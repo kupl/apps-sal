@@ -28,8 +28,7 @@ for l in range(n):
             ov = True
             break
         a[-1] += sm
-
 if not ov:
     print(a[-1])
 else:
-    print("OVERFLOW!!!")
+    print('OVERFLOW!!!')

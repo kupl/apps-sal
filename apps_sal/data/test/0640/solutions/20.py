@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-c, d, e = 0, 0, 0
+(a, b) = map(int, input().split())
+(c, d, e) = (0, 0, 0)
 for i in range(1, 7):
     if abs(i - a) < abs(i - b):
         c += 1

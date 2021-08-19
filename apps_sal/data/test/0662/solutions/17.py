@@ -8,6 +8,6 @@ for i in range(n):
     else:
         c = list({1, 2, 3} ^ {t, c})[0]
 if g:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

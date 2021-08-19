@@ -1,6 +1,6 @@
-ax, ay = list(map(int, input().split()))
-bx, by = list(map(int, input().split()))
-cx, cy = list(map(int, input().split()))
+(ax, ay) = list(map(int, input().split()))
+(bx, by) = list(map(int, input().split()))
+(cx, cy) = list(map(int, input().split()))
 
 
 def f(cx, ax, bx, cy, ay, by):

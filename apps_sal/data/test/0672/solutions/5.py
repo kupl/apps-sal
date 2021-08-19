@@ -1,4 +1,4 @@
-a, b = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
 o = a - b
 sum = 0
 l = 1
@@ -9,9 +9,8 @@ if o > 0:
                 sum += 2
                 if i == o // i:
                     sum -= 1
-            if (o // i > b and i <= b) or (o // i <= b and i > b):
+            if o // i > b and i <= b or (o // i <= b and i > b):
                 sum += 1
-
 if o == 0:
     print('infinity')
 else:

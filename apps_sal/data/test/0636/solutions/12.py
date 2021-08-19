@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 M = list(map(int, input().split()))
 for i in range(n):
     M[i] = (M[i], i + 1)
@@ -14,4 +14,4 @@ else:
         used += M[i][0]
         i += 1
     print(len(Ans))
-    print(" ".join(map(str, Ans)))
+    print(' '.join(map(str, Ans)))

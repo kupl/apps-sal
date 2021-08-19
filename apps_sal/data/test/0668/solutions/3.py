@@ -1,5 +1,5 @@
 n = int(input())
-arr = [[i, int(c)] for i, c in enumerate(input().strip().split(' '))]
+arr = [[i, int(c)] for (i, c) in enumerate(input().strip().split(' '))]
 p = arr[0]
 arr = arr[1:]
 arr.sort(key=lambda i: i[1], reverse=True)
@@ -18,7 +18,7 @@ if check:
     ar = []
     count = 0
     cur = p
-    stock, stock_n = [], 0
+    (stock, stock_n) = ([], 0)
     i = 0
     while i < len(arr):
         ar.append([cur[0] + 1, arr[i][0] + 1])

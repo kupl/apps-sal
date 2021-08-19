@@ -7,6 +7,6 @@ for i in s:
         h = False
         break
 if h:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

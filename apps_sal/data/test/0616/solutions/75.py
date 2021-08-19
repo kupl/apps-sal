@@ -8,14 +8,14 @@ def input():
 
 MOD = 10 ** 9 + 7
 sys.setrecursionlimit(20000000)
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     key = []
     for _ in range(M):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         C = list([int(x) - 1 for x in input().split()])
         state = 0
         for c in C:
@@ -30,9 +30,9 @@ def main():
             if dp[i | state] > tmp:
                 dp[i | state] = tmp
     if dp[-1] == INF:
-        print((-1))
+        print(-1)
     else:
-        print((dp[-1]))
+        print(dp[-1])
 
 
 def __starting_point():

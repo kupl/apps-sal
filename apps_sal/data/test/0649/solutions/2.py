@@ -1,5 +1,4 @@
 dr = [[0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1], [-1, 0], [-1, 1]]
-
 n = int(input())
 t = [int(i) for i in input().split()]
 visited = set()

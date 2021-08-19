@@ -7,15 +7,15 @@ def gcd(a, b):
 
 
 def works(a, b, c, d, x):
-    return b <= d * x and a <= c * x and d * x - b >= c * x - a
+    return b <= d * x and a <= c * x and (d * x - b >= c * x - a)
 
 
 def solve():
-    a, b, c, d = list(map(int, input().rstrip().split()))
-    if c == d == 1 and not a / b == 1:
+    (a, b, c, d) = list(map(int, input().rstrip().split()))
+    if c == d == 1 and (not a / b == 1):
         print(-1)
         return
-    if c == 0 and not a == 0:
+    if c == 0 and (not a == 0):
         print(-1)
         return
     g = gcd(c, d)

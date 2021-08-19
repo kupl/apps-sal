@@ -4,7 +4,7 @@ def mp():
 
 t = int(input())
 for tt in range(t):
-    x, y = mp()
+    (x, y) = mp()
     if x - y == 1:
         print('NO')
     else:

@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 k = 0
 l = 0
 s = 0
@@ -9,5 +9,4 @@ for i in range(1, 7):
         l += 1
     else:
         s += 1
-
 print(s, l, k)

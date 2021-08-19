@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 if m == 0:
     ok = True
 else:
@@ -9,5 +8,4 @@ else:
         if hole[i] == hole[i - 1] + 1 == hole[i - 2] + 2:
             ok = False
             break
-
-print("YES" if ok else "NO")
+print('YES' if ok else 'NO')

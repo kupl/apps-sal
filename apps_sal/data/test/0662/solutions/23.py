@@ -1,10 +1,10 @@
 k = int(input().strip().split()[0])
 sp = 3
-answer = "YES"
+answer = 'YES'
 for _ in range(k):
     i = int(input().strip().split()[0])
     if i == sp:
-        answer = "NO"
+        answer = 'NO'
         break
     else:
         sp = 6 - i - sp

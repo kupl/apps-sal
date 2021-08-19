@@ -1,7 +1,5 @@
-
-
 def main():
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     s = set(map(int, input().split()))
     res = 0
     for i in range(x):

@@ -1,7 +1,5 @@
 import sys
-
 s = input()
-
 ans = 0
 for c in s:
     if c in 'aeiou':

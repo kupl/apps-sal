@@ -1,6 +1,6 @@
 import math
-a, b = list(map(int, input().split()))
-win1, draw, win2 = 0, 0, 0
+(a, b) = list(map(int, input().split()))
+(win1, draw, win2) = (0, 0, 0)
 for i in range(1, 7):
     c = math.fabs(a - i)
     d = math.fabs(b - i)

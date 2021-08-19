@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 now = n
 while True:
     if k == 2 ** (now - 1):

@@ -1,5 +1,5 @@
 N = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [[0] * (N + 1) for _ in range(N + 1)]
 dp[1][0] = 1
 dp[1][1] = 1

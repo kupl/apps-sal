@@ -17,6 +17,6 @@ for i in range(n):
     if k == b:
         f = False
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

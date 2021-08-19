@@ -1,5 +1,5 @@
 from math import hypot
-r, x, y, xn, yn = map(int, input().split())
+(r, x, y, xn, yn) = map(int, input().split())
 d = hypot(x - xn, y - yn)
 ans = 0
 if d == r or d == 0:

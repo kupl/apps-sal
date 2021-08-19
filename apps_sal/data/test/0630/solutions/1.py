@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(lambda x: int(x) - 1, input().split()))
 dp = [0] * n
 for i in range(n):

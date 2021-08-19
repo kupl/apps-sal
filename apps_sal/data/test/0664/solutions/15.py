@@ -4,7 +4,7 @@ import sys
 def minindex(alist):
     index = -1
     min = 1000000
-    for idx, num in enumerate(alist):
+    for (idx, num) in enumerate(alist):
         if num < min:
             index = idx
             min = num
@@ -21,13 +21,9 @@ def isSorted(array):
 
 
 nums = int(sys.stdin.readline())
-
 numbers = [int(num) for num in sys.stdin.readline().split()[0:nums]]
-
 index = minindex(numbers)
 min = numbers[index]
-
-
 moves = 0
 if index == 0:
     for num in range(nums - 1, -1, -1):
@@ -38,13 +34,11 @@ if index == 0:
             moves = moves + 1
         else:
             break
-
     newnumbers = numbers[index:nums - moves]
     if isSorted(newnumbers):
         print(moves)
     else:
         print(-1)
-
 else:
     newnumbers = numbers[index:]
     newnumbers.extend(numbers[0:index])

@@ -1,5 +1,5 @@
 n = int(input())
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 white = max(x - 1, y - 1)
 black = max(n - x, n - y)
-print("White" if white <= black else "Black")
+print('White' if white <= black else 'Black')

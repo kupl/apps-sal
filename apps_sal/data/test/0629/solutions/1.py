@@ -13,8 +13,6 @@ def make_prefixes(a):
 
 prefa1 = make_prefixes(a1)
 prefa2 = make_prefixes(a2)
-
 crosstimes = [prefa1[i] + b[i] + (prefa2[-1] - prefa2[i]) for i in range(n)]
 crosstimes.sort()
-
 print(crosstimes[0] + crosstimes[1])

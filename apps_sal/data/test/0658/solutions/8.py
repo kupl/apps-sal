@@ -1,8 +1,8 @@
-n, w, v, u = list(map(int, input().split()))
-x, y = list(map(int, input().split()))
+(n, w, v, u) = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 razn = ozhid = v * y - x * u
 for i in range(1, n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     r = v * y - x * u
     if r > razn:
         razn = r

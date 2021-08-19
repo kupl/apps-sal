@@ -17,5 +17,5 @@ else:
             ans.append((a[i][1], a[ck][1]))
             ck += 1
     print(len(ans))
-    for i, j in ans:
+    for (i, j) in ans:
         print(i, j)

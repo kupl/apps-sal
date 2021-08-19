@@ -1,5 +1,5 @@
-zlu, blu = map(int, input().split())
-x, y, z = map(int, input().split())
+(zlu, blu) = map(int, input().split())
+(x, y, z) = map(int, input().split())
 zl = 2 * x + y
 bl = 3 * z + y
 if zl > zlu:

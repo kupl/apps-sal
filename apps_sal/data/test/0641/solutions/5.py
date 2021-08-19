@@ -1,5 +1,4 @@
 3
-
 mnthnums = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 
@@ -21,8 +20,7 @@ def of_week(n):
 
 strs = input().split()
 n = int(strs[0])
-
-if strs[-1] == "week":
+if strs[-1] == 'week':
     print(of_week(n))
 else:
     print(of_month(n))

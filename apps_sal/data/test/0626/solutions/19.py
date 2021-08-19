@@ -2,7 +2,7 @@ n = int(input())
 lst = list(map(int, input().split()))
 ans = 0
 zap = 0
-used = [False] * (n)
+used = [False] * n
 while zap != n:
     if zap != 0:
         ans += 1
@@ -10,7 +10,6 @@ while zap != n:
         if not used[i] and zap >= lst[i]:
             used[i] = True
             zap += 1
-
     if zap == n:
         break
     ans += 1
@@ -18,5 +17,4 @@ while zap != n:
         if not used[i] and zap >= lst[i]:
             used[i] = True
             zap += 1
-
 print(ans)

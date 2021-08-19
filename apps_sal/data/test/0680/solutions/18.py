@@ -26,9 +26,9 @@ def print_md(ax, ay, bx, by):
     return ret
 
 
-xa, ya = list(map(int, input().split()))
-xb, yb = list(map(int, input().split()))
-xc, yc = list(map(int, input().split()))
+(xa, ya) = list(map(int, input().split()))
+(xb, yb) = list(map(int, input().split()))
+(xc, yc) = list(map(int, input().split()))
 if max(xb, xc) > xa > min(xb, xc) and max(yb, yc) > ya > max(yb, yc):
     print(man_dist(xc, yc, xb, yb) - 2)
     ans = []

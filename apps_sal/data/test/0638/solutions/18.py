@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = [int(i) for i in input().split()]
 pre = [0] * (n + 1)
 for i in range(1, n + 1):

@@ -13,7 +13,7 @@ def rook(cord):
 def bishop(cord):
     if (cord[0] + cord[1]) % 2 != (cord[2] + cord[3]) % 2:
         return 0
-    elif (cord[0] - cord[1] == cord[2] - cord[3]) or (cord[0] + cord[1] == cord[2] + cord[3]):
+    elif cord[0] - cord[1] == cord[2] - cord[3] or cord[0] + cord[1] == cord[2] + cord[3]:
         return 1
     return 2
 

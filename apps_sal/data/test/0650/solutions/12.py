@@ -7,4 +7,4 @@ for i in s:
         ok1 = 0
     else:
         ok2 = 0
-print(["NO", "YES"][ok1 or ok2])
+print(['NO', 'YES'][ok1 or ok2])

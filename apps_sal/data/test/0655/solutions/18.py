@@ -1,5 +1,5 @@
 n = int(input())
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 dx = n - x + 1
 dy = n - y + 1
 cnt1 = min(x, y) + x - min(x, y) + y - min(x, y)

@@ -1,8 +1,8 @@
 t = int(input())
 for i in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     b = list(map(int, input().split()))
     if sum(b) == m:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

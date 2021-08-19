@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ins = list(map(int, input().split()))
 index = list(range(n))
 index.sort(key=lambda x: ins[x])
@@ -14,7 +14,6 @@ while True:
     else:
         ans.append(index[i] + 1)
     i += 1
-
 print(i)
 if i != 0:
-    print(" ".join(map(str, ans)))
+    print(' '.join(map(str, ans)))

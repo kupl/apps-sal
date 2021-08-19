@@ -1,18 +1,15 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 mass = list()
 arr = list()
 past = -1
 answer = 0
-
 for i in range(n):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     mass.append(r - l)
     if past != -1:
         arr.append(l - past)
     past = r
-
 l2 = 0
-
 local = s
 q = mass[0] + s
 for j in range(n - 1):
@@ -22,7 +19,6 @@ for j in range(n - 1):
         break
     q += mass[j + 1]
 answer = q
-
 if local <= 0:
     for i in range(1, n):
         local += arr[i - 1]
@@ -39,5 +35,4 @@ if local <= 0:
             answer = q
         if local > 0:
             break
-
 print(answer)

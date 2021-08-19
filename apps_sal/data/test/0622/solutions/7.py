@@ -1,13 +1,12 @@
 def go(n, m):
-    t = 2**(n - 1)
+    t = 2 ** (n - 1)
     if m == t:
         return n
+    elif m < t:
+        return go(n - 1, m)
     else:
-        if m < t:
-            return go(n - 1, m)
-        else:
-            return go(n - 1, m - t)
+        return go(n - 1, m - t)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 print(go(n, m))

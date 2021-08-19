@@ -16,7 +16,6 @@ for i in range(n):
         a[j + 1] = 0
     if a[j] >= 4294967296:
         df = True
-
         break
 if df == True:
     print('OVERFLOW!!!')

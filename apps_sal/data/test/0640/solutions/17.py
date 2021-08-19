@@ -1,7 +1,5 @@
 from sys import stdin
-
-a, b = map(int, stdin.readline().split())
-
+(a, b) = map(int, stdin.readline().split())
 aa = bb = ab = 0
 for x in range(1, 7):
     if abs(x - a) < abs(x - b):
@@ -10,5 +8,4 @@ for x in range(1, 7):
         bb += 1
     else:
         ab += 1
-
-print("{} {} {}".format(aa, ab, bb))
+print('{} {} {}'.format(aa, ab, bb))

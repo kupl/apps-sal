@@ -6,5 +6,5 @@ def solve(n, m):
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     print(solve(n, m))

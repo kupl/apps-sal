@@ -1,21 +1,22 @@
 from collections import Counter, defaultdict, deque
-def read(): return list(map(int, input().split()))
 
 
-n, h = read()
+def read():
+    return list(map(int, input().split()))
+
+
+(n, h) = read()
 dis = []
 for _ in range(n):
-    a, b = read()
+    (a, b) = read()
     dis.append([a, b])
-
 rec = []
 for i in range(1, n):
     rec.append(dis[i][0] - dis[i - 1][1])
 rec.append(float('inf'))
-
 s = 0
 left = h
-i, j = 0, 0
+(i, j) = (0, 0)
 res = 0
 vis = [False] * n
 while i < n:
@@ -35,5 +36,4 @@ while i < n:
                 i += 1
             if i >= n:
                 break
-
 print(res)

@@ -13,11 +13,11 @@ for _ in range(n):
     else:
         e = prib.pop() * mn.pop()
         prib[-1] += e
-        if prib[-1] > 2**32 - 1:
+        if prib[-1] > 2 ** 32 - 1:
             b = 0
             break
 if b:
-    if prib[0] <= 2**32 - 1:
+    if prib[0] <= 2 ** 32 - 1:
         print(prib[0])
     else:
         print('OVERFLOW!!!')

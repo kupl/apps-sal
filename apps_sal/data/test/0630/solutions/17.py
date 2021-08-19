@@ -2,7 +2,7 @@ def read():
     return list(map(int, input().split()))
 
 
-n, k = read()
+(n, k) = read()
 a = read()
 b = [min(k, n - 1) + 1]
 for i in range(1, n):

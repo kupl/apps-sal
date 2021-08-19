@@ -11,7 +11,7 @@ def li():
 
 
 for _ in range(ii()):
-    l, r, d = mi()
+    (l, r, d) = mi()
     ans = d
     if l <= d <= r:
         ans = d * (r // d + 1)

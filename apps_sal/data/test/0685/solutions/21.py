@@ -1,6 +1,5 @@
-n, h = [int(i) for i in input().split()]
+(n, h) = [int(i) for i in input().split()]
 A = [[int(i) for i in input().split()] for j in range(n)]
-
 r = 0
 cur_h = h
 ans = 0

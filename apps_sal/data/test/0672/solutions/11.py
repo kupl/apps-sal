@@ -1,10 +1,10 @@
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 diff = a - b
-if a == 0 or b == 0 or diff == 0 or b > a:
+if a == 0 or b == 0 or diff == 0 or (b > a):
     if b > a:
         print(0)
     elif a == 0 and b == 0:
-        print("infinity")
+        print('infinity')
     elif a == 0:
         print(0)
     elif b == 0:
@@ -17,8 +17,7 @@ if a == 0 or b == 0 or diff == 0 or b > a:
         facts = [i for i in factors if i > b]
         print(len(facts))
     else:
-        print("infinity")
-
+        print('infinity')
 else:
     b = b % a
     diff = a - b

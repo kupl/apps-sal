@@ -16,7 +16,6 @@ def check_stairs(n, stairs):
 
 
 def __starting_point():
-
     nm_list = [int(c) for c in sys.stdin.readline().rstrip().split(' ')]
     (n, m) = tuple(nm_list)
     stairs = []

@@ -1,7 +1,8 @@
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-m, b = I()
+(m, b) = I()
 mx = 0
 for y in range(0, 100001):
     x = m * (b - y)

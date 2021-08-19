@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = list(map(int, input().split()))
-
 ans = []
 for i in range(n):
     if sum(t[:i + 1]) <= m:
@@ -13,4 +12,4 @@ for i in range(n):
             if remain <= 0:
                 ans.append(j + 1)
                 break
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

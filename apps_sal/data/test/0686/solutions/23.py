@@ -1,20 +1,9 @@
 from sys import *
 from heapq import *
-
-
 for q in range(int(input())):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x > y + 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
-'''
-1
-8
-100 200 100 200 100 200 100 100
-10 2
-15 3
-107
-3
-'''
+        print('NO')
+'\n1\n8\n100 200 100 200 100 200 100 100\n10 2\n15 3\n107\n3\n'

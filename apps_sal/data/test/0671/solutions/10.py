@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    s = "123456789"
+    s = '123456789'
     x = 10
     n -= 1
     while len(s) <= n:

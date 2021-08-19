@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t = list(map(int, input().split()))
 t2 = []
 cur = 0
@@ -16,4 +16,4 @@ for i in t:
         t2.append(i)
         res.append(j)
 for i in res:
-    print(i, end=" ")
+    print(i, end=' ')

@@ -1,5 +1,5 @@
 import math
-n, bottles, towels = map(int, input().split())
+(n, bottles, towels) = map(int, input().split())
 num = n
 cnt = 0
 while n != 1:

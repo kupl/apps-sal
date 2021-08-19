@@ -9,5 +9,5 @@ for i in range(1, q):
     w = int(input())
     if w not in g:
         b = False
-    g = {w} | (t - g)
+    g = {w} | t - g
 print('YES' if b else 'NO')

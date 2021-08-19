@@ -8,6 +8,6 @@ for i in s:
     if i in C:
         total += 2
 if total == len(s) or total == len(s) * 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

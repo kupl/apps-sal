@@ -3,7 +3,7 @@ a = int(tmp[0])
 b = int(tmp[1])
 a -= b
 if a == 0:
-    print("infinity")
+    print('infinity')
 else:
     ans = 0
     i = 1

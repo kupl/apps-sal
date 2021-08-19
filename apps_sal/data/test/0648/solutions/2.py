@@ -2,10 +2,10 @@ from math import *
 
 
 def sum(n):
-    return (n * (n + 1)) // 2
+    return n * (n + 1) // 2
 
 
-m, b = [int(x) for x in input().strip().split()]
+(m, b) = [int(x) for x in input().strip().split()]
 ans = 0
 x = 0
 y = 0

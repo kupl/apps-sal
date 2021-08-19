@@ -1,5 +1,5 @@
 def main():
-    M, K = list(map(int, input().split()))
+    (M, K) = list(map(int, input().split()))
     if M == 1:
         if K == 0:
             print('0 0 1 1')
@@ -7,7 +7,7 @@ def main():
             print('-1')
         return
     if K >= 2 ** M:
-        print((-1))
+        print(-1)
         return
     r = []
     for i in range(2 ** M):
@@ -18,7 +18,7 @@ def main():
         if i != K:
             r.append(i)
     r.append(K)
-    print((' '.join(str(i) for i in r)))
+    print(' '.join((str(i) for i in r)))
 
 
 main()

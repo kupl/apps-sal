@@ -1,9 +1,7 @@
 def main():
     q = int(input())
-
     for i in range(q):
-        l, r, d = map(int, input().split())
-
+        (l, r, d) = map(int, input().split())
         if d < l:
             print(d)
         else:

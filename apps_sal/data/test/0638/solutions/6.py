@@ -1,5 +1,5 @@
 from copy import copy
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 T = list(map(int, input().split()))
 Z = copy(T)
 for i in range(1, n):

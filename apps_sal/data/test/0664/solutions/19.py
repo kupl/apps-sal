@@ -10,7 +10,7 @@ def naek(a, indeks):
 
 
 a = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 sor = True
 for x in range(len(a) - 1):
     if a[x] > a[x + 1]:
@@ -19,7 +19,6 @@ for x in range(len(a) - 1):
         break
         pass
     pass
-
 if sor:
     print(0)
 else:

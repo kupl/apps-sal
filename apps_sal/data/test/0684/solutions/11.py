@@ -13,9 +13,7 @@ sys.stdout = _OUTPUT_BUFFER
 def write():
     sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
 """
-
 testcases = int(input())
-
 for case in range(testcases):
     (a, b, c, d) = [int(zax) for zax in input().split()]
     print(b, c, c)

@@ -6,7 +6,7 @@ d = list([list(map(int, s.split())) for s in sys.stdin.readlines()])
 
 
 def assign(t):
-    k, i, j = t
+    (k, i, j) = t
     d[i][j] = min(d[i][j], d[i][k] + d[k][j])
 
 

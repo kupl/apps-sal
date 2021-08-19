@@ -1,10 +1,8 @@
 s = input()
-
 mults = [-1]
 for i in range(len(s)):
     if s[i] == '*':
         mults.append(i)
-
 mults.append(len(s))
 max = 0
 for i in range(len(mults)):

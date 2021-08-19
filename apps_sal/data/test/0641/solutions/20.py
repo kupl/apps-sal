@@ -1,9 +1,9 @@
-a, b, c = map(str, input().split())
+(a, b, c) = map(str, input().split())
 a = int(a)
-if (c == "month"):
-    if (a < 30):
+if c == 'month':
+    if a < 30:
         print(12)
-    elif(a == 30):
+    elif a == 30:
         print(11)
     else:
         print(7)

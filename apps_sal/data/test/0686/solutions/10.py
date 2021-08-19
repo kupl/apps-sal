@@ -1,7 +1,7 @@
 q = int(input())
 out = []
 for i in range(q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x - y == 1:
         out.append('NO')
     else:

@@ -17,5 +17,4 @@ min_cost2 = 99999999999
 for i in range(N):
     if min_cost2 > cost[0][i] + cost[1][i] + C[i] and i != min_i:
         min_cost2 = cost[0][i] + cost[1][i] + C[i]
-
 print(min_cost + min_cost2)

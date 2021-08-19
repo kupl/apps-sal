@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
-pf, d, ps = 0, 0, 0
+(a, b) = list(map(int, input().split()))
+(pf, d, ps) = (0, 0, 0)
 for i in range(1, 7):
     if abs(a - i) < abs(b - i):
         pf += 1

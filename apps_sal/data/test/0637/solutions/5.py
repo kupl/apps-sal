@@ -8,20 +8,17 @@ flag = 0
 for i in range(len(arr)):
     if arr[i] == arr[last]:
         now += 1
+    elif not (ln == -1 or ln == now):
+        flag = 1
+        break
+    elif ln == -1:
+        ln = now
+        last = i
+        now = 1
     else:
-        if not (ln == -1 or ln == now):
-            flag = 1
-            break
-        elif ln == -1:
-            ln = now
-            last = i
-            now = 1
-        else:
-            last = i
-            now = 1
-
-
+        last = i
+        now = 1
 if not flag and (ln == -1 or ln == now):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -11,6 +11,6 @@ def find(n1, n2):
         return rel
 
 
-n1, n2 = map(int, input().split())
-res = [[-1] * (301) for i in range(301)]
+(n1, n2) = map(int, input().split())
+res = [[-1] * 301 for i in range(301)]
 print(find(n1, n2))

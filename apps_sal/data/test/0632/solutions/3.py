@@ -1,13 +1,13 @@
-'''input
+"""input
 3
 5 1
 8 2
 3 4
-'''
+"""
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     div = 0
     for i in range(2, n + 1):
         if n % i == 0:

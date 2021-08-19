@@ -1,4 +1,4 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 if pow(2, m) <= k:
     print(-1)
 elif not m == 1:
@@ -11,8 +11,7 @@ elif not m == 1:
         ans[pow(2, m + 1) - 2 - j] = i
         i += 1
     print(*ans)
+elif k == 0:
+    print(0, 0, 1, 1)
 else:
-    if k == 0:
-        print(0, 0, 1, 1)
-    else:
-        print(-1)
+    print(-1)

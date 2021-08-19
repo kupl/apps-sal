@@ -1,7 +1,6 @@
 n = int(input())
 counts = list(map(int, input().split()))
 ai = [-1] * n
-
 if counts[0] > 0 and sum(counts) >= n - 1:
     print(n - 1)
     k = sum(counts) - n + 1
@@ -18,6 +17,5 @@ if counts[0] > 0 and sum(counts) >= n - 1:
                 ai[i] = counts[i]
                 counts[i] = -1
                 print(j + 1, i + 1)
-
 else:
     print(-1)

@@ -1,6 +1,4 @@
-
-
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 ans1 = ans2 = ans3 = 0
 for i in range(6):
     if abs(a - (i + 1)) == abs(b - (i + 1)):

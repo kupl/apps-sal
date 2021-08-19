@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = [int(i) for i in input().split()]
 arr2 = []
 for i in range(n):

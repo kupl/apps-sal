@@ -1,5 +1,5 @@
-a, b = [int(i) for i in input().split()]
-x, y, z = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
+(x, y, z) = [int(i) for i in input().split()]
 a -= 2 * x
 a -= y
 b -= y

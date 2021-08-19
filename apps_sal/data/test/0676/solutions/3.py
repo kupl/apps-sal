@@ -26,12 +26,11 @@ elif len(x) == 3:
         good = True
         a = [x[2] // 3]
 elif len(x) == 4:
-    if (x[2] == 4 * x[0] - x[1]) and (3 * x[0] == x[3]):
+    if x[2] == 4 * x[0] - x[1] and 3 * x[0] == x[3]:
         good = True
-
 if good:
-    print("YES")
+    print('YES')
     for i in a:
         print(i)
 else:
-    print("NO")
+    print('NO')

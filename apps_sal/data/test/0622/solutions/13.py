@@ -1,10 +1,10 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 def nk(n, k):
     if n == 1:
         return 1
-    t = 2**(n - 1)
+    t = 2 ** (n - 1)
     if k == t:
         return n
     if k < t:

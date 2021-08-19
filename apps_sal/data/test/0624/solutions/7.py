@@ -1,5 +1,5 @@
 from sys import stdin
-n, m, k = list(map(int, stdin.readline().strip().split()))
+(n, m, k) = list(map(int, stdin.readline().strip().split()))
 s = list(map(int, stdin.readline().strip().split()))
 s.sort()
 acum = [0]

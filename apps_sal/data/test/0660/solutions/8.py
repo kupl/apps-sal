@@ -1,4 +1,4 @@
-n, b, p = list(map(int, input().split()))
+(n, b, p) = list(map(int, input().split()))
 ansb = p * n
 if n == 1:
     print(0, ansb)

@@ -1,12 +1,19 @@
 from collections import *
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split(' ')]
-def st(): return input().rstrip('\n')
-def val(): return int(input())
+def li():
+    return [int(i) for i in input().rstrip('\n').split(' ')]
 
 
-n, h = li()
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input())
+
+
+(n, h) = li()
 l = []
 for i in range(n):
     l.append(li())
@@ -16,15 +23,12 @@ d = deque()
 d.append(l[0])
 currrem = h
 currdist = l[0][1] - l[0][0]
-
-
 for i in range(1, n):
-
     cant = 0
     while currrem <= l[i][0] - l[i - 1][1]:
         if cant:
             break
-        a, b = d.popleft()
+        (a, b) = d.popleft()
         if len(d):
             currrem += d[0][0] - b
             currrem = min(currrem, h)

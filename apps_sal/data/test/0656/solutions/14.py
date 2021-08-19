@@ -1,8 +1,9 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, k = f()
-s, d = [], -1
+(n, k) = f()
+(s, d) = ([], -1)
 for q in f():
     if q < 0:
         k -= 1

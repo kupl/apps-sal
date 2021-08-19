@@ -1,5 +1,5 @@
 def solve():
-    M, K = map(int, input().split())
+    (M, K) = map(int, input().split())
     if K >= 1 << M:
         return [-1]
     if M == 1:

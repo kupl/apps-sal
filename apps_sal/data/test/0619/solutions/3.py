@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 a = x % z
 b = y % z
 s = x // z + y // z

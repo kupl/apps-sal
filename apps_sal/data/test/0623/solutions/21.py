@@ -10,30 +10,24 @@ while a1 > 0 and a2 > 0:
             a1 = a1 - S * 2
             a2 = a2 + S
             somme += S
-
         else:
             S = a1 // 2
             a1 -= S * 2
             a2 = a2 + S
             somme += S
-
+    elif a2 % 2 == 0:
+        S = a2 // 2 - 1
+        a2 -= S * 2
+        a1 = a1 + S
+        somme += S
     else:
-        if a2 % 2 == 0:
-            S = a2 // 2 - 1
-            a2 -= S * 2
-            a1 = a1 + S
-            somme += S
-
-        else:
-            S = a2 // 2
-            a2 -= S * 2
-            a1 = a1 + S
-            somme += S
-
-    if (a1 == 2 and a2 == 2) or (a1 < 2 and a2 == 2) or (a2 < 2 and a1 == 2):
+        S = a2 // 2
+        a2 -= S * 2
+        a1 = a1 + S
+        somme += S
+    if a1 == 2 and a2 == 2 or (a1 < 2 and a2 == 2) or (a2 < 2 and a1 == 2):
         somme = somme + 1
         break
     if a1 < 2 and a2 < 2:
         break
-
 print(somme)

@@ -24,7 +24,7 @@ for i in range(m):
             u[j] = t
             k += 1
             t -= 1
-if(key):
+if key:
     print(k)
 else:
     print(-1)

@@ -9,7 +9,7 @@ elif diff < 0:
 else:
     l = []
     out = 1
-    for x in range(2, int(diff**(1 / 2)) + 1):
+    for x in range(2, int(diff ** (1 / 2)) + 1):
         num = 0
         y = diff / x
         while y == int(y):
@@ -18,7 +18,7 @@ else:
             y /= x
         if num != 0:
             l.append([x, num])
-            out *= (num + 1)
+            out *= num + 1
         if diff < x:
             break
     if diff != 1:

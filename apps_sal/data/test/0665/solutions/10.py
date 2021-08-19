@@ -1,5 +1,5 @@
 def sol():
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     pref = list(map(int, input().split()))
     mx = [pref[0]]
     ind = [0]

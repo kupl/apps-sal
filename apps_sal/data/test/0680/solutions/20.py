@@ -1,6 +1,6 @@
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
-x3, y3 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
+(x3, y3) = list(map(int, input().split()))
 k = max(y1, y2, y3) + 1 - min(y1, y2, y3) + max(x1, x2, x3) - min(x1, x2, x3)
 m = [0, y1, y2, y3]
 m.sort()

@@ -8,12 +8,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, x, y = egcd(b % a, a)
-        return (g, y - (b // a) * x, x)
+        (g, x, y) = egcd(b % a, a)
+        return (g, y - b // a * x, x)
 
 
 def mulinv(b, n):
-    g, x, _ = egcd(b, n)
+    (g, x, _) = egcd(b, n)
     if g == 1:
         return x % n
 
@@ -41,6 +41,7 @@ def f(p=0):
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.parent = [i for i in range(1, n + 1)]
         self.rank = [0] * (n + 1)
@@ -65,16 +66,15 @@ def graph(n, m, edg=False):
     visited = [0] * n
     g = [list() for _ in range(n + 1)]
     for i in range(m):
-        u, v = f(1)
+        (u, v) = f(1)
         g[u].append(v)
         g[v].append(u)
         if edg:
             edges.append((u, v))
-
     if edg:
-        return g, visited, edg
+        return (g, visited, edg)
     else:
-        return g, visited
+        return (g, visited)
 
 
 def bfs(g, visited):
@@ -94,29 +94,23 @@ def dfs(u, g, visited):
             dfs(v, g, visited)
 
 
-n, t = f(1)
-
+(n, t) = f(1)
 cl = f(2)
 pl = []
 count = 0
 sm = 0
-
 res = []
-
 for i in range(n):
     sm += cl[i]
     k = t - sm
     j = count - 1
-    while(j > -1 and k < 0):
+    while j > -1 and k < 0:
         k += pl[j]
         j -= 1
-
     if k < 0:
         res.append(count)
     else:
         res.append(count - j - 1)
-
     bisect.insort(pl, cl[i])
     count += 1
-
 print(*res)

@@ -1,10 +1,9 @@
 def solve():
     n = int(input())
     A = list(map(int, input().split()))
-    x, A = A[0], A[1:]
+    (x, A) = (A[0], A[1:])
     A = [(A[i], i + 2) for i in range(len(A))]
     A.sort(reverse=True)
-
     cnt = 1
     msg = x
     total = 1
@@ -17,7 +16,6 @@ def solve():
         cnt += 1
         if total >= n:
             break
-
     print(n - 1)
     total = x
     for j in range(min(x, len(A))):

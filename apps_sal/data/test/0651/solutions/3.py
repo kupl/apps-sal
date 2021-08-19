@@ -1,5 +1,5 @@
 from collections import defaultdict as di
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 free = di(lambda: False)
 startpos = (-1, -1)
 goal = (-1, -1)
@@ -9,12 +9,12 @@ for y in range(n):
         c = s[x]
         if c == 'S':
             startpos = (x, y)
-            free[(x, y)] = True
+            free[x, y] = True
         elif c == 'E':
             goal = (x, y)
-            free[(x, y)] = True
+            free[x, y] = True
         elif c == '.':
-            free[(x, y)] = True
+            free[x, y] = True
 counts = 0
 dire = '0123'
 command = input()
@@ -26,7 +26,7 @@ for up in dire:
                     continue
                 pos = startpos
                 for c in command:
-                    x, y = pos
+                    (x, y) = pos
                     if c == up:
                         y += 1
                     elif c == down:
@@ -41,5 +41,4 @@ for up in dire:
                         break
                     if not free[pos]:
                         break
-
 print(counts)

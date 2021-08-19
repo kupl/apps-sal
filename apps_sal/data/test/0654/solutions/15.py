@@ -1,6 +1,5 @@
 N = int(input())
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 dp = [[0] * (2020 + 1) for _ in range(2020 + 1)]
 dp[1][1] = 1
 ans = 0

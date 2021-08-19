@@ -13,6 +13,6 @@ for i in range(blocks):
     ans += j * str(curr)
     curr ^= 1
 if ans == s:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -7,11 +7,11 @@ end = [100] * 26
 
 
 def num(x):
-    return(ord(x) - ord("a"))
+    return ord(x) - ord('a')
 
 
 def let(x):
-    return(chr(x + ord("a")))
+    return chr(x + ord('a'))
 
 
 def ans(x):
@@ -33,16 +33,16 @@ def ans(x):
                     elif end[num(B[j])] == num(B[j + 1]):
                         g = 0
                     else:
-                        return("NO")
+                        return 'NO'
                 elif 0 < j < len(B) - 1:
                     if start[num(B[j])] == 100 or start[num(B[j])] == -100:
                         start[num(B[j])] = num(B[j - 1])
                     elif start[num(B[j])] != num(B[j - 1]):
-                        return("NO")
+                        return 'NO'
                     if end[num(B[j])] == 100 or end[num(B[j])] == -100:
                         end[num(B[j])] = num(B[j + 1])
                     elif end[num(B[j])] != num(B[j + 1]):
-                        return("NO")
+                        return 'NO'
                 elif j == len(B) - 1:
                     if end[num(B[j])] == 100:
                         end[num(B[j])] = -100
@@ -51,11 +51,11 @@ def ans(x):
                     elif start[num(B[j])] == num(B[j - 1]):
                         g = 0
                     else:
-                        return("NO")
+                        return 'NO'
     if len(set(start)) + max(0, start.count(100) - 1) + max(0, start.count(-100) - 1) != 26:
-        return("NO")
+        return 'NO'
     elif len(set(end)) + max(0, end.count(100) - 1) + max(0, end.count(-100) - 1) != 26:
-        return("NO")
+        return 'NO'
     else:
         for i in range(0, 26):
             if start[i] != -100:
@@ -67,9 +67,9 @@ def ans(x):
                     final = final + [let(j)]
                     j = end[j]
         if len(final) != len(set(start)) - min(1, start.count(100)) + max(0, start.count(-100) - 1):
-            return("NO")
+            return 'NO'
         else:
-            return("".join(final))
+            return ''.join(final)
 
 
 print(ans(A))

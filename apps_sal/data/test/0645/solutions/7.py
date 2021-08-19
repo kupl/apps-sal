@@ -7,5 +7,4 @@ for c in s:
         count += 1
     elif c in odd:
         count += 1
-
 print(count)

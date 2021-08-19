@@ -10,11 +10,26 @@ from bisect import bisect, bisect_left
 from fractions import gcd
 from heapq import heappush, heappop
 from functools import reduce
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
@@ -23,20 +38,18 @@ mod = 10 ** 9 + 7
 
 
 def main():
-    N, M = MAP()
+    (N, M) = MAP()
     dp = [INF] * (1 << N)
     dp[0] = 0
-
     for _ in range(M):
-        a, b = MAP()
+        (a, b) = MAP()
         c = LIST()
         tmp = 0
         for x in c:
-            tmp = tmp | 1 << (x - 1)
+            tmp = tmp | 1 << x - 1
         for S in range(1 << N):
             dp[S | tmp] = min(dp[S | tmp], dp[S] + a)
-
-    print((dp[-1] if dp[-1] != INF else -1))
+    print(dp[-1] if dp[-1] != INF else -1)
 
 
 def __starting_point():

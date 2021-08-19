@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 K = list(map(int, input().split()))
 l = L = len(K)
 k = []
@@ -17,6 +17,6 @@ print(i)
 while i:
     i -= 1
     if i:
-        print(k[i][1], end=" ")
+        print(k[i][1], end=' ')
     else:
         print(k[i][1])

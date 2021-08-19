@@ -1,6 +1,6 @@
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
-x3, y3 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
+(x3, y3) = list(map(int, input().split()))
 line = []
 x41 = x3 - (x2 - x1)
 y41 = y3 - (y2 - y1)
@@ -30,4 +30,4 @@ for i in range(1, 5):
         line1 += [line[i]]
 print(len(line1))
 for i in range(len(line1)):
-    print(" ".join(map(str, line1[i])))
+    print(' '.join(map(str, line1[i])))

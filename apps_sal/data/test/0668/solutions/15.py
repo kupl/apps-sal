@@ -4,18 +4,15 @@
 def __starting_point():
     n = int(input())
     arr = [int(x) for x in input().split()]
-
     users = []
     invited_users = []
     messages_count = 0
     output = ''
     for i in range(len(arr)):
         users.append([i, arr[i]])
-
     sender = users[0]
     users = users[1:]
     users.sort(key=lambda row: row[1])
-
     while messages_count != n - 1 and len(users) > 0:
         invites_count = sender[1]
         person = sender[0]
@@ -30,11 +27,9 @@ def __starting_point():
             messages_count += 1
             if messages_count == n - 1:
                 break
-
         if len(invited_users) > 0:
             sender = invited_users[0]
             invited_users = invited_users[1:]
-
     if messages_count < n - 1:
         print(-1)
     else:

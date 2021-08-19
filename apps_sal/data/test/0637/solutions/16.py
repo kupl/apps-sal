@@ -8,25 +8,25 @@ c = 0
 ans = 1
 for i in list(s):
     p = int(i)
-    if (c == 0):
-        if (k == 0):
+    if c == 0:
+        if k == 0:
             t = p
-        if (t == p):
+        if t == p:
             k += 1
         else:
             t = p
             x = 0
             c = 1
-    if (t == p):
+    if t == p:
         x += 1
     else:
         t = p
-        if (x != k):
+        if x != k:
             ans = 0
         x = 1
-if (x != k):
+if x != k:
     ans = 0
-if (ans == 1):
+if ans == 1:
     print('YES')
 else:
     print('NO')

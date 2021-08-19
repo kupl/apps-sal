@@ -1,6 +1,6 @@
 neats = 'AEFHIKLMNTVWXYZ'
 s = input()
-un, n = 0, 0
+(un, n) = (0, 0)
 for c in s:
     if c not in neats:
         un += 1

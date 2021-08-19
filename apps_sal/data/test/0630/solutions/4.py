@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(x) for x in input().split()]
-
 ans = []
 for i in range(n):
     c = 0
@@ -17,5 +16,4 @@ for i in range(n):
     else:
         c += imax - imin + 1
     ans.append(c)
-
-print(" ".join([str(x) for x in ans]))
+print(' '.join([str(x) for x in ans]))

@@ -3,7 +3,7 @@ def medium(a, b, c):
 
 
 def wayy(x1, y1, x2, y2):
-    nx, ny = x1, y1
+    (nx, ny) = (x1, y1)
     if [nx, ny] not in way:
         way.append([nx, ny])
     while nx != x2 or ny != y2:
@@ -19,9 +19,9 @@ def wayy(x1, y1, x2, y2):
             way.append([nx, ny])
 
 
-ax, ay = map(int, input().split())
-bx, by = map(int, input().split())
-cx, cy = map(int, input().split())
+(ax, ay) = map(int, input().split())
+(bx, by) = map(int, input().split())
+(cx, cy) = map(int, input().split())
 way = []
 mx = medium(ax, bx, cx)
 my = medium(ay, by, cy)

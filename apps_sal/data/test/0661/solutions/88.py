@@ -1,12 +1,11 @@
 import bisect
 import sys
-
-
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
 
 
 class v:
+
     def __init__(self, f):
         self.f = f
         self.v = None
@@ -30,18 +29,16 @@ def read_list():
 
 
 def main():
-    M, K = read_values()
+    (M, K) = read_values()
     if K >= 2 ** M:
-        print((-1))
+        print(-1)
         return
-
     if M == 1:
-        print(("0 0 1 1" if K == 0 else -1))
+        print('0 0 1 1' if K == 0 else -1)
         return
-
     X = [str(i) for i in range(2 ** M) if i != K]
     res = X + [str(K)] + X[::-1] + [str(K)]
-    print((" ".join(res)))
+    print(' '.join(res))
 
 
 def __starting_point():

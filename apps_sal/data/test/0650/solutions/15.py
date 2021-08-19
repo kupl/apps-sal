@@ -7,4 +7,4 @@ def f(s):
     return cnt == 0 or cnt == len(s)
 
 
-print("YES" if f(input()) else "NO")
+print('YES' if f(input()) else 'NO')

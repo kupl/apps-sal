@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 ANS = []
 X = []
@@ -12,5 +12,4 @@ for i in range(N):
     ANS.append(j)
     X = sorted(X + [A[i]])[::-1]
     t += A[i]
-
 print(*ANS)

@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 l = sorted(list(map(int, input().split())))
 tot = 0
 prefix = []
@@ -16,8 +16,8 @@ for i in range(n + 1):
             t += m
         else:
             t += (n - i) * k
-        if (n - i) != 0:
-            t = (1.0 * t) / (n - i)
+        if n - i != 0:
+            t = 1.0 * t / (n - i)
             if ans < t:
                 ans = t
-print("%0.20f" % ans)
+print('%0.20f' % ans)

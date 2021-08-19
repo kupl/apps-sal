@@ -1,9 +1,6 @@
-n, k = [int(s) for s in input().split()]
-
+(n, k) = [int(s) for s in input().split()]
 lengths = [1]
-
-n, k = n - 1, k - 1
-
+(n, k) = (n - 1, k - 1)
 for i in range(n):
     lengths.append(lengths[-1] * 2 + 1)
 

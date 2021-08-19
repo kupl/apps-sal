@@ -1,6 +1,6 @@
-x1, y1 = map(int, input().split())
-x2, y2 = map(int, input().split())
-x3, y3 = map(int, input().split())
+(x1, y1) = map(int, input().split())
+(x2, y2) = map(int, input().split())
+(x3, y3) = map(int, input().split())
 mas = [[y1, x1], [y2, x2], [y3, x3]]
 mas.sort()
 for i in range(3):

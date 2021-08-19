@@ -1,4 +1,4 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 if m == 0:
     if k == 0:
         print(0, 0)
@@ -17,10 +17,10 @@ else:
         for num in range(a + 1):
             if num == k:
                 continue
-            print(num, end=" ")
-        print(k, end=" ")
+            print(num, end=' ')
+        print(k, end=' ')
         for num in range(a, -1, -1):
             if num == k:
                 continue
-            print(num, end=" ")
+            print(num, end=' ')
         print(k)

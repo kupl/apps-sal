@@ -1,5 +1,5 @@
 n = int(input())
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 
 
 def d(a, b):
@@ -7,6 +7,6 @@ def d(a, b):
 
 
 if d(x - 1, y - 1) <= d(n - x, n - y):
-    print("White")
+    print('White')
 else:
-    print("Black")
+    print('Black')

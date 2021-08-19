@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 finish = False
 length = 1
 for i in range(n - 1):
@@ -13,7 +13,7 @@ while n != 1:
         length = length // 2
         n -= 1
     if k > gran:
-        k -= (length // 2 + 1)
+        k -= length // 2 + 1
         length = length // 2
         n -= 1
 if not finish:

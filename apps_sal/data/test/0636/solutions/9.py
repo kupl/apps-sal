@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = sorted(a)
 result = []
@@ -11,4 +11,4 @@ for i in range(n):
     else:
         break
 print(len(result))
-print(' '.join(str(i) for i in result))
+print(' '.join((str(i) for i in result)))
