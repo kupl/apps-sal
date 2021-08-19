@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for y in range(t):
     flag = True
@@ -6,10 +5,10 @@ for y in range(t):
     x = int(input())
     arr = list(map(int, input().split()))
     arr.sort(reverse=True)
-    while(len(arr) != 0):
+    while len(arr) != 0:
         for k in range(len(arr)):
             arr[k] = arr[k] - 1
-            if(arr[k] == 0):
+            if arr[k] == 0:
                 flag = False
                 break
         for j in range(x):
@@ -17,7 +16,7 @@ for y in range(t):
                 arr.pop()
             except:
                 pass
-    if(flag == True):
+    if flag == True:
         print('Possible')
     else:
         print('Impossible')

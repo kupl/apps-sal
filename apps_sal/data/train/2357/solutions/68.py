@@ -1,17 +1,20 @@
 k = 72
 kk = k // 4
 K = 1 << k
-# nu = lambda L: int("".join([hex(K+a)[3:] for a in L[::-1]]), 16)
 
 
 def nu(L, sl=-1):
     if sl == -1:
         sl = slice(0, len(L))
-    return int("".join([hex(K + a)[3:] for a in L[sl][::-1]]), 16)
+    return int(''.join([hex(K + a)[3:] for a in L[sl][::-1]]), 16)
 
 
-def st(n): return hex(n)[2:]
-def li(s, l, r): return [int(a, 16) % P if len(a) else 0 for a in [s[-(i + 1) * kk:-i * kk] for i in range(l, r)]]
+def st(n):
+    return hex(n)[2:]
+
+
+def li(s, l, r):
+    return [int(a, 16) % P if len(a) else 0 for a in [s[-(i + 1) * kk:-i * kk] for i in range(l, r)]]
 
 
 def grow(d, v, h, start):
@@ -29,22 +32,15 @@ def grow(d, v, h, start):
     iv = [1] * (3 * d + 3)
     for i in range(1, 3 * d + 3):
         iv[i] = ti[i] * t[i - 1] % P
-
-    ###
     fg = li(st(nuf * nu(iv[1:2 * d + 2])), d, d * 2 + 1)
-    for i, (_fg, _ti) in enumerate(zip(fg, ti)):
+    for (i, (_fg, _ti)) in enumerate(zip(fg, ti)):
         h[i] = h[i] * (_fg * t[d + i + 1] % P * _ti % P) % P
-
-    ###
     fg1 = li(st(nuf * nu(inv[1:2 * d + 2])), d, d * 2 + 1)
     fg2 = li(st(nuf * nu(iv[d + 2:3 * d + 3])), d, d * 2 + 1)
     fg1.pop()
-    for i, (_fg1, _fg2) in enumerate(zip(fg1, fg2)):
+    for (i, (_fg1, _fg2)) in enumerate(zip(fg1, fg2)):
         h[i + d + 1] = _fg1 * fa[d + i + 1] % P * fainv[i] % P * (_fg2 * t[2 * d + i + 2] % P * ti[d + i + 1] % P) % P
-
     return h
-
-# Create a table of the factorial of the first v+2 multiples of v, i.e., [0!, v!, 2v!, ..., (v(v+1))!]
 
 
 def create_table(v, start):
@@ -53,7 +49,6 @@ def create_table(v, start):
     while s < v:
         X = grow(s, v, X, start)
         s *= 2
-
     table = [1]
     for x in X:
         table.append(table[-1] * x % P)
@@ -82,7 +77,7 @@ for i in range(1, 2 * v + 2):
     inv[i] = fainv[i] * fa[i - 1] % P
 
 
-def prod(a, b, vv):  # a * (a + 1) * ... * (b - 1) % P
+def prod(a, b, vv):
     T = create_table(vv, a)
     c = b - a
     s = T[c // vv]
@@ -97,7 +92,7 @@ def C(a, b):
     return prod(a - b + 1, a + 1, v) * pow(prod(1, b + 1, v), P - 2, P) % P
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 s = sum(A)
-print((C(N + M, s + N) if M >= s else 0))
+print(C(N + M, s + N) if M >= s else 0)

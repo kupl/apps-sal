@@ -1,11 +1,10 @@
 import itertools
-N, M, *A = [int(_) for _ in open(0).read().split()]
+(N, M, *A) = [int(_) for _ in open(0).read().split()]
 
 
 class Factorial:
+
     def __init__(self, max_fact, mod):
-        # mod should be prime number
-        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * (max_fact + 1)
         for idx in range(2, max_fact + 1):
             f[idx] = f[idx - 1] * idx
@@ -71,35 +70,10 @@ class Factorial:
 
 suma = sum(A)
 max_fact = suma + N
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 fact_instance = Factorial(max_fact, mod)
 comb = fact_instance.combination
-
 ans = comb(M + N, N + suma)
 print(ans)
-'''
-ans = 0
-for bs in itertools.product(range(M + 1), repeat=N):
-    f = 0
-    if sum(bs) > M:
-        continue
-    ans += list(
-        itertools.accumulate([comb(b, a) for a, b in zip(A, bs)],
-                             func=lambda x, y: x * y % mod))[-1]
-    ans %= mod
-print(ans)
-'''
-'''
-ans(N, M, sum(A))
-
-ans(3, 1, 1) = C[4, 0]
-ans(3, 2, 2) = C[5, 0]
-ans(3, 3, 3) = C[6, 0]
-
-ans(3, 4, 4) = C[7, 0]
-
-ans(3, 6, 5) = C[9, 1]
-ans(4, 6, 5) = C[10, 1]
-
-ans(N, M, sum(A)) = C[N + M, M - sum(A)]
-'''
+'\nans = 0\nfor bs in itertools.product(range(M + 1), repeat=N):\n    f = 0\n    if sum(bs) > M:\n        continue\n    ans += list(\n        itertools.accumulate([comb(b, a) for a, b in zip(A, bs)],\n                             func=lambda x, y: x * y % mod))[-1]\n    ans %= mod\nprint(ans)\n'
+'\nans(N, M, sum(A))\n\nans(3, 1, 1) = C[4, 0]\nans(3, 2, 2) = C[5, 0]\nans(3, 3, 3) = C[6, 0]\n\nans(3, 4, 4) = C[7, 0]\n\nans(3, 6, 5) = C[9, 1]\nans(4, 6, 5) = C[10, 1]\n\nans(N, M, sum(A)) = C[N + M, M - sum(A)]\n'

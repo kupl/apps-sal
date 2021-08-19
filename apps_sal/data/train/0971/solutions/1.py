@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     d = {}
@@ -6,7 +5,6 @@ for _ in range(int(input())):
     for i in l:
         d[i] = l.count(i)
     x = 0
-
     for j in d:
         if d[j] > x:
             x = d[j]

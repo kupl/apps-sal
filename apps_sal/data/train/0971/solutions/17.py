@@ -12,7 +12,6 @@ def changeIt(n, arr):
     return
 
 
-# Driver code starts here
 t = int(input())
 for _ in range(t):
     n = int(input())
