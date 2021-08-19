@@ -22,16 +22,13 @@ for _ in range(test):
       if len(value) == 0:
        print(correct[j])
 """
-
 from collections import Counter
-
 test = int(input())
 for _ in range(test):
-    n, q = list(map(int, input().split(' ')))
+    (n, q) = list(map(int, input().split(' ')))
     correct = []
     allcorrect = []
     allwrong = []
-    # corrected = set(corrected)
     wrong = []
     for j in range(n):
         mydict = input()
@@ -39,7 +36,6 @@ for _ in range(test):
             correct.append(mydict)
     for f in range(len(correct)):
         allcorrect.append(Counter(correct[f]))
-
     for i in range(q):
         misspelt = input()
         wrong.append(misspelt)

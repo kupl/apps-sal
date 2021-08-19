@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 MOD = 1000000007
 
@@ -28,7 +27,7 @@ while t:
     ma = input().split()
     u = int(ma[0])
     v = int(ma[1])
-    if s % x == 0 and ((s // x) & ((s // x) - 1) == 0):
+    if s % x == 0 and s // x & s // x - 1 == 0:
         inv = power(u, MOD - 2)
         print(mod(mod(mod(s // x) * v) * inv))
     else:

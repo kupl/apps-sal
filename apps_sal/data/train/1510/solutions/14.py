@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    lst = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    lst = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
     n = input()
     op = 0
     for i in n:

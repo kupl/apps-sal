@@ -1,9 +1,8 @@
 from itertools import chain, repeat
-K, N = list(map(int, input().split()))
+(K, N) = list(map(int, input().split()))
 
 
 def solve():
-
     if K % 2 == 0:
         return ' '.join(map(str, chain((K // 2,), repeat(K, N - 1))))
     else:
@@ -20,9 +19,8 @@ def solve():
 
 def naive():
     from itertools import product
-    s = sorted(chain.from_iterable(product(list(range(1, K + 1)), repeat=i) for i in range(1, N + 1)))
+    s = sorted(chain.from_iterable((product(list(range(1, K + 1)), repeat=i) for i in range(1, N + 1))))
     return ' '.join(map(str, s[(len(s) - 1) // 2]))
 
 
-print((solve()))
-# print(naive())
+print(solve())
