@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
 except:
@@ -13,4 +12,4 @@ for i in range(t):
     N[int(q)] += 1
     N[int(r)] += 1
     ans = 4 - max(N)
-    print(ans**3)
+    print(ans ** 3)

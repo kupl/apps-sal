@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for t in range(int(input())):
     ls = list(input())
     flag1 = 0
@@ -10,6 +8,6 @@ for t in range(int(input())):
             flag1 = 1
             break
     if flag1 == 0:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

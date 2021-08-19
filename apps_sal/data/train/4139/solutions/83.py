@@ -8,4 +8,3 @@ def rental_car_cost(d):
     else:
         total = d * 40
         return d * 40
-    # your code

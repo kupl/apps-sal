@@ -1,9 +1,8 @@
 from operator import itemgetter
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 arr = []
 dic = {}
-# m=[]
 two = []
 for i in range(m):
     y = list(map(str, input().split()))
@@ -24,12 +23,4 @@ for i in two:
     print(i[1])
 for i in arr:
     print(i[1])
-
-
-'''if a in dic:
-     dic[a].append(y[2])
-     flag=1
-    else:
-     dic[a]=[y[2]]
-     flag=1'''
-# if flag==0:
+'if a in dic:\n     dic[a].append(y[2])\n     flag=1\n    else:\n     dic[a]=[y[2]]\n     flag=1'
