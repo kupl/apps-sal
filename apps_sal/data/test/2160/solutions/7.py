@@ -1,5 +1,5 @@
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     x = list(map(int, input().split()))
     fpos = [k for i in range(n + 1)]
     lpos = [-1 for i in range(n + 1)]
@@ -11,14 +11,11 @@ def solve():
     for i in range(1, n + 1):
         if lpos[i] == -1:
             ans += 1
-    # print(ans)
     for i in range(1, n):
         if fpos[i] >= lpos[i + 1]:
             ans += 1
         if fpos[i + 1] >= lpos[i]:
             ans += 1
-
-        # print(i,i+1,ans)
     print(ans)
 
 

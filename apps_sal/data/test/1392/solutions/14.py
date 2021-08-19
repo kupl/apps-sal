@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 a = []
 for i in range(n):
     a.append(input())
-
 r = 0
 for s in a:
     f = True
@@ -14,5 +11,4 @@ for s in a:
             break
     if f:
         r = r + 1
-
 print(r)

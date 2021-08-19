@@ -15,9 +15,7 @@ for i in range(0, m):
         break
     s.append(str(num))
 if e != 0:
-    c = ["0" for l in range(e, m)]
-    # for i in range(e, m):
-    #    t = input()
+    c = ['0' for l in range(e, m)]
     s.extend(c)
-st = " "
+st = ' '
 print(st.join(s))

@@ -1,9 +1,9 @@
-# AC
 import sys
 sys.setrecursionlimit(1000000)
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0

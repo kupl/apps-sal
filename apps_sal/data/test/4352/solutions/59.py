@@ -1,7 +1,4 @@
-# 入力
-A, B = map(int, input().split())
-
-# 同じなら引き分け、1が出たら勝ち、大きい方が勝ち
+(A, B) = map(int, input().split())
 if A == B:
     print('Draw')
 elif A == 1:

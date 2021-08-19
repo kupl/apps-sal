@@ -1,7 +1,5 @@
-# A - One Card Poker
 def main():
-    a, b = map(int, input().split())
-
+    (a, b) = map(int, input().split())
     if a == b:
         print('Draw')
     elif a == 1 and b != 1:

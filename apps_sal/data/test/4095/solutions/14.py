@@ -1,8 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 mid = t.index(m)
-# print(mid)
-
 lefts = [0] * 600000
 lefts[300000] = 1
 gt = 0
@@ -13,8 +11,6 @@ for i in range(mid - 1, -1, -1):
     else:
         gt += 1
     lefts[300000 + gt - lt] += 1
-
-
 rights = [0] * 600000
 rights[300000] = 1
 gt = 0
@@ -25,10 +21,6 @@ for i in range(mid + 1, n):
     else:
         gt += 1
     rights[300000 + gt - lt] += 1
-
-# print(lefts[299995:300005])
-# print(rights[299995:300005])
-
 res = 0
 for i in range(0, 210000):
     res += lefts[300000 - i] * rights[300000 + i]
@@ -36,5 +28,4 @@ for i in range(0, 210000):
     if i != 0:
         res += lefts[300000 + i] * rights[300000 - i]
         res += lefts[300000 + i] * rights[300000 - i + 1]
-
 print(res)

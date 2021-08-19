@@ -1,14 +1,11 @@
-# 054a
-
-A, B = list(map(int, input().split()))    # カードの数字を入力
-
+(A, B) = list(map(int, input().split()))
 if A == B:
-    print("Draw")
+    print('Draw')
 elif A == 1:
-    print("Alice")
+    print('Alice')
 elif B == 1:
-    print("Bob")
+    print('Bob')
 elif A < B:
-    print("Bob")
+    print('Bob')
 else:
-    print("Alice")
+    print('Alice')

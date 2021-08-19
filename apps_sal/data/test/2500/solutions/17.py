@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 N = int(input())
-
 MOD = 1000000007
 cache = {0: 1, 1: 2}
 
@@ -17,4 +15,4 @@ def f(n):
     return result
 
 
-print((f(N)))
+print(f(N))

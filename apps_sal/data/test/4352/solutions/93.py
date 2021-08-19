@@ -1,8 +1,4 @@
-# 入力
-A, B = list(map(int, input().split()))
-
-# 出力
-
+(A, B) = list(map(int, input().split()))
 if A == B:
     print('Draw')
 elif A == 1:
