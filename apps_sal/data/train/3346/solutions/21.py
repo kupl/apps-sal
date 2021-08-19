@@ -1,4 +1,5 @@
 def gap(g, m, n):
+
     def isprime(a):
         a = abs(int(a))
         if a < 2:
@@ -7,11 +8,10 @@ def gap(g, m, n):
             return True
         if not a & 1:
             return False
-        for x in range(3, int(a**0.5) + 1, 2):
+        for x in range(3, int(a ** 0.5) + 1, 2):
             if a % x == 0:
                 return False
         return True
-
     if g & 1:
         if 2 >= m and 2 <= n:
             if isprime(2 + g):
@@ -29,10 +29,9 @@ def gap(g, m, n):
                     if isprime(j + 2 * i + g):
                         result = [j + 2 * i, j + 2 * i + g]
                         status = True
-                else:
-                    if isprime(j + 2 * i + g):
-                        if not status:
-                            break
+                elif isprime(j + 2 * i + g):
+                    if not status:
+                        break
             if status:
                 return result
     return None

@@ -1,6 +1,6 @@
 def pattern(n):
     x = 1
-    new = ""
+    new = ''
     while x < n + 1 and n > 0:
         new += str(x) * x + '\n'
         x += 1

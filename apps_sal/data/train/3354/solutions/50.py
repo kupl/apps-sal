@@ -4,5 +4,4 @@ def boolean_to_string(b):
         result = True
     else:
         result = False
-
     return str(result)

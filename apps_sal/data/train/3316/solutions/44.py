@@ -1,4 +1,4 @@
-def how_many_light_sabers_do_you_own(name="Jack"):
+def how_many_light_sabers_do_you_own(name='Jack'):
     if name == 'Zach':
         return 18
     else:

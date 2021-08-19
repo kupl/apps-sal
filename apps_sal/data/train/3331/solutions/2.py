@@ -1,6 +1,6 @@
 def solve(arr, n):
-    dogs = [i for i, x in enumerate(arr) if x == 'D']
-    cats = {i for i, x in enumerate(arr) if x == 'C'}
+    dogs = [i for (i, x) in enumerate(arr) if x == 'D']
+    cats = {i for (i, x) in enumerate(arr) if x == 'C'}
     catch = 0
     while dogs and cats:
         dog = dogs.pop()

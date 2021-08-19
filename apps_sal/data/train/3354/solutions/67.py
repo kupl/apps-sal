@@ -1,1 +1,2 @@
-def boolean_to_string(a): return str(a)
+def boolean_to_string(a):
+    return str(a)

@@ -1,5 +1,5 @@
 def evil(n):
-    binary = bin(n).replace("0b", "")
+    binary = bin(n).replace('0b', '')
     count = 0
     for i in str(binary):
         if i == '1':

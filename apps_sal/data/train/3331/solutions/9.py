@@ -1,7 +1,7 @@
 def solve(arr, n):
     a = [''] * n + arr[:] + [''] * n
     r = 0
-    for i, e in enumerate(a):
+    for (i, e) in enumerate(a):
         if e == 'D':
             for j in range(i - n, i + n + 1):
                 if a[j] == 'C':

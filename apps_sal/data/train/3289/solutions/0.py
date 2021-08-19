@@ -1,5 +1,5 @@
 def motif_locator(sequence, motif):
-    res, i = [], 0
+    (res, i) = ([], 0)
     while True:
         i = sequence.find(motif, i) + 1
         if not i:

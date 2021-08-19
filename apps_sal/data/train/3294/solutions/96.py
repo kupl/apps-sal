@@ -1,3 +1,3 @@
 def converter(mpg):
-    kpl = mpg / 2.8248105314960629921259842519685
-    return float("{:.2f}".format(kpl))
+    kpl = mpg / 2.824810531496063
+    return float('{:.2f}'.format(kpl))

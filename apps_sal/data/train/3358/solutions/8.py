@@ -1,4 +1,3 @@
-
 def correct(string):
     cor = ''
     for leter in string:

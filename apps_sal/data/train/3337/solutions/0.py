@@ -1,6 +1,5 @@
 import re
-
-REGEX = re.compile(r'\[(.*?)\]')
+REGEX = re.compile('\\[(.*?)\\]')
 
 
 def bracket_buster(strng):

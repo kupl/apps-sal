@@ -1,15 +1,15 @@
-N = 10_000
+N = 10000
 a = [1] * N
 a[0] = a[1] = 0
 for i in range(2, N):
     if a[i]:
-        for j in range(i**2, N, i):
+        for j in range(i ** 2, N, i):
             a[j] = 0
-a = [i for i, x in enumerate(a) if x]
+a = [i for (i, x) in enumerate(a) if x]
 
 
 def solve(n, m):
-    return all(not n % x for x in f(m))
+    return all((not n % x for x in f(m)))
 
 
 def f(n):

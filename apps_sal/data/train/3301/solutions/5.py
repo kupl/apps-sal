@@ -2,13 +2,13 @@ from bisect import bisect_left
 
 
 def gen():
-    x, y = 0, 1
+    (x, y) = (0, 1)
     while True:
         yield y
-        x, y = y, x + y
+        (x, y) = (y, x + y)
 
 
-fib, memo, res = gen(), [0], [0]
+(fib, memo, res) = (gen(), [0], [0])
 
 
 def even_fib(m):

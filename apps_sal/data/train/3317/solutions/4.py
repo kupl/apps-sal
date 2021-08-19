@@ -1,4 +1,4 @@
-trans = str.maketrans("abdeiknoprtuvwxy", "αβδεικηθρπτμυωχγ")
+trans = str.maketrans('abdeiknoprtuvwxy', 'αβδεικηθρπτμυωχγ')
 
 
 def gr33k_l33t(string):

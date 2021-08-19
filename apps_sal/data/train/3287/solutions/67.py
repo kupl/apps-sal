@@ -1,5 +1,5 @@
 def mouth_size(animal):
     if animal.title() == 'Alligator':
-        return "small"
+        return 'small'
     else:
-        return "wide"
+        return 'wide'

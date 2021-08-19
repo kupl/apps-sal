@@ -1,7 +1,7 @@
 def pattern(n):
-    result = ""
+    result = ''
     if n < 1:
-        return ""
+        return ''
     else:
         for num in range(1, n + 1):
             row = ''

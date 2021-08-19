@@ -23,5 +23,4 @@ def gap(g, m, n):
             return None
         if prime_number_right - prime_number_left == g:
             return [prime_number_left, prime_number_right]
-
         prime_number_left = prime_number_right

@@ -1,4 +1,4 @@
-translation = str.maketrans("IREASGTBOlzeasbtgo", "123456780123456790")
+translation = str.maketrans('IREASGTBOlzeasbtgo', '123456780123456790')
 
 
 def cypher(s):

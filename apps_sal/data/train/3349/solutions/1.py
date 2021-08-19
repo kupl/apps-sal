@@ -6,5 +6,4 @@ def find_missing_number(sequence):
                 return i
     except ValueError:
         return 1
-
     return 0

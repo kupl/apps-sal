@@ -7,7 +7,7 @@ def rule30(list_, n):
 
 def ruler(*args):
     data = [1 if x == 1 else 0 for x in args]
-    x = int("".join(map(str, data)), 2)
+    x = int(''.join(map(str, data)), 2)
     if x == 0 or x > 4:
         return 0
     else:

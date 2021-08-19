@@ -1,7 +1,7 @@
 def find_missing_number(sequence):
-    if sequence == "":
+    if sequence == '':
         return 0
-    sequence = sequence.split(" ")
+    sequence = sequence.split(' ')
     try:
         sequence = list(map(int, sequence))
         sequence.sort()

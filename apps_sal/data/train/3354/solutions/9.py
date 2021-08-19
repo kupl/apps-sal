@@ -1,1 +1,2 @@
-def boolean_to_string(b): return ["False", "True"][b]
+def boolean_to_string(b):
+    return ['False', 'True'][b]

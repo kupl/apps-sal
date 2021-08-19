@@ -1,7 +1,7 @@
 def correct(string):
     new = ''
     for i in string:
-        if i == "0":
+        if i == '0':
             new = new + 'O'
         elif i == '1':
             new = new + 'I'

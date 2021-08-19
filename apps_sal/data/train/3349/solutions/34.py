@@ -2,7 +2,7 @@ def find_missing_number(sequence):
     if not sequence:
         return 0
     try:
-        sequence = [int(el) for el in sequence.split(" ")]
+        sequence = [int(el) for el in sequence.split(' ')]
     except:
         return 1
     sequence.sort()

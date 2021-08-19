@@ -14,16 +14,16 @@ def prime(number):
 def gap(g, m, n):
     res = []
     i = m
-    while (i < n + 1):
+    while i < n + 1:
         if prime(i):
             res.append(i)
             break
         i += 1
     while True:
         j = i + 1
-        while (j < n + 1):
+        while j < n + 1:
             if prime(j):
-                if (j - i == g):
+                if j - i == g:
                     res.append(j)
                     return res
                 else:

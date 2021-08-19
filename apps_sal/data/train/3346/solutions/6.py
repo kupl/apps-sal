@@ -6,9 +6,9 @@ def isPrime(x):
         return False
     if x in (3, 5, 7):
         return True
-    if x % 2 == 0 or x % 3 == 0 or x % 5 == 0 or x % 7 == 0:
+    if x % 2 == 0 or x % 3 == 0 or x % 5 == 0 or (x % 7 == 0):
         return False
-    for i in range(2, int(x**.5) + 1):
+    for i in range(2, int(x ** 0.5) + 1):
         if x % i == 0:
             return False
     return True

@@ -3,15 +3,14 @@ from collections import defaultdict
 
 
 def shortest(N, edge):
-    ver, inf = defaultdict(list), 10**10
+    (ver, inf) = (defaultdict(list), 10 ** 10)
     for e in edge:
         ver[e[0]].append(e[1:])
-
     dist = {i: inf for i in range(N)}
-    dist[0], pq = 0, []
+    (dist[0], pq) = (0, [])
     heapq.heappush(pq, [dist[0], 0])
     while pq:
-        u_dis, u_node = heapq.heappop(pq)
+        (u_dis, u_node) = heapq.heappop(pq)
         if u_dis == dist[u_node]:
             for v in ver[u_node]:
                 v_node = v[0]

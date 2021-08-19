@@ -1,5 +1,5 @@
 def mouth_size(animal):
-    if "alligator" in animal.casefold():
-        return "small"
+    if 'alligator' in animal.casefold():
+        return 'small'
     else:
-        return "wide"
+        return 'wide'

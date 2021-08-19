@@ -1,4 +1,5 @@
-def is_prime(n): return all(n % d for d in range(3, int(n ** .5) + 1, 2))
+def is_prime(n):
+    return all((n % d for d in range(3, int(n ** 0.5) + 1, 2)))
 
 
 def primes_a_p(lower_limit, upper_limit):

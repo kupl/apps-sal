@@ -1,10 +1,10 @@
 def mouth_size(animal):
     animal = str(animal).lower()
-    if animal == "alligator":
-        return "small"
+    if animal == 'alligator':
+        return 'small'
     else:
-        return "wide"
+        return 'wide'
 
 
-s = mouth_size("alligator")
+s = mouth_size('alligator')
 print(s)

@@ -1,12 +1,10 @@
 def dec_to_bin(n):
     bin_list = []
     x = n
-
     while x > 0:
         bit = x % 2
         bin_list.append(bit)
         x //= 2
-
     return bin_list
 
 

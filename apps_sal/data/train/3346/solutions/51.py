@@ -3,7 +3,6 @@ def is_prime(a):
         return False
     if a <= 3:
         return True
-
     if a % 2 == 0 or a % 3 == 0:
         return False
     i = 5
@@ -16,7 +15,7 @@ def is_prime(a):
 
 def gap(g, m, n):
     flag = 0
-    start, end = -1, -1
+    (start, end) = (-1, -1)
     if m % 2 == 0:
         m += 1
     for i in range(m, n + 1, 2):
@@ -29,6 +28,5 @@ def gap(g, m, n):
                 if end - start == g:
                     return [start, end]
                 else:
-                    start, end = i, -1
-
+                    (start, end) = (i, -1)
     return None

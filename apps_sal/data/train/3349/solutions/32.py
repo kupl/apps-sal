@@ -8,7 +8,6 @@ def find_missing_number(sequence):
                 continue
             else:
                 return 1
-
         for i in range(1, len(se) + 1):
             if str(i) not in se:
                 return i

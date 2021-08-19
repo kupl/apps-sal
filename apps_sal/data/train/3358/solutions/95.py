@@ -1,10 +1,4 @@
-
-CORRECTIONS = {
-    '0': 'O',
-    '5': 'S',
-    '1': 'I',
-}
-
+CORRECTIONS = {'0': 'O', '5': 'S', '1': 'I'}
 CORRECTION_TRANSLATION = str.maketrans(CORRECTIONS)
 
 

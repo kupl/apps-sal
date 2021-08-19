@@ -1,5 +1,5 @@
 def solve(a, b):
-    li, j = [], 2
+    (li, j) = ([], 2)
     while b > 1:
         if b % j:
             j += 1

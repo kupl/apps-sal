@@ -5,4 +5,4 @@ def mouth_size(animal):
         return 'wide'
 
 
-mouth_size("alligator")
+mouth_size('alligator')

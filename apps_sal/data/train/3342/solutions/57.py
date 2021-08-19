@@ -4,5 +4,5 @@ def pattern(n):
         if i == n:
             c = c + i * str(i)
         else:
-            c = c + i * str(i) + "\n"
+            c = c + i * str(i) + '\n'
     return c

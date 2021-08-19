@@ -2,7 +2,7 @@ import math
 
 
 def prime(x):
-    if not (any(not (x % y) for y in range(2, int(math.ceil(math.sqrt(x))) + 1))):
+    if not any((not x % y for y in range(2, int(math.ceil(math.sqrt(x))) + 1))):
         return True
 
 

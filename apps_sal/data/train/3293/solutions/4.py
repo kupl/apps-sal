@@ -13,5 +13,5 @@ def pure30(row, n):
         row.append(0)
         row.insert(0, 0)
         ref = row[:]
-        row = [cell30(0 if i == 0 else ref[i - 1], v, ref[i + 1] if i + 1 < len(ref) else 0) for i, v in enumerate(row)]
+        row = [cell30(0 if i == 0 else ref[i - 1], v, ref[i + 1] if i + 1 < len(ref) else 0) for (i, v) in enumerate(row)]
     return row

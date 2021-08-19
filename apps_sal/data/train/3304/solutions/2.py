@@ -1,5 +1,5 @@
 def is_inertial(arr):
-    even, odd = [], []
+    (even, odd) = ([], [])
     for num in arr:
         if num % 2 == 0:
             even.append(num)

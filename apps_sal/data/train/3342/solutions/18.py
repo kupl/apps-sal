@@ -2,7 +2,7 @@ def pattern(n):
     x = 1
     L = []
     while x <= n:
-        result = (x) * str(x)
+        result = x * str(x)
         x = x + 1
         L.append(result)
     if n < 1:

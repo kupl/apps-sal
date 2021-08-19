@@ -1,4 +1,3 @@
-
 def find_uniq(arr):
     arr.sort(key=lambda x: x.lower())
     arr1 = [set(i.lower()) for i in arr]

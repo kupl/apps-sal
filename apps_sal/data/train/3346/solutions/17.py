@@ -6,7 +6,7 @@ def is_prime(a):
         return True
     if a < 2:
         return False
-    for x in range(2, int(a**0.5) + 1):
+    for x in range(2, int(a ** 0.5) + 1):
         if a % x == 0:
             return False
     primes.append(a)

@@ -12,9 +12,8 @@ def sharkovsky(a, b):
             return True
         else:
             return False
+    elif b % 2 == 1:
+        return False
     else:
-        if b % 2 == 1:
-            return False
-        else:
-            result = sharkovsky(a / 2, b / 2)
-            return result
+        result = sharkovsky(a / 2, b / 2)
+        return result

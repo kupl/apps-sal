@@ -26,7 +26,7 @@ def sharkovsky(a, b):
         number = 2 * counter
     counter = 3
     exponential = 1
-    number = (2**exponential) * counter
+    number = 2 ** exponential * counter
     while number <= higher:
         if number == a:
             return True
@@ -34,10 +34,10 @@ def sharkovsky(a, b):
             return False
         counter = counter + 2
         exponential = exponential + 1
-        number = (2**exponential) * counter
+        number = 2 ** exponential * counter
     counter = 3
     exponential = 2
-    number = (2**exponential) * counter
+    number = 2 ** exponential * counter
     while number <= higher:
         if number == a:
             return True
@@ -45,21 +45,21 @@ def sharkovsky(a, b):
             return False
         counter = counter + 2
         exponential = exponential + 1
-        number = (2**exponential) * counter
+        number = 2 ** exponential * counter
     exponential = 1
-    number = (2**exponential)
+    number = 2 ** exponential
     while number >= lower:
         if number == a:
             return True
         if number == b:
             return False
         exponential = exponential - 1
-        number = (2**exponential)
+        number = 2 ** exponential
     number = higher
     while number >= lower:
         if number == a:
             return True
         if number == b:
             return False
-        number = (number - 2)
+        number = number - 2
     return False

@@ -3,7 +3,7 @@ def score_pole_vault(vaulter_list):
     for v in vaulter_list:
         x = [len(v['results']), 0, 0]
         f = 0
-        for i, t in enumerate(v['results'][::-1]):
+        for (i, t) in enumerate(v['results'][::-1]):
             if 'O' in t and x[0] == len(v['results']):
                 x = [i, t.count('X'), 0]
             f += t.count('X')

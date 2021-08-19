@@ -3,7 +3,7 @@ def three_amigos(a):
     for i in range(len(a) - 2):
         s = a[i] & 1
         t = a[i:i + 3]
-        if all(j & 1 == s for j in t):
+        if all((j & 1 == s for j in t)):
             m = max(t)
             m_ = min(t)
             li.append([m - m_, t])

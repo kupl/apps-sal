@@ -5,20 +5,19 @@ def isPrime(n):
         return True
     if n % 3 == 0 or n % 2 == 0:
         return False
-    k, a, b = 1, 0, 0
+    (k, a, b) = (1, 0, 0)
     sr = int(n ** 0.5)
     while b < sr:
         a = 6 * k - 1
         b = 6 * k + 1
         if n % a == 0 or n % b == 0:
             return False
-
         k += 1
     return True
 
 
 def gap(g, m, n):
-    curr, prev = 0, 0
+    (curr, prev) = (0, 0)
     for i in range(m, n + 1):
         if isPrime(i):
             prev = curr
