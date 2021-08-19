@@ -7,7 +7,7 @@ def main():
     k = len(a)
     prv = []
     cur = []
-    for i, e in enumerate(a):
+    for (i, e) in enumerate(a):
         if i % 2:
             cur.append(a[i])
         else:
@@ -18,12 +18,11 @@ def main():
     if copysign(1, prv[0]) != copysign(1, cur[0]):
         return 0
     for r in range(k):
-        # print(prv)
         nxt = [cur[0] * prv[i] - prv[0] * cur[i] for i in range(1, n)] + [0]
         if nxt == [0] * n:
             for i in range(n):
                 nxt[i] = cur[i] * (k - r - 2 * i)
-        prv, cur = cur, nxt
+        (prv, cur) = (cur, nxt)
         if copysign(1, prv[0]) != copysign(1, cur[0]) or cur[0] == 0:
             return 0
     return 1

@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, k = (map(int, input().split()))
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     if k == 1:
         c_sum = l[0]

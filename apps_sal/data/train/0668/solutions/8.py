@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 tcases = int(input())
 myanswer = []
@@ -19,7 +18,6 @@ def programrun(tcases):
             if mendnow < 0:
                 mendnow = 0
         return msofar
-
     for _ in range(0, tcases):
         fline = input().split()
         fline = list(map(int, fline))
@@ -32,12 +30,10 @@ def programrun(tcases):
                 print(msumfinder(a, n, k))
             else:
                 print(msumfinder(a, n, 2) + (k - 2) * sa)
-
+        elif k == 1:
+            print(msumfinder(a, n, 1))
         else:
-            if k == 1:
-                print(msumfinder(a, n, 1))
-            else:
-                print(msumfinder(a, n, 2))
+            print(msumfinder(a, n, 2))
 
 
 programrun(tcases)

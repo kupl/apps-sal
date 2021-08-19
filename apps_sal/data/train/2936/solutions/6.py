@@ -1,6 +1,5 @@
 def num_of_open_lockers(n):
-    print("lockers:", n)
-
+    print('lockers:', n)
     i = 0
     count = 1
     open = 0
@@ -14,6 +13,4 @@ def num_of_open_lockers(n):
             even = True
             i += count * 2
             count += 1
-
-    # print "open:", open
     return open

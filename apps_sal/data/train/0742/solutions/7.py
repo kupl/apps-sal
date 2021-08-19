@@ -1,8 +1,6 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     coef = list(map(int, input().split()))
-    # print(coef)
     mpow = len(coef) - 1
     row1 = []
     row2 = []
@@ -12,11 +10,10 @@ for _ in range(t):
             row1.append(coef[i])
         else:
             row2.append(coef[i])
-    if (len(coef)) % 2:
+    if len(coef) % 2:
         row2.append(0)
     mat.append(row1)
     mat.append(row2)
-    # print(mat)
     idle = [0] * len(row1)
     for i in range(2, len(coef)):
         rown = []
@@ -25,28 +22,20 @@ for _ in range(t):
             rown.append(val)
         for _ in range(len(rown), len(row1)):
             rown.append(0)
-        # print(rown)
         mat.append(rown)
         if rown == idle:
             for i in range(len(mat)):
                 if mat[i] == idle:
                     for j in range(len(mat[i])):
                         mat[i][j] = mat[i - 1][j] * (mpow + 4 - (i + 1) - 2 * (j + 1))
-
-    # print(mat)
-    # print(idle)
     s = 0
     sa = 0
     for i in mat:
         s += i[0]
         sa += abs(i[0])
     c = 0
-    '''for i in range(len(mat)):
-        if mat[i]==idle:
-            for j in range(len(mat[i])):
-                mat[i][j] = mat[i-1][j]*(mpow+4-(i+1)-2*(j+1))'''
-    # print(mat)
-    if(s == sa):
+    'for i in range(len(mat)):\n        if mat[i]==idle:\n            for j in range(len(mat[i])):\n                mat[i][j] = mat[i-1][j]*(mpow+4-(i+1)-2*(j+1))'
+    if s == sa:
         c = 1
         for i in range(len(mat)):
             if mat[i][0] == 0:
