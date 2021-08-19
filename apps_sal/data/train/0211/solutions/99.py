@@ -1,6 +1,6 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
-        # print(s)
         le = len(s) - 1
         max = 1
         for ma in range(pow(2, le) - 1, 0, -1):

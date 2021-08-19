@@ -1,4 +1,5 @@
 def partition(s):
+
     def backtrack(index, path):
         if index == len(s):
             res.append(list(path))
@@ -6,7 +7,6 @@ def partition(s):
             path.append(s[index])
             backtrack(index + 1, path)
             path.pop()
-
             if path:
                 path[-1] = path[-1] + s[index]
                 backtrack(index + 1, path)
@@ -21,7 +21,6 @@ class Solution:
         ans = 0
         lst = partition(s)
         for prt in lst:
-            if(len(set(prt)) == len(prt)):
+            if len(set(prt)) == len(prt):
                 ans = max(ans, len(prt))
-        # print(lst)
         return ans

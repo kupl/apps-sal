@@ -4,4 +4,3 @@ def past(h, m, s):
     s = s * 1000
     time = 0 + h + m + s
     return time
-    # Good Luck!

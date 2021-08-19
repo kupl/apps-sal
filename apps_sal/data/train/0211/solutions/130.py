@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s) - 1
         ans = 1
@@ -19,6 +20,5 @@ class Solution:
             tmp = s[start:]
             if tmp in subs:
                 continue
-            # print(subs, i)
             ans = max(ans, len(subs) + 1)
         return ans
