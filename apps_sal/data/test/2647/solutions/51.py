@@ -1,5 +1,5 @@
 from collections import deque
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 G = []
 white_num = 0
 for i in range(a):
@@ -9,28 +9,28 @@ for i in range(a):
 
 
 def mazesearch(G, initial_h, initial_w, target_h, target_w):
-    '''
+    """
     G is for example:
         G = [[1,0,1,1,1,1],
             [1,0,1,0,1,0],
             [1,0,1,0,1,1],
             [1,1,1,0,1,1]]
-    '''
+    """
     steps = 0
-    BLOCKED, ALLOWED = '#', '.'
-    UNVISITED, VISITED = 0, 1
+    (BLOCKED, ALLOWED) = ('#', '.')
+    (UNVISITED, VISITED) = (0, 1)
     directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
     if G[initial_h][initial_w] == BLOCKED:
         return -1
-    height, width = len(G), len(G[0])
+    (height, width) = (len(G), len(G[0]))
     is_visited = [[UNVISITED for w in range(width)] for h in range(height)]
     is_visited[initial_h][initial_w] = VISITED
     queue = deque([(initial_h, initial_w, steps)])
     while queue:
-        h, w, steps = queue.popleft()
+        (h, w, steps) = queue.popleft()
         if h == target_h and w == target_w:
             return steps
-        for dh, dw in directions:
+        for (dh, dw) in directions:
             new_h = h + dh
             new_w = w + dw
             if not (0 <= new_h < height and 0 <= new_w < width):

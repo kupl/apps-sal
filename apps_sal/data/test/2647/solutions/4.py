@@ -1,16 +1,15 @@
 from collections import deque
-
-Y, X = map(int, input().split())
-Map = list(input() for _ in range(Y))
+(Y, X) = map(int, input().split())
+Map = list((input() for _ in range(Y)))
 
 
 def bfs(sy, sx, gy, gx):
-    seen = list([-1] * X for _ in range(Y))
+    seen = list(([-1] * X for _ in range(Y)))
     queue = deque()
     queue.append((sy, sx))
     seen[sy][sx] = 0
     while queue:
-        y, x = queue.popleft()
+        (y, x) = queue.popleft()
         search_around(y, x, seen, queue)
         if seen[gy][gx] > 0:
             return seen[gy][gx]
@@ -18,8 +17,8 @@ def bfs(sy, sx, gy, gx):
 
 def search_around(y, x, seen, queue):
     count = seen[y][x]
-    for u, t in [(y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)]:
-        if u < 0 or t < 0 or u >= Y or t >= X:
+    for (u, t) in [(y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)]:
+        if u < 0 or t < 0 or u >= Y or (t >= X):
             continue
         elif Map[u][t] == '#' or seen[u][t] != -1:
             continue
@@ -32,7 +31,6 @@ for M in Map:
     for m in M:
         if m == '#':
             cnt += 1
-
 b = bfs(0, 0, Y - 1, X - 1)
 if b == None:
     print(-1)

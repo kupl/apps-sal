@@ -2,19 +2,15 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    inf = 10**20
-    n, k = map(int, readline().split())
+    inf = 10 ** 20
+    (n, k) = map(int, readline().split())
     co = [list(map(int, readline().split())) for _ in range(n)]
-
     co.sort()
-
     x_range = []
     for i in range(n - 1):
         for j in range(i + 1, n):
             x_range.append((co[i][0], co[j][0]))
-
     co.sort(key=lambda x: x[1])
     ans = inf
     for x in x_range:
@@ -36,7 +32,6 @@ def main():
                     break
             if cnt == k:
                 ans = min(ans, (x_max - x_min) * (y_max - y_min))
-
     print(ans)
 
 
