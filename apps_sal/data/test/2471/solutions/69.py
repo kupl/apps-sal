@@ -89,6 +89,7 @@ for i in range(n):
                 d[pid] = 1
             else:
                 d[pid] += 1
+    # print(d)
 
 ans = [0 for i in range(10)]
 

@@ -44,10 +44,10 @@ class Solution:
                     x, y = b[0] + dx, b[1] + dy
                     bx, by = b[0] - dx, b[1] - dy
 
-                    if 0 <= x < m and 0 <= y < n and 0 <= bx < m and 0 <= by < n and grid[x][y] != '
-                    seen.add(((bx, by), b))
-                    q.append(((bx, by), b))
-                    if (bx, by) == t:
-                        return depth
+                    if 0 <= x < m and 0 <= y < n and 0 <= bx < m and 0 <= by < n and grid[x][y] != '#' and grid[bx][by] != '#' and can_reach(s, (x, y)) and ((bx, by), b) not in seen:
+                        seen.add(((bx, by), b))
+                        q.append(((bx, by), b))
+                        if (bx, by) == t:
+                            return depth
                 grid[b[0]][b[1]] = '.'
         return -1

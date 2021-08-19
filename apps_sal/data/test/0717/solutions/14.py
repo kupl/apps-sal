@@ -1,3 +1,5 @@
+# python3
+# utf-8
 
 doctors_nr = int(input())
 doctor_idx___start_day_idx = []

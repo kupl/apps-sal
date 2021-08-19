@@ -17,3 +17,6 @@ def high(x):
         else:
             score = 0
     return big_word
+    # Code here 54
+
+    # for every in word: if every in scoreboard, score + every.index()

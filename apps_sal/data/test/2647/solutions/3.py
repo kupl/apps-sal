@@ -18,8 +18,8 @@ while q:
 
         if nextx < 0 or nextx >= w or nexty < 0 or nexty >= h:
             continue
-        if grid[nexty][nextx] == "
-        continue
+        if grid[nexty][nextx] == "#":
+            continue
 
         dist = dists[y][x] + 1
 

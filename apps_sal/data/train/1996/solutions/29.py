@@ -7,6 +7,7 @@ class Solution:
 
         return sorted(list(res))
 
+    # dfs is to check if there's a cycle starting from this point
     def dfs(self, graph, i, visited, res):
         visited.add(i)
         for j in graph[i]:

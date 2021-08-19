@@ -11,6 +11,7 @@ def pick_peaks(arr):
         add_node = False
         if value >= arr[count + 1] and value > arr[count - 1]:
             if value == arr[count + 1]:
+                # checking if value eventually goes down
                 for i in range(2, length - count):
                     if arr[count + i] > value:
                         break

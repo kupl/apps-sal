@@ -1,3 +1,4 @@
+# they are all inclusive
 R, C, N, K = list(map(int, input().split()))
 v = []
 for i in range(N):

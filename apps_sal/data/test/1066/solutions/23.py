@@ -1,6 +1,7 @@
 import sys
 from math import ceil
 my_file = sys.stdin
+#my_file = open("input.txt", "r")
 line = my_file.readline().split()
 n, k = int(line[0]), int(line[1])
 

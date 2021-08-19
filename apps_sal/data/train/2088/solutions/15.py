@@ -9,6 +9,7 @@ def calculate(i, j, colors):
             return 1
         dp[i][j] = 10000
         dp[i][j] = min(dp[i][j], 1 + calculate(i + 1, j, colors))
+        # print(i,j)
         if colors[i] == colors[i + 1]:
             dp[i][j] = min(dp[i][j], 1 + calculate(i + 2, j, colors))
         for k in range(i + 2, j + 1):

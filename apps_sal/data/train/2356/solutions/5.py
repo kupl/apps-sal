@@ -1,6 +1,10 @@
 n, k = map(int, input().split())
 mod = 998244353
 
+# decompose K into N numbers using 1,1/2,1/4,...
+# O(N*K)
+# recursion isn't good bc implicit stack space is O(N^2), too large
+# can do O(n) space by using only two rows
 
 dp = [[0] * (n + 1) for _ in range(n + 1)]
 

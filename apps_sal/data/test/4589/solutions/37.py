@@ -8,8 +8,8 @@ dy = [0, 1, 0, -1, 1, 1, -1, -1]
 
 for i in range(h):
     for j in range(w):
-        if s[i][j] == "
-        continue
+        if s[i][j] == "#":
+            continue
 
         tmp = 0
         for k in range(8):
@@ -20,8 +20,8 @@ for i in range(h):
                 continue
             if nj < 0 or nj >= w:
                 continue
-            if s[ni][nj] == "
-            tmp += 1
+            if s[ni][nj] == "#":
+                tmp += 1
         s[i][j] = str(tmp)
 
 for i in range(h):

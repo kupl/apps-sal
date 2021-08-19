@@ -96,7 +96,9 @@ S = []
 for i in range(H):
     s = stdin.readline()
     S.append(s[:-1])
+#print (S)
 
+# ペア列挙
 p = []
 if W % 2 == 0:
     pair([], [i for i in range(W)])
@@ -105,6 +107,7 @@ else:
     for i in range(W):
         pair([i, i], tmp[:i] + tmp[i + 1:])
 
+#print (p)
 
 for pl in p:
     able = [True] * H

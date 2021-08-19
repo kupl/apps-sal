@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 dia_uno = input()
 dia_dos = input()
 if(dia_uno == dia_dos):

@@ -15,7 +15,9 @@ class Solution:
             if nums[i] % 2 != 0:
                 odds += 1
 
+            # print(odds-k, seen)
             if odds - k in seen:
+                # print(i, seen, odds -k )
                 output += seen[odds - k]
 
             seen[odds] += 1

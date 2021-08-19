@@ -1,7 +1,7 @@
 h, w = map(int, input().split())
-a_l = [['
+a_l = [['#'] + list(map(str, input().split())) + ['#'] for i in range(h)]
 
-print(''.join(['
+print(''.join(['#'] * (w + 2)))
 for a in a_l:
     print(''.join(a))
-print(''.join(['
+print(''.join(['#'] * (w + 2)))

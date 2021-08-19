@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -16,6 +17,7 @@ def main():
     if M < S:
         print((0))
         return
+    # 答えは(M+N)C(S+N)=(M+N)C(M-S)
     ans = 1
     div = 1
     for i in range(N + S):
@@ -23,6 +25,7 @@ def main():
         div *= N + S - i
         ans %= p
         div %= p
+        # print(ans, div)
     print((ans * pow(div, p - 2, p) % p))
 
 

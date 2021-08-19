@@ -1,5 +1,6 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # to see start with the node, whether there is a cycle
         v = [0 for _ in range(len(graph))]
         ans = []
 

@@ -1,3 +1,4 @@
+# unionfind
 import sys
 from operator import itemgetter
 
@@ -43,6 +44,7 @@ class Uf:
 def main():
     input = sys.stdin.readline
     N, M = list(map(int, input().split()))
+    # harmonious <=> l < m < r で、l から r に辿り着けるなら、l から m に辿り着ける
 
     uf = Uf(N + 1)
     for u, v in zip(*[iter(map(int, sys.stdin.read().split()))] * 2):

@@ -1,3 +1,4 @@
+# coding = SJIS
 
 s = str(input())
 ans = 0

@@ -7,6 +7,7 @@ x = l()
 for i in range(N):
     x[i] = abs(x[i] - X)
 
+# print(x)
 
 mini = min(x)
 lst = []
@@ -17,6 +18,7 @@ for i in range(1, int(mini**0.5) + 1):
 
 lst.sort()
 lst = lst[::-1]
+# print(lst)
 for i in lst:
     flag = True
     for j in x:

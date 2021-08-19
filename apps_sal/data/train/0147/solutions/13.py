@@ -12,6 +12,7 @@ class Solution:
         cur_eff = 0
         res = 0
         for e, s in es_list:
+            #print(e, s, queue, total_speed, res)
             if -e < cur_eff:
                 res = max(res, cur_eff * total_speed)
 

@@ -37,6 +37,7 @@ def RLE(s):
 def __starting_point():
     s = input()
     rle = RLE(s)
+    # print(rle)
     print(len(rle) - 1)
 
 

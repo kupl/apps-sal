@@ -2,6 +2,7 @@ from collections import deque
 n, k = list(map(int, input().split()))
 li = list(map(int, input().split()))
 li.sort()
+# print(li)
 dq = deque()
 
 a = li[0]
@@ -21,7 +22,7 @@ dq.append([a, countt, distp, -1])
 diff = li[-1] - li[0]
 
 while k > 0 and diff > 0:
-    if dq[0][1] > dq[-1][1]:
+    if dq[0][1] > dq[-1][1]:  # go from top
         if k > dq[-1][2] * dq[-1][1]:
             k -= dq[-1][2] * dq[-1][1]
             x1 = dq.pop()
@@ -31,7 +32,7 @@ while k > 0 and diff > 0:
         else:
             diff -= k // dq[-1][1]
             k = 0
-    else:
+    else:  # go from bot
         if k > dq[0][3] * dq[0][1]:
             k -= dq[0][3] * dq[0][1]
             x1 = dq.popleft()
@@ -41,5 +42,8 @@ while k > 0 and diff > 0:
         else:
             diff -= k // dq[0][1]
             k = 0
+            # print("yyyyy")
 
+    # print(dq)
+    # print(f"diff:{diff} k:{k}")
 print(diff)

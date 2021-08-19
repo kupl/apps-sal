@@ -1,3 +1,4 @@
+# 20201002 Jenny sample 200 ms submission
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
         v = set()

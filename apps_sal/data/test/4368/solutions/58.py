@@ -5,5 +5,6 @@ S = K
 while N >= S:
     rank += 1
     S *= K
+#  print(S)
 
 print(rank)

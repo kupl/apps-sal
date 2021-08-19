@@ -5,14 +5,14 @@ input = sys.stdin.readline
 class BinaryTrie:
     class Node:
         def __init__(self, bit: bool = False):
-            self.bit = bit
+            self.bit = bit  # Stores the current bit (False if 0, True if 1)
             self.children = []
-            self.count = 0
-            self.counter = 1
+            self.count = 0  # stores number of keys finishing at this bit
+            self.counter = 1  # stores number of keys with this bit as prefix
 
     def __init__(self, size):
         self.root = BinaryTrie.Node()
-        self.size = size
+        self.size = size  # Maximum size of each key
 
     def convert(self, key):
         """Converts key from string/integer to a list of boolean values!"""

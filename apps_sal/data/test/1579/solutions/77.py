@@ -35,6 +35,10 @@ while len(X.items()) > 0:
                     queue.append((i, X[i]))
                     queue_is_x.append(True)
                     del X[i]
+    # print((point_dict['x']))
+    # print(len((point_dict['x'])))
+    # print((point_dict['y']))
+    # print(len((point_dict['y'])))
     count += len(set(point_dict['x'])) * len(set(point_dict['y']))
 
 print(count - len(points))

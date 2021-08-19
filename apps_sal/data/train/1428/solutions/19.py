@@ -1,3 +1,4 @@
+# cook your dish here
 import heapq
 from math import ceil
 
@@ -30,6 +31,7 @@ for k in range(t):
                 break
             count += 1
             p_user += -key
+            # print(need,key,cont)
             heapq.heappush(cont, int(key / 2))
 
         if flag == 0:

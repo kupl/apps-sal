@@ -21,8 +21,8 @@ for start in startls:
             y = now[0] + dy_dx[i][0]
             x = now[1] + dy_dx[i][1]
             if 0 <= y < h and 0 <= x < w:
-                if C[y][x] != '
-                visited[y][x] = cost
-                queue.append([y, x])
-                ans = max(ans, cost)
+                if C[y][x] != '#' and visited[y][x] == -1:
+                    visited[y][x] = cost
+                    queue.append([y, x])
+                    ans = max(ans, cost)
 print(ans)

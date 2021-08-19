@@ -27,3 +27,15 @@ class Solution:
             if d[first] > 0:
                 heapq.heappush(keys, first)
         return True
+
+        # c = 0
+        # for k in range(0,len(d),kk):
+        #     if d[k] <= 0:
+        #         return False
+        #     if 0 < c < k and (k-1 not in d or d[k-1] <= 0):
+        #         return False
+        #     c += 1
+        #     d[k] -= 1
+        #     if c == kk:
+        #         c = 0
+        # return True

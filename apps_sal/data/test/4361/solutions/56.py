@@ -5,6 +5,7 @@ H = sorted([int(input()) for _ in range(N)])
 ans = H[K - 1] - H[0]
 
 for k in range(N - K + 1):
+    # print(H[k+K-1],H[k])
     ans = min(ans, H[k + K - 1] - H[k])
 
 print(ans)

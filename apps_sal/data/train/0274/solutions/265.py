@@ -2,8 +2,8 @@ class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         i, j = 0, 0
         nums.append(float('inf'))
-        qmin = collections.deque()
-        qmax = collections.deque()
+        qmin = collections.deque()  # monotonic non-decreasing
+        qmax = collections.deque()  # non-increasing
         qmin.append(0)
         qmax.append(0)
         ans = 0
@@ -21,6 +21,7 @@ class Solution:
                     qmin.pop()
                 qmin.append(j)
 
+            # only one can happen
             while qmax and nums[qmax[0]] - nums[j] > limit:
                 i = qmax.popleft() + 1
 

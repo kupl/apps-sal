@@ -1,5 +1,6 @@
 def to_alternating_case(string):
     s = ''
+    # After i "Hard Code" this I will see much much much better solutions to learn from
     for i in string:
         i.split()
         if i.islower():

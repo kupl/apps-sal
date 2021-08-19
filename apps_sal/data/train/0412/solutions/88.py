@@ -5,7 +5,7 @@ class Solution:
         maxV = 10**9 + 7
         for _ in range(d):
             for tv in range(target, -1, -1):
-                memo[tv] = 0
+                memo[tv] = 0  # since have must use all dices! So reaching tv with less than d dices doesn't count.
                 for fv in range(1, f + 1):
                     memo[tv] += memo[tv - fv] if tv - fv >= 0 else 0
                 memo[tv] %= maxV

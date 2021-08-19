@@ -37,6 +37,8 @@ class Solution:
                 cur_num = cur_num * 10 + int(c)
                 has_num = True
 
+            # print(left_x, right_x, left_const, right_const, cur_num, cur_sign)
+
         right_const += cur_num * cur_sign
         left_x -= right_x
         right_const -= left_const

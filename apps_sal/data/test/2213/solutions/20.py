@@ -1,3 +1,4 @@
+# ls.sort(key=lambda x: (x[0], x[1]))
 from bisect import bisect_left
 import sys
 
@@ -9,6 +10,13 @@ def array(): return list(map(int, sys.stdin.readline().split()))
 def intt(): return list(map(int, sys.stdin.readline().split()))
 
 
+#n, k = map(int, sys.stdin.readline().split())
+#arr = list(map(int, sys.stdin.readline().split()))
+#arr=[(int(x),i) for i,x in enumerate(input().split())]
+# ls=list(map(int,input().split()))
+# for i in range(m):
+# print(s[i],end="")
+# n=int(sys.stdin.readline())
 n, m, k = list(map(int, sys.stdin.readline().split()))
 ls = []
 for i in range(n):

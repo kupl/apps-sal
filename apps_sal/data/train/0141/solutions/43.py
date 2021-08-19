@@ -28,7 +28,7 @@ class Solution:
                 left += 1
                 right -= 1
                 counter += 1
-            else: 
+            else: # people[left] + people[right] > limit:
                 right -= 1
                 counter += 1
             return counter'''

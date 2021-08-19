@@ -19,6 +19,9 @@ class Solution:
                     except KeyError:
                         s, nodes_below_j = dfs(j, i)
 
+                    # 1 - to walk to node j
+                    # nodes_below_j - for number of walks from i to j to reach all nodes below
+                    # s - sum of all paths from j to all nodes below j
                     nodes_below_i += 1 + nodes_below_j
                     total += 1 + nodes_below_j + s
 

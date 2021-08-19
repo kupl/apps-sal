@@ -69,7 +69,7 @@ class Fenwick_Tree:
 INF = float('inf')
 
 
-def Bellmanford(n, edges, r):
+def Bellmanford(n, edges, r):  # r: 始点
     d = [INF] * n
     d[r] = 0
 

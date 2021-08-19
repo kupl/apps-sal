@@ -10,6 +10,7 @@ class Solution:
         if len(x_set) == len(points) or len(y_set) == len(points):
             return 0
 
+        # using a hash map to record {x:[y]}
         columns = defaultdict(list)
         for x, y in points:
             columns[x].append(y)
@@ -17,6 +18,7 @@ class Solution:
         visited = {}
         res = float('inf')
 
+        # sort hash map, for every 2 ys in the current column, calculate area
         for col in sorted(columns):
             num_y = columns[col]
             num_y.sort()

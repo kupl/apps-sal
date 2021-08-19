@@ -15,6 +15,7 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
 
         def dfs(node):
+            # nonlocal ans
             for st in self.hmap[node]:
                 if st not in self.deathed:
                     ans.append(st)
@@ -22,3 +23,10 @@ class ThroneInheritance:
         ans = [self.root] if self.root not in self.deathed else []
         dfs(self.root)
         return ans
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

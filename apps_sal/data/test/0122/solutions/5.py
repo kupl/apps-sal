@@ -30,3 +30,22 @@ if res == 'NO':
     res = f(arr, n)
 
 print(res)
+
+# arr = list(map(int, input().split()))
+# res = 0
+# a = {math.pow(2, i) for i in range(35)}
+# for i in range(n-1):
+#     for j in range(i+1,n):
+#         if arr[i] + arr[j] % 2 % 2 % 2 % 2 % 2 in a:
+#             res += 1
+#
+# print(res)
+
+
+# arr = list(map(int, input().split()))
+# m = int(input())
+# spis = list(map(int, input().split()))
+#
+# arr1 = sorted(arr, reverse=True)
+# a = [n - arr1.index(arr[el - 1]) for el in spis]
+# print(' '.join(map(str, a)))

@@ -4,7 +4,7 @@ class Solution:
         if len(points) == 1:
             return 0
         res = 0
-        curr = 0
+        curr = 0  # select a random point as the starting point
         dis = [math.inf] * n
         explored = set()
 

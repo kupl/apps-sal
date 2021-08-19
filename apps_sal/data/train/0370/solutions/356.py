@@ -1,4 +1,10 @@
+#
+# @lc app=leetcode id=952 lang=python3
+#
+# [952] Largest Component Size by Common Factor
+#
 
+# @lc code=start
 from collections import defaultdict
 
 
@@ -38,3 +44,4 @@ class Solution:
             label[root_id] -= 1
 
         return -min(label.values())
+# @lc code=end

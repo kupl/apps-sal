@@ -1,4 +1,6 @@
+# cook your dish here
 t = int(input())
+#res =1
 for _ in range(t):
     n = int(input())
     res = 1

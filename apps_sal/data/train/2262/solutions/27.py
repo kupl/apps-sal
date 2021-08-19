@@ -26,6 +26,7 @@ for _ in range(N):
         XY2.append((xy2, 1))
         D.append(xy2 - xy1)
 
+# print(XY)
 XY.sort()
 XY2.sort()
 D.sort()
@@ -40,6 +41,7 @@ for xy in XY2:
         del Stack[-1]
 
 D2.sort()
+#print(D, D2)
 if D == D2:
     print("YES")
 else:

@@ -10,6 +10,7 @@ cs = [int(v) for v in input().split()]
 
 ans = 0
 
+# vertex, color
 stack = [(0, 0)]
 while stack:
     v, c = stack.pop()

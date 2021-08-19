@@ -23,6 +23,7 @@ class Solution:
                 if (t_sum + nums[curpos] > halfsum):
                     curpos += 1
                 elif (t_sum + nums[curpos] == halfsum):
+                    #print(curpos, t_sum,len(nums))
                     return True
                 else:
                     t_sum += nums[curpos]

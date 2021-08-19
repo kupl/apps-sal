@@ -8,7 +8,7 @@ class StreamChecker:
                 if char not in cur:
                     cur[char] = {}
                 cur = cur[char]
-            cur['
+            cur['#'] = {}
 
         self.candidates = deque()
 
@@ -21,6 +21,11 @@ class StreamChecker:
         if letter in self.trie:
             self.candidates.append(self.trie[letter])
         for candidate in self.candidates:
-            if '
+            if '#' in candidate:
                 return True
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

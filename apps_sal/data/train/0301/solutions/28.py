@@ -1,5 +1,6 @@
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
+        # self.res = float('-inf')
         self.A, self.B = A, B
         self.seen = {}
         return self.dfs(0, 0)

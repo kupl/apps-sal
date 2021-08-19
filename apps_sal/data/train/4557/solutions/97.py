@@ -12,4 +12,8 @@ def row_weights(array):
         even_weight += array[i]
     for i in odd_index:
         odd_weight += array[i]
+        # if array.index(i) in even_index:
+        # even_weight+=i
+        # else:
+        # odd_weight+=i
     return even_weight, odd_weight

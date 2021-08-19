@@ -5,6 +5,7 @@ class Solution:
         source = []
         visited = set()
 
+        # (access, status, key, i)
         for i in initialBoxes:
             access[i] = 1
             visited.add(i)

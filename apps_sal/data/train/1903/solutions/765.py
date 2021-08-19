@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # spaning tree
         n = len(points)
         hq = [(0, points[0][0], points[0][1])]
         seen = set()

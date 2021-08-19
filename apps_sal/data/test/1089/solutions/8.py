@@ -6,9 +6,9 @@ mod = 10**9 + 7
 
 
 def make_tables(n, mod=10 ** 9 + 7):
-    fac = [1, 1]
-    finv = [1, 1]
-    inv = [0, 1]
+    fac = [1, 1]  # 階乗テーブル
+    finv = [1, 1]  # 逆元の階乗テーブル
+    inv = [0, 1]  # 逆元テーブル
 
     for i in range(2, n + 1):
         fac.append((fac[-1] * i) % mod)
@@ -20,6 +20,8 @@ def make_tables(n, mod=10 ** 9 + 7):
 def nCk(n, k, mod=10 ** 9 + 7):
     k = min(k, n - k)
     return fac[n] * finv[k] * finv[n - k] % mod
+
+##########################
 
 
 n, m, k = list(map(int, input().split()))

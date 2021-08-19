@@ -6,10 +6,10 @@ def eratosthene(n):
         return []
     n += 1
     tableau = [False, False] + [True] * (n - 2)
-    tableau[2::2] = [False] * ((n - 2) // 2 + n % 2)
-    premiers = [2]
+    tableau[2::2] = [False] * ((n - 2) // 2 + n % 2)  # sup. des nb pairs
+    premiers = [2]  # initialisation de la tableau des nb 1ers (2 est 1er)
     racine = int(n**0.5)
-    racine = racine + [1, 0][racine % 2]
+    racine = racine + [1, 0][racine % 2]  # pour que racine soit impair
     for i in range(3, racine + 1, 2):
         if tableau[i]:
             premiers.append(i)

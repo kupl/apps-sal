@@ -23,6 +23,8 @@ for i, j in enumerate(W):
     elif j < h:
         arr[j][i] = 'w'
 
+# for i in arr:
+#    print(*i)
 
 if error:
     print(0)

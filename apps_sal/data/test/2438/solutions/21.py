@@ -37,10 +37,13 @@ count += count_a * (count_a - 1) // 2
 count += count_b * (count_b - 1) // 2
 if count_a != 0 and count_b != 0:
     for i in range(len(dic[0]) - 1):
+        # print("IN")
         b_pos = bin_sear_pos(dic[0][i], dic[1])
 
+        # print(b_pos)
         if b_pos < len(dic[1]):
             count += len(dic[1]) - bin_sear_pos(max(dic[0][i + 1], dic[1][b_pos]), dic[1])
+        # print(count)
 
     for i in range(len(dic[1]) - 1):
         a_pos = bin_sear_pos(dic[1][i], dic[0])

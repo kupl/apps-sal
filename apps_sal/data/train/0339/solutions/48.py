@@ -1,6 +1,7 @@
 class Solution:
     def wrapper(self, toSquare, toProd):
 
+        # create a hash table of count of unique squared ints in arr 1
         table = {}
         for integer in toSquare:
             squared = integer**2
@@ -10,8 +11,9 @@ class Solution:
                 table[squared] += 1
 
         counter = 0
+        # get all pairs products, check in hash table, if so, inc counter by count in table
         i = 0
-        while i < len(toProd):
+        while i < len(toProd):  # minus one ok too?
             j = i + 1
             while j < len(toProd):
                 product = toProd[i] * toProd[j]
@@ -35,13 +37,13 @@ class Solution:
         i = 0
         while i != len(nums):
             j = i
-            while j != len(nums):
+            while j != len(nums):   # O(N^2)
                 product_or_square = nums[i] * nums[j]
                 if i == j:
-                    if product_or_square not in squares:
-                        squares[product_or_square] = 1
+                    if product_or_square not in squares:    # O(1)
+                        squares[product_or_square] = 1     # O(1)
                     else:
-                        squares[product_or_square] += 1
+                        squares[product_or_square] += 1     # O(1)
                 else:
                     if product_or_square not in products:
                         products[product_or_square] = 1
@@ -53,13 +55,14 @@ class Solution:
         return products, squares
 
     def get_counts(self, products, squares):
+        # iterate over the smaller set
         counter = 0
         if len(products) > len(squares):
-            for square in squares:
+            for square in squares:          # O(N)
                 if square in products:
                     counter += squares[square] * products[square]
         else:
-            for product in products:
+            for product in products:  # O(M)
                 if product in squares:
                     counter += products[product] * squares[product]
 

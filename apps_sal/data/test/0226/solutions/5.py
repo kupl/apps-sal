@@ -1,5 +1,6 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n = int(input())
@@ -8,6 +9,7 @@ pie = list(map(int, input().split()))
 
 
 def dp(i):
+    # best result for this player
     if i >= len(pie):
         return (0, 0)
     t1, t2 = dp(i + 1)

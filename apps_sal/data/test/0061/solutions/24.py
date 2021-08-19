@@ -26,6 +26,10 @@ def solve(xs, ys, bx, by):
         return '='
 
 
+# def p(*args, **kwargs):
+#     return print(*args, file=sys.stderr, **kwargs)
+
+
 def main():
     [n, bx] = list(map(int, input().strip().split()))
     xs = [int(c) for c in input().strip().split()]

@@ -7,6 +7,7 @@ class Solution:
         for i in range(len(arr)):
             for j in range(i, len(arr)):
                 a = 0
+                # [i, j - 1]
                 if j == i:
                     a = arr[i]
                 else:

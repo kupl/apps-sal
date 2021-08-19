@@ -20,12 +20,14 @@ def solve():
                     if k > n1:
                         k = n1
                         fl = 1
+                # print(k)
                 if (k * a + d >= i) and (n != 0):
                     pred = k * a + d
                 else:
                     pred = i + d
                     k = floor(pred // a)
                     sol += 1
+                # if n==0:
                 k = min(floor(pred // a), n1)
                 sol += n // step + (n % step != 0)
             else:
@@ -33,6 +35,7 @@ def solve():
                 pred = i + d
         if i == a * n1:
             fl = 1
+            # print(i,pred,sol,n,step,k, fl)
     print(sol)
 
 

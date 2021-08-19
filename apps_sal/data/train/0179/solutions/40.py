@@ -1,5 +1,7 @@
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+        #if s[i] != s[i-1]: dp[i][t] = min(dp[i-1][t-1], dp[i-1][t] + 1)
+        # else: dp[i][t] = min(dp[i-1][t-1], dp[i-1][t] + carry) carry = (cnt in [9, 99, 999]) cnt += 1
         n = len(s)
         cp = s[:]
 

@@ -4,6 +4,7 @@ class Solution:
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
+        # 0 is right, 1 is down, 2 is left, 3 is up
         state = 0
         next_direction = [1, 2, 3, 0]
         r = []
@@ -26,6 +27,7 @@ class Solution:
                 matrix = [m[1:] for m in matrix]
                 state = 0
 
+            # Covers the case of a list of empty lists (eg. [[],[],[]])
             if len(matrix) >= 1 and not matrix[0]:
                 matrix = []
 

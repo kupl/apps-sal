@@ -7,6 +7,7 @@ class Solution:
         return self.compute(mem, 0, 0, text1, text2)
 
     def compute(self, mem, ptr1, ptr2, text1, text2):
+        # we are at the end
         if ptr1 == len(text1) or ptr2 == len(text2):
             return 0
 

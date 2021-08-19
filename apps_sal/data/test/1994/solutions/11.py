@@ -10,6 +10,7 @@ def z_advanced(s):
 
     for k in range(1, len(s)):
         if k > rt:
+            # If k is outside the current Z-box, do naive computation.
             n = 0
             while n + k < len(s) and s[n] == s[n + k]:
                 n += 1
@@ -18,8 +19,9 @@ def z_advanced(s):
                 lt = k
                 rt = k + n - 1
         else:
+            # If k is inside the current Z-box, consider two cases.
 
-            p = k - lt
+            p = k - lt  # Pair index.
             right_part_len = rt - k + 1
 
             if Z[p] < right_part_len:
@@ -70,13 +72,16 @@ def __starting_point():
     v = []
     V.sort()
     my_tab = [0] * (len(s) + 1)
+    # print(Z)
     for i in Z:
         my_tab[i] += 1
     somme = 0
+    # print(my_tab)
     for i in range(len(my_tab) - 1, -1, -1):
 
         my_tab[i] += somme
         somme = my_tab[i]
+    # print(my_tab)
     for i in dict:
         dict[i] = my_tab[i]
         v.append((dict[i], i))

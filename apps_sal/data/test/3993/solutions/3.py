@@ -17,6 +17,7 @@ for a in A:
 
 COMP.pop()
 
+# print(COMP)
 
 ANS = 0
 NOW_PAGE = 0
@@ -49,6 +50,7 @@ while pa < LEN:
                 COMP[pa][0] -= k - NOW_PAGE
                 NOW_PAGE = k - NOW_SCORE
 
+    # print(i,j,pa,NOW_PAGE,NOW_SCORE,ANS,COMP)
 
 if NOW_SCORE > 0:
     ANS += 1

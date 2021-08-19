@@ -17,6 +17,7 @@ for gcd in range(100000, 0, -1):
     mult = 2
     total = freq[gcd]
     complement = 0
+    # xy = k, so integral is ln(x)
     while mult * gcd <= 100000:
         total += freq[mult * gcd]
         complement += dp[mult * gcd]

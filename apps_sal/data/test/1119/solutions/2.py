@@ -56,5 +56,7 @@ def f(total_a, total_ab):
 
     return (Best)
 
+#print( k, pa, pb )
+
 
 print((f(1, 0)) % MOD)

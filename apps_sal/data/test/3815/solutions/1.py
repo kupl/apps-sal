@@ -25,6 +25,7 @@ if q == 1:
             ans = (ans - res) % MOD
         res = res * b % MOD * _a % MOD
 else:
+    # rat = (1-Pow(q, num))%MOD*Pow((1-q)%MOD, MOD-2)%MOD
     rat = (Pow(q, num) - 1) % MOD * Pow((q - 1) % MOD, MOD - 2) % MOD
     cur = Pow(a, n) * rat % MOD
     for i in input():

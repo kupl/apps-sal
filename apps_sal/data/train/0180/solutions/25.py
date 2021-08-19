@@ -19,3 +19,15 @@ class Solution:
                 return refuels
 
         return -1
+
+
+#             for refue in range(1, n + 1):
+#             for station in range(1, n + 1):
+#                 dp[station][refue] = dp[station - 1][refue]
+#                 if dp[station - 1][refue - 1] >= stations[station - 1][0]:
+#                     dp[station][refue] = max(dp[station - 1][refue - 1] + stations[station - 1][1], dp[station][refue])
+
+#             if dp[n][refue] >= target:
+#                 return refue
+
+#         return -1

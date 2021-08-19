@@ -9,3 +9,5 @@ def row_weights(array):
             odd += array[num]
 
     return even, odd
+
+    # your code here

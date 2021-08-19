@@ -1,6 +1,8 @@
 N = int(input())
 moves = input()
 
+# print(N)
+# print(moves)
 
 pos_x, pos_y = 0, 0
 coins = 0

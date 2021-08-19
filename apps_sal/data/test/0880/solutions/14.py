@@ -15,7 +15,7 @@ def solve(n):
     ans = (
         ((n - 1) + (n - 2))
         * len_metaseq
-        * 49912217
+        * 49912217  # 7 # modinv(2, mod)
     ) % mod
     error = 0
     for curr in range(4, n + 1):

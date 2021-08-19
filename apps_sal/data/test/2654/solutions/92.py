@@ -6,6 +6,8 @@ for n in range(N):
     a, b = map(int, input().split())
     A.append(a)
     B.append(b)
+#AB = sorted(AB, key=lambda x: x[0])
+# print(AB)
 cenA = median(A)
 cenB = median(B)
 

@@ -109,6 +109,9 @@ if cntr or not cntr:
             break
 
 
+#!!!!!!!!!!!
+
+
 if cntd or not cntd:
 
     for i in range(cntd, -1, -1):
@@ -173,3 +176,6 @@ if not len(ans) or not label:
 else:
 
     stdout.write(str(list(ans)[0] + 1))
+
+
+# Made By Mostafa_Khaled

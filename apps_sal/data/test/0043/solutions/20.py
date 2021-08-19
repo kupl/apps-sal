@@ -30,3 +30,6 @@ for y in d:
 
 
 print(x[2], x[3])
+
+
+# Made By Mostafa_Khaled

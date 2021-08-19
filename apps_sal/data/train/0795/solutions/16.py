@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     N, K, L = (int(i) for i in input().split(' '))
     if(((N / K) > L) or (K == 1 and N != K)):

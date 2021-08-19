@@ -1,3 +1,7 @@
+# import sys
+# from io import StringIO
+#
+# sys.stdin = StringIO(open(__file__.replace('.py', '.in')).read())
 
 n, m = list(map(int, input().split()))
 x = list(map(int, input().split()))
@@ -17,3 +21,4 @@ for i in y:
         c += 1
 
 print(c)
+# print(d[:100])

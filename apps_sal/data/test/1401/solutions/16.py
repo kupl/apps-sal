@@ -28,6 +28,7 @@ def bfs(n, adjList, a):
 
 
 def main():
+    # sys.stdin = open("in.txt", "r")
 
     it = iter(map(int, sys.stdin.read().split()))
 

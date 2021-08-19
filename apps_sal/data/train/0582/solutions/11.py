@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 
 
@@ -9,6 +10,7 @@ def main():
         t = t - 1
         s = input()
         n = len(s)
+        # print(n,s)
         l = [0 for i in range(n)]
         l[n - 1] = -1
         q = []
@@ -26,6 +28,7 @@ def main():
                 q.pop()
 
         Q = int(input())
+        # print(l)
 
         arr = [int(x) for x in stdin.readline().split()]
 
@@ -38,6 +41,7 @@ def main():
                 print(l[x] + 1)
 
 
+# call the main method
 def __starting_point():
     main()
 

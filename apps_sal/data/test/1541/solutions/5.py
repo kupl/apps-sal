@@ -12,6 +12,7 @@ def main():
     right = []
 
     s = input()
+    # s = "=^=="
     middle_pos = s.index("^")
     for i in range(len(s)):
         if s[i] == "=" or s[i] == "^":

@@ -1,3 +1,4 @@
+# Binary search
 
 n = int(input())
 x = [int(x) for x in input().strip().split(' ')]
@@ -19,6 +20,7 @@ def verify(t):
 
 M = max(x)
 while p < q - 0.0000001:
+    #print('%f, %f' % (p, q))
     m = p + (q - p) / 2
     span = verify(m)
     if len(span) > 0:

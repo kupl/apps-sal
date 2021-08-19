@@ -13,6 +13,7 @@ def main():
         for x, y in zip(A, F):
             if x * y > tmp:
                 k += x - (tmp // y)
+            #k += max(0, x - (tmp // y))
         if K >= k:
             r = tmp
         else:

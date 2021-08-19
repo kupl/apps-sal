@@ -3,6 +3,7 @@ class Solution:
         if S == T:
             return 0
 
+        # Get rid of duplicates if any in the lists inside 'routes'
         routes = list(map(set, routes))
         n = len(routes)
         graph = defaultdict(set)
@@ -13,6 +14,7 @@ class Solution:
                     graph[i].add(j)
                     graph[j].add(i)
 
+        # Get source and destination
         for i in range(n):
             if S in routes[i]:
                 if T in routes[i]:

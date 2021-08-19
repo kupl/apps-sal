@@ -4,12 +4,15 @@ class Solution:
         for i in range(n):
             paths.append([sys.maxsize] * n)
 
+        # all non edges are inf
+        # all self paths are 0
         for src, dest, weight in edges:
             paths[src][dest] = weight
             paths[dest][src] = weight
         for i in range(n):
             paths[i][i] = 0
 
+        # calculate all source shortest paths
         for k in range(n):
             for src in range(n):
                 for dest in range(n):

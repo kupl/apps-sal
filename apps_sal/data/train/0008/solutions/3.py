@@ -24,10 +24,12 @@ for _ in range(int(input())):
                 sc += 1
     arr.sort()
     arr.reverse()
+    #print(arr, sc)
     while len(arr) > 0 and arr[-1] <= k:
         k -= arr[-1]
         sc += arr[-1] * 2 + 1
         arr.pop()
+    # print(k)
     sc += k * 2
     if k > 0 and s.count("W") == 0:
         sc -= 1

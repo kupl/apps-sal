@@ -1,5 +1,7 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
+        # brute force, linear scan NAIVE APPROACH
+        # start with the largest size and move down, time limit exceeded
         '''
         for size in range(len(A)-1, -1, -1): 
             i = 0
@@ -21,13 +23,16 @@ class Solution:
         return 0
         '''
 
+        # use dynamic variant of sliding window technique
         maxConsecutiveOnes = 0
         windowStart = 0
         currZeroes = 0
+        # iterate through the array linearly and see if the number of 0s is <= K
         for windowEnd in range(len(A)):
             if A[windowEnd] == 0:
                 currZeroes += 1
 
+            # shrinks window
             while currZeroes > K:
                 if A[windowStart] == 0:
                     currZeroes -= 1

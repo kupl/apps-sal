@@ -1,4 +1,4 @@
-n = int(input())
+n = int(input())  # кол друзей
 maxW = 0
 widthes = []
 heigthes = []

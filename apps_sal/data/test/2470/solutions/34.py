@@ -7,6 +7,7 @@ class Solution:
         B = sorted(set(B))
         b2idx = {b: i for i, b in enumerate(B)}
 
+        # @lru_cache(None)
         def find_larger_value_in_B(val):
             if val >= B[-1]:
                 return float('inf')

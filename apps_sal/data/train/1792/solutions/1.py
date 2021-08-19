@@ -1,3 +1,4 @@
+# segment the pics and find the law
 def countWays(n):
     A = [0] * (n + 1)
     B = [0] * (n + 1)

@@ -29,6 +29,7 @@ def resolve():
             M_div.append(i)
             M_div.append(M // i)
 
+    # Mの約数の中でMを割った時の値がN以上になるような最大のもの
     ans = 1
     for i in M_div:
         if M // i >= N:

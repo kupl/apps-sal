@@ -16,10 +16,10 @@ def bfs(h, w, sy, sx, gy, gx, S):
                 dist2 = maze[nexty][nextx]
             else:
                 continue
-            if dist1 != '
-            if dist2 > maze[y][x] + 1:
-                maze[nexty][nextx] = maze[y][x] + 1
-                que.append([nexty, nextx])
+            if dist1 != '#':
+                if dist2 > maze[y][x] + 1:
+                    maze[nexty][nextx] = maze[y][x] + 1
+                    que.append([nexty, nextx])
     return maze[gy - 1][gx - 1] + 1
 
 

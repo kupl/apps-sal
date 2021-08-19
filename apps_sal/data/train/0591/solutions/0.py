@@ -5,5 +5,6 @@ for _ in range(int(input())):
     for n in num:
         if n.isnumeric():
             s += int(n)
+    # print(s)
     x = (10 - s % 10) % 10
     print(int(N) * 10 + int(x))

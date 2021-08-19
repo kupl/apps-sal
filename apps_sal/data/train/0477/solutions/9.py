@@ -1,5 +1,6 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
+        # First element is for n == 1
         cache = [''] * n
 
         def gen_str(n):

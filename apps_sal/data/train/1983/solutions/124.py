@@ -14,3 +14,9 @@ class ProductOfNumbers:
             return 0
         else:
             return int(self.arr[-1] / self.arr[-k - 1])
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

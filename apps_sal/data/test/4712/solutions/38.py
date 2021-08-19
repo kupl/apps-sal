@@ -1,9 +1,9 @@
 h, w = map(int, input().split())
 
-print("
+print("#" * (w + 2))
 
 for i in range(h):
-    num=input()
-    print("
+    num = input()
+    print("#" + num + "#")
 
-print("
+print("#" * (w + 2))

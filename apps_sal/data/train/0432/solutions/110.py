@@ -42,6 +42,7 @@ class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
+        # heap = list(Counter(nums).items())
         heap = create_pairs(nums)
         print(heap)
         heapify(heap)

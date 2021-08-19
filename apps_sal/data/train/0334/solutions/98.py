@@ -23,6 +23,7 @@ class Solution:
                     if cost[xx] > cost[max_cost_idx]:
                         max_cost_idx = xx
                 for idx in range(i, min(next_i, len(s))):
+                    # print(idx)
                     if idx != max_cost_idx:
                         sol += cost[idx]
                 i = next_i

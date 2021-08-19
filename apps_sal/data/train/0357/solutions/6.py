@@ -2,9 +2,12 @@ class Solution:
     def maxDistToClosest(self, seats) -> int:
         self.dists = [0 for i in range(len(seats))]
         i = 0
+        # loop thru seats, assign weights as they come. update i to next seat found
         while i < len(seats) - 1:
             i = self.assign_weights(i, seats)
+        # print(self.dists)
         return max(self.dists)
+    # from left seat, search for next seat and assign weights
 
     def assign_weights(self, start, seats):
         if start == 0 and seats[start] != 1:

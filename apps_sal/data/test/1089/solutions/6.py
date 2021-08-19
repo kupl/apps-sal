@@ -21,8 +21,10 @@ def cmb1(n, r, mod):
 ans = 0
 for i in range(n * m):
     x, y = divmod(i, m)
+    # x
     ans += x * m * cmb1(n * m - 2, k - 2, mod) * x
     ans -= (n - 1 - x) * m * cmb1(n * m - 2, k - 2, mod) * x
+    # y
     ans += y * n * cmb1(n * m - 2, k - 2, mod) * y
     ans -= (m - 1 - y) * n * cmb1(n * m - 2, k - 2, mod) * y
 

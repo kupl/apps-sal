@@ -42,4 +42,6 @@ for i in range(len(lowest_row_array)):
             if i * j > max_size:
                 max_size = i * j
 
+# print(lowest_col_array)
+# print(lowest_row_array)
 print(max_size)

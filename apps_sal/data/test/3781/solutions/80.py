@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
 
+#############
+# Libraries #
+#############
 
 from functools import lru_cache
 from collections import Counter
@@ -11,10 +15,21 @@ import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
 
+#from math import gcd
+
+#############
+# Constants #
+#############
 
 MOD = 10**9 + 7
 INF = float('inf')
 AZ = "abcdefghijklmnopqrstuvwxyz"
+
+#############
+# Functions #
+#############
+
+######INPUT######
 
 
 def I(): return int(input().strip())
@@ -27,12 +42,16 @@ def ILL(n): return [list(map(int, input().split())) for _ in range(n)]
 def SLL(n): return [list(map(str, input().split())) for _ in range(n)]
 
 
+#####Shorten#####
 def DD(arg): return defaultdict(arg)
+
+#####Inverse#####
 
 
 def inv(n): return pow(n, MOD - 2, MOD)
 
 
+######Combination######
 kaijo_memo = []
 
 
@@ -70,6 +89,8 @@ def nCr(n, r):
     ret = ret * gyaku_kaijo(n - r) % MOD
     return ret
 
+######Factorization######
+
 
 def factorization(n):
     arr = []
@@ -87,6 +108,8 @@ def factorization(n):
         arr.append([n, 1])
     return arr
 
+#####MakeDivisors######
+
 
 def make_divisors(n):
     divisors = []
@@ -96,6 +119,8 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
     return divisors
+
+#####MakePrimes######
 
 
 def make_primes(N):
@@ -109,15 +134,21 @@ def make_primes(N):
     primeNum.extend(seachList)
     return primeNum
 
+#####GCD#####
+
 
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 
+#####LCM#####
+
 
 def lcm(a, b):
     return a * b // gcd(a, b)
+
+#####BitCount#####
 
 
 def count_bit(n):
@@ -126,6 +157,8 @@ def count_bit(n):
         n &= n - 1
         count += 1
     return count
+
+#####ChangeBase#####
 
 
 def base_10_to_n(X, n):
@@ -144,6 +177,8 @@ def base_10_to_n_without_0(X, n):
         return base_10_to_n_without_0(X // n, n) + [X % n]
     return [X % n]
 
+#####IntLog#####
+
 
 def int_log(a, n):
     count = 0
@@ -151,6 +186,10 @@ def int_log(a, n):
         n //= a
         count += 1
     return count
+
+#############
+# Main Code #
+#############
 
 
 def solve():

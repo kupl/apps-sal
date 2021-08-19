@@ -1,3 +1,6 @@
+#
+# abc054 b
+#
 import sys
 from io import StringIO
 import unittest
@@ -15,21 +18,23 @@ class TestClass(unittest.TestCase):
 
     def test_入力例_1(self):
         input = """3 2
-.
-.
+#.#
+.#.
+#.#
+#.
+.#"""
         output = """Yes"""
         self.assertIO(input, output)
 
     def test_入力例_2(self):
         input = """4 1
-
-
 ....
 ....
 ....
 ....
-output = """No"""
-self.assertIO(input, output)
+#"""
+        output = """No"""
+        self.assertIO(input, output)
 
 
 def resolve():
@@ -57,6 +62,7 @@ def resolve():
 
 
 def __starting_point():
+    # unittest.main()
     resolve()
 
 

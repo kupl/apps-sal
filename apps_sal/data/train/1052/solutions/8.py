@@ -20,6 +20,9 @@ for _ in range(0, t):
     next_items = []
     steps = 0
 
+    # if n%3 == 0 and d%3 == 0:
+    #   stop_at = 3
+
     while stop_at not in dict and steps < 11:
         steps += 1
         for i in curr_items:

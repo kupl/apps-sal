@@ -1,6 +1,7 @@
 N = int(input())
 S = input()
 
+# first: r
 not_r = 0
 not_b = 0
 for i, s in enumerate(S):
@@ -12,6 +13,7 @@ for i, s in enumerate(S):
             not_b += 1
 ans = max(not_r, not_b)
 
+# first: b
 not_r = 0
 not_b = 0
 for i, s in enumerate(S):

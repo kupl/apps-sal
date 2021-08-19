@@ -11,4 +11,5 @@ for _ in range(k):
         for i in range(d):
             sunuke[a[i] - 1] += 1
 
+# print(sunuke)
 print((sunuke.count(0)))

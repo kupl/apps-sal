@@ -1,5 +1,6 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+        # All starting points
         m = len(grid)
         n = len(grid[0])
         max_gold = 0
@@ -11,6 +12,7 @@ class Solution:
     def findMaxGold(self, grid, row, col, curr_gold):
         if 0 <= row < len(grid) and 0 <= col < len(grid[0]) and grid[row][col] != 0:
             origin = grid[row][col]
+            # Mark as visited
             grid[row][col] = 0
 
             max_gold = 0
@@ -20,8 +22,12 @@ class Solution:
             for i in range(0, 4):
                 max_gold = max(max_gold, self.findMaxGold(grid, row + x_moves[i], col + y_moves[i], max_gold))
 
+            # Backtrack: mark as unvisited
             grid[row][col] = origin
 
             return max_gold + origin
         else:
             return 0
+
+    # Time: O((m*n)^2)
+    # Space: O(m*n)

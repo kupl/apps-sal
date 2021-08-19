@@ -18,8 +18,8 @@ class Solution:
         char = ''
         count = 0
         while i >= 0 and not char:
-            if s[i] == '
-            count += 1
+            if s[i] == '#':
+                count += 1
             elif count == 0:
                 char = s[i]
             else:

@@ -13,7 +13,9 @@ count = 0
 last = 0
 t = 0
 while True:
+    #print(t, vis)
     if t >= b:
+        # print('back')
         t -= b
         if vis[t]:
             break
@@ -24,14 +26,18 @@ while True:
         if t > m:
             break
         if t > last:
+            #print('forward', t - last, 'with', nvis)
             count += (t - last) * nvis
             last = t
         if vis[t]:
             break
         vis[t] = 1
         nvis += 1
+    # print(nvis,count)
+    # print('---')
 
 if t > m:
+    # we're done
     count += (m - last + 1) * nvis
 else:
     def sumto(n):
@@ -41,6 +47,13 @@ else:
         r -= corr
         return r
 
+    #S = 0
+    # for i in range(last, m+1):
+    #    S += i//g + 1
+    #count += S
+    #assert S == sumto(m) - sumto(last-1)
+
     count += sumto(m) - sumto(last - 1)
 
+# print(vis)
 print(count)

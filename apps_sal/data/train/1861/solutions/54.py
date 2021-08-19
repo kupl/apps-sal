@@ -21,6 +21,8 @@ class Solution:
             if len(heights_x) < 2:
                 continue
 
+            # print(x, heights_x)
+
             for i in range(len(heights_x) - 1):
                 for j in range(i + 1, len(heights_x)):
                     pair = (heights_x[i], heights_x[j])

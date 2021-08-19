@@ -21,7 +21,10 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
 alf = list("abcdefghijklmnopqrstuvwxyz")
 ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+#import numpy as np
 INF = float("inf")
+#d = defaultdict(int)
+#d = defaultdict(list)
 s = ""
 N = int(input())
 if N == 0:

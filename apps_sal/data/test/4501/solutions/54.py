@@ -4,7 +4,7 @@ T = 2500
 N, A = list(map(int, input().split()))
 X = list([int(x) - A for x in input().split()])
 
-dp = [[0] * 5001 for i in range(NMAX)]
+dp = [[0] * 5001 for i in range(NMAX)]  # i時点で総和がSになるものの個数
 
 dp[0][T] = 1
 

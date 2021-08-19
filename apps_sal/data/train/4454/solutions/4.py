@@ -1,5 +1,5 @@
 def presses(phrase):
-    numbers = ['*', '
+    numbers = ['*', '#', '1', 'ABC2', 'DEF3', 'GHI4', 'JKL5', 'MNO6', 'PQRS7', 'TUV8', 'WXYZ9', ' 0']
     print(phrase)
     phrase = phrase.upper()
     result = 0

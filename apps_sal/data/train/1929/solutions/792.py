@@ -14,7 +14,7 @@ class StreamChecker:
             if c not in curr:
                 curr[c] = {}
             curr = curr[c]
-        curr['
+        curr['#'] = True
 
     def query(self, letter: str) -> bool:
 
@@ -28,4 +28,8 @@ class StreamChecker:
 
         self.start = start
 
-        return any('
+        return any('#' in p for p in self.start)
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

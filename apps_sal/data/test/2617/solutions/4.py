@@ -7,6 +7,7 @@ for i in range(int(n)):
             print(j - 1)
             break
     l = [2**x for x in range(j)]
+    # print(l)
 
     total = sum(l)
     c = 1
@@ -15,6 +16,7 @@ for i in range(int(n)):
             l[-c] -= min(l[-c - 1], total - a)
             total = sum(l)
             c += 1
+            # print(c)
         except:
             pass
     ans = []

@@ -3,7 +3,7 @@ References
 ----------
 [0]. 解説(公式), https://img.atcoder.jp/abc144/editorial.pdf, AtCoder
     - O(NM)
-[1]. kmjp. AtCoder ABC 
+[1]. kmjp. AtCoder ABC #144 : F - Fork in the Road, <http://kmjp.hatenablog.jp/entry/2019/10/28/0930>, kmjp's blog
     - O(NM)
 [2]. physics0523. Fork in the Road(ABC144-F), <https://physics0523.hatenablog.com/entry/2019/10/27/235334>, physics0523's 精進ログ
     - O(M)

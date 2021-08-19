@@ -4,10 +4,15 @@ from array import array
 from collections import deque
 import sys
 3
+# -*- coding: utf-8 -*-
+
+# scipy version
 
 
 def input():
     return sys.stdin.readline().rstrip('\n')
+
+# main
 
 
 N, M, L = list(map(int, input().split()))
@@ -30,6 +35,7 @@ for i in range(Q):
 
 dist_matrix, predecessors = floyd_warshall(csgraph=C, directed=False, return_predecessors=True)
 
+# D[i][j] <= L となる i,j に辺を張る
 for i in range(N):
     for j in range(i + 1, N):
         if dist_matrix[i][j] <= L:
@@ -37,6 +43,7 @@ for i in range(N):
 
 dist_matrix, predecessors = floyd_warshall(csgraph=C, directed=False, return_predecessors=True)
 
+# answer
 for q in range(Q):
     i, j = ST[q]
     step = dist_matrix[i][j]

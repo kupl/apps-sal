@@ -23,9 +23,11 @@ for xyd in XYD:
     else:
         yD.add(y)
         xS.add(x)
+# xmin
 xRmin = min(xR | {I})
 xLmin = min(xL | {I})
 xSmin = min(xS | {I})
+# xmax
 xRmax = max(xR | {-I})
 xLmax = max(xL | {-I})
 xSmax = max(xS | {-I})
@@ -35,9 +37,11 @@ x1m = max(xSmax - xRmin, xLmax - xSmin)
 x0 = max(xRmax - xRmin, xLmax - xLmin, xSmax - xSmin)
 x1 = max(xSmax - xLmin, xRmax - xSmin)
 x2 = xRmax - xLmin
+# ymin
 yUmin = min(yU | {I})
 yDmin = min(yD | {I})
 ySmin = min(yS | {I})
+# ymax
 yUmax = max(yU | {-I})
 yDmax = max(yD | {-I})
 ySmax = max(yS | {-I})

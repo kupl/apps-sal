@@ -2,6 +2,7 @@ import bisect
 
 n, m, k, q = map(int, input().split())
 
+# min, max
 vals = {}
 vals[1] = [1, 1]
 for i in range(k):
@@ -51,6 +52,7 @@ for row in range(1, n + 1):
 
     old_a, old_b = new_a, new_b
     pos_a, pos_b = row_min, row_max
+    #print(old_a, old_b)
 
 total = highest - 1
 total += min(old_a, old_b)

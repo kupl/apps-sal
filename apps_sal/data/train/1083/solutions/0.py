@@ -6,7 +6,9 @@ for i in range(eval(input())):
     if(m % 2 == 0):
         hand_rest -= max(0, n - l - r)
     if(l + r + (2 * b) <= hand_rest):
+        # print "kanu"
         print(min(n * m, l + r + z + b))
     else:
         temp = l + r + (hand_rest - l - r) / 2
+        # print "parth"
         print(min(n * m, temp + z))

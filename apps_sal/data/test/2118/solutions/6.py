@@ -4,6 +4,7 @@ res = []
 
 
 def solve(begin, end, rem):
+    #print('Solve:', begin, end, rem)
     if rem < 2:
         res.extend(list(range(begin, end)))
         return rem
@@ -22,3 +23,5 @@ if rem == 0:
     print(' '.join(map(str, res)))
 else:
     print(-1)
+    # print(rem)
+    # print(res)

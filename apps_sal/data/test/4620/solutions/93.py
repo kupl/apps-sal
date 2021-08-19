@@ -7,6 +7,7 @@ for i in range(n - 1):
     now = i
     for j in range(i + 1, n - 1):
         nc, ns, nf = csf[j]
+        # next = ns + nf * x
         if a <= ns:
             a = ns
         else:

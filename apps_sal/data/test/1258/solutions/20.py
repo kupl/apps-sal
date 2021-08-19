@@ -27,14 +27,18 @@ while i < n:
     i += 1
 
 SB = sorted(BIN, key=lambda x: len(x[1]))
+#[print(x) for x in (BIN)]
+# print()
+#[print(x) for x in (SB)]
 
 now = SB[0][0]
 last = None
 while True:
     ans.append(now)
     nowl = BIN[now][1]
+    # print(f"{now}={last}={nowl}=========={ans}")
     lnowl = len(nowl)
-    if lnowl == 3:
+    if lnowl == 3:  # mid
         for item in nowl:
             try:
                 item.remove(now)
@@ -60,7 +64,7 @@ while True:
             if len(item) == 1:
                 next = item[0]
                 break
-    else:
+    else:  # first last
         tl = nowl[0]
         tl.remove(now)
         if not tl:

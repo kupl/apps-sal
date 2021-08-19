@@ -3,6 +3,7 @@ arr = list(map(int, input().split()))
 a -= 1
 ans = 0
 for i in range(n):
+    # print(i, ans, 2 * a - i)
     if (i == a):
         ans += arr[i]
     elif (i < a):

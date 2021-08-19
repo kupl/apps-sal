@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def func(sw, p, bit):
     sum_on = 0

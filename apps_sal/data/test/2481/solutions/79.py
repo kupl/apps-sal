@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
 
 
 H, W = list(map(int, input().split()))
@@ -9,6 +13,9 @@ for _ in range(H):
     A.append(list(map(int, input().split())))
 
 
+# In[3]:
+
+
 def wf_func(mat):
     dist = mat
     for k in range(10):
@@ -18,6 +25,9 @@ def wf_func(mat):
     return dist
 
 
+# In[5]:
+
+
 dist = wf_func(c)
 ans = 0
 for i in range(H):
@@ -25,3 +35,6 @@ for i in range(H):
         if A[i][j] != -1:
             ans += dist[A[i][j]][1]
 print(ans)
+
+
+# In[ ]:

@@ -5,6 +5,7 @@ modulo = [0 for x in range(0, m)]
 
 for x in range(1, m + 1):
     modulo[(x * x) % m] += 1
+# mnoze ile trzeba
 for index in range(m):
     modulo[index] *= math.floor(n / m)
 

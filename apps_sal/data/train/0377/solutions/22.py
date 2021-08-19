@@ -5,6 +5,7 @@ class Solution(object):
         L = A // gcd(A, B) * B
 
         def magic_below_x(x):
+            # How many magical numbers are <= x?
             return x // A + x // B - x // L
 
         lo = 0

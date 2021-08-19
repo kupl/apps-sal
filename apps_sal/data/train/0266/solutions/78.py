@@ -1,5 +1,6 @@
 class Solution:
     def numSplits(self, s: str) -> int:
+        # stores
         unique_chars = {}
         for i, char in enumerate(s):
             if char in unique_chars:
@@ -18,7 +19,9 @@ class Solution:
         right_num = n_unique_chars
         total = 0
         start_good = None
+        # print(events)
         for i, event_type in events:
+            #print(i, event_type, left_num, right_num)
             if start_good is not None:
                 return i - start_good
             if event_type == 1:

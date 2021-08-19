@@ -14,6 +14,7 @@ for _ in range(N):
     C.append(c)
 
 inf = 10 ** 9 + 7
+# 3次元dpを考える
 dp = [[[inf] * (sum_b + 1) for _ in range(sum_a + 1)] for _ in range(N + 1)]
 
 dp[0][0][0] = 0

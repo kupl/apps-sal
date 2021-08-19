@@ -10,6 +10,8 @@ def solve():
     journeypassed = 0
     while journeypassed < k:
 
+        #print("location:", location, ", fuel:", fuel, ", "+direction)
+
         if location == 0:
             if fuel < f:
                 return -1

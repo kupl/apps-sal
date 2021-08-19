@@ -15,6 +15,7 @@ class Solution:
                         numBouquets += 1
                         numFlowers -= k
 
+            # print(mid, numBouquets)
             return numBouquets >= m
 
         low = 0
@@ -22,6 +23,7 @@ class Solution:
         while (low < high):
             mid = int((low + high) / 2)
             if (isPossible(mid)):
+                # print(\"true\", mid)
                 high = mid
             else:
                 low = mid + 1

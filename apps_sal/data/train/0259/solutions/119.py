@@ -8,6 +8,7 @@ class Solution:
             s = 0
             for i in nums:
                 s += math.ceil(i / mid)
+            # print(\"Sum\",s,mid)
             return s <= threshold
 
         def binsearch():

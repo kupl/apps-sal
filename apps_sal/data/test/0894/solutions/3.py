@@ -1,6 +1,7 @@
 x, y = map(int, input().split())
 
 
+# y=-x+c
 if((x > 0 and y > 0)):
     c = y + x
     print("0 " + str(c), end=" ")

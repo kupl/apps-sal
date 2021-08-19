@@ -9,6 +9,7 @@ A.sort(reverse=True)
 B.sort(reverse=True)
 C.sort(reverse=True)
 
+# (sum, idx of a, b, c)
 
 h = []
 heapq.heappush(h, (-A[0] - B[0] - C[0], 0, 0, 0))

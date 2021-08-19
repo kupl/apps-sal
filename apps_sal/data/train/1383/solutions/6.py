@@ -27,5 +27,7 @@ for t in range(1, int(input()) + 1):
     even = l[k2][1] - l[k1 - 1][1]
     odd = l[k2][2] - l[k1 - 1][2]
 
+    # print(th , even , odd)
+
     summ = (th * p1) % mod + (odd * p2) % mod + (even * p3) % mod
     print(summ)

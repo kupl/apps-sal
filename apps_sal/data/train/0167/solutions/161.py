@@ -3,6 +3,8 @@ from functools import lru_cache
 
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
+        # return self.bottomUp(K, N)
+        # return self.findMoves(K, N)
         return self.bottomUp2(K, N)
 
     @lru_cache(maxsize=None)
@@ -24,7 +26,13 @@ class Solution:
         mid = left - 1
         return 1 + max(self.findMoves(K - 1, mid - 1), self.findMoves(K, N - mid))
 
+        # f = N
+        # for x in range (1, N+1):
+        #     f = min(1 + max(self.findMoves(K-1, x-1), self.findMoves(K, N-x)), f)
+        # return f
+
     def bottomUp(self, K, N):
+        # compress to 1d array
         dp = [i for i in range(N + 1)]
         for i in range(2, K + 1):
             prev = dp[:]

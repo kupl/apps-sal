@@ -30,10 +30,13 @@ def main(n, ab):
         return False
     if f[-1][0] == 1:
         return False
+    # for x in f:
+    #    print(x)
     now = 0
     memo = {}
 
     def chk(l, r):
+        # 区間[l,r]は成り立つか。
         if (l, r) in memo:
             return memo[(l, r)]
         if (r - l) % 2 == 0:
@@ -59,6 +62,7 @@ def main(n, ab):
         if l == 2 * n:
             return True
         ret = False
+        # lを区間の左端としたとき、残りは成り立つか。lより左は成立している。
         for ri in range(l + 1, 2 * n):
             tmp = chk(l, ri)
             if tmp:
@@ -67,9 +71,12 @@ def main(n, ab):
         return False
 
     dp(0)
+    # for k,v in memo.items():
+    #    print(k,v)
     return dp(0)
 
 
+# """
 n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
 ret = main(n, ab)

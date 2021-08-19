@@ -68,6 +68,7 @@ class Prime():
             d[n] += 1
         return d.items()
 
+    # memo
     def divisions(self, n):
         if n in self.ds_memo:
             return self.ds_memo[n]

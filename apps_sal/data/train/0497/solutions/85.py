@@ -3,6 +3,7 @@ class Solution:
         jobs = list(zip(startTime, endTime, profit))
         jobs = sorted(jobs, key=lambda x: x[1])
         dp = [0] + profit
+        # print(dp)
 
         def search_start(i):
             nonlocal jobs
@@ -22,4 +23,5 @@ class Solution:
 
             dp[i + 1] = max(dp[i], pft_if_not_take_job + pft)
 
+        # print(dp)
         return dp[-1]

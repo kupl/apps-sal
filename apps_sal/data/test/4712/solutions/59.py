@@ -2,9 +2,9 @@ a, b = map(int, input().split())
 s = []
 for i in range(a):
     s.append(input())
-print("
+print("#" * (b + 2))
 for i in range(a):
-    print("
+    print("#", end="")
     print(s[i], end="")
-    print("
-print("
+    print("#")
+print("#" * (b + 2))

@@ -18,7 +18,7 @@ def solve_tie_2(_vaulter_list, names, res, c):
             c += 1
             if len(res) >= 3 or c >= 3:
                 return c
-        else:
+        else:  # unsolvable tie
             res.append(', '.join(sorted(pair[1])))
             for name in pair[1]:
                 remove_from_dict(_vaulter_list, name)
@@ -45,7 +45,7 @@ def solve_tie_1(_vaulter_list, names, index, res, c):
             c += 1
             if len(res) >= 3 or c >= 3:
                 return c
-        else:
+        else:  # try to solve according to next criterion
             c = solve_tie_2(_vaulter_list, pair[1], res, c)
             if len(res) >= 3:
                 return c
@@ -73,7 +73,7 @@ def score_pole_vault(vaulter_list):
                 if "O" in player["results"][i]:
                     best_height_index = i
                     break
-            if best_height_index < l:
+            if best_height_index < l:  # found
                 break
         first_criterion_players = []
         for player in _vaulter_list:

@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('cf598a.in')
 
 def smaller_power(n):
     cpow = -1

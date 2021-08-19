@@ -81,12 +81,19 @@ class MajorityChecker:
     def query(self, left: int, right: int, threshold: int) -> int:
 
         candidate = self.pqery(left, right, 0, 0, (len(self.arr) - 1))
+        # print(self.freq,candidate.val)
         if candidate.val == 0:
             return -1
 
         s = self.lower_bound(self.freq[candidate.val], left)
         e = self.upper_bound(self.freq[candidate.val], right)
+        # print(e,s)
         if (e - s) >= threshold:
             return candidate.val
         else:
             return -1
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

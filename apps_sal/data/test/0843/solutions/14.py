@@ -21,4 +21,6 @@ def solver(arrows, cells):
             index = index + cells[index]
 
 
+#print(solver(">><", [2, 1, 1]))
+#print(solver("><", [1, 2]))
 main()

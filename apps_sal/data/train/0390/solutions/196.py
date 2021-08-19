@@ -1,8 +1,8 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         dp = [0] * (n + 3)
-        dp[1] = 1
-        dp[2] = 0
+        dp[1] = 1  # Alice
+        dp[2] = 0  # Bob
 
         for i in range(3, n + 1):
             for j in range(1, int(i**0.5) + 1):

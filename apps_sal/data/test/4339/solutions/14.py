@@ -12,5 +12,6 @@ while p1 > p2:
     while p2 < p1 and c[p1] + c[p2] <= 0:
         p2 += 1
     ans += p1 - p2
+    # print(ans)
     p1 -= 1
 print(ans)

@@ -3,8 +3,8 @@ class Solution:
         q = deque()
         res = 0
         for i in range(len(A)):
-            if len(q) % 2 != 0:
-                if A[i] == 1:
+            if len(q) % 2 != 0:  # means even numbers of flip
+                if A[i] == 1:  # flip to 0
                     res += 1
                     q.append(i + K - 1)
             else:

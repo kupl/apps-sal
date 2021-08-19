@@ -5,7 +5,7 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         if len(grid) == 1 and len(grid[0]) == 1:
             return 0
-        queue = deque([(0, 0, k, 0)])
+        queue = deque([(0, 0, k, 0)])  # i,j,free eliminate chance, steps
         directions = [[0, 1], [0, -1], [-1, 0], [1, 0]]
         visited = set([(0, 0, k)])
 

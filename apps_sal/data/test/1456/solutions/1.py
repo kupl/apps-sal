@@ -31,6 +31,7 @@ for fi in range(len(fig)):
             if r == 0:
                 dx = k - x + n - 1
                 dy = i - y + n - 1
+                #print(x, y, k, i, dx, dy)
                 hh[dx][dy] = 0
 
 

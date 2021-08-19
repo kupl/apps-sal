@@ -17,6 +17,7 @@ def main():
     for val in fav:
         players_fav_cnt[val] += 1
 
+    # dp[a][b] - a players, b favourite cards (in total)
     dp = [[0 for _ in range(k * n + k + 1)] for _ in range(n + 1)]
     for p in range(n):
         for c in range(k * n + 1):

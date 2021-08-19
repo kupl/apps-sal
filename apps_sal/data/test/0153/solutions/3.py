@@ -6,6 +6,7 @@ sT = sum(T)
 
 
 def it(p):
+    # pタスク完成させるノリ
     score = p * (k + 1)
     m = M - p * sT
 

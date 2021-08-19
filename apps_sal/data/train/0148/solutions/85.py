@@ -4,6 +4,7 @@ import heapq
 
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
+        # (-profit[i], difficulty[i])组成最小堆
         result_profit = 0
         profit_minus_min_heap = list()
         for i in range(len(profit)):

@@ -10,7 +10,7 @@ def main():
     A.sort(reverse=True)
     B.sort(reverse=True)
     C.sort(reverse=True)
-    que = [(- A[0] - B[0] - C[0], 0, 0, 0)]
+    que = [(- A[0] - B[0] - C[0], 0, 0, 0)]  # multiply -1 to change min to max
     already_inserted = defaultdict(int)
     answer = list()
     for _ in range(K):

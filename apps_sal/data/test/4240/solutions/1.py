@@ -1,5 +1,7 @@
+# 初期入力
 import sys
 
+# input = sys.stdin.readline  #文字列では使わない
 S = input().strip()
 T = input().strip()
 ans = "No"

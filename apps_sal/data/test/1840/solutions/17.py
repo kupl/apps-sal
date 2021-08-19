@@ -4,6 +4,18 @@ b = int(sb[1])
 a = list(map(int, input().split()))
 bases = []
 
+#
+# class Base:
+#     def __init__(self,str):
+#         lst = str.split()
+#         d = int(lst[0])
+#         g = int(lst[1])
+#
+#
+# for _ in range(b):
+#     new_base = Base(input())
+#     bases.append(new_base)
+#
 
 for _ in range(b):
     dg = list(map(int, input().split()))

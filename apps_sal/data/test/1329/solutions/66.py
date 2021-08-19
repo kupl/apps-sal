@@ -27,12 +27,14 @@ for i in range(2, n + 1):
             x //= j
             d[j] += 1
 
+# 75
 c = 0
 for i in list(d.values()):
     if i >= 74:
         c += 1
 ans = c
 
+#25 * 3
 c, e = 0, 0
 for i in list(d.values()):
     if i >= 24:
@@ -41,6 +43,7 @@ for i in list(d.values()):
         e += 1
 ans += c * (e - 1)
 
+#15 * 5
 c, e = 0, 0
 for i in list(d.values()):
     if i >= 14:
@@ -49,6 +52,7 @@ for i in list(d.values()):
         e += 1
 ans += c * (e - 1)
 
+#5 * 5 * 3
 c, e = 0, 0
 for i in list(d.values()):
     if i >= 4:

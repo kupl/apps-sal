@@ -7,6 +7,7 @@ from sys import stdin, stdout, setrecursionlimit
 from collections import deque, defaultdict
 from bisect import bisect_left
 
+# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 barr = list(stdin.readline().strip())
@@ -21,5 +22,6 @@ for i in range(n - 1, -1, -1):
         if i >= 1:
             mx = max(mx, temp + prefix[i - 1])
         temp += arr[i]
+    # print(temp, mx)
 mx = max(mx, temp)
 print(mx)

@@ -28,8 +28,10 @@ for i in range(MAX, 0, -1):
     gyakugen[i - 1] = (gyakugen[i] * i) % mod
 
 
-def Comb(n, k):
+def Comb(n, k):  # nCk
     return (fac[n] * gyakugen[k] * gyakugen[n - k]) % mod
+
+# K=k,N=n,0pair = 0
 
 
 def calc(k, n, i):

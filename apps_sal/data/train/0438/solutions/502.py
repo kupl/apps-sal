@@ -17,6 +17,7 @@ class Solution:
             if pos - 1 > 0 and self.find(pos - 1) in self.grpcounts:
                 self.union(pos, pos - 1)
 
+            # print(self.countMgrps)
             if self.countMgrps > 0:
                 last = step + 1
 

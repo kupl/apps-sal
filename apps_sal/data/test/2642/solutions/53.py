@@ -18,9 +18,11 @@ for i in range(N):
         a, b = -a, -b
     if b == 0 and a < 0:
         a, b = -a, b
+    # rot90
     rot90 = a <= 0
     if rot90:
         a, b = b, -a
+    # add
     if not (abs(a), b) in P:
         P[(a, b)] = [0, 0]
     if not rot90:
@@ -30,6 +32,7 @@ for i in range(N):
 
 ans = 1
 for k, v in P.items():
+    # print(k,v)
     s, t = v
     wk = 1 + pow(2, s, mod) - 1 + pow(2, t, mod) - 1
     ans *= wk

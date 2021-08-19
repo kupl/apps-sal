@@ -1,3 +1,7 @@
+# list(map(int,input().split()))
+# map(int,input().split())
+# for test in range(t):
+# int(input())
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
 tup = [[0, 0] for i in range(n)]

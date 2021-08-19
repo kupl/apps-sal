@@ -3,6 +3,7 @@ from itertools import accumulate
 
 
 def main():
+    # 入力
     readline = stdin.readline
     n, m = map(int, readline().split())
     a = list(map(int, readline().split()))

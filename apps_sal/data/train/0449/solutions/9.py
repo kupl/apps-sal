@@ -1,4 +1,5 @@
 class Solution:
+    # def findMin_PRACTICE(self, nums):
     def findMin(self, nums):
         if len(nums) == 1:
             return nums[0]
@@ -31,6 +32,7 @@ class Solution:
             return nums[m]
 
     def findMin_PASSED(self, nums):
+        # def findMin(self, nums):
         """
         :type nums: List[int]
         :rtype: int

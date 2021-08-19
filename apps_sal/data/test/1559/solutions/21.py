@@ -24,6 +24,7 @@ if n % l != 0:
     print(''.join(y for y in x))
 else:
     j = l - 1
+    # print('divisible')
     carry = 1
     s_ind = ''
     for i in range(l - 1, -1, -1):
@@ -32,12 +33,16 @@ else:
         if carry == 0:
             s_ind = str(y)
             break
+    # print(i,'ii',carry)
     if carry:
+        # print('a')
         if check(s):
             ans = ['0' for _ in range(l)]
             ans[0] = '1'
             i = 0
+            # print(ans,'ans')
             x = ['0' for _ in range(l * (n // l + 1))]
+            # print(x,'x')
             while i < (n // l + 1) * l:
                 for j in range(l):
                     x[i] = ans[j]
@@ -59,8 +64,11 @@ else:
                 x[i] = ans[j]
                 i += 1
         b = s[:l] * (n // l)
+        # print(s[:l])
+        # print(b,'s')
 
         a = ''.join(y for y in x)
+        # print(a,'a')
         if a < b:
             print(a)
         else:

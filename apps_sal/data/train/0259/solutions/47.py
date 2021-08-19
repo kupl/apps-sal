@@ -1,6 +1,13 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
 
+        # def evl(d):
+        #s = 0
+        # for n in nums:
+        #    s += (n-1) // d + 1
+        # return s
+        #    return
+
         def BS(p, r):
 
             if r - p <= 1:

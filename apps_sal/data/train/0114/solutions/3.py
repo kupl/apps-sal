@@ -29,6 +29,7 @@ for rew in range(q):
                 if poz + kroki >= n:
                     break
                 best_potwor = max(monster[poz + kroki], best_potwor)
+                # tyle krokow robimy i taki best potwor
                 l = 0
                 pr = m - 1
                 while abs(pr - l) > 0:

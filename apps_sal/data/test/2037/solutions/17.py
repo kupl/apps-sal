@@ -17,6 +17,9 @@ def read_string():
 def read_string_list(delim=" "):
     return input().strip().split(delim)
 
+###### Author : Samir Vyas #######
+###### Write Code Below    #######
+
 
 n, m = read_int_list()
 arr = read_int_list()

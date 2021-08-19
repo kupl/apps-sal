@@ -18,7 +18,9 @@ def main(ws, ords):
     s = 0
     for o in ords:
         idx = stack.index(o)
+        # print(stack, o, idx)
         w = [ws[b - 1] for b in stack[:idx]]
+        # print(w)
         s += sum(w)
         stack.insert(0, stack.pop(idx))
 
@@ -29,6 +31,7 @@ def parse():
     _ = intput()
     ws = intput()
     ords = intput()
+    # print(ws, ords)
     return ws, ords
 
 

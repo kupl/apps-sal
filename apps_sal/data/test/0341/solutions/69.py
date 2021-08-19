@@ -2,6 +2,7 @@ import math
 n, k = list(map(int, input().split()))
 r, s, p = list(map(int, input().split()))
 t = input()
+#r<-p, s<-r, p<-s
 dic = {'r': p, 's': r, 'p': s}
 point = 0
 lose = False

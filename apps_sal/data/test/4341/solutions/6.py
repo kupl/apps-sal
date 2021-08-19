@@ -32,3 +32,38 @@ for x in degreeTwo:
         ans += int(flag)
 
 print(ans)
+
+# components = [-1] * v
+
+# numComp = 0
+
+# for i in range(v):
+# 	if components[i] == -1:
+# 		queue = [i]
+# 		while queue:
+# 			curr = queue.pop(0)
+# 			components[curr] = numComp
+# 			for neigh in edges[curr]:
+# 				if components[neigh] == -1:
+# 					queue.append(neigh)
+# 		numComp += 1
+
+# c = [[] for _ in range(numComp)]
+
+# for i in range(numComp):
+# 	for j in range(v):
+# 		if components[j] == i:
+# 			c[i].append(j)
+
+# ans = 0
+# for comp in c:
+# 	if len(comp) >= 3:
+# 		flag = True
+# 		for vertex in comp:
+# 			if len(edges[vertex]) != 2:
+# 				flag = False
+# 				break
+# 		if flag:
+# 			ans += 1
+
+# print(ans)

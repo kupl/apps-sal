@@ -10,18 +10,22 @@ while(T > 0):
         carry = int((carry + i) / 10)
         cal += 1
         i += 1
+    # print ans
     i -= 2
     while i >= 1:
         ans = ((carry + i) % 10) * (10**cal) + ans
         carry = int((carry + i) / 10)
         cal += 1
         i -= 1
+    # print ans
     while carry > 0:
         ans = ((carry) % 10) * (10**cal) + ans
         carry = int((carry) / 10)
         cal += 1
+    # print ans
     ans *= (D * D)
     ans = str(ans)
+    # print ans
 
     length = len(ans)
     ans1 = 0

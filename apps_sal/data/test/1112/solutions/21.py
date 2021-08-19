@@ -1,3 +1,4 @@
+# Description of the problem can be found at http://codeforces.com/problemset/problem/259/B
 
 g = []
 o_s = 0

@@ -1,3 +1,5 @@
+# heapqの方針で上手くいかなかった
+# 解説放送を見てimosにした
 
 def main():
     from collections import namedtuple

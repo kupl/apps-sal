@@ -60,3 +60,8 @@ class MajorityChecker:
         left_values, left_set = self.rec_query(node.left, left, node.mid)
         right_values, right_set = self.rec_query(node.right, node.mid, right)
         return left_values + right_values, left_set + right_set
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

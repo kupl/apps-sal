@@ -17,6 +17,7 @@ class Solution:
         mx = 0
         while l <= h:
             m = (l + h) // 2
+            # print(m)
             t = 0
             for i in range(0, lim - m):
                 if sm[i + m] - sm[i] + arr[i] <= maxCost:

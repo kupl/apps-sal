@@ -1,4 +1,15 @@
+# class Solution:
+#     def isValid(self, s: str) -> bool:
+#         element = 0
+#         lg = len(s)
+#         for j in range(lg):
+#             element += 1
+#             if element >= 3:
+#                 if s[2]=='c' and s[1]=='b' and s[0]=='a':
+#                     for i in range(2,-1,-1):
+#                         del s[i]
 
+#         return len(s)==0
 
 from collections import deque
 

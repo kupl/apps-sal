@@ -1,5 +1,6 @@
 import sys
 f = sys.stdin
+#f = open("input.txt", "r")
 f.readline()
 l, r = [], []
 res = 0

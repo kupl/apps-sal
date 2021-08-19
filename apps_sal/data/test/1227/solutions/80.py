@@ -8,6 +8,7 @@ def main():
     for i in range(1, L + 1):
         n = int(N[i - 1])
         for k in range(K + 1):
+            # from dpp
             kk = k + (1 if n > 0 else 0)
             if kk <= K:
                 dpp[kk][i] = dpp[k][i - 1]
@@ -15,6 +16,7 @@ def main():
                 dp[k][i] += dpp[k][i - 1]
                 if k + 1 <= K:
                     dp[k + 1][i] += (n - 1) * dpp[k][i - 1]
+            # from dp
             dp[k][i] += dp[k][i - 1]
             if k + 1 <= K:
                 dp[k + 1][i] += 9 * dp[k][i - 1]

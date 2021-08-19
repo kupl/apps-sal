@@ -4,6 +4,7 @@ class Solution:
             p1, p2, prev_max_string = 0, -1, None
             for i, l in enumerate(s):
                 if p2 > 0:
+                    # has valid start
                     if ord(l) > ord(s[p1 + i - p2]):
                         p1 = p2
 
@@ -12,6 +13,7 @@ class Solution:
                     else:
                         p2 = -1
                 else:
+                    # how you initialize the string
                     if ord(l) > ord(s[p1]):
                         p1 = i
                     elif ord(l) < ord(s[p1]):

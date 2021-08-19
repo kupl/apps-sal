@@ -4,9 +4,12 @@ class Solution:
 
         ans = list()
         for query in queries:
+            # O(n)
             ind = m - 1 - current.index(query)
 
+            # O(n)
             current.remove(query)
+            # O(1)
             current.append(query)
 
             ans.append(ind)

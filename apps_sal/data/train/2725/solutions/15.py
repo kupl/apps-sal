@@ -1,4 +1,5 @@
 def gimme(input_array):
+    # Implement this function
     for e in input_array:
         i = 0
         for p in range(len(input_array)):

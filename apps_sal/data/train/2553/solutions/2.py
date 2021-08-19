@@ -18,6 +18,8 @@ class Solution:
             else:
                 c_nums += [i]
 
+        # return (self.fact(len(p_nums))*self.fact(len(c_nums)))%(10**9+7)  ===ok
+        # 模运算规则：(a * b) % m = ((a % m) * b) % m 证明方法请自行搜索
         return (self.fact(len(p_nums) % (10**9 + 7)) * self.fact(len(c_nums)) % (10**9 + 7))
 
     def fact(self, n):

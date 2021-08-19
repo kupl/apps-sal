@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+# nCをp(=10**9+7)で割ったときのあまり(モジュラ逆数)
 def cmb(n, r, p):
     if r < 0 or n < r:
         return 0
@@ -7,9 +9,13 @@ def cmb(n, r, p):
 
 p = 10**9 + 7
 n, m = map(int, input().split())
+# 0,1の時の値をいれたn!のリスト(modp)
 facto = [1, 1]
+# 0,1の時の値をいれたn!の逆元のリスト(modp)
 factoinv = [1, 1]
+# 0,1の場合を入れたn!の逆元も求めるために使うnの逆元のリスト(modp)
 inv = [0, 1]
+# 2からスタート
 for i in range(2, m + 1):
     facto.append((facto[-1] * i) % p)
     inv.append((-inv[p % i] * (p // i)) % p)

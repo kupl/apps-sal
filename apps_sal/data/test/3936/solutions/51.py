@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -7,7 +9,7 @@ s = input()
 t = input()
 
 MOD = 10**9 + 7
-v = 2
+v = 2  # 初期状態
 ans = 1
 i = 0
 while i < n:

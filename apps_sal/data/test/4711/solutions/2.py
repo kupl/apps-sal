@@ -1,3 +1,4 @@
+# A - ringring
 def main():
     abc = list(map(int, input().split()))
     abc.sort()

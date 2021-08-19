@@ -17,9 +17,11 @@ class Solution:
         incoming, outgoing = list(range(n)), defaultdict(list)
         for i in range(n):
             l, r = leftChild[i], rightChild[i]
+            # No cycle allowed
             if l == i or r == i:
                 return False
             if l > -1:
+                # Every pair of nodes has only one edge: one-way not two-way edge
                 if i in outgoing[l]:
                     return False
                 outgoing[i].append(l)
@@ -33,6 +35,8 @@ class Solution:
                 if incoming[r] != r:
                     return False
                 incoming[r] = i
+        # Only one node has no incoming edge, others have only one incoming node
+        # if sum([1 for i in range(n) if incoming[i] == i]) > 1: return False
         group = n
         p, rank = list(range(n)), [0] * n
         for i in range(n):

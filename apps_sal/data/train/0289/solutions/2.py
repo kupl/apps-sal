@@ -3,6 +3,10 @@ class Solution:
         sub_L = [sum(A[i:i + L]) for i in range(len(A) - L + 1)]
         sub_M = [sum(A[i:i + M]) for i in range(len(A) - M + 1)]
 
+        # let p be the index of sub_L, and q be the index of sub_M.
+        # we require (q+M-1) - (p+L-1) >= M  or (p+L-1) - (q+M-1) >= L.
+        # equivalently: q - p >= L or p - q >= M
+
         max_L_M = float('-inf')
         max_M_L = float('-inf')
 

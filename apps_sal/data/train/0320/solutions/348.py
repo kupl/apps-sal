@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        mul = [0 for i in range(len(nums))]
+        mul = [0 for i in range(len(nums))]  # for each number of increment by 1 needed
         res = 0
         for i in range(len(nums)):
             while nums[i] != 0:

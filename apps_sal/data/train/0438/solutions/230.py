@@ -38,4 +38,8 @@ class Solution:
                     if uf.ranks[j]:
                         uf.union(i, j)
 
+        # for i in range(n):
+         #   if uf.ranks[uf.find(i)] == m:
+          #      return n
+
         return ans

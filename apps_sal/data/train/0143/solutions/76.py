@@ -1,5 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
+        # two fruit
         firstFruit = secondFruit = -1
         firstQuant = secondQuant = 0
         ans = 0
@@ -30,5 +31,6 @@ class Solution:
                     j -= 1
                 secondQuant = i - 1 - j
             ans = max(ans, firstQuant + secondQuant)
+            # print(firstFruit,firstQuant,secondFruit,secondQuant,ans)
             i += 1
         return ans

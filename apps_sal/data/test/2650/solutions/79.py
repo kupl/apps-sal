@@ -9,8 +9,8 @@ A, B = [], []
 
 for i in range(n):
     a, b = map(int, input().split())
-    A.append(a)
-    B.append(b)
+    A.append(a)  # スコア
+    B.append(b)  # 幼稚園番号
     heapq.heappush(kindergarten[b], (-a, i))
 
 for i in kindergarten:
@@ -18,7 +18,7 @@ for i in kindergarten:
     heapq.heappush(best, (-tmp[0], tmp[1]))
 
 for i in range(q):
-    c, d = map(int, input().split())
+    c, d = map(int, input().split())  # c: 幼児の番号, d: 転園先の幼稚園番号
     kd_ori = B[c - 1]
     B[c - 1] = d
 

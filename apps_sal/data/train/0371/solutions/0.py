@@ -5,6 +5,9 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
+        # sequence_to_route_id dict
+        # if when adding sequence ids to this dict, they are part of another route,
+        # merge them
         max_int = 10**6
         start_routes = set()
         end_routes = set()
@@ -23,8 +26,14 @@ class Solution:
                     route_connections[sequence_to_route_id_dict[s]].add(r_id)
                 sequence_to_route_id_dict[s] = r_id
 
+        # print(route_connections)
+        # print(start_routes)
+        # print(end_routes)
+
         current_route_buscount = [(s, 1) for s in start_routes]
         for r_id, buscount in current_route_buscount:
+            # print(current_route_buscount)
+            # print(dict(route_to_minbuscount))
             for connection in route_connections[r_id]:
                 if route_to_minbuscount[connection] > buscount + 1:
                     route_to_minbuscount[connection] = buscount + 1

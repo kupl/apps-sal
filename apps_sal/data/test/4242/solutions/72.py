@@ -1,3 +1,4 @@
+# 整数A,B AもBも割れる整数でK番目に大きいもの
 
 A, B, K = map(int, input().split())
 

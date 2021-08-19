@@ -12,4 +12,10 @@ class Solution:
                 elif s2 >= s1 and e2 <= e1:
                     toremove.add(j)
 
+        # res = []
+        # for i, interval in enumerate(intervals):
+        #     if i in toremove:
+        #         continue
+        #     res.append(interval)
+
         return len(intervals) - len(toremove)

@@ -1,4 +1,4 @@
-t = int(input())
+t = int(input())  # number of test cases
 mod = 1000000007
 
 

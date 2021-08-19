@@ -20,14 +20,15 @@ def solve():
         moji = []
         line = input()
         for c in line:
-            if c == '*' or c == '
-            moji.append('*')
+            if c == '*' or c == '#' or c == '&':
+                moji.append('*')
             elif ord('0') <= ord(c) <= ord('9'):
                 moji.append('1')
             else:
                 moji.append('a')
         str_l.append(moji)
 
+    # debug(str_l, locals())
     row_nums = []
 
     for i in range(n):

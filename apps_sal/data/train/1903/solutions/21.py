@@ -9,6 +9,8 @@ class Solution:
             return abs(points[x[0]][0] - points[x[1]][0]) + abs(points[x[0]][1] - points[x[1]][1])
         e.sort(key=lambda x: h(x))
 
+        #print([[points[x], points[y], h((x,y))] for x,y in e])
+
         n = len(points)
         v = set()
         s = 0
@@ -47,4 +49,5 @@ class Solution:
                 del c[yi]
                 if len(v) == n and len(c) == 1:
                     return s
+        # print(v)
         return s

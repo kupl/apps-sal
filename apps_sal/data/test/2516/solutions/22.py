@@ -1,7 +1,9 @@
+#!python3
 
 def LI(): return list(map(int, input().split()))
 
 
+# input
 N, P = LI()
 S = input()
 

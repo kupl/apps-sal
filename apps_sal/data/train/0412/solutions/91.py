@@ -1,6 +1,7 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = [[0 for _ in range(target + 1)]]
+        #dp.append([0 for _ in range(target+1)])
         for i in range(1, min(f + 1, target + 1)):
             dp[0][i] = 1
         for i in range(2, d + 1):

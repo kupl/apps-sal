@@ -27,6 +27,7 @@ while GetS < X + Y:
     t = max([a, b, c])
     index = [a, b, c].index(t)
     W += t
+    #print(R, G, T)
     GetS += 1
     if index == 0:
         del(R[-1])

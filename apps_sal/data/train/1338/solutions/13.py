@@ -1,3 +1,4 @@
+# cook your dish here
 arr = [float(i) for i in input().split()]
 n = int(arr[0])
 for i in range(1, 2 * n + 1, 2):

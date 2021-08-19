@@ -4,14 +4,14 @@ class UF:
         self.cc = [1] * n
 
     def find(self, x):
-        while x != self.f[x]:
+        while x != self.f[x]:  # while, not if
             x = self.f[x]
         return x
 
     def union(self, x, y):
         fx, fy = self.find(x), self.find(y)
         if fx != fy:
-            if self.cc[fx] <= self.cc[fy]:
+            if self.cc[fx] <= self.cc[fy]:  # path compression?
                 self.f[fx] = fy
                 self.cc[fx], self.cc[fy] = 0, self.cc[fx] + self.cc[fy]
             else:
@@ -27,6 +27,7 @@ class Solution:
         uf = UF(n)
 
         '''
+        # TLE
         def gcd(a, b):
             while b != 0:
                 a, b = b, a % b
@@ -49,7 +50,7 @@ class Solution:
                     num2primes[num] = getPrimeSets(i, num2primes) | getPrimeSets(num // i, num2primes)
                     return num2primes[num]
 
-            num2primes[num] = set([num])
+            num2primes[num] = set([num])  # num is prime
             return num2primes[num]
 
         num2primes = collections.defaultdict(set)
@@ -66,6 +67,8 @@ class Solution:
             for i in range(len(idxs) - 1):
                 uf.union(idxs[i], idxs[i + 1])
 
+        # print(uf.f)
+        # print(uf.cc)
         res = 1
         for i in range(n):
             res = max(uf.cc[i], res)

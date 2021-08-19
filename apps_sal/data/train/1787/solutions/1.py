@@ -1,5 +1,8 @@
+# Matrix access functions
 def row(m, r): return m[r]
 def col(m, c): return [r[c] for r in m]
+
+# Matrix row functions
 
 
 def row_mul(m, r, coeff): return [[v * coeff for v in row] if rr == r else row for rr, row in enumerate(m)]
@@ -19,20 +22,27 @@ class Datamining:
         P = min(10, P)
         xs, ys = [t[0] for t in train_set], [t[1] for t in train_set]
 
+        # Build powers of xs[i]
         m = [[sum(xs[i] ** (p1 + p2) for i in range(N)) for p2 in range(P)] for p1 in range(P)]
+        # Create augmented matrix with expected coefficients column
         r = [sum(ys[i] * xs[i] ** p for i in range(N)) for p in range(P)]
         m = [m[i] + [r[i]] for i in range(P)]
 
+        # Perform Gaussian reduction
         for r in range(P):
+            # Make current diagonal equal 1
             if m[r][r] == 0:
+                # Oops this diagonal is zeo, so add another row
                 vs = col(m, r)
                 for rr, v in enumerate(vs):
                     if rr > r and v != 0:
                         break
                 m = row_add(m, r, rr, 1 / m[rr][r])
             else:
+                # Multiply to get to value 1
                 m = row_mul(m, r, 1 / m[r][r])
 
+            # Use current row to zero out other rows on same column
             for cr in range(P):
                 if cr != r:
                     f = m[cr][r]

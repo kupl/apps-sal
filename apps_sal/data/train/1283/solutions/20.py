@@ -12,6 +12,7 @@ try:
             for f in range(h, len(glist)):
                 hlist.append(glist[h] + glist[f])
         hlist.sort()
+        # print(hlist)
         if (n in hlist):
             print("YES")
         else:

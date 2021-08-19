@@ -16,10 +16,13 @@ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
+# def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def LS(): return sys.stdin.readline().split()
 def S(): return input()
+
+# Union-Find -- START --
 
 
 class UnionFind():
@@ -55,6 +58,7 @@ class UnionFind():
 
     def get_amount(self, k):
         return self.amount[k]
+# Union-Find --- END ---
 
 
 def main():
@@ -69,12 +73,17 @@ def main():
             if not l1[i]:
                 continue
             for k in range(n):
+                # print(field[i][k],field[j][k])
                 if field[i][k] + field[j][k] > K:
                     l1[j] = False
                     break
+        # print(l1[j])
         for j in range(i + 1, n):
             if l1[j]:
                 uf1.unite(i, j)
+
+        # for i in range(n):
+        #   print(uf1.find(i))
 
     for i in range(n):
         l2 = [True] * n
@@ -89,6 +98,9 @@ def main():
             if l2[j]:
                 uf2.unite(i, j)
 
+    # for i in range(n):
+    #   print(uf2.find(i))
+
     ans1 = 1
     check1 = [True] * n
     for i in range(n):
@@ -102,6 +114,8 @@ def main():
                 _ans %= mod
             ans1 *= _ans
             ans1 %= mod
+
+    # print(ans1)
 
     ans2 = 1
     check2 = [True] * n
@@ -120,4 +134,5 @@ def main():
     return (ans1 * ans2) % mod
 
 
+# main()
 print((main()))

@@ -1,12 +1,14 @@
 class Solution:
     def sorting(self, numstr):
         newnumstr = []
+        # print(numstr)
         for i in range(0, len(numstr)):
             for j in range(1, len(numstr) - i):
                 if numstr[j - 1] + numstr[j] < numstr[j] + numstr[j - 1]:
                     temp = numstr[j - 1]
                     numstr[j - 1] = numstr[j]
                     numstr[j] = temp
+        # print(numstr)
 
     def largestNumber(self, nums):
         """
@@ -26,5 +28,7 @@ class Solution:
             if str(i) in matrix:
                 prenums = matrix[str(i)]
                 self.sorting(prenums)
+                # print(prenums)
                 ret += "".join(prenums)
+                # print(ret)
         return str(int(ret))

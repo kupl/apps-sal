@@ -13,6 +13,7 @@ while(t):
             fac.add(i)
             fac.add(n // i)
     fac.add(1)
+    # fac.add(n)
     lcm = float('inf')
     a, b = 0, 0
     for i in fac:

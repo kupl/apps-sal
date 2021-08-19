@@ -15,6 +15,7 @@ d = floyd_warshall(G, False)
 rec = inf
 for i in permutations(R, r):
     temp = 0
+    # print(i)
     for j in range(r):
         if j == r - 1:
             continue

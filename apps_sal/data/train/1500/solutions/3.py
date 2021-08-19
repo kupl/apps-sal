@@ -1,3 +1,4 @@
+# cook your dish here
 def fun(s):
     bal = 0
     maxbal = 0

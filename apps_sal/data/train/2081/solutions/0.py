@@ -3,7 +3,7 @@ from math import pi
 from cmath import exp
 
 
-def fft(a, lgN, rot=1):
+def fft(a, lgN, rot=1):  # rot=-1 for ifft
     N = 1 << lgN
     assert len(a) == N
     rev = [0] * N
@@ -32,6 +32,7 @@ ac = [0] * (n + 1)
 for i in range(n):
     ac[i + 1] = (r[i] < x) + ac[i]
 
+# Multiset addition
 min_A, min_B = 0, -ac[-1]
 max_A, max_B = ac[-1], 0
 N, lgN, m = 1, 0, 2 * max(max_A - min_A + 1, max_B - min_B + 1)

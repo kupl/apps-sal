@@ -36,3 +36,6 @@ for i in range(q + 1, 1000003, 1):
 
 
 print(n - ma)
+
+
+# Made By Mostafa_Khaled

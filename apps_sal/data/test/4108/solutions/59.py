@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 30 03:40:29 2020
 
@@ -45,6 +46,7 @@ def solve():
             return
 
     print("Yes")
+    # print(B)
     return
 
 

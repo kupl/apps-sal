@@ -14,7 +14,7 @@ class Solution:
 
         for k in range(1, jobs):
             for i in range(1, d):
-                for x in range(1, k - i + 2):
+                for x in range(1, k - i + 2):  # k-x >= i-1
                     opt[i][k] = min(opt[i][k],
                                     opt[i - 1][k - x] + max(jobDifficulty[k - x + 1: k + 1]))
         print(opt)

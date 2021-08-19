@@ -11,6 +11,7 @@ class Solution:
         steps = 0
         pos_m[arr[0]].remove(0)
 
+        # (idx, step)
         q = [(0, 0)]
         while q:
             for _ in range(len(q)):
@@ -23,10 +24,14 @@ class Solution:
                 if idx + 1 < len(arr) and idx + 1 not in seen:
                     seen.add(idx + 1)
                     q.append((idx + 1, step + 1))
+                # pos_to_remove = []
                 for pos in pos_m[arr[idx]]:
                     if pos not in seen:
                         seen.add(pos)
                         q.append((pos, step + 1))
+                        # pos_to_remove.append(pos)
                 del pos_m[arr[idx]]
+                # for pos in pos_to_remove:
+                #     pos_m[arr[idx]].remove(pos)
 
         return -1

@@ -1,3 +1,4 @@
+# coding: utf-8
 import math
 
 cat, meta, x = map(int, input().split())

@@ -1,3 +1,4 @@
+# 545 ms
 from functools import lru_cache
 n = int(input())
 s = input()

@@ -383,6 +383,7 @@ class Poly:
                 power1 -= 1
             while(power2 > -1 and q[power2] == 0):
                 power2 -= 1
+            #result += [current]
         return (Poly(result), Poly(p))
 
     def __rdivmod__(self, other):
@@ -409,6 +410,7 @@ class Poly:
         return self
 
 
+#begin = time()
 p, q = list(map(int, input().split()))
 lolka = Fraction(p, q)
 n = int(input())
@@ -421,3 +423,4 @@ if(Answer == lolka):
     print("YES")
 else:
     print("NO")
+#print(time() - begin)

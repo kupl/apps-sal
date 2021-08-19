@@ -14,6 +14,7 @@ class Solution:
 
         max_len = 1
 
+        # while left <= right and right < len(nums):
         for right in range(len(nums)):
             curr_max = max(curr_max, nums[right])
             curr_min = min(curr_min, nums[right])

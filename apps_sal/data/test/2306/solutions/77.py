@@ -21,6 +21,10 @@ for s, u in zip(T[::-1], V[::-1]):
         vr[t - 1] = min(u, vr[t] + 1)
         t -= 1
 v = [min(vl[i], vr[i]) for i in range(max_t + 1)]
+# print(vm)
+# print(vl)
+# print(vr)
+# print(v)
 ans = 0
 for i in range(max_t):
     ans += (v[i] + v[i + 1]) / 2

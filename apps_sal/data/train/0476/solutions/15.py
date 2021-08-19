@@ -6,6 +6,7 @@ class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         if len(position) < 1:
             return 0
+        # d = dict(zip(target - np.array(position), speed))
         ord_d = collections.OrderedDict(sorted(dict(zip(target - np.array(position), speed)).items()))
         count = 0
         r = -1

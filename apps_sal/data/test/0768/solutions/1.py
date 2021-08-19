@@ -5,3 +5,4 @@ for i in range(n):
     for j in range(m):
         a[j] += s[j] == 'Y'
 print(len(list([x for x in a if x >= k])))
+# kitten

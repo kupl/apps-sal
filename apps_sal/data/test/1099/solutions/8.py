@@ -15,6 +15,7 @@ def eprint(*args):
 
 zz = 1
 
+# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -67,6 +68,7 @@ tt = 1
 while tt > 0:
     tt -= 1
     n = fi()
+    # Pick all even or odd levels
     a = [[] for i in range(n + 1)]
     for i in range(n - 1):
         x, y = mi()

@@ -3,8 +3,10 @@ from math import gcd
 
 
 def solve(*eqs):
+    # Print equations for reference
     for e in eqs:
         print(e)
+    # Parsed equations into values
     parsed_eqs = []
     for e in eqs:
         e = ('' if e[0] == '-' else '+') + e
@@ -19,6 +21,7 @@ def solve(*eqs):
                     parsed[k] = 0
                 parsed[k] += (int(v) if v not in '-+' else int(v + '1')) * [1, -1][i]
         parsed_eqs.append(parsed)
+    # Parsed values into matrix
     keys = set()
     for parsed_eq in parsed_eqs:
         for key in parsed_eq:
@@ -34,8 +37,10 @@ def solve(*eqs):
         matrix.append([[parsed_eq[k], 1] for k in ordered_keys])
     for line in matrix:
         print(line)
+    # Reduce the matrix with standard operations
 
     def swap(i0, i1):
+        # matrix[i1], matrix[i0] = matrix[i0], matrix[i1]
         tmp = matrix[i0]
         matrix[i0] = matrix[i1]
         matrix[i1] = tmp
@@ -65,6 +70,7 @@ def solve(*eqs):
                 divisor *= -1
             if divisor != 0:
                 l[0], l[1] = l[0] // divisor, l[1] // divisor
+    # Convert to row echelon form
 
     def ref(r0, c0):
         print()
@@ -90,11 +96,13 @@ def solve(*eqs):
                 reduce(i)
         return ref(r0 + 1, c0 + 1)
     ref(0, 0)
+    # Remove lines that lack meaning
     matrix = [line for line in matrix
               if line != [[0, 1] for x in range(len(line))]]
     print('REF:')
     for line in matrix:
         print(line)
+    # Generate reduced row echelon form by retracing up the matrix
 
     def rref(r0, c0):
         while r0 > 0 and c0 > 0 and matrix[r0][c0] != [1, 1]:

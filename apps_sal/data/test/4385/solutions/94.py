@@ -12,6 +12,7 @@ dist = []
 for m in M:
     dist.append(abs(m[0] - m[1]))
 
+# print(dist)
 
 if max(dist) > k:
     print(':(')

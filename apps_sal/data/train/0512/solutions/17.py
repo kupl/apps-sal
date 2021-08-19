@@ -59,7 +59,7 @@ def solve():
     idEle = (INF, -1)
 
     def _binOpe(x, y):
-        return x if x <= y else y
+        return x if x <= y else y  # min
 
     def makeSegTree(numEle):
         numPow2 = 2 ** (numEle - 1).bit_length()

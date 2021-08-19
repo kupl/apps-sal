@@ -10,6 +10,7 @@ class Solution:
                     continue
                 if num + v > suma * (k + 1) // N:
                     continue
+                # print(k, v, num, dp)
                 if num + v == suma * (k + 1) // N and suma * (k + 1) % N == 0 and k + 1 < N:
                     return True
 

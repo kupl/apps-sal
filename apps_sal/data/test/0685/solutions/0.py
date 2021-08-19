@@ -13,6 +13,9 @@ else:
         gap_sum.append(gap_sum[-1] + x1 - oldx2)
         airflow_sum.append(airflow_sum[-1] + x2 - oldx2)
 
+    # print(gap_sum)
+    # print(airflow_sum)
+
     ans = h
     for i in range(n):
         cnt = bisect_left(gap_sum, h + gap_sum[i])

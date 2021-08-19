@@ -1,4 +1,5 @@
 def number(bus_stops):
+    # Good Luck!
     into_bus = 0
     get_off_bus = 0
     for stops in bus_stops:

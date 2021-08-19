@@ -31,6 +31,7 @@ def solve():
         for j in range(i + 1, len(s)):
             if t.index(s[i]) > t.index(s[j]):
                 r += 1
+    # print(r)
     print(["NO", "YES"][r % 2 == 0])
 
 

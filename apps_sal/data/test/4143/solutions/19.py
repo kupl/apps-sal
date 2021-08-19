@@ -6,6 +6,7 @@ def main():
     csr = []
     for _ in range(5):
         csr.append(int(input()))
+    # print(5+n//min(csr))
     print((4 + math.ceil(n / min(csr))))
 
 

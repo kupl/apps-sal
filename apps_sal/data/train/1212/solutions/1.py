@@ -1,11 +1,11 @@
-def hash_it(arr, s):
+def hash_it(arr, s):  # to count occurences of each letter and returning a     reverse sorted array
     for i in range(len(s)):
-        arr[ord(s[i]) - 65] += 1
-    arr = sorted(arr, reverse=True)
+        arr[ord(s[i]) - 65] += 1  # counting occurences of each letter
+    arr = sorted(arr, reverse=True)  # reverse sorting the array
     return arr
 
 
-def balance(s, arr, l):
+def balance(s, arr, l):  # balancing the string
     val = len(set(s))
     res = 10000000000
     pp = 0
@@ -26,10 +26,10 @@ def balance(s, arr, l):
     return(res)
 
 
-for _ in range(int(input())):
-    s = input()
-    l = len(s)
-    if l <= 2:
+for _ in range(int(input())):  # number of test cases
+    s = input()  # input string
+    l = len(s)  # length of the string
+    if l <= 2:  # if length is 2 or less, it is already balanced
         print(0)
         continue
     arr = [0 for i in range(0, 27)]

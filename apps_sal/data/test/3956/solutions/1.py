@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+# K+1 - x でうつす -> i と 2K+2-i は同じ
 
 MOD = 998244353
 U = 10000

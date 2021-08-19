@@ -24,3 +24,5 @@ a = prime_factorize(N)
 b = prime_factorize(M)
 c = set(a) & set(b)
 print((len(c) + 1))
+## [[2, 3], [3, 1]]
+# 24 = 2^3 * 3^1

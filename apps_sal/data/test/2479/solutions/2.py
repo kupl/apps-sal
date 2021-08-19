@@ -8,6 +8,8 @@ walls_V = []
 
 count = (N - 2) * (N - 2)
 
+# search smallest i ( s <= i < e ) such that f(i) == True
+
 
 def bisearch_smallest(f, s, e=None):
     if e == None:
@@ -49,4 +51,5 @@ for _ in range(Q):
             j = bisearch_smallest(lambda j: walls_V[j][0] < i, 0, len(walls_V))
             count -= walls_V[j][1]
 
+#print(area_W, area_H)
 print(count)

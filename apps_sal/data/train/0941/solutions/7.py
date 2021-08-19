@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 
 for i in range(t):
@@ -20,5 +21,7 @@ for i in range(t):
     else:
         even_y = len(y) // 2
         odd_y = len(y) // 2
+    #print("even_x & even_y : ",even_x,even_y)
+    #print("odd_x & odd_y : ",odd_x,odd_y)
     count = (even_x * even_y) + (odd_x * odd_y)
     print(count)

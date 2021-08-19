@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def notify(xs, xs_sorted, ind_sorted, n, answer):
     if not xs_sorted[ind_sorted][1]:
@@ -24,11 +25,15 @@ def main():
 
     answer = []
     f = xs_sorted.index([0, True, xs[0]])
+    # print(f)
     notify(xs, xs_sorted, f, n, answer)
 
     for i in range(n):
         if i != f:
             notify(xs, xs_sorted, i, n, answer)
+
+    # print(xs_sorted)
+    # print(answer)
 
     if all(x[1] for x in xs_sorted):
         print(len(answer))

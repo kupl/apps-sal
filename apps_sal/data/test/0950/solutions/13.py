@@ -1,7 +1,7 @@
 import math
 
 n, m = list(map(int, input().split()))
-SYMBOLS = ['&', '*', '
+SYMBOLS = ['&', '*', '#']
 
 strs = []
 
@@ -14,6 +14,7 @@ minS = [m] * n
 for i, s in enumerate(strs):
     for j, c in enumerate(list(s)):
         dist = min(j, m - j)
+        # print(dist)
         if c.isalpha() and minA[i] > dist:
             minA[i] = dist
         if c.isdigit() and minD[i] > dist:

@@ -3,7 +3,7 @@ class Solution:
         if target == 0:
             return 0
 
-        pq = [(0, 0, -1)]
+        pq = [(0, 0, -1)]  # steps, pos, speed
         visited = set([(0, -1)])
 
         while pq:
@@ -15,6 +15,7 @@ class Solution:
                 return next_steps
 
             if -2 * target < -next_pos < 2 * target and -2 * target < -next_speed < 2 * target and not (next_pos, next_speed) in visited:
+                # if -next_pos < 2 * target and -next_speed < 2 * target and not (next_pos, next_speed) in visited:
                 heapq.heappush(pq, (next_steps, next_pos, next_speed))
                 visited.add((next_pos, next_speed))
 

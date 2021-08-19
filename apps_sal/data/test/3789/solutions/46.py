@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 
 from sys import stdin
-from fractions import gcd
+from fractions import gcd  # math.gcd is introduced in python 3.5
 from functools import reduce
 
 
@@ -51,7 +52,7 @@ def tuples(m, N):
                 continue
             if any(j % i == 0 for j in t):
                 continue
-            ls.append((i,) + t)
+            ls.append((i,) + t)  # smaller label first
     ts.append(ls)
     return ts
 
@@ -59,6 +60,7 @@ def tuples(m, N):
 def solve(a):
     N = len(a)
     tl = flatten(tuples(N, N))
+    # break jewels with larger labels first.
     tl.sort(key=lambda t: [-x for x in t])
     for t in tl:
         if value(a, t) < 0:

@@ -16,5 +16,6 @@ for _ in range(int(input())):
             else:
                 ans += u[i] - cur
                 cur = 0
+        #print(cur, u[i])
     gans.append(ans)
 print('\n'.join(map(str, gans)))

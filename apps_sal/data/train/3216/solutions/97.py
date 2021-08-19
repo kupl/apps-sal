@@ -9,4 +9,5 @@ def movie(card, ticket, perc):
         count += 1
         system_A += ticket
         system_B += ticket * (perc**count)
+        # count+=1
     return count

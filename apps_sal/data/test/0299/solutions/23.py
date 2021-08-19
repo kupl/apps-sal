@@ -1,3 +1,4 @@
+# coding: utf-8
 n = int(input())
 a = [int(i) for i in input().split()]
 chest = sum([a[i] for i in range(n) if i % 3 == 0])

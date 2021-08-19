@@ -2,6 +2,7 @@ N = int(input())
 3 <= N <= 100
 
 D1_D2 = [map(int, input().split()) for _ in range(N)]
+# print(D1_D2)
 D1, D2 = [list(i) for i in zip(*D1_D2)]
 
 right = int()

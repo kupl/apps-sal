@@ -8,6 +8,7 @@ for i in range(1, n, 1):
     idx = -1
     while(lo <= hi):
         mid = (lo + hi) // 2
+        # print(lo,hi,i)
         if lo != len(ans) and ans[mid][len(ans[mid]) - 1] < arr[i]:
             idx = mid
             hi = mid - 1

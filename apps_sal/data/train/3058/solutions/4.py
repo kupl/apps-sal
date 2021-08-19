@@ -1,3 +1,4 @@
+# Will work for any size (as long as it's a square)
 def is_magical(sq):
     N = int(len(sq)**0.5)
     res = sum(sq[::N + 1])

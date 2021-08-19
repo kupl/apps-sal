@@ -13,7 +13,7 @@ def main():
     max_sum = s
     for i in range(n - 1):
         if a[i + 1] - a[i] != 1:
-            to_add = a[i + 1] - 1
+            to_add = a[i + 1] - 1  # added in pos between i and i+1
 
             s_ = incr_sum[i]
             s_ += to_add - a[i]

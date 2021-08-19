@@ -2,7 +2,7 @@ def solve(n, a):
     tot = 0
     for i in range(n):
         tot += a[i]
-    diffs = []
+    diffs = []  # alla suffix - prefix diffs[i]=prefix-suffix om delas innan element i
     diffs.append(-tot)
     for i in range(n):
         tot -= 2 * a[i]

@@ -4,6 +4,12 @@ s = input()
 X, Y = map(int, input().split())
 S = list(map(len, s.split('T')))
 N = len(S)
+# if N == 1:
+#   print(['No', 'Yes'][X == S[0] and Y == 0])
+#   return
+# elif N == 2:
+#   print(['No', 'Yes'][X == S[0] and abs(Y) == S[1]])
+#   return
 
 x = S[0]
 y = 0

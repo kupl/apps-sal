@@ -18,6 +18,7 @@ class Solution:
         def paths(i, n):
             if (i, n) in dp:
                 return dp[(i, n)]
+            # number of ways to jump from i n times
             if n == 1:
                 return len(path[i])
             if n == 0:

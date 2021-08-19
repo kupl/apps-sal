@@ -10,6 +10,7 @@ class DinnerPlates:
         self.cur = []
 
     def push(self, val: int) -> None:
+        # print(\"push\", val, self.cur, self.nFull)
         if self.nFull:
             self.cur[self.nFull[0]].append(val)
             if len(self.cur[self.nFull[0]]) == self.cap:
@@ -20,6 +21,7 @@ class DinnerPlates:
                 self.nFull.append(len(self.cur) - 1)
 
     def pop(self) -> int:
+        # print(\"pop\", self.cur, self.nFull)
         if not self.cur:
             return -1
         tmp = self.cur[-1].pop()
@@ -34,6 +36,7 @@ class DinnerPlates:
         return tmp
 
     def popAtStack(self, index: int) -> int:
+        # print(\"popAt\", index, self.cur, self.nFull)
         if index >= len(self.cur):
             return -1
         if self.cur[index]:
@@ -52,3 +55,10 @@ class DinnerPlates:
             return tmp
         else:
             return -1
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

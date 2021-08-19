@@ -35,8 +35,8 @@ class Solution:
 
                 xx, yy = ni
 
-                if xx < 0 or yy < 0 or xx >= n or yy >= m or grid[xx][yy] == '
-                continue
+                if xx < 0 or yy < 0 or xx >= n or yy >= m or grid[xx][yy] == '#':
+                    continue
 
                 if grid[xx][yy] in 'ABCDEF':
                     if grid[xx][yy].lower() in keys and (xx, yy, keys) not in visited:

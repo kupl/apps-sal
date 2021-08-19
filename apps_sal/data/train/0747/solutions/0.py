@@ -37,3 +37,5 @@ for _ in range(int(input())):
 
     else:
         print("NO")
+
+# cook your dish here

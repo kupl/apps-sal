@@ -9,16 +9,19 @@ def seq1(diff, nums):
     for i in range(1, len(diff)):
         index = diff[i][1]
         a, b = nums[index][0], nums[index][1]
+        # print(a,b,x2)
         if x2 > a and a < b:
             indices.append(index)
             x2 = b
         else:
             break
+        # print(a,b,x2)
 
     return indices
 
 
 def seq2(diff, nums):
+    # print(nums)
     index = diff[0][1]
     a, b = nums[index][0], nums[index][1]
     if b < a:
@@ -29,6 +32,7 @@ def seq2(diff, nums):
     for i in range(1, len(diff)):
         index = diff[i][1]
         a, b = nums[index][0], nums[index][1]
+        # print(a,b,x2)
         if a > x2 and a > b:
             indices.append(index)
             x2 = b

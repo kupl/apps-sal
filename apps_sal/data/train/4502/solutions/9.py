@@ -5,3 +5,4 @@ def tribonacci(s, n):
         return s
     else:
         return s[:n]
+    # your code here

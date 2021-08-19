@@ -1,3 +1,4 @@
+# cook your dish here
 for testcase in range(int(input())):
     n = int(input())
     values = list(map(int, input().split()))
@@ -5,6 +6,7 @@ for testcase in range(int(input())):
     current_total = sum(values)
 
     equality_value = current_total / n
+    # lines 10-11 are ceil() function equivalent
     if equality_value > int(equality_value):
         equality_value += 1
     equality_value = int(equality_value)
@@ -17,7 +19,9 @@ for testcase in range(int(input())):
         deviations.append(deviation)
         net_deviations += deviation
 
-    minimum_operations = abs(net_deviations)
+    # print(current_total, equality_value, deviations, net_deviations)
+
+    minimum_operations = abs(net_deviations)    # net_deviations has to be a negative value, using abs() just to be foolproof
 
     for deviation in deviations:
         if deviation > 0:

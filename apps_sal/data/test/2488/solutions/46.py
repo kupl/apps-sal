@@ -4,6 +4,7 @@ def resolve():
     AB = [list(map(int, input().split())) for _ in range(N)]
     AB.sort()
 
+    # imos
     imos = [0] * (N + 1)
     ans = 0
     R = 0
@@ -17,7 +18,7 @@ def resolve():
             while R < N and AB[R][0] <= 2 * D + x:
                 R += 1
             d = h - imos[l]
-            cnt = -(-d // A)
+            cnt = -(-d // A)  # 切り上げ
             imos[l] += cnt * A
             imos[R] -= cnt * A
             ans += cnt

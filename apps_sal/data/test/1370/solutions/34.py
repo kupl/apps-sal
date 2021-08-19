@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -16,7 +17,7 @@ for pattern in range(1 << H - 1):
     cnt = 0
     Tcum = Scum.copy()
     for i in range(H - 1):
-        if pattern >> i & 1:
+        if pattern >> i & 1:  # 切れ目
             cnt += 1
         else:
             Tcum[i + 1] += Tcum[i]
@@ -30,7 +31,7 @@ for pattern in range(1 << H - 1):
                 cut = True
                 break
         if cut:
-            if prev == w - 1:
+            if prev == w - 1:  # 1列でKをオーバー
                 break
             cnt += 1
             prev = w - 1

@@ -23,6 +23,7 @@ def main():
 
     used = [0] * n
 
+    # print()
     def dfs(v):
         is_cir = 1
         if deg[v] != 2:
@@ -36,6 +37,7 @@ def main():
     head = 0
     count = 0
     while 1:
+        #print(used, head)
         used[head] = 1
         is_cir = dfs(head)
         count += is_cir

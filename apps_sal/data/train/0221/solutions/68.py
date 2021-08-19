@@ -15,11 +15,13 @@ class Solution:
 
         n = len(S)
         nums = [ord(c) - ord('a') for c in S]
+        # find length of longest duplicate substring
         l, r = 1, n
         pos = 0
-        MOD = 2**63 - 1
+        MOD = 2**63 - 1  # use largest positive of 8 byte integer
         while l <= r:
             m = (l + r) // 2
+            # search if there's duplicate for length m substring
             cur = search(m, MOD)
             if cur != -1:
                 l = m + 1

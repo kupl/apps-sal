@@ -1,5 +1,6 @@
 from math import *
 
+# logger[n] = log(n!)
 logger = []
 for n in range(1000111):
     if n == 0:

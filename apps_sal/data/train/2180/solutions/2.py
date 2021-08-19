@@ -35,12 +35,16 @@ res = 0
 last = -BigNum
 
 for i in range(1, len(ts)):
+    #print(i, ' ------------ ')
     emps = empsInRange(ts[i - 1], ts[i])
+    #print(ts[i-1], ts[i], emps, last)
     last, inc = moveEmps(emps, last)
+    #print('last:', last, ' inc:', inc)
     res += inc
 
     if ts[i] < BigNum and last + d < ts[i]:
         res += 1
         last = ts[i]
+    #print('temp res:', res)
 
 print(res)

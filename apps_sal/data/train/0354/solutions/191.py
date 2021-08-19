@@ -1,4 +1,5 @@
 class Solution:
+    # @lru_cache(None)
     def __init__(self):
         self.store = defaultdict(int)
 

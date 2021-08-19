@@ -12,6 +12,7 @@ for _ in range(t):
     y = 0
     c = 0
     for i in s:
+        #print(v, x, y, i)
         if i == 'N':
             if (x, y, x + 1, y) in v:
                 c += 1

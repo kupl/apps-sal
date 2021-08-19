@@ -1,4 +1,4 @@
-from sys import stdin, stdout
+from sys import stdin, stdout  # only need for big input
 import numpy as np
 
 

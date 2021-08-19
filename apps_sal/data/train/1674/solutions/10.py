@@ -1,5 +1,6 @@
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
+        # store (start, M)
         table = {}
 
         def stoneGameRec(start, M):

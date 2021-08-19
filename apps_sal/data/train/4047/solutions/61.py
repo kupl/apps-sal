@@ -8,7 +8,7 @@ MAPPING_TABLE = {
     'E': '3',
     'F': 'F',
     'G': '6',
-    'H': '
+    'H': '#',
     'I': '!',
     'J': 'J',
     'K': 'K',
@@ -44,4 +44,4 @@ class TestToLeekSpeak(unittest.TestCase):
     def test_to_leek_speak_with_empty_space(self):
         str_ = 'HELLO WORLD'
         actual = to_leek_speak(str_)
-        self.assertEqual(actual, '
+        self.assertEqual(actual, '#3110 W0R1D')

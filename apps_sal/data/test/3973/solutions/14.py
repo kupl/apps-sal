@@ -1,3 +1,4 @@
+# Binary Indexed Tree (Fenwick Tree)
 class BIT():
     """区間加算、一点取得クエリをそれぞれO(logN)で答える
     add: 区間[l, r)にvalを加える

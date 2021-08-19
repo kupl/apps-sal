@@ -25,6 +25,7 @@ s = [0] * n
 s[-1] = arr[0][-1] + arr[1][-1]
 for i in range(n - 2, -1, -1):
     s[i] = s[i + 1] + arr[0][i] + arr[1][i]
+# print(s)
 
 a = [0] * n
 a[-1] = arr[1][-1] * 2 + arr[0][-1]
@@ -33,6 +34,8 @@ b[-1] = arr[0][-1] * 2 + arr[1][-1]
 for i in range(n - 2, -1, -1):
     a[i] = arr[0][i] + a[i + 1] + s[i + 1] + arr[1][i] * (n - i) * 2
     b[i] = arr[1][i] + b[i + 1] + s[i + 1] + arr[0][i] * (n - i) * 2
+# print(a)
+# print(b)
 
 dp = [0] * n
 dp[-1] = arr[n % 2][-1]

@@ -3,6 +3,7 @@ maxA = A
 S = [int(a) for a in input().split()]
 
 for i in range(N):
+    # print(B, A)
     s = S[i]
     if A + B == 0:
         print(i)

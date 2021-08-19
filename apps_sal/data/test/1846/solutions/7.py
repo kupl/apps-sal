@@ -1,3 +1,16 @@
+#	!/bin/env python3
+#	coding: UTF-8
+
+
+#	✪ H4WK3yE乡
+#	Mohd. Farhan Tahir
+#	Indian Institute Of Information Technology and Management,Gwalior
+
+#	Question Link
+#	https://codeforces.com/problemset/problem/234/C
+#
+
+# ///==========Libraries, Constants and Functions=============///
 
 
 import sys
@@ -15,6 +28,8 @@ def get_ints(): return list(map(int, sys.stdin.readline().split()))
 
 
 def input(): return sys.stdin.readline()
+
+# ///==========MAIN=============///
 
 
 def __starting_point():

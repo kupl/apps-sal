@@ -1,10 +1,10 @@
 def productsum(n):
-    pass
+    pass  # Your code here
 
 
 def productsum(kmax):
     def prodsum2(p, s, c, start):
-        k = p - s + c
+        k = p - s + c     # product - sum + number of factors
         if k < kmax:
             if p < n[k]:
                 n[k] = p

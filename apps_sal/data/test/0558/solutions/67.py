@@ -1,4 +1,5 @@
 def combs_mod(n, k, mod):
+    # nC0からnCkまで
     inv = [1] * (k + 1)
     for i in range(1, k + 1):
         inv[i] = pow(i, mod - 2, mod)

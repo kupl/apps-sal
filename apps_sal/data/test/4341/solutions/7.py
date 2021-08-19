@@ -1,4 +1,5 @@
 import sys
+#sys.stdin = open("e.txt")
 input = sys.stdin.readline
 N, M = map(int, input().split())
 G = {}

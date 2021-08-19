@@ -12,6 +12,7 @@ for _ in range(int(input())):
     y = []
     for v in d:
         y.extend(d[v])
+    # print(y)
     if len(y) >= 3:
         v1 = max(y)
         y.remove(v1)

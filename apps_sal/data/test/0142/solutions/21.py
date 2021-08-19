@@ -8,6 +8,7 @@ for i in range(n):
 
 
 def sl(n, l, c, bl):
+    #print(n, l, c, bl)
     s = []
     for i in range(n):
         if i not in bl:

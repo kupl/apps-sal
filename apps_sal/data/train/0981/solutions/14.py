@@ -9,6 +9,8 @@ for i in range(T):
     for item in inp:
         linp.append(int(item))
 
+    # print linp
+
     linp.sort()
 
     lout = []

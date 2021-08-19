@@ -22,6 +22,7 @@ def main():
         if not ok:
             break
 
+    # print(s)
     if len(s) > 0:
         print("NO")
     else:

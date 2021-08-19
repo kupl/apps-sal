@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 N, Ma, Mb = list(map(int, input().split()))
 
 dp = [[10**9 for i in range(401)] for j in range(401)]

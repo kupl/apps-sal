@@ -12,3 +12,8 @@ class Solution:
             return max_hor_width
 
         return (get_max_gap(horizontalCuts) * get_max_gap(verticalCuts)) % 1000000007
+
+# time complexity - nlogn - mainly sorting
+# sub1: corner case for 0, n index
+# sub2: result should be module
+#  does insertion take extra time? - maybe just O(n) - could be avoided with smart comparison

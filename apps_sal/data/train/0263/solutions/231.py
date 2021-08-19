@@ -24,6 +24,7 @@ class Solution:
             for nei in graph[curr]:
                 cnt += helper(left - 1, nei)
             return cnt
+        #n = 3
         ans = 0
         for i in range(10):
             ans += helper(n, i)

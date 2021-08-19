@@ -1,3 +1,4 @@
+# /usr/bin/python
 
 def main():
     test = int(input())

@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 def main():
     N, X = list(map(int, input().split()))
-    nums = [None] * (N + 1)
-    pnums = [None] * (N + 1)
+    nums = [None] * (N + 1)  # nums[i]: i次元バーガーの層の数
+    pnums = [None] * (N + 1)  # pnums[i]: i次元バーガーのパティの枚数
     nums[0] = 1
     pnums[0] = 1
     for i in range(N):
@@ -16,10 +17,10 @@ def main():
         if X == 1:
             print(ans)
             break
-        elif X <= nums[N - 1] + 1:
+        elif X <= nums[N - 1] + 1:  # N-1次元バーガの中をさらに探索
             X -= 1
             N -= 1
-        elif X == nums[N - 1] + 2:
+        elif X == nums[N - 1] + 2:  # ぴったり真ん中のパティまで到達
             print((ans + pnums[N - 1] + 1))
             break
         elif X < nums[N]:
@@ -29,6 +30,7 @@ def main():
         else:
             print((ans + pnums[N]))
             break
+    # print(N,X)
 
 
 def __starting_point():

@@ -1,3 +1,4 @@
+# cook your dish here
 d, x, y = map(int, input().split())
 arr = [int(i) for i in input().split()]
 s = x * d

@@ -4,20 +4,20 @@ import re
 def siegfried(week, txt):
     lessons = \
         [
-            [
+            [   # Week 1
                 (r'c(?=[ie])', {'c': 's', 'C': 'S'}),
                 (r'c(?!h)', {'c': 'k', 'C': 'K'})
-            ], [
+            ], [  # Week 2
                 (r'ph', {'ph': 'f', 'Ph': 'F'})
-            ], [
+            ], [  # Week 3
                 (r'(?<=\w\w\w)e(?=\W|\Z)', {'e': '', 'E': ''}),
                 (r'([a-z])\1', {})
-            ], [
+            ], [  # Week 4
                 (r'th', {'th': 'z', 'Th': 'Z'}),
                 (r'wr', {'wr': 'r', 'Wr': 'R'}),
                 (r'wh', {'wh': 'v', 'Wh': 'V'}),
                 (r'w', {'w': 'v', 'W': 'V'})
-            ], [
+            ], [  # Week 5
                 (r'ou', {'ou': 'u', 'Ou': 'U'}),
                 (r'an', {'an': 'un', 'An': 'Un'}),
                 (r'ing(?=\W|\Z)', {'ing': 'ink'}),

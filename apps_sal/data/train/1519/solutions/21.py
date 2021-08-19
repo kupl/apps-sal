@@ -19,3 +19,7 @@ def get_don(n):
 for t in range(int(input())):
     n = int(input().strip())
     print(get_don(n))
+
+
+# for i in range(2, 100):
+#    print("n:", i, "value:", get_don(i))

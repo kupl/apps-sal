@@ -11,6 +11,12 @@ import copy
 from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
+# Guide:
+#   1. construct complex data types while reading (e.g. graph adj list)
+#   2. avoid any non-necessary time/memory usage
+#   3. avoid templates and write more from scratch
+#   4. switch to "flat" implementations
+
 
 def VI(): return list(map(int, input().split()))
 def I(): return int(input())
@@ -66,7 +72,7 @@ class FlowNetwork:
         self.nv = nv
         self.al = ELIST(self.nv)
 
-    def add_edge(self, e):
+    def add_edge(self, e):  # directed edge
         self.al[e.v].append(e)
         self.al[e.w].append(e)
 
@@ -77,7 +83,7 @@ class FlowNetwork:
 
 
 class FordFulkerson:
-    def __init__(self, g, s, t):
+    def __init__(self, g, s, t):  # graph, source, target
         self.g = g
         self.s = s
         self.t = t

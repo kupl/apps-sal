@@ -15,4 +15,5 @@ for i in range(n - 1):
         boxs[i + 1] = boxs[i + 1] + (boxs[i] - num)
         s += boxs[i] - num
         boxs[i] = num
+    # print(boxs)
 print(int(s))

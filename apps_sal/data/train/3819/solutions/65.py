@@ -1,4 +1,5 @@
 def smash(words):
+    # Begin here
     count = 0
     sentence = ""
     for word in words:

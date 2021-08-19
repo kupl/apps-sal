@@ -14,7 +14,9 @@ class Solution:
             if A[r][c]:
                 return search(r, c + 1, steps)
 
+            # A[r][c] is empty
             for k in range(min(R - r, C - c), 0, -1):
+                # If A[r:r+k][c:c+k] is empty:
                 bad = False
                 for r0 in range(r, r + k):
                     for c0 in range(c, c + k):

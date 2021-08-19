@@ -22,6 +22,7 @@ class Solution:
                 index += 1
                 if index >= answers_len:
                     break
+                # skip at most answers[index] following answers
                 for _ in range(this_answer):
                     if answers[index] == this_answer:
                         index += 1

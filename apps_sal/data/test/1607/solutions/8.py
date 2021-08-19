@@ -1,7 +1,12 @@
+# 0 denotes white white
+# 1 denotes white black
+# 2 denotes black white
+# 3 denotes black black
 
 pri = 998244353
 dp = [[[0 for i in range(2001)] for i in range(1001)] for i in range(2)]
 n, k = list(map(int, input().split()))
+# dp[i][j][k] i denotes type  j denotes index k denotes bycoloring
 for i in range(1, n + 1):
     if(i == 1):
         dp[0][i][1] = 2

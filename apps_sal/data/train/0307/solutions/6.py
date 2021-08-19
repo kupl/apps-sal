@@ -1,3 +1,4 @@
+#
 class Solution:
     def soupServings(self, N: int) -> float:
         Q, R = divmod(N, 25)

@@ -1,3 +1,4 @@
+# cook your dish here
 from math import sqrt
 t = int(input())
 for _ in range(t):

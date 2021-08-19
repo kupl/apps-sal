@@ -18,9 +18,12 @@ for i in range(q):
     else:
         l = BOOK[int(Q[i][1])][1]
         r = BOOK[int(Q[i][1])][2]
+        # print(l,r)
         if BOOK[int(Q[i][1])][0] == "R":
             ANS = min(Rcount - r, Lcount - l + (r + l - 1))
         elif BOOK[int(Q[i][1])][0] == "L":
             ANS = min(Lcount - l, Rcount - r + (r + l - 1))
 
         sys.stdout.write(str(ANS) + "\n")
+
+# print(Lcount)

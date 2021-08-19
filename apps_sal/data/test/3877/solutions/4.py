@@ -12,10 +12,13 @@ def score(n):
         n >>= 1
         factor *= 2
 
+    # print('score({}) = {}'.format(save, ans))
     return ans
 
 
 def solve(n, r, half_size):
+    # count the number of 1s strictly less than r (0 indexed)
+    # print(n, r, half_size)
     if r == 0:
         return 0
 
@@ -28,6 +31,7 @@ def solve(n, r, half_size):
         ans += score(n // 2)
         ans += solve(n // 2, r - half_size - 1, half_size // 2)
     else:
+        # r <= half_size
         ans += solve(n // 2, r, half_size // 2)
 
     return ans
@@ -41,6 +45,7 @@ def main():
     right = solve(n, r, half_size)
 
     left = solve(n, l - 1, half_size)
+    # print(right, left)
     print(right - left)
 
 

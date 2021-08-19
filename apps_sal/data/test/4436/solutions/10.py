@@ -3,6 +3,7 @@ for a in range(t):
     n = ori = int(input())
     num = []
     for b in range(2, int(ori**0.5) + 1):
+        # print(n)
         if n % b == 0:
             num.append(b)
             n = n // b

@@ -1,3 +1,4 @@
+# cook your dish here
 def pal(str):
     h = len(str) // 2
     i = 0

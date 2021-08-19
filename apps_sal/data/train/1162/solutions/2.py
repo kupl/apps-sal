@@ -7,15 +7,15 @@ out = sys.stdout
 cases = int(inp.readline())
 
 
-def lucky_number_4(num):
-    if num < 4:
+def lucky_number_4(num):  # 15
+    if num < 4:  # no
         return -1
-    if num == 4:
+    if num == 4:  # no
         return 0
-    if num < 7:
+    if num < 7:  # no
         return -1
-    fours = num - (num % 7)
-    for i in range(fours, 0, -7):
+    fours = num - (num % 7)  # = 15 - 1 = 14
+    for i in range(fours, 0, -7):  # 14,
         if (num - i) % 4 == 0:
             return i
     return -1

@@ -11,7 +11,7 @@ class Solution:
         edge_costs.sort()
 
         total = 0
-        parent = list(range(n))
+        parent = list(range(n))  # init with parent[i] = i
 
         def find_parent(v):
             if parent[v] == v:
@@ -20,11 +20,18 @@ class Solution:
                 parent[v] = find_parent(parent[v])
                 return parent[v]
 
-        for cost, edge in edge_costs:
+        # def join(v1, v2):
+        #     a = find_parent(v1)
+        #     b = find_parent(v2)
+        #     if a != b:
+        #         parent[b] = a
+
+        for cost, edge in edge_costs:  # already sorted in increasing edge weight
             v1, v2 = edge
             v1_parent = find_parent(v1)
             v2_parent = find_parent(v2)
             if v1_parent != v2_parent:
+                # print(v1, v2, cost)
                 total += cost
                 parent[v2_parent] = v1_parent
 

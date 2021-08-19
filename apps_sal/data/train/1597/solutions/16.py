@@ -2,6 +2,7 @@ import math
 t = int(input())
 while t > 0:
     t -= 1
+    # n = int(input())
     a, m = list(map(int, input().split()))
     d = 1
     ans = set()

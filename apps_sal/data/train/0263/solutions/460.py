@@ -3,9 +3,12 @@ class Solution:
         mod = 10 ** 9 + 7
         phone = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [0, 1, 0]]
         moves = ((2, 1), (1, 2), (2, -1), (1, -2), (-2, 1), (-1, 2), (-2, -1), (-1, -2))
+        # memo = {}
 
         @lru_cache(None)
         def helper(row, col, left):
+            #             if (row,col,left) in memo:
+            #                 return memo[(row,col,left)]
 
             if not 0 <= row <= 3 or not 0 <= col <= 2 or phone[row][col] == 0:
                 return 0
@@ -15,6 +18,7 @@ class Solution:
             for r, c in moves:
                 if 0 <= row + r <= 3 and 0 <= col + c <= 2 and phone[row + r][col + c] == 1:
                     ans += helper(row + r, col + c, left - 1)
+            # memo[(row,col,left)] = ans
             return ans
 
         ans = 0

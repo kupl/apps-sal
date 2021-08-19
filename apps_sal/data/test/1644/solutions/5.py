@@ -3,7 +3,7 @@ n = int(input())
 
 for i in range(n):
     a, b, h = map(int, input().split())
-    aux.append((b, a, h))
+    aux.append((b, a, h))  # sort padrao eh pelo item 0 da tupla
 
 aux.sort(reverse=True)
 

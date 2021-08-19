@@ -14,6 +14,8 @@ for i in range(int(math.sqrt(2 * m)), n + 1):
         break
 
 MAXANS = n - i
+# n*(n-1)/2=m
+# n^2-n+2m=0
 
 
 print(MINANS, MAXANS)

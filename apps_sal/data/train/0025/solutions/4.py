@@ -22,7 +22,7 @@ for _ in range(t):
     index = 0
     while index < n - 2:
         curr = que[index]
-        tt = triangles[curr].pop()
+        tt = triangles[curr].pop()  # should remain one
         order.append(assign_order[tt])
         t = set(tt)
         t.remove(curr)

@@ -58,7 +58,13 @@ for i in range(K):
 for i in range(L):
     uf_train.union(rs[i][0] - 1, rs[i][1] - 1)
 
+# 各都市に連結しているroadとtrainの積集合の探索はTLE
+# ans = []
+# for i in range(N):
+#   ans.append(len(set(uf_road.members(i)) & set(uf_train.members(i))))
+# print(*ans)
 
+# road,trainの根のペアで同じペアを持つ都市は連結している
 pair = [(uf_road.find(i), uf_train.find(i)) for i in range(N)]
 ans = Counter(pair)
 print(*[ans[i] for i in pair])

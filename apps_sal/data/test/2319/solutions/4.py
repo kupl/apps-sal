@@ -51,6 +51,7 @@ def main():
                     dp[i + 1][j + 1] = min(dp[i + 1][j + 1], pre)
                 if j + 1 <= n and cnts[i + 1][ord(t[j]) - 97] > cntt[j + 1][ord(t[j]) - 97]:
                     dp[i][j + 1] = min(dp[i][j + 1], pre)
+        # p2D(dp)
         print(dp[n][n])
 
 

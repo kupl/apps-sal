@@ -12,6 +12,8 @@ class MajorityChecker:
         print((self.nums))
 
     def query(self, left: int, right: int, threshold: int) -> int:
+        # binary search every number in arr
+        # find number of num in this range [left, right]
         for n in self.nums:
             if len(self.loc[n]) < threshold:
                 return -1
@@ -19,3 +21,7 @@ class MajorityChecker:
             if r - l >= threshold:
                 return n
         return -1
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

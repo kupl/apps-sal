@@ -30,3 +30,10 @@ class ThroneInheritance:
             for i in range(len(node.children)):
                 stack.append(node.children[-1 - i])
         return res
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

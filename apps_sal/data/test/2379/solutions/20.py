@@ -7,6 +7,10 @@ def main():
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
+    #from math import gcd
+
+    #inf = 10**17
+    #mod = 10**9 + 7
 
     n, k, c = map(int, input().split())
     s = input().rstrip()

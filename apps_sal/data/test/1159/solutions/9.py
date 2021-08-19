@@ -15,6 +15,7 @@ ans.append([1, n])
 c = 0
 while(not prime[edges]):
     ans.append([c + 1, c + n // 2 + 1])
+    # print(edges,c,c+n//2)
     degree[c] += 1
     degree[c + n // 2] += 1
     c += 1

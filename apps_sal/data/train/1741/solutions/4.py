@@ -1,3 +1,4 @@
+# https://www.codeleading.com/article/49772209610/
 arr = [0, 8, 95, 1183, 14824]
 
 for i in range(0, 10**5):

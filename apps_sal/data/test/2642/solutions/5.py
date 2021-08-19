@@ -1,3 +1,4 @@
+# ほぼ写経
 from math import gcd
 from collections import defaultdict
 mod = 10**9 + 7
@@ -15,6 +16,8 @@ for i in range(n):
     rot_cnt = 0
     while not (a > 0 and b >= 0):
         a, b = -b, a
+        # ベクトルの成分が(正,正)となるまで90度回転、奇数回の時は元のベクトルと直行することになるのでrot_cntで記録
+        # 今回の問題においては内積0を計算すればいいので逆ベクトルは考慮しなくてよい
         rot_cnt += 1
     mp[(a, b)][rot_cnt % 2] += 1
 ans = 1

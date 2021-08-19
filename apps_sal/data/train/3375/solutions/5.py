@@ -1,3 +1,4 @@
+# truncate to 6 decimals
 def trunc(n):
     return float(str(n)[:8])
 

@@ -1,4 +1,5 @@
 def capital(capitals):
+    # your code here
     q = []
     lst = []
     p = len(capitals)

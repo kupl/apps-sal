@@ -5,7 +5,7 @@ class Random():
     def randint(self, start, end):
         return int(self.random() * (end - start + 1) + start)
 
-    def random(self):
+    def random(self):  # xorshift
         x = self.seed
         x ^= (x << 13) & 0xffffffff
         x ^= (x >> 17)

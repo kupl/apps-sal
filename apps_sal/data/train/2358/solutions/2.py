@@ -6,7 +6,7 @@ MOD = 10 ** 9 + 7
 INF = 10 ** 15
 
 
-def dijkstra(G, s=0):
+def dijkstra(G, s=0):  # sを始点とした最短経を求める
     n = len(G)
     dist = [INF] * n
     dist[s] = 0

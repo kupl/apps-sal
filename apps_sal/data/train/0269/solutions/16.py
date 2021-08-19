@@ -1,4 +1,5 @@
 class Solution:
+    # 8:23
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         i = 0
         while(i < len(nums) and nums[i] == 0):

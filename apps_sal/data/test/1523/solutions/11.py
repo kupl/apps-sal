@@ -17,11 +17,14 @@ def persuade(idler_nos, job_nos, job_chosen, idlers_persuade_time):
             remain_tuples.append(t)
             pass
 
+    # Selection step, remove those with highest jobs
+
     idler_needed_nos = job_nos - job_chosen_nos
     for i in reversed(list(range(len(remain_tuples) - idler_needed_nos, len(remain_tuples)))):
         persuade_time += remain_tuples[i][1]
 
     return persuade_time
+    # Persuade step
 
 
 idler_nos, job_nos = list(map(int, input().split()))

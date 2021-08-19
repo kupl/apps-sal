@@ -1,10 +1,16 @@
 from typing import List
 
 
+# Aug 15, 2020
+# 44 / 153 test cases passed.
+# 129 / 153 test cases passed.
+# Faster than 12.08% of Python3 online submissions for Find Longest Awesome Substring
 class Solution:
     def longestAwesome(self, s: str) -> int:
         res = 0
 
+        # pattern[i] True means we have even number of i so far
+        # pattern[i] false means we have odd number of i so far
         pattern: List[bool] = [False] * 10
 
         existing = {tuple(pattern): -1}
@@ -16,8 +22,11 @@ class Solution:
             for i in range(10):
                 new_pattern = pattern.copy()
                 new_pattern[i] = not new_pattern[i]
+                # `existing[new_pattern]` give us the position of j where
+                # starting from `j` we know we have 1 odd `num`
                 res = max(res, cur_i - existing.get(tuple(new_pattern), cur_i))
 
+            # If we have `pattern` in `existing`, then we know it is also a palindrome starting from existing[pattern]
             res = max(res, cur_i - existing.get(tuple(pattern), cur_i))
 
             existing.setdefault(tuple(pattern), cur_i)

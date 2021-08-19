@@ -43,6 +43,7 @@ for i in range(N - 1):
 
 heappush(q, (abs(x[N - 1][0] - x[0][0]), x[N - 1][1], x[0][1]))
 heappush(q, (abs(y[N - 1][0] - y[0][0]), y[N - 1][1], y[0][1]))
+# クラスカル法
 while len(q) > 0:
     d, a, b = heappop(q)
     if S.find(a) != S.find(b):

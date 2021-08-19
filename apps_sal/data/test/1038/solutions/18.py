@@ -13,10 +13,13 @@ def g(n):
 
     b = bin(n)[2:]
     res = 0
+    # xxxx10: 01, 10
     if b[-2:] == "10":
         res += 3
+    # xxxx11: 01, 10, 11
     elif b[-2:] == "11":
         pass
+    # xxxx00 or xxxx01
     else:
         res += int(b[-1])
 

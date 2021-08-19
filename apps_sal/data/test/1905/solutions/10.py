@@ -26,3 +26,6 @@ for t in [list(f()) for k in range(q)][::-1]:
 
 for d in p:
     print(*d)
+
+
+# Made By Mostafa_Khaled

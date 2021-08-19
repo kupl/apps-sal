@@ -67,6 +67,7 @@ def fil(y, x):
     for i1 in range(len(x)):
         if an[0] + x[i1] < 10 and an[1] + y[i1] < 10:
             mp[an[0] + x[i1]][an[1] + y[i1]] = 1
+    # chk()
 
 
 def ind(y, x):

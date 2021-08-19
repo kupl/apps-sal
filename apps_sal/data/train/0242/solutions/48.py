@@ -9,6 +9,7 @@ class Solution:
 
         print((count, freq))
         for i in range(n - 1, 0, -1):
+            # If include A[i]
             if count[A[i]] * freq[count[A[i]]] == i:
                 return i + 1
             freq[count[A[i]]] -= 1

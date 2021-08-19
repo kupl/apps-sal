@@ -12,6 +12,7 @@ class Solution:
         while left < right:
 
             mid = (left + right + 1) // 2
+            # print(left,mid,right)
             if arr[mid][1] <= target:
                 left = mid
             elif arr[mid][1] > target:
@@ -50,6 +51,11 @@ class Solution:
 
         arr.sort(key=lambda x: x[1])
 
+        # print(arr)
+
         ans = self.solve(len(profit) - 1, arr)
 
+        # print(self.dp)
+
+        # print(self.next_index(arr,2,2))
         return ans

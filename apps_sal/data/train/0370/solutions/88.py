@@ -21,7 +21,7 @@ class UnionFind(object):
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        def primeFactors(n):
+        def primeFactors(n):  # Prime factor decomposition
             out = set()
             while n % 2 == 0:
                 out.add(2)

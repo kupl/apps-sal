@@ -5,6 +5,10 @@ H, W = list(map(int, input().split()))
 A = [list(map(int, input().split())) for i in range(H)]
 B = [list(map(int, input().split())) for i in range(H)]
 
+#import random
+#H,W = 80, 80
+#A = [[random.randint(0,80) for x in range(W)] for y in range(H)]
+#B = [[random.randint(0,80) for x in range(W)] for y in range(H)]
 
 C = [[abs(a - b) for a, b in zip(la, lb)] for la, lb in zip(A, B)]
 

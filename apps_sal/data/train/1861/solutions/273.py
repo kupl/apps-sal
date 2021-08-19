@@ -3,6 +3,8 @@ from collections import defaultdict
 
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
+        # (1,1), (1,3), (3, 1), (3,3)
+        # (1,1), (1,3), (3,1), (3,3) X (3,1), (3,3), (4,1), (4,3)
 
         point_set = set()
         for x, y in points:
@@ -18,3 +20,9 @@ class Solution:
                     min_area = min(min_area, abs((x1 - x2) * (y1 - y2)))
 
         return min_area if min_area != float('inf') else 0
+
+        # x1, y1    x2, y1
+        # x1, y2    x2, y2
+
+        #3, 3
+        # 3,4       4, 4

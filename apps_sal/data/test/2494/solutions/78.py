@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 sys.setrecursionlimit(10 ** 9)
+# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 
@@ -23,6 +24,12 @@ def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
 
 INF = float('inf')
 
+# from math import ceil, floor, log2
+# from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
+# from heapq import heapify, heappop, heappush
+# import numpy as np
+# from numpy import cumsum  # accumulate
+
 
 def solve():
     K = II()
@@ -30,6 +37,7 @@ def solve():
     q = deque([(1, 1)])
     used = [0 for _ in range(K)]
     while len(q) > 0:
+        # print(q)
         v, cost = q.popleft()
         if v == 0:
             print(cost)

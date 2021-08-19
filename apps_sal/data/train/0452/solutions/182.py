@@ -3,6 +3,7 @@ class Solution:
         if len(jobDifficulty) < d:
             return -1
 
+        # dp[i][j]表示第i天以第j个任务结尾，总的最小的difficulty
         dp = [[float('inf')] * len(jobDifficulty) for _ in range(d)]
 
         dp[0][0] = jobDifficulty[0]

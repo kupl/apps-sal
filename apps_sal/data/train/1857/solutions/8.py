@@ -26,6 +26,7 @@ class Solution:
         config3 = {4, 5, 6, 7}
         config4 = {6, 7, 8, 9}
 
+        #print(rowSeats, config1.intersection(rowSeats[1]))
         res = freeRows * 2
         for row in rowSeats:
             if len(rowSeats[row]) == 0 or not config1.intersection(rowSeats[row]):

@@ -13,10 +13,10 @@ dp[2][2] -= 1
 for i in range(3, n):
     for j in range(4):
         dp[i][j] = sum(dp[i - 1]) % mod
-    dp[i][1] -= dp[i - 2][0]
-    dp[i][1] -= dp[i - 2][2]
-    dp[i][1] -= dp[i - 3][0] * 3
-    dp[i][2] -= dp[i - 2][0]
-    dp[i][2] += dp[i - 3][2]
+    dp[i][1] -= dp[i - 2][0]  # AGC
+    dp[i][1] -= dp[i - 2][2]  # GAC
+    dp[i][1] -= dp[i - 3][0] * 3  # AGTC,AGGC,ATGC
+    dp[i][2] -= dp[i - 2][0]  # ACG
+    dp[i][2] += dp[i - 3][2]  # GACG
 
 print(sum(dp[n - 1]) % mod)

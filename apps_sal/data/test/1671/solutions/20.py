@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -19,3 +21,4 @@ for i in m:
         a2 += i - s - 1
 print(max(a1, a2))
 finish = time.time()
+#print(finish - start)

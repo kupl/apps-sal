@@ -30,7 +30,7 @@ def prnt(*args, override=False):
 
 
 def get_qi(p, i, n, F):
-    if (n // i) % 2 == 1:
+    if (n // i) % 2 == 1:  # even
         return p ^ F[i - 1] ^ F[n % i]
     else:
         return p ^ F[n % i]
@@ -40,6 +40,7 @@ def __starting_point():
     n = rint()
     p = rints()
 
+    # Pre-populate F as the cumulative xor of i
     F = [0 for i in range(n)]
     for i in range(1, n):
         F[i] = F[i - 1] ^ i

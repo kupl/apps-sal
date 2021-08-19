@@ -24,6 +24,7 @@ while que:
         que.append(i)
         ans[i] = v
 
+# print(dist)
 print('Yes')
 for j in range(2, N + 1):
     print(ans[j])

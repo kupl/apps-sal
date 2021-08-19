@@ -16,6 +16,8 @@ def query(i):
     return(ans)
 
 
+# taking inputs
+
 n = int(input())
 l = list(map(int, sys.stdin.readline().split()))
 bit = [0 for i in range(n + 30)]

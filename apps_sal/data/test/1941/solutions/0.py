@@ -10,7 +10,14 @@ def S(i): return a * i + b * i * (i - 1) // 2
 for _ in range(n):
 
     l, t, m = list(map(int, str.split(sys.stdin.readline())))
+    # Si = a * r + b * r * (r - 1) / 2
+    # Si = b / 2 * r ^ 2 - (b / 2 - a) * r
+    # si = a + (i - 1) * b => (si - a) / b + 1 = i
 
+    # (S(r) - S(l-1)) / t <= m
+    # S(r) <= m * t + S(l-1)
+    # b / 2 * r ^ 2 - (b / 2 - a) * r - m * t - S(l-1) <= 0
+    # D = (b / 2 - a) ^ 2 + 4 * b / 2 * (m * t + S(l-1))
     d = (b / 2 - a) ** 2 + 4 * b / 2 * (m * t + S(l - 1))
     if d < 0:
 

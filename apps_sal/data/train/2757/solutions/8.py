@@ -1,5 +1,5 @@
 from string import digits as D, ascii_lowercase as L, ascii_uppercase as U
-S = "!@
+S = "!@#$%^&*?"
 
 
 def check_password(s):

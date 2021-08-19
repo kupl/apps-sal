@@ -13,6 +13,7 @@ class Solution:
                     x = num // nums2[j]
                     Dict[x] += 1
         Dict.clear()
+        # print(count)
         for i in range(len(nums2)):
             num = nums2[i] * nums2[i]
             Dict.clear()

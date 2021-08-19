@@ -12,8 +12,10 @@ class Solution:
 
         combinations = list(divide(s))
         combinations.append(s)
+        # print(combinations)
         ret = 1
         for comb in combinations:
             if len(comb) == len(set(comb)):
+                # print(comb, set(comb))
                 ret = max(ret, len(comb))
         return ret

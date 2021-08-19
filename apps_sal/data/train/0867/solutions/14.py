@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 for i in range(n):
     s, w1, w2, w3 = list(map(int, input().split()))

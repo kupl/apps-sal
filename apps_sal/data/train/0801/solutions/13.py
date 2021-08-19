@@ -16,6 +16,7 @@ for _ in range(int(input())):
             da[item] += 1
         else:
             da[item] = 1
+    # print(da)
     correct = {}
     pos = 1
     for key, value in list(da.items()):
@@ -24,10 +25,13 @@ for _ in range(int(input())):
             break
         else:
             correct[key] = value // 2
+    # print(correct)
     if(pos == 0):
         print(-1)
         continue
     ref = correct.copy()
+    # vector var1,var2
+    # print(correct)
     var1 = []
     var2 = []
     for i in range(0, n):

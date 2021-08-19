@@ -1,6 +1,11 @@
 from math import gcd
 from functools import reduce
 
+# https://brg.a2hosted.com/?page_id=563
+# The Money Changing Problem Revisited:
+# Computing the Frobenius Numberin Time O(ka1) by Bocker and Liptak
+# http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.389.4933&rep=rep1&type=pdf
+
 
 def frobenius_number(a):
     def __residue_table(a):

@@ -37,3 +37,9 @@ class ProductOfNumbers:
         if self.size - k <= 0 or self.d[self.size - k] == 0:
             return self.d[self.size]
         return self.d[self.size] // self.d[self.size - k]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

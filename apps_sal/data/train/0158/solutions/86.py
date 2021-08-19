@@ -15,6 +15,7 @@ class Solution:
 
         output = 0
 
+        # @lru_cache(maxsize=None)
         def search(stack):
             if not stack:
                 return 0

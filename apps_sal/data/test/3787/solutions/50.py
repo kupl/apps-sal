@@ -34,6 +34,13 @@ def f(a, b):
     ]
 
 
+# N - A + 1, N - A + 2, ..., N,
+# N - 2A + 1, N - 2A + 2, ..., N - A,
+# ...,
+# N - floor(N / A)A + 1, N - floor(N / A)A + 2, ..., N - (floor(N / A) + 1)A,
+# B - floor(N / A), B - floor(N / A) + 1, ..., N - floor(N / A)A
+# B - floor(N / A) - 1, B - floor(N / A) - 2, ..., 1
+# と構築する
 ans = (
     -1 if A * B < N or A + B > N + 1 else
     ' '.join(

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 ss = [input().strip() for _ in range(2)]
 n = len(ss[0])

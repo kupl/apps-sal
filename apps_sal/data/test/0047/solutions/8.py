@@ -1,3 +1,9 @@
+#  =========     /\       /|    |====/|
+#      |        /  \       |    |   / |
+#      |       /____\      |    |  /  |
+#      |      /      \     |    | /   |
+#  ========= /        \  =====  |/====|
+#  code
 from collections import Counter
 from math import gcd
 

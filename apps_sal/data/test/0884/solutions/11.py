@@ -19,3 +19,4 @@ def calc(a, b):
 start = time.time()
 print(((calc(a, b) * calc(b, c) * calc(c, a)) % mod))
 end = time.time()
+# print(end-start);

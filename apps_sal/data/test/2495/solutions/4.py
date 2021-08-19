@@ -5,7 +5,7 @@ pos = 0
 now = 0
 for i, a in enumerate(A):
     now += a
-    if i % 2 == 0:
+    if i % 2 == 0:  # poisive
         if now <= 0:
             pos += -now + 1
             now = 1

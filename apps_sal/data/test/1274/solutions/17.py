@@ -7,6 +7,7 @@ for i in range(N):
     if M - a >= 0:
         AB[M - a].append(b)
 
+# print(AB)
 queue = []
 for i in range(1, M + 1):
     for j in AB[-i]:
@@ -14,4 +15,5 @@ for i in range(1, M + 1):
     if queue != []:
         score += -1 * heappop(queue)
 
+    #print(score, queue)
 print(score)

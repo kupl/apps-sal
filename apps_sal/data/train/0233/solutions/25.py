@@ -6,6 +6,7 @@ class Solution:
         matrix = grid
 
         parent = list(range(N * N * 4))
+        # print(parent)
 
         def find(x):
             depth = 0
@@ -15,6 +16,7 @@ class Solution:
             return x, depth
 
         def union(x, y):
+            # print(x, y)
             (rx, dx), (ry, dy) = find(x), find(y)
             if dx < dy:
                 parent[rx] = ry

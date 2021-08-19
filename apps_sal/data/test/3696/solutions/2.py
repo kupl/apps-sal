@@ -52,6 +52,7 @@ found = 0
 for i, j in [(1, 1), (1, -1), (-1, 1), (-1, -1)]:
     for r in [0, 1]:
         x, y = gen(i, j, r)
+        #print(x, y)
         if x[-1] == 1 and y[-1] == 1:
             found = 1
             break

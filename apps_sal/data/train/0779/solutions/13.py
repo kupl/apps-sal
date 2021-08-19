@@ -1,3 +1,4 @@
+# cook your dish here
 def poison(n, concentration):
 
     concentration = sorted(concentration)

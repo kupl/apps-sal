@@ -1,5 +1,9 @@
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
+        # DP : option #1 : Connect A to B
+        #      option #2 : Skip B and look for another candidate
+        # Longest Common Subsequence
+        # if A[i] == B[j], connect and move i-1, j-1
         n, m = len(A), len(B)
 
         @lru_cache(None)

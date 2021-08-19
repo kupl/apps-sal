@@ -1,4 +1,5 @@
 def minimum(arr):
+    # your code here...
     y = 0
     for x in arr:
         if y == 0:
@@ -9,6 +10,7 @@ def minimum(arr):
 
 
 def maximum(arr):
+    #...and here
     y = 0
     for x in arr:
         if y == 0:

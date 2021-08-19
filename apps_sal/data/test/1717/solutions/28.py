@@ -13,7 +13,11 @@ for i in range(2, n + 1):
             cur += 1
         powers[key] = max(powers[key], cur)
 
+# print(dict(powers))
 for key in keys:
     s *= (key ** powers[key])
 s += 1
 print(s)
+
+# for i in range(2, n+1):
+#     print(i, s % i)

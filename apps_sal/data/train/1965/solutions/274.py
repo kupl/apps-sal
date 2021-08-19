@@ -25,6 +25,7 @@ class Solution:
                     both[v].append(u)
             else:
                 res += 1
+        # print(res)
 
         va, vb, = set(), set()
         vc = dict()
@@ -70,6 +71,11 @@ class Solution:
             bc_need += cluster - 1
 
         res += bc - bc_need
+        # print(bc)
+        # print(c1)
+        # print(c2)
+        # print(res)
+        # print(bc_need)
 
         res += c1 - (n - 1 - bc_need)
         res += c2 - (n - 1 - bc_need)

@@ -1,10 +1,13 @@
 import math
+######################################################
+# ps template
 def mi(): return list(map(int, input().split()))
 def ii(): return int(input())
 def li(): return list(map(int, input().split()))
 def si(): return input().split()
 
 
+#######################################################
 t = ii()
 for _ in range(t):
     n, k, l = mi()
@@ -54,6 +57,7 @@ for _ in range(t):
         else:
             ans = False
             break
+    # print(dp)
     if ans and dp[n - 1] != -1:
         print("Yes")
     else:

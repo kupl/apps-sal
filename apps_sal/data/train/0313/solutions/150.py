@@ -37,6 +37,7 @@ class Solution:
 
         while min_d <= max_d:
             bouquets = possible_bouquets(day_guess)
+            # print(f\"{day_guess}:{bouquets}\")
             if bouquets >= m:
                 max_d = day_guess - 1
                 possible_days = day_guess

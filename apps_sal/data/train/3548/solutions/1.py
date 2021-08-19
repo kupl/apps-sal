@@ -22,6 +22,7 @@ def polynomialize(roots):
     if len([i for i in roots if i != 0]) == 0:
         return 'x^' + str(len(roots)) + ' = 0'
 
+#    ans =  np.poly(roots)
     ans = poly(roots)
     ans1 = ans[:]
 

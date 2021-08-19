@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+# sys.stdin = open("ivo.in")
 
 n, m = map(int, sys.stdin.readline().split())
 

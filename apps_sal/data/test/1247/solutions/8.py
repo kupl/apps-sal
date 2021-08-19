@@ -1,3 +1,6 @@
+# import sys
+# f = sys.stdin
+# f = open("input.txt", "r")
 a = input()
 b = dict()
 for i in set(a):

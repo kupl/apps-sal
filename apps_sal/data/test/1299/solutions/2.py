@@ -22,6 +22,7 @@ def find_max(tree, v, l, r, tl, tr):
         return (0, 10000)
     else:
         if(tl == l and tr == r):
+            #   print(tl, tree[v])
             return (tree[v], tl)
         else:
             tm = (tl + tr) // 2
@@ -37,6 +38,8 @@ def find_max(tree, v, l, r, tl, tr):
                     return m1
                 else:
                     return m2
+
+            # return max(m1, m2)
 
 
 (n, k) = readIntList()
@@ -54,15 +57,41 @@ for i in range(1, n - k + 1):
 
 mn = len(maxs) - 1
 
+#print(mn, maxs)
+#build(tree, maxs, 1, 0, len(maxs) - 1)
+# print(tree)
+#print( find_max(tree, 1, 1, len(maxs) - 1, 0, len(maxs) - 1) )
 
+#last_max = ((0, 0), (0, 0))
+#last_max_i = 0
 m1 = 0
 m2 = 0
 
+# for i in range(0, mn - k):
+#   m1 = (maxs[i], i)
+#
+#   if( i + k > last_max[1][1] ):
+#       m2 = find_max(tree, 1, i + k, mn - 1, 0, mn - 1)
 
+#   if( (m1[0] + m2[0]) > last_max[0][0] + last_max[1][0] ):
+#       last_max = (m1, m2)
+
+#print( last_max )
+#print( last_max[0][1] + 1, last_max[1][1] + 1 )
+
+#print( last_max_i + k, mn - 1)
+# for i in range( last_max_i + k, mn):
+
+#   if( maxs[i] + maxs[last_max_i] == last_max ):
+#       last_max_i = (last_max_i, i)
+#       break
+
+#print (last_max_i[0] + 1, last_max_i[1] + 1)
 m1 = maxs[mn - k]
 i1 = 0
 m2 = maxs[mn]
 i2 = 0
+#print ( list(range(mn - k, -1, -1)) )
 
 a = (mn + 1) * [0]
 
@@ -73,7 +102,11 @@ for i in range(mn - k, -1, -1):
     a[i] = (maxs[i] + m2, i2)
 
 
+#   print( i, i + k, i1, i2, maxs[i], maxs[i + k - 1])
+# print(a)
+
 ms = 0
+#print(list(range(0, mn - k)))
 for i in range(0, mn - k + 1):
     if(a[i][0] > ms):
         i1 = i

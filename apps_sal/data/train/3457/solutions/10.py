@@ -5,4 +5,4 @@ def final_grade(exam, projects):
         return 90
     elif exam > 50 and projects > 1:
         return 75
-    return 0
+    return 0  # final grade

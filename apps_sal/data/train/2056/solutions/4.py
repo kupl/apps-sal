@@ -17,5 +17,6 @@ for idx in range(n - 1):
 for idx in range(n):
     if a[idx] != b[idx]:
         count += 1
+        # a[idx] = b[idx]
 
 print(count)

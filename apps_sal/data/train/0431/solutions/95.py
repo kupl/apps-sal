@@ -18,3 +18,4 @@ class Solution:
         for i in range(len(A)):
             result += A[i] * (dp_forward[i] + 1) * (dp_backward[i] + 1)
         return result % (10**9 + 7)
+        # return sum(a*(l+1)*(r+1) for a, l, r in zip(A, dp_forward, dp_backward)) % (10**9 + 7)

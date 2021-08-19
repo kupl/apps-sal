@@ -14,15 +14,21 @@ for i in range(Q):
 
 ans = 0
 
+#print(list(itertools.combinations( list(range(1, M+1)), N)))
 for A in itertools.combinations_with_replacement(list(range(1, M + 1)), N):
+    # print("A:" + str(A))  # (1, 2, 3), (1, 2, 4) ...
 
     cur = 0
 
     for i in range(Q):
         if (A[b[i]] - A[a[i]] == c[i]):
+            #print("a:" + str(a[i]) + " / b:" + str(b[i]) + " / A[b[i]]:" + str(A[b[i]]) + " / A[a[i]]:" + str(A[a[i]]) + " / c[i]:" + str(c[i]) + " / d[i]:" + str(d[i]) + " -> Matched" )
             cur += d[i]
 
+    #print("tmp ans for A:" + str(cur))
+
     if (ans < cur):
+        #print("Overwrite ans")
         ans = cur
 
 print(ans)

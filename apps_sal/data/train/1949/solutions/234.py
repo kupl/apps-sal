@@ -30,6 +30,7 @@ class Solution:
             return valid
 
         def findMaxPath(maxV, path, start, grid):
+            #print(maxV, path, start, grid)
             validList = isValid(start, grid)
 
             if not validList:
@@ -55,4 +56,5 @@ class Solution:
                     grid[r][c] = 0
                     maxV = findMaxPath(maxV, [val], (r, c), grid)
                     grid[r][c] = val
+                    #print((r,c), maxV)
         return maxV

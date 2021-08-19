@@ -28,10 +28,14 @@ class Solution:
             pa, pb = find_parent(a), find_parent(b)
             if pa == pb:
                 return 0
+            # Attach smaller rank tree under root of
+            # high rank tree (Union by Rank)
             if rank[pa] < rank[pb]:
                 par[pa] = pb
             elif rank[pa] > rank[pb]:
                 par[pb] = pa
+            # If ranks are same, then make one as root
+            # and increment its rank by one
             else:
                 par[pb] = pa
                 rank[pa] += 1

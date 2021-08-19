@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 [h, a] = list(map(int, input().split()))
 

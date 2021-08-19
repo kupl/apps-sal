@@ -49,6 +49,7 @@ class UnionFind():
 N, M = map(int, input().split())
 
 ans = 0
+# UnionFind木を作る
 uf = UnionFind(N)
 
 for _ in range(M):

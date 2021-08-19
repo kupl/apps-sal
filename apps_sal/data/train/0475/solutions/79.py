@@ -1,6 +1,8 @@
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
 
+        # get the array of sum of all continuous subarrays
+
         res = []
 
         for i in range(len(nums)):

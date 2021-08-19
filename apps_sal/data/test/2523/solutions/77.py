@@ -2,6 +2,7 @@ S = list(input())
 
 
 def check(x):
+    # print(S[len(S)-x:x])
     for y in S[len(S) - x:x]:
         if y != S[len(S) - x]:
             break

@@ -12,6 +12,15 @@ result = 0
 
 a, b, c = 0, len(A) + 1, 0
 
+# for k in range(len(A) - len(B) + 1):
+#    needed = 0
+#    for x in letters:
+#        needed += max([0, k * BC[x] - AC[x]])
+#
+#    if needed <= AC['?']:
+#        result = k
+#    else:
+#        break
 
 while a < b:
     c = (a + b) // 2

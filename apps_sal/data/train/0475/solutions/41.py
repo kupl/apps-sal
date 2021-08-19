@@ -1,3 +1,4 @@
+#import heapq
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         '''
@@ -29,6 +30,7 @@ class Solution:
         '''
 
         def subArraySum1(target):
+            # return the number of subarrays whose sums less than or equal to target
 
             count = 0
             left, right = 0, 0
@@ -49,6 +51,7 @@ class Solution:
             return count
 
         def subArraySum2(target):
+            # return the number of subarrays whose sums less than or equal to target
 
             count = 0
             left, right = 0, 0
@@ -73,9 +76,11 @@ class Solution:
             return count, overall_sum
 
         def findSum(target):
+            # return the sum of first target-th element of non-decreasing ordered subarray sum
             if target == 0:
                 return 0
 
+            # Binary search
             l, r = min(nums) - 1, sum(nums) + 1
 
             while l + 1 < r:

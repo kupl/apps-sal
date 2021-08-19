@@ -4,6 +4,7 @@ class Solution:
 
         def dfs(k, n):
             if k == 1:
+                # Only one egg, start from floor.
                 return n
             if n <= 1:
                 return n

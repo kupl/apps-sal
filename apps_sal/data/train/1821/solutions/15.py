@@ -1,7 +1,10 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
+        # Heap Sort
+        # Step 1:
         for i in range(len(nums) // 2, 0, -1):
             self.heapify(nums, i, len(nums) + 1)
+        # Step 2:
         for i in range(len(nums), 0, -1):
             index = i - 1
             nums[0], nums[index] = nums[index], nums[0]

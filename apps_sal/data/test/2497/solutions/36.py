@@ -1,8 +1,10 @@
+# coding: utf-8
+# Your code here!
 
 import sys
 n = int(input())
 inf = float("inf")
-xmin = [inf, inf, inf]
+xmin = [inf, inf, inf]  # 傾き-1,0,1
 xmax = [-inf, -inf, -inf]
 ymin = [inf, inf, inf]
 ymax = [-inf, -inf, -inf]

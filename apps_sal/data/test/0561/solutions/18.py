@@ -12,6 +12,7 @@ else:
             p = [a[0] - d[0], a[-1] + d[0]]
             if n == 2 and (a[1] - a[0]) % 2 == 0:
                 p += [(a[1] + a[0]) // 2]
+            # print(p)
         elif len(d) == 2:
             if max(d) == 2 * min(d):
                 for i in range(n - 1):

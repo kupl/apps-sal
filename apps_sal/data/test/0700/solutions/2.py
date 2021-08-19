@@ -19,7 +19,7 @@ def flip(i, j):
 
 def main():
     same = True
-    for i in range(n):
+    for i in range(n):  # 0
         for j in range(n):
             if ns[i][j] != ns2[i][j]:
                 same = False
@@ -30,7 +30,7 @@ def main():
         return True
 
     same = True
-    for i in range(n):
+    for i in range(n):  # 1
         for j in range(n):
             a, b = rotate(i, j)
             if ns[i][j] != ns2[a][b]:
@@ -42,7 +42,7 @@ def main():
         return True
 
     same = True
-    for i in range(n):
+    for i in range(n):  # 2
         for j in range(n):
             a, b = rotate(i, j)
             a, b = rotate(a, b)
@@ -56,7 +56,7 @@ def main():
 
     same = True
     for i in range(n):
-        for j in range(n):
+        for j in range(n):  # 3
             a, b = rotate(i, j)
             a, b = rotate(a, b)
             a, b = rotate(a, b)
@@ -69,7 +69,7 @@ def main():
         return True
 
     same = True
-    for i in range(n):
+    for i in range(n):  # 0
         for j in range(n):
             a, b = flip(i, j)
             if ns[a][b] != ns2[i][j]:
@@ -81,7 +81,7 @@ def main():
         return True
 
     same = True
-    for i in range(n):
+    for i in range(n):  # 1
         for j in range(n):
             a, b = rotate(i, j)
             a, b = flip(a, b)
@@ -94,7 +94,7 @@ def main():
         return True
 
     same = True
-    for i in range(n):
+    for i in range(n):  # 2
         for j in range(n):
             a, b = rotate(i, j)
             a, b = rotate(a, b)
@@ -109,7 +109,7 @@ def main():
 
     same = True
     for i in range(n):
-        for j in range(n):
+        for j in range(n):  # 3
             a, b = rotate(i, j)
             a, b = rotate(a, b)
             a, b = rotate(a, b)

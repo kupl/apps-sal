@@ -11,4 +11,5 @@ diff = []
 for i in range(0, m - n + 1):
     diff.append(pieces[i + n - 1] - pieces[i])
 
+# print(diff)
 print(min(diff))

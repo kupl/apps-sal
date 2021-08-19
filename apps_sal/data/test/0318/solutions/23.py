@@ -11,6 +11,8 @@ def __starting_point():
 
     hh = hh % 24
 
+    # print(hh,mm)
+
     strhh = "0" * (2 - len(str(hh))) + str(hh)
     strmm = "0" * (2 - len(str(mm))) + str(mm)
     print(strhh, ":", strmm, sep="")

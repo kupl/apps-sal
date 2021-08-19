@@ -1,3 +1,4 @@
+# cook your dish here
 j, s, m = map(int, input().split())
 m = m - j
 buy = m // s

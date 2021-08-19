@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 while n:
     l = list(map(int, input().split()))

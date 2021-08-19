@@ -9,6 +9,7 @@ def places(num, v):
 def check(num):
     for i in range(n - 1, -1, -1):
         count = max(0, places(b[i], num) - ((n - 1) - i))
+        # print (num,count)
         if count == 0:
             return True
         if count % p == 0:
@@ -19,6 +20,7 @@ def check(num):
 def check2(num):
     for i in range(n - 1, -1, -1):
         count = max(0, places(b[i], num) - ((n - 1) - i))
+        # print (num,count)
         if count % p == 0:
             return True
     return False

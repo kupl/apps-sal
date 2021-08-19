@@ -30,6 +30,7 @@ vdic = {}
 
 for i in range(n):
     vdic[vlis[i]] = i + 1
+#print (vdic)
 
 
 xv = []

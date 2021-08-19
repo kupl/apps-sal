@@ -14,6 +14,7 @@ class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
 
+        # 1. Find set of numbers that belongs to each prime factor
         factors = collections.defaultdict(set)
         for num in A:
             prime_factors = self.primeDecompose(num)

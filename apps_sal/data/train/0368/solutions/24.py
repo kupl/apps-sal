@@ -2,6 +2,7 @@ class Solution:
     def mergeSort(self, lst: List[int]) -> int:
         n = len(lst)
 
+        # base case
         if n <= 1:
             return lst
 
@@ -24,6 +25,7 @@ class Solution:
 
             k += 1
 
+        # fill remaining
         while (i < len(L)):
             lst[k] = L[i]
             i += 1

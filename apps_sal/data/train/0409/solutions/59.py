@@ -22,6 +22,8 @@ class Solution:
             r += L[i]
             rm = max(rm, r)
 
+        # print(lm,rm,m)
+
         if(k == 1):
             return m % (10**9 + 7)
         elif(k == 2):

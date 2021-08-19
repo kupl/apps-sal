@@ -1,9 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+# number of amidakuji
 
 h, w, k = list(map(int, input().split()))
 
 dp = [[0 for i in range(w + 1)] for i in range(h + 1)]
 
+# dp[i][j]=i段目まででjというところにいくために必要な方法の総和
+# 求めるのはdp[h][k]である
 dp[0][1] = 1
 mod = 10**9 + 7
 if w > 1:

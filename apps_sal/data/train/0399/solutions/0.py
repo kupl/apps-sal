@@ -8,6 +8,7 @@ class Solution:
             return 0
 
         def num_decode(i):
+            # Number of ways to decode s[i:]
             if i == len(s):
                 return 1
 

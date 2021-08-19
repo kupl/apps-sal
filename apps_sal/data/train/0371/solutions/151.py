@@ -3,6 +3,7 @@ class Solution:
         if S == T:
             return 0
         bus_stop_dict = collections.defaultdict(set)
+        # each stop corresponds to all the buses
         for i in range(len(routes)):
             for stop in routes[i]:
                 bus_stop_dict[stop].add(i)

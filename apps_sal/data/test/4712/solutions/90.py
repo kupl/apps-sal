@@ -1,5 +1,5 @@
 h, w = [int(x) for x in input().split()]
-print("
+print("#" * (w + 2))
 for i in range(h):
-    print("
-print("
+    print("#" + input() + "#")
+print("#" * (w + 2))

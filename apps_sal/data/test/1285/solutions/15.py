@@ -11,14 +11,14 @@ i = 0
 
 while(i < n):
     j = i + 1
-    while(j < n and matrix[i] == matrix[j]):
+    while(j < n and matrix[i] == matrix[j]):  # Recorro por filas
         j += 1
     ans = gcd(ans, j - i)
 
     col = 0
     while(col < n):
         l = col + 1
-        while(l < n and matrix[i][col] == matrix[i][l]):
+        while(l < n and matrix[i][col] == matrix[i][l]):  # Recorro por columnas
             l += 1
         ans = gcd(ans, col - l)
         col = l

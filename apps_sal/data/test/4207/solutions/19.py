@@ -36,3 +36,4 @@ for i in range(1, n):
 if n != 0:
     bk = max(bk, k)
 print(bk + ans0)
+# print(d)

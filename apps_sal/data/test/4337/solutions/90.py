@@ -5,6 +5,7 @@ for i in s:
         print('Four')
         break
 
+# 4種類か3種類かは、黄色Yが入ってるかどうか
 
 else:
     print('Three')

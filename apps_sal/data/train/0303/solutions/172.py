@@ -9,3 +9,13 @@ class Solution:
                     m = max(A[i - j], m)
                     dp[i] = max(dp[i], dp[i - j] + m * j)
         return dp[-1]
+
+        # n = len(A)
+        # dp = [0] * (n+1)
+        # for i in range(1,n+1):
+        #     m = float('-inf')
+        #     for j in range(1,K+1):
+        #         if i - j >= 0:
+        #             m = max(A[i-j],m)
+        #             dp[i] = max(dp[i],dp[i-j]+m*j)
+        # return dp[-1]

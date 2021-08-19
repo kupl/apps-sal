@@ -9,6 +9,9 @@ class Solution:
             rv = abs(arr[-1] - med)
             lv = abs(arr[0] - med)
 
+            # print(arr[-1],arr[0])
+            # print(rv,lv)
+
             if rv >= lv:
                 f.append(arr.pop(-1))
             else:

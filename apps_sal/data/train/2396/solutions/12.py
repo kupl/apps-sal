@@ -1,4 +1,11 @@
 import math
+# r,g,b=map(int,input().split())
+#list1 = input().split()
+# for i in range(len(list1)):
+#    list1[i] = int(list1[i])
+# print(list1)
+#print(r, g, b)
+# arr = [[0 for x in range(columns)] for y in range(rows)]
 
 lookup = "abcdefghijklmnopqrstuvwxyz"
 t = int(input())

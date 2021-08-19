@@ -19,3 +19,9 @@ class Solution:
         for word in words:
             longest = max(longest_chain(word, set(words), {}), longest)
         return longest
+
+#     n = len(words)
+#     m = max length of word in words
+
+#     Time: O(n * m!)
+#     Space: O(n*m)

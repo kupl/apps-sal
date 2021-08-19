@@ -2,6 +2,11 @@
 import math
 import sys
 
+# imgur.com/Pkt7iIf.png
+
+#n, m = map(int, input().split())
+#n = int(input())
+#d = list(map(int, input().split()))
 
 n = int(input())
 dicn = [{} for i in range(10**6)]
@@ -31,6 +36,7 @@ second = []
 for i in maxv:
     for j in dicn[i - 1]:
         if len(dicn[i - 1][j]) % 2 == 1:
+            #t = dicn[i-1][j].pop()
             first[i - 1].append(dicn[i - 1][j].pop())
         if len(dicn[i - 1][j]) > 0:
             second += dicn[i - 1][j]
@@ -38,6 +44,8 @@ for i in maxv:
 t = []
 c = 0
 
+# print(first)
+# print(second)
 
 for f in first:
     while len(f) >= 2 and len(second) >= 2:

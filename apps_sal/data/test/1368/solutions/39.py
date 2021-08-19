@@ -2,13 +2,16 @@ from sys import stdin
 
 
 def main():
+    # 入力
     readline = stdin.readline
     N, A, B = map(int, readline().split())
     v = list(map(int, readline().split()))
     v.sort(reverse=True)
 
+    # average
     average = sum(v[:A]) / A
 
+    # combination
     res = 0
     x = v[A - 1]
     x_count = v.count(x)

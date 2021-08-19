@@ -1,5 +1,6 @@
 n, m = tuple(map(int, input().split(' ')))
 move = 1
+# 1 - AKHSHAT
 while(True):
     n -= 1
     m -= 1

@@ -1,4 +1,5 @@
 def array_madness(a, b):
+    # Ready, get, set, GO!!!
     temp = 0
     temp1 = 0
     for i in range(len(a)):

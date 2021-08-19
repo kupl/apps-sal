@@ -1,5 +1,8 @@
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
+        # [0,1,2,3,4,5,6]
+        # need=3, then cut subarray with sum=3
+        # csum[j]-csum[i]==3 or csum[j]==0
         A = nums
         need = sum(A) % p
         dp = {0: -1}

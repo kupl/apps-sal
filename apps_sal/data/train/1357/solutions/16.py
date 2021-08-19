@@ -1,3 +1,11 @@
+# cook your dish here
+# 3
+# 2
+# 5 10
+# 2
+# 10 5
+# 2
+# 5 15
 
 for _ in range(int(input())):
     n = int(input())

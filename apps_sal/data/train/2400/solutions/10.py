@@ -19,6 +19,8 @@ for _ in range(int(input())):
         ans[-1] = 3
         f = 3
 
+    # print(ind)
+
     if f == 3 and ind:
         for i in range(ind, n):
             ans[i] = 3 - ans[i]
@@ -26,4 +28,9 @@ for _ in range(int(input())):
 
     print(len(set(ans)))
 
+    # if f:
+    #     print(3)
+
+    # else:
+    #     print(2)
     print(*ans)

@@ -6,6 +6,7 @@ class Solution:
         t = k
         p1, p2 = arr[0], arr[1]
         while t:
+            # print(arr, p1,p2,t)
             if p1 > p2:
                 arr.pop(1)
                 arr.append(p2)

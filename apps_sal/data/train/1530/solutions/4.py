@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     p = int(input())
     k = 1

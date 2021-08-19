@@ -1,3 +1,5 @@
+# Problem: http://www.codechef.com/JULY09/submit/CUBESUM/
+# Author: Susam Pal
 
 def computeA():
     X, Y, Z = [int(x) for x in input().split()]

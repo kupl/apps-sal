@@ -5,6 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
+# SOLUTION
+
 
 def gcd(a, b):
     if a < 0:
@@ -34,7 +36,13 @@ def main():
     return len(lines)
 
 
+# HELPERS
+
+
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

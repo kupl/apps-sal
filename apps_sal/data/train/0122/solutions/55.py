@@ -14,4 +14,5 @@ class Solution:
                 Min = min(Min, Sum)
             j += 1
 
+        # print(Min)
         return totalPoints - Min

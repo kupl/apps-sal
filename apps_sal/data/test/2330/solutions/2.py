@@ -1,6 +1,7 @@
 import sys
 import math
 
+# sys.stdin = open("in.txt")
 for _ in range(int(input())):
     n, m = map(int, input().split())
 

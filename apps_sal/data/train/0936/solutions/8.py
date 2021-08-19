@@ -5,6 +5,7 @@ while t > 0:
     for i in range(n):
         l = [int(x) for x in input().split()]
         mat.append(l)
+    # print(mat)
     c = 0
     for i in range(n - 1, -1, -1):
         if(mat[0][i] != i + 1):

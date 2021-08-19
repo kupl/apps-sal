@@ -58,6 +58,7 @@ for x in valist:
         cnt[1] += 1
     elif x >= 2:
         cnt[0] += 1
+# print(cnt)
 res = 0
 a = sum(cnt[1:])
 b = cnt[0]

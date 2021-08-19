@@ -1,6 +1,7 @@
 import sys
 import math
 
+# https://atcoder.jp/contests/agc008/submissions/15248942
 sys.setrecursionlimit(10 ** 8)
 def ini(): return int(sys.stdin.readline())
 def inm(): return map(int, sys.stdin.readline().split())
@@ -34,6 +35,8 @@ tree = []
 for _ in range(N):
     tree.append(Node())
 
+#node = Node()
+#tree = [node]*N
 
 for _ in range(N - 1):
     a, b = inm()
@@ -46,6 +49,10 @@ for _ in range(Q):
 
 for _ in range(N):
     counts.append(0)
+
+# for i in range(N):
+#    print(tree[i].edge)
+#    print(tree[i].count)
 
 
 dfs(tree, 0, -1, 0)

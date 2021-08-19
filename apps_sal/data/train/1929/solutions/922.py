@@ -17,3 +17,8 @@ class StreamChecker:
         if letter in self.trie:
             self.recent.append(self.trie[letter])
         return any('*' in d for d in self.recent)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

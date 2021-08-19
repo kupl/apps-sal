@@ -33,6 +33,7 @@ D_y = [min(DY + [INF]), max(DY + [-INF])]
 
 
 def calc_x(t):
+    # t秒後の横幅
     right = fixed_x[1]
     left = fixed_x[0]
     for x in [R_x[1] + t, L_x[1] - t]:
@@ -45,6 +46,7 @@ def calc_x(t):
 
 
 def calc_y(t):
+    # t秒後の横幅
     right = fixed_y[1]
     left = fixed_y[0]
     for y in [U_y[1] + t, D_y[1] - t]:

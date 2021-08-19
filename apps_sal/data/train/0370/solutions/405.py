@@ -25,6 +25,7 @@ class Solution:
         v = [False] * n
 
         def dfs(val):
+            # print(f\"dfs: {val}\")
             if v[val]:
                 return 0
             res = 1
@@ -34,7 +35,10 @@ class Solution:
             return res
 
         max_csize = 0
+        # print(al)
         for idx in range(n):
             if not v[idx]:
+                # print(f\"{idx}: {max_csize}\")
                 max_csize = max(max_csize, dfs(idx))
+                # print(f\"{idx}: {max_csize}\")
         return max_csize

@@ -28,6 +28,17 @@ class Solution:
                 type3 += 1
 
         res = 0
+        # for key, val in dic.items():
+        #     for keyp, valp in val.items():
+        #         if 3 in valp:
+        #             if 1 in valp:
+        #                 type1 -= 1
+        #                 dic[key][keyp].remove(1)
+        #                 res += 1
+        #             if 2 in valp:
+        #                 type2 -= 1
+        #                 dic[key][keyp].remove(2)
+        #                 res += 1
 
         seen_A = [0] * n
 

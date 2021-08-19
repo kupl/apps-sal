@@ -5,4 +5,4 @@ for i in range(n):
     d[ip + ';'] = name
 for i in range(m):
     command, ip = input().split()
-    print('{} {}
+    print('{} {} #{}'.format(command, ip, d[ip]))

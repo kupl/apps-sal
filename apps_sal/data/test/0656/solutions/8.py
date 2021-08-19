@@ -5,6 +5,7 @@ import heapq
 def main():
     from sys import stdin
     lines = deque(line.strip() for line in stdin.readlines())
+    # lines will now contain all of the input's lines in a list
     n, k = [int(x) for x in lines.popleft().split()]
     temps = deque(int(x) for x in lines.popleft().split())
     temps.appendleft(0)
@@ -48,6 +49,7 @@ def main():
         k -= heapq.heappop(heap)
         changes -= 2
     if ispositive and k > count:
+        # don't need to change back to summer tires if we end in winter tires
         changes -= 1
     while heap2 and k2 >= heap2[0]:
         k2 -= heapq.heappop(heap2)

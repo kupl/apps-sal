@@ -21,7 +21,7 @@ class UnionFind(object):
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        def primeFactors(n):
+        def primeFactors(n):  # Prime factor decomposition
             out = set()
             while n % 2 == 0:
                 out.add(2)
@@ -34,20 +34,22 @@ class Solution:
                 out.add(n)
             return out
 
-        idx_lookup = {A[i]: i for i in range(len(A))}
+        idx_lookup = {A[i]: i for i in range(len(A))}  # in order to find idx in uf
         uf = UnionFind()
         uf.uf(len(A))
-        primeAndItsMultiples = collections.defaultdict(list)
+        primeAndItsMultiples = collections.defaultdict(list)  # {2: [4, 6], 3: [6, 15], 5: [15, 35], 7: [35]})
 
         for i in A:
             factors = primeFactors(i)
             for f in factors:
                 primeAndItsMultiples[f].append(i)
 
+        # we don't need to connect all the multiples of a prime,
+        # just use the first multiple as their root
         for idx, multiples in primeAndItsMultiples.items():
             if multiples:
-                root = multiples[0]
+                root = multiples[0]  # use the first multiple as their root
                 for node in multiples[1:]:
-                    uf.union(idx_lookup[node], idx_lookup[root])
+                    uf.union(idx_lookup[node], idx_lookup[root])  # connect node with root
 
         return max(uf.size)

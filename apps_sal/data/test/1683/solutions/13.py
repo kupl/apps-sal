@@ -1,3 +1,4 @@
+# s = list(map(int,input().split(" ")))
 
 n = int(input())
 mod = 998244353

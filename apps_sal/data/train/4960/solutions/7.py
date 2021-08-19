@@ -6,8 +6,10 @@ class Harshad:
         while n:
             result.append(n % 10)
             n = n // 10
+        # 逆序，按正常的顺序返回
         result.reverse()
         return result
+        # print(result)
 
     @staticmethod
     def is_valid(number):

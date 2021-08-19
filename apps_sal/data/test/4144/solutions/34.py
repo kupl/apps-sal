@@ -1,9 +1,13 @@
 n = int(input())
+#x, k, d = map(int, input().split())
+#al = list(map(int, input().split()))
+#al=[list(input()) for i in range(n)]
 
 mod = 10**9 + 7
 
 
 def modpow(a, n, mod):
+    # a^nをmodでわったあまり 二分累乗法O(logn)
     res = 1
     while n > 0:
         if n & 1:

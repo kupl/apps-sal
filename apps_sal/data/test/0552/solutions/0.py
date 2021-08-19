@@ -6,6 +6,7 @@ logging.disable(logging.INFO)
 
 def build(S, n):
     Z = [0 for i in range(3 * n + 3)]
+    # logging.info(S)
     n = len(S)
     L = 0
     R = 0

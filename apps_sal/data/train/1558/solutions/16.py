@@ -1,3 +1,4 @@
+# cook your dish here
 ans = set()
 for _ in range(int(input())):
     r, c = map(int, input().split())

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -30,3 +32,6 @@ print(acc)
 for i in range(acc):
     print(ans[i], end=' ')
 print()
+
+#finish = time.time()
+#print(finish - start)

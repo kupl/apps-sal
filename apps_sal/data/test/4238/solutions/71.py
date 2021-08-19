@@ -1,6 +1,7 @@
 import re
 import sys
 
+# Lista de Entradas
 lst = []
 for line in sys.stdin:
     lst.append(line.rstrip("\n"))

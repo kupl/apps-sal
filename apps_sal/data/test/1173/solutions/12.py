@@ -13,7 +13,7 @@ def cycle_detectable_topological_sort(
     """
     V = len(graph) + first_index
     order = []
-    depths = [-1] * V
+    depths = [-1] * V  # depths[i] := the length of the longest path to V_i
     for i in range(first_index, V):
         if not in_degrees[i]:
             order.append(i)

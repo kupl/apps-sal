@@ -10,6 +10,7 @@ class Node:
 
 class Solution:
     def dfs(self, node, dirstr, found):
+        #print(dirstr, found)
         rtn = []
         if node.terminal and not found:
             rtn = [dirstr]

@@ -9,14 +9,14 @@ class Solution:
             maxLength = 0
 
             if curr_index != -1:
-                for v in l[curr_index]:
+                for v in l[curr_index]:  # add the chosen word to selected
                     selected.add(v)
 
             for i in range(curr_index + 1, len(l)):
-                if ok(l[i], selected):
+                if ok(l[i], selected):  # word is good - so we choose it
 
-                    maxLength = max(maxLength, len(l[i])
-                                    + backTrack(l, i, selected.copy()))
+                    maxLength = max(maxLength, len(l[i]) +
+                                    backTrack(l, i, selected.copy()))
 
             return maxLength
 

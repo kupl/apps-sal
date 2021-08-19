@@ -1,4 +1,6 @@
+# good explanation in https://www.youtube.com/watch?v=EW521e8c8lk
 
+# video starts 10:40
 
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
@@ -31,6 +33,7 @@ https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-s
 why does the following code now working???? 
 
 
+### The following code does not pass submission ..... 
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         

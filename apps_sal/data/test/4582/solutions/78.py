@@ -1,3 +1,4 @@
+# 56
 a, b = input().split()
 if (a == 'H' and b == 'H'):
     print('H')

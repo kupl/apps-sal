@@ -16,5 +16,6 @@ class Solution:
                 return cache[i][j]
 
         a = lcs(text1, text2, 0, 0, cache)
+        # print(cache)
 
         return a

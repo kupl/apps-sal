@@ -5,7 +5,7 @@ class Solution:
         heapq.heapify(heap)
 
         res = 0
-        for j in range(1, right + 1):
+        for j in range(1, right + 1):  # 1-indexed
             x, i = heapq.heappop(heap)
             if j >= left:
                 res += x

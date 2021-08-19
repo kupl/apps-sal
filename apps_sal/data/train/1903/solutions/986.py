@@ -30,11 +30,13 @@ class Union:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        #p_to_cost = {}
         costs = []
         point = Union()
         for i in range(len(points) - 1):
             for j in range(i + 1, len(points)):
                 cost = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                #p_to_cost[(i, j)] = val
                 costs.append([i, j, cost])
         costs.sort(key=lambda x: x[2])
         res = 0

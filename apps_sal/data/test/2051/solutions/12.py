@@ -2,6 +2,7 @@ from collections import deque, defaultdict
 
 
 def BFS(graph, source, visited, colours):
+    # Generator which yields all vertices connected to source (includes source)
     colour_counts = defaultdict(int)
     max_count = 0
     total = 0

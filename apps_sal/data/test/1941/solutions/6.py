@@ -12,4 +12,11 @@ for i in range(n):
     D = (2 * x - b) ** 2 + 8 * m * t * b
     d = int(math.floor((-2 * x + b + math.sqrt(D)) / (2 * b)))
     r = min(r, l + d - 1)
+    # total = t * m
+    # last = a + (r - 1) * b
+    # total_need = (x + last) * (r - l + 1) // 2
+    # while total_need > total:
+    #     total_need -= last
+    #     last -= b
+    #     r -= 1
     print(r)

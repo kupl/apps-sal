@@ -8,6 +8,7 @@ class Solution:
         q = deque([(0, 1, 0)])
         while q:
             pos, sp, d = q.popleft()
+            #print(pos, q)
             if pos == target:
                 return d
 

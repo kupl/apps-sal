@@ -40,6 +40,7 @@ def process(s1, s2, d):
 n = int(input())
 hid = input()
 revealed = get_revealed(hid)
+# print(revealed)
 m = int(input())
 x = 0
 d = {}
@@ -50,8 +51,10 @@ for i in range(m):
     if not check_revealed_present(hid, s, revealed):
         continue
     d = process(hid, s, d)
+    # print("sad")
     x += 1
 ans = 0
+# print(x,revealed,d)
 for i in d:
     if d[i] == x:
         ans += 1

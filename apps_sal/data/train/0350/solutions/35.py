@@ -1,6 +1,9 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
 
+        # Important
+        # https://leetcode.com/problems/subarrays-with-k-different-integers/discuss/523136/JavaC%2B%2BPython-Sliding-Window
+
         print((self.atmost_counts(A, K), self.atmost_counts(A, K - 1)))
         return self.atmost_counts(A, K) - self.atmost_counts(A, K - 1)
 

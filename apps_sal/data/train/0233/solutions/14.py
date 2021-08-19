@@ -1,9 +1,9 @@
 class Solution:
     def regionsBySlashes(self, grid: List[str]) -> int:
-        self.N = len(grid)
+        self.N = len(grid)  # n行
         print((self.N))
-        pre = list(range(self.N * self.N * 4))
-        self.count = self.N * self.N * 4
+        pre = list(range(self.N * self.N * 4))  # 所有元素自己是自己的父节点[0,1,2,3,4,5,6,...]
+        self.count = self.N * self.N * 4  # 总共的区域数量
         for r in range(self.N):
             line = grid[r]
             for c in range(self.N):

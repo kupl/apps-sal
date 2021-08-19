@@ -50,12 +50,25 @@ def main():
     Aleftsum[wakeme] = lsum
     Arightsum[2 * N] = -rsum
 
+    # [0, N)から[0, 2N)までの和が欲しい
+    # Aleftsum(i): [0, i)までの上位N個の和
+
+    # [2N, 3N)から[N, 3N)までの和が欲しい
+    # Arightsum(i): [i, 3N)までの上位N個の和
+
     for i in range(N):
+        # [0, N+1)から[0, 2N)までやる。
+        # [0, wakeme + i + 1)の和を計算する。
+        # wakeme=Nなので、wakeme + i + 1 = 2N -> i = N - 1
         newl = A[wakeme + i]
         lsum += newl
         lsum -= heapq.heappushpop(leftA, newl)
         Aleftsum[wakeme + i + 1] = lsum
 
+        # [2N-1, 3N)から[N, 3N)までやる。
+        # r_wakeme = 2N-1として、
+        # r_wakeme - i = 2N - 1 -> i=0
+        # r_wakeme - i = N -> i=N-1
         newr = A[2 * N - 1 - i]
         rsum -= newr
         rsum -= heapq.heappushpop(rightA, -newr)

@@ -22,7 +22,9 @@ class Solution:
         row_num = len(board)
         col_num = len(board[0])
 
+        # candidate values of each pos
         candidates = [[0 for x in range(row_num)] for y in range(col_num)]
+        # number of candidates of each pos, key is num of candidates, values are list of (row, col)
         NumOfCandidatesDict = [[] for i in range(9)]
 
         for row in range(row_num):
@@ -30,6 +32,7 @@ class Solution:
                 if board[row][col] == '.':
                     candidates[row][col] = self.findValues(board, row, col)
 
+                    # Not able to solve it
                     if (len(candidates[row][col]) == 0):
                         return False
                     elif len(candidates[row][col]) == 1:

@@ -3,6 +3,9 @@ from math import gcd, log2, log10, floor
 import math
 from collections import defaultdict, OrderedDict
 from bisect import bisect_left
+# import numpy as np
+# input=stdin.readline
+# print=stdout.write
 n, k, p = [int(i) for i in input().split()]
 a = list(map(int, input().split()))
 asort = a[:]
@@ -24,3 +27,4 @@ for i in range(p):
         print("Yes")
     else:
         print("No")
+# print(dict)

@@ -29,6 +29,7 @@ def __starting_point():
         h |= {(y, x)}
     dist1 = bfs(True)
     dist2 = bfs(False)
+    # print(dist1, dist2)
     if dist1 == -1 or dist2 == -1:
         print(-1)
     else:

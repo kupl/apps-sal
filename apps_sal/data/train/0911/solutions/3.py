@@ -16,6 +16,8 @@ for i in range(1, 2000000):
     prefixSum1.append(prefixSum1[i - 1] + G[i])
 for i in range(1, 2000000):
     prefixSum2.append((prefixSum2[i - 1] + i * i % M * G[i] % M) % M)
+    # print(prefixSum1)
+    # print(prefixSum2)
 
 
 def solve(n):

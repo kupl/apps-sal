@@ -4,6 +4,7 @@ import numpy as np
 N, K = map(int, sys.stdin.readline().rstrip().split())
 A = np.array(sys.stdin.readline().rstrip().split(), np.int64)
 
+# A をソートし、負／ゼロ／正　に分ける
 A = np.sort(A)
 zero = A[A == 0]
 pos = A[A > 0]
@@ -30,22 +31,27 @@ def f2(x):
 
     cnt_tpl = 0
 
+    # k < 0 の掛け合わせ -> 右から
     B = A.copy()
     B = -B
     B.sort()
     cnt_tpl += np.searchsorted(B, x // (-neg), side='right').sum()
 
+    # a_2, a_3, k = 0 なら そのペアはすべて 0 (x//0になるので別扱い)
     if x >= 0:
         cnt_tpl += len(zero) * N
 
+    # k > 0 の掛け合わせ -> 左から何番目まで, x 以下にできるか？
     cnt_tpl += np.searchsorted(A, x // pos, side='right').sum()
 
+    # (i, i) で x 以下になったものがあれば、削除する
     cnt_tpl -= np.count_nonzero(A * A <= x)
 
     assert cnt_tpl % 2 == 0
     return cnt_tpl // 2
 
 
+# 二分探索
 left = -10 ** 18
 right = 10 ** 18
 while left + 1 < right:

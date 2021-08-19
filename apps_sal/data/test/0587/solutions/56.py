@@ -5,6 +5,7 @@ sushi = sorted([list(map(int, input().split())) for _ in range(N)], key=lambda x
 
 eaten = [False] * N
 
+# d1: 種類が増えないもの同士、d2: 同じ種類の中で最大の組み合わせ
 d1, d2 = [0], [0]
 
 for i in range(N):

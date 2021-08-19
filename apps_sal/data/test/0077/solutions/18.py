@@ -18,4 +18,5 @@ else:
     for i in range(n):
         if a[i] >= 0 and a[i] % 2:
             mn = min(a[i], mn)
+    #print(mx, mn)
     print(max(s + mx, s - mn))

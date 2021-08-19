@@ -13,6 +13,7 @@ for _ in range(int(input())):
         continue
     print("possible")
     d, p = 10**12, -1
+#	print(*a)
     for i in l:
         x = -1 + n - i + (i + 1) // 2
         last = i + x

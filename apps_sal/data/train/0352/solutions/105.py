@@ -4,10 +4,13 @@ class Solution:
         if not words:
             return 0
 
+        # O(n log n)
         words = sorted(words, key=lambda x: len(x))
 
+        # O(n) space
         dp = [1] * len(words)
 
+        # O(n^2)
         for i in range(1, len(words)):
 
             for j in range(i - 1, -1, -1):

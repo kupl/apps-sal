@@ -10,6 +10,7 @@ for _ in range(0, int(input())):
     x = list(map(operator.sub, x1, x2))
     x.sort()
     z = y1 + z1
+    # z.sort()
     zc = Counter(z)
     z = list(zc.keys())
     z.sort()

@@ -13,6 +13,7 @@ for i in range(10):
 
 warshall_floyd()
 
+# print(*costs, sep='\n')
 ans = 0
 for i in range(H):
     wall = list(map(int, input().split()))

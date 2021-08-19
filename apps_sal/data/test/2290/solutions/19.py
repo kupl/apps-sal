@@ -20,6 +20,7 @@ def bfs(adj, i, m):
     return m
 
 
+# input = sys.stdin.readline()
 n, m = stdin.readline().split()
 n = int(n)
 m = int(m)

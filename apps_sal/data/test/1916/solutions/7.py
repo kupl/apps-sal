@@ -39,12 +39,15 @@ for power in reversed(list(range(0, 10))):
                 if a & (1 << pre_pow) and b & (1 << pre_pow):
                     b_bad = True
             if a & (1 << power) and b & (1 << power):
+                #print(a, 1<<power)
+                #print(b, 1<<power)
                 b_bad = True
             if b_bad == False:
                 found = True
         if not found:
             bad = True
             break
+    # print(bad)
     if not bad:
         elim.append(power)
 ans = 0

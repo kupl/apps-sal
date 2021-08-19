@@ -8,4 +8,5 @@ class Solution:
             cumsum += num
             pos[cumsum] = max(ans, pos.get(cumsum - target, -1) + 1)
             ans = max(ans, pos[cumsum])
+            #print(pos, cumsum)
         return ans

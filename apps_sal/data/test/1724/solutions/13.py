@@ -12,9 +12,12 @@ for i, bit in enumerate(m):
 
     if bit == '1':
 
-        res = max(res + a[i], summ)
+        res = max(res + a[i], summ)  # try to add
 
     summ += a[i]
 
 
 print(res)
+
+
+# Made By Mostafa_Khaled

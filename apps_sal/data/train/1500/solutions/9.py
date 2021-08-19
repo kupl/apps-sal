@@ -1,3 +1,4 @@
+# cook your dish here
 def F(S):
     balance = 0
     max_balance = 0
@@ -16,4 +17,4 @@ for _ in range(int(input())):
     max_balance = F(S)
     resStr = '(' * max_balance
     resStr += ')' * max_balance
-    print(resStr)
+    print(resStr)  # cook your dish here

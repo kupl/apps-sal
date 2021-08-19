@@ -14,6 +14,7 @@ class DSU:
             return
         if self.size[pv] > self.size[pu]:
             pu, pv = pv, pu
+        #pu is bigger
         self.parent[pv] = pu
         self.size[pu] += self.size[pv]
 
@@ -49,4 +50,5 @@ class Solution:
                         found = True
                 if found == True:
                     res = i + 1
+                #res = i + 1
         return res

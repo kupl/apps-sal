@@ -18,6 +18,8 @@ def query(index):
 
 n, t = list(map(int, input().split()))
 a = list(map(int, input().split()))
+#n, t = 5, 4
+#a = [5, -1, 3, 4, -1]
 
 summ_raw = [0]
 summ_minus = []
@@ -32,6 +34,8 @@ size = len(summ)
 d = {}
 for i in range(size):
     d[summ[i]] = i + 1
+# print(summ)
+# print(d)
 tree = [0] * (size + 1)
 update(d[0])
 
@@ -40,12 +44,14 @@ for i in range(1, n + 1):
     v = summ_raw[i]
     index = d[v - t]
     cur = (query(size) - query(index))
+    #print(tree, size, query(size), cur, v, index)
     res += cur
     update(d[v])
 print(res)
 
 
 '''
+# divide and conquer, two pointers
 
 n, t = list(map(int, input().split()))
 a = list(map(int, input().split()))
@@ -94,6 +100,7 @@ def helper(l, r):
     ans1 = helper(l, mid)
     ans2 = helper(mid + 1, r)
     ans3 = merge(l, mid, r)
+    #print(ans1, ans2, ans3)
     return ans1 + ans2 + ans3
 
 res = helper(0, n)

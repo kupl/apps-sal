@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 N = int(input())
@@ -35,6 +36,7 @@ for i, level in enumerate(levels):
             out += color_1 - len(adj[n])
         else:
             out += color_0 - len(adj[n])
+        # print(n, out)
 
 assert out % 2 == 0
 print(out // 2)

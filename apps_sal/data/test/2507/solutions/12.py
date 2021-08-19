@@ -12,6 +12,7 @@ high = 10**18
 
 while high - low > 1:
     d = (high + low) // 2
+    # 0かa-d//fの大きい値を採用するnp.maximum　
     if np.maximum(0, a - d // f).sum() <= K:
         high = d
     else:

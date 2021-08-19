@@ -7,8 +7,10 @@ class Solution:
         counter = 1
         for i in range(1, l):
             n = (n * 10) + 1
+            # counter+=1
         while(True):
             if(n % K == 0):
                 return len(str(n))
             n = (n * 10) + 1
+            # counter+=1
         return -1

@@ -33,6 +33,7 @@ for i in range(n - 1):
 
         point(a, b, c, d)
 
+# print(SET)
 LIST = list(SET)
 ANS = 0
 for i in range(len(LIST) - 1):

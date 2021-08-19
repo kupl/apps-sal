@@ -24,3 +24,6 @@ class Solution:
             j += 1
 
         return max_len
+
+# time: O(n^2)
+# space: O(n)

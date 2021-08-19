@@ -1,3 +1,4 @@
+# 35
 import string
 
 S = str(input())

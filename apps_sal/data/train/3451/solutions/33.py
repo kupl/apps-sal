@@ -8,7 +8,7 @@ def get(c1, c2):
     if c1 == 'B':
         if c2 == 'G':
             return 'R'
-        else:
+        else:  # c2 R
             return 'G'
     if c1 == 'G':
         if c2 == 'R':

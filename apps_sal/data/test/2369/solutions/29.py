@@ -36,9 +36,11 @@ def resolve():
 
     fact = Factorial(n + 1)
     lll = [fact.comb(i, k - 1) for i in range(k - 1, n)]
+    # acc = list(accumulate(lll))
 
     ans = 0
     for i in range(n - k + 1):
+        # print(i, -1-i, f" --- {a[i]}, {a[-i-1]}, {lll[-i-1]}")
         ans = (ans + (a[-i - 1] - a[i]) * lll[-i - 1]) % mod
     print(ans)
 

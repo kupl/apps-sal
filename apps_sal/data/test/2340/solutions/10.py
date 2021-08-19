@@ -26,4 +26,5 @@ for _ in range(int(input())):
                 currenth = platforms[0] + 1
         else:
             currenth = platforms[0] + 1
+        # print(currenth)
     print(ans)

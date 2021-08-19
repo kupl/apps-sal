@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 def serej(bottles):
+    # set of bottles that need to be opened
 
     unopened = defaultdict(set)
 

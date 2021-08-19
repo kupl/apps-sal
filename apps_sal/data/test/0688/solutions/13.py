@@ -1,3 +1,4 @@
+# import numpy as np
 
 def solution():
     number = input()
@@ -57,3 +58,4 @@ def join0(array):
 
 
 solution()
+# input-output by console

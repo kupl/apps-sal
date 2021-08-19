@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def build_a_wall(x=None, y=None):
     if not all([isinstance(x, int), isinstance(y, int)])\
             or x < 1 or y < 1:

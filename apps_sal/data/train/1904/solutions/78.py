@@ -5,6 +5,7 @@ class Solution:
 
         def partition(left, right, pivot_index):
             pivot = points[pivot_index]
+            # move the pivot to the position of right first
             points[pivot_index], points[right] = points[right], points[pivot_index]
 
             store_index = left
@@ -13,6 +14,8 @@ class Solution:
                     points[store_index], points[i] = points[i], points[store_index]
                     store_index += 1
 
+            # move the pivot back to its correct position:
+            # such that all elements on the left are smaller, and elements on the right have larger distance to origin.
             points[store_index], points[right] = points[right], points[store_index]
 
             return store_index

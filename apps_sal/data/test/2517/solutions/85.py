@@ -42,13 +42,13 @@ class Graph:
     def __init__(self, w_v, w_e):
         super().__init__()
         self.size = len(w_v)
-        self.w_v = [v_i for v_i in w_v]
+        self.w_v = [v_i for v_i in w_v]  # value of vartex
         self.w_e = [{} for _ in [0] * self.size]
 
         self.neighbor = [[] for _ in [0] * self.size]
         for a_i, b_i, w_i in w_e:
-            self.w_e[a_i][b_i] = w_i
-            self.w_e[b_i][a_i] = w_i
+            self.w_e[a_i][b_i] = w_i  # weight of edge
+            self.w_e[b_i][a_i] = w_i  # weight of edge
 
             self.neighbor[a_i].append(b_i)
             self.neighbor[b_i].append(a_i)

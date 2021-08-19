@@ -1,5 +1,9 @@
 class Solution:
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
+        # 11:35
+        # pick k+1 songs out of N Songs
+        # k+1 factorial
+        # you can pick a new song or old song from this k+1 => basically you got N options now
 
         mod = 10**9 + 7
 

@@ -22,7 +22,7 @@ def primeFactor(N):
         else:
             i += 2
         if i == 101 and n >= (2**20):
-            def findFactorRho(N):
+            def findFactorRho(N):  # Prime�łȂ����Ƃ��m�F�������̂������Ƃ���B
                 def gcd(a, b):
                     if b == 0:
                         return a
@@ -149,7 +149,10 @@ def divisors(N):
 
 n, b = list(map(int, input().split()))
 
+# n = 10**18
+# b = 2
 pf = primeFactor(b)
+# print(pf)
 
 ma = 0
 X = []

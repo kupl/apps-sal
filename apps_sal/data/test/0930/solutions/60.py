@@ -7,10 +7,13 @@ import itertools
 from collections import deque, Counter
 from operator import mul
 import copy
+# ! /usr/bin/env python
+# -*- coding: utf-8 -*-
 import heapq
 
 n, k = list(map(int, input().split()))
 
+# C,Pを求める前処理
 m = 4 * 10**5
 mod = 10**9 + 7
 
@@ -27,6 +30,9 @@ for i in range(2, m + 5):
     fact[i] = fact[i - 1] * i % mod
     inv[i] = mod - inv[mod % i] * (mod // i) % mod
     fact_inv[i] = fact_inv[i - 1] * inv[i] % mod
+
+# nCkをmod（素数）で割った余りを求める．ただしn<10**7
+# 前処理はm=n+5まで
 
 
 def cmb(n, k, mod):

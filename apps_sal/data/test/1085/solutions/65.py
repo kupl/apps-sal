@@ -1,3 +1,4 @@
+# 約数
 def make_divisors(n):
     divisors = []
     for i in range(1, int(n**0.5) + 1):
@@ -10,6 +11,7 @@ def make_divisors(n):
 
 N = int(input())
 divs = make_divisors(N)
+# print(sorted(divs))
 divs2 = make_divisors(N - 1)
 ans = len(sorted(divs2)) - 1
 for div in divs[1:]:

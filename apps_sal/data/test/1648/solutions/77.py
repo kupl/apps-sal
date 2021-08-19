@@ -1,3 +1,4 @@
+#coding: utf-8
 from collections import defaultdict
 import sys
 
@@ -10,7 +11,7 @@ def cmb(n, r, p):
 
 
 p = 10 ** 9 + 7
-N = 3000
+N = 3000  # N は必要分だけ用意する
 fact = [1, 1]
 factinv = [1, 1]
 inv = [0, 1]

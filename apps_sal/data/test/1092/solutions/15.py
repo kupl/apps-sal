@@ -9,8 +9,14 @@ for i in range(1, m):
     x = a[i] - a[i - 1] - 1
     if(x > 0):
         b.append(x)
+# print(b)
 count = pow(2, sum(b) - len(b), M) * f[n - m] % M
+# print(count)
 b = [a[0] - 1] + b + [n - a[-1]]
+# print(b)
+# print(f[3])
 for i in b:
     count = count * pow(f[i], M - 2, M) % M
+    # print(pow(f[i],M-2,M))
+    # print(i)
 print(count)

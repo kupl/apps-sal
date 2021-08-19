@@ -19,6 +19,7 @@ def answer2(x, y):
         val += 1
     if (x + y) & 1 == 1:
         a += val
+        # print(val)
     x1 = a + (((x + 1) // 2) - 1) * n
     if x & 1 == 0:
         y += n

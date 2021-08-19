@@ -4,6 +4,7 @@ def SieveOfEratosthenes(n, ans):
     p = 2
     while (p * p <= n):
 
+        # If prime[p] is not changed, then it is a prime
         if (prime[p] == True):
             ans[p] = c
             for i in range(p * p, n + 1, p):

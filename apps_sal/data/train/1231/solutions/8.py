@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 T = int(input())
 for t in range(T):

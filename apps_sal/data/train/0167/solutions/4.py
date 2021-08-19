@@ -3,8 +3,10 @@ from functools import lru_cache
 
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
+        # time complexity: O(K*N*logN)
+        # space complexity: O(K*N)
         @lru_cache(None)
-        def dp(k, n):
+        def dp(k, n):  # k eggs, n floors
             if k == 0:
                 return 0
             if k == 1:

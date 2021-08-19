@@ -15,3 +15,10 @@ class CustomStack:
         k = k if k < len(self.items) else len(self.items)
         for i in range(k):
             self.items[i] = self.items[i] + val
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

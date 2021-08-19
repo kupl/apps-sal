@@ -1,3 +1,4 @@
+# ベクトルを既約分数にしてなおかつ方向を第一象限か第二象限に集める
 
 from collections import defaultdict
 from math import gcd
@@ -28,5 +29,5 @@ ans = 1
 for k, v in list(d.items()):
     ans *= pow(2, v[0], MOD) + pow(2, v[1], MOD) - 1
     ans %= MOD
-ans = (ans + zeros - 1) % MOD
+ans = (ans + zeros - 1) % MOD  # 各ベクトル対の組から一つも選ばないパターンを引いてる
 print(ans)

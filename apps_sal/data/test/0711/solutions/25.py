@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import Counter  # N : 素因数分解
 
 MOD = 10**9 + 7
 

@@ -7,6 +7,7 @@ for _ in range(int(input())):
         k = int(n**(0.5))
         if k * k < n:
             k += 1
+        # print(n,k)
         ans = k - 1
         if k * (k - 1) >= n:
             ans += (k - 2)

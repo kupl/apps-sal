@@ -2,6 +2,7 @@ n = int(input())
 s = input()
 S = [ord(znak) - 97 for znak in s]
 a = list(map(int, input().strip().split(' ')))
+#print(n, S, a)
 
 MOD = 10**9 + 7
 

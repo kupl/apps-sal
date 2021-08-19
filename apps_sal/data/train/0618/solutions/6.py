@@ -1,3 +1,4 @@
+# cook your dish here
 inp = list(map(int, input().split()))
 t = inp[0]
 for te in range(t):

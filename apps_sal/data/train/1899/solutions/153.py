@@ -1,6 +1,8 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         m, n = len(A), len(A[0])
+        # mark first island as -1, find and start at second island, bfs until first island is reached while adding steps along
+        # find first island
         self.first = []
 
         def dfs(i, j, m, n):

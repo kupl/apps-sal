@@ -13,8 +13,8 @@ for i in range(2**H):
         for h in range(H):
             for w in range(W):
                 if (i >> h) & 1 & (j >> w) & 1:
-                    if c[h][w] == '
-                    count += 1
+                    if c[h][w] == '#':
+                        count += 1
         if count == K:
             ans += 1
 print(ans)

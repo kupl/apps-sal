@@ -7,6 +7,11 @@ right = n - 1
 block_left_index = 0
 block_right_index = n
 
+# Example:
+# 000011000
+# |     |
+# or
+# |    |
 while left < right:
     if I[left] != I[left + 1]:
         block_left_index = left + 1

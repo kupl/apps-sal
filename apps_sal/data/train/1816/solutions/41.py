@@ -9,6 +9,7 @@ class Solution:
         tmp.sort()
         d = defaultdict(deque)
         for time, name in tmp:
+            # print(name, time)
             while d[name] and abs(time - d[name][0]) > 60:
                 d[name].popleft()
             d[name].append(time)

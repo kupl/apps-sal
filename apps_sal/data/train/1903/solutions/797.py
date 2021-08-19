@@ -5,6 +5,7 @@ class Solution:
 
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
+                # if i != j:
                 x1, y1 = points[i]
                 x2, y2 = points[j]
                 md = abs(x1 - x2) + abs(y1 - y2)

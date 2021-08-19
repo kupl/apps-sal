@@ -10,6 +10,8 @@ def solve(k, X, Y, arms, command):
     if k == -1:
         return final_solve(X, Y, arms, command)
     else:
+        # 大きい方を変換
+        # print(X,Y)
         bl_X = (np.abs(X) > np.abs(Y))
         bl_Y = ~bl_X
         neg_X = (X < 0)

@@ -1,5 +1,6 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
+        # max profit, rotating count
         max_tuple = (0, -1)
 
         profit = 0
@@ -12,6 +13,7 @@ class Solution:
             awaiting -= count_pay
 
             profit += count_pay * boardingCost - runningCost
+            # print(profit)
             if profit > max_tuple[0]:
                 max_tuple = (profit, turn + 1)
 

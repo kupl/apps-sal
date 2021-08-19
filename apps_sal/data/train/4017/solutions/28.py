@@ -2,6 +2,7 @@ import operator
 
 
 def add(a, b):
+    # print(dir(operator))
     return operator.__add__(a, b)
 
 

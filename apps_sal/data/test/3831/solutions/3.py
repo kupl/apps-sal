@@ -1,3 +1,5 @@
+# https://codeforces.com/contest/883/problem/K
+# WA
 import heapq
 from heapq import heappush as push_
 from heapq import heappop as pop_
@@ -38,3 +40,19 @@ if flg == False:
 else:
     print(sum([d[i] - p[i][0] for i in range(n)]))
     print(' '.join([str(x) for x in d]))
+
+# 3
+# 4 5
+# 4 5
+# 4 10
+
+# 4
+# 1 100
+# 100 1
+# 1 100
+# 100 1
+
+# 3
+# 1 1
+# 100 100
+# 1 1

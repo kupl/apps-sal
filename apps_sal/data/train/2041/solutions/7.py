@@ -40,6 +40,7 @@ def main():
     n = int(input())
     t = [int(i) for i in input().split()]
 
+    # rep = [False]*(n-1)
     rep = []
     for i in range(n - 1):
         if needs_rep(t, i):
@@ -49,6 +50,11 @@ def main():
         print(0)
         return
 
+    # print(rep)
+
+    # to_try = [rep[0]]
+    # if rep[0] < n-1:
+    # 	to_try.append(rep[0] + 1)
     to_try = [rep[0], rep[0] + 1]
 
     s = set()
@@ -74,7 +80,11 @@ def main():
             if bad:
                 continue
 
+            # print(i, j)
+            # print(would_need_rep(t, 2, i, j))
+
             if (i, j) not in s and (j, i) not in s:
+                # print('Adding {}'.format((i, j)))
                 s.add((i, j))
 
     print(len(s))

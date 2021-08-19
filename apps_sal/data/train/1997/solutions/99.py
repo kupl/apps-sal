@@ -16,6 +16,8 @@ class Solution:
 
         return result
 
+    # Interval [a,b) is covered by interval [c,d) if and only if c <= a and b <= d
+
     def covered(self, i1, i2):
         c = i2[0]
         d = i2[1]

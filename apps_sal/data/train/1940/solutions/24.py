@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def addToHashmap(self, hashmap, key, val):
         if hashmap.get(key) is None:

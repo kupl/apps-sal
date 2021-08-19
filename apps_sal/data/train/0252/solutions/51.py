@@ -11,6 +11,8 @@ class Solution:
             return -1
         stack = [[taps[0][0], abs(taps[0][1])]]
 
+        # print(taps)
+
         for t in taps[1:]:
             if stack[-1][1] == n:
                 break
@@ -26,4 +28,5 @@ class Solution:
                     stack.pop()
                 stack.append([l, r])
 
+        # print(stack)
         return len(stack)

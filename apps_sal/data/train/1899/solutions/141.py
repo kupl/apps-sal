@@ -1,5 +1,7 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
+        # ref:
+        # https://leetcode.com/problems/shortest-bridge/discuss/189293/C%2B%2B-BFS-Island-Expansion-%2B-UF-Bonus
         R, C = len(A), len(A[0])
 
         def inside(i, j):
@@ -31,6 +33,8 @@ class Solution:
                 continue
             break
 
+        # now the island I have touched is in color-2
+        # the other one, untouched, is in color-1
         for color in range(2, max(R, C) + 2):
             for i, row in enumerate(A):
                 for j, ele in enumerate(row):

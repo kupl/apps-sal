@@ -16,3 +16,4 @@ for i in range(n):
         s = ans[i][1]
 maxi = max(maxi, s)
 print(maxi)
+#print (*ans)

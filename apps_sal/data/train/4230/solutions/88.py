@@ -1,4 +1,5 @@
 def reverse_letter(string):
+    # do your magic here
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     reversed_word = list()
     for letter in string:

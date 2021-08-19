@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 N, M = list(map(int, input().split()))
 h_list = list(map(int, input().split()))

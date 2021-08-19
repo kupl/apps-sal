@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 import networkx as nx
 
@@ -15,6 +16,7 @@ for i in range(n):
 
         if a < c and b < d:
             match_list[i].append(j)
+# print(match_list)
 
 
 group1 = list(range(n))
@@ -27,6 +29,16 @@ g.add_nodes_from(group2, bipartite=0)
 for i, list_ in enumerate(match_list):
     for j in list_:
         g.add_edge(i, j + n, weight=1)
+
+# A, B = bipartite.sets(g)
+# print(A, B)
+# pos = dict()
+# pos.update((n, (1, i)) for i, n in enumerate(A))
+# pos.update((n, (2, i)) for i, n in enumerate(B))
+# nx.draw_networkx(g, pos)
+# nx.draw_networkx_edges(g, pos)
+# plt.axis("off")
+# plt.show()
 
 
 d = nx.max_weight_matching(g)

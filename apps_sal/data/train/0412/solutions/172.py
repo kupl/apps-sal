@@ -12,5 +12,7 @@ class Solution:
                 for k in range(1, f + 1):
                     if j - k > 0:
                         dp[i][j] = (dp[i][j] + dp[i - 1][j - k]) % mod
+                        #dp[i][j] = (dp[i][j] + dp[i-1][j-k])
 
+        # print(dp)
         return dp[-1][-1]

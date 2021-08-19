@@ -17,9 +17,11 @@ for i in range(n):
 seg.sort(reverse=True)
 
 ans_arr = []
+# ind=0
 inc = [0] * n
 
 for w in range(n):
+    # check
     done = 1
     val = 0
     for g in range(1, 201):
@@ -42,9 +44,14 @@ for w in range(n):
                     ans_arr.append(seg[q][3])
                     break
 
+        # l1=seg[ind][1]
+        # r1=seg[ind][2]
+
         for p in range(seg[cur][1], seg[cur][2] + 1):
             arr[p] -= 1
 
+        # ans_arr.append(seg[ind][3])
+        # ind+=1
 
 ans_arr.sort()
 

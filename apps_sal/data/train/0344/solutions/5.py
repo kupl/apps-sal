@@ -5,6 +5,7 @@ class Solution:
 
         for i in range(words - 2, -1, -1):
             for j in range(i + 1, words):
+                # for all rows that row[i] <= row[j] set dp[i] = max of dp[i], 1+dp[j]
                 if all(row[i] <= row[j] for row in A):
                     dp[i] = max(dp[i], 1 + dp[j])
 

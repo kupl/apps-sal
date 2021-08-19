@@ -21,6 +21,7 @@ def solve(n, k, p, c):
     for s in ss:
         s_len = len(s)
         cumsum = [0]
+        # 2周分の累積和
         for i in range(2 * s_len):
             cumsum.append(cumsum[-1] + s[i % s_len])
 

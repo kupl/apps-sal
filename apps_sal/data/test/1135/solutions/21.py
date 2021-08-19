@@ -11,4 +11,5 @@ for i in s:
         ans = i + ans
     else:
         ans = ans + i
+    # print(ans)
 print(ans)

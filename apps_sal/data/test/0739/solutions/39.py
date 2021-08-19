@@ -40,8 +40,10 @@ for i in range(k):
         if z == '1':
             temp_mat = calc_mat(temp_mat, mat)
         mat = calc_mat(mat, mat)
+    # print(temp_mat)
     temp_x = (temp_mat[0][0] * x + temp_mat[1][0] * s + temp_mat[2][0]) % m
     s = (temp_mat[0][1] * x + temp_mat[1][1] * s + temp_mat[2][1]) % m
     x = temp_x
+    #print(x, s)
 
 print(x)

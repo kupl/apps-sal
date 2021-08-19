@@ -3,6 +3,7 @@ import time
 
 
 def get_input():
+    # _ = int(input())
     inp_str = input()
     return inp_str
 
@@ -10,9 +11,11 @@ def get_input():
 def get_nth_fibbo(n):
     a = 0
     b = 1
+    # ndash = n
     while n > 0:
         a, b = b, a + b
         n -= 1
+    # print(ndash, b)
     return b
 
 
@@ -37,6 +40,7 @@ def count_unique(inp_str):
             cur_chr_len = 1
     if cur_chr in ["f", "g"]:
         count_arr.append(cur_chr_len)
+    # print(count_arr)
     for count in count_arr:
         unique_count *= get_nth_fibbo(count)
     return unique_count
@@ -69,6 +73,8 @@ def main():
 
 
 def __starting_point():
+    # stress_test()
+    # test()
     main()
 
 

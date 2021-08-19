@@ -34,6 +34,7 @@ class Solution:
                                         options.append(dp[i - 1][j - 1][last_color])
                             if len(options) != 0:
                                 dp[i][j][k] = min(options)
+        # print(dp)
         costs = list([x for x in dp[m - 1][target] if x != -1])
         if len(costs) == 0:
             return -1

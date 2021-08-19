@@ -1,5 +1,13 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+        # 1 2 3
+      # 6 6
+      # 5 6 11 0 11 10 9
+        # init
+        # dp[j][d+1], if j < d, dp[j][d] = -1, dp[0][0] = 0
+        # transition
+        # 0 < k < d, dp[j][k] = min[dp[i][k-1] + max(i..j)]
+        # answer dp[n][d]
 
         n = len(jobDifficulty)
         if n < d:

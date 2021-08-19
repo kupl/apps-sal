@@ -1,14 +1,17 @@
 from collections import defaultdict
 N, K = map(int, input().split())
 alist = list(map(int, input().split()))
+# print(alist)
 
 slist = [0]
 for i in range(N):
     slist.append(slist[-1] + alist[i])
+# print(slist)
 
 sslist = []
 for i in range(N + 1):
     sslist.append((slist[i] - i) % K)
+# print(sslist)
 
 answer = 0
 si_dic = defaultdict(int)

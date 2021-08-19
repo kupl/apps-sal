@@ -1,5 +1,6 @@
 from itertools import product
 
+# Map a keypad number to the nearby numbers (including the number itself).
 keypad_neighbors = {
     '1': ['1', '2', '4'],
     '2': ['1', '2', '3', '5'],
@@ -15,9 +16,13 @@ keypad_neighbors = {
 
 
 def get_pins(observed):
+    # Build a 2D array of possibilities
+    # Each row in the array is an entry
+    # Each column is a possible number.
     pins = []
     for num in observed:
         pins.append(keypad_neighbors[num])
 
+    # Generate every permutation of the possible numbers.
     for tup in product(*pins):
         yield ''.join(tup)

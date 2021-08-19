@@ -1,3 +1,4 @@
+# C - Peaks
 
 n, m = list(map(int, input().split()))
 h = list(map(int, input().split()))

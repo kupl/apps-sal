@@ -60,7 +60,7 @@ for box in Grid:
             if s == 1:
                 st += '.'
             elif s == -1:
-                st += '
+                st += '#'
         ans.append(st)
 num.append(len(ans))
 num.append(len(ans[0]))

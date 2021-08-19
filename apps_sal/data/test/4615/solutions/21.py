@@ -15,6 +15,9 @@ def main():
             if sugar_amount <= F:
                 sugar.add(sugar_amount)
 
+    # print(water)
+    # print(sugar)
+
     max_c = -1
     max_w = 0
     max_s = 0

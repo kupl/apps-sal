@@ -9,6 +9,7 @@ for i in range(n - 1):
     y.append(b[i + 1] - b[i])
 x.sort()
 y.sort()
+# print(x,y)
 if x == y and a[0] == b[0] and a[n - 1] == b[n - 1]:
     print("Yes")
 else:

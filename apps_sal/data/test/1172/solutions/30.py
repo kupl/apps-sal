@@ -28,3 +28,5 @@ for i in range(1, N + 1):
         count += 1
 
 print((DP[2][N]))
+
+# print (DP)

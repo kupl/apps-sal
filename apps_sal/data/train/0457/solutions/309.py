@@ -13,6 +13,7 @@ class Solution:
                     matrix[i][j] = matrix[i - 1][j]
                 else:
                     matrix[i][j] = min(matrix[i - 1][j], 1 + matrix[i][j - coins[i - 1]])
+        #print (matrix)
         if matrix[-1][-1] == sys.maxsize:
             return -1
         return matrix[-1][-1]

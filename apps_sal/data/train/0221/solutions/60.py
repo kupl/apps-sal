@@ -26,6 +26,10 @@ class Solution:
         mod = 2**63 - 1
         power = pow(26, length, mod)
 
+        # cur = 0
+        # for i in range(length):
+        #     cur = (cur * 26 + self.A[i]) % mod
+
         cur = reduce(lambda x, y: (x * 26 + y) % mod, self.A[:length], 0)
         seen = {cur}
 

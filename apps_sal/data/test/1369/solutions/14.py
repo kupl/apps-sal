@@ -49,3 +49,4 @@ for i in range(400):
     else:
         l, r = c, r
 print(c)
+# print(c**2)

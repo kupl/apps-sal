@@ -1,3 +1,6 @@
+# A - Sharing Cookies
+
+# A,B,A+Bのいずれかが3の倍数かどうか判定する
 
 
 A, B = list(map(int, input().split()))

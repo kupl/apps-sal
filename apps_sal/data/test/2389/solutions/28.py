@@ -1,9 +1,11 @@
 n, a, b, c = map(int, input().split(' '))
+# print(n,a,b,c)
 left = [a, b, c]
 ans = []
 prev = (-1, -1)
 for i in range(0, n):
     s = input()
+    # print(s)
     x = {'A': 0, 'B': 1, 'C': 2}[s[0]]
     y = {'A': 0, 'B': 1, 'C': 2}[s[1]]
     if left[x] == left[y] == 0:

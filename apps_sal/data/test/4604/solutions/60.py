@@ -9,6 +9,7 @@ a = True
 if N % 2 == 0:
     for i in range(1, N, 2):
         if A[i - 1] != i or A[i] != i:
+            # print(i,A[i-1],A[i])
             a = False
             break
 else:
@@ -17,6 +18,7 @@ else:
     else:
         for i in range(2, N, 2):
             if A[i - 1] != i or A[i] != i:
+                # print(i,A[i-1],A[i])
                 a = False
                 break
 print(f() if a else 0)

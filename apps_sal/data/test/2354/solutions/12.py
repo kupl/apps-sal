@@ -6,6 +6,7 @@ def __starting_point():
     data = list(map(int, input.split()))
     size = data[0]
     n = data[1]
+    #size, n = map(int, input().split())
     plus = (size * size + size % 2) // 2
     for i in range(n):
         x, y = data[i * 2 + 2], data[i * 2 + 3]

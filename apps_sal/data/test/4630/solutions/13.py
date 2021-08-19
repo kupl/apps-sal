@@ -19,6 +19,7 @@ while t:
                 p[j] = i
                 j = l[j]
 
+    # print(v)
     for i in range(n):
         print(v[p[i]], end=' ')
     print()

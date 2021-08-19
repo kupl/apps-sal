@@ -1,5 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        # dp[i][j] represents minimum coins needed to change i amount using upto jth coins
+        # dp[i][j] = min(dp[i][j-1], dp[i-coins[j]][j])
 
         sz = len(coins) + 1
         dp = [[sys.maxsize] * sz for _ in range(amount + 1)]

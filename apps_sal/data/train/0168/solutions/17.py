@@ -11,6 +11,7 @@ class Solution:
             else:
                 dic[sym] = 1
 
+        # num=sum(dic.values())
         num = 0
         for i in dic.values():
             num += i

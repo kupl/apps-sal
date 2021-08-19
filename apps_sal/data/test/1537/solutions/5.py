@@ -38,6 +38,14 @@ def main():
     for i in range(n - k + 1):
         for j in range(n - k + 1):
             ans = max(ans, lc + yans[i + k][j + 1] - yans[i][j + 1] + tans[i + 1][j + k] - tans[i + 1][j])
+    # print(*tate, sep='\n')
+    # print()
+    # print(*yoko, sep='\n')
+    # print()
+    # print(*tans, sep='\n')
+    # print()
+    # print(*yans, sep='\n')
+    # print()
     print(ans)
 
 

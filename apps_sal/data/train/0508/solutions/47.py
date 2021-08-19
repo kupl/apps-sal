@@ -22,13 +22,18 @@ for pos, m, x in event:
         stop_set.remove(x)
 
     elif m == 1:
+        # heappushする時点でqはソートされている
         heappush(q, x)
         stop_set.add(x)
 
     else:
+        # この時点でのstop_setは、i番目の人が遭遇する通行止めの座標
+        # この時点でのqは今までstopになった座標
         while q:
+            # qはソート済なので、q[0]は最小値　それがstop_setから外れている場合、heappopでそれを排除する
             if q[0] not in stop_set:
                 heappop(q)
+            # q[0]がstop_setから外れてない場合、それ以降のqも外れていないのでbreak
             else:
                 break
 

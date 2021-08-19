@@ -3,6 +3,14 @@ from functools import lru_cache
 
 class Solution:
     def splitArraySameAverage(self, A: List[int]) -> bool:
+        # TLE
+        #         avg = sum(A) / len(A)
+        #         for k in range(1, len(A) // 2 + 1):
+        #             for comb in combinations(A, k):
+        #                 if abs(sum(comb) / k - avg) < 1e-5:
+        #                     return True
+
+        #         return False
 
         N, S = len(A), sum(A)
 

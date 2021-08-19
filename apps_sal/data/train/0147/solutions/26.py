@@ -1,6 +1,6 @@
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        h = []
+        h = []  # 最小堆，存放挑选的工程师的速度
         ssum = 0
         res = 0
         for e, s in sorted(zip(efficiency, speed), reverse=True):

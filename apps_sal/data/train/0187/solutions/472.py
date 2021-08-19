@@ -9,6 +9,7 @@ class Solution:
             r += c
             cnt += 1
             profit += (min(4, r) * bc - rc)
+            # print(profit)
             if profit > max_prof:
                 ans = cnt
                 max_prof = profit

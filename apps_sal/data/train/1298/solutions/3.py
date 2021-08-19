@@ -1,3 +1,4 @@
+# cook your code here
 test_cases = int(input())
 for case in range(test_cases):
     copies = int(input())

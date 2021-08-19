@@ -1,5 +1,7 @@
 from sys import stdin
 import math
+# Input data
+#stdin = open("input", "r")
 
 
 def func(x):

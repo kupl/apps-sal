@@ -25,6 +25,8 @@ for i in range(N):
 
 edges.sort()
 
+# print(edges)
+
 
 stack = [R + R + C + C]
 flag = 'YES'

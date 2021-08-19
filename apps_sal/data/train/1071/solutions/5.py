@@ -8,6 +8,7 @@ for i in range(0, n):
     del(t[0])
     while(len(t) < 30):
         t.insert(0, '0')
+    # print(t)
     t.reverse()
     for j in range(0, q):
         o = int(input())

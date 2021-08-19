@@ -24,12 +24,19 @@ def strongest_even(n, m):
        [n, m].
     """
 
+    # It can be shown that the largest power of 2 on an interval [n, m] will
+    # necessarily be the strongest even number. Check first if the interval
+    # contains a power of 2, by comparing the log2 of the endpoints.
     if int(log2(m)) > int(log2(n)):
         return 2**int(log2(m))
 
+    # Modify the endpoints exclude any odd numbers. If the two endpoints are
+    # equal, the original interval contains only a single even number. Return it.
     n += n % 2
     m -= m % 2
     if n == m:
         return n
 
+    # All optimizations and edge cases are exhausted. Recurse with the
+    # modified endpoints halved, and multiply the result by 2.
     return 2 * strongest_even(n // 2, m // 2)

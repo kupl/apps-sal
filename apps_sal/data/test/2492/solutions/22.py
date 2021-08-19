@@ -8,6 +8,7 @@ plus = a[a > 0]
 minus = a[a < 0]
 zero = a[a == 0]
 
+# infだと割ってもinf
 left = -10 ** 18
 right = 10 ** 18
 

@@ -1,4 +1,5 @@
 def power_of_two(x):
+  # your code here
     if x == 0:
         return False
 

@@ -28,7 +28,11 @@ for t in range(T):
     N, K = [int(_) for _ in input().split()]
     M = [[0] * N for i in range(N)]
 
+    # save = set()
+
     for i in range(K):
+        # assert (i%N, (i//N + i)%N) not in save
+        # save.add((i%N, (i//N + i)%N))
         M[i % N][(i // N + i) % N] = 1
 
     print(f(M))

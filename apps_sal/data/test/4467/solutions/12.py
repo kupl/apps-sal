@@ -1,4 +1,4 @@
-N = int(input())
+N = int(input())  # 100
 AB = [0] * N
 for i in range(N):
     AB[i] = list(map(int, input().split()))
@@ -7,6 +7,7 @@ CD = [0] * N
 for i in range(N):
     CD[i] = list(map(int, input().split()))
 CD = sorted(CD)
+#print(AB, CD)
 
 ans = 0
 

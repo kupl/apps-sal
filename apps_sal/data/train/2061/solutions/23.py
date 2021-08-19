@@ -1,7 +1,12 @@
+# coding: utf-8
+# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
 
+
+#a = int(readline())
+#n,k = map(int, readline().split())
 
 def solve1(a, b, c, d, e, f, cx, cy, x, y):
     if x == y:

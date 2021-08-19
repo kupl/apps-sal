@@ -4,6 +4,8 @@ B = [int(x) for x in input().split()]
 
 
 def sum_count(A, B, x):
+    # A,B is sorted.
+    # return count(a+b < x)
     p = len(B) - 1
     result = 0
     for a in A:

@@ -13,6 +13,7 @@ class Solution:
 
         final = []
 
+        # print((b-a).seconds)
         for emp in res:
             if len(res[emp]) < 3:
                 continue

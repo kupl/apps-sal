@@ -11,6 +11,7 @@ for i in range(m):
     graph[a - 1].add(i)
     graph[b - 1].add(i)
 
+# (cost,done,node,edge)
 for i in range(n):
     done = [True for _ in range(n)]
     D = [(0, 0, i, m), ]

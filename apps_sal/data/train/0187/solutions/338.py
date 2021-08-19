@@ -18,6 +18,9 @@ class Solution:
             if waiting > 0:
                 total = waiting + arrival
 
+            # if onboard == 0 and total == 0:
+            #    continue
+
             if total <= 4:
                 profit += ((total * boardingCost) - runningCost)
                 onboard += total

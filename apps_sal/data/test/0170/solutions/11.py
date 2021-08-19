@@ -31,6 +31,8 @@ for i in a:
 for i in b:
     q.append(i)
 
+# print(a)
+# print(b)
 
 total = 0
 flag = True
@@ -48,6 +50,7 @@ while(True):
         b.pop(0)
         b.append(x)
         b.append(y)
+    # print(a,b)
     total += 1
     if((p == a and q == b) or total >= 100000):
         flag = False

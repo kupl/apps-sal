@@ -9,13 +9,13 @@ for i in range(h):
     mine[i + 1].appendleft(".")
 for i in range(1, h + 1):
     for j in range(1, w + 1):
-        if mine[i][j] == "
-            print("
+        if mine[i][j] == "#":
+            print("#", end="")
         else:
-            counter=0
+            counter = 0
             for k in range(-1, 2):
                 for l in range(-1, 2):
-                    if (k or l) and mine[i + k][j + l] == "
+                    if (k or l) and mine[i + k][j + l] == "#":
                         counter += 1
             print(counter, end="")
     print()

@@ -42,6 +42,7 @@ for i in range(1, h - 1):
                             break
     if isTrue:
         break
+# print(*inpL)
 
 if isTrue:
     isTrue = True

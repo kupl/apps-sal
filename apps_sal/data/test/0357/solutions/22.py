@@ -1,3 +1,5 @@
+# @Date:   23-Oct-2017
+# @Last modified time: 23-Oct-2017
 s = input()
 words = ["Danil", "Olya", "Slava", "Ann", "Nikita"]
 c = 0

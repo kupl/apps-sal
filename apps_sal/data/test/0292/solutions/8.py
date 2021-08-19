@@ -3,6 +3,7 @@ def ans():
     div = 2**(h - 1)
     mystr = ""
     for i in range(h):
+        # print(div)
         if n > div:
             mystr += "G"
             div += 2**(h - i - 2)
@@ -10,6 +11,7 @@ def ans():
             mystr += "L"
             div -= 2**(h - i - 2)
 
+    # print(mystr)
     if mystr[0] == "L":
         ans = 1
     elif mystr[0] == "G":

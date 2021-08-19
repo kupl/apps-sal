@@ -4,6 +4,9 @@ n, c = list(map(int, input().split()))
 D = [list(map(int, input().split()))for _ in range(c)]
 
 
+# 色は0始まりで管理する
+
+# 入力の色を受け取って、それぞれの色毎にいくつあるか
 diago0 = defaultdict(int)
 diago1 = defaultdict(int)
 diago2 = defaultdict(int)
@@ -19,6 +22,7 @@ for i in range(n):
             diago2[color] += 1
 
 
+# 0列目をcにするときのcにするときの最小コスト
 cost0 = [0] * c
 cost1 = [0] * c
 cost2 = [0] * c

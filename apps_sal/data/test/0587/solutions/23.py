@@ -1,3 +1,4 @@
+# various sushi
 import heapq
 N, K = map(int, input().split())
 que = []
@@ -12,7 +13,7 @@ N_set = set()
 
 sums = 0
 
-cnt = [0 for i in range(N + 1)]
+cnt = [0 for i in range(N + 1)]  # ねたxに何個いるか
 ng, ok, sub = [], [], []
 heapq.heapify(ng)
 heapq.heapify(ok)
@@ -33,16 +34,21 @@ while ng:
 
 ng = sub
 
+# ng とっちゃダメなやつ
+# ok とってもいいやつ
 
 S = len(N_set)
 ans = S**2 + sums
 
+
+# これより更新することはあるか？
 
 for i in range(K, N):
     taste, value = que[i]
     if taste in N_set:
         pass
     else:
+        #taste not in N_set
         if ok:
             min_value, m_taste = heapq.heappop(ok)
             sums -= min_value

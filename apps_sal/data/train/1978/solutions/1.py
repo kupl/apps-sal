@@ -12,6 +12,7 @@ class Solution:
             if p not in list(dp.keys()):
                 dp[p] = i + 1
             lstp.append(dp[p])
+        # print(lstp)
 
         for word in words:
             dp = {}
@@ -20,6 +21,7 @@ class Solution:
                 if w not in list(dp.keys()):
                     dp[w] = j + 1
                 lst.append(dp[w])
+            # print(lst)
             if lstp == lst:
                 ans.append(word)
         return ans

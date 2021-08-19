@@ -44,6 +44,7 @@ for t in range(int(input())):
     h = []
     r = []
     for i in range(n):
+        #x, y = randint(1,10), randint(1,10)
         x, y = list(map(int, input().split()))
         h.append(x)
         r.append(y)
@@ -51,13 +52,18 @@ for t in range(int(input())):
     ans = []
     curr = check(h)
 
+    # print h
+    # print r
+
     if (curr != 0):
         ans.append(0)
 
+    # print 0, ":", "x", h, curr
     for i in range(1, 20):
         for j in range(n):
             h[j] += r[j]
         temp = check(h)
+        # print i, ":", curr, h, temp
         if (temp != curr):
             if (temp == 0):
                 ans.append(i - 1)

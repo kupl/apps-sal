@@ -13,7 +13,7 @@ class Solution:
             elif apples % 3 != 0 and apples % 2 != 0:
                 return (apples - 1,)
 
-        poses = [(n, 0)]
+        poses = [(n, 0)]  # (#apples remained,days passed)
         min_apples = min([pos[0] for pos in poses])
 
         while min_apples != 0:
@@ -27,6 +27,7 @@ class Solution:
                 new_poses += new_pos
             min_apples = min([pos[0] for pos in new_poses])
             poses = sorted(list(set(new_poses)))
+            # print(poses)
 
         days = sorted(poses, key=lambda x: x[0])[0][1]
 

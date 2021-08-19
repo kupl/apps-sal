@@ -15,6 +15,7 @@ def main():
         Q.append((t, a))
     Q.sort(key=itemgetter(0))
 
+    # print(Q)
     prev = 0
     m = 0
     M = X
@@ -42,6 +43,7 @@ def main():
             else:
                 am = m + R_cs
                 aM = M + R_cs
+                #print('am', am, 'aM', aM, m, M)
                 if a <= am:
                     if flg == 1:
                         print((min(X, m + t - prev)))

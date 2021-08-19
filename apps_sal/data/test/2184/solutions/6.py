@@ -19,6 +19,11 @@ xVal = GetVal('00001111')
 yVal = GetVal('00110011')
 zVal = GetVal('01010101')
 
+# 0 - |
+# 1 - &
+# 2 - !
+# 3 - ()
+
 
 def Dijkstra():
     depth = [['Z' * 585 for i in range(4)] for i in range(MSIZE)]

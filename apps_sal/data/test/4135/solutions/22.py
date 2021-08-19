@@ -7,5 +7,6 @@ for i in range(2, n + 1):
 for i in d:
     j = a[:i]
     j = j[::-1]
+  #  print(j)
     a = j + a[i:]
 print(a)

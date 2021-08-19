@@ -5,6 +5,8 @@ class Solution(object):
         :rtype: int
         """
 
+        # track min_negative_product and max_positive_product
+
         if len(nums) == 0:
             return nums
         if len(nums) == 1:

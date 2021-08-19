@@ -10,7 +10,9 @@ def combinations_count(n, r):
 n, m = map(int, input().split())
 s = list(map(lambda x: x % m, list(accumulate(list(map(int, input().split()))))))
 s.append(0)
+# print(s)
 d = Counter(s)
+# print(d)
 ans = 0
 for i in d:
     if d[i] >= 2:

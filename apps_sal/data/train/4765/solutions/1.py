@@ -3,7 +3,7 @@ class Hero(object):
                  health=100, damage=5, experience=0):
         self.name = name
         self.position = position
-        self.max_health = health
+        self.max_health = health  # trust me, you want to have this as well
         self.health = health
         self.damage = damage
         self.experience = experience

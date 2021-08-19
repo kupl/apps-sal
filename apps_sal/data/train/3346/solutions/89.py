@@ -24,3 +24,4 @@ def gap(g, m, n):
                 return [li[-2], li[-1]]
         i = i + 1
     return
+    # your code

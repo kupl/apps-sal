@@ -13,6 +13,7 @@ for _ in range(int(input())):
             indexzero.append(i)
         else:
             arr2.append(arr[i])
+    # arr3 = [x for x in arr1 if x not in arr2]
     arr3 = list(set(arr1) - set(arr2))
     result = permutations(arr3)
     perm = []

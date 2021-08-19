@@ -1,5 +1,8 @@
+# cook your dish here
 n = int(input())
 a = list(map(int, input().split()))
+#a = [1,1,3,4,1,2,2,2]
+#n = 14
 k = 0
 l = 0
 ans1 = 0

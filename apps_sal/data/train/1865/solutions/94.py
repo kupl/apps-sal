@@ -15,8 +15,8 @@ class Solution:
         def valid(i, j, s=None, b=None):
             if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]):
                 return False
-            if grid[i][j] == '
-            return False
+            if grid[i][j] == '#':
+                return False
             if s is not None:
                 if (i, j) == s:
                     return False

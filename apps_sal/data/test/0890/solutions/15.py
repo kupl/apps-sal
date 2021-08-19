@@ -7,8 +7,8 @@ def generate(i, real, a):
             if (sum_a >= l) and (sum_a <= r) and (max_a - min_a >= x):
                 count[0] += 1
     else:
-        generate(i + 1, real + 1, a + [c[i]])
-        generate(i + 1, real, a)
+        generate(i + 1, real + 1, a + [c[i]])  # взяли эту задачу
+        generate(i + 1, real, a)  # не взяли эту задачу
 
 
 n, l, r, x = map(int, input().split())

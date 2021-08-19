@@ -1,3 +1,4 @@
+# cook your dish here
 def destroy_cells(N, M):
     print(N * M, end=' ')
 

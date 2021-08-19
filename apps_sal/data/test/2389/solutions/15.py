@@ -1,12 +1,34 @@
+# 初手 1 1 1 なら絶対成功 (greedy)
+# どこかの状態で 1 1 1 を作れるなら絶対成功 (greedy)
+# 0 1 2 なら絶対成功 (greedy)
+# 0 0 3 で、初手がAB以外なら絶対成功 (greedy)
+# 0 0 0 なら絶対失敗
+#
+# 初手で成否が分からないのは
+# 0 1 1
+# 0 0 2
+# 0 0 1
+#
+# 0 0 1 は greedyにやるしかない
+# 0 0 2 は、少なくとも1回はgreedy
+#
+# 結局、各回のgreedyでは問題になるのは
+# 0 1 1 のときのみ
+# これは1個先を読めば十分
 
 
 def select(x, y, ops, i, z):
+    # true -> x を増やす
     if not(x == 1 and y == 1 and i < len(ops) - 1):
         if x < y:
             return True
         else:
             return False
 
+    # x = y = 1, i < len(ops) - 1
+    # 先読みして xz なら x を増やす
+    # 先読みして xy なら y を増やす
+    # 先読みして xy なら どっちでもいい
     op = ops[i]
     nop = ops[i + 1]
 

@@ -19,6 +19,7 @@ to_stay = set()
 for i, x in enumerate(a):
     for p in range(32):
         if ((2**p) - x) in is_in and is_in[((2**p) - x)] != i:
+            # print(str(x) + ' + ' +str(((2**p) - x)) + '=' + str(2**p))
             to_stay.add(i)
             to_stay.add(is_in[((2**p) - x)])
 

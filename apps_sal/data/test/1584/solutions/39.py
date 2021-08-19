@@ -1,3 +1,6 @@
+# それゆけにぶたんまん
+# python3.8.2のTLEの壁に阻まれました←ぱいぱいまんに助けてもらった
+# てかライブラリ使えばよくねver
 from bisect import bisect_left
 n = int(input())
 l = sorted(list(map(int, input().split())))

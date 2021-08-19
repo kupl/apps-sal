@@ -17,6 +17,7 @@ for _ in range(t):
         for j in range(n):
             if matrix[j][i] == '1':
                 count += 1
+        # print('Count:', count)
         if count > 1:
             collision += ((count * (count - 1)) // 2)
     print(collision)

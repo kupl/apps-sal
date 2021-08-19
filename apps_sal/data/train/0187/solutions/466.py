@@ -21,6 +21,7 @@ class Solution:
                     maxProfitCount = rotate
                 remaining -= cur
                 number -= cur
+                #print(rotate, board,remaining,curProfit)
 
         while remaining > 0:
             cur = min(remaining, 4)
@@ -33,6 +34,7 @@ class Solution:
                 maxProfitCount = rotate
 
             remaining -= cur
+            #print(rotate, board,remaining,curProfit)
 
         if profit != -1:
             return maxProfitCount

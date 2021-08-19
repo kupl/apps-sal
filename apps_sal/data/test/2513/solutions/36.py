@@ -1,4 +1,6 @@
+#!python3
 
+# input
 N = int(input())
 s = input()
 

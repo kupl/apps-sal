@@ -12,6 +12,7 @@ def chess_board_cell_color(cell1, cell2):
     else:
         color1 = 'w'
     if ((int(cell2[1]) % 2) == 0 and (ce2 % 2) == 0) or ((int(cell2[1]) % 2) == 1 and (ce2 % 2) != 0):
+        # if ((int(cell2[1])%2) == 0 and ce2%2 == 0) or ((int(cell2[1])%2) == 1 and ce2%2 != 0):
         color2 = 'r'
     else:
         color2 = 'w'

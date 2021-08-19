@@ -3,6 +3,7 @@ import math
 
 def main():
     n, a, b = [int(x) for x in input().split(" ")]
+    # 2^n - 1 - nCa - nCb
     p = 1000000007
     a = min([a, n - a])
     b = min([b, n - b])
@@ -25,7 +26,7 @@ def main():
     print((modpower(2, n, p) - 1 - (na * finv[lf - 1 - a]) % p - (nb * finv[lf - 1 - b]) % p) % p)
 
 
-def modpower(a, p, d):
+def modpower(a, p, d):  # a^p % d
     pp = [a]
     for i in range(int(math.log2(p)) + 1):
         pp.append((pp[-1] ** 2) % d)

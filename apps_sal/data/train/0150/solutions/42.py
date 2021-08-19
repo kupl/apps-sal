@@ -15,6 +15,7 @@ class Solution:
             else:
                 q[len(A) - 1 - i] = min(q[len(A) - i], v)
 
+        # print(p,q)
         for i in range(len(A) - 1):
             if p[i] <= q[i + 1]:
                 return i + 1

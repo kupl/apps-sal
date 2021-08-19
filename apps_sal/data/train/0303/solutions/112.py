@@ -1,17 +1,26 @@
 class Solution:
     def getMax(self, arr, k, idx, cache):
+        # I am partitioning 1 element
         if idx == len(arr) - 1:
             return arr[idx]
+        # I need to get max sum after partitioning
         maxSum = 0
 
+        # [1,2,9,30]
+        # I need to try partitioning from 1 -> K elements
         for numInPartition in range(1, k + 1):
+            # I cannot choose elements if I would be choosing too many elements
             if idx + numInPartition > len(arr):
                 break
 
             startOfRecursiveIndex = idx + numInPartition
+            # select max value in first 'k' elements
             maxVal = max(arr[idx:startOfRecursiveIndex])
 
+            # generates sum for this subset
             partSum = maxVal * numInPartition
+
+            # I need to get the partition sum for the rest of the elements
 
             rest = cache[startOfRecursiveIndex] if startOfRecursiveIndex in cache else self.getMax(arr, k, startOfRecursiveIndex, cache)
 

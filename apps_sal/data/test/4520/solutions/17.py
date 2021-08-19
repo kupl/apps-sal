@@ -2,6 +2,11 @@
 template author-: Pyduper
 '''
 
+# MAX = pow(10, 5)
+# stdin = open("testdata.txt", "r")
+# ip = stdin
+# def input():
+# 	return ip.readline().strip()
 
 N = 250
 n, k = map(int, input().split())

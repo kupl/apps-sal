@@ -6,5 +6,6 @@ for i in range(1, n + 1, 2):
         if(i % j == 0):
             cnt += 1
     if(cnt == 8):
+        # print(i)
         ans += 1
 print(ans)

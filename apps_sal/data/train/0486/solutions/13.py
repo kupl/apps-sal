@@ -20,6 +20,7 @@ class Solution:
                     if x < num <= N:
                         s.add(num)
                 elif(i > msb):
+                    # print(num,end=\" \")
                     if num & (1 << msb):
                         num -= (1 << msb)
                     num <<= 1
@@ -43,4 +44,5 @@ class Solution:
                 p = 1 << (msb - 2)
             for i in s1:
                 s.add(i)
+        # print(list(s),p)
         return len(s) == (N - p)

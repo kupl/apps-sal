@@ -19,4 +19,5 @@ def zfunc(str_):
     k = len(str_)
     for i in range(len(str_)):
         z.append(prefix2(str_[i:], str_[: k - i], k - i))
+        # z.append(prefix1(str_[i:], str_[: k - i]))     #poor timing
     return z

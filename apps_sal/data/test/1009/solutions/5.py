@@ -16,11 +16,14 @@ else:
     for i in range(int(len(pairs) / 2)):
         pair_sums.append(pairs[i] + pairs[-i - 1])
 
+    # print(pairs)
+    # print(pair_sums)
     if len(pair_sums) > 0:
         pmax = max(pair_sums)
     else:
         pmax = 0
     singles = s[-(2 * k - n):]
+    # print(singles)
     if len(singles) > 0:
         smax = max(singles)
     else:

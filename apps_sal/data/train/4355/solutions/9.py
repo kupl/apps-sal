@@ -13,3 +13,5 @@ def ex_euler(n):
         zk = (1 + 0.5 * exp(-4 * x) - 0.5 * exp(-2 * x))
         error = error + abs(y - zk) / zk
     return floor(error / (n + 1) * 10 ** 6) / 10 ** 6
+# float("{:.6f}".format(error/(n+1)))
+# round(error/(n+1),6)

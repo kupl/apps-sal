@@ -2,6 +2,7 @@ class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         ans = 0
         dp = {}
+        # dp[i,d] = max length subseq up to i with diff d
         for i in range(len(A)):
             for j in range(i):
                 d = A[i] - A[j]

@@ -1,4 +1,5 @@
 import math
+# ------------------------------warmup----------------------------
 import os
 import sys
 from io import BytesIO, IOBase
@@ -54,6 +55,7 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
+# -------------------game starts now----------------------------------------------------
 for ik in range(int(input())):
     n, m, a, b = map(int, input().split())
     if a * n != b * m:

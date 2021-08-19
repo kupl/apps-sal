@@ -9,6 +9,7 @@ class Solution:
         def can_place_queen(row, col):
             for i, j in enumerate(placement):
                 if col == j or abs(col - j) == row - i:
+                    # Same column as, or diagonally from other queen
                     return False
             return True
 

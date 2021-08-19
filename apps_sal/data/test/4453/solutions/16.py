@@ -2,6 +2,7 @@ T = int(input())
 while(T > 0):
     n = int(input())
     p = [(int(i) - 1) for i in input().split()]
+    # print(p)
     ans = []
     for i in range(0, n):
         curr = i

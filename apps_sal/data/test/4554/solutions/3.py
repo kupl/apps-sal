@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 W, a, b = list(map(int, input().split()))
 
 a_l = a

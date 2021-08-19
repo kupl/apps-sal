@@ -1,5 +1,8 @@
+# Imports
 
 
+##############################################
+# Input
 n = int(input())
 
 mas = []
@@ -17,12 +20,15 @@ for i in range(n):
     mas.append((k, line))
 
 
+##############################################
+# Main code
 sor = sorted(mas, key=lambda val: val[0], reverse=True)
 str = ''
 
 for item in sor:
     str += item[1]
 
+# print(str)
 
 count = 0
 count_h = all_h

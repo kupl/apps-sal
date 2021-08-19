@@ -2,6 +2,7 @@ import bisect
 
 N = int(input())
 L = sorted([int(n) for n in input().split()])
+# print(L)
 
 count = 0
 for i in range(N - 1):

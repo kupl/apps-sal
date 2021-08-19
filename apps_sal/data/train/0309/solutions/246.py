@@ -1,6 +1,7 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         self.results = {}
+        # self.results[i][diff] is the length of the longest subsequence that includes index i to the end, with difference diff
 
         self.results[len(A) - 1] = {}
         for i in range(len(A) - 2, -1, -1):

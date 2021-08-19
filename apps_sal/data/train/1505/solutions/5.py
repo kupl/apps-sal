@@ -1,3 +1,4 @@
+# cook your dish here
 def is_seq_brackets_right(input_seq):
     stack = []
     highest_depth = 0

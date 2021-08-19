@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 minx = miny = maxx = maxy = 0
 c = []

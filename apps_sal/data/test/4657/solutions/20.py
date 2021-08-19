@@ -26,6 +26,7 @@ def dis(first, second, remain):
         return second[0] + remain
 
 
+# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     n, k = list(map(int, stdin.readline().split()))

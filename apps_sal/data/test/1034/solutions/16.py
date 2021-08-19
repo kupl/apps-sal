@@ -1,4 +1,4 @@
-import heapq
+import heapq  # heapqライブラリのimport
 X, Y, Z, K = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))

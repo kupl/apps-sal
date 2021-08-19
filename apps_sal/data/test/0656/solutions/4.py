@@ -1,5 +1,9 @@
 import heapq
+# sys.stdin=file('input.txt')
+# sys.stdout=file('output.txt','w')
+# 10**9+7
 mod = 1000000007
+# mod=1777777777
 pi = 3.1415926535897932
 IS = float('inf')
 xy = [(1, 0), (-1, 0), (0, 1), (0, -1)]

@@ -6,6 +6,7 @@ for i in range(3):
     rc, cc = (r1, r2, r3)[(i + 2) % 3], "ABC"[(i + 2) % 3]
     if ra[0] == ra[1]:
         continue
+    # solve a ra[1]-ra[0] x ra[1] rectangle with 2 remaining rectangles
     w, h = ra[1] - ra[0], ra[1]
     rs = []
     wtot, whit, ws = 0, 0, []

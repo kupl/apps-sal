@@ -7,6 +7,9 @@ class Solution:
             width = shelf_width
             height = 0
             j = i
+            # to determine the minimum height up to the ith book,
+            # we need te examine all possible books which in the same level as the ith book up to the ith book
+            # the later books which may be in the same level as the ith book will be examined later when it is introduced.
             while j >= 0 and width - books[j][0] >= 0:
                 width -= books[j][0]
                 height = max(height, books[j][1])

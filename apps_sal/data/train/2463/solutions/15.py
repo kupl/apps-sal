@@ -1,3 +1,4 @@
+# 19
 class Solution:
     def validMountainArray(self, A: List[int]) -> bool:
         if len(A) < 3:

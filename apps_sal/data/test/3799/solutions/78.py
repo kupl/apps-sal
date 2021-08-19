@@ -5,6 +5,7 @@ def ini(): return int(sys.stdin.readline())
 def inm(): return list(map(int, sys.stdin.readline().split()))
 def inl(): return list(inm())
 def ins(): return sys.stdin.readline().rstrip()
+# debug = lambda *a, **kw: print(*a, **kw, file=sys.stderr)
 
 
 s = ins()

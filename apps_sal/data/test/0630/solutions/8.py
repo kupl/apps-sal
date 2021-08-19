@@ -3,6 +3,7 @@ a = list(map(int, input().split()))
 
 ans = [min(i - 1, k) + 1 + min(n - i, k) for i in range(1, n + 1)]
 
+# l + 1 + min(n - l, k) - (r - min(r - 1, k)) - число перекрываюихся сообщений
 
 for i in range(1, n + 1):
     a_ = a[i - 1]

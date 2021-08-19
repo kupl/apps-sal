@@ -1,5 +1,6 @@
 n = int(input())
 lst = list(map(int, input().rstrip().split()))
+# start with positive number
 cur, cnt_1 = 0, 0
 for i, j in enumerate(lst):
     new = cur + j
@@ -12,6 +13,7 @@ for i, j in enumerate(lst):
     else:
         cur = new
 
+# start with negative number
 cur, cnt_2 = 0, 0
 for i, j in enumerate(lst):
     new = cur + j

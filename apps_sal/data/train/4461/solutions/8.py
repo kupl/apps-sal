@@ -1,6 +1,8 @@
 from itertools import tee, chain, starmap
 from operator import lt
 
+# found at https://docs.python.org/3.6/library/itertools.html
+
 
 def pairwise(iterable):
     "s -> (s0,s1), (s1,s2), (s2, s3), ..."

@@ -21,3 +21,10 @@ class CustomStack:
 
     def increment(self, k: int, val: int) -> None:
         self.array[0:k] = list([x + val for x in self.array[0:k]])
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

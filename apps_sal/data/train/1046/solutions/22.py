@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 for i in range(0, n):
     (l, b) = map(int, input().split(" "))

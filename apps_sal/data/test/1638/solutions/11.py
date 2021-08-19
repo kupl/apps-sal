@@ -31,3 +31,4 @@ while i < n:
         dict = arr
     i += 1
 print(*dict)
+# print(dict.values())

@@ -24,7 +24,9 @@ for i in range(2 * n):
         if k != q[-2] - 1:
             flag = 0
     else:
+        #print(toBe, flag, ans)
         if q and toBe != q[-1]:
+            #print(q, toBe, ans)
             flag = 1
             ans += 1
             q = []

@@ -12,6 +12,7 @@ def main():
     abc_list.append('AB')
 
     for i in range(n):
+        # a_txt = input()
         l_txt = abc_list[i][0]
         r_txt = abc_list[i][1]
 

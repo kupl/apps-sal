@@ -20,13 +20,18 @@ def less_sum(s, m):
         else:
             a += 1
         x = a - b
+        # print(x)
+        #print(count[-2], count[-1], count[0], count[1], count[2])
         if s[i] > m:
             last -= count[x + 1]
         else:
             last += count[x]
+        #print(x, last)
         res += last
         count[x] += 1
         last += 1
+
+    # print(res)
 
     return res
 
@@ -34,5 +39,6 @@ def less_sum(s, m):
 n, m = map(int, input().split(' '))
 s = list(map(int, input().split(' ')))[0:n]
 
+#print(m, s)
 
 print(less_sum(s, m) - less_sum(s, m - 1))

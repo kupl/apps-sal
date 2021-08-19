@@ -13,6 +13,7 @@ class UF:
                 self.m_cnt -= 1
             if self.c[pi] == self.m:
                 self.m_cnt -= 1
+            #self.c[pj] += self.c[pi]
             self.c[pi] += self.c[pj]
             if self.c[pi] == self.m:
                 self.m_cnt += 1

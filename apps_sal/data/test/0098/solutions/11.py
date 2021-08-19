@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# 560B_art.py - Codeforces.com 560B Art program
+#
+# Copyright (C) 2015 Sergey
 
 """
 Gerald asks whether it is possible to place the paintings on the board,
@@ -15,8 +19,16 @@ If the paintings can be placed on the wall, print "YES" (without the quotes),
 and if they cannot, print "NO" (without the quotes).
 """
 
+# Standard modules
 import unittest
 import sys
+
+# Additional modules
+
+
+###############################################################################
+# Art Class
+###############################################################################
 
 
 class Art:
@@ -61,6 +73,16 @@ class Art:
         return "NO"
 
 
+###############################################################################
+# Helping classes
+###############################################################################
+
+
+###############################################################################
+# Art Class testing wrapper code
+###############################################################################
+
+
 def get_inputs(test_inputs=None):
 
     it = iter(test_inputs.split("\n")) if test_inputs else None
@@ -72,15 +94,18 @@ def get_inputs(test_inputs=None):
         else:
             return sys.stdin.readline()
 
+    # Getting string inputs. Place all uinput() calls here
     imax = 3
     numnums = list(map(int, " ".join(uinput() for i in range(imax)).split()))
 
+    # Splitting numnums into n arrays
     numa = []
     numb = []
     for i in range(0, 2 * imax, 2):
         numa.append(numnums[i])
         numb.append(numnums[i + 1])
 
+    # Decoding inputs into a list
     return [numa, numb]
 
 
@@ -89,11 +114,17 @@ def calculate(test_inputs=None):
     return Art(get_inputs(test_inputs)).calculate()
 
 
+###############################################################################
+# Unit Tests
+###############################################################################
+
+
 class unitTests(unittest.TestCase):
 
     def test_Art_class__basic_functions(self):
         """ Art class basic functions testing """
 
+        # Constructor test
         d = Art([[3, 1, 2], [2, 3, 1]])
         self.assertEqual(d.numa[0], 3)
 
@@ -106,17 +137,21 @@ class unitTests(unittest.TestCase):
     def test_sample_tests(self):
         """ Quiz sample tests. Add \n to separate lines """
 
+        # Sample test 1
         test = "3 2\n1 3\n2 1"
         self.assertEqual(calculate(test), "YES")
         self.assertEqual(list(get_inputs(test)[0]), [3, 1, 2])
         self.assertEqual(list(get_inputs(test)[1]), [2, 3, 1])
 
+        # Sample test 2
         test = "5 5\n3 3\n3 3"
         self.assertEqual(calculate(test), "NO")
 
+        # Sample test 3
         test = "4 2\n2 3\n1 2"
         self.assertEqual(calculate(test), "YES")
 
+        # My test 4
         test = "5 5\n1 5\n1 5"
         self.assertEqual(calculate(test), "YES")
 
@@ -125,6 +160,7 @@ class unitTests(unittest.TestCase):
 
         import random
 
+        # Time limit test
         test = "1000 1000"
         test += "\n900 900"
         test += "\n50 50"
@@ -142,18 +178,20 @@ class unitTests(unittest.TestCase):
 
         stop = timeit.default_timer()
         print((
-            "\nTime Test: "
-            + "{0:.3f}s (inp {1:.3f}s init {2:.3f}s calc {3:.3f}s)".
+            "\nTime Test: " +
+            "{0:.3f}s (inp {1:.3f}s init {2:.3f}s calc {3:.3f}s)".
             format(stop - start, init - start, calc - init, stop - calc)))
 
 
 def __starting_point():
 
+    # Avoiding recursion limitaions
     sys.setrecursionlimit(100000)
 
     if sys.argv[-1] == "-ut":
         unittest.main(argv=[" "])
 
+    # Print the result string
     sys.stdout.write(calculate())
 
 

@@ -16,10 +16,13 @@ for a in arr:
     ranges.append((min(l, r), max(l, r)))
 res = 0
 
+# print(arr)
+# print(ranges)
 
 for l, r in ranges:
     left_index = bisect_left(arr, l)
     right_index = bisect_left(arr, r)
     res += right_index - left_index
+    # print(left_index, right_index)
 
 print(res)

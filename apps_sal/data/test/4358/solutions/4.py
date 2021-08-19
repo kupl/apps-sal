@@ -1,4 +1,6 @@
+# B - Christmas Eve Eve
 
+#  N
 N = int(input())
 my_list = []
 

@@ -18,6 +18,7 @@ def solve(k):
                     is_possible = is_possible and a[i]
                 if is_possible:
                     print("YES")
+                    # print(" ".join(map(str, x)))
                     return
     print("NO")
 

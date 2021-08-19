@@ -9,4 +9,5 @@ class Solution:
                 if text[i:j] == text[j:j + j - i]:
                     subs.add(text[i:j])
 
+    # print(subs)
         return len(subs)

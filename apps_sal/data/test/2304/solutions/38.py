@@ -1,9 +1,13 @@
+# potential union findの問題と聞いて
 class PotentialUnionFind:
+    # あり本実装
+    # rankとrootの配列を1つで賄う方法
     def __init__(self, n):
         self.n = n
         self.par = [-1] * n
         self.weight = [0] * n
 
+    # 根を求める
     def find(self, x):
         if self.par[x] < 0:
             return x
@@ -13,16 +17,21 @@ class PotentialUnionFind:
             self.par[x] = px
             return px
 
+    # 頂点からのpotential
     def weight(self, x):
         self.find(x)
         return self.weight[x]
 
+    # 同じかどうかの判定
     def is_same(self, x, y):
         return self.find(x) == self.find(y)
 
+    # 集合の大きさ
     def size(self, x):
         return -self.find(x)
 
+    # 　2つの集合の合体
+    # 重みが大きい方に小さい方をつけるようにする
     def unite(self, x, y, w):
         w += self.weight[x] - self.weight[y]
         x = self.find(x)

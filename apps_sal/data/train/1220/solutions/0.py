@@ -34,6 +34,6 @@ def solve():
             print(S[x][-K])
 
 
-T = 1
+T = 1  # R()
 for t in range(1, T + 1):
     solve()

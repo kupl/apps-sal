@@ -15,7 +15,9 @@ class Solution:
                 start = mid
             else:
                 end = mid
+        # print(start, end)
         pos = self.check(end)
+        # print(pos)
         if pos:
             return S[pos: pos + end]
         pos = self.check(start)

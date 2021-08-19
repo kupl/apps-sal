@@ -16,6 +16,7 @@ class Solution:
 
                     if mapped_e in new_graph[mapped_s] or mapped_s == mapped_e:
                         duplicate_count += 1
+                        # print('collpase_cost', s, 'to', e, 'is mapped to', mapped_s, 'to', mapped_e)
                         continue
 
                     new_graph[mapped_s].add(mapped_e)
@@ -27,6 +28,7 @@ class Solution:
             return new_graph, duplicate_count // 2
 
         def find_connected(graph):
+            # return mapping
             mapping = dict()
 
             node_count = 0
@@ -74,13 +76,18 @@ class Solution:
         share_mapping, edge_needed = find_connected(share_graph)
         new_share_graph, share_collapse = collapse(share_mapping, share_graph)
         costs.append(share_collapse - edge_needed)
+        # print(share_collapse, edge_needed)
 
         for graph in [a_graph, b_graph]:
+            # naming is ambiguous here
 
             new_graph, share_collpase = collapse(share_mapping, graph)
+            # print(new_graph)
             sub_mapping, edge_needed = find_connected(new_graph)
             _, collpased = collapse(sub_mapping, new_graph)
             costs.append(share_collpase + collpased - edge_needed)
+            # print(collpase, connect_cost, needed)
+            # print(sub_mapping)
             if len(set(sub_mapping.values())) > 1:
                 return -1
 

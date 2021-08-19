@@ -1,5 +1,5 @@
 
-k = int(input())
+k = int(input())  # 101, 999983
 a = 7
 for i in range(k + 1):
     if a % k == 0:

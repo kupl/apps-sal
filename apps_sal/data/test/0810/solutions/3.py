@@ -1,6 +1,7 @@
 MOD = 10**9 + 7
 
 a, b, n = list(map(int, input().strip().split(' ')))
+# there are i a's. n-i b's
 
 
 def check(a, b, x):
@@ -21,8 +22,11 @@ temp = 1
 intemp = 1
 for i in range(1, n + 1):
     temp *= i
+    # intemp*=pow(i,MOD-2,MOD)
     temp %= MOD
+    # intemp%=MOD
     fact += [temp]
+    # infact+=[intemp]
 
 
 def binom(a, b):
@@ -40,4 +44,5 @@ for i in range(n + 1):
     if check(a, b, temp) == 1:
         total += binom(n, i)
         total %= MOD
+# total*=fact[a]
 print(total % MOD)

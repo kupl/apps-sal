@@ -11,5 +11,6 @@ while t:
         val = list(map(int, list(str(a1))))
         if min(val) == 0:
             break
+        # print(val)
         a1 = a1 + min(val) * max(val)
     print(a1)

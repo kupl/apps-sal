@@ -15,6 +15,9 @@ def VI(): return list(map(int, input().split()))
 
 
 def main1(k):
+    # works correctly, but too slow and generates many more vertices than necessary.
+    # doesn't pass the time constraint with this implementation. (prints 10^5 lines)
+    # ==> use the editorial solution below.
     if k % 2 == 0:
         print("NO")
         return
@@ -54,6 +57,7 @@ def main1(k):
 
 
 def main(k):
+    # following the editorial algo
     if k % 2 == 0:
         print("NO")
         return
@@ -71,7 +75,8 @@ def main(k):
         e.extend([(off, j)])
     for j in range(off + 1, off + k):
         for i in range(j + 1, off + k):
-            if (i == j + 1 and (j - off) % 2 == 1):
+            if (i == j + 1 and (j - off) % 2 == 1):  # or (j==off+1 and i==off+k-1):
+                # if (i==j+1 and i%2==0) or (j==off+1 and i==off+k-1):
                 continue
             e.extend([(j, i)])
         e.extend([(j, off + k), (j, off + k + 1)])
@@ -81,7 +86,7 @@ def main(k):
         e.extend([(off, j)])
     for j in range(off + 1, off + k):
         for i in range(j + 1, off + k):
-            if (i == j + 1 and (j - off) % 2 == 1):
+            if (i == j + 1 and (j - off) % 2 == 1):  # or (j==off+1 and i==off+k-1):
                 continue
             e.extend([(j, i)])
         e.extend([(j, off + k), (j, off + k + 1)])

@@ -12,8 +12,10 @@ b2 = a[3:6]
 if sum(b1) > sum(b2):
     b1, b2 = b2, b1
 diff = sum(b2) - sum(b1)
+# debug("diff =", diff)
 
 deltas = sorted([9 - x for x in b1 if x < 9] + [x for x in b2 if x > 0], reverse=True)
+# debug("deltas =", deltas)
 cum_deltas = [0] + deltas[:]
 
 for i in range(1, len(cum_deltas)):
@@ -22,4 +24,5 @@ for i, x in enumerate(cum_deltas):
     if cum_deltas[i] >= diff:
         break
 
+# debug("cum_deltas =", cum_deltas)
 print(i)

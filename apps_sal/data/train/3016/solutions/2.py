@@ -1,4 +1,4 @@
-notes = ["C", ["C
+notes = ["C", ["C#", "Db"], "D", ["D#", "Eb"], "E", "F", ["F#", "Gb"], "G", ["G#", "Ab"], "A", ["A#", "Bb"], "B"]
 mom = {(3, 4): "Minor", (4, 3): "Major"}
 levels = {
     x: i

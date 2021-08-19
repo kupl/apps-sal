@@ -17,3 +17,4 @@ for i in range(1, H + 1):
     dp[i] = min(dp[i - A] + B)
 
 print((int(dp[H])))
+# print(dp)

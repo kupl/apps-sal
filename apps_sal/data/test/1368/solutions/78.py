@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 from math import factorial
@@ -16,12 +17,12 @@ print(ave)
 border = V[-A]
 left_i = np.searchsorted(V, border, side='left')
 right_i = np.searchsorted(V, border, side='right')
-seg = right_i - left_i
+seg = right_i - left_i  # 使える数字たち
 done = N - right_i
-use = A - done
+use = A - done  # 使う幅
 
 
-def combinations_count(n, r):
+def combinations_count(n, r):  # 組み合わせ
     return factorial(n) // factorial(n - r) // factorial(r)
 
 
@@ -31,3 +32,4 @@ if border == ave:
         answer += combinations_count(seg, x)
 
 print(answer)
+# 05

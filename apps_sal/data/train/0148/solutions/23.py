@@ -25,6 +25,9 @@ class Solution:
             ):
                 current_difficulty_index += 1
 
+            # print(
+            #     f\"{worker_index=} {current_difficulty_index=} {benifit[worker_index][1]=}\"
+            # )
             ans += benifit[current_difficulty_index][1]
             worker_index += 1
 

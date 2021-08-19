@@ -11,9 +11,13 @@ def lin(): return list(tin())
 
 mod = 1000000007
 
+# +++++
+
 
 def main():
+    #a = int(input())
     n, a, b = tin()
+    #s = input()
     al = lin()
     pos = al[0]
     ret = 0
@@ -23,6 +27,7 @@ def main():
     return ret
 
 
+# +++++
 isTest = False
 
 
@@ -51,6 +56,7 @@ def __starting_point():
         isTest = True
     else:
         pass
+        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

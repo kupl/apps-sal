@@ -25,6 +25,8 @@ numsDone = set(nums)
 
 for i in nums:
     temp = check(i, numsDone)
+    # print(i)
+    # print(temp)
     if len(temp) > currLen:
         currLen = len(temp)
         currAns = temp

@@ -30,6 +30,7 @@ vis = [False] * 26
 cnt = 0
 for i in range(26):
     if not vis[i] and i in got:
+        # print(got)
         dfs(i, vis, al)
         cnt += 1
 print(cnt)

@@ -7,3 +7,4 @@ for i in range(n):
     else:
         j += (b[i] // 2) * (b[i] - b[i] // 2)
 print(j)
+# WA Test:3,4,5,Hoping for 6

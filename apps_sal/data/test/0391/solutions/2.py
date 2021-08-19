@@ -17,12 +17,16 @@ class CodeforcesTask323ASolution:
             for z in range(self.k):
                 level = "w" if z % 2 else "b"
                 for k in range(self.k // 2):
+                    # upper
                     for x in range(2 * (k + 1)):
                         cube[z][self.k // 2 - 1 - k][self.k // 2 - 1 - k + x] = level
+                    # lower
                     for x in range(2 * (k + 1)):
                         cube[z][self.k // 2 + k][self.k // 2 - 1 - k + x] = level
+                    # left
                     for y in range(2 * (k + 1)):
                         cube[z][self.k // 2 - 1 - k + y][self.k // 2 - 1 - k] = level
+                    # right
                     for y in range(2 * (k + 1)):
                         cube[z][self.k // 2 - 1 - k + y][self.k // 2 + k] = level
                     level = "w" if level == "b" else "b"

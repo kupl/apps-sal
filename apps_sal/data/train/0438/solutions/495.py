@@ -18,13 +18,18 @@ class Solution:
 
         def dfs(u, node):
 
+            # nonlocal ans
             nonlocal chk
             nonlocal m
+
+            # print (u, node.leftvalue, node.rightvalue)
 
             if chk:
                 return
 
             if not node.nextleft and not node.nextright:
+
+                # print ('x')
 
                 if u == node.leftvalue:
                     node.leftvalue += 1
@@ -58,6 +63,9 @@ class Solution:
 
         if m == len(arr):
             return n
+
+        # if arr == sorted(arr):
+        #     return m
 
         ans = n
         for i in range(len(arr) - 1, -1, -1):

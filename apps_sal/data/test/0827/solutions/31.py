@@ -12,6 +12,7 @@ elif T == '11':
     print(NUM)
 else:
     zero_cnt = T.count('0')
+    # print(zero_cnt)
     if T[-1] == '0':
         print(NUM - zero_cnt + 1)
     else:

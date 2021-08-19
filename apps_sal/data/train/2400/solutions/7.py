@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
@@ -6,11 +7,13 @@ for _ in range(t):
     n = int(input())
     a = [int(item) for item in input().split()]
     kind = len(set(a))
+    # Single animal
     if kind == 1:
         ans = [1] * n
         print(1)
         print(*ans)
         continue
+    # Has sequence
     a.append(a[0])
     l = 0
     has_sequence = False
@@ -19,6 +22,7 @@ for _ in range(t):
             l = i
             has_sequence = True
             break
+    # All different
     if not has_sequence:
         if n % 2 == 0:
             ans = [1, 2] * (n // 2)

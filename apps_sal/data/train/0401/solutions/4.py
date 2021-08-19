@@ -11,4 +11,7 @@ class Solution:
                 else:
                     if dp[i - 1][(j - nums[i]) % 3] > 0:
                         dp[i][j] = max(dp[i - 1][(j - nums[i]) % 3] + nums[i], dp[i - 1][j])
+        # print([i[0] for i in dp])
+        # print([i[1] for i in dp])
+        # print([i[2] for i in dp])
         return dp[n - 1][0]

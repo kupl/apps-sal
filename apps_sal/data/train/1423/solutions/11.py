@@ -1,3 +1,4 @@
+# cook your dish here
 testCases = int(input())
 for time in range(1, testCases + 1):
     length = int(input())

@@ -28,6 +28,7 @@ for i in range(1, int(math.sqrt(P)) + 1):
 
 arr = part(S, k)
 flag = -1
+#print(part(S, k))
 
 for i in arr:
     temp = i

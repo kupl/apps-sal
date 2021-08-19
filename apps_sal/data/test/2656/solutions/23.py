@@ -1,3 +1,4 @@
+# フェルマーの小定理
 def main():
     from builtins import pow
 
@@ -11,6 +12,7 @@ def main():
     u = pow(26, -1, m) * 25 % m
     l = len(S)
     for i in range(K + 1):
+        # result += pow(26, K - i, m) * mcomb(len(S) - 1 + i, i) * pow(25, i, m)
         result = (result + t) % m
         t = (t * u) % m * (l + i) * pow(i + 1, -1, m) % m
     print(result)

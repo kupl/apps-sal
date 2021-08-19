@@ -17,7 +17,7 @@ def dijkstra(graph, initial):
 
         nodes.remove(min_node)
         for v, w in graph[min_node]:
-            weight = w + current_weight
+            weight = w + current_weight  # weight update step
             if v not in visited or weight < visited[v]:
                 visited[v] = weight
                 heappush(h, (weight, v))
@@ -40,6 +40,7 @@ for i in range(N):
         graph[i].append((j, d))
         graph[j].append((i, d))
 
+    # start
     dst = max(sqrt((xi - xstart)**2 + (yi - ystart)**2) - ri, 0)
     graph[i].append((N, dst))
     graph[N].append((i, dst))

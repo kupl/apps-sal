@@ -1,3 +1,5 @@
+# import math
+# import sys
 
 n, v = [int(x) for x in input().strip().split(" ")]
 if v >= (n - 1):

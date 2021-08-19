@@ -1,3 +1,4 @@
+# cook your dish here
 tests = int(input())
 for _ in range(tests):
     n, k = [int(j) for j in input().split()]

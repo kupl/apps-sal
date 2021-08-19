@@ -1,3 +1,4 @@
+# -*-coding:utf-8-*-
 import numpy as np
 import math
 import itertools
@@ -7,7 +8,9 @@ input = sys.stdin.readline
 
 def main():
     numbers = []
+    #n = int(input())
     n, m = map(int, input().split())
+    # numbers=list(map(int,input().split()))
     numbers = np.array([list(map(int, input().split())) for _ in range(n)])
     ans = 0
     length = 0

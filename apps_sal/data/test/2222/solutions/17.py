@@ -1,5 +1,5 @@
 n = int(input())
-oper = list(map(int, input().split()))
+oper = list(map(int, input().split()))  # 0 - min, 1 - max
 prev = [int(i) - 1 for i in input().split()]
 
 graph = [[] for i in range(n)]

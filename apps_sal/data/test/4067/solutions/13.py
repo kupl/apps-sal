@@ -11,7 +11,7 @@ if(count[0] > m):
         if(a[i] == 0):
             c += 1
         i += 1
-    j = i - 1
+    j = i - 1  # The first 0 which is to be converted
     while(j < n and count[1] < m):
         if(a[j] == 0):
             a[j] = 1
@@ -32,7 +32,7 @@ if(count[2] > m):
         if(a[i] == 2):
             c += 1
         i -= 1
-    j = i + 1
+    j = i + 1  # The first 2 from right which is to be converted
     while(j >= 0 and count[1] < m):
         if(a[j] == 2):
             a[j] = 1
@@ -59,7 +59,7 @@ if(count[1] > m):
         if(a[i] == 1):
             c += 1
         i += 1
-    j = i - 1
+    j = i - 1  # The first 1 which is to be converted
     if(count[1] > m):
         while(j < n and count[2] < m):
             if(a[j] == 1):

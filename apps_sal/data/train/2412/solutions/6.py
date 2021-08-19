@@ -9,4 +9,5 @@ class Solution:
                 S = S[0:i] + S[i + 2:]
                 if i > 0:
                     i -= 1
+                # print(S)
         return S

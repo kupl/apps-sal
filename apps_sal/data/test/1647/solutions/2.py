@@ -40,6 +40,7 @@ for i in range(n):
                 Slovar[b] = ''
                 res += 1
                 Ans.append([sviter[i], futbol[i]])
+        #print(i, res, Slovar, S)
 print(res)
 for i in range(res):
     print(*Ans[i])

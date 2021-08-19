@@ -65,13 +65,16 @@ class PokerHand(object):
         if self.hand_weight[0] < other.hand_weight[0]:
             return True
 
+        # if both hands have teh same weight, the tie must be broken by highest ranking cards.
         if self.hand_weight[0] == other.hand_weight[0]:
             for i in range(1, len(self.hand_weight)):
+                # if the rank is also equal, you want to check the next cards, if any are left
                 if self.hand_weight[i] == other.hand_weight[i]:
                     continue
                 if self.hand_weight[i] < other.hand_weight[i]:
                     return True
                 return False
+        # if it is a tie
         return False
 
     def _calculate_hand_weight(self):
@@ -86,41 +89,52 @@ class PokerHand(object):
             hand[card.rank] += 1
 
         length = len(hand)
+        # values holds the count for how many times each rank appears in the hand
         values = list(hand.values())
 
+        # five different cards
         if length == 5:
             suited = self.is_suited()
             straight_high_card = self.is_a_straight()
 
+            # if it is a straight flush:
             if suited and straight_high_card:
                 return (1, straight_high_card)
+            # if it is a flush:
             if suited:
                 return (4, *self.cards)
+            # if it is a straight:
             if straight_high_card:
                 return (5, straight_high_card)
+            # high card:
             return (9, *self.cards)
 
         if length == 2:
+            # four of a kind:
             if 4 in values:
                 i_four = values.index(4)
                 i_kicker = values.index(1)
                 return (2, self.cards[i_four], self.cards[i_kicker])
 
+            # full house:
             i_triple = values.index(3)
             i_pair = values.index(2)
             return (3, self.cards[i_triple], self.cards[i_pair])
 
         if length == 3:
+            # triple:
             if 3 in values:
                 i_triple = values.index(3)
                 return (6, self.cards[i_triple], *self.cards[:i_triple], *self.cards[i_triple + 1:])
 
+            # two pairs:
             i_pair = values.index(2)
             j_pair = values.index(2, i_pair + 1)
             i_kicker = values.index(1)
             return (7, self.cards[i_pair], self.cards[j_pair], self.cards[i_kicker])
 
         if length == 4:
+            # this is a pair:
             i_pair = values.index(2)
             return (8, self.cards[i_pair], *self.cards[:i_pair], *self.cards[i_pair + 1:])
 
@@ -139,6 +153,7 @@ class PokerHand(object):
             The highest card in the Straight.
         '''
         starter = 0
+        # if True, skips the first element to check for the Low Straight
         if self.cards[0].rank == 'A' and self.cards[1].rank == '5':
             starter = 1
 
@@ -146,6 +161,7 @@ class PokerHand(object):
             if self.cards[i + 1] - self.cards[i] != 1:
                 return False
 
+        # in case it was a Low Straight, you want to return the 5 instead of the Ace
         if starter == 1:
             return self.cards[1]
 

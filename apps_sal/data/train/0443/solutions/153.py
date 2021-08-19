@@ -1,5 +1,6 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
+        # brute force attempt
         n = len(rating)
         ans = 0
 

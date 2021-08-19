@@ -6,6 +6,7 @@ class Solution:
         cell2idx = {}
         for i, cell in enumerate(cells):
             cell2idx[cell] = i
+        # number of sequences end at cell
         sequences = [1 for _ in cells]
         for step in range(n - 1):
             new_sequences = [0 for _ in cells]

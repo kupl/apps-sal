@@ -1,6 +1,6 @@
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
-        arr1 = set(arr)
+        arr1 = set(arr)  # -- to remove duplicate for iteration purpose only
 
         cutoff = len(arr) * 0.25
 

@@ -30,9 +30,12 @@ for t in range(1, h + 1):
                         Z += 1
         else:
             Z = 1
+        # print(f"{X} {Y} {Z}")
         pattern_1 = dp[t - 1][i - 1] * X if i > 1 else 0
         pattern_2 = dp[t - 1][i + 1] * Y if i < w else 0
         pattern_3 = dp[t - 1][i] * Z
         dp[t][i] = (pattern_1 + pattern_2 + pattern_3) % mod
 
+# for line in dp:
+#     print(*line)
 print((dp[h][k]))

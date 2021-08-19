@@ -19,9 +19,12 @@ while pos < 2 * n:
         stackelse.append(x[ok])
         ok += 1
         seq += '('
+##        curr += 1
 
     elif stackelse[-1][0] <= pos - stack[-1] <= stackelse[-1][1]:
         stack.pop()
+# if curr != 0:
+##            curr -= 1
         stackelse.pop()
         seq += ')'
 
@@ -33,6 +36,7 @@ while pos < 2 * n:
         stackelse.append(x[ok])
         seq += '('
         ok += 1
+##        curr += 1
 
     pos += 1
 print(seq)

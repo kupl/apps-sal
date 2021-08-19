@@ -5,3 +5,6 @@ for i, c in enumerate(input()):
     elif (t[c][0] - i) & 1:
         t[c] = (i, t[c][1] + 1)
 print(max(b for a, b in list(t.values())))
+
+
+# Made By Mostafa_Khaled

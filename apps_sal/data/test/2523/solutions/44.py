@@ -6,4 +6,5 @@ if r < 0:
 l = S.rfind("1" if c0 == "0" else "0", 0, len(S) // 2)
 l += 1
 K = min(r, len(S) - l)
+#print(l, r, K)
 print(K)

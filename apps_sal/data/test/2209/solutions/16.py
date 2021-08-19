@@ -23,6 +23,7 @@ for i in range(1, n + 1):
     else:
         tmp = s / h
     a.append((int(s), int(h), tmp))
+    # print(s,h)
 a.sort(key=lambda x: x[2], reverse=True)
 sum = 0
 for i in range(0, len(a)):

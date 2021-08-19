@@ -3,5 +3,6 @@ def create_array(n):
     i = 1
     while i <= n:
         res += [i]
+        # print(res)
         i = i + 1
     return res

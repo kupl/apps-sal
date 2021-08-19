@@ -18,8 +18,8 @@ class Solution:
                         return True
             return False
 
-        left = min(bloomDay)
-        right = max(bloomDay)
+        left = min(bloomDay)  # min number of days
+        right = max(bloomDay)  # maximum number of days
         while left < right:
             mid = left + (right - left) // 2
             if feasible(mid, m, k):

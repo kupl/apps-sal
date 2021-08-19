@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(2 * 10**5)
 
+# 入力
 N = int(input())
 a, b = (
     list(zip(*(list(map(int, input().split())) for _ in range(N - 1)))) if N - 1 else

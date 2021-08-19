@@ -11,6 +11,7 @@ class Solution:
                 if le > minv:
                     break
                 potential = sorted(p[xs[i]].intersection(p[xs[j]]))
+                #print(le, potential)
                 v = float('inf')
                 for j in range(len(potential) - 1):
                     v = min(v, potential[j + 1] - potential[j])

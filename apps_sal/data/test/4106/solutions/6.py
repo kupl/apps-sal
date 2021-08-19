@@ -1,6 +1,8 @@
 from sys import stdin, stdout
 import collections
 
+#T = int(input())
+#s = input()
 N, K, X = [int(x) for x in stdin.readline().split()]
 arr = [int(x) for x in stdin.readline().split()]
 
@@ -17,6 +19,7 @@ for i in range(X - 1):
     for j in range(N):
         if dp[i][j] != 0:
             for z in range(j + 1, min(j + K + 1, N)):
+                # print(i,j,i+1,z)
                 dp[i + 1][z] = max(dp[i + 1][z], dp[i][j] + arr[z])
 
 

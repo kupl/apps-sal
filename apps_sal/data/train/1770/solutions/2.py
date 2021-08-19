@@ -7,7 +7,7 @@ MOVES = ((0, 1), (0, -1), (1, 0), (-1, 0))
 def path_finder(maze):
     maze = list(map(list, maze.split()))
     X, Y = end = len(maze) - 1, len(maze[0]) - 1
-    q = [(0, 0, 0, (0, 0))]
+    q = [(0, 0, 0, (0, 0))]                    # (heuristic, isEnd, n steps, x, y)
 
     while q and not q[0][1]:
         _, _, c, (x, y) = heappop(q)

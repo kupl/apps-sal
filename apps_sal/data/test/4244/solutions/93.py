@@ -1,4 +1,9 @@
+# coding=utf-8
 
+# lib
+#import copy
+#import collections
+#import sys
 '''
 def generate_2d_array(Row, Column, IV):
     array = [[IV] * Column for i in range(Row)]

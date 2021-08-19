@@ -2,6 +2,7 @@ class Solution:
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
 
         counter = collections.Counter(deck)
+        # check if X>=2
 
         for i in counter:
             if(counter[i] < 2):

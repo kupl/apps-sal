@@ -3,7 +3,9 @@ INF = -float('inf')
 
 
 def dp(ind, k):
+    # print(n, m, k)
     if k == 0:
+        # print('yes')
         return 0
     elif ind > diff:
         return INF
@@ -36,6 +38,7 @@ else:
         end += 1
         sumi.append(sums)
     dp = [[0 for i in range(n)] for i in range(k)]
+    # print(dp, sumi)
     for i in range(n):
         dp[0][i] = max(sumi[i], dp[0][i - 1])
 

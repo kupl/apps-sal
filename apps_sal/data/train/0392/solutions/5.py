@@ -9,6 +9,7 @@ class Solution:
         mod = 10**9 + 7
         if tot == 0:
             n = len(s) - 1
+            # return (((n%mod)*((n-1)%mod))%mod)//2
             return ((n * (n - 1)) // 2) % mod
 
         ctr = 0
@@ -30,4 +31,5 @@ class Solution:
             if d < 0 and ctr == 2 * eq + 1:
                 d = i
 
+        # print (a, b, c, d)
         return (((b - a) % mod) * ((d - c) % mod)) % mod

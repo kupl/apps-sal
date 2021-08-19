@@ -7,6 +7,6 @@ def choose_best_sum(t, k, ls):
     combos = list(combinations(ls, k))
     sums = [sum(x) for x in combos if sum(x) <= t]
     if sums:
-        best = min(sums, key=lambda x: t - x)
+        best = min(sums, key=lambda x: t - x)   # find smallest diff
         return best
     return None

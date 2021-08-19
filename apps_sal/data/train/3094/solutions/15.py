@@ -1,6 +1,8 @@
 from functools import reduce
 def min_max_tot(x, y): return (min(x[0], y), max(x[1], y), x[2] + y)
 
+# Who needs more than one iteration after all?
+
 
 def sum_array(arr):
     if arr is None or len(arr) < 3:

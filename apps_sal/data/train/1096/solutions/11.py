@@ -1,4 +1,5 @@
 import itertools
+# cook your dish here
 
 N, X, Y = list(map(int, input().split()))
 contests = []
@@ -11,6 +12,7 @@ outo = list(map(int, input().split()))
 
 worthwole = [(x, y) for x, y in itertools.product(into, outo) if x < y]
 worthwole = sorted(worthwole, key=lambda x: x[1] - x[0])
+# print(worthwole)
 
 result = 0
 found = False

@@ -6,12 +6,20 @@ NTC here
 import sys
 inp = sys.stdin.readline
 def input(): return inp().strip()
+# flush= sys.stdout.flush
+# import threading
+# sys.setrecursionlimit(10**6)
+# threading.stack_size(2**26)
 
 
 def iin(): return int(input())
 
 
 def lin(): return list(map(int, input().split()))
+
+
+# range = xrange
+# input = raw_input
 
 
 def main():
@@ -36,23 +44,31 @@ def main():
         w = n
         end = {(0, h), (0, 0), (w, h), (w, 0)}
         sensors = [lin() for _ in range(k)]
+        # we will track ray
+        # as line as set of ax+by+c=0
         lines = {(1, -1, 0): [(0, 0), 0]}
         ch = [1, -1, 0]
         ch1 = 1
         ch2 = 0
         st = [0, 0]
         while 1:
+            # print('EQ-', ch)
+            # print(st)
             dn = 0
+            # y = h
             y1 = h
             x1 = fnx(ch, y1)
+            # print("D",[x1, y1])
             if int_val(x1) and 0 <= int(x1) <= w and [int(x1), int(y1)] != st:
                 x1 = int(x1)
                 if x1 == w:
                     break
                 dn = 1
+            # y = 0
             if dn == 0:
                 y1 = 0
                 x1 = fnx(ch, 0)
+                # print("A",[x1, y1])
                 if int_val(x1) and 0 <= int(x1) <= w and [int(x1), int(y1)] != st:
                     x1 = int(x1)
                     if x1 == 0:
@@ -60,8 +76,10 @@ def main():
                     dn = 1
 
                 if dn == 0:
+                    # x = 0
                     x1 = 0
                     y1 = fny(ch, x1)
+                    # print("B",[x1, y1])
                     if int_val(y1) and 0 <= int(y1) <= h and [int(x1), int(y1)] != st:
                         y1 = int(y1)
                         if y1 == 0:
@@ -69,8 +87,10 @@ def main():
                         dn = 1
 
                     if dn == 0:
+                        # x = w
                         x1 = w
                         y1 = fny(ch, x1)
+                        # print("C",[x1, y1])
                         if int_val(y1) and 0 <= int(y1) <= h and [int(x1), int(y1)] != st:
                             y1 = int(y1)
                             if y1 == h:
@@ -78,6 +98,7 @@ def main():
                             dn = 1
             if dn:
 
+                # print(x1, y1)
                 ch2 += abs(st[0] - x1)
                 ch1 = -1 if ch1 == 1 else 1
                 ch = [ch1, -1, -ch1 * x1 + y1]
@@ -90,8 +111,10 @@ def main():
                 st = [x1, y1]
             else:
                 break
+        # print(lines)
         for i, j in sensors:
             ch1, ch2 = (1, -1, -i + j), (-1, -1, i + j)
+            # print((i, j), ch1, ch2)
             ans = -1
             if ch1 in lines:
                 p, c1 = lines[ch1]
@@ -103,3 +126,5 @@ def main():
 
 
 main()
+
+# threading.Thread(target=main).start()

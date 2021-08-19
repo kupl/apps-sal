@@ -14,9 +14,11 @@ class Solution:
             if this_round > 4:
                 customers_left = this_round - 4
                 this_round = 4
+            # print(this_round, boarding_customers, customers_left, (this_round + boarding_customers) * boardingCost - runningCost * (i + 1))
             if (this_round + boarding_customers) * boardingCost - runningCost * (i + 1) > max_profit:
                 max_profit = (this_round + boarding_customers) * boardingCost - runningCost * (i + 1)
                 max_round = i + 1
+                # print(max_profit, max_round)
             boarding_customers += this_round
             i += 1
 

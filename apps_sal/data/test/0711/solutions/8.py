@@ -25,6 +25,7 @@ else:
         return a
 
     def make_fact_list(n, MOD):
+        # make factorial list from 0 to n
         fact = [0] * (n + 1)
         inv = [0] * (n + 1)
         factinv = [0] * (n + 1)

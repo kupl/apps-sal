@@ -9,8 +9,10 @@ class Solution:
         length_2 = len(s2)
         if length_1 > length_2:
             return False
-        S1_MAP = [0] * 128
+        S1_MAP = [0] * 128  # size of ASCII table
         S2_MAP = [0] * 128
+
+        # Initialise MAP S1
 
         for char in s1:
             S1_MAP[ord(char)] += 1

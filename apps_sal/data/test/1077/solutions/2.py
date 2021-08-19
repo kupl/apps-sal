@@ -17,11 +17,13 @@ for i in range(1, m + 1):
     while groups[i] < maxmin:
         change = False
         for n, j in enumerate(a):
+            # print(j)
             if j <= m:
                 continue
             groups[j] -= 1
             a[n] = i
             groups[i] += 1
+            # print('kek')
             changes += 1
             change = True
             if groups[i] >= maxmin:
@@ -31,8 +33,10 @@ for i in range(1, m + 1):
             continue
 
         for n, j in enumerate(a):
+            # print(j)
             if groups[j] <= maxmin:
                 continue
+            # print(groups[j])
             groups[j] -= 1
             a[n] = i
             groups[i] += 1

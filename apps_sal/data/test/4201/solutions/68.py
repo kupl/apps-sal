@@ -10,7 +10,7 @@ for i in range(H):
 cmap = np.array(cmap)
 
 
-def count_char(cmap, rmask, cmask, num_digits_r, num_digits_c, char="
+def count_char(cmap, rmask, cmask, num_digits_r, num_digits_c, char="#"):
     def to_bin_str(num, num_digits):
         return str(bin(num))[2:].zfill(num_digits)
 
@@ -26,6 +26,8 @@ def count_char(cmap, rmask, cmask, num_digits_r, num_digits_c, char="
     cmap2[:, cids] = "r"
     count = len(cmap2[cmap2 == char])
 
+    # if count == K:
+    #     print(cmap2)
 
     return count
 

@@ -15,6 +15,7 @@ ar1.sort()
 ar2.sort()
 ar1 = [i for i in reversed(ar1)]
 ar2 = [i for i in reversed(ar2)]
+# print(ar1, ar2)
 
 pp1 = 0
 pp2 = 0

@@ -1,3 +1,4 @@
+# 5671891
 from collections import defaultdict as DD
 from bisect import bisect_left as BL
 from bisect import bisect_right as BR
@@ -49,6 +50,7 @@ color = [0 for i in range(n + 1)]
 
 parent = dict()
 bfs(1)
+# print(color)
 
 flag = 0
 for i in d:
@@ -60,6 +62,7 @@ for i in d:
         break
 
 
+# print("fjfj")
 if flag == 1:
     print("NO")
 else:

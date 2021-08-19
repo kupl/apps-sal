@@ -1,5 +1,9 @@
 class Solution:
     def countTriplets(self, arr: List[int]) -> int:
+        # worst case is iterate from i -> j -> k and k -> arr.length and test out each comb
+        # compute i -> j - 1, keep counter for each i, j comb
+        # compute j -> k
+        # for each i -> j,
         count = 0
         for i in range(1, len(arr)):
             arr[i] ^= arr[i - 1]

@@ -21,11 +21,11 @@ def bfs(start_x, start_y):
             nx = p[0] + dx
             ny = p[1] + dy
 
-            if 0 <= nx < H and 0 <= ny < W and MAZE[nx][ny] != '
-            que.append((nx, ny))
-            d[nx][ny] = d[p[0]][p[1]] + 1
+            if 0 <= nx < H and 0 <= ny < W and MAZE[nx][ny] != '#' and d[nx][ny] == -1:
+                que.append((nx, ny))
+                d[nx][ny] = d[p[0]][p[1]] + 1
 
-            cnt = max(cnt, d[p[0]][p[1]] + 1)
+                cnt = max(cnt, d[p[0]][p[1]] + 1)
 
     return cnt
 
@@ -33,8 +33,8 @@ def bfs(start_x, start_y):
 max_count = 0
 for i in range(H):
     for j in range(W):
-        if MAZE[i][j] == '
-        continue
+        if MAZE[i][j] == '#':
+            continue
         count = bfs(i, j)
         max_count = max(count, max_count)
 

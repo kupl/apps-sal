@@ -9,6 +9,7 @@ class UnionFindWithSize(object):
     def find(self, x):
         if self.parent[x] == x:
             return x
+        # path compression
         self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
@@ -16,6 +17,7 @@ class UnionFindWithSize(object):
         x, y = self.find(x), self.find(y)
         if x == y:
             return
+        # union by size
         if self.size[x] < self.size[y]:
             self.size[y] += self.size[x]
             self.parent[x] = y

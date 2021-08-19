@@ -6,4 +6,5 @@ for i in range(int(len(S) / 2)):
         continue
     else:
         cnt += 1
+        #print(i, S[i], S[len(S)-1-i])
 print(cnt)

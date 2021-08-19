@@ -1,17 +1,18 @@
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
         R, C = len(grid), len(grid[0])
+        # two source bfs
 
         def neighbor(r, c):
             for nr, nc in [[r + 1, c], [r, c + 1], [r - 1, c], [r, c - 1]]:
-                if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '
-                yield nr, nc
+                if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '#':
+                    yield nr, nc
 
         def can_reach(worker, target, box):
             if worker == target:
                 return True
-            if target[0] >= R or target[0] < 0 or target[1] >= C or target[1] < 0 or grid[target[0]][target[1]] == '
-            return False
+            if target[0] >= R or target[0] < 0 or target[1] >= C or target[1] < 0 or grid[target[0]][target[1]] == '#':
+                return False
 
             start = [worker]
             end = [target]
@@ -69,5 +70,6 @@ class Solution:
                             n_level.append(n_state)
 
             level = n_level
+            # print(seen, level)
             steps += 1
         return -1

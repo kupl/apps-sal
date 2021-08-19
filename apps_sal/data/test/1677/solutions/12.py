@@ -1,3 +1,4 @@
+# WHY IS RUBY SO SLOW????
 input()
 a = [*list(map(int, input().split()))]
 r = {}

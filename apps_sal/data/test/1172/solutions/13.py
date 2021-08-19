@@ -1,4 +1,5 @@
 S = input()
+# dp[i][four] =: i + 1番目まで見たとき,照合したケツがfourとなるものの総数
 dp = [[0 for _ in range(4)] for _ in range(len(S) + 1)]
 dp[0][0] = 1
 mod = 10**9 + 7

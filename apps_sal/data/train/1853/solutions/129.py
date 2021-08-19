@@ -21,8 +21,10 @@ class Solution:
                     if (j == k):
                         continue
                     A[i, j] = min(A[i, j], A[i, k] + A[k, j])
+        # print(A)
         count = np.sum(A <= distanceThreshold, axis=0)
         minn = count[0]
+        # print(count)
         argminn = 0
         for i, c in enumerate(count):
             if c <= minn:

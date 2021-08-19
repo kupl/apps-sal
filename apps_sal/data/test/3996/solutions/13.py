@@ -37,3 +37,6 @@ else:
     p %= MOD
 
 print(p, q, sep='/')
+
+
+# Made By Mostafa_Khaled

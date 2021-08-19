@@ -14,11 +14,14 @@ class Solution:
                 accCurr = 1
             elif accCurr > 0:
                 if lastpos != -1:
+                    # print(i, lastpos)
                     res = max(res, i + 1 - lastpos)
             else:
                 if lastnegative != -1:
+                    # print('-', i, lastnegative)
                     res = max(res, i + 1 - lastnegative)
                 else:
                     lastnegative = i + 1
             accLast = accCurr
+        # print(acc)
         return res

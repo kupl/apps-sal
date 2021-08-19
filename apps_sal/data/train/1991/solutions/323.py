@@ -20,4 +20,5 @@ class Solution:
             return mem[(point, fuel)]
 
         v = get_val(start, fuel)
+        # print(mem)
         return v % (10**9 + 7)

@@ -8,7 +8,9 @@ class Solution:
         for re in requests:
             events.append([re[0], 1])
             events.append([re[1] + 1, -1])
+        # count.sort()
         events.sort()
+        # print(events)
 
         prev = -1
         result = 0
@@ -27,4 +29,5 @@ class Solution:
         count.pop()
         count.sort()
 
+        # print(count)
         return sum([count[i] * nums[i] for i in range(n)]) % LARGE

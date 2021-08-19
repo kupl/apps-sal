@@ -13,6 +13,7 @@ for i in range(len(digits)):
             digits[i + 1] += 1
             ans += 10 - digits[i]
     else:
+        # digits[i] > 5
         digits[i + 1] += 1
         ans += 10 - digits[i]
 

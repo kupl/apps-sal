@@ -12,7 +12,7 @@ class Solution:
             currMin = sys.maxsize
 
             for coin in coins:
-                current.append(coin)
+                current.append(coin)  # choose that coin
                 currNum = self.helper(coins, amount - coin, cache, current)
 
                 if currNum != -1:
@@ -28,6 +28,15 @@ class Solution:
         cache = {}
         val = self.helper(coins, amount, cache)
 
+        # if val == sys.maxsize:
+        #     return -1
+        # else:
+        #     return val
+
+        # for each slot in memoization array, subtract each coin from it
+        # find min and add 1
+
+        # F(0) is 0
         memo = [sys.maxsize] * (amount + 1)
         memo[0] = 0
 

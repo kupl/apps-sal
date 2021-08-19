@@ -1,6 +1,6 @@
 a = input()
 j = 0
-s = 'heidi
+s = 'heidi#'
 for i in a:
     if i == s[j]:
         j += 1

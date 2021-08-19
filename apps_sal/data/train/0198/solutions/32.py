@@ -13,3 +13,6 @@ class Solution:
             maxLength = max(maxLength, currLength)
 
         return maxLength
+
+# Time: O(n)
+# Space: O(1)

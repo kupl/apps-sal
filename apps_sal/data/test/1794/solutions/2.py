@@ -10,6 +10,7 @@ i = n - 2
 nmax = 2**17
 tree = [[0, 0]] * 2 * nmax
 
+# Build Segment tree
 j = 0
 while j < n:
     tree[nmax + j] = [a[j], j]
@@ -18,6 +19,8 @@ j = nmax - 1
 while j > 0:
     tree[j] = max(tree[j * 2], tree[j * 2 + 1])
     j = j - 1
+
+# get max of a interval [left, right]
 
 
 def get(left, right):

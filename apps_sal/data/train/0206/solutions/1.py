@@ -4,6 +4,15 @@ class Solution:
         :type nums: List[int]
         :rtype: bool
         """
+        # total = sum(nums)
+        # memo = {}
+        # def score(l, r, t):
+        #     if l>r: return 0
+        #     if (l, r) not in memo:
+        #         memo[(l, r)] = t-min(score(l+1, r, t-nums[l]), score(l, r-1, t-nums[r]))
+        #     return memo[(l, r)]
+        # sc = score(0, len(nums)-1, total)
+        # return sc>=total-sc
         N = len(nums)
         dp = [[0] * N for _ in range(N)]
         pre_sum = [nums[0]] * (N + 1)

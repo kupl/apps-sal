@@ -18,6 +18,7 @@ n = mint()
 a = [0] * 256
 b = [0] * 256
 for k in range(0, n):
+    # print(a[ord('a'):ord('z')+1])
     for i in range(ord('a'), ord('z') + 1):
         b[i] = min(a[i], 1)
     i = 0

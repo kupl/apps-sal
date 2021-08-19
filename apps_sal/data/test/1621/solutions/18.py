@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 
 def f(string, w):

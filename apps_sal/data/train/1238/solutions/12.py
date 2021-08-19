@@ -6,7 +6,9 @@ for i in range(t):
     l = []
     perm = permutations(s, 2)
     perm = set(list(perm))
+    # print(list(perm))
     for i in list(perm):
+        # print(i)
         s = ""
         s += str(i[0])
         s += str(i[1])

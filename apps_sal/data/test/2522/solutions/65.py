@@ -37,6 +37,7 @@ B_tail = []
 for c, v in total_list:
     a = A_table[v] if v in A_table else 0
     b = B_table[v] if v in B_table else 0
+#	print(c, a, b)
     while a > 0 and len(A_head) + len(B_head) < N:
         A_head.append(v)
         a -= 1
@@ -53,12 +54,19 @@ for c, v in total_list:
         B_tail.append(v)
         b -= 1
 
+# print(A_head)
+# print(A_tail)
+# print(B_head)
+# print(B_tail)
 
 A_tail.reverse()
 B_head.reverse()
 
 A_list = A_head + A_tail
 B_list = B_tail + B_head
+
+# print(A_list)
+# print(B_list)
 
 
 def check():

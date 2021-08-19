@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/3/7 23:26
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Balanced Team.py
 
 from collections import Counter
 

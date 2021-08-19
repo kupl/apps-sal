@@ -47,6 +47,7 @@ while queue != []:
     else:
         queue.pop()
 
+        # reverse
         back = stack.pop()
         if back[1] == None:
             dp.pop()

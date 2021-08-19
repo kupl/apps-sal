@@ -1,3 +1,4 @@
+# cook your dish here
 while True:
     try:
         n = int(input())
@@ -7,7 +8,9 @@ while True:
             k.append(k[1] + k[2])
             lis.append(k)
 
+        # print(lis)
         p = sorted(lis, key=lambda x: x[3], reverse=True)
+        # print(p)
         maxi = 0
         s = 0
         w = 0

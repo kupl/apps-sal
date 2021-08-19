@@ -3,6 +3,7 @@ from collections import deque
 sys.setrecursionlimit(10**5)
 def input(): return sys.stdin.readline().strip()
 
+
 """
 Pypyは再帰が遅いらしいのでPythonで通してみる
 """
@@ -16,7 +17,7 @@ def main():
     for i in range(N - 1):
         a, b = list(map(int, input().split()))
         repn[a - 1].append((b - 1, i))
-        repn[b - 1].append((a - 1, i))
+        repn[b - 1].append((a - 1, i))  # (to, id)
 
     """
     まずu, vを結ぶ単純パス上にあるnodeを列挙する。
@@ -37,6 +38,7 @@ def main():
         return False
     connected(v, u)
     path.append(v)
+    # print("path={}".format(path))
 
     """
     次にu, vを結ぶ単純パスP上の各頂点wに対して、wからPに沿わない向きにどれだけ深く潜れるかを求める。
@@ -44,7 +46,7 @@ def main():
     uvの中点からdfsすれば十分。
     """
 
-    def dfs(v, p):
+    def dfs(v, p):  # Pと異なる頂点方向にdfsして深さを求める
         d = -1
         for w, _ in repn[v]:
             if w == p:

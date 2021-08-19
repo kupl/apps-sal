@@ -12,16 +12,16 @@ def main():
             if board[i][j] == '.':
                 if j + k - 1 < n and board[i][j + k - 1] == '.':
                     for l in range(j, j + k):
-                        if board[i][l] == '
-                        break
+                        if board[i][l] == '#':
+                            break
                     else:
                         for l in range(j, j + k):
                             count[i][l] += 1
 
                 if i + k - 1 < n and board[i + k - 1][j] == '.':
                     for l in range(i, i + k):
-                        if board[l][j] == '
-                        break
+                        if board[l][j] == '#':
+                            break
                     else:
                         for l in range(i, i + k):
                             count[l][j] += 1

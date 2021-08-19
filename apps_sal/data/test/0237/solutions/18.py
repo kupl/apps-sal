@@ -11,16 +11,20 @@ def check(a):
     a -= 1
     ans = n
     t1 = a - k + 1
+    # print(a)
     if t1 >= 0:
         ans += sum_(a) - sum_(t1 - 1)
     else:
         ans += sum_(a)
+    # print(ans)
     z = n - k + 1
     t2 = a - z + 1
+    #print('ts', t2)
     if t2 >= 0:
         ans += sum_(a - 1) - sum_(t2 - 1)
     else:
         ans += sum_(a - 1)
+    # print(ans)
     return (ans <= m)
 
 
@@ -37,4 +41,5 @@ def bins():
 
 
 n, m, k = list(map(int, input().split()))
+# print(check(2))
 bins()

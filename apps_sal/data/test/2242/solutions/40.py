@@ -15,10 +15,13 @@ def main():
     d = [0] * mod
     d[0] = 1
     rev_num = 0
+    # 2以上なら共通するmodがあったということになる
     for i in range(s_len):
         rev_num += int(s[i]) * int(modpow(10, i, mod))
         rev_num %= mod
         d[rev_num] += 1
+    # 2以上同じmodがあったらそこから2つ選ぶ選び方
+    # それを全てのmodで
     print(sum(i * (i - 1) // 2 for i in d))
 
 

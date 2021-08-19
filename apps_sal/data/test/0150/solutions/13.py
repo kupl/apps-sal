@@ -1,3 +1,12 @@
+# from math import ceil,floor
+# def matches(n,left):
+# 	pass
+# n = int(input())
+# if n%2 == 0:
+# 	print(1+matches(n//2,0))
+# else:
+# 	print(1+matches(ceil(n/2),1))
+# print(ans)
 primes = [2, 3]
 x = 3
 while x < 200000:

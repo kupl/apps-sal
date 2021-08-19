@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import deque
 import sys
 input = sys.stdin.readline

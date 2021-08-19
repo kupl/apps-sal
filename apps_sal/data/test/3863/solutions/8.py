@@ -6,7 +6,7 @@ N, K = MI()
 mod = 10**9 + 7
 
 
-def divisor(n):
+def divisor(n):  # nの約数のリスト
     res = []
     for i in range(1, int(n**.5) + 1):
         if n % i == 0:
@@ -18,11 +18,11 @@ def divisor(n):
 
 A = divisor(N)
 
-d = {}
+d = {}  # d[i] = iの約数のリスト(iはNの約数)
 for a in A:
     d[a] = divisor(a)
 
-prime = []
+prime = []  # Nの素因数のリスト
 for i in range(2, int(N**.5) + 1):
     if N % i == 0:
         prime.append(i)
@@ -31,7 +31,7 @@ for i in range(2, int(N**.5) + 1):
 if N != 1:
     prime.append(N)
 
-mu = {}
+mu = {}  # mu[i] = μ(i) (iはNの約数)
 for a in A:
     b = a
     r = 1

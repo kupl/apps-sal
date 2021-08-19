@@ -4,6 +4,11 @@ MOD = 10**9 + 7
 
 string = "ACGT"
 
+# AGC
+# A*GC
+# GAC
+# ACG
+# AG*C
 
 table = [{} for i in range(n + 1)]
 

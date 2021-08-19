@@ -4,6 +4,7 @@ n, m = list(map(int, input().split()))
 def bellman_ford(s):
     d = [float('inf')] * n
     d[s] = 0
+    # 注意点として、閉路を探索(=スコアが更新されたか確かめる)ためにn*2回実行する必要がある
     for i in range(n * 2):
         for edge in g:
             if edge[0] != float('inf') and d[edge[1]] > d[edge[0]] + edge[2]:

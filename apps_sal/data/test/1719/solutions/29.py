@@ -7,9 +7,9 @@ def main():
     N = int(readline())
     A, G, C, T = 0, 1, 2, 3
     dp = [[[[0] * 4 for _ in range(4)] for _ in range(4)] for _ in range(N + 1)]
-    for j in range(4):
-        for k in range(4):
-            for l in range(4):
+    for j in range(4):  # i - 2 文字目
+        for k in range(4):  # i - 1 文字目
+            for l in range(4):  # i 文字目
                 if j == A and k == G and l == C:
                     continue
                 if j == A and k == C and l == G:

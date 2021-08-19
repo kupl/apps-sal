@@ -16,4 +16,5 @@ class Solution:
             if bin(i)[2:] not in d:
                 q = 0
                 break
+        # print(type(bin(3)[2:]))
         return q

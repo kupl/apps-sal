@@ -34,7 +34,7 @@ else:
     temp = 0
     for k in range(H):
         for m in range(W):
-            if sq[k][m] == "
-            temp += 1
+            if sq[k][m] == "#":
+                temp += 1
 
     print((H * W - temp - depth - 1))

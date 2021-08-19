@@ -1,5 +1,9 @@
 class Solution:
     def dieSimulatorLast(self, n, rollMax, last, count):
+        # n: number of rolls
+        # rollMax:
+        # last: the last number in the sequence
+        # count: how many times `last` occurs consecutively in the sequence
         if count > rollMax[last]:
             return 0
         elif n == 0:

@@ -1,4 +1,5 @@
 def first_non_consecutive(arr):
+    # your code here
     length = len(arr)
     if length <= 2:
         return None

@@ -1,3 +1,5 @@
+# your code goes here
+# cook your dish here
 from collections import Counter
 t = int(input())
 for x in range(t):
@@ -19,11 +21,11 @@ for x in range(t):
                 listo.append([i, j, 3])
             elif(string[j] == 'R'):
                 listo.append([i, j, 4])
-            elif(string[j] == '
+            elif(string[j] == '#'):
                 listb.add((i, j))
 
     for y in range(max(r, c)):
-        nants=Counter()
+        nants = Counter()
         for i in range(len(listo)):
             if(listo[i][2] != 5):
                 nants[tuple(listo[i][:-1])] += 1
@@ -40,9 +42,9 @@ for x in range(t):
             elif(ant[2] == 4):
                 ant[1] += 1
             if(tuple(ant[:-1])) in listb:
-                ant[2]=5
+                ant[2] = 5
             elif(ant[0] < 0) or ant[0] >= r:
-                ant[2]=5
+                ant[2] = 5
             elif ant[1] < 0 or ant[1] >= c:
-                ant[2]=5
+                ant[2] = 5
     print(pair)

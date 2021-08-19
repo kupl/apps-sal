@@ -6,6 +6,7 @@ L_list = [int(input()) for i in range(N)]
 Target = itertools.product([0, 1, 2, 3], repeat=N)
 
 INF = 10 ** 9
+#Target = [(1,2,2,2,3)]
 ans = INF
 for T in Target:
     A_sum = 0

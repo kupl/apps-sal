@@ -7,5 +7,10 @@ for i in range(1, b + 1):
     else:
         pass
 
+# for i in range(1, b + 1):
+#     if b % i == 0:
+#         c.append(i)
+#     else:
+#         pass
 
 print((c[-k]))

@@ -1,4 +1,5 @@
 from http.cookiejar import reach
+#import numpy
 
 
 def is_path_exist(cage, visited, i1, j1, i2, j2):
@@ -8,6 +9,7 @@ def is_path_exist(cage, visited, i1, j1, i2, j2):
     reached = False
     stk_adj = []
     stk_adj.append([i1, j1])
+    # cage[i1][j1]='X'
     while(len(stk_adj) and not reached):
         temp_point = stk_adj.pop()
         for i in range(0, 4):
@@ -30,6 +32,7 @@ n = int(numbers[0])
 m = int(numbers[1])
 temp_line = ""
 cage = [[''] * m for _ in range(n)]
+# vstd=numpy.zeros(10)
 visited = [[False] * m for _ in range(n)]
 for i in range(0, n):
     temp_line = input()

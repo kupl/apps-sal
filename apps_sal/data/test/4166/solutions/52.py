@@ -11,6 +11,8 @@ def main():
             ans[s - 1] = c
         else:
             return -1
+    # if n == 1 and ans[0]==0:
+    #     continue
     if n > 1 and ans[0] == 0:
         ans[0] = 1
 

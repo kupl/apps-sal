@@ -39,6 +39,7 @@ def solve():
             for _ in range(0, mvlen):
                 heapq.heappop(mv)
 
+            #print(ln, rn, pv, mv)
             ans = max(ans, pv + sum(mv))
 
     print((max(0, ans)))

@@ -20,7 +20,7 @@ def main():
             nest += 1
         elif c[0] == 'add':
             x[nest] += 1
-        else:
+        else:  # c[0] == 'end'
             x[nest - 1] += x[nest] * stack.pop()
             x[nest] = 0
             nest -= 1

@@ -2,7 +2,10 @@ class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
 
         sm = sum(nums)
+        # strt = sm//threshold
 
+        # search_space = list(range(max(strt,1),sm))
+        # n = len(search_space)
         l = max(sm // threshold, 1)
         r = max(nums)
         while(l + 1 < r):
@@ -17,6 +20,7 @@ class Solution:
             return l
         else:
             return r
+        # print(search_space[l],search_space[r])
 
     def search(self, nums, i, threshold):
 

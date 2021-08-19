@@ -8,7 +8,7 @@ class Solution:
         @lru_cache(None)
         def td_solve(gas, s):
             if gas < abs(locations[s] - locations[finish]):
-                return 0
+                return 0  # no way to get to target
 
             res = 1 if s == finish else 0
             for city in range(len(locations)):

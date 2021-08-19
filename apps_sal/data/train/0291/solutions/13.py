@@ -3,6 +3,8 @@ class Solution:
         kMod = int(1e9 + 7)
         n = len(arr)
 
+        # dp[i][0] is how many sub-arrays ends with arr[i] have even sum
+        # dp[i][1] is how many sub-arrays ends with arr[i] have odd sum
         dp = [[0] * 2 for _ in range(n)]
 
         ans = 0

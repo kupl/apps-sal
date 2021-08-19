@@ -1,6 +1,7 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
 
+        # we can use memoization
         DP = {}
 
         def get_rolls(n, t):

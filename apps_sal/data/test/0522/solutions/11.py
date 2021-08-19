@@ -72,5 +72,6 @@ ans = (ans * calc_exponent(f2, temp3, m)) % m
 
 ans = (ans * calc_exponent(f1, temp4, m)) % m
 
+#print(temp1, temp2, temp3 , temp4)
 
 print(ans)

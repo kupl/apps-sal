@@ -1,4 +1,5 @@
 def sum_mix(arr):
+    # your code here
     n = 0
     for a in arr:
         if type(a) == int:

@@ -20,6 +20,7 @@ for i in range(k):
         m += 1
     else:
         break
+# print(inpt)
 instblity = max(inpt) - min(inpt)
 print(str(instblity) + ' ' + str(m))
 for i in range(len(i_lst)):

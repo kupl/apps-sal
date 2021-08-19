@@ -12,6 +12,7 @@ while(T > 0):
         cal += 1
         i += 1
         k += 1
+    # print ans
     i -= 2
     while i >= 1:
         ans += str(chr(((carry + i) % 10) + ord('0')))
@@ -19,14 +20,18 @@ while(T > 0):
         cal += 1
         i -= 1
         k += 1
+    # print ans
     while carry > 0:
         ans += str((((carry + i) % 10) + ord('0')))
         carry = int((carry) / 10)
         cal += 1
         k += 1
+    # print ans[0:k]
+    # print long(ans)
     ans = int(ans)
     ans *= (D * D)
     ans = str(ans)
+    # print ans
 
     length = len(ans)
     ans1 = 0

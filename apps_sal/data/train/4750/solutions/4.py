@@ -1,4 +1,5 @@
 def flatten(lst):
+    # your code here\
     res = []
     for i in lst:
         if isinstance(i, list):

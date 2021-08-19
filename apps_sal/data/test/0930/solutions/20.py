@@ -8,8 +8,10 @@ def I(): return int(sys.stdin.readline())
 def MI(): return list(map(int, sys.stdin.readline().split()))
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LI2(N): return [list(map(int, sys.stdin.readline().split())) for i in range(N)]
+# 文字列を一文字ずつ数字に変換、'5678'を[5,6,7,8]とできる
 def LSI(): return list(map(int, list(sys.stdin.readline().rstrip())))
 def LSI2(N): return [list(map(int, list(sys.stdin.readline().rstrip()))) for i in range(N)]
+# 文字列として取得
 def ST(): return sys.stdin.readline().rstrip()
 def LST(): return sys.stdin.readline().rstrip().split()
 def LST2(N): return [sys.stdin.readline().rstrip().split() for i in range(N)]
@@ -20,6 +22,7 @@ def FILL4(i, h, w, d, d2): return [FILL3(i, w, d, d2) for j in range(h)]
 def sisha(num, digit): return Decimal(str(num)).quantize(Decimal(digit), rounding=ROUND_HALF_UP)
 
 
+# '0.01'や'1E1'などで指定、整数に戻すならintをかます
 MOD = 1000000007
 INF = float("inf")
 sys.setrecursionlimit(10**6 + 10)
@@ -32,11 +35,11 @@ def cmb(n, r, mod):
     return g1[n] * g2[r] * g2[n - r] % mod
 
 
-mod = MOD
+mod = MOD  # 出力の制限
 N = 5 * 10**5
-g1 = [1, 1]
-g2 = [1, 1]
-inverse = [0, 1]
+g1 = [1, 1]  # 元テーブル
+g2 = [1, 1]  # 逆元テーブル
+inverse = [0, 1]  # 逆元テーブル計算用テーブル
 
 for i in range(2, N + 1):
     g1.append((g1[-1] * i) % mod)

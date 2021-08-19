@@ -29,8 +29,8 @@ class Solution:
 
             return longest
 
-        elif sum(nums) == 0:
+        elif sum(nums) == 0:  # all zeros
             return 0
 
-        elif sum(nums) == len(nums):
+        elif sum(nums) == len(nums):  # all 1s
             return(len(nums) - 1)

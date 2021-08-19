@@ -25,6 +25,7 @@ for i in range(sz):
     l, r = ria()
     mx2 = max(l, mx2)
     mn2 = min(r, mn2)
+# print(mx1,mn1,mx2,mn2)
 mx = max(mx, mx1 - mn2)
 mx = max(mx, mx2 - mn1)
 print(mx)

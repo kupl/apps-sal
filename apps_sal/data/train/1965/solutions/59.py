@@ -23,6 +23,7 @@ class UnionFind:
 
 
 class Solution:
+    # copied https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/discuss/831506/Textbook-Union-Find-Data-Structure-Code-with-Explanation-and-comments
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges = sorted(edges, reverse=True)

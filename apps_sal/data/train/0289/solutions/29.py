@@ -11,6 +11,8 @@ class Solution:
         for idx in range(M, len(A)):
             thisSum += A[idx] - A[idx - M]
             MList.append((thisSum, idx - M + 1))
+        # LList.sort(reverse=True)
+        # MList.sort(reverse=True)
         allHeap = []
         for LEle in LList:
             for MEle in MList:

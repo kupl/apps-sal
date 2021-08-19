@@ -24,7 +24,7 @@ def solve(a, b, c):
                 ans += 1
         return ans
 
-    v = b[1: -1] + [[100500, '
+    v = b[1: -1] + [[100500, '#']] + a
     p = [0] * len(v)
     for i in range(1, len(v)):
         j = p[i - 1]

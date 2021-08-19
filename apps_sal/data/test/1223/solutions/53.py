@@ -51,6 +51,7 @@ for i in range(N):
 
 
 Rlis.reverse()
+#print (Llis,Rlis)
 
 ans = 0
 P.reverse()
@@ -61,6 +62,7 @@ for i in range(N):
     Rlenge = 1 + max(0, i - (N - Rlis[i][0]))
 
     ans += (P[i] + 1) * Llenge * Rlenge
+    #print (P[i] , Llenge , Rlenge)
 
 P.reverse()
 Rlis.reverse()
@@ -72,5 +74,6 @@ for i in range(N):
     Llenge = 1 + max(0, i - (N - Llis[i][0]))
 
     ans += (P[i] + 1) * Llenge * Rlenge
+    #print (P[i],Llenge,Rlenge)
 
 print(ans)

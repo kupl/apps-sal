@@ -68,6 +68,7 @@ class Solution:
             if node in intersection:
                 for elt in intersection[node]:
                     islands[root].add(elt)
+        # print(islands)
         islandCounts = {}
         for node in range(len(graph[0])):
             root = uf.root(node)
@@ -77,6 +78,7 @@ class Solution:
                         islandCounts[key] = 1
                     else:
                         islandCounts[key] += 1
+        # print(islandCounts)
         if len(islandCounts) == 0:
             return initial[0]
         res = sorted(islandCounts, key=lambda x: (-islandCounts[x], x))

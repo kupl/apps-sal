@@ -1,4 +1,5 @@
 def animals(heads, legs):
+    # return (Chickens, Cows)
     if heads == 0 and legs == 0:
         return (0, 0)
     elif heads < 0 or legs < 0:

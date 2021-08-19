@@ -13,8 +13,8 @@ for i in range(n):
         if 'z' >= s[j] >= 'a' or 'z' >= s[-j] >= 'a':
             fst[i][1] = min(fst[i][1], j)
 
-        if s[j] in '
-        fst[i][2] = min(fst[i][2], j)
+        if s[j] in '#*&' or s[-j] in '#*&':
+            fst[i][2] = min(fst[i][2], j)
 
 
 ans = INF

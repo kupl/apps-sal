@@ -41,6 +41,8 @@ def main():
             print(*a)
 
 
+# region M
+# region fastio
 BUFSIZE = 8192
 
 
@@ -97,14 +99,26 @@ def print(*args, **kwargs):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
+# endregion
+
+# region import
+
 
 def inputt(t=0): return range(t) if t else range(int(input()))
 def inputi(): return map(int, input().split())
 def inputl(): return list(inputi())
 
 
+# endregion
+
+# region main
+
+
 def __starting_point():
     main()
 
+# endregion
 
+
+# endregion
 __starting_point()

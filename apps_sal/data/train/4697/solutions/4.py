@@ -1,3 +1,4 @@
+# Python is nice
 from collections import Counter
 from operator import mul, and_
 from itertools import starmap

@@ -6,6 +6,8 @@ def readpts():
 N, M = list(map(int, input().split()))
 pts1 = readpts()
 pts2 = readpts()
+# print(pts1)
+# print(pts2)
 
 
 def psb(a, b):
@@ -18,7 +20,7 @@ def sb(a, b):
     for i in a:
         if i in b:
             return i
-    return -1
+    return -1  # should not happen
 
 
 def ipsv(pts1, pts2):

@@ -20,5 +20,6 @@ class Solution:
                     max_gold = [0]
                     visited = [[0 for i in range(n)] for j in range(m)]
                     self.dfs(0, max_gold, grid, visited, i, j)
+                    # print(\"i j cur_max: \", i, j, max_gold[0])
                     res = max(res, max_gold[0])
         return res

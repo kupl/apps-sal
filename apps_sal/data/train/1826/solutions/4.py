@@ -17,8 +17,10 @@ class Solution:
                     res[i][j] = get_sum(0, 0)
                 else:
                     if i == 0:
+                        # reuse the result from left cell
                         res[i][j] = res[i][j - 1] - sum([mat[b][j - K - 1] if (0 <= (j - K - 1) < n and 0 <= b < m) else 0 for b in range(i - K, i + K + 1)]) + sum([mat[b][j + K] if (0 <= (j + K) < n and 0 <= b < m) else 0 for b in range(i - K, i + K + 1)])
                     else:
+                        # reuse the result from top cell
                         res[i][j] = res[i - 1][j] - sum([mat[i - K - 1][b] if (0 <= (i - K - 1) < m and 0 <= b < n) else 0 for b in range(j - K, j + K + 1)]) + sum([mat[i + K][b] if (0 <= (i + K) < m and 0 <= b < n) else 0 for b in range(j - K, j + K + 1)])
 
         return res

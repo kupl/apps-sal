@@ -1,3 +1,4 @@
+# kitten
 f, I, t = map(int, input().split())
 l = []
 for i in range(f):

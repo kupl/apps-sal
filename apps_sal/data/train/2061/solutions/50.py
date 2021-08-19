@@ -11,13 +11,13 @@ for t in range(T):
         print(1)
         continue
 
-    if [bx, by - 1] == [ax, ay] and [cx - 1, cy] == [ax, ay]:
+    if [bx, by - 1] == [ax, ay] and [cx - 1, cy] == [ax, ay]:  # 1
         g = [bx + cx - 1, by + cy - 1]
-    if [bx, by - 1] == [ax, ay] and [cx - 1, cy - 1] == [ax, ay]:
+    if [bx, by - 1] == [ax, ay] and [cx - 1, cy - 1] == [ax, ay]:  # 2
         g = [ax + cx - 1, ay + cy]
-    if [bx - 1, by + 1] == [ax, ay] and [cx - 1, cy] == [ax, ay]:
+    if [bx - 1, by + 1] == [ax, ay] and [cx - 1, cy] == [ax, ay]:  # 3
         g = [ax + bx, ay + by]
-    if [bx - 1, by] == [ax, ay] and [cx - 1, cy - 1] == [ax, ay]:
+    if [bx - 1, by] == [ax, ay] and [cx - 1, cy - 1] == [ax, ay]:  # 4
         g = [ax + cx, ay + cy - 1]
 
     ans = max([abs(x) for x in g]) + (g[0] == g[1])

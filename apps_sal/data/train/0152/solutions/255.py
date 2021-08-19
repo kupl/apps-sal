@@ -12,6 +12,7 @@ class Solution:
                 while j < len(position) and position[j] - position[last] < x:
                     j += 1
                 if j == len(position):
+                    # print(j, last, x)
                     return 0
                 last = j
             return 1
@@ -19,6 +20,7 @@ class Solution:
         while l < r:
             mid = (r + l) // 2
             dist = c(mid)
+            # print('len', mid, l, r, dist)
             if not dist:
                 r = mid
             else:

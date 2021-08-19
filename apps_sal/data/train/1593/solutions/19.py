@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 cl = [1, 2, 5, 10, 50, 100]
 l = len(cl)

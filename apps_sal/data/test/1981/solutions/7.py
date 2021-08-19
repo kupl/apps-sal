@@ -39,6 +39,7 @@ while len(queue) > 0:
         count[v] = count[pi[v]]
     if a[v] == 1:
         count[v] += 1
+    #print("m :",m," count[v] :",count[v])
     if count[v] > m:
         marked[v] = True
         continue
@@ -49,7 +50,9 @@ while len(queue) > 0:
             queue.append(w)
             pi[w] = v
             marked[w] = True
+    #		print(w)
             c += 1
+    #print("c :", c," m :",m," pi[",v,"] " ,pi[v], " count[",v,"]:",count[v])
     if c == 0 and count[v] <= m:
         answer += 1
 

@@ -1,6 +1,11 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 
+        # self.cache = [ [-1] * (len(text2) + 1) for _ in range(len(text1))]
+        # for row in self.cache:
+        #     row[-1] = 0
+        # self.cache.append([ 0 ] * (len(text2) + 1))
+
         self.cache = [[-1] * len(text2) for _ in range(len(text1))]
 
         def findSubsequence(idx1, idx2):

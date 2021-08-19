@@ -29,6 +29,8 @@ def grow(d, v, h):
                 h[i + d + 1] = h[i + d + 1] * fg[d + i + 1] % P
     return h
 
+# Create a table of the factorial of the first v+2 multiples of v, i.e., [0!, v!, 2v!, ..., (v(v+1))!]
+
 
 def create_table(v):
     s = 1

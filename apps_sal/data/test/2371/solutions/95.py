@@ -2,6 +2,7 @@ import numpy as np
 
 
 def solve(N, Z, W, A):
+    # dp_x[n] := y さんが n 枚目を引いて x さんに手番が回ったときの最大値
     dp_x = np.full(N + 1, 1 << 61, dtype=np.int64)
     dp_y = np.zeros(N + 1, dtype=np.int64)
     for i in range(N - 1, 0, -1):

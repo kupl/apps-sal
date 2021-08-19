@@ -1,5 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        # dp[i][j] first j coins with sum of i
+        # dp[i][j] = min(dp[j-coins[k][k]]+1) for k in coins
 
         n = len(coins)
         dp = [0] + [float('inf')] * amount

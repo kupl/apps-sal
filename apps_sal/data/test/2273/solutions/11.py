@@ -1,3 +1,8 @@
+# https://codeforces.com/contest/1228/problem/D
+# all neightbor in group --> pass 1
+# all neighbor not in group --> merge 0
+# invalid 2
+# WA
 def type_(list_v, group):
     cnt_0 = 0
     cnt_1 = 0
@@ -98,3 +103,17 @@ else:
         print(' '.join(pr))
     else:
         print(-1)
+# 1,2  3,4  5,6
+# 6 12
+# 1 3
+# 1 4
+# 2 3
+# 2 4
+# 1 5
+# 1 6
+# 2 5
+# 2 6
+# 3 5
+# 3 6
+# 4 5
+# 4 6

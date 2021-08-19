@@ -1,5 +1,5 @@
 """
-Codeforces Educational Round 
+Codeforces Educational Round #2
 Problem 600 D. Area of Two Circles' Intersection
 
 @author yamaton
@@ -51,9 +51,9 @@ def solve(r1, r2, d_squared):
     r1, r2 = min(r1, r2), max(r1, r2)
 
     d = math.sqrt(d_squared)
-    if d >= r1 + r2:
+    if d >= r1 + r2:  # circles are far apart
         return 0.0
-    if r2 >= d + r1:
+    if r2 >= d + r1:  # whole circle is contained in the other
         return math.pi * r1 ** 2
 
     r1f, r2f, dsq = map(fractions.Fraction, [r1, r2, d_squared])

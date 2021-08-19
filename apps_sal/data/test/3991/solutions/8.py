@@ -1,3 +1,4 @@
+#!/usr/bin/pypy3
 
 from sys import stdin, stderr
 from random import shuffle
@@ -21,6 +22,7 @@ def expnm(a, b, m):
 
 
 def expnm2(a, b, m):
+    # print(a,b)
     out = 1
     mult = a
     while b > 0:

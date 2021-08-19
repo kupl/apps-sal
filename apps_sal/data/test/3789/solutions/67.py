@@ -19,6 +19,8 @@ class Dinic:
         self.G[fm].append({'to': to, 'cap': cap, 'rev': len(self.G[to])})
         self.G[to].append({'to': fm, 'cap': 0, 'rev': len(self.G[fm]) - 1})
 
+    # sからの最短距離をbfsで計算
+
     def bfs(self, s):
         import queue
         self.level = [-1 for _ in range(self.V)]

@@ -1,3 +1,4 @@
+# You lost the game.
 n, a, b = map(int, input().split())
 dem = n // 2 + n % 2
 i = 1

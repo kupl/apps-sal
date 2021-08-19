@@ -1,5 +1,9 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
+        # res=sum(nums)
+        # print(1//5)
+        # n=max(nums)+1
+        # print(int(1e6))
         def dfs(m):
             r = 0
             for i in nums:
@@ -27,3 +31,4 @@ class Solution:
             if r<=threshold:
                 return i
         '''
+        # return res

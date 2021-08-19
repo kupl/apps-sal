@@ -1,5 +1,5 @@
 N, M = map(int, input().split())
-String = [str(0) for _ in range(N)]
+String = [str(0) for _ in range(N)]  # indexは0からに注意
 flag = 1
 for _ in range(M):
     s, c = map(int, input().split())

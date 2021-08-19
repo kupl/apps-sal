@@ -16,6 +16,7 @@ def dfs(node, edges, costs, visited):
             cycle = True
             break
 
+    # print(node,cycle,visited)
     if cycle:
         x = edges[node][0]
         min_cost = costs[x - 1]

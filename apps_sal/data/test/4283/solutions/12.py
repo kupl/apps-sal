@@ -1,3 +1,5 @@
+#!/usr/bin/pypy
+# -*- coding: utf-8 -*-
 
 
 def main():

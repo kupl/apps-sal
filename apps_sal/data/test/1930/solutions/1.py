@@ -63,6 +63,8 @@ if total > 0:
             smaller = high
         else:
             smaller = high + 1
+        # D[i] is the position of i in the list
+        # T[D[i]] is how many -1s there are to the left of it
         themostimportantsum += T[D[i]] * (total - smaller) + (total - T[D[i]]) * (smaller)
         num = themostimportantsum + total
         denom = total

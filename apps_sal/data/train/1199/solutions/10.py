@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     S, N = (int(i) for i in input().strip().split())
     coinCount = 0

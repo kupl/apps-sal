@@ -7,6 +7,8 @@ import bisect
 
 
 def main():
+    # sys.stdin = open('input.txt', 'r')
+    # sys.stdout = open('output.txt', 'w')
 
     st = input()
     count = 0
@@ -17,6 +19,8 @@ def main():
         st = st[idx + 1:]
 
     print(count)
+    # sys.stdin.close()
+    # sys.stdout.close()
 
 
 def __starting_point():

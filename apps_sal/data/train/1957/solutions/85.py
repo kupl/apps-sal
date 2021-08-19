@@ -24,6 +24,15 @@ class Solution:
                     elif grid[nx][ny] == 0 and (nx, ny, curk) not in visited:
                         nq.append((nx, ny, curk))
                         visited.add((nx, ny, curk))
+                    # if grid[nx][ny] == 0:
+                    #     if (nx, ny, curk) not in visited:
+                    #         # visited.add((nx, ny, curk))
+                    #         nq.append((nx, ny, curk))
+                    # elif curk > 0:
+                    #     if (nx, ny, curk) not in visited:
+                    #         # visited.add((nx, ny, curk))
+                    #         nq.append((nx, ny, curk-1))
+            # print(nq)
             step += 1
             q = nq
         return -1

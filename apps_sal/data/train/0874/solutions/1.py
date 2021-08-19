@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, m, s = list(map(int, input().split()))
     arr = list(map(int, input().split()))

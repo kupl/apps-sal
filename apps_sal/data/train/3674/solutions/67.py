@@ -1,4 +1,5 @@
 def add_binary(a, b):
+    # your code here
     res = ''
     c = a + b
 

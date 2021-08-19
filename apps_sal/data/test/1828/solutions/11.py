@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -27,3 +29,4 @@ if x[n - 1] * y[0] - x[0] * y[n - 1] > 0:
 
 print(ans)
 finish = time.time()
+#print(finish - start)

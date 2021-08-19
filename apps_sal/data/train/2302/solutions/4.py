@@ -32,3 +32,8 @@ Q = int(input())
 q = list(map(int, input().split()))
 for i in range(Q):
     print((ans[q[i] - 1]))
+
+
+# print(dp)
+# print(data)
+# print(ans)

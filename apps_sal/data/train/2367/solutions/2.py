@@ -28,12 +28,16 @@ for testcases in range(q):
         SA += sum(W[ord(s) - 97:])
         W[ord(s) - 97] += 1
 
+    # print(SA)
+
     W = [0] * 26
     TA = 0
 
     for s in T:
         TA += sum(W[ord(s) - 97:])
         W[ord(s) - 97] += 1
+
+    # print(TA)
 
     if (SA + TA) % 2 == 0:
         print("YES")

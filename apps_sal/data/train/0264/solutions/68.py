@@ -17,6 +17,7 @@ class Solution:
                     continue
 
                 if len(new_chars & path) == 0:
+                    # we can concat
                     new_path = new_chars | path
                     backtrack(i + 1, new_path)
 

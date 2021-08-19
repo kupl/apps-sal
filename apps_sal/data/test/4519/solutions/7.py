@@ -1,4 +1,5 @@
 q = int(input())
+#q = 1
 for _ in range(q):
     n, k = map(int, input().split())
 
@@ -11,6 +12,7 @@ for _ in range(q):
             zero += 1
             continue
         pos = zero
+        # print("<", line, zero)
         if zero - non_zero < k:
             k -= zero - non_zero
             line[zero] = '1'
@@ -20,6 +22,8 @@ for _ in range(q):
             line[zero - k] = '0'
             line[zero] = '1'
             break
+        # print(">", line, zero)
+        # print()
         if k == 0:
             break
         zero += 1

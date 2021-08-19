@@ -4,8 +4,12 @@ sys.setrecursionlimit(10**6)
 n = int(input())
 a = list(map(int, input().split()))
 
+# 3 3 1 2 1
+# -> [2, 2], [1]
+
 
 def painting(left, right, arr, height):
+    # find min:
     if left >= right:
         return 0
 

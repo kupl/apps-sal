@@ -73,3 +73,4 @@ for q in range(inn()):
         res = query(l - 1, r)
         c = len([i for i in range(26) if res[i] > 0])
         print(c)
+    # print(t)

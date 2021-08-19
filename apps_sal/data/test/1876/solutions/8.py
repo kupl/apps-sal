@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/3/21 23:56
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Edgy Trees.py
 
 
 class UnionFind(object):
@@ -53,6 +58,7 @@ def main():
 
 def __starting_point():
     main()
+    # print(pow_mod(4, 4, 3))
 
 
 __starting_point()

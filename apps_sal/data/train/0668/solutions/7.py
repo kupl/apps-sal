@@ -1,3 +1,4 @@
+# cook your dish here
 tcase = int(input())
 for i in range(tcase):
     ninput = input()

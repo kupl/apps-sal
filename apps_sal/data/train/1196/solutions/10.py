@@ -11,6 +11,7 @@ for ii in range(t):
         for j in range(n):
             pp.append(a[j][i])
         arr.append(pp)
+    # print(a,arr)
     s = 0
     for i in a:
         for j in range(m - k + 1):

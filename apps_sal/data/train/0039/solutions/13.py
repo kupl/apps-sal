@@ -17,6 +17,7 @@ for q in range(t):
                 dp[i] = dp[i + 1] + a
             else:
                 dp[i] = dp[i + 1] + b
+    # print(dp)
     for i in range(l):
         if p >= dp[i]:
             print(i + 1)

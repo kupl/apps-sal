@@ -28,6 +28,7 @@ def resolve():
         G[X].append(Y)
         G[Y].append(X)
 
+    # A_XtoA_Yは片方が決まればもう片方も決まる よって連結成分数が答え
     visited = [False] * N
 
     def dfs(c):

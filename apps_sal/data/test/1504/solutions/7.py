@@ -33,7 +33,9 @@ for testcase in range(1, T + 1):
                     tmp = i * (s - b)
                     if i * (t - a) >= k:
                         tmp += k
+                        # print("b",i,a,b,s,t)
                     else:
                         tmp += i * (t - a) + (k - i * (t - a)) * 2
                     res = min(res, tmp)
+                    # print("a",i,tmp)
                 print(res)

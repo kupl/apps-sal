@@ -5,6 +5,9 @@ class Solution:
 
         @lru_cache(maxsize=None)
         def dfs(i, k, i0):
+            # put k balls into position[i:] with max min force
+            # i0 is the position with the largest index between position[0] and position[i-1]
+            # d0 is the max min force between balls placed between position[0] and position[i-1]
             if k > (n - i):
                 return 0
             if k == 1:
@@ -19,6 +22,8 @@ class Solution:
 
             return d
 
+        # return dfs(1, m-1, 0)
+
         @lru_cache(None)
         def f(i, k):
             if k == 0:
@@ -32,6 +37,8 @@ class Solution:
                 ret = max(ret, v)
 
             return ret
+
+        # return f(0, m-1)
 
         def count(d):
             ans, curr = 1, position[0]
@@ -49,3 +56,12 @@ class Solution:
             else:
                 r = mid - 1
         return l
+
+    # position = [1,2,3,4,7], m = 3, n=5
+    # dfs(0, 3, -1e20, 1e20)
+    # i=0, k=3, n-i=5
+    # j=0, d0_new = 1e20,
+    # dfs(1, 2, 0, 1e20): d_new = ?
+    # dfs(2, 2, 1, 1e20): d_new = ?
+    # dfs(3, 2, 2, 1e20): d_new =
+    # dfs(4, 2, 3, 1e20): k=2 > 5-4=1, d_new = 0

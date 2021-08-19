@@ -29,6 +29,7 @@ for i in range(4):
         d.pop(j)
         for k in range(2):
             e = d[:]
+            # print(e)
             f.append(e[k])
             e.pop(k)
             f.append(e[0])
@@ -44,6 +45,7 @@ for i in range(4):
                             if (ii + jj) % 2 != seg[ii][jj]:
                                 fa += 1
                 m = min(m, fa, 4 * n * n - fa)
+                # print(fa)
             else:
                 for seg in se[:2]:
                     for ii in range(n):
@@ -55,7 +57,9 @@ for i in range(4):
                         for jj in range(n):
                             if (ii + jj) % 2 == seg[ii][jj]:
                                 fa += 1
+             #   print(fa)
                 m = min(m, fa, 4 * n * n - fa)
+            # print(m,f)
             f.pop()
             f.pop()
         f.pop()

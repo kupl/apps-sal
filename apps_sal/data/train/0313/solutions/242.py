@@ -23,6 +23,7 @@ class Solution:
         b = min(bloomDay)
         e = max(bloomDay)
         rt = 0
+        # n2
         while b < e:
 
             mid = b + (e - b) // 2
@@ -31,5 +32,13 @@ class Solution:
             else:
                 b = mid + 1
         return b
+
+        # arr = [abs difference prev and cur]
+#         # for idx, val in enumerate(bloomDay):
+#         h = defaultdict(list)
+#         for idx, val in enumerate(bloomDay):
+
+#             dif = abs(bloomday[idx+1] - val)
+#             h[dif].append((idx, idx+1))
 
         return rt

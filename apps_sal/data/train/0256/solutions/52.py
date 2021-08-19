@@ -21,4 +21,5 @@ class Solution:
             else:
                 start = mid + 1
 
+        # print(start)
         return start if start <= max_val else start - 1

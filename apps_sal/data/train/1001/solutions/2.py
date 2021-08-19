@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 list2 = [751, 751, 751, 751, 751]
 for i in range(n):

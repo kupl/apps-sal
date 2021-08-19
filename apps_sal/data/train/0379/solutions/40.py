@@ -14,6 +14,8 @@ class Solution:
                 to2[i] = inds2[x]
                 to1[inds2[x]] = i
 
+        # print(dp1, dp2, to2, to1)
+
         i = len(nums1) - 1
         j = len(nums2) - 1
 
@@ -29,6 +31,7 @@ class Solution:
                 i -= 1
                 j -= 1
 
+        # print(dp1, dp2)
         while i >= 0:
             dp1[i] = nums1[i] + dp1[i + 1]
             i -= 1
@@ -36,5 +39,7 @@ class Solution:
         while j >= 0:
             dp2[j] = nums2[j] + dp2[j + 1]
             j -= 1
+
+        # print(dp1, dp2)
 
         return max(dp1[0], dp2[0]) % (10**9 + 7)

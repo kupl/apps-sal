@@ -8,5 +8,5 @@ else:
         print((M - 2))
     elif (N >= 2 and M == 1):
         print((N - 2))
-    else:
+    else:  # N==M==1
         print("1")

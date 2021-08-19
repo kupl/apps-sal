@@ -34,8 +34,9 @@ for i in range(n):
     cur = x
     prev = x
     for l in range(11):
+        #        print(cur, cur_head)
         if l > 0:
-            ans += lens[l] * (cur + 10 * prev)
+            ans += lens[l] * (cur + 10 * prev)  # space_out(x,l)
             ans %= mod
         prev = cur
         cur -= cur_head * 10**(2 * l + 1)

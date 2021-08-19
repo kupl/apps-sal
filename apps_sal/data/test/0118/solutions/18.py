@@ -1,5 +1,7 @@
 def main():
     t, s, x = list(map(int, input().split()))
+    # n = int(input())
+    # a = list(map(int, input().split()))
     if (x - t >= s or x == t) and (x - t) % s in (0, 1):
         print('YES')
     else:

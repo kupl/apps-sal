@@ -10,21 +10,21 @@ def generate_bc(url, separator):
         questionIndex = -1
 
     try:
-        hashIndex = url.index("
+        hashIndex = url.index("#")
     except ValueError:
-        hashIndex=-1
+        hashIndex = -1
 
     if questionIndex != -1:
-        url=str(url[:questionIndex])
+        url = str(url[:questionIndex])
 
     if hashIndex != -1:
-        url=str(url[:hashIndex])
+        url = str(url[:hashIndex])
 
-    names=list(filter(None, url.split('/')))
-    html=""
+    names = list(filter(None, url.split('/')))
+    html = ""
 
-    commonExtensions=[".html", ".htm", ".php", ".asp"]
-    ignoreWords=[
+    commonExtensions = [".html", ".htm", ".php", ".asp"]
+    ignoreWords = [
         "the",
         "of",
         "in",
@@ -38,45 +38,45 @@ def generate_bc(url, separator):
         "at",
         "a"
     ]
-    pastLinks=[]
+    pastLinks = []
 
     for index, name in enumerate(names):
-        isFirstIndex=index == 0
-        isLastIndex=index == len(names) - 1
+        isFirstIndex = index == 0
+        isLastIndex = index == len(names) - 1
 
         if not isLastIndex and "index" in names[index + 1]:
-            isLastIndex=True
+            isLastIndex = True
 
         if isLastIndex:
             for commonExtension in commonExtensions:
-                name=name.replace(commonExtension, "")
+                name = name.replace(commonExtension, "")
 
-        tagValue=""
+        tagValue = ""
         if isFirstIndex:
-            tagValue="HOME"
+            tagValue = "HOME"
         elif len(name) > 30:
-            tagValue=''.join(
+            tagValue = ''.join(
                 str.upper(a[0:1]) for a in name.split('-') if a not in ignoreWords)
         else:
             if '-' in name:
-                tagValue=name.upper().replace('-', ' ')
+                tagValue = name.upper().replace('-', ' ')
             else:
-                tagValue=name.upper()
+                tagValue = name.upper()
 
         html += "<{element}".format(element='span' if isLastIndex else 'a')
         if isLastIndex:
             html += ' class="active"'
         else:
-            currentLink=name.strip().lower()
-            hrefValue=''
+            currentLink = name.strip().lower()
+            hrefValue = ''
             if isFirstIndex:
-                hrefValue='/'
+                hrefValue = '/'
             elif len(pastLinks) > 0:
                 pastLinks.append(currentLink)
-                hrefValue='/{link}/'.format(link="/".join(pastLinks))
+                hrefValue = '/{link}/'.format(link="/".join(pastLinks))
             else:
                 pastLinks.append(currentLink)
-                hrefValue="/{link}/".format(link=currentLink)
+                hrefValue = "/{link}/".format(link=currentLink)
             html += ' href="{hrefValue}"'.format(hrefValue=hrefValue)
 
         html += '>'

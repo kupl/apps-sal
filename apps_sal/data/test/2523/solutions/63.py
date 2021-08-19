@@ -1,3 +1,5 @@
+# [a,b] - [a,b) = {b} なので、端の方は自由。
+# 中央が単色であるかを確認すればよい。
 
 import numpy as np
 arr = np.array([int(x) for x in input()])
@@ -10,6 +12,7 @@ answer = 0
 for K in range(N, 0, -1):
     left = N - K
     right = K - 1
+    # [left,right]が単色であればよい
     if left >= right:
         answer = K
         break

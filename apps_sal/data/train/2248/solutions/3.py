@@ -24,6 +24,8 @@ for loop in range(tt):
     if q != 1:
         bk[q] = 1
 
+    #print (bk)
+
     ans = float("-inf")
     for i in bk:
         cnt = 0

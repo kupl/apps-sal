@@ -1,3 +1,7 @@
+######################
+# AC: ms(PyPy)
+# AC: ms(Python3)
+######################
 
 from bisect import bisect_left
 import sys

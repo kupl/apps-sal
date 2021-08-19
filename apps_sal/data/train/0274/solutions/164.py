@@ -10,6 +10,11 @@ class Solution:
         if n < 2:
             return n
 
+        # sliding window to calculate min-max range
+        # extend window if range is within limit r -->
+        # shrink window if range is off limit l -->
+        # sliding window is a sorted subarray
+
         longest = 1
         l, r = 0, 0
         window = []

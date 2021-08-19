@@ -7,13 +7,16 @@ class Solution:
             acc[i] = acc[i - 1] + arr[i]
         best_to = [n + 1 for _ in range(n)]
         best_from = dict()
-        min_total = n + 1
+        min_total = n + 1  # Naturally impossible length. Will be updated if any possible case exist. Will tell when no possible case
         min_left = n + 1
         sum_left = 0
         s_left = 0
 
         for i in range(n):
             sum_left = acc[i] - acc[s_left - 1]
+            # if i == 3:
+            # print(s_left)
+            # print(sum_left)
             if sum_left == target:
                 best_to[i] = i - s_left + 1
                 best_from[s_left] = i - s_left + 1
@@ -29,6 +32,9 @@ class Solution:
 
         for i in range(1, n):
             best_to[i] = min(best_to[i], best_to[i - 1])
+
+        # print(best_to)
+        # print(best_from)
 
         for i in range(n - 1):
             if best_to[i] > n:

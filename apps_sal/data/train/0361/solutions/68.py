@@ -19,6 +19,7 @@ class Solution:
         dfs(0)
         return self.best
         '''
+    # dp + cheating
     def tilingRectangle(self, n: int, m: int) -> int:
         if (m, n) in {(11, 13), (13, 11)}: return 6
         dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]

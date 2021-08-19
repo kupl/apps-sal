@@ -8,6 +8,9 @@ input = sys.stdin.readline
 def print(x):
     sys.stdout.write(str(x) + "\n")
 
+# sys.stdout=open("CP1/output.txt",'w')
+# sys.stdin=open("CP1/input.txt",'r')
+
 
 def power(x, y, m):
     if y == 0:

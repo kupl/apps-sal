@@ -2,8 +2,8 @@ N = int(input())
 A = [0] + list(map(int, input().split()))
 B = [[a, i, 1] for i, a in enumerate(A)]
 C = sorted(B, reverse=True)
-a_max, idx = 0, 0
-left_max = [[0, 0] for i in range(N + 1)]
+a_max, idx = 0, 0  # [value, idx]
+left_max = [[0, 0] for i in range(N + 1)]  # [value, idx]
 for i, a in enumerate(A):
     left_max[i] = [a_max, idx]
     if a > a_max:

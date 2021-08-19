@@ -1,5 +1,5 @@
 class Solution:
-    def to_minutes(self, timePoints):
+    def to_minutes(self, timePoints):  # if in place
         ret_list = []
         for hour in timePoints:
             h, m = tuple(map(int, hour.split(':')))
@@ -18,7 +18,7 @@ class Solution:
 
         minutes_p.sort()
 
-        min_minutes = 1439
+        min_minutes = 1439  # distance from 00:00 to 23:59
         for i in range(len(minutes_p) - 1):
             if i == 0:
                 min_minutes = min(abs(minutes_p[i] - minutes_p[i - 1] + 1440), min_minutes)

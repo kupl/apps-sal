@@ -25,8 +25,8 @@ for i in range(n):
 A = sorted(A)
 n = len(A) // 2
 ans = 0
-for i in range(n):
-    for j in range(1, n + 1):
+for i in range(n):  # 始点
+    for j in range(1, n + 1):  # 連続数
         X = 0
         Y = 0
         for k in range(i, i + j):

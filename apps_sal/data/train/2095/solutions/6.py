@@ -36,3 +36,6 @@ for i, a in enumerate(A):
 
 print(changed)
 print(' '.join(map(str, A)))
+
+
+# Made By Mostafa_Khaled

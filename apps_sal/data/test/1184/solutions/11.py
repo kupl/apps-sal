@@ -13,5 +13,6 @@ if m == ['']:
     print(0)
 else:
 
+    # print(m,len(m))
     r = C(m)
     print(len(list(r)))

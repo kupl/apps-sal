@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 def read(): return list(map(int, input().strip.split()))
 def rs(): return int(input().strip())

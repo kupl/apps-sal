@@ -5,4 +5,4 @@ def sum_digits(x):
     for j in str(x):
         if j != '-':
             suma += int(j)
-    return suma
+    return suma    # ...

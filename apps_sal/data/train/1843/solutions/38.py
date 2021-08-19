@@ -22,4 +22,25 @@ class TweetCounts:
                 index = int((t - startTime) // delta)
                 res[index] += 1
 
+        # i = delta
+        # if len(time_list) == 1:
+        #     if time_list[0] < startTime or time_list[0] > endTime:
+        #         res.append([0]*size)
+        #         return res[0]
+        # while startTime <= endTime:
+        #     while i < startTime:
+        #         i+=delta
+        #     count = 0
+        #     for t in time_list:
+        #         if startTime <= t <i:
+        #             count += 1
+        #     res.append(count)
+        #     startTime += delta
+        #     i += delta
         return res
+
+
+# Your TweetCounts object will be instantiated and called as such:
+# obj = TweetCounts()
+# obj.recordTweet(tweetName,time)
+# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

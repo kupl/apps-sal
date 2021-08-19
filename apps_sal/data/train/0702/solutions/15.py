@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     m, a, b = map(int, input().split())
     mins = abs(a - b) // 3

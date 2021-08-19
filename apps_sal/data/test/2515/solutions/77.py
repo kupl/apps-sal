@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 from collections import deque
 from collections import defaultdict
@@ -10,6 +11,8 @@ import bisect
 import copy
 import math
 sys.setrecursionlimit(10**6)
+
+# lis_of_lis = [[] for _ in range(N)]
 
 
 def zz(): return list(map(int, sys.stdin.readline().split()))
@@ -51,6 +54,7 @@ for i in range(3, max_, 2):
     if (i in like2017):
         num_lile2017[i] = 1
 num_lile2017 = list(accumulate(num_lile2017))
+# print(num_lile2017)
 
 Q = z()
 for i in range(Q):

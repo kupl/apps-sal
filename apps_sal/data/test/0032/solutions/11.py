@@ -17,6 +17,7 @@ for i in range(n):
             currentPos -= k
         elif dir == 'South':
             currentPos += k
+    # print(currentPos)
 if currentPos != 0:
     b = 1
 if b == 0:

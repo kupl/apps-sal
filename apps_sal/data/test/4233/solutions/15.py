@@ -6,6 +6,7 @@ def li():
     return list(map(int, input().split()))
 
 
+# https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
 def modInverse(a, m):
     m0 = m
     y = 0
@@ -91,6 +92,7 @@ for i in range(n):
                 else:
                     break
             zz = min(u, d, l, r)
+            # print(i,j,zz)
             if(zz == 0):
                 continue
             pp.append((i + 1, j + 1, zz))

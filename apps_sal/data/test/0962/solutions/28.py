@@ -3,6 +3,7 @@ from collections import deque
 
 
 def shave(fwd_link, bwd_link):
+    # Vertices having no leaving link
     q = [v for v, links in enumerate(fwd_link) if not links]
     while q:
         v = q.pop()
@@ -10,6 +11,7 @@ def shave(fwd_link, bwd_link):
             fwd_link[u].remove(v)
             if not fwd_link[u]:
                 q.append(u)
+    # Vertices having no entering link
     q = [v for v, links in enumerate(bwd_link) if not links]
     while q:
         v = q.pop()

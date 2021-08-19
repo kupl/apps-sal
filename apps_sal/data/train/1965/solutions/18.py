@@ -8,7 +8,7 @@ class DJ_DS():
         self.rank = [0 for i in range(n)]
         self.nb_edges = 0
 
-    def find_parent(self, i):
+    def find_parent(self, i):  # faster with path compression
         if self.parent[i] != i:
             self.parent[i] = self.find_parent(self.parent[i])
         return self.parent[i]
@@ -34,6 +34,7 @@ class DJ_DS():
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         nb_edges = len(edges)
+        # list of edges of each color individually
         type1, type2, type3 = [], [], []
         for [t, u, v] in edges:
             if t == 1:
@@ -43,16 +44,19 @@ class Solution:
             else:
                 type3.append([u - 1, v - 1])
 
+        # Count nb_edges with type 3 only in max forest
         dj_3 = DJ_DS(n)
         dj_3.perform_merge(type3)
         sol_3 = dj_3.nb_edges
         dj_1 = copy.deepcopy(dj_3)
         dj_2 = copy.deepcopy(dj_3)
 
+        # From type 3 forest add edges from type 1 to see if spanning tree, if not return -1
         dj_1.perform_merge(type1)
         if dj_1.nb_edges < n - 1:
             return -1
 
+        # From type 3 forest add edges from type 2 to see if spanning tree, if not return -1
         dj_2.perform_merge(type2)
         if dj_2.nb_edges < n - 1:
             return -1

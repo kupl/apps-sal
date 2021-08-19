@@ -3,7 +3,7 @@ class Solution:
         m, n = len(grid), len(grid[0])
 
         def is_floor(i, j):
-            return 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != '
+            return 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != '#'
 
         def bfs(start_i, start_j, box_i, box_j):
             visited, queue, reach_list = [[0 for _ in range(n)] for _ in range(m)], [(start_i, start_j)], []

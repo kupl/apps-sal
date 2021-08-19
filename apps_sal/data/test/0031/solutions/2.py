@@ -1,9 +1,12 @@
+#!/usr/bin/env python3
 import os
 MOD = 1000003
 inv2 = pow(2, MOD - 2, MOD)
 
 
 def logm(n, m):
+    # log = 3.3
+    # return (3, False)
     ans = 0
     whole = True
     while n >= m:
@@ -35,6 +38,8 @@ def main():
 
     num = 1
     Nr = pow(2, n, MOD)
+    # N * (N-1) * ... * (N - k + 1)
+    # (-0) * (-1) *
     for t in range(1, k):
         i = (Nr - t) % MOD
         if i == 0:

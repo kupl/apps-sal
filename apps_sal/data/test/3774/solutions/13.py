@@ -19,3 +19,4 @@ else:
         print((n * m - 1))
     else:
         print(n * m)
+# find the formula myself!

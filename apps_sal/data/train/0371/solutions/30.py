@@ -14,7 +14,7 @@ class Solution:
 
         node2 => {3,6,7}
         '''
-        buses = defaultdict(list)
+        buses = defaultdict(list)  # map stops to buses
         for i in range(len(routes)):
             for stop in routes[i]:
                 buses[stop].append(i)
@@ -30,6 +30,7 @@ class Solution:
                     continue
                 busVisited.add(bus)
                 for reachableStop in routes[bus]:
+                    # if reachableStop not in visited:
                     queue.append((reachableStop, busCnt + 1))
 
         return -1

@@ -1,5 +1,7 @@
 a, b, c, d = map(int, input().split())
 
+# 高橋君のモンスターは体力が A で攻撃力が B です。  a-d
+# 青木君のモンスターは体力が C で攻撃力が D です。  c-b
 
 takahashi_hp = a
 aoki_hp = c

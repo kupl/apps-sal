@@ -9,7 +9,12 @@ def compresswords(n, words):
 
     for i in range(1, len(words)):
         lps = getlps(words[i])
+        # print(lps)
         idx = getsuffixmatchIdx(a, words[i], lps)
+        # print(idx)
+
+        # if idx == -1:
+        #    idx = 0
 
         for j in range(idx, len(words[i])):
             a.append(words[i][j])
@@ -34,6 +39,9 @@ def getlps(w):
 
         lps.append(idx)
 
+    # for i in range(len(lps)):
+    #    lps[i] += 1
+
     return lps
 
 
@@ -43,6 +51,8 @@ def getsuffixmatchIdx(a, w, lps):
     for i in range(max(0, len(a) - len(w)), len(a)):
         c = a[i]
 
+        #print('w: ' + w[widx] + ' ' + str(widx))
+
         while widx >= 0 and w[widx] != c:
             widx -= 1
             if widx > 0:
@@ -50,6 +60,13 @@ def getsuffixmatchIdx(a, w, lps):
                     widx = lps[widx] + 1
                 else:
                     widx = 0
+
+        #print('c: ' + str(c) + ' ' + str(widx) + ' | ' + str(i))
+        # print('-------------------------------')
+        # if widx >= 0:
+            # find match
+        # else:
+            # no match
 
         widx += 1
 
@@ -65,7 +82,14 @@ def __starting_point():
 
     res = compresswords(n, words)
 
+    # stdout.write(res)
     print(res)
+
+    #lps = getlps('ABABCABABX')
+    # print(lps)
+    #a = ['a','b','c','d','A','B']
+    #r = getsuffixmatchIdx(a, 'ABABCABABX', lps)
+    # print(r)
 
 
 __starting_point()

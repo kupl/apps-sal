@@ -1,3 +1,4 @@
+# cook your dish here
 def check(a, b):
 
     for i in range(t):

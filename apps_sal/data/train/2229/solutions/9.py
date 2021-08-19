@@ -1,5 +1,7 @@
 import sys
 
+# listindexes is sorted
+
 
 def removeat(string, indexes):
 

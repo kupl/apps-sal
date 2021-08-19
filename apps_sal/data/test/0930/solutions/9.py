@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -39,7 +40,7 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 10 ** 6
+U = 10 ** 6  # 階乗テーブルの上限
 fact, fact_inv = make_fact(U, MOD)
 
 N, K = lr()

@@ -146,7 +146,7 @@ class Solution:
             t[i] += t[i - 1]
 
         nums.sort()
-        t.pop()
+        t.pop()  # Makes it so t matches length with nums
         t.sort()
 
         return sum(a * b for a, b in zip(nums, t)) % (10**9 + 7)

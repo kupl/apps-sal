@@ -8,6 +8,12 @@ n = int(input())
 a = list(readints())
 
 
+# for k in range(1,9):
+#     buf=''
+#     for i in range(1,9):
+#         buf+=str(i%k)+' '
+#     print(buf)
+
 P = 0
 for p in a:
     P = P ^ p

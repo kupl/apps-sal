@@ -5,6 +5,7 @@ class Solution:
 
         while queue:
             curr_A, curr_k, curr_p = queue.popleft()
+            # print(curr_A, curr_k, curr_p)
             if curr_A == B:
                 return curr_k
             for i in range(curr_p, len(A)):

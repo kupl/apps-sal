@@ -1,4 +1,5 @@
 class Solution:
+    # @return a string
     def longestPalindrome(self, s):
         if len(s) == 0:
             return 0

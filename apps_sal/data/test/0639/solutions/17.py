@@ -1,3 +1,4 @@
+# python3
 
 numbers_nr, evil_value = (int(x) for x in input().split())
 numbers = [int(x) for x in input().split()]

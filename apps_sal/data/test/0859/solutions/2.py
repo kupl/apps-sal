@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import itertools
 
@@ -23,6 +25,7 @@ if s2_q == 0:
     else:
         print(0.0)
 else:
+    #print("diff_pos = ", diff_pos)
     num = 0
     den = 0
     for c in itertools.product([1, -1], repeat=s2_q):

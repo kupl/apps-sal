@@ -17,6 +17,8 @@ def main():
         i = 0
 
         for index, elem in enumerate(a_string):
+            # if (index + 1) in moves[:(middle + 1)]:
+            #  continue
             if index_of_move[index + 1] <= middle + 1:
                 continue
             if elem is b_string[bi]:

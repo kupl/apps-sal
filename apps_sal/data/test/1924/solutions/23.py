@@ -11,6 +11,10 @@ def main():
     inv[1] = 1
     for i in range(2, N):
         fac[i] = fac[i - 1] * i % mod
+        # mod pにおける1, 2, ..., nの逆元
+        # inv[i] = mod - inv[mod % i] * (mod // i) % mod
+        # finv[i] = finv[i - 1] * inv[i] % mod
+    # modにおける1!, 2!, ...の逆元
     finv[N // 2] = pow(fac[N // 2], mod - 2, mod)
     for i in reversed(list(range(N // 2))):
         finv[i] = (finv[i + 1] * (i + 1)) % mod

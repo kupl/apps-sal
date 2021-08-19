@@ -1,4 +1,5 @@
 '''Author- Akshit Monga'''
+# Complexity- (26*26*|S|)
 from sys import stdin, stdout
 input = stdin.readline
 t = int(input())

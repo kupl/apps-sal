@@ -15,7 +15,9 @@ for i in l:
     c = [0 for i in range(h)]
     cc = 0
     f = 1
+    # print(i,0)
     for j in range(w):
+        # print(c)
         ff = 0
         for k in range(h):
             c[i[k]] += s[k][j]
@@ -33,8 +35,10 @@ for i in l:
                     f = 1
             if f:
                 cc = w + h
+                # print(c)
                 break
         f = 0
+    # print(cc)
     if mc > cc + len(set(i)) - 1:
         mc = cc + len(set(i)) - 1
 print(mc)

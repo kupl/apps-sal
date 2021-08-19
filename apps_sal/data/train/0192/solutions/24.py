@@ -1,5 +1,7 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
+        # [2,4,1,2,7,8]
+        # [1,2,2,4,7,8]
         piles.sort()
         n = len(piles)
 

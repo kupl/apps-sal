@@ -13,4 +13,4 @@ class Solution:
             for matching_time in range(60 - t % 60, maxtime + 1, 60):
                 if matching_time in timedict:
                     pairs += timedict[matching_time] - (t == matching_time)
-        return pairs // 2
+        return pairs // 2  # we double-counted

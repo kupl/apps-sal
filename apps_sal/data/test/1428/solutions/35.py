@@ -4,11 +4,13 @@ Dmat = []
 for i in range(C):
     array = list(map(int, input().split()))
     Dmat.append(array)
+# print(Dmat)
 
 cmat = []
 for i in range(N):
     array = list(map(int, input().split()))
     cmat.append(array)
+# print(cmat)
 grid_list = [{}, {}, {}]
 for i in range(N):
     for j in range(N):
@@ -18,6 +20,7 @@ for i in range(N):
             grid_list[mod][c] += 1
         else:
             grid_list[mod][c] = 1
+# print(grid_list)
 
 min_cost = 10**9
 for i in range(C):
@@ -41,6 +44,7 @@ for i in range(C):
                 cost += Dmat[c][k] * num
 
             if cost < min_cost:
+                # print(i,j,k,cost)
                 min_cost = cost
 
 print(min_cost)

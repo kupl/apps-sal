@@ -41,15 +41,19 @@ for q in Q_ls:
     Rtemple = temple_ls[i_Rtemple]
     i_Ltemple = i_Rtemple - 1
     Ltemple = temple_ls[i_Ltemple]
+    # Temple,Shrine共に右
     RR = max(Rtemple, Rshrine) - q
+    # Temple,Shrine共に左
     if i_Lshrine >= 0 and i_Ltemple >= 0:
         LL = abs(min(Ltemple, Lshrine) - q)
     else:
         LL = float('inf')
+    # 右templeと左shrine
     if i_Lshrine >= 0:
         RtLs = 2 * min(Rtemple - q, q - Lshrine) + max(Rtemple - q, q - Lshrine)
     else:
         RtLs = float('inf')
+    # 左templeと右shrine
     if i_Ltemple >= 0:
         LtRs = 2 * min(Rshrine - q, q - Ltemple) + max(Rshrine - q, q - Ltemple)
     else:

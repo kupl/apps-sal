@@ -24,8 +24,10 @@ for _ in range(t):
             if l[i] > l[j]:
                 swapN += 1
 
+    # print(l)
     if swapN & 1:
         l[swap[0]], l[swap[1]] = l[swap[1]], l[swap[0]]
+    # print(l)
 
     def shift(i):
         out.append(i + 1)
@@ -61,8 +63,10 @@ for _ in range(t):
                 works = False
                 break
 
+    # print(l)
     if works:
         print(len(out))
         print(' '.join(map(str, out)))
     else:
         print(-1)
+    # print('---')

@@ -14,4 +14,5 @@ class Solution:
                 for i in range(L(nums)):
                     nums[i] >>= 1
                 op += 1
+            #print(nums, op)
         return op

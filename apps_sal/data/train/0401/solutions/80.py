@@ -30,5 +30,6 @@ class Solution:
                 if dp[i - 1][2]:
                     dp[i][1] = max(dp[i][1], dp[i - 1][2] + nums[i])
                 dp[i][2] = max(dp[i][2], dp[i - 1][0] + nums[i])
+            # print(i, dp[i])
 
         return dp[n - 1][0]

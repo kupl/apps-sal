@@ -5,6 +5,7 @@ while n:
     s = input()
     for j in range(m):
         k[j] += s[j] == 'Y'
+# kitten
 for i in k:
     n += i >= t
 print(n)

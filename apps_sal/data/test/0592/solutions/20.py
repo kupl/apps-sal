@@ -1,7 +1,12 @@
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import collections
 
 N = int(input())
+#s = input()
+#N,Q = [int(x) for x in stdin.readline().split()]
 
 res = 0
 for m in range(2, N + 1):

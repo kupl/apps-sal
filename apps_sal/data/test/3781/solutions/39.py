@@ -1,3 +1,5 @@
+# problem: let's play nim
+# problem id: arc105 d
 
 import sys
 from collections import Counter

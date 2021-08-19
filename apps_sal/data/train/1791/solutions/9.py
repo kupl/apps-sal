@@ -50,8 +50,8 @@ def escape(maze):
                 pos = pp
             return rpath[::-1]
 
-        if cell == '
-        continue
+        if cell == '#':
+            continue
 
         for n in neighs(maze, pos):
             if n not in prev:

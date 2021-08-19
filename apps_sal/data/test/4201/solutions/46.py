@@ -9,7 +9,7 @@ def main():
     h, w, k = map(int, input().split())
     gg = []
     for _ in range(h):
-        row = [1 if c == '
+        row = [1 if c == '#' else 0 for c in list(input())]
         gg.extend(row)
     row_pro = tuple(product((0, 1), repeat=h))
     col_pro = tuple(product((0, 1), repeat=w))

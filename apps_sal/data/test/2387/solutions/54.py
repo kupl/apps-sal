@@ -1,3 +1,7 @@
+#from collections import defaultdict, deque
+#import itertools
+#import numpy as np
+#import re
 import bisect
 
 
@@ -11,6 +15,7 @@ def main():
         while '()' in s:
             s = s.replace('()', '')
         S.append(s)
+    # print(S)
     S = [s for s in S if s != '']
     sum_op = 0
     sum_cl = 0
@@ -24,10 +29,13 @@ def main():
         else:
             pos = s.find('(')
             if pos <= len(s) - pos:
-                S_both_op.append((pos, len(s) - pos))
+                S_both_op.append((pos, len(s) - pos))  # closeのほうが少ない、'))((('など -> (2,3)
             else:
-                S_both_cl.append((pos, len(s) - pos))
+                S_both_cl.append((pos, len(s) - pos))  # closeのほうが多い、')))(('など -> (3,2)
 
+    # S_both_opは、耐えられる中でより伸ばす順にしたほうがいい？
+    # S_both_op.sort(key=lambda x: (x[0], x[0]-x[1]))  #closeの数が小さい順にsortかつclose-openが小さい=伸ばす側にsort
+    # S_both_cl.sort(key=lambda x: (x[0], x[0]-x[1]))  #これもcloseの数が小さい順にsortかつclose-openが小さい=あまり縮まない順にsort
     S_both_op.sort(key=lambda x: x[0])
     S_both_cl.sort(key=lambda x: -x[1])
 

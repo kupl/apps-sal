@@ -1,3 +1,4 @@
+# Fast IO (only use in integer input)
 
 import os
 import io

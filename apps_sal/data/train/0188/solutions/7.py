@@ -28,8 +28,8 @@ class Solution:
         if not num:
             return 'Zero'
 
-        res = num // 1000
-        last3 = num % 1000
+        res = num // 1000    # 商
+        last3 = num % 1000     # 余数，后三位
         ans = ''
 
         while res or last3:

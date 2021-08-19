@@ -32,6 +32,7 @@ class Solution:
                 c[sj] += c[si]
                 return sj
 
+        # connected component
         e1s = []
         e2s = []
         s = -1

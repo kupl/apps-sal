@@ -1,3 +1,4 @@
+# cook your dish here
 c, f = map(int, input().split())
 dist = [[float('Inf') for _ in range(c)] for _ in range(c)]
 for _ in range(f):

@@ -1,9 +1,22 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[22]:
 
 
 n, m = list(map(int, input().rstrip().split()))
 data = []
 for i in range(0, n):
     data.append(list(map(int, input().rstrip().split())))
+
+
+# In[4]:
+
+
+# In[ ]:
+
+
+# In[64]:
 
 
 def mergesortbysecond(l):
@@ -15,6 +28,8 @@ def mergesortbysecond(l):
         llower.append(l[i])
     for i in range(int(len(l) / 2), len(l)):
         lupper.append(l[i])
+    # print(lupper)
+    # print(llower)
 
     slower = mergesortbysecond(llower)
     supper = mergesortbysecond(lupper)
@@ -29,21 +44,35 @@ def mergesortbysecond(l):
         elif supper[u][1] < slower[b][1]:
             sort.append(supper[u])
             u = u + 1
+    # print(sort)
     if b == len(slower):
         for i in range(u, len(supper)):
             sort.append(supper[i])
     elif u == len(supper):
         for i in range(b, len(slower)):
             sort.append(slower[i])
+    # print(sort)
     return sort
+
+
+# In[2]:
+
+
+# In[65]:
 
 
 sort = mergesortbysecond(data)
 
 
+# In[66]:
+
+
 bsort = []
 for i in range(0, n):
     bsort.append(sort[n - i - 1])
+
+
+# In[67]:
 
 
 dic = {}
@@ -54,9 +83,15 @@ for i in range(0, n):
         dic[bsort[i][0]] = [bsort[i][1]]
 
 
+# In[68]:
+
+
 array = []
 for i in range(0, n):
     array.append([])
+
+
+# In[69]:
 
 
 for ele in dic:
@@ -66,7 +101,13 @@ for ele in dic:
         array[i].append(j)
 
 
+# In[70]:
+
+
 array
+
+
+# In[71]:
 
 
 ma = 0
@@ -80,4 +121,10 @@ for i in range(0, len(array)):
         ma = s
 
 
+# In[72]:
+
+
 print(ma)
+
+
+# In[ ]:

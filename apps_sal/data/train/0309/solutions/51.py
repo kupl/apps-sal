@@ -1,12 +1,13 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        memo = {}
+        memo = {}  # storing next Item -> (diff pattern, length so far)
+        # [a, b, c]
         maxLength = 2
 
         if len(A) < 3:
             return len(A)
 
-        for i in range(len(A)):
+        for i in range(len(A)):  # iterating over A
             if A[i] in memo:
                 toIter = [(i, j) for i, j in list(memo[A[i]].items())]
                 del memo[A[i]]

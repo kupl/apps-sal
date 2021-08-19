@@ -4,6 +4,9 @@ import sys
 def main(N, C, A, B):
     import sys
     input = sys.stdin.readline
+    #N,C = map(int,input().split())
+    #A = list(map(int,input().split()))
+    #B = list(map(int,input().split()))
     mod = 10**9 + 7
     powA = [[0] * (401) for i in range(401)]
     for i in range(401):
@@ -27,11 +30,15 @@ def main(N, C, A, B):
                 tmp = (tmp + (S[k][B[i]] - S[k][A[i] - 1]) * dp[i - 1][j - k]) % mod
             dp[i][j] = tmp
     print(dp[N - 1][C])
+    # print(S[1])
 
 
 def main2(N, C, A, B):
     import sys
     input = sys.stdin.readline
+    #N,C = map(int,input().split())
+    #A = list(map(int,input().split()))
+    #B = list(map(int,input().split()))
     mod = 10**9 + 7
     powA = [[0] * (401) for i in range(401)]
     for i in range(401):

@@ -1,3 +1,5 @@
+# 956. Tallest Billboard
+# version 2, inspired by the quote \"only the difference matters\".
 
 def register(diffs, index, a):
     if index not in diffs:

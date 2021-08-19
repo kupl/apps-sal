@@ -1,6 +1,6 @@
 import sys
 
-cubes = list(input())
+cubes = list(input())  # 入力受付
 stack = []
 count = 0
 

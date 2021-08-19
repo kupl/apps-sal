@@ -1,4 +1,5 @@
 
+# rock, scissors, paper
 def count_wins(a1, a2, a3, b1, b2, b3):
     return min(a1, b2) + min(a2, b3) + min(a3, b1)
 

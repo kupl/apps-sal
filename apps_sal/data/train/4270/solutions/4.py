@@ -1,3 +1,4 @@
+# krishp
 def odd_ball(arr):
     fl = arr.index("odd")
     for i in arr:

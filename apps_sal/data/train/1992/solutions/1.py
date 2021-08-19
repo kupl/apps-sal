@@ -20,3 +20,9 @@ class CombinationIterator:
 
     def hasNext(self) -> bool:
         return self.start < self.end
+
+
+# Your CombinationIterator object will be instantiated and called as such:
+# obj = CombinationIterator(characters, combinationLength)
+# param_1 = obj.next()
+# param_2 = obj.hasNext()

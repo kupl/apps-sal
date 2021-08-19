@@ -15,11 +15,13 @@ for _ in range(t):
     p = -1
     for i in range(q):
         x = int(input())
+        # print(d)
         if d[x] != -1:
             print(e, o)
             continue
         s.append(x)
         d[x] = 1
+        # z=len(s)
         for j in s:
             if j != x:
                 l = j ^ x

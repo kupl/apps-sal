@@ -1,15 +1,18 @@
+# Optimizing above solution by starting from right to left, and adding the elements to a balanced BST so that they can be searched for in O(logn) time. We also maintain a hashmap for the earliest index of a certain number.
 
 from sortedcontainers import SortedSet
 
 
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
+        # Helper function that gets the index of the smallest index i such that A[i] >= x
         def getNextLargerIdx(x):
             i = sortedSet.bisect_left(x)
             if i == len(sortedSet):
                 return -1
             return indices[sortedSet[i]]
 
+        # Helper function that gets the index of the smallest index i such that A[i] <= x
         def getNextSmallerIdx(x):
             i = sortedSet.bisect_right(x)
             if i == 0:

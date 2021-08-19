@@ -3,6 +3,7 @@ from collections import defaultdict
 dx = [0, -1, -1, -1, 0, 1, 1, 1]
 dy = [1, 1, 0, -1, -1, -1, 0, 1]
 
+#visited =[[[[False for _ in range(32)] for _ in range(8)] for _ in range(320)] for _ in range(320)]
 visited = defaultdict(lambda: False)
 
 grid = [[False for _ in range(320)] for _ in range(320)]

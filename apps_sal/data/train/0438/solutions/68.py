@@ -1,8 +1,8 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        lens = defaultdict(int)
+        lens = defaultdict(int)  # len of union, count
 
-        unions = {}
+        unions = {}  # start:end, or vice versa
 
         latest = -1
 
@@ -24,3 +24,5 @@ class Solution:
                 latest = step + 1
 
         return latest
+
+        # 1 0 1 0 1

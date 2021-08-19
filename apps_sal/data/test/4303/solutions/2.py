@@ -12,8 +12,10 @@ def __starting_point():
         left = A[i]
         right = A[i + k - 1]
 
+        # 1 abs(left) < abs(right) の場合
         tmp2 = abs(left) + abs(right - left)
 
+        # 2 abs(right) > abs(left)の場合
         tmp3 = abs(right) + abs(left - right)
 
         ans = min(ans, min(tmp2, tmp3))

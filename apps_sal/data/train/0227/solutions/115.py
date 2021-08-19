@@ -38,6 +38,7 @@ Bolded numbers were flipped from 0 to 1.  The longest subarray is underlined.
 
 class Solution:
     def longestOnes1(self, A: List[int], K: int) -> int:
+        # 开区间[start, end)
         start = 0
         end = 0
         ret = 0
@@ -63,3 +64,10 @@ class Solution:
                 K += 1 - A[i]
                 i += 1
         return j - i + 1
+
+# A = [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+# K = 3
+#
+# r = Solution()
+# a = r.longestOnes(A, K)
+# print(a)

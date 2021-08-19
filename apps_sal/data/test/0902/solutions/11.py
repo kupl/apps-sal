@@ -12,3 +12,4 @@ while True:
     else:
         ar.append(ar.pop(0))
     winns[ar[0]] += 1
+    # print(ar)

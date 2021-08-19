@@ -14,10 +14,10 @@ for i in range(com):
 
 for i in range(com - 1):
     u = 0
-    if zar[0][1] > zar[i + 1][1]:
+    if zar[0][1] > zar[i + 1][1]:  # 1 больше 2
         u = zar[0][1] - zar[i + 1][1]
         y += u * zar[i + 1][0]
-    else:
+    else:  # 2 больше 1
         u = zar[i + 1][1] - zar[0][1]
         y += u * zar[0][0]
         zar[0][1] = zar[i + 1][1]

@@ -7,6 +7,7 @@ def main():
         return
     for i in range(N):
         s = input()
+        # merge node:
         while len(s) > 0:
             if s[-1] == '1' and s[:-1] + '0' in keys:
                 keys.remove(s[:-1] + '0')
@@ -29,6 +30,7 @@ def main():
             if j[:-1] != "":
                 keys.append(j[:-1])
             j = j[:-1]
+            # merge node
             while len(j) > 0:
                 if j[-1] == '1' and j[:-1] + '0' in keys:
                     keys.remove(j[:-1] + '0')

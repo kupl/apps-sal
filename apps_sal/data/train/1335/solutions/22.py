@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import groupby
 try:
     N = int(input())

@@ -1,4 +1,5 @@
 def solution(string, ending):
+    # your code here...
     index = len(ending)
 
     substr = string[(0 - index):]

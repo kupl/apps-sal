@@ -19,6 +19,7 @@ class Solution:
             if num < n and tmp_arr[num]:
                 memo[left[num] + right[num] - 1] -= 1
                 left[num] += left[num - 1]
+                # print(\"haha\", tmp_arr, left, right)
                 if (num - 2 + right[num - 1]) != num:
                     left[num - 2 + right[num - 1]] += left[num - 1]
 
@@ -27,4 +28,5 @@ class Solution:
             if memo[m] > 0:
 
                 last_step = i + 1
+            # print(memo, tmp_arr, left, right)
         return last_step

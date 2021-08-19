@@ -1,3 +1,4 @@
+# Program to print the winner of the candy party among limak and Bob
 
 
 def winner(a, b):

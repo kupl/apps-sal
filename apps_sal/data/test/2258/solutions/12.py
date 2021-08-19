@@ -1,3 +1,4 @@
+# from debug import debug
 inf = int(1e6)
 
 n = int(input())

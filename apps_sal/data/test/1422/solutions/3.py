@@ -2,6 +2,7 @@ import sys
 
 
 def solve(a, b, m, M, weights, last, solution):
+    # print(a,b,m,M,weights, solution)
     if (a - b > 10):
         return False
     if m == M:

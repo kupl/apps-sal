@@ -1,3 +1,7 @@
+# coding: utf-8
+# hello worldと表示する
+# float型を許すな
+# numpyはpythonで
 from math import floor, ceil, pi, factorial, sqrt
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -34,11 +38,13 @@ for i in range(n):
         vals[2].append(lis[i][1])
     else:
         vals[3].append(lis[i][1])
+# print(vals)
 for i in range(4):
     vals[i].sort(reverse=True)
     vals[i] = list(accumulate(vals[i]))
     vals[i] = [0] + vals[i]
 mx = 0
+# print(vals)
 for i in range(len(vals[0])):
     for j in range(len(vals[1])):
         for k in range(len(vals[2])):

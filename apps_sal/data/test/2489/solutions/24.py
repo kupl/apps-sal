@@ -1,3 +1,4 @@
+# coding: utf-8
 n = int(input())
 A = list(map(int, input().split()))
 a_ = max(A)
@@ -16,6 +17,7 @@ for a in A_:
         while tmp <= a_:
             dp[tmp] = False
             tmp += a
+# print(dp)
 for a in A_:
     if dp[a]:
         if C[a] == 1:

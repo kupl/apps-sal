@@ -16,6 +16,7 @@ for i in range(t):
         else:
             hmap[arr2[i]] = 1
     ans = []
+    # print(hmap)
     for key in hmap:
         if hmap[key] == 1:
             ans.append(key)

@@ -1,5 +1,7 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # asc stack
+        # desc stack
         asc, desc = deque(), deque()
         left = 0
         longest = 0

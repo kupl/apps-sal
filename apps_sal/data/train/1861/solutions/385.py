@@ -4,6 +4,7 @@ class Solution:
         x = defaultdict(set)
         y = defaultdict(set)
         z.sort()
+        #se= set(tuple(i) for i in z)
         for a, b in z:
             x[a].add(b)
             y[b].add(a)

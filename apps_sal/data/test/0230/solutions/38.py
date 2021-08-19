@@ -13,12 +13,19 @@ def main():
     for i in range(n + 1):
         t[i] += tmp
         tmp -= 1
+#    for i in range(n+1):
+#        print(t[i])
     for i in range(n):
         c = s[i]
         equal = (c == s)
+#        print(equal)
         dp[i + 1][1:] += equal
         dp[i + 1][1:] += equal * dp[i][:-1]
+#    for i in range(n+1):
+#        print(dp[i])
     dp = np.minimum(dp, t)
+#    for i in range(n+1):
+#        print(dp[i])
     ans = 0
     for i in range(1, n):
         tmp = dp[i][i + 1:]

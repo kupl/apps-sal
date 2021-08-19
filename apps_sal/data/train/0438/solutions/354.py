@@ -41,11 +41,13 @@ class Solution:
             arr[num] = 1
             groupSize[num] = 1
             ugm(num)
+            # print(arr)
             if num - 1 >= 0 and arr[num - 1]:
                 join(num - 1, num)
 
             if num + 1 < n and arr[num + 1]:
                 join(num, num + 1)
+            # print(groupMap)
             if len(groupMap) > 0:
                 ans = ind + 1
         return ans

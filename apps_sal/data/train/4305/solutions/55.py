@@ -12,6 +12,16 @@ def order_weight(strng):
         p = sorted(q, key=lambda t: (t[0], t))
         print(p)
         v = list(zip(*p))
+    # print(v[1])
         return " ".join(v[1])
     else:
         return strng
+
+# def getsum(stg):
+#    k = []
+ #   for i in stg:
+  #       l = 0
+   #     for m in i:
+  #          l += int(m)
+    #    k.append(l)
+# have this fns take a number as an input and output the sum of the digits

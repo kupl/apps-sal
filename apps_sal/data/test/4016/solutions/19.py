@@ -7,9 +7,11 @@ max_prefix = ''
 
 for i in range(1, len(t)):
     l = t[-i:]
+    # print(str(i) + " : " + l)
     if(t.startswith(l)):
         max_prefix = l
 
+# print("Max prefix :- " + max_prefix)
 
 s = ''
 

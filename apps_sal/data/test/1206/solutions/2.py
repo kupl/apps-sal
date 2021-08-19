@@ -9,11 +9,14 @@ allPairs = [x for x in (itertools.product((0, 1, 2), repeat=len(pairs))) if (x.c
 
 def analyze_sec_price_prob(companiesProb):
     secPriceProb = 0
+#	print(companiesProb, "||||||||||")
     for oneChoice in allPairs:
         compChain = 1
         for index in range(len(companiesProb)):
             compChain *= companiesProb[index][oneChoice[index]]
         secPriceProb += compChain
+#		if compChain > 0:
+#			print(oneChoice, "&&&&&&&&&")
     return secPriceProb
 
 

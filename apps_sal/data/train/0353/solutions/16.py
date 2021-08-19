@@ -1,5 +1,6 @@
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
+        # time O(nlogn); space O(1)
         nums.sort()
         left, right = 0, len(nums) - 1
         res = 0

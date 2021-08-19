@@ -5,6 +5,7 @@ accum_Wls = [0]
 for W in Wls:
     accum_Wls.append(accum_Wls[-1] + W)
 
+# print(accum_Wls)
 
 ans = 10**9 + 13
 

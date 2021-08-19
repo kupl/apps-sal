@@ -9,6 +9,7 @@ for i in range(m):
         x, y = y, x
     g[x].append(y)
     g[y].append(x)
+# print(g)
 
 im = 0
 mx = 0

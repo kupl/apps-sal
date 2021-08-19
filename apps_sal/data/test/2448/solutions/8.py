@@ -57,6 +57,9 @@ def solve(N, A, B, C, S):
     return ''.join(sol)
 
 
+###############################################################################
+# AUXILIARY FUNCTIONS
+
 DEBUG = 'DEBUG' in os.environ
 
 

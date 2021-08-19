@@ -34,4 +34,5 @@ def solve(p, k):
 
 
 p, k = list(map(int, input().split()))
+#print(gen([], p, k, 0))
 print(solve(p, k))

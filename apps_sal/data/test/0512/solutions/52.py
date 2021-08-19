@@ -34,6 +34,7 @@ def solve(N, ab):
     for i in range(ab.shape[0]):
         a = ab[i, 0]
         b = ab[i, 1]
+        # 両方の値がある場合
         if a > - 1 and b > -1:
             if b - a <= 0:
                 return 0

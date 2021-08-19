@@ -9,6 +9,11 @@ class Solution:
 
             if d is None:
                 if K == 1 or N <= 2:
+                    # 1) K == 1: Only one egg is left.
+                    # Drop egg from bottom floor up until it breaks.
+                    # Maximum N drops.
+                    # 2) N <= 2: Simple cases that don't need binary search.
+                    # Same strategy as above.
                     d = N
 
                 else:

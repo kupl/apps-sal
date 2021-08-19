@@ -1,3 +1,5 @@
+# A - Sandglass2
+# https://atcoder.jp/contests/abc072/tasks/abc072_a
 
 X, t = list(map(int, input().split()))
 

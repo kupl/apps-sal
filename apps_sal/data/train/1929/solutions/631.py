@@ -23,3 +23,8 @@ class StreamChecker:
             self.queries.append(self.root[letter])
 
         return any([q for q in self.queries if EOW in q])
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -7,6 +8,7 @@ for _ in range(int(input())):
         temp += a[i] % 2
         sum.append(temp)
     q = int(input())
+    # print(sum)
     while q != 0:
         q -= 1
         l, r = [int(x) for x in input().split()]

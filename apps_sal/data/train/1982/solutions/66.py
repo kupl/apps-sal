@@ -6,6 +6,7 @@ class Solution:
             u, v = e
             graph[u].add(v)
 
+            # TODO map in both directons? I think so
             graph[v].add(u)
 
         print(graph)

@@ -6,6 +6,7 @@ class Solution:
         segment = {}
         res = -1
         for step, a in enumerate(arr):
+            # print(count)
             if a - 1 in segment and a + 1 in segment:
                 count[abs(a - 1 - segment[a - 1]) + 1] -= 1
                 count[abs(a + 1 - segment[a + 1]) + 1] -= 1
@@ -42,4 +43,5 @@ class Solution:
             if count[m] > 0:
 
                 res = step + 1
+        # print(count)
         return res

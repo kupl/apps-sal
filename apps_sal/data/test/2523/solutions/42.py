@@ -1,5 +1,10 @@
 
 
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+
+
 s = input()
 
 if len(s) % 2 == 0:

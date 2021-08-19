@@ -3,6 +3,8 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         self.coins = coins
         self.amount_dict = {0: 0}
+        # for coin in coins:
+        #     self.amount_dict[coin] = 1
         return self.coinChangeHelp(amount)
 
     @lru_cache

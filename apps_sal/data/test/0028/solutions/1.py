@@ -51,6 +51,7 @@ while preToChange or postToChange:
             preWrong.discard(x)
             ans.append(("move", x, temp))
             preToChange.add(temp)
+            # postMissing.discard(x)
             if x in postAns:
                 postFree.add(x)
         else:
@@ -58,6 +59,7 @@ while preToChange or postToChange:
             ans.append(("move", x, temp))
             postWrong.discard(x)
             postToChange.add(temp)
+            # preMissing.discard(x)
             if x in postAns:
                 preFree.add(x)
     elif preFree:

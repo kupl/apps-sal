@@ -9,6 +9,7 @@ def main():
         if a[i] < y:
             less += 1
 
+    #print(less, median)
     if less >= median:
         print(-1)
         return

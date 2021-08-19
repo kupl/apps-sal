@@ -17,6 +17,7 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # MST
         n = len(points)
         edges = []
 

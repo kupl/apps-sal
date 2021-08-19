@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -16,8 +17,10 @@ from typing import List
 
 def solve(N, A, B):
     p = [0 for _ in range(N + 1)]
+    # print(B)
     for i, v in enumerate(B):
         p[v] = i + 1
+    # print(p)
     if p[1]:
         i = 2
         while i <= N and p[i] == p[1] + i - 1:

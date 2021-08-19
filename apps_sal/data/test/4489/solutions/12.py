@@ -14,7 +14,7 @@ for i in range(M):
     else:
         dic[word] = -1
 
-ans = 0
+ans = 0  # -float('inf')
 for i in dic:
     ans = max(ans, dic[i])
 print(ans)

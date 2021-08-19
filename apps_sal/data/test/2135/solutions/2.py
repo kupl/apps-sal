@@ -22,6 +22,9 @@ def preprocess(grid):
 h, w = [int(x) for x in input().split()]
 grid = [input() for y in range(h)]
 pre, pre2 = preprocess(grid), transpose(preprocess(transpose(grid)))
+#print(len(pre), len(pre[0]), len(pre2), len(pre2[0]))
+# pprint.pprint(pre)
+# pprint.pprint(pre2)
 q = int(input())
 for qi in range(q):
     r1, c1, r2, c2 = [int(x) for x in input().split()]

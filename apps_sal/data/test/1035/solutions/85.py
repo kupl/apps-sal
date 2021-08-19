@@ -1,4 +1,5 @@
 import math
+# https://qiita.com/snow67675476/items/e87ddb9285e27ea555f8
 
 
 def factorization(n):

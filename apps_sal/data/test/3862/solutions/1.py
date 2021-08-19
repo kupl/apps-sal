@@ -1,3 +1,6 @@
+##
+##
+##
 import sys
 
 
@@ -18,6 +21,8 @@ n, k = 0, 0
 mark = [False] * 2010
 edges = [False] * 1010
 
+# bfs for "ssph"
+
 
 def bfs(s):
 
@@ -31,8 +36,10 @@ def bfs(s):
         next_frontier = []
         for u in frontier:
 
+            # check next state
             for v, isState in enumerate(edges):
                 if isState:
+                    # check new node
                     state = u + (n - 1000) - v
 
                     if state >= 0 and state <= 2000 and not mark[state]:
@@ -48,12 +55,19 @@ def bfs(s):
         return -1
 
 
+# main program
 [n, k] = numbers()
 concentrations = numbers()
 
+# reading edges
 for x in concentrations:
     edges[x] = True
 
 n = n + 1000
 ans = bfs(1000)
 print(ans)
+
+# 1496438704903
+
+
+# Made By Mostafa_Khaled

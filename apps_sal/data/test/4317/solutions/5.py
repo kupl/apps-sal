@@ -1,4 +1,6 @@
+# A - +-x
 
+# 標準入力 A B
 
 A, B = list(map(int, input().split()))
 

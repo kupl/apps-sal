@@ -10,17 +10,21 @@ for i in range(M):
     G[a][b] = c
     G[b][a] = c
 
+# 全点間最短距離を計算
 G = floyd_warshall(G)
 
 
+# コストL以下で移動可能な頂点間のコスト1の辺を張る
 E = [[float('inf')] * N for i in range(N)]
 for i in range(N):
     for j in range(N):
         if G[i][j] <= L:
             E[i][j] = 1
 
+# 全点間最短距離を計算
 E = floyd_warshall(E)
 
+# クエリに答えていく
 Q = int(input())
 for i in range(Q):
     s, t = map(int, input().split())

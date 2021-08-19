@@ -1,5 +1,6 @@
 import sys
 input = sys.stdin.readline
+# sys.setrecursionlimit(1000000)
 
 n = int(input())
 fr = [0] * (n + 2)

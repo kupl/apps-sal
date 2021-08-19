@@ -3,9 +3,9 @@ class Solution:
         def test(s):
             stack = []
             for l in s:
-                if l == '
-                if len(stack) != 0:
-                    stack.pop()
+                if l == '#':
+                    if len(stack) != 0:
+                        stack.pop()
                 else:
                     stack.append(l)
             return ''.join(stack)

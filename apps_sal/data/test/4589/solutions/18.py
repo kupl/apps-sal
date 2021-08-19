@@ -11,8 +11,8 @@ for i in range(-1, 2):
 ans = [[0] * w for _ in range(h)]
 for i in range(h):
     for j in range(w):
-        if s[i][j] == '
-        ans[i][j] = '
+        if s[i][j] == '#':
+            ans[i][j] = '#'
 
 for i in range(h):
     for j in range(w):
@@ -21,8 +21,8 @@ for i in range(h):
             for y, x in a:
                 iy, jx = i + y, j + x
                 if 0 <= iy < h and 0 <= jx < w:
-                    if s[iy][jx] == '
-                    cnt += 1
+                    if s[iy][jx] == '#':
+                        cnt += 1
             ans[i][j] = cnt
 for i in ans:
     print(''.join(map(str, i)))

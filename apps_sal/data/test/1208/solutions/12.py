@@ -15,4 +15,6 @@ for i in range(n):
             s.add(a[1])
         else:
             now.discard(a[1])
+    # print(m)
+    # print(now)
 print(m)

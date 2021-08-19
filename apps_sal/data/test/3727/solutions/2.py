@@ -25,6 +25,7 @@ def solve(A, B, C, D):
 
 
 def build(A, S, l, r):
+    #dprint('l', l, 'r', r)
     if A[l] == 0:
         return None
     ans = [l]
@@ -32,6 +33,7 @@ def build(A, S, l, r):
     i = l
     S -= 1
     while S > 0:
+        # dprint(ans)
         if i == 0:
             j = 1
         elif i == 1:
@@ -64,6 +66,8 @@ def build(A, S, l, r):
 
     return ans
 
+
+###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

@@ -24,12 +24,12 @@ for i in range(N):
 for i in range(1 << N):
     judge = True
     for j in range(N):
-        if (i >> j) & 1:
+        if (i >> j) & 1:  # もしAjが正直者だったら
             for k in range(A[j]):
                 if (i >> X[j][k] - 1) & 1 != Y[j][k]:
                     judge = False
-        """else:
-            for k in range(A[j]):
+        """else:#もしAjが不親切ものだったら。不親切者も正しいことをいうこともある。
+            for k in range(A[j]):#
                 if (i >> X[j][k]-1) & 1 == Y[j][k]:
                     judge = False"""
     if judge:

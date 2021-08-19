@@ -18,3 +18,6 @@ for i in range(65):
     else:
         lo = m
 print('%.10f' % hi)
+
+
+# Made By Mostafa_Khaled

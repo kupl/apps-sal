@@ -5,7 +5,9 @@ class Solution:
         max_dis = 0
         for i, s in enumerate(seats):
             if s == 0:
+                # print(\"DRR\", i, s)
                 j = i - 1
+                # search left
                 min_left = j
                 left_seat_found = False
                 while j >= 0:
@@ -30,6 +32,7 @@ class Solution:
                 if left_seat_found is False:
                     min_left = min_right
                 closer = abs(min(i - min_left, min_right - i))
+                # print(i, min_left ,min_right , closer )
                 seat_max_space = max(seat_max_space, closer)
         print(seat_max_space)
         return seat_max_space

@@ -6,8 +6,8 @@ for i in range(1, N + 1):
     p.append(p[i - 1] * 2 + 1)
 
 
-def f(n, x):
-    if n == 0:
+def f(n, x):  # レベルnのハンバーガーをx段食べる
+    if n == 0:  # 0段目の終了条件
         return 0 if x <= 0 else 1
 
     if x <= 1 + a[n - 1]:

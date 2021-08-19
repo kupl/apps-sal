@@ -14,5 +14,6 @@ for i in range(1, N + 1):
     else:
         l = i - dict[current_sum]
         ans = max(ans, l)
+    #print(i ,current_sum,dict,ans)
 
 print(ans)

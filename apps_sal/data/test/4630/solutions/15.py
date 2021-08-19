@@ -7,6 +7,7 @@ def solve():
     ans = dict()
 
     for i in range(n):
+        # st = i + 1
         if i not in ans:
             p = []
 

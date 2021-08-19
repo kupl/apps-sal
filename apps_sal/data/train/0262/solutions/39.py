@@ -9,6 +9,7 @@ class Solution:
 
     def findSolution(self, n, carry=0):
         if n == self.limit:
+            # Check leading zero policy
             leadingDigitChars = [w[len(w) - 1] for w in self.wordsRev]
             leadingDigitChars.append(self.resultRev[len(self.resultRev) - 1])
             leadingDigits = [self.digitMap[c] for c in leadingDigitChars]
@@ -39,6 +40,7 @@ class Solution:
                 if self.findSolution(n + 1, c):
                     return True
                 else:
+                    # Fallback
                     for i, v in enumerate(d):
                         if unknownDigitChars[i] in self.digitMap:
                             del self.digitMap[unknownDigitChars[i]]
@@ -56,6 +58,7 @@ class Solution:
                 if self.findSolution(n + 1, c):
                     return True
                 else:
+                    # Fallback
                     for i, v in enumerate(d):
                         if unknownDigitChars[i] in self.digitMap:
                             del self.digitMap[unknownDigitChars[i]]

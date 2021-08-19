@@ -1,3 +1,5 @@
+# def hh(a):
+#    return -a
 
 import sys
 import math
@@ -5,6 +7,7 @@ n, k = list(map(int, input().split()))
 z = [0] * n
 for i in range(n):
     z[i] = len(input())
+#z.sort(key = hh)
 passw = len(input())
 bef = 0
 same = 0

@@ -6,6 +6,7 @@ D = [tuple(map(int, input().split())) for _ in range(C)]
 grid = [tuple(map(int, input().split())) for _ in range(N)]
 
 
+# mod_x : (i+j)%3がxで、keyは色、valueは個数
 mod_0 = defaultdict(int)
 mod_1 = defaultdict(int)
 mod_2 = defaultdict(int)
@@ -21,6 +22,7 @@ for i in range(N):
             mod_2[grid[i][j]] += 1
 
 ans = float("inf")
+# mod_0のマスにあるものをiに、mod_1のものをjに、mod_2のものをkに塗り替える
 for i in range(C):
     for j in range(C):
         if i == j:

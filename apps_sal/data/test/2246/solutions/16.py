@@ -1,6 +1,6 @@
 n = int(input())
 
-d = {x: [] for x in range(1, n + 1)}
+d = {x: [] for x in range(1, n + 1)}  # defaultdict(list)
 for x in range(n - 1):
     s, de = map(int, input().split())
     d[s].append(de)

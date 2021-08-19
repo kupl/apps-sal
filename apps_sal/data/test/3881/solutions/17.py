@@ -1,3 +1,4 @@
+# You lost the game.
 n, q = map(int, input().split())
 L = [list(str(input()).split(" ")) for _ in range(q)]
 A = [[] for _ in range(6)]

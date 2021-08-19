@@ -68,10 +68,10 @@ class UnionFind():
 
 
 n, m = MAP()
-uf = UnionFind(n)
+uf = UnionFind(n)  # 初期化
 
 for i in range(m):
     x, y, z = MAP1()
-    uf.union(x, y)
+    uf.union(x, y)  # グループを併合
 
 print(uf.group_count())

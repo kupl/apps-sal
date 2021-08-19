@@ -4,6 +4,7 @@ i = 0
 k = 1
 j = 0
 while i < n:
+    # print(i,j)
     j = i
     i += 1
     while i < n and s[i] == '0':

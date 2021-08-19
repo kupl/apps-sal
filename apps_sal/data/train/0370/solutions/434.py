@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/largest-component-size-by-common-factor/discuss/819919/Python-Union-find-solution-explained
 class UnionFind:
     def __init__(self, length):
         self.parents = {num: num for num in range(length)}

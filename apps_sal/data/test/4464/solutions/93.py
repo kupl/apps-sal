@@ -7,6 +7,7 @@ while True:
     pivot = (step * A) % B
     if (step * A) % B == C:
         print('YES')
+        #print('debug', step)
         break
     elif pivot in mod:
         print('NO')

@@ -11,6 +11,7 @@ def process_query(queries, m):
 
 def apply_query(times, updates, n):
     a = [0] * (n + 1)
+    # print(len(a),len(times),len(updates))
     for i in range(len(updates)):
         a[updates[i][0] - 1] += times[i] * updates[i][2]
         a[updates[i][1]] -= times[i] * updates[i][2]
@@ -25,6 +26,7 @@ def main():
     updates = [list(map(int, input().split())) for i in range(m)]
     queries = [list(map(int, input().split())) for i in range(k)]
     times_query = process_query(queries, m)
+    # print("times_query",*times_query);
     updated_a = apply_query(times_query, updates, n)
 
     print(*[a[i] + updated_a[i] for i in range(n)])

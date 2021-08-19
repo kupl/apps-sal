@@ -17,25 +17,28 @@ def find_4digs(m, MaxNum, MaxSum):
             while (sum_int(st + 10**i) <= MaxSum and st + 10**i <= MaxNum):
                 sts.append(st + 10**i)
                 st += 10**i
-    sts = list(set(sts))
+    sts = list(set(sts))  # delete duplicates
     return (sts)
 
 
 def find_5digs(nums, MaxNum, MaxSum):
     """ takes in a list of 4 digit numbers \leq MaxNum and with sum \leq MaxSum. Returns list of 4 and 5 digit nums 
     with every consecutive 4 digits satisfying the same conditions"""
+    # TODO: Generalize to x digit numbers
 
     for s in nums:
+        # add digits before the 4 digit nums
         for i in range(1, MaxSum - sum_int(int(str(s)[0:3])) + 1):
             cand1 = int(str(i) + str(s))
             if cand1 <= MaxNum:
                 nums.append(cand1)
+        # add digits after the 4 digit nums
         for i in range(0, MaxSum - sum_int(int(str(s)[1:4])) + 1):
             cand2 = int(str(s) + str(i))
             if cand2 <= MaxNum:
                 nums.append(cand2)
 
-    nums = list(set(nums))
+    nums = list(set(nums))  # delete duplcates
     return nums
 
 
@@ -45,6 +48,7 @@ def max_sumDig(MaxNum, MaxSum):
     nums = find_4digs(1000, MaxNum, MaxSum)
     nums = find_5digs(nums, MaxNum, MaxSum)
 
+    # calcualte min distance from mean
     mean = sum(nums) / len(nums)
     dists = [abs(s - mean) for s in nums]
 

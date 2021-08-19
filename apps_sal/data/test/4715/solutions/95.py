@@ -7,4 +7,5 @@ for i in range(1, len(num_line)):
     if num_line[i] != num_line[i - 1]:
         num_list.append(num_line[i])
 
+# print(num_list)
 print(len(num_list))

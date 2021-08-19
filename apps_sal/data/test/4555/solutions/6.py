@@ -1,3 +1,4 @@
+# ABC093
 A, B, K = map(int, input().split())
 
 for num in range(A, min(B + 1, A + K)):

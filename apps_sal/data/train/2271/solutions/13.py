@@ -92,6 +92,7 @@ def slove2():
 
 
 def __starting_point():
+    # slove()
     slove2()
 
 

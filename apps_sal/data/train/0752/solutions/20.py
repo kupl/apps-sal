@@ -1,3 +1,4 @@
+# cook your dish here
 a, b = list(map(int, input().split()))
 sample_dict = {}
 for i in range(a):

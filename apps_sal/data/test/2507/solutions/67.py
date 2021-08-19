@@ -14,6 +14,7 @@ def main():
     while l != r:
         p = (l + r) // 2
         tmp = Asum - np.minimum(a, p // f).sum() <= K
+        # print(p, tmp)
         if tmp:
             r = p
         else:

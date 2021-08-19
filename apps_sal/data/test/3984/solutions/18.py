@@ -7,6 +7,7 @@ s = input().strip('\n')
 c = Counter(s)
 l = sorted(list(c))
 ans = []
+# print(s)
 mi = [1] * (len(s))
 curr = s[0]
 for i in range(1, len(s)):
@@ -16,6 +17,7 @@ for i in range(1, len(s)):
 
 
 for i in range(len(s)):
+    # print(i)
     if i == 0 or mi[i]:
         ans.append('Mike')
     else:

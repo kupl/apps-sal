@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(0, t):
     n = int(input())
@@ -23,6 +24,7 @@ for i in range(0, t):
             else:
                 sum2 = sum2 + l[k - i]
 
+        # print(sum2)
         finalSum = max(finalSum, sum2 * dw * tw)
 
     print(finalSum)

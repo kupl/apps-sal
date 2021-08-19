@@ -60,6 +60,7 @@ def sin(x):
 
 
 def acos(x):
+    # binary search
     def f(xx):
         return cos(xx) - x
 
@@ -74,6 +75,8 @@ def acos(x):
             b = xx
         xx = (a + b) / 2
         fxx = f(xx)
+        # print (xx, fxx)
+    # print (f"diff {xx-rel(x)}")
     return xx
 
 

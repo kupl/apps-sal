@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 
 for _ in range(int(input())):
@@ -16,3 +17,13 @@ for _ in range(int(input())):
     y = math.ceil(len(l2) / d)
 
     print(x + y)
+
+
+# 2
+# 10 1
+# 10 20 30 40 50 60 90 80 100 1
+# 5 2
+# 9 80 27 72 79
+# Example Output
+# 10
+# 3

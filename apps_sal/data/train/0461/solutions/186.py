@@ -9,6 +9,7 @@ class Solution:
                 continue
             graph[m].append(i)
 
+        #print( graph )
         totalTime = []
 
         def dfs(node, time=0):
@@ -19,4 +20,5 @@ class Solution:
                 dfs(e, time + informTime[e])
 
         dfs(headID, time=informTime[headID])
+        # print(totalTime)
         return max(totalTime)

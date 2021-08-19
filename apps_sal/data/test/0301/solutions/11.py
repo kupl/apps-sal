@@ -18,6 +18,7 @@ def rlinput():
 
 
 def main():
+    # q = rlinput() rinput() iinput() input()
     q = [0] * 100
     u, v = rlinput()
     if u <= v:

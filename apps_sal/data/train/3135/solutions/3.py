@@ -14,6 +14,8 @@ def meeting_time(Ta, Tb, r):
         sb = len / Tb
     else:
         sb = 0.00
+#     len = sa * T + sb * T
+#     len = sa * T - sb * T
 
     if Ta == -Tb:
         return '{:.2f}'.format(abs(float(len / (sa + sb))))

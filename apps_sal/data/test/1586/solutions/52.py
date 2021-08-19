@@ -10,6 +10,7 @@ import scipy
 from collections import Counter, defaultdict, deque
 from itertools import permutations, combinations
 from heapq import heappop, heappush
+# input = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 mod = 10**9 + 7
 def inp(): return int(input())

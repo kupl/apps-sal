@@ -15,6 +15,7 @@ def ok(mask, s):
             strs.append(s[prev: i + 1])
             prev = i + 1
     strs.append(s[prev:])
+    # print(strs)
     return len(set(strs)) == len(strs)
 
 

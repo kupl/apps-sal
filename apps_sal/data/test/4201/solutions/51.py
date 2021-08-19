@@ -7,8 +7,8 @@ for row in range(2**h):
         for i in range(h):
             for j in range(w):
                 if (row >> i) & 1 == 0 and (col >> j) & 1 == 0:
-                    if s[i][j] == '
-                    c += 1
+                    if s[i][j] == '#':
+                        c += 1
         if c == k:
             ans += 1
 print(ans)

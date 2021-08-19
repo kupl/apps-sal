@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n = int(input())
 s = [[int(x) for x in input().split()] for _ in range(n)]

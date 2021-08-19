@@ -11,7 +11,7 @@ def main():
         s = input()
         com, ip = s.split()
         ip = ip.strip(';')
-        print(s + '
+        print(s + ' #' + d[ip])
 
 
 main()

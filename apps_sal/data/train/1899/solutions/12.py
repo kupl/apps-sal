@@ -60,8 +60,15 @@ class Solution:
                     dfs(A, i, j, M, N, s)
                     I.append(s)
 
+        # print(len(I[0]), len(I[1]))
+
         level = {}
         visited = set()
         bfs(A)
+
+        # d = [level[j] for j in I[1]]
+
+        # print(level)
+        # print(d)
 
         return min([level[j] for j in I[1]]) - 1

@@ -1,3 +1,5 @@
+#!/usr/bin python3
+# -*- coding: utf-8 -*-
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -12,7 +14,7 @@ if a[mi] >= 0:
         ret.append([i + 1, i + 2])
 else:
     for i in range(n - 2, -1, -1):
-        ret.append([i + 2, i + 1])
+        ret.append([i + 2, i + 1])  # i+1->i
 print((2 * n - 1))
 for x in ret:
     print((" ".join(map(str, x))))

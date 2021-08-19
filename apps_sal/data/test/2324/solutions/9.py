@@ -1,4 +1,5 @@
 P = 311
+# we use two mods to reduce the chance of collision
 MOD1 = int(1e9) + 7
 MOD2 = int(1e9) + 9
 
@@ -7,6 +8,7 @@ def main():
     s = input()
     n = len(s)
 
+    # Pre-compute
     power_1 = [0 for i in range(n + 1)]
     power_2 = [0 for i in range(n + 1)]
     mod_inv_1 = [0 for i in range(n + 1)]
@@ -22,6 +24,7 @@ def main():
         mod_inv_1[i] = bin_exp(power_1[i], MOD1 - 2, MOD1)
         mod_inv_2[i] = bin_exp(power_2[i], MOD2 - 2, MOD2)
 
+    # Compute hash values
     hash_1 = 0
     hash_2 = 0
     forward_hash_1 = [0 for i in range(n + 1)]

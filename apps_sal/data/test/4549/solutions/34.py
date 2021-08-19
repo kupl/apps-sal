@@ -8,9 +8,9 @@ for _ in range(H):
 
 for i in range(H):
     for j in range(W):
-        if grid[i][j] == "
-          X = "NG"
-           if (i - 1 >= 0 and grid[i - 1][j] == ".") or i < 1:
+        if grid[i][j] == "#":
+            X = "NG"
+            if (i - 1 >= 0 and grid[i - 1][j] == ".") or i < 1:
                 None
             else:
                 X = "OK"

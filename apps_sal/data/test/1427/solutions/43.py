@@ -11,6 +11,7 @@ class Factorize(object):
     def __init__(self, maxnum):
         self.primes = self.__smallest_prime_factors(maxnum)
 
+    # 素因数分解する(リスト)
     def factorize_list(self, n):
 
         fct = []
@@ -19,6 +20,7 @@ class Factorize(object):
             n //= self.primes[n]
         return fct
 
+    # 素因数分解する(辞書)
     def factorize_dict(self, n):
         fct = defaultdict(lambda: 0)
         while n != 1:
@@ -26,6 +28,7 @@ class Factorize(object):
             n //= self.primes[n]
         return fct
 
+    # n以下の最小の素因数を列挙する
     def __smallest_prime_factors(self, n):
 
         prime = list(range(n + 1))

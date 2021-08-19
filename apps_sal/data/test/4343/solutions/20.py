@@ -2,6 +2,7 @@
 def knight(x0,y0,moves,a):
 	nonlocal n,tri
 	m=[x0,y0]
+	#elif moves==0:
 	elif m==a:
 		tri[0]=True
 	x1=x0+1
@@ -12,14 +13,14 @@ def knight(x0,y0,moves,a):
 	if y1<=n and moves>0 and not([x0,y1] in y):
 		knight(x0,y1,moves-1,a)
 
-y=[]	
-n=int(input())	
-k=int(input())	
-o=int(input())	
+y=[]	#list of obstacles
+n=int(input())	#n*n
+k=int(input())	#no of moves
+o=int(input())	#obstacles
 for i in range(o):
 	y+=[list(map(int,input().split(" ")))]
 
-p=int(input())	
+p=int(input())	#no of values to check
 for i in range(p):
 	x=[]
 	tri[0]=False
@@ -111,6 +112,11 @@ def towords(no):
 	if int(no)>100:
 """
 
+# str_num=[]
+# n=int(input())
+# arr=input()
+# for i in arr:
+#	str_num.append(int(i))
 """
 def find_sub(stri):
 	maxi=0
@@ -162,6 +168,7 @@ def main():
 
 	return maxy
 
+#print(main())
 
 for i in range(100000):
 	print("a", end="")"""
@@ -199,6 +206,7 @@ def Tee(N,M):
 		temp=str(M - N)
 	else:
 		temp=str(N - M)
+#	print(temp)
 	if (int(temp)/2)%2!=0:
 		print("Even")
 	else:
@@ -209,10 +217,13 @@ for i in range(int(input())):
 	N,M=map(str,input().split(" "))
 	if int(N[-1])%2==0:
 		N1=int(N[-1])+1
+#		print(N,N[-1],N1)
 	else:
 		N1=int(N[-1])
+#		print(N,N[-1],N1)	
 	if int(M[-1])%2==0:
 		M1=int(M[-1])-1
+#		print(M,M[-1],M1)
 	else:
 		M1=int(M[-1])
 	Tee(N1,M1)"""
@@ -353,6 +364,7 @@ dicti = {}
 for i in range(26):
     dicti[chr(97 + i)] = i + 1
 
+# print(dicti)
 
 k = int(input())
 str1 = list(input())
@@ -379,6 +391,7 @@ for i in range(k - 1):
         delta[i + 1] += 26
     else:
         divide[i] = delta[i] // 2
+    # print(i,divide,delta)
 
 divide.append(delta[-1] // 2)
 

@@ -26,14 +26,27 @@ class Solution:
 
         removed = []
         while i < lremain and j < lremain:
+            # if leftsorted[i] in removed:
             if leftsorted[i] not in intervals:
                 i += 1
             elif leftsorted[i] != rightsorted[j]:
                 intervals.remove(rightsorted[j])
+                # removed.append(rightsorted[j])
                 j += 1
             else:
                 i += 1
                 j += 1
+                # while leftsorted[i] not in intervals:
+                #     i += 1
+                #     if i == lremain:
+                #         break
 
+
+#         removed = []
+#         for i in range(len(leftsorted)):
+#             if leftsorted[i] not in intervals:
+#                 continue
+#             if leftsorted[i] != rightsorted[i]:
+#                 intervals.remove(rightsorted[i])
         print(intervals)
         return len(intervals)

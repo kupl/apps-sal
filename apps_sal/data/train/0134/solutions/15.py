@@ -17,6 +17,7 @@ class Solution:
         found = {}
 
         def count(par):
+            #            print(par,len(par),NS)
             res = 0
             if len(par) == len(NS) and par <= NS:
                 return 1
@@ -32,4 +33,5 @@ class Solution:
             return res
         for ii in range(1, int(NS[0]) + 1):
             res = res + count(str(ii))
+#        print(res,print(found))
         return(N - res)

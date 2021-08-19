@@ -37,6 +37,7 @@ def main():
                     a = dpr[k][a]
                     ans += 2**k
         else:
+            # a > b
             for k in range(ln + 1)[::-1]:
                 if dpl[k][a] > b:
                     a = dpl[k][a]

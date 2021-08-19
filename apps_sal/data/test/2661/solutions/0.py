@@ -11,6 +11,7 @@ def main():
 
     range_N = list(range(N))
     ans = [[0] * N for _ in range_N]
+    # 論理積
     for i in range_N:
         if S[i] == 0:
             for j in range_N:
@@ -23,6 +24,7 @@ def main():
             if (U[i] & V[j]):
                 ans[i][j] = ans[i][j] | (U[i] & V[j])
 
+    # 論理和
     for x in range_N:
         if S[x] == 0:
             continue
@@ -69,6 +71,7 @@ def main():
             if up == 0:
                 break
 
+    # チェック
     for i in range_N:
         check_xs = ans[i][0]
         check_ys = ans[0][i]

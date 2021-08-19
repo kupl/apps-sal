@@ -11,6 +11,7 @@ class Solution:
             if l - 1 not in lst and l + 1 not in lst:
                 return False
         while lst:
+            # print(lst)
             begin = lst[0]
             ct[begin] -= 1
             if ct[begin] == 0:

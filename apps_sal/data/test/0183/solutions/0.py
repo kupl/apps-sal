@@ -9,6 +9,8 @@ while d < n:
     if P == 0:
         P = 1
     i = 1
+#	print("E=",E)
+#	print("F=",F)
     while i < 10:
         j = (-i * p) % k
         f = 0
@@ -26,8 +28,27 @@ while d < n:
     while i < k:
         F[i] = (F[i] + E[i]) % m
         i += 1
+#	print(E,P)
     F[0] = 1
+# print("r=",r)
 print(r % m)
+# i=10**n
+# j=10**(n-1)
+# r=0
+# F=[0]*k
+# while j<i:
+#	x=str(j)
+#	l=len(x)
+#	a=l
+#	while a:
+#		a-=1
+#		s=int(x[a:l])
+#		if s>0 and s%k==0:
+#			r+=1
+#			break
+#	j+=1
+# print()
+# print(r)
 """
 3 6 9
 13 16 19	12 15 18

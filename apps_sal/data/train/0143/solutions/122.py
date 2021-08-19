@@ -23,5 +23,8 @@ class Solution:
                 else:
                     pair = [grp[i - 1][0]] + [x]
                     pair_sum = grp[i - 1][1] + y
+            # print(pair)
+            # print(pair_sum)
+            # print('***')
             ret = max(ret, pair_sum)
         return ret

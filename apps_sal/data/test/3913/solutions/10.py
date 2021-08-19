@@ -1,3 +1,4 @@
+# while True:
 n = int(input())
 mark = [0] * 26
 notinclude = [0] * 10001
@@ -21,10 +22,12 @@ for j in range(t):
 
 ans = set(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
 temp = 0
+# print(sets)
 for i in sets:
     if len(sets[i]) and notinclude[i] == 0:
         temp = 1
         ans = ans & sets[i]
+# print(ans)
 print(0 if temp == 0 else len(ans))
 
 ''' input

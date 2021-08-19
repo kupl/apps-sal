@@ -27,6 +27,7 @@ def main():
             while j < n and j < m:
                 p = int(nCr[m - 1][j])
                 q = int((nCr[s - m][n - j - 1]))
+                # print p,q
                 num = int(num) + (p * q)
                 j = j + 1
             den = int(nCr[s - 1][n - 1])

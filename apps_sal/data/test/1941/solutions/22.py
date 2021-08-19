@@ -12,6 +12,7 @@ for i in range(n):
             l = mid + 1
         else:
             r = mid - 1
+#    print(l,r)
     if l == ll:
         print(-1)
     else:

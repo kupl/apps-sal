@@ -17,8 +17,8 @@ def resolve():
     G = csr_matrix(G)
     dist = floyd_warshall(G, directed=False)
 
-    G2 = np.full((N, N), np.inf)
-    np.fill_diagonal(G2, 0)
+    G2 = np.full((N, N), np.inf)  # 値をINFにした配列
+    np.fill_diagonal(G2, 0)  # G[i][i]は動いていない状態なのでコスト0
     G2[dist <= L] = 1
 
     dist2 = floyd_warshall(G2, directed=False)

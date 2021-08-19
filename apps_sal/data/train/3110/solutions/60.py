@@ -1,3 +1,4 @@
+# I know it's ugly, sorry. But it works :)
 def two_decimal_places(n):
     if isinstance(n, float):
         if n > 0:

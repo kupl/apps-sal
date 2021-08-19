@@ -9,6 +9,8 @@ class Solution:
             for j in range(i + 1, len(arr)):
                 l = preXor[j - 1] ^ preXor[i - 1]
                 for k in range(j, len(arr)):
+                    #print(i, j, k)
                     if l == preXor[k] ^ preXor[j - 1]:
+                        # print(\"match:\", i, j, k)
                         ret += 1
         return ret

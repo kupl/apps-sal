@@ -24,3 +24,8 @@ class StreamChecker:
                 new_pointers.append(p)
         self.pointers = new_pointers
         return ret_val
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

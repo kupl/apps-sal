@@ -53,6 +53,7 @@ def AliceHairDresser():
         hairline_len[i] = lengths[i - 1]
 
     time = InitialTIme(hairline_len, l)
+    # print time
 
     for i in range(m):
         query = input()
@@ -61,6 +62,7 @@ def AliceHairDresser():
             print(time)
         else:
             inputs1 = list(map(int, query.split()))
+            # print inputs1
             p = inputs1[1]
             d = inputs1[2]
             if hairline_len[p] <= l:

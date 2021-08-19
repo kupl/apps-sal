@@ -1,3 +1,4 @@
+# =====================================================
 from sys import stdin, stdout
 from collections import defaultdict
 from functools import lru_cache
@@ -14,6 +15,7 @@ def iint():
 
 def istr():
     return stdin.readline().strip()
+# =====================================================
 
 
 s = istr()

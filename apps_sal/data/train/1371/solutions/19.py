@@ -1,3 +1,4 @@
+# cook your dish here
 def __starting_point():
     for i in range(int(input())):
         N, K = map(int, input().split())

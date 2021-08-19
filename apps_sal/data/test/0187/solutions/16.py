@@ -1,3 +1,5 @@
+# python3
+# utf-8
 from collections import Counter
 
 cards_nr = int(input())

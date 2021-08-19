@@ -8,13 +8,15 @@ sys.setrecursionlimit(N_MAX)
 MOD = 10**9 + 7
 
 
+### BFS ###
+
 nextH = [0, 1, 0, -1]
 nextW = [1, 0, -1, 0]
 
 
 def bfs(u, S):
 
-    S[u[0]][u[1]] = 0
+    S[u[0]][u[1]] = 0  # state を変更
 
     q = deque()
     q.append(u)
@@ -27,8 +29,8 @@ def bfs(u, S):
             if not (0 <= h < len(S) and 0 <= w < len(S[0])):
                 continue
 
-            if S[h][w] == '.':
-                S[h][w] = S[u[0]][u[1]] + 1
+            if S[h][w] == '.':  # state を確認
+                S[h][w] = S[u[0]][u[1]] + 1  # state を変更
                 m = max(m, S[h][w])
                 q.append((h, w))
 
@@ -41,6 +43,8 @@ def main():
     S = []
     for _ in range(H):
         S.append([x for x in sys.stdin.readline().rstrip()])
+
+    # print(S)
 
     m = 0
     for h in range(H):

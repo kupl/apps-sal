@@ -1,6 +1,9 @@
 
+# 1340. Jump Game V
+# 20201003 这个题目，也只有用栈解决最快
 
-class Solution:
+
+class Solution:  # Decreasing Stack + DP （单调栈 DP）
 
     def maxJumps(self, arr, d):
         n = len(arr)

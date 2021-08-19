@@ -5,6 +5,7 @@ class Solution:
         dp[0] = arr[0]
         for i in range(1, len(arr)):
             dp[i] = dp[i - 1] ^ arr[i]
+        # print(dp)
         res = []
         for i in range(len(queries)):
 

@@ -20,6 +20,14 @@ def count(n, A, B):
     ans = 0
 
     limit = isqrt(n)
+    # x = A + 1
+    # while True:
+    # 	if x*x <= n:
+    # 		if n//x < B:
+    # 			ans += 1
+    # 		x += 1
+    # 	else:
+    # 		return ans + min(n//x,B-1)
     return max(0, limit - A) + min(n // (limit + 1), B - 1)
 
 

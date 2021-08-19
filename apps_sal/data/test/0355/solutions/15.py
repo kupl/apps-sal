@@ -1,7 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
+#   = input()
+#   = int(input())
 
+#() = (i for i in input().split())
+#   = [i for i in input().split()]
+
+#() = (int(i) for i in input().split())
 a = [[0 for j in range(8)] for i in range(8)]
 
 for i in range(8):
@@ -45,4 +53,6 @@ if mW <= mB:
     print('A')
 else:
     print('B')
+# print(ans)
 finish = time.time()
+#print(finish - start)

@@ -17,9 +17,9 @@ for (l, r) in zip(s, t):
 if same % 2 != 0:
     fir += 1
 
-if fir > sec:
+if fir > sec:  # or (sec - fir <= 1 and same % 2 != 0):
     print("First")
-elif sec > fir + 1:
+elif sec > fir + 1:  # or (sec - fir <= 1 and same % 2 == 0):
     print("Second")
 else:
     print("Draw")

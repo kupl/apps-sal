@@ -17,6 +17,10 @@ class Solution:
                 i2 = min(len(cumMat) - 2, i + K)
                 j1 = max(1, j - K)
                 j2 = min(len(cumMat[0]) - 2, j + K)
+                # print(i1)
+                # print(j1)
+                # print(i2)
+                # print(j2)
                 answer[i - 1][j - 1] = cumMat[i2][j2] - cumMat[i1 - 1][j2] - cumMat[i2][j1 - 1] + cumMat[i1 - 1][j1 - 1]
                 print(answer[i - 1][j - 1])
         return answer

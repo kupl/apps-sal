@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 import sys
 sys.setrecursionlimit(10**6)
@@ -19,6 +21,7 @@ for d in range(1, n + 1):
         p -= d
         q += d
         res += s[p] + s[q]
+#        print(d,a,res)
         if res > ans:
             ans = res
         a -= d

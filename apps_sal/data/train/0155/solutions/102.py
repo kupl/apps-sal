@@ -3,6 +3,7 @@ class Solution:
         def helper(i):
             if cache[i]:
                 return cache[i]
+            # go right
             numberOfJump = 0
             for j in range(i + 1, i + d + 1):
                 if j >= len(arr) or arr[j] >= arr[i]:

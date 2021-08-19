@@ -10,6 +10,7 @@ for i in s:
         l.append(c)
         c = 0
 l.append(c)
+# print(l)
 
 
 def possible(x):
@@ -23,6 +24,7 @@ def possible(x):
         else:
             rows += 1
             curr = i
+#	print(x,rows)
     return rows <= n
 
 

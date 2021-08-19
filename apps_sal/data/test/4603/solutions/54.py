@@ -20,11 +20,13 @@
     入力値はすべて整数である。
 '''
 
+# 標準入力から A, B, C, D の値を取得する
 a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
 
+# 乗り換えのパターンをリストに入れて、リストの最小値を出力する
 travel_costs = [a + c, a + d, b + c, b + d]
 
 print((min(travel_costs)))

@@ -3,8 +3,8 @@ class Solution:
     def bfsHelper(self, adj_matrix, n):
         res = [1e10 for i in range(n)]
         queue = []
-        queue.append([0, 0, 0])
-        visited = set()
+        queue.append([0, 0, 0])  # append [node,color traversed last,dist from 0]
+        visited = set()  # each elem is (node, last traversed color)
         visited.add((0, 0))
         while queue:
             curr, color, dist = queue.pop(0)
@@ -12,9 +12,9 @@ class Solution:
 
             for neighbor in range(n):
                 edge = adj_matrix[curr][neighbor]
-                if edge == 0:
+                if edge == 0:  # if there is no edge
                     continue
-                if color == 0:
+                if color == 0:  # if we did not traverse to this node, can use any color
                     if edge in [1, 2]:
                         if (neighbor, edge) not in visited:
                             visited.add((neighbor, edge))
@@ -32,7 +32,7 @@ class Solution:
                             if (neighbor, edge) not in visited:
                                 visited.add((neighbor, edge))
                                 queue.append([neighbor, edge, dist + 1])
-                    if edge == 3:
+                    if edge == 3:  # curr has red and blue edges
                         if (neighbor, 1) not in visited and color != 1:
                             visited.add((neighbor, 1))
                             queue.append([neighbor, 1, dist + 1])
@@ -47,6 +47,10 @@ class Solution:
         return res
 
     def shortestAlternatingPaths(self, n, red_edges, blue_edges):
+        # 0, no edge
+        # 1, red edge
+        # 2, blue edge
+        # 3, both edges
         adj_matrix = [[0 for i in range(n)] for j in range(n)]
         for x, y in red_edges:
             adj_matrix[x][y] += 1

@@ -17,5 +17,6 @@ while m * m <= N:
             break
         if gcd(m, n) == 1 and (m + n) % 2 == 1:
             count += (N // c)
+        # print(a,b,c)
     m += 1
 print(count)

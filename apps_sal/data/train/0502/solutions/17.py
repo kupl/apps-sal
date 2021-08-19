@@ -6,25 +6,31 @@ class Solution:
         component = 0
 
         for i in initial:
+            # print(\"graph\", graph, heap)
             if graph[i][i] < 0:
                 heappush(heap, (-sizes[component], i, graph[i][i]))
                 continue
 
             queue = deque([i])
+            # print(\"outer queue\", queue)
             size = 0
             component = component - 1
 
             while len(queue) > 0:
 
                 current = queue.popleft()
+                # print(current)
 
                 if graph[current][current] == 1:
                     size = size + 1
                     graph[current][current] = component
                     queue.extend(i for (i, x) in enumerate(graph[current]) if x == 1)
+                    # print(\"queue\", current, queue)
 
             heappush(heap, (-size, i, component))
             sizes[component] = size
+
+        # print(\"final heap\", heap)
 
         return self.select(heap)
 

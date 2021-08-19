@@ -7,6 +7,7 @@ def work():
         return
     if sum(a) > sum(b):
         a, b = b, a
+    # now sum(a) < sum(b)
     a = sorted(a)
     b = sorted(b)
     ben = [9 - a[0], 9 - a[1], 9 - a[2], b[0], b[1], b[2]]

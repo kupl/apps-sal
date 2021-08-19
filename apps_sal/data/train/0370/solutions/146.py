@@ -20,6 +20,7 @@ class Solution:
                     return set([i]).union(get_factor_primes(n // i))
             return set([n])
 
+        # hash index to prim numbers
         prime = defaultdict(list)
 
         for i, n in enumerate(A):
@@ -27,6 +28,7 @@ class Solution:
             for p in primeset:
                 prime[p].append(i)
 
+        # create DSU for all common prime sets
         N = len(A)
         dsu = DSU(N)
 
@@ -34,4 +36,5 @@ class Solution:
             for i in range(len(indexes) - 1):
                 dsu.union(indexes[i], indexes[i + 1])
 
+        # return max count
         return max(Counter([dsu.find(i) for i in range(N)]).values())

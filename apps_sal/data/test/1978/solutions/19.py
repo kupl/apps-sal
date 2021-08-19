@@ -55,11 +55,13 @@ while j < len(la):
     k = j + 1
 
     while k < len(la):
+        # print(k-)
         if full[la[j]][la[k]] == k - j:
             k += 1
         else:
             break
 
+    # break
     if k == j:
         ans.append(la[j])
         j += 1

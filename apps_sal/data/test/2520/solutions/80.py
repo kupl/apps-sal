@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[14]:
 
 
 class UnionFind():
@@ -48,9 +52,15 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
+# In[ ]:
+
+
 N, M, K = list(map(int, input().split()))
 tree = UnionFind(N)
 not_friend_candidates = []
+
+
+# In[ ]:
 
 
 for i in range(M):

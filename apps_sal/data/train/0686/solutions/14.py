@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 T = int(input())
 for i in range(T):

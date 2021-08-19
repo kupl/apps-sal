@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 k, s = map(int, input().split())
 

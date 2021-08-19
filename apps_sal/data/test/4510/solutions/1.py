@@ -13,6 +13,7 @@ for Id in a:
 
 screen = list(lt.items())
 screen.sort(key=(lambda t: -t[1]))
+# print(screen)
 screen = screen[:min(n, k)]
 print(len(screen))
 for v in screen:

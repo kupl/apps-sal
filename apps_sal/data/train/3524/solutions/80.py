@@ -1,3 +1,4 @@
+#! python3
 
 def dna_to_rna(dna):
     rna = ''

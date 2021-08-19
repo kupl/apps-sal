@@ -1,4 +1,7 @@
 def __starting_point():
+    #n = 4
+    #k = 6
+    #a = [2, 4, 3, 5]
     inp = input().split(' ')
     n = int(inp[0])
     k = int(inp[1])

@@ -20,6 +20,7 @@ def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
+#from decimal import *
 
 s = input()
 K = INT()
@@ -30,6 +31,7 @@ substr = []
 for l in range(len(s)):
     r = l + 1
     while r < len(s) + 1:
+        #print(l, r, substr)
         if bisect(substr, s[l:r]) == 5:
             break
         elif s[l:r] in substr:
@@ -41,4 +43,5 @@ for l in range(len(s)):
                 r += 1
 
 
+# print(substr)
 print((substr[K - 1]))

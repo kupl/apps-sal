@@ -1,3 +1,4 @@
+# セイウチ
 
 def main():
     from heapq import heappush, heappop
@@ -6,7 +7,7 @@ def main():
     MX_AG = 2500
 
     N, M, S = map(int, input().split())
-    S = min(S, MX_AG)
+    S = min(S, MX_AG)  # それ以上のAgは不要
 
     g = tuple(set() for _ in range(N))
     for _ in range(M):
@@ -25,6 +26,7 @@ def main():
 
     time = [[INF] * (MX_AG + 1) for _ in range(N)]
     time[0][S] = 0
+    # time[location][r_Ag]:=minimum_time_to_reach
 
     while h:
         t, ag, loc = heappop(h)

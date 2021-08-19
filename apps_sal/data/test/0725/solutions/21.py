@@ -7,6 +7,6 @@ for i in range(n):
     ss = ss.union(s)
 
 if len(ss.intersection(set(['C', 'M', 'Y']))) > 0:
-    print("
+    print("#Color")
 else:
-    print("
+    print("#Black&White")

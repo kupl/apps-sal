@@ -1,6 +1,8 @@
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
+# 約数列挙
+
 
 def make_divisors(n):
     divisors = []
@@ -10,6 +12,7 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
 
+    # divisors.sort()
     return divisors
 
 

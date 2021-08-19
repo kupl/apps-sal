@@ -25,6 +25,7 @@ else:
         print(A + 1)
     elif (int(s1[0]) < int(s1[L])):
         v = s1[0:L]
+        # v[-1]=v[-1]+1
         s += v[0:len(v) - 1]
         s += str(int(v[-1]) + 1)
         print(s * q)

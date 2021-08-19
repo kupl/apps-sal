@@ -1,5 +1,6 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
+        # dp
         n = len(arr)
         res = [0] * n
 

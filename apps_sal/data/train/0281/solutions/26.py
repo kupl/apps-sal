@@ -8,6 +8,7 @@ class Solution:
             if s[i] == t[i]:
                 continue
             cnt[(ord(t[i]) - ord(s[i])) % N] += 1
+        # print(cnt)
         for i in range(1, N):
             if cnt[i] > (k // N) + (k % N >= i):
                 return False

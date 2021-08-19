@@ -1,7 +1,7 @@
 def passer_rating(att, yds, comp, td, ints):
     def limit(x): return min(max(x, 0), 2.375)
 
-    att = float(att)
+    att = float(att)    # for python 2 compatibility
 
     A = ((comp / att) - .3) * 5
     B = ((yds / att) - 3) * .25

@@ -30,7 +30,9 @@ class Solution:
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((dist, i, j))
 
+        # sort based on cost (i.e. distance)
         edges.sort()
+        # using Kruskal's algorithm to find the cost of Minimum Spanning Tree
         res = 0
         uf = UnionFind(n)
         for cost, u, v in edges:

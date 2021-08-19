@@ -1,3 +1,4 @@
+# O(logn), binary search for peak since arr is ordered
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
         l = 0
@@ -6,14 +7,15 @@ class Solution:
             m = (l + r) // 2
             if arr[m - 1] < arr[m] > arr[m + 1]:
                 return m
-            if arr[m] < arr[m + 1]:
+            if arr[m] < arr[m + 1]:  # peak on right
                 l = m + 1
-            else:
+            else:  # peak on left
                 r = m
         return l
 
 
 '''
+# O(n), distinct elements so get max and return it's index
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
         return arr.index(max(arr))

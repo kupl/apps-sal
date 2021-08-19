@@ -14,8 +14,8 @@ class Solution:
                     tmp[delta_L + new_L],
                 )
                 tmp[abs(delta_L - new_L)] = max(
-                    L,
-                    L - delta_L + new_L,
+                    L,  # long
+                    L - delta_L + new_L,  # new short
                     tmp[abs(delta_L - new_L)],
                 )
 

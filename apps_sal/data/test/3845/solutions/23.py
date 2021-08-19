@@ -8,8 +8,8 @@ def fill(X, c, start):
 
 A, B = map(int, input().split())
 H, W = 100, 100
-ans = [list("
+ans = [list("#" * W) if i < W // 2 else list("." * W) for i in range(H)]
 fill(A - 1, ".", 1)
-fill(B - 1, "
+fill(B - 1, "#", H // 2 + 1)
 print(H, W)
 [print("".join(row)) for row in ans]

@@ -1,4 +1,5 @@
 def identify_weapon(character):
+    # insert your code here...FOR CHIMA!
     try:
         return character + "-" + {
             "Laval": "Shado Valious", "Cragger": "Vengdualize",

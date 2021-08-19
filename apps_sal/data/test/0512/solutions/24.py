@@ -35,11 +35,11 @@ def LI(): return list(map(int, input().split()))
 def main():
     mod = 10**9 + 7
     N = I()
-    st = [0] * (2 * N)
+    st = [0] * (2 * N)  # 不明:0，左向き:-1，　右向き:1　　(ただし相方が確定済みの人は0とする)
     flag = 1
-    looked = []
+    looked = []  # 乗り降りする階が被ってはいけない
 
-    fixed = [-1] * (2 * N)
+    fixed = [-1] * (2 * N)  # 確定した相方がどこにいるか，いなければ-1
 
     for i in range(N):
         a, b = MI()
@@ -50,12 +50,13 @@ def main():
         if b != -2:
             looked.append(b)
 
-        if a != -2 and b != -2:
+        if a != -2 and b != -2:  # 相方確定
             fixed[a] = b
             fixed[b] = a
-            if b <= a:
+            if b <= a:  # 上の階から乗ってくる人がいたら不可
                 flag == 0
         else:
+            # 向きをセット
             if a != -2:
                 st[a] = 1
             if b != -2:
@@ -76,30 +77,38 @@ def main():
     dd = defaultdict(int)
 
     def check(a, d):
+        # aを左端として，(a,a+d)を結べるか
 
-        if a + 2 * d - 1 >= 2 * N:
+        if a + 2 * d - 1 >= 2 * N:  # オーバー
             return False
 
-        for i in range(d):
+        for i in range(d):  # aから何ます右に行ったところから開始するか
+            # lとrを結ぶ
             l = a + i
             r = l + d
 
-            if fixed[l] != -1:
-                if fixed[l] != r:
+            # print(l,r)
+
+            if fixed[l] != -1:  # lに確定相方がいるなら
+                if fixed[l] != r:  # rじゃないとだめ
                     return False
-            elif fixed[r] != -1:
-                if fixed[r] != l:
+            elif fixed[r] != -1:  # rに確定相方がいるなら
+                if fixed[r] != l:  # lじゃないとだめ
                     return False
-            else:
+            else:  # 　lもrも相方が未定
+                # lは左を向いてはいけない
                 if st[l] == -1:
                     return False
+                # rは右を向いてはいけない
                 if st[r] == 1:
                     return False
 
+                # 一見良さそうだけど，違う人同士を結ばないとだめ，どちらかは0出なければならない
                 if st[l] * st[r] != 0:
                     return False
         return True
 
+    # [l,r)でひとまとめにできるところを有向辺で繋ぐ，0から2Nまで行けたらOK
     adj = [[]for _ in range(2 * N + 1)]
     for i in range(2 * N):
         for d in range(1, N + 3):
@@ -120,6 +129,10 @@ def main():
             if can[nv] == 0:
                 can[nv] = 1
                 q.put(nv)
+
+    # print(st)
+    # print(fixed)
+    # print(adj)
 
     if can[-1]:
         print("Yes")

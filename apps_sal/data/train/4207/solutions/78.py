@@ -4,3 +4,4 @@ def sum_cubes(n):
         cube = i ** 3
         result += cube
     return result
+    # your code here

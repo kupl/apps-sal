@@ -10,12 +10,14 @@ class DinnerPlates:
 
     def push(self, val):
 
+        # when stack is initially empty
         if not self.stacks:
             self.stack.append(val)
             self.stacks.append(self.stack)
             self.left = 0
 
         else:
+            # find the leftmost stack with size less than capacity to append item
             while self.left < len(self.stacks) and len(self.stacks[self.left]) == self.size:
                 self.left += 1
             if self.left == len(self.stacks):
@@ -31,6 +33,7 @@ class DinnerPlates:
         if not self.stacks:
             return -1
 
+        # find the rightmost non empty stack
         if not self.stacks[self.right]:
             while not self.stacks[self.right] and len(self.stacks) - 1 >= self.right:
                 self.stacks.pop(self.right)
@@ -38,6 +41,7 @@ class DinnerPlates:
 
         item = self.stacks[self.right].pop()
 
+        # if stack gets empty after pop item, move the pointer for rightmost non empty stack
         if not self.stacks[self.right]:
             self.stacks.pop(self.right)
             self.right -= 1
@@ -51,6 +55,7 @@ class DinnerPlates:
         if not self.stacks[index]:
             return -1
 
+        # before popping item from stack at index, update the pointer for leftmost stack with capacity
         if self.stacks[index]:
             if self.left > index:
                 self.left = index

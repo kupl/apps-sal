@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[15]:
 
 
 N = int(input())
@@ -8,6 +12,9 @@ for _ in range(N):
     for _ in range(A):
         xy.append(list(map(int, input().split())))
     xy_list.append(xy)
+
+
+# In[16]:
 
 
 ans = 0
@@ -23,3 +30,6 @@ for i in range(2**N):
     else:
         ans = max(ans, bin(i)[2:].count("1"))
 print(ans)
+
+
+# In[ ]:

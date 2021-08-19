@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 def lca(a, b): return a * b // math.gcd(a, b)
 

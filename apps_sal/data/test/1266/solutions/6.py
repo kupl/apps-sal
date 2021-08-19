@@ -61,4 +61,6 @@ if fSW == 'B' or fSE == 'B' or fNW == 'B' or fNE == 'B':
 if fNord == 'R' or fSouth == 'R' or fWest == 'R' or fEast == 'R':
     ans = True
 
+#print(fSW, fSE, fNW, fNE)
+#print(fNord, fSouth, fWest, fEast)
 print('YES' if ans else 'NO')

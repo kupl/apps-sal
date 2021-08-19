@@ -6,3 +6,4 @@ def array_madness(a, b):
     for i in b:
         w += i**3
     return q > w
+    # Ready, get, set, GO!!!

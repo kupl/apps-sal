@@ -15,6 +15,7 @@ i = 0
 sol_index = 1
 while i < operation_p:
     if operations[i][0] == sol_index:
+        # Logic
         sol = col_m - 1
         o = {}
         while (i < operation_p and operations[i][0] == sol_index):
@@ -24,6 +25,7 @@ while i < operation_p:
             else:
                 o[e] = 1
             i += 1
+        # print o
         for e in o:
             if o[e] > 1:
                 if e + 1 <= col_m:

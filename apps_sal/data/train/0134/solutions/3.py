@@ -1,5 +1,6 @@
 class Solution:
     def numDupDigitsAtMostN(self, N: int) -> int:
+        # https://leetcode.com/problems/numbers-with-repeated-digits/discuss/592922/Python-Well-commented-solution-with-easy-to-follow-recursion
         memo = {}
 
         def f(digits_of_N, i, digits_used, any_digit):

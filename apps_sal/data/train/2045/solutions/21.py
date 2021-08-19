@@ -21,7 +21,9 @@ class SegTree:
     def _update_range(self, v, tl, tr, l, r, val):
         if l > r or tl > tr:
             return
+        # print(f"l, r = {l, r}, tl, tr = {tl, tr}")
         if l == tl and r == tr:
+            # self.T[v].append(val)
             if self.T[v] == [INF, INF]:
                 self.T[v] = val
         else:
@@ -57,6 +59,8 @@ class SegTree:
 
 
 def main():
+    # n = number of knights
+    # m = number of fights
     n, m = rli()
     ans = [0 for _ in range(n)]
     ST = SegTree(n)

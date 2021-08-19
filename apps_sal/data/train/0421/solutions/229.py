@@ -1,5 +1,12 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
+        # loop to find the max lexicographic
+        # substring in the substring array
+        # l = \"\"
+        # for i in range(len(s)-1,-1,-1):
+        #     l = max(l, s[i:])
+        #     print(s[i:])
+        # return l
         if len(set(s)) == 1:
             return s
         idx = len(s) - 1

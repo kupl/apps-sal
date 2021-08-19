@@ -1,3 +1,4 @@
+#a = map(int, input().split())
 t = int(input())
 for i in range(t):
     a, b, k = list(map(int, input().split()))

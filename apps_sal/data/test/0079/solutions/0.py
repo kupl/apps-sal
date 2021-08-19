@@ -32,6 +32,7 @@ def mod_inv(x):
 
 s = 1
 for i in range(2, big):
+    # p is probabilty that i | a random number [1,m]
     p = (m // i) * mod_inv(m)
     s += (-mu[i]) * (p) * mod_inv(1 - p)
 print(s % MOD)

@@ -8,6 +8,8 @@ class Solution:
             i = 0
             temp_s = s
             while(i < len(s) - 1):
+                # print(\"i = \",i)
+                # print(\"s = \",s)
                 if(s[i] != s[i + 1]):
                     i = i + 1
                 else:

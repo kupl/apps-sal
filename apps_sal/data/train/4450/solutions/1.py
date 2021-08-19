@@ -1,4 +1,5 @@
 def consecutive(arr):
+    # your code here
     if len(arr) == 1 or len(arr) == 0:
         return 0
     mn, mx = min(arr), max(arr)

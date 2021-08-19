@@ -1,8 +1,9 @@
-class UnionFind:
+class UnionFind:  # 引数は頂点の数、1インデックス
     def __init__(self, n):
         self.parents = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
 
+    # 検索
     def find(self, x):
         if self.parents[x] == x:
             return x
@@ -10,6 +11,7 @@ class UnionFind:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
+    # 併合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -20,6 +22,7 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
+    # 同じ集合に属するか判定
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 

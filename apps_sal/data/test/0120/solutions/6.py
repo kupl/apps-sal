@@ -8,6 +8,8 @@ else:
     G = s.count("G")
     T = s.count("T")
     Q = s.count("?")
+    #print(A, C, G, T, Q)
+    # print(l)
     if max((A, C, G, T)) <= n // 4:
         ns = ""
         for i in range(n):

@@ -98,3 +98,4 @@ elif a <= num and b >= num and c >= num:
             s -= 1
         i += 1
 print(''.join(T))
+# print(L)

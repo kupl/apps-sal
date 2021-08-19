@@ -11,6 +11,7 @@ while(i < n):
         count += 1
         arrx.append(arr[j])
         j += 1
+    # print(j)
     arrx.sort(reverse=True)
     ans += sum(arrx[:min(count, k)])
     i = j

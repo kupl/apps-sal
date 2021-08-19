@@ -1,4 +1,5 @@
 def find(A):
+    # A is a list of non-increasing number
     on = 1
     ans = 0
     for x in A:

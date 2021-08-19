@@ -1,6 +1,7 @@
 def I(): return map(int, input().split())
 
 
+# C
 n = int(input())
 a = sorted(list(I()))
 b = sorted(list(I()))

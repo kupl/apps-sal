@@ -25,6 +25,7 @@ class Solution:
         for i in range(1, n):
             for j in range(i):
                 if ispre(words[j], words[i]):
+                    #print(words[j], words[i])
                     f[i] = max(f[i], f[j] + 1)
             res = max(res, f[i])
         return res

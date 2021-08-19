@@ -28,6 +28,7 @@ class Solution:
             if profit > max_profit:
                 best = rotates
                 max_profit = profit
+            #print(rotates, g, profit)
             i += 1
             i %= 4
         return best

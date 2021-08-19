@@ -14,6 +14,7 @@ class Solution(object):
                     if val == 1:
                         A[r][c] = 2
                         stack = [(r, c)]
+                        #seen = {(r, c)}
                         seen = [(r, c)]
                         while stack:
                             node = stack.pop()
@@ -21,6 +22,7 @@ class Solution(object):
                                 if A[x][y] == 1:
                                     A[x][y] = 2
                                     stack.append((x, y))
+                                    #seen.add((x, y))
                                     seen.append((x, y))
                         components.append(seen)
             return components

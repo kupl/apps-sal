@@ -14,8 +14,8 @@ def resolve():
     _, K = [int(i) for i in input().split()]
     A = [int(i) for i in input().split()]
 
-    ok = max(A)
-    ng = -1
+    ok = max(A)  # maxVal when minimize
+    ng = -1  # maxVal when maximize
     while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if mid > 0 and check(mid, A, K):

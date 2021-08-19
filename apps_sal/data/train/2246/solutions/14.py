@@ -10,6 +10,7 @@ def main():
     X = list(map(int, input().split(" ")))
     A = int(input())
     C = list(map(int, input().split(" ")))
+    #drunk = [0]*N
     money_needed = 0
     drinks_needed = []
     drunk_to_now = 0

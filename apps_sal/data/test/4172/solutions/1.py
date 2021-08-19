@@ -4,6 +4,10 @@ import sys
 from itertools import accumulate
 
 
+#
+# _INPUT_LINES = sys.stdin.read().splitlines()
+# input = iter(_INPUT_LINES).__next__
+
 def go():
     n, k = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
@@ -40,13 +44,19 @@ def go():
             best = min(best, (target - 1) * upcnt[target] - upsum[target] + need)
         if downcnt[target] >= need:
             best = min(best, downsum[target] - (target + 1) * downcnt[target] + need)
-        best = min(best, (target - 1) * upcnt[target] - upsum[target] +
-                   downsum[target] - (target + 1) * downcnt[target] + need
+        best = min(best, (target - 1) * upcnt[target] - upsum[target]
+                   + downsum[target] - (target + 1) * downcnt[target] + need
                    )
 
     return best
 
 
+# x,s = map(int,input().split())
+# t = int(input())
 t = 1
+# ans = []
 for _ in range(t):
     print(go())
+    # ans.append(str(go()))
+#
+# print('\n'.join(ans))

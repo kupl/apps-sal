@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 (n, m), *q = [[*list(map(int, i.split()))] for i in open(0)]
 s = sorted(q)
 d = {}

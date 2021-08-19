@@ -6,6 +6,7 @@ a.sort(reverse=True)
 s = sum(a) + f
 t = 0
 y = i * f
+# print(y/s)
 while(y / s < o):
     s -= a[t]
     t += 1

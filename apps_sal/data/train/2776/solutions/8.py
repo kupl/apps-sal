@@ -5,6 +5,6 @@ def commas(n):
         print("Error")
     res = "{:,}".format(n)
     print(res)
-    if res.endswith('.0'):
+    if res.endswith('.0'):  # I mean...
         return res[:-2]
     return res

@@ -15,6 +15,7 @@ class Solution:
 
             if len(pos):
                 res = max(res, max(pos))
+            # print(res)
 
             if len(pos):
                 pos = set([max(pos)])

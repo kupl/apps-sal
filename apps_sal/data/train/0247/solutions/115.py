@@ -15,12 +15,15 @@ class Solution:
         l = r = None
         ans = float('inf')
         vis = []
+        # print(mapper)
         for i, a in enumerate(arr):
             cumu += a
+            # print(cumu, cumu - target in mapper)
             if cumu - target in mapper:
                 if l == None:
                     count += 1
                     l = i - mapper[cumu - target]
+                    # print(i, mapper[cumu - target])
                     vis.append((mapper[cumu - target] + 1, i))
                 else:
                     l = min(l, i - mapper[cumu - target])

@@ -21,7 +21,7 @@ def main():
         s.append(s_line)
 
     ok_cnt_min = h * w
-    op_cnt = h - 1
+    op_cnt = h - 1  # すき間の個数
     for i in range(2 ** op_cnt):
         op = [False] * op_cnt
         for j in range(op_cnt):

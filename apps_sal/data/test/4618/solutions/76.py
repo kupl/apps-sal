@@ -18,6 +18,9 @@ for alpha in lst:
                 cand_lst.append(s[index2:end])
         cand_lst = set(cand_lst)
         cand_lst = sorted(cand_lst)
+        #print('alpha:  ', alpha)
+        #print('alpha_index: ', alpha_index)
+        #print('cand_lst: ', cand_lst)
         if len(cand_lst) < l:
             l = l - len(cand_lst)
         else:

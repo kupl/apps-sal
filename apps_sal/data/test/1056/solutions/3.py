@@ -20,8 +20,11 @@ for i in range(10):
 res = [0 for i in range(101)]
 for i in range(99, 94, -1):
     ri = max(1, 6 / (100 - i))
+    # print(i,ri,)
     for j in range(i + 1, 101):
         ri += res[j] / (min(6, 100 - i))
+    #    print(j,ri,)
+    # print("")
     res[i] = ri
 
 for i in range(94, -1, -1):
@@ -31,4 +34,6 @@ for i in range(94, -1, -1):
     res[i] = ri
 
 
+# print(res)
+# print(corresp(9,0))
 print(res[1])

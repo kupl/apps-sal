@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while(t > 0):
     t -= 1
@@ -11,6 +12,7 @@ while(t > 0):
         s, p, v = map(int, input().split())
 
         if(p % (s + 1) == 0):
+            # b=0
             a = p // (s + 1)
             a = a * v
             v1.append(a)

@@ -20,6 +20,7 @@ while i < len(s):
         if z != '.':
             ans += z
     gg += int(ans)
+#print(gg, dbl)
 dd = []
 gg += dbl // 100
 dbl = dbl % 100
@@ -29,6 +30,7 @@ if dbl != 0:
     while len(dbl) < 2:
         dbl = '0' + dbl
     dd.append(dbl)
+# print(dd)
 if gg == 0:
     dd.append(0)
 while gg != 0:

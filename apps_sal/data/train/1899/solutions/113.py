@@ -1,10 +1,13 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
+        # Find the first element of the first island
         x, y = self.get_first(A)
 
+        # Do DFS to find all elements in the first island
         q = collections.deque()
         self.dfs(A, x, y, q)
 
+        # Expand the first island, layer by layer until touch the 2nd island
         step = 0
         while q:
             new_q = collections.deque()

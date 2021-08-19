@@ -1,10 +1,13 @@
 import math
+# Вычисление координаты точки по координатам центра, углу, и начальным относительно центра
 
 
 def getCoordinate(gx, gy, alpha, x, y):
     x1 = gx + x * math.cos(alpha) - y * math.sin(alpha)
     y1 = gy + x * math.sin(alpha) + y * math.cos(alpha)
     return x1, y1
+# Вычисление угла, на который надо повернуть точку с координатами x, y,
+# чтобы она оказалась прямо над gx, gy
 
 
 def getAngle(gx, gy, x, y):
@@ -55,6 +58,9 @@ for i in range(n):
     x[i] -= gx
     y[i] -= gy
 alpha = 0
+#print('pos',gx, gy, alpha);
+# Восстанавливать положение точек будем по центру масс и углу
+# Угол - поворот против часовой вокруг центра масс
 fix = {0, 1}
 for i in range(q):
     if r[i] == 2:
@@ -63,9 +69,18 @@ for i in range(q):
     else:
         if len(fix) == 2:
             fix.remove(f[i])
+        # print('remove',f[i])
+        # j - единственный элемент в множестве
         for j in fix:
+            # print(j);
             currX, currY = getCoordinate(gx, gy, alpha, x[j], y[j])
+            #print('fix:', currX, currY)
+            #dalpha=getAngle(gx, gy, currX, currY);
+            # alpha+=dalpha;
             alpha = angles[j]
+            # Чтобы вычислить новые координаты g, нуно повернуть ее на угол
+            # dalpha относительно currX, currY
             gx, gy = currX, currY - math.sqrt(x[j]**2 + y[j]**2)
 
+            #print('pos',gx, gy, alpha/math.pi)
         fix.add(t[i])

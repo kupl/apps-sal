@@ -2,6 +2,7 @@ n, ma, mb = list(map(int, input().split()))
 el = [list(map(int, input().split())) for i in range(n)]
 sa = sum(i[0] for i in el)
 sb = sum(i[1] for i in el)
+# mi=min(sa//ma,sb//mb)
 inf = 10000000000
 x = [[inf for j in range(sb + 1)] for i in range(sa + 1)]
 x[0][0] = 0

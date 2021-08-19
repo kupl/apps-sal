@@ -1,6 +1,8 @@
 n, m, x, y = [int(x) for x in input().split(" ")]
 commands = input()
 
+#n, m, x, y = [3, 4, 2, 2]
+#commands = "UURDRDRL"
 
 x, y = x - 1, y - 1
 
@@ -18,6 +20,7 @@ print("1", end=" ")
 for command in commands[:-1]:
     oldX, oldY = x, y
     x, y = x + move[command][0], y + move[command][1]
+    # print("x,y: ", x, y)
     if (x < 0 or y < 0) or (x >= n or y >= m):
         print("0", end=" ")
         x, y = oldX, oldY
@@ -31,6 +34,9 @@ for command in commands[:-1]:
 
 x, y = x + move[commands[-1]][0], y + move[commands[-1]][1]
 
+# print()
+# print(place)
+# print()
 if (x < 0 or y < 0) or (x >= n or y >= m):
     print("0")
 else:

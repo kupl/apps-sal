@@ -1,3 +1,7 @@
+# cook your dish here
+# import sys
+# sys.stdin = open('input.txt', 'r')
+# sys.stdout = open('output.txt', 'w')
 
 import math
 import collections
@@ -21,7 +25,14 @@ def nCrModp(n, r, p):
     return C[r]
 
 
+# T = int(stdin.readline())
+# for _ in range(T):
+    # n = int(stdin.readline())
 n, k = list(map(int, stdin.readline().split()))
+# a = list(map(int,stdin.readline().split()))
+# q = list(map(int,stdin.readline().split()))
+# b = list(map(int,stdin.readline().split()))
+# a = stdin.readline().strip('\n')
 N = n + k - 1
 R = n - 1
 print(nCrModp(N, R, M))

@@ -13,6 +13,7 @@ class Solution:
         return valid_mountain, i
 
     def longestMountain(self, A: List[int]) -> int:
+        # Idea: go through every element in array and try to build largest mountain
         max_mountain = 0
         i = 0
         if not A:

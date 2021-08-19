@@ -12,13 +12,16 @@ class Solution:
         n = len(A)
         sorted_idxes = sorted(list(range(n)), key=lambda i: A[i])
         odd_next = make_mono_stack(sorted_idxes)
+        # sorted_idxes = sorted(range(n), key=lambda x: A[x], reverse=True)
         sorted_idxes.sort(key=lambda i: A[i], reverse=True)
         even_next = make_mono_stack(sorted_idxes)
 
         odd_can_reach_from_idx = [False] * n
         even_can_reach_from_idx = [False] * n
+        # we can reach to last idx from last idx itself
         odd_can_reach_from_idx[-1] = even_can_reach_from_idx[-1] = True
 
+        # iterate through A backwards, starting at next to last element
         for i in range(len(A) - 2, -1, -1):
             if odd_next[i] is not None:
                 odd_can_reach_from_idx[i] = even_can_reach_from_idx[odd_next[i]]

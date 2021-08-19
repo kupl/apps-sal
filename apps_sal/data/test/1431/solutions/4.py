@@ -1,6 +1,9 @@
+# 入力
 n = int(input())
 a = list(map(int, input().split()))
+# dpテーブル dp[i-1]はi番目の箱に入っているボールの数
 dp = [0 for i in range(n)]
+# 初期条件
 dp[n - 1] = a[n - 1]
 
 for i in range(n, 0, -1):

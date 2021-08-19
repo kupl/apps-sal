@@ -8,5 +8,5 @@ def gap(g, m, n):
                 break
         if prime == True and (i - prev == g):
             return [prev, i]
-        prev = i if prime else prev
+        prev = i if prime else prev  # previous prime number
     return None

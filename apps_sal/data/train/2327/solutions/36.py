@@ -1,3 +1,4 @@
+# seishin.py
 N, M = map(int, input().split())
 D = [[] for i in range(M + 1)]
 for i in range(N):

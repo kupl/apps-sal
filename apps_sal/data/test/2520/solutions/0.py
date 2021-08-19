@@ -13,6 +13,7 @@ for i in range(K):
     block[c - 1].append(d - 1)
     block[d - 1].append(c - 1)
 
+#print(friend, block)
 
 used = [True] * N
 for i in range(N):
@@ -29,7 +30,9 @@ for i in range(N):
                     used[j] = False
 
 
+# print(graph)
 gg = dict(collections.Counter(graph))
+# print(gg)
 
 for i in range(N):
     nn = graph[i]

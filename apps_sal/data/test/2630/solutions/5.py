@@ -13,6 +13,7 @@ class Solution:
         n, m = len(obstacleGrid), len(obstacleGrid[0])
         dp = [[1 if i == 0 or j == 0 else 1 for j in range(m)] for i in range(n)]
 
+        # Set first column of dp.
         obs = False
         first_col = [i[0] for i in obstacleGrid]
 
@@ -23,6 +24,7 @@ class Solution:
         except ValueError:
             pass
 
+        # Set first row of dp.
         try:
             first_row = obstacleGrid[0]
             idx = first_row.index(1)

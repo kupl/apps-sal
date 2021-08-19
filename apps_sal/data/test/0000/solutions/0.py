@@ -18,6 +18,7 @@ for i in range(n - 1, -1, -1):
         if f:
             bind = i
             break
+# print(ind,bind)
 if ind == -1 or bind == -1:
     print(-1)
 elif ind >= bind:

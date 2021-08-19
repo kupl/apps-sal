@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     A = int(input())
     x = 1

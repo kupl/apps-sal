@@ -11,8 +11,9 @@ for _ in range(M):
 
 ans = 0
 
+# 頂点を並び替える順列を生成してループ
 for path in itertools.permutations(list(range(N)), N):
-    if path[0] == 0:
+    if path[0] == 0:  # 先頭が頂点1の時
         for i in range(N):
             if i == N - 1:
                 ans += 1

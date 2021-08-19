@@ -35,6 +35,7 @@ def main():
     ans = []
 
     for i, k in enumerate(a[1:-1], start=1):
+        # print(i,k)
 
         if a[i - 1] <= k and k <= a[i + 1] or a[i - 1] >= k and k >= a[i + 1]:
             ans.append(total)

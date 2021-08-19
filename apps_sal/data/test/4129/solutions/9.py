@@ -79,6 +79,7 @@ def dfs(v, depth):
     dsu.setState(v, (vState, vMinDepth))
 
     for nv in ps[v]:
+        #print(':', v, nv)
         nvSt = dsu.getState(nv)
         nvState, nvMinDepth = nvSt
 
@@ -112,6 +113,8 @@ for i in range(1, n + 1):
         dfs(i, 0)
 
 components = dsu.setNames().difference({0})
+# print(dsu.vs)
+# print(components)
 
 components = components.difference({dsu.get(s)})
 for (u, v) in edges:
@@ -120,4 +123,5 @@ for (u, v) in edges:
         continue
     components = components.difference({v})
 
+# print(components)
 print(len(components))

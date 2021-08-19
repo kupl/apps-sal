@@ -24,6 +24,7 @@ class Solution:
                     if val == target:
                         return val
                     temp_dist = abs(target - val)
+                    # print('VALS', arr[i], arr[j], arr[k], val, temp_dist)
                     if dist == None or temp_dist < dist:
                         closest = val
                         dist = temp_dist

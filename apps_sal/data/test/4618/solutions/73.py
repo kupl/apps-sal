@@ -1,3 +1,6 @@
+# coding: utf-8
+# hello worldと表示する
+# dpでできないかな？
 from math import floor, ceil, pi
 from bisect import bisect_left, bisect_right
 from operator import itemgetter

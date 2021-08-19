@@ -1,3 +1,4 @@
+# cook your dish here
 from math import ceil
 tc = int(input())
 sw = list(map(int, input().split()))

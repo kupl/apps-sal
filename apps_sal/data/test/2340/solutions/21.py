@@ -4,6 +4,7 @@ for _ in range(t):
     p = list(map(int, input().split()))
     p.reverse()
     s = n - 1
+    # print(s)
     c = 0
     l = h
     while 1:

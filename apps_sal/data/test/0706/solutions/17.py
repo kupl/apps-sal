@@ -3,5 +3,6 @@ A, B, n, x = (int(x) for x in input().split())
 if A > 1:
     An = pow(A, n, M)
     print((((An * x) % M) + (B * (1 - An) * pow(1 - A, M - 2, M)) % M) % M)
+    #print(int(An * x + B * (1-An)/(1-A)) % M)
 else:
     print((x + B * n) % M)

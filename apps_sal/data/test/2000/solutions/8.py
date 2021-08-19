@@ -3,6 +3,8 @@ Created on Jul 29, 2016
 
 @author: Md. Rezwanul Haque
 '''
+#from pip.util import Inf
+#import math
 ''''
 n = int(input())
 L = list(map(int,input().split()))
@@ -13,8 +15,10 @@ for i in range(n):
             for k in range(31):
                 if pow(2, k) == L[i]+L[j]:
                     cnt+=1
+                    #print(i,j)
                     break
             
+            #cnt+=1
 print(cnt)'''
 
 
@@ -28,6 +32,7 @@ for i in input().split():
     else:
         d[int(i)] = 1
 
+# print(d)
 L = []
 
 for i in range(1, 33):
@@ -39,7 +44,10 @@ for i in d:
     for j in L:
         if j - i in d:
             if j - i != i:
+                # print(d[j-i],d[i])
                 ans += d[j - i] * d[i]
             else:
+                # print(d[i]-1,d[i])
                 ans += (d[i] - 1) * (d[i])
+# print(ans)
 print(ans // 2)

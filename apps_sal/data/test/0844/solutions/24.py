@@ -2,6 +2,7 @@ n = int(input())
 x = input()
 s = ''.join(['0', x, '1'])
 s1 = ''.join(['1', x, '0'])
+# s = input()
 
 
 def get_max(s):

@@ -1,6 +1,7 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         count = collections.Counter(A)
+        # print(count)
         taken = []
         ans = 0
         for x in range(100000):

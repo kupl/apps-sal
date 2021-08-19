@@ -20,3 +20,6 @@ r = sum(f(s) for s in a)
 c = sum(f(''.join(a[i][j] for i in range(n))) for j in range(m))
 
 print(r + c)
+
+
+# Made By Mostafa_Khaled

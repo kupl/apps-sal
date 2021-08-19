@@ -63,6 +63,7 @@ class Solution:
         res = 0
         que = deque()
         que.append(-1)
+        #start, end = 0, 0
         
         for index, seat in enumerate(seats):
             if seat == 1: que.append(index)

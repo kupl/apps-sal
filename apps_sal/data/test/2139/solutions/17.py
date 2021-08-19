@@ -1,5 +1,7 @@
+# input part
 string = input()
 
+# solution
 result = 0
 
 pos = string.find("bear")

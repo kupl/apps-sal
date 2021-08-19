@@ -16,7 +16,7 @@ def mouse_path(s):
     return abs(area)
 
 
-def invalid(s):
+def invalid(s):  # Checks if the path is invalid
     x, y, sgn = 0, 0, 1
     V, H = [], []
     while True:

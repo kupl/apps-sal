@@ -8,6 +8,7 @@ for i in range(65, 91):
         ls.append((start, 'start'))
         ls.append((end, 'end'))
 ls = list(sorted(ls, key=lambda x: x[0]))
+# print(ls)
 maxl = 0
 for i, x in enumerate(ls):
     if x[1] == 'start':

@@ -35,4 +35,6 @@ class Solution:
                         dpv[new_ssid] = 1 + dpv[ssid]
                         dps[new_ssid] = dps[ssid] + [peepsid]
 
+        # print(dpv)
+
         return dps[(2**N) - 1]

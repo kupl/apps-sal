@@ -29,7 +29,7 @@ def resolve():
             if t == s or dist[t] == -1:
                 continue
             for to in G[t]:
-                if to == s:
+                if to == s:  # サイクルになっている頂点
                     tmp = [s]
                     cur = t
                     while cur != s:

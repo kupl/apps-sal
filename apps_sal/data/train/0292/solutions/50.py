@@ -44,6 +44,7 @@ class Solution:
             if -arr1[i] + arr2[i] - i > c8[0]:
                 c8[0] = -arr1[i] + arr2[i] - i
                 c8[2] = i
+        # print(c1,c2,c3,c4,c5,c6,c7,c8)
         for i in range(0, lim):
             if -arr1[i] - arr2[i] - i > c1[1] and i != c1[2]:
                 c1[1] = -arr1[i] - arr2[i] - i
@@ -68,6 +69,7 @@ class Solution:
 
             if arr1[i] - arr2[i] + i > c8[1] and i != c8[2]:
                 c8[1] = arr1[i] - arr2[i] + i
+        # print(c1,c2,c3,c4,c5,c6,c7,c8)
 
         v1 = 0
         if -9999999999999 not in c1:

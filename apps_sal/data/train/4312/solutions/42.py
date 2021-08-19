@@ -1,4 +1,5 @@
 def pick_peaks(arr):
+    # your code here
     result = []
     resultIndex = []
     for element in range(len(arr)):

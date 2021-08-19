@@ -1,5 +1,6 @@
 import os
 from io import BytesIO
+#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 from collections import namedtuple
 Parsed = namedtuple("Parsed", "type p pl s sl")

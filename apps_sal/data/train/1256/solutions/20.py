@@ -1,3 +1,4 @@
+# cook your dish here
 def solve():
     n = int(input())
     l = list(map(int, input().split()))

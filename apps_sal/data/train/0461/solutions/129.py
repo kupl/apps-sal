@@ -10,9 +10,11 @@ class Solution:
 
         tree_nodes = [None for _ in range(n)]
         for index in range(n):
+            # Set up child
             if tree_nodes[index] is None:
                 tree_nodes[index] = TreeNode(time=informTime[index])
 
+            # Set up parent
             if manager[index] != -1:
                 if tree_nodes[manager[index]] is None:
                     tree_nodes[manager[index]] = TreeNode(time=informTime[manager[index]])
@@ -36,6 +38,8 @@ class Solution:
             return longest_time
 
         return BFS(tree_nodes[headID])
+
+        ##############################
 
         def sum_leaf_to_root(leaf: int) -> int:
             if leaf == headID:

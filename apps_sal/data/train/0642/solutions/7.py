@@ -25,6 +25,7 @@ for _ in range(int(input())):
     left = 0
     right = 999999
     pos1 = 0
+    # print(pos)
     while left <= right:
         con = 0
         mid = (left + right) // 2

@@ -4,4 +4,4 @@ def dont_give_me_five(start, end):
     for item in startlist:
         if '5' not in str(item):
             newlist.append(item)
-    return len(newlist)
+    return len(newlist)   # amount of numbers

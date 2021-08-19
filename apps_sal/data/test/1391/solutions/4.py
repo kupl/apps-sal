@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, m, a = list(map(int, input().split()))
 b = sorted(map(int, input().split()))

@@ -1,3 +1,4 @@
+# cook your dish here
 import sys
 
 N = int(sys.stdin.readline())
@@ -10,11 +11,13 @@ for i in range(N + 1):
     dp1.append([-1, -1])
     dp2.append([-1, -1])
 
+# dp1 initializations
 dp1[0][0] = 0
 dp1[0][1] = 0
 dp1[1][0] = 0
 dp1[1][1] = 2e9
 
+# dp2 initializations
 dp2[0][0] = 0
 dp2[0][1] = 0
 dp2[1][0] = 2e9

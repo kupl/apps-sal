@@ -11,4 +11,5 @@ class Solution:
                 else:
                     for k in range(j):
                         dp[i][j] += dp[i - 1][k]
+        # print(dp)
         return sum(dp[n][:]) % (pow(10, 9) + 7)

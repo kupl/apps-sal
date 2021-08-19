@@ -1,5 +1,7 @@
+# 入力
 A, B, C, D = list(map(int, input().split()))
 
+# 出力
 if 1 <= A and B and C and D <= 10:
     if A + B == C + D:
         print('Balanced')

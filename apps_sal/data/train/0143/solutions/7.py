@@ -1,7 +1,11 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
+        # find the largest region using only two numbers..
+        # sliding window may do the trick here
+        # use a dictionary to keep track of the fruits/ how many types you have .. or just use two baskekts
         import collections
         fruits = collections.defaultdict(int)
+        # only put something in the basket if it's empty
         max_len = 0
         front = back = 0
         while back < len(tree):

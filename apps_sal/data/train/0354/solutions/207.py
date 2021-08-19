@@ -14,4 +14,5 @@ class Solution:
                     elif j == rollMax[i - 1] + 1:
                         dp[i][j] -= 1
                     dp[i][j] %= mod
+        # print(dp)
         return sum(dp[k][n] for k in range(1, 7)) % mod

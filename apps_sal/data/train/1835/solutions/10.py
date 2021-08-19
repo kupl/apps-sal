@@ -9,7 +9,7 @@ class Solution:
         while deq:
             num = deq.popleft()
 
-            if math.pow(10, n - 1) <= num < math.pow(10, n):
+            if math.pow(10, n - 1) <= num < math.pow(10, n):  # in n
                 res.append(num)
             else:
                 targets = [num % 10 - k, num % 10 + k] if k > 0 else [num % 10]

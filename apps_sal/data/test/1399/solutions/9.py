@@ -18,11 +18,13 @@ def CF1036E():
     lines = []
     count = 0
 
+    # Find the lines covered by each line segment
     for _ in range(N):
         x1, y1, x2, y2 = map(int, input().split())
         count += gcd(abs(x1 - x2), abs(y1 - y2)) + 1
         lines.append((x1, y1, x2, y2))
 
+    # Deal with the intersecting points
     for i in range(N):
         d = set()
         for j in range(i + 1, N):
@@ -32,16 +34,22 @@ def CF1036E():
             vecx = (px - qx, rx - sx)
             vecy = (py - qy, ry - sy)
 
+            # Cross of two lines
             area = cross(vecx[0], vecx[1], vecy[0], vecy[1])
 
+            # Parallel line has no intersecting points
             if area == 0:
                 continue
 
+            # Computation of the exact point
+            # This has been referenced from : https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
             lineA = cross(px, py, qx, qy)
             lineB = cross(rx, ry, sx, sy)
             x = cross(lineA, lineB, vecx[0], vecx[1]) / area
             y = cross(lineA, lineB, vecy[0], vecy[1]) / area
 
+            # Verify the points are good.
+            # If the points are integers and lie of the lines they are valid.
             if not (x % 1 == 0 and y % 1 == 0):
                 continue
             if not (online(lines[i], x, y) and online(lines[j], x, y)):

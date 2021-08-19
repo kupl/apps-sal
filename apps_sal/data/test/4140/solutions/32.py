@@ -7,6 +7,7 @@ s = str(input())
 len_s = len(s)
 str10 = str10[:len_s]
 str01 = str01[:len_s]
+# print(str10,str01)
 
 cnt10, cnt01 = 0, 0
 for i in range(len_s):

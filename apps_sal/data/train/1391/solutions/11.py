@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin
 for _ in range(int(input())):
     n, k = map(int, input().split())

@@ -1,5 +1,5 @@
 
-def bitadd(a, w, bit):
+def bitadd(a, w, bit):  # aにwを加える(1-origin)
 
     x = a
     while x <= (len(bit) - 1):
@@ -7,7 +7,7 @@ def bitadd(a, w, bit):
         x += x & (-1 * x)
 
 
-def bitsum(x, bit):
+def bitsum(x, bit):  # ind 1～aまでの和を求める
 
     ret = 0
     while x:
@@ -16,7 +16,8 @@ def bitsum(x, bit):
     return ret
 
 
-def bitaddR(l, r, w, bit1, bit2):
+# 区間更新BIT(BITを2つ用意し、BITの長さをN+2で初期化しておくべし)
+def bitaddR(l, r, w, bit1, bit2):  # 半開区間[l,r)にwを加える
 
     bitadd(l, -1 * w * l, bit1)
     bitadd(r, w * r, bit1)
@@ -24,7 +25,7 @@ def bitaddR(l, r, w, bit1, bit2):
     bitadd(r, -1 * w, bit2)
 
 
-def bitsumR(r, bit1, bit2):
+def bitsumR(r, bit1, bit2):  # 半開区間[1,r)の区間和
 
     return bitsum(r, bit1) + r * bitsum(r, bit2)
 

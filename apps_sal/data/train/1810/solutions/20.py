@@ -1,4 +1,6 @@
 class Solution:
+    # Version 1: Use one dict to store all version numbers
+    # TC: O(n), SC: O(n)
     def getFolderNames(self, names: List[str]) -> List[str]:
         version = {}
         ans = []

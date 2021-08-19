@@ -6,8 +6,8 @@ lr_idx = 0
 for i in range(N - 1):
     if S[i] == 'R' and S[i + 1] == 'L':
 
-        r_odd = 0
-        r_even = 0
+        r_odd = 0  # 奇数
+        r_even = 0  # 偶数
         for c, j in enumerate(reversed(list(range(lr_idx, i)))):
             if S[j] == 'R':
                 if (c + 1) % 2 == 0:

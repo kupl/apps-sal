@@ -17,11 +17,12 @@ def main():
 
     MAX_SILVER = 50 * (N - 1)
     INF = 10 ** 18
+    # dijkstra (time, vertex, money)
     visited = [[False] * (MAX_SILVER + 1) for _ in range(N)]
     cost = [[INF] * (MAX_SILVER + 1) for _ in range(N)]
     q = []
     S = min(S, MAX_SILVER)
-    heappush(q, (0, 0, S))
+    heappush(q, (0, 0, S))  # (time, vertex, silver)
 
     while q:
         t, now, s = heappop(q)
@@ -30,6 +31,7 @@ def main():
         visited[now][s] = True
         cost[now][s] = t
 
+        # next node
         for nv, (a, b) in to[now].items():
             nt = t + b
             rest = s - a
@@ -38,6 +40,7 @@ def main():
                     continue
                 heappush(q, (nt, nv, rest))
 
+        # exchange gold with silver
         rate, time = info[now]
         nt = t + time
         ns = min(s + rate, MAX_SILVER)

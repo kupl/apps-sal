@@ -16,6 +16,7 @@ def solve(s):
                 ans = max(ans, i - start)
                 start = i
                 prev = s[i]
+                # print(ans)
         if(f):
             ans = max(ans, n - start)
             start = i
@@ -39,6 +40,7 @@ def solve1(s):
                 ans += 1
                 maxx = max(maxx, ans)
         maxx = max(maxx, len(st))
+        # print(st)
     maxx = max(maxx, len(st))
     return maxx
 
@@ -59,6 +61,7 @@ def solve2(s):
                 ans += 1
                 maxx = max(maxx, ans)
         maxx = max(maxx, len(st))
+        # print(st)
     maxx = max(maxx, len(st))
     return maxx
 

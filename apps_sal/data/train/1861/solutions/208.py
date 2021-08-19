@@ -4,6 +4,7 @@ class Solution:
         for x, y in a:
             mx[x].add(y)
         ans, n = float('inf'), len(a)
+        # print(mx)
         for i in range(n - 1):
             x1, y1 = a[i]
             for j in range(i + 1, n):

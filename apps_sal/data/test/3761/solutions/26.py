@@ -20,6 +20,10 @@ def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
+#mod = 998244353
+#from decimal import *
+#import numpy as np
+#decimal.getcontext().prec = 10
 
 s = input()
 x, y = MAP()

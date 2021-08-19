@@ -1,3 +1,4 @@
+# test
 s = list(input())
 t = [0 for i in range(len(s) * 4)]
 bits = dict()
@@ -72,10 +73,10 @@ def count(l, r):
 def get_request():
     req = iter(input().split())
     token = int(next(req))
-    if token - 1:
+    if token - 1:  # count
         l, r = list(map(int, req))
         return token, l, r
-    else:
+    else:  # change
         pos = int(next(req))
         sym = next(req)
         return token, pos, sym
@@ -83,7 +84,7 @@ def get_request():
 
 def response(req):
     token, a, b = req
-    if token - 1:
+    if token - 1:  # count
         print(count(a, b))
     else:
         update(a, b)

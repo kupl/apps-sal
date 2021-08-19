@@ -1,6 +1,8 @@
 class Solution:
 
+    # O(n^2), O(n)
     def minAreaRect(self, points: List[List[int]]) -> int:
+        # O(nlogn), O(1)
         points.sort()
 
         cols = defaultdict(list)

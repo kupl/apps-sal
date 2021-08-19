@@ -11,3 +11,6 @@ for i in range(X[0]):
     Time += Stay * X[1] + Distance[i]
     Tank += Stay * Max - Distance[i]
 print(Time)
+
+# Hope the best for Ravens
+# Never give up

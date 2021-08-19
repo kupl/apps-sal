@@ -1,4 +1,7 @@
+# dp[t][m] = largest possible starting at a position  >= t with m intervals left
 n, m, k = map(int, input().split(' '))
+# m = length of interval
+# k = # of intervals
 array = list(map(int, input().split(' ')))
 dp = [[0] * 5002 for a in range(5002)]
 prefsums = [array[0]]

@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 t = int(input(''))
 for k in range(t):
     n = int(input(''))
@@ -11,6 +13,7 @@ for k in range(t):
         li.append(p)
         li1.append(q)
     r = li[1] - li[0]
+    # print(r)
     li2.append(r)
     for i in range(1, n - 1):
         p = li[i + 1] - li[i - 1]
@@ -21,4 +24,5 @@ for k in range(t):
     ans = 0
     for i in range(n):
         ans = ans + li1[i] * li2[i]
+        # print(li2[i])
     print(ans)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import bisect
 import sys
 input = sys.stdin.readline

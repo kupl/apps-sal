@@ -13,4 +13,4 @@ def bishop_diagonal(bishop1, bishop2):
         return sorted([top, bottom])
 
     else:
-        return sorted([bishop2, bishop1])
+        return sorted([bishop2, bishop1])  # not on same diagonal

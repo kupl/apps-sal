@@ -8,6 +8,7 @@
 from sys import stdin
 
 
+# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     n, r = list(map(int, stdin.readline().split()))

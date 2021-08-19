@@ -28,4 +28,5 @@ for i in range(q - 1):
             out.write(str(min(z - 1, 1 + len(dright) + dleft[id] - 1)) + "\n")
         else:
             z = dright[id]
+            # print(z)
             out.write(str(min(len(dleft) + z, len(dright) - z)) + "\n")

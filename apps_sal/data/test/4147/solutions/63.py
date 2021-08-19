@@ -3,6 +3,8 @@ sys.setrecursionlimit(10**7)
 n, A, B, C = map(int, input().split())
 L_ls = [int(input()) for _ in range(n)]
 
+# dfs(i,a,b,c) := i番目の竹のまえの時点で、A用の長さがa, B用の長さがb, C用の長さがcだった時の、それ以降の分岐での最初コスト
+
 
 def dfs(i, a, b, c):
     if i == n:

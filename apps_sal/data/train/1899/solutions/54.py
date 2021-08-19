@@ -28,6 +28,7 @@ class Solution:
                     break
 
         def BFS(i, j):
+            # A[i][j] = 2
             queue.append((i, j))
             for x, y in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
                 if 0 <= (i + x) < len(A) and 0 <= (j + y) < len(A):

@@ -1,5 +1,7 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
+        # this is a bit operation question
+        # trick is to realize that largest number is number of * 2 operations
 
         multiply = 0
         add = 0

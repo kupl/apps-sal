@@ -7,6 +7,7 @@ class Solution(object):
         revsum = [0] * (l - 1) + [A[-1]]
         for i in range(l - 1)[::-1]:
             revsum[i] = revsum[i + 1] + A[i]
+        # print(revsum)
 
         @lru_cache(None)
         def dp(n, k):

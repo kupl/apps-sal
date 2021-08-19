@@ -22,6 +22,7 @@ for i in range(n + 1):
 for i in range(n + 1, 0, -1):
     right[i - 1] = max(right[i - 1], right[i])
 
+# 引き返さない最大
 ans = max(left[-1], right[0])
 right = list(reversed(right))
 for i in range(n):

@@ -16,7 +16,7 @@ for i in range(h):
     ny += ch[i] == ay
 for i in range(w):
     nx += cw[i] == ax
-can = ny * nx
+can = ny * nx  # 最大値をとる選び方の数
 for y, x in yx:
     if ch[y] == ay and cw[x] == ax:
         can -= 1

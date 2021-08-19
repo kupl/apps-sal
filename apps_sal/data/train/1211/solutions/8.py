@@ -5,4 +5,4 @@ for i in range(T):
     while pos != -1:
         string = string.replace("abc", "")
         pos = string.find('abc')
-    print(string)
+    print(string)  # cook your dish here

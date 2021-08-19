@@ -9,6 +9,7 @@ class Solution:
 
         concatenated_string, res = [], 0
         dfs(arr, '', concatenated_string)
+        # print(concatenated_string)
         for elem in concatenated_string:
             res = max(res, len(elem))
         return res

@@ -12,6 +12,7 @@ def ARC072C():
         cnt2 = abs(-1 - a[0])
         sum2 = -1
     j = 1
+    #print(sum1, sum2)
     for i in range(1, N):
         sum1 += a[i]
         sum2 += a[i]
@@ -30,6 +31,8 @@ def ARC072C():
                 cnt2 += 1 - sum2
                 sum2 = 1
         j += 1
+        #print(sum1, sum2)
+    #print(cnt1, cnt2)
     print((min(cnt1, cnt2)))
 
 

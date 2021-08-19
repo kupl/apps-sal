@@ -68,6 +68,7 @@ class Prime():
             d[n] += 1
         return d.items()
 
+    # memo
     def divisions(self, n):
         if n in self.ds_memo:
             return self.ds_memo[n]
@@ -115,8 +116,10 @@ def main():
                 nn //= u
             if nn % u == 1:
                 r += 1
+            # print("u",u,j,nn,r)
 
     d = pr.division(n - 1)
+    # print("d",d)
     k = 1
     for _, v in d:
         k *= v + 1

@@ -19,6 +19,7 @@ def solve(n, aa, ab, ba, bb):
         if ba == 'B':
             print(pow(2, n - 3, mod))
         else:
+            # n-3の区間にaaを除く全パターン
             dp = [[0] * 2 for i in range(n + 1)]
             dp[0][0] = 1
             dp[0][1] = 1
@@ -31,6 +32,7 @@ def solve(n, aa, ab, ba, bb):
         if ba == 'A':
             print(pow(2, n - 3, mod))
         else:
+            # n-3の区間にaaを除く全パターン
             dp = [[0] * 2 for i in range(n + 1)]
             dp[0][0] = 1
             dp[0][1] = 1

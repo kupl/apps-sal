@@ -24,6 +24,7 @@ for c in colors():
             if field[i][j] == c:
                 if not all(field[n_i][n_j] == c for (n_i, n_j) in neighbours(i, j)):
                     edges[c].append((i, j))
+# print(edges)
 
 
 def up_field(color):
@@ -43,6 +44,8 @@ def print_field():
         print(l)
     print('-' * 100)
 
+# print_field()
+
 
 while any(len(x) > 0 for x in list(edges.values())):
     for s, c in zip(speeds, colors()):
@@ -51,10 +54,12 @@ while any(len(x) > 0 for x in list(edges.values())):
             if len(edges[c]) == 0:
                 break
 
+    # print_field()
+
 
 counts = {c: 0 for c in colors()}
 counts['.'] = 0
-counts['
+counts['#'] = 0
 
 for i in range(n):
     for j in range(m):

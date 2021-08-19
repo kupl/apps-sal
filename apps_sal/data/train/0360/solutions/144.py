@@ -24,4 +24,5 @@ class Solution:
                 lo = mid + 1
             else:
                 hi = mid
+            # print(lo, mid, hi)
         return lo

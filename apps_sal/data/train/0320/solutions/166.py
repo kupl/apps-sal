@@ -7,6 +7,7 @@ class Solution:
         n = len(nums)
 
         while nums:
+            # print(nums)
             while nums[-1] == 0:
                 nums.pop()
                 if not nums:

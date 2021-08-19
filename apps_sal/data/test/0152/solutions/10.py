@@ -17,6 +17,7 @@ for i in range(m + 1):
     inf = -1
     sup = k
     while inf < sup - 1:
+        # print(inf,sup)
         mid = (inf + sup) // 2
         if b_m[mid] <= re_mana:
             inf = mid

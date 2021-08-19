@@ -8,3 +8,6 @@ for i in range(m):
     o = max(o, (a[x - 1] + a[y - 1]) / c)
 
 print(o)
+
+
+# Made By Mostafa_Khaled

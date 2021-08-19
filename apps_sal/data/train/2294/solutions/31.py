@@ -1,3 +1,4 @@
+# E
 import numpy as np
 
 N = int(input())
@@ -11,8 +12,10 @@ for i in range(N):
     Y[i] = max(x, y)
 
 
+# CASE1
 res1 = (max(Y) - min(Y)) * (max(X) - min(X))
 
+# CASE2
 x_arg = np.argsort(X)
 max_a = max(X)
 min_a = min(X)

@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 cnt_1 = 0
 

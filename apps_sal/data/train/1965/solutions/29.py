@@ -21,6 +21,7 @@ class Solution:
                     fa[getfa(i)] = getfa(j)
                     connect_count += 1
                     ret -= 1
+            # print(fa, connect_count, ret)
             if c == True or connect_count == len(fa) - 1:
                 return ret
             return -1

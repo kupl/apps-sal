@@ -12,5 +12,6 @@ class Solution:
         for i in ind[maxy]:
             s = s[i - off:]
             off += (i - off)
+            # print(s, off)
             ans = max(ans, s)
         return ans

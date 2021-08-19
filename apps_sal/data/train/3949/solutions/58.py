@@ -6,6 +6,7 @@ d = {
 
 
 def calculate_tip(amount, rating):
+    # your code here
     rating = rating.lower()
     if rating not in d.keys():
         return 'Rating not recognised'

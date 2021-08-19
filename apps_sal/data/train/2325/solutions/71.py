@@ -6,9 +6,11 @@ def input(): return sys.stdin.readline().rstrip()
 
 
 def resolve():
+    # 全部 A にした時に、差が3の約数なら良さそう
     S = [1 if(s == 'A') else 2 for s in input()]
     T = [1 if(s == 'A') else 2 for s in input()]
 
+    # cumsum
     m = len(S)
     n = len(T)
     CS = [0] * (m + 1)
@@ -19,6 +21,7 @@ def resolve():
     for i in range(n):
         CT[i + 1] = CT[i] + T[i]
 
+    # output
     for _ in range(int(input())):
         a, b, c, d = map(int, input().split())
         a -= 1

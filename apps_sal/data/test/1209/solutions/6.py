@@ -3,6 +3,7 @@ from itertools import combinations
 from math import ceil, fabs
 input = stdin.readline
 n = int(input())
+#n, m = list(map(int, input().split()))
 a = [float(input()) for _ in range(n)]
 l = len(a)
 m = []

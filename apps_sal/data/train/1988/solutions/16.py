@@ -11,6 +11,7 @@ class Solution:
             blue[x].append(y)
         ans = []
         for i in range(n):
+            # blue
             visited = set()
             queue = [(0, 0, 0), (1, 0, 0)]
             level = -1
@@ -21,11 +22,13 @@ class Solution:
                 if(node == i):
                     level = lvl
                     break
+                #previous is blue
                 if(color == 0):
                     for neigh in red[node]:
                         if((1, neigh) not in visited):
                             queue.append((1, neigh, lvl + 1))
                             visited.add((1, neigh))
+                #previous is red
                 elif(color == 1):
                     for neigh in blue[node]:
                         if((0, neigh) not in visited):

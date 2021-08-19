@@ -35,7 +35,7 @@ def main():
     while pos != 0:
         next_pos = pos - M
         idx = bisect_left(pos_0, next_pos)
-        if pos - pos_0[idx] > M or pos == pos_0[idx]:
+        if pos - pos_0[idx] > M or pos == pos_0[idx]:  # 移動できない
             print((-1))
             return
 

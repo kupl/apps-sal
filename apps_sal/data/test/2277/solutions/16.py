@@ -10,6 +10,7 @@ arr = list(map(int, (input()).split()))
 m = int(input())
 flag = False
 
+# current parity
 count = 0
 for i in range(n - 1):
     for j in range(i + 1, n):
@@ -19,6 +20,8 @@ if count % 2 == 0:
     flag = False
 else:
     flag = True
+# print("nothing")
+# print(flag)
 
 newflag = 0
 ans = []
@@ -29,12 +32,14 @@ for i in range(m):
         newflag = False
     else:
         newflag = True
+    #print("new flag ", newflag)
     if flag and newflag or not flag and not newflag:
-        flag = False
+        flag = False  # even
         ans.append("even")
     else:
-        flag = True
+        flag = True  # odd
         ans.append("odd")
 
+    # print(pflag(flag))
 
 print("\n".join(ans))

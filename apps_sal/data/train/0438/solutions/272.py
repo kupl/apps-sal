@@ -60,6 +60,7 @@ class Solution:
                 disjoint.union(index, index - 1)
             if index + 1 < len(val) and val[index] == val[index + 1]:
                 disjoint.union(index, index + 1)
+            #print(k, disjoint.groupCount)
             if disjoint.groupCount[m] > 0:
                 ans = k + 1
             '''
@@ -71,6 +72,7 @@ class Solution:
                     continue
                 i += 1
             '''
+            #print(k, disjoint.size, val)
         return ans
 
     '''

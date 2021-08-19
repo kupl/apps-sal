@@ -1,5 +1,6 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
+        # Eliminate zero
         negative = []
         positive = []
 
@@ -17,6 +18,7 @@ class Solution:
 
         negative.sort()
         positive.sort()
+        # print(negative, positive)
 
         return self.helper(negative) and self.helper(positive)
 
@@ -24,6 +26,7 @@ class Solution:
         while nums:
             cur_num = nums[0]
             idx = self.binarySearch(nums, 2 * cur_num)
+            # print('helper',nums[0], idx)
             if idx == -1:
                 return False
             nums.pop(idx)
@@ -37,6 +40,7 @@ class Solution:
 
         head = 0
         tail = len(nums) - 1
+        # print(nums, key)
 
         while head <= tail:
             mid = (head + tail) // 2

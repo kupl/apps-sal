@@ -3,7 +3,7 @@ x = list(map(int, input().split()))
 xm = max(x)
 
 
-def ra(a):
+def ra(a):  # 圧縮された要素を非保持
     ll, l = [0] * xm, 1
     for i in range(len(a) - 1):
         if a[i] == a[i + 1]:

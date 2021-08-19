@@ -14,6 +14,8 @@ class Solution:
                      '9': ['w', 'x', 'y', 'z'],
                      '0': [""]}
         combs = []
+        # Queue will hold a list of tuples mapping to how many characters are already mapped,
+        # and the current converted string!
         letter_q = [(0, "")]
         if not digits:
             return []

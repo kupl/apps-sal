@@ -1,5 +1,6 @@
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
+        # remove smallest thing from centert
         tot = sum(nums)
         need = sum(nums) % p
         if need == 0:

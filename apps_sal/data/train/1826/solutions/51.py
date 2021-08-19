@@ -32,7 +32,9 @@ class Solution:
             for j in range(1, n + 2 * (K + 1)):
                 res[i][j] = res[i][j] + res[i - 1][j] + res[i][j - 1] - res[i - 1][j - 1]
 
+        # print(res)
         for i in range(K + 1, m + K + 1):
             for j in range(K + 1, n + K + 1):
+                # print(f'mat[{i-K}][{j-K}] = res[{i + K}][{j + K}] - (res[{i + K}][{j - K - 1}] + res[{i - K - 1}][{j + K}] - res[{i - K - 1}][{j - K - 1}])')
                 mat[i - K - 1][j - K - 1] = res[i + K][j + K] - (res[i + K][j - K - 1] + res[i - K - 1][j + K] - res[i - K - 1][j - K - 1])
         return mat

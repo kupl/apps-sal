@@ -17,7 +17,7 @@ def mazesearch(G, initial_h, initial_w, target_h, target_w):
             [1,1,1,0,1,1]]
     '''
     steps = 0
-    BLOCKED, ALLOWED = '
+    BLOCKED, ALLOWED = '#', '.'
     UNVISITED, VISITED = 0, 1
     directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
     if G[initial_h][initial_w] == BLOCKED:

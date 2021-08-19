@@ -42,7 +42,9 @@ class Problem:
                     occs = 0
                 else:
                     occs = cnt[pair]
+                # print(pair, res[i][0], res[j][0], occs)
                 if res[i][0] + res[j][0] - occs == m:
+                    # return ' '.join(str(x) for x in sorted([res[i][1], res[j][1]]))
                     return "YES"
         return "NO"
 

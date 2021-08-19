@@ -22,6 +22,7 @@ def dijkstra(u):
         res.append(f)
         for w, j, f in graph[i]:
             if not vis[j]:
+                #print(_+w, w, j, f)
                 heapq.heappush(q, (_ + w, w, j, f))
 
     print(ans)

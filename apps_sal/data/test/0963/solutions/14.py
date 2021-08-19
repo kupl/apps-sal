@@ -8,9 +8,9 @@ for _ in range(k):
     lr.append([l, r])
 for i in range(2, n + 1):
     for l, r in lr:
-        if i - l < 0:
+        if i - l < 0:  # iに到達可能なやり方がないとき
             continue
-        a[i] += a[i - l] - a[max(0, i - r - 1)]
-    a[i] += a[i - 1]
+        a[i] += a[i - l] - a[max(0, i - r - 1)]  # 1手で到達可能なのは正味で何通りかを計算
+    a[i] += a[i - 1]  # 同一区間の分を集約
     a[i] %= mod
 print(((a[n] - a[n - 1]) % mod))

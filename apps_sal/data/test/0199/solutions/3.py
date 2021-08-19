@@ -11,6 +11,7 @@ else:
         print(minK)
     else:
         s = s - (sumK - (minK * n))
+        # print(s)
         if s % n == 0:
             print(minK - (s // n))
         else:

@@ -19,14 +19,18 @@ for L, R in LR:
 np.maximum.accumulate(canuse_0, out=canuse_0)
 np.maximum.accumulate(canuse_1, out=canuse_1)
 
+# 1を使った個数で
 dp = np.zeros(N + 1, dtype=np.int64)
 dp[0] = 1
 for i in range(N):
     prev = dp
     dp = np.zeros(N + 1, dtype=np.int64)
+    # i番目を置いた後で、1の個数の範囲
     left = max(0, (i + 1) - canuse_0[i])
     right = canuse_1[i]
+    # 0を使う
     dp[left:right + 1] += prev[left:right + 1]
+    # 1を使う
     left = max(1, left)
     dp[left:right + 1] += prev[left - 1:right]
     dp %= MOD

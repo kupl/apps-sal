@@ -25,7 +25,9 @@ def main():
                     else:
                         break
                     j += 1
+                # print(cnt)
                 for j in range(i + cnt - 1, i - 1, -1):
+                    # print(j)
                     ans[j + 1] = inc
                     inc -= 1
         for i in range(N):

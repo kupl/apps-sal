@@ -18,6 +18,7 @@ for i in reversed(range(n)):
     if L[i] <= 0:
         c += 1
 res = 10**9
+# print(T)
 if L[0] > 0:
     T[0][0] += 1
 if L[n - 1] < 0:
@@ -27,4 +28,5 @@ for i in range(n):
     if L[i] == 0:
         k += 1
     res = min(res, k)
+# print(res)
 open('output.txt', 'w').write(str(res))

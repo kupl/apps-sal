@@ -13,4 +13,7 @@ class Solution:
                 right[i] = 1 + right[i + 1]
             res = max(res, left[i] + right[i])
 
+        # res = float('-inf')
+        # for i in range(len(nums)):
+        #     res = max(res, left[i] + right[i])
         return res

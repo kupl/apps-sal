@@ -1,3 +1,4 @@
+# 未知のアルゴリズムか天才系DPかと思ってすぐ諦めて解説読んでしまった
 
 d, g = list(map(int, input().split()))
 points = []
@@ -14,12 +15,15 @@ for bit in range(2**d):
     count = 0
     for i in range(d):
         if arr[i]:
+            # kompuli-to
             tmp_sum += points[i][1]
             tmp_sum += (i + 1) * 100 * points[i][0]
             count += points[i][0]
     if tmp_sum < g:
+        # 達成できるまで得点の高いやつからやっていく
         for i in range(d - 1, -1, -1):
             if arr[i]:
+                # すでにkompuli-toしてるので
                 continue
             used = 0
             for j in range(points[i][0]):

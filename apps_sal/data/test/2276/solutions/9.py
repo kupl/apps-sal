@@ -7,7 +7,7 @@ def readints(): return list(map(int, input().strip('\n').split()))
 n = int(input())
 s = input()
 a = list(readints())
-a = [0] + a
+a = [0] + a  # 1-index
 
 cache = {}
 
@@ -24,6 +24,7 @@ def solve(i, j, k):
     for x in range(i + 1, j + 1):
         if s[i] == s[x]:
             best = max(best, solve(i + 1, x - 1, 1) + solve(x, j, k + 1))
+    # print(i,j,best)
     cache[(i, j, k)] = best
     return best
 

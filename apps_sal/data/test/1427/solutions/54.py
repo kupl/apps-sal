@@ -50,6 +50,7 @@ for i in range(1, len(F)):
 val = 1
 for p, e in list(lcm.items()):
     val = val * pow(p, e, M) % M
+# print(val)
 
 B = [val * pow(a, M - 2, M) % M for a in A]
 print((sum(B) % M))

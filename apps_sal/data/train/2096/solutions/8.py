@@ -24,3 +24,6 @@ print(len(s))
 for l in s:
 
     print(len(l), *l)
+
+
+# Made By Mostafa_Khaled

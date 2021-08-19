@@ -3,6 +3,7 @@ dic1 = {}
 dic2 = {}
 dic3 = []
 min_ans = 10000000000
+# dicはdic[点数][問題数][コンプリート]
 for i in range(1, D + 1):
     p, c = map(int, input().split())
     dic1[i * 100] = p

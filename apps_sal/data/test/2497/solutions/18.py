@@ -17,7 +17,7 @@ for x, y, d in xyd:
         ho, ve = 0, 1
     elif d == "U":
         ho, ve = 1, 2
-    else:
+    else:  # d == "D"
         ho, ve = 1, 0
     x_max_RL_[ho] = max(x_max_RL_[ho], x)
     x_min_RL_[ho] = min(x_min_RL_[ho], x)

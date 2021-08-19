@@ -21,3 +21,6 @@ for a in f():
     s ^= x if k & 1 else y
 
 print('Kevin' if s else 'Nicky')
+
+
+# Made By Mostafa_Khaled

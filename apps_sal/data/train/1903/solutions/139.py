@@ -22,6 +22,7 @@ class Solution:
                 )
 
         heapq.heapify(dis)
+        # l-1 break
         count = 0
         ans = 0
         while dis:

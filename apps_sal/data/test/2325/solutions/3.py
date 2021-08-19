@@ -1,7 +1,10 @@
+# from array import array
 md = 10 ** 9 + 7
 
 
 def fact_all(N):
+    # lp = array('L', [2]*(N+1))
+    # pr = array('L', [2])
     lp = [2] * (N + 1)
     pr = [2]
     pra = pr.append
@@ -47,6 +50,7 @@ def factor(n, lpa=fact_all(10**6)):
         dv = lpa[n]
     if n > 1:
         num_ones += 1
+        # pws.append(1)
     return pws, num_ones
 
 

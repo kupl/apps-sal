@@ -17,11 +17,13 @@ def sg_func(a, b):
 
 class Seg_cus():
     def __init__(self, x):
+        #####単位元######
         self.ide_ele_min = inf
         self.func = sg_func
 
         self.n = len(x)
 
+        # num_max:n以上の最小の2のべき乗
         self.num_max = 2**(self.n - 1).bit_length()
         self.x = [[self.ide_ele_min, self.ide_ele_min, 0] for _ in range(2 * self.num_max)]
 
@@ -69,11 +71,13 @@ class Seg_cus():
 
 class Seg_min():
     def __init__(self, x):
+        #####単位元######
         self.ide_ele_min = 10**10
         self.func = min
 
         self.n = len(x)
 
+        # num_max:n以上の最小の2のべき乗
         self.num_max = 2**(self.n - 1).bit_length()
         self.x = [self.ide_ele_min] * 2 * self.num_max
 
@@ -127,6 +131,10 @@ for _ in range(n // 2):
     ans.append(num1)
     ans.append(num2)
 
+    # print(num1,num2)
+    # print(ind[num1],ind[num2])
+    # print(st.x)
+    # print(st_ind.x)
     st.delete(ind[num1])
     st.delete(ind[num2])
     st_ind.update(ind[num1], ind[num1])

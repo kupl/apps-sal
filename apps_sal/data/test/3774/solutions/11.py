@@ -16,6 +16,7 @@ if n == 1:
         solutions = m
     if m % 6 == 1 or m % 6 == 5:
         solutions = m - 1
+        # no need to write m*n as n = 1 so m shld suffice
     if m % 6 == 2 or m % 6 == 4:
         solutions = m - 2
     if m % 6 == 3:

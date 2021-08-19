@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def is_leap(y):
     return bool(not y % 400 or (not y & 0x3 and y % 100))

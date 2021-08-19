@@ -6,8 +6,8 @@ ans = 0
 directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 for i in range(h):
     for j in range(w):
-        if tizu[i][j] == "
-        continue
+        if tizu[i][j] == "#":
+            continue
         check = [[False for _ in range(w)] for _ in range(h)]
         check[i][j] = True
         queue = deque()
@@ -21,8 +21,8 @@ for i in range(h):
                 nw = pos[1] + dw
                 if nh == -1 or nh == h or nw == -1 or nw == w:
                     continue
-                if tizu[nh][nw] == "
-                continue
+                if tizu[nh][nw] == "#":
+                    continue
                 if check[nh][nw]:
                     continue
                 check[nh][nw] = True

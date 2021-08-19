@@ -11,8 +11,8 @@ for b in sys.stdin.read():
             board.append(-1)
         elif 0 <= ord(c) - 49 <= 9:
             board.append(ord(c) - 49)
-        elif c == '
-        board.append(-2)
+        elif c == '#':
+            board.append(-2)
 
 new_castles = [dq() for _ in range(P)]
 
@@ -25,6 +25,7 @@ player_Q = dq(p for p in range(P) if new_castles[p])
 while player_Q:
     p = player_Q.popleft()
     Q = new_castles[p]
+    # Do S[p] moves
     goal = Q[-1][1] + S[p]
     while Q and Q[0][1] != goal:
         pos, moves = Q.popleft()

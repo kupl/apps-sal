@@ -15,3 +15,23 @@ class Solution:
                 for e in dic.get(em, []):
                     stack.append((e, informTime[em] + time))
         return ans
+
+        # O(n), O(n)两种方法
+
+
+#         manage = {}
+#         for i in range(n):
+#             manage[manager[i]] = manage.get(manager[i], []) + [i]
+
+#         ans = 0
+#         stack = [(headID,0)]
+
+#         while stack:
+#             node, time = stack.pop()
+#             if informTime[node] == 0:
+#                 ans = max(ans, time)
+#             else:
+#                 for nei in manage[node]:
+#                     stack.append((nei, informTime[node] + time))
+
+#         return ans

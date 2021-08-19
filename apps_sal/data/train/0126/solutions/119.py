@@ -1,3 +1,5 @@
+# O(n) time and space
+# Only need minSize, if string S with size N > minSize has frequency F, then the substring of S must also have frequency F
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         ans = 0

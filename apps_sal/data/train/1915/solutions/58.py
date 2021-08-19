@@ -4,8 +4,10 @@ class Solution:
         out = []
         q = collections.deque()
         done = set()
+        # create v,t
         v = [set() for _ in range(lent - lens + 1)]
         t = [set() for _ in range(lent - lens + 1)]
+        # iterate over all offsets
         for i in range(len(target) - len(stamp) + 1):
             for j in range(len(stamp)):
                 if stamp[j] == target[i + j]:

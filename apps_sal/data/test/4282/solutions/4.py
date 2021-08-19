@@ -1,7 +1,9 @@
+# alpha = "abcdefghijklmnopqrstuvwxyz"
 from heapq import heappop, heappush
 t = 1
 for test in range(t):
     n = int(input())
+    # a = list(map(int, input().split()))
     D = {}
     for i in range(1, n + 1):
         a, b = list(map(int, input().split()))

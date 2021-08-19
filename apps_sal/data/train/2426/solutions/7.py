@@ -7,5 +7,7 @@ class Solution:
                 min_val = a
             elif a > max_val:
                 max_val = a
+            # min_val = min(min_val, a)
+            # max_val = max(max_val, a)
 
         return max(max_val - min_val - 2 * K, 0)

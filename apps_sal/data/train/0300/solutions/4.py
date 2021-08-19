@@ -5,6 +5,7 @@ class Solution:
 
         @lru_cache(maxsize=None)
         def f(x, target, depth):
+            # print('  ' * depth, '开始计算', x, target)
             if target == 1:
                 return 1
 

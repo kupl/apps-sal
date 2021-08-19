@@ -21,6 +21,7 @@ for _ in range(int(input())):
     right = 10000000000
     while right - left >= 10**(-6):
         mid = (left + right) / 2
+        # print(mid)
         if isValid(arr, mid) == True:
             left = mid
             ans = mid

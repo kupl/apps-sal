@@ -26,6 +26,8 @@ def Line(N, num):
         read_all = [tuple(II()) for _ in range(N)]
         return map(list, zip(*read_all))
 
+#################
+
 
 def my_sign(x):
     return (x > 0) - (x < 0)

@@ -1,5 +1,8 @@
 import sys
 
+# x = abs(int(input()))
+# k = int(input())
+# d = int(input())
 
 array = list(map(int, input().strip().split()))
 x = abs(array[0])

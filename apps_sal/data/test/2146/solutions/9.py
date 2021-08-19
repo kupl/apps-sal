@@ -1,3 +1,4 @@
+# 689B
 n = int(input())
 s = input()
 g = {}

@@ -25,6 +25,7 @@ def main():
         for i in range(n):
             a[i] -= off
         ans += off
+        # print(a, off)
         buff = []
         while a:
             if a[-1]:

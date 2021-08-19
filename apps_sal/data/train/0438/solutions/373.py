@@ -1,7 +1,7 @@
 class UnionFindSet:
     def __init__(self, n):
         self.parents = [i for i in range(n)]
-        self.ranks = [0] * n
+        self.ranks = [0] * n  # check whether the position is 1
 
     def find(self, x):
         if x != self.parents[x]:
@@ -36,7 +36,10 @@ class Solution:
                 if 0 <= j < len(arr):
                     if uf.ranks[uf.find(j)] == m:
                         ans = step
-                    if uf.ranks[j]:
+                    if uf.ranks[j]:  # j is 1
                         uf.union(idx, j)
 
+        # for i in range(n):
+        #    if uf.ranks[uf.find(i)]==m:
+        #        return n
         return ans

@@ -18,6 +18,7 @@ def getList():
     return list(map(int, input().split()))
 
 
+# sys.setrecursionlimit(1000000)
 INF = 10 ** 17
 MOD = 10 ** 9 + 7
 
@@ -62,6 +63,7 @@ def main():
     nums = [(x, i + 1) for i, x in enumerate(nums)]
     nums.append((0, INF))
     nums.sort(key=lambda x: -x[0] * INF + x[1])
+    # print(nums)
     mx = INF
     ans = [0 for i in range(n + 1)]
     tmp_tgt = INF

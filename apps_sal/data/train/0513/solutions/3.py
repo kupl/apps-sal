@@ -1,6 +1,12 @@
+# coding: utf-8
 import sys
+#from operator import itemgetter
 sysread = sys.stdin.readline
+#from heapq import heappop, heappush
+#from collections import defaultdict
 sys.setrecursionlimit(10**7)
+#import math
+#from itertools import combinations
 
 
 def run():
@@ -16,7 +22,7 @@ def run():
     dp[0] = -float('inf')
     ddp2 = [0]
     paths = []
-    actions = []
+    actions = []  # (idx, pre, pro)
     ans = [0] * (N + 1)
 
     def dfs(node, parent=None):

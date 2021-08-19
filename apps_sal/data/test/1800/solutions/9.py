@@ -22,6 +22,8 @@ for i in range(m):
     t.append(t1[i])
     r.append(r1[i])
 
+# print(t)
+# print(r)
 
 m = len(t)
 b = [0 for x in range(n)]
@@ -31,6 +33,7 @@ for i in range(m - 1, -1, -1):
         last = r[i]
         b[r[i]] = t[i]
 
+# print(b)
 r = []
 r.extend(a)
 for i in range(n - 1, -1, -1):
@@ -65,6 +68,7 @@ for i in range(n - 1, -1, -1):
         le = 0
         ri = i - 1
         tp = typ
+        # print(c)
         for j in range(i - 1, -1, -1):
             if b[j] is not 0:
                 tp = b[j]
@@ -72,11 +76,15 @@ for i in range(n - 1, -1, -1):
                 r[j] = c[ri]
                 ri = ri - 1
             else:
+             #       print(le)
+             #       print(c[le])
                 r[j] = c[le]
                 le = le + 1
 
+          #  print(r)
         break
 
+# print(c)
 for j in range(len(r)):
     print(r[j], end=' ')
 print()

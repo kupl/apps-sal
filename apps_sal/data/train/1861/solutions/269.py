@@ -1,5 +1,8 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
+        # store y coordinates at each x
+        # for each y1 y2 pairs at each x from left to right
+        # find the last x that has y1 and y2, and calculate area
         n = len(points)
         nx = len(set(x for x, y in points))
         ny = len(set(y for x, y in points))

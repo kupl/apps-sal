@@ -27,7 +27,7 @@ class Solution:
     @ft.lru_cache(None)
     def count_binary_trees(self, idx: int) -> int:
         num = self.A[idx]
-        ans = 1
+        ans = 1  # root only
         for left_idx, right_idx in self.divisor_pairs(idx):
             left_cnt = self.count_binary_trees(left_idx)
             right_cnt = self.count_binary_trees(right_idx)

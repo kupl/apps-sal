@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/911/E
 
 n, k = map(int, input().split())
 p = list(map(int, input().split()))
@@ -16,6 +17,7 @@ def solve(p, d, n):
                 if len(s) >= 2 and s[-1] > s[-2]:
                     return False, None
 
+            # len(p)=0
             if len(s) == 0 or s[-1] != x:
                 up = n if len(s) == 0 else s[-1] - 1
 

@@ -16,16 +16,19 @@ def f(dig, under, num):
     if under:
         if n[dig] == '0':
             res = f(dig + 1, True, num)
+            #print(dig, under, num, res, 'aaa')
             return res
         else:
             res = f(dig + 1, False, num)
             if int(n[dig]) > 1:
                 res += (int(n[dig]) - 1) * f(dig + 1, False, num - 1)
             res += f(dig + 1, True, num - 1)
+            #print(dig, under, num, res, 'bbb')
             return res
     else:
         res = f(dig + 1, False, num)
         res += 9 * f(dig + 1, False, num - 1)
+        #print(dig, under, num, res, 'ccc')
         return res
 
 

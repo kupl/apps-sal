@@ -16,6 +16,7 @@ if moves >= len(is8):
 not8 = not8[moves:]
 is8 = is8[moves:]
 
+# print(not8, is8)
 
 if is8[0] < not8[0]:
     print('YES')

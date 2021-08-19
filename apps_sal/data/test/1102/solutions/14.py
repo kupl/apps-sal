@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, l = (int(i) for i in input().split())
 n_criminals = [int(i) for i in input().split()]

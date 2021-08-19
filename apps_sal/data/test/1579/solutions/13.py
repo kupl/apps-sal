@@ -34,8 +34,14 @@ def dfs(idx):
     while stack:
         v = stack.pop()
         if v >= delta:
+            # if y_used[v % delta]:
+            #     continue
+            # y_used[v % delta] = True
             y_res += 1
         else:
+            # if x_used[v]:
+            #     continue
+            # x_used[v] = True
             x_res += 1
         for u in graph[v]:
             if u >= delta:

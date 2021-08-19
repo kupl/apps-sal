@@ -13,8 +13,10 @@ arr = read()
 cost = []
 for i in range(n):
     cost.append(read())
-dp[0][0][MX_SZ - 1] = 0
+dp[0][0][MX_SZ - 1] = 0  # [trees painted][group amount][last color]
 best[0][0][0] = (0, MX_SZ - 1)
+# print(best[0][0][0][1])
+# return
 for i in range(1, n + 1):
     clr = arr[i - 1]
     if clr == 0:

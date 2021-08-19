@@ -22,10 +22,10 @@ def solve(maze, h, w):
         for i in ([1, 0], [-1, 0], [0, 1], [0, -1]):
             ny = y + i[0]
             nx = x + i[1]
-            if 0 <= ny <= h - 1 and 0 <= nx <= w - 1 and maze[ny][nx] != '
-            if maze[ny][nx] > t + 1:
-                maze[ny][nx] = t + 1
-                qu.append([ny, nx])
+            if 0 <= ny <= h - 1 and 0 <= nx <= w - 1 and maze[ny][nx] != '#':
+                if maze[ny][nx] > t + 1:
+                    maze[ny][nx] = t + 1
+                    qu.append([ny, nx])
 
     return maze[h - 1][w - 1]
 

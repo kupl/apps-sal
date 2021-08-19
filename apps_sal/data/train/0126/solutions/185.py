@@ -22,4 +22,5 @@ class Solution:
         if len(memo_dict) == 0:
             return 0
         res = sorted(memo_dict, key=lambda x: memo_dict[x])
+        # print(res)
         return memo_dict[res[-1]]

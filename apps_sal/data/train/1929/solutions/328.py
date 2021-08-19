@@ -1,3 +1,4 @@
+# Approach: Insert reversed words to the Trie. Also use a deque to store current stream, that way you know you're looking at the last character every time you get a new letter in the stream.
 
 class TrieNode:
     def __init__(self):
@@ -40,3 +41,8 @@ class StreamChecker:
                 return True
             node = node.children[ind]
         return node and node.isEnd
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

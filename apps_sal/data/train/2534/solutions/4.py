@@ -7,8 +7,10 @@ class Solution:
             if s[i] == '0':
                 l += 1
             r = 0
+            # print(s[:i], s[i:])
             for j in range(i + 1, len(s)):
                 if s[j] == '1':
                     r += 1
+            # print(l, r)
             ans = max(ans, l + r)
         return ans

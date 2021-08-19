@@ -8,6 +8,8 @@ for _ in range(t):
         temp = [int(x) for x in input().split()]
         a.append(temp)
 
+        # print(a)
+
     trace = 0
 
     i = 0
@@ -23,6 +25,7 @@ for _ in range(t):
 
             m += a[r][c]
 
+        # print(m)
         if(m > trace):
             trace = m
 
@@ -38,6 +41,8 @@ for _ in range(t):
             c += 1
 
             m += a[r][c]
+
+        # print(m)
 
         if(m > trace):
             trace = m

@@ -6,6 +6,7 @@ class Solution:
         :rtype: bool
         """
         """
+    #    my second solution...modified based on first solution...
          l = len(s)
          
          sdic = {}
@@ -42,6 +43,7 @@ class Solution:
          
          
          """
+   #    my first solution...
         sdic = {}
         snum = []
         i = 0

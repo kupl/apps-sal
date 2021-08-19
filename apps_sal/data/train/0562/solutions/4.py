@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -21,6 +22,11 @@ A = []
 for i in range(N):
     A.append([int(x) for x in input()])
 
+# for row in A:
+#     print(row)
+
+
+# f(r, c, color, width) = f(r+1, c+1, color, width-1) + mismatches_in_edge
 
 mxMN, mnMN = max(M, N), min(M, N)
 ans = [float('inf') for _ in range(mxMN + 1)]
@@ -47,5 +53,7 @@ for width in range(1, min(N, N) + 1):
 qc = input()
 qs = [int(x) for x in input().split()]
 
+# print()
+# print(ans)
 for q in qs:
     print(bisect.bisect_right(ans, q) - 1)

@@ -1,4 +1,4 @@
 def remove_url_anchor(url):
-    if not "
+    if not "#" in url:
         return url
-    return url[:url.find('
+    return url[:url.find('#')]

@@ -1,9 +1,15 @@
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
+        # 采用和类似于stoneGameII的方法，可以吗？
+        # 残局
+        # solve(s) score diff
+        # M=1,2,3
+        # x=[1,2,3]
+        # solve(s) = max(sum(sv[s:s+x-1]) - solve(s+x))
 
         n = len(stoneValue)
 
-        cache = dict()
+        cache = dict()  # s:score
 
         def solve(s):
             if s >= n:

@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 from collections import defaultdict
 list1 = list(map(int, input().split()))
 N = list1[0]
@@ -29,6 +31,7 @@ while len(tobevisited) > 0:
                 dowegoup[children[temp][i]] = False
             else:
                 dowegoup[children[temp][i]] = True
+#print("wealth: ", wealth, "parents: ", parent, "children; ", children, "leaves: ", leaves, "dowegoup: ", dowegoup)
 visited = {}
 disparity = {}
 answer = -10**10
@@ -51,4 +54,5 @@ while len(leaves) > 0:
         leaves.append(parent[temp])
     if disparity[parent[temp]] > answer:
         answer = disparity[parent[temp]]
+#print("disparity: ", disparity)
 print(answer)

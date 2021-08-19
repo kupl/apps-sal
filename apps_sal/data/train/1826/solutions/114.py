@@ -19,6 +19,7 @@ class Solution:
                 j2 = min(n - 1, c + K)
                 i1 = max(0, r - K)
                 j1 = max(0, c - K)
+                # print(i1, j1, i2, j2)
                 ans[r][c] = RangeSum[i2 + 1][j2 + 1] - RangeSum[i2 + 1][j1] - RangeSum[i1][j2 + 1] + RangeSum[i1][j1]
 
         return ans

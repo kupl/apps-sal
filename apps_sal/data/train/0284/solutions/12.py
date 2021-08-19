@@ -1,7 +1,9 @@
 class Solution:
+    # all the tokens start in a neutral position. Can either play it face up or face down.
     def bagOfTokensScore(self, tokens: List[int], P: int) -> int:
         tokens.sort()
 
+        # start from front and back. greedily take all the powers from the front and spend score in back to get more to add to the front
         def twoPointer(tokens, P):
             i = 0
             j = len(tokens) - 1

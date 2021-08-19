@@ -15,4 +15,6 @@ def func(n):
 
 for _ in range(int(input())):
     n = int(input())
+    #l = list(map(int, stdin.readline().split()))
+    #n, k = map(int, input().split())
     print(func(n))

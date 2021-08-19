@@ -6,7 +6,7 @@ def cmb(n, r, mod):
 
 
 mod = 10**9 + 7
-nums = 10**5
+nums = 10**5  # 制約に合わせよう
 g1, g2, inverse = [1, 1], [1, 1], [0, 1]
 
 for num in range(2, nums + 1):

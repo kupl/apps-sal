@@ -1,3 +1,6 @@
+# 8/4/19
+# 1119E
+# BlueyNeilo
 
 n = int(input())
 a = list(map(int, input().split()))

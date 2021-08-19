@@ -12,6 +12,6 @@ if n % 2:
     med_B = B[n // 2]
     print(abs(med_A - med_B) + 1)
 else:
-    med_A = A[(n - 1) // 2] + A[n // 2]
+    med_A = A[(n - 1) // 2] + A[n // 2]  # this is double of median
     med_B = B[(n - 1) // 2] + B[n // 2]
-    print(abs(med_A - med_B) + 1)
+    print(abs(med_A - med_B) + 1)  # we want gap of 1/2

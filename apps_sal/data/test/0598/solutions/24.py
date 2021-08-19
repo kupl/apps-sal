@@ -20,3 +20,6 @@ for d, t in enumerate(s):
             i += 1
         m = min(m, c + M)
 print(-1 if m == 3e9 else m)
+
+
+# Made By Mostafa_Khaled

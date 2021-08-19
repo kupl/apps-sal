@@ -6,6 +6,7 @@ for i in range(N):
     S.append(str(input()))
 
 S = list(set(S))
+# print(S)
 name = [0 for i in range(5)]
 
 for j in range(len(S)):
@@ -20,6 +21,7 @@ for j in range(len(S)):
         name[3] += 1
     elif t[0] == "H":
         name[4] += 1
+# print(name)
 
 for x in range(5):
     for y in range(5):

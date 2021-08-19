@@ -21,7 +21,7 @@ class Polynomial:
         else:
             self.coefficient = coefficient
 
-    def __add__(self, other):
+    def __add__(self, other):  # +
         f, g = self.coefficient, other.coefficient
         if len(f) > len(g):
             f, g = g, f
@@ -31,12 +31,12 @@ class Polynomial:
         h.coefficient[:len(f)] += f + g[:len(f)]
         return h
 
-    def __iadd__(self, other):
+    def __iadd__(self, other):  # +=
         h = self.__add__(other)
         self.coefficient = h.coefficient
         return self
 
-    def __mul__(self, other):
+    def __mul__(self, other):  # *
         f = self.coefficient
         g = other.coefficient
         h = Polynomial()

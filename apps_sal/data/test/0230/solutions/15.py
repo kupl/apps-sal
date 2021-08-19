@@ -20,6 +20,7 @@ class RollingHash(object):
         self.HASH = HASH
 
     def hash(self, l: int, r: int):
+        # get hash for S[l:r]
         _hash = (self.HASH[r] - self.HASH[l] * self.POWER[r - l]) % self.MOD
         return _hash
 
@@ -35,6 +36,7 @@ def main():
     D = [0] * N
     while abs(right - left) > 1:
         mid = (left + right) // 2
+        # hash_to_left = defaultdict(list)
         hashes = set()
         L = mid
         P = p[L]

@@ -13,9 +13,10 @@ def resolve():
     minus = []
     total = 0
     for _ in range(N):
+        # 1つのパーツを処理
         S = input()
-        cum = 0
-        bottom = 0
+        cum = 0  # 累積和(最高地点)
+        bottom = 0  # 最下地点
         for s in S:
             if s == "(":
                 cum += 1

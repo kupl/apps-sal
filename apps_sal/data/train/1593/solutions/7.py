@@ -1,3 +1,4 @@
+# cook your dish here
 def notes(a):
     Q = [100, 50, 10, 5, 2, 1]
     x, b = 0, 0

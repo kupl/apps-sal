@@ -1,3 +1,4 @@
+# cook your dish here
 T = int(input())
 
 for i in range(T):
@@ -5,6 +6,9 @@ for i in range(T):
     m = int(m)
     n = int(n)
     c = []
+    # m = 4
+    # n  = 5
+    # c = [['N', 'P', 'N', 'N', 'P'], ['N', 'N', 'P', 'N', 'N'], ['N', 'P', 'N',         'N', 'N'], ['P', 'N', 'N', 'N', 'N']]
     start_pos_m = -1
     start_pos_n = -1
     for j in range(m):
@@ -12,6 +16,7 @@ for i in range(T):
         if('P' in c[-1] and start_pos_m == -1):
             start_pos_n = c[-1].index('P')
             start_pos_m = j
+    # print(c)
     cur_pos_m = start_pos_m
     cur_pos_n = start_pos_n
     next_pos_m = cur_pos_m
@@ -33,6 +38,7 @@ for i in range(T):
                     cur_pos_n = next_pos_n
             if('P' in c[j + 1]):
                 number_of_steps += j - cur_pos_m
+            # print(c[j])
 
         elif(j % 2 == 0):
             rev = c[j][:: -1]
@@ -44,6 +50,8 @@ for i in range(T):
             cur_pos_n = next_pos_n
             number_of_steps += 1
         else:
+            # rev = c[j][:: -1]
+            # print("rev : ", rev)
             next_pos_n = c[j].index('P')
             if('P' in c[j + 1][0: next_pos_n + 1]):
                 next_pos_n = c[j + 1].index('P')

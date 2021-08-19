@@ -1,3 +1,4 @@
+# cook your dish here
 N = int(input())
 sp, psp = 0, 0
 

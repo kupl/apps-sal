@@ -1,5 +1,7 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+       # Approach: Recursive backtracking
+        # Keep track of gold at each element and keep calculating max to get the result
 
         r, c = len(grid), len(grid[0])
         self.res = 0

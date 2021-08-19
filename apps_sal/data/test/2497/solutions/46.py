@@ -2,9 +2,11 @@ from scipy.optimize import fmin
 N = int(input())
 
 INF = 10 ** 18
+# x 方向に動かない点、右移動の点、左移動の点の最小・最大値
 fixed_x = [INF, -INF]
 R = [INF, -INF]
 L = [INF, -INF]
+# y 方向に動かない点、右移動の点、左移動の点の最小・最大値
 fixed_y = [INF, -INF]
 U = [INF, -INF]
 D = [INF, -INF]

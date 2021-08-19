@@ -5,6 +5,7 @@ class Solution:
         ans = []
 
         while last > 1:
+            # print(f\"last={last} ans={ans} arr={arr}\")
             max_pos = 0
             max_v = -float('inf')
             for i in range(last):

@@ -18,7 +18,7 @@ class Solution:
                     return True
                 temp = []
                 for r, c in q:
-                    if (r, c) == tuple(target):
+                    if (r, c) == tuple(target):  # must do this cast
                         return True
                     for d in dirs:
                         nr = r + d[0]

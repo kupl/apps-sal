@@ -14,12 +14,12 @@ for i in range(n):
 
 queries = [int(x) for x in sys.stdin.readline().strip().split(" ")]
 
-start_time = 0
+start_time = 0  # could be 1 kek
 
 intervals = []
 cur_time = start_time
 for i in range(0, len(songs)):
-    song = songs[i]
+    song = songs[i]  # times, duration
     times = song[0]
     dur = song[1]
     new_time = cur_time + (times * dur)

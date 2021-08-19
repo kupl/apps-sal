@@ -2,6 +2,7 @@ import numpy
 from sortedcontainers import SortedList
 
 
+# Definition for a binary tree node.
 class Solution:
 
     def minKey(self, num_v, key, mstSet):
@@ -27,7 +28,7 @@ class Solution:
                 graph[i][j] = graph[j][i] = delta_x + delta_y
 
         parent = [None] * num_v
-        parent[0] = -1
+        parent[0] = -1  # First node is always the root of
 
         key = [sys.maxsize] * num_v
         key[0] = 0

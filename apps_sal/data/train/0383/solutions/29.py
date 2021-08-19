@@ -15,6 +15,7 @@ class Solution:
                     vis.add(node)
                     d[node].append(init)
                     Q.append(node)
+        # count the most frequent node
         res = [0] * n
         for key in d:
             if len(d[key]) == 1:

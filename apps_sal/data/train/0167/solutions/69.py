@@ -29,6 +29,11 @@ class Solution:
                     res = min(res, notbroken_num + 1)
 
             results[K][N] = res
+            # for i in range(1, N+1):
+            #     results[K][N] = min(results[K][N], max(dp(K-1, i-1), dp(K, N-i)) + 1)
 
+            # return results[K][N]
             return res
+        # dp(K, N)
+        # print(results)
         return dp(K, N)

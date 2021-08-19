@@ -55,6 +55,7 @@ class PokerHand(object):
         Returns the output either 'Win', 'Loss', 'Tie' accordingly.
         :type other: PokerHand
         """
+        # Basic comparison
         if self._hand_type > other._hand_type:
             return 'Win'
         elif self._hand_type < other._hand_type:
@@ -78,25 +79,25 @@ class PokerHand(object):
         For flush and high card, compare all the cards in reverse order.
         :type other: PokerHand
         """
-        if hand_type == 23:
+        if hand_type == 23:  # Royal flush
             return 'Tie'
 
-        elif hand_type in [22, 18]:
+        elif hand_type in [22, 18]:  # Straight flush or Straight
             return 'Win' if self._high_card > other._high_card else 'Loss' \
                 if self._high_card < other._high_card else 'Tie'
 
-        elif hand_type in [21, 20]:
+        elif hand_type in [21, 20]:  # Four of a kind or Full house
             if self._first_pair == other._first_pair:
                 return 'Win' if self._hand_value > other._hand_value else \
                     'Loss' if self._hand_value < other._hand_value else 'Tie'
             return 'Win' if self._first_pair > other._first_pair else 'Loss'
 
-        elif hand_type in [17, 15]:
+        elif hand_type in [17, 15]:  # Three of a kind or One pair
             if self._first_pair == other._first_pair:
                 return self._compare_cards(other)
             return 'Win' if self._first_pair > other._first_pair else 'Loss'
 
-        elif hand_type == 16:
+        elif hand_type == 16:  # Two pairs
             if self._first_pair == other._first_pair:
                 if self._second_pair == other._second_pair:
                     return 'Win' if self._hand_value > other._hand_value else \
@@ -106,7 +107,7 @@ class PokerHand(object):
                         else 'Loss'
             return 'Win' if self._first_pair > other._first_pair else 'Loss'
 
-        else:
+        else:  # Flush and high card
             return self._compare_cards(other)
 
     def _compare_cards(self, other: 'PokerHand') -> str:
@@ -135,8 +136,8 @@ class PokerHand(object):
         15: One pair
         14: Decide with highest card
         """
-        if self._is_flush() and (self._is_five_high_straight()
-                                 or self._is_straight()):
+        if self._is_flush() and (self._is_five_high_straight() or
+                                 self._is_straight()):
             if self._hand_value == 60:
                 return 23
             else:

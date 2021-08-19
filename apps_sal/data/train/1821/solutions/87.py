@@ -1,3 +1,4 @@
+# 3:10
 from random import random
 
 
@@ -21,7 +22,11 @@ class Solution:
 
         def quick_sort(start, end):
             if start < end:
+                # print(nums)
                 pivot = partition(start, end)
+                # print(nums)
+                # print(pivot)
+                # print('------')
                 quick_sort(start, pivot - 1)
                 quick_sort(pivot + 1, end)
 

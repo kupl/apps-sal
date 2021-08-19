@@ -12,5 +12,6 @@ class Solution:
         ans = []
         for i in range(K):
             x, y = heapq.heappop(heap)[1]
+            # ans = [[x, y]] + ans
             ans.append([x, y])
         return ans[::-1]

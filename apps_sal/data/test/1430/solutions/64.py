@@ -6,6 +6,7 @@ temp = [0]
 if s[0] == "0":
     temp.append(0)
 for i in s:
+    # print(i,ps,ms)
     if i == "0":
         ms += 1
         if ps:
@@ -20,9 +21,11 @@ if ms:
     temp.append(ms)
 else:
     temp.append(ps)
+# print(temp)
 temp.append(0)
 for i in range(len(temp) - 1):
     temp[i + 1] += temp[i]
+# print(temp)
 ans = 0
 if len(temp) - (2 * k + 1) <= 0:
     ans = temp[-1]

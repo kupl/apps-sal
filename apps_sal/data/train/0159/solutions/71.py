@@ -9,6 +9,7 @@ class Solution:
 
         ans = dp[0]
 
+        # queue holds the index
         queue = deque([0])
 
         for j in range(1, len(nums)):

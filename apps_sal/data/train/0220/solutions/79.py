@@ -6,6 +6,8 @@ class Solution:
         self.customers = customers
         self.grumpy = grumpy
         self.n = len(customers)
+        # if len(grumpy) != self.n:
+        #     raise ValueError(f\"Customers {customers} and grumpy {grumpy} arrays must have the same length.\")
         self.cumulative_customers = list(it.accumulate(customers, initial=0))
         self.technique_length = X
         return self.satisfy(0, 1)

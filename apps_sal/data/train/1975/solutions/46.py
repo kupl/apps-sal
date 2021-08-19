@@ -23,3 +23,9 @@ class CustomStack:
             t = [val] * k
             t.extend([0] * (len(self.stack) - k))
             self.stack = (np.array(self.stack) + np.array(t)).tolist()
+
+# ed and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

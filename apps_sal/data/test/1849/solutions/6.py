@@ -1,3 +1,6 @@
+# from io import BytesIO
+# import os
+# input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 n = int(input())
 MOD = 998244353

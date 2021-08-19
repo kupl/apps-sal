@@ -17,11 +17,11 @@ def bfs(h, w, sy, sx, S):
                 dist2 = maze[nexty][nextx]
             else:
                 continue
-            if dist1 != '
-            if dist2 > maze[y][x] + 1:
-                maze[nexty][nextx] = maze[y][x] + 1
-                count = max(count, maze[nexty][nextx])
-                que.append([nexty, nextx])
+            if dist1 != '#':
+                if dist2 > maze[y][x] + 1:
+                    maze[nexty][nextx] = maze[y][x] + 1
+                    count = max(count, maze[nexty][nextx])
+                    que.append([nexty, nextx])
     return count
 
 

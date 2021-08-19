@@ -7,6 +7,7 @@ def cluster(points, n):
 
     def get_cluster_distance(cluster1, cluster2):
 
+        # function to find distance between a single pair
         def get_point_distance(coord_1, coord_2):
             x1, y1 = coord_1
             x2, y2 = coord_2
@@ -19,8 +20,10 @@ def cluster(points, n):
 
         return np.mean(distances)
 
+    # Initiate list of all clusters, initially every point is a cluster (its own list)
     all_clusters = [[point] for point in points]
 
+    # Main function
     while len(all_clusters) > n:
         distances = []
         for i, j in itertools.combinations([_ for _ in range(len(all_clusters))], 2):
@@ -29,6 +32,8 @@ def cluster(points, n):
         i, j, distance = minimum_distance_pair
         all_clusters[i] = all_clusters[i] + all_clusters.pop(j)
 
+    # Sort points in each cluster
     for i in range(len(all_clusters)):
         all_clusters[i] = sorted(all_clusters[i])
+    # Sort each cluster
     return sorted(all_clusters)

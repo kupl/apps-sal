@@ -10,13 +10,16 @@ y = 0
 
 
 for l in range(n):
+    #    print("start",l,r)
     while x == y and r <= n:
         x += al[r]
         y = y ^ al[r]
         r += 1
+#        print(x,y)
     r -= 1
     x -= al[r]
     y = y ^ al[r]
+#    print(x,y,l,r)
     res += r - l
     x -= al[l]
     y = y ^ al[l]

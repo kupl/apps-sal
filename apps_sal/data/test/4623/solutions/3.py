@@ -36,5 +36,6 @@ for _ in range(val()):
             if j - i == i and m[i] > 1:
                 m[i] -= 2
                 curr += 1
+        # print(curr, j)
         ans = max(ans, curr)
     print(ans)

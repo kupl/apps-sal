@@ -34,6 +34,17 @@ for i, s in enumerate(S):
     if s == 'B':
         b.append(i)
 
+# j = bisect.bisect_right(<list>,<value>)
+# print(r)
+# print(g)
+# print(b)
+
+# for i in r:
+#     for j in g:
+#         for k in b:
+#             tmp = sorted([i,j,k])
+#             if not tmp[1]-tmp[0]==tmp[2]-tmp[1]:
+#                 ans += 1
 
 ans = len(r) * len(g) * len(b)
 
@@ -49,3 +60,24 @@ for i in range(N):
         ans -= 1
 
 print(ans)
+
+# R G B
+# R B G
+# G B R
+# G R B
+# B G R
+# B R G
+
+# i   j   k
+#  - != -
+
+# RBRBGRBGGB
+# 1122233333
+# 0000111233
+# 0112223334
+
+# B*3
+# G*4
+
+# GB系: (2,4), (4,5)
+# RB系: (1,3),

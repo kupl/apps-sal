@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import bisect
 sys.setrecursionlimit(10**8)
@@ -18,6 +19,7 @@ for item in b:
 for item in c:
     holder[item - 1] = 2
 
+# seen ith, state(a hold, b hold, c hold)
 dp = [[INF] * (k + 1) for _ in range(3)]
 dp[0][0] = 0
 dp[1][0] = 0

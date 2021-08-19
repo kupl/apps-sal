@@ -36,4 +36,5 @@ class Solution:
                     else:
                         root[rt] = rl
                         size[rl] += size[rt]
+        # print(root)
         return False

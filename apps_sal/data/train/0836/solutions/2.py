@@ -1,3 +1,4 @@
+# cook your code here
 for tests in range(eval(input())):
     n = eval(input())
     L = list(map(int, input().split()))

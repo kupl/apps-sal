@@ -32,7 +32,7 @@ allr = []
 sys.setrecursionlimit(10**7)
 
 
-def dfs(s, k):
+def dfs(s, k):  # s:list, k:set
     if len(k) == 1:
         s.append(k.pop())
         return [s]

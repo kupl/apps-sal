@@ -33,6 +33,7 @@ for _ in range(t):
         if(not visited[i]):
             mususeumsBigNode.append(dfs(i))
 
+    # print(mususeumsBigNode)
     sorted(mususeumsBigNode)
     if len(mususeumsBigNode) < k:
         print(-1)

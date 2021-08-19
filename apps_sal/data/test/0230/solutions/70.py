@@ -1,22 +1,32 @@
+# 32bitのMod一つでRollingHashを行った場合、
+# 10**5個程度のHashを生成するだけでも
+# 半分以上の確率でどこかのHashが衝突していることが分かります
 
 
-base = 27
+# 小文字アルファベットの時のbese
+base = 27  # alphabet
 
 
 def getnum(x):
     return ord(x) - ord("a") + 1
 
 
+# rolling hash実装
+
+# 必要な定数
+# mod = 1<<61-1としたときの高速余り計算
 m30 = (1 << 30) - 1
 m31 = (1 << 31) - 1
 m61 = (1 << 61) - 1
 mod = m61
 positive_delta = m61 ** 4
 
+# 高速化された計算
+
 
 def mul(a, b):
     au = a >> 31
-    ad = a & m31
+    ad = a & m31  # 余りを取ることが&演算でできる
     bu = b >> 31
     bd = b & m31
     mid = ad * bu + au * bd
@@ -34,6 +44,7 @@ def calcmod(a):
     return res
 
 
+# s:string
 def rollinghash(s):
     num = len(s)
     res = [0] * (num + 1)
@@ -63,9 +74,11 @@ def hantei(x, rh):
         if temp in kumi:
             pre_idx = kumi[temp]
             if i - pre_idx >= x:
+                # print("pair", i, pre_idx, "delta", x)
                 return True
         else:
             kumi[temp] = i
+    # print(x, kumi)
     return False
 
 
@@ -75,5 +88,6 @@ while ng - ok > 1:
         ok = mid
     else:
         ng = mid
+    # print(ok, ng)
 
 print(ok)

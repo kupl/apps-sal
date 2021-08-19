@@ -1,6 +1,13 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
+        # find the maximum subarray with max of K 0's
+        # this will help find the maximum number of 1s
 
+        # [1,1,1,0,0,0,1,1,1,1,0]
+        # fast = 5
+        # slow  = 0
+        # lastZero = 3, 4, 5
+        # slow = 3
         slow = fast = 0
         maxOnes = -1
         lastZero = collections.deque()

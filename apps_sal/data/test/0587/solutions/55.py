@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 from heapq import heapify, heappop, heappush
 
@@ -7,6 +8,7 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# x * xをどう評価するか、heapに「おいしさ」の高い順に入れていく
 N, K = lr()
 TD = [lr() for _ in range(N)]
 heap = []

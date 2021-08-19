@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+n, m = map(int, input().split())  # voters, parties
 
 money = [0] * n
 

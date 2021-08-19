@@ -8,13 +8,13 @@ mmm = 998244353
 
 
 def count_k(ka, k, t):
-    if t == 0:
+    if t == 0:  # 00
         return ka[k][0] + ka[k][1] + ka[k][2] + ka[k - 1][3]
-    if t == 1:
+    if t == 1:  # 10
         return ka[k - 1][0] + ka[k][1] + ka[k - 2][2] + ka[k - 1][3]
-    if t == 2:
+    if t == 2:  # 01
         return ka[k - 1][0] + ka[k - 2][1] + ka[k][2] + ka[k - 1][3]
-    if t == 3:
+    if t == 3:  # 11
         return ka[k - 1][0] + ka[k][1] + ka[k][2] + ka[k][3]
 
 

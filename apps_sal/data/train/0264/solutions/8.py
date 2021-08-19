@@ -13,6 +13,7 @@ class Solution:
 
     def maxLength(self, arr: List[str]) -> int:
 
+        # setify
         arr = [set(x) for x in arr if len(set(x)) == len(x)]
 
         self.maxlen = 0

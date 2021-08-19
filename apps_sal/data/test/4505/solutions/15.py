@@ -1,4 +1,6 @@
+# A - abc of ABC
 
+# 標準入力S
 S = input()
 abc_list = ["a", "b", "c"]
 

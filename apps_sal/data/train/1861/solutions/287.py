@@ -10,10 +10,12 @@ class Solution:
                 p2 = points[idx2]
 
                 if p1[0] != p2[0] and p1[1] != p2[1]:
+                    # search for other points
                     p3 = (p1[0], p2[1])
                     p4 = (p2[0], p1[1])
 
                     if p3 in point_set and p4 in point_set:
+                        # calc area
                         dx = abs(p1[0] - p2[0])
                         dy = abs(p1[1] - p2[1])
                         area = dx * dy

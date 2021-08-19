@@ -25,9 +25,11 @@ class Solution:
             length = lhs + rhs + 1
             d[start] = length
             d[end] = length
+            # print(start, end, length)
             if length == m:
                 cnt += 1
             if cnt > 0:
                 ans = step + 1
+            # print(cnt)
 
         return ans

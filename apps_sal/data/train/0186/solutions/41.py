@@ -9,8 +9,13 @@ class Solution:
                 l1 = 0 if dp[i] == ['0'] else l1
                 l2 = len(dp[i - cost[j]]) + 1 if i >= cost[j] else 0
                 c = dp[i - cost[j]] if i >= cost[j] else ['0']
+                # print(l1,l2)
                 if l1 <= l2:
                     dp[i] = c + [str(j + 1)] if c != ['0'] else ['0']
+                # if i == t:
+                #     print(dp[i], c, l1, l2)
 
+            # print(dp[0:][j])
+        # print(dp)
         ans = ''.join(sorted(dp[t])[::-1])
         return ans

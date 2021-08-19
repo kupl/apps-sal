@@ -10,6 +10,7 @@ def read_graph():
     g = defaultdict(list)
     for _ in range(m):
         (u, v) = [int(x) - 1 for x in input().split()]
+        # if v != s:
         g[u].append(v)
     return g
 
@@ -20,6 +21,7 @@ topo = []
 
 
 def dfs(u):
+    # print(u)
     for v in G[u]:
         if not vis[v]:
             vis[v] = True

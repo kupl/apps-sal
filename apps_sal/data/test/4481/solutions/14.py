@@ -25,6 +25,10 @@ for i in range(len(cntlist)):
         cntlist_new.append(cntlist[i])
 new_cnt = sorted(cntlist_new, key=itemgetter(0), reverse=False)
 
+# print(S)
+# print(S_sorted)
+# print(cntlist_new)
+# print(new_cnt)
 
 for i in range(len(new_cnt)):
     print(new_cnt[i][0])

@@ -1,3 +1,4 @@
+# Create a function args_count, that returns count of passed arguments
 import sys
 
 

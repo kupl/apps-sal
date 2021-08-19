@@ -1,10 +1,12 @@
 def is_valid_coordinates(coordinates):
+    # all characters to be used
     digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
     dec = "."
     comma = ","
     space = " "
     neg = "-"
 
+    # counters
     negOK, digitOK = True, True
     decOK, spaceOK, commaOK = False, False, False
     hitComma = False
@@ -50,6 +52,7 @@ def is_valid_coordinates(coordinates):
             continue
         return False
 
+    # now check the size of the coordinates
     cArr = coordinates.split(", ")
     if abs(float(cArr[0])) > 90 or abs(float(cArr[1])) > 180:
         return False

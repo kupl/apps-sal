@@ -1,3 +1,5 @@
+# Union Find
+# xの根を求める
 def find(x):
     if par[x] < 0:
         return x
@@ -6,6 +8,7 @@ def find(x):
         return par[x]
 
 
+# xとyの属する集合の併合
 def unite(x, y):
     x = find(x)
     y = find(y)
@@ -13,6 +16,7 @@ def unite(x, y):
     if x == y:
         return False
     else:
+        # x < y にする
         if par[x] > par[y]:
             x, y = y, x
         par[x] += par[y]
@@ -20,6 +24,7 @@ def unite(x, y):
         return True
 
 
+# 根の個数を返す
 def group_count():
     return sum(x < 0 for x in par)
 

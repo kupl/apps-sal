@@ -1,4 +1,10 @@
 class Solution:
+    # def predecessor(self, long, short):
+    #     # print(long, short)
+    #     for i in range(len(long)):
+    #         if long[0:i] + long[i+1:] == short:
+    #             return True
+    #     return False
     def predecessor(self, word, candidate):
         if len(word) != len(candidate) + 1:
             return False
@@ -18,5 +24,6 @@ class Solution:
                 if len(words[i]) - len(words[j]) > 1:
                     break
                 if self.predecessor(words[i], words[j]):
+                    # print(\"hi\")
                     dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)

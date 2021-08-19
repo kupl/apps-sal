@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sat Sep 12 22:49:54 2020
 
@@ -28,6 +29,7 @@ cnt = 0
 while cnt != K:
     cnt += 1
     ans = q.popleft()
+    # print(ans)
     if ans % 10 != 0:
         q.append(10 * ans + ans % 10 - 1)
     q.append(10 * ans + ans % 10)

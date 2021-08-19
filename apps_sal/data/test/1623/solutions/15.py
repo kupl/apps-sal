@@ -1,3 +1,5 @@
+# Contest: Codeforces Round #581 (Div. 2) (https://codeforces.com/contest/1204)
+# Problem: B: Mislove Has Lost an Array (https://codeforces.com/contest/1204/problem/B)
 
 def rint():
     return int(input())

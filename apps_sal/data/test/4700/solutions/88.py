@@ -1,7 +1,10 @@
+# coding=utf-8
 
 def __starting_point():
     N, M = list(map(int, input().split()))
     Hli = list(map(int, input().split()))
+
+    #road = [[0] * 2 for i in range(M)]
 
     ans = [0] * N
 
@@ -18,6 +21,7 @@ def __starting_point():
         else:
             ans[B - 1] += 1
 
+    # print(ans)
     print((ans.count(0)))
 
 

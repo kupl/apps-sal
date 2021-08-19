@@ -17,6 +17,7 @@ class Solution:
         pairs2.sort()
         if len(pairs1) == 0 or len(pairs2) == 0:
             return 0
+        # print(pairs1,pairs2)
 
         def bs1(arr, key):
             if arr[0] > key:
@@ -35,6 +36,7 @@ class Solution:
                     hi = mid - 1
                 else:
                     hi = mid - 1
+            # print('left ',left, key,arr)
             return left
 
         def bs2(arr, key):

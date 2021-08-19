@@ -2,8 +2,8 @@ n = int(input())
 a = [list(map(int, input().split())), list(map(int, input().split()))]
 ame = 0
 ame_l = []
-for i in range(n):
-    for j in range(n):
+for i in range(n):  # 重複する列の選択
+    for j in range(n):  # 各列足してく
         if i > j:
             ame += a[0][j]
         elif i == j:

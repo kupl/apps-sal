@@ -25,5 +25,48 @@ def main():
 def __starting_point():
     main()
 
+#             dp[i + 1][s][0] = (dp[i + 1][s][0] + dp[i][s][0]) % MOD
+#             dp[i + 1][s][1] = (dp[i + 1][s][1]
+#                                + dp[i][s][1] + (dp[i][s - x][1] if s - x >= 0 else 0)
+#                                + dp[i][s][0] + (dp[i][s - x][0] if s - x >= 0 else 0)) % MOD
+#             dp[i + 1][s][2] = (dp[i + 1][s][2]
+#                                + dp[i][s][2] +
+#                                dp[i][s][1] + (dp[i][s - x][1] if s - x >= 0 else 0)
+#                                + dp[i][s][0] + (dp[i][s - x][0] if s - x >= 0 else 0)) % MOD
+
+#     for i, x in enumerate(A):
+#         dp[i + 1][0][0] = dp[i][0][0]
+#         for s in range(S, -1, -1):
+#             dp[i + 1][s][1] = (dp[i][s][1] + dp[i][s][0]) % MOD
+#             dp[i + 1][s][2] = (dp[i][s][2] + dp[i][s][1] + dp[i][s][0]) % MOD
+#
+#             if s - x >= 0:
+#                 v = dp[i][s - x][1] + dp[i][s - x][0]
+#                 dp[i + 1][s][1] = (dp[i + 1][s][1] + v) % MOD
+#                 dp[i + 1][s][2] = (dp[i + 1][s][2] + v) % MOD
+
+#         dp[i + 1][0][0] = dp[i][0][0]
+#         dp[i + 1][0][1] = (dp[i][0][1] + dp[i][0][0]) % MOD
+#         dp[i + 1][0][2] = (dp[i][0][2] + dp[i][0][1] + dp[i][0][0]) % MOD
+#         for s in range(S, 0, -1):
+#             dp[i + 1][s][1] = dp[i][s][1] % MOD
+#             dp[i + 1][s][2] = (dp[i][s][2] + dp[i][s][1]) % MOD
+#             if s - x >= 0:
+#                 v = dp[i][s - x][1] + dp[i][s - x][0]
+#                 dp[i + 1][s][1] = (dp[i + 1][s][1] + v) % MOD
+#                 dp[i + 1][s][2] = (dp[i + 1][s][2] + v) % MOD
+
+#     for x in A:
+#         for s in range(S, 0, -1):
+#             dp[s][1] += dp[s][0]
+#             if s - x >= 0:
+#                 v = dp[s - x][0] + (1 if s - x == 0 else 0)
+#                 dp[s][0] += v
+#                 dp[s][1] += v
+#             dp[s][0] %= MOD
+#             dp[s][1] %= MOD
+#         dp[0][0] += 1
+#         dp[0][1] += (dp[0][0] + 1)
+
 
 __starting_point()

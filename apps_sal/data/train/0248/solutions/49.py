@@ -8,6 +8,8 @@ class Solution:
 
         def check(i, j, parent):
 
+            # print('outside',i,j)
+
             for k in range(4):
                 xx, yy = dx[k] + i, dy[k] + j
                 if xx in range(row) and yy in range(col) and parent != (xx, yy) and grid[i][j] == grid[xx][yy] and grid[i][j] != 'checked':

@@ -7,12 +7,15 @@ class Solution:
         return self.lcs_rec(text1, text2, len(text1), len(text2))
 
     def lcs_rec(self, x, y, n, m):
+        # Base Condition
         if n == 0 or m == 0:
             return 0
 
+        # Memoization
         if self.dp[n][m] != -1:
             return self.dp[n][m]
 
+        # Choice for subsequence
         if x[n - 1] == y[m - 1]:
             self.dp[n][m] = 1 + self.lcs_rec(x, y, n - 1, m - 1)
         else:

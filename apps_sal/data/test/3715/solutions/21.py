@@ -9,6 +9,7 @@ def get_input():
 
 
 def foo(xs, res, last):
+    # print(xs)
     if len(xs) is []:
         return res
     for i, x in enumerate(xs):

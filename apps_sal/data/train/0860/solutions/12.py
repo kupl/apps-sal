@@ -1,3 +1,4 @@
+# cook your dish here
 def MinimumHours(n, h, a):
     a.sort()
     pmi = a[-1]

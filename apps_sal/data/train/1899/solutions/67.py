@@ -35,3 +35,4 @@ class Solution:
             if expand(*islands):
                 return ans
             ans += 1
+            # islands.reverse()

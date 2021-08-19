@@ -1,3 +1,4 @@
+# cook your dish here
 a, b = map(int, input().split())
 ans = 0
 for x in range(1, a + 1):

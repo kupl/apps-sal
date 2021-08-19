@@ -8,6 +8,8 @@ for i in range(n):
     if lens[a[i]] > maxlen:
         maxlen = lens[a[i]]
         maxlast = a[i]
+# print(lens)
+# print(maxlast, maxlen)
 print(maxlen)
 subs = []
 si = maxlast - maxlen + 1

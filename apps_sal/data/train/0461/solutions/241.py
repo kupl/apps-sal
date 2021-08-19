@@ -13,3 +13,21 @@ class Solution:
             return informTime[i] + max([dfs(t) for t in d[i]])
 
         return dfs(d[-1][0])
+
+
+#         d = collections.defaultdict(list)
+#         for i in range(n):
+#             d[ manager[i] ].append(i)
+
+#         res = 0
+#         que = collections.deque( [ [ d[-1][0], 0 ] ] )
+
+#         while que:
+#             cur, time = que.popleft()
+#             res = max(res, time)
+#             time += informTime[cur]
+
+#             for t in d[cur]:
+#                 que.append( [t, time] )
+
+#         return res

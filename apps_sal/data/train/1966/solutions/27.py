@@ -6,6 +6,8 @@ class Solution:
 
         res = 0
 
+        # stoplength store the first zero position\\
+
         stoplength = column - y
         for r in range(row - x):
             if mat[x + r][y] == 1:
@@ -23,8 +25,11 @@ class Solution:
 
     def numSubmat(self, mat: List[List[int]]) -> int:
 
+        # check validity
         if len(mat) == 0 or len(mat[0]) == 0:
             return 0
+
+        # find border
 
         row = len(mat)
         column = len(mat[0])

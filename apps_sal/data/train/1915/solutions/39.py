@@ -1,5 +1,8 @@
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
+        # abc??
+        # ?abc?
+        # ??abc
 
         def num_match(stamp, target):
             ret = 0

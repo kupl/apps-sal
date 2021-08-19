@@ -22,3 +22,6 @@ for i in range(1, n):
 l[nom] *= x**k
 
 print(l[nom] | a[nom] | b[nom])
+
+
+# Made By Mostafa_Khaled

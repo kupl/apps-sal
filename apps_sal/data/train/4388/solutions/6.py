@@ -1,5 +1,6 @@
 import re
 
+# TODO: need to refactor later :)
 find_snake = re.compile("([_])([A-Za-z])")
 find_camel = re.compile("([A-Z])")
 find_kebab = re.compile("([-])([A-Za-z])")

@@ -14,6 +14,9 @@ for i in range(M):
     cave[b - 1].append(a - 1)
 
 
+# show_2d_array(cave)
+
+
 def bfs(tree, p):
     seen = [False] * len(tree)
     queue = deque((p,))
@@ -21,8 +24,10 @@ def bfs(tree, p):
     depth[p] = 0
     current_depth = depth[p]
     while len(queue) > 0:
+        # print(queue)
         q = queue.popleft()
         seen[q] = True
+        # print(q)
         for v in tree[q]:
             if not seen[v]:
                 depth[v] = depth[q] + 1
@@ -34,6 +39,7 @@ def bfs(tree, p):
 
 depth = bfs(cave, 0)
 
+# print("depth", depth)
 
 sign = [0] * N
 ans = "Yes"

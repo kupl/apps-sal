@@ -2,6 +2,7 @@ q = int(input())
 for _ in range(q):
     k, n, a, b = map(int, input().split())
     ans = (k - b * n - 1) // (a - b)
+    # print(ans,k-b*n)
     if b * n >= k:
         print(-1)
     else:

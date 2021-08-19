@@ -11,6 +11,8 @@ alist.sort()
 blist.sort()
 clist.sort()
 
+# あるbより小さいaの数
+
 
 def count_a(b):
     ok, ng = -1, n

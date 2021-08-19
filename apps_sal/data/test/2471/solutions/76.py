@@ -19,6 +19,7 @@ def main():
                 if b - j + 3 > W:
                     continue
                 g[(a - i) * W + (b - j)] += 1
+                # (a,b)を塗ったとき影響される3x3マス目の左上の座標に加算する
 
     ctr = [0] * 10
     tot = (H - 2) * (W - 2)

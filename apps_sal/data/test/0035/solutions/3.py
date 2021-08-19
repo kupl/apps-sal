@@ -11,7 +11,7 @@ def main():
         f.append(sys.stdin.readline())
 
     ok = True
-    if f[0][0] == f[n - 1][0]:
+    if f[0][0] == f[n - 1][0]:  # vertical
         if m % 3 != 0:
             ok = False
         else:
@@ -31,7 +31,7 @@ def main():
                     if not ok:
                         break
 
-    else:
+    else:  # horizontal
         if n % 3 != 0:
             ok = False
         else:

@@ -5,6 +5,7 @@ class Solution:
         while m * p != n * q:
             n += 1
             m = n * q // p
+        # m and n cannot be both even
         if n % 2 == 0:
             return 2
         if n % 2 == 1:

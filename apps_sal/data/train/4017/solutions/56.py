@@ -26,3 +26,7 @@ def exponent(numeroUno, numeroDos):
 def subt(numeroUno, numeroDos):
 
     return numeroUno - numeroDos
+
+# Make more functions. Refer to the description for function names.
+# The code will NOT WORK IF YOU USE names other than the ones
+# from the description

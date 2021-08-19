@@ -1,3 +1,4 @@
+# write the function is_anagram
 def is_anagram(test, original):
     test_list = sorted(list(test.lower()))
     original_list = sorted(list(original.lower()))

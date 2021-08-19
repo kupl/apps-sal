@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -35,6 +36,7 @@ def solve(N, K, A):
                 c += 1
                 u = v + K ** c
         elif K < -1:
+            # even
             c = 0
             u = v + 1
             while u <= maxval:

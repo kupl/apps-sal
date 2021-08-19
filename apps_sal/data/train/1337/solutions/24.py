@@ -1,5 +1,7 @@
 import math
 
+# function to calculate LCM
+
 
 def L(a):
     lcm = a[0]

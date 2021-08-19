@@ -14,9 +14,11 @@ class Solution:
         uniques = set()
 
         for piece in arr:
+            # print(piece)
             next_uniques = set()
             for unique in uniques:
                 concat = piece + unique
+                # print(\"{0}: {1}\".format(concat, self.is_unique(concat)))
                 if self.is_unique(concat):
                     next_uniques.add(concat)
             if self.is_unique(piece):

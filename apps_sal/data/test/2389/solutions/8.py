@@ -17,7 +17,7 @@ def process1(vrs, lst_s):
         elif vrs[s[0]] == 0:
             selects.append(s[0])
             update_vrs(vrs, 0, s)
-        else:
+        else:  # when vrs[s[1]] == 1:
             selects.append(s[1])
             update_vrs(vrs, 1, s)
     return True, selects

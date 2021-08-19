@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 BELL = []
 for i in range(1000):

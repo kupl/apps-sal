@@ -1,4 +1,5 @@
 from sys import stdin as fin
+# fin = open("cfr369a.in")
 
 n = int(fin.readline())
 flag = False

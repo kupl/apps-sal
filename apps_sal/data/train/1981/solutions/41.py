@@ -9,6 +9,8 @@ class Solution:
         pref[0] = p[0]
         for i in range(1, n):
             pref[i] = p[i] + pref[i - 1]
+        # pref.pop()
+        # print(pref)
         pref.sort(reverse=True)
         a.sort(reverse=True)
         s = 0

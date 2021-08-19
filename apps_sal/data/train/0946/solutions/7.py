@@ -1,3 +1,4 @@
+# cook your dish here
 n, k = list(map(int, input().split()))
 a = [[]for i in range(n)]
 for i in range(n):

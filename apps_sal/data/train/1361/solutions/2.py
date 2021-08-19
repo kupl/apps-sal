@@ -13,6 +13,7 @@ while k != 0:
     k -= 1
     h += n
 M = 1000000007
+# print(lst)
 for j in range(len(lst) - n, len(lst)):
 
     print(lst[j] % M, end=" ")

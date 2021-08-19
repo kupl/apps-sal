@@ -1,3 +1,4 @@
+# cook your dish here
 while True:
     try:
         m = int(input())

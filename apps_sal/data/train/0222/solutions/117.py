@@ -25,12 +25,15 @@ class Solution:
             curr_ans = 0
             temp_fi = fi
             si = temp_fi + 1
+            # print(\"======={}====================\".format(fi))
             while si < len(A):
                 reqd_sum = A[temp_fi] + A[si]
                 if reqd_sum > sum_lim:
                     break
                 pres = BinarySearch(A, reqd_sum)
                 if pres:
+                    # temp_fi = si
+                    # si = pres
                     curr_ans = 1 + get_length(A[si], A[pres])
                     ans = max(ans, curr_ans)
                 si += 1

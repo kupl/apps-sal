@@ -10,6 +10,7 @@ class Solution:
         numStars = 0
         ans = []
         while turns <= 10 * len(target) and numStars != len(target):
+            # print(target)
             replaced = False
             numStars = 0
             for i in range(len(target)):

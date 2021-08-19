@@ -1,6 +1,16 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
 
+        #         start=0
+        #         end=len(people)-1
+        #         count=0
+        #         #people=sorted(people)
+        #         while start<=end:
+        #             if people[start]+people[end]<=limit:
+        #                 start+=1
+
+        #             end-=1
+        #          count+=1
         bucket = [0] * (limit + 1)
         for i in people:
             bucket[i] += 1

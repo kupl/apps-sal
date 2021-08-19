@@ -1,5 +1,21 @@
 class Solution:
     def isMonotonic(self, a: List[int]) -> bool:
+        #         n = len(a)
+
+        #         if n == 1:
+        #             return True
+
+        #         asc = True if a[n-1] - a[0] >= 0 else False
+
+        #         for i in range(1, n):
+        #             if asc:
+        #                 if a[i] - a[i-1] < 0:
+        #                     return False
+        #             else:
+        #                 if a[i] - a[i-1] > 0:
+        #                     return False
+
+        #         return True
 
         increasing = decreasing = True
 

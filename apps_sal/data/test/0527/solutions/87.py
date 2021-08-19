@@ -19,9 +19,9 @@ def main():
         elif dic[string][-1] <= ind:
             cycle += 1
             ind = dic[string][0]
-        else:
+        else:  # [2,6,7,10] 6の次は？
             ind = dic[string][bisect.bisect_right(
-                dic[string], ind)]
+                dic[string], ind)]  # n以下の個数を数える
     print(cycle * len(s) + ind + 1)
 
 

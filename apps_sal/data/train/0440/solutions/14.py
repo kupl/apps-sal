@@ -3,6 +3,7 @@ class Solution:
         def determine_reflect_point(x1, y1, x2, y2):
             slope = (y2 - y1) / (x2 - x1)
             ref_slope = -slope
+            # line y=y2+ref_slope*(x-x2)
             if abs(x2 - p) < 10**(-2):
                 val1 = [0, y2 + ref_slope * (-p)]
                 val2 = [(0 - y2) / ref_slope + p, 0]

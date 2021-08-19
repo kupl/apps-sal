@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 7)
 
+# 遅延評価で加えてあげるだけ
 
 N, Q = map(int, input().split())
 AB = [[int(x) for x in input().split()] for _ in range(N - 1)]

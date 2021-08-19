@@ -13,8 +13,8 @@ while True:
     elif not good:
         counter += 1
     else:
-        if string[counter] == "
-        answer = False
+        if string[counter] == "#":
+            answer = False
         if string[counter] in "GT":
             break
         counter += k

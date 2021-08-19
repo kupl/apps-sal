@@ -75,6 +75,7 @@ for _ in range(T):
         if sum(roots_size) == (s_size + t_size):
             flg = flg ^ (s_size & t_size)
         else:
+            # 先手が勝てるようにs_size, t_sizeを(1,1)か(0,0)にする。その後は勝利条件を持ってる方が常に維持できる
             if (s_size & t_size):
                 flg = flg ^ 1
             elif not (s_size | t_size):

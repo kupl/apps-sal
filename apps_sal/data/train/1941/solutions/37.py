@@ -1,3 +1,5 @@
+# 1178. Number of Valid Words for Each Puzzle
+# version 2. backwards.
 
 def gist(word):
     ans = 0

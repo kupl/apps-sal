@@ -4,6 +4,7 @@ class Solution:
         level = 0
         visited = set()
         while q:
+            # print(q)
             size = len(q)
             for i in range(size):
                 cur = q.popleft()

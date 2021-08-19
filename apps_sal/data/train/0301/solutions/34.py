@@ -1,9 +1,13 @@
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         ga = collections.defaultdict(list)
+        # gb = collections.defaultdict(list)
 
         for i, v in enumerate(A):
             ga[v].append(i)
+
+        # for j, v in enumerate(B):
+        #     gb[v].append(j)
 
         def pd(i, start_a):
             if i >= len(B) or start_a >= len(A):

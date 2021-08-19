@@ -1,5 +1,8 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
+        # store y coordinates at each x
+        # for each y1 y2 pairs at each x from left to right
+        # find the last x that has y1 and y2, and calculate area
 
         lastx = {}
         everyx = collections.defaultdict(list)

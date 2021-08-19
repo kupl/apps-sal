@@ -72,7 +72,7 @@ def crosstable(players, results):
                 string += "\n"
             i += 1
 
-    head = "
+    head = "#".rjust(placmentLength) + spaces
     head += "Player".ljust(longestName) + spaces
     for i in range(1, len(players) + 1):
         head += str(i).rjust(playersLength) + " "
@@ -91,7 +91,7 @@ def crosstable(players, results):
     """
     
     return (
-        "
+        "#  Player             1 2 3  Pts  SB\n"
         "=====================================\n"
         "1  Boris Spassky        1 =  1.5 1.25\n"
         "2  Garry Kasparov     0   1  1.0 0.50\n"

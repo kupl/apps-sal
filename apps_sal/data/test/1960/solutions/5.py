@@ -1,3 +1,4 @@
+# a simple parser for python. use get_number() and get_word() to read
 def main():
     def parser():
         while 1:
@@ -15,7 +16,9 @@ def main():
             return int(data)
         except ValueError:
             return float(data)
+    # ---------program---------
     from bisect import bisect_left as binsleft
+    # bisect_left = bisect_left
     MAXA = int(9e9)
     n = getNum()
     RANGN = range(n)

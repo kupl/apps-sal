@@ -22,6 +22,7 @@ def solve():
         s += 1
     ans[0] = ((H - 2) * (W - 2) - s)
     print(*ans, sep="\n")
+    # print(C)
 
     return 0
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 number_of_mines = int(input())
 x_coords = []

@@ -12,6 +12,8 @@ def kadomatsu(li, x):
 ansli = []
 
 for i in range(4**n):
+    #print(i,end = " ")
+    #memo = i
     amari = []
     while True:
         if i >= 4:
@@ -21,7 +23,9 @@ for i in range(4**n):
             amari.append(i)
             break
     gyaku = amari[::-1]
+    #print(gyaku,end=" ")
     gya = [0] * (n - len(gyaku)) + gyaku
+    #print(gya,end = " ")
     al = []
     bl = []
     cl = []
@@ -35,4 +39,5 @@ for i in range(4**n):
     if al and bl and cl:
         ans = kadomatsu(al, a) + kadomatsu(bl, b) + kadomatsu(cl, c)
         ansli += [ans]
+        # print(memo,gya,al,bl,cl)
 print(min(ansli))

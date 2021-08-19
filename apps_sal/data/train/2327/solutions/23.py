@@ -1,3 +1,4 @@
+# instead of AVLTree
 import sys
 
 
@@ -6,6 +7,8 @@ class BITbisect():
         self.max = max
         self.data = [0] * (self.max + 1)
 
+    # 0からiまでの区間和
+    # 立っているビットを下から処理
     def query_sum(self, i):
         s = 0
         while i > 0:
@@ -13,6 +16,8 @@ class BITbisect():
             i -= i & -i
         return s
 
+    # i番目の要素にxを足す
+    # 覆ってる区間すべてに足す
     def add(self, i, x):
         while i <= self.max:
             self.data[i] += x
@@ -30,6 +35,8 @@ class BITbisect():
     def length(self):
         return self.query_sum(self.max)
 
+    # 下からc番目(0-indexed)の数
+    # O(log(N))
     def search(self, c):
         c += 1
         s = 0
@@ -52,6 +59,7 @@ class BITbisect():
             return 0
         return self.query_sum(x - 1)
 
+    # listみたいに表示
     def display(self):
         print('inside BIT:', end=' ')
         for x in range(1, self.max + 1):

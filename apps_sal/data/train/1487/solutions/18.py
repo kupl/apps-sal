@@ -1,3 +1,4 @@
+# https://www.codechef.com/problems/BIT2B
 import math
 import bisect
 t = int(input())

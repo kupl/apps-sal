@@ -10,6 +10,8 @@ class Solution:
         maxprofit = 0
         max_rotation = -1
         for idx, arrival in enumerate(customers):
+            # if onboard == 0 and waiting == 0 and arrival == 0:
+            # continue
 
             if gondola_customers and gondola_customers[0][1] == idx:
                 coming_down = gondola_customers.popleft()[0]

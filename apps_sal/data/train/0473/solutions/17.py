@@ -5,6 +5,7 @@ class Solution:
         for i in range(1, len(arr)):
             xors.append(xors[-1] ^ arr[i])
 
+        # 2 1 0 6 7
         print(xors)
         n = len(arr)
         count = 0

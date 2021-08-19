@@ -19,6 +19,7 @@ class Solution:
         while count != k:
             prev_winner = winner
             winner, loser = max(deck[0], deck[1]), min(deck[0], deck[1])
+            # print(deck)
             deck.popleft()
             deck.popleft()
             deck.appendleft(winner)

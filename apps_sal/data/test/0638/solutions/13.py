@@ -22,4 +22,5 @@ for k in range(1, n):
     else:
         ans.append(k - s[1])
 
+    #print(k, s)
 print(*ans)

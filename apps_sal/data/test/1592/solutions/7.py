@@ -9,6 +9,7 @@ for i in range(n):
     cq = max(cq - (t - ct), 0)
     cq += c
     ct = t
+    # print(cq)
 
 
 mcq = max(cq, mcq)

@@ -13,6 +13,7 @@ class Solution:
         return max(self.results)
 
     def getTheGold(self, i, j, value):
+        # print(i,j)
         if self.isSafe(i, j):
             self.visited[i][j] = True
             self.getTheGold(i + 1, j, value + self.nums[i][j])

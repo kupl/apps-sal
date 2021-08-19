@@ -13,6 +13,7 @@ class Solution:
 
             if croakOfFrogs[i] == 'c':
                 numOfFrogs += 1
+            # print(numOfFrogs)
             if croakOfFrogs[i] == 'k':
                 numOfFrogs -= 1
 

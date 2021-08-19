@@ -1,6 +1,9 @@
 class Solution:
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
 
+        # Time O(2^N)
+        # Space O(1)
+
         def solve(idx, counter):
             if idx == len(words):
                 return 0

@@ -21,4 +21,5 @@ while True:
     else:
         ans += (t // s) * k
         t %= s
+    #print(ans, t, s)
 print(ans)

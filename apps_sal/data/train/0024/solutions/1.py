@@ -2,6 +2,7 @@ n = int(input())
 
 for i in range(n):
     d = int(input())
+    # b**2-bd+d=0
     D = d**2 - 4 * d
     if D >= 0:
         b1 = (d + D**0.5) / 2

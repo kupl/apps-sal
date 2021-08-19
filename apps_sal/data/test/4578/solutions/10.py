@@ -18,6 +18,7 @@ def main():
 
 
 def __starting_point():
+    # execute only if run as a script
     main()
 
 

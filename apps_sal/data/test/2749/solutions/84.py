@@ -25,7 +25,7 @@ def ni(): return int(ns())
 def nf(): return float(ns())
 def na(): return list(map(int, stdin.readline().split()))
 def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
 
 
 H, W = na()

@@ -25,6 +25,7 @@ for i in range(n):
                 o = (-d - 2)
             else:
                 o = (-(his_r - a[i] + 1)) - (a[i] - cur_l)
+            #print(d, o, x, i, cur_l, cur_r)
             x += (i - cur_l) + (cur_r - i) + 1 + o
         ans[i] = x
 print(' '.join(map(str, ans)))

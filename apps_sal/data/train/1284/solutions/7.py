@@ -1,6 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     k = n // 4
+    # a,b,c = map(int,input().split())
     a = sorted(map(int, input().split()))
     a60 = (a[k - 1], a[k])
     a75 = (a[2 * k - 1], a[2 * k])

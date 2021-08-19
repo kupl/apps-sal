@@ -5,3 +5,5 @@ def powers_of_two(n):
         result.append(2 ** i)
 
     return result
+
+# powers_of_two = lambda n: list(map(lambda i: 2 ** i, list(range(n + 1))));

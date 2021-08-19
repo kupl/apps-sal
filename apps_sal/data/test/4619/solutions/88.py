@@ -15,6 +15,8 @@ for i in range(N):
     else:
         min_y = min(min_y, y)
 
+# print(max_x, max_y)
+# print(min_x, min_y)
 if(min_x > max_x) and (min_y > max_y):
     print(((min_x - max_x) * (min_y - max_y)))
 else:

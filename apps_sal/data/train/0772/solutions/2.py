@@ -11,6 +11,7 @@ def checkPalindrome(string):
 t = int(eval(input()))
 while(t):
     ip_string = input()
+    # print(ip_string)
     length_of_str = len(ip_string)
     p = 2
     count = length_of_str
@@ -22,9 +23,15 @@ while(t):
             while(j <= length_of_str):
                 temp_str += ip_string[j - 1]
                 indx_chk += str(j)
+                # print(temp_str)
                 if(checkPalindrome(temp_str) == 1):
+                    # print(temp_str)
+                    # print(indx_chk)
                     count += 1
                 j = j * p
+
+                # print("i=",i,"j=",j)
+                # print(ip_string[i-1:j+1])
 
         p += 1
     print(count)

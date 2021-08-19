@@ -8,3 +8,4 @@ class Solution:
             if val % 2 == 1:
                 oc += 1
         return False if oc > k else True
+        # return False if k < len([1 for _ , val in Counter(s).items() if val % 2 == 1]) else True

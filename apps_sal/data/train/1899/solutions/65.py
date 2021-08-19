@@ -35,9 +35,12 @@ class Solution:
                 vis.add((ni, nj))
                 q.append((ni, nj))
 
+        # print (boarder)
+
         vis.clear()
         for i, j in boarder:
             q.append((i, j, 0))
+            # vis.add((i, j))
         res = math.inf
         while q:
             i, j, nsteps = q.popleft()

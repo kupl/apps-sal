@@ -12,13 +12,32 @@ class Solution:
                 continue
             elif tmp > 0:
                 if direction == 0 or direction == -1:
+                    # if direction < 1:
                     direction = -1
                 else:
                     return False
             else:
                 if direction == 0 or direction == 1:
+                    # if direction > -1 :
                     direction = 1
                 else:
                     return False
+
+            # if A[i] == A[j]:
+            #    continue
+            # elif A[i] > A[j]:
+            #    if direction < 0:
+            #        continue
+            #    elif direction == 0:
+            #        direction = -1
+            #    else:
+            #        return False
+            # else:# A[i] < A[j]
+            #    if direction > 0:
+            #        continue
+            #    elif direction == 0:
+            #        direction = 1
+            #    else:
+            #        return False
 
         return True

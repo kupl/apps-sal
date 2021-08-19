@@ -8,6 +8,7 @@ for let in s:
 
 b = 0
 while len(q) > 1 and abs(b) < 400000:
+    # print(b)
     c = q.popleft()
     if c == 'D':
         if b >= 0:

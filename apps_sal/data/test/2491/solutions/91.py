@@ -5,7 +5,7 @@ def Bellmanford(n, edges):
     dp = [INF] * n
     dp[0] = 0
 
-    for i in range(n):
+    for i in range(n):  # たかだかn-1回ループ　n回目でまだ更新できたら負閉路がある
         for u, v, c in edges:
             if dp[u] != INF and dp[u] + c < dp[v]:
                 dp[v] = dp[u] + c

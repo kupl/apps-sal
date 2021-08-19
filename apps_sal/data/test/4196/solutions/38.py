@@ -9,12 +9,15 @@ class SegmentTree:
         self.num = 2**(n - 1).bit_length()
         self.seg = [self.ide_ele] * 2 * self.num
 
+    #####segfunc######
     def segfunc(self, x, y):
         return gcd(x, y)
 
     def init(self, init_val):
+        # set_val
         for i in range(n):
             self.seg[i + self.num - 1] = init_val[i]
+        # built
         for i in range(self.num - 2, -1, -1):
             self.seg[i] = self.segfunc(self.seg[2 * i + 1], self.seg[2 * i + 2])
 

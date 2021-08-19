@@ -72,15 +72,18 @@ def f(x):
 
 
 def main():
+    # input data
     n, k = map(int, input().split())
     A = read_intgrid(n)
 
     mod = 998244353
 
+    # solve
     ans = 1
     uf1 = UnionFind(n)
     uf2 = UnionFind(n)
 
+    # fix by columns
     for i in range(n - 1):
         for j in range(i + 1, n):
             if all(A[i][c] + A[j][c] <= k for c in range(n)):

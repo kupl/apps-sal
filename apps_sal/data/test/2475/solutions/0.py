@@ -12,6 +12,7 @@ S = list(map(int, sys.stdin.readline().split()))
 
 
 def count_max(diff):
+    # 左右対称に diff 間隔でとるときの最大
     b = 0
     a = N - 1
     ret = 0

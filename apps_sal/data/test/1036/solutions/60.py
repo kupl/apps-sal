@@ -1,3 +1,4 @@
+# arc109c
 def win(i, j):
     if i == j:
         return i

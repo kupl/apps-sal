@@ -1,5 +1,6 @@
 
 def min_value(digits):
+    # your code here
 
     set_digits = set()
     for digit in digits:

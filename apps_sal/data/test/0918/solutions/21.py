@@ -16,6 +16,7 @@ def __starting_point():
             h[r][p] = [s]
     for da in h:
         d = sorted(list(h[da].items()), key=ig(0), reverse=True)
+        # print(d)
         ns, i = [], 0
         while len(ns) < 2:
             if len(d[i][1]) + len(ns) >= 3:

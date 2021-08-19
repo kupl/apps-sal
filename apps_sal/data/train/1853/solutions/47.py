@@ -19,8 +19,8 @@ class Solution:
                         pq.append((adjnode, dist[node]))
             return dist
 
-        city_num = 0
-        cc = n + 1
+        city_num = 0  # ans city number
+        cc = n + 1  # cities connected
         for node in range(n):
             dist = dijkstra(node)
             print(dist)

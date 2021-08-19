@@ -25,6 +25,7 @@ for _ in range(val()):
     l = [0 for i in range(n + 2)]
     d = -1
     last = n + 1
+    # print(s)
     for i in range(len(s), 0, -1):
         if s[i - 1] == 'R':
             l[i] = last - i

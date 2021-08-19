@@ -7,6 +7,7 @@ class Solution:
         while left <= right:
             mid = left + (right - left) // 2
             d = self.get_day(weights, mid)
+            #print(left, right, mid, d)
             if d <= D:
                 res = min(res, mid)
                 right = mid - 1

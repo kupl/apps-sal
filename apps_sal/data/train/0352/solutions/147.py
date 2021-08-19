@@ -37,6 +37,9 @@ class Solution:
 
             dp = [1 for _ in range(len(words))]
 
+            # dp[i] = longest chain at words[i]
+
+            # max_length is always 1 for each word
             max_length = 1
             for word in range(0, len(dp)):
                 for j in range(word - 1, -1, -1):

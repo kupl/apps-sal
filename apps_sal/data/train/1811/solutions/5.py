@@ -29,3 +29,8 @@ class StockSpanner:
             span_start = self.stack[-1][1] if self.stack else -1
             self.stack.append((price, self.ix))
             return self.ix - span_start
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

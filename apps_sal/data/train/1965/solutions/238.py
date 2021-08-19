@@ -1,8 +1,8 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        ufa = UnionFind(n)
-        ufb = UnionFind(n)
-        cnt = 0
+        ufa = UnionFind(n)  # Graph for Alice
+        ufb = UnionFind(n)  # Graph for Bob
+        cnt = 0  # number of removable edges
 
         for x, y, z in edges:
             if x == 3:

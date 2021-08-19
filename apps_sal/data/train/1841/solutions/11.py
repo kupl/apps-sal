@@ -4,4 +4,5 @@ class Solution:
         mid = (len(arr) - 1) // 2
         m = arr[mid]
         temp = sorted(arr, key=lambda x: abs(x - m))
+        # temp.reverse()
         return temp[-1 * k:]

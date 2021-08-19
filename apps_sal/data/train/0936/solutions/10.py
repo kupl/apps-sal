@@ -1,3 +1,4 @@
+# cook your dish here
 def check_For_L(i, n, counter):
     if counter & 1:
         if matrix[0][i] != i * n + 1:

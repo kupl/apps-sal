@@ -1,3 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 n = int(input())
 num_str_ar = input().strip().split()
 

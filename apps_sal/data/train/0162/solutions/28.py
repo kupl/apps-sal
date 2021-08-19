@@ -11,6 +11,8 @@ class Solution:
                 if i == rows - 1 and j == cols - 1:
                     continue
                 print1 = False
+                # if i == 2:
+                #     print1 = True
                 if print1:
                     print(i, j)
                 right = 0
@@ -22,6 +24,10 @@ class Solution:
                     right = dp[i][j + 1]
                 if i < rows - 1 and j < cols - 1:
                     rightdown = dp[i + 1][j + 1]
+                # print(text1[i])
+                # print(text2[j])
+                # print(down)
+                # print(right)
                 if text1[i] == text2[j]:
                     dp[i][j] = 1 + rightdown
                 else:

@@ -10,6 +10,7 @@ class Solution(object):
         Flip A[4],A[5],A[6]: A becomes [1,1,1,1,1,0,0,0]
         Flip A[5],A[6],A[7]: A becomes [1,1,1,1,1,1,1,1]
         '''
+        # https://www.youtube.com/watch?v=tbNpHv2HDXo
         cur = res = 0
         for i in range(len(A)):
             if i >= K and A[i - K] == 2:
@@ -36,3 +37,16 @@ class Solution1:
                 cur += 1
                 res += 1
         return res
+
+
+# class Solution:
+#     def minKBitFlips(self, A: List[int], K: int) -> int:
+#         cnt = 0
+#         for i in range(len(A) + 1 - K):
+#             if A[i] == 0:
+#                 cnt += 1
+#                 for k in range(K):
+#                     A[i+k] ^= 1
+#             else:
+#                 continue
+#         return cnt if 0 not in A[-K:] else -1

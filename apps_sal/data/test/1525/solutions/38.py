@@ -1,3 +1,13 @@
+# 解説と下記を参考に作成
+# https://atcoder.jp/contests/abc113/submissions/15821617
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(H, W, K):
     mod = 10 ** 9 + 7
     dp = [[0] * W for _ in range(H + 1)]
@@ -21,6 +31,11 @@ def solve(H, W, K):
 def __starting_point():
     H, W, K = list(map(int, input().split()))
     solve(H, W, K)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # solve()
 
 
 __starting_point()

@@ -1,3 +1,4 @@
+# E71_A
 
 t = int(input())
 

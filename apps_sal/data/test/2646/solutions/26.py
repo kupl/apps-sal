@@ -5,7 +5,7 @@ infty = 10 ** 9
 def BFS(graph, parent, u):
     queue = deque()
     queue.append(u)
-    visited = [False for k in range(len(parent))]
+    visited = [False for k in range(len(parent))]  # 探索が始まったか否か
     visited[u] = True
     while queue:
         v = queue.popleft()

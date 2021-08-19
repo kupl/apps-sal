@@ -4,6 +4,7 @@ t = input()
 s = "110" * 100000
 sz = (10**10) * 3
 
+# print(len(s))
 
 st = -1
 ed = -1
@@ -13,6 +14,7 @@ for i in range(3):
         ed = i + len(t) - 1
         break
 
+# print("st = ", st)
 if t == '1':
     print(2 * (10 ** 10))
 elif t == '0':
@@ -29,6 +31,7 @@ else:
     while l <= r:
         m = (l + r) // 2
         st = a + (m - 1) * d
+        # print(m, st, st+len(t)-1)
         if st + len(t) - 1 > sz:
             r = m - 1
         else:

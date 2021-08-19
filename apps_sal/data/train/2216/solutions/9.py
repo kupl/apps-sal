@@ -25,3 +25,5 @@ for i, (l, r) in enumerate(q):
         d[i] = 'NO'
 
 print('\n'.join(d))
+
+# Made By Mostafa_Khaled

@@ -21,6 +21,7 @@ class Solution:
         score = 0
 
         for i in range(len(arr)):
+           # print(arr[i], score, 'b')
             if arr[i] % 2 == 1:
                 score += 1
 
@@ -28,6 +29,9 @@ class Solution:
                 score += o[-1][1] - o[i][1]
             else:
                 score += o[-1][0] - o[i][0]
+
+           # print(o)
+           # print(arr[i], score, 'a')
 
         mod = 10**9 + 7
         return score % mod

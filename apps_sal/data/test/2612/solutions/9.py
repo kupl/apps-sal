@@ -16,5 +16,6 @@ for _ in range(t):
             cnt += 1
             j = i * cnt
         dp[i] = cur
+    # print(dp,'dp')
     ans = max(dp)
     print(ans)

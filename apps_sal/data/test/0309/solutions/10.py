@@ -6,6 +6,7 @@ def maximum(l, r):
     if r[0] == "1" and l[0] == "0":
         return int("1" * len(l), base=2)
     else:
+        # print(l,r)
 
         if l[1:] != "":
 

@@ -1,3 +1,4 @@
+# cook your dish here
 def fun(arr, n):
     cost = [0] * n
     cost[n - 1] = arr[n - 1]

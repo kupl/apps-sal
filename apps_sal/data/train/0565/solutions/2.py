@@ -19,13 +19,18 @@ def counter(opList, a, x):
     rightBig = 0
 
     for i in range(len(opList) - 1):
+        # print("for oplist[",i,"]=",opList[i])
         if opList[i] < opList[i + 1]:
+            # print("traverse to right")
             if x < a[opList[i]]:
+                # print("x is small")
                 small += 1
             else:
                 rightSmall += 1
         else:
+            # print("traverse to left")
             if x > a[opList[i]]:
+                # print("x is big")
                 big += 1
             else:
                 rightBig += 1
@@ -68,4 +73,7 @@ for z in range(t):
         result = binarySearch(0, n - 1, xindex, opList)
         count = counter(opList, a, x)
 
+        # print(result)
         print(count)
+        # else:
+        #     print(swapCount)

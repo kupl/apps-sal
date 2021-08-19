@@ -8,6 +8,7 @@ try:
         a = input()
         destx = a.count("R") - a.count("L")
         desty = a.count("U") - a.count("D")
+        #print(destx, desty)
 
         if (destx < 0 or destx > m) or (desty < 0 or desty > n):
             result = "DANGER"

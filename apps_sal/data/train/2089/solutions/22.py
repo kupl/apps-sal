@@ -40,3 +40,7 @@ ans = [("&", set_zero), ("^", flip), ("|", set_one)]
 print(len(ans))
 for comm in ans:
     print(*comm)
+
+# for i in range(1<<10):
+# 	if process(i,commands) != process(i,ans):
+# 		print(bin(process(i,commands)),"vs",bin(process(i,ans)))

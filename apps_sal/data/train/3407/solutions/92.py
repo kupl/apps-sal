@@ -1,4 +1,6 @@
 def palindrome_chain_length(n):
+    # parameter n is a positive integer
+    # your function should return the number of steps
     n_str = str(n)
     steps = 0
 

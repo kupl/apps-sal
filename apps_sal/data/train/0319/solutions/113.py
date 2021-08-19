@@ -8,7 +8,7 @@ class Solution:
             if ind >= num_stones:
                 return 0
 
-            if player == 'A':
+            if player == 'A':  # Alex as the player
                 tmp_result = []
                 for i in range(1, 4):
                     if ind + i <= num_stones:

@@ -4,6 +4,7 @@ ans = []
 i = 1
 for p in range(0, n):
     ll = []
+    #l.append(list(map(int,input().split(" "))))
     a, b = input().split(" ")
     a = int(a)
     b = int(b)

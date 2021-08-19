@@ -1,6 +1,9 @@
 import sys
 
 
+#sys.stdin = open('input.txt')
+#sys.stdout = open('output.txt', 'w')
+
 n = int(input())
 h = [int(i) for i in input().split()]
 h = h[::-1]

@@ -29,6 +29,7 @@ def tc():
     print(' '.join(map(str, a)))
 
 
+################
 T = int(input())
 for _ in range(T):
     tc()

@@ -1,6 +1,7 @@
 import math
 
 t = int(input())
+# print t
 while(t > 0):
     h, s = list(map(int, input().split()))
     check = h * h - 4 * s

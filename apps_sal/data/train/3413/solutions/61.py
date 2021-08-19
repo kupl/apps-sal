@@ -1,4 +1,6 @@
 def solution(nums):
+    # nums.sort()
+    # return nums
     if nums == None:
         return []
     elif len(nums) == 0:

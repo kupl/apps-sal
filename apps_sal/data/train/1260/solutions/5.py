@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 """
 Created on Fri Jul 17 14:21:08 2020
 
 @author: shubham gupta
 """
+# cook your dish here
 for _ in range(int(input())):
     n, m, k = list(map(int, input().split()))
     l = [[] for _ in range(n + 1)]
@@ -28,6 +30,7 @@ for _ in range(int(input())):
                     q.append(vv)
             sum_l.append(summa)
 
+    # print(sum_l)
     if len(sum_l) < k:
         print(-1)
     else:

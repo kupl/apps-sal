@@ -1,3 +1,4 @@
+# coding: utf-8
 
 def is_parindrome(h, m):
     s = "{:02d}:{:02d}".format(h, m)

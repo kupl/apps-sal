@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('in.txt','r')
 
 n, q = list(map(int, input().split()))
 g = [[] for i in range(n + 1)]

@@ -8,7 +8,9 @@ def resolve():
 
     def Dijkstra(g):
         ans = {}
+        # ある頂点にいて、ある銀貨の枚数を持っているときのこれまでにかかった最短時間
         dp = [[INF] * (maxMoney + 1) for _ in range(N)]
+        # (time, node, silver)
         hq = []
         heappush(hq, (0, 0, min(S, maxMoney)))
         while hq:
@@ -20,6 +22,7 @@ def resolve():
                 if len(ans) == N:
                     break
 
+            # buy
             if s < maxMoney:
                 c, d = CD[v]
                 new_s = min(s + c, maxMoney)
@@ -28,9 +31,12 @@ def resolve():
                     dp[v][new_s] = new_t
                     heappush(hq, (new_t, v, new_s))
 
+            # move
             for nv, cost, time in G[v]:
+                # 払えない
                 if s < cost:
                     continue
+                # 払って移動した場合、最短時間なら更新
                 new_s = s - cost
                 new_t = t + time
                 if new_t < dp[nv][new_s]:

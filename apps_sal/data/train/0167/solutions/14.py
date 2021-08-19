@@ -9,8 +9,11 @@ class Solution:
                 return 0
             if k == 1:
                 return n
+            # Following line is required; o.w. result is not right.
             if n <= 1:
                 return n
+            # Find the first floor where dp(k - 1, i - 1) >= dp(k, n - i)
+            # such point must exist because dp(k, n-i) has min as dp(k, 0) == 0
             left, right = 1, n
             while left <= right:
                 mid = (left + right) // 2

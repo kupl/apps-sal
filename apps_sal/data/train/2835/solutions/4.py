@@ -19,7 +19,7 @@ def gen_primes():
     returns generator object
     """
     D = {}
-    p = 2
+    p = 2  # running integer
     while True:
         if p not in D:
             yield p

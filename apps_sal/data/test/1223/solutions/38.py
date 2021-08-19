@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc140/submissions/7411285
+# 写経
 
 def main():
     N = int(input())
@@ -18,6 +20,8 @@ def main():
 
     ans = 0
     for x, ind in enumerate(iter_inds, start=1):
+        # l2, ..., l1, ..., x, ..., r1, ..., r2
+        # (l2,r1) or (l1,r2)
         l1 = L[ind]
         l2 = L[l1]
         r1 = R[ind]

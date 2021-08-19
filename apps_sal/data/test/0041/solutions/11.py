@@ -14,6 +14,7 @@ for i in range(len(a)):
         d[i] = dist
 
 for i in range(len(a) - 1, -1, -1):
+    # print(dist)
     if(a[i] == 0):
         d[i] = 0
         dist = 0

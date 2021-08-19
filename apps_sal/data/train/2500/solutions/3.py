@@ -8,6 +8,6 @@ class Solution:
                 c['power'] += 1
 
             else:
-                c['new start
+                c['new start#%s' % i] = c['power']
                 c['power'] = 1
         return max(c.values())

@@ -8,7 +8,7 @@ def power(x, y, p):
     while (y > 0):
         if ((y & 1) == 1):
             res = (res * x) % p
-        y = y >> 1
+        y = y >> 1  # y = y/2
         x = (x * x) % p
     return res
 
@@ -26,6 +26,10 @@ INF = inf = 10**18 + 5
 
 for t in range(int(input())):
     n, k = inl()
+
+    # if n>=k or k<3:
+    #     print(k-1)
+    #     continue
 
     a = k - 1
     d = n - 1

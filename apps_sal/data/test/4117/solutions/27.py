@@ -1,6 +1,8 @@
+# 入力
 N = int(input())
 L = list(map(int, input().split()))
 
+# 処理
 L.sort()
 count = 0
 for i in range(N):

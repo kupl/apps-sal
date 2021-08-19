@@ -37,8 +37,12 @@ for _, v in soinsu.items():
     for i in range(5):
         cnt[i] += 1 if v >= tit[i] else 0
 
+# (2,4,4)
 ans += cnt[1] * (cnt[1] - 1) // 2 * (cnt[0] - 2)
+# (14,4)
 ans += cnt[2] * (cnt[1] - 1)
+# (2,24)
 ans += cnt[3] * (cnt[0] - 1)
+# (74)
 ans += cnt[4]
 print(ans)

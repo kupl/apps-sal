@@ -15,6 +15,10 @@ for i in range(n):
     map[int(temp[0])] = int(temp[1])
 
 
+# print(first)
+# print(second)
+# print(map)
+
 temp = 0
 res = [temp for x in range(n + 10)]
 j = 2
@@ -27,6 +31,7 @@ while temp in map.keys():
     res[j] = temp
     j += 2
 
+# print(res)
 x = first - second
 temp = int(x.pop())
 j = 1

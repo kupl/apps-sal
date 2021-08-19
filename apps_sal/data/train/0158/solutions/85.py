@@ -7,7 +7,7 @@ class Solution:
         for i in range(len(A)):
             A_list.append(A[i])
 
-        states = [[A_list.copy(), 0, 0], ]
+        states = [[A_list.copy(), 0, 0], ]  # list, index, step
         while states != []:
             state = states.pop(0)
             indictor = 0

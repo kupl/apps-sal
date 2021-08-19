@@ -1,11 +1,14 @@
 class Solution:
+    # calc=[]
     def findPower(self, ele):
+        # self.calc=[]
         ctr = 0
         while ele != 1:
             if ele % 2 == 0:
                 ele = ele // 2
             else:
                 ele = 3 * ele + 1
+            # self.calc.append(ele)
             ctr += 1
         return ctr
 

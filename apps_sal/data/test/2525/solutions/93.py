@@ -24,6 +24,7 @@ for i in range(q):
             else:
                 a.appendleft(c)
 
+#print(a, b, stat % 2)
 ans = ''.join(a) + s + ''.join(b)
 if stat % 2 == 1:
     ans = ans[::-1]

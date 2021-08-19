@@ -24,10 +24,10 @@ class Solution:
                 biggest = num
                 mode = float(i)
 
-            if total % 2:
+            if total % 2:  # odd
                 if accumulator < mid and (accumulator + num) >= mid:
                     median = float(i)
-            else:
+            else:          # even
                 if accumulator < mid - 1 and (accumulator + num) >= mid - 1:
                     median = float(i)
                 elif num and accumulator == mid:

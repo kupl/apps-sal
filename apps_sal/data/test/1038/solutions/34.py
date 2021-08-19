@@ -23,6 +23,7 @@ def LSS(): return input().split()
 def resolve():
     A, B = LI()
 
+    # 実験した結果
     def f(x):
         rem = x % 4
         if rem == 0:

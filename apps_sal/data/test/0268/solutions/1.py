@@ -9,8 +9,9 @@ def main():
     arrange = [False for _ in range(n + 1)]
     arrange[0] = True
     s = 0
+    # i means the first i items could be arranged well
     i = min(bisect_right(sat, sat[s] + d), k)
-    n_arrange = 1 if i - k >= 0 else 0
+    n_arrange = 1 if i - k >= 0 else 0  # arrange[0] == True | the first 0 items
 
     while i <= n:
         if i - s >= k and n_arrange > 0:

@@ -5,6 +5,7 @@ class Solution:
     def longestStrChain(self, words: List[str]) -> int:
 
         return self.run_graph_solution(words)
+        # return self.run_dp_solution(words)
 
     def run_dp_solution(self, words):
         pass
@@ -27,6 +28,7 @@ class Solution:
                         if word2[:i] + word2[i + 1:] == word1:
                             graph[word1].append(word2)
                             into[word2] = True
+        # return graph
 
         sources = [word for word in words if word not in into]
         max_len = 0

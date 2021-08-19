@@ -13,12 +13,12 @@ for i in range(q):
     id -= 1
     if req == 1:
         if count != k or friend_list[id] > min_value:
-            if count == k:
+            if count == k:  # вытеснять
                 active_friends_id[min_ind] = id
                 active_friends[min_ind] = friend_list[id]
                 min_value = min(active_friends)
                 min_ind = active_friends.index(min_value)
-            else:
+            else:  # добавить
                 active_friends_id[tmp_ind] = id
                 active_friends[tmp_ind] = friend_list[id]
                 tmp_ind += 1

@@ -9,4 +9,5 @@ for i in range(n):
         if games[j] <= games[i]:
             strike[i] = max(strike[i], strike[j] + 1)
 
+# print(strike)
 print(max(strike))

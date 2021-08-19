@@ -56,5 +56,6 @@ for a in A_INV[::-1]:
             L[R[l]] = L[l]
 
     NOW = 3 - NOW
+    # print(*ANS,USELIST,L,R)
 
 print("".join(map(str, ANS)))

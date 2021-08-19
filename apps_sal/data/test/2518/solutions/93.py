@@ -15,6 +15,14 @@ def main():
             return True
         else:
             return False
+    # def biser(t,l):
+    #    if l==0:
+    #        return t
+    #    t=t+l//2
+    #    if enough(t):
+    #        return biser(t-l//2,l//2)
+    #    else:
+    #        return biser(t+1,l-l//2)
     l = max(h) // b + 1
     t = 0
     while l > 0:

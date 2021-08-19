@@ -1,6 +1,7 @@
 import math
 from collections import defaultdict
 import sys
+#input = sys.stdin.readline
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
                             end += required[t] - balance
                         balance -= min(required[t], balance)
                         required[t] = 0
-            if d == days:
+            if d == days:  # last day
                 for r in required:
                     if r > 0:
                         end += r

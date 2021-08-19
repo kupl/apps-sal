@@ -16,6 +16,8 @@ class PlayingCards:
             output = output * alphabet_size + self.alphabet.index(letter)
         return output
 
+    # Takes a String containing a message, and returns an array of Strings representing
+    # a deck of playing cards ordered to hide the message, or None if the message is invalid.
     def encode(self, message):
         for letter in message:
             if letter not in self.alphabet:
@@ -42,6 +44,8 @@ class PlayingCards:
             remaining_cards.pop(current_index)
         return output
 
+    # Takes an array of Strings representing a deck of playing cards, and returns
+    # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
         printDeck(deck, False)
         if len(deck) > len(self.cards):

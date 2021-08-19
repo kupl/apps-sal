@@ -45,4 +45,5 @@ class Solution:
             bitvalue[i] = 1
             if abs(parent[find(i)]) == m:
                 ans = count
+            # print(parent)
         return ans

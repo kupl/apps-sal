@@ -1,5 +1,8 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # we have to maintain two min/max heaps with both value and index
+        # slide right if subarray is still valid
+        # slide left until subarray is valid again: if min/max value's index is earlier than left, then pop it out
         n = len(nums)
         i, j, ans = 0, 0, 0
         min_heap, max_heap = [], []

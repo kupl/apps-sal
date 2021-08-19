@@ -8,7 +8,7 @@ dp[0][''] = 1
 
 
 def sol(s):
-    if s.find('ABC') != -1:
+    if s.find('ABC') != -1:  # 見つかった場合
         return False
     L = len(s)
     for i in range(L - 1):

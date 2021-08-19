@@ -26,5 +26,6 @@ for i in range(len(A)):
     if i >= L_B - 1:
         if (zeros - B_zeros) % 2 == 0:
             res += 1
+        # print(zeros,L_B-zeros)
 
 print(res)

@@ -5,7 +5,12 @@ A = [list(map(int, input().split())) for _ in range(H)]
 Q = int(input())
 LR = [list(map(int, input().split())) for _ in range(Q)]
 
+# 1 -> 1+D ->
+# 2 -> 2+D ->
+# 3 -> 3+D -> みたいなものを事前に計算
 
+# 辞書で管理する
+# d[A[i][j]] = [i,j] みたいな感じ
 d = defaultdict(list)
 for i in range(H):
     for j in range(W):

@@ -16,6 +16,11 @@ for i in range(M):
     prev[a][b] = a
     prev[b][a] = b
 
+#####
+# print("d",d)
+# print("vlist",vlist)
+# print("prev",prev)
+#####
 
 for k in range(N):
     for i in range(N):
@@ -29,6 +34,11 @@ for i in range(N):
         if prev[i][j] == i:
             vlist[i][j] = 0
 
+#####
+# print("d",d)
+# print("vlist",vlist)
+# print("prev",prev)
+#####
 
 count = 0
 for i in range(N - 1):

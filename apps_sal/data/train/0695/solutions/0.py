@@ -1,3 +1,4 @@
+# cook your dish here
 tc = int(input())
 for j in range(tc):
     ip = list(map(int, input().rstrip().split()))
@@ -12,6 +13,8 @@ for j in range(tc):
     rn = bin(y).replace("0b", "")
     ll = len(ln)
     rl = len(rn)
+    # print(ln)
+    # print(rn)
     if(ll == len(rn)):
         for i in range(ll):
 
@@ -19,9 +22,11 @@ for j in range(tc):
                 ln = ln[i:]
                 rn = rn[i:]
                 break
+    # print(ln)
     if(ln[0] == '0'):
         ln = ln[1:]
         ll -= 1
+    # print(rn)
     if(rn[0] == '0'):
         rn = rn[1:]
         rl -= 1
@@ -39,7 +44,9 @@ for j in range(tc):
         amn += rm
     else:
         amn += hpl
+    #print("amn = ",amn)
     aln = (n + 1) - amn
+    #print("aln = ",aln)
     if(x < y):
         print(amn)
     else:

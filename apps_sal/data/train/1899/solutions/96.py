@@ -12,6 +12,8 @@ class Solution:
             if found_one:
                 break
 
+        # print(A)
+
         return self.BFS(found_y, found_x, A)
 
     def invertOnes(self, y, x, A):
@@ -43,6 +45,7 @@ class Solution:
 
         while stack:
             curr_y, curr_x, curr_dist = stack.pop(0)
+            #print(curr_y, curr_x, curr_dist)
             if A[curr_y][curr_x] == 1:
                 min_dist = min(min_dist, curr_dist - 1)
 

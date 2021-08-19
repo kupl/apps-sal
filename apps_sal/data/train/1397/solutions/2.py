@@ -8,6 +8,8 @@ def findM(A, n):
 
     keys = sorted(elemIdxMap.keys())
 
+    # print(elemIdxMap, keys)
+
     connected = False
     count = 0
     prevIdx = -1
@@ -34,6 +36,12 @@ def findM(A, n):
                     prevIdx = idx
                     break
 
+        # print(keys[i], count, prevIdx)
+    # if count == nKeys - 1:
+    #     return 1
+    # else:
+    #     return (nKeys - count)
+    # print(nKeys, count)
     return (nKeys - count)
 
 
@@ -43,6 +51,7 @@ def __starting_point():
         A = list(map(int, input().split()))
 
         print(findM(A, n))
+        # print(findM([1, 3, 2, 1, 2], 5))
 
 
 __starting_point()

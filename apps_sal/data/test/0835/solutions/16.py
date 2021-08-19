@@ -33,6 +33,7 @@ while not exceeded:
         exceeded = True
         break
     i += 1
+# number of burgers is in range [2^(i-1) to 2^i)
 lo = 2**(i - 1)
 high = 2**(i)
 mid = int((lo + high) / 2)

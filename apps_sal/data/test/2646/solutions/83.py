@@ -21,7 +21,14 @@ while queue:
             continue
         if d[i] == -1:
             d[i] = now
+#    d[i]=d[now]+1
         queue.append(i)
+# print(d)
+# return
+# E=[0]*(N+1)
+# for i in range(M):
+#  if d[B[i]]-d[A[i]]==1 and E[B[i]]==0:E[B[i]]=A[i]
+#  elif d[A[i]]-d[B[i]]==1 and E[A[i]]==0:E[A[i]]=B[i]
 if d.count(0) > 2:
     print('No')
     exit

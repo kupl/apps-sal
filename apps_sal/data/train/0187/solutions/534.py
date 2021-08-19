@@ -21,11 +21,14 @@ class Solution:
                 profits.append(profit)
                 wait = wait - min(4, wait)
 
+        # print(profits)
+
         sum_ = profits[0]
         for i in range(1, len(profits)):
             profits[i] = sum_ + profits[i]
             sum_ = profits[i]
 
+        # print(profits)
         max_ = 0
         index = -1
         for i in range(0, len(profits)):

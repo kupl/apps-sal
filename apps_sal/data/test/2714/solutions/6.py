@@ -32,6 +32,7 @@ for test_count in range(t):
         even, odd = 1, 0
         while queue and not break_all:
             search = queue.popleft()
+            # print('searching vertex {0}, {1}'.format(search, edge[search]))
             current = flag[search]
             for to in edge[search]:
                 if flag[to] == -1:
@@ -45,7 +46,9 @@ for test_count in range(t):
                     break_all = True
                 else:
                     assert flag[to] == current ^ 1
+        # print(flag)
         if break_all:
+            # print('break_all')
             ans = 0
         else:
             if (even, odd) == (1, 0):
@@ -67,3 +70,4 @@ for test_count in range(t):
     ans %= 998244353
     anss.append(ans)
 print('\n'.join(map(str, anss)))
+# print(time.time() - start)

@@ -1,5 +1,6 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+        # dp[house][target][color]
         dp = [[[float('inf')] * (n + 1) for j in range(target + 1)] for i in range(m)]
 
         if houses[0] == 0:
@@ -31,6 +32,7 @@ class Solution:
                                 dp[i][t][cidx2] = min(dp[i][t][cidx2], pre_cost + c)
                             elif t + 1 <= target:
                                 dp[i][t + 1][cidx2] = min(dp[i][t + 1][cidx2], pre_cost + c)
+        # print(dp)
         res = float('inf')
         for cidx in range(1, n + 1):
             res = min(res, dp[-1][target][cidx])

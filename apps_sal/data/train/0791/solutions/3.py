@@ -23,6 +23,7 @@ for i in range(0, T):
 
             elif L[i] < A and (i + D) < N:
                 diff = A - L[i]
+                # if L[i+D]>=diff:
                 L[i] = L[i] + diff
                 L[i + D] = L[i + D] - diff
                 MOVE = MOVE + diff

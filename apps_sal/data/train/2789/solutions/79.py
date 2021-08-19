@@ -10,3 +10,4 @@ def bmi(weight, height):
         return "Obese"
     else:
         print("wrong input")
+    # your code here

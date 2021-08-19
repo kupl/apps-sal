@@ -14,6 +14,7 @@ def abc073_d():
         graph[b, a] = c
 
     dist = floyd_warshall(csgraph=graph)
+    # print(dist)
 
     ans = 10**18
     for route in permutations(R, r):
@@ -25,6 +26,7 @@ def abc073_d():
             if tmp > ans:
                 break
         ans = min(ans, tmp)
+        #print(route, tmp)
 
     print(int(ans))
 

@@ -1,7 +1,11 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
+        # matrices
+        # for i,j,k
+        # min value
         matrix = [[float('inf') for x in range(n)] for y in range(n)]
 
+        # build initial matrix
         for i in range(n):
             matrix[i][i] = 0
 
@@ -23,10 +27,12 @@ class Solution:
                 if dist <= distanceThreshold and i != j:
                     res[i] += 1
 
+        # check if unconnected cities
         unconnected = []
         i = 0
         while i < n:
             if res[i] == 0:
+                # not conencted
                 unconnected.append(i)
             i += 1
 

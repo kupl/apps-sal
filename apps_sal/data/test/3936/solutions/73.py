@@ -5,7 +5,7 @@ def main():
     S.append(input())
     MOD = 10**9 + 7
     ans = 1
-    pre_mino_flag = -1
+    pre_mino_flag = -1  # vertical:0, horizontal:1
     pass_flag = False
     if S[0][0] == S[1][0]:
         ans *= 3

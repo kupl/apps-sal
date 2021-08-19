@@ -27,6 +27,7 @@ def main():
 def __starting_point():
     start_time = time.time()
     main()
+    #print("--- %s seconds ---" % (time.time() - start_time))
 
 
 __starting_point()

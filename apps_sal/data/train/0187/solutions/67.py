@@ -8,6 +8,7 @@ class Solution:
         max_profit = -float('inf')
 
         while q > 0 or r < len(customers):
+            # print(q,r,profit)
             if profit > max_profit:
                 cnt = r
                 max_profit = profit

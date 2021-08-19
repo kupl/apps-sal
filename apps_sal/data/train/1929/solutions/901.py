@@ -21,3 +21,8 @@ class StreamChecker:
                     result = result or self.end in new_prevs[-1]
             self.prevs = new_prevs
         return result
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

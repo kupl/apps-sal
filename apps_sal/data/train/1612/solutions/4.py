@@ -4,6 +4,7 @@ from itertools import permutations
 
 
 def find_spec_prod_part(n, com):
+    # your code here
     temp_partition = []
     factors = primeFactors(n)
     counter = Counter(factors)
@@ -66,15 +67,22 @@ def calculateScore(count):
     score = score * coef
     return score
 
+# A function to print all prime factors of
+# a given number n
+
 
 def primeFactors(n):
     prime_factors = []
+    # Print the number of two's that divide n
     while n % 2 == 0:
         prime_factors.append(2),
         n = n / 2
 
+    # n must be odd at this point
+    # so a skip of 2 ( i = i + 2) can be used
     for i in range(3, int(math.sqrt(n)) + 1, 2):
 
+        # while i divides n, print i ad divide n
         while n % i == 0:
             prime_factors.append(i),
             n = n / i

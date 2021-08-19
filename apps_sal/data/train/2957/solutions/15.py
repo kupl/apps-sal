@@ -8,4 +8,4 @@ def get_drink_by_profession(id):
         "rapper": "Cristal"
     }
 
-    return switch.get(id.lower(), "Beer")
+    return switch.get(id.lower(), "Beer")  # id en minisculas, si no existe dentro de switch, devuelve "Beer"

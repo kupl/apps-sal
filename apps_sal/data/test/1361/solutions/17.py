@@ -8,6 +8,7 @@ def main(n, a):
         x = dif(a[:i] + a[i + 1:])
         if x < mn:
             mn = x
+        # print(i,x,mn)
     print(mn)
 
 

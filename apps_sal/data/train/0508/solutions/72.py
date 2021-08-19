@@ -1,3 +1,4 @@
+# roadwork
 import heapq
 N, Q = map(int, input().split())
 que = []
@@ -8,24 +9,27 @@ heapq.heapify(heap)
 Set = set([])
 for i in range(N):
     s, t, x = map(int, input().split())
-    que.append((s - x, 0, i))
-    que.append((t - x, 1, i))
+    que.append((s - x, 0, i))  # append
+    que.append((t - x, 1, i))  # remove
     D[i] = x
 
 for i in range(Q):
     d = int(input())
-    que.append((d, 2, i))
+    que.append((d, 2, i))  # querie
 
 que.sort(key=lambda x: x[0])
 
 for x in que:
     demand = x[1]
     if demand == 0:
+        # append
         heapq.heappush(heap, (D[x[2]], x[2]))
         Set.add(x[2])
     elif demand == 1:
+        # remove
         Set.remove(x[2])
     else:
+        # querie
         flag = True
         while heap and flag:
             distance, index = heapq.heappop(heap)

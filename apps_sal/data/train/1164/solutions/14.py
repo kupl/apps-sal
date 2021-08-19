@@ -15,6 +15,8 @@ for prob in range(p):
     for i in range(s - 1):
         if nop[i][1] > nop[i + 1][1]:
             n[prob] += 1
+    # print(nop)
+# print(n)
 for i in range(p):
     n[i] = [n[i], i]
 n.sort()

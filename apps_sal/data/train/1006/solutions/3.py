@@ -14,6 +14,7 @@ while t:
     z = 0
     cc = d
     for c in n:
+        # print(c, cc, z)
         if c > cc:
             z += 1
         else:

@@ -4,6 +4,7 @@ class Solution:
         mydict = {}
 
         def func(city, myfuel):
+            #print('travel to', city, 'fuel', myfuel)
             if myfuel < 0:
                 return 0
             if myfuel == 0:
@@ -24,4 +25,5 @@ class Solution:
             return tmp
 
         count = func(locations[start], fuel)
+        # print(mydict)
         return (count) % (10**9 + 7)

@@ -24,6 +24,7 @@ mod = 10 ** 9 + 7
 
 N, C = MAP()
 L = [LIST() for i in range(N)]
+# oa, ob
 A = [0] * N
 B = [0] * N
 

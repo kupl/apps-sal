@@ -7,8 +7,8 @@ S = list(sys.stdin)
 ans = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '
-        continue
+        if S[i][j] == '#':
+            continue
         dist = [[-1] * W for _ in range(H)]
         dist[i][j] = 0
         que = deque()

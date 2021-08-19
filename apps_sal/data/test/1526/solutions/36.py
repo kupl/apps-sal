@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+# ARC094C
 import copy
 import sys
 import math
 
+#n = int(input())
 tmp = input().split()
 a, b, c = list([int(a) for a in tmp])
 

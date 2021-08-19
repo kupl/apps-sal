@@ -1,3 +1,4 @@
+# cook your dish here
 from operator import itemgetter
 inp = list(map(int, input().split()))
 n, m, w, b = inp[:4]

@@ -24,7 +24,9 @@ class Solution:
                         max_area = max(max_area, height * width)
                     while helper_stack:
                         stack.append(helper_stack.pop())
+            # print(stack)
         width = 0
+        # print(stack)
         while stack:
             width += 1
             height = stack.pop()

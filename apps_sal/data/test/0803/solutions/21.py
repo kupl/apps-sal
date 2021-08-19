@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 
 n = list(map(int, input()))
 a = list(input())

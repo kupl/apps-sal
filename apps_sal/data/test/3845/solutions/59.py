@@ -14,15 +14,17 @@ B -= 1
 print(100, 100)
 for i in range(100):
     for j in range(100):
+        # 黒一面に白を入れていく
         if i < 50:
             if A > 0 and i % 2 == 0 and j % 2 == 0:
                 print(".", end="")
                 A -= 1
             else:
-                print("
+                print("#", end="")
+        # 白一面に黒を入れていく
         elif 50 <= i:
             if B > 0 and i % 2 == 1 and j % 2 == 0:
-                print("
+                print("#", end="")
                 B -= 1
             else:
                 print(".", end="")

@@ -10,6 +10,7 @@ for i in range(len(lis) + 1):
     for j in range(i + 1, len(lis) + 1):
         ans = lis[i:j]
         res.append(ans)
+    # print(res)
 while q > 0:
     k = int(input())
     count = 0

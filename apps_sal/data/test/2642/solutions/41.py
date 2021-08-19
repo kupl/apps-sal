@@ -1,3 +1,9 @@
+# 約分して、互いに素な(1,3) (3,1)のようなペアを作りカウントする
+# 正のグループと負のグループを別々に管理
+# 正のグループの相手が負のグループに存在した場合、
+# どちらかのグループから好きなだけ選ぶか、どちらも選ばないかしかない
+# 誰ともペアにならなかったグループの個数を全て足してP個だとして、2^P通りを掛ける
+# (0,0)については、その中から1つ選ぶか、選ばないかしかない
 
 from collections import defaultdict
 import math
@@ -33,11 +39,14 @@ for i in range(N):
 
 DIV = 1000000007
 ans = 1
+# zeroa,zerobから選ぶパターンは、どちらから好きなだけ選ぶか、どちらも選ばないか
 ans *= (pow(2, zeroa, DIV) + pow(2, zerob, DIV) - 1) % DIV
 ans %= DIV
 
+# 誰とでもペアになれるものをカウント
 allcnt = 0
 
+# plusから選ぶパターンで、minusにある対応ペアを探す
 for item in list(pluspair.items()):
     a, b = item[0]
     cnt = item[1]
@@ -52,5 +61,6 @@ for val in list(minuspair.values()):
     allcnt += val
 
 ans = (ans * pow(2, allcnt, DIV)) % DIV
+# zeropairから選んだ場合、今までのパターンとは独立
 ans += zeropair
 print(((ans - 1) % DIV))

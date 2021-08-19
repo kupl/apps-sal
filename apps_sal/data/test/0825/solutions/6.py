@@ -9,6 +9,7 @@ for i in range(2, int(n ** 0.5) + 2):
 else:
     if n != 1:
         temp.append([n, 1])
+# print(temp)
 ans = 0
 for i in range(len(temp)):
     count = 1

@@ -21,6 +21,7 @@ def resolve():
     N = I()
     AB = [LI() for _ in range(N)]
 
+    # A, Bを標準化 互いに疎でAは正
     def normalize(AB):
         A = AB[0]
         B = AB[1]
@@ -49,8 +50,10 @@ def resolve():
     AB_n = [normalize(i) for i in AB]
     counter = collections.Counter(AB_n)
 
+    # 場合の数を求める
     used = set()
     ans = 1
+    # (0, 0)以外について
     for A, B in AB_n:
         if not (A, B) in used:
             if (A, B) != (0, 0):
@@ -59,6 +62,7 @@ def resolve():
                 used.add((A, B))
                 used.add(orthogonal((A, B)))
     ans -= 1
+    # (0, 0)について
     ans += counter[(0, 0)]
     ans %= MOD
 

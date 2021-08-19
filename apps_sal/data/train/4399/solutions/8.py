@@ -10,6 +10,7 @@ def fold_cube(number_list):
         if ((number_list[j] - 5) in number_list):
             connections += 1
 
+    # in cube 6 faces are connected by 5 edges
     if connections != 5:
         return False
 
@@ -38,6 +39,7 @@ def fold_cube(number_list):
     if lenghts_horizontal[0] == 4 or lenghts_horizontal[-1] == 4:
         return False
 
+    # print(lenghts_horizontal)
     is_3_horizontal_fist = False
     if lenghts_horizontal[0] == 3 or lenghts_horizontal[-1] == 3:
         is_3_horizontal_fist = True
@@ -65,6 +67,10 @@ def fold_cube(number_list):
         if any_in_row:
             width += 1
 
+    #    print(lenghts_vertical)
+    #    print(lenghts_horizontal)
+    #    print(height,width)
+
     if height == 3 and width == 3:
         return False
 
@@ -74,6 +80,10 @@ def fold_cube(number_list):
     is_3_vertical_first = False
     if (lenghts_vertical[0] == 3) or (lenghts_vertical[-1] == 3):
         is_3_vertical_first = True
+    # print(height)
+
+    #    print(lenghts_vertical)
+    #    print(lenghts_vertical[0])
 
     lenghts_vertical.sort(reverse=True)
 
@@ -87,8 +97,16 @@ def fold_cube(number_list):
     print(lenghts_vertical)
     print(lenghts_horizontal)
 
+    # print(is_3_vertical_first, is_3_horizontal_fist)
+
     if lenghts_vertical[0] > 4:
         return False
+
+    # if (lenghts_vertical[0] == 3 and width == 3) or (lenghts_horizontal[0] == 3 and height == 3):
+    #    return True
+
+    # if (lenghts_vertical[0] == 3 and height == 3) or (lenghts_horizontal[0] == 3 and width == 3):
+    #    return True
 
     if (lenghts_vertical[0] == 3 and lenghts_vertical[1] == 3 and width == 2):
         return True

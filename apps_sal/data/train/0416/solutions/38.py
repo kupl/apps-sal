@@ -15,6 +15,9 @@ class Solution:
                 for turn in [MOUSE_TURN, CAT_TURN]:
                     key = (m_pos, c_pos, turn)
                     if m_pos == 0 or c_pos == 0:
+                        # If the mouse reaches the hole, the mouse wins.
+                        # The cat also isn't allowed to go on the node corresponding
+                        # to the hole, so mark the cat doing that as also a win.
                         win_states[key] = MOUSE_WIN
                     elif m_pos == c_pos:
                         win_states[key] = CAT_WIN

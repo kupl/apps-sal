@@ -17,22 +17,24 @@ def solve():
     summ[0] = mem[0]
     for i in range(1, len(summ)):
         summ[i] = (mem[i] + summ[i - 1]) % MOD
+    # res = list()
     output = io.StringIO()
     for i in range(t):
         a, b = read()
         strtemp = str((summ[b] - summ[a - 1] + MOD) % MOD)
         output.write(strtemp + '\n')
+        # res.append((summ[b]-summ[a-1]+MOD)%MOD)
     print(output.getvalue())
 
 
 def read(mode=2):
     inputs = input().strip()
     if mode == 0:
-        return inputs
+        return inputs  # String
     if mode == 1:
-        return inputs.split()
+        return inputs.split()  # List of strings
     if mode == 2:
-        return list(map(int, inputs.split()))
+        return list(map(int, inputs.split()))  # List of integers
 
 
 def write(s="\n"):

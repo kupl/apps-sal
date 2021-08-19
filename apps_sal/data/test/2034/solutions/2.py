@@ -1,5 +1,7 @@
 3
 
+# from collections import deque
+
 
 class StdIO:
     def read_int(self):
@@ -25,6 +27,8 @@ io = StdIO()
 
 
 def bfs(adj, vi, visited):
+    # q = deque()
+    # q.append(vi)
     q = [vi]
     visited[vi] = True
 
@@ -32,6 +36,7 @@ def bfs(adj, vi, visited):
     ec = 0
 
     while q:
+        # v = q.popleft()
         v = q.pop()
 
         vc += 1
@@ -45,13 +50,24 @@ def bfs(adj, vi, visited):
     return (vc, ec // 2)
 
 
+# def dfs(adj, v, visited):
+# 	visited[v] = True
+
+# 	for u in adj[v]:
+# 		if not visited[u]:
+# 			dfs(adj, u, visited)
+
+
 def main():
     n, m = io.read_ints()
+    # n = 100001
+    # m = 100000
 
     adj = [list() for i in range(n)]
 
     for i in range(m):
         x, y = io.read_ints()
+        # x, y = i+1, i+2
         x -= 1
         y -= 1
 

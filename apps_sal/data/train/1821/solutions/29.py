@@ -18,8 +18,11 @@ def heapify(nums, n, i):
 
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
+        # build heap
         n = len(nums)
 
+        # n // 2 -> 0
+        # building maximizing heap
         for i in range(n // 2, -1, -1):
             heapify(nums, n, i)
 
@@ -28,3 +31,4 @@ class Solution:
             heapify(nums, i, 0)
 
         return nums
+        # do the heap sort

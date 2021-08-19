@@ -8,6 +8,7 @@ class Solution:
         dq = collections.deque()
         ans = A[0]
         dq.append(0)
+        # monoqueue dq that contains indices i such that P[i]s are non-decreasing
         for j in range(1, len(pfx)):
             if j - dq[0] > n:
                 dq.popleft()

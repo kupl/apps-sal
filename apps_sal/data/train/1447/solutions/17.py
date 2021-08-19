@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 
 for _ in range(t):
@@ -17,9 +18,11 @@ for _ in range(t):
             flag = 1
             break
 
+    # print(d)
     vals = list(d.values())
     dist = []
     for i in vals:
+        # print(i)
         dist.append(i[1])
 
     if flag == 0:

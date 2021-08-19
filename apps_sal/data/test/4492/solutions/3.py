@@ -24,9 +24,12 @@ def resolve():
     N, x = LI()
     a = LI()
 
+    # 隣り合う2つの和
     s = [a[i] + a[i + 1] for i in range(N - 1)]
+    # 隣り合う2つの和をx以下にしたもの
     s_after = [min(i, x) for i in s]
 
+    # 隣り合う2つの和をx以下にしたものから元の数列を復元
     a_after = [0] * N
     a_after[0] = min(a[0], s_after[0])
     for i in range(N - 1):

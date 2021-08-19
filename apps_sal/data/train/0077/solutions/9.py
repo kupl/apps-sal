@@ -18,6 +18,7 @@ from sys import stdin
 from math import ceil, log
 
 
+# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
     n = int(stdin.readline().strip())

@@ -14,6 +14,7 @@ def score(a):
 
 
 def find_spec_prod_part(n, com):
+    # non-recursive way to find partitions
     there_are_new = True
 
     partitions = partition(n)

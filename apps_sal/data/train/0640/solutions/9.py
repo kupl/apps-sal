@@ -1,3 +1,4 @@
+# cook your dish here
 def lcm(a, b):
     from math import gcd
     return a * b // gcd(a, b)

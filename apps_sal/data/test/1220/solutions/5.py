@@ -28,11 +28,15 @@ for _ in range(m):
     x, y = x - 1, y - 1
     a[x].add(y)
     a[y].add(x)
+    # print(i)
 
+# log(a)
 q = []
 willVisit = set(range(n))
+# log(willVisit)
 while willVisit:
     x = willVisit.pop()
+    # loang tai x
     queue = [x]
     count = 1
     while queue:
@@ -41,6 +45,13 @@ while willVisit:
         count += len(sibling)
         queue.extend(sibling)
         willVisit &= a[y]
+        # willVisit -= sibling
+        # count += 1
+        # for z in willVisit:
+        #     if (not z in a[y]):
+        #         queue.add(z)
+        # log(f" y = {y} - {willVisit} - {count} - {sibling}")
+    # log(willVisit)
     q.append(count)
 
 q.sort()

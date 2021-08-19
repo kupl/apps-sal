@@ -4,6 +4,7 @@ class Solution:
         def helper(idx):
             if idx == len(stoneValue):
                 return 0, idx
+            # if idx + 2 >= len(stoneValue) - 1: return sum(stoneValue[idx:]), len(stoneValue)
             score, max_score = 0, -sys.maxsize + 1
             op_idx = idx + 1
             for num in range(3):
@@ -18,6 +19,7 @@ class Solution:
         score, op_idx = helper(0)
         op_score = helper(op_idx)[0]
 
+        # print(score, op_idx)
         if score > op_score:
             return 'Alice'
         elif score == op_score:

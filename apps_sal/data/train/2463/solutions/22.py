@@ -1,5 +1,8 @@
 class Solution:
     def validMountainArray(self, A: List[int]) -> bool:
+        # find max
+        # everything to the left should be strictly decreasing
+        # everything to the right should be decreasing
         m = (0, 0)
         for i in range(0, len(A)):
             if A[i] > m[1]:

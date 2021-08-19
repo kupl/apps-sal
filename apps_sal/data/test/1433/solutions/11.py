@@ -5,6 +5,7 @@ def count_place(a, n, m):
         if (c > 1):
             l = a[i].index(1)
             r = m - a[i][::-1].index(1) - 1
+            #print(l, r, ((m - c - (l + (m - r - 1)))))
             place += l + (m - r - 1) + ((m - c - (l + (m - r - 1))) * 2)
         elif (c == 1):
             place += m - 1

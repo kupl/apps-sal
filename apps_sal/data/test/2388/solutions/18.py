@@ -1,3 +1,4 @@
+# input
 N = int(input())
 XD = []
 for _ in range(N):
@@ -6,6 +7,7 @@ for _ in range(N):
 
 MOD = 998244353
 
+# process
 XD.sort(reverse=True)
 
 sei = [(10**9, 0)]
@@ -18,4 +20,5 @@ for i, (s, e) in enumerate(XD):
     sei.append((s, ei))
     pattern[i + 1] = (pattern[i] + pattern[ei]) % MOD
 
+# output
 print((pattern[-1]))

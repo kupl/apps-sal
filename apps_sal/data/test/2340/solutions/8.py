@@ -12,6 +12,7 @@ for i in range(q):
     now = arr[cur]
     cur = 1
     while cur < n:
+       # print("now", now, "count", count)
         try:
             if now - arr[cur] == 1:
                 if now - arr[cur + 1] == 2:

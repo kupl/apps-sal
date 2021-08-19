@@ -4,6 +4,7 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        # return sum(set(nums))*2-sum(nums)
         '''
          one = 0
          for num in nums:

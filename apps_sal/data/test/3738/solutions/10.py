@@ -1,3 +1,4 @@
+# http://codeforces.com/problemset/problem/321/A
 
 import logging as log
 
@@ -11,12 +12,15 @@ class Point(object):
         return "({}, {})".format(self.x, self.y)
 
     def __add__(self, other):
+        # add 2 points together
         return Point(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
+        # substract 2 points from each other
         return Point((other.x < self.x) & (self.x - other.x), (other.y < self.y) & (self.y - other.y))
 
     def __truediv__(self, other):
+        # devide 2 points, return an integer of how many times the other is bigger than the current point
         if other.x == 0:
             return Point(0, self.y / other.y)
         elif other.y == 0:
@@ -25,14 +29,17 @@ class Point(object):
             return Point(self.x / other.x, self.y / other.y)
 
     def __mul__(self, other):
+        # multiply 2 points
         return Point(self.x * other, self.y * other)
 
     def __eq__(self, other):
+        # check if two points are equal
         return self.x == other.x and self.y == other.y
 
 
 class CMDSeq(object):
 
+    # mapping between commnads and change in X-Y co-ordinates in Point co-ordinates
     trans = {	"U": Point(0, 1),
               "D": Point(0, -1),
               "R": Point(1, 0),
@@ -41,6 +48,7 @@ class CMDSeq(object):
     def __init__(self, seq):
         self.seq = seq
 
+        # a dictionary that saves the movesin a command sequence
         self.seq_delta = {k: 0 for k in 'LURD'}
         self.parse_cmdseq()
 
@@ -72,10 +80,13 @@ class CMDSeq(object):
 def Robot():
 
     log.basicConfig(format='%(levelname)s:%(message)s', level=log.CRITICAL)
+    #log.basicConfig(format='%(levelname)s:%(message)s', level=log.DEBUG)
 
+    # end point
     end = Point(*[*list(map(int, input().split()))])
     log.debug('End point: %s.', end)
 
+    # command sequence
     cmd = CMDSeq(input())
     log.info('Command sequence: %s.', cmd.seq)
     log.info('Command sequence delta: (%s, %s).', cmd.hori_delta, cmd.vert_delta)
@@ -125,6 +136,7 @@ def Robot():
     log.info('New start B: %s', new_start_b)
 
     log.debug('------\nWalking the robot:')
+    # add the sequence to the new_start point, return YES if we hit the end point
     for rep in range(cmd.loopback_factor + 1):
         for i in cmd.seq:
             log.debug('Current command: %s', i)

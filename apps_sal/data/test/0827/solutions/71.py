@@ -7,6 +7,8 @@ if t == "0":
     out = lenS
 elif t == "1":
     out = lenS * 2
+# elif t == "11":
+#    out = lenS*2
 else:
     out = 0
     for chOffset in range(3):

@@ -1,5 +1,10 @@
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
+        # a -> e
+        # e -> a,i
+        # i -> a,e,o,u
+        # o -> i,u
+        # u -> a
         rules = [[1, 2, 4], [0, 2], [1, 3], [2], [2, 3]]
         dp = [1] * 5
 

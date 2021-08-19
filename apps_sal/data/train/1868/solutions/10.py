@@ -8,6 +8,7 @@ class Solution:
             N = N >> 1
             counter += 1
         self.tree = [0] * (2**(counter + 1))
+#        print(len(self.tree))
         self.tree[0] = 1
         self.buildtree(0, 0)
         self.traverse(0)

@@ -24,12 +24,14 @@ def solve():
 
 
 def color(n):
-    res = [1] * (n + 2)
+    res = [1] * (n + 2)  # 0, 1, 2, 3, ..., n + 1
     for p in range(2, n + 2):
         if res[p] != 1:
             continue
         for q in range(p * p, n + 2, p):
             res[q] = 2
+
+    # debug(res, locals())
 
     return res[2:]
 

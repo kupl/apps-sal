@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.4
 
 n, m = list(map(int, input().split()))
 board = []

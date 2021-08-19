@@ -48,6 +48,8 @@ class Solution:
 
         cost = 0
         while distances:
+            # print(type(distances))
+            # print(nodes)
             dis = heapq.heappop(distances)
             p1, p2 = db[dis].pop()
             if nodes.union(p1, p2):

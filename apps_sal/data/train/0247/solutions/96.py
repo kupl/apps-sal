@@ -19,3 +19,5 @@ class Solution:
             pre[p] = i
 
         return -1 if res == n + 1 else res
+
+# https://leetcode-cn.com/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/solution/biao-zhun-de-dong-tai-gui-hua-zhu-xing-jiang-jie-b/

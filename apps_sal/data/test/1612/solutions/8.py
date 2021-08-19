@@ -6,6 +6,8 @@ mn = []
 for i in range(n):
     b = list(map(int, input().split()))
     a.insert(i, b)
+    # a.append(b)
+    #m = m + [a[i][0]]
     m.append(a[i][0])
     a[i] = a[i][1:]
     mn.append(set(a[i]))

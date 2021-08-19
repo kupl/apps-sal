@@ -25,6 +25,7 @@ def solve():
             total += max(0, (b - k) // (k + 1))
 
     print(total)
+    # print (blocks)
 
 
 mode = 'T'

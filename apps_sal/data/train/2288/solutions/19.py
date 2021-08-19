@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -26,6 +28,9 @@ def funcval(x, lst):
     else:
         return x + c
 
+#seg = segment_tree_dual(q, compose, funcval, ID_M)
+#seg.build([a for a,t,i in ati])
+
 
 seg = (0, x, 0)
 
@@ -52,5 +57,6 @@ for i, ri in enumerate(r):
     t0 = ri
     coeff *= -1
 
+    # print(seg)
 
 print(*ans, sep="\n")

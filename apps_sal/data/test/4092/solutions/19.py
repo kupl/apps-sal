@@ -25,6 +25,7 @@ def li3(): return [int(i) for i in input().rstrip('\n')]
 n = val()
 l = li()
 
+# l = list(accumulate(l))
 d = {0: 1}
 
 currsum = ans = 0
@@ -38,4 +39,5 @@ for i in range(n):
         currsum = l[i]
     else:
         d[currsum] = 1
+    # print(currsum)
 print(ans)

@@ -1,4 +1,11 @@
 def capitalize(s):
+  # given a string
+    # capitalize the letters in the even positions
+    # capitalize those that are in odd positions separately
+    #0 is even
+    # given a string of letters
+    #     when a letter occupy the even indexes
+    #     then capitalise
     even = []
     odd = []
     final = []

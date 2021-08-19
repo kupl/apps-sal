@@ -12,9 +12,12 @@ class Solution:
         max_a = A[-1][1] if A else None
         max_b = B[-1][1] if B else None
 
+        # key: (Int, Int) - (first line interval id, second line interval id)
+        # value: List[Int] - list of intersections
         intersections = {}
 
         def intersections_append(k: (int, int), v: int):
+            #print(intersections, k, v)
             if k in intersections:
                 intersections[k].append(v)
                 if len(intersections[k]) > 2:
@@ -56,3 +59,4 @@ class Solution:
                 intersections_append2((counter_a, counter_b), i)
 
         return self.res2
+        # return intersections.values()

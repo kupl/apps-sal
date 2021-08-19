@@ -1,9 +1,13 @@
+# Atcoder Problem Solving
+# F - Takahashi's Basics in Education and Learning
 import math
 L, A, D, mod = map(int, input().split())
 que = []
 
 ans = 0
+# 1桁、......20桁のグループに分類する
 for i in range(1, 22):
+    #10**(i-1) <= A+D*(j) < 10**(i)
     if (10**(i - 1) - A + D) % D == 0:
         lowest = max(1, (10**(i - 1) - A + D) // D)
     else:
@@ -20,6 +24,8 @@ for i in range(1, 22):
 
 
 def poly_sum(X, N, mod):
+    # return X^N +    .... X^1+1 mod
+    # O(logN)
     if N == 0:
         return 1
     if N == 1:
@@ -35,6 +41,8 @@ def poly_sum(X, N, mod):
 
 
 def sum_of_poly_sum(X, N, mod):
+    # return poly_sum(X,N,mod)+ poly_sum(X,N-1,mod) +poly_sum(X,N-2,mod) +.....  + poly_sum(X,1,mod) + poly_sum(X,0,mod)
+    # O(logN*logN)
     if N == 0:
         return poly_sum(X, 0, mod)
     elif N == 1:
@@ -44,6 +52,7 @@ def sum_of_poly_sum(X, N, mod):
 
 
 def find_mod(length, lowest, highest, mod):
+    # length 桁　の lowest 項目から highest 項目における連結巨大数のmodular
     X = pow(10, length, mod)
     if highest > lowest:
         base = (A + D * (lowest - 1)) * poly_sum(X, highest - lowest, mod) + \

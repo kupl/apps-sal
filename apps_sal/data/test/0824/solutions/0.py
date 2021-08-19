@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def ri():
     return list(map(int, input().split()))

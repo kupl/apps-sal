@@ -3,7 +3,7 @@ class Solution:
         n = len(piles)
         piles.sort()
 
-        def finish(k):
+        def finish(k):  # O(n)
             return sum((p - 1) // k + 1 for p in piles) <= H
 
         r = 0
@@ -13,6 +13,7 @@ class Solution:
             else:
                 r += 1
 
+        # Then binary search K in piles[l] and piles[r]
         start = 1 if r == 0 else piles[0]
         end = piles[r]
 

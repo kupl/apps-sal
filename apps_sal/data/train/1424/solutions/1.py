@@ -1,3 +1,4 @@
+# cook your dish here
 a, b = map(int, input().split())
 for i in range(b):
     r = a % 10

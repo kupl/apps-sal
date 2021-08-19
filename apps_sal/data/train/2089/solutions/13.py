@@ -1,11 +1,18 @@
 import io
 import os
 input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+# input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
 def ii(): return int(input())
 def kk(): return map(int, input().split())
 def ll(): return list(kk())
 
 
+# xor + 0 --> unchanged(2)
+# xor + 1 --> flip(3)
+# or + 0 --> unchanged(2)
+# or + 1 --> 1(1)
+# and + 0 --> 0(0)
+# and + 1 --> unchanged(2)
 arr = [2] * 10
 for _ in range(ii()):
     s, v = input().split()

@@ -1,5 +1,6 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
+        # 15
         mp = {}
         num_person = len(favoriteCompanies)
         for i in range(num_person):

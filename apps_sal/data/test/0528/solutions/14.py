@@ -16,3 +16,6 @@ for x, y in list(d.items()):
 if not res:
     res = 'YES'
 print(res)
+
+
+# Made By Mostafa_Khaled

@@ -1,3 +1,4 @@
+# python 3.7.1
 c, d = 0, 0
 for _ in range(int(input())):
     s, n, k, r = input().split()

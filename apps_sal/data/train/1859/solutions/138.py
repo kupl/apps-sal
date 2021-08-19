@@ -12,6 +12,9 @@ class Solution:
             memo[i][0] = (memo[i - 1][0][0] + matrix[i][0], matrix[i][0])
         for i in range(1, n):
             for j in range(1, m):
+                # if matrix[i-1][j-1] == 0 or matrix[i][j] == 0:
+                #     memo[i][j] = (memo[i-1][j][0] + memo[i][j-1][0] - memo[i-1][j-1][0] + matrix[i][j], matrix[i][j])
+                # else:
                 if matrix[i][j] == 0:
                     square_size = 0
                 else:

@@ -9,7 +9,7 @@ def p(n, z=2):
     return s, r
 
 
-def prod_int_partII(n, l):
+def prod_int_partII(n, l):  # n, integer to have the multiplicative partitions
     s, r = p(n)
     x = [v for v in r if len(v) == l]
     L = len(x)

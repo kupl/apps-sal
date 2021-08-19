@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 from heapq import heapify, heappop, heappush
 from collections import defaultdict
@@ -12,7 +13,7 @@ def main():
     N, Q = lr()
     top = []
     left_top = []
-    infants = [[] for _ in range(2 * 10**5 + 1)]
+    infants = [[] for _ in range(2 * 10**5 + 1)]  # 1-indexed
     left = [[] for _ in range(2 * 10**5 + 1)]
     dic = defaultdict(tuple)
     for i in range(1, N + 1):
@@ -39,8 +40,8 @@ def main():
             rate, id = infants[prev][0]
             heappush(top, (-rate, id))
         if infants[next]:
-            heappush(left_top, (-infants[next][0][0], infants[next][0][1]))
-        heappush(infants[next], (-r, c))
+            heappush(left_top, (-infants[next][0][0], infants[next][0][1]))  # idをpush
+        heappush(infants[next], (-r, c))  # tupleでpush
         while left[next] and infants[next][0][1] == left[next][0][1]:
             heappop(infants[next])
             heappop(left[next])

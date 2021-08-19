@@ -18,7 +18,7 @@ resT = [n] * n
 resS[s] = 0
 resT[t] = 0
 
-q = deque()
+q = deque()  # очередь
 
 q.append(s)
 while len(q) != 0:

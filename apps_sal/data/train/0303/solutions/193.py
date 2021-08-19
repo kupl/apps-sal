@@ -11,6 +11,8 @@ class Solution:
 
                 cur_max = max(cur_max, arr[i - kk + 1])
 
+                # print(i, kk, \",\", i - kk + 1, cur_max, arr[i-kk+1], ':', d[i], d[i-kk])
+
                 if i - kk < 0:
                     prev = 0
                 else:

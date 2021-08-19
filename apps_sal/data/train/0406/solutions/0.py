@@ -21,9 +21,11 @@ class Solution:
 
         while len(beginSet) > 0 and len(endSet) > 0:
 
+            # make sure begin set is smaller than endSet
             if len(beginSet) > len(endSet):
                 beginSet, endSet = endSet, beginSet
 
+            # extend begin set
             newSet = set()
             for w in beginSet:
                 for i in range(lenWord):

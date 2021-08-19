@@ -10,7 +10,7 @@ else:
         cnt[i] += 1
 
     add = []
-    for i in range(1, n + 1):
+    for i in range(1, n + 1):  # 1 to 26
         if cnt[i] == 0:
             add.append(i)
 

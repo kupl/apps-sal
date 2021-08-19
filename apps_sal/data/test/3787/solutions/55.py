@@ -3,9 +3,12 @@ def main(n, a, b):
         return [-1]
     ans = []
     flg = False
+    # ブロック数
     for x in range(b):
+        # x番目のブロック(0-indexed)
         if not flg:
             for y in range(a):
+                # x*a+y+1個目の要素(1-indexed)
                 ans.append(b - x + b * y)
                 if len(ans) + (b - x) == n:
                     if y != a - 1:

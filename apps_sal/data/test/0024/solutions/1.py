@@ -1,5 +1,6 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 g = [list(input().strip()) for _ in range(10)]
@@ -11,8 +12,10 @@ for i in range(10):
         if g[i][j] != '.':
             continue
         g[i][j] = 'X'
+        # check possible
         for p in range(10):
             for q in range(10):
+                # cancer
                 if p + 4 < 10:
                     cnt = 0
                     for r in range(5):
@@ -40,6 +43,7 @@ for i in range(10):
                             cnt += 1
                     if cnt == 5:
                         ans = 1
+        # done
         g[i][j] = '.'
 
 print("YES" if ans else "NO")

@@ -61,13 +61,16 @@ ans = 1
 for i in dic:
 
     if len(dic[i]) < n - 1:
+        #print (i,"a")
         continue
 
     dic[i].sort()
 
     if len(dic[i]) == n:
         ans *= i ** dic[i][1]
+        #print (i,"b")
     else:
         ans *= i ** dic[i][0]
+        #print (i,"c")
 
 print(ans)

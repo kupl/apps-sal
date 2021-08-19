@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 a = [list(map(int, input().split())) for _ in range(n)]
 a = a + [(float('inf'), -1)]

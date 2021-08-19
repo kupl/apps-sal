@@ -6,4 +6,5 @@ class Solution:
             for j, y in enumerate(nums[i + 1:]):
                 sums.append(sum(nums[i:i + j + 2]))
         sums.sort()
+        # print(sums)
         return sum(sums[left - 1:right]) % (10**9 + 7)

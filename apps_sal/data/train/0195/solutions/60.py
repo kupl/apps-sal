@@ -8,6 +8,7 @@ class TrieNode:
 class Trie:
     def __init__(self):
         self.root = TrieNode()
+        #self.cache = {}
 
     def insert(self, num):
         now = self.root
@@ -48,9 +49,11 @@ class Trie:
 
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
+        # Tries: 16 * n^2
 
         trie = Trie()
 
+        # build Trie
         for num in A:
             trie.insert(num)
 
@@ -61,4 +64,5 @@ class Solution:
                 num = (num1 & num2)
                 a = trie.match(num)
                 ans += a
+                #print(num1, num2, a)
         return ans

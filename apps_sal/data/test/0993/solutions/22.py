@@ -16,10 +16,13 @@ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
+# def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def LS(): return sys.stdin.readline().split()
 def S(): return input()
+
+# Summarize count of factor within list -- START --
 
 
 def summarizeList(l):
@@ -39,6 +42,7 @@ def summarizeList(l):
     res.append([a, c])
 
     return res
+# Summarize count of factor within list --- END ---
 
 
 def main():
@@ -50,6 +54,8 @@ def main():
         y = rui[-1] + x
         rui.append(y % m)
 
+    # print(rui)
+
     sl = summarizeList(rui)
     ans = 0
     for x, c in sl:
@@ -58,4 +64,5 @@ def main():
     return ans
 
 
+# main()
 print((main()))

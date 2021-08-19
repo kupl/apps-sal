@@ -11,6 +11,7 @@ def solve():
         for w in range(W):
             Wcount[h + 1][w + 1] = Wcount[h][w + 1] + Wcount[h + 1][w] - Wcount[h][w] + int(S[h][w])
 
+    # print(Wcount)
     Ans = H * W + 1
     for i in range(2 ** (H - 1)):
         B = [0]
@@ -38,6 +39,7 @@ def solve():
                 break
         else:
             Ans = min(TotalBound, Ans)
+        #print(i, B, TotalBound)
     print(Ans)
 
     return 0

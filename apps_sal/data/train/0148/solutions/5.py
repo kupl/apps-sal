@@ -13,9 +13,13 @@ class Solution:
         for i in range(1, maxdifficulty + 1):
             d[i] = max(d[i], d[i - 1])
 
+        # print (d)
+
         ans = 0
 
         for i in worker:
+
+            # print (i, d[i])
 
             ans += d[i]
 

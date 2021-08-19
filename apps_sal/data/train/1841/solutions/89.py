@@ -9,6 +9,8 @@ class Solution:
         else:
             median = sarr[int(L / 2 - .5)]
 
+        #absm = [abs(a - median) for a in arr]
+
         tarr = [[abs(arr[i] - median), arr[i]] for i in range(L)]
 
         tarr = sorted(tarr, reverse=True)

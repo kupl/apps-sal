@@ -25,6 +25,7 @@ for _ in range(val()):
     n = len(s)
     a = b = c = 0
     ans = float('inf')
+    # print(s)
     while j < len(s):
         if s[j] == 1:
             a += 1

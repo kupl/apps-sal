@@ -10,6 +10,7 @@ def main():
         d[i - 1][j - 1] = k
         d[j - 1][i - 1] = k
 
+    # Warshall-Floyd algorithm
     for k in range(n):
         for i in range(n - 1):
             for j in range(i + 1, n):
@@ -17,6 +18,8 @@ def main():
                     d[i][j] = d[i][k] + d[k][j]
                     d[j][i] = d[i][j]
 
+    # full search
+    # 8! = 40320
     from itertools import permutations
 
     answer = float('inf')

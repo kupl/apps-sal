@@ -1,3 +1,4 @@
+# same code but with using bootstrap recursion
 
 
 from collections import *
@@ -31,21 +32,25 @@ def rints(): return [int(x) for x in stdin.readline().split()]
 
 
 class graph:
+    # initialize graph
     def __init__(self, gdict=None):
         if gdict is None:
             gdict = defaultdict(list)
         self.gdict, self.edges, self.l = gdict, [], defaultdict(int)
 
+    # add edge
     def addEdge(self, node1, node2, w=None):
         self.gdict[node1].append(node2)
 
     @bootstrap
     def scc_utils(self, v):
 
+        # initilaize time and disc
         self.disc[v], self.low[v], self.stack[v] = self.time, self.time, 1
         self.time += 1
         self.st.append(v)
 
+        # loop edges
         for i in self.gdict[v]:
             if self.disc[i] == -1:
                 yield self.scc_utils(i)
@@ -54,6 +59,7 @@ class graph:
             elif self.stack[i]:
                 self.low[v] = min(self.low[v], self.disc[i])
 
+            # print founded scc
         if self.low[v] == self.disc[v]:
             node, mem = -1, defaultdict(int)
 

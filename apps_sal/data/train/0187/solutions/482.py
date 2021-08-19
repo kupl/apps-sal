@@ -23,6 +23,8 @@ class Solution:
                 pmax = pcurr
                 pmax_ind = i
 
+            # print(waiting, pmax,pmax_ind, pcurr)
+
         j = 0
 
         while waiting > 0:
@@ -38,6 +40,7 @@ class Solution:
 
             pcurr -= runningCost
 
+            # print(pmax, pmax_ind, pcurr)
             if pcurr > pmax:
                 pmax = pcurr
                 pmax_ind += j

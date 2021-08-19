@@ -26,10 +26,11 @@ def main():
         print((-1))
         return
 
+    # check upper part (2**20 <= x)
     ug = g >> 20
     b0 = a0 >> 20
     b1 = a1 >> 20
-    upper_ans_0 = -1
+    upper_ans_0 = -1  # a0: no borrow, a1: no carry
     for i in range(b0):
         t0 = b0 - i
         t1 = b1 + i
@@ -37,7 +38,7 @@ def main():
             upper_ans_0 = i
             break
 
-    upper_ans_1 = -1
+    upper_ans_1 = -1  # a0: no borrow, a1: carry
     for i in range(b0):
         t0 = b0 - i
         t1 = b1 + 1 + i
@@ -45,7 +46,7 @@ def main():
             upper_ans_1 = i
             break
 
-    upper_ans_2 = -1
+    upper_ans_2 = -1  # a0: borrow, a1: no carry
     for i in range(b0 - 1):
         t0 = b0 - 1 - i
         t1 = b1 + i
@@ -53,7 +54,7 @@ def main():
             upper_ans_2 = i
             break
 
-    upper_ans_3 = -1
+    upper_ans_3 = -1  # a0: borrow, a1: carry
     for i in range(b0 - 1):
         t0 = b0 - 1 - i
         t1 = b1 + 1 + i
@@ -61,6 +62,8 @@ def main():
             upper_ans_3 = i
             break
 
+    # print(upper_ans_0, upper_ans_1, upper_ans_2, upper_ans_3)
+    # check lower part (0 ... 2**20)
     lower_answers = []
     for i in range(half):
         t0 = (a0 - i) % half
@@ -70,20 +73,28 @@ def main():
     if len(lower_answers) == 0:
         print((-1))
         return
+    # print(len(lower_answers))
+    # print(lower_answers)
     answers = []
     for l in lower_answers:
         if (a0 % half) >= l:
+            # a0: no borrow
             if (a1 % half) + l < half:
+                # no carry
                 if upper_ans_0 != -1:
                     answers.append((upper_ans_0 << 20) + l)
             else:
+                # carry
                 if upper_ans_1 != -1:
                     answers.append((upper_ans_1 << 20) + l)
         else:
+            # a0: borrow
             if (a1 % half) + l < half:
+                # no carry
                 if upper_ans_2 != -1:
                     answers.append((upper_ans_2 << 20) + l)
             else:
+                # carry
                 if upper_ans_3 != -1:
                     answers.append((upper_ans_3 << 20) + l)
     if len(answers) == 0:

@@ -5,3 +5,6 @@ for _ in range(t):
         if n % (2**k - 1) == 0:
             print(n // (2 ** k - 1))
             break
+
+# a = list(map(int,input().split()))
+# n,m = map(int,input().split())

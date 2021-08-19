@@ -1,4 +1,5 @@
 import sys
+#sys.stdin = open('inE', 'r')
 t = int(input())
 for ti in range(t):
     n, m = list(map(int, input().split()))

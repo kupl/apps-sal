@@ -1,4 +1,5 @@
 import math
+# Source Stack Overflow :p
 
 
 def divisorGenerator(n):
@@ -11,11 +12,12 @@ def divisorGenerator(n):
     for divisor in reversed(large_divisors):
         yield divisor
 
-
+    # return len(k)
 for KK_KK in range(eval(input())):
 
     a = eval(input())
     k = list(divisorGenerator(a))
+    # print k
     if len(k) % 2 == 0:
         print("NO")
     else:

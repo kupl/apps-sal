@@ -26,6 +26,7 @@ def dfs(p):
     cparent[c].append(p)
     s = 1
     for nxt in path[p]:
+        #print (nxt)
 
         if reached[nxt]:
             continue

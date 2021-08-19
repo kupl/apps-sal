@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+# モジュールのインポート
 import sys
 
 
@@ -8,6 +10,7 @@ def get_input() -> tuple:
     Returns:\n
         tuple: 標準入力
     """
+    # 標準入力を取得
     N, M = list(map(int, input().split()))
     cakes = []
     for n in range(N):
@@ -26,6 +29,7 @@ def main(N: int, M: int, cakes: list) -> None:
         M (int): 食べる数(0 <= M <= N)
         cakes (list): ケーキの要素(-10000000000 <= x_i, y_i, z_i <= 10000000000)
     """
+    # 求解処理
     ans = -sys.maxsize
     element = 3
     for bit in range(1 << element):
@@ -43,12 +47,15 @@ def main(N: int, M: int, cakes: list) -> None:
 
         ans = max(ans, sum(map(abs, indicator)))
 
+    # 結果出力
     print(ans)
 
 
 def __starting_point():
+    # 標準入力を取得
     N, M, cakes = get_input()
 
+    # メイン処理
     main(N, M, cakes)
 
 

@@ -8,4 +8,5 @@ for i in range(N):
     for j in range(num):
         l[A[j] - 1] += 1
 
+# lの要素でNである個数を出力
 print(l.count(N))

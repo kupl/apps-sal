@@ -1,4 +1,7 @@
 
+# coding: utf-8
+
+# In[9]:
 
 import collections
 n = int(input())

@@ -7,4 +7,4 @@ def dont_give_me_five(start, end):
             continue
         else:
             n += 1
-    return n
+    return n   # amount of numbers

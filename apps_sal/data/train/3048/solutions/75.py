@@ -2,6 +2,7 @@ import string
 
 
 def alternateCase(s):
+    # your code here
     UPPER = string.ascii_uppercase
     LOWER = string.ascii_lowercase
 

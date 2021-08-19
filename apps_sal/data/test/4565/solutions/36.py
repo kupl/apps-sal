@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sat Sep 19 20:18:57 2020
 
@@ -23,5 +24,6 @@ for i in range(N):
         tmp += 1
     if S[i + 1] == "E":
         tmp -= 1
+    # print(tmp)
 
 print(ans)

@@ -5,12 +5,14 @@ class Solution:
             adj_list[a - 1].append(b - 1)
             adj_list[b - 1].append(a - 1)
 
+        # 0=>uncolored, 1=>first color, 2=>second color
         colors = [0 for i in range(N)]
 
         for i in range(N):
             if colors[i] != 0:
                 continue
 
+            # new disconnected graph
             q = [i]
             exp_color = 1
             while len(q) > 0:

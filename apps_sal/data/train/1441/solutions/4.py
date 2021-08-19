@@ -10,6 +10,7 @@ for _ in range(int(input())):
             p = i + 1
     dp = [False] * (p + 1)
     s.sort()
+    # print(s)
     for i in range(1, p + 1):
         flag = 0
         for j in range(k):

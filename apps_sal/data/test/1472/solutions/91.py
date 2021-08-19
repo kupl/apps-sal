@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     from collections import deque
 

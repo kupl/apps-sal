@@ -1,3 +1,4 @@
+# 70
 from math import gcd
 n = int(input())
 t = [int(input()) for i in range(n)]

@@ -11,6 +11,7 @@ for x in range(n, -1, -1):
 cnt = 0
 level = dict()
 for x in range(n):
+    # print a
     if a[air[x]] > 1:
         if air[x] > st[-1]:
             a[air[x]] -= 1

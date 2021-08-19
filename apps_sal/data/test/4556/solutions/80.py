@@ -16,4 +16,5 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
+############################################################
 print(('A' + lstr()[1][0] + 'C'))

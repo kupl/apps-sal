@@ -7,6 +7,7 @@ def dis(u, v):
 def adj(u):
     x, y = u
     t = []
+    # print(x,y)
     if x + 1 < n and a[x + 1][y] == '0':
         t.append([x + 1, y])
     if y + 1 < n and a[x][y + 1] == '0':
@@ -49,5 +50,6 @@ ans2 = bfs([r2 - 1, c2 - 1])
 r = 9999999999
 for i in ans1:
     for j in ans2:
+        # print(i,j)
         r = min(r, dis(i, j))
 print(r)

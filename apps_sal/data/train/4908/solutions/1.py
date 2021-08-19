@@ -11,3 +11,5 @@ def epidemic(tm, n, s0, i0, b, a):
         s0 = s1
         i_max = i0 if i0 > i_max else i_max
     return i_max
+
+    # your code

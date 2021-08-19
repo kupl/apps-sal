@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # minimum spanning tree?
         n = len(points)
 
         cost = []

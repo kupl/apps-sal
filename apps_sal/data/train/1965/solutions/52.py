@@ -4,11 +4,13 @@ class Solution:
         edges123 = [collections.defaultdict(list) for _ in range(3)]
         for t, a, b in edges:
             edges123[t - 1][a - 1].append(b - 1)
+        # type 0 1 2 for alice, bob and both
         self.res = 0
         Parents = [[i for i in range(n)] for _ in range(2)]
         selectedEdges = [0, 0]
 
         def FindRoot(n, t):
+            # print('node',n,'type',t)
             if Parents[t][n] != n:
                 Parents[t][n] = FindRoot(Parents[t][n], t)
             return Parents[t][n]
@@ -30,6 +32,9 @@ class Solution:
                             selectedEdges[t] += 1
                     else:
                         self.res += 1
+            # for t in mytypes:
+            #     root = [FindRoot(i,t) for i in range(n)]
+            #     print(thetype,t, 'parents',Parents[t],root,selectedEdges,self.res)
 
         connect(2)
         connect(0)

@@ -52,6 +52,11 @@ heap = []
 cur = 0
 ans = [-1] * n
 hoge = 0
+# 今追加できるやつで最も小さいものを追加
+# ここでなにもなかったら？
+#   時間を変更する
+# 次の時間までに追加できるものを追加
+# 清算
 while hoge != n:
     if heap and stack.sum_all() > heap[0]:
         j = heappop(heap)
@@ -63,11 +68,14 @@ while hoge != n:
     while t and t[0][0] <= cur + p:
         ti, i = heappop(t)
         if ti == cur + p:
+            # 後回し
             heappush(heap, i)
         else:
+            # いま追加できるか確認
             if stack.sum_all() > i:
                 stack.push(i)
             else:
+                # 後回し
                 heappush(heap, i)
 
     if stack.len:

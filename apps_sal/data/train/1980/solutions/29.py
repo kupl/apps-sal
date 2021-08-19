@@ -47,6 +47,7 @@ class Skiplist:
 
     def add(self, num: int) -> None:
         self.searchpath(num)
+        # print(arr)
         if self.arr[15].__next__ and self.arr[15].__next__ == num:
             a = 1
         else:
@@ -63,6 +64,7 @@ class Skiplist:
                 prev = self.arr[16 - i].__next__
                 check = self.coinflip()
                 if check == True:
+                    # print(\"coinflip\",\"add\",num,i+1)
                     i += 1
                 elif check == False:
                     return
@@ -78,3 +80,10 @@ class Skiplist:
                 self.arr[16 - i].next = self.arr[16 - i].next.__next__
             i += 1
         return check
+
+
+# Your Skiplist object will be instantiated and called as such:
+# obj = Skiplist()
+# param_1 = obj.search(target)
+# obj.add(num)
+# param_3 = obj.erase(num)

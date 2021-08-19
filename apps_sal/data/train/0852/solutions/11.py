@@ -1,7 +1,14 @@
+# cook your dish here
+
+# t = [input() for i in range(n)]
 
 
 def fk(s: str):
     s = int(s)
+    # for i in range(2, 1+1+int(s)):
+    #     for k in range(i, i+s):
+    #         print(k, end='')
+    #     print()
 
     t = 0
     ini = 0
@@ -19,7 +26,17 @@ def fk(s: str):
             else:
                 ini = 0
 
+    # res = ''
+    # ini = 1
+    # for i in range(s):
+    #     res += str(ini)
+    #     ini = 1-ini
+    # for i in range(s):
+    #     print(res)
+
 
 n = input()
 n = int(n)
 t = [fk(input()) for i in range(n)]
+
+# fk(5)

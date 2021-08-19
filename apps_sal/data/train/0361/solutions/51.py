@@ -5,11 +5,13 @@ class Solution:
         res, state = m * n, [0] * n
 
         def dfs(count):
+            # print(count, state)
             nonlocal res
             if count > res:
                 return
             min_h = min(state)
             if min_h == m:
+                # print(count, state)
                 res = min(res, count)
                 return
             e = s = state.index(min_h)

@@ -14,17 +14,21 @@ def rotate(n, s):
 
 
 def cipher(n, s):
+    # extract spaces
     spaces = [idx for idx, char in enumerate(s) if char == SPACE]
 
     for _ in range(abs(n)):
+        # rotate words (decoding)
         if n < 0:
             s = rotate(n, s)
 
+        # remove spaces, rotate string, put back spaces
         s = s.replace(SPACE, NULL_STR)
         s = rotate(n, s)
         for idx in spaces:
             s = s[:idx] + SPACE + s[idx:]
 
+        # rotate words (encoding)
         if n > 0:
             s = rotate(n, s)
 

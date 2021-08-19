@@ -1,3 +1,5 @@
+# cook your dish here
+# -*- coding: utf-8 -*-
 """
 Created on Mon Apr 27 21:08:53 2020
 
@@ -22,3 +24,12 @@ for _ in range(int(input())):
         type_count.append(len(indices))
 
     print(types[type_count.index(max(type_count))])
+
+
+# 3
+# 5
+# 1 2 2 1 2
+# 6
+# 1 1 1 1 1 1
+# 8
+# 1 2 2 2 3 4 2 1

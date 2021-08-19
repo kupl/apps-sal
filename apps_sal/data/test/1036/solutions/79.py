@@ -1,3 +1,5 @@
+# 先頭プレイヤーがS[offset]で始まる部分トーナメントを考える
+# 2^k人の勝者を予想する。
 N, K = map(int, input().split())
 S = input()
 dp = [['?'] * (N + 1) for i in range(K + 1)]

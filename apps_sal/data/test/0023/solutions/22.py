@@ -6,6 +6,12 @@ def max_num(a, b):
         val = ''.join(sorted(a, reverse=True))
         return int(val)
     else:
+        # int_a=int(''.join(sorted(a)))
+        # int_b=int(''.join(b))
+        # for i in range(int_b,int_a-1,-1):
+        #     # print(str(i),str(int_a))
+        #     if Counter(str(i)) == Counter(str(''.join(a))):
+        #         return i
         res = ''
         for i in b:
             if i in a:
@@ -17,6 +23,8 @@ def max_num(a, b):
                     break
             else:
                 break
+        # print(res)
+        # return res
         new_b = b[len(res):]
         if new_b == []:
             return res

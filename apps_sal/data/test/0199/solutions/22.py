@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[15]:
 
 
 import math
@@ -8,14 +12,29 @@ s = ns[1]
 data = list(map(int, input().rstrip().split()))
 
 
+# In[16]:
+
+
 data.sort()
+
+
+# In[17]:
 
 
 extras = [i - data[0] for i in data]
 
 
+# In[18]:
+
+
 total = sum(data)
 extratotal = sum(extras)
+
+
+# In[ ]:
+
+
+# In[19]:
 
 
 if s > total:
@@ -25,3 +44,6 @@ elif extratotal >= s:
 else:
     sub = math.ceil((s - extratotal) / n)
     print(data[0] - sub)
+
+
+# In[ ]:

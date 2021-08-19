@@ -6,7 +6,7 @@ n, t, c = list(map(int, f.readline().split()))
 s = f.readline().split()
 
 total = 0
-r = 0
+r = 0  # длинна отрезка
 for j in s:
     d = int(j)
     if (d <= t):

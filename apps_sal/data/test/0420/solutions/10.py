@@ -1,3 +1,4 @@
+# =__='
 
 n, m = list(map(int, input().split()))
 a = []

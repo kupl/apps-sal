@@ -21,4 +21,5 @@ class Solution:
                     if numStr2[j] == char:
                         numStr2[j] = '9'
                 break
+        # print(numStr1, numStr2)
         return int(''.join(numStr2)) - int(''.join(numStr1))

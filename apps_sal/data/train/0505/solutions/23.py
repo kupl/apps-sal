@@ -20,6 +20,7 @@ class Solution:
                     left_pos = left_pos[:-1]
                     l += 1
         out_string = ''
+        # left_pos = set(left_pos)
         for i in range(len(out)):
             if i not in left_pos:
                 out_string += out[i]

@@ -24,6 +24,7 @@ for s in S:
     elif s > 1 and s not in factors:
         factors[s] = 1
 
+# print(factors)
 
 if len(factors.values()) == 0:
     ans = 1

@@ -16,5 +16,6 @@ for i in range(m):
     while v[j] != arr[i]:
         s += w[v[j]]
         j += 1
+    # print(v)
     v = [v[j]] + v[0:j] + v[j + 1:]
 print(s)

@@ -27,16 +27,21 @@ def bellman_ford(edges, num_v, start, end):
     edges: 頂点(from, to, cost)
     """
 
+    # グラフの初期化
     INF = 10**18
     dist = [INF] * num_v
+    # 始点は0にする
     dist[start] = 0
 
+    # 辺の緩和
+    # 負の閉路が無ければ、num_v-1回までで収束する
     for _ in range(num_v):
         updated = False
         for f, t, c in edges:
             if dist[f] == INF:
                 continue
 
+            # コストが以前のものより小さければ更新
             cost = dist[f] + c
             if cost < dist[t]:
                 dist[t] = cost
@@ -44,6 +49,7 @@ def bellman_ford(edges, num_v, start, end):
         if not updated:
             break
     else:
+        # num_v回の時に更新があるなら負閉路が存在する
         return -1
 
     return max(-dist[end], 0)
@@ -57,6 +63,7 @@ def main():
     paths_rev = defaultdict(list)
     edges = []
     for a, b, c in zip(*[iter(tmp)] * 3):
+        # 頂点nからの経路をdfsするため、辺の向きを逆にする
         paths_rev[b - 1].append(a - 1)
         edges.append((a - 1, b - 1, p - c))
 

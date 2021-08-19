@@ -24,3 +24,8 @@ class Solution:
                         ans = i
                 idx += 1
         return ans
+
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(nums)
+# param_1 = obj.pick(target)

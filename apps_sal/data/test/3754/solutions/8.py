@@ -11,6 +11,7 @@ for d in ds:
     pi_d *= d
     pi_d %= MOD
 
+# perm : (sigma_d-n) P (N-2)
 perm = 1
 for i in range(N - 2):
     perm *= (sigma_d - N - i)

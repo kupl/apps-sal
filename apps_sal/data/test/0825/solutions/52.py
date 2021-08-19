@@ -14,6 +14,7 @@ if n != 1:
 
 ans = 0
 for v in list(d.values()):
+    # x * (x + 1) // 2 <= vとなる最大のx
     x = 0
     while (x + 1) * (x + 2) // 2 <= v:
         x += 1

@@ -1,3 +1,4 @@
+# Made By Mostafa_Khaled
 from bisect import bisect_left
 bot = True
 m = int(input())
@@ -17,3 +18,6 @@ def f(i):
 
 
 print(' '.join(f(i) for i in map(int, input().split())))
+
+
+# Made By Mostafa_Khaled

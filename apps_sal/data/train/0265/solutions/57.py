@@ -9,4 +9,5 @@ class Solution:
             if cur - target in mem:
                 dp[i + 1] = max(dp[i + 1], dp[mem[cur - target]] + 1)
             mem[cur] = i + 1
+        # print(dp)
         return dp[-1]

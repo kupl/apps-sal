@@ -11,4 +11,5 @@ ans = 0
 for i in range(9):
     for j in range(9):
         ans += x[i][j] * x[j][i]
+        # print(i+1,j+1,x[i][j])
 print(ans)

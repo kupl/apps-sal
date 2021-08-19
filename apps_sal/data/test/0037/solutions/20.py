@@ -7,6 +7,7 @@ c = line[2]
 def doable(a, b, c):
     for i in range((c // a) + 1):
         t = c - (i * a)
+        # print("t: %s" % (t))
         if t % b == 0:
             return True
     return False

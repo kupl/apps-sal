@@ -1,3 +1,4 @@
+# Python template
 from collections import defaultdict
 import sys
 import math

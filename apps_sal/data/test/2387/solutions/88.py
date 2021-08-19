@@ -17,6 +17,7 @@ def main():
                 now -= 1
             if now < m:
                 m = now
+            # print(t, now)
         if now >= 0:
             Up.append((m, now))
         else:
@@ -31,6 +32,7 @@ def main():
 
     down = 0
     Down.sort(reverse=True)
+    # print(Up, Down)
     for m, dec in Down:
         if down + m < 0:
             print("No")

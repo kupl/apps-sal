@@ -1,3 +1,4 @@
+# Formula adapted from https://www.wikihow.com/Calculate-Partial-Pressure
 
 def solution(molar_mass1, molar_mass2, given_mass1, given_mass2, volume, temp):
     mass1 = given_mass1 / molar_mass1 * 0.001

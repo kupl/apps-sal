@@ -1,5 +1,7 @@
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
+        # first start something simple
+        # should be able to do this in O(n)
         ages.sort()
         ans, i, j = 0, 0, 0
         while i < len(ages):
@@ -9,6 +11,7 @@ class Solution:
             cnt, num_equal = i - j, 0
             while i < len(ages) and ages[i] == val:
                 num_equal, i = num_equal + 1, i + 1
+            # here could be either out of bound of different value
             ans += (num_equal * cnt) + (num_equal * (num_equal - 1))
         return ans
 
@@ -24,6 +27,7 @@ class Solution:
                     continue
                 if ageA < ageB:
                     continue
+                # if ageA < 100 < ageB: continue
                 ans += countA * countB
                 if ageA == ageB:
                     ans -= countA

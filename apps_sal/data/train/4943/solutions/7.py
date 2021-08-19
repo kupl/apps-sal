@@ -1,5 +1,5 @@
 def string_counter(string, char):
-    if char not in string:
+    if char not in string:  # stopping condition
         return 0
     c = string[0]
     if c == char:

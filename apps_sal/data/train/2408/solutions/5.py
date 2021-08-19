@@ -5,6 +5,7 @@ class Solution:
         :rtype: int
         """
         """
+         #complexity 2*len(s)
          idx=-1
          let_dict={}
          for letter in s:

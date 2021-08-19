@@ -3,6 +3,7 @@ def solve():
     govt = {x - 1: 1 for x in list(map(int, input().split(" ")))}
     connections = {}
 
+    # Add edges
     for _ in range(edges):
         x, y = list(map(int, input().split(" ")))
 
@@ -21,10 +22,12 @@ def solve():
     for i in range(nodes):
         is_govt = False if i not in govt else True
 
+        # Node is already been lookd at
         if i in discovered:
             continue
 
         cycle = [i]
+        # Nodes with no edges to other nodes
         if i not in connections:
             discovered[i] = 1
             if is_govt:
@@ -34,6 +37,7 @@ def solve():
             continue
 
         path = connections[i]
+        # Find all the nodes reachable
         while len(path) > 0:
             node = path.pop(0)
 

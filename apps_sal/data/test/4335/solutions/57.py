@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     N = int(input()) // 2
     S = input()

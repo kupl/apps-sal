@@ -1,5 +1,7 @@
 __MULTITEST = True
 
+# solve
+
 
 def solve():
     n, x = map(int, input().split())
@@ -23,6 +25,8 @@ def solve():
         ptr -= 1
 
     print(group)
+
+# main
 
 
 def __starting_point():

@@ -10,7 +10,9 @@ for i in range(N):
     else:
         dic[S] += 1
 ans = 0
+# print(dic)
 for k in dic.keys():
+    # print(k)
     if(k != 0):
         ans += dic[k] * (dic[k] - 1) // 2
     if(k == 0):

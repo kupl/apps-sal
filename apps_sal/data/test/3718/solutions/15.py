@@ -15,6 +15,7 @@ for i in range(0, num - 1):
         cont += 1
     else:
         cont = 1
+    # print(cont)
     if(cont == 3):
         flag = True
         break
@@ -24,3 +25,4 @@ if(flag):
     print("YES")
 else:
     print("NO")
+##print("%d %d %d"%(balls[i],balls[j],balls[m]))

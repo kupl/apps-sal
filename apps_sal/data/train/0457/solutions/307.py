@@ -41,3 +41,18 @@ class Solution:
                 fewest_coins[j] = -1
 
         return fewest_coins[-1]
+#         fewest_coins = [0 for j in range(amount+1)]
+
+#         for j in range(1,amount+1):
+#             fewest_coins[j] = float('inf')
+#             for coin_i in range(len(coins)):
+#                 if coins[coin_i] == j:
+#                     fewest_coins[j] = 1
+#                     break
+#                 elif coins[coin_i] < j:
+#                     if fewest_coins[j-coins[coin_i]] > 0:
+#                         fewest_coins[j] = min(fewest_coins[j], fewest_coins[j-coins[coin_i]]+1)
+#             if fewest_coins[j] == float('inf'):
+#                 fewest_coins[j] = -1
+
+#         return fewest_coins[-1]

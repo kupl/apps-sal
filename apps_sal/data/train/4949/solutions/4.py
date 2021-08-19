@@ -2,6 +2,7 @@ from math import cos, sin, pi
 
 
 def crusoe(n, d, ang, dis_tmult, ang_mult):
+    # your code
     lastx = 0
     lasty = 0
     for i in range(n):

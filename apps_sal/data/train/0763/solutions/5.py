@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input().strip()
@@ -20,6 +21,8 @@ for _ in range(int(input())):
         if arr1[i] < arr2[i]:
             flag = True
             break
+    # print(arr1)
+    # print(arr2)
     if p1 != s1:
         flag = True
     if flag:

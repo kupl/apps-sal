@@ -2,7 +2,9 @@ import sys
 
 
 fin = sys.stdin
+#fin = open ('in', 'r')
 
+#fout = open ('out', 'w')
 
 [n, m] = [int(x) for x in fin.readline().split()]
 

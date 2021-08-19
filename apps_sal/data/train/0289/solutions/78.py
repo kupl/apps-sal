@@ -7,6 +7,7 @@ class Solution:
             sum[i] = sum[i - 1] + A[i]
 
         res = -math.inf
+        # L before M
         for i in range(len(A) - L):
             r = -math.inf
             for j in range(i + L, len(A) - M + 1):
@@ -14,6 +15,7 @@ class Solution:
             r += sum[i + L - 1] - (sum[i - 1] if i - 1 > -1 else 0)
             res = max(res, r)
 
+        # M before L
         for i in range(len(A) - M):
             r = -math.inf
             for j in range(i + M, len(A) - L + 1):

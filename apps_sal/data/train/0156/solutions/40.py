@@ -10,6 +10,8 @@ class Solution:
                     dp[i][j] = dp[i - 1][j - 1] + 1
                 else:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+        # for i in dp:
+        #     print(i)
         lcs = ''
         i, j = len(s), len(t)
         while i > 0 and j > 0:

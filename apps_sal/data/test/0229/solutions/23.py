@@ -1,3 +1,5 @@
+#!/usr/local/env python3
+# -*- encoding: utf-8 -*-
 import sys
 
 
@@ -26,6 +28,8 @@ def intersect(l1, r1, l2, r2):
 def solve():
     m = readnlines(sys.stdin)
     uniques = sorted(m)
+    #print("len(set(m)) = {}".format(len(set(m))))
+    # print(uniques)
     if len(uniques) > 3:
         return "NO"
     elif len(uniques) == 3:

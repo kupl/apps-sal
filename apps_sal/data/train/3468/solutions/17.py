@@ -1,7 +1,12 @@
+# Stack solution:
+#    Loop through s2 once, pushing char occurances onto the stack
+#    Loop through s1 once, popping any occurances of s2 chars from the stacks
+#    If any stack has a count greater than 0, than it's False
 def scramble(s1, s2):
     stacks = {}
 
     for char in s2:
+        # Checking if stacks already has a key:value pair with the key char
         if char in stacks:
             stacks[char] += 1
         else:
@@ -15,6 +20,8 @@ def scramble(s1, s2):
 
 
 '''
+# Turn strings into lists, remove the appropriate element, and keep track of it to compare at the end
+# Takes too long, but correct output
 def scramble(s1, s2):
     source = [char for char in s1]
     tokens = [char for char in s2]
@@ -28,6 +35,8 @@ def scramble(s1, s2):
 '''
 
 '''
+# Turn strings into lists, remove the appropriate element, and catch ValueError exceptions that signify False-ness
+# Takes too long but correct output
 def scramble(s1, s2):
     source = [char for char in s1]
     try:
@@ -39,6 +48,8 @@ def scramble(s1, s2):
 '''
 
 '''
+# Count every instance of every char in s1 and s2, then compare the number of s2 char appearances in s1
+# slowest of all three
 def scramble(s1, s2):
     source = [char for char in s1]
     source.sort()

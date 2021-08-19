@@ -5,7 +5,7 @@ class Solution:
 
         def find(x):
             root.setdefault(x, x)
-            if root[x] != x:
+            if root[x] != x:  # not find( root[x]  )
                 root[x] = find(root[x])
             return root[x]
 

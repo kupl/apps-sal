@@ -30,8 +30,8 @@ for _c in range(t):
         s = input()
         k = 0
         for c in s:
-            if c == '
-            m[i].append(False)
+            if c == '#':
+                m[i].append(False)
             else:
                 m[i].append(True)
 

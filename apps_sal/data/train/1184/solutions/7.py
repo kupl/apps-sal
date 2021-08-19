@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout
 def I1(): return int(stdin.readline())
 
@@ -11,6 +12,7 @@ for _ in range(I1()):
         x, t = list(map(str, stdin.readline().split()))
         t = int(t)
         d[x][li2.index(t)] += 1
+    # print(d)
     n = 4
     ans = []
     cost = [100, 75, 50, 25]
@@ -40,6 +42,7 @@ for _ in range(I1()):
                         li1.pop()
                 li1.pop()
         li1.pop()
+    # print(ans)
     a = max(ans)
     print(a)
     T += a

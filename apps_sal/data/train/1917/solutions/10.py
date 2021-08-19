@@ -5,10 +5,12 @@ class Solution:
         :rtype: str
         """
 
+        # stack = [dict()]
         stack = [collections.Counter()]
         i = 0
         while i < len(formula):
             if formula[i] == '(':
+                # stack.append(dict())
                 stack.append(collections.Counter())
                 print('new stack', stack)
                 i += 1

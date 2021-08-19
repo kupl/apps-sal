@@ -1,3 +1,4 @@
+# 31
 N = int(input())
 S = str(input())
 

@@ -17,6 +17,7 @@ for i in range(n):
         men.append((d[s[0]], d[s[1]], i))
 if not fl:
     men.sort()
+    # print(men)
     for i in range(len(men)):
         if arr[men[i][0]] != 0:
             arr[men[i][0]] -= 1

@@ -7,6 +7,7 @@ class Solution:
 
         robbed = [nums[0]]
         maxMoney = robbed[0]
+        # print(nums)
         for i in range(1, len(nums)):
             cur = nums[i]
             for j in range(len(robbed) - 1):
@@ -14,4 +15,5 @@ class Solution:
             robbed.append(cur)
             if cur > maxMoney:
                 maxMoney = cur
+        # print(robbed)
         return maxMoney

@@ -20,13 +20,13 @@ def check(n, inlist, outlist):
         [list]: 不要な要素を削除して転置して返す
     """
     for i in range(n):
-        if ('
+        if ('#' in inlist[i]) == True:
             outlist.append(inlist[i])
     return list(map(list, zip(*outlist)))
 
 
-side=check(H, L, side)
-ver=check(len(side), side, ver)
+side = check(H, L, side)
+ver = check(len(side), side, ver)
 
 for i in range(len(ver)):
     print(''.join(ver[i]))

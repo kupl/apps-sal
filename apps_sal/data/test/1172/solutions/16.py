@@ -1,9 +1,9 @@
 s = input()
 n = len(s)
 mod = 10**9 + 7
-qcnt = [[0, 0]for i in range(n)]
-Acnt = [0] * n
-Ccnt = [0] * n
+qcnt = [[0, 0]for i in range(n)]  # それより左の？、右の？のこすう
+Acnt = [0] * n  # それより左のAのこすう
+Ccnt = [0] * n  # それより右のCの個数
 q = 0
 for i in range(n - 1):
     if s[i] == '?':

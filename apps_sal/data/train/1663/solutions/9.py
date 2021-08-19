@@ -1,3 +1,5 @@
+# Python 3.8 when
+# https://stackoverflow.com/a/53983683
 def isqrt(n):
     if n > 0:
         x = 1 << (n.bit_length() + 1 >> 1)

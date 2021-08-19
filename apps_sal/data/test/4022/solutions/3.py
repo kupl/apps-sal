@@ -32,6 +32,7 @@ def get_len(segment):
 
 
 def main():
+    # lines will now contain all of the input's lines in a list
     N = int(nextline())
     segments = list(ints() for _ in range(N))
     forwards = [segments[0]]

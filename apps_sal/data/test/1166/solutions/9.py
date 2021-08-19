@@ -4,6 +4,7 @@ ans = [None] * n
 
 
 def get(p):
+    # print(ans)
     if ans[p] is not None:
         return ans[p]
     elif a[p] == 1:

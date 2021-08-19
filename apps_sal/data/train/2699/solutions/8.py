@@ -32,7 +32,7 @@ special = {
 
 def three_digits2words(s):
     ''' len of s should <= 3 '''
-    s = str(int(s))
+    s = str(int(s))  # remove leading 0s
     if s in special:
         return special[s]
     if len(s) == 2:

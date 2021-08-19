@@ -23,6 +23,7 @@ H.append((1, 0))
 visit[1] = 1
 ans = mod
 while H:
+    # print(H)
     x, cost = H.popleft()
     visit[x] = 1
     if x == N:

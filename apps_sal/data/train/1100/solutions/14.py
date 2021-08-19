@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while t > 0:
     p, q, r = list(map(int, input().split()))

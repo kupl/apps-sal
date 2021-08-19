@@ -1,3 +1,5 @@
+#a, b, h, w, n = map(int,input().split())
+#rash = map(int,input().split())
 n, c, d = list(map(int, input().split()))
 
 fon = []
@@ -17,6 +19,7 @@ def sravni(elem):
 
 
 fon.sort(key=sravni, reverse=True)
+# print(fon)
 
 maxkras = 0
 for fon1 in range(n):

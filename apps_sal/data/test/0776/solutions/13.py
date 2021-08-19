@@ -9,6 +9,7 @@ for i in range(int(input())):
         arr[1].append(pr)
 arr[0].sort()
 arr[1].sort()
+# print(arr)
 pr = 0
 n = 0
 d = []
@@ -22,6 +23,7 @@ for j in range(min(b, len(arr[1]))):
     arr[1][j] = 1e10
 d += arr[1][min(b, len(arr[1])):]
 d.sort()
+# print(d)
 for k in range(min(c, len(d))):
     n += 1
     pr += d[k]

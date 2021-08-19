@@ -15,12 +15,14 @@ class Solution:
         def union(arr, i, j, c, mCount):
             u = find(arr, i)
             v = find(arr, j)
+            # print(mCount,u,v,c,\"9999999\")
             if u != v and v in c and c[v] == m:
                 mCount -= 1
             if u != v and u in c and c[u] == m:
                 mCount -= 1
             if u != v:
                 arr[v] = u
+            # print(mCount,u,v,c,par)
             return u, mCount
 
         ret = -1
@@ -55,4 +57,5 @@ class Solution:
                 del c[p2]
             if mCount:
                 ret = i + 1
+            # print(mCount,\";;;\",c)
         return ret

@@ -8,11 +8,17 @@ def binarySearchCount(arr, n, key):
     while (left <= right):
         mid = int((right + left) / 2)
 
+        # Check if middle element is
+        # less than or equal to key
         if (arr[mid] < key):
 
+            # At least (mid + 1) elements are there
+            # whose values are less than
+            # or equal to key
             count = mid + 1
             left = mid + 1
 
+        # If key is smaller, ignore right half
         else:
             right = mid - 1
 
@@ -23,18 +29,27 @@ def countGreater(arr, n, k):
     l = 0
     r = n - 1
 
+    # Stores the index of the left most element
+    # from the array which is greater than k
     leftGreater = n
 
+    # Finds number of elements greater than k
     while (l <= r):
         m = int(l + (r - l) / 2)
 
+        # If mid element is greater than
+        # k update leftGreater and r
         if (arr[m] > k):
             leftGreater = m
             r = m - 1
 
+        # If mid element is less than
+        # or equal to k update l
         else:
             l = m + 1
 
+    # Return the count of elements
+    # greater than k
     return (n - leftGreater)
 
 
@@ -94,17 +109,23 @@ class SegmentTree:
 m, n = map(int, input().split())
 b = list(map(int, input().split()))
 a = list(map(int, input().split()))
+# a=[100]*10
 a.sort()
 b.sort()
 tot = 9999999999999999999999999999999
 s = SegmentTree(a)
+# print(s.query(n,n-1))
 s1 = SegmentTree(b)
 for i in range(n):
     c = binarySearchCount(b, m, a[i])
+    # print(a[i],c)
     ans = c * a[i] - s1.query(0, c - 1) - (n - 1 - i) * a[i] + s.query(i + 1, n - 1)
+    # print(ans)
     tot = min(ans, tot)
 for i in range(m):
     c = countGreater(a, n, b[i])
+   # print(b[i],c)
     ans = -(c) * b[i] + s.query(n - c, n - 1) - s1.query(0, i - 1) + (i) * b[i]
+   # print(ans)
     tot = min(ans, tot)
 print(tot)

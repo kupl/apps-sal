@@ -25,3 +25,5 @@ class Solution:
         for x in res:
             ans = (ans + x) % modd
         return ans
+
+        # ele[0]*ele[1] for ele in zip([idx_cnt, nums])

@@ -4,9 +4,12 @@ input = sys.stdin.readline
 
 
 def dfs(x, S):
+    # print(x,S)
     for i in range(len(S)):
         if x in S[i]:
             S[i].remove(x)
+
+    # print(x,S)
 
     LEN1 = 0
     for s in S:
@@ -28,9 +31,11 @@ for tests in range(t):
 
     for i in range(1, n + 1):
         ANS = [i] + dfs(i, copy.deepcopy(A))
+        # print(i,ANS)
         if -1 in ANS[:n]:
             continue
         else:
+            # print(ANS[:n])
             USE = [0] * (n - 1)
 
             flag = 1

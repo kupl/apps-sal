@@ -7,6 +7,7 @@ for i in itertools.combinations(l, 2):
         flag = False
         break
 for i in itertools.combinations(l, 1):
+    # なぜかここでi*2だとエラーが出た
     if flag and sum(list(i)) * 2 == sum(l):
         print('Yes')
         flag = False

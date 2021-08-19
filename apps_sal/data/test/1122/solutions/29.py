@@ -1,5 +1,5 @@
 def main():
-    N, M = list(map(int, input().split()))
+    N, M = list(map(int, input().split()))  # N must be an odd number
 
     if N % 2 == 1:
         gen = ((i + 1, N - i) for i in range(M))

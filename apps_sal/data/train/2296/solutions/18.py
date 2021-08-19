@@ -62,7 +62,7 @@ def main():
             odd += 1
             mid = k
 
-    if N % 2 == 0:
+    if N % 2 == 0:  # 偶数
         if odd:
             return -1
         half = {k: v // 2 for k, v in C.items()}
@@ -89,7 +89,7 @@ def main():
         ans += calc_inv(label[::-1])
         return ans
 
-    else:
+    else:  # 奇数
         if odd != 1:
             return -1
         half = {k: v // 2 for k, v in C.items()}
@@ -98,8 +98,8 @@ def main():
         right = []
         left = []
         seen = 0
-        LL = 0
-        RR = 0
+        LL = 0  # midの右にあるL
+        RR = 0  # midの左にあるR
 
         for i, s in enumerate(S):
             if s == mid and cnt[s] == half[s]:

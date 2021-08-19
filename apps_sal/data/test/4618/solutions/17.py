@@ -1,6 +1,8 @@
+# input
 s = input()
 K = int(input())
 
+# check
 case = []
 append = case.append
 for i in range(1, K + 1):

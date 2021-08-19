@@ -3,12 +3,13 @@ import re
 from math import ceil, floor, sqrt, pi, factorial, gcd
 from copy import deepcopy
 from collections import Counter, deque, defaultdict
-from heapq import heapify, heappop, heappush
-from itertools import accumulate
-from itertools import product, combinations, combinations_with_replacement
+from heapq import heapify, heappop, heappush  # 優先度付きキュー
+from itertools import accumulate  # 累積和
+from itertools import product, combinations, combinations_with_replacement  # 順列を列挙
 from bisect import bisect, bisect_left, bisect_right
 from functools import reduce
 from decimal import Decimal, getcontext
+# input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
 INF = float('inf')
@@ -35,6 +36,7 @@ def main():
     t = s_input()
 
     S = "110"
+    #s = "110" * (n // 3 * 2)
 
     ok = False
     for i in range(3):

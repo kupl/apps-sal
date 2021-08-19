@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import deque
 primes = set([2, 3, 5, 7, 11, 13, 17])
 
@@ -8,6 +9,7 @@ queue = deque([x])
 resource = {tuple(x): 0}
 while queue:
     cur = queue.popleft()
+    # print(cur)
     for ele in edge:
         if cur[ele[0]] + cur[ele[1]] in primes:
             curr = cur[0:]
@@ -28,6 +30,7 @@ for _ in range(int(input())):
         for j in line.split():
             lis.append(int(j))
     lis = tuple(lis)
+    # print(lis)
     if lis in resource:
         print(resource[lis])
     else:

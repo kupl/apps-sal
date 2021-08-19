@@ -10,7 +10,7 @@ for i in range(N):
     nd = int(L[i])
     for a in range(2):
         for b in range(2):
-            if a == b == 1:
+            if a == b == 1:  # 繰り上がっちゃう(a+b>L)
                 continue
             for k in range(2):
                 ni = i + 1

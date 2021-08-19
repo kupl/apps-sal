@@ -1,7 +1,7 @@
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         curr_running_delta = 0
-        max_delta = (-2**31, None)
+        max_delta = (-2**31, None)  # max sum, end idx
 
         for i in range(len(customers)):
             curr_running_delta += customers[i] * grumpy[i]
@@ -19,3 +19,6 @@ class Solution:
                 max_satisfied += customers[i]
 
         return max_satisfied
+
+    # time O(n)
+    # space O(1)

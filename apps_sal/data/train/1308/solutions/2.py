@@ -17,5 +17,6 @@ def findPassword():
         elif t == 1:
             print("Invalid")
 
-
+        # else:
+        # print "Invalid"
 findPassword()

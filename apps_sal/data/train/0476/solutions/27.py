@@ -10,7 +10,7 @@ class Solution:
         count = 1
         temp = time[-1]
         for val in time[::-1]:
-            if val > temp:
+            if val > temp:  # cant catch the next one
                 count += 1
                 temp = val
         return count

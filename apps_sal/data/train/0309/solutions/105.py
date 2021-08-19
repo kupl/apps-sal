@@ -12,4 +12,5 @@ class Solution:
                 res = max(res, dp[a][d])
                 if d == 0:
                     flag = False
+                # if res == dp[a][d]: print(a, d, dp[a][d])
         return res

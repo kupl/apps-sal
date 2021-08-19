@@ -22,4 +22,4 @@ for _ in range(test):
                     if(start != '?' and end != '?'):
                         ans = 0
                         break
-    print(ans)
+    print(ans)  # just code here

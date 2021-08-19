@@ -1,4 +1,5 @@
 def base3(n):
+    # 17 -> [2, 2, 1] (reversedd)
     array = []
     while n > 0:
         array.append(n % 3)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n, s = list(map(int, input().split()))
 xs = [int(x) for x in input().split()]
 xs.sort()

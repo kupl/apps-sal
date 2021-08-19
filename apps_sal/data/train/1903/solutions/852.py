@@ -40,9 +40,11 @@ class Solution:
         graph = build_graph(points)
         graph.sort()
         cost = 0
+        # print(graph)
         for w, a, b in graph:
             if union_find.find_parent(a) == union_find.find_parent(b):
                 continue
+            #print(w, a, b)
             union_find.union(a, b)
             cost += w
         return cost

@@ -7,18 +7,22 @@ class Solution:
         left = 0
         right = 0
         for right in range(0, len(s), 1):
+            # print(left, right)
             for i in range(left, right, 1):
                 if right - i < minSize:
                     break
                 valid_str = s[i:right]
+                # print(i, right, valid_str)
                 valid_str_freq[valid_str] += 1
                 res = max(res, valid_str_freq[valid_str])
 
+            # add right
             if s[right] not in window_letter:
                 window_letter[s[right]] = 1
             else:
                 window_letter[s[right]] += 1
 
+            # check left
             while (len(window_letter) > maxLetters
                    or right - left + 1 > maxSize
                    ):
@@ -31,6 +35,7 @@ class Solution:
             if right - i < minSize:
                 break
             valid_str = s[i:right]
+            # print(i, right, valid_str)
             valid_str_freq[valid_str] += 1
             res = max(res, valid_str_freq[valid_str])
         return res

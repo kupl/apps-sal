@@ -4,6 +4,8 @@ class Solution:
         :type asteroids: List[int]
         :rtype: List[int]
         """
+        # O(N) time and O(N) space
+        # stack solution
         ans = []
         for new in asteroids:
             while True:

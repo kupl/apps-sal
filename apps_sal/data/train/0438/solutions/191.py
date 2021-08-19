@@ -1,5 +1,6 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
+        # [3,1,5,4,2]
         uf = UF(len(arr) + 1)
         res, step = -1, 1
         ok = set()

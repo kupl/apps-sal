@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 
 
@@ -19,8 +20,8 @@ def main():
     black = []
     for w in range(W):
         for h in range(len(a)):
-            if a[h][w] == '
-            black.append(w)
+            if a[h][w] == '#':
+                black.append(w)
 
     black = sorted(list(set(black)))
     for h in range(len(a)):

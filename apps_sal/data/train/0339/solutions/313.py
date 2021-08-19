@@ -10,6 +10,8 @@ class Solution:
             else:
                 drev[x] = {i}
 
+        # print(d)
+
         for idx1, x in enumerate(nums1):
             i2 = x * x
             d = drev.copy()
@@ -34,6 +36,8 @@ class Solution:
                 drev[x].add(i)
             else:
                 drev[x] = {i}
+
+        # print(d)
 
         for idx1, x in enumerate(nums2):
             i2 = x * x

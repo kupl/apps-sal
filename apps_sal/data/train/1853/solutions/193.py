@@ -9,6 +9,7 @@ class Solution:
 
         def find_cities_k(vertex, vis):
             q = []
+            # [distance_covered,vertex]
             heapq.heappush(q, [0, vertex])
             while q:
                 dis, node = heapq.heappop(q)

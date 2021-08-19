@@ -8,6 +8,7 @@ def count(x, a, n):
         x = a[x - 1]
         c += 1
         if t == x:
+            # print(t,x)
             break
         if c >= n:
             return 0

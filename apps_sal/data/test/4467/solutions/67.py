@@ -8,8 +8,8 @@ for i in range(n):
     c, d = list(map(int, input().split()))
     B.append((c, d))
 
-R.sort(reverse=True)
-B.sort(key=lambda x: x[1])
+R.sort(reverse=True)  # aをx座標でソート
+B.sort(key=lambda x: x[1])  # bをｙ座標でソート
 ans = 0
 for i in R:
     for j in range(len(B)):

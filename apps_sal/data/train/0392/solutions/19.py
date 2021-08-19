@@ -42,6 +42,8 @@ class Solution:
                 zc[1] += 1
                 j += 1
 
+            # print(zc)
+
             lv = 0
             rv = 0
             if zc[0] > 0:
@@ -58,5 +60,6 @@ class Solution:
                 ans = lv * rv
             else:
                 ans = lv + rv
+        # print(1)
         ans = int(ans)
         return ans % (10**9 + 7)

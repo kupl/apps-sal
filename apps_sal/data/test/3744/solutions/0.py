@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from itertools import accumulate
 from heapq import heappop, heappush
 

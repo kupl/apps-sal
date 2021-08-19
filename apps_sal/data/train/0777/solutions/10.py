@@ -1,5 +1,6 @@
 import math
 pi = math.pi
+# print pi
 t = eval(input())
 while(t != 0):
     a = list(map(float, input().split(' ')))

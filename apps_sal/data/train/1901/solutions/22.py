@@ -5,6 +5,7 @@ class Solution:
         '''
         island_sizes = {}
         max_island_id, max_island_size = -1, 0
+        # id starts from 2 to avoid conflict with 0/1
         global_island_id = 2
         zeros = set()
         deltas = ((1, 0), (-1, 0), (0, 1), (0, -1))

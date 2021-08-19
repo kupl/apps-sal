@@ -29,7 +29,7 @@ def ni(): return int(ns())
 def nf(): return float(ns())
 def na(): return list(map(int, stdin.readline().split()))
 def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
 
 
 H, W = na()
@@ -38,6 +38,7 @@ A = [na() for _ in range(H)]
 adj = [[] for _ in range(10)]
 
 
+# cost[i][j]: 頂点v_iから頂点v_jへ到達するための辺コストの和
 for k in range(10):
     for i in range(10):
         for j in range(10):
@@ -46,5 +47,6 @@ ans = 0
 for y in range(H):
     for x in range(W):
         if A[y][x] != -1:
+            # print(ans)
             ans += c[A[y][x]][1]
 print(ans)

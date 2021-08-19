@@ -10,7 +10,7 @@ class Solution:
             m = l + (r - l) // 2
             if calc_h(piles, m) > H:
                 l = m + 1
-            else:
+            else:  # calc_h(piles, m) <= H
                 if m == minn or calc_h(piles, m - 1) > H:
                     return m
                 r = m - 1

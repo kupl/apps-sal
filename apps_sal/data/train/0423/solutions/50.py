@@ -9,4 +9,5 @@ class Solution:
                 tail[n] = tail[n - difference] + 1
             else:
                 tail[n] = 1
+            # print(tail, n, maxi)
         return maxi

@@ -52,6 +52,7 @@ for Y1, Y2 in zip(Y, Y[1:]):
     Branch.append((Y2[0] - Y1[0], Y1[1], Y2[1]))
 Branch.sort()
 
+# 負のとき size, 非負のとき parent
 par = [-1] * N
 ans = 0
 for c, a, b in Branch:

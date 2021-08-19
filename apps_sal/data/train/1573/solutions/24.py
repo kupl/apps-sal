@@ -6,8 +6,11 @@ for _ in range(int(input())):
         d = {}
         k = (n) * (n - 1) // 2
         r = k // n
+        # print(r)
         l = [[0 for i in range(n)] for j in range(n)]
+        # print(l)
         for i in range(1, n):
+            # print(d.get(i,0))
             for j in range(i + 1, n + 1):
                 if d.get(i, 0) < r:
                     l[i - 1][j - 1] = 1

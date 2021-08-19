@@ -6,3 +6,4 @@ def max_tri_sum(numbers):
     e = a.remove(d)
     f = max(a)
     return b + d + f
+    # your code here

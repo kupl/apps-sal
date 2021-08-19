@@ -3,6 +3,7 @@ class Solution:
         def condition(k):
             ind, load, days = 0, 0, 0
             while ind < len(weights):
+                #print(ind, load, days)
                 if weights[ind] + load <= k:
                     load += weights[ind]
                     ind += 1
@@ -10,6 +11,8 @@ class Solution:
                     load = 0
                     days += 1
             return days + 1 <= D
+
+        # print(condition(15))
 
         left, right = max(weights), sum(weights)
         while left < right:

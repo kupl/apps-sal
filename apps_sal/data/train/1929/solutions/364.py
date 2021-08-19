@@ -1,4 +1,5 @@
 class StreamChecker:
+    # reverse the streamer and put it in trie
     def __init__(self, words: List[str]):
 
         self.now = ''
@@ -11,7 +12,7 @@ class StreamChecker:
                     cur[i] = defaultdict()
 
                 cur = cur[i]
-            cur['
+            cur['#'] = None
 
     def query(self, letter: str) -> bool:
         self.now += letter
@@ -21,8 +22,13 @@ class StreamChecker:
         for i in s:
             if i in cur:
                 cur = cur[i]
-                if '
+                if '#' in cur:
                     return True
             else:
                 break
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

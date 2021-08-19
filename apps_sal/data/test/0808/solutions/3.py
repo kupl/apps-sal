@@ -1,3 +1,4 @@
+# You lost the game.
 x = str(input())
 n = len(x)
 d = 0

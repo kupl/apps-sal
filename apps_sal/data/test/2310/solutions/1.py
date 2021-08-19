@@ -9,7 +9,7 @@ for test in range(test_count):
     unhappy = []
     for i in range(m - 1):
         t, r = list(map(int, sys.stdin.readline().split()))
-        t -= 1
+        t -= 1  # -1 means unknown
         took.append(t)
         unhappy.append(r)
 

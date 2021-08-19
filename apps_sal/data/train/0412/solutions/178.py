@@ -9,3 +9,4 @@ class Solution:
                     state[j] += state[j - k]
                     state[j] %= mod
         return state[-1]
+# Sanyam Rajpal

@@ -15,8 +15,9 @@ class Solution:
                 start = i
         q = []
         q.append((start, informTime[start]))
-        hi = 0
+        hi = 0  # max value
         while (len(q) > 0):
+            # print(q)
             out = q.pop(0)
             index = out[0]
             cost = out[1]

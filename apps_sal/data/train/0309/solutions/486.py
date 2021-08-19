@@ -15,4 +15,8 @@ class Solution:
                     if (i, diff) not in dp:
                         dp[(i, diff)] = 1
                 mostFreq = max(dp[(i, diff)], mostFreq)
+        # ret = -1
+        # for k,v in dp.items():
+        #     ret = max(ret,v)
+        # return ret+1
         return mostFreq + 1

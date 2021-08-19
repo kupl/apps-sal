@@ -1,6 +1,12 @@
+#!/usr/bin/env python3
+# 599B_sponge.py - Codeforces.com/problemset/problem/599/B by Sergey 2015
 
 import unittest
 import sys
+
+###############################################################################
+# Sponge Class (Main Program)
+###############################################################################
 
 
 class Sponge:
@@ -14,10 +20,13 @@ class Sponge:
         def uinput():
             return next(it) if it else sys.stdin.readline().rstrip()
 
+        # Reading single elements
         [self.n, self.m] = list(map(int, uinput().split()))
 
+        # Reading a single line of multiple elements
         self.numf = list(map(int, uinput().split()))
 
+        # Reading a single line of multiple elements
         self.numb = list(map(int, uinput().split()))
 
         self.fd = {}
@@ -40,12 +49,17 @@ class Sponge:
 
         return "Possible\n" + " ".join(map(str, result))
 
+###############################################################################
+# Unit Tests
+###############################################################################
+
 
 class unitTests(unittest.TestCase):
 
     def test_single_test(self):
         """ Sponge class testing """
 
+        # Constructor test
         test = "3 3\n3 2 1\n1 2 3"
         d = Sponge(test)
         self.assertEqual(d.n, 3)
@@ -53,44 +67,56 @@ class unitTests(unittest.TestCase):
         self.assertEqual(d.numf, [3, 2, 1])
         self.assertEqual(d.numb, [1, 2, 3])
 
+        # Sample test
         self.assertEqual(Sponge(test).calculate(), "Possible\n3 2 1")
 
+        # Sample test
         test = "3 3\n1 1 3\n1 2"
         self.assertEqual(Sponge(test).calculate(), "Impossible")
 
+        # Sample test
         test = "3 3\n1 1 1\n1 1 1"
         self.assertEqual(Sponge(test).calculate(), "Ambiguity")
 
+        # My tests
         test = ""
+        # self.assertEqual(Sponge(test).calculate(), "0")
+
+        # Time limit test
+        # self.time_limit_test(5000)
 
     def time_limit_test(self, nmax):
         """ Timelimit testing """
         import random
         import timeit
 
+        # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
         numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
 
+        # Run the test
         start = timeit.default_timer()
         d = Sponge(test)
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
                format(stop - start, calc - start, stop - calc)))
 
 
 def __starting_point():
 
+    # Avoiding recursion limitaions
     sys.setrecursionlimit(100000)
 
     if sys.argv[-1] == "-ut":
         unittest.main(argv=[" "])
 
+    # Print the result string
     sys.stdout.write(Sponge().calculate())
 
 

@@ -33,6 +33,8 @@ def cnt(t):
 
 n, x, y, c = input().split()
 n, x, y, c = int(n), int(x), int(y), int(c)
+# for i in range(10):
+#	print(i, cnt(i))
 ini, fin = 0, int(1e9)
 cont = int(1e9)
 while cont > 0:

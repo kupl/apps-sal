@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 A, B = map(int, input().split())
 S = input()
 

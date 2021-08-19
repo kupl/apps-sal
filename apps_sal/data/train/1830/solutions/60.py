@@ -12,6 +12,16 @@ class Solution:
             if day > 0:
                 if day in flooded:
                     if dry_days:
+                        # found = False
+                        # for d in range(len(dry_days)):
+                        #     dry_day = dry_days[d]
+                        #     if dry_day > flooded[day]:
+                        #         out[dry_day] = day
+                        #         dry_days.pop(d)
+                        #         found = True
+                        #         break
+                        # if not found:
+                        #     return []
                         dry = bisect_left(dry_days, flooded[day])
                         if dry == len(dry_days):
                             return []

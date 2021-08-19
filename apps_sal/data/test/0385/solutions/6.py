@@ -28,12 +28,14 @@ def remove_bracket(s, c, length):
     val = bracket_to_value(s[c])
     initial_c = c
     dir = bracket_to_value(s[c])
+    #print(f'started at c ={c} and dir = {dir}')
     if dir == 1:
         c = move_r(c)
     if dir == -1:
         c = move_l(c)
     val += bracket_to_value(s[c])
     while val != 0:
+        #print(f'wwwc = {c} val = {val} s[c] = {s[c]}')
         if dir == 1:
             c = move_r(c)
         if dir == -1:
@@ -45,6 +47,7 @@ def remove_bracket(s, c, length):
     right_end = max(initial_c, final_c)
     real_r_end = right_end
     real_l_end = left_end
+    #print(f'left_end = {left_end} roght_end = {right_end}')
     jump_r[left_end] = right_end
     jump_l[right_end] = left_end
     if right_end + 1 in jump_r:
@@ -88,5 +91,13 @@ se = input()
 orders = input()
 for ord in orders:
     p = perform_order(ord, se, p, n)
+    #print(f'jump_r = {jump_r} jump_l = {jump_l} p = {p} s = {se}')
 
 smart_print(se)
+# print(f'se = {se} p = {p}')
+# print(jump_r)
+
+# 3->6
+#
+# 0 1 2 3 4 5 6 7 8 9 10 11
+# ( ( ( ) ( ) ) ( ( ) )  )

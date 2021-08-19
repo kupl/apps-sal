@@ -21,6 +21,7 @@ class Solution:
         left, right = 0, len(vals) - 1
         while left <= right:
             mid = (left + right) // 2
+            # print(left, right, mid)
             if invalid(vals[mid]):
                 left = mid + 1
             else:

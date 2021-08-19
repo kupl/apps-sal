@@ -31,6 +31,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
 
+        # stream is limited to length of longest word
         if len(self.stream) > self.size:
             self.stream.pop()
 
@@ -42,3 +43,8 @@ class StreamChecker:
                 return False
             node = node.children[ch]
         return node.is_word
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

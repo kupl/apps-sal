@@ -2,10 +2,12 @@
 5 100
 80 100 100 40 60
 '''
+# problem solving is essentially pattern recognition
 from sys import stdin, stdout
 import math
 import collections
 
+# main starts
 n, m = list(map(int, stdin.readline().split()))
 arr = list(map(int, stdin.readline().split()))
 aux = dict()

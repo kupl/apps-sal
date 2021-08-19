@@ -9,6 +9,7 @@ rounds = int(1 / cookingDone)
 
 cookingLeft = 1 - rounds * cookingDone
 
+# print(timeAfterK, cookingDone, rounds, cookingLeft)
 
 if cookingLeft <= k / t:
     ans = rounds * timeAfterK + cookingLeft * t

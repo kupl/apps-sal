@@ -36,5 +36,6 @@ if(iterate >= len(s)):
             idx += 1
 
 
+# print(ans)
 str1 = ''.join(ans)
 print(str1)

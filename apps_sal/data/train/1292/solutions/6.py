@@ -1,3 +1,4 @@
+# cook your dish here
 n, m, w, b, *l = list(map(int, input().split()))
 mat = [[0 for _ in range(m)] for _ in range(n)]
 for i in range(w):
@@ -25,3 +26,4 @@ for j in range(n):
             ans += blk - i + 1
             temp[j][i] = blk - i + 1
 print(ans)
+# print(temp)

@@ -2,6 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         maxrange = position[-1] - position[0]
+        # print(maxrange)
         l, r = 1, maxrange
         while l <= r:
             mid = l + (r - l) // 2

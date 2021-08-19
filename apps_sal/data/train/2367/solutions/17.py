@@ -40,6 +40,7 @@ def solve():
             for j in range(jj - 1, i - 1, -1):
                 s[j], s[j + 1] = s[j + 1], s[j]
                 r += 1
+    # print(r)
     print(["NO", "YES"][r % 2 == 0])
 
 

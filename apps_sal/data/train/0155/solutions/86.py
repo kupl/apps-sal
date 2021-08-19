@@ -57,6 +57,7 @@ class Solution:
                     rstack.append(idx + i)
                 else:
                     rbarrier = True
+            # if idx == 10: print(lstack, rstack)
             ljump = 1
             while lstack:
                 lidx = lstack.pop()

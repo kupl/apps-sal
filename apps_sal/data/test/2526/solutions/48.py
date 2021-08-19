@@ -1,4 +1,4 @@
-import heapq
+import heapq  # heapqライブラリのimport
 X, Y, A, B, C = list(map(int, input().split()))
 P = list(map(int, input().split()))
 Q = list(map(int, input().split()))
@@ -11,12 +11,13 @@ sp = sum(P)
 sq = sum(Q)
 ans = sp + sq
 R.sort(reverse=True)
-heapq.heapify(P)
+heapq.heapify(P)  # リストを優先度付きキューへ
 heapq.heapify(Q)
-p = heapq.heappop(P)
+p = heapq.heappop(P)  # 最小値の取り出し
 q = heapq.heappop(Q)
 r = R.pop(0)
 while p < r or q < r:
+    # print(p,q,r,ans)
     if r - p > r - q:
         heapq.heappush(P, r)
         ans += r - p
@@ -28,4 +29,7 @@ while p < r or q < r:
     if len(R) == 0:
         break
     r = R.pop(0)
+    # print(p,q,r,ans)
 print(ans)
+
+#print(*ans[1:], sep='\n')

@@ -84,6 +84,7 @@ for i in range(M):
         if i != j:
             a, b = ab[j][0], ab[j][1]
             uf.union(a - 1, b - 1)
+    # print(i)
     if uf.group_count() != 1:
         ans += 1
 

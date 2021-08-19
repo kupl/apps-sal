@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 from functools import reduce
 
@@ -6,6 +7,7 @@ sys.setrecursionlimit(10**7)
 
 input = sys.stdin.readline
 
+# @profile
 MOD = 10**9 + 7
 
 
@@ -47,6 +49,7 @@ def solve(g, f, fi, m):
     print(*ans[1:], sep='\n')
 
 
+# @profile
 def main():
     mul = mul_mod
     mod = MOD

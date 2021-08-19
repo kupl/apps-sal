@@ -8,9 +8,11 @@ while(n >= 0):
     if n % a == 0:
         j = n // a
         ke = (cop - a * j) // b
+        # print(j,ke)
         break
     else:
         n -= b
+# print(n,j,ke)
 if j == -1:
     print(-1)
 else:
@@ -23,6 +25,7 @@ else:
                 k += a
             ans.append(k)
         t += a
+        # print(t)
     for yu in range(ke):
         for ty in range(b):
             k = t + (ty + 1) % b

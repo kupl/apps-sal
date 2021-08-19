@@ -4,6 +4,7 @@ from collections import Counter
 def main():
     from sys import stdin, stdout
 
+    # stdin = open("in.txt", "r")
     it = iter(map(int, stdin.read().split()))
 
     n = next(it)

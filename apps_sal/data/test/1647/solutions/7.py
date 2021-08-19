@@ -9,6 +9,9 @@ def fin(x):
     return parent[x]
 
 
+#import sys
+#sys.stdin = open ('464-D.in', 'r')
+
 n = int(input())
 a = input()
 b = input()

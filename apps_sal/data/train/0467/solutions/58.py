@@ -14,6 +14,7 @@ class Solution:
         factors = 2
         summ = 1 + num
         for i in range(2, int(num ** 0.5) + 1):
+            # print(\"i \", i, \" num \", num)
             if not num % i and num % i not in visited_factors:
                 visited_factors.add(i)
                 summ += i
@@ -24,6 +25,7 @@ class Solution:
                     factors += 1
                     summ += secondHalf
 
+        # print(\"factors \", factors)
         if factors == 4:
             return summ
         return 0

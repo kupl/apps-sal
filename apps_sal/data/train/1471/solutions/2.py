@@ -13,6 +13,7 @@ def run_bfs(x, y, k1, a):
     qu.put((x, y, 0))
     while(not(qu.empty())):
         (x1, y1, a1) = qu.get()
+        # x1 in range(min(x1-k1,0),min(x1+k1+1,n))
         for x_n in range(max(x1 - k1, 0), min(x1 + k1 + 1, n)):
             t1 = abs(x_n - x1)
             for y_n in range(max(y1 - k1 + t1, 0), min(y1 + k1 - t1 + 1, m)):

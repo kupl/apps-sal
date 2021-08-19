@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# import sys
+# sys.recursionlimit(10**7)
 from functools import reduce
 
 

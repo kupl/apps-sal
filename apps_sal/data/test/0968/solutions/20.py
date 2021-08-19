@@ -5,6 +5,7 @@ while i <= n:
     l.append(input().split())
     i += 1
 a = [int(p) for p in input().split()]
+# print(n,l,a)
 i = 1
 
 

@@ -1,3 +1,8 @@
+# ===================================
+# (c) MidAndFeed aka ASilentVoice
+# ===================================
+# import math, fractions, collections
+# ===================================
 n, d = [int(x) for x in input().split()]
 s = str(input())
 i = 0
@@ -18,6 +23,8 @@ while(1):
 
     ans += 1
     i += temp
+
+    # print(i, ans)
 
     if i == n - 1 or not(flag):
         break

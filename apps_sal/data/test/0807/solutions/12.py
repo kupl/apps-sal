@@ -1,3 +1,5 @@
+# fn(pi) = pi-(pi+1)-c
+# determine fn(pi) when it is max.
 
 n, c = [v for v in map(int, input().split())]
 p = [v for v in map(int, input().split())]

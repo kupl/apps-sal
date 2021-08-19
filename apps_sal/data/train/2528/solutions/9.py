@@ -7,8 +7,9 @@ class Solution:
         """
         if not strs:
             return ""
+        # 为了不改动原来的数组
         cpy = strs.copy()
-        return self.__helper(cpy)
+        return self.__helper(cpy)  # 记得加 self
 
     '''算出前面两个str的longest common prefix. 然后，把lcp放到第二个str的位置上，strs的第一个元素抛弃，
      递归调用,直到最后只剩一个元素'''
@@ -26,5 +27,5 @@ class Solution:
             j += 1
             prefix = s1[:j]
         strs[1] = prefix
-        strs.pop(0)
-        return self.__helper(strs)
+        strs.pop(0)  # or strs= strs[1:]
+        return self.__helper(strs)  # 记得加 self

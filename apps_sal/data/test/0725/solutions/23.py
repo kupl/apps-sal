@@ -1,3 +1,4 @@
+# coding: utf-8
 
 
 import math
@@ -16,9 +17,9 @@ def main():
     for i in range(n):
         a = input().split(" ")
         if "C" in a or "M" in a or "Y" in a:
-            print("
+            print("#Color")
             return
-    print("
+    print("#Black&White")
 
 
 main()

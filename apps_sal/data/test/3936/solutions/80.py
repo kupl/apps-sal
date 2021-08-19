@@ -4,6 +4,7 @@ y = input()
 
 now = 1
 flag = 0
+#preflag = 0
 
 
 i = 0
@@ -21,11 +22,13 @@ while (i < n):
         if (x[i] == y[i]):
             if (flag == 0):
                 flag = 1
+                #preflag = 0
                 i += 1
             else:
                 now *= 2
                 now = now % 1000000007
                 flag = 1
+                #preflag = 1
                 i += 1
         else:
             if (flag == 0):

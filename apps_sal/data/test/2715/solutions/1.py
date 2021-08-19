@@ -17,6 +17,7 @@ else:
         a[i] += 1
 print((len(a)))
 
+# print(a)
 
 a = [str(i) for i in a]
 print((' '.join(a)))

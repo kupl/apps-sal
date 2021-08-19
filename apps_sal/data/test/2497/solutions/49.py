@@ -17,6 +17,7 @@ for i in range(N):
     Y[d].append(y)
 
 query = []
+# Xmax
 if not X["L"]:
     Lmax = -INF
 else:
@@ -44,6 +45,7 @@ if q1 > q2:
 else:
     query.append([q1, "Xmax", 1, Rmax])
 
+# Xmin
 if not X["L"]:
     Lmin = INF
 else:
@@ -72,6 +74,7 @@ if q1 > q2:
 else:
     query.append([q1, "Xmin", -1, Lmin])
 
+# Ymax
 if not Y["L"]:
     mobLmax = -INF
 else:
@@ -100,6 +103,7 @@ if q1 > q2:
 else:
     query.append([q1, "Ymax", 1, Umax])
 
+# Ymin
 if not Y["L"]:
     mobLmin = INF
 else:

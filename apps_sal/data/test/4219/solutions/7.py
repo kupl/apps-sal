@@ -21,7 +21,9 @@ for bit in range(1, 1 << N):
                 else:
                     unkind.add(x)
 
+    # print(h,honest,unkind)
     if 0 == len(honest - h) and h.isdisjoint(unkind) and honest.isdisjoint(unkind):
+        # print("   ",h,honest,unkind)
         ans = max(len(h), ans)
 
 print(ans)

@@ -18,6 +18,7 @@ class Solution:
                 ans = t
 
         profit += wait // 4 * BC
+        # profit-=RC*(wait+3)//4
         if profit > maxprofit:
             ans += wait // 4
         if wait % 4 * BC > RC:

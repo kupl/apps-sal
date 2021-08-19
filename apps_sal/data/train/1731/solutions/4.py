@@ -110,8 +110,8 @@ def interpret(code):
                 ascii_code = stack[-1]
                 output += chr(ascii_code)
             stack.pop()
-        elif command == "
-        skip_next = True
+        elif command == "#":
+            skip_next = True
         elif command == "p":
             y1, x1, v = stack.pop(), stack.pop(), stack.pop()
             coordinate[y1][x1] = chr(v)

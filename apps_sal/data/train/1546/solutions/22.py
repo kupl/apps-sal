@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     l = [int(x) for x in input().strip().split(" ")]

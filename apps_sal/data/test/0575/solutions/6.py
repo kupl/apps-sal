@@ -1,3 +1,4 @@
+# make sure the king never crosses the row or column the queen is in
 
 n = int(input())
 ax, ay = list(map(int, input().split()))

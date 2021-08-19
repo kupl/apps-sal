@@ -1,4 +1,5 @@
 def make_upper_case(s):
+    # Code here
     res = ""
     for char in s:
         if char.islower():

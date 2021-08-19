@@ -2,8 +2,10 @@ def input_numbers():
     return list(map(int, input().split()))
 
 
+# Количество вершин
 n = int(input())
 
+# Читаем дерево
 g = {}
 i = 1
 
@@ -20,6 +22,7 @@ while i <= n - 1:
 
     i += 1
 
+# Обходим дерево в ширину и делим на две части
 queue = [1]
 visited = set()
 
@@ -39,6 +42,8 @@ while len(queue):
             else:
                 part1.add(v)
 
+# Находим нужное количество ребер как разность между
+# максимально возможным количеством и тех, что уже есть
 need = len(part1) * len(part2) - (n - 1)
 
 print(need)

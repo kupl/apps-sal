@@ -24,6 +24,8 @@ else:
     c = pc - poc
     a = pa - roz * kolko
     b = pb
+    # a,b,c,poc=pa,pb,pc,0
+    # print(a,b,w,x,c)
     while (c > a):
         c -= 1
         if b >= x:
@@ -32,4 +34,5 @@ else:
             a -= 1
             b = w - (x - b)
         poc += 1
+        # print(a,b,w,x,c)
     print(poc)

@@ -7,6 +7,7 @@ class Solution:
         for i in range(m):
             count = 0
 
+            # It will find consecutive ones horizontally
             for j in range(n - 1, -1, -1):
                 if mat[i][j]:
                     count += 1

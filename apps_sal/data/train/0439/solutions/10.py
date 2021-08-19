@@ -3,7 +3,7 @@ class Solution:
         turb0 = [1 for i in range(len(A))]
         turb1 = [1 for i in range(len(A))]
         if len(A) <= 1:
-            return len(A)
+            return len(A)  # covers really small cases
         for i in range(1, len(A)):
             if i % 2 == 0:
                 if A[i] > A[i - 1]:

@@ -17,5 +17,6 @@ def acronym_buster(message):
             new_msg = new_msg.replace(item, subs[item])
         elif item.isupper():
             return '{} is an acronym. I do not like acronyms. Please remove them from your email.'.format(item)
+    # Now capitalize the first "word" in each sentence
     sentences = new_msg.split('. ')
     return '. '.join(s[:1].upper() + s[1:] for s in sentences)

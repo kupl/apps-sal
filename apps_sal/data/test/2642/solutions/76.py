@@ -19,9 +19,11 @@ def main():
         x, y = x // denominator, y // denominator
 
         if y < 0:
+            # quadrant III, IV -> I, II
             x, y = -x, -y
 
         if x <= 0:
+            # round 90° from quadrant II to I
             x, y = y, -x
             counter2[(x, y)] += 1
             counter1[(x, y)] += 0
@@ -36,7 +38,7 @@ def main():
         now += pow(2, counter2[k], mod) - 1
         ans = ans * now % mod
     ans += zeroes
-    ans -= 1
+    ans -= 1  # choose no fish
     return ans % mod
 
 

@@ -10,6 +10,7 @@ class Solution:
             else:
                 c_frequency[1] += 1
 
+            # Replacements cost = cells count between left and right - highest frequency
             cells_count = r - l + 1
             if c_frequency[0] <= k or c_frequency[0] == 0:
                 longest_str_len = max(longest_str_len, cells_count)

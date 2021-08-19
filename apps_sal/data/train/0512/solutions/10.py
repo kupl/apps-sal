@@ -9,10 +9,10 @@ class SegmentTree1():
     """
 
     def __init__(self, n_, ele_id, operation_func):
-        self.n = 1 << (n_ - 1).bit_length()
-        self.data = [ele_id] * (2 * self.n)
-        self.ele_id = ele_id
-        self.operation_func = operation_func
+        self.n = 1 << (n_ - 1).bit_length()  # size
+        self.data = [ele_id] * (2 * self.n)  # binary tree
+        self.ele_id = ele_id  # identity element
+        self.operation_func = operation_func  # binary operation of monoid
 
     def __getitem__(self, idx):
         return self.data[idx + self.n]
@@ -25,6 +25,7 @@ class SegmentTree1():
                                                self.data[2 * i + 1])
 
     def update(self, idx, x):
+        # change idx-th element to x (idx : 0-indexed)
         idx += self.n
         self.data[idx] = x
         while idx > 1:
@@ -33,16 +34,18 @@ class SegmentTree1():
                                                  self.data[2 * idx + 1])
 
     def query(self, l, r):
+        # query for interval [l, r) (l, r : 0-indexed)
         l += self.n
         r += self.n
         ret = self.ele_id
         while l < r:
-            if l & 1:
+            if l & 1:  # right child
                 ret = self.operation_func(ret, self.data[l])
                 l += 1
-            if r & 1:
+            if r & 1:  # right child
                 r -= 1
                 ret = self.operation_func(ret, self.data[r])
+            # go to parent-nodes
             l = l >> 1
             r = r >> 1
         return ret
@@ -50,10 +53,11 @@ class SegmentTree1():
 
 class Tree():
     def __init__(self, n, graph, v_root):
-        self.n = n
-        self.graph = graph
-        self.v_root = v_root
+        self.n = n  # number of nodes
+        self.graph = graph  # adjacent list of graph
+        self.v_root = v_root  # root node
 
+        # euler tour
         self.first_idx = [2 * self.n] * self.n
         self.euler_tour = []
         self.euler_depth_topo = []

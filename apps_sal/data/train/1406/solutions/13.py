@@ -31,6 +31,10 @@ def main():
 
 def __starting_point():
     main()
+# a=5
+# str1=""
+# str1+=bin(a)
+# print(str1[2:])
 
 
 __starting_point()

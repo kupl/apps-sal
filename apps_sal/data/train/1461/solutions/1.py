@@ -19,6 +19,9 @@ def farey_seq(x, limit):
     return l
 
 
+# ProjectEuler problem:
+# print(farey_seq(F(3, 7), 1000000).numerator)
+
 for _ in range(int(input())):
     a, b, n = map(int, input().split())
     r = farey_seq(F(a, b), n)

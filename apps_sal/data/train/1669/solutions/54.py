@@ -6,7 +6,7 @@ class Solution:
             for k in range(m, m + W):
                 v = count[k]
                 if not v:
-                    return False
+                    return False    # if v is zero
                 if v == 1:
                     del count[k]
                 else:

@@ -15,6 +15,7 @@ for char in list(d.keys()):
         even.append(char)
     for i in range(d[char] % 2):
         odd.append(char)
+# print(len(even), len(odd))
 if len(odd) <= 1:
     x = ''.join([even[i] for i in range(1, len(even), 2)])
     y = ''.join(odd)

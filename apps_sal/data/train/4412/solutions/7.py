@@ -1,4 +1,14 @@
+# def find(n,z):
 
+#    s = [i for i in str(n)]
+#    print (s)
+#    k = []
+#    for i in range(len(s)):
+#        s_n = s[:i]+s[i+1:]
+#        b = [s[i]]
+#        k = [s[i]] + [s_n]
+#        print (k)
+#        for i in range(len(s_n)):
 def subsets(collection):
     if len(collection) == 1:
         yield [collection]

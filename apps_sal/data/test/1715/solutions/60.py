@@ -3,12 +3,14 @@ a, b, q = list(map(int, input().split()))
 INF = 10**15
 s = [-INF] + sorted([int(input()) for _ in range(a)]) + [INF]
 t = [-INF] + sorted([int(input()) for _ in range(b)]) + [INF]
+# print(s,t)
 for i in range(q):
     pro = int(input())
     s_index = bisect_left(s, pro)
     t_index = bisect_left(t, pro)
     s1, s2 = s[s_index - 1], s[s_index]
     t1, t2 = t[t_index - 1], t[t_index]
+    # print(s1,s2,t1,t2)
     minimum = []
     kouho1 = abs(pro - s1) + abs(s1 - t1)
     minimum.append(kouho1)

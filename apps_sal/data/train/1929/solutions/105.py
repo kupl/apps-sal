@@ -27,14 +27,22 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.cache += letter
+        # self.result = False
         k = 1
         node = self.trie.root
         while k <= len(self.cache):
             char = self.cache[-k]
             if char in node.children:
                 if node.children[char].isEnd:
+                    # self.result = self.result or node.children[char].isEnd
                     return True
                 k += 1
                 node = node.children[char]
             else:
                 return False
+        # return self.result
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

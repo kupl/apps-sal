@@ -2,6 +2,8 @@ import math
 import sys
 input = sys.stdin.readline
 
+############ ---- Input Functions ---- ############
+
 
 def inint():
     return(int(input()))
@@ -9,6 +11,8 @@ def inint():
 
 def inlst():
     return(list(map(int, input().split())))
+
+# returns a List of Characters, which is easier to use in Python as Strings are Immutable
 
 
 def instr():

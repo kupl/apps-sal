@@ -34,6 +34,13 @@ for i in range(loop_rest):
     tar_index += 2
 '''
 
+# 一つおきでListを取る場合。
+# a[0::2]
+# 1つ目：起点。
+# 2つ目：Step
+
+# a[::-1]
+# > -1step,つまりReverse
 
 if n % 2 == 1:
     print((" ".join((a[0::2][::-1] + a[1::2]))))

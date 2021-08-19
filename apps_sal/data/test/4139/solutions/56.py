@@ -8,6 +8,9 @@ N_len = len(N)
 '''
 
 
+# t = []
+
+
 def dfs(a, depth):
     if depth == N_len:
         if int(a) <= int(N) and a.count('3') > 0 \
@@ -25,3 +28,4 @@ def dfs(a, depth):
 
 ans = dfs('', 0)
 print(ans)
+# print(t)

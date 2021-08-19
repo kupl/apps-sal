@@ -25,6 +25,8 @@ class Solution:
         for i, (weight, node1, node2) in enumerate(edges):
             if weight == 3:
                 is_union = uf1.union(node1 - 1, node2 - 1)
+                # is_union2 = uf2.union(node1 - 1, node2 - 1)
+                # is_union = is_union1 and is_union2
                 count_union1 += is_union
                 count_union2 += is_union
                 count_delete += 1 - is_union

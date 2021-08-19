@@ -1,3 +1,4 @@
+# cook your dish here
 for test in range(int(input())):
     s = input().strip()
 

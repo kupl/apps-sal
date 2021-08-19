@@ -13,6 +13,7 @@ for i in range(len(s)):
             si1 = int(si)
             if (len(d) >= 3 and d[-3] != ".") or len(d) < 3:
                 si1 *= 100
+            # print(si1)
             ans += si1
         d = ""
 si = ""

@@ -16,7 +16,12 @@ else:
     nmax = (C // Wr)
     pmax = nmax * Hr + ((C - nmax * Wr) // Wb) * Hb
     dmax = ((C - (nmax - 0) * Wr) % Wb)
+    #print(0, pmax, dmax)
 
+    #
+    #pm1 = (nmax-1)*Hr + ((C - (nmax-1)*Wr) // Wb) * Hb
+    # if pm1>pmax:
+    #    pmax = pm1
     if Hr / Wr > Hb / Wb:
         dx = dmax * (Hb / Wb) / (Hr / Wr - Hb / Wb)
     elif Hr / Wr < Hb / Wb:
@@ -36,6 +41,7 @@ else:
                 break
             pk = (nmax - k) * Hr + ((C - (nmax - k) * Wr) // Wb) * Hb
             dk = ((C - (nmax - k) * Wr) % Wb)
+            #print(k, pmax, pk, dk)
             if pk > pmax:
                 pmax = pk
             if dk == 0:
@@ -48,9 +54,25 @@ else:
 
             pk = (nmax - k) * Hr + ((C - (nmax - k) * Wr) // Wb) * Hb
             dk = ((C - (nmax - k) * Wr) % Wb)
+            #print(j, k, pmax, pk, dk, (nmax-k), ((C - (nmax-k)*Wr) // Wb) )
             if pk > pmax:
                 pmax = pk
+                #dmax = dk
             if dk == 0:
                 break
+
+#    elif Wr<Wb and dx>0:
+#        for j in range(1, C//Wb+1):
+#            k = (j*Wb - dmax)//Wr
+#            if k*Wr > dx:
+#                break
+#            pk = (nmax-k)*Hr + ((C - (nmax-k)*Wr) // Wb) * Hb
+#            dk = ((C - (nmax-k)*Wr) % Wb)
+#            print(j, k, pmax, pk, dk, (nmax-k), ((C - (nmax-k)*Wr) // Wb) )
+#            if pk>pmax:
+#                pmax = pk
+#                #dmax = dk
+#            if dk==0 :
+#                break
 
     print(pmax)

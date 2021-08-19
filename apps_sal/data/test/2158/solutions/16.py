@@ -12,9 +12,11 @@ ca = [0] * (n)
 
 def dfs(n, c):
     va[n] = 1
+    # print(c)
     ca[n] = ca[n] + c
 
     for e in al[n]:
+        # print(e)
         p = e[0]
         q = e[1] + ca[n]
         if(va[p] == 0):

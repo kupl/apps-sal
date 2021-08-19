@@ -1,3 +1,4 @@
+# cook your dish here
 def check(n, k):
     return 1 if k >= n and k % n == 0 else 0
 

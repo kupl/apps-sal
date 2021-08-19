@@ -1,3 +1,4 @@
+# cook your dish here
 
 def check(A, N, K):
     first = sum(A[:K])

@@ -50,5 +50,6 @@ for _ in range(r1(int)):
 
         for x in ind:
             t[x] = tk
+        #print(mp, b, t)
 
     print(''.join(t))

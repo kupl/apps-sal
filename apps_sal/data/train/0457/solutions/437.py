@@ -1,5 +1,15 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        # coins.sort()
+        # min_coins = [math.inf]*(amount+1)
+        # min_coins[0] = 0
+        # for coin in coins:
+        #     for amount in range(coin,amount+1):
+        #         min_coins[amount] = min(min_coins[amount], min_coins[amount-coin]+1)
+        # # print(min_coins)
+        # if min_coins[-1] == math.inf:
+        #     return -1
+        # else: return min_coins[-1]
         cache = {}
 
         def subproblem(i, t):

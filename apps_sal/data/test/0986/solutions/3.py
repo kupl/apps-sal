@@ -36,6 +36,7 @@ for i, book_id in enumerate(books):
         if next_closect > min_next_closest:
             min_next_closest = next_closect
             to_evict = x_id
+    # print("To evict %s" % to_evict)
     cache.remove(to_evict)
     cache.add(book_id)
     cost += 1

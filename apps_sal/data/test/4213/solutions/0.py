@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 n = int(input())
 a = list(map(int, input().split()))
 ans = 0

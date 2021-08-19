@@ -1,7 +1,9 @@
+# cook your dish here
 '''
 https://www.codechef.com/INOIPRAC/problems/INOI1501
 '''
 
+#inputFile = open('input.txt', 'r')
 n = int(input())
 a = list(map(int, input().rstrip().split()))
 b = list(map(int, input().rstrip().split()))

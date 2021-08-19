@@ -24,6 +24,7 @@ else:
     ans_ = 0
     for g_s in range(1, S_zero_group - K + 2):
         g_e = g_s + K - 1
+#         print('====',g_s,g_e)
         s = 0
         e = N - 1
 

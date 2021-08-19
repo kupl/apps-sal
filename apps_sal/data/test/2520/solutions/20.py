@@ -1,16 +1,16 @@
 class UnionFind():
-    def __init__(self, n):
+    def __init__(self, n):  # 初期化
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x):
+    def find(self, x):  # 属すグループの根(リーダー)
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def union(self, x, y):
+    def union(self, x, y):  # 連結
         x = self.find(x)
         y = self.find(y)
         if x == y:
@@ -20,26 +20,26 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x):
+    def size(self, x):  # 同じグループに属す頂点数
         return -self.parents[self.find(x)]
 
-    def same(self, x, y):
+    def same(self, x, y):  # x,yが同じグループに属しているかどうか
         return self.find(x) == self.find(y)
 
-    def members(self, x):
+    def members(self, x):  # 同じグループに属すメンバー
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self):
+    def roots(self):  # 全ての根(リーダー)
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-    def group_count(self):
+    def group_count(self):  # グループの数
         return len(self.roots())
 
-    def all_group_members(self):
+    def all_group_members(self):  # 全てのグループのメンバー
         return {r: self.members(r) for r in self.roots()}
 
-    def __str__(self):
+    def __str__(self):  # 根：{所属しているメンバー}
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 

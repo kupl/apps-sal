@@ -20,6 +20,7 @@ for _ in range(Q):
     sb = b - a + 1 - sa
     ta = TX[d] - TX[c - 1]
     tb = d - c + 1 - ta
+#    print(sa, sb, ta, tb)
     if (sa - sb) % 3 == (ta - tb) % 3:
         print("YES")
     else:

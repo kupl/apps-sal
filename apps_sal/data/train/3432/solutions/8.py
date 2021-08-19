@@ -7,3 +7,4 @@ def cipher(phrase: str):
         else:
             res.append(' ')
     return "".join(res)
+    #0, 1,2,0, 2,3,1, 3,4,2,4,5,3,5,6,4,6,7,5,7,8,

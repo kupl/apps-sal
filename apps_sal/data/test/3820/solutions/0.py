@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def solve(n, m, s, t):
     if '*' in s:
         l, r = s.split('*')

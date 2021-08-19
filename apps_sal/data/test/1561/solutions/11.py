@@ -18,6 +18,7 @@ ans = 0
 for i in range(n):
     begin = 0
     while begin < m:
+        # print (begin)
         if (mp[i][begin] == '.'):
             temp = begin
             while mp[i][temp] == '.':

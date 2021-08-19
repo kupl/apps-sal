@@ -1,3 +1,7 @@
+# Play with the function in your test cases.
+# When you think you've solved the
+# implement the following function as your answer
+# Note: you should remove any mention of the word in your code to pass the tests
 
 def solved(s):
     l = len(s)

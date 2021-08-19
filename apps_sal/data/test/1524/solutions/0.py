@@ -1,3 +1,5 @@
+#! env/bin/local python3
+# -*- coding: utf-8 -*-
 
 sentence: str = input()
 n_sentence = len(sentence)

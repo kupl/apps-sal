@@ -1,4 +1,10 @@
 __author__ = 'sm'
+#import sys
+#fin = open('data.in','r')
+#fout = open("data.out",'w')
+# sys.stdin = fi:w
+# n
+#sys.stdout = fout
 
 
 def readln():

@@ -1,3 +1,4 @@
+# from dust i have come dust i will be
 
 n, p = list(map(int, input().split()))
 a = list(map(int, input().split()))

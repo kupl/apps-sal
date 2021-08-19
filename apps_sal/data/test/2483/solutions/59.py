@@ -1,3 +1,4 @@
+# 解説 imos
 n, C = map(int, input().split())
 L = [tuple(map(int, input().split())) for _ in range(n)]
 m = 10 ** 5

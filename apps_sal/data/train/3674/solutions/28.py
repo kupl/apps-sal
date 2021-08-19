@@ -1,4 +1,5 @@
 def add_binary(a, b):
+    # your code here
     def translate_bin(dec):
         if dec == 0:
             return "0"

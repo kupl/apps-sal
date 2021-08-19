@@ -7,8 +7,9 @@ def primes(x):
         return []
 
     primes = [i for i in range(x)]
-    primes[1] = 0
+    primes[1] = 0  # 1は素数ではない
 
+    # エラトステネスのふるい
     for prime in primes:
         if prime > math.sqrt(x):
             break

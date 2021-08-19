@@ -12,6 +12,7 @@ right = K2
 for k, val in enumerate(c[1:K2 + 1]):
     dic[val] += 1
 res = 0
+# 左端を動かしていく
 prev = 0
 for val in c[1:]:
     tgt = prev

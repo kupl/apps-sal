@@ -12,11 +12,13 @@ for i in range(n):
 
     elif (m % 2 != 0):
 
+        # check left half
         i = 0
         j = int(m / 2) + 1
         flag = False
         Flag = True
         while (j < m):
+            # print(i,j)
             if (s[i] != s[j]):
                 if (not flag):
                     flag = True
@@ -30,11 +32,13 @@ for i in range(n):
 
         if (not Flag):
 
+            # check right half
             i = 0
             j = int(m / 2)
             flag = False
             Flag = True
             while (j < m):
+                # print(i,j)
                 if (s[i] != s[j]):
                     if (not flag):
                         flag = True

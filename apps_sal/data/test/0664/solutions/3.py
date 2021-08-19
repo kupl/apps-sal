@@ -1,8 +1,11 @@
+# input
 n = int(input())
 alist = [int(x) for x in input().split()]
 
+# variables
 fault = 0
 
+# start of program
 for i in range(n):
     if alist[i - 1] <= alist[i]:
         pass

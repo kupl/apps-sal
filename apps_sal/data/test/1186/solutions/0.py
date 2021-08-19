@@ -17,6 +17,7 @@ nn = n
 if (n % 2 == 0):
     x = []
     while (n != 0):
+        # add n to comp(n) to the front of x
         for i in range(comp(n), n + 1):
             x.append(i)
         n = comp(n) - 1

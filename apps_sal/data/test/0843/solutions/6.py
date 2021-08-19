@@ -24,6 +24,7 @@ class graph():
 n = int(input())
 s = input()
 f = [int(z) for z in input().split()]
+# G=graph(n+2,1)
 Vis = [0] * n
 k = 1
 i = 0

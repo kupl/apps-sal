@@ -21,6 +21,7 @@ for x in range(t):
         print("There is a spoon!")
         continue
 
+    # If not found in row major form, then try the column major form
     for c in range(col):
         col_in = ''
         for r in range(row):

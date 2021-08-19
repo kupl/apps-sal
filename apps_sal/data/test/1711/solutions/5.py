@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 MOD = 998244353
 n, m = list(map(int, input().split()))
@@ -28,6 +29,7 @@ else:
         bunja %= MOD
         bunmo %= MOD
 
+    #ans = start * bunja // bunmo
     start *= bunja
     temp = go(bunmo, MOD - 2, MOD)
     ans = start * temp

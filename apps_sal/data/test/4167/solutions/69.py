@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -41,6 +42,7 @@ if (K % 2 == 0):
     mod0 = N // K
     ans += mod0**3
     a = (N + K // 2) // K
+    # print(a)
     ans += a**3
 else:
     mod0 = N // K

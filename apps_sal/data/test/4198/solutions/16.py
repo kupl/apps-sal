@@ -7,6 +7,8 @@ def binary_search(a, b, x):
     right = 10**9
     while left <= right:
         mid = (left + right) // 2
+        # print(mid)
+        # print(a*mid+b*int(len(str(mid))))
         if x == a * mid + b * int(len(str(mid))):
             return mid
         elif x < a * mid + b * int(len(str(mid))):

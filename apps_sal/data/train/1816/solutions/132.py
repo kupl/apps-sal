@@ -12,7 +12,7 @@ class Worker(object):
         self.minutes.sort()
         for i, lower in enumerate(self.minutes):
             upper = lower + 60
-            j = bisect.bisect_right(self.minutes, upper)
+            j = bisect.bisect_right(self.minutes, upper)  # a[:j] <= upper
             if j - i >= 3:
                 return True
         return False

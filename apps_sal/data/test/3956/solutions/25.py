@@ -4,7 +4,7 @@ class Combination:
     n_max = 10**6のとき前処理は約950ms (PyPyなら約340ms, 10**7で約1800ms)
     使用例：
     comb = Combination(1000000)
-    print(comb(5, 3))  
+    print(comb(5, 3))  # 10
     """
 
     def __init__(self, n_max, mod=10**9 + 7):
@@ -16,6 +16,8 @@ class Combination:
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def make_factorial_list(self, n):
+        # 階乗のリストと階乗のmod逆元のリストを返す O(n)
+        # self.make_modinv_list()が先に実行されている必要がある
         fac = [1]
         facinv = [1]
         for i in range(1, n + 1):
@@ -24,6 +26,7 @@ class Combination:
         return fac, facinv
 
     def make_modinv_list(self, n):
+        # 0からnまでのmod逆元のリストを返す O(n)
         modinv = [0] * (n + 1)
         modinv[1] = 1
         for i in range(2, n + 1):
@@ -56,6 +59,7 @@ for i in range(2, 2 * K + 1, 2):
         if M - j < 0:
             break
         ans += pow(2, M - j, mod) * C(M, j) * H(K - a, N) * b
+        #print((j, a), C(M, j) , H(N, K-a), b, pow(2, M-j, mod) * C(M, j) * H(K-a, N) * b)
         ans %= mod
         b = -b
     print(ans)

@@ -1,3 +1,6 @@
+# A - HonestOrDishonest
+
+# a, bにそれぞれ文字'H','D'が入力されるので、'H'か'D'を判定し出力する
 
 
 a, b = input().split()

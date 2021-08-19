@@ -3,6 +3,7 @@ import sys
 
 n, q = map(int, sys.stdin.readline().strip().split())
 nc = n
+# print(n,q)
 
 if(n % 2 == 0):
     n2 = int((n * n) / 2)
@@ -12,6 +13,7 @@ n1 = int(n / 2)
 if(1 == 1):
     for i in range(q):
         x, y = map(int, sys.stdin.readline().strip().split())
+        # print(n,q,x,y)
         x1 = int(x / 2)
         y1 = int(y / 2)
         op = 0

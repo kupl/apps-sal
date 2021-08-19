@@ -19,6 +19,8 @@ def main():
         col[w] += 1
         bomb.add((h, w))
 
+    # print(row, col, bomb)
+
     rowmax = max(row)
     colmax = max(col)
 

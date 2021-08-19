@@ -17,6 +17,7 @@ for i in range(n - 1):
         watchlist.append((abs(a[i] - a[i + 1]), i))
 
 watchlist.sort()
+# print(watchlist)
 
 totalcount = 0
 for price, index in watchlist:

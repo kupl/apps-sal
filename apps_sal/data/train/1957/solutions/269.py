@@ -1,6 +1,11 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
+        # algorithm: bfs with a twist
+        # each node in graph is (r, c, num_already_eliminate)
+        # think of num_already_eliminate is the \"capacity\"
+        # already used so far
+
         rows, cols = len(grid), len(grid[0])
         if rows == 1 and cols == 1:
             return 0

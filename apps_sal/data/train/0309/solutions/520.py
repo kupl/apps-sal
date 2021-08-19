@@ -13,6 +13,7 @@ class Solution:
         if full:
             return n
 
+        # print(table)f
         for i in range(n):
             for j in range(0, i):
                 diff = A[i] - A[j]
@@ -23,4 +24,6 @@ class Solution:
 
                 out = max(table[i][diff], out)
 
+        # for i in range(n):
+        #     print(A[i], table[i])
         return out

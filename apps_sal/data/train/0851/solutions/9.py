@@ -1,3 +1,4 @@
+# cook your dish here
 test = int(input())
 while(test):
     n, k = map(int, input().split())

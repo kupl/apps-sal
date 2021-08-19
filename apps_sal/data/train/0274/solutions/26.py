@@ -1,3 +1,5 @@
+# lame implementation of random removal in min/max heaps, but i saw
+# phorum solutions about monotonic queues, quite interesting!
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:

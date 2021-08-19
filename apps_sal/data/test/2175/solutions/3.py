@@ -20,6 +20,7 @@ def pour(p, amount):
         p = Links[p]
     for i in Skip:
         Links[i] = p
+        # print(W)
 
 
 def amount(p):

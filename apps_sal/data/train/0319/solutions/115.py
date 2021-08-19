@@ -14,6 +14,7 @@ class Solution:
             if player == 1:
                 res = float('-inf')
                 for i in range(1, 4):
+                    # Take 1, 2, 3 stones from head.
                     if idx + i > len(stoneValue):
                         break
                     res = max(res, pre_sum[idx + i] - pre_sum[idx] + dfs(idx + i, -player))

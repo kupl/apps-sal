@@ -1,6 +1,6 @@
-amount = int(input())
+amount = int(input())  # количество ставок
 bet = map(int, input().split())
-bet_list = list(bet)
+bet_list = list(bet)  # преобразование в список
 for i in range(0, amount):
     while bet_list[i] % 2 == 0:
         bet_list[i] /= 2

@@ -35,5 +35,7 @@ class Solution:
                 count[size[find(u)]] += 1
             if count[m] > 0:
                 res = i
+            # print(i, size)
+            # print(i, count)
 
         return res

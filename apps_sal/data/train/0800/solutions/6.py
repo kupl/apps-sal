@@ -1,3 +1,4 @@
+# cook your dish her
 N = int(input())
 arr = list(map(int, input().split()))
 print(max(arr), min(arr))

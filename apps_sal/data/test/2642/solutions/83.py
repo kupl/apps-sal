@@ -11,12 +11,15 @@ tz = 0
 for _ in range(N):
     a, b = map(int, input().split())
 
+    # (a, b) = (0, 0)
     if a == 0 and b == 0:
         zz += 1
         continue
+    # (a, b) = (0, #)
     if a == 0:
         sz += 1
         continue
+    # (a, b) = (#, 0)
     if b == 0:
         tz += 1
         continue
@@ -45,6 +48,6 @@ ans %= MOD
 for i in range(len(S)):
     ans *= 2**S[i] + 2**T[i] - 1
     ans %= MOD
-ans += zz
+ans += zz  # (0, 0)
 ans -= 1
 print(ans % MOD)

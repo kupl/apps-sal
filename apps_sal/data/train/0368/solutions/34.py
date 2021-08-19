@@ -3,8 +3,14 @@ class Solution:
         satisfaction.sort()
         total = 0
         beneficial = [s for s in satisfaction if s >= 0]
-        negative = [s for s in satisfaction if s < 0]
+        negative = [s for s in satisfaction if s < 0]  # [-3, -1, ...]
 
+        # any satisfaction >= 0 should be prepared
+        # need to figure out when to include negative dishes
+        # a negative dish increments the time coefficient, so it should be included if the difference
+        # between
+
+        # a negative dish is beneficial if the satisfaction increases after adding it
         for s in reversed(negative):
             if calc_satisfaction([s] + beneficial) > calc_satisfaction(beneficial):
                 beneficial.insert(0, s)

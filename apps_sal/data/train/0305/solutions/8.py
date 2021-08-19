@@ -1,5 +1,6 @@
 class Solution:
     def distinctEchoSubstrings(self, text: str) -> int:
+        # MOD = 10**9+7
         MOD = 2000000011
         textlen = len(text)
         half = textlen // 2
@@ -20,6 +21,8 @@ class Solution:
                 f[i][i + l - 1] = (f[i][i + l - 3] * 676 + (ord(text[i + l - 2]) - 97) * 26 + ord(text[i + l - 1]) - 97) % MOD
                 HASH[l].add(f[i][i + l - 1])
         count = 0
+        # print(HASH)
+        # print(f)
         tmp = 1
         for l in range(1, half + 1):
             tmp = tmp * 26 % MOD

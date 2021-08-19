@@ -14,17 +14,17 @@ for i in range(H):
         else:
             c_ij = 0
             if 0 <= i <= H - 1 and 1 <= j <= W - 1:
-                if grid[i][j - 1] == "
-                c_ij += 1
+                if grid[i][j - 1] == "#":
+                    c_ij += 1
             if 0 <= i <= H - 1 and 0 <= j <= W - 2:
-                if grid[i][j + 1] == "
-                c_ij += 1
+                if grid[i][j + 1] == "#":
+                    c_ij += 1
             if 1 <= i <= H - 1 and 0 <= j <= W - 1:
-                if grid[i - 1][j] == "
-                c_ij += 1
+                if grid[i - 1][j] == "#":
+                    c_ij += 1
             if 0 <= i <= H - 2 and 0 <= j <= W - 1:
-                if grid[i + 1][j] == "
-                c_ij += 1
+                if grid[i + 1][j] == "#":
+                    c_ij += 1
             if c_ij == 0:
                 fail_flg = True
                 break

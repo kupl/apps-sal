@@ -22,9 +22,16 @@ class Solution:
         for i in range(arr[0], arr[1]):
             product *= nums[i]
 
+        # If product is greater than
+        # zero, return array size
         if (product >= 0):
             return arr[1] - arr[0]
 
+        # Traverse the array and if
+        # any negative element found
+        # then update the Length of
+        # longest subarray with the
+        # Length of left and right subarray
         for i in range(arr[0], arr[1]):
             if (nums[i] < 0):
                 Len = max(Len, max(N - i - 1, i - arr[0]))

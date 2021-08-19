@@ -9,6 +9,7 @@ class Solution:
             heapq.heappush(pq, (s, 1))
             heapq.heappush(pq, (e + 1, -1))
 
+        # print(pq)
         counts = 0
         for k in range(n):
             while pq and pq[0][0] == k:

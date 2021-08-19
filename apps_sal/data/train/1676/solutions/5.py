@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 
 xyz = [
@@ -49,3 +50,4 @@ dim = [
 A, B, C = list(map(int, input().split()))
 print('1', dim[A][0] + 1, dim[A][1] + 1, '2', 5 + dim[B][0] + 1, 5 + dim[B][1] + 1, '3', 5 + dim[C][0] + 1, dim[C][0] + 1)
 print('-1 ' * 9)
+# print '2', xyz[C][0], xyz[C][1], '3', xyz[B][0], xyz[B][1], '-1 '*3

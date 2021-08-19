@@ -15,8 +15,10 @@ def pack_bagpack(scores, weights, capacity):
     3) 得出最优
     """
     start_time = time.time()
+    # 组合
     lst = list(zip(scores, weights))
 
+    # 1) 倒序排列 >> 均分 = 分数/重量
     lst_sorted = sorted(lst, key=lambda x: x[0], reverse=True)
 
     cache_dict = {}
@@ -29,11 +31,14 @@ def pack_bagpack(scores, weights, capacity):
         cache_key = "{}-{}".format(index, weight_last)
 
         if cache_key not in cache_dict:
+            # 算上当前的最大结果
             score_with_current = 0
             if weight_last >= current[1]:
                 score_with_current = current[0] + calc_item(index + 1, weight_last - current[1])
+            # 跳过当前的最大结果
             score_no_current = calc_item(index + 1, weight_last)
 
+            # 缓存当前的位置和剩余重量的值, 让以后的递归不再重复计算类似结果
             cache_dict[cache_key] = max(score_with_current, score_no_current)
 
         return cache_dict[cache_key]
@@ -41,4 +46,5 @@ def pack_bagpack(scores, weights, capacity):
     final_score = calc_item(0, capacity)
 
     print("score: {}  duration---> {}".format(final_score, time.time() - start_time))
+    # 3) 得出最优
     return final_score

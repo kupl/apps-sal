@@ -1,3 +1,4 @@
+# 4 B - ss
 S = list(input())
 
 

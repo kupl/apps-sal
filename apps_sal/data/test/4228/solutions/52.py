@@ -1,4 +1,5 @@
 N, L = map(int, input().split())
+# 味：L + i - 1
 aji_list = [L + i - 1 for i in range(1, N + 1)]
 
 basic = abs(sum(aji_list))

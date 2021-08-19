@@ -6,7 +6,7 @@ mod = 998244353
 left = s[0]
 right = s[-1]
 
-ans = 1
+ans = 1  # include remove all
 
 if left != right:
     lcount = 0

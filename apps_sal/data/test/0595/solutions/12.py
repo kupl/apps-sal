@@ -1,3 +1,4 @@
+# B
 y = int(input())
 
 

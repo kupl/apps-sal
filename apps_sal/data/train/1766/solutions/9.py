@@ -39,17 +39,17 @@ def to_binary(decimal):
 
 
 def test_to_binary():
-    assert to_binary(to_dec("00000")) == "0"
-    assert to_binary(to_dec("00001")) == "1"
-    assert to_binary(to_dec("00010")) == "10"
-    assert to_binary(to_dec("00011")) == "11"
-    assert to_binary(to_dec("00100")) == "100"
-    assert to_binary(to_dec("00101")) == "101"
-    assert to_binary(to_dec("00110")) == "110"
-    assert to_binary(to_dec("00111")) == "111"
-    assert to_binary(to_dec("01000")) == "1000"
-    assert to_binary(to_dec("01001")) == "1001"
-    assert to_binary(to_dec("01010")) == "1010"
+    assert to_binary(to_dec("00000")) == "0"        # 0
+    assert to_binary(to_dec("00001")) == "1"        # 1
+    assert to_binary(to_dec("00010")) == "10"       # -2
+    assert to_binary(to_dec("00011")) == "11"       # -1
+    assert to_binary(to_dec("00100")) == "100"  # 4
+    assert to_binary(to_dec("00101")) == "101"  # 5
+    assert to_binary(to_dec("00110")) == "110"  # 2
+    assert to_binary(to_dec("00111")) == "111"  # 3
+    assert to_binary(to_dec("01000")) == "1000"  # -8
+    assert to_binary(to_dec("01001")) == "1001"  # -7
+    assert to_binary(to_dec("01010")) == "1010"  # -10
     assert to_binary(to_dec("10000")) == "10000"
     assert to_binary(to_dec("10001")) == "10001"
     assert to_binary(to_dec("10010")) == "10010"

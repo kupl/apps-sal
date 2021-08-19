@@ -5,6 +5,10 @@ class Solution:
         :rtype: int
         """
 
+        # sol1: mono stack
+
+        # sol2: heap
+
         l_bounds = []
         lb = float('-inf')
         for h in height:

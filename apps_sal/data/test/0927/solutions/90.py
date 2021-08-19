@@ -1,3 +1,4 @@
+# D - Match Matching
 
 N, M = map(int, input().split())
 A = list(int(x) for x in input().split())
@@ -7,6 +8,7 @@ for a in A:
     MA.append(match_list[a])
 MA.sort(key=lambda x: x[0], reverse=True)
 
+# dp[i] := i本のマッチを使って作れる最大桁数
 dp = [-1] * (N + 1)
 dp[0] = 0
 for i in range(N + 1):
@@ -19,6 +21,8 @@ remain_match = N
 ans = ''
 for i in range(dp[N]):
     for ma in MA:
+        # 大きい数字から一桁使った時に、
+        # 残り桁がちょうど一桁減っている場合
         if remain_match >= ma[1] and dp[remain_match - ma[1]] == remain_keta - 1:
             ans += ma[0]
             remain_keta -= 1

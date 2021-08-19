@@ -82,6 +82,7 @@ CAL = Calculator()
 
 def evaluate0(num, sym):
     expr = num[0] + sym[0] + num[1] + sym[1] + num[2] + sym[2] + num[3]
+    # print(expr)
     return CAL.evaluate(expr), expr
 
 

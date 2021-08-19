@@ -1,3 +1,7 @@
+#	✪ H4WK3yE乡
+#	Mayank Chaudhary
+#	ABES EC , Ghaziabad
+# ///==========Libraries, Constants and Functions=============///
 import sys
 from bisect import bisect_left, bisect_right
 from collections import deque, Counter
@@ -8,7 +12,7 @@ mod = 1000000007
 mini = 1000000007
 
 
-def fact(n):
+def fact(n):                                                             # <------  To calculate factorial of n under modulo m
     if n == 0:
         return 1
     p = 1
@@ -19,7 +23,7 @@ def fact(n):
     return p
 
 
-def ncr(n, r):
+def ncr(n, r):                                                          # < ------ To calculate nCr mod p value using Fermat Little under modulo m
     d = 10**9 + 7
     num = fact(n)
     den = (fact(r) * fact(n - r)) % d
@@ -27,7 +31,7 @@ def ncr(n, r):
     return (num * den) % d
 
 
-def sieve(n):
+def sieve(n):                                                          # <----- sieve of eratosthenes for prime no.
     prime = [True for i in range(n + 1)]
     lst = [0] * (n + 1)
     p = 2
@@ -48,7 +52,7 @@ def sieve(n):
     return mylist
 
 
-def binary(number):
+def binary(number):  # <----- calculate the no. of 1's in binary representation of number
     result = 0
     while number:
         result = result + 1
@@ -56,7 +60,7 @@ def binary(number):
     return result
 
 
-def calculate_factors(n):
+def calculate_factors(n):  # <---- most efficient method to calculate no. of factors of number
     hh = [1] * (n + 1)
     p = 2
     while((p * p) < n):
@@ -76,7 +80,7 @@ def calculate_factors(n):
     return total
 
 
-def prime_factors(n):
+def prime_factors(n):  # <------------ to find prime factors of a no.
     i = 2
     factors = set()
     while i * i <= n:
@@ -93,12 +97,12 @@ def prime_factors(n):
         return False
 
 
-def isPrime(n):
+def isPrime(n):  # <-----------check whether a no. is prime or not
     if n == 2 or n == 3:
         return True
     if n % 2 == 0 or n < 2:
         return False
-    for i in range(3, int(n**0.5) + 1, 2):
+    for i in range(3, int(n**0.5) + 1, 2):   # only odd numbers
         if n % i == 0:
             return False
 
@@ -110,6 +114,7 @@ def get_ints(): return map(int, sys.stdin.readline().strip().split())
 def input(): return sys.stdin.readline().strip()
 
 
+# ///==========MAIN=============///
 n = int(input())
 A = [ord(c) - 97 for c in input()]
 B = [ord(c) - 97 for c in input()]

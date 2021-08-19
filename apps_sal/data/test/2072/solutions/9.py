@@ -4,7 +4,7 @@ X = list(map(int, input().split()))
 V = list(map(int, input().split()))
 
 
-def calc(p):
+def calc(p):  # everyone is gathered to point p
     return max(abs(X[i] - p) / V[i] for i in range(N))
 
 

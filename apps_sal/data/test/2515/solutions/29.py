@@ -15,6 +15,7 @@ def sieve(n):
 def is_like2017(n):
     for i in range(n + 1):
         if is_primeL[i]:
+            #print(i, (i+1)//2)
             if is_primeL[(i + 1) // 2]:
                 is_likeL[i] = True
 

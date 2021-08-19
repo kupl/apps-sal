@@ -1,3 +1,5 @@
+# 写経
+# https://atcoder.jp/contests/abc165/submissions/12655073
 from bisect import bisect_left, bisect_right
 import sys
 

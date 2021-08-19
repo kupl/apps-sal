@@ -1,5 +1,6 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
+        # [99,68,70,77,35,52,53,25,62]
         n = len(A)
         dsu = DSU(n)
         prime_dict = defaultdict(list)

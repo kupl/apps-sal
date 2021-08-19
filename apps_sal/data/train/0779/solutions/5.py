@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def ns(): return input()
 def ni(): return int(input())

@@ -31,6 +31,7 @@ def pylons(k, arr):
     i = 0
     while i < len(arr):
         index_right = right_index_search(i, arr, k)
+        # print(index_right)
         if index_right == -1:
             index_left = left_index_search(i, arr, k)
             if index_left == -1:

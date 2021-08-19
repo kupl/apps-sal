@@ -26,6 +26,7 @@ for word in words[1:]:
 
         if cur_hash == word_hash:
             i_matches.append(same_i)
+            #biggest_match = same_i
 
         same_i += 1
 

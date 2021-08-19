@@ -36,4 +36,5 @@ for tests in range(t):
             for i in range(m):
                 B[i] -= abs(i - l)
 
+    # print(ANS)
     print("".join([chr(a + 97) for a in ANS]))

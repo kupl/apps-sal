@@ -14,7 +14,12 @@ class Solution:
     def maxVowels(self, s, k):
         res, cnt = 0, 0
         for i, c in enumerate(s):
+            # if i-k >= 0 and s[i-k] in 'aeiou':
+            #     cnt -= 1
+            # if c in 'aeiou':
+            #     cnt += 1
             cnt += (c in 'aeiou') - (i - k >= 0 and s[i - k] in 'aeiou')
+            #res = max(res, cnt)
             if cnt > res:
                 res = cnt
         return res

@@ -1,7 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# FileName: 	C_fix
+# CreatedDate:  2020-10-10 15:17:07 +0900
+# LastModified: 2020-10-10 15:25:36 +0900
+#
 
 
 import os
 import sys
+# import numpy as np
+# import pandas as pd
 from itertools import accumulate
 
 

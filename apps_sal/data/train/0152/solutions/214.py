@@ -22,6 +22,7 @@ class Solution:
             return False
 
         while lo <= hi:
+            # print(lo,hi)
             mid = (lo + hi) // 2
 
             if possible(mid):

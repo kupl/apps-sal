@@ -10,6 +10,8 @@ class Solution:
         for cmb in range(mx, 0, -1):
             bs = list(bin(cmb)[2:].zfill(n - 1))
             if bs.count('1') + 1 < ans:
+                # if cmb<2**10:
+                # print(cmb,bs)
                 continue
             spl = []
             sub = s[0]
@@ -24,4 +26,5 @@ class Solution:
             if all(v == 1 for v in c.values()):
                 if len(spl) > ans:
                     ans = len(spl)
+                    # print(n,cmb,ans,spl)
         return ans

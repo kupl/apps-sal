@@ -1,4 +1,5 @@
 def group(arr):
+    # your code here
     lst = [[i] * arr.count(i) for i in arr]
     re = []
     for n in lst:

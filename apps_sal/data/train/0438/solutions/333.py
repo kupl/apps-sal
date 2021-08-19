@@ -4,8 +4,9 @@ import math
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
+        # print(\"-----\"*5)
         arr = [i - 1 for i in arr]
-        splitted = [(0, len(arr) - 1), ]
+        splitted = [(0, len(arr) - 1), ]  # indices \"1\"s started with
         step = len(arr)
         if len(arr) == m:
             return step
@@ -24,4 +25,5 @@ class Solution:
                 replace.append(right)
 
             splitted[i - 1:i] = replace
+            # print(splitted)
         return -1

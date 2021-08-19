@@ -3,6 +3,7 @@ class UnionFindSet:
         self.parants = [0] * n
         self.rank = [0] * n
 
+        # self is a distinct group
         for i in range(n):
             self.parants[i] = i
 
@@ -14,6 +15,7 @@ class UnionFindSet:
     def union(self, x, y):
         px, py = self.find(x), self.find(y)
 
+        # already in same group, no need to merge again
         if px == py:
             return False
 

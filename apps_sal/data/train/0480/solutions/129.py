@@ -3,9 +3,9 @@ class Solution:
         if not arrLen or not steps:
             return 1
         if arrLen == 1:
-            return 1
+            return 1  # stay all the time
 
-        shorter = min(steps, arrLen)
+        shorter = min(steps, arrLen)  # the position cannot be larger than the min(steps, arrLen)
         dp = [[0 for _ in range(shorter)] for _ in range(steps + 1)]
         dp[0][0] = 1
         dp[1][0] = 1

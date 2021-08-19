@@ -12,6 +12,7 @@ class UnionFind:
         if self.parent[i] != i:
             return self.find(self.parent[i])
 
+    # A utility function to do union of two subsets
     def union(self, x, y):
         x_set, y_set = self.find(x), self.find(y)
         if x_set == y_set:
@@ -23,11 +24,14 @@ class UnionFind:
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
+        # brute force is look at each node and see if we can connect it to every other node
+        # after we are done connecting, we check every node and see keep track of longest path
 
         if len(A) <= 0:
             return 0
 
-        '''
+        '''# key: node value
+        # values: list of connected components
         nodes = defaultdict(list)
         
         gcf_cache = {}
@@ -38,14 +42,18 @@ class Solution:
             if (b,a) in gcf_cache:
                 return gcf_cache[(b,a)]
             
+            # euclidean algo
+            # Everything divides 0  
             if (a == 0): 
                 return b 
             if (b == 0): 
                 return a 
 
+            # base case 
             if (a == b): 
                 return a 
 
+            # a is greater 
             if (a > b): 
                 gcf = greatest_common_factor(a-b, b)
                 gcf_cache[(a,b)] = gcf
@@ -87,6 +95,8 @@ class Solution:
             result = max(result, dfs(i))
         return result'''
 
+        # try union find
+        # reference: https://leetcode.com/problems/largest-component-size-by-common-factor/discuss/200643/Python-1112-ms-beats-100-Union-Find-and-Prime-factor-decomposition-with-Optimization
         def primeFactors(n):
             out = set()
             while n % 2 == 0:

@@ -16,14 +16,17 @@ class Solution:
         count = 0
         res = 0
         for end, a in enumerate(A):
-            if count ^ A[end] == 0:
+            if count ^ A[end] == 0:  # (count % 2) ^ A[end]
+                # print(end)
                 A[end] -= 2
                 res += 1
-                count ^= 1
+                count ^= 1  # count++
 
-            if end >= start + K - 1:
-                if A[start] < 0:
-                    count ^= 1
-                    A[start] += 2
+            if end >= start + K - 1:  # move window start
+                if A[start] < 0:  # 被flip过
+                    count ^= 1  # count-- #这个start影响不到end了
+                    A[start] += 2  # flip back
                 start += 1
+        # print(A)
+        # at the end if there is anything not flipped? (last window need flip)
         return -1 if any([a < 0 for a in A]) else res

@@ -6,7 +6,7 @@ class Solution:
         dlikelist = [[] for i in range(N)]
         for p in dislikes:
             dlikelist[p[0] - 1].append(p[1] - 1)
-            dlikelist[p[1] - 1].append(p[0] - 1)
+            dlikelist[p[1] - 1].append(p[0] - 1)  # Dislike is mutual
 
         seen = [-1] * N
         group = [-1] * N

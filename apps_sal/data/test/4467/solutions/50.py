@@ -17,6 +17,7 @@ for n in range(N):
     B[N + n + 1] = (list(map(int, input().split())))
     ad_dict[N + n + 1] = []
 
+# 隣接行列を作成(ad_matrix[start][end] = 1：接続)
 for r_ in R.keys():
     ad_dict[start].append(r_)
     ad_dict[r_].append(start)
@@ -60,7 +61,10 @@ while True:
             visit.pop()
             color[start] = 1
 
+#         print(visit,color)
+
         if color[end] == 0:
+            # コストの更新
             visit = list(visit)
             flow = 10**10
             for d1, d2 in zip(visit[:-1], visit[1:]):
@@ -73,6 +77,7 @@ while True:
                     ad_dict[d1].remove(d2)
                     ad_dict[d2].append(d1)
             break
+#     print(visit)
     if not visit:
         break
     ans += 1

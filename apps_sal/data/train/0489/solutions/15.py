@@ -1,5 +1,6 @@
 class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
+        # sorting sol O(nlgn)
         arr = [(a, i) for i, a in enumerate(A)]
         arr.sort()
         imin, res = float('inf'), 0

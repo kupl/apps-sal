@@ -12,6 +12,8 @@ class Solution:
             return n
         if (k, n) in dict_soln:
             return dict_soln[(k, n)]
+        # test at x (x = 1, ..., n)
+        # dp(k, n) = min_{x = 1, ..., n} max(dp(k, n - x), dp(k - 1, x - 1)) + 1
         left = 1
         right = n
         while True:

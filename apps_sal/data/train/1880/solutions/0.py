@@ -6,6 +6,7 @@ class Solution:
         seendict = {}
         index = 0
         while True:
+            # print([int(x) for x in '{0:08b}'.format(cell)])
             if cell in seendict:
                 if (N - index) % (index - seendict[cell]) == 0:
                     return [int(x) for x in '{0:08b}'.format(cell)]

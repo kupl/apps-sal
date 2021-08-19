@@ -1,3 +1,5 @@
+# Author: lizi
+# Email: lzy960601@outlook.com
 
 import sys
 import math
@@ -10,6 +12,7 @@ for i in range(min(n, 100)):
     while p > 0:
         s += p % 10
         p = p // 10
+    #print(s,' ',p)
     if s == n:
         ans.append(n - i)
 print(len(ans))

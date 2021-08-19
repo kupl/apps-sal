@@ -19,6 +19,7 @@ def main():
                 temp[(a, b)] = min(temp[(a, b)], cur[p] + drug[i][2])
         cur = temp
 
+    # print(cur)
     min_c = float('inf')
     for p in cur:
         if p != (0, 0) and p[0] * Mb == p[1] * Ma:

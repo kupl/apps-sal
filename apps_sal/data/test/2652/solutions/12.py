@@ -39,15 +39,18 @@ def main():
         x2, j2 = X[i + 1]
         y1, k1 = Y[i]
         y2, k2 = Y[i + 1]
+        # ヒープ構造を用いて常にHの最初に最小値を持ってくる
+        # X座標とY座標でそれぞれHに追加
         heappush(H, (x2 - x1, j1, j2))
         heappush(H, (y2 - y1, k1, k2))
 
     answer = 0
-    data = [-1] * (N + 1)
+    data = [-1] * (N + 1)  # 1-indexed rootには-sizeが入る
     height = [0] * (N + 1)
 
     while H:
         w, s, t = heappop(H)
+        # sとtの集合が異なっていた時、道を作る
         if union(s, t):
             answer += w
 

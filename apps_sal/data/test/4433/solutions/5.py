@@ -17,6 +17,7 @@ for x, y in E:
     EDGELIST[y].append(x)
 
 x = cost.index(max(cost))
+# print(x)
 
 QUE = deque([x])
 
@@ -33,5 +34,6 @@ while QUE:
             QUE.append(to)
             check[to] = 1
 
+# print(ANS)
 for x, y in ANS:
     print(x, y)

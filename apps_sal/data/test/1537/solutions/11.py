@@ -13,12 +13,17 @@ for i in range(n):
 for i in range(n):
     if not g_row[i]:
         already_white_line_nums += 1
+    # else:
+    #     g_row[i] = g_row[i][0], g_row[i][-1]
     if not g_col[i]:
         already_white_line_nums += 1
+    # else:
+    #     g_col[i] = g_col[i][0], g_col[i][-1]
 
 r = 0
 
 new_white_line_nums_col = [[[0] for _ in range(n - k + 1)] for _ in range(n - k + 1)]
+# new_white_line_nums_row = [[[0] for _ in range(n - k + 1)] for _ in range(n - k + 1)]
 
 for i in range(n - k + 1):
     new_white_line_nums = 0
@@ -40,6 +45,7 @@ for i in range(n - k + 1):
     for l in range(0, k):
         if g_row[l] and i <= g_row[l][0] and g_row[l][-1] < i + k:
             new_white_line_nums += 1
+    # new_white_line_nums_row[0][i] = new_white_line_nums
     r = max(r, new_white_line_nums_col[0][i] + new_white_line_nums)
 
     for old_row in range(n - k):
@@ -49,6 +55,11 @@ for i in range(n - k + 1):
         if g_row[new_row] and i <= g_row[new_row][0] and g_row[new_row][-1] < i + k:
             new_white_line_nums += 1
         r = max(r, new_white_line_nums_col[old_row + 1][i] + new_white_line_nums)
+        # new_white_line_nums_row[old_row + 1][i] = new_white_line_nums
 
+# r = 0
+# for i in range(n - k + 1):
+#     for j in range(n - k + 1):
+#         r = max(r, new_white_line_nums_col[i][j] + new_white_line_nums_row[i][j])
 
 print(r + already_white_line_nums)

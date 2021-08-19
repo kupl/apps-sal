@@ -1,4 +1,5 @@
 def smash(words):
+    # Begin here
 
     sayac = len(words)
     yazi = ""

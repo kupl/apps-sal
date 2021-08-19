@@ -3,6 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
+        # idea is to sort words based on length and then apply dfs on each index
         n = len(words)
         words.sort(key=len)
         memo = {}

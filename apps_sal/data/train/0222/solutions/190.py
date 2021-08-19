@@ -7,4 +7,5 @@ class Solution:
             for i in range(j):
                 if (A[j] - A[i]) in s and (A[j] - A[i]) < A[i]:
                     d[(A[i], A[j])] = d.get((A[j] - A[i], A[i]), 2) + 1
+        # print(d)
         return max(d.values() or [0])

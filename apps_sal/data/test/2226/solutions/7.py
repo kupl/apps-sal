@@ -62,6 +62,8 @@ def nn2(n):
 
 
 def solve(n, m, q, edges):
+    # k < m
+    # dp[v][k] - max path cost ending in v and having k edges
     dp = [[-INF] * (m + 1) for _ in range(n)]
     mk = [0] * (m + 1)
 

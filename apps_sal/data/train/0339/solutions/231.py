@@ -15,6 +15,7 @@ class Solution:
         for i, n in enumerate(pair_list):
             if square_num // n in pair_dict and square_num % n == 0:
                 ans += len(pair_dict[square_num // n])
+                # print(pair_dict[square_num // n], i, square_num // n, n, num)
             if n not in pair_dict:
                 pair_dict[n] = []
             pair_dict[n].append(i)

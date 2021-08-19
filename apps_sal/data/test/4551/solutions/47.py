@@ -1,3 +1,7 @@
+# A - Libra
+
+# 天秤の左の皿におもりA,Bを、右の皿におもりB,Dを載せた場合、
+# 天秤がどちらに傾くかを出力する
 
 
 A, B, C, D = list(map(int, input().split()))

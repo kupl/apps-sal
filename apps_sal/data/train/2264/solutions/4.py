@@ -87,6 +87,7 @@ def main0(n, m, s, t, abc):
         if x != 0:
             ret += x * (summid - x)
             ret %= mod
+    # print(mincost,mideary,midvary)
     return ret
 
 

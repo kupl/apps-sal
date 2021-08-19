@@ -21,6 +21,8 @@ def solve():
     print(max(dp))
     return
 
+# solve()
+
 
 T = ni()
 for _ in range(T):

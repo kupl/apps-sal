@@ -10,6 +10,8 @@ def f(n, m):
                 cs = (cs + dpi[j]) % md
             dpi1[j + 1] = (dpi1[j + 1] + cs) % md
         dpi = dpi1
+#    for x in dp:
+#        print(*x)
     print((dpi1[-1]))
 
 

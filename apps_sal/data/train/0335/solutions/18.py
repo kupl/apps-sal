@@ -1,6 +1,7 @@
 class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
 
+        # diff: lower length
         dp = {0: 0}
         for r in rods:
             new_dp = dp.copy()

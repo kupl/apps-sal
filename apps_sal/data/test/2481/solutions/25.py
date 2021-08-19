@@ -1,6 +1,7 @@
-import numpy as np
+import numpy as np    # cumsum
 import sys
 sys.setrecursionlimit(10 ** 9)
+# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 def MI(): return list(map(int, input().split()))
@@ -15,12 +16,21 @@ def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
 
 
 INF = float('inf')
+# from math import ceil, floor, log2
+# from collections import deque, defaultdict
+# from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
+# from heapq import heapify, heappop, heappush
+# from bisect import bisect_left, bisect_right
 
 
 def solve():
     H, W = MI()
     dist = LLI(10)
     N = 10
+
+    # dist = [[INF]*10 for _ in range(10)]
+    # for i in range(N):
+    #     dist[i][1] = C[i, 1]
 
     for k in range(N):
         for i in range(N):

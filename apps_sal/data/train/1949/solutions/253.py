@@ -14,6 +14,8 @@ class Solution:
         return grid[i][j] + max_next_sum
 
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+        # DFS, try dfs from every non-zero position
+        # Key: visited matrix WILL NOT work in this question, because CAN NOT guarantee previous path(i, j) NOT overlap with current path
 
         res = 0
         if len(grid) < 1 or len(grid[0]) < 1:

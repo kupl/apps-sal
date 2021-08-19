@@ -7,12 +7,13 @@ class Solution:
         bloomDay_dict = {}
         num = 0
         prev = -1
-        for item in bloomDay_sort:
+        for item in bloomDay_sort:      # 离散
             if item != prev:
                 bloomDay_dict[num] = item
                 num += 1
                 prev = item
 
+        # 二分day
         bloomDay_tmp = [0 for ii in range(len(bloomDay))]
         l, r = 0, num
         while l < r:
@@ -41,4 +42,4 @@ class Solution:
             else:
                 l = mid + 1
 
-        return bloomDay_dict[l]
+        return bloomDay_dict[l]      #

@@ -30,7 +30,9 @@ def ans():
 
             else:
                 continue
+    # print(lis)
     lis.sort(reverse=True)
+    # print(lis)
     d = a + lis
     print("YES")
     for i in d:

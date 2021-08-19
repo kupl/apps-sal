@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 l = []
-l.append(1)
+l.append(1)  # to avoid stack underflow
 for i in range(n):
     if l[-1] == "o":
         if l[-2] == "f" and s[i] == "x":

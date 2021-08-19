@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 x1, y1 = (int(x) for x in input().split())
 x2, y2 = (int(x) for x in input().split())

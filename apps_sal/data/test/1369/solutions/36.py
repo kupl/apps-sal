@@ -5,14 +5,17 @@ for i in range(n):
     XY.append((x, y))
 
 
+# 外積、平行判定
 def cross(a, b):
     return a.real * b.imag - b.real * a.imag
 
 
+# 内積、直行判定
 def dot(a, b):
     return a.real * b.real + a.imag * b.imag
 
 
+# 外心の中心
 def circumcenter(a, b, c):
     bunshi = (a - b) * dot(c, c) + (b - c) * dot(a, a) + (c - a) * dot(b, b)
     bunbo = (a - b) * c.conjugate() + (b - c) * a.conjugate() + (c - a) * b.conjugate()

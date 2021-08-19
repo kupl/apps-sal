@@ -12,4 +12,6 @@ class Solution:
                     adj_idx = mini_idx - 1
                 res += arr[adj_idx] * arr[mini_idx]
             arr.pop(mini_idx)
+            # print(arr)
+            # print(res)
         return res

@@ -19,6 +19,7 @@ class Solution:
             return 0 <= i < len(grid) and 0 <= j < len(grid[i])
 
         def dfs(i, j):
+            # not in bounds
             if not in_bounds(i, j) or (i, j) in visited:
                 return []
 

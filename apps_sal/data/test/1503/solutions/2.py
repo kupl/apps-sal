@@ -17,6 +17,7 @@ while i < n:
     x = A[0][i]
 
     check = 1
+    # print(ANS,i)
     for j in range(i + 1, n + 1):
         for k in range(1, m):
             if LISTS[k][x] + (j - i) < n and j < n and A[k][LISTS[k][x] + (j - i)] == A[0][j]:

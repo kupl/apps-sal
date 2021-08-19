@@ -1,4 +1,5 @@
 a, b = map(int, input().split())
+#lis = list(map(int,input().split()))
 count = 0
 if a > b:
     count += a

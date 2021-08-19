@@ -17,4 +17,5 @@ for i in range(n):
     elif r == "?" and (i + 1) != n:
         a = a - w
         cnt += int(f)
+    # print(a)
 print(cnt)

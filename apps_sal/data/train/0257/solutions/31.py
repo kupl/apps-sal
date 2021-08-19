@@ -12,10 +12,11 @@ class Solution:
 
         while max_heap:
             prob, node = heapq.heappop(max_heap)
-            prob = abs(prob)
+            prob = abs(prob)  # make it positive to avoid confusion
             if node == end:
                 return prob
             for adj, next_prob in graph[node]:
+                # if we are coming from the start node, make sure we don't multiply it by 0
                 next_prob *= prob
                 if dist[adj] < next_prob:
                     dist[adj] = next_prob

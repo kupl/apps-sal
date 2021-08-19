@@ -13,12 +13,14 @@ def solution(tiles):
 
     res = ''
     for i in range(1, 10):
+        #         print(f'try {i}\n=============================')
         winset = []
         if cnts[i] < 4:
             cnts[i] += 1
             if win(cnts, 0, winset):
                 res += str(i)
             cnts[i] -= 1
+#         print(f'res = {res}, winset = {winset}')
 
     return res
 
@@ -39,7 +41,8 @@ def win(cnts, pair, winset):
     }
     tiles = [i for i in cnts.keys() if cnts[i] > 0]
     i = tiles[0]
-    if cnts[i] == 1:
+#     print(i, cnts)
+    if cnts[i] == 1:  # sequence * 1
         for j in seqdic[i]:
             if cnts[j[0]] > 0 and cnts[j[1]] > 0:
                 cnts_c = cnts.copy()
@@ -50,13 +53,15 @@ def win(cnts, pair, winset):
                     winset.append((j[0], j[1], i))
                     return True
         return False
-    if cnts[i] == 2:
+    if cnts[i] == 2:  # pair or sequence * 2
+        # pair
         if not pair:
             cnts_c = cnts.copy()
             cnts_c[i] -= 2
             if win(cnts_c, 1, winset):
                 winset.append((i, i))
                 return True
+        # sequence * 2
         for j in seqdic[i]:
             if cnts[j[0]] > 1 and cnts[j[1]] > 1:
                 cnts_c = cnts.copy()
@@ -67,18 +72,21 @@ def win(cnts, pair, winset):
                     winset += [(j[0], j[1], i)] * 2
                     return True
         return False
-    if cnts[i] == 3:
+    if cnts[i] == 3:  # pair and sequence, triplet, or sequence * 3
+        # pair and sequence
         if not pair:
             cnts_c = cnts.copy()
             cnts_c[i] -= 2
             if win(cnts_c, 1, winset):
                 winset.append((i, i))
                 return True
+        # triplet
         cnts_c = cnts.copy()
         cnts_c[i] -= 3
         if win(cnts_c, pair, winset):
             winset.append((i, i, i))
             return True
+        # sequence * 3
         for j in seqdic[i]:
             if cnts[j[0]] > 2 and cnts[j[1]] > 2:
                 cnts_c = cnts.copy()
@@ -89,18 +97,21 @@ def win(cnts, pair, winset):
                     winset += [(j[0], j[1], i)] * 3
                     return True
         return False
-    if cnts[i] == 4:
+    if cnts[i] == 4:  # pair and sequence * 2, triplet and sequence, or sequence * 4
+        # pair and sequence * 2
         if not pair:
             cnts_c = cnts.copy()
             cnts_c[i] -= 2
             if win(cnts_c, 1, winset):
                 winset.append((i, i))
                 return True
+        # triplet and sequence
         cnts_c = cnts.copy()
         cnts_c[i] -= 3
         if win(cnts_c, pair, winset):
             winset.append((i, i, i))
             return True
+        # sequence * 4
         for j in seqdic[i]:
             if cnts[j[0]] > 3 and cnts[j[1]] > 3:
                 cnts_c = cnts.copy()

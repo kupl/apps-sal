@@ -10,4 +10,5 @@ class Solution:
 
             if len(r) == target:
                 return True
+        # else:
         return False

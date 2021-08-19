@@ -13,15 +13,15 @@ class RollingHash():
         for i in range(l):
             pw[i + 1] = v = v * base % mod
 
-    def get(self, l, r):
+    def get(self, l, r):  # S[l:r]indexでいうl文字目からr-l文字目。r-l文字。
         return (self.h[r] - self.h[l] * self.pw[r - l]) % self.mod
 
     def check(self, d):
         ma = {}
-        for i in range(N - d + 1):
+        for i in range(N - d + 1):  # 0からN-dまで
             p = self.get(i, i + d)
             if p in ma:
-                if i - ma[p] >= d:
+                if i - ma[p] >= d:  # d文字以上離れているか
                     return True
             else:
                 ma[p] = i
@@ -40,7 +40,7 @@ left = 0
 right = N // 2 + 1
 while right - left > 1:
     mid = (left + right) // 2
-    if RH.check(mid):
+    if RH.check(mid):  # こちらがokの方
         left = mid
     else:
         right = mid

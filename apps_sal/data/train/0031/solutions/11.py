@@ -36,4 +36,6 @@ for _ in range(t):
                 ans += 5
             used_hor.add(way)
         pos = next_st
+        # print("used_hor", used_hor)
+        # print("used_ver", used_ver)
     print(ans)

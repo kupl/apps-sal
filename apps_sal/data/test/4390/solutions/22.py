@@ -9,6 +9,10 @@ import timeit
 import random
 import string
 
+#########################
+# imgur.com/Pkt7iIf.png #
+#########################
+
 
 def sieve(n):
     if n < 2:
@@ -72,6 +76,8 @@ def prr(a, sep=' '): print(sep.join(map(str, a)))
 def dd(): return collections.defaultdict(int)
 def ddl(): return collections.defaultdict(list)
 
+
+# input = sys.stdin.readline
 
 for _ in range(ii()):
     a, b = mi()

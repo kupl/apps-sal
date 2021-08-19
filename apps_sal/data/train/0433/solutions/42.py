@@ -1,5 +1,6 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
+        # establish the first sum
         s = 0
         ret = 0
         for i, num in enumerate(arr):

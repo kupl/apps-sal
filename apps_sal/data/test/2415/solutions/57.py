@@ -21,3 +21,18 @@ def check(s):
 
 
 print("YES" if check(input()) else "NO")
+
+
+# __template__
+# # input() reads a whole line
+# def getarr():
+#    return(list(map(int, input().split())))
+
+# def solve():
+#    n = input()
+#    s = input()
+#    print(len(s.replace('UR','D').replace('RU','D')))
+
+# # for tc in range(int(input())): solve()
+
+# solve()

@@ -8,10 +8,12 @@ INF = 10**9
 def main():
     h, n = list(map(int, sys.stdin.readline().split()))
     magic = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+    # print(magic)
     max_a = max(a for a, b in magic)
     dp = [0] * (h + max_a + 1)
     for i in range(1, h + max_a):
         dp[i] = min(dp[i - a] + b for a, b in magic)
+        # print(dp)
     print(dp[h])
 
     return 0

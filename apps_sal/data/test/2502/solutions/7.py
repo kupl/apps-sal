@@ -27,6 +27,7 @@ def main():
     while len(REP_S) < target_len:
         REP_S += S
 
+    # Z-algorithmでREP_S中に含まれるTの場所を調べる
     T_REP_S = T + REP_S
     z = z_alg(T_REP_S)
     location_list = list()
@@ -34,10 +35,12 @@ def main():
         if z[i + len(T)] >= len(T):
             location_list.append(i)
 
+    # Tがなければ0を出力して終了
     if len(location_list) == 0:
         print(0)
         return
 
+    # グラフを作り、最長パスに含まれるノード数が答え（ループがあったら-1）
     node_flag_list = [0] * len(S)
     for n in location_list:
         node_flag_list[n] = 1

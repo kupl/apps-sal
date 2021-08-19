@@ -73,6 +73,7 @@ for k in range(n - 1):
 
 
 graph.sort()
+# print(graph)
 
 ans = 0
 uf = UnionFind(n)

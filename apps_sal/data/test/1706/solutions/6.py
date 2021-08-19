@@ -22,4 +22,5 @@ def solve():
     print('L', 2)
 
 
+# for i in range(mint()):
 solve()

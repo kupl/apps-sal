@@ -22,7 +22,7 @@ for i in range(N - 1):
     a, b, c = MAP()
     tree[a - 1].append([b - 1, c])
     tree[b - 1].append([a - 1, c])
-Q, K = MAP()
+Q, K = MAP()  # 処理
 disli = [0 for i in range(N)]
 finish = set([K - 1])
 bfs(K - 1, 0)

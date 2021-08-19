@@ -1,4 +1,5 @@
 class Solution:
+    #     https://www.youtube.com/watch?v=eKkXU3uu2zk
     def minScoreTriangulation(self, a: List[int]) -> int:
         n = len(a)
         dp = [[(float('inf') if i - j > 2 else 0) for i in range(len(a))]for j in range(len(a))]

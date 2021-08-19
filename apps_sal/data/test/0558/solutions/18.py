@@ -30,7 +30,7 @@ class Combination:
 
     def _get_fi(self):
         ii = 1
-        lii = [0, 1]
+        lii = [0, 1]  # [i^-1 modulo mod for i in 0, ..., n]
         fi = 1
         lfi = [1, 1]
 

@@ -5,6 +5,7 @@ class Solution:
         heap = []
         for a in arr:
             strength = abs(a - med)
+            # print(heap, strength, a)
             if len(heap) == k:
                 heappushpop(heap, (strength, a))
             else:

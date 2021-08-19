@@ -12,12 +12,14 @@ class Solution:
                 length = abs(start[0] - end[0]) + abs(start[1] - end[1])
                 cache.append([length, i, j])
         cache.sort()
+        # print(cache)
 
         res = 0
         t = len(cache)
         count = 0
         group = []
         for i in range(t):
+            # print(group)
 
             curr = cache[i]
             g = len(group)
@@ -28,6 +30,7 @@ class Solution:
                     a = j
                 if curr[2] in group[j]:
                     b = j
+            # print(a,b)
 
             if a == None and b == None:
                 group.append({curr[1], curr[2]})
@@ -44,4 +47,5 @@ class Solution:
             count += 1
             res += curr[0]
             if count == l - 1:
+                # print(group)
                 return res

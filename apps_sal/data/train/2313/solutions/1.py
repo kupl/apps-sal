@@ -31,6 +31,7 @@ for i in range(2, n):
     while (last1 >= 0):
         if (c[last1][0] <= a[i] and c[last1][1] >= a[i]):
             dp[i] = dp[c[last1][2]] + b[c[last1][2]] * a[i]
+            # print(i,dp[i])
             break
         elif c[last1][0] > a[i]:
             last1 -= 1

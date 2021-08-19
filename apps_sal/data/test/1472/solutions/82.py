@@ -13,6 +13,7 @@ def main():
         dp[x] = min(dp[x], dp[y] + 1)
         calcstep(x, dp)
         calcstep(y, dp)
+        #print(i, dp)
         ans += dp
     ans = Counter(ans)
     for i in range(1, n):

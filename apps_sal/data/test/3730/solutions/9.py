@@ -33,6 +33,7 @@ for i in range(len(a) - 1):
         best = max(best, a[i])
     else:
         if a[i + 1] == 1 and end + 1 != len(arr) - 1:
+            # 3 seq joins
             if arr[end] < arr[end + 2] - 1:
                 best = max(best, a[i] + a[i + 2])
 

@@ -1,3 +1,4 @@
+# leetCode 1220. Count Vowels Permutation
 class Solution:
     def countVowelPermutation(self, n):
         last_a, last_e, last_i, last_o, last_u = 1, 1, 1, 1, 1
@@ -9,4 +10,5 @@ class Solution:
             cur_o = (last_i) % mod
             cur_u = (last_i + last_o) % mod
             last_a, last_e, last_i, last_o, last_u = cur_a, cur_e, cur_i, cur_o, cur_u
+        # 注意取整，加在一起可能越界
         return sum([last_a, last_e, last_i, last_o, last_u]) % mod

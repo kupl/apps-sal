@@ -12,6 +12,7 @@ N = int(input())
 
 
 A_n0 = an(9, N)
+#A_n9 = an(9,N)
 A_n0n9 = an(8, N)
 
 

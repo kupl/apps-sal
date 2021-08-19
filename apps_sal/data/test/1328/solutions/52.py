@@ -1,3 +1,5 @@
+# A,Bそれぞれの最大値は40 * 10である
+# dp[i][j] = Aがiグラム、Bがjグラム含まれた薬品の最小コスト
 
 import math
 import sys

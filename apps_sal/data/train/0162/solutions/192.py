@@ -9,6 +9,7 @@ class Solution:
                 return record[i][j]
 
             if s1[i] == s2[j]:
+                #temp = max(1 + f(s1, s2, i+1, j+1), f(s1, s2, i, j+1), f(s1, s2, i+1, j))
                 temp = 1 + f(s1, s2, i + 1, j + 1)
             else:
                 temp = max(f(s1, s2, i, j + 1), f(s1, s2, i + 1, j))

@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 a = [int(X) for X in input().split()]
 a = [0] + a

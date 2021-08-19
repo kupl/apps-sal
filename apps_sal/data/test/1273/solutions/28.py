@@ -20,7 +20,7 @@ def resolve():
         parentC = color[v]
         c = 1
         for to in G[v]:
-            if c == parentC:
+            if c == parentC:  # 親と同じ色だったら次の色を使用
                 c += 1
             color[to] = c
             c += 1

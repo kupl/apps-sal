@@ -1,6 +1,7 @@
 m, n, k, t = list(map(int, input().split()))
 a = [0] + sorted(list(map(int, input().split()))) + [3 * 10**5]
 data = sorted([list(map(int, input().split())) for _ in range(k)])
+# print(data)
 
 ok = m + 1
 ng = 0
@@ -25,9 +26,11 @@ while ok - ng > 1:
     for interval in interval_set:
         time += (interval[1] - interval[0] + 1) * 2
 
+    #print(mid,A, interval_set,time)
     if time <= t:
         ok = mid
     else:
         ng = mid
 
 print(m - ok + 1)
+# print(a[ok])

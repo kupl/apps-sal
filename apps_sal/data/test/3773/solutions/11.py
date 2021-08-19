@@ -1,16 +1,19 @@
 """
-def grundy(a,k): 
+def grundy(a,k): #石 a 個、最大 x//k までとれる
+    #print(a,k)
     if a < k:
         return 0
     if a%k==0:
         return a//k
     q = a//k
+    #v = (a-q*k)//q - (1 if (a-q*k)%q==0 else 0)
     return grundy(a-1-q,k)
 """
 import sys
 
 
-def grundy(a, k):
+def grundy(a, k):  # 石 a 個、最大 x//k までとれる
+    # print(a,k)
     if a < k:
         return 0
     q = a // k
@@ -18,6 +21,7 @@ def grundy(a, k):
     if r == 0:
         return a // k
     v = (a - q * k) // (q + 1) + 1
+    # print(a,k,q,v)
     return grundy(a - (q + 1) * v, k)
 
 
@@ -36,6 +40,9 @@ for k in range(V,V+1):
                 a[i] = j
                 break
     
+    #print(k,a)
+    #for i in range(N//V):
+    #    print(a[i*V:(i+1)*V])
 
     
     b = [grundy(i,k) for i in range(N)]
@@ -43,6 +50,8 @@ for k in range(V,V+1):
     print(b)
     assert a==b
 """
+# coding: utf-8
+# Your code here!
 readline = sys.stdin.readline
 read = sys.stdin.read
 sys.setrecursionlimit(10**8)

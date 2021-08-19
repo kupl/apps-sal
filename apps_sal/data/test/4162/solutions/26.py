@@ -1,21 +1,24 @@
+# 最小公倍数(mathは3.5以降)
+# 参考　https://note.nkmk.me/python-gcd-lcm/
 import sys
 from functools import reduce
-import math
+import math  # (2020-0405  fractions→math)
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return (x * y) // math.gcd(x, y)  # 「//」はフロートにせずにintにする
 
 
-def lcm(*numbers):
+def lcm(*numbers):  # a,b,cなど
     return reduce(lcm_base, numbers, 1)
 
 
-def lcm_list(numbers):
+def lcm_list(numbers):  # リスト
     return reduce(lcm_base, numbers, 1)
 
 
-input = sys.stdin.readline
+# 初期入力
+input = sys.stdin.readline  # 文字列では使わない
 N = int(input())
 a = list(map(int, input().split()))
 

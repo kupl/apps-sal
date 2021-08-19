@@ -1,3 +1,5 @@
+# in the name of god
+# Mr_Rubick
 a, b, c, l = list(map(int, input().split()))
 cnt = (l + 3) * (l + 2) * (l + 1) // 3
 for i in (a, b, c):

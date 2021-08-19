@@ -1,4 +1,5 @@
 def bumps(road):
+    # your code here
     road_list = list(road)
     bump_number = 0
     for segment in road_list:

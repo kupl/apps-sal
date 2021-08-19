@@ -22,6 +22,7 @@ class Solution:
                 return ''
             elif c < 0:
                 return None
+            # print(c)
 
             strs = [getMaxList(str(i), dfs(c - cost[i - 1])) for i in range(1, 10) if cost[i - 1] in costMap]
             if not any(strs):

@@ -24,8 +24,10 @@ class Solution:
         while min_gap <= max_gap:
             cur_gap = (min_gap + max_gap) // 2
             if possible(cur_gap):
+                # print(\"possible\", cur_gap)
                 min_gap = cur_gap + 1
             else:
+                # print(\"impossible\", cur_gap)
                 max_gap = cur_gap - 1
 
         return min_gap - 1

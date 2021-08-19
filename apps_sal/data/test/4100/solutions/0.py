@@ -6,6 +6,7 @@ res = [0] * n
 for i in range(q):
     res[a[i] - 1] += 1
 b = q - k
+# print(res)
 for i in range(n):
     if res[i] > b:
         print("Yes")

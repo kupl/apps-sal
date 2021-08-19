@@ -3,6 +3,7 @@ import math as mt
 import bisect
 input = sys.stdin.readline
 t = int(input())
+# t=1
 
 
 def solve(l3, l4):
@@ -23,6 +24,9 @@ def solve(l3, l4):
 
 for _ in range(t):
     n = int(input())
+    # n,k=map(int,input().split())
+    # x,y,k=map(int,input().split())
+    # n,h=(map(int,input().split()))
     l1 = list(map(int, input().split()))
     l2 = list(map(int, input().split()))
     l1.sort()

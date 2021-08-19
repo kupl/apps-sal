@@ -13,6 +13,7 @@ def main():
             group[a] = []
         group[a].append(i)
     group = list(sorted(list(group.items()), key=lambda t: t[0]))
+    # print(group)
 
     for i in range(len(group) - 1):
         if group[i][0] + 1 == group[i + 1][0]:

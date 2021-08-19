@@ -1,3 +1,8 @@
+# [google ][Jenny_write 20201003 1:32 am ]
+
+# [Jenny_write]1016. Binary String With Substrings Representing 1 To N
+# [Jenny_write]114. Longest Common Prefix
+# [Jenny_write]len(A) - len(set(A)) >= 1
 
 
 class Solution:
@@ -9,6 +14,7 @@ class Solution:
             sources_dict[pos_index] = sources[i]
             targets_dict[pos_index] = targets[i]
 
+        # 此处一定要先建字典，再倒排序
         indexes.sort(reverse=True)
 
         for pos_index in indexes:

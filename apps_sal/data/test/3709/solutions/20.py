@@ -41,6 +41,7 @@ elif k == 4:
     alert = 0
     s = {str(input()) for i in range(n)}
     s = list(s)
+    # print(s)
     if "0 0 0 0" in s:
         alert = 1
     if "1 1 0 0" in s:

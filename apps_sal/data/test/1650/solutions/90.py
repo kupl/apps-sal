@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 import sys
 try:
     from typing import List
 except ImportError:
     pass
 
-MOD = 1000000007
+MOD = 1000000007  # type: int
 
 
 def solve(L: str):
@@ -28,7 +29,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    L = next(tokens)
+    L = next(tokens)  # type: str
     solve(L)
 
 

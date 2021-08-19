@@ -40,8 +40,10 @@ class TweetCounts:
             t0 = t
             t1 = min(t + delta, endTime + 1)
             i0 = self.insertAt(tweetName, t0)
+            # print(t0, t1)
             if i0 == len(self.tweetDict[tweetName]):
                 ans += [0] * (total - n)
+                # ans.append(0)
                 return ans
             i1 = self.insertAt(tweetName, t1)
             if i1 == len(self.tweetDict[tweetName]):
@@ -51,3 +53,9 @@ class TweetCounts:
             n += 1
             ans.append(i1 - i0)
         return ans
+
+
+# Your TweetCounts object will be instantiated and called as such:
+# obj = TweetCounts()
+# obj.recordTweet(tweetName,time)
+# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

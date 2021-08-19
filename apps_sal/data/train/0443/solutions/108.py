@@ -1,3 +1,4 @@
+# Version B:  O(n^2) solution with (primitive) nested loops for building our 4 counting variables.
 class Solution:
     def numTeams(self, A) -> int:
         L = len(A)

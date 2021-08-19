@@ -42,6 +42,7 @@ else:
                     dp1[i] %= M
                 ans = dp0[n - 3] + dp1[n - 3]
                 ans %= M
+#                 print(dp0, dp1)
                 return ans
             ans = sub(n) % M
 print(ans % M)

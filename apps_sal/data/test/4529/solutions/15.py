@@ -28,6 +28,7 @@ for i in range(int(input())):
                 m1 = d[(x, y)][-2]
         except:
             d[(x, y)] = [c]
+    # print(d)
     if(m1 != -1):
         print(str(m1 + 1) + " " + str(m2))
     else:

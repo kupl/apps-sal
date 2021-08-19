@@ -69,12 +69,14 @@ def main():
     preCompute()
 
     for test in range(testcases):
+        # io.write("Case #%d: "%(test+1),end="")
         s = io.String()
         n = len(s)
         ans = 0
         for i in range(n // 2):
             ans += abs(ord(s[i]) - ord(s[n - i - 1]))
         io.write(ans)
+        # solve()
 
 
 class IO:

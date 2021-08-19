@@ -4,7 +4,7 @@ for _ in range(t):
     s = input()
     ans = [0] * n
     max_elem = 0
-    want_indices = [[], []]
+    want_indices = [[], []]  # want_indices[0] means the index wants 0
     for i, d in enumerate(map(int, s)):
         if not want_indices[d]:
             max_elem += 1

@@ -1,4 +1,5 @@
 def bumps(road):
+    # your code here
     bumps = 0
     for i in road:
         if i == '_':

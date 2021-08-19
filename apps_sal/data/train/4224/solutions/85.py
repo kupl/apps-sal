@@ -7,4 +7,4 @@ def dont_give_me_five(start, end):
         else:
             numbers.append(i)
 
-    return len(numbers)
+    return len(numbers)  # amount of numbers

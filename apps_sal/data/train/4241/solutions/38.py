@@ -9,3 +9,4 @@ def sequence_sum(begin_number, end_number, step):
             res += var
             var += step
         return res
+    # your code here

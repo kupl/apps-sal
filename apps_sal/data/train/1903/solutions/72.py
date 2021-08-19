@@ -25,6 +25,7 @@ class UnionFind:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # build graph by using edge list (x, y, weight)
         n = len(points)
 
         edge_list = []
@@ -33,6 +34,7 @@ class Solution:
                 if i != j:
                     edge_list.append([i, j, self.dist(points[i], points[j])])
 
+        # find the final result: each time select the edge with minimun weight, and vertices come from different component, merge the component, add the cost
         uf = UnionFind(n)
         cost = 0
         edge_list.sort(key=lambda x: x[2])

@@ -10,13 +10,18 @@ for i in range(n):
     ni = int(s[i])
 
     for k in range(4):
+        # smaller 1 -> 全部OK
         dp[i + 1][1][k + 1] += dp[i][1][k] * 9
         dp[i + 1][1][k] += dp[i][1][k]
 
+        # smaller 0,next smaller 1 -> nowより小さいのを全部
+        # 次の桁からsmallerであるためにはN＜ni であることが必要で
+        # Nは0より大きい必要がある。（0より小さいものがない＝確定しない
         if (ni > 0):
             dp[i + 1][1][k + 1] += dp[i][0][k] * (ni - 1)
             dp[i + 1][1][k] += dp[i][0][k]
 
+        # smaller 0,next smaller 0 -> nowだけ
         if (ni > 0):
             dp[i + 1][0][k + 1] = dp[i][0][k]
         else:

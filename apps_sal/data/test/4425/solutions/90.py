@@ -1,3 +1,4 @@
+# 21 C - Dice and Coin
 import math
 N, K = map(int, input().split())
 

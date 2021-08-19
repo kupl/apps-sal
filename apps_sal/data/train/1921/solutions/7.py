@@ -6,6 +6,7 @@ class DinnerPlates:
         self.capacity = capacity
 
     def push(self, val: int) -> None:
+        # find the first available one
         while self.availIndexes and self.availIndexes[0] < len(self.stacks) and len(self.stacks[self.availIndexes[0]]) == self.capacity:
             heappop(self.availIndexes)
         if not self.availIndexes:
@@ -25,3 +26,10 @@ class DinnerPlates:
             heapq.heappush(self.availIndexes, index)
             return self.stacks[index].pop()
         return -1
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

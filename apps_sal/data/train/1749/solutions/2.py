@@ -16,7 +16,7 @@ def get_factors(n):
 
 def trailing_zeros(num, base):
     factors = get_factors(base)
-    zeros = 1 << 10000
+    zeros = 1 << 10000  # infinity
     for f, p in factors:
         cnt = 0
         k = f

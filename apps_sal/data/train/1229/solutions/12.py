@@ -21,6 +21,8 @@ for x in range(t):
             break
         tarr[i], marr[i] = marr[i], tarr[i]
 
+    #print(tarr, marr)
+
     t = sum(tarr)
     m = sum(marr)
 

@@ -20,7 +20,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         node = self.trie
-        for c in self.stream:
+        for c in self.stream:  # we treat the stream like a stack, as we start reading it from the last insertion point.
             if not c in node.children:
                 return False
             node = node.children[c]
@@ -28,7 +28,7 @@ class StreamChecker:
                 return True
         return False
 
-
+    # solution 2 a bit different trie implementation
 '''
 class StreamChecker:
     def __init__(self, words: List[str]):
@@ -51,5 +51,10 @@ class StreamChecker:
             if not c in  node:
                 return False
             node=node[c]
+        #print('$' in node)
         return '$' in node
 '''
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

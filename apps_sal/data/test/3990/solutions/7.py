@@ -11,12 +11,15 @@ def bfs(src, lvl, flag):
     while True:
         for i in range(1, n + 1):
             if dp[src][i] == flag:
+                #print (i, i)
                 if level[i] == -1:
+                    #	print (i, i)
                     stack.append(i)
                     level[i] = level[src] + 1
         if len(stack) <= p + 1:
             break
         p += 1
+        #print (stack)
         src = stack[p]
         if src == n:
             return level[src]

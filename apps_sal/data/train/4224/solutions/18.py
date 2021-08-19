@@ -5,4 +5,4 @@ def dont_give_me_five(start, end):
         if '5' in str(i):
             continue
         n += 1
-    return n
+    return n   # amount of numbers

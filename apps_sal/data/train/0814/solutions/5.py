@@ -14,6 +14,7 @@ while test_case > 0:
                 flag = False
                 times += 1
         else:
+            # c = max(c,temp)
             c.append(temp)
             temp = 0
             flag = True

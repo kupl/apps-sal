@@ -25,6 +25,7 @@ class Solution:
 
         job_list.append((0, 0, k, 0))
         visited_set = set()
+        # print(graph)
         while len(job_list) > 0:
             cur = job_list.popleft()
             if cur[0] == m - 1 and cur[1] == n - 1:

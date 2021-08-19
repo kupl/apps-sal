@@ -1,3 +1,5 @@
+# import sys; input = sys.stdin.buffer.readline
+# sys.setrecursionlimit(10**7)
 from collections import defaultdict
 mod = 10 ** 9 + 7
 INF = float("inf")
@@ -34,6 +36,7 @@ def main():
         elif x < 0 and y >= 0:
             m = min(-x, y)
             ans = D[3] * m + D[4] * (-x - m) + D[2] * (y - m)
+     # x, y < 0
         else:
             m = min(-x, -y)
             ans = D[5] * m + D[4] * (-x - m) + D[6] * (-y - m)

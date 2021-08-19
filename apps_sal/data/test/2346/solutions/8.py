@@ -36,8 +36,12 @@ for i in range(1, n + 1):
 
 
 for vertex, pair in enumerate(parentlist):
+    # print(vertex,pair)
+    # print(childlist)
     parent = pair[0]
+    # print(parent)
     if not parent == -1:
+        # print(childlist[parent])
         (childlist[parent]).append((vertex + 1, pair[1]))
 
 blist = []

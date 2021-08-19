@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 '''
 Author:    krishna
 Created:   Fri Jan 19 20:39:10 2018 IST
@@ -30,6 +31,7 @@ def main():
     for i in x:
         if (int(i)):
             ans[val] = 1
+            # print(val)
             cnt += 1
 
         val -= 1
@@ -39,6 +41,9 @@ def main():
         ans[idx - 1] += 2
         if (ans[idx] == 0):
             idx -= 1
+
+    # print(ans[18])
+    # return
 
     maxIdx = idx - 1
     minIdx = idx - 1
@@ -52,11 +57,13 @@ def main():
         minIdx -= 1
 
     minIdx = nonZeroIdx
+    # print(ans[0:10])
+    # print(maxIdx, minIdx)
 
     while (1):
         if (
-            (ans[maxIdx] > 2)
-            or ((ans[maxIdx] == 2 ) and (maxIdx != minIdx))
+            (ans[maxIdx] > 2) or
+            ((ans[maxIdx] == 2 ) and (maxIdx != minIdx))
         ):
             ans[minIdx] -= 1
             ans[minIdx - 1] += 2
@@ -78,6 +85,9 @@ def main():
         if (idx < 0) and (ans[idx] == 0):
             break
 
+    # print([(i, ans[i]) for i in range(len(ans)) if ans[i] < 0])
+    # print(sum(ans))
+    # print(len(x))
     print(" ".join(map(str, x)))
 
 

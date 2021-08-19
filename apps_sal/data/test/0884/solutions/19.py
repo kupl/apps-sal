@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -30,3 +31,35 @@ def ct(a, b):
 L = 998244353
 
 print(ct(a, b) * ct(a, c) * ct(b, c) % L)
+
+# print(time.time()-t0)
+
+# p = [[0 for _ in range(MAXN)] for _ in range(MAXN)]
+# for i in range(1, MAXN):
+#     p[i][0] = 1
+#     for j in range(1, i+1):
+#         p[i][j] = (p[i-1][j-1]+p[i-1][j]) % MOD
+# print(time.time() - t0)
+# pre = [0] * MAXN
+# pre[0] = 1
+# for i in range(1, MAXN):
+#     pre[i] = (i*pre[i-1]) % MOD
+#
+#
+# def solve(x, y):
+#     ans = 0
+#     for k in range(min(x, y)+1):
+#         d = pre[k]
+#         d = (d*p[x][k]) % MOD
+#         d = (d*p[y][k]) % MOD
+#         ans = (ans+d) % MOD
+#
+#     return ans
+#
+# ans = 1
+# ans = (ans * solve(a, b)) % MOD
+# ans = (ans * solve(b, c)) % MOD
+# ans = (ans * solve(a, c)) % MOD
+# print(ans)
+#
+# print(time.time() - t0)

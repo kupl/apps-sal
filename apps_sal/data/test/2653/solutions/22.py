@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**6)  # 各頂点ごとに所属する木の大きさを計算する
 N, Q = list(map(int, input().split()))
 
 E = [[] for _ in range(N + 1)]

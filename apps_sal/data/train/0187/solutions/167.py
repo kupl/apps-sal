@@ -12,6 +12,7 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit
                 res = rotations
+            #print(f'p: {profit}, mprofit: {max_profit}, rotations:{rotations}')
             return
 
         for i in range(len(customers) - 1):

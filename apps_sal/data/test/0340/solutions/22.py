@@ -13,6 +13,8 @@ for i in range(3, nn + 1, 2):
         nn //= i
 if nn > 1:
     fac[nn] = 1
+# print(nn)
+# print(fac)
 
 maxe = 1
 mine = n

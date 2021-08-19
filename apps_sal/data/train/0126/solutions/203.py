@@ -13,6 +13,7 @@ class Solution:
             window_tracker[curr] += 1
             curr_sum += 1
 
+            # while i < j and (len(window_tracker.keys()) > maxLetters and curr_sum > minSize):
             while i < j and curr_sum > minSize:
                 curr_i = s[i]
                 curr_sum -= 1

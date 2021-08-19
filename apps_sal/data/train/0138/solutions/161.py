@@ -34,5 +34,6 @@ class Solution:
                     end_neg = idx
                     if start_neg < 0:
                         start_neg = idx
+          #  print(start_idx,end_idx,acc_product,start_neg,end_neg)
 
         return ans

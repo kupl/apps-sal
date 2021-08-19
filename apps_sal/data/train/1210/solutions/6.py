@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 
 for i in range(t):
@@ -25,18 +26,24 @@ for i in range(t):
         if((n - 1) % 2 == 0):
             if(index % 2 == 0):
                 language_is = language
+                # print('1')
             else:
                 if(language == 'H'):
                     language_is = 'E'
+                    # print('0')
                 else:
                     language_is = 'H'
+                    # print('0')
 
         else:
             if(index % 2 != 0):
                 language_is = language
+                # print('1')
             else:
                 if(language == 'H'):
                     language_is = 'E'
+                    # print('0')
                 else:
                     language_is = 'H'
+                    # print('0')
     print(str(number_is) + ' ' + str(language_is))

@@ -3,6 +3,7 @@ from math import gcd
 n = int(input())
 a = list(map(int, input().split()))
 
+# 解説AC(a*loga)
 ans = 0
 cnt = [0] * (max(a) + 1)
 for ai in a:

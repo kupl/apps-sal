@@ -1,3 +1,4 @@
+# particiok szama
 def makec():
     dp = [[-1] * 801 for _ in range(801)]
     for n in range(801):

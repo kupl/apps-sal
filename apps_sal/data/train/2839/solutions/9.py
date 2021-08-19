@@ -1,4 +1,5 @@
 def count_adjacent_pairs(st):
+    # print(st)
     st = st.lower().split()
     cnt = 0
     on = False

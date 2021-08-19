@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import copy
 N = int(input())
 A_list = []

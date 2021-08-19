@@ -17,10 +17,12 @@ for i in range(n):
     elif arr[i] < 0:
         neg.append([i, -arr[i]])
 
+# print(pos,neg)
 ans = []
 j = 0
 for i in range(len(neg)):
     while neg[i][1] > 0:
+        # print(j)
         if pos[j][1] >= neg[i][1]:
             ans.append([neg[i][0] + 1, pos[j][0] + 1, neg[i][1]])
             pos[j][1] -= neg[i][1]

@@ -1,7 +1,7 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         maxL = 0
-        l, r = 0, 0
+        l, r = 0, 0  # 0, 4
         if len(set(tree)) < 3:
             return len(tree)
 

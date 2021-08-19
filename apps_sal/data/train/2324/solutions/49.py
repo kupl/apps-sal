@@ -1,3 +1,5 @@
+# 分岐は後で処理すれば良い
+# それぞれ0,nに近づくのが最適
 from heapq import heappush, heappop
 inf = 10**10
 n = int(input())

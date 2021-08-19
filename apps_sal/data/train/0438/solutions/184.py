@@ -66,6 +66,7 @@ class Solution:
                 e_d[i] = l
 
                 lengths[1] += 1
+            # print(i,s_d,lengths)
             if m in lengths:
                 latest = step
             step += 1

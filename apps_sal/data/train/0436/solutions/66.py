@@ -9,6 +9,7 @@ class Solution:
             seen = set([])
             while q:
                 left, days = q.pop()
+                # print(left ,days)
 
                 if left == 0:
                     return days

@@ -7,6 +7,8 @@ for i in range(q):
     else:
         count_dict[seikaisha] = 0
 count_dict_sorted = sorted(count_dict.items(), key=lambda x: x[0])
+# print(type(count_dict_sorted))
+# print(count_dict_sorted)
 for i, j in count_dict_sorted:
     if k + j - q > 0:
         print('Yes')

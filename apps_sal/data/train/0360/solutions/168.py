@@ -3,6 +3,7 @@ class Solution:
         def check(cap):
             cnt, load = 0, 0
             for x in weights:
+                # cap is too small to load even one package
                 if x > cap:
                     return False
                 if load + x < cap:

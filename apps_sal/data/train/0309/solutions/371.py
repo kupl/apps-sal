@@ -11,6 +11,12 @@ class Solution:
             for j in range(i):
                 delta = A[i] - A[j]
                 k = delta + M
+            #    print(k,M)
                 dp[i][k] = dp[j][k] + 1
                 m = max(m, dp[i][k])
+  #      m=0
+  #      for i in range(2*M):
+  #          for j in range(len(A)):
+  #              m=max(dp[j][i],m)
+  #    #  print(dp)
         return m

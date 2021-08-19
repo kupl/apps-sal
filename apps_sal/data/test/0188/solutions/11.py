@@ -11,6 +11,7 @@ for i in range(K):
     N[4] -= r4
 
 a.sort(reverse=True)
+# print(a,N)
 for i in range(K):
     if a[i] == 0:
         continue
@@ -19,18 +20,23 @@ for i in range(K):
     N[2] -= r2
 
 a.sort(reverse=True)
+# print(a,N)
 for i in range(K):
+    # print("a",a,N,a[i])
     if a[i] == 0:
         continue
     if a[i] >= 4:
         works = False
         break
+    # print("x")
     if a[i] == 3:
+        #print(" ai is 3")
         x = min(N[4], 1)
         a[i] -= 3 * x
         N[4] -= x
 
     elif a[i] == 2:
+        #print( "ai is 2")
         x = min(N[2], a[i] // 2)
         a[i] -= 2 * x
         N[2] -= x
@@ -45,6 +51,7 @@ for i in range(K):
         N[1] -= x
 
     elif a[i] == 1:
+        #print(" ai is 1")
         N[1] += N[2]
         N[1] += 2 * N[4]
         N[4] = 0
@@ -55,6 +62,7 @@ for i in range(K):
         N[1] -= x
 
     if a[i] != 0:
+        # print(a[i])
         works = False
         break
 

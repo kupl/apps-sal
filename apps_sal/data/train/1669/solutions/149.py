@@ -18,4 +18,6 @@ class Solution:
                 for d in dump:
                     heapq.heappush(pq, d)
 
+        # print(\"hel\")
+        # print(straights)
         return len(straights) > 0

@@ -6,5 +6,6 @@ for i in range(N - 1):
     num = num * fac[i]
 
     fac = [x // fac[i] if x % fac[i] == 0 else x for x in fac]
+    # print(fac)
 
 print((num + 1))

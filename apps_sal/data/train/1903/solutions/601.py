@@ -1,6 +1,7 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
+        # minimal spam tree
         length = len(points)
         if length < 2:
             return 0

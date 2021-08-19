@@ -1,3 +1,4 @@
+# 20-08-12再トライ
 import sys
 input = sys.stdin.readline
 
@@ -6,7 +7,7 @@ class UnionFind():
     def __init__(self, n):
         self.rank = [0] * n
         self.par = list(range(n))
-        self._size = [1] * n
+        self._size = [1] * n  # 木の根のみ有効、集合に属する要素数
 
     def find(self, x):
         ch = []

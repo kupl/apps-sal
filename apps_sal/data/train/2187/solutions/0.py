@@ -10,6 +10,9 @@ from itertools import compress
 
 
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -25,21 +28,37 @@ def write(s="\n"):
     s = str(s)
     print(s, end="")
 
+# SOLUTION
+
+
+# croft algorithm to generate primes
+# from pyprimes library, not built-in, just google it
+
 
 def croft():
     """Yield prime integers using the Croft Spiral sieve.
 
     This is a variant of wheel factorisation modulo 30.
     """
+    # Implementation is based on erat3 from here:
+    #   http://stackoverflow.com/q/2211990
+    # and this website:
+    #   http://www.primesdemystified.com/
+    # Memory usage increases roughly linearly with the number of primes seen.
+    # dict ``roots`` stores an entry x:p for every prime p.
     for p in (2, 3, 5):
         yield p
-    roots = {9: 3, 25: 5}
+    roots = {9: 3, 25: 5}  # Map d**2 -> d.
     primeroots = frozenset((1, 7, 11, 13, 17, 19, 23, 29))
     selectors = (1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0)
     for q in compress(
+            # Iterate over prime candidates 7, 9, 11, 13, ...
             itertools.islice(itertools.count(7), 0, None, 2),
+            # Mask out those that can't possibly be prime.
             itertools.cycle(selectors)
     ):
+        # Using dict membership testing instead of pop gives a
+        # 5-10% speedup over the first three million primes.
         if q in roots:
             p = roots[q]
             del roots[q]

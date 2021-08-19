@@ -26,7 +26,7 @@ def part_count(S):
       R[j] += B2[i] * R1[(-i + j)%MOD]
       C[j] += R1[i] * L2[(-i + j)%MOD]
   
-  return (B, L, R, C) 
+  return (B, L, R, C) #両側隣接、左隣接、右隣接、隣接なしの個数
 """
 
 S = list(input())
@@ -42,16 +42,20 @@ for i in range(N):
     a *= 10
     a %= MOD
 
+#B, L, R, C = part_count(S)
+#print(B[0] + L[0] + R[0] + C[0])
 T = [0 for _ in range(N + 1)]
 for i in range(1, N + 1):
     T[i] += S[i - 1] + T[i - 1]
     T[i] %= MOD
 
+# print(T)
 
 C = [0 for i in range(MOD)]
 for i in range(N + 1):
     C[T[i]] += 1
 
+# print(C)
 
 ans = 0
 for i in range(MOD):

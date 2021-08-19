@@ -1,3 +1,4 @@
+# F - LIS on Tree
 import bisect
 import sys
 sys.setrecursionlimit(10**7)
@@ -19,13 +20,16 @@ def dfs(now, par):
     idx = bisect.bisect_left(dp, a[now])
     tmp = dp[idx]
     dp[idx] = a[now]
+    # 親のLIS以上であれば、その値で更新
     if ans[par] <= idx:
         ans[now] = idx
+    # そうでなければ親のLISを引き継ぐ
     else:
         ans[now] = ans[par]
 
     for i in g[now]:
         if i != par:
+            # 次にみる頂点と、自分（親）の情報を渡す
             dfs(i, now)
     dp[idx] = tmp
 

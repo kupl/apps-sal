@@ -7,7 +7,7 @@ def main():
     H, W = map(int, input().split())
     A = []
     for _ in range(H):
-        S = [0 if c == '
+        S = [0 if c == '#' else 1 for c in input().strip()]
         A.append(S)
 
     A = np.array(A)

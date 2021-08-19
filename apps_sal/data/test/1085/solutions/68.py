@@ -7,6 +7,7 @@ import math
 from copy import deepcopy
 import queue
 import numpy as np
+# sympy as syp(素因数分解とか)
 Mod = 1000000007
 
 
@@ -53,7 +54,7 @@ class UnionFind:
         return self.findroot(x) == self.findroot(y)
 
 
-def main():
+def main():  # startline-------------------------------------------
     def divisor(n):
         res = []
         for i in range(1, int(np.sqrt(n)) + 1):
@@ -81,7 +82,7 @@ def main():
 
 
 def __starting_point():
-    main()
+    main()  # endline===============================================
 
 
 __starting_point()

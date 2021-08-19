@@ -9,10 +9,12 @@ class Solution:
         res = set()
         store = defaultdict(deque)
         for time, name in sorted(zip(keyTime, keyName)):
+            # print(name, time)
             while store[name] and get_diff_minutes(store[name][0], time) > 60:
                 store[name].popleft()
             store[name].append(time)
             if len(store[name]) >= 3:
                 res.add(name)
 
+        # print(res)
         return sorted(res)

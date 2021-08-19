@@ -10,9 +10,11 @@ for II_II in range(eval(input())):
             CharacterArray.append(str(cof * exp) + "x^" + str(exp - 1))
         if (exp == 1):
             IntegerArray.append((cof * exp))
+    # print IntegerArray
     k = sum(IntegerArray)
     if k > 0:
         CharacterArray.append(str(k))
+    # print CharacterArray
     str1 = ' + '.join(str(e) for e in CharacterArray)
     if len(str1) >= 1:
         print(str1)

@@ -35,4 +35,5 @@ class Solution:
                 ans.add(dic[v][0])
             if ans:
                 ret = i + 1
+            # print(dic, ans)
         return ret

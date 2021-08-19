@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, b = list(map(int, input().split()))
     ans = n - n // b

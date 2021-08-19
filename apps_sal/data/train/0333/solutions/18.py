@@ -7,7 +7,8 @@ class Solution:
             link[x].append(i)
         lvl = 0
         num_met, pos_met = set(), set()
-        queue = collections.deque([0])
+        # dp = [-1]*len(arr)
+        queue = collections.deque([0])  # put index
         while queue:
             L = len(queue)
             for i in range(L):
@@ -17,7 +18,7 @@ class Solution:
                 num = arr[x]
                 pos_met.add(x)
 
-                for k in [x - 1, x + 1] + link[num] * (num not in num_met):
+                for k in [x - 1, x + 1] + link[num] * (num not in num_met):  # 取交集
                     if k in pos_met or not 0 <= k < len(arr):
                         continue
                     queue.append(k)

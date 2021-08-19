@@ -1,6 +1,8 @@
+#! /usr/bin/python3
 
 n = int(input())
 a = list(map(int, input().split()))
+#a = tuple(map(int, input().split()))
 u = {}
 v = {}
 w = []

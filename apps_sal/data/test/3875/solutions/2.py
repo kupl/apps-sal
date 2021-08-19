@@ -1,7 +1,7 @@
 from itertools import permutations
 from bisect import bisect_left
 SIZE = 10
-MOD = 10**9 + 7
+MOD = 10**9 + 7  # 998244353 #ここを変更する
 inv = [0] * SIZE
 inv[1] = 1
 for i in range(2, SIZE):

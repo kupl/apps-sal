@@ -22,6 +22,8 @@ class Solution:
         min_length = n + 1
         while i < n + 1:
 
+            # print(deque)
+
             while len(deque) > 0 and s[deque[-1]] >= s[i]:
 
                 deque.pop()

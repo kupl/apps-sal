@@ -8,7 +8,7 @@ class Solution:
         l = len(s)
         if l != len(t):
             return False
-        d = {}
+        d = {}  # mapping
         for i, letter in enumerate(s):
             if letter not in d.keys():
                 d[letter] = t[i]
@@ -16,7 +16,7 @@ class Solution:
                 if d[letter] != t[i]:
                     return False
 
-        d2 = {}
+        d2 = {}  # mapping
         for i, letter in enumerate(t):
             if letter not in d2.keys():
                 d2[letter] = s[i]

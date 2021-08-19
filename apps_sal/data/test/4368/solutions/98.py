@@ -1,5 +1,9 @@
 n, k = map(int, input().split())
 
+# kのべき乗でnを超える最大の冪数を求める
+# 最大の冪数から順にとり尽くしていく
+# 再帰で書ける？
+
 
 def max_beki(number, k):
     beki = 0

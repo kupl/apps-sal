@@ -2,6 +2,7 @@ class Union_Find:
     def __init__(self, n):
         self.father = {i: i for i in range(n)}
         self.count = n
+        # 可以查看 某一个node 有几个联通
         self.rank = [1] * n
 
     def find(self, x):
@@ -21,6 +22,7 @@ class Union_Find:
         father_x, father_y = self.find(x), self.find(y)
         if father_x != father_y:
             self.union(father_x, father_y)
+            # 表示，如果本来不是联通 return true
             return True
         return False
 

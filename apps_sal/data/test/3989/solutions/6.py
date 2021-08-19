@@ -1,3 +1,4 @@
+# Made By Mostafa_Khaled
 bot = True
 a = input()
 
@@ -26,3 +27,5 @@ for i in range(1, 10):
 modCnt = (10000 * modCnt) % 7
 
 print(str(mod[7 - modCnt]) + '0' * cnt[0])
+
+# Made By Mostafa_Khaled

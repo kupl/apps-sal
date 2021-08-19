@@ -9,6 +9,7 @@ class Solution:
             this_res = min([res.get(y, 2**31) for y in prevs]) + 1
 
             res[x] = this_res
+        # print(res)
         if res[amount] >= 2**31:
             return -1
         else:

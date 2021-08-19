@@ -10,3 +10,4 @@ class Solution:
                         dp[i + 1][k + j] += dp[i][k]
                         dp[i + 1][k + j] %= mod
         return dp[-1][-1]
+# Sanyam Rajpal

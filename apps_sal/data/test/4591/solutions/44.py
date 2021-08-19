@@ -1,4 +1,5 @@
 3
+#coding: utf-8
 
 A, B, C, X, Y = (int(x) for x in input().split())
 

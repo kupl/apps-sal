@@ -1,5 +1,6 @@
 import math
 t = int(input())
+# print(math.factorial(5))
 for i in range(t):
     s = input()
     l = list(s)

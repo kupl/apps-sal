@@ -1,3 +1,4 @@
+# cook your dish here
 from math import log
 t = int(input())
 for _ in range(t):

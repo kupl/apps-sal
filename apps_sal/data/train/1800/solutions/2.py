@@ -1,5 +1,7 @@
 from itertools import islice, count
 
+# Python cookbook
+
 
 def eratosthenes():
     D = {}

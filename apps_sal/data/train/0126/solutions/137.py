@@ -2,6 +2,7 @@ class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         wordCounter = collections.defaultdict()
 
+        # loop (maxSize - minSize)+1 times
         for i in range((maxSize - minSize) + 1):
             charCounter = collections.Counter(s[:minSize + i])
             if len(charCounter) <= maxLetters:

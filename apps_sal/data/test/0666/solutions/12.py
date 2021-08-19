@@ -13,7 +13,9 @@ l = int(0)
 r = int(1000 * 1000 * 1000)
 while (l <= r):
     mid = int((l + r) / 2)
+    #print('mid = ', mid)
     sum = sm(mid)
+    #print('sum = ', sum)
     if sm(mid) < n:
         st = sum
         l = mid + 1

@@ -29,3 +29,7 @@ class Solution:
             total += l * r * v
 
         return total % mod
+
+        # # [2,3,1,2,4,6]
+        # # 21 subarrays
+        #      2 1 1 1 1

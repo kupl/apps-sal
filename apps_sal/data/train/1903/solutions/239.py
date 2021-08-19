@@ -6,6 +6,7 @@ class Solution:
         for i in range(len(points)):
             for j in range(len(points)):
                 distance[i][j] = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                #distance[j][i] = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
 
         cost = 0
         visited[0] = True
@@ -28,3 +29,4 @@ class Solution:
                 if not visited[i]:
                     close[i] = min(close[i], distance[v][i])
         return cost
+        # return res

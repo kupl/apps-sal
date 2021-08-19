@@ -18,6 +18,7 @@ class Solution:
         i = 0
         a = length - 1
         while count < k and i != a:
+            # print(count,k)
             if strength[a] > strength[i]:
                 ans.append(arr[a])
                 a -= 1

@@ -7,6 +7,7 @@ def __starting_point():
 
     a.sort()
     b.sort()
+    # print("b:", b)
 
     mindiff = float("inf")
 
@@ -14,6 +15,7 @@ def __starting_point():
         diff = (b[-1] - num) % m
         _a = [(i + diff) % m for i in a]
         _a.sort()
+        # print("_a:", _a)
         if _a == b:
             mindiff = min(mindiff, diff)
 

@@ -12,6 +12,7 @@ class Solution:
         for i in range(len(l1)):
             curr = l2[i]
             curr = curr.split(':')
+            # print(curr)
             curr = int(''.join(curr))
 
             d[l1[i]].append(curr)

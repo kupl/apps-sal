@@ -9,6 +9,7 @@ class Solution:
             ans = float('-inf')
             count = 0
             res = 0
+            # move from the right pointer
             while end < len(A):
 
                 char = A[end]

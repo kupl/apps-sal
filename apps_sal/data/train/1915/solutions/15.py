@@ -8,6 +8,9 @@ class Solution:
             doReplace = False
             for i in range(len(target) - len(stamp) + 1):
                 if not visited[i] and self.canReplace(stamp, target, i):
+                    # if target[i:i+len(stamp)]==['*']*len(stamp):
+                    #    visited[i] = True
+                    #    continue
                     star += self.doReplace(stamp, target, i)
                     doReplace = True
                     visited[i] = True

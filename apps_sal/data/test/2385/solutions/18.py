@@ -56,6 +56,7 @@ while stack:
 size = [1] * N
 dp = [1] * N
 
+# print (order)
 for c, p in order[::-1]:
     if c == 0:
         break
@@ -65,8 +66,10 @@ for c, p in order[::-1]:
     dp[c] = (dp[c] * C.factorial(size[c] - 1)) % MOD
     if c == 0:
         break
+    # dp[c] = (dp[c] * C.factorial(size[c] - 1)) % MOD
     dp[p] = (dp[p] * dp[c] % MOD) * C.ifactorial(size[c]) % MOD
 
+# print (dp)
 dp2 = [0] * N
 dp2[0] = dp[0]
 

@@ -14,6 +14,7 @@ for dude in range(n):
     base += s * a
     tSlices += s
     ppl.append([b - a, s])
+# print(base)
 
 if tSlices % S != 0:
     ppl.append([0, S - (tSlices % S)])

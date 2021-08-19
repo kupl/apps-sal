@@ -3,4 +3,4 @@ def read(): return list(map(int, stdin.readline().split()))
 
 
 n, k = read()
-print("NO" if '
+print("NO" if '#' * k in stdin.readline() else "YES")

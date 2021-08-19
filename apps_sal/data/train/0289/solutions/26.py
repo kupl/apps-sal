@@ -4,6 +4,15 @@ class Solution:
 
         def getmaxfrom(i, x):
             return max(acc[j + x] - acc[j] for j in range(i, len(acc) - x))
+            # s = 0
+            # res = 0
+            # for j in range(i, len(A)):
+            #     s+=A[j]
+            #     if j-i==x:
+            #         s-=A[i]
+            #         i+=1
+            #     res = max(res, s)
+            # return res
 
         ans = 0
         s = 0

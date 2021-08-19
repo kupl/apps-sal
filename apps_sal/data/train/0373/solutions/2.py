@@ -25,6 +25,10 @@ class Solution:
         if k == 0:
             return 0
 
+        # For N days, there will be at most N/2 transactions (N/2 buys and N/2 sells)
+        # One buy + One sell = One transaction
+        # When k is big enough to allow us buy/sell as many as we want, this becomes type-II
+        # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
         if 2 * k > (prices_length + 1):
             profit = 0
             max_price = prices[0]
@@ -41,6 +45,7 @@ class Solution:
 
             return profit
 
+        # Generic solution
         candidate_max = float('-inf')
         profit = [0] * prices_length
         for trans in range(1, k + 1):
@@ -49,15 +54,17 @@ class Solution:
             max_profit = 0
             for d in range(1, prices_length):
                 if 2 * trans > d + 1:
-                    continue
+                    continue  # For a given day, there are too many transaction allowed, no need to compute
 
                 cache = -prices[d - 1] + profit[d - 1] if -prices[d - 1] + profit[d - 1] > cache else cache
                 new_profit = prices[d] + cache
 
+                # profit[d-1] has been used (the above line), now update it before 'max_profit' gets updated
                 profit[d - 1] = max_profit
 
                 max_profit = max_profit if max_profit > new_profit else new_profit
 
+            # When loop ends, do one last update
             profit[-1] = max_profit
             candidate_max = profit[-1] if profit[-1] > candidate_max else candidate_max
 

@@ -6,6 +6,8 @@ for i in range(n - 1):
     tree[par].append(i + 1)
     parents.append(par)
 flag = True
+# print(parents)
+# print(tree)
 for i in parents:
     count = 0
 

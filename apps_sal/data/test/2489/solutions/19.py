@@ -1,8 +1,10 @@
+# D - Not Divisible
 import collections
 N = int(input())
 a = list(map(int, input().split()))
 a = sorted(a, reverse=False)
 
+# collections.Counterは存在しない値を指定すると0を返す
 cnt = collections.Counter(a)
 m = max(a) + 1
 for i in a:

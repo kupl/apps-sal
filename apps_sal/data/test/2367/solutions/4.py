@@ -13,8 +13,8 @@ def comb(n, k):
 
 ans = 0
 for h in range(H - A):
-    x = comb(B - 1 + h, h)
-    y = comb(W + H - B - h - 2, H - h - 1)
+    x = comb(B - 1 + h, h)  # 右にB-1回、下にh回移動する方法の数
+    y = comb(W + H - B - h - 2, H - h - 1)  # 右にW-B-1回、下にH-h-1回移動する方法の数
     ans += x * y
     ans %= mod
 print(ans)

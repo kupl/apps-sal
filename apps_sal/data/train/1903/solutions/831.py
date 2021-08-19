@@ -16,9 +16,11 @@ class Solution:
                     if min_distance[i][j] < min_flag:
                         min_flag = min_distance[i][j]
                         min_point = i
+        # print(min_distance)
         for j in range(n):
             if j != min_point:
                 heappush(queue, (min_distance[min_point][j], min_point, j))
+        # print(queue)
 
         res = 0
         visit = [False] * n

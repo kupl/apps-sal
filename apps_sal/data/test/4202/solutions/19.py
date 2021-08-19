@@ -12,7 +12,7 @@ else:
                 if tmp < min:
                     min = tmp
         ans = min
-    else:
+    else:  # l > r:
         min = 100000000
         for i in range(l, r + 2019):
             for j in range(i + 1, r + 2019 + 1):

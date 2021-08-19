@@ -2,6 +2,9 @@ import sys
 import math
 sys.setrecursionlimit(100000)
 
+#sys.stdin = open("INP.txt", 'r')
+# sys.stdout = open("OUT.txt", 'w')
+
 
 def main():
     s = input()

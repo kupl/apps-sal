@@ -6,6 +6,7 @@ if N == 0:
     Ans = X
 else:
     S = list(map(int, input().split()))
+#  S.sort()
     if X not in S:
         Ans = X
         flg = True

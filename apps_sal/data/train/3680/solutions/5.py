@@ -1,3 +1,4 @@
+# This function should return n!
 def factorial(n):
     if n < 0:
         return None

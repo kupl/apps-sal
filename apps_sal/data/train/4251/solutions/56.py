@@ -6,3 +6,4 @@ def difference_of_squares(n):
         x = x ** 2
         b += x
     return a ** 2 - b
+    # Flez

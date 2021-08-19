@@ -5,6 +5,7 @@ import re
 import fractions
 
 N = int(input())
+# N, M = map(int, input().split(" "))
 A = list(map(int, input().split(" ")))
 arr = [0] * (10**5 + 1)
 existing = set()
@@ -36,4 +37,5 @@ for i in range(len(A) - 1, -1, -1):
     if arr[a] == 0:
         existing.discard(a)
     accumulate[arr[a]] += 1
+    # print(accumulate)
 print(length)

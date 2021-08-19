@@ -24,6 +24,8 @@ for _ in range(int(input())):
 
         i += 1
 
+    # print(d,flag)
+
     if flag == False:
         print("NO")
     else:

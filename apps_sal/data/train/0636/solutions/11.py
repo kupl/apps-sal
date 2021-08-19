@@ -1,3 +1,4 @@
+# cook your dish here
 inp = list(map(int, input().split()))
 N = inp[0]
 T = inp[1]

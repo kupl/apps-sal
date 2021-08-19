@@ -5,7 +5,7 @@ def main():
     A.sort()
     A = np.array(A)
 
-    def cnt_shake(x):
+    def cnt_shake(x):  # 握手の組であって合計パワーがx以上となる組みの数
         return n**2 - np.searchsorted(A, x - A).sum()
 
     right = 10**10 * 1
@@ -17,9 +17,10 @@ def main():
         else:
             left = mid
 
-    border = left
+    border = left  # border以上の握手をする
     C = n - np.searchsorted(A, border + 1 - A)
     B = np.cumsum(A[::-1])
+    # print(border,A,B,C)
 
     s, cnt = 0, 0
     for i in range(n):

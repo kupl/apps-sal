@@ -1,3 +1,4 @@
+# cook your dish here
 for h in range(int(input())):
     a, b, c, d = map(int, input().split())
     if a + b + c + d == 0 or a + b + c == 0 or a + b == 0 or a == 0:

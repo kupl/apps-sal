@@ -15,6 +15,7 @@ def tr(s, k):
 
 
 n = int(stdin.readline().strip())
+# n,m=map(int,stdin.readline().strip().split())
 s = [0] + list(map(int, stdin.readline().strip().split()))
 ans = []
 for i in range(1, n + 1):

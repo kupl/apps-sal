@@ -1,6 +1,7 @@
 s = input()
 S = len(s)
 
+# i文字目まで見たときj文字目まで確定しているときの組み合わせ
 dp = [[0 for i in range(4)]for j in range(S + 1)]
 mod = 10**9 + 7
 

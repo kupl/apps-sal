@@ -1,3 +1,4 @@
+# cook your code here
 alf = input()
 
 n = int(input())

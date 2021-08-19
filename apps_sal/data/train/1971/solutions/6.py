@@ -6,6 +6,7 @@ class Solution:
         """
 
         g = 0
+        # li[i][j] is the largest square whose right-lower conner lands at [i][j]
         li = [[0 for a in x] for x in matrix]
 
         for i in range(0, len(matrix)):

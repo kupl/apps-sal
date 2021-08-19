@@ -10,6 +10,7 @@ class Solution:
             age = ages[i]
             left = self.binary_search_left(ages, 0, i, age // 2 + 8)
             right = self.binary_search_right(ages, i, len(ages) - 1, age)
+            #print(left, right)
             res += max(0, right - left)
         return res
 

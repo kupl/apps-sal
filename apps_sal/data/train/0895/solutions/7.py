@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 array = list(map(int, input().split()))
 array2 = array.copy()

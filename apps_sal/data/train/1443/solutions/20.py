@@ -11,6 +11,7 @@ for i in range(t):
             if l[v][u] == '1':
                 c = c + 1
         ans.append(c)
+        # print(ans)
         c = 0
     count = 0
     for j in range(len(ans)):

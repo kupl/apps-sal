@@ -7,9 +7,12 @@ import decimal
 import copy
 import heapq
 
+# import numpy as np
 
+# sys.setrecursionlimit(10 ** 6)
 INF = 10 ** 20
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline().rstrip())
@@ -19,6 +22,7 @@ def na1(): return list([int(x) - 1 for x in sys.stdin.readline().rstrip().split(
 def flush(): return sys.stdout.flush()
 
 
+# ===CODE===
 def main():
     t = ni()
 

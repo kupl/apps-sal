@@ -34,6 +34,7 @@ for i in range(1, n + 1):
 
 facts = list(cnt.keys())
 ans = 0
+# 3,5,5
 for subset in combinations(facts, 3):
     for i in range(3):
         can_be = 1
@@ -49,6 +50,7 @@ for subset in combinations(facts, 3):
         if can_be:
             ans += 1
 
+# 15,5 3,25
 for subset in combinations(facts, 2):
     for i in range(2):
         can_be = 1
@@ -77,6 +79,7 @@ for subset in combinations(facts, 2):
         if can_be2:
             ans += 1
 
+# 74個の場合
 if 74 <= cnt[2]:
     ans += 1
 

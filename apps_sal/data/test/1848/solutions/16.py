@@ -11,6 +11,7 @@ def __starting_point():
         j = i + 1
         s = lst[i]
         while j < n:
+            # print(j,trav)
             if lst[j] > s and j not in trav:
                 h += 1
                 s = lst[j]

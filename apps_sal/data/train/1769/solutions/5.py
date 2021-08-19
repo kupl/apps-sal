@@ -3,10 +3,13 @@ def shortestPath(topology, startPoint, endPoint):
     print(startPoint)
     print(endPoint)
 
-    visitedNodes = {}
-    boarderNodes = {startPoint: {'path': [[startPoint]], 'cost': 0}}
+    visitedNodes = {}  # node name, node path
+    boarderNodes = {startPoint: {'path': [[startPoint]], 'cost': 0}}  # node name, node path, node cost
 
+    # do greedy first search
+    # loop while boarder not empty
     while(len(boarderNodes) > 0):
+        # expand unknown node with lowest cost
         cost = None
         node = ''
         for boarderNodeName, boarderNodeDict in list(boarderNodes.items()):
@@ -21,6 +24,7 @@ def shortestPath(topology, startPoint, endPoint):
         visitedNodes[node] = path
         del boarderNodes[node]
 
+        # add to boarder at right spot/ update cost values if necessary
         for neighborNode, neighborCost in list(topology[node].items()):
             if (not neighborNode in visitedNodes) and (not neighborNode in boarderNodes):
                 boarderNodes[neighborNode] = {'path': [[]], 'cost': cost + neighborCost}
@@ -33,8 +37,11 @@ def shortestPath(topology, startPoint, endPoint):
                 elif(boarderNodes[neighborNode]['cost'] == cost + neighborCost):
                     mergePath(boarderNodes, neighborNode, path, topology)
 
+        # goal check -> is goal in visited Nodes
         if endPoint in visitedNodes:
             return visitedNodes[endPoint]
+
+        # EndLoop
 
     return 0
 

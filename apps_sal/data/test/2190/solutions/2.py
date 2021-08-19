@@ -24,10 +24,15 @@ for ii in z:
     if i > 1:
         x.append((i, 1))
         x2.append((i, k - 1))
+    # print(i)
+    # print(x)
+    # print(dic)
     dic[tuple(x)] += 1
     total += dic[tuple(x2)]
+    # print(f"ans:{x} and {inver(x)}")
     if(x2 == x):
         total -= 1
 
 
+# print(x)
 print(total)

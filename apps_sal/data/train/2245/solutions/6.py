@@ -1,6 +1,13 @@
+# -------
+# imports
+# -------
 
 import sys
 
+
+# -------
+# solve
+# -------
 
 def solve(r, w):
     """
@@ -17,6 +24,7 @@ def solve(r, w):
     a = [0] * (num_ops + 1)
     b = [0] * (num_elems + 1)
 
+    # get operations
     op_list = []
     for _ in range(num_ops):
         op_list.append(tuple([int(x) for x in r.readline().split()]))
@@ -38,6 +46,10 @@ def solve(r, w):
         c += b[i]
         print(elem + c, end=' ')
 
+
+# -------
+# main
+# -------
 
 def __starting_point():
     solve(sys.stdin, sys.stdout)

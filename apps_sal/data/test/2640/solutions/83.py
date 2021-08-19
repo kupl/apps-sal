@@ -7,6 +7,8 @@ for h in range(H):
 G = np.array(S)
 G = np.where(G == ".", 1, 0)
 
+# 事前計算
+# マスごとに、「そのマスにライトを設置した場合に照らせるマスの数」を上下左右の4配列で求める
 L = np.zeros((H, W), dtype=int)
 R = np.zeros((H, W), dtype=int)
 U = np.zeros((H, W), dtype=int)

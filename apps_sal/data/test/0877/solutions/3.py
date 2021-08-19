@@ -29,6 +29,9 @@ else:
             if y > max_div2:
                 max_div2 = y
 
+    # print(max_div2)
+    # print(min_div1)
+
     if ans:
         for i in range(1, n + 1):
             if i not in div1 and i not in div2:

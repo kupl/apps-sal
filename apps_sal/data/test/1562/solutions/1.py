@@ -6,17 +6,17 @@ for i in range(0, k):
     T[i] = list(map(int, sys.stdin.readline().strip().split()))
     T[i][1] = T[i][1] - 1
     T[i][0] = T[i][0] - 1
-T.sort()
+T.sort()  # treasures sorted by row
 b = list(map(int, sys.stdin.readline().strip().split()))
 b.sort()
 for i in range(0, q):
-    b[i] = b[i] - 1
-L = [b[0]] * m
-R = [b[-1]] * m
-R1 = [10 ** 6] * n
-R2 = [-1] * n
-n1 = 0
-n2 = 0
+    b[i] = b[i] - 1     # sorted safe columns
+L = [b[0]] * m          # safe column left
+R = [b[-1]] * m         # safe column right
+R1 = [10 ** 6] * n      # leftmost treasure
+R2 = [-1] * n           # rightmost treasure
+n1 = 0                  # pathlength 1
+n2 = 0                  # pathlength 2
 for i in range(0, k):
     R1[T[i][0]] = min(R1[T[i][0]], T[i][1])
     R2[T[i][0]] = max(R2[T[i][0]], T[i][1])

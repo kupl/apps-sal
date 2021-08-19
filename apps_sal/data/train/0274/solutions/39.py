@@ -19,3 +19,18 @@ class Solution:
             res = max(res, i - j + 1)
 
         return res
+
+
+#         res = 0
+
+#         i = 0
+#         arr = [] # space O(res)
+#         for n in nums:  # O(n) time
+#             bisect.insort(arr, n) # O(res)
+#             while arr[-1] - arr[0] > limit:
+#                 ind = bisect.bisect_right(arr, nums[i])  # O( log res )
+#                 arr.pop(ind-1)  # O(res)
+#                 i += 1
+#             res = max(res, len(arr))
+
+#         return res

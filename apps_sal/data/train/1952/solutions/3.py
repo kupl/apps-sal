@@ -19,6 +19,8 @@ class Solution:
         while n:
             end = end.__next__
             n -= 1
+        # print(pre.val)
+        # print(end.val) if end else print("None")
         new_start = self.reverse(pre.__next__, end)
         pre.next = new_start
         return sentinel.__next__
@@ -30,4 +32,5 @@ class Solution:
             cur.next = new_head
             new_head = cur
             cur = next
+            # print(new_head.val) if new_head else print("none")
         return new_head

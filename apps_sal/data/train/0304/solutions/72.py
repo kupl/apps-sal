@@ -13,6 +13,7 @@ class Solution:
                     Min = int((i / 2) + 8)
                 else:
                     Min = int(math.ceil((i / 2) + 7))
+                # Min=int(0.5*i+7)
                 Max = i
                 j = Min
                 while j <= Max and j <= 120:
@@ -26,4 +27,5 @@ class Solution:
 
                 mp[i] = p
 
+        # print(mp)
         return ans

@@ -5,6 +5,7 @@ class Solution:
         ans = 0
         for i in range(len(s)):
             num = int(s[i])
+            # update tuple
             t ^= 1 << num
             if t not in d:
                 d[t] = i

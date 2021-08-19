@@ -1,8 +1,9 @@
 import itertools
+# tempt
 H, W, K = list(map(int, input().split()))
 S = [input() for _ in range(H)]
 
-ans = 1e4
+ans = 1e4  # 10000(10**4)
 for t in itertools.product([0, 1], repeat=H - 1):
     cnt = t.count(1)
     SW = []

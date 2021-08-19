@@ -13,8 +13,12 @@ def ria():
 
 if getpass.getuser() != 'frohenk':
     filename = 'half'
+    # sys.stdin = open('input.txt')
+    # sys.stdout = open('output.txt', 'w')
 else:
     sys.stdin = open('input.txt')
+    # sys.stdin.close()
+# sys.stdout = open('output.txt', 'w')
 
 
 n = ria()[0]

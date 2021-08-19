@@ -1,5 +1,6 @@
 def main():
     import sys
+    # readline = sys.stdin.readline
     readlines = sys.stdin.readlines
     N, M = list(map(int, input().split()))
     edge = []

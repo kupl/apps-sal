@@ -10,11 +10,13 @@ class Solution:
                 s, v = queue.popleft()
                 if s == target:
                     return steps
+                # 'A'
                 cur_s = s + v
                 cur_v = v * 2
                 if (cur_s, cur_v) not in visited:
                     queue.append((cur_s, cur_v))
                     visited.add((cur_s, cur_v))
+                # 'R'
                 cur_s = s
                 cur_v = -1 if v > 0 else 1
                 if (cur_s, cur_v) not in visited:

@@ -29,6 +29,7 @@ for x in a[2]:
     data_sum_three.append(data_sum_three[-1] + x)
 
 ans = 0
+# print(data_sum_odd,data_sum_even,data_sum_three)
 for k in range(a_length[2] + 1):
     if m - 3 * k < 0:
         break

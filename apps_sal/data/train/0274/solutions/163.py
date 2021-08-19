@@ -9,6 +9,7 @@ class Solution:
         while i < len(nums) - 1 and j < len(nums) - 1:
 
             diff = nums[winMax[0]] - nums[winMin[0]]
+            # print(i,j,diff,winMax,winMin)
             if diff <= limit:
                 res = max(res, j - i + 1)
 

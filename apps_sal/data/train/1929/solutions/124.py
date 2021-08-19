@@ -53,3 +53,8 @@ class StreamChecker_TLE:
                 nxtch = w[idx]
                 self.curdict[nxtch].append((w, idx))
         return ret
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

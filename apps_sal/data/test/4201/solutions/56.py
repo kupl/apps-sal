@@ -14,7 +14,7 @@ def main():
             for j in range(W):
                 if p[i] == '1' or p[H + j] == '1':
                     m[i][j] = '.'
-        cnt = np.count_nonzero(m == '
+        cnt = np.count_nonzero(m == '#')
         if cnt == K:
             ans += 1
 

@@ -7,6 +7,17 @@ def main():
     test = int(input())
 
     for _ in range(test):
+        # n = int(input())
+        # l = [int(i) for i in input().split(" ")]
+        # n,k = [int(i) for i in input().split(" ")]
+        # a,b,c,d = [int(i) for i in input().split(" ")]
+        #
+        # l = []
+        # l = [int(i) for i in input().split(" ")]
+        #
+        # for i in l:
+        #     print(i, end=' ')
+        # print()
 
         s = input().strip()
 

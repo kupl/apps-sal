@@ -21,6 +21,7 @@ class Solution:
         zeros = SortedSet()
         m = {}
         for i, val in enumerate(rains):
+            # print(i, val, m, zeros, res)
             if val == 0:
                 zeros.add(i)
             else:

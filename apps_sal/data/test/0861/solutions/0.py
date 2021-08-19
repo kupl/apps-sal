@@ -16,10 +16,12 @@ for i in range(m):
         if(m == 1):
             continue
         ans += cord * (m - 3)
+    # left
     left = (i - 1) - 1
     if(left < -1):
         left = -1
     ans += (left + 1) * (left / 2) * unit
+    # right
     r = (m - 1) - (i) - 2
     if(r < -1):
         r = -1

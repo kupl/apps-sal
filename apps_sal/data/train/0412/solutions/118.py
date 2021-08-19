@@ -1,5 +1,6 @@
 
 class Solution:
+    # mod = 1e9+7
 
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = dict()

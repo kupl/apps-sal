@@ -47,6 +47,7 @@ class Solution:
                 if i >= startS:
                     count += self.numSubseq(i + 1, startT + 1)
                     if firstMatch < 0:
+                        # We can directly fill dp[startT][startS:firstMatch-1] with the same number
                         firstMatch = i
 
         self.dp[startT][startS] = count

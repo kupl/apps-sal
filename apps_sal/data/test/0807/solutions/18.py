@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     def readData(): return list(map(int, input().split()))

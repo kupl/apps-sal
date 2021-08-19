@@ -66,6 +66,7 @@ for i in range(n):
     if (i in whites) or (i in blacks):
         for j in range(m):
             res = simulateRay(i, j)
+    # print(i,j,res)
             total += res
     else:
         total += allL

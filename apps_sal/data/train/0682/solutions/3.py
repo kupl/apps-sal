@@ -7,9 +7,11 @@ while i <= N and i == A[i]:
 j = N
 while j >= i and j == A[j]:
     j -= 1
+    #print(j,A[j],end=' | ')
 t = i
 flg = True
 for k in range(j, i - 1, -1):
+    #print(A[k],t,end=' | ')
     if A[k] != t:
         flg = False
         break

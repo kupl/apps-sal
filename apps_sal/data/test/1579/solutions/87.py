@@ -1,3 +1,4 @@
+#  --*-coding:utf-8-*--
 
 def dsMakeSet(ds, x):
     ds[x] = x

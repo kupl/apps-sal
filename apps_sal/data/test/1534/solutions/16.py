@@ -1,7 +1,7 @@
 s = input()
 a_count = 0
-dp1 = 0
-dp2 = 0
+dp1 = 0     # last letter is 'b'
+dp2 = 0     # last letter is 'a'
 for i in range(len(s)):
     if(s[i] == 'a'):
         a_count += 1

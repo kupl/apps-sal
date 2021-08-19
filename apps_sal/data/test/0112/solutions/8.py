@@ -24,6 +24,7 @@ for inp in l:
         if num:
             res.add(int(num))
 
+# print(res)
 for i in range(1, 1003):
     if i not in res:
         print(i - 1)

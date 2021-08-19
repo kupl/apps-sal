@@ -6,6 +6,9 @@ class Solution:
             m[letter] = 0
             for w in B:
                 ct_curr_l = w.count(letter)
+                # for l in w:
+                #     if l == letter:
+                #         ct_curr_l+=1
                 m[letter] = max(m[letter], ct_curr_l)
         res = []
         for w in A:

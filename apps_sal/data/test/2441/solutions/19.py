@@ -38,14 +38,17 @@ def main():
                     i += 1
                     stack.append(v)
                     v.on_stack = True
+                # If we just recursed on something
                 if pi > 0:
                     prev = v.adj[pi - 1]
                     v.lowlink = min(v.lowlink, prev.lowlink)
+                # Find the next thing to recurse on
                 while pi < len(v.adj) and v.adj[pi].index is not None:
                     w = v.adj[pi]
                     if w.on_stack:
                         v.lowlink = min(v.lowlink, w.index)
                     pi += 1
+                # If we found something with index=None, recurse
                 if pi < len(v.adj):
                     w = v.adj[pi]
                     assert w.index is None
@@ -56,12 +59,14 @@ def main():
                     comp = []
                     while True:
                         w = stack.pop()
-                        w.on_stack = False
+                        w.on_stack = False  # This is important, since later nodes may see it
                         comp.append(w.name)
                         if w is v:
                             break
                     comps.append(comp)
 
+    # print(stack)
+    # print(comps)
     res = 0
     ways = 1
     for comp in comps:

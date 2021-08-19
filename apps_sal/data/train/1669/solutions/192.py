@@ -8,8 +8,10 @@ class Solution:
             dicts[n] = dicts.get(n, 0) + 1
 
         while dicts:
+            # print(min(dicts),max(dicts))
             m = min(dicts)
             for k in range(m, m + W):
+                # print('m-m+W:',m,m+W)
                 if k not in dicts:
                     return False
                 elif dicts[k] == 1:

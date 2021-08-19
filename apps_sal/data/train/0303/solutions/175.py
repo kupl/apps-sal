@@ -11,6 +11,8 @@ class Solution:
 
                 cur_max = max(cur_max, arr[i - kk + 1])
 
+                # print(i, kk, \",\", i - kk + 1, cur_max, arr[i-kk+1], ':', d[i], d[i-kk])
+
                 d[i] = max(d[i], d[i - kk] + cur_max * kk)
 
         print(d)

@@ -11,7 +11,9 @@ for a in range(n):
         b += 1
     vs[a], ne[a] = b - a, b
 curr = [0] * (n + 1)
+# print(vs)
 for _ in range(k):
+    # print(curr)
     prev = curr
     curr = [0] * (n + 1)
     for i in range(n):

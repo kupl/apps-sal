@@ -1,3 +1,4 @@
+# You lost the game.
 s = str(input())
 n = len(s)
 i = 0
@@ -11,6 +12,7 @@ while i < n:
         p += s[i]
         i += 1
     E = list(p.split("."))
+    # print(p,E)
     e = len(E)
     if len(E[e - 1]) == 2:
         v = 0
@@ -23,6 +25,7 @@ while i < n:
             v = v * 1000 + int(E[j])
         v *= 100
     r += v
+# print(r)
 R = str(r)
 m = len(R) - 2
 res = ""

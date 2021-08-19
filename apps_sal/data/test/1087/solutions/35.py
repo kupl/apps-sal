@@ -13,10 +13,12 @@ for i in range(N):
         temp = "0" + temp
         lendif -= 1
     AB.append(temp)
+# print(AB,l)
 
 ans = 0
-now = 0
-for i in range(l):
+now = 0  # Kを超えていないかチェックする用。
+for i in range(l):  # 桁数で回す。l-i桁から順にみていく。
+    # cは0の数。dは1の数。
     c = 0
     d = 0
     for j in range(N):
@@ -24,7 +26,7 @@ for i in range(l):
             c += 1
         else:
             d += 1
-    if c > d:
+    if c > d:  # 0の方が多いので1にしたい。l-i桁目が1の時はKを超えてないか確認。
         if pow(2, l - 1 - i) + now > K:
             m = d
         else:
@@ -32,5 +34,6 @@ for i in range(l):
             m = c
     else:
         m = d
+    #print(m, now, pow(2,l-1-i))
     ans += pow(2, l - 1 - i) * m
 print(ans)

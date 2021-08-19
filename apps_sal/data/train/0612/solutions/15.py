@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     s = input()
     if '101' in s:

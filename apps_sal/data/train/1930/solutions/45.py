@@ -21,3 +21,8 @@ class Cashier:
             for pro, amt in zip(product, amount):
                 tot += self.di[pro] * amt
             return tot
+
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)

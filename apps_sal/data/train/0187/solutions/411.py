@@ -10,7 +10,9 @@ class Solution:
                 prev = max(prev - (4 - customers[ind]), 0)
 
             total += cur
+            # print(total)
             curCost = total * boardingCost - (ind + 1) * runningCost
+            # print(curCost)
             if (curCost > maxCost):
                 res = ind + 1
                 maxCost = curCost
@@ -23,6 +25,7 @@ class Solution:
             total += min(prev, 4)
             prev = max(prev - 4, 0)
             curCost = total * boardingCost - (ind + 1) * runningCost
+            # print(curCost)
             if (curCost > maxCost):
                 res = ind + 1
                 maxCost = curCost

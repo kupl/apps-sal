@@ -1,3 +1,8 @@
+#import sys
+#sys.stdin = open('in', 'r')
+#n = int(input())
+#a = [int(x) for x in input().split()]
+#n,m = map(int, input().split())
 
 s1 = input()
 s2 = input()

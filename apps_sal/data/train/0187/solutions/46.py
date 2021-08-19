@@ -4,6 +4,7 @@ class Solution:
         from collections import deque
         deq = deque(customers)
         curr_customers = 0
+        #rev_list = reversed(customers)
         max_profit, count_spin = 0, 0
         count = 0
         while True:

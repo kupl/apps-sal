@@ -1,5 +1,7 @@
 class Solution(object):
     def minMalwareSpread(self, graph, initial):
+        # 1. Color each component.
+        # colors[node] = the color of this node.
 
         N = len(graph)
         colors = {}
@@ -16,12 +18,16 @@ class Solution(object):
                 dfs(node, c)
                 c += 1
 
+        # 2. Size of each color.
+        # size[color] = number of occurrences of this color.
         size = collections.Counter(colors.values())
 
+        # 3. Find unique colors.
         color_count = collections.Counter()
         for node in initial:
             color_count[colors[node]] += 1
 
+        # 4. Answer
         ans = float('inf')
         for x in initial:
             c = colors[x]

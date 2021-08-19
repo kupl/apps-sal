@@ -12,6 +12,7 @@ for i, j in enumerate(t, 1):
         u[i] = - j
     else:
         v[i] = j
+# print(u,v)
 t, p = [1], [0] * (n + 1)
 while t:
     a = t.pop()

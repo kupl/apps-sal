@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('in.txt', 'r')
 
 _ = input()
 s = input()

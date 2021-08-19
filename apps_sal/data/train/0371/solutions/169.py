@@ -10,6 +10,7 @@ class Solution:
                 route2Stop[i].add(stop)
                 stop2Route[stop].add(i)
 
+     #   return stop2Route, route2Stop
         visited = set()
         visitedStop = set()
 
@@ -23,6 +24,7 @@ class Solution:
                 for route in stop2Route[stop]:
                     if route not in visited:
                         if target in route2Stop[route]:
+                          #  if stop in route2Stop[route]:
                             return step
                         else:
                             stack.extend(route2Stop[route])
@@ -30,7 +32,10 @@ class Solution:
                 visitedStop.add(stop)
 
             for stop in stack:
+             #   for stop in route2Stop[route]:
                 if stop not in visitedStop:
                     q.append(stop)
+     #   print(q, stop, stack, visited, step, visitedStop)
+     #   return
 
         return -1

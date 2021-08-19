@@ -11,6 +11,7 @@ def solve(n, m, costs):
     for i in range(n - 1):
         cost += costs[i] + costs[i + 1]
 
+    # print(cost)
     cost += costs[0] + costs[-1]
     min_cost = float('inf')
     for i in range(n):

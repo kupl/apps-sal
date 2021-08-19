@@ -1,3 +1,4 @@
+# from debug import debug
 import sys
 input = sys.stdin.readline
 n = int(input())

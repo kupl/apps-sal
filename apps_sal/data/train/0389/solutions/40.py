@@ -1,6 +1,21 @@
 class Solution:
     def splitArraySameAverage(self, A: List[int]) -> bool:
 
+        #         ALen = len(A)
+        #         visited = set()
+
+        #         def checkNum(i0, bN, bSum, aN, aSum):
+        #             if i0 == ALen:
+        #                 if aN != 0 and bN != 0 and bSum*aN == aSum*bN:
+        #                     return True
+        #                 return False
+        #             if (i0, bN, bSum) in visited:
+        #                 return False
+        #             visited.add((i0, bN, bSum))
+        #             subAns = checkNum(i0+1, bN+1, bSum+A[i0], aN, aSum) or checkNum(i0+1, bN, bSum, aN +1, aSum + A[i0])
+        #             return subAns
+
+        #         return checkNum(0, 0, 0, 0, 0)
         from fractions import Fraction
         ALen = len(A)
         s = sum(A)

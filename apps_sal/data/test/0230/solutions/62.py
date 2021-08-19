@@ -1,5 +1,5 @@
 n = int(input())
-s = input()
+s = input()  # sys.stdin.readlineは最後が改行
 
 right = 0
 ans = 0

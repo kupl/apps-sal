@@ -1,3 +1,4 @@
+# cook your dish here
 def check():
     pref = [0] * n
     pref[0] = a[0]

@@ -12,6 +12,7 @@ for jj in range(n + 1):
         else:
             totalheight += heights[i]
 
+    #print('at jj',jj, totalheight)
     if totalheight <= k:
         ok = jj
     else:

@@ -18,3 +18,14 @@ try:
     print(n - femcount + max(0, cong - 1))
 except:
     print(0)
+
+# while True:
+#     l = list(s)
+#     for i in range(len(s) - 1):
+#         if s[i] == 'M' and s[i + 1] == 'F':
+#             l[i] = 'F'
+#             l[i + 1] = 'M'
+#     if ''.join(l) == s:
+#         break
+#     s = ''.join(l)
+#     print(s)

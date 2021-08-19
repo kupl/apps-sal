@@ -6,12 +6,14 @@ class Solution:
             tl -= A[i - L]
             tl += A[i]
             ll.append(tl)
+        # print(ll)
         tl = sum(A[:M])
         ml = [tl]
         for i in range(M, len(A)):
             tl -= A[i - M]
             tl += A[i]
             ml.append(tl)
+        # print(ml)
         maxx = 0
         for i in range(len(ll)):
             for j in range(len(ml)):

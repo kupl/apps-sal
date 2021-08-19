@@ -7,6 +7,7 @@ for i in range(2, int(a**0.5) + 1):
 if a != 1:
     A.append(a)
 
+# print(A)
 out = 0
 while b > 0:
     n = len(A)

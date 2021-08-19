@@ -1,5 +1,6 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
+        # index = {a:i for i, a in enumerate(A)}
         candidates = set(A)
         dp = {}
         N = len(A)

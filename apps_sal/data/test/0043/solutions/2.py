@@ -1,4 +1,5 @@
 import sys
+# sys.stdin = open('ivo.in')
 
 
 def getkos(x, y):
@@ -29,8 +30,10 @@ for i in range(n):
 
 positive.sort(key=lambda x: ((-1 if x[0] > 0 else 1) * x[0]**2 / (x[1] ** 2 + x[0] ** 2)))
 negative.sort(key=lambda x: ((1 if x[0] > 0 else -1) * x[0]**2 / (x[1] ** 2 + x[0] ** 2)))
+#negative.sort(key=lambda x,y: x[0] - y[0] if x[0] != y[0] else (y[1] - x[1]) * x[0])
 
 all = positive + negative
+# print(all)
 biggest = [-1.1, 1]
 bi = 0
 bj = 1
@@ -48,5 +51,7 @@ for i in range(n):
         biggest = kos2
         bi = all[i][2]
         bj = all[prev][2]
+    # print("{} kos1: {} kos2: {}".format(i, kos1, kos2))
 
+# print(biggest)
 print("%d %d" % (bi + 1, bj + 1))

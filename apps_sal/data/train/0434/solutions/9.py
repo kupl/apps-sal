@@ -19,3 +19,23 @@ class Solution:
             m -= 1
 
         return m
+
+
+#         max_ones_len = 0
+#         num_of_ones = 0
+#         last_ones_len = 0
+
+#         for num in nums:
+#             if num == 1:
+#                 num_of_ones +=1
+#             else:
+#                 max_ones_len = max(max_ones_len, last_ones_len + num_of_ones)
+#                 last_ones_len = num_of_ones
+#                 num_of_ones = 0
+
+#         max_ones_len = max(max_ones_len, last_ones_len + num_of_ones)
+
+#         if max_ones_len == len(nums):
+#             max_ones_len -= 1
+
+#         return max_ones_len

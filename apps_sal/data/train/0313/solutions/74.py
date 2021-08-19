@@ -9,7 +9,7 @@ class Solution:
                 else:
                     run = 0
                 if run == k:
-                    bouqs_to_fit -= 1
+                    bouqs_to_fit -= 1  # fit a bouquet
                     run = 0
             return bouqs_to_fit <= 0
         if len(bloomDay) < m * k:

@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open("#input.txt", "r")
 n, m = list(map(int, input().split()))
 
 if n == m:

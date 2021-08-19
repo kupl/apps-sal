@@ -1,10 +1,12 @@
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+        # for each car:
         cars = []
         for i in range(len(speed)):
             cars.append([position[i], speed[i], (target - position[i]) / speed[i]])
 
         cars.sort(key=lambda x: x[0])
+        # print(cars)
 
         maxs = []
         for car in cars[::-1]:

@@ -5,6 +5,7 @@ class Solution:
         def helper(position, x, m):
             prev = position[0]
             m -= 1
+            # greedy
             for i in range(1, len(position)):
                 if position[i] - prev >= x:
                     prev = position[i]

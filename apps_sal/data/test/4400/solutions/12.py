@@ -1,7 +1,10 @@
 str = input()
 
+# 直前の文字が雨か判定するフラグ
 flg = False
+# 連続count数
 count = 0
+# 最大count数
 max = 0
 
 for s in str:

@@ -9,8 +9,8 @@ for i in range(H):
 R = list(range(W))
 for i in range(H):
     for j in range(W):
-        if j in R and L[i][j] == "
-        R.remove(j)
+        if j in R and L[i][j] == "#":
+            R.remove(j)
 for i in range(H):
     if i in yoko:
         continue

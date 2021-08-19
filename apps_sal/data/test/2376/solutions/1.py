@@ -1,8 +1,10 @@
 n, w = list(map(int, input().split()))
 pack_list = [list(map(int, input().split())) for _ in range(n)]
 
+# dp = [[float('inf') for _ in range(10**7+1)] for _ in range(n+1)]
+# dp[0] = [0 for _ in range(10**7+1)]
 
-dp_dict = {0: {0: 0}}
+dp_dict = {0: {0: 0}}  # w,v
 
 '''
 for i,pack in enumerate(pack_list):

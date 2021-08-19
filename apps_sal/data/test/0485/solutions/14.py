@@ -52,6 +52,7 @@ def main():
         if y_key < y_min and point_y[y_key] > 1:
             y_min = y_key
 
+    # print(x_max, y_max), (x_min, y_min)
     found = False
     for point in points:
         if point[0] == x_max or point[0] == x_min:

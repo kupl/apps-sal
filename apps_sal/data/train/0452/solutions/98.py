@@ -1,5 +1,8 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+        # two dimensional dp
+        # dp[m][n]  n<=m   the best solution when there are m+1 jobs in n+1 days
+        # dp[m][n] =min(dp[j][n-1] + max(jobDifficulty[j+1:m+1]))  n-1<= j <= m-1
 
         if len(jobDifficulty) < d:
             return -1

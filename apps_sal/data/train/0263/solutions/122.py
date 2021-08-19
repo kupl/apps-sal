@@ -1,3 +1,4 @@
+# https://leetcode-cn.com/problems/knight-dialer/solution/4zhuang-tai-dong-tai-gui-hua-pythonjie-kong-jian-f/ markov chain, 这个解法神了
 class Solution:
     def knightDialer(self, N: int) -> int:
         if N == 1:

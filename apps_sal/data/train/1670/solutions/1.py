@@ -1,7 +1,7 @@
 while True:
     s = input()
-    if s[0] == '
-    break
+    if s[0] == '#':
+        break
     s = s.replace('%', '%25')
     s = s.replace(' ', '%20')
     s = s.replace('!', '%21')

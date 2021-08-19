@@ -1,14 +1,19 @@
 from functools import reduce
+# 部分木の解を 1 次元で持つように変更
 
 
 def rerooting(n, edges, identity, merge, add_node):
+    # 全方位木 dp
+    # 参考1: https://qiita.com/keymoon/items/2a52f1b0fb7ef67fb89e
+    # 参考2: https://atcoder.jp/contests/abc160/submissions/15255726
     from functools import reduce
     G = [[] for _ in range(n)]
     for a, b in edges:
         G[a].append(b)
         G[b].append(a)
+    # step 1
     parents = [0] * n
-    order = []
+    order = []  # 行きがけ順
     stack = [0]
     parents[0] = -1
     while stack:
@@ -19,7 +24,8 @@ def rerooting(n, edges, identity, merge, add_node):
             if p != u:
                 stack.append(u)
                 parents[u] = v
-    dp_down = [0] * n
+    # 下から登る
+    dp_down = [0] * n  # 自身とその下
     for v in order[:0:-1]:
         p = parents[v]
         result = identity
@@ -27,7 +33,9 @@ def rerooting(n, edges, identity, merge, add_node):
             if p != u:
                 result = merge(result, dp_down[u])
         dp_down[v] = add_node(result, v)
-    dp_up = [identity] * n
+    # step 2
+    # 上から降りる
+    dp_up = [identity] * n  # 親とその先
     for v in order:
         Gv = G[v]
         if len(Gv) == 1 and v != 0:
@@ -57,6 +65,7 @@ def rerooting(n, edges, identity, merge, add_node):
 
 class Combination:
     def __init__(self, n_max, mod=10**9 + 7):
+        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -70,7 +79,7 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    def __call__(self, n, r):
+    def __call__(self, n, r):  # self.C と同じ
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
 

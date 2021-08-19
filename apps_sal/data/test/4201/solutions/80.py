@@ -16,8 +16,8 @@ for h in product(list(range(2)), repeat=H):
         cnt = 0
         for ih in range(H):
             for iw in range(W):
-                if C[ih, iw] == '
-                cnt += 1
+                if C[ih, iw] == '#' and (h[ih] and w[iw]):
+                    cnt += 1
 
         if cnt == K:
             ans += 1

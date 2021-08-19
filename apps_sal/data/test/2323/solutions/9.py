@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 
 from bisect import bisect_left

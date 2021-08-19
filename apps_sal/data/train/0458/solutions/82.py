@@ -19,7 +19,9 @@ class Solution:
             pref_arr.append(temp)
 
         ans = float('inf')
+        # need to find shortest subarray who's sum % p == sum_nums % p
 
+        # loop through all indices and see if sub-array possible starting at that index
         for i in range(n + 1):
             r = (desired_rem + pref_arr[i]) % p
             if r not in mapping:

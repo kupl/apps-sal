@@ -1,3 +1,4 @@
+# write the function is_anagram
 def is_anagram(tst, org):
     tst = tst.lower()
     org = org.lower()

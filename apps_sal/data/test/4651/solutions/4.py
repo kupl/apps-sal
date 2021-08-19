@@ -6,6 +6,7 @@ for tt in range(t):
     index = [0] * (n + 1)
     for i in range(1, n + 1):
         index[i] = arr.index(i)
+    # while 1:
     for i in range(1, n + 1):
         for j in range(index[i], 0, -1):
             if visited[j] == 0 and arr[j - 1] > arr[j]:
@@ -13,6 +14,7 @@ for tt in range(t):
                 arr[j] = arr[j - 1]
                 arr[j - 1] = temp
                 visited[j] += 1
+                # flag=True
     for i in arr:
         print(i, end=" ")
     print()

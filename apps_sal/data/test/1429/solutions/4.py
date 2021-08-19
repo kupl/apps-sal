@@ -3,6 +3,7 @@ def main():
 
     ans = 0
 
+    # 文字列のスタート位置
     for i in range(int(n)):
         at_cnt = 0
         gc_cnt = 0

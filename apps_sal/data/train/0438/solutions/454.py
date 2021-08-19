@@ -7,6 +7,7 @@ class UnionFind:
     def find(self, x):
         parent = self.parent[x]
         if parent != x:
+            # reassign its parent to the root
             self.parent[x] = self.find(parent)
         return self.parent[x]
 
@@ -17,7 +18,7 @@ class UnionFind:
         xparent, yparent = self.find(x), self.find(y)
         if xparent == yparent:
             return
-        self.parent[yparent] = xparent
+        self.parent[yparent] = xparent  # assign yparent parent to xparent
         self.count[xparent] += self.count[yparent]
 
 

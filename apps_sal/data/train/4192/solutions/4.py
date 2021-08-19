@@ -1,3 +1,4 @@
+# This isn't best practice, this is just for fun
 def pairwise(arr, n):
     save = set()
     add = save.add

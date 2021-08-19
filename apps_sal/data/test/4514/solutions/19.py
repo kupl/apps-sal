@@ -6,7 +6,7 @@ input = sys.stdin.readline
 class Graph(object):
     """docstring for Graph"""
 
-    def __init__(self, n, d):
+    def __init__(self, n, d):  # Number of nodes and d is True if directed
         self.n = n
         self.graph = [[] for i in range(n)]
         self.parent = [-1 for i in range(n)]
@@ -17,7 +17,7 @@ class Graph(object):
         if not self.directed:
             self.graph[y].append(x)
 
-    def bfs(self, root):
+    def bfs(self, root):  # NORMAL BFS
         self.parent = [-1 for i in range(self.n)]
         queue = [root]
         queue = deque(queue)
@@ -30,11 +30,11 @@ class Graph(object):
                     queue.append(i)
                     self.parent[i] = element
 
-    def dfs(self, root, ans):
+    def dfs(self, root, ans):  # Iterative DFS
         stack = [root]
         vis = [0] * self.n
         stack2 = []
-        while len(stack) != 0:
+        while len(stack) != 0:  # INITIAL TRAVERSAL
             element = stack.pop()
             order.append(element)
             if vis[element]:
@@ -45,11 +45,12 @@ class Graph(object):
             for i in self.graph[element]:
                 if vis[i] == 0:
                     temp.append(i)
+            # print (element,temp)
             temp.sort(reverse=True)
             for i in temp:
                 stack.append(i)
 
-        while len(stack2) != 0:
+        while len(stack2) != 0:  # BACKTRACING. Modify the loop according to the question
             element = stack2.pop()
             m = 0
             for i in self.graph[element]:
@@ -58,7 +59,7 @@ class Graph(object):
             ans[element] = m + 1
         return ans
 
-    def shortestpath(self, source, dest):
+    def shortestpath(self, source, dest):  # Calculate Shortest Path between two nodes
         self.bfs(source)
         path = [dest]
         while self.parent[path[-1]] != -1:
@@ -88,6 +89,7 @@ class Graph(object):
             e = stack[-1]
             if vis[e]:
                 stack.pop()
+                # Reverse_The_Change()
                 continue
             vis[e] = 1
             for i in graph[e]:
@@ -95,6 +97,7 @@ class Graph(object):
                     stack.append(i)
             if self.parent[e] == -1:
                 continue
+            # Change_The_Answers()
 
 
 n, q = list(map(int, input().split()))
@@ -106,6 +109,8 @@ for i in range(1, n):
 count = [0] * n
 order = []
 g.dfs(0, count)
+# print (count)
+# print (order)
 rank = {}
 for i in range(n):
     rank[order[i]] = i

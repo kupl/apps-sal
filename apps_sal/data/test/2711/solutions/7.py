@@ -2,6 +2,7 @@ from collections import defaultdict as dc
 import os
 import sys
 from io import BytesIO, IOBase
+# region fastio
 BUFSIZE = 8192
 
 
@@ -52,6 +53,8 @@ class IOWrapper(IOBase):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline()
 
+# ------------------------------
+
 
 def RL(): return map(int, sys.stdin.readline().split())
 def RLL(): return list(map(int, sys.stdin.readline().split()))
@@ -62,6 +65,13 @@ def print_list(l):
     print(' '.join(map(str, l)))
 
 
+# sys.setrecursionlimit(100000)
+# from heapq import *
+# from collections import deque as dq
+# from math import ceil,floor,sqrt,pow,gcd,log
+# import bisect as bs
+# from collections import Counter
+# from functools import lru_cache
 n, k = RL()
 dic = [[] for _ in range(1000)]
 for _ in range(n):
@@ -70,6 +80,7 @@ for _ in range(n):
         dic[page].append(input().strip())
 dic = [word for page in dic for word in page]
 nw = len(dic)
+# print(dic)
 ingress = dc(int)
 edges = dc(list)
 chars = set()
@@ -92,12 +103,14 @@ for i in range(1, nw):
 if not F:
     print('IMPOSSIBLE')
 else:
+    # print(edges)
     res = ''
     now = []
     for c in chars:
         ingress[c] = max(0, ingress[c])
         if ingress[c] == 0:
             now.append(c)
+    # print(ingress)
     while now:
         a = now.pop()
         res += a

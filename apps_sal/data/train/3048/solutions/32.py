@@ -5,4 +5,5 @@ def alternateCase(s):
             a += x.upper()
         else:
             a += x.lower()
+    # your code here
     return a

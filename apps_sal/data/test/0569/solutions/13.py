@@ -1,5 +1,6 @@
 n = int(input())
 s = str(input())
+#alpha = 'abcdefghijklmnopqrstuvwxyz'
 count = 0
 used = []
 if n > 26:

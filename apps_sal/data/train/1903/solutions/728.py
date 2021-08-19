@@ -2,10 +2,13 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def calc(x, y):
             return abs(x[0] - y[0]) + abs(x[1] - y[1])
+        #d = collections.defaultdict(dict)
         connections = []
+        #seen = set()
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 if i != j:
+                    #d[i][j]  = calc(points[i],points[j])
                     connections.append([i, j, calc(points[i], points[j])])
 
         connections.sort(key=lambda x: x[2])
@@ -39,4 +42,5 @@ class Solution:
         for a, b, c in res:
             ans += c
 
+        # print(res)
         return ans

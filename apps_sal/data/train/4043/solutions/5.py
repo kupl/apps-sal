@@ -18,3 +18,27 @@ def calc(gamemap):
                                 ws[ra_ * nr + rb_] = max(ws[ra_ * nr + rb_], v_)
         vs, ws = ws, vs
     return vs[-1]
+
+
+# # Unoptimized:
+# from collections import defaultdict, namedtuple
+
+# def calc(gamemap):
+#     nr, nc = len(gamemap), len(gamemap[0])
+#     vs = {(Point(0, 0), Point(0, 0)): gamemap[0][0]}
+#     for _ in range(nr + nc - 2):
+#         ws = defaultdict(int)
+#         for (a, b), v in vs.items():
+#             for a_ in a.next_points(nr, nc):
+#                 for b_ in b.next_points(nr, nc):
+#                     v_ = v + gamemap[a_.r][a_.c] + (gamemap[b_.r][b_.c] if a_ != b_ else 0)
+#                     ws[a_, b_] = max(ws[a_, b_], v_)
+#         vs = ws
+#     return vs[Point(nr-1, nc-1), Point(nr-1, nc-1)]
+
+# class Point(namedtuple('Point', 'r c')):
+#     def next_points(self, nr, nc):
+#         if self.c < nc - 1:
+#             yield Point(self.r, self.c + 1)
+#         if self.r < nr - 1:
+#             yield Point(self.r + 1, self.c)

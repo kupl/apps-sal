@@ -74,3 +74,7 @@ class Node:
         l = self.lc.query_maj(lo, hi)
         r = self.rc.query_maj(lo, hi)
         return l if is_maj(l) else r if is_maj(r) else -1
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

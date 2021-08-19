@@ -11,6 +11,7 @@ from heapq import heappush, heappop
 INF = float("inf")
 sys.setrecursionlimit(10**7)
 
+# 4近傍（右, 下, 左, 上）
 dy4, dx4 = [0, -1, 0, 1], [1, 0, -1, 0]
 
 

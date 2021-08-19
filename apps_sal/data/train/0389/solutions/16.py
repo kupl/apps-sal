@@ -5,6 +5,7 @@ class Solution:
 
         @lru_cache(None)
         def knapsack(i, num, tot):
+            # Find num items in A that add up to tot
             if i > len(A) - 1 or num <= 0 or tot <= 0:
                 return False
             elif num == 1 and A[i] == tot:

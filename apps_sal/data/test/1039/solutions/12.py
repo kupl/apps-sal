@@ -21,6 +21,8 @@ for _ in range(N - 1):
 
 Q, K = map(int, input().split())
 dfs(K - 1, 0)
+# print(dist)
+# print(tree)
 for _ in range(Q):
     x, y = map(int, input().split())
     print(dist[x - 1] + dist[y - 1])

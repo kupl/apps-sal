@@ -2,10 +2,12 @@ from functools import reduce
 from collections import Counter
 import sys
 sys.setrecursionlimit(2000)
+# sys.stdin.readline()
 
 
 def __starting_point():
 
+    # single variables
     n = [int(val) for val in sys.stdin.readline().split()][0]
     a = [int(val) for val in sys.stdin.readline().split()]
 

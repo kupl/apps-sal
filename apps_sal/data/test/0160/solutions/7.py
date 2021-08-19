@@ -1,7 +1,17 @@
 from copy import copy, deepcopy
+# from functools import reduce
+# from heapq import heapify, heappop, heappush
+# from itertools import accumulate, permutations, combinations, combinations_with_replacement, groupby, product
 import unittest
 from io import StringIO
 import math
+# import numpy as np  # Pythonのみ！
+# from operator import xor
+# import re
+# from scipy.sparse.csgraph import connected_components  # Pythonのみ！
+# ↑cf.  https://note.nkmk.me/python-scipy-connected-components/
+# from scipy.sparse import csr_matrix
+# import string
 import sys
 sys.setrecursionlimit(10 ** 5 + 10)
 
@@ -18,10 +28,10 @@ def resolve():
         for i in range(1, int(n**0.5) + 1):
             if n % i == 0:
                 divisors.append(i)
-                if i != n // i:
+                if i != n // i:  # 平方数の場合n**0.5を1つだけにしてる
                     divisors.append(n // i)
 
-        divisors.sort(reverse=True)
+        divisors.sort(reverse=True)  # ソートしたけりゃして
         return divisors
 
     M = make_divisors(sum(A))
@@ -30,8 +40,12 @@ def resolve():
         for i in M:
             AA = [0] * N
             age = 0
+            # delete = 0
             for j in range(N):
                 AA[j] = A[j] % i
+                # if AA[j] == 0:
+                # delete += 1
+                # age -= i
                 age += i - AA[j]
             AA.sort()
 

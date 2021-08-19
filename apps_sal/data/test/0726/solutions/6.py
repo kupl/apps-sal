@@ -1,4 +1,7 @@
 def main():
+    # string     input()
+    # strList    input().split()
+    # integer    int(input())
     n, d = list(map(int, input().split()))
     x = list(map(int, input().split()))
     ret = 2

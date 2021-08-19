@@ -3,6 +3,10 @@ from functools import lru_cache
 
 class Solution:
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
+        # Dynamic Programming
+        # Let dp[i][j] be the number of playlists of length i that have exactly j unique songs.
+        # Time  complexity: O(NL)
+        # Space complexity: O(NL)
         @lru_cache(None)
         def dp(i, j):
             if i == 0:

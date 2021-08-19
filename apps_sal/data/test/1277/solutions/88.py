@@ -24,6 +24,8 @@ def distances(sommet):
 t = distances(u)
 a = distances(v)
 
+# ~ print(t)
+# ~ print(a)
 
 ans = -1
 for i in range(1, N + 1):

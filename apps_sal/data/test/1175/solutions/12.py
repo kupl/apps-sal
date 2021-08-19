@@ -1,8 +1,11 @@
+# coding: utf-8
+# Your code here!
 
 import sys
 sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
+readline = sys.stdin.readline  # 文字列入力のときは注意
 
+#n = int(input())
 l, r = [int(i) for i in readline().split()]
 
 
@@ -21,17 +24,18 @@ L = "0" * (len(R) - len(L)) + L
 
 dp = make_dp(0, (len(R) + 1, 2, 2, 2))
 dp[0][0][0][0] = 1
-for i, (r, l) in enumerate(zip(R, L)):
+for i, (r, l) in enumerate(zip(R, L)):  # i桁目からi+1桁目に遷移
     ri = int(r)
     li = int(l)
     for is_less in range(2):
         for is_more in range(2):
             for is_nonzero in range(2):
                 for dl in range(0 if is_more else li, 2):
-                    for dr in range(dl, 2 if is_less else ri + 1):
+                    for dr in range(dl, 2 if is_less else ri + 1):  # d: i+1桁目の数字
                         dp[i + 1][is_nonzero or dr != 0][is_more or li < dl][is_less or dr < ri] += dp[i][is_nonzero][is_more][is_less] * (dr == dl or is_nonzero)
                         dp[i + 1][is_nonzero or dr != 0][is_more or li < dl][is_less or dr < ri] %= MOD
 
+# print(dp[-1])
 ans = 0
 for i in range(2):
     for j in range(2):

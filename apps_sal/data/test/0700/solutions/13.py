@@ -1,3 +1,11 @@
+# def pr():
+#	print()
+#	for i in range(n):
+#		for j in range(n):
+#			print(map1[i][j], end = "")
+#		print()
+#	print()
+# -----------------------------------------------
 def check():
     f = True
     for i in range(n):

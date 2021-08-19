@@ -38,9 +38,13 @@ while EDGE:
     for to, cost in COST_vertex[x]:
         if to != y and not((y, to) in USED_SET) and c + cost < -ANS[0]:
             heapq.heappush(EDGE, (c + cost, y, to))
+            # USED_SET.add((y,to))
+            # USED_SET.add((to,y))
 
     for to, cost in COST_vertex[y]:
         if to != x and not((x, to) in USED_SET) and c + cost < -ANS[0]:
             heapq.heappush(EDGE, (c + cost, x, to))
+            # USED_SET.add((x,to))
+            # USED_SET.add((to,x))
 
 print(-ANS[0])

@@ -1,5 +1,6 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
@@ -13,6 +14,7 @@ a = [0] * n
 bad = 0
 
 for i in range(len(l) - 1):
+    # transfer l[i] to l[i+1]
     if a[l[i]] and a[l[i]] % n != (l[i + 1] - l[i]) % n:
         bad = 1
         break
@@ -22,6 +24,7 @@ for i in range(len(l) - 1):
         a[l[i]] = n
 
 if not bad:
+    # fill in gaps
     for i in range(n):
         if a[i] == 0:
             for j in range(1, n + 1):

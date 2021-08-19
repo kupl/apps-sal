@@ -11,6 +11,7 @@ class Solution:
                 if remainder_cnt[i] % 2 != 0:
                     return False
             elif not k - i in remainder_cnt or remainder_cnt[i] != remainder_cnt[k - i]:
+                # print(remainder_cnt,i)
                 return False
 
         return True

@@ -11,6 +11,8 @@ ans = sum
 data.sort()
 
 for i in range(n - 1):
+    # print(ans)
+   # print(data[i:])
     ans += sum
     sum -= data[i]
 

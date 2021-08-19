@@ -9,7 +9,9 @@ for i in range(len(t)):
     a[i] = [a[i], t[i]]
 a.sort(key=lambda x: (x[0], -x[1]))
 prev, i, ans = a[0][0], 1, 0
+# print(a)
 while(i < len(a)):
+    #print(prev, ans, h)
     if h:
         if a[i][0] == prev:
             heapq.heappush(h, [-a[i][1], a[i][0]])

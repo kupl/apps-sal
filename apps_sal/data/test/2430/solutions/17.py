@@ -1,3 +1,4 @@
+# coding: utf-8
 n = int(input())
 heigth = int(input())
 ans = heigth + 1

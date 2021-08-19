@@ -1,4 +1,10 @@
+#import sys
 
+#fin = open("input.txt", 'r')
+#fout = open("output.txt", 'w')
+
+#fin = open("input.txt", 'r')
+#fout = open("output.txt", 'w')
 
 n = int(input())
 a = list(map(int, input().split()))

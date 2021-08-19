@@ -9,6 +9,8 @@ def solve():
     for i in range(N):
         A[i] = list([int(x) - 1 for x in input().split()])
 
+    # print(A)
+
     days = 0
     ta = [i for i in range(N)]
     while True:

@@ -8,7 +8,7 @@ class Solution:
             res = res + grid[i][j]
 
             tmp = grid[i][j]
-            grid[i][j] = 0
+            grid[i][j] = 0  # mark as visited
 
             for r, c in ((i + 1, j), (i, j + 1), (i - 1, j), (i, j - 1)):
                 if 0 <= r < len(grid) and 0 <= c < len(grid[0]):

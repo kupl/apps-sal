@@ -1,5 +1,7 @@
 class Factorial:
     def __init__(self, max_fact, mod):
+        # mod should be prime number
+        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * 2
         for idx in range(2, max_fact + 1):
             f += [f[idx - 1] * idx % mod]

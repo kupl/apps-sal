@@ -2,7 +2,9 @@ class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         res = -1
 
+        # pos: length
         lenMap = dict()
+        # length: cnt
         cntMap = collections.defaultdict(lambda: 0)
 
         for i, x in enumerate(arr):

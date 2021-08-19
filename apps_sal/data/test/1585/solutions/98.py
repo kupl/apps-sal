@@ -9,6 +9,7 @@ def main():
         else:
             x *= 2
             ans += 1
+#		print(x,X,Y)
 
     print(ans)
 

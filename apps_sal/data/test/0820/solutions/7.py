@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -21,3 +23,4 @@ while(m > 0):
 
 print(ans)
 finish = time.time()
+#print(finish - start)

@@ -3,6 +3,7 @@ class Solution:
         def ifeatK(k):
             hour = 0
             for pile in piles:
+                # 是math.ceil 不是ceiling
                 hour += math.ceil(pile / k)
             return hour
 
@@ -16,7 +17,9 @@ class Solution:
             elif ifeatK(mid) > H:
                 start = mid
             else:
+              # 不应该 找到mid,就return，应该继续
                 end = mid
+   #     print(start,end)
         if ifeatK(start) > H:
             return end
         if ifeatK(start) == H:

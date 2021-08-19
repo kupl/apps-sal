@@ -1,5 +1,6 @@
 class Solution:
     def divisorGame(self, N: int) -> bool:
+        # dp solution
         d = {}
 
         def dp(v):

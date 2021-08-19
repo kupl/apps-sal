@@ -27,10 +27,10 @@ class Solution:
 
     def buildPad(self) -> None:
         self.pad = [[str(i + j) for j in range(3)] for i in range(1, 10, 3)]
-        self.pad.append(['*', '0', '
+        self.pad.append(['*', '0', '#'])
 
     def buildMoves(self) -> None:
-        self.moves=(
+        self.moves = (
             (4, 6),
             (6, 8),
             (7, 9),

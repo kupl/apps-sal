@@ -4,3 +4,5 @@ def sort_my_string(str):
     oddChar = str[1::2]
 
     return evenChar + ' ' + oddChar
+
+# end function sort_my_string

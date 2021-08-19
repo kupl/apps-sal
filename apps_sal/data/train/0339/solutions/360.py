@@ -18,4 +18,6 @@ class Solution:
                 else:
                     triplets += (c1 * c2 * c3) / 2
 
+                # print(n1, n2, n3, triplets)
+
         return int(triplets)

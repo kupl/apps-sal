@@ -1,3 +1,4 @@
+# 1205B
 def do():
     n = int(input())
     nums = [int(c) for c in input().split(" ")]
@@ -12,6 +13,7 @@ def do():
         if len(count) == 2:
             valid.add(count[0])
             valid.add(count[1])
+    # valid won't be that large hahaha at most 64*2
     nv = len(valid)
     valid = list(valid)
     dis = [[float('inf')] * nv for _ in range(nv)]

@@ -15,6 +15,7 @@ def jump(n, d, s):
                 dist += d
                 count += 1
                 a += d
+                # if d+a-r<len(s):
             else:
                 while d - r > 0:
                     if int(s[d + a - r]) == 1:
@@ -25,6 +26,9 @@ def jump(n, d, s):
                         break
                     else:
                         r += 1
+                # else:
+                #	while d+a-r>=len(s):
+                #		r+=1
         else:
             a -= 1
     return count

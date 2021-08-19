@@ -1,5 +1,6 @@
 class Solution:
     def coinChange_bottomUp(self, coins: List[int], amount: int) -> int:
+        # Intialize the lookup, and initialize a base case of 0
         lookup = {x: amount + 1 for x in range(1, amount + 1)}
         lookup[0] = 0
 

@@ -8,6 +8,7 @@ for _ in range(int(input())):
     if(b > a // 2):
         x = b - a // 2
         b = a // 2
+    # print(b,x)
     for i in range(b):
         arr[(2 * i) + 1] *= -1
     if(a % 2 == 0):

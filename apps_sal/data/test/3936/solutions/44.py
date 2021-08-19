@@ -1,4 +1,5 @@
 import sys
+# sys.setrecursionlimit(100000)
 
 
 def input():
@@ -18,23 +19,23 @@ def main():
     L1 = [None] + list(input()) + [None]
     L2 = [None] + list(input()) + [None]
     seq = []
-    if L1[1] == L2[1]:
-        L1[1] = L2[1] = "
+    if L1[1] == L2[1]:  # 縦ドミノ
+        L1[1] = L2[1] = "#"
         seq.append("X")
-    elif L1[1] == L1[2]:
-        L1[1] = L1[2] = L2[1] = L2[2] = "
+    elif L1[1] == L1[2]:  # 横ドミノ
+        L1[1] = L1[2] = L2[1] = L2[2] = "#"
         seq.append("Y")
 
     for i in range(1, n + 1):
-        if L1[i] == "
-        continue
+        if L1[i] == "#":
+            continue
         else:
             if L1[i] == L2[i]:
                 seq.append("X")
-                L1[i] = "
+                L1[i] = "#"
             elif L1[i] == L1[i + 1]:
                 seq.append("Y")
-                L1[i] = L1[i + 1] = "
+                L1[i] = L1[i + 1] = "#"
     if seq[0] == "X":
         ans = 3
     elif seq[0] == "Y":

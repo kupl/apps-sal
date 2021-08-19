@@ -1,5 +1,6 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+        # This is a greedy approach and is generally O(N) time
         def is_feasible(max_day) -> bool:
             total_bouquets, flowers = 0, 0
             for bloom in bloomDay:

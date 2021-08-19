@@ -1,4 +1,4 @@
-"""Codeforces Round 
+"""Codeforces Round #419 (Div. 1) - Karen and Game.
 
 http://codeforces.com/contest/815/problem/A
 
@@ -55,6 +55,7 @@ logger.addHandler(ch)
 def solve(n, m, grid):
     logger.debug('\n'.join([str(x) for x in grid]))
 
+    # Check if ...
     a = [grid[i][0] for i in range(n)]
     b = [grid[0][i] - grid[0][0] for i in range(m)]
     if any(grid[i][j] != a[i] + b[j] for i in range(n) for j in range(m)):

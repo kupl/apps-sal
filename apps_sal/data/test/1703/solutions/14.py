@@ -45,3 +45,4 @@ for i in range(-N // 2, 1):
     if b[i + N // 2] > 0 and b[-i + N // 2] > 0:
         ans += b[i + N // 2] * b[-i + N // 2]
 print(ans)
+# print(N//2)

@@ -1,3 +1,4 @@
+# code
 import math
 t = int(input())
 while(t > 0):

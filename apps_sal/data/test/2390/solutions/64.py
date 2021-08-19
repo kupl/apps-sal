@@ -2,6 +2,7 @@ from sys import stdin
 
 
 def main():
+    # 入力
     readline = stdin.readline
     n, c = map(int, readline().split())
     x = [0] * n
@@ -28,11 +29,13 @@ def main():
         now = x_rev[i]
 
     ans = 0
+    # 時計、反時計
     for i in range(n):
         tmp1 = dp[i + 1]
         tmp2 = dp[i + 1] - x[i] + dp_rev[n - i - 1]
         ans = max(ans, tmp1, tmp2)
 
+    # 反時計、時計
     for i in range(n):
         tmp1 = dp_rev[i + 1]
         tmp2 = dp_rev[i + 1] - x_rev[i] + dp[n - i - 1]

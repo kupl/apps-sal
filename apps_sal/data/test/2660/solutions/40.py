@@ -1,6 +1,7 @@
 from itertools import zip_longest
 from heapq import heappush, heappop
 
+# 入力
 Q = int(input())
 
 q, a, b = (
@@ -47,4 +48,5 @@ ans = '\n'.join(
     for r in res
 )
 
+# 出力
 print(ans)

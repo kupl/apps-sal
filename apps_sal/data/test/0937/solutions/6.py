@@ -17,5 +17,6 @@ max_init_sum = init_sum = sum(s[:m])
 k = m
 for i in range(k, n):
     init_sum = init_sum - s[i - k] + s[i]
+    #print (init_sum, s[i-k], s[k])
     max_init_sum = max(max_init_sum, init_sum)
 print(max_init_sum + su)

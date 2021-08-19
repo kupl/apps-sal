@@ -6,6 +6,8 @@ sys.setrecursionlimit(10**6)
 N, M = map(int, input().split())
 words = [deque(input().rstrip()) for _ in range(N)]
 
+# 深さLのfull treeの小さい方を計算してみる
+
 
 def G_small():
     G = [0] * 100
@@ -18,6 +20,10 @@ def G_small():
         G[n] = min(rest)
         G_cum[n] = G_cum[n - 1] ^ G[n]
     return G
+
+# print([(n,G[n]) for n in range(100)])
+# G[n] = 2**ord_2(n+1)
+# 値がわかれば証明は易しい
 
 
 def G(n):

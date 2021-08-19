@@ -20,6 +20,8 @@ def main():
             max_cols = [w]
         elif val_max_col == v:
             max_cols.append(w)
+    # 基本的には val_max_row + val_max_col が答え。
+    # 行・列で重複カウントになるケースだった場合はここから1引かないといけない。
     max_rows = Counter(max_rows)
     max_cols = Counter(max_cols)
     n_max_cells = len(max_rows.keys()) * len(max_cols.keys())

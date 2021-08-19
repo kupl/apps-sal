@@ -21,17 +21,20 @@ def find(subsets, u):
 
 
 class Solution:
+    # kruskal's
+    #1 is alice and 2 is bob
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
-        subsets1 = ['1 index'] + [[x + 1, 0] for x in range(n)]
-        subsets2 = ['1 index'] + [[x + 1, 0] for x in range(n)]
+        subsets1 = ['1 index'] + [[x + 1, 0] for x in range(n)]  # Alice's unionfind
+        subsets2 = ['1 index'] + [[x + 1, 0] for x in range(n)]  # Bob's unionfind
 
         edges = sorted(edges, key=lambda e: -e[0])
-        e = 0
-        e1 = 0
-        e2 = 0
-        i = 0
+        e = 0  # number of total edges used
+        e1 = 0  # number of edges for Alice
+        e2 = 0  # number of edges for Bob
+        i = 0  # track position in edges list
 
+        # start with type 3 edges
         while e < n - 1:
             if i == len(edges):
                 return -1
@@ -44,10 +47,12 @@ class Solution:
 
             i += 1
 
+        # everything that was done to Alice applies to Bob
         e1 = e
         e2 = e
         subsets2 = copy.deepcopy(subsets1)
 
+        # once done with shared edges, do Bob's
         while e2 < n - 1:
             if i == len(edges):
                 return -1
@@ -61,8 +66,9 @@ class Solution:
             i += 1
 
         if e2 < n - 1:
-            return -1
+            return -1  # if we've used all edges bob can use (types 2 and 3) and he still can't reach all nodes, ur fucked
 
+        # now finish Alice's MST
         while e1 < n - 1:
             if i == len(edges):
                 return -1

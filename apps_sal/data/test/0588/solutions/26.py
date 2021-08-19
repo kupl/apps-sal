@@ -3,24 +3,31 @@ import math
 n = int(input())
 a = []
 b = []
+# 偏角ソートの方が楽
 for i in range(n):
     x, y = list(map(int, input().split()))
     a.append(complex(x, y))
     b.append(cmath.phase(a[i]))
+# a.sort(key=cmath.phase)
 ma = 0
+# math.piに注意
 for i in range(n):
     z = a[i]
     c = b[i] - math.pi / 2
     d = b[i] + math.pi / 2
     l = max([c, -math.pi])
     r = min([d, math.pi])
+    # (0,0)の時は偏角が0になってしまうし、除く
+    # あとは-piとpiどっちになるか→piになる
     if a[i] != complex(0, 0):
         for j in range(n):
             if j != i:
+                # 境界条件の場合分けがむずい
                 if l <= b[j] <= r or (c <= -math.pi and c + 2 * math.pi <= b[j] <= math.pi) or (d >= math.pi and -math.pi <= b[j] <= d - 2 * math.pi):
                     z += a[j]
     ma = max([abs(z), ma])
 m = 0
+# math.piに注意
 for i in range(n):
     if a[i] != complex(0, 0):
         za, zb = complex(0, 0), complex(0, 0)

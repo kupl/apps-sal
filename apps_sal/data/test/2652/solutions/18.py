@@ -45,6 +45,8 @@ def main():
     edges = sorted(list(iter(ew)), key=lambda e: ew[e])
     v = Unionfind(n)
     totcost = 0
+    # print(ew)
+    # print(edges)
     for edge in edges:
         if not v.issametree(edge[0], edge[1]):
             v.union(edge[0], edge[1])

@@ -10,6 +10,7 @@ def factor(N):
     return Z
 
 
+# print(factor(10))
 x = int(input())
 for y in range(x):
     i, j = list(map(int, input().split()))

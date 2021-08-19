@@ -1,3 +1,4 @@
+# created by BinZhaO
 n, x = list(map(int, input().split()))
 V = []
 for i in range(x + 1):

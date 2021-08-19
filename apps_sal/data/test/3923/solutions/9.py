@@ -30,3 +30,6 @@ for x in range(0, 10 ** 6 + 1):
         break
 else:
     print(-1)
+
+
+# Made By Mostafa_Khaled

@@ -1,5 +1,6 @@
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
+        # we can do this in O(n) space
         lakes = {}
         zeroes = []
         length = len(rains)

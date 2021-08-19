@@ -10,6 +10,9 @@ temp = 1000000000
 for i in range(1, n):
     temp2 = 0
     for j in range(n):
+        # if i + 1 == j:
+        #     temp2 = max(temp2 , t[j + 2] - t[j])
+        # el
         if j + 1 == i:
             temp2 = max(temp2, t[j + 2] - t[j])
         elif i != j:

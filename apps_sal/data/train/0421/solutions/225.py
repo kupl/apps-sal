@@ -1,5 +1,9 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
+        # find all indexes of last lex char
+        # for all those indices, compare next char, eliminate non-last lex
+        # continue until there is only one index
+        # append the rest of the string
 
         char_index_map = collections.defaultdict(list)
         for i in range(len(s)):

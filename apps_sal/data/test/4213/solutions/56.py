@@ -1,3 +1,4 @@
+# 102b
 
 def atc_102b(N: int, Ai_input: str) -> int:
     Ai = [int(i) for i in Ai_input.split(" ")]

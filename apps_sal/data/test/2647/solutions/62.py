@@ -16,8 +16,8 @@ while q:
         nx, ny = x + int(((1j)**d).real), y + int(((1j)**d).imag)
         if nx < 0 or W <= nx or ny < 0 or H <= ny:
             continue
-        if board[ny][nx] == '
-        continue
+        if board[ny][nx] == '#':
+            continue
         if dist[(nx, ny)] <= white:
             continue
         dist[(nx, ny)] = dist[(x, y)] + 1

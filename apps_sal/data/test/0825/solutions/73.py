@@ -26,6 +26,7 @@ for p, e in L:
         continue
     t = 1
     while t <= e:
+        # print(p,e,a)
         a += 1
         e -= t
         t += 1

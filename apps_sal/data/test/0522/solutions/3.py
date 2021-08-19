@@ -64,5 +64,8 @@ M2 = matmul_log(m2, n - 1)
 x, y, z = matmul([ini[0]], M)[0][0], matmul([ini[1]], M)[0][0], matmul([ini[2]], M)[0][0]
 w = matmul([ini[3]], M2)[0][2]
 
+#print(x, y, z)
+# print(ini[3])
+# print(w)
 ans = (pow(c, w, MOD) * pow(f1, x, MOD) * pow(f2, y, MOD) * pow(f3, z, MOD)) % MOD
 print(ans)

@@ -2,6 +2,9 @@ from math import comb
 
 
 class Solution:
+    # def convert(self,list) -> int:
+    #    res = int(\"\".join(map(str, list)))
+    #    return res
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         hashtable = {}
         for d in dominoes:

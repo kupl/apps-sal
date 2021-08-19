@@ -12,5 +12,6 @@ for i in range(1, N + 1):
 
     if sum_all >= A and sum_all <= B:
         ans += i
+        # print(i)
 
 print(ans)

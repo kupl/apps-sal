@@ -37,10 +37,15 @@ class Solution:
 
                 else:
                     dp[i] = -1 * (dp[i - 1] + 1)
+                    #dp1[i] = -1*(dp[i-1] + 1)
             ans = max(ans, dp[i], dp1[i])
+        # print(dp)
+        # print(dp1)
+        # print('---')
         return ans
 
     def getMaxLen(self, nums: List[int]) -> int:
         ans1 = self.getMaxLen2(nums)
         ans2 = self.getMaxLen2(nums[::-1])
+        #print(ans1, ans2)
         return max(ans1, ans2)

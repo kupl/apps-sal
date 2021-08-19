@@ -22,22 +22,27 @@ def grow(d, v, h, start):
     for i in range(1, 3 * d + 3):
         iv[i] = ti[i] * t[i - 1] % P
 
+    ###
     g = [inv[i] for i in range(1, 2 * d + 2)]
     fg = li(st(nuf * nu(g)), d, d * 2 + 1)
     for i in range(d):
         h[i + d + 1] = fg[i] * fa[d + i + 1] % P * fainv[i] % P
 
+    ###
     g = [iv[i] for i in range(1, 2 * d + 2)]
     fg = li(st(nuf * nu(g)), d, d * 2 + 1)
     for i in range(d + 1):
         h[i] = h[i] * (fg[i] * t[d + i + 1] % P * ti[i] % P) % P
 
+    ###
     g = [iv[i] for i in range(d + 2, 3 * d + 3)]
     fg = li(st(nuf * nu(g)), d, d * 2 + 1)
     for i in range(d):
         h[i + d + 1] = h[i + d + 1] * (fg[i] * t[2 * d + i + 2] % P * ti[d + i + 1] % P) % P
 
     return h
+
+# Create a table of the factorial of the first v+2 multiples of v, i.e., [0!, v!, 2v!, ..., (v(v+1))!]
 
 
 def create_table(v, start):
@@ -75,7 +80,7 @@ for i in range(1, 2 * v + 2):
     inv[i] = fainv[i] * fa[i - 1] % P
 
 
-def prod(a, b):
+def prod(a, b):  # a * (a + 1) * ... * (b - 1)
     T = create_table(v, a)
     c = b - a
     s = T[c // v]

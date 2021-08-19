@@ -13,9 +13,9 @@ while i >= 0 and i < n:
     if i == t:
         print("YES")
         break
-    elif s[i] == "
-    print("NO")
-    break
+    elif s[i] == "#":
+        print("NO")
+        break
     i += v
 else:
     print("NO")

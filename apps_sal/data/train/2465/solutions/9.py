@@ -33,6 +33,8 @@ def recurse_game(N, P):
     for factor in find_factors(N):
         results.append(recurse_game(N - factor, next_P))
 
+    # print(N,P,results)
+
     if P == 0:
         if True in results:
             lookup[(N, P)] = True

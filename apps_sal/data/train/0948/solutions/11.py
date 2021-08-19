@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 a, b = map(int, input().strip().split(' '))
 count = 0

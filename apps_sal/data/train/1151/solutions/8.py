@@ -26,6 +26,12 @@ class Graph:
                 cc.append(self.DFSUtil(temp, v, visited))
         return cc
 
+#g = Graph(5);
+#g.addEdge(1, 0)
+#g.addEdge(2, 3)
+#g.addEdge(3, 4)
+#cc = g.connectedComponents()
+
 
 t = int(input())
 for _ in range(t):

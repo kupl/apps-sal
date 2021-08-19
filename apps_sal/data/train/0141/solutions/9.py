@@ -10,6 +10,7 @@ class Solution:
         board_cnt = 0
 
         while left <= right:
+            # key
             if left == right:
                 board_cnt += 1
                 break

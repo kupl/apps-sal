@@ -3,20 +3,20 @@ import operator
 n, s = list(map(int, input().split()))
 orders = []
 for i in range(n):
-    orders.append(tuple(map(str, input().split())))
+    orders.append(tuple(map(str, input().split())))  # d,p,q
 
 aggr = {}
 for order in orders:
     key = (order[0][0], int(order[1]))
     if key not in aggr:
         aggr[key] = 0
-    aggr[key] += int(order[2])
+    aggr[key] += int(order[2])  # volume
 
 books = {"B": [], "S": []}
 for key in aggr:
     book = books[key[0]]
     volume = aggr[key]
-    book.append((key[0], key[1], volume))
+    book.append((key[0], key[1], volume))  # d,p,q
 
 
 for k in books:

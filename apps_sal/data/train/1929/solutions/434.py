@@ -27,7 +27,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.stream = []
-        self.reverseTrie = Trie()
+        self.reverseTrie = Trie()  # no new keyword before object instantiation
         for word in words:
             self.reverseTrie.addWordInReverse(word)
 
@@ -45,3 +45,8 @@ class StreamChecker:
             else:
                 return False
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

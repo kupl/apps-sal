@@ -8,8 +8,11 @@ class Solution:
                     if(i > j):
                         j = i
                     i = nums[num]
+                    # print(i)
                 else:
                     if(j > i):
                         i = j
                     j = nums[num]
+                    # print(j)
+        # print (i,\" \",j)
         return (i - 1) * (j - 1)

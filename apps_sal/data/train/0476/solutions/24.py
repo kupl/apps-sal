@@ -8,7 +8,7 @@ class Solution(object):
         while len(times) > 1:
             lead = times.pop()
             if lead < times[-1]:
-                ans += 1
+                ans += 1  # if lead arrives sooner, it can't be caught
             else:
-                times[-1] = lead
+                times[-1] = lead  # else, fleet arrives at later time 'lead'
         return ans + 1

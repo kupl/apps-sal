@@ -19,6 +19,7 @@ def list_squared(m, n):
             else:
                 max -= 1
             counter += 1
+        #factors = [i ** 2 for i in factors]
         factors = list(map(lambda x: x ** 2, factors))
         sumOf = sum(factors)
         root = math.sqrt(sumOf)

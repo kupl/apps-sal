@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 from collections import defaultdict as dd
 from sys import stdin, stdout
@@ -16,6 +17,7 @@ def solve():
     for i in range(n):
         temp = getl()
         temp.sort(reverse=True)
+        # print(temp)
         a.append(tuple(temp))
         occur[a[-1]] += 1
     ans = 0

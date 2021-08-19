@@ -1,6 +1,6 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if m * k > len(bloomDay):
+        if m * k > len(bloomDay):  # 要形成至少需要的花朵数
             return -1
         l, r = 1, max(bloomDay)
         while l < r:

@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     n, k = list(map(int, input().split()))
     remainder = (k - 2) % (n - 1)

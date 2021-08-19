@@ -18,8 +18,10 @@ for i in pers:
             for k in range(M):
                 if (i[j] == AB[k][0] and i[j + 1] == AB[k][1]) or (i[j] == AB[k][1] and i[j + 1] == AB[k][0]):
                     flag2 = True
+                    # print(i,i[j],i[j+1],AB[k])
             if flag2:
                 flag1 += 1
         if flag1 == N - 1:
+            # print(i)
             count += 1
 print(count)

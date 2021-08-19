@@ -1,4 +1,5 @@
 def compare(s1, s2):
+    # your code here
     if s1 == None:
         s1 = ""
     if s2 == None:

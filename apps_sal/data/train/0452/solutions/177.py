@@ -22,6 +22,7 @@ class Solution:
                     max_val = stack[-1][1]
 
                 stack.append((j, max_val))
+            # print(i, dp2)
             dp = dp2
 
         return dp[N] if dp[N] != float('inf') else -1

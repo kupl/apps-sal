@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     A, B, X = list(map(int, input().split()))
     num_max = 10 ** 9

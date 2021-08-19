@@ -14,9 +14,13 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 
 
-def inverse(a, mod):
+def inverse(a, mod):  # aのmodを法にした逆元を返す
     return pow(a, mod - 2, mod)
 
+
+# modのn!と、n!の逆元を格納したリストを返す(拾いもの)
+# factorialsには[1, 1!%mod , 2!%mod , 6!%mod… , n!%mod] が入っている
+# invsには↑の逆元が入っている
 
 def modfac(n, MOD):
 
@@ -36,7 +40,7 @@ def modfac(n, MOD):
     return factorials, invs
 
 
-def modnCr(n, r, mod, fac, inv):
+def modnCr(n, r, mod, fac, inv):  # 上で求めたfacとinvsを引数に入れるべし(上の関数で与えたnが計算できる最大のnになる)
 
     return fac[n] * inv[n - r] * inv[r] % mod
 
@@ -96,8 +100,12 @@ ans = [None] * N
 
 temp, ans[0] = dfs(0, 0)
 
+#print (plis,chnum,mulis)
+
 
 def dfs2(v, p):
+
+    #print (v,p)
 
     if v != 0:
         vn = chnum[v]

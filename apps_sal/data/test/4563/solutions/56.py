@@ -7,4 +7,5 @@ for i in range(N):
     q = (A + y - 1) // A
     x = T * max(p, q)
     y = A * max(p, q)
+    #print(f"[{x} {y}]")
 print((x + y))

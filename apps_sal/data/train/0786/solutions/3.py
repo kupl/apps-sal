@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 def nthMagicNo(n):
 
     pow = 1

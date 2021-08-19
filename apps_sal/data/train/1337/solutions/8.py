@@ -1,4 +1,6 @@
+# cook your dish here
 import math
+# function to calculate LCM
 
 
 def LCMofArray(a):

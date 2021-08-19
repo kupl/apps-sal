@@ -8,6 +8,7 @@ for _ in range(t):
         l1, r1, l2, r2 = l2, r2, l1, r1
 
     if l2 < r1:
+        # they already intersect.
         start = (min(r1, r2) - max(l1, l2)) * n
         if start >= k:
             print(0)
@@ -20,10 +21,12 @@ for _ in range(t):
             print(cheap + (k - start - cheap) * 2)
             continue
 
+    # they do not intersect yet.
     best = 10**100
     cost_sf = 0
     intersection_sf = 0
     for j in range(n):
+        # compute price using j-th interval as the last.
         cost_sf += l2 - r1
         cheap = r2 - l1
         if intersection_sf + cheap >= k:

@@ -14,6 +14,7 @@ for testcases in range(t):
 
     B = B[:n]
 
+    # print(B)
     LEN = len(B)
 
     if LEN == 1:

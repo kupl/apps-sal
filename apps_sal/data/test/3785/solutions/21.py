@@ -66,8 +66,7 @@ def main():
     vis = set()
     count = s - k
     bfs2(l[0], l[1])
-
-    def f(i): return 'X' if i == '.' else ('
+    def f(i): return 'X' if i == '.' else ('#' if i == '#' else '.')
     for row in g:
         print(''.join(list(map(f, row))))
 

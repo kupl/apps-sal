@@ -13,7 +13,9 @@ for i in range(m):
 ans = 0
 
 for i in itertools.permutations(range(n), n):
+    # 頂点が0のものだけ抽出
     if i[0] == 0:
+        # 確かめる
         for j in range(n):
             if j == n - 1:
                 ans += 1

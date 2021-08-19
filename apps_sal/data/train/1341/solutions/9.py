@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while(t):
     n = int(input())
@@ -20,11 +21,17 @@ while(t):
         else:
             if(flag == 0):
                 temp = i + 1
+                # print(temp)
                 suff[i] = 0
                 flag = 1
             else:
                 suff[i] = 0
+                # flah=1
 
+    #print(pre,end=' ')
+    # print()
+    # print(suff,end='')
+    # print(temp)
     count = 0
     for i in range(n):
         if(pre[i] == 1):
@@ -32,6 +39,7 @@ while(t):
             for j in range(temp, n):
                 if(arr[j] > arr[i] and j > i + 1):
                     count += (n - j)
+                    # print(n-j)
                     break
     count += (n - temp)
     if(pre[temp] == 1):

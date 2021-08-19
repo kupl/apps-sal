@@ -1,7 +1,9 @@
+# https://note.nkmk.me/python-gcd-lcm/
 def f(myList):
     if len(myList) == 0:
         return 0
     else:
+        # print(myList)
         tmp = min(myList)
         ans = tmp
         for i in range(len(myList)):

@@ -1,3 +1,4 @@
+# cook your dish here
 y = [1, 5, 9, 15, 21]
 for i in range((int(input()))):
     s = 0

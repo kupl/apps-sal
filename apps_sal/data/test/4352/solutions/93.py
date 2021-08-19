@@ -1,5 +1,7 @@
+# 入力
 A, B = list(map(int, input().split()))
 
+# 出力
 
 if A == B:
     print('Draw')

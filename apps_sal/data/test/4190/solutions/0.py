@@ -1,5 +1,8 @@
+# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+# input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
 def ii(): return int(input())
 def kk(): return map(int, input().split())
+# k2=lambda:map(lambda x:int(x)-1, input().split())
 def ll(): return list(kk())
 
 

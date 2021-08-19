@@ -27,6 +27,7 @@ K2 = deque(K)
 Q = deque()
 Q2 = deque()
 
+# print(K2)
 
 while K2:
     if len(K2) >= 2 and K2[0][0] == K2[1][0] and K2[0][1] == K2[1][1]:
@@ -52,6 +53,8 @@ while Q:
 
 ANS = []
 
+# print(Q1)
+# print(Q2)
 
 while Q1 and Q2:
     x = Q1.popleft()

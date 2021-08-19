@@ -12,6 +12,7 @@ class Solution:
 
         while a < b:
             m = (a + b) // 2
+            # print(a,m,b)
             lCount = 0
             hCount = 0
             for k in nums:
@@ -19,6 +20,7 @@ class Solution:
                     lCount += 1
                 elif m < k <= b:
                     hCount += 1
+            #print(lCount, hCount)
             if lCount > m - a + 1:
                 b = m
             else:

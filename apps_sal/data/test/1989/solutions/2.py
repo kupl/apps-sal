@@ -47,11 +47,17 @@ def solution(n, a):
         seen1i[a[i]] += 1
         onetoi.append(seen1i[a[i]])
 
+    # print(onetoi)
+    # print(seen1i)
+
     jton = []
     seenjn = defaultdict(int)
     for j in range(n - 1, -1, -1):
         seenjn[a[j]] += 1
         jton.append(seenjn[a[j]])
+
+    # print(jton)
+    # print(seenjn)
 
     jton = jton[::-1]
 
@@ -63,6 +69,7 @@ def solution(n, a):
     for i in range(n):
         fw.update(jton[i], -1)
         t += fw.query(0, onetoi[i] - 1)
+        # print(t)
 
     return t
 

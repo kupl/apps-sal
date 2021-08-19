@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Fri Feb 21 15:46:01 2020
 
@@ -37,10 +38,12 @@ class graph:
 
 
 T = int(input())
+# T=1
 
 for x in range(T):
     N, M, K = list(map(int, input().split()))
     city_map = graph(N)
+    # roads=[]
     for i in range(M):
         road = list(map(int, input().split()))
         city_map.add_road(road[0] - 1, road[1] - 1)
@@ -55,11 +58,20 @@ for x in range(T):
         for group in con_groups:
             museums_group = 0
             for city in group:
+                # print(museums_city[city])
                 museums_group += museums_city[city]
             museums_groups.append(museums_group)
 
         total_museums = 0
         museums_groups.sort(reverse=True)
+        # Nikhil=False
+        # for j in range(K):
+        #   index_month=-1*Nikhil
+        #   total_museums+=museums_groups[index_month]
+        #   if len(museums_groups)!=0:
+        #       del(museums_groups[index_month])
+        #   Nikhil = not Nikhil
+        # print(museums_groups)
         Ladki = 0
         Nikhil = len(museums_groups) - 1
         for j in range(K):

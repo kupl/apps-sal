@@ -2,6 +2,7 @@ import sys
 
 
 def solve(n, m, k, a):
+    # s = set(a)
     if m == 1:
         if k == n:
             return sum(a)
@@ -17,6 +18,8 @@ def solve(n, m, k, a):
         s.append(sum0)
 
     t = [0] * len(s)
+    # t = [[0] * len(s) for _ in range(k)]
+    # nt = [0] * len(s)
     t[0] = s[0]
     for i in range(1, len(s)):
         t[i] = max(s[i], t[i - 1])
@@ -29,6 +32,9 @@ def solve(n, m, k, a):
         t = nt
     return t[-1]
 
+
+# assert solve(5, 2, 1, list(map(int, '1 2 3 4 5'.split()))) == 9
+# assert solve(7, 1, 3, list(map(int, '2 10 7 18 5 33 0'.split()))) == 61
 
 n, m, k = list(map(int, sys.stdin.readline().strip().split()))
 numbers = list(map(int, sys.stdin.readline().strip().split()))

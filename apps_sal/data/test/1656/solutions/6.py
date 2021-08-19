@@ -18,4 +18,5 @@ for i in range(len(l)):
     else:
         dp[2] += dp[1] * l[i]
         dp[0] += l[i]
+# print(*l)
 print(dp[-1])

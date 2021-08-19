@@ -8,6 +8,7 @@ class Solution:
         helper.sort(key=lambda x: x[0])
         imin = helper[0][1]
         maxlen = 0
+        # print(helper)
         for val, indx in helper:
             if indx >= imin:
                 maxlen = max(maxlen, indx - imin)

@@ -2,6 +2,7 @@ import math
 
 
 def __starting_point():
+    #n, m = list(map(int, input().split()))
     n, k = list(map(int, input().split()))
     A = list(map(int, input().split()))
     x = int((-1 + math.sqrt(1 + 8 * k)) / 2)

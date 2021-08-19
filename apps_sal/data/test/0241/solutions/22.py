@@ -10,6 +10,7 @@ for x in tem:
     if x < mn or x > mx:
         check = 1
 
+# print(flag,diff)
 if not check:
     if diff >= 2:
         print("Correct")

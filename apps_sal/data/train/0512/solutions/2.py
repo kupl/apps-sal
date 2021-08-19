@@ -30,6 +30,8 @@ tour_d_arr = np.array(tour_d)
 v_to_i = {v: i for i, v in enumerate(tour_v)}
 v_to_d = dict(zip(tour_v, tour_d))
 
+# sparse table
+# 各インデックスから、2^i 項目分見て、一番depthの小さいインデックス
 L = len(tour_v)
 U = L.bit_length()
 sp = [np.arange(L)]

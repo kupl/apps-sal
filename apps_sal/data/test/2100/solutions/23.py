@@ -1,3 +1,4 @@
+# python2 or 3
 import sys
 import threading
 import os.path
@@ -16,6 +17,7 @@ def main():
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
+    # --------------------------------INPUT---------------------------------
     n = int(input.readline())
     lis, counter = [], 0
     rightc, leftc = 0, 0
@@ -27,6 +29,7 @@ def main():
             leftc += 1
     counter = min(rightc, n - rightc) + min(leftc, n - leftc)
     output = counter
+    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:

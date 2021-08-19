@@ -1,7 +1,10 @@
+# cook your dish here
 from sys import stdin, stdout
 import sys
 from bisect import bisect_left, bisect_right
 
+# stdin = open("input.txt", "r");
+# stdout = open("output.txt", "w");
 
 t = int(stdin.readline().strip())
 
@@ -19,6 +22,7 @@ for _ in range(t):
         for j in range(m):
             pq.append((arr[i][j], i, j))
     pq = sorted(pq, key=lambda e: (e[0]), reverse=True)
+    # print(pq)
     for i in pq:
         cv, yo, xo = i
         if visited[yo][xo]:

@@ -9,6 +9,7 @@ class Solution:
 
             if grid[i][j] == -1 or (i, j) in visited:
                 return
+            # + 1 to account for starting position
             elif grid[i][j] == 2 and len(visited) == num_empty + 1:
                 count += 1
                 return
@@ -26,6 +27,8 @@ class Solution:
 
                 visited.remove((i, j))
 
+        # 1) Find starting position
+        # 2) Count all empty squares
         start_i = start_j = None
         num_empty = 0
         for i in range(len(grid)):

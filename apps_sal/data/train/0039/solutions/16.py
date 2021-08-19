@@ -35,6 +35,7 @@ for _ in range(int(input())):
 
         ans = len(s)
         temp = []
+        # print(stack)
 
         if p < a and p < b:
             print(len(s))

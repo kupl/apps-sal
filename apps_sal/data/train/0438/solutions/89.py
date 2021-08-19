@@ -26,4 +26,5 @@ class Solution:
                 cs.add(cur)
             if len(cs) > 0:
                 res = i + 1
+            # print(f'{ones} {cs} {cache} {uf}')
         return res

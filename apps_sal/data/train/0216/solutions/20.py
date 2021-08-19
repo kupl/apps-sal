@@ -11,6 +11,8 @@ class Solution:
         if not croakOfFrogs[0] == 'c':
             return -1
 
+        # count the number of c before the first k shows up
+
         for ch in croakOfFrogs:
             if 'c' == ch:
                 if num_k == 0:
@@ -21,6 +23,7 @@ class Solution:
             if 'k' == ch:
                 num_k += 1
 
+        # check validation
         for ch in croakOfFrogs:
             freq[dic[ch]] += 1
 

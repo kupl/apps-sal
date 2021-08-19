@@ -1,11 +1,11 @@
 import heapq
 
 N, Q = map(int, input().split())
-ST = [0] * (N + 1)
-kid_Add = [[] for _ in range(2 * 10**5 + 1)]
-kid_Del = [[] for _ in range(2 * 10**5 + 1)]
-max_Add = []
-max_Del = []
+ST = [0] * (N + 1)  # strong,belong
+kid_Add = [[] for _ in range(2 * 10**5 + 1)]  # infant who is in this kinder at least one time
+kid_Del = [[] for _ in range(2 * 10**5 + 1)]  # infant who is no longer in this kinder
+max_Add = []  # highest rate
+max_Del = []  # highest rate deleted
 
 heapq.heapify(kid_Add)
 heapq.heapify(kid_Del)

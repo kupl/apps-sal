@@ -5,6 +5,7 @@ f = False
 for i in range(n):
     s = input()
     dist = s.index('S') - s.index('G')
+    # print(dist)
     if dist < 0:
         f = True
         break

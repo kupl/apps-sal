@@ -10,6 +10,9 @@ from math import ceil, floor, gcd, fabs, factorial, fmod, sqrt, inf
 from collections import defaultdict as dd, deque, Counter as c
 from itertools import combinations as comb, permutations as perm
 from bisect import bisect_left as bl, bisect_right as br, bisect
+# sys.setrecursionlimit(2*pow(10, 6))
+# sys.stdin = open("input.txt", "r")
+# sys.stdout = open("output.txt", "w")
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()

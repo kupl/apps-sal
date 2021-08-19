@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 root = math.sqrt(2)
 

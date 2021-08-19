@@ -17,9 +17,11 @@ for t in range(int(input())):
         c[i] = g
         if g > max:
             max = g
+    # print(b,c)
     for i in range(n):
         for j in range(1, m - k + 1):
             b[i] = b[i] + a[i][j + k - 1] - a[i][j - 1]
+            # print(b[i])
             if b[i] > max:
                 max = b[i]
     for i in range(m):

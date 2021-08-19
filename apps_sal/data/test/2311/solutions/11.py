@@ -1,3 +1,6 @@
+# import sys
+
+# sys.stdin = open('test')
 
 
 def get_dividers(k):
@@ -38,4 +41,6 @@ for d in dividers:
 res = 0
 for d in dividers:
     res += a_d[d] * b_d[k // d]
+    # res += b_d[d] * a_d[k//d]
+    # print(d, a_d[d] * b_d[k//d], b_d[d] * a_d[k//d], res)
 print(res)

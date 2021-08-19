@@ -27,8 +27,10 @@ n, f1, f2, f3, c = map(int, input().split())
 f1 = (f1 * c) % md
 f2 = (f2 * c**2) % md
 f3 = (f3 * c**3) % md
+#print(f1, f2, f3)
 mat = [[1, 1, 1], [1, 0, 0], [0, 1, 0]]
 res = power(mat, n - 3)
+# print(res)
 pw1, pw2, pw3 = res[0][2], res[0][1], res[0][0]
 f1 = pow(f1, pw1, md)
 f2 = pow(f2, pw2, md)

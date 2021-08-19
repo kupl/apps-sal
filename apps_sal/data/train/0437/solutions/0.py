@@ -1,6 +1,7 @@
 class Solution:
     def decodeAtIndex(self, S: str, K: int) -> str:
         size = 0
+        # Find size = length of decoded string
         for c in S:
             if c.isdigit():
                 size *= int(c)

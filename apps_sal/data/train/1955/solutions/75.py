@@ -6,6 +6,8 @@ class Solution:
             edges[p[0]].append(p[1])
             edges[p[1]].append(p[0])
 
+        # print(edges)
+
         ans = list(s)
         seen = set()
         for i, c in enumerate(s):
@@ -19,9 +21,12 @@ class Solution:
                 heapq.heappush(h1, cur)
                 heapq.heappush(h2, ans[cur])
                 for j in edges[cur]:
+                    # print(cur,j)
                     if j not in seen:
+                        # print('New index')
                         seen.add(j)
                         frontier.append(j)
+            # print(f' Current-{cur}, h1-{h1}, h2-{h2}')
             while h1:
                 ans[heapq.heappop(h1)] = heapq.heappop(h2)
 

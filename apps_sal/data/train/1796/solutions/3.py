@@ -1,4 +1,6 @@
+# Infix to Postfix Converter: Implements Dijkstra's Shunting-yard algorithm
 
+# simple stack class to be used by the conversion from infix to postfix
 class Stack(object):
     def __init__(self):
         self.stack = []
@@ -23,8 +25,10 @@ class Stack(object):
 
     def push(self, v):
         self.stack.insert(0, v)
+# end stack class
 
 
+# Implements the Shunting-yard algorithm
 class Ifix2PfixConverter():
     __EXP_OP = '^'
     __MUL_OP = '*'
@@ -69,6 +73,8 @@ class Ifix2PfixConverter():
     def isRightParen(self, k):
         return k == self.__R_PAREN
 
+    # Implementation of Dijkstra's Shunting-yard algorithm
+
     def convertToPostfix(self):
 
         for c in self.infixEqn:
@@ -79,7 +85,7 @@ class Ifix2PfixConverter():
             elif self.isRightParen(c):
                 while not self.stack.isEmpty() and not self.isLeftParen(self.stack.peek()):
                     self.postfixEqn.append(self.stack.pop())
-                self.stack.pop()
+                self.stack.pop()  # toss the left parenthesis
             elif self.isOperator(c):
                 while not self.stack.isEmpty() and self.isOperator(self.stack.peek()) \
                         and ((self.precidence(self.stack.peek()) > self.precidence(c)) or (self.precidence(self.stack.peek()) == self.precidence(c) and self.isLeftAssociative(c))):
@@ -90,8 +96,10 @@ class Ifix2PfixConverter():
 
         while not self.stack.isEmpty():
             self.postfixEqn.append(self.stack.pop())
+# ---end class
 
 
 def to_postfix(infix):
     converter = Ifix2PfixConverter(infix)
     return converter.getPostfixEquation()
+# ---end function

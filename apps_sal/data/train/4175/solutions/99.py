@@ -1,2 +1,3 @@
 def repeater(n, str):
-    return str * n
+    # Your code goes here.
+    return str * n  # "{} ".format(str) * "{}".format(n)

@@ -37,6 +37,7 @@ for i in range(query):
     sys.stdout.flush()
     sum = int(input())
     li.append((sum / (n)))
+    # print m,k
     if k >= m:
         break
     k += 1

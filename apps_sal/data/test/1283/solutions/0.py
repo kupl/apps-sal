@@ -10,14 +10,14 @@ res = [[0 for i in range(n)] for j in range(n)]
 
 for i in range(n):
     for j in range(n):
-        if grid[i][j] == '
-        continue
+        if grid[i][j] == '#':
+            continue
         ii, jj = i, j
 
         cpt = 0
         while ii < n and cpt < k:
-            if grid[ii][j] == '
-            break
+            if grid[ii][j] == '#':
+                break
             else:
                 cpt += 1
             ii += 1
@@ -27,8 +27,8 @@ for i in range(n):
 
         cpt = 0
         while jj < n and cpt < k:
-            if grid[i][jj] == '
-            break
+            if grid[i][jj] == '#':
+                break
             else:
                 cpt += 1
             jj += 1

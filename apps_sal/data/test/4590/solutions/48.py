@@ -9,6 +9,8 @@ for i in range(N):
 for i in range(M):
     b.append(b[i] + B[i])
 
+# print(a)
+# print(b)
 
 ans = 0
 j = M
@@ -17,5 +19,6 @@ for i in range(N + 1):
         break
     while b[j] > K - a[i]:
         j -= 1
+    # print(i,j)
     ans = max(ans, i + j)
 print(ans)

@@ -1,5 +1,6 @@
 class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
+        # graph = [[] for _ in range(10000007)]
         graph = {}
         u1, u2 = nums1[0], nums2[0]
 

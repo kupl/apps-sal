@@ -9,6 +9,7 @@ for i in range(m):
 dist = [float('inf')] * n
 dist[0] = 0
 for i in range(n - 1):
+    # n-1回ループすることで、到達できるすべての頂点の更新ができる
     for st, en, score in edges:
         if dist[st] == float('inf'):
             continue
@@ -18,6 +19,8 @@ for i in range(n - 1):
 negative = [False] * n
 
 for loop in range(n):
+    # n回目以降のループで更新された頂点は負閉路を含む
+    # それをn回繰り返して更新された頂点は、負閉路の影響を受けている
     for e in edges:
         st, en, score = e
         if dist[st] == float('inf'):

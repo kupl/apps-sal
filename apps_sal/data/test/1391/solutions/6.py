@@ -2,7 +2,7 @@ def readn():
     return list(map(int, input().split()))
 
 
-n, m, a = readn()
+n, m, a = readn()  # map(int,input().split())
 b, p = sorted(map(int, input().split()))[-min(n, m):], sorted(map(int, input().split()))
 r = min(n, m)
 mm = r

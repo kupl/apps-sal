@@ -1,5 +1,6 @@
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
+        # hash table to remember substrings
         substrings = defaultdict(int)
         char_counts = Counter(s[0:minSize - 1])
 

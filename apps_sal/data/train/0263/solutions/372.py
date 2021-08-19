@@ -15,6 +15,8 @@ class Solution:
         poss[0] = [4, 6]
 
         def helper(numb, i):
+            # print('numb is ', numb)
+            # print('at i ',i)
             if i == n:
                 return 1
             if (numb, i) in mem:
@@ -31,5 +33,6 @@ class Solution:
         res = 0
         mem = {}
         for i in range(10):
+            # print('starting at ',i)
             res += helper(i, 1)
         return res % MOD

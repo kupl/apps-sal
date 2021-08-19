@@ -7,6 +7,7 @@ for _ in range(int(input())):
         if su >= k:
             ans = int(s[i:])
             ans = int("1" + (len(s) - i) * "0") - ans
+            # print(ans)
             break
     su = 0
     for i in range(len(s)):

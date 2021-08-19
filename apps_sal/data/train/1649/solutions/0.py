@@ -45,7 +45,7 @@ STATE_TO_COMMANDS = {
 
 
 def traverse_TCP_states(events):
-    state = "CLOSED"
+    state = "CLOSED"  # initial state, always
     for event in events:
         if event not in STATE_TO_COMMANDS[state]:
             return 'ERROR'

@@ -3,7 +3,7 @@
 import sys
 
 
-def input() -> str:
+def input() -> str:  # noqa: A001
     """Input."""
     return sys.stdin.readline()[:-1]
 

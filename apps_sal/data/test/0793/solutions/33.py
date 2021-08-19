@@ -9,6 +9,8 @@ def f(n, m):
             if sk == tk:
                 cs = (cs + dp[i][j]) % md
             dpi1[j + 1] = (dpi1[j + 1] + cs) % md
+#    for x in dp:
+#        print(*x)
     print((dp[-1][-1]))
 
 

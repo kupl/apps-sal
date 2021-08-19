@@ -13,6 +13,7 @@ def __starting_point():
         else:
             train_passables &= id___passables[person]
     print(ans)
+    # swapable = [[int(x) for x in input().split()] for _ in range(m)]
 
 
 __starting_point()

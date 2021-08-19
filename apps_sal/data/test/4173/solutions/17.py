@@ -1,4 +1,5 @@
 from sys import stdin, stdout
+#from collections import defaultdict as dd
 def inp(): return (int(o) for o in stdin.readline().split())
 def sinp(): return (o for o in stdin.readline().split())
 def out(): return stdout.write(str())
@@ -6,6 +7,7 @@ def out(): return stdout.write(str())
 
 def I(): return map(int, input().split())
 def Y(): return int(input())
+# print(inp())    #generator object
 
 
 for _ in range(int(input())):

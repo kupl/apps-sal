@@ -5,6 +5,7 @@ while k != 0:
     x1, y1, x2, y2 = map(int, input().split())
     a.append([x1, y1, x2, y2])
     check[y1 - 1] += 1
+    #check[y2-1] += 1
     k -= 1
 maxi = check.index(max(check)) + 1
 sum = 0

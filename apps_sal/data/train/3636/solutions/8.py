@@ -1,4 +1,5 @@
 def bouncy_ratio(percent):
+    #if percent < 0.1 or percent > 0.9: raise ValueError()
     def check(i):
         d = [int(x) for x in str(i)]
         up, down = False, False

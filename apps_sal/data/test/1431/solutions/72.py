@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 *a, = list(map(int, input().split()))
 b = [0] * (n // 2) + a[n // 2:]

@@ -62,6 +62,9 @@ def rand_query(ran1, ran2, rantime):
 sys.setrecursionlimit(1000000000)
 mod = 998244353
 
+#############
+# Main Code #
+#############
 
 """
 数列A
@@ -110,6 +113,7 @@ A = getList()
 A = [[A[i], i] for i in range(N)]
 
 flag = [0] * N
+# 区切り0
 l = deepcopy(sorted(A))
 opt = []
 l.sort()
@@ -117,10 +121,14 @@ for i in range(Q):
     opt.append(l[i][0])
 ans = opt[-1] - opt[0]
 
+# 区切り1個以上
 for i in range(N):
-    flag[l[i][1]] = 1
+    # indexの位置はlを再利用
+    flag[l[i][1]] = 1  # A[i][1]はindex
     parent = []
     child = []
+    # フラグの立っているところで区切る
+    # 要素の探索はAを使う
     for j in range(N):
         if flag[j] == 0:
             child.append(A[j][0])
@@ -132,10 +140,13 @@ for i in range(N):
         child.sort()
         parent.append(child)
 
+    # 値を求める
+    # 各childから取れるだけ取る(配列操作を行う)
     opt = []
     for array in parent:
-        for j in range(len(array) - K + 1):
+        for j in range(len(array) - K + 1):  # childの長さ - K + 1だけ値を取れる
             opt.append(array[j])
+    # Q個取れたなら
     if len(opt) >= Q:
         opt.sort()
         ans = min(ans, opt[Q - 1] - opt[0])

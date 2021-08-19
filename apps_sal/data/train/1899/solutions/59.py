@@ -19,11 +19,11 @@ class Solution:
                 i, j = pos
 
                 if (i >= R or
-                    i < 0 or
-                    j >= C or
-                    j < 0 or
-                    A[i][j] == 0 or
-                        pos in visited):
+                    i < 0
+                    or j >= C
+                    or j < 0
+                    or A[i][j] == 0
+                        or pos in visited):
                     return
 
                 visited.add(pos)
@@ -48,6 +48,8 @@ class Solution:
 
         island1, island2 = get_islands()
 
+        # BFS starting from island1
+        #queue = collections.deque()
         min_distance = 0
 
         while True:
@@ -58,6 +60,14 @@ class Solution:
 
                 island1.add(neighbor)
             min_distance += 1
+#         min_distance = None
+#         for p1 in island1:
+#             for p2 in island2:
+
+#                 if min_distance is None:
+#                     min_distance = self.dist(p1, p2)
+#                 else:
+#                     min_distance = min(min_distance, self.dist(p1,p2))
 
         return min_distance
 

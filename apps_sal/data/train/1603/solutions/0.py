@@ -1,4 +1,7 @@
+# Bartek Kostka
+#  You are not prepared!
 
+# include "bits/stdc++.h"
 
 n = int(input())
 W = {}
@@ -9,13 +12,15 @@ for i in range(n):
         adr[-1] = '?'
     domena = "/".join(adr[:3])
     adres = "/".join(adr[3:])
+    #print(domena, adres)
     if domena not in W:
         W[domena] = set()
     W[domena].add(adres)
 
 E = {}
 for key, ele in list(W.items()):
-    lele = "
+    #print(key, ele)
+    lele = "#".join(sorted(list(ele)))
     if lele not in E:
         E[lele] = []
     E[lele].append(key)

@@ -1,5 +1,6 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+        # dp[i][j][k] means this is ith roll and we end up with number j and it has lasted k times
         dp = [[[0 for k in range(16)] for j in range(7)] for i in range(n + 1)]
         mod = pow(10, 9) + 7
 

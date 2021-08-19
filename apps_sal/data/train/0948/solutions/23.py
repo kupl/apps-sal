@@ -1,3 +1,5 @@
+# cook your dish here
+# 872//2
 import math
 a, b = list(map(int, input().split()))
 l = []

@@ -1,3 +1,4 @@
+# cook your code here
 from math import ceil
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))

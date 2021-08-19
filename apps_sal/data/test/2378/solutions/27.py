@@ -4,7 +4,7 @@ import sys
 def dfs1(root, links):
     parent = [0] * n
     subtree_count = [{} for _ in range(n)]
-    q = [(root, -1, 0)]
+    q = [(root, -1, 0)]  # 2番目:親  3番目:0=初, 1=全ての子巡回後
     while q:
         v, p, t = q.pop()
         if t == 0:
@@ -59,10 +59,12 @@ for line in sys.stdin:
     links[b].add(a)
 root = 0
 MOD = 10 ** 9 + 7
-d2 = 500000004
+d2 = 500000004  # 2^-1 mod 10**9+7
 d2s = [1]
 for i in range(n):
     d2s.append(d2s[-1] * d2 % MOD)
 parent, subtree_count = dfs1(root, links)
+# print(parent)
+# print(subtree_count)
 ans = dfs2(root, parent, subtree_count, d2, d2s)
 print(ans)

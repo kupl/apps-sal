@@ -28,6 +28,7 @@ class Solution:
         for i, num in enumerate(A):
             factor = self.decomp(num)
             dic[num] = factor[0]
+            # print(num, factor)
             for i in range(0, len(factor) - 1):
                 uf.union(factor[i], factor[i + 1])
 
@@ -40,6 +41,7 @@ class Solution:
     def decomp(self, num):
         factor = 2
         ans = set()
+        # print(\"num\", num)
         while num >= factor * factor:
             if num % factor == 0:
                 num //= factor
@@ -47,4 +49,5 @@ class Solution:
             else:
                 factor += 1
         ans.add(num)
+        # print(\"num end\", num)
         return list(ans)

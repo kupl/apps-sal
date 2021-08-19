@@ -8,7 +8,7 @@ class Solution:
 
         def dac(X):
             if len(X) == 1:
-                return X[0], X[0], X[0], X[0]
+                return X[0], X[0], X[0], X[0]  # l, r, m, s
 
             n = len(X)
             nby2 = n // 2

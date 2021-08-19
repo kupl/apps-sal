@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+# https://atcoder.jp/contests/abc098/tasks/abc098_b
 
 N = int(input())
 S = input()

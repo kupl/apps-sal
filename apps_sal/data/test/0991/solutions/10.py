@@ -18,12 +18,20 @@ for i in range(N):
     change_cost.append(cost)
 
 
+# dp[i][silver] := 頂点iにいて銀貨をsilver枚持っているような状況を作るために必要な最小時間
 dp = [[float('inf')] * (MAX_COST + 1) for _ in range(N)]
 dp[0][init_silver] = 0
 
+# 優先度付きキュー: (time, node, silver)
 hq = [(0, 0, init_silver)]
 while hq:
     time, node, silver = heapq.heappop(hq)
+
+    # self_loop_silver = min(silver + change_rate[node], MAX_COST)
+    # self_loop_cost = time + change_cost[node]
+    # if self_loop_cost < dp[node][self_loop_silver]:
+    #     dp[node][self_loop_silver] = self_loop_cost
+    #     heapq.heappush(hq, (time + change_cost[node], node, self_loop_silver))
 
     for to, silver_cost, time_cost in G[node]:
         remain_silver = min(silver - silver_cost, MAX_COST)

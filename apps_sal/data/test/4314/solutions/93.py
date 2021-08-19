@@ -4,9 +4,9 @@ row = [False] * h
 col = [False] * w
 for i in range(h):
     for j in range(w):
-        if A[i][j] == '
-        row[i] = True
-        col[j] = True
+        if A[i][j] == '#':
+            row[i] = True
+            col[j] = True
 for i in range(h):
     if row[i]:
         for j in range(w):

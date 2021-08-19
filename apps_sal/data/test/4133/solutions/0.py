@@ -28,6 +28,9 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
+############################## SOLUTION ##############################
+
+# ?(_/____+_______*__-_____*______-___):-__<___,___<____,____<_____,_____<______,______<_______.
 
 golorp = input().split(":-")
 golorp[0] = golorp[0][2:]

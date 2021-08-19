@@ -28,17 +28,22 @@ n = int(input())
 c = 0
 a, b = [int(x) for x in input().split()]
 
+# if is_prime(a) and is_prime(b):
+#    c+=1
 l1, l2 = primeFactors(a), primeFactors(b)
 d = list(set(l1 + l2))
 f = 0
 for i in range(1, n):
     a, b = [int(x) for x in input().split()]
+    # if is_prime(a) and is_prime(b):
+    #    c+=1
     s = []
     for p in d:
         if a % p != 0 and b % p != 0:
             s.append(p)
     for ele in s:
         d.remove(ele)
+    # print(d)
     if len(d) == 0:
         f = 1
         ans = -1

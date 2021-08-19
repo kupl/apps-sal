@@ -19,6 +19,8 @@ def backwardsPrime(start, stop):
         k = k + 1
     return Prime
 
+# Test de primalidad de Miller-Rabin
+
 
 def TryComposite(a, d, n, s):
     if pow(a, d, n) == 1:
@@ -26,7 +28,7 @@ def TryComposite(a, d, n, s):
     for i in range(s):
         if pow(a, 2**i * d, n) == n - 1:
             return False
-    return True
+    return True  # n  is definitely composite
 
 
 def IsPrime(n, PrecisionForHugeN=16):
@@ -38,6 +40,7 @@ def IsPrime(n, PrecisionForHugeN=16):
     d, s = n - 1, 0
     while not d % 2:
         d, s = d >> 1, s + 1
+    # Returns exact according to http://primes.utm.edu/prove/prove2_3.html
     if n < 1373653:
         return not any(TryComposite(a, d, n, s) for a in (2, 3))
     if n < 25326001:
@@ -50,4 +53,5 @@ def IsPrime(n, PrecisionForHugeN=16):
         return not any(TryComposite(a, d, n, s) for a in (2, 3, 5, 7, 11, 13))
     if n < 341550071728321:
         return not any(TryComposite(a, d, n, s) for a in (2, 3, 5, 7, 11, 13, 17))
+    # otherwise
     return not any(TryComposite(a, d, n, s) for a in KnownPrimes[:PrecisionForHugeN])

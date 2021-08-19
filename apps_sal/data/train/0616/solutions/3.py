@@ -23,6 +23,8 @@ for _ in range(int(input())):
 
             j += 1
 
+        # print(values)
+
         if(len(values) == 0):
             if(flag == 0):
                 continue
@@ -70,5 +72,6 @@ for _ in range(int(input())):
                 ans += abs(last - min(values))
 
             last = max(values)
+        # print(ans)
 
     print(ans)

@@ -45,9 +45,21 @@ for i in range(n):
                 for l in range(m):
                     if graph[2][l][k] == False:
                         flag = True
+             #           print(i, j, k, l)
             if flag:
                 print('NO')
                 flag1 = not flag
 
 if flag1:
     print('YES')
+
+# print()
+# for i in range(n):
+    # for j in range(m):
+    #print(graph[0][j][i], end = ' ')
+    # print()
+# print()
+# for i in range(n):
+    # for j in range(m):
+    #print(graph[1][j][i], end = ' ')
+    # print()

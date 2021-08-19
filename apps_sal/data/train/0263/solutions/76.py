@@ -10,6 +10,7 @@ class Solution:
             for j in range(10):
                 for p in path[j]:
                     dp2[j] += dp[p]
+                # dp[j] %= MOD
             dp = dp2
         res = sum(dp)
 

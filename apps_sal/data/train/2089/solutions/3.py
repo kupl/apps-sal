@@ -40,6 +40,7 @@ def dump_encoded(s):
         print(op, n)
 
 
+# x, y, 0, 1
 m = int(input())
 ops = []
 for i in range(m):

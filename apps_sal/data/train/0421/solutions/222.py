@@ -1,4 +1,5 @@
 class Solution:
+    # O(n^2) time, O(1) space
     def lastSubstring(self, s: str) -> str:
         best = 0
         n = len(s)

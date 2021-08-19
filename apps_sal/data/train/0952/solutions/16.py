@@ -1,3 +1,4 @@
+# cook your dish here
 import bisect
 l = [1, 5, 9, 15, 21]
 for i in range(int(input())):

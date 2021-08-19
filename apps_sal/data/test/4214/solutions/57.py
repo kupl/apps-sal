@@ -14,6 +14,7 @@ for i in range(n):
 cnt = 0
 ans = 0
 for idx in list(itertools.permutations(v)):
+    # print(idx)
 
     cnt += 1
     for i in range(1, n):

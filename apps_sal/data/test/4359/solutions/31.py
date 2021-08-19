@@ -1,3 +1,6 @@
+# ABC123
+# Five Dishes
+# B=A R=B G=C P=D T=E
 Ryori = [input() for _ in range(5)]
 O = []
 t = 0

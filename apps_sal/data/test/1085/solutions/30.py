@@ -2,10 +2,13 @@ import sys
 readline = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 mod = 10**9 + 7
+#mod = 998244353
 INF = 10**18
 eps = 10**-7
 
 N = int(input())
+
+# nの約数列挙
 
 
 def divisor(n):
@@ -16,7 +19,7 @@ def divisor(n):
             if i**2 == n:
                 continue
             ass.append(n // i)
-    return ass
+    return ass  # sortされていない
 
 
 ans = len(divisor(N - 1)) - 1

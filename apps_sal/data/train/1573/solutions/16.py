@@ -1,6 +1,8 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
+    # A=list(map(int,input().split()))
     a = (n - 1) // 2
 
     if n % 2 == 0:

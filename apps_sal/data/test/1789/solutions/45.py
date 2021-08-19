@@ -4,11 +4,14 @@ def __starting_point():
 
     ans = 0
 
+    # 階の差分
     ud_sbn = abs(a - b)
+    # 上るか下るか
     up = False
     if a - b < 0:
         up = True
 
+    # 同じ階ならば
     if ud_sbn == 0:
         ans = x
     else:

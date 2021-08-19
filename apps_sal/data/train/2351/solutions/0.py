@@ -11,6 +11,7 @@ def solve(a, b, min1, min2, min3, min4, x, y):
     solMin2 *= (x * y)
 
     if solMin1 >= min1 and solMin1 <= min2 and solMin2 >= min3 and solMin2 <= min4:
+        # Solution found
         return [a, solMin1, b, solMin2]
     return []
 
@@ -247,4 +248,5 @@ for i in range(eval(input())):
                 t2 = str(t2)
         except:
             exit(0)
+        # print str(solutionh)+":%.2f"%(solutionm);
         print(str(solutionh) + ":%d.%s" % (t1, t2))

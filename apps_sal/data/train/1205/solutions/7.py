@@ -1,3 +1,4 @@
+# cook your dish here
 def find2(i):
     ans = 0
     return (i + 1) * (lenS - i - 1) + i * (i + 1) / 2 + (lenS - i - 2) * (lenS - i - 1) / 2

@@ -19,7 +19,7 @@ for i in range(n):
         ts.add(s[i])
     l[d[s[i]]].append(i)
 
-for end in range(n):
+for end in range(n):  # start = 0
     if s[end] not in cs:
         cs.add(s[end])
     if ts & cs == ts:

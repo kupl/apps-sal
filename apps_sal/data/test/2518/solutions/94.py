@@ -8,6 +8,7 @@ l = 0
 r = 10 ** 9 + 1
 
 
+# x 回で全滅できるか否か
 def check(x):
     cnt = 0
     for ri in R:

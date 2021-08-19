@@ -8,6 +8,7 @@ for _ in range(n):
 
 M2 = [[M1[j][i] for j in range(n)] for i in range(m)]
 
+# print(M2)
 
 for M in ([M1, M2] if k > 1 else [M1]):
     for row in M:
@@ -20,6 +21,7 @@ for M in ([M1, M2] if k > 1 else [M1]):
                 cnts.append(sofar)
                 sofar = 0
         cnts.append(sofar)
+        # print(cnts)
 
         for cnt in cnts:
             result += max(0, cnt - k + 1)

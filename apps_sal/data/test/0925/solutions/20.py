@@ -1,4 +1,14 @@
+#s = str(input())
+#
+#balance = 0
+#sh = 0
+#
+# for i in s:
+#    if i == "(": balance += 1
+#    if i == ")": balance -= 1
+#    if i == "#": sh += 1
 
+#print(balance, sh)
 
 s = str(input())
 

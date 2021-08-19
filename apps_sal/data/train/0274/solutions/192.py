@@ -45,3 +45,29 @@ class Solution:
                 local_max = -max_heap[0]
 
         return max_d
+
+#     def longestSubarray(self, nums: List[int], limit: int) -> int:sub:
+#       n = len(nums)
+
+#       max_d = 0
+#       for left in range(n):
+#         local_max = float('-inf')
+#         local_min = float('inf')
+
+#         for right in range(left + 1, n + 1):
+#           sub = nums[left:right]
+
+#           if local_max < sub[-1]:
+#             local_max = sub[-1]
+
+#           if local_min > sub[-1]:
+#             local_min = sub[-1]
+
+#           if local_max - local_min <= limit:
+#             if right - left + 1 > max_d:
+#               max_d = right - left + 1
+#               # print(max_d, right, left, sub)
+#           else:
+#             break
+
+#       return max_d

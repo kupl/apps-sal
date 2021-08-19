@@ -1,7 +1,7 @@
 class Solution:
 
     def maxNonOverlapping(self, nums, target) -> int:
-        hashMap = {0: -1}
+        hashMap = {0: -1}  # totalSum -> inclusive ending index
         totalSum = 0
         answer = []
         count = 0

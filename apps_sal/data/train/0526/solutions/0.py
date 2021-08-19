@@ -1,3 +1,4 @@
+# include<sdg.h>
 for _ in range(int(input())):
     s = input()
     n = len(s)
@@ -32,5 +33,6 @@ for _ in range(int(input())):
                 if i == n - 1:
                     ans += s[i]
                     ch += 1
+        # print(ans,num,ch)
         sol = (n * 8) - ((num * 32) + (ch * 8))
         print(sol)

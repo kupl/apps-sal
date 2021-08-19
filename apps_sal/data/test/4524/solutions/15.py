@@ -25,6 +25,7 @@ while i < n:
         c += 1
     if a[i] == '1':
         r += c
+    # print(c,r)
     i += 1
     j += 1
 print(r % 998244353)

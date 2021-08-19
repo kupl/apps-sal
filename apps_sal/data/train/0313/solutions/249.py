@@ -17,6 +17,7 @@ class Solution:
             if curr_idx == lo:
                 idx = curr_idx
             curr_day = unique_bloom_days[curr_idx]
+            # check if the condition is satisfiable
             bouquet = 0
             curr = 0
             for i in range(len(bloomDay)):
@@ -28,13 +29,13 @@ class Solution:
                 else:
                     curr = 0
 
-            if bouquet < m:
+            if bouquet < m:  # not enough
                 if curr_idx == lo:
                     idx = lo + 1
                     break
                 else:
                     lo = curr_idx
-            else:
+            else:  # enough
                 hi = curr_idx
                 if hi == lo:
                     idx = hi

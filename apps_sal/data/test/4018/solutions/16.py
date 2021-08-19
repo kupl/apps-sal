@@ -11,6 +11,7 @@ for i in range(n):
         j -= 1
     if(j == -1):
         count[i][1] += 1
+# print(count)
 cost = 0
 count[0][0] = 1
 for l in range(n, -1, -1):
@@ -22,6 +23,7 @@ for l in range(n, -1, -1):
         ct += count[i][l]
     minct = min(setsize, ct)
     setsize -= minct
+    # print("for k=",setsize,"l=",l,";minct=",minct,";localcost=",localcost)
     cost += (minct * localcost)
 if(setsize == 0):
     print(cost)

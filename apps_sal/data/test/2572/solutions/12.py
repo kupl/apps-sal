@@ -5,6 +5,7 @@ def f(*a):
     ans = int(1e19)
     for i in a:
         ans = min(ans, sum(abs(n - i) for n in a))
+    # print(a, ans)
     return ans
 
 

@@ -21,13 +21,19 @@ class Solution:
                 return True
 
             dislikes = set(map(tuple, dislikes))
+            # print(dislikes)
             uf = UF(N)
             for i in range(1, N + 1):
                 for j in range(i + 1, N + 1):
                     if (i, j) not in dislikes and (j, i) not in dislikes:
+                        # print(i,j)
                         uf.union(i - 1, j - 1)
 
+            # uf.find_all()
+            # print(uf.p)
+
             return len(set(uf.p)) == 2
+        # return method1(dislikes)
 
         def method2():
             graph = collections.defaultdict(list)

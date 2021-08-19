@@ -11,6 +11,7 @@ class Solution:
                 else:
                     cur = 0
                 if cur == sz:
+                    #print('size: ' + str(sz) + ' L: ' + str(l) + text[l-sz:l])
                     res.add(text[l - sz + 1:l + 1])
                     cur -= 1
                 r += 1

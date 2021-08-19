@@ -29,4 +29,5 @@ class Solution:
                     continue
                 else:
                     heapq.heappush(cost, (abs(x - x1) + abs(y - y1), i, j))
+        # print(len(cost))
         return cruskal(len(P), cost)

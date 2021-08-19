@@ -1,4 +1,14 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+#   1
+# /   \\
+# 2    3
 
+# [1, 2,null, null,3, null, null]
 
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:

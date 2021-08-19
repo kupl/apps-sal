@@ -1,3 +1,4 @@
+# cook your dish here
 from math import gcd
 for _ in range(int(input())):
     n, a, k, min_k, e = int(input()), [int(i) for i in input().split()], 0, 0, -1

@@ -3,6 +3,8 @@ import math
 import collections
 from collections import defaultdict
 
+#from itertools import permutations,combinations
+
 
 def file():
     sys.stdin = open('input.py', 'r')
@@ -16,6 +18,7 @@ def get_array():
 
 def get_ints():
     return map(int, input().split())
+    # return a,b
 
 
 def get_3_ints():
@@ -77,6 +80,8 @@ def chk(aa, bb):
             else:
                 continue
     return f
+
+# file()
 
 
 def main():

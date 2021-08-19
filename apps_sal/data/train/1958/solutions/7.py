@@ -6,6 +6,7 @@ class Solution:
                 groups[groupSizes[i]].append(i)
             else:
                 groups[groupSizes[i]] = [i]
+        # print(groups)
 
         output = []
         for i in groups:

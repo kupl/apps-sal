@@ -12,6 +12,7 @@ for x in range(2, 51):
     for y in range(x + 1):
         c[x][y] = c[x - 1][y - 1] + c[x - 1][y]
 d = [[[[0, float('inf')] for l in range(2)] for i in range(c100 + 1)] for j in range(c50 + 1)]
+# d[i][j][c] ответ, когда мы переправили i по 50 кг и j по 100 кг и лодка на берегу c
 d[0][0][0][0] = 1
 d[0][0][0][1] = 0
 q = deque()

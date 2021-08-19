@@ -1,4 +1,6 @@
+# cook your dish here
 
+# using the concept of binary search
 
 def ret_sum(arr, k, x):
     s = 0

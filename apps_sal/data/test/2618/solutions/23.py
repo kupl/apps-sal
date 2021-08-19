@@ -1,4 +1,5 @@
 def calc(arr, ll, a, b, x, y):
+    # y is always greater than x
     rXY = 0
     rX = 0
     rY = 0

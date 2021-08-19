@@ -8,6 +8,7 @@ for i in range(n):
         if(abs(arr1[i] - arr2[j]) <= 1):
             graph[i][j + n] = True
             graph[j + n][i] = True
+# print(str(graph).replace('], [','],\n[')[1:].replace('True','1').replace('False','-'))
 u = [False] * (m + n)
 to = [-1] * m
 

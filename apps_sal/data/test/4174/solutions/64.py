@@ -1,3 +1,4 @@
+# nは跳ねる回数　d1 = 1 dn+1 = dn + ln
 
 n, x = list(map(int, input().split()))
 l = list(map(int, input().split()))

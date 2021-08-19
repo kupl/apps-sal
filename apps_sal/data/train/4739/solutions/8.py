@@ -1,4 +1,5 @@
 def same_col_seq(val, k, col):
+    # your code here
     code = {'blue': 0, 'red': 1, 'yellow': 2}
     result = []
     limit = 2 * k * val

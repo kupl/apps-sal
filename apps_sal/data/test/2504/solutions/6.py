@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 E - Travel by Car
 https://atcoder.jp/contests/abc143/tasks/abc143_e

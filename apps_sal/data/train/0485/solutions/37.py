@@ -4,6 +4,7 @@ class Solution:
         p = ans = 0
         for i in range(len(A)):
             if i >= K:
+                # switch back
                 p ^= flipped[i - K]
             if p == A[i]:
                 if i + K > len(A):

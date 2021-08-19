@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     a, m, g = [int(x) for x in input().split()]
     r = abs(a - m)

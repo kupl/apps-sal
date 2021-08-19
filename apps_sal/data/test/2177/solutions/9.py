@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations
@@ -43,6 +44,8 @@ def solve():
         d = len(str(b + 1)) - 1
         print(a * d)
     return
+
+# Solve
 
 
 def __starting_point():

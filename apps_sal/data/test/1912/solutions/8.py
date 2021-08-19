@@ -2,6 +2,7 @@ t = int(input())
 for case in range(t):
     r, g, b, w = list(map(int, input().split()))
     nodd = (r % 2) + (g % 2) + (b % 2) + (w % 2)
+    # print("nodd:", nodd)
     if nodd == 2:
         print("No")
     elif nodd <= 1:

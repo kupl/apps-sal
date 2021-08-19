@@ -13,6 +13,7 @@ class Solution:
                 if (nums2[i] * nums2[j]) ** 0.5 == int((nums2[i] * nums2[j]) ** 0.5):
                     m = int((nums2[i] * nums2[j]) ** 0.5)
                     if m in set1:
+                        # print(m, i, j)
                         res += len(set1[m])
 
         for i in range(len(nums1) - 1):
@@ -20,5 +21,6 @@ class Solution:
                 if (nums1[i] * nums1[j]) ** 0.5 == int((nums1[i] * nums1[j]) ** 0.5):
                     m = int((nums1[i] * nums1[j]) ** 0.5)
                     if m in set2:
+                        # print(m, i, j)
                         res += len(set2[m])
         return res

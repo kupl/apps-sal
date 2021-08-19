@@ -9,15 +9,18 @@ for i in range(0, n):
     logb = int(math.log(b, 2))
 
     dist = 0
+    # print a, b
     if loga > logb:
         dist += loga - logb
         a = a >> (loga - logb)
     else:
         b = b >> (logb - loga)
         dist += logb - loga
+    # print a, b
 
     x = a ^ b
     if x:
         dist += (int(math.log(x, 2)) + 1) * 2
 
     print(dist)
+    # print "   "

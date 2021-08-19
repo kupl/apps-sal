@@ -1,6 +1,8 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
 
+        ##############################
+        # Union Find
         parents = [-1] * (max(A) + 1)
 
         def find(x: int) -> int:
@@ -28,11 +30,12 @@ class Solution:
 
             else:
                 parents[root_x] = root_y
+        ##############################
 
         def get_factor(n: int) -> list:
             ans = []
 
-            for i in range(2, int(n**(1 / 2) + 1)):
+            for i in range(2, int(n**(1 / 2) + 1)):  # exclude \"factor 1\" and \"max factor\"
                 if n % i == 0:
                     ans.append(i)
 

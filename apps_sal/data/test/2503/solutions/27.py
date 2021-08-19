@@ -1,6 +1,7 @@
 import numpy as np
 N, K = list(map(int, input().split()))
 mod = 2 * K
+#field = np.zeros((2*K+1, 2*K+1), dtype='i')
 field = [[0] * (2 * K + 1) for _ in range(2 * K + 1)]
 
 

@@ -26,7 +26,7 @@ def like2017(N):
 
 
 def main():
-    Q = int(sys.stdin.readline().rstrip())
+    Q = int(sys.stdin.readline().rstrip())  # クエリ数
 
     L = like2017(10**5)
 

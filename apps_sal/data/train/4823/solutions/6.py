@@ -2,6 +2,8 @@ import math
 
 
 def wallpaper(l, w, h):
+    # assuming to cover the wall with wallpaper vertically roll by roll, so it's likely the roll strip will be partially used
+    # number of rolls needed
     if l == 0 or w == 0 or h == 0:
         return 'zero'
     r = math.ceil((2 * (l + w) * 100) * h * 100 * 1.15 / (52 * 1000))

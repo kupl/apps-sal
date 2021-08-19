@@ -1,5 +1,6 @@
 import math
 from functools import reduce
+# finding primes
 MAX_PRIME = 10000
 prime_candidates = [True] * MAX_PRIME
 

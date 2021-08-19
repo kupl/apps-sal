@@ -27,6 +27,7 @@ class Solution:
                 comb = helper(skills - set(people[ind]), group | {ind}) | {ind}
                 if not new_group or len(comb) < len(new_group):
                     new_group = comb
+            # print(new_group)
             memo[tuple(skills)] = new_group
             return new_group
 

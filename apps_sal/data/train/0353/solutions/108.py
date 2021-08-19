@@ -11,6 +11,8 @@ class Solution:
                 if n + n > target:
                     continue
 
+#             print ('ssss')
+
             if n + nums[-1] <= target:
                 R = len(nums)
                 cnt += 2**(R - i - 1)
@@ -25,4 +27,5 @@ class Solution:
                 else:
                     R = mid
             cnt += 2**(R - i - 1)
+            # print (n, i, R, cnt)
         return cnt % (10**9 + 7)

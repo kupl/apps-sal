@@ -3,8 +3,10 @@ from itertools import accumulate as acc
 
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
+        # dp
         N = len(mat)
         M = len(mat[0])
+        # how do we accumulate
         prefix = [*list(zip(*list(map(acc, list(zip(*list(map(acc, mat))))))))]
         for i in prefix:
             print(i)
@@ -17,6 +19,7 @@ class Solution:
                 l = max(0, i - K)
                 t = max(0, j - K)
                 cursum = prefix[r][b]
+                # print(cursum)
                 if(l - 1 >= 0):
                     cursum -= prefix[l - 1][b]
                 if(t - 1 >= 0):

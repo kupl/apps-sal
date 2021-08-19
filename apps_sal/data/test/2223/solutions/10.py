@@ -21,6 +21,7 @@ def main():
     max_height = 1
     while len(q) > 0:
         u, hu = q.pop()
+        # print(u)
         leaf_node = True
 
         for v in g[u]:

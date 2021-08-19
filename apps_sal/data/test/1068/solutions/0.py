@@ -21,8 +21,8 @@ def solution():
     s = input()
     l = len(s)
     mod = modgroup()
-    num = [mod(0)] * (l + 1)
-    shift = [mod(1)] * (l + 1)
+    num = [mod(0)] * (l + 1)  # num[i] = int(s[:i]) <mod>
+    shift = [mod(1)] * (l + 1)  # shift[i] = 10**i <mod>
     for i, x in enumerate(s, 1):
         num[i] = num[i - 1] * mod(10) + mod(int(x))
         shift[i] = shift[i - 1] * mod(10)

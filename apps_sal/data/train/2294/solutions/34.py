@@ -24,10 +24,13 @@ ymin = p[0][1]
 tymin = float('inf')
 tymax = 0
 for i in range(N - 1):
+    # print(i, dx, (xmax, xmin), end=' ==> ')
     tymin = min(tymin, p[i][1])
     xmax = max(xmax, p[i][1])
     xmin = min(tymin, p[i + 1][0])
     ymin = min(ymin, p[i][0])
     dx = min(dx, xmax - xmin)
+    # print(i, dx, (xmax, xmin))
 
+# print(ret, (ymax-ymin) * (xmax-xmin) ,(ymax,ymin), (xmax,xmin), dx)
 print((min(ret, (ymax - ymin) * dx)))

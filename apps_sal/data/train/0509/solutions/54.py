@@ -34,12 +34,14 @@ for _ in range(m):
         g[u].append([v, c])
         g[v].append([u, c])
         uf.union(u, v)
+# print(g)
 
 
 node_val = [None] * n
 node_val[0] = 0
 que = [0]
 seen = set()
+# BFS
 while que != []:
     temp = []
     for node in que:
@@ -53,6 +55,7 @@ while que != []:
             else:
                 node_val[next_node] = c
 
+            # update
             temp.append(next_node)
 
         seen.add(node)

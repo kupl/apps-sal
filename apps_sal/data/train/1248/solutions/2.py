@@ -1,7 +1,8 @@
-T = input()
+# sabemos que no existe una base B>N donde el número empieze con 1 analizamos los casos 0,1 y los demás enteros
+T = input()  # casos a analizar
 T = int(T)
 for a in range(0, T):
-    N = input()
+    N = input()  # número de base
     N = int(N)
     unos = 1
     if N == 1:

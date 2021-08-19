@@ -6,8 +6,8 @@ class Solution:
         """
         preorder = preorder.split(',')
 
-        if preorder[0] == '
-           return len(preorder) == 1
+        if preorder[0] == '#':
+            return len(preorder) == 1
 
         s = []
 
@@ -20,8 +20,8 @@ class Solution:
 
             e = preorder[i]
 
-            if e != '
-               if on_left:
+            if e != '#':
+                if on_left:
                     s.append(curr)
 
                 curr = e

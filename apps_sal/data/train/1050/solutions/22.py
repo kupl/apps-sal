@@ -24,3 +24,5 @@ ls = list()
 
 for i in range(T):
     print(solve(input()))
+    # l=liinput()
+    # ls.extend(l)

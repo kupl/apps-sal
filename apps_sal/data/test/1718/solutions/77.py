@@ -1,5 +1,6 @@
 import sys
 pin = sys.stdin.readline
+# わからんわこれ
 
 
 def main():

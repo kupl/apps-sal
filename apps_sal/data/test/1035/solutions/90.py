@@ -14,7 +14,7 @@ def make_divisors(n):
     return lower_divisors + upper_divisors[::-1]
 
 
-v = gcd(a, b)
+v = gcd(a, b)  # greatest common divisors
 divs = make_divisors(v)
 
 k = 1

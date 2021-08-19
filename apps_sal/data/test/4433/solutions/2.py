@@ -12,9 +12,12 @@ def BFS(s):
 
     visited = [False] * (n + 1)
 
+    # Create a queue for BFS
     queue = []
     k = 0
 
+    # Mark the source node as
+    # visited and enqueue it
     queue.append(s)
     visited[s] = True
 

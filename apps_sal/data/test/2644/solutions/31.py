@@ -30,6 +30,15 @@ def solve(N, P):
 
 
 def __starting_point():
+    # N = 10
+    # nums = list(range(1,N+1))
+    # idx = list(range(N-1))
+    # order = random.sample(idx, len(idx))
+    # for o in order:
+    #     nums[o], nums[o+1] = nums[o+1], nums[o]
+
+    # print(nums)
+    # solve(N, nums)
 
     N = int(input())
     P = list(map(int, input().split()))

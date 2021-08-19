@@ -3,6 +3,7 @@ class Solution:
         inputs = {i: 0 for i in range(n)}
         graph = {i: set() for i in range(n)}
         for i, m in enumerate(manager):
+            # edge m --> i
             if m == -1:
                 continue
             if i not in graph[m]:
@@ -14,6 +15,7 @@ class Solution:
         while stack:
             i, elapsed = stack.pop()
             ans = max(ans, elapsed)
+            # find all subordinates of i
             new_elapsed = elapsed + informTime[i]
             for nb in graph[i]:
                 inputs[nb] -= 1

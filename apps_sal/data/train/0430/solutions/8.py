@@ -13,4 +13,5 @@ class Solution:
                     dp[i] -= 1
                     break
             dp[i] %= mod
+        # print(dp)
         return dp[-1]

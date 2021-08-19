@@ -1,3 +1,4 @@
+# from https://atcoder.jp/contests/abc108/submissions/4342595
 import math
 
 

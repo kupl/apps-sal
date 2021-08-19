@@ -10,6 +10,7 @@ def check(n, m, s, v):
             else:
                 mi = v[i]
 
+        # print(i, mi)
     return True
 
 
@@ -22,8 +23,10 @@ def __starting_point():
     while l < r:
         s = (l + r) // 2
         if check(n, m, s, v):
+            # print(s, 1)
             r = s
         else:
+            # print(s, 0)
             l = s + 1
 
     print(l)

@@ -6,6 +6,13 @@ class Solution:
             return 0
         result = 0
 
+        # target = 10
+        # [-2,6, 6, 3, 5, 4, 1, 2, 8]
+        # [-2,4,10,13,18,22,23,25,33]
+        #                         ^
+        # seen: [0]
+        # result = 2
+
         prefixSums = []
         partial = 0
 

@@ -1,5 +1,6 @@
 import sys
 
+# def main():
 if 1 == 1:
     n, x = list(map(int, sys.stdin.readline().split()))
     al = []
@@ -35,3 +36,6 @@ if 1 == 1:
         print(-1)
     else:
         print(res)
+
+
+# main()

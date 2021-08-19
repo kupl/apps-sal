@@ -1,3 +1,4 @@
+# cook your dish here
 import heapq
 from math import ceil, floor
 for _ in range(int(input())):
@@ -19,5 +20,6 @@ for _ in range(int(input())):
         else:
             current += ret
             heapq.heappush(s, -(ret // 2))
+            # heapq.heapify(s)
         count += 1
     print(count) if current >= z else print("RIP")

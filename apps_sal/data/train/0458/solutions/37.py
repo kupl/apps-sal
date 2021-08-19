@@ -18,9 +18,11 @@ class Solution:
             v = modcumsum[i]
             target = (v - diff) % p
 
+            # check if target val is in array
             if target in list(d.keys()):
                 best = min(best, i - d[target])
 
+            # add current value to the dict
             d[v] = i
 
         return best if best != len(nums) else -1

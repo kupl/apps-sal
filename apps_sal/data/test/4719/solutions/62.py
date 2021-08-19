@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 n = int(input())
 s = [input() for _ in range(n)]
@@ -18,6 +19,7 @@ for i in range(n):
         if tmp <= d[key]:
             d[key] = tmp
 
+# print('d =', d)
 d = sorted(list(d.items()), key=lambda x: x[0])
 ans = ''
 for i in range(len(d)):

@@ -1,5 +1,6 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
+        # since transp. generate symm. grp., just need pair counts
         mask = 0
         prefix, suffix = {0: -1}, {0: -1}
         digcodes = [2**i for i in range(10)] + [0]

@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 n, w, v, u = list(map(int, input().split()))
 v = u / v
 l = r = 0

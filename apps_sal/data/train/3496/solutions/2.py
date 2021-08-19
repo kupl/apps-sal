@@ -11,7 +11,7 @@ def sort_by_area(seq):
 
         valueList.append(area)
 
-    a = sorted(range(len(valueList)), key=valueList.__getitem__)
+    a = sorted(range(len(valueList)), key=valueList.__getitem__)    # Get index of sorted list
     sort_by_area = [seq[i] for i in a]
 
     return sort_by_area

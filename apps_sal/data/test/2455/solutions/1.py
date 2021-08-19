@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def read_ints():
     return list(map(int, input().strip().split()))

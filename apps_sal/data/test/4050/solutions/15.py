@@ -1,3 +1,4 @@
+# import time
 def index(key, item, index):
     if key in index:
         index[key].add(item)
@@ -14,14 +15,17 @@ def schedule(times):
         index(a, i, index_by_a)
         index(b, i, index_by_b)
     b_keys = sorted(list(index_by_b.keys()))
+    # a_keys = sorted(list(index_by_a.keys()))
     a_min = 0
     while 1:
+        # collect pool
         pool = set()
         for k, v in index_by_a.items():
             if k >= a_min:
                 pool |= v
         if not pool:
             break
+        # greedy select.
         for k in (ele for ele in b_keys if ele > a_min):
             candidates = pool & index_by_b[k]
             if candidates:
@@ -62,10 +66,13 @@ def solve(n, a_l):
 def main():
     n = int(input())
     a_l = list(map(int, input().split()))
+    # tick = time.time()
     result = solve(n, a_l)
     print(len(result))
     for a, b in result:
         print(a + 1, b)
+    # tock = time.time()
+    # print('T:', round(tock - tick, 5))
 
 
 def __starting_point():

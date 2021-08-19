@@ -17,6 +17,7 @@ class Solution:
             for j in range(len(x[i])):
                 d[x[i][j]] = 1
             arrd.append(d)
+        # print(arrd)
         ind = [0] * len(x)
         for j in range(len(x)):
             for i in range(j - 1, -1, -1):

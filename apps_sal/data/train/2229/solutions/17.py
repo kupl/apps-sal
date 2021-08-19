@@ -1,3 +1,4 @@
+#print('HARE KRISHNA')
 t = input()
 p = input()
 block = [int(i) - 1 for i in input().split()]

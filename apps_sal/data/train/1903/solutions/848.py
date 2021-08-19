@@ -32,12 +32,25 @@ class Solution:
         for node1, point1 in enumerate(points):
             for node2, point2 in enumerate(points):
                 if node1 != node2:
+                    # graph[node1].append( ( distance(point1[0],point1[1] ,point2[0],point2[1]) , node2) )
                     graph.append((distance(point1[0], point1[1], point2[0], point2[1]), node1, node2))
+
+        # print(graph)
 
         res = 0
         dsu = DSU()
 
+        # for node in graph:
+        #     for dis, nei in sorted(graph[node]):
+        #         print(node,nei,dis)
+        #         if dsu.union(node,nei):
+        #             print('yes')
+        #             res += dis
+
         for d, u, v in sorted(graph):
+            # print(d,u,v)
+            # if len(dsu.parents) == len(points):
+            #     return res
             if len(dsu.parents) == len(points) and len(set(dsu.find(x) for x in dsu.parents)) == 1:
                 return res
 

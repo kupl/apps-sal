@@ -1,7 +1,10 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
+#n,m = map(int,readline().split())
 s = input()
 t = input()
 
@@ -19,6 +22,8 @@ for i in t:
     else:
         vt.append(vt[-1] - 1)
 
+# print(vs)
+# print(vt)
 
 q = int(input())
 for _ in range(q):

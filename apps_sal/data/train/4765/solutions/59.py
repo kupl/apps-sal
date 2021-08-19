@@ -5,4 +5,5 @@ class Hero(object):
         self.damage = 5
         self.experience = 0
         self.position = '00'
+        # Add default values here
         pass

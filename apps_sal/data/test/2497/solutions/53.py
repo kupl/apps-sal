@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 
 import sys
 n = int(input())
@@ -129,10 +131,13 @@ if d and u:
     if dmax - umax > 0:
         s.add((dmax - umax) / 2)
 
+# print(rmax,xmax)
 
 ans = 10**18
 for t in s:
+    #    print(rpos(t),lpos(t),dpos(t),upos(t),xmin,ymin,xmax,ymax,xx,yy)
     area = (rpos(t) - lpos(t)) * (upos(t) - dpos(t))
+#    print(t,area)
     if area < ans:
         ans = area
 

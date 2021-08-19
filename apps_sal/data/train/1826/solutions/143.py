@@ -5,6 +5,8 @@ class Solution:
         for i in range(r):
             for j in range(c):
                 rsums[i].append(rsums[i][-1] + mat[i][j])
+        # for i in rsums:
+        #    print(*i)
         res = [[0 for i in range(c)] for j in range(r)]
         for i in range(r):
             for j in range(c):
@@ -14,6 +16,7 @@ class Solution:
                 lc = 0 if j - k < 0 else j - k
                 rc = c - 1 if j + k >= c else j + k
                 rc += 1
+                # print((i,j),lr,rr,lc,rc)
                 for x in range(lr, rr + 1):
                     mat[i][j] += (rsums[x][rc] - rsums[x][lc])
         return mat

@@ -12,6 +12,8 @@ class Profiler(object):
 n = int(input())
 a = input()
 b = input()
+#a= 'x'*200000 +'ab'
+#b= 'b'*200000 +'xx'
 indexes = list()
 d = {}
 f1 = False
@@ -19,6 +21,7 @@ f2 = False
 df = 0
 i1 = 0
 i2 = 0
+# with Profiler() as p:
 for i in range(n):
     if a[i] != b[i]:
         df += 1

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 import random
 
@@ -35,6 +36,7 @@ class Prime:
             d //= 2
 
         witnesses = self.get_witnesses(n)
+        #witnesses = [random.randint(1, n - 1) for _ in range(100)]
 
         for w in witnesses:
             t = d

@@ -1,6 +1,6 @@
 from math import log2
 
-ns = ["A", "A
+ns = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
 
 
 def get_note(p):

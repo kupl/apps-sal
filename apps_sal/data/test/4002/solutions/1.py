@@ -50,4 +50,5 @@ for i in range(1, len(maxlis)):
             ndp[(x + y) % k] = max(ndp[(x + y) % k], dp[x] + now[y])
     dp = ndp
 
+#print (maxlis)
 print(dp[0])

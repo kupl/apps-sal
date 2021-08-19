@@ -25,6 +25,7 @@ class Solution:
         return -1
 
     def find(self, n, memo):
+        # DFS
         if n <= 1:
             return n
 

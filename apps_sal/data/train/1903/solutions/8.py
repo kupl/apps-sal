@@ -24,6 +24,7 @@ class Solution:
                     continue
                 visited.add(idx)
                 cost += nxt_cost
+                # print('visit', idx, nxt_cost, cost, visited, min_heap)
 
                 for adj in g[idx]:
                     if adj not in visited:

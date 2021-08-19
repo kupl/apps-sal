@@ -3,6 +3,8 @@ class Solution:
         total = sum(A)
         minSum = self.maxSum([-x for x in A]) + total
         maxSum = self.maxSum(A)
+        # print(maxSum)
+        # print(minSum)
         return max(maxSum, minSum) if minSum > 0 else maxSum
 
     def maxSum(self, A: List[int]) -> int:

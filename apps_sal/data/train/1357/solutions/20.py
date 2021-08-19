@@ -1,4 +1,6 @@
+# MOD = 1000000007
 for _ in range(int(input())):
+    # n,k = map(int,input().split())
     n = int(input())
     coins = list(map(int, input().split()))
     cashier = {5: 0, 10: 0}

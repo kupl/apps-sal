@@ -7,6 +7,7 @@ ng = 0
 while abs(ok - ng) > 1:
 
     X = (ok + ng) // 2
+    # X回爆発を起こす必要があると仮定する
 
     cnt = 0
     flag = 1
@@ -20,6 +21,7 @@ while abs(ok - ng) > 1:
             flag = 0
             break
 
+    #print(X, cnt, ok)
     if flag:
         ok = X
     else:

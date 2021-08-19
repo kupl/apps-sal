@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 x = int(input())
 for i in range(x):
     y = int(input())

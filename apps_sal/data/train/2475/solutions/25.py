@@ -10,4 +10,6 @@ class Solution:
                     l[j] = 'A'
                 else:
                     l[j] = i[j]
+                # print(l)
+        # print(l)
         return l.count('A')

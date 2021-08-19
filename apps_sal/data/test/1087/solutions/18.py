@@ -1,3 +1,12 @@
+# 解説を参考に作成
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, K, A):
     import math
     max_K = 0
@@ -19,6 +28,11 @@ def __starting_point():
     N, K = list(map(int, input().split()))
     A = [int(i) for i in input().split()]
     solve(N, K, A)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # solve()
 
 
 __starting_point()

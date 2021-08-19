@@ -13,6 +13,7 @@ def main():
         tree[i].append((k, j))
         tree[j].append((k, i))
 
+    # dijkstra
     import heapq
     from numpy import zeros
 

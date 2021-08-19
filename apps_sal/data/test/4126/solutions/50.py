@@ -1,3 +1,4 @@
+# 159 B
 S = input()
 N = len(S)
 Sf = S[0:(N - 1) // 2]

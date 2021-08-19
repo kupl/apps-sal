@@ -3,11 +3,13 @@ def main():
     input = sys.stdin.readline
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
+    #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby, product
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
 
+    #inf = 10**17
     mod = 10**9 + 7
 
     max_n = 2 * (10**5)
@@ -18,11 +20,13 @@ def main():
     for i in range(max_n, 0, -1):
         inv[i - 1] = inv[i] * i % mod
 
+    # nCrを求める
     def ncr(n, r):
         return fac[n] * inv[r] * inv[n - r] % mod
 
     n, k = list(map(int, input().split()))
     res = 0
+    # i:空き部屋の数
     for i in range(n):
         if i > k:
             continue

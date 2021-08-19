@@ -14,4 +14,4 @@ while ans == 0:
         else:
             ans = player[(count + 1) % 2]
     count += 1
-print(ans)
+print(ans)  # winner

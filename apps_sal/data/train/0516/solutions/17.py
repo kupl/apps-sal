@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while(t):
     t -= 1
@@ -11,6 +12,8 @@ while(t):
                 ans[i] = ans[i] + 1
             if(i > j and arr[i] > arr[j]):
                 ans2[i] = ans2[i] + 1
+    # print(ans)
+    # print(ans2)
     for i in range(n):
         if(ans[i] != 0):
             ans[i] = (ans[i] * k * (k + 1)) // 2

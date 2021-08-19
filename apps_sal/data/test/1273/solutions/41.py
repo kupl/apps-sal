@@ -8,7 +8,7 @@ n = int(input())
 e = [[] for i in range(1 + n)]
 ei = {}
 for i in range(n - 1):
-    """
+    """#weighted->erase_,__,___=map(int,input().split())
     e[_].append((__,___))
     e[__].append((_,___))
     """
@@ -19,10 +19,11 @@ for i in range(n - 1):
     ei[__, _] = i
 
     """
-"""
+"""  # weighted->erase
 M = max([len(x)for x in e])
 res = [0] * (n - 1)
 dq = deque([])
+# pop/append/(append,pop)_left/in/len/count/[]/index/rotate()(右へnずらす)
 Ms = [1] * (1 + n)
 dq.append(1)
 while dq:

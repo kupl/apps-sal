@@ -1,3 +1,4 @@
+#[int(i) for i in input().split()]
 n, k = [int(i) for i in input().split()]
 i = 0
 res = 0

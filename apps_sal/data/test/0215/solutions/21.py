@@ -12,4 +12,5 @@ for i in range(len(l) - 1):
         if s[j] not in ls and (ord(s[j]) >= 97 and ord(s[j]) <= 122):
             ls.append(s[j])
     ans = max(ans, len(ls))
+    # print(ls)
 print(ans)

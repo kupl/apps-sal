@@ -25,6 +25,8 @@ class Solution:
                 else:
                     hashcount[c + 1] = [nums[i]]
 
+            # print(hashcount)
+
             if (len(list(hashtable.keys())) == 1):
                 m = i + 1
 

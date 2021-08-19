@@ -14,7 +14,7 @@ for sta in range(N):
     while que:
         v = que.popleft()
         for w in edge[v]:
-            if w == sta:
+            if w == sta:  # 閉路発見
                 path = []
                 while v != -1:
                     path.append(v + 1)

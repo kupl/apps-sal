@@ -13,6 +13,7 @@ class Solution:
             for i in range(1, len(s) + 1):
 
                 temp.append(s[:i])
+                # print(temp)
                 res = dfs(temp, s[i:], res)
                 temp.pop()
             return res

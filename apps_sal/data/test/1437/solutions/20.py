@@ -20,4 +20,5 @@ for i in l:
         ans *= 3
         while(ans >= 1000000007):
             ans -= 1000000007
+        # ans%=1000000007
 print(ans)

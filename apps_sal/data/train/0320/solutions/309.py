@@ -12,6 +12,7 @@ class Solution:
             nums = list([x for x in nums if x > 0])
             if not nums:
                 break
+            # mineve = min(nums)
             for i in range(len(nums)):
                 nums[i] //= 2
                 s += nums[i]

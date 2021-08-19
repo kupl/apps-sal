@@ -16,6 +16,10 @@ while a[0] == b[0] and len(a) != 0:
     b = b[1:]
     if len(a) == 0 or len(b) == 0:
         break
+    # if len(a)!=0:
+     #   a=str(int(a))
+    # if len(b)!=0:
+     # 7   b=str(int(b))
 aa = max(len(b), len(a))
 c = c + aa * '1'
 c = int(c)

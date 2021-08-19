@@ -12,6 +12,7 @@ class Solution:
         def check(ls):
             ls = sorted(ls)
             start, end = 0, 0
+            # guarantee safe access on arr
             def make_date(x): return timedelta(hours=int(x[:2]), minutes=int(x[3:]))
 
             def outer_check(start, end):

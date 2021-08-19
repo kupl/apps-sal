@@ -5,6 +5,8 @@ class Solution:
         :rtype: int
         """
 
+        # my solution......beat 95 %
+
         l = len(citations)
         if l == 0:
             return 0

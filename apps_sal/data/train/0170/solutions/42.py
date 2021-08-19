@@ -2,8 +2,8 @@ class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         n = len(arr)
 
-        left = [False] * n
-        right = [False] * n
+        left = [False] * n  # all to left are  increasing
+        right = [False] * n  # all to right are  increasing
 
         left[0] = True
         right[n - 1] = True

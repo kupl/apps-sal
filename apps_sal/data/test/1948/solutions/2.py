@@ -1,3 +1,4 @@
+#!/usr/bin/pypy3
 
 from sys import stdin, stderr
 from collections import defaultdict

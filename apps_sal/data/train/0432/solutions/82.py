@@ -13,4 +13,5 @@ class Solution:
                     else:
                         count[num + i] -= count[num]
             count[num] = 0
+           # print(count)
         return all([a == 0 for a in list(count.values())])

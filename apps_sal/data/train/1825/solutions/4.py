@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def __init__(self):
         self.max_depth = 0
@@ -11,6 +17,7 @@ class Solution:
         return self.ancestor
 
     def dfs(self, node: TreeNode, curr_depth) -> int:
+        # return current deepest from that node?
         curr_deepest_L, curr_deepest_R = curr_depth, curr_depth
 
         if not node.left and not node.right:

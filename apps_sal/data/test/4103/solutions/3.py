@@ -11,6 +11,7 @@ def main():
         if not batt and not accum:
             break
         if accum == accumax:
+            # if accum is full
             accum -= 1
             path += 1
         elif batt > 0 and light[i]:

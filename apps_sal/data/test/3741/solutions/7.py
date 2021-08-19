@@ -30,6 +30,7 @@ for i in range(0, mx):
     if(c > 2):
         flag = 1
         break
+# print(L)
 
 if(flag == 1):
     print(3)

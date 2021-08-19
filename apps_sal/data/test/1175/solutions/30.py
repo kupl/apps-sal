@@ -12,10 +12,13 @@ def f(pos, flagX, flagY, flagZ):
     if memo[pos][flagX][flagY][flagZ] != -1:
         return memo[pos][flagX][flagY][flagZ]
     ret = 0
+    # x 0, y 0
     if flagX or l[pos] == '0':
         ret += f(pos - 1, flagX, 1 if r[pos] == '1' else flagY, flagZ)
+    # x 0, y 1
     if (flagX or l[pos] == '0') and (flagY or r[pos] == '1') and flagZ:
         ret += f(pos - 1, flagX, flagY, flagZ)
+    # x 1, y 1
     if flagY or r[pos] == '1':
         ret += f(pos - 1, 1 if l[pos] == '0' else flagX, flagY, 1)
     ret %= MOD

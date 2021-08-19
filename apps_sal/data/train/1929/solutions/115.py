@@ -17,9 +17,15 @@ class StreamChecker:
         node = self.trie
         for index in range(len(self.input)):
             ch = self.input[-(index + 1)]
+            # print(' index:', ch, 'dict:', node.keys())
             if '$' in list(node.keys()):
                 return True
             elif ch not in list(node.keys()):
                 return False
             node = node[ch]
         return '$' in list(node.keys())
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

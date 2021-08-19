@@ -20,5 +20,6 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 max_gold = self.dfs(grid, i, j)
+                # print(\"max gold: \", max_gold)
                 res = max(res, max_gold)
         return res

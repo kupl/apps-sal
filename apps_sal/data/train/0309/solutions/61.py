@@ -1,3 +1,7 @@
+# dp
+# d[(i, diff)] = len: end at i with diff has maximum subsequence length len
+# i: right num idx, j: left num idx
+# d[(i, diff)] = d[(j, diff)] + 1 if (j, diff) in d else 2, j = 0...i-1
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         d = dict()

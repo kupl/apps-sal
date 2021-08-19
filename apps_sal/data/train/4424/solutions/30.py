@@ -9,4 +9,4 @@ def expression_matter(a, b, c):
     E = a + b * c
     F = (a + b) * c
     R = np.array([A, B, C, D, E, F])
-    return R.max()
+    return R.max()  # highest achievable result

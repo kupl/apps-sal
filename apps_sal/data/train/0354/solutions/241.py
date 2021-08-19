@@ -6,6 +6,7 @@ class Solution:
 
         def dfs(dies, last, cur_len):
             if not dies:
+                # print(curr_roll)
                 return 1
 
             if last >= 0 and dp[dies][last][cur_len] > 0:

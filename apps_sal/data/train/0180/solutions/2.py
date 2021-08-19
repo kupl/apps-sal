@@ -8,6 +8,7 @@ class Solution:
         can_drive_to = startFuel
         i = 0
         while can_drive_to < target:
+            # push stations to heap
             while i < len(stations) and stations[i][0] <= can_drive_to:
                 heapq.heappush(max_gas_heap, -stations[i][1])
                 i += 1

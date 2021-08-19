@@ -1,8 +1,11 @@
+# Test 3
 
+# basic input
 s = input()
 n = int(input())
 t = [0 for i in range(len(s) * 4)]
 
+# precalculating masks
 bits = dict()
 b = 1
 for i in range(97, 123):
@@ -37,6 +40,7 @@ def build(A, v, t_left, t_right):
 
 
 def _update(v, t_left, t_right, index, val):
+    # find destination
     while t_left != t_right:
         t_mid = (t_left + t_right) >> 1
         left_son = (v << 1) + 1
@@ -47,7 +51,9 @@ def _update(v, t_left, t_right, index, val):
         else:
             t_right = t_mid
             v = left_son
+    # change val
     t[v] = bit_repr(val)
+    # update upper nodes
     while v:
         v = (v - 1) >> 1
         left_son = (v << 1) + 1
@@ -84,10 +90,10 @@ def count(l, r):
 def process():
     req = iter(input().split())
     token = int(next(req))
-    if token - 1:
+    if token - 1:  # count
         l, r = list(map(int, req))
         print(count(l, r))
-    else:
+    else:  # change
         pos = int(next(req))
         sym = next(req)
         update(pos, sym)
@@ -95,5 +101,6 @@ def process():
 
 build(s, 0, 0, len(s) - 1)
 
+# request - response part
 for i in range(n):
     process()

@@ -4,6 +4,9 @@ import numpy as np
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
+#N,K = 9,9
+#A = [-3,-2,-2,-2,0,0,1,2,2]
+
 
 def simple():
     B = sorted([A[i] * A[j] for i in range(N) for j in range(i + 1, N)])
@@ -59,6 +62,7 @@ def solve():
             cnt += np.sum(np.searchsorted(pluss2, xs2, side='right'))
             cnt -= np.count_nonzero(pluss2_p2 <= mid)
             cnt = cnt // 2
+            # print(mn,mid,mx,cnt)
             if nK <= cnt:
                 mx = mid
             else:
@@ -67,3 +71,5 @@ def solve():
 
 
 print((solve()))
+# for K in range(1,N*(N-1)//2+1):
+#    print(solve(),simple())

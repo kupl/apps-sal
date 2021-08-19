@@ -31,6 +31,7 @@ for _ in range(0, int(input())):
         if(minval > (q[0] + b)):
             minval = (q[0] + b)
             fcnf = cnt
+        # print(l)
         if(q[0] > 9):
             p = dsum(q[0])
             l.append([])

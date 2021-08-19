@@ -19,6 +19,8 @@ def what(obj):
         pp(obj, sys.stderr)
 
 
+#############################################
+
 n, k = map(int, input().split())
 min_x = n * k + 1
 
@@ -27,6 +29,7 @@ for i in range(1, k):
         min_x = min(min_x, n // i * k + i)
 print(min_x)
 
+##############################################
 if __flag:
     stdout.close()
     stdin.close()

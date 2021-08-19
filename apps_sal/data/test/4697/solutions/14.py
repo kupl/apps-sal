@@ -1,3 +1,4 @@
+# C - Scc Puzzle
 def main():
     n, m = map(int, input().split())
 

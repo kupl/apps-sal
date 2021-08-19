@@ -8,6 +8,7 @@ for i in range(n):
     a, b = map(int, input().split())
     c[a].append(b)
 
+# print(c)
 
 ans = 0
 h = []
@@ -15,6 +16,7 @@ for i in reversed(range(m)):
     d = m - i
     for j in c[d]:
         heapq.heappush(h, -j)
+    # heapq.heapify(h)
     ans += -heapq.heappop(h)
 
 print(ans)

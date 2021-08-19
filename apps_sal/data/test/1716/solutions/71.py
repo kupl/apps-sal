@@ -27,6 +27,7 @@ class Cumsum2d(object):
 
 def __starting_point():
     N, M, Q = [int(x) for x in input().split(" ")]
+    # L = [0 for _ in range(N + 2)]
     count = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
     for _ in range(M):
         l, r = [int(x) for x in input().split(" ")]

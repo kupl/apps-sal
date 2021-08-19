@@ -30,6 +30,8 @@ class DSU:
 class Solution:
     import heapq
 
+    # prime + heap, not using unionfind.
+    # https://leetcode.com/problems/min-cost-to-connect-all-points/discuss/850185/Java-or-Min-Spanning-Tree-or-Prim-%2B-PriorityQueue
     def minCostConnectPoints1(self, points: List[List[int]]) -> int:
         def getDist(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
@@ -46,6 +48,7 @@ class Solution:
                         heapq.heappush(heap, (getDist(j, k), (j, k)))
         return res
 
+    # slow
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         graph = []
         for i in range(len(points)):

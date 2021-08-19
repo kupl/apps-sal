@@ -14,10 +14,10 @@ for i in range(N // 2):
         ldp[~ i & 1][j].clear()
     for j in range(K + 1):
         for key in ldp[i & 1][j]:
-            ldp[~ i & 1][j][key] += ldp[i & 1][j][key]
-            ldp[~ i & 1][j][key + A[i]] += ldp[i & 1][j][key]
+            ldp[~ i & 1][j][key] += ldp[i & 1][j][key]  # toranai
+            ldp[~ i & 1][j][key + A[i]] += ldp[i & 1][j][key]  # toru
             if j + 1 <= K and A[i] <= 18:
-                ldp[~ i & 1][j + 1][key + fact[A[i]]] += ldp[i & 1][j][key]
+                ldp[~ i & 1][j + 1][key + fact[A[i]]] += ldp[i & 1][j][key]  # kaijyou totte toru
 
 rdp = [[defaultdict(int) for i in range(K + 1)] for j in range(2)]
 rdp[0][0][0] = 1

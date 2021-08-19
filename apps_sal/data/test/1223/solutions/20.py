@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 N = int(input())
 p = list(map(int, input().split()))
 LL = [0] + [i for i in range(N + 1)]

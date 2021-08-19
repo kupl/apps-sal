@@ -8,6 +8,7 @@ diffs = list(reversed(sorted(diffs)))
 
 ans = sum(diffs)
 
+# print(diffs)
 
 for i in range(min(len(diffs), k - 1)):
     ans -= diffs[i]

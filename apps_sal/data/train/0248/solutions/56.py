@@ -9,6 +9,7 @@ class Solution:
             if (r, c) in grp[grp_num]:
                 return True
 
+            # check 4 directions
             visited.add((r, c))
             grp[grp_num].add((r, c))
             result = False

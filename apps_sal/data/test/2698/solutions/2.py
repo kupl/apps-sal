@@ -5,6 +5,7 @@ for i in range(m):
     d, l = map(int, input().split())
     b.append([d, l])
 b.sort()
+# print(b)
 for i in b:
     d = i[0]
     l = i[1]

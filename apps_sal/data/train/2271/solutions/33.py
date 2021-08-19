@@ -1,4 +1,5 @@
 import sys
+# sys.setrecursionlimit(100000)
 
 
 def input():
@@ -22,6 +23,7 @@ class UnionFind:
         self.parents = [-1] * n
         self.rank = [0] * n
 
+    # retrun the root of element x
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -29,6 +31,7 @@ class UnionFind:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
+    # unite the group include element x and group include element y
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -43,12 +46,15 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
+    # get size of the gourp which element x belongs
     def get_size(self, x):
         return -self.parents[self.find(x)]
 
+    # check if element x and element y is same group
     def same(self, x, y):
         return self.find(x) == self.find(y)
 
+    # return groups as array of set
     def get_groups(self, index_base=0) -> list:
         d = {}
         for i in range(index_base, self.nodes):
@@ -61,7 +67,7 @@ class UnionFind:
 
 def main():
     n, m = input_int_list()
-    A = [None] + input_int_list()
+    A = [None] + input_int_list()  # 1-indexed
     djs = UnionFind(n + 1)
 
     for _ in range(m):

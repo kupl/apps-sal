@@ -9,4 +9,6 @@ def query(n, a):
 
 n, q = map(int, sys.stdin.readline().split())
 arr = [int(sys.stdin.readline()) for _ in range(q)]
+# arr = [query(n, a) for a in arr]
+# sys.stdout.write(*arr)
 sys.stdout.write("\n".join(str(query(n, a)) for a in arr))

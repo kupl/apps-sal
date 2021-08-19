@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -8,7 +9,7 @@ def lr(): return list(map(int, sr().split()))
 
 
 N, K = lr()
-graph = [[] for _ in range(N + 1)]
+graph = [[] for _ in range(N + 1)]  # 1-indexed
 for _ in range(N - 1):
     a, b = lr()
     graph[a].append(b)
@@ -52,8 +53,10 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 10 ** 6
+U = 10 ** 6  # 階乗テーブルの上限
 fact, fact_inv = make_fact(U, MOD)
+#print(answer % MOD)
+# np.int64とint型の違いに注意
 answer = 1
 root = 1
 parent = [0] * (N + 1)

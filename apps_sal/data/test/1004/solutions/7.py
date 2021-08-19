@@ -42,6 +42,9 @@ def solve(N, A):
     return ans
 
 
+###############################################################################
+# AUXILIARY FUNCTIONS
+
 DEBUG = 'DEBUG' in os.environ
 
 

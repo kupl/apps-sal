@@ -4,6 +4,8 @@ import itertools
 
 class Solution:
     def mergeStones(self, stones: List[int], K: int) -> int:
+        # Time  complexity: O(N^3 / K)
+        # Space complexity: O(KN^2)
         n = len(stones)
         if (n - 1) % (K - 1):
             return -1

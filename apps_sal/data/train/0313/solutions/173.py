@@ -5,8 +5,9 @@ class Solution:
             flowers = 0
             bouquets = 0
 
+            # loop through the array to check the days to bloom
             for bloom in bloomDay:
-                if bloom > days:
+                if bloom > days:  # we cannot gather any flowers to make the bouquets because the flower are not yet bloomed
                     flowers = 0
 
                 else:
@@ -15,6 +16,7 @@ class Solution:
 
             return bouquets >= m
 
+        # base case:
         if len(bloomDay) < m * k:
             return -1
         left = 1

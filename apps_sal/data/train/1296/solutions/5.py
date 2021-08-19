@@ -29,10 +29,13 @@ for t in range(int(input())):
 
     for i in d[root].children:
         count = 0
+        # get leaf nodes
         q = queue.Queue()
         q.put((i, root))
         while (not q.empty()):
+            # print "size ",q.qsize()
             n, p = q.get()
+            # print n,p, "- pop"
             flag = 1
             for c in (d[n].children):
                 if (c != p):
@@ -40,6 +43,8 @@ for t in range(int(input())):
                     flag = 0
             if (flag == 1):
                 count += 1
+        # print count
         ans *= count
         ans %= mod
     print(ans)
+    # print "*****"

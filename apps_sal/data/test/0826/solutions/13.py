@@ -8,4 +8,5 @@ while abs(ok - ng) > 1:
     else:
         ng = mid
 
+# n+1をバラせば1~okまでカバーできる
 print((n - ok + 1))

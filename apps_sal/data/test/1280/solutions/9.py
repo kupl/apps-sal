@@ -1,8 +1,11 @@
 import sys
 import math as mt
+# input=sys.stdin.buffer.readline
+# t=int(input())
 t = 1
 mod = 9007199254740881
 for ___ in range(t):
+    # n,m=map(int,input().split())
     s1 = input()
     s2 = input()
     k = int(input())

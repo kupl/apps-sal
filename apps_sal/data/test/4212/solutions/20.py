@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Thu Sep  3 23:43:13 2020
 
@@ -22,6 +23,7 @@ def make_list(n, m):
 
 
 make_list(0, 1)
+# print(A)
 
 calc = [list(map(int, input().split())) for _ in range(Q)]
 

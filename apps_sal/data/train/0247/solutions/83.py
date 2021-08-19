@@ -10,6 +10,7 @@ class Solution:
         res = float('inf')
         lvalue = float('inf')
         sum_list = 0
+        # print(mp)
 
         for i, val in enumerate(arr):
             sum_list += val

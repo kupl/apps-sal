@@ -7,6 +7,7 @@ for j in range(n - 1):
         if i != j:
             if requ_time <= csf[i][1]:
                 requ_time += (csf[i][0] + (csf[i][1] - requ_time))
+    # elif requ_time > csf[i][1] and csf[i][0]+csf[1] > requ_time:
             else:
                 requ_time += (csf[i][0] + (csf[i][2] - (requ_time - csf[i][1]) % csf[i][2]) % csf[i][2])
     ans1.append(requ_time)

@@ -1,4 +1,5 @@
 class Solution:
+    # def __init__(self):
 
     def sortArray(self, nums: List[int]) -> List[int]:
         return self.mergeSort(nums)

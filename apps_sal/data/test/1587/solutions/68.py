@@ -1,3 +1,4 @@
+# RRR..WWW..を目指す
 n = int(input())
 s = list(input())
 w_count, r_count = s.count("W"), s.count("R")

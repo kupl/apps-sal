@@ -1,21 +1,24 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # 所有边按照类型排序， 类型为3的边有最高优先级
         edges.sort(key=lambda edge: edge[0], reverse=True)
 
         def build_graph(types):
             removed = set()
             neighbors = defaultdict(set)
             graph = []
-            for (t, a, b) in edges:
+            for (t, a, b) in edges:  # edge: t, a->b
                 if t not in types:
                     continue
                 if b in neighbors[a]:
                     removed.add((t, a, b))
                     continue
+                # print((t, a, b))
 
                 neighbors[a].add(b)
                 neighbors[b].add(a)
                 graph.append((t, a, b))
+            # print('========')
             return removed, graph
 
         def find(f, a):

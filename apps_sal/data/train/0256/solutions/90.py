@@ -11,6 +11,7 @@ class Solution:
             while i < len(piles):
                 hours += int(math.ceil(piles[i] / mid))
                 i += 1
+            # print(mid, hours)
             if hours <= H:
                 right = mid
             else:

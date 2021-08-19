@@ -6,6 +6,7 @@ class Solution:
         for i in range(len(A)):
             prev ^= interval_status[i]
             curr_status = prev ^ A[i]
+            # print(curr_status)
             if curr_status == 0:
                 if i + K <= len(A):
                     interval_status[i + K] ^= 1

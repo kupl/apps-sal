@@ -1,3 +1,4 @@
+# cook your dish here
 def permutation(n, p):
     r = 26
     if n == 1:

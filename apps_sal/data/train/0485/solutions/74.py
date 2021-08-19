@@ -13,4 +13,6 @@ class Solution:
                 count[i] += 1
                 flipped[i] = True
                 flips += 1
+        # print(flipped)
+        # print(count)
         return flips if not any(flipped[len(A) - K + 1:]) else -1

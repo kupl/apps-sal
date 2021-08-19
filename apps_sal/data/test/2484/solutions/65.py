@@ -12,6 +12,7 @@ for i in range(n):
             if s[j] == '1':
                 if acc_s[j] == '1':
                     ok = False
+                    # print(j)
         if ok:
             acc += aas[r]
             r += 1

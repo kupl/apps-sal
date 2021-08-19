@@ -7,6 +7,7 @@ for i in range(n):
         l[i] = a + b
 l.sort()
 ct = 0
+# print(l)
 for i in range(n):
     l[i] -= a
     if(l[i] <= 0):

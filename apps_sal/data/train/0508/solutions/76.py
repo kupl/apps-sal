@@ -4,18 +4,18 @@ def main():
 
     from heapq import heappush, heappop
 
-    running = []
-    events = []
-    finished = set()
+    running = []  # 止まりうる座標
+    events = []  # 時刻順のイベント
+    finished = set()  # 工事が終了した座標
 
     n, q = map(int, input().split())
     for _ in range(n):
         s, t, x = map(int, input().split())
-        events.append((s - x, x, 1))
-        events.append((t - x, x, 0))
+        events.append((s - x, x, 1))  # 追加イベント
+        events.append((t - x, x, 0))  # 削除イベント
     for _ in range(q):
         d = int(input())
-        events.append((d, 10**10, 2))
+        events.append((d, 10**10, 2))  # 出発イベント,同じ時刻内で最後になるよう第二引数設定
     events.sort()
     for i in range(len(events)):
         temp = events[i]

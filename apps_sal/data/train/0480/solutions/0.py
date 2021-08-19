@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/discuss/569521/7-python-approaches-with-Time-and-Space-analysis
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         r = min(arrLen, steps // 2 + 1)

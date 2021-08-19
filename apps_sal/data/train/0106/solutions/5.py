@@ -8,6 +8,7 @@ for i in range(T):
         X.append([j, l, r])
 
     X = sorted(X, key=lambda x: x[1])
+    # print(X)
 
     Y = ["2"] * n
     s = -1

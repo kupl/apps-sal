@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-bulbbit = [0] * m
+bulbbit = [0] * m  # 電球とつながっているSWをbit表現
 for i in range(m):
     tmp = list(map(int, input().split()))
     for j in range(1, tmp[0] + 1):

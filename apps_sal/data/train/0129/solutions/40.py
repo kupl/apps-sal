@@ -1,5 +1,6 @@
 class Solution:
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
+        # we want to find the two biggest numbers closest to eachother.
         dp_i = [0 for i in range(len(A))]
         dp_j = [0 for i in range(len(A))]
         dp_i[0] = A[0]

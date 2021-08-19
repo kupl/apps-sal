@@ -1,3 +1,5 @@
+# A - Sharing Cookies
+# https://atcoder.jp/contests/abc067/tasks/abc067_a
 
 A, B = list(map(int, input().split()))
 

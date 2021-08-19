@@ -14,8 +14,13 @@ def main():
         edges[u].append((v, c))
         edges[v].append((u, c))
 
+    # import
     from collections import deque
 
+    # BFS for tree
+    # please prefer those objects
+    # ki: adjacency list
+    # N: length of vertex list
     fr = 0
     que = deque([fr])
     number[fr] = 1

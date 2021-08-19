@@ -6,6 +6,7 @@ As = list(map(int, input().split()))
 cnt = Counter(As)
 
 num = sum([v * (v - 1) // 2 for v in list(cnt.values())])
+# print('# num:', num)
 
 anss = []
 for A in As:

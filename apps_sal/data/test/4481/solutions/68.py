@@ -1,6 +1,7 @@
 N = int(input())
 S = [input() for _ in range(N)]
 
+# cnts = {key: S.count(key) for key in S}
 cnts = {key: 0 for key in S}
 for key in S:
     cnts[key] += 1

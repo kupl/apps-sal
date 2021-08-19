@@ -1,4 +1,5 @@
-class UnionFind():
+# /////[UnionFind準備]//////////////////////////////////////////////////////
+class UnionFind():  # 0インデックス
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -48,6 +49,8 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+# /////[main]]//////////////////////////////////////////////////////
+
 
 def __starting_point():
     N, M = list(map(int, input().split()))
@@ -56,6 +59,7 @@ def __starting_point():
     answer_list = []
     total = N * (N - 1) // 2
     answer_list.append(total)
+    # すべて崩落したところから逆に調べていく
     union_find = UnionFind(N)
     for i in range(M - 1, 0, -1):
         A, B = bridges[i]

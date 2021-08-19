@@ -1,5 +1,6 @@
 import io
 import os
+#input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
 
 q = int(input())
 

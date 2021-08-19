@@ -4,8 +4,8 @@ import copy
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
-        self.parent = collections.defaultdict(list)
-        self.children = collections.defaultdict(list)
+        self.parent = collections.defaultdict(list)  # child : parent
+        self.children = collections.defaultdict(list)  # parent: children
         self.king = kingName
         self.deathList = set()
 
@@ -19,6 +19,7 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         order = [self.king]
         current = self.king
+        #print(self.parent, self.children)
         c = copy.deepcopy(self.children)
         p = copy.copy(self.parent)
 
@@ -43,3 +44,9 @@ class ThroneInheritance:
                 if name not in self.deathList:
                     neworder.append(name)
             return neworder
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

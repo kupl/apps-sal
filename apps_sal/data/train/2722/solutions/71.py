@@ -1,5 +1,5 @@
 def remove_url_anchor(url):
-    index = url.find('
+    index = url.find('#')
     if index == -1:
         return url
     else:

@@ -1,4 +1,5 @@
 from collections import Counter
+#inputlist = list(input().split())
 n = int(input())
 list1 = list(map(int, input().split()))[:n]
 list1 = sorted(list1)

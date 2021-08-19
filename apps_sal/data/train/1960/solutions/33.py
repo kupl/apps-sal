@@ -8,6 +8,7 @@ class Solution:
             before = coord[num - 1]
             result.append(before)
 
+            # after
             coord = [x + 1 if x < before else x for x in coord]
             coord[num - 1] = 0
 

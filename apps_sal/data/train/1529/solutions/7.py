@@ -3,6 +3,7 @@ try:
 
     def getSum(arr, n):
 
+        # calculate factorial
         fact = math.factorial(n)
 
         digitsum = 0
@@ -10,6 +11,8 @@ try:
             digitsum += arr[i]
         digitsum *= (fact // n)
 
+        # Compute result (sum of
+        # all the numbers)
         res = 0
         i = 1
         k = 1
@@ -27,9 +30,10 @@ try:
     while(b > 0):
         a = int(input())
 
-        arr = input()
+        arr = input()   # takes the whole line of n numbers
         l = list(map(int, arr.split(' ')))
 
+    # n distinct digits
         b -= 1
         n = len(l)
         n = a

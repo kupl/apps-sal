@@ -1,3 +1,4 @@
+# cook your dish here
 x, y, z = map(int, input().split())
 s = [0] * z
 y = y + 1

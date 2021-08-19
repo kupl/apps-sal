@@ -9,4 +9,6 @@ class Solution:
             A[min_index] = -A[min_index]
 
             max_ = sum(A)
+            # print(max_)
+            # max_sum = max(max_sum, max_)
         return max_

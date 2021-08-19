@@ -4,4 +4,4 @@ def generate_hashtag(s):
 
     s = s.title().replace(" ", "")
 
-    return '
+    return '#' + s

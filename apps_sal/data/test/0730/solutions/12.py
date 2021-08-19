@@ -2,33 +2,33 @@ k = int(input())
 print('+------------------------+')
 if k <= 4:
     if k > 0:
-        print('| O.
+        print('|O.#.#.#.#.#.#.#.#.#.#.|D|)')
     else:
-        print('|
+        print('|#.#.#.#.#.#.#.#.#.#.#.|D|)')
     if k > 1:
-        print('| O.
+        print('|O.#.#.#.#.#.#.#.#.#.#.|.|')
     else:
-        print('|
+        print('|#.#.#.#.#.#.#.#.#.#.#.|.|')
     if k > 2:
         print('|O.......................|')
     else:
-        print('|
+        print('|#.......................|')
     if k > 3:
-        print('| O.
+        print('|O.#.#.#.#.#.#.#.#.#.#.|.|)')
     else:
-        print('|
+        print('|#.#.#.#.#.#.#.#.#.#.#.|.|)')
 else:
     k -= 4
-    first=k // 3 + 1
+    first = k // 3 + 1
     if k % 3 > 0:
         first += 1
-    second=k // 3 + 1
+    second = k // 3 + 1
     if k % 3 > 1:
         second += 1
-    third=k // 3 + 1
+    third = k // 3 + 1
 
-    print('|', 'O.' * first, '
-    print('|', 'O.' * second, '
+    print('|', 'O.' * first, '#.' * (11 - first), '|D|)', sep='')
+    print('|', 'O.' * second, '#.' * (11 - second), '|.|', sep='')
     print('|O.......................|')
-    print('|', 'O.' * third, '
+    print('|', 'O.' * third, '#.' * (11 - third), '|.|)', sep='')
 print('+------------------------+')

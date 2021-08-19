@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def compress(string):
-    string = string + "
+    string = string + "#"
     n = len(string)
     begin, end, cnt = 0, 1, 1
     ans = []

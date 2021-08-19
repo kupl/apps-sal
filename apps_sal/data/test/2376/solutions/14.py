@@ -32,6 +32,7 @@ for ls in product(m[0], m[1], m[2]):
         tmp_weight += k * (wi + i)
     if tmp_weight > W:
         continue
+    # wi, wi+1, wi+2の個数が決まっているので、wi+3を何個取れるかはO(1)で求められる
     max_m3 = (W - tmp_weight) // (wi + 3)
     m3 = min(max_m3, n[3] - 1)
     tmp_value += dic_cumsum[wi + 3][m3]

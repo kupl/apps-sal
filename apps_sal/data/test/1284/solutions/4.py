@@ -5,8 +5,11 @@ def getsum(a, b, pref):
 
 
 for _ in range(1):
+    # for _ in range(int(input())):
+    # a, b = map(int, input().split())
     n = int(input())
     arr = list(map(int, input().split()))
+    # s = input()
     pref0 = [0] * (len(arr) + 1)
     pref1 = [0] * (len(arr) + 1)
     for i in range(1, len(pref0)):

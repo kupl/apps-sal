@@ -26,6 +26,7 @@ def solve():
         else:
             break
     sz -= 1
+    # a max chain of sz
     now = 1
     for i in range(2, N + 1):
         print((str(now) + ' ' + str(i)))

@@ -2,6 +2,7 @@ class Solution:
     def helper(self, n, currentIndex, aux, rowsWithQueen, alll):
         for i in range(n):
             if i not in rowsWithQueen:
+                # Verify first diagonal
                 x, y = currentIndex - 1, i - 1
                 while aux[x][y] != 'Q' and x >= 0 and y >= 0:
                     x -= 1
@@ -9,6 +10,7 @@ class Solution:
                 if x != -1 and y != -1:
                     continue
 
+                # Verify second diagonal
                 x, y = currentIndex - 1, i + 1
                 while x >= 0 and y < n and aux[x][y] != 'Q':
                     x -= 1

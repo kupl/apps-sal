@@ -14,6 +14,8 @@ for x, y in links:
 init = list(map(lambda x: x == "1", input().split()))
 goal = list(map(lambda x: x == "1", input().split()))
 
+# print(init)
+# print(goal)
 
 stack.append(0)
 ops = 0

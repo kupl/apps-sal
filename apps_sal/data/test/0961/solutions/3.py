@@ -43,6 +43,7 @@ def solve():
                     dp[i] = max(dp[i], dp[j - 1] + v)
                     break
 
+    # print(dp)
     ans = dp[n]
     print(ans)
 

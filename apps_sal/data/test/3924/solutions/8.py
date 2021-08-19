@@ -26,7 +26,9 @@ def check():
                 sum0 += math.ceil((a[i] + res) / k)
             else:
                 sum0 += max(int((a[i] + res) / k), 1)
+            #print(res, max(int((a[i] + res) / k), 1))
             res = (a[i] + res) % k if a[i] + res >= k else 0
+        # print(res0,sum0)
     print(sum0)
 
 

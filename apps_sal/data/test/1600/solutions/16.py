@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #332
 
 Problem 599 C. Day at the Beach
 
@@ -43,6 +43,30 @@ def solve_old(xs, n):
             count += 1
 
     return count
+
+
+#
+# @functools.lru_cache(maxsize=None)
+# def count(tup):
+#     if len(tup) == 1:
+#         return 1
+#
+#     maxval = 1
+#     n = len(tup)
+#     for i in range(1, n):
+#         first = tup[:i]
+#         second = tup[i:]
+#         if max(first) <= min(second):
+#             maxval = max(maxval, count(first) + count(second))
+#     return maxval
+#
+#
+# def solve(xs, n):
+#     return count(tuple(xs))
+
+
+# def p(*args, **kwargs):
+#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

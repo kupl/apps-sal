@@ -2,6 +2,8 @@ class UnionFind:
     def __init__(self, N):
         self.N = N
 
+        # the parent of all node is itself
+        # self.parent = list(range(N))
         self.parent = [-1] * N
 
     def root(self, i):
@@ -24,6 +26,7 @@ class UnionFind:
 
         self.parent[i] += self.parent[j]
         self.parent[j] = i
+        # print(self.parent)
 
     def same(self, i, j):
         return self.root(i) == self.root(j)
@@ -40,6 +43,7 @@ class UnionFind:
 
 N, M = map(int, input().split())
 
+# init union find
 forest = UnionFind(N)
 
 edges = []

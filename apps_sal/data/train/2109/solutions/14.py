@@ -1,3 +1,4 @@
+# D
 import math
 Q = int(input())
 A_list = []

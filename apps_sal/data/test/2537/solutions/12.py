@@ -2,6 +2,10 @@ def ain():
     return list(map(int, input().split()))
 
 
+# for _ in range( int(input()) ):
+# n = int(input())
+# python3 g.py
+
 for _ in range(int(input())):
     s = input()
     t = input()
@@ -20,6 +24,7 @@ for _ in range(int(input())):
     else:
         for x in t:
             if s.count(x) + p.count(x) < t.count(x):
+                #print( x , s.count(x), p.count(x) , t.count(x)  )
                 print('NO')
                 fl = True
                 break

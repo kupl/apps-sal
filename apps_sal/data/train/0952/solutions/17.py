@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     t = int(input())
     for _ in range(t):
@@ -19,6 +20,7 @@ try:
                     c += abs(x - 5)
                 else:
                     c += abs(x - 1)
+                # c+= min(abs(x-1), abs(x-5), abs(x-9), abs(x-15), abs(x-21))
         print(c)
 except EOFError:
     pass

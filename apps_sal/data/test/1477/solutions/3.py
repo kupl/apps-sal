@@ -26,6 +26,7 @@ while len(done) < n:
     total += 1
     while qCo:
         nxt = qCo.popleft()
+        #print('co', nxt)
         if e[nxt] == 0:
             qMain.append(nxt)
         else:
@@ -37,6 +38,7 @@ while len(done) < n:
 
     while qMain:
         nxt = qMain.popleft()
+        #print('main', nxt)
         if e[nxt] == 1:
             qCo.append(nxt)
         else:

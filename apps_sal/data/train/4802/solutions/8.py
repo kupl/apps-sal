@@ -1,3 +1,4 @@
+# A blank slate
 class Checkout:
     items = {
         "onion": 0.99,

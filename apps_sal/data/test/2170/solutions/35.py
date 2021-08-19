@@ -22,7 +22,7 @@ mod = 10 ** 9 + 7
 
 N, M = MAP()
 
-lim = M + 10
+lim = M + 10  # 必要そうな階乗の限界を入れる
 fact = [1] * (lim + 1)
 fact_inv = [1] * (lim + 1)
 for n in range(1, lim + 1):

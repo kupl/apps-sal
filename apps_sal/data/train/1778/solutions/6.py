@@ -32,6 +32,8 @@ def common_subs(alist):
                 to_return.append(abs(i - j))
     return to_return
 
+# print(common_subs([100,3,4]))
+
 
 def get_key_length(cipher_text, max_key_length):
     dis = []
@@ -45,6 +47,9 @@ def get_key_length(cipher_text, max_key_length):
     for di in dis:
         if [x[0] for x in dis].count(di[0]) != 1:
             a = [x[1] for x in dis if x[0] == di[0]]
+            # print(a)
+            # print(common_subs(a))
+            # print(gcd_list(common_subs(a)))
             alls.append(gcd_list(common_subs(a)))
     print('a')
     return most_common([x for x in alls if x != 1])

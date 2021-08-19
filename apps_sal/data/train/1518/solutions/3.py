@@ -1,7 +1,8 @@
+# cook your dish here
 from random import randint
 
 
-def prime(n):
+def prime(n):  # Fermat Little's theorem
     if n < 4:
         return n == 2 or n == 3
     for i in range(5):

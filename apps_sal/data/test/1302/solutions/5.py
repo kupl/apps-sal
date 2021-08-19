@@ -5,6 +5,7 @@ def k_beautiful(n, k):
     else:
         beautiful = [i for i in range(1, n + 1)]
 
+    # make them not beauftiful
     left = n - k - 1
     if left % 2 == 0:
         for i in range(k + 1, n, 2):

@@ -1,3 +1,4 @@
+#[int(i) for i in input().split()]
 a = input()
 b = input()
 a = a + b[::-1]

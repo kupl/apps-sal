@@ -1,3 +1,5 @@
+# import sys
+# sys.stdin = open('cf602a.in')
 
 n, bx = map(int, input().split())
 x = list(map(int, input().split()))

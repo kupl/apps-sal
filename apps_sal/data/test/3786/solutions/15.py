@@ -21,6 +21,8 @@ for p in parents:
     nodes[p].children.add(base)
     base += 1
 
+# for n in nodes.values():
+#    print("%d -> %s" % (n.id, n.children))
 
 recolt = 0
 todo = {1}

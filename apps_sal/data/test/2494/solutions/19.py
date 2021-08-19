@@ -4,6 +4,7 @@ d = deque()
 mat = []
 for i in range(k):
     mat.append([])
+#mark = [False]*k
 dis = [10**18] * k
 dis[1] = 0
 for i in range(k):
@@ -12,6 +13,7 @@ for i in range(k):
     if (10 * i) % k != i:
         mat[i].append(((10 * i) % k, False))
 
+# bfs 1->0
 d.append(1)
 res = 0
 while d:

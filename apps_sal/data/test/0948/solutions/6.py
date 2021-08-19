@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+    # fin = open("input.txt", "r")
     fin = sys.stdin
 
     n, m = map(int, fin.readline().split())

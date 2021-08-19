@@ -5,6 +5,7 @@ class Solution:
         max_fruit = 0
         baskets = defaultdict(int)
         while j <= len(tree) and i < len(tree):
+            #print(i, j, baskets)
             if j < len(tree) and len(set(list(baskets.keys()) + [tree[j]])) <= 2:
                 baskets[tree[j]] += 1
                 j += 1

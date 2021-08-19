@@ -20,6 +20,7 @@ def __starting_point():
 
     x = int(input())
     x = (-sign(x)) * (abs(x) % 360)
+    # print(x)
 
     mindis = dis(x)
     res = 0

@@ -38,6 +38,8 @@ def test(i):
 
 
 def __starting_point():
+    # test(1)
+    # test(2)
     return(main())
 
 

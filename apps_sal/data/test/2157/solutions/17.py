@@ -33,3 +33,6 @@ for i in range(n):
     cur += a[i] * c[i]
 
 print(cur)
+
+
+# Made By Mostafa_Khaled

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, r = map(int, input().split())
     reg_teams = [input().split() for _ in range(r)]

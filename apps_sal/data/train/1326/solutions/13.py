@@ -13,3 +13,5 @@ for _ in range(int(input())):
         count += curr_fuel
 
     print(count)
+
+    # cook your dish here

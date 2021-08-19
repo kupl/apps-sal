@@ -1,3 +1,4 @@
+#
 import collections
 import atexit
 import math
@@ -12,9 +13,12 @@ def getIntList():
 
 
 try:
+    #raise ModuleNotFoundError
     import numpy
 
     def dprint(*args, **kwargs):
+        #print(*args, **kwargs, file=sys.stderr)
+        # in python 3.4 **kwargs is invalid???
         print(*args, file=sys.stderr)
     dprint('debug mode')
 except Exception:
@@ -26,11 +30,11 @@ inId = 0
 outId = 0
 if inId > 0:
     dprint('use input', inId)
-    sys.stdin = open('input' + str(inId) + '.txt', 'r')
+    sys.stdin = open('input' + str(inId) + '.txt', 'r')  # 标准输出重定向至文件
 if outId > 0:
     dprint('use output', outId)
-    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')
-    atexit.register(lambda: sys.stdout.close())
+    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')  # 标准输出重定向至文件
+    atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
 
 
 def gcd(a, b):
@@ -41,6 +45,7 @@ def gcd(a, b):
 
 la, ra, ta = getIntList()
 lb, rb, tb = getIntList()
+# print(N)
 g = gcd(ta, tb)
 wa = ra - la + 1
 wb = rb - lb + 1

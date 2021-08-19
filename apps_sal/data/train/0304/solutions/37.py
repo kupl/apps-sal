@@ -17,6 +17,8 @@ class Solution:
                 if friendRequests(age_a, age_b):
                     total_requests += count_a * count_b
 
+                    # if both candidates are the same, we reduce total
+                    # requests by one of their frequencies
                     if age_a == age_b:
                         total_requests -= count_a
         return total_requests

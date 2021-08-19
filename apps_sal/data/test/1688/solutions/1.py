@@ -31,8 +31,8 @@ def rangemin(a, b):
 N = int(input())
 A = [int(a) for a in input().split()]
 B = sorted([(A[i], i) for i in range(N)])
-i = 0
-j = 0
+i = 0  # large
+j = 0  # small
 X = [1 << 20] * (2 * N)
 while i < N:
     while 2 * B[j][0] < B[i][0]:

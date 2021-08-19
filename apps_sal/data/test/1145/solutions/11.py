@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -.- coding: utf-8 -.-
 
 n = int(input())
 cool_factors = [int(item) for item in input().strip().split(" ")]

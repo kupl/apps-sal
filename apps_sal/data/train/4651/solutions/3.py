@@ -7,6 +7,6 @@ def christmas_tree(height):
         result.append("*" * w)
         result.append("*" * (w + 2))
         result.append("*" * (w + 4))
-    result.append("
-    l=len(result[-2])
+    result.append("###")
+    l = len(result[-2])
     return "\r\n".join([line.center(l).rstrip() for line in result])

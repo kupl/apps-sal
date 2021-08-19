@@ -1,3 +1,4 @@
+# God Bless
 def possible(s):
     for i in "LTIM":
         if s.count(i) < 2:

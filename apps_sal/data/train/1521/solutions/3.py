@@ -1,3 +1,4 @@
+# cook your dish here
 def tourneyscore(a):
     scorelist = []
     for i in range(len(a)):

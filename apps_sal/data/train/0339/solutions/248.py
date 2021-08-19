@@ -10,5 +10,6 @@ class Solution:
                     if nums2[j] in d:
                         ans += len(d[nums2[j]])
                     d[s / nums2[j]].append(j)
+            # print(ans)
             return ans
         return helper(nums1, nums2) + helper(nums2, nums1)

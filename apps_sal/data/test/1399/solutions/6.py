@@ -54,10 +54,15 @@ def CF1036E():
             sy = lines[j][3] - lines[j][1]
 
             rs = cross(rx, ry, sx, sy)
+            # qpr = cross(qx - px, qy - py, rx, ry)
 
             if rs == 0:
                 continue
 
+            # qpr = cross(qx - px, qy - py, rx, ry)
+            # qps = cross(qx - px, qy - py, sx, sy)
+            # t = qps / rs
+            # u = qpr / rs
             x, y = line_intersection(lines[i], lines[j])
             if not (x % 1 == 0 and y % 1 == 0):
                 continue

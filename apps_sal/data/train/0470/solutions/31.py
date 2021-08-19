@@ -1,5 +1,6 @@
 class Solution:
     def threeSumMulti(self, A: List[int], target: int) -> int:
+        # hashtable with dp
 
         res = 0
         mod = int(1e9 + 7)

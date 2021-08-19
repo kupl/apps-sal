@@ -2,7 +2,7 @@ import sys
 readline = sys.stdin.readline
 
 H, W = map(int, readline().split())
-G = [[1 if s == '
+G = [[1 if s == '#' else 0 for s in readline().strip()] for _ in range(H)]
 
 DIREC = [(0, 1), (1, 0), (-1, 0), (0, -1)]
 

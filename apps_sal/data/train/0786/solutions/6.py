@@ -1,4 +1,5 @@
 import sys
+# cook your dish here
 T = int(input())
 system = [0, 1]
 new_multiplier = 1

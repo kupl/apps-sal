@@ -49,5 +49,6 @@ for l in range(N):
     for r in range(l + 1, N):
         roff += diff[r]
         ans = max(ans, roff - (A[r] - A[l]))
+        #print(l, r, roff - (A[r] - A[l]))
 
 print(ans)

@@ -7,6 +7,7 @@ for i in range(n):
     line = (re.sub(r"[\.,\';:]+", "", line))
     line = (re.sub(r"\s+", " ", line))
     lines.append(line.split()[::-1])
+    # lines[i].reverse()
 
 lines.reverse()
 for i in range(n):

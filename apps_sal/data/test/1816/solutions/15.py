@@ -1,3 +1,24 @@
+# n,p,q=map(int,input().split())
+##
+# s=input()
+##
+# l=list()
+##
+# while len(s):
+# if len(s)%p!=0 and len(s)>=q:
+# l.append(s[0:q])
+# s=s[q:]
+# elif len(s)%p==0 and len(s)>=p:
+# l.append(s[0:p])
+# s=s[p:]
+# else:
+# break
+# if len(s):
+# print(-1)
+# else:
+# print(len(l))
+# for x in l:
+# print(x)
 
 n = input()
 s = list(input().split())

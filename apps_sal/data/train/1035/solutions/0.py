@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import namedtuple
 
 CurrentPosition = namedtuple('current_position', 'points, cell, pairs')
@@ -18,15 +19,19 @@ for _ in range(T):
         for i, (dx, dy) in enumerate(p.pairs):
             sx, sy = p.cell
             new_pairs = p.pairs[:i] + p.pairs[i + 1:]
+            # case (+, +)
             px, py = sx + dx, sy + dy
             if px < R and py < C:
                 next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
+            # case (+, -)
             px, py = sx + dx, sy - dy
             if px < R and 0 <= py:
                 next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
+            # case (-, +)
             px, py = sx - dx, sy + dy
             if 0 <= px and py < C:
                 next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
+            # case (-, -)
             px, py = sx - dx, sy - dy
             if 0 <= px and 0 <= py:
                 next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]

@@ -1,5 +1,7 @@
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
+        # time complexity: O(N)
+        # space complexity: O(N)
         N = len(stoneValue)
         stoneValue += [0, 0, 0]
         dp = [-sys.maxsize] * N + [0, 0, 0]

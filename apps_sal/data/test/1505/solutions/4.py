@@ -12,10 +12,15 @@ def __starting_point():
 
     n0x = vx / absv
     n0y = n0y = vy / absv
+    #print( "n0 :" , n0x , n0y )
 
     n1x, n1y = n0y, -n0x
+    #print( "n1 :" , n1x , n1y )
     n2x, n2y = -n0x, -n0y
+    #print( "n2 :" , n2x , n2y )
     n3x, n3y = -n0y, n0x
+    #print( "n3 :" , n3x , n3y )
+    # print()
 
     print(px + b * n0x, py + b * n0y)
     print(px + a * n3x / 2, py + a * n3y / 2)

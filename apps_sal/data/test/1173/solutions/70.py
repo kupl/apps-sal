@@ -1,10 +1,11 @@
 from sys import stdin
 
 
-def opp(i):
+def opp(i):  # 対戦希望相手
     return a[i][nex[i]]
 
 
+# 入力
 readline = stdin.readline
 n = int(readline())
 m = n * (n - 1) // 2

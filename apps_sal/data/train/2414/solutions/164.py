@@ -11,6 +11,7 @@ class Solution:
             k = len(arr) - 1
 
             while i + 1 != k:
+                # for k in range(k, i+2, -1):
                 if i + 1 != k:
 
                     for j in range(i + 1, k):

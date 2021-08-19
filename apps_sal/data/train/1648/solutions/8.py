@@ -12,6 +12,9 @@ def spinning_rings(inner_max, outer_max):
                 count += (inner_ring - outer_ring) // 2
                 return count
             else:
+                # parity change happens when one of the rings reaches 0
+                # it happens if inner reaches 0 or outer reaches outer_max
+                # since inner is at outer max it is certain that outer will reach zero sooner
                 count += (outer_max - outer_ring) + 1
                 inner_ring -= (outer_ring)
                 if inner_ring % 2 == 0:
@@ -44,7 +47,8 @@ def spinning_rings(inner_max, outer_max):
                 count += (inner_ring - outer_ring) // 2
                 return count
             else:
-                count = (outer_max)
+                # check parity change
+                count = (outer_max)  # larger ring reaches 0
                 outer_ring = 0
                 inner_ring -= count % (inner_max + 1)
                 count += 1
@@ -52,7 +56,7 @@ def spinning_rings(inner_max, outer_max):
                     count += inner_ring // 2
                     return count
                 else:
-                    count += inner_ring + 1
+                    count += inner_ring + 1  # smaller reaches inner max
                     outer_ring += inner_ring + 1
                     inner_ring = inner_max
                     count += (inner_ring - outer_ring) // 2

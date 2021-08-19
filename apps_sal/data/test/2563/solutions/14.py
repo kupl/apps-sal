@@ -9,6 +9,8 @@ for q in range(Q):
             chet.append(int(i))
         else:
             nechet.append(int(i))
+    # chet.sort()
+    # nechet.sort()
     chet.append(10)
     nechet.append(10)
 

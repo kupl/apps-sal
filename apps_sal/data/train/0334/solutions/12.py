@@ -6,7 +6,9 @@ class Solution:
 
         i = 1
         while i < len(s):
+            # print(i)
             if i < len(s) and s[i] == s[i - 1]:
+                # print('hi')
                 H = []
                 heapq.heappush(H, cost[i - 1])
                 c = 1
@@ -14,6 +16,7 @@ class Solution:
                     heapq.heappush(H, cost[i])
                     i += 1
                     c += 1
+                # print('c =',c)
                 while c > 1:
                     t = heapq.heappop(H)
                     ans += t

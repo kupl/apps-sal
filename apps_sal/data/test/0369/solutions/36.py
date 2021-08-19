@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
 import sys
 def input(): return sys.stdin.readline().rstrip()
+
+# ライブラリ参照https://atcoder.jp/contests/practice2/submissions/16580070
 
 
 class SegmentTree:
@@ -53,11 +56,13 @@ class SegmentTree:
         return self.data[self.n + index]
 
     def max_right(self, l, f):
+        # assert f(self.e)
         if l >= self.original_size:
             return self.original_size
         l += self.n
         left_folded = self.e
         while True:
+            # l //= l & -l
             while l % 2 == 0:
                 l //= 2
             if not f(self.func(left_folded, self.data[l])):
@@ -73,7 +78,9 @@ class SegmentTree:
                 break
         return self.original_size
 
+    # 未verify
     def min_left(self, r, f):
+        # assert f(self.e)
         if r == 0:
             return 0
         r += self.n
@@ -114,6 +121,8 @@ def main():
             dist, masu = seg.folded(i - m, i)
             roots[i] = masu
             seg.replace(i, [dist + 1, i])
+    # print(seg.data[16:])
+    # print(roots)
     if seg.folded(n, n + 1)[0] > 10**9:
         print(-1)
     else:

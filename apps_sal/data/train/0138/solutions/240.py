@@ -1,5 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # dp[i]: max length of pos subarray ends at i
         l = len(nums)
         pdp = [0] * l
         ndp = [0] * l

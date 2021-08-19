@@ -1,5 +1,5 @@
 n, m = [int(i) for i in input().split()]
-a = [(n - i) // m + 1 for i in range(0, m + 1)]
+a = [(n - i) // m + 1 for i in range(0, m + 1)]  # a[1],a[2],...,a[m]
 s = 0
 for i in range(1, m + 1):
     for j in range(1, m + 1):

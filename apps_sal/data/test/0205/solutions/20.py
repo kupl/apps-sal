@@ -18,6 +18,7 @@ def factorize(n):
 n, b = input().split()
 n = int(n)
 b = int(b)
+#print(n, b)
 p = factorize(b)
 
 ans = None
@@ -28,6 +29,7 @@ for (prime, power) in p:
         pp += n // k
         k *= prime
     res = pp // power
+#	print(prime, power, pp, k, res)
     if ans == None or ans > res:
         ans = res
 

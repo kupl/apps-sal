@@ -8,6 +8,7 @@ class Solution:
         for t in trips:
             for j in range(t[1], t[2]):
                 dp[j] += t[0]
+                # print(dp)
                 if dp[j] > capacity:
                     return False
 

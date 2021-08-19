@@ -1,5 +1,6 @@
 import math
 N, D = (int(x) for x in input().split())
+# 2次元配列
 grid = []
 for i in range(N):
     array = list(map(int, input().strip().split()))

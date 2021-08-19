@@ -12,6 +12,7 @@ for i in range(n):
 ans.sort()
 c = 1
 fin = 0
+# print(ans)
 for i in range(1, n):
     if ans[i - 1] == ans[i]:
         c += 1

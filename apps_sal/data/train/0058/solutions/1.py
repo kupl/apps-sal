@@ -1,5 +1,6 @@
 import sys
 
+# sys.stdin = open('ivo.in')
 
 mem = []
 for i in range(32):

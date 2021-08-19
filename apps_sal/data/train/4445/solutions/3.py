@@ -14,6 +14,7 @@ def is_haiku(text):
     strings = text.split('\n')
     syls = []
     for s in strings:
+        # lower and clear punctuation
         s = ''.join([c for c in s.lower() if c not in string.punctuation])
         syls.append(sum([syl_in_word(word) for word in s.split(' ')]))
 

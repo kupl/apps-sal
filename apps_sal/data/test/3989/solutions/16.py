@@ -1,3 +1,4 @@
+# by the authority of GOD     author: manhar singh sachdev #
 
 import os
 import sys
@@ -25,6 +26,7 @@ def main():
     print(''.join(ls))
 
 
+# Fast IO Region
 BUFSIZE = 8192
 
 

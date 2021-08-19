@@ -1,4 +1,4 @@
-p = input()
+p = input()  # name
 s = input()
 answer = 0
 j = 0

@@ -1,6 +1,9 @@
 
+# 1340. Jump Game V
 
 class Solution:
+    # Time complexity O(ND)
+    # Space complexity O(N) for dp
     def maxJumps(self, arr: List[int], d: int) -> int:
 
         n = len(arr)
@@ -18,3 +21,5 @@ class Solution:
             return res[i]
 
         return max(list(map(dp, list(range(n)))))
+
+    # range(0, n) as input of dp func, then get the max of their results

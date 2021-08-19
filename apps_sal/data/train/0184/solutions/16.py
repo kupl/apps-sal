@@ -19,6 +19,8 @@ class Solution:
         for i in range(len(compact)):
             last_idx[compact[i][0]] += compact[i][1]
 
+        # print(compact)
+
         for i in range(len(compact) - 2):
 
             if compact[i][0] == compact[i + 2][0] and compact[i + 1][1] == 1 and compact[i][1] + compact[i + 2][1] < last_idx[compact[i][0]]:

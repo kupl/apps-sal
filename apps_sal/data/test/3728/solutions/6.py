@@ -8,6 +8,7 @@ for i in range(n):
 
 
 def solve(arr):
+    # print(arr)
     for row in arr:
         count = 0
         for i, num in enumerate(row):
@@ -22,6 +23,7 @@ def permute(arr, i, j):
     arr_ = deepcopy(arr)
     for k in range(n):
         arr_[k][i], arr_[k][j] = arr_[k][j], arr_[k][i]
+    # print(arr_)
     return arr_
 
 
@@ -36,6 +38,7 @@ def main():
             if i + 1 != num:
                 wrong_cols.append(i)
         if wrong_cols:
+            # print(row, wrong_cols)
             if len(wrong_cols) > 4:
                 print("NO")
                 return

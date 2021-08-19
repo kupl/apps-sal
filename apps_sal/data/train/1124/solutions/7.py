@@ -31,6 +31,7 @@ for _ in range(t):
                     count += 1
                     p -= i - q - q
                     q = 0
+                    # print("hii")
                 else:
                     continue
     print(count)

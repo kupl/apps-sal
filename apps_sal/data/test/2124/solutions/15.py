@@ -40,6 +40,9 @@ for ti in range(t):
         if guessed[i] in denied[i]:
             answer = False
 
+    # print(guessed)
+    # print(denied)
+
     changed = True
     while changed and answer:
         changed = False

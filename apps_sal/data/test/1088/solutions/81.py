@@ -1,5 +1,5 @@
-from decimal import ROUND_HALF_UP, Decimal
-from fractions import Fraction as frac
+from decimal import ROUND_HALF_UP, Decimal  # 変換後の末尾桁を0や0.01で指定
+from fractions import Fraction as frac  # frac(a,b)で正確なa/b
 from itertools import combinations as com, permutations as per
 from bisect import bisect_left as bileft, bisect_right as biright, insort
 from functools import lru_cache
@@ -12,10 +12,16 @@ except FileNotFoundError:
     None
 from math import sqrt, ceil, floor
 from collections import deque, Counter, defaultdict
+# defaultdict(int)
 def input(): return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(11451419)
+#Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
+# @lru_cache(maxsize=10**10)
+#######ここまでテンプレ#######
+# ソート、"a"+"b"、再帰ならPython3の方がいい
+#######ここから天ぷら########
 
 n, k = list(map(int, input().split()))
 A = [list(map(int, input().split())) for i in range(n)]
@@ -26,6 +32,7 @@ kai = [1] * 70
 mod = 998244353
 for i in range(1, 65):
     kai[i] = (kai[i - 1] * i) % mod
+# print(kai)
 
 
 class UnionFind():
@@ -76,6 +83,7 @@ class UnionFind():
         return list(self.all_group_members().values())
 
 
+# uf=UnionFind(n)
 ufx = UnionFind(n)
 ufy = UnionFind(n)
 

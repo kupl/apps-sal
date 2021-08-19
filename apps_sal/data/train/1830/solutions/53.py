@@ -12,6 +12,10 @@ class Solution:
         '''
         sunny_day_idx = []
         res = [-1] * len(rains)
+        # for day,lake in enumerate(rains):
+        #     if lake==0:
+        #         sunny_day_idx.append(day)
+        #         res[day]=1
 
         last_day_rains_over_lake = {}
         '''
@@ -31,6 +35,8 @@ class Solution:
                     low = mid + 1
             return low if low < len(sunny_day_idx) and sunny_day_idx[low] > prev else None
 
+        # print(binary_search([2,3],0))
+
         for day, lake in enumerate(rains):
             if lake == 0:
                 sunny_day_idx.append(day)
@@ -42,8 +48,10 @@ class Solution:
                 if not sunny_day_idx:
                     return []
                 idx = binary_search(sunny_day_idx, last_day_rains_over_lake[lake])
+                # print(idx)
                 if idx == None or sunny_day_idx[idx] > day:
                     return []
+                # print(sunny_day_idx[0],day)
                 res[sunny_day_idx[idx]] = lake
                 last_day_rains_over_lake[lake] = day
                 sunny_day_idx.pop(idx)

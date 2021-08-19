@@ -2,6 +2,7 @@ from itertools import groupby
 
 
 def fast_prime_factorization_many(lst):
+    # 素因数分解（ロー法、複数）
     from subprocess import Popen, PIPE
     res = Popen(["factor"] + list(map(str, lst)), stdout=PIPE).communicate()[0].split(b"\n")[:-1]
     return [list(map(int, r.split()[1:])) for r in res]

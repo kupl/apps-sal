@@ -1,13 +1,13 @@
 class Solution:
     def isWin(self, board, c):
-        for i in range(3):
+        for i in range(3):  # Row check
             if board[0][i] == c and board[1][i] == c and board[2][i] == c:
                 return True
-        for i in range(3):
+        for i in range(3):  # Column check
             if board[i][0] == c and board[i][1] == c and board[i][2] == c:
                 return True
         if board[0][0] == c and board[1][1] == c and board[2][2] == c or \
-                board[0][2] == c and board[1][1] == c and board[2][0] == c:
+                board[0][2] == c and board[1][1] == c and board[2][0] == c:  # Diagonal check
             return True
 
         return False
@@ -26,6 +26,7 @@ class Solution:
 
         if o_cnt > x_cnt or x_cnt > o_cnt + 1:
             return False
+        #print(o_cnt,x_cnt,self.isWin(board, 'X'))
         if o_cnt == x_cnt and self.isWin(board, 'X') or x_cnt == o_cnt + 1 and self.isWin(board, 'O'):
             return False
 

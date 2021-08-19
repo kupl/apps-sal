@@ -1,3 +1,4 @@
+# cook your dish here
 from sys import stdin, stdout, setrecursionlimit
 from math import ceil
 
@@ -14,5 +15,6 @@ for _ in range(t):
     s3 = ((y * y * (y + 1) * (y + 1)) // 4) % mod
 
     ans = (m * n * s1 - (m + n) * s2 + s3) % mod
+    # ans = (m*(m+1)*(2*m*n + 4*n + 2 - m*m - m)//12)
 
     print(ans)

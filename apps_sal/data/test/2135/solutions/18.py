@@ -19,6 +19,7 @@ for x in range(h):
 
 q = int(input())
 ans = []
+# print(hor[1][1])
 print()
 for _ in range(q):
     x, y, x1, y1 = [int(i) for i in input().split()]

@@ -30,6 +30,7 @@ while (i < n) and (j < n):
     ans[count] += (left[i] - right[j] - 1)
     j += 1
     count += 1
+#	print(i, j)
 
 
 for i in range(1, n + 1):

@@ -1,5 +1,8 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # think it in another way as to construct minimum spanning trees for Alice and Bob
+        # if there are then all the rest of the edges can be removed
+        # prioritize type 3 edges
         edges.sort(key=lambda edge: -edge[0])
         ds_alice = DisjointSets(n)
         ds_bob = DisjointSets(n)

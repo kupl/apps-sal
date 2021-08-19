@@ -20,6 +20,7 @@ dp = [[0] * n for _ in range(1 << n)]
 
 for people in range(1, 1 << n):
     ones = [i for i in range(n) if people & (1 << i)]
+    # print(f'ones: {ones}')
     one_num = len(ones)
 
     if one_num == 1:
@@ -34,6 +35,7 @@ for people in range(1, 1 << n):
                 continue
             for pre_s, times in enumerate(dp[pre_people][j]):
                 s = pre_s | (rel[j][i] << one_num - 2)
+                # print(f'dp[{people}][{i}][{s}]: {dp[people][i][s]}')
                 dp[people][i][s] += times
 
 people = (1 << n) - 1

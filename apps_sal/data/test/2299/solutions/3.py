@@ -38,6 +38,7 @@ def main():
                         break
                     l += 1
 
+    # print(rr)
     k = II()
     l, r = LI()
     t = ''

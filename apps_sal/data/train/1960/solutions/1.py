@@ -8,5 +8,6 @@ class Solution:
             res.append(P.index(q))
             del P[res[-1]]
             P.appendleft(q)
+            # print(P)
 
         return res

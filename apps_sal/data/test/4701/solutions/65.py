@@ -1,6 +1,9 @@
 N = int(input())
 K = int(input())
 
+# A+B=N
+# A:C[i]*2
+# B:C[i]+K
 
 C = 1
 for i in range(N):

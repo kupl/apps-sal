@@ -36,6 +36,7 @@ class Solution:
             return True if n > 1 else False
         prn = {a: pcr(a) for a in A}
         print(prn)
+        # return
         while True:
             rms = set()
             ks = list(prn.keys())
@@ -49,7 +50,9 @@ class Solution:
                         rms.add(ks[j])
                         continue
                     if prn[k].intersection(prn[ks[j]]):
+                        # print(k,ks[j],prn[k])
                         prn[k].update(prn[ks[j]])
+                        # print(k,ks[j],prn[k])
                         rms.add(ks[j])
                 if rms:
                     break
@@ -58,5 +61,7 @@ class Solution:
             if not rms:
                 break
         aa = set(A)
+        #print([(k,len(v)) for k,v in prn.items()])
+        # print(prn)
         cdd = [len(v & aa) for v in prn.values()]
         return max(cdd)

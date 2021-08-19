@@ -43,6 +43,7 @@ class Solution:
         A1.sort()
         A2.sort()
         C1, C2 = collections.Counter(A1), collections.Counter(A2)
+        # print(A1,A2,C1,C2)
         res = 0
         N1, N2 = len(A1), len(A2)
         seen = set()
@@ -50,25 +51,30 @@ class Solution:
             for j, y1 in enumerate(A2):
                 if x * x < y1:
                     break
+                # if y1 in seen:continue
                 y2 = x * x // y1
                 if x * x % y1 == 0 and y2 in C2:
                     c = C2[y2]
+                    # print(x,y1,c)
                     if x == y1:
-                        res += comb(c, 2)
+                        res += comb(c, 2)  # if c>1 else 0
                     else:
                         res += c * C2[y1]
                     seen |= {y1, y2}
                     break
+        # print(res)
         seen = set()
         for x in A2:
             for y1 in A1:
                 if x * x < y1:
                     break
+                # if y1 in seen:continue
                 y2 = x * x // y1
                 if x * x % y1 == 0 and y2 in C1:
                     c = C1[y2]
+                    # print('-',x,y1,c)
                     if x == y1:
-                        res += comb(c, 2)
+                        res += comb(c, 2)  # if c>1 else 0
                     else:
                         res += c * C1[y1]
                     seen |= {y1, y2}

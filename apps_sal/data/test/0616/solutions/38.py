@@ -6,6 +6,7 @@ for _ in range(m):
     cl = list(map(int, input().split()))
     abcsl.append((a, b, cl))
 
+# dp = [ [10**9]*(2**n) for _ in range(m) ]
 dp = [10**9] * (2**n)
 dp[0] = 0
 for a, b, cl in abcsl:

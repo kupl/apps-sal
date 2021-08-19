@@ -5,6 +5,7 @@ class Solution:
         :type t: str
         :rtype: str
         """
+        # assume t doesn't have duplicated chars
         left = -1
         right = 0
         result = ""
@@ -19,11 +20,13 @@ class Solution:
             if c in d:
                 d[c] -= 1
                 if d[c] >= 0:
+                    # good match
                     totalMatch += 1
 
                     if left == -1:
                         left = right
 
+                    # find a sustring
                     if totalMatch == len(t):
                         if result == "" or len(result) > right - left:
                             result = s[left: right + 1]
@@ -35,6 +38,7 @@ class Solution:
 
                             if s[left] in d:
                                 if d[s[left]] < 0:
+                                    # skip over matched letter
                                     d[s[left]] += 1
                                 else:
                                     break
@@ -43,6 +47,7 @@ class Solution:
                     d[c] += 1
                     while left < right:
                         left += 1
+                        # skip over matched letter
                         if s[left] in d:
                             if d[s[left]] < 0:
                                 d[s[left]] += 1

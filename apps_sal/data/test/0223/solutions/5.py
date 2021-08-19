@@ -17,6 +17,7 @@ def calc(a, f, rv, n):
         t = cur - 1
         s += t
         ans = ans * cur * f[s] * rv[s - t] % mod
+        #print(a[i], cur, s, f[s], rv[s-t])
         s += 1
     return ans
 

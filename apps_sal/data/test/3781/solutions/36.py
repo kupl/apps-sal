@@ -1,5 +1,10 @@
 def main(n, a):
+    # F:ゲームの先行
+    # S:ゲームの後行
     if n % 2 == 0:
+        # ゲームの先行Fがnimの先行になる。
+        # nimはF先行。Fはnimのxor和が0以上になるようにしたい。Sはぴったり0にしたい
+        # Fは大きいものから順に同じ皿に置いていけばいい。逆にこれでも0になってしまう場合はSが勝つ。
         a.sort()
         num0, num1 = 0, 0
         for i, x in enumerate(a):
@@ -9,6 +14,8 @@ def main(n, a):
                 num1 += x
         return num0 != num1
     else:
+        # ゲームの後行Sがnimの先行になる。
+        # nimはS先行。Fはnimのxor和が0になるようにしたい。Sは0以上にしたい
         return False
         pass
 

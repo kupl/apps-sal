@@ -12,6 +12,7 @@ for i in range(n):
 even = 0
 odd = 0
 cnt = 0
+# print(a)
 sofar = 0
 for i in range(n):
     sofar += a[i]
@@ -20,6 +21,7 @@ for i in range(n):
     else:
         even += 1
 even += 1
+# print(even,odd)
 sofar = 0
 for i in range(n):
     if(sofar % 2):
@@ -30,6 +32,7 @@ for i in range(n):
         cnt += even
     sofar += a[i]
 
+# print(cnt)
 for i in range(n):
     sum1 = 0
     max1 = a[i]

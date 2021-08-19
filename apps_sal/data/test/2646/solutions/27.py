@@ -2,8 +2,9 @@ from heapq import heappush, heapify, heappop
 
 
 def dijkstra(start: "始点", V: "頂点数", es: "隣接リスト", INF=10000000000):
-    prev = [-1] * n
-    d = [INF] * n
+    # INF = 10**10 毎回チェックしよう
+    prev = [-1] * n  # 経路復元
+    d = [INF] * n  # 頂点sからの最短距離
     que = [start]
     d[start] = 0
     while que:
@@ -28,12 +29,13 @@ def get_path(t, prev):
 
 
 n, m = list(map(int, input().split()))
-es = [[] for _ in range(n)]
+es = [[] for _ in range(n)]  # es[i] = (頂点iの(隣接する頂点,コスト)の組)
+# 入力
 for i in range(m):
     a, b = list(map(int, input().split()))
     a, b = a - 1, b - 1
     es[a].append((b, 1))
-    es[b].append((a, 1))
+    es[b].append((a, 1))  # 無向グラフ
 
 
 d, prev = dijkstra(0, n, es)

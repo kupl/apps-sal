@@ -7,6 +7,7 @@ for nt in range(int(input())):
     t = s
     ans = 0
     for i in range((n - 2) // 2):
+        # print (t,ans)
         ans += (math.cos((t * math.pi) / 180))
         t += s
     print(ans * 2 + 1)

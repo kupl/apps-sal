@@ -4,4 +4,4 @@ class Hero(object):
         self.position = position
         self.health = health
         self.damage = damage
-        self.experience = experience
+        self.experience = experience  # I solved this Kata on  7/30/2019  07:00 AM...#Hussam'sCodingDiary

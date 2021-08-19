@@ -1,7 +1,7 @@
 MOD = 10 ** 9 + 7
 s, t = input(), input()
 
-p = t + '
+p = t + '#' + s
 z = [0] * len(p)
 l = r = 0
 for i in range(1, len(p)):

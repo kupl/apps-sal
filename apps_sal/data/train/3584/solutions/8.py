@@ -7,5 +7,7 @@ def decrypt(text, encryptKey): return crypt(text, encryptKey, -1)
 
 def crypt(text, encryptKey, dir):
     encryptKey = str(encryptKey).zfill(3)
+    # rotate all rows of keyboard
     new_keyboard = [row[int(encryptKey[i // 2]) * dir:] + row[:int(encryptKey[i // 2]) * dir] for i, row in enumerate(keyboard)]
+    # join the rows of keyboard together to make a full translation and translate
     return ''.join([char.translate(str.maketrans(' '.join(keyboard), ' '.join(new_keyboard))) for char in text])

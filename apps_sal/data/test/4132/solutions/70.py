@@ -1,3 +1,4 @@
+# https://note.nkmk.me/python-gcd-lcm/
 import math
 from functools import reduce
 

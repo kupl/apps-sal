@@ -1,6 +1,7 @@
 s = input()
 
 result = 10 ** 9
+# 0始まりで揃える場合
 tmp = 0
 for i, c in enumerate(s):
     if i & 1:
@@ -13,6 +14,7 @@ for i, c in enumerate(s):
 result = min(result, tmp)
 tmp = 0
 
+# 1始まりで揃える場合
 for i, c in enumerate(s):
     if i & 1:
         if c == '1':

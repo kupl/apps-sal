@@ -133,6 +133,7 @@ class TheGridForTron:
         self._dir = Direction.Right
 
     def _grow(self):
+        # Grow to left
         diff = self._org[0] - self._pos[0]
         if diff > 0:
             self._org = (self._pos[0], self._org[1])
@@ -145,6 +146,7 @@ class TheGridForTron:
 
             return
 
+        # Grow to up
         diff = self._org[1] - self._pos[1]
         if diff > 0:
             self._org = (self._org[0], self._pos[1])
@@ -155,6 +157,7 @@ class TheGridForTron:
 
             return
 
+        # Grow to right
         diff = self._pos[0] - (self._org[0] + self._size) + 1
         if diff > 0:
             s = ' ' * diff
@@ -165,6 +168,7 @@ class TheGridForTron:
 
             return
 
+        # Grow to down
         diff = self._pos[1] - (self._org[1] + len(self._grid)) + 1
         if diff > 0:
             s = ' ' * self._size

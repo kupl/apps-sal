@@ -8,6 +8,10 @@ t = 0
 
 PASSENGERS = ('x', 'P', 'S')
 
+# - is 0
+# . is 1
+# P is 10
+# S is 11
 
 for i in range(n):
     s = input()

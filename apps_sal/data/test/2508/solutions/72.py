@@ -23,6 +23,7 @@ for h in range(1, H + 1):
 dp[sth][stw] = 0
 
 
+# Seen = [[INF]*W for _ in range(H)]
 XY = {(1, 0), (-1, 0), (0, 1), (0, -1)}
 
 
@@ -31,6 +32,7 @@ def bfs(sth, stw, glh, glw):
     next_q.append((sth, stw))
 
     while len(next_q) != 0:
+        # キュー取り出し(先頭)
         h, w = next_q.popleft()
         for dh, dw in XY:
             for sk in range(1, K + 1):
@@ -41,7 +43,12 @@ def bfs(sth, stw, glh, glw):
                     next_q.append((hs, ws))
                     dp[hs][ws] = dp[h][w] + 1
                 elif dp[hs][ws] <= dp[h][w]:
+                    # もし、dp[hs][ws] が 今の値以下なら
+                    # その先はdp[hs][ws]をもとに 書き込まれている or 今後書き込まれる ので止める
                     break
+                # if hs == glh and ws == glw:
+                #    return dp[h][w] + 1
+    # return -1
 
 
 def main():

@@ -4,6 +4,7 @@ while n > 0:
     flag = 0
     for i in range(0, len(s1)):
         if str(s1[i]) == "not":
+            # print(s1[i])
             flag = 1
     if flag == 1:
         print("Real Fancy")

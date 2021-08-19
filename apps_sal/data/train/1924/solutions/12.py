@@ -8,6 +8,7 @@ class Transaction:
 
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
+        # convert each into object Transaction
         for i in range(len(transactions)):
             transact = transactions[i].split(',')
             transactions[i] = Transaction(transact[0], transact[1], transact[2], transact[3])

@@ -3,6 +3,7 @@ import numpy as np
 
 
 def main():
+    # 入力
     readline = stdin.readline
     mod = 10**9 + 7
     s = readline().strip()

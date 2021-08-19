@@ -1,13 +1,17 @@
+# 2つの文字列S,Tを標準入力として受け取る
 a = [str(input()) for i in range(2)]
 S = a[0]
 T = a[1]
 
+# SとTの文字数をlength_S, length_Tとする
 length_S = len(S)
 length_T = len(T)
 
+# 文字列SとTを1文字ずつ格納したリストl_S、l_Tを準備する。
 l_S = [str(x) for x in list(str(S))]
 l_T = [str(y) for y in list(str(T))]
 
+# Sの部分文字列sを作り、リストl_sに格納
 l_s = []
 for i in range(length_S - length_T + 1):
     s = l_S[i:i + length_T]

@@ -5,6 +5,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         start_pos = locations[start]
         end_pos = locations[finish]
+        # locations.sort()
         N = len(locations)
 
         @lru_cache(None)

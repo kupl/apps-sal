@@ -1,7 +1,14 @@
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
+# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import math
 
+#T = int(input())
+#N = int(input())
+# print(N)
 N, r = [int(x) for x in stdin.readline().split()]
+#arr = [int(x) for x in stdin.readline().split()]
 
 visited = [0] * N
 
@@ -23,6 +30,8 @@ for i in range(pos):
     start = 0
     gain = -50000
     for j in range(N):
+        # find available and largest gain
+        # if gain tie, find largest start r
         if visited[j] == 1 or b[j] < 0:
             continue
 
@@ -41,6 +50,7 @@ for i in range(pos):
     else:
         visited[idx] = 1
         r += b[idx]
+        # print(idx,r)
 
 
 tmp = []

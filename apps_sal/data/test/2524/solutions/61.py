@@ -9,4 +9,5 @@ for i in range(60):
     p += 1
     ans += (one * zero) * 2**i
     ans %= M
+    # print(one,zero)
 print(ans)

@@ -57,6 +57,8 @@ def solve():
             dp4[i][j] += max(z1, z2)
 
     ans = 0
+    # print(dp1)
+    # print(dp2)
     for i in range(1, n - 1):
         for j in range(1, m - 1):
             z1, z2, z3, z4 = dp1[i][j - 1], dp2[i + 1][j], dp3[i][j + 1], dp4[i - 1][j]
@@ -65,7 +67,11 @@ def solve():
             z1, z2, z3, z4 = dp1[i - 1][j], dp2[i][j - 1], dp3[i + 1][j], dp4[i][j + 1]
             ans = max(z1 + z2 + z3 + z4, ans)
 
+            # print(ans)
+
     print(ans)
 
 
+# t = int(stdin.readline())
+# for _ in range(t):
 solve()

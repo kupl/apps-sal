@@ -1,3 +1,4 @@
+# 二部ぐらふ、知らなかった
 from collections import defaultdict
 
 

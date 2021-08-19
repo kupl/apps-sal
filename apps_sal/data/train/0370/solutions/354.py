@@ -1,6 +1,6 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        parent = [-1] * 100_001
+        parent = [-1] * 100_001  # One more than all values
 
         def find(x):
             if parent[x] == -1:

@@ -3,7 +3,7 @@ class Solution:
         n = len(arr)
         g_right = {}
         g_left = {}
-        lengths = [0] * n
+        lengths = [0] * n  # number of cells with length 1, 2, ... , n
         res = -1
         for itr, i in enumerate(arr):
             pos = i - 1
@@ -23,7 +23,12 @@ class Solution:
             g_left.update({rb: lb})
             g_right.update({lb: rb})
             lengths[rb - lb] += 1
+            # print(lengths)
             if lengths[m - 1] > 0:
                 res = itr + 1
 
         return res
+        #     for i in g_
+        #     if m in s:
+        #         res = itr + 1
+        # return res

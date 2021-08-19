@@ -10,5 +10,6 @@ for x in range(10):
                 if u <= n:
                     array.add(u)
 array.remove(0)
+# print (sorted(list(array)))
 array = [u for u in array if u <= n]
 print(len(array))

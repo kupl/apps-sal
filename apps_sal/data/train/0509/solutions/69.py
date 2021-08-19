@@ -25,6 +25,7 @@ def main():
     親と子で頂点のラベルが一致するので辺が切れてしまう。
     なのでこの場合だけ子には親と違うラベルをランダムに当てる。
     """
+    # Prim
     visited = [0] * (N + 1)
     used_edge = [[] for _ in range(N + 1)]
     edge_q = []
@@ -42,6 +43,7 @@ def main():
             if not visited[nv]:
                 heappush(edge_q, (nc, v, nv))
 
+    # Labeling
     label = [0] * (N + 1)
     cand = set(range(1, N + 1))
     for c, v in used_edge[1]:

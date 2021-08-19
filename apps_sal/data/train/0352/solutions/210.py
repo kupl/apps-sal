@@ -16,7 +16,10 @@ class Solution:
         for i in range(n):
             for j in range(i + 1, n):
                 if pre(words[j], words[i]):
+                    # print('pre', word2, word)
                     length[j] = max(length[j], length[i] + 1)
                     best = max(best, length[j])
+
+        # print(length)
 
         return best + 1

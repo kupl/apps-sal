@@ -1,3 +1,4 @@
+# cook your dish here
 tc = int((input()))
 for _ in range(tc):
     n = list(map(int, input().split()))

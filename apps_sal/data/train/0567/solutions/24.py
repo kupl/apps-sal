@@ -1,3 +1,4 @@
+# cook your dish here
 def get_ans(ar, n):
     for i in range(n - 2):
         if ar[i] == ar[i + 1] == ar[i + 2]:

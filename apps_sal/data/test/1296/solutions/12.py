@@ -6,6 +6,7 @@ upper = n - 1
 lower = 0
 while upper > lower:
     k = (upper + lower) // 2
+    # print("u",upper,'l',lower)
     t = list([x[1] + k * (x[0] + 1) for x in enumerate(l)])
     h = sum(sorted(t)[:k])
     if h == s:

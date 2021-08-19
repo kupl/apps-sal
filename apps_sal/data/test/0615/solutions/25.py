@@ -1,3 +1,4 @@
+# 102_D
 N = int(input())
 A = list(map(int, input().split()))
 s = 0
@@ -5,6 +6,7 @@ AS = []
 for i in range(N):
     s += A[i]
     AS.append(s)
+# 尺取り法
 Ans = AS[N - 1] + 1
 L = 0
 R = 2
@@ -20,5 +22,6 @@ for Mid in range(1, N - 2):
     Q = AS[Mid] - AS[L]
     S = AS[R] - AS[Mid]
     T = AS[N - 1] - AS[R]
+    # print(Mid,L,R,abs(max(P,Q,S,T)-min(P,Q,S,T)))
     Ans = min(Ans, abs(max(P, Q, S, T) - min(P, Q, S, T)))
 print(Ans)

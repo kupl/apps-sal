@@ -4,12 +4,14 @@ class Solution:
             return self.dp[idx]
 
         max_step = 1
+        # to left
         for c in range(idx - 1, max(0, idx - self.d) - 1, -1):
             if self.arr[idx] <= self.arr[c]:
                 break
 
             max_step = max(self.helper(c) + 1, max_step)
 
+        # to right
         for c in range(idx + 1, min(self.n, idx + self.d + 1)):
             if self.arr[idx] <= self.arr[c]:
                 break

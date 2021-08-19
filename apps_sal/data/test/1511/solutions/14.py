@@ -5,12 +5,18 @@ def pretty_print_list(a):
 
 
 n, m, k = map(int, input().split())
+#print(n, m, k)
 
+#x = [[-1] * m] * n
 x = [[-1 for _ in range(m)] for _ in range(n)]
 for i in range(n):
     z = [y for y in map(int, input().split(" "))]
+#    print("i:n:", i, "z:", *z)
     for j in range(m):
         x[i][j] = z[j]
+#       x[i] = [z for z in map(int, input().split(" "))]
+
+# pretty_print_list(x)
 
 
 d = {}
@@ -37,6 +43,8 @@ for i in range(m):
             if cell in locked_cells:
                 if not core in locked_cores:
                     locked_cores[core] = i + 1
+
+    #print(i, d); print("locked_cores:", locked_cores); print("locked_cells:", locked_cells)
 
 
 for i in range(n):

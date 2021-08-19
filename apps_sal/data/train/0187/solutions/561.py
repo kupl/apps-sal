@@ -5,6 +5,7 @@ class Solution:
         curWait = 0
         maxProfit = 0
         minRo = 0
+        # 8
         for i, customer in enumerate(customers):
             while rotation < i:
                 rotation += 1

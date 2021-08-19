@@ -8,3 +8,4 @@ def solve(a):
     amtOddEntries = len(oddEntries)
 
     return amtEvenEntries - amtOddEntries
+# end function

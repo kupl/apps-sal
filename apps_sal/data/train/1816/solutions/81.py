@@ -15,6 +15,7 @@ class Solution:
 
         w = []
         res = []
+        # print(d)
         for p in list(d.keys()):
             times = d[p]
             w = []

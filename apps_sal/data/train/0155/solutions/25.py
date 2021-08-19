@@ -31,11 +31,14 @@ class Solution:
                     jumps_to_i = seen[i]
                     maximum_locations = max(maximum_locations, jumps_to_i + 1)
 
+            # print(\"Backtracking\")
             seen[pos] = maximum_locations
+            # print(\"pos:\", arr[pos], \"seen:\", seen)
             return maximum_locations
 
         indices = [(i, arr[i]) for i in range(len(arr))]
         indices.sort(key=lambda x: x[1], reverse=True)
 
         seen = {}
+        # print(seen)
         return max(jump(x[0], 1, seen) for x in indices)

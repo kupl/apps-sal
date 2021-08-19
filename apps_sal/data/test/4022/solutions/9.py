@@ -19,5 +19,7 @@ max_ans = max(max(0, dp_left[-2][1] - dp_left[-2][0]), max(0, dp_right[-2][1] - 
 for i in range(1, n - 1):
     l = max(dp_left[i - 1][0], dp_right[n - i - 2][0])
     r = min(dp_left[i - 1][1], dp_right[n - i - 2][1])
+    #print(l, r)
+    # break
     max_ans = max(max_ans, r - l)
 print(max_ans)

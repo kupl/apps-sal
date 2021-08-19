@@ -1,3 +1,4 @@
+# cook your dish here
 
 from sys import stdin, stdout
 mod = 10**9 + 7
@@ -13,6 +14,7 @@ def power10(N):
         if x[i] == '1':
             r *= tmp
             r %= mod
+        # print(tmp,r,tmp*r)
         tmp = (tmp % mod) * (tmp % mod)
         tmp %= mod
         i -= 1

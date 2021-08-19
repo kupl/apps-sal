@@ -1,3 +1,4 @@
+# cook your dish here
 def solve():
     s = input().strip()
     i = 0

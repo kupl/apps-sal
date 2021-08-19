@@ -42,6 +42,9 @@ for key, value in list(pairs.items()):
     sequences.append(temp)
 
 
+# print(sequences)
+
+
 variants = n
 
 for seq in sequences:

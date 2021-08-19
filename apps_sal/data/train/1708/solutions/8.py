@@ -18,11 +18,12 @@ class MemoryManager:
         """
         for i in range(len(self.memory)):
             ok = True
-            for j in range(i, i + size):
-                if j >= len(self.memory):
+            for j in range(i, i + size):  # j is the currently checking index
+                if j >= len(self.memory):  # it has reached the end
                     ok = False
                     break
                     raise Exception('No allocation available')
+#                 if it's already been allocated
                 for k in range(len(self.allocationStarts)):
                     if j >= self.allocationStarts[k] and j < self.allocationStarts[k] + self.allocationSizes[k]:
                         ok = False
@@ -30,8 +31,10 @@ class MemoryManager:
             if ok:
                 self.allocationStarts.append(i)
                 self.allocationSizes.append(size)
+#                 print(i)
                 return i
 
+        # this shouldn't usually be reached because it would stop when j crosses over the length
         raise Exception('No allocation available')
 
     def release(self, pointer):
@@ -40,7 +43,7 @@ class MemoryManager:
         @param {number} pointer - The pointer to the block to release.
         @raises If the pointer does not point to an allocated block.
         """
-        index = self.allocationStarts.index(pointer)
+        index = self.allocationStarts.index(pointer)  # this raises a value error if it's not found
         del self.allocationStarts[index]
         del self.allocationSizes[index]
 

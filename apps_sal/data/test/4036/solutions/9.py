@@ -1,3 +1,5 @@
+#!/usr/bin/evn python
+# -*- coding: utf-8 -*-
 
 import math
 """
@@ -10,6 +12,7 @@ import math
 
 def solution():
     n, k = list(map(int, input().strip().split()))
+    # n, k = 200, 30
 
     a = []
     for i in range(k):
@@ -22,9 +25,11 @@ def solution():
 
     if n != 0:
         print('NO')
+        # print(a)
     else:
         print('YES')
         print(' '.join(map(str, a)))
+        # print(sum(a))
 
 
 while True:
@@ -33,3 +38,4 @@ while True:
 
     except:
         break
+# solution()

@@ -44,10 +44,12 @@ def main():
 
     c = collections.defaultdict(list)
     ad = n * (n - 1) // 2 * d + x * n
+    # print(ad)
     dd = abs(d) * 2
     for i in range(n + 1):
         u = ad - (x * i + ((i - 1) * i // 2) * d) * 2
         k = ad - (x * i + ((n - 1 + n - i) * i // 2) * d) * 2
+        # print("iku",i,k,u)
         if k > u:
             k, u = u, k
         c[k % dd].append((k, u))
@@ -55,6 +57,7 @@ def main():
     r = 0
     for k, v in c.items():
         v.sort()
+        # print(k,v)
         a, b = v[0]
         for t, u in v[1:]:
             if t <= b:
@@ -62,6 +65,7 @@ def main():
                     b = u
             else:
                 r += (b - a) // dd + 1
+                # print("ab",a,b,(abs(b-a)+dd), dd,r)
                 a, b = t, u
         r += (b - a) // dd + 1
 

@@ -8,7 +8,7 @@ class Solution:
                     c += 1
             return c
 
-        s = '
+        s = '#' + s
         n = len(s)
         dp = [[float('inf')] * (k + 1) for _ in range(n)]
         dp[0][0] = 0

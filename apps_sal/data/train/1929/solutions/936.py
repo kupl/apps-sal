@@ -7,7 +7,7 @@ class Node:
 
 class Trie:
     def __init__(self):
-        self.t = Node()
+        self.t = Node()  # root;
         self.leaves: Dict[str, List[Node]] = {}
         self.maxLen: int = 0
 
@@ -23,7 +23,7 @@ class Trie:
         while j < len(w):
             i = w[j]
             n = tl.children.get(i, None)
-            if n != None:
+            if n != None:  # this char exist
                 tl = n
                 j += 1
             else:
@@ -52,8 +52,8 @@ class StreamChecker:
 
         for f in fl:
             i = len(self.q) - 2
-            if f.parent.value == None:
-                return True
+            if f.parent.value == None:  # reached root
+                return True  # already reach
             while i >= 0:
                 l = self.q[i]
                 if f.parent.value == l:
@@ -62,7 +62,12 @@ class StreamChecker:
                 else:
                     break
 
-                if f.parent.value == None:
-                    return True
+                if f.parent.value == None:  # reached root
+                    return True  # already reach
 
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

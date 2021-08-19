@@ -8,6 +8,7 @@ class Solution:
     def longestAwesome(self, s: str) -> int:
         sLength = len(s)
         earliestBinaries = {}
+        # we need to find out the current count of (0,1,2,...,9) and do even odd. Then we hash and check the earliest of the 11 possibilities so that at that point it will be the longest possible string ending at this endpoint.
         current = [0] * 10
         earliestBinaries[tuple(current)] = -1
         currentMax = 0

@@ -15,7 +15,7 @@ def bfs(g, N, s, t):
                 continue
             dist[u] = d + 1
             if u == t:
-                return dist[t] // 3
+                return dist[t] // 3  # TLEしたので解を見つけたら即returnに変えた
             dq.append(u)
     return -1
 

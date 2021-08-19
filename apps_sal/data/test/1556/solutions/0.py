@@ -16,7 +16,7 @@ if is_neg:
 else:
     minode = hq.heappop(narr)
     mi = minode[0]
-    kswitch = ceil(mi / x)
+    kswitch = ceil(mi / x)  # make the off number of negatives
     if kswitch > k:
         kswitch = k
     else:

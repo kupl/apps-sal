@@ -1,4 +1,5 @@
-R = int(input())
-G = int(input())
+R = int(input())  # 現在のレーティング
+G = int(input())  # 次のコンテストでとりたいと思ってるレーティング
 
+# 高橋君が取るべきパフォーマンスを出力
 print(G * 2 - R)

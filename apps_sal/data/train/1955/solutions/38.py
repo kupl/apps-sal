@@ -15,6 +15,8 @@ class Solution:
         parent = dict()
 
         for i, j in pairs:
+            # if i==j:
+            #     continue
             x = i
             y = j
             px = find(x)

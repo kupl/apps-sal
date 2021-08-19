@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/853/A
 from heapq import heappush, heappop
 n, k = list(map(int, input().rstrip().split()))
 c = list(map(int, input().rstrip().split()))

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n, a, b = list(map(int, input().split()))
 p = [a, b, min(a, b)]
 c = [int(x) for x in input().split()]

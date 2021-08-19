@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
 
+# import
 import math
+#import numpy as np
 A, B, H, M = list(map(int, input().split()))
 
 h = H * 30 + M / 2

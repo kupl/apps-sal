@@ -17,10 +17,14 @@ for _ in range(int(input())):
         e[i] = (a[i - 1] - a[i]) / i
         e[i] += e[i - 1]
     e = e[::-1]
+    # print(s)
+    # print(e)
     a = a[::-1]
 
     for i in range(1, n + 2):
         if s[i] >= e[i]:
+            # i-1~i
+            # print(i)
             s_speed = i
             e_spped = n + 2 - i
             if s[i - 1] <= e[i]:

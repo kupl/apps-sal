@@ -1,6 +1,7 @@
 __author__ = 'Rajan'
 
 n, m = map(int, input().split())
+# n nodes and m edges
 hash = [False for i in range(n + 1)]
 for i in range(m):
     a, b = map(int, input().split())

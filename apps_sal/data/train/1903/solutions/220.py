@@ -9,6 +9,7 @@ class Solution:
         vertices = [(0, (0, 0))]
 
         while len(seen) < n:
+            # print(vertices, seen)
             w, (u, v) = heapq.heappop(vertices)
             if u in seen and v in seen:
                 continue

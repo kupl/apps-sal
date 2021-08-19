@@ -6,6 +6,7 @@ class Solution:
         nonslave = 0
         slavedays = 0
         while b < len(hours):
+          #  print(a,b,slave,nonslave,slavedays)
             if slave > nonslave:
                 slavedays = max(slavedays, b - a + slave - nonslave - 1)
             if a == b:
@@ -55,6 +56,7 @@ class Solution:
         for i in range(len(isslave)):
 
             sumslave = isslave[i] + sumslave
+          #  print(sumslave)
             if sumslave > 0:
                 maxslavedays = max(maxslavedays, i + 1)
 
@@ -79,6 +81,8 @@ class Solution:
             if sumslave[i] <= 0:
                 a = i
         return maxslavedays
+
+        # for i in range(1,len(isslave)):
 
         return 0
         slavelength1 = self.findslavedays(hours)

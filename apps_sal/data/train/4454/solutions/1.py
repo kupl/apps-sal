@@ -1,7 +1,7 @@
 def presses(phrase):
     x = 0
     for letter in phrase:
-        if letter.lower() in list('1 *
+        if letter.lower() in list('1*#adgjmptw '):
             x += 1
         elif letter.lower() in list('0behknqux'):
             x += 2

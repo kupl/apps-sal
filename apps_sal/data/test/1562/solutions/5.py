@@ -1,6 +1,14 @@
+# see bisect module:
+# https://codeforces.com/contest/1201/submission/58302708
 
+# python complexity:
+# https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
+
+# solve using DP
 
 n, m, k, q = map(int, input().split())
+# n rows
+# m cols
 
 tr_min = [None for _ in range(n)]
 tr_max = [None for _ in range(n)]
@@ -16,6 +24,7 @@ tr_min[-1] = 0
 tr_max[-1] = tr_max[-1] or 0
 
 savecols = sorted(map(lambda t: int(t) - 1, input().split()))
+# binary search? :)
 
 
 def binsearch(arr, val):
@@ -34,7 +43,7 @@ def binsearch(arr, val):
 
 def find_short_descent(A, B):
     if A > B:
-        return find_short_descent(B, A)
+        return find_short_descent(B, A)  # this is invariant
 
     idx1 = binsearch(savecols, A)
     idx2 = idx1 + 1
@@ -54,6 +63,7 @@ l, r = 0, 0
 found_valid = False
 last_valid = None
 for row in range(0, n):
+    # insert idea here
     if found_valid == False:
         if tr_min[row] != None:
             found_valid = True
@@ -73,10 +83,14 @@ for row in range(0, n):
     rl = find_short_descent(tr_max[last_valid], tr_min[row])
     rr = find_short_descent(tr_max[last_valid], tr_max[row])
 
+    #l += min(ll, rl) + 1 + (tr_max[row] - tr_min[row])
+    #r += min(lr, rr) + 1 + (tr_max[row] - tr_min[row])
+    #l, r = r, l
     new_l = min(l + lr, r + rr) + 1 + (tr_max[row] - tr_min[row])
     new_r = min(l + ll, r + rl) + 1 + (tr_max[row] - tr_min[row])
     l, r = new_l, new_r
     last_valid = row
 
+# insert last step on row n here
 answ = l + tr_min[last_valid]
 print(answ)

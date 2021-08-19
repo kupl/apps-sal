@@ -19,6 +19,7 @@ class Solution:
 
         for i in range(1, len(s) + 1):
             for j in range(0, k + 1):
+                # print(\"{0} {1}\".format(i,j))
                 if j > 0:
                     dp[i][j] = dp[i - 1][j - 1]
 
@@ -34,5 +35,8 @@ class Solution:
 
                     dp[i][j] = min(dp[i][j],
                                    dp[p - 1][j - rem] + calc(cnt))
+
+        # for row in dp:
+        #     print(row)
 
         return dp[len(s)][k]

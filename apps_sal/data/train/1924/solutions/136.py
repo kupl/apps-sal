@@ -22,4 +22,12 @@ class Solution:
                     if c > 1000:
                         res.add(a + ',' + str(b) + ',' + str(c) + ',' + d)
 
+                # if i>=1:
+                #     e,f,g,h = v[i-1].split(',')
+                #     if (abs(int(b)-int(f)) <= 60) and (a == e) and (d != h):
+                #         res.add(a+','+str(b)+','+str(c)+','+d)
+                #         res.add(e+','+str(f)+','+str(g)+','+h)
+                # if int(c) > 1000:
+                #     res.add(a+','+str(b)+','+str(c)+','+d)
+
         return res

@@ -14,6 +14,7 @@ class Solution(object):
             for r, row in enumerate(A):
                 for c, val in enumerate(row):
                     if val and (r, c) not in done:
+                        # Start dfs
                         stack = [(r, c)]
                         seen = {(r, c)}
                         while stack:

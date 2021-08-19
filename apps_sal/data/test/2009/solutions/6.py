@@ -22,7 +22,7 @@ def dfs(r, c):
 n = int(input())
 r1, c1 = list(map(int, input().split()))
 r2, c2 = list(map(int, input().split()))
-res = 5000
+res = 5000  # n ** 2 * 2
 cells = (['1'],) + tuple((['1'] + list(input()) for _ in range(n)))
 dfs1 = dfs(r1, c1)
 for rs, cs in dfs(r2, c2):

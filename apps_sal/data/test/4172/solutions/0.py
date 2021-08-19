@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
@@ -75,6 +76,8 @@ def solve():
         p = i
     print(ans)
     return
+
+# Solve
 
 
 def __starting_point():

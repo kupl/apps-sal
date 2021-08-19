@@ -5,6 +5,7 @@ class Solution:
         :rtype: int
         """
         order = dict()
+        # order[nums[0]]=1
         if len(nums) > 1:
             for i in range(len(nums)):
                 if nums[i] in list(order.keys()):

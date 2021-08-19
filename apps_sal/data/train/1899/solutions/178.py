@@ -24,6 +24,8 @@ class Solution:
             if find:
                 break
 
+        # print(visited)
+
         visited_zero = set()
         queue = []
         for i, j in visited:
@@ -32,6 +34,8 @@ class Solution:
                     assert A[i + _i][j + _j] == 0
                     visited_zero.add((i + _i, j + _j))
                     queue.append((i + _i, j + _j, 1))
+
+        # print(queue)
 
         res = 0
         find = False

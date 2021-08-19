@@ -6,4 +6,5 @@ for x in range(n):
 for y in range(m):
     a, b = input().split()
     c = b[:-1]
-    print(a, b, "
+    # print(c)
+    print(a, b, "#" + s[c])

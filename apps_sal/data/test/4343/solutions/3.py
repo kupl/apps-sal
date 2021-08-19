@@ -1,7 +1,10 @@
+# Bhargey Mehta (Sophomore)
+#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 sys.setrecursionlimit(1000000)
+#sys.stdin = open("input.txt", "r")
 
 n = int(input())
 a = list(input())
@@ -19,6 +22,8 @@ for i in range(n):
     else:
         c[i] = carry + a[i] + b[i]
     carry = (carry + a[i] + b[i]) // 26
+# print(a)
+# print(b)
 c = [c[i] for i in range(-1, -n - 1, -1)]
 
 carry = 0

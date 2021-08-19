@@ -11,9 +11,11 @@ def check(bit):
     return True
 
 
+# dp[h][w]:上からh段目での操作を終了した時点でw番目のあみだにいる場合の数
 dp = [[0] * (W + 2) for h in range(H + 1)]
 dp[0][1] = 1
 
+# ある段における横線の配置を全探索してw-1 <-> wに横線がある数
 lines = [0] * (W + 1)
 c = 0
 for i in range(2**(W - 1)):
@@ -24,6 +26,7 @@ for i in range(2**(W - 1)):
         lines[w + 1] += (i & 1 << w) > 0
 
 
+# 配るDP
 for h in range(H):
     for w in range(1, W + 1):
         x, z = lines[w - 1], lines[w]

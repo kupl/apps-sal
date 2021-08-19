@@ -2,6 +2,7 @@ class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         n = len(mat)
         m = len(mat[0])
+        # for x in mat: print(x)
         count = 0
         for i in range(n):
             c = 0

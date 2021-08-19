@@ -1,5 +1,10 @@
 import heapq
 
+# minMaxQueue:
+# max 4 5
+# min 4 3 3 2
+#     queue: [1, 6, 8, 2, 2]
+
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:

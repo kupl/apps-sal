@@ -1,5 +1,6 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
+        # O(n), greedy or stack
 
         res = 0
         i = 0

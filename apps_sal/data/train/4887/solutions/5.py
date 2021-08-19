@@ -26,7 +26,7 @@ def days(date, month, year):
     month_30_leap = {1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
 
     if year > 1752:
-        if leap_year(year) == True:
+        if leap_year(year) == True:  # if its a leap year
             for m in range(1, month):
                 days += month_30_leap[m]
             days += date

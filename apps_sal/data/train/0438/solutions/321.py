@@ -5,9 +5,11 @@ class Solution:
         step = 1
         group = 0
         for i in range(len(arr)):
+            #print(step, arr[i], group)
             temp = 1
             right = 0
             left = 0
+            # print(bit)
             if arr[i] - 1 > 0 and bit[arr[i] - 1] != None:
                 if bit[arr[i] - 1] == 'True':
                     bit[arr[i] - m] = False
@@ -35,6 +37,7 @@ class Solution:
                 else:
                     left += bit[arr[i] + 1]
             if bit[arr[i]] == None:
+                #print(arr[i],right , left)
                 temp += right + left
                 bit[arr[i]] = temp
                 if right:
@@ -45,6 +48,7 @@ class Solution:
                     bit[arr[i] - right] = 'True'
                     bit[arr[i] + left] = 'True'
                     group += 1
+            # print(bit)
             if group > 0:
                 res = step
             step += 1

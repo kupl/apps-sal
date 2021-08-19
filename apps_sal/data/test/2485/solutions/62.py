@@ -11,10 +11,20 @@ for _ in range(M):
     HSum[hi] += 1
     WSum[wi] += 1
     bombs.add((hi, wi))
+# print(HSum)
+# print(WSum)
 
 
 curMax = 0
 
+# 計算量多すぎ。。
+# for h in range(H):
+# 	for w in range(W):
+# 		tmp = HSum[h] + WSum[w]
+# 		if curMax <= tmp:
+# 			if (h,w) in bombs:
+# 				tmp -= 1
+# 			curMax = max( curMax, tmp )
 
 hMax = max(HSum)
 wMax = max(WSum)

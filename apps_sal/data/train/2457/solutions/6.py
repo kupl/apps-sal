@@ -4,6 +4,7 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        #nums = [-1,-1,-1,1,1,1]
 
         if len(nums) == 0:
             return -1
@@ -23,6 +24,9 @@ class Solution:
         for i in range(1, len(nums)):
             left += nums[i - 1]
             right -= nums[i]
+
+            #print("l=" + str(left))
+            #print("r=" + str(right))
 
             if left == right:
                 return i

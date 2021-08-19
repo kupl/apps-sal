@@ -5,7 +5,7 @@ class Solution:
         :rtype: str
         """
         r = s[::-1]
-        s = s + '
+        s = s + '#' + r
         lps = [0] * len(s)
 
         for i in range(1, len(s)):

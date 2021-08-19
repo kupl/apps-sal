@@ -18,3 +18,6 @@ for A in range(max(0, mD - yA + 1), max(0, mH + mD - yA) + 1):
         Q = min(A * a + D * d + max(0, h * (1 - H)), Q)
 
 print(Q)
+
+
+# Made By Mostafa_Khaled

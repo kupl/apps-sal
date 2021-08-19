@@ -8,6 +8,7 @@ for i in range(n):
     temp = 0
     for k in range(len(s[i])):
         temp ^= (1 << (ord(s[i][k]) - ord('a')))
+    # print(temp,s[i])
     if temp in list(dic.keys()):
         ans = ans + dic[temp]
     for j in range(26):
@@ -19,4 +20,5 @@ for i in range(n):
         dic[temp] += 1
     else:
         dic[temp] = 1
+   # print(dic[temp])
 print(ans)

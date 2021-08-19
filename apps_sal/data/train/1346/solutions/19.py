@@ -1,3 +1,5 @@
+# Hello World program in Pytho
+# cook your dish here
 for i in range(int(input())):
     n, w = map(int, input().split())
     c = 0

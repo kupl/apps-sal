@@ -2,6 +2,8 @@ import math
 import sys
 from collections import defaultdict
 
+# input = sys.stdin.readline
+
 
 def rt(): return list(map(int, input().split()))
 def ri(): return int(input())

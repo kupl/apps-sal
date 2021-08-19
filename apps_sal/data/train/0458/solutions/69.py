@@ -7,10 +7,12 @@ class Solution:
         fullsum = nums.sum() % p
         if fullsum == 0:
             return 0
+        # print(fullsum)
         res = np.inf
         indmap = {0: -1}
         for i, a in enumerate(nums.cumsum()):
             subsum = (a - fullsum) % p
+            # print(i,a,subsum)
             if subsum in indmap:
                 res = min(res, i - indmap[subsum])
                 print(res)

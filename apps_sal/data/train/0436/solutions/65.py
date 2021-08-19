@@ -21,6 +21,7 @@ class Solution:
                 if node + 1 not in seen1:
                     q1.append(node + 1)
                     seen1.add(node + 1)
+            # print(q1, seen1, step)
             step += 1
             for _ in range(len(q2)):
                 node = q2.popleft()

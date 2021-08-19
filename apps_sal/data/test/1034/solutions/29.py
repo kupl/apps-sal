@@ -16,6 +16,7 @@ for ik in range(K):
     max = heapq.heappop(q)
     print((-max[0]))
     i, j, k = max[1], max[2], max[3]
+    # print(-max[0],i,j,k)
     if(not ((i + 1, j, k) in inq) and i + 1 < X):
         heapq.heappush(q, (-1 * (XYZ[0][i + 1] + XYZ[1][j] + XYZ[2][k]), i + 1, j, k))
         inq.add((i + 1, j, k))

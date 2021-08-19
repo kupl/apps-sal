@@ -18,6 +18,9 @@ def LLS(rows_number): return [LS() for _ in range(rows_number)]
 
 
 INF = float('inf')
+# from bisect import bisect_left, bisect_right
+# from heapq import heapify, heappop, heappush
+# import numpy as np    # cumsum
 
 
 def solve():

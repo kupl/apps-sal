@@ -38,3 +38,7 @@ def solve():
 
 
 solve()
+
+# T = ni()
+# for _ in range(T):
+#     solve()

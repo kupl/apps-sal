@@ -10,6 +10,7 @@ def solve():
 
 def main():
     t = int(input())
+    # t = 1
     for _ in range(t):
         solve()
 

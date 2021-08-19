@@ -16,4 +16,5 @@ class Solution:
                 if dp[i - j * j] == False:
                     dp[i] = True
                     break
+        # print(dp)
         return dp[n]

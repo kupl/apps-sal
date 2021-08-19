@@ -20,9 +20,12 @@ def warshall(d, n):
 
 
 roads = di(road, n)
+# [print(cost) for cost in road]
+# print()
 costs = [[1 if roads[i][j] <= l and i != j else 0 for j in range(n)] for i in range(n)]
 costs = di(costs, n)
 
+# [print(cost) for cost in costs]
 q = int(input())
 for i in range(q):
     s, t = list(map(int, input().split()))

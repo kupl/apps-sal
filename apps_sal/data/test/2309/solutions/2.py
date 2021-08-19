@@ -38,6 +38,7 @@ for i, j in list(d.items()):
     else:
         same_different[i[0]].append(j[0])
 
+# print(same_same)
 
 same_different_list = []
 for i, j in list(same_different.items()):
@@ -47,6 +48,8 @@ for i, j in list(same_different.items()):
 
         for i in range(0, len(j), 2):
             same_different_list.append((j[i], j[i + 1]))
+
+# print(same_different_list)
 
 
 ans = []

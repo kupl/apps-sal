@@ -29,12 +29,14 @@ class DSU:
 
 class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
+        # 0 is land,  1 is water!
         m, n = len(grid), len(grid[0])
         net = DSU(m * n)
         for r in range(m):
             for c in range(n):
                 if grid[r][c] == 1:
                     continue
+                # grid[r][c] = 0: land
                 net.land[r * n + c] = True
                 for d in dirs:
                     nr, nc = r + d[0], c + d[1]
@@ -43,16 +45,16 @@ class Solution:
                     elif grid[nr][nc] == 1:
                         continue
                     net.union(r * n + c, nr * n + nc)
-        ihm = defaultdict(list)
+        ihm = defaultdict(list)  # island hashmap
         for i in range(m * n):
-            p = net.find(i)
+            p = net.find(i)  # parent
             if net.land[p]:
                 ihm[p].append((i // n, i % n))
-        islands = list(ihm.values())
+        islands = list(ihm.values())  # list of list of integer
         ret = 0
-        for pl in islands:
+        for pl in islands:  # point list
             isClosed = True
-            for p in pl:
+            for p in pl:  # point
                 r, c = p[0], p[1]
                 if r == m - 1 or c == n - 1 or r == 0 or c == 0:
                     isClosed = False

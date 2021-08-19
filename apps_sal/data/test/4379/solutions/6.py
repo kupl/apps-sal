@@ -9,6 +9,7 @@ for i in range(n):
     if p in d:
         if (t not in d) or ((p - d[p]) >= (t - d[t])):
             d[t] = d[p]
+            # d.pop(p)
             k = t - d[t]
             if k > m:
                 m = k

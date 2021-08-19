@@ -29,6 +29,7 @@ while (check == False):
             Max_sec = R[i]
             pos_sec = []
             pos_sec.append(i)
+#    print(Max,' ',Max_sec,' ',pos_max,' ',pos_sec,' ',R)
     if (Max == Min):
         check = True
         break
@@ -61,6 +62,7 @@ while (check == False):
                     if (R[k] != 0):
                         R[k] -= 1
                     some.append(k)
+                  #  print('1', end='')
                     j += 1
                     if (j > 1):
                         j = 1
@@ -75,17 +77,22 @@ while (check == False):
                     string += '0'
     else:
         for k in range(n):
+         ##   print('k is ',k)
             if (pos_max[0] == k):
                 if (R[k] != 0):
                     R[k] -= 1
                 string += '1'
+                #print('1', end='')
                 continue
             if (pos_sec[0] == k):
                 if (R[k] != 0):
                     R[k] -= 1
                 string += '1'
+                #print('1', end='')
                 continue
             string += '0'
+            #print('0', end='');
+     #   print('\n')
     Output.append(string)
 
 print(Max)

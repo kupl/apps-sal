@@ -13,6 +13,10 @@ for i in range(1, n):
     lret[i] = max(lret[i], lret[i - 1])
     rret[i] = max(rret[i], rret[i - 1])
 ans = max(0, max(l), max(r))
+# print(l)
+# print(r)
+# print(lret)
+# print(rret)
 for i in range(n - 1):
     ans = max(ans, l[i] + rret[n - i - 2], r[i] + lret[n - i - 2])
 print(ans)

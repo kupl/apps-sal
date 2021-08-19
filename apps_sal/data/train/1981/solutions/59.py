@@ -12,12 +12,15 @@ class Solution:
         n = len(nums)
         counts = []
 
+        # print(starts)
+        # print(ends)
         for i in range(n):
             endsOnBehind = len(ends) - bisect.bisect_left(ends, i)
             startsToRight = len(starts) - bisect.bisect_right(starts, i)
 
             counts.append(endsOnBehind - startsToRight)
 
+        # print(counts)
         counts.sort()
 
         j = n - 1

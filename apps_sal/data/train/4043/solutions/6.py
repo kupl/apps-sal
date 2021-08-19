@@ -25,15 +25,20 @@ def calc(game_map):
     for (diagonal, row_cell_1, row_cell_2) in state_keys:
         prev_values = []
 
+        # Both paths downwards
         if row_cell_1 > 0:
             prev_values.append(states[(diagonal - 1, row_cell_1 - 1, row_cell_2 - 1)])
 
+        # Cell 1 downwards and cell 2 rightwards
         if row_cell_1 > 0 and row_cell_2 < diagonal:
             prev_values.append(states[(diagonal - 1, row_cell_1 - 1, row_cell_2)])
 
+        # Cell 1 rightwards and cell 2 downwards. Excluded the case
+        # where both paths come from a common cell for efficiency.
         if row_cell_2 > row_cell_1 + 1:
             prev_values.append(states[(diagonal - 1, row_cell_1, row_cell_2 - 1)])
 
+        # Both paths rightwards
         if row_cell_2 < diagonal:
             prev_values.append(states[(diagonal - 1, row_cell_1, row_cell_2)])
 

@@ -4,6 +4,7 @@ m = l (if l is odd) or l - 1 (if l is even)
 k = length of a cycle to get back to original string
 then (2^k) mod m = 1
 """
+# find minimum k where (b ^ k) % m = 1 and k > 0
 
 
 def multiplicativeOrder(b, m):

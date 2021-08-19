@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Tue Sep  8 18:25:14 2020
 
@@ -22,12 +23,12 @@ adj = ((1, 0), (-1, 0), (0, 1), (0, -1))
 
 def BFS(y, x):
     def isValid(t):
-        if t[0] < 0 or t[0] >= H or t[1] < 0 or t[1] >= W or field[t[0]][t[1]] == "
-        return False
+        if t[0] < 0 or t[0] >= H or t[1] < 0 or t[1] >= W or field[t[0]][t[1]] == "#":
+            return False
         return True
     d = Init()
-    if field[y][x] == '
-    return -1
+    if field[y][x] == '#':
+        return -1
     d[y][x] = 0
     q.append((y, x))
     res = 0
@@ -37,6 +38,8 @@ def BFS(y, x):
             nex = (cur[0] + a[0], cur[1] + a[1])
             if isValid(nex) and (d[nex[0]][nex[1]] == -1 or d[nex[0]][nex[1]] > d[cur[0]][cur[1]] + 1):
                 d[nex[0]][nex[1]] = d[cur[0]][cur[1]] + 1
+                # if res < d[nex[0]][nex[1]]:
+                #    res = d[nex[0]][nex[1]]
                 res = max(res, d[nex[0]][nex[1]])
                 q.append(nex)
     return res

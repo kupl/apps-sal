@@ -1,6 +1,8 @@
+# coding: utf-8
 import math
 from collections import deque
 n = int(input())
+#x, y = map(int,input().split())
 A = list(map(int, input().split()))
 ans = 0
 B = deque()

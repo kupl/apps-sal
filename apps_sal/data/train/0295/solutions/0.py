@@ -8,6 +8,7 @@ class Solution:
             return False
         i = 3
         while i < len(x):
+            # print(i)
             if x[i] >= x[i - 2] and x[i - 1] <= x[i - 3]:
                 print('case 1')
                 return True

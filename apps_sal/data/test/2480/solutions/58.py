@@ -4,6 +4,9 @@ n, k = list(map(int, input().split()))
 A = list(map(int, input().split()))
 ans = 0
 shukei = defaultdict(int)
+# AiからAjまでの和→SA[j]-SA[i-1]
+# SA[j]-SA[i-1]=j-(i-1)
+# 今回はkで割ったあまりなのでaccumulateは使わず自力
 S = [0] * (n + 1)
 T = [0] * (n + 1)
 for i in range(1, n + 1):
@@ -11,6 +14,8 @@ for i in range(1, n + 1):
     S[i] %= k
     T[i] = S[i] - i
     T[i] %= k
+# i>=1, i<jで同じ値になっている組み合わせを探せば良い。
+# kで割ったあまりなので、要素数j−(i-1)がkより小さくないといけない
 ans = 0
 if k > n + 1:
     for i in range(n + 1):

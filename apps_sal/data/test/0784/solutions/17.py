@@ -9,6 +9,7 @@ while b > a:
         b //= 2
     elif b % 10 == 1:
         ans.append(b)
+        # print(b)
         b = (b - 1) // 10
     else:
         b = -1

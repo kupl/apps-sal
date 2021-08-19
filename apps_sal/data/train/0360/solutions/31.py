@@ -1,3 +1,7 @@
+# +60
+# +30
+# +30
+# did not get this one, found the solution in forums
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         min_cap = max(weights)

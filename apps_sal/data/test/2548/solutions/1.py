@@ -15,6 +15,8 @@ for tests in range(t):
     for l in L:
         SUM.append(SUM[-1] + l)
 
+    # print(SUM)
+
     C = Counter(SUM)
 
     ANS = 0

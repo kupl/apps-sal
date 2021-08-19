@@ -10,4 +10,5 @@ def calc(nn, costs):
     return total
 
 
+# calc(1000000, [1000000 for a in range(1000000)])
 print(calc(int(input()), list(map(int, input().split(" ")))))

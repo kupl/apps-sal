@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/7 22:08
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Meaningless Operations.py
 
 import math
 
@@ -39,6 +44,19 @@ def main():
         else:
             temp = int(math.log(a, 2))
             print(pow(2, temp + 1) - 1)
+
+    # for i in range(2, 500):
+    #     f = 0
+    #     for j in range(1, i):
+    #         f = max(f, math.gcd(i ^ j, i & j))
+    #     print(i, 'F(A)', f)
+    #
+    # for k in range(1, 26):
+    #     i = pow(2, k) - 1
+    #     f = 0
+    #     for j in range(1, i):
+    #         f = max(f, math.gcd(i ^ j, i & j))
+    #     print(i, ':', f, ',')
 
 
 def __starting_point():

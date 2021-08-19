@@ -29,6 +29,7 @@ class Solution:
         unionfind = UnionFind()
         for point in points:
             unionfind.makeset(tuple(point))
+        # print(unionfind.parent,unionfind.size)
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 cost = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])

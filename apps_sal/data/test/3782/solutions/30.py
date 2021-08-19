@@ -7,10 +7,10 @@ N, K, Q = MI()
 A = LI()
 
 ans = 10**18
-for i in range(N):
+for i in range(N):  # 取り出す要素の最小値はA[i]
     a = A[i]
     left, right = 0, 0
-    X = []
+    X = []  # 取り出す数の候補
     while right < N:
         if A[right] >= a:
             right += 1

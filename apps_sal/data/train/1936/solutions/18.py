@@ -20,9 +20,12 @@ class Solution:
             out.append(pos2num(row, posoffset))
             posoffset *= 2
             if targetpos < offset + 2**(targetrow - row - 1):
+                # go left
                 pass
             else:
+                # go right
                 offset += 2**(targetrow - row - 1)
                 posoffset += 1
+            #out.append(pos2num(row, offset))
             row += 1
         return out

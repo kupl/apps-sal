@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while(t):
     li = [int(i) for i in input().split()]

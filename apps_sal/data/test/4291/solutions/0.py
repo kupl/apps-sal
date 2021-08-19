@@ -18,6 +18,9 @@ def main():
         sum += sum_array[i]
         sum_array[i] = sum
 
+    # print("")
+    # print(sum_array)
+
     ans_array = [0] * Q
     for q in range(Q):
         l, r = map(int, input().split())

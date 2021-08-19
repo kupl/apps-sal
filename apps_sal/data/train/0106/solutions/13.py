@@ -27,7 +27,7 @@ def main():
             elif threshold < lr_s[j][R]:
                 threshold = lr_s[j][R]
         if threshold_final == None:
-            print(-1)
+            print(-1)  # impossible
             continue
         answer = ""
         for j in range(n[i]):

@@ -9,3 +9,4 @@ for i in map(int, input().split()):
         v[j] = (v[j] + dp[j + 1]) % m
     dp = v
 print((dp[0] - 1) % m)
+# print the result

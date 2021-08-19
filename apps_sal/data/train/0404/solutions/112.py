@@ -15,4 +15,6 @@ class Solution:
                     else:
                         candidate = dp[i][k - 1] + (sc[r] - sc[i]) / (r - i)
                         dp[r][k] = max(dp[r][k], candidate)
+        # for row in dp:
+        #     print(row)
         return dp[-1][-1]

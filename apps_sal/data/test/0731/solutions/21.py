@@ -17,6 +17,7 @@ def f(a, b):
 
 
 w, m, k = list(map(int, input().split()))
+# print(fhelp(10))
 l = m - 1
 r = 1000000000000000000
 while (r - l > 1):

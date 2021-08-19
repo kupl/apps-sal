@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     for i in range(int(input())):
         l = list(map(int, input().strip().split()))

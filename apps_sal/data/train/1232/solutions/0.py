@@ -1,3 +1,4 @@
+# cook your dish here
 class node:
     def __init__(self, a, b=0, c=0):
         self.val = a
@@ -47,4 +48,5 @@ while(t > 0):
             lower = mid
     print("%.5f" % (higher))
     arr = []
+    # print(higher)
     t -= 1

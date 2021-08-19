@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# Copied solution
 
 import collections
 import sys
@@ -76,6 +78,7 @@ def number_to_list(number, bits):
     number <<= (32 - bits)
     values = []
     for _ in range(4):
+        #print('number = {}'.format(number))
         values.append(str(number % 256))
         number //= 256
     values = values[::-1]
@@ -87,6 +90,7 @@ def get_optimized(tree, optimized, number, bits):
         return
     if tree.subtree_color == 1:
         list = number_to_list(number, bits)
+        #print('number_to_list({}, {}) = {}'.format(number, bits, list))
         optimized.append(list)
         return
     get_optimized(tree.left, optimized, number * 2, bits + 1)

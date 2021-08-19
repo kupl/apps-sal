@@ -26,15 +26,17 @@ for i in range(2, k + 2):
     for q in range(min(p + 1, n + 1)):
         if k - i + q < 0:
             continue
-        if i % 2 > 0:
+        if i % 2 > 0:  # odd
             ans_i = ans[-1]
             break
-        else:
+            # ans_iq = pow2[q]*nCk(p, q)*nHk(k-(i-1)+q, n-q)%MOD
+        else:  # even
             ans_iq = 0
             if q > 0 and k - i + q > 0:
                 ans_iq = (ans_iq + pow2[q - 1] * nCk(p - 1, q - 1) * nHk(k - (i - 1) + (q - 1), n - q)) % MOD
             if q < p:
                 ans_iq = (ans_iq + pow2[q] * nCk(p - 1, q) * nHk(k - (i - 1) + q, n - q)) % MOD
+            # print(ans_iq)
         ans_i = (ans_i + ans_iq) % MOD
     ans.append(ans_i)
 

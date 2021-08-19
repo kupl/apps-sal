@@ -14,6 +14,7 @@ while i < n - 1:
         if curr_seq + last_seq > ans:
             ans = curr_seq + last_seq
         if s[i + 1] == 'G':
+            # gcount+=1
             last_seq = curr_seq
             curr_seq = 0
             i += 1
@@ -28,6 +29,7 @@ if s[-1] == 'G':
     curr_seq += 1
 if curr_seq + last_seq > ans:
     ans = curr_seq + last_seq
+# print(gcount,ans)
 if gcount > ans:
     print(ans + 1)
 else:

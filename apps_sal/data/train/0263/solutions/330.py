@@ -14,6 +14,20 @@ class Solution:
 
         return sum(dp) % modulo
 
+#     def getWays(self, digit, n):
+#         if n == 0:
+#             return 1
+
+#         if (digit,n) in self.cache:
+#             return self.cache[(digit,n)]
+
+#         temp = 0
+#         for neighbor in self.neighbors(digit):
+#             temp += self.getWays(neighbor, n-1)
+
+#         self.cache[(digit, n)] = temp
+#         return self.cache[(digit,n)]
+
     def neighbors(self, digit):
         neighbors = {
             0: (4, 6),

@@ -1,5 +1,9 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+        # Return true if all packages can be shipped within D days
+        # with capacity capacity.
+        # Note that if I can ship with capacity, I can definitely ship with
+        # any value > capacity
         def check(capacity):
             cur = ix = 0
             day = 1

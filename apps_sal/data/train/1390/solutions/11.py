@@ -1,3 +1,4 @@
+# cook your dish here
 def __starting_point():
     for i in range(int(input())):
         n, q = list(map(int, input().split()))

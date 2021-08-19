@@ -1,3 +1,4 @@
+#!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
 '''
 Created on 13/09/2018
 
@@ -37,6 +38,7 @@ if(m > 1):
             ultimo_en_salir[num] &= not posteriores
         continuos[num] &= cont
         mencionados.add(num)
+#    print("anteriores {} posteriores {} continuos {} ops {}".format(anteriores, posteriores, continuos, ops))
     if not anteriores and not posteriores:
         assert ultima_salida_inesperada is None
         if ops[0][0] == '+' and ops[-1][0] == '-' and ops[0][1] == ops[-1][1] and continuos[ops[0][1]] and ultimo_en_salir[ops[0][1]]:
@@ -53,14 +55,17 @@ if(m > 1):
             if not anteriores:
                 assert ultima_salida_inesperada is None
                 posibles_jefes_filtrados = list([x for x in posteriores if continuos[x] and ultimo_en_salir[x]])
+#                print("posibles {}".format(posibles_jefes_filtrados))
                 assert len(posibles_jefes_filtrados) <= 1
                 if(posibles_jefes_filtrados):
                     assert posibles_jefes_filtrados[0] == ops[0][1]
                     posibles_jefes_mencionados.add(ops[0][1])
             else:
                 assert ultima_salida_inesperada is not None
+#                print("continuos {}".format(continuos))
                 posibles_jefes_mencionados = set([x for x in anteriores & posteriores if ultimo_en_salir[x] and continuos[x] and ultima_salida_inesperada == x])
 
+#    print("posibles jefes menc {}".format(posibles_jefes_mencionados))
     posibles_jefes -= (mencionados - posibles_jefes_mencionados)
 
 print(len(posibles_jefes))

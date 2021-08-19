@@ -1,3 +1,4 @@
+# cook your dish here
 def pure_it(L, N):
     for j in range(1, N):
         if L[j - 1] == L[j]:

@@ -29,6 +29,9 @@ for nt in range(int(input())):
         maxx.append(s)
         left.append(t)
         start.append(curr)
+    # print (maxx)
+    # print (left)
+    # print (start)
     ans = 0
     for i in range(n):
         ans = max(ans, maxx[i] + (pref[start[i] + left[i]] - pref[start[i]]))

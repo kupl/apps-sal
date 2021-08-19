@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/353/D
 s = [0 if x == 'M' else 1 for x in input()]
 ans = 0
 pre = -1

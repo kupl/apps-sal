@@ -1,3 +1,4 @@
+# cook your dish he
 for i in range(int(input())):
     s = input()
     if s == "B" or s == "b":

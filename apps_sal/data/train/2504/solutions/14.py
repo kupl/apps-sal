@@ -5,4 +5,5 @@ class Solution:
             for j in range(len(arr)):
                 if len(arr[j:j + i]) == i:
                     s = s + sum(arr[j:j + i])
+                    # print(arr[j:j+i],sum(arr[j:j+i]))
         return s

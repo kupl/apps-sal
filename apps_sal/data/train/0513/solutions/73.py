@@ -1,3 +1,4 @@
+# 木によってLISを作り、dfsで抜けるときにLISをその前の状態まで復元する
 
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
@@ -33,26 +34,29 @@ for _ in ra(N - 1):
     tree[v].append(u)
 
 LIS = []
-ans = [0] * N
+ans = [0] * N  # 各ノードのlen(LIS)を記録
 
 
-def dfs(now, p):
+def dfs(now, p):  # 現在のノード、親
     a = A[now]
+    # LISの更新
     idx = bisect_left(LIS, a)
     is_append = False
     if idx == len(LIS):
         LIS.append(a)
         is_append = True
     else:
-        old = LIS[idx]
-        LIS[idx] = a
+        old = LIS[idx]   # なんの値だったか持っておく
+        LIS[idx] = a  # aに更新
 
-    ans[now] = len(LIS)
+    ans[now] = len(LIS)  # 答えを記録
+    # 次のノードを探索
     for to in tree[now]:
         if to == p:
             continue
         dfs(to, now)
 
+    # 抜けるときにLISを復元
     if is_append:
         del LIS[idx]
     else:

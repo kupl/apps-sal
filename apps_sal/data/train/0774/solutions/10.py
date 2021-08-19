@@ -1,3 +1,4 @@
+# cook your dish here
 n, k, p = map(int, input().split())
 x = [int(x) for x in input().split()]
 l = sorted(set(x))

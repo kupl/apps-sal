@@ -4,6 +4,7 @@ class Solution:
         return points[:K]
 
     def getDistance(self, a):
+        # print(a)
         return a[0] ** 2 + a[1] ** 2
 
     def sort(self, l, r, points, K):

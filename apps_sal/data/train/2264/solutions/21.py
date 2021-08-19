@@ -17,7 +17,7 @@ for _ in range(M):
 mod = 10**9 + 7
 
 
-distS = [(10**18, 0)] * (N + 1)
+distS = [(10**18, 0)] * (N + 1)  # (最短距離,経路数)
 distS[S] = (0, 1)
 qS = []
 heappush(qS, (0, S))
@@ -57,15 +57,17 @@ while qT:
             distT[j] = (distT[j][0], distT[j][1] + distT[i][1])
             heappush(qT, (distT[i][0] + d, j))
 
-a, b = distS[T]
+a, b = distS[T]  # SからTまでの最短距離,経路数
 ans = b**2 % mod
 
+# 頂点で出くわす場合
 if a % 2 == 0:
     for i in range(1, N + 1):
         if distS[i][0] == distT[i][0] == a // 2:
             ans -= (distS[i][1] * distT[i][1])**2
             ans %= mod
 
+# 辺上で出くわす場合
 for i in range(2 * M):
     U, V, D = edges2[i]
     if distS[U][0] < (a + 1) // 2 and distT[V][0] < (a + 1) // 2 and a == distS[U][0] + D + distT[V][0]:

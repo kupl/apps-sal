@@ -1,5 +1,6 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # HEAP SLIDING WINDOW SOLUTION
         max_heap, min_heap = [], []
         res = 0
         l = 0
@@ -9,6 +10,7 @@ class Solution:
             heapq.heappush(min_heap, [a, r])
 
             while -max_heap[0][0] - min_heap[0][0] > limit:
+                # we need to kick all the elments before left pointer
                 while max_heap[0][1] <= l:
                     heapq.heappop(max_heap)
 

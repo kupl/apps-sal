@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     n, time = list(map(int, input().split()))

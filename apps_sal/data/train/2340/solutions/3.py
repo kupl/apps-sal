@@ -19,12 +19,16 @@ for tests in range(t):
             count += 1
     L.append(count)
 
+    # print(L)
+
     DP = 1
 
     MAX = (1 << (n + 1)) - 1
 
     for i in L:
         DP = (DP | DP << i) & MAX
+
+    # print(bin(DP))
 
     if DP & (1 << n) != 0:
         print("YES")

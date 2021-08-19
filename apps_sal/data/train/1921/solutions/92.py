@@ -33,3 +33,10 @@ class DinnerPlates:
         while self.top and not self.stack[self.top][0]:
             self.top -= 1
         return self.popAtStack(self.top)
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

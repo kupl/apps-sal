@@ -7,26 +7,39 @@ class Solution:
                 return find_set(parents[x][0])
 
         def union_set(x, y):
+            # print(x, y)
             x_root = find_set(x)
             y_root = find_set(y)
+            # print(x_root, y_root)
+            # print(parents[x_root], parents[y_root])
             parents[y_root][1] += parents[x_root][1]
             parents[x_root][0] = y_root
 
         n = len(arr)
         parents = [[i, 1] for i in range(n)]
+        # print(parents)
         visited = [False for i in range(n)]
         answer = -1
         d = {}
         for i in range(n):
             num = arr[i] - 1
             visited[num] = True
+            # if num > 0 and visited[num - 1]:
+            #     d[parents[num - 1][1]] -= 1
+            # if num + 1 < n and visited[num + 1]:
+            #     d[parents[num + 1][1]] -= 1
             if num > 0 and visited[num - 1]:
                 d[parents[find_set(num - 1)][1]] -= 1
+                # print(parents)
                 union_set(num - 1, num)
+                # print(parents)
             if num + 1 < n and visited[num + 1]:
                 d[parents[find_set(num + 1)][1]] -= 1
+                # print(parents)
                 union_set(num + 1, num)
+                # print(parents)
             d[parents[num][1]] = 1 if parents[num][1] not in d else d[parents[num][1]] + 1
             if m in d and d[m] > 0:
+                # print(i + 1, num + 1, d)
                 answer = i + 1
         return answer

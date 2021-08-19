@@ -28,6 +28,7 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
+############################## SOLUTION ##############################
 n, m = g()
 n, m = int(n), int(m)
 b = g()

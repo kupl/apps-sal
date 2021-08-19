@@ -7,8 +7,10 @@ for i, j in a:
 for i, j in b:
     x.append((i, j, 2))
 x.sort()
+# print(x)
 for i in range(2 * n):
     x[i] = (x[i][1], x[i][2])
+# print(x)
 ans = 0
 while len(x):
     maxindex = 0
@@ -21,6 +23,11 @@ while len(x):
             maxindex = i
     if flag == 0:
         break
+    # if (x[maxindex][1]==1):
+        # x.pop(i)
+    # else:
+    #maxindex2 = 0
+    #maxvalue2 = -1
     flag = 0
     for i in range(maxindex + 1, len(x)):
         if (x[i][1] == 2):

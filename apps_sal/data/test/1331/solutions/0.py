@@ -13,6 +13,7 @@ while start < len(a):
         while konec < len(a) and a[konec] - v < m:
             ur += 1
             if ur >= k:
+                # print(a,start,konec,ur)
                 a[konec] = None
                 count += 1
                 ur -= 1

@@ -17,9 +17,11 @@ for i in range(n, 0, -1):
     else:
         ans += (n - i + 1) * sz
         k -= sz
+    # print(i,k,ans)
     if k < 0:
         break
 if k > 0:
     print(-1)
 else:
     print(ans)
+# print(k,ans,st)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 N = int(input())
 grid = [input() for _ in range(N)]
@@ -10,6 +11,7 @@ for i in range(N):
         if grid[i][j] == 'C':
             rows[i] += 1
             cols[j] += 1
+#
 
 
 def blah(n):

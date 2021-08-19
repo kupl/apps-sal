@@ -4,8 +4,8 @@ class Solution:
         :type obstacleGrid: List[List[int]]
         :rtype: int
         """
-        m = len(obstacleGrid)
-        n = len(obstacleGrid[0])
+        m = len(obstacleGrid)  # row
+        n = len(obstacleGrid[0])  # col
         path = [[0 for j in range(n)] for i in range(m)]
         for i in range(m):
             if obstacleGrid[i][0] == 0:

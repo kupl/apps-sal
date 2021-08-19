@@ -4,6 +4,7 @@ def main():
     ans = 0
     mod = 10 ** 9 + 7
     for d in range(61):
+        # d桁目ごとに考える
         x = 0
         for a in A:
             if (a >> d) & 1:

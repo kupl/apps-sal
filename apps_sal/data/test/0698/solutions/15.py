@@ -1,3 +1,4 @@
+#! /usr/bin/env python3.3
 
 x, k = list(map(int, input().split()))
 a = [False] * x

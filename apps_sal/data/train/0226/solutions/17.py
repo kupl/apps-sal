@@ -16,6 +16,8 @@ class Solution:
                     graph[i].append(j)
                     graph[j].append(i)
 
+        # find num of hamiltonian paths in graph
+
         @lru_cache(None)
         def dfs(node, visited):
             if visited == (1 << N) - 1:

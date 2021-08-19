@@ -1,3 +1,4 @@
+# Trie
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -42,3 +43,8 @@ class StreamChecker:
         match, found = self.trie.matchNextChar(self.trie.currentMatch, letter)
         self.trie.currentMatch = match
         return found
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

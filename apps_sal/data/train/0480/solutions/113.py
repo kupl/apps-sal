@@ -8,4 +8,5 @@ class Solution:
             for j in range(min(i + 1, arrLen)):
                 temp.append(sum(rec[max(0, j - 1): min(j + 2, arrLen)]) % mod)
             rec = temp
+#            print(rec)
         return rec[0]

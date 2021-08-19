@@ -1,3 +1,6 @@
+# Time   : 2017-6-26 14:30
+# Auther : Anjone
+# URL : http://codeforces.com/contest/821/problem/C
 
 
 ans = 0

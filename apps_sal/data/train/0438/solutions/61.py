@@ -12,6 +12,7 @@ class Solution:
 
         for i, x in zip(list(range(1, n + 1)), a):
 
+            # merge
             left = sz[x - 1] if x - 1 in sz else 0
             right = sz[x + 1] if x + 1 in sz else 0
             tot = left + right + 1

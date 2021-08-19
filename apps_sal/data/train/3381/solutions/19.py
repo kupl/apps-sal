@@ -7,4 +7,4 @@ def get_real_floor(n):
             pass
         else:
             ls.append(i)
-    return ls.index(n)
+    return ls.index(n)  # I solved this Kata on  8/21/2019  11:07 PM...#Hussam'sCodingDiary

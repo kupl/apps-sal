@@ -10,11 +10,13 @@ class Solution:
             dist[u][v] = w
             dist[v][u] = w
 
+        # Floyd
         for k in range(N):
             for j in range(N):
                 for i in range(N):
                     dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 
+        # Calculate
         min_cities = float('inf')
         ret = None
         print(dist)

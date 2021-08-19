@@ -21,5 +21,7 @@ for h in range(H):
                     v[nh + dh[i]][nw + dw[i]] = v[nh][nw] + 1
                     tmp = v[nh + dh[i]][nw + dw[i]]
                     Q.append((nh + dh[i], nw + dw[i]))
+            # for a in v:
+            #  print(a)
         ans = max(ans, tmp)
 print(ans)

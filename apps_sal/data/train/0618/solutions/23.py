@@ -1,3 +1,4 @@
+# cook your dish here
 for k in range(int(input())):
     num, bags = map(int, input().split())
     coins = list(map(int, input().split()))

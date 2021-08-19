@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque, Counter, OrderedDict
 from bisect import bisect_left, bisect_right
 from functools import reduce, lru_cache
@@ -47,7 +48,7 @@ class RollingHash:
         self.n = len(seq)
         self.base1, self.base2 = 1007, 2009
         self.mod1, self.mod2 = 1000000007, 1000000009
-        self.f = f
+        self.f = f  # set numerizing function
 
         self.hash1, self.hash2 = [0] * (self.n + 1), [0] * (self.n + 1)
         self.power1, self.power2 = [1] * (self.n + 1), [1] * (self.n + 1)
@@ -58,11 +59,13 @@ class RollingHash:
             self.power1[i + 1] = (self.power1[i] * self.base1) % self.mod1
             self.power2[i + 1] = (self.power2[i] * self.base2) % self.mod2
 
+    # get hash value of seq[left:right]
     def get(self, l, r):
         v1 = (self.hash1[r] - self.hash1[l] * self.power1[r - l]) % self.mod1
         v2 = (self.hash2[r] - self.hash2[l] * self.power2[r - l]) % self.mod2
         return v1, v2
 
+    # get lcp of seq[a:] and seq[b:]
     def getLCP(self, a, b):
         l = self.n - max(a, b) + 1
         left, right = 0, l

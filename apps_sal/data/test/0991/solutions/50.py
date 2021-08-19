@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 from heapq import heapify, heappop, heappush
 
@@ -7,10 +8,11 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# 銀貨を何枚持っているかの状態数、N*2501の都市, dijkstra
 N, M, S = lr()
 limit = 2500
 S = min(S, limit)
-graph = [[] for _ in range((N + 1) * (limit + 1))]
+graph = [[] for _ in range((N + 1) * (limit + 1))]  # 1-indexed
 for _ in range(M):
     u, v, a, b = lr()
     for x in range(a, limit + 1):

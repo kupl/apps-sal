@@ -1,4 +1,6 @@
+#import sys
 import numpy as np
+#input = sys.stdin.readline
 
 
 def main():

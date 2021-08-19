@@ -1,6 +1,7 @@
 class Solution:
     def binaryGap(self, n: int) -> int:
         binary_string = bin(n)[2:]
+        # The binary string has to begin with a 1, if n is a positive integer.
 
         left, right, current_distance, global_max = 0, 1, 1, 0
 

@@ -27,4 +27,6 @@ class Solution:
                     ans = max(ans, end - left_neg)
             return ans
 
+        # print(trip_zeros)
+        # if not trip_zeros: return 0
         return max(map(count, trip_zeros))

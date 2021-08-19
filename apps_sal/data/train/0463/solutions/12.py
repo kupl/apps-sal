@@ -1,5 +1,7 @@
 class Solution:
     def maxValueAfterReverse(self, nums: List[int]) -> int:
+        # 三种情况，从头到中间某个地方进行reverse；
+        # 从中间到最后进行reverse，中间的某一段进行reverse
         total, res, min2, max2 = 0, 0, float('inf'), float('-inf')
         for a, b in zip(nums[:-1], nums[1:]):
             total += abs(a - b)

@@ -1,10 +1,13 @@
 import sys
 from collections import defaultdict
 
+# 再帰制限を緩和するおまじない
 sys.setrecursionlimit(10**6)
 
 
 def sum(n): return n * (n + 1) // 2
+
+# 部分木のサイズと、「色iを封鎖したときに到達できない頂点の個数」を持つ辞書を返す
 
 
 def dfs(v, p):
@@ -17,6 +20,7 @@ def dfs(v, p):
         size += ss
         ans[c[v]] += sum(ss - d[c[v]])
 
+        # マージテク
         if len(ret) < len(d):
             ret, d = d, ret
         for vvv in d:

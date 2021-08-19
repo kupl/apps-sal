@@ -3,6 +3,8 @@ N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort()
 
+# border以上の幸福度を返す握手の組の数が、M以上であるか
+
 
 def isok(border):
     res = 0
@@ -15,6 +17,7 @@ ok = 0
 ng = A[-1] * 2 + 1
 mid = (ok + ng) // 2
 
+# 幸福度h以上の握手がM組以上存在するような最大のhを探す
 while abs(ok - ng) > 1:
     mid = (ok + ng) // 2
     if isok(mid):

@@ -15,4 +15,5 @@ class Solution:
                 start += 1
 
             res += (end - start + 1)
+        # print(res)
         return res

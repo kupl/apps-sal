@@ -37,6 +37,26 @@ def main():
     BB = input()
     ans = solve(N, AA, AB, BA, BB)
     print(ans)
+    # for i in range(2, 10):
+    #     for pattern in itertools.product('AB', repeat=4):
+    #         N = i
+    #         ans = stupid(N, *pattern)
+    #         print(ans, *pattern)
+    #         # assert ans == solve(N, *pattern)
+    #     print('-' * 100)
+
+    # if AB == 'A':
+    #     if AA == 'A':
+    #         print(1)
+    #         return
+    #     else:
+    #         # AB: A, AA: B
+    #         pass
+    # else:
+    #     if BB == 'B':
+    #         print(1)
+    #     else:
+    #         pass
 
 
 def solve(N, AA, AB, BA, BB):
@@ -107,6 +127,7 @@ def stupid(N, AA, AB, BA, BB):
             elif cur[i: i + 2] == 'BB':
                 next_s = cur[:i + 1] + BB + cur[i + 1:]
             stack.append(next_s)
+    # print(ret)
     return len(ret)
 
 

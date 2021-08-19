@@ -1,3 +1,4 @@
+# ABC159B
 s = input()
 n = len(s)
 f = s[:(n - 1) // 2]

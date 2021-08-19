@@ -1,5 +1,6 @@
+#!/ur/bin/python3
 
-def digit(i):
+def digit(i):  # 0 <= i <= 9
     if i == 0 or i == 6 or i == 9:
         return 6
     elif i == 1:
@@ -14,7 +15,7 @@ def digit(i):
         return 7
 
 
-def num(i):
+def num(i):  # 1 <= i <= 10^6
     sum = 0
     for d in str(i):
         sum += digit(int(d))
@@ -24,6 +25,8 @@ def num(i):
 (a, b) = tuple(map(int, input().split()))
 
 sum = 0
+# print(a)
+# print(b)
 i = a
 while i <= b:
     if i == 1 and b >= 100000:

@@ -10,4 +10,5 @@ def min_sum(arr):
         arr == arr.remove(c)
     return sum_numbers
 
+    # Your code here
     pass

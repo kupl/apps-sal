@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -36,3 +38,4 @@ if k > 0:
 ans = sum([divmod(i, 10)[0] for i in A])
 print(ans)
 finish = time.time()
+#print(finish - start)

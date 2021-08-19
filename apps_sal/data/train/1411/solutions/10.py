@@ -1,3 +1,4 @@
+# lannisters don't act like fools
 
 
 '''And who are you, the proud lord said,

@@ -1,3 +1,4 @@
+# solution
 import io
 data = input()
 g = data.count('g')

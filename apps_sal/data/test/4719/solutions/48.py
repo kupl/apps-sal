@@ -1,6 +1,7 @@
 n = int(input())
 jisho = 'abcdefghijklmnopqrstuvwxyz'
 moji = []
+# print(moji)
 for i in range(n):
     dic = {}
     for i in range(len(jisho)):
@@ -17,6 +18,7 @@ for j in range(len(jisho)):
         tmp = min(tmp, moji[i][jisho[j]])
     if tmp != 0:
         dic.setdefault(jisho[j], tmp)
+# print(dic)
 ans = ''
 for item in dic.items():
     while dic[item[0]] > 0:

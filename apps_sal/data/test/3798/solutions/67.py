@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
@@ -68,6 +69,8 @@ def solve():
             return
     print((-1))
     return
+
+# Solve
 
 
 def __starting_point():

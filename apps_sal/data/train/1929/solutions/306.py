@@ -19,6 +19,7 @@ class StreamChecker:
         self.queried = ''
 
     def exists(self, word):
+        # dc
         curr_node = self.trie
         for char in word:
             if char not in curr_node.children:
@@ -48,3 +49,8 @@ class StreamChecker:
 1. checking the actual problem
 2. checking the trie
 '''
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -6,6 +6,7 @@ S = [ord(s) - ord('a') for s in input().rstrip()]
 INF = 10 ** 9
 N = len(S)
 dp = [None] * (N + 1)
+# そこから始めたとき、次にxが現れる位置、および、次にxをとった場合に長さLのものが全て作れる
 dp[N] = [[INF] * 26, [0] * 26, 0]
 
 for n in range(N - 1, -1, -1):
@@ -20,11 +21,13 @@ for n in range(N - 1, -1, -1):
 answer = []
 i = 0
 while i < N:
+    # 辞書順で、作れる長さが一番短い文字
     L = dp[i][2] // 26
     for x in range(26):
         if dp[i][1][x] == L:
             break
     answer.append(chr(ord('a') + x))
+    # その文字の場所に移動
     i = dp[i][0][x]
     i += 1
 

@@ -1,6 +1,7 @@
 for _ in range(int(input())):
     s = input()
     lst = s.split(':')
+    # print(lst)
     h = int(lst[0])
     m = int(lst[1])
     h = h % 12

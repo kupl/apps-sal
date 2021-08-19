@@ -25,4 +25,5 @@ class Solution:
         grid[i][j] = val
         for newi, newj in ((i + 1, j), (i - 1, j), (i, j - 1), (i, j + 1)):
             if 0 <= newi < m and 0 <= newj < n and grid[newi][newj] == 0:
+                # grid[newi][newj] = val
                 self.dfs(grid, newi, newj, val)

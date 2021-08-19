@@ -7,4 +7,5 @@ def reverse_bits(n):
     answer = int(almostanswer, 2)
     return answer
 
+    # bin(almost)
     pass

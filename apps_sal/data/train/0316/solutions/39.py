@@ -6,7 +6,7 @@ class Solution:
         j = 0
         while i < len_s:
             while j > 0 and s[j] != s[i]:
-                j = nxts[j - 1]
+                j = nxts[j - 1]  # 退而求其次
             if s[j] == s[i]:
                 j = j + 1
             else:

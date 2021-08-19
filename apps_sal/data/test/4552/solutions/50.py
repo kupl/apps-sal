@@ -14,6 +14,7 @@ for i in range(2**10):
             for k in range(n):
                 if f[k][j] == 1:
                     co[k] += 1
+    # print(i,bin(i),co)
     for l in range(n):
         ans += p[l][co[l]]
     li += [ans]

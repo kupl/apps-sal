@@ -24,7 +24,7 @@ def calc(h, m, f):
             u, v = i + 1, i
         if f:
             u, v = v, u
-        H, M = h[u] - h[v], m[v] - m[u]
+        H, M = h[u] - h[v], m[v] - m[u]  # M * t < H
         if M > 0:
             r = min(floorm(H, M), r)
         elif M < 0:

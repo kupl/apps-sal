@@ -3,3 +3,4 @@ def sum_mix(arr):
     for number in arr:
         suma += int(number)
     return suma
+    # your code here

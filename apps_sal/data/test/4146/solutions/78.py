@@ -29,6 +29,7 @@ def main():
     if key1 != key2:
         print((n - val1 - val2))
     else:
+        #print(diclis1, diclis2, len(diclis1))
         if len(diclis1) > 1 and len(diclis2) > 1:
             ans = min(n - diclis1[0][1] - diclis2[1][1], n - diclis1[1][1] - diclis2[0][1])
 

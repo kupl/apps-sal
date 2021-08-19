@@ -9,6 +9,7 @@ while count != k:
                 continue
             new_bits = (bits | (1 << i))
             seen[beauty + x] = new_bits
+            #print('%d + %d = %d' % (beauty, x, beauty+x))
             group = []
             for j, y in enumerate(soldiers):
                 if (new_bits & (1 << j)) != 0:

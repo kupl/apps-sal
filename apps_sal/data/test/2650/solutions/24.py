@@ -6,6 +6,7 @@ from collections import deque, Counter, defaultdict
 from itertools import combinations, product
 inf = float('inf')
 MOD = 10**9 + 7
+# MOD = 998244353
 
 
 class NumberTheory():
@@ -75,7 +76,7 @@ class NumberTheory():
         return divisors
 
     @staticmethod
-    def base_convert(n, b):
+    def base_convert(n, b):  # return string
         if not n:
             return '0'
         res = ''
@@ -125,7 +126,7 @@ class Combinatorics():
 
     sys.setrecursionlimit(10**6)
 
-    def choose(self, n, r, mod=None):
+    def choose(self, n, r, mod=None):  # no mod, or mod ≠ prime
         if r > n or r < 0:
             return 0
         if r == 0:
@@ -423,8 +424,8 @@ class ABC007():
             for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 i += y
                 j += x
-                if maze[i][j] == '
-                continue
+                if maze[i][j] == '#' or dist[i, j] != np.inf:
+                    continue
                 dist[i, j] = dist[y, x] + 1
                 queue.append((i, j))
         print(int(dist[gy, gx]))

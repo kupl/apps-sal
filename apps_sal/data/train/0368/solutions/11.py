@@ -10,9 +10,9 @@ class Solution:
         '''
         for s in satisfaction:
             if s >= 0:
-                beneficial.append(s) 
+                beneficial.append(s) # [0, 2, 5]
             else:
-                negative.append(s)  
+                negative.append(s)  # [-3, -2]
         '''
         curr_satisfaction = calc_satisfaction(satisfaction[min_index + 1:])
         while True:

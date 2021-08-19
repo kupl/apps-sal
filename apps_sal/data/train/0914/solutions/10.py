@@ -17,6 +17,7 @@ for _ in range(t):
         y = i[2]
         s[x][y] = 1
         c = 1
+        # print(x,y)
         for j in range(x + 1, n):
             s[j][y] = 0
             for b in range(y - 1, max(y - c - 1, -1), -1):

@@ -1,3 +1,4 @@
+# C
 import math
 N = int(input())
 D = sorted(list(map(int, input().split())))

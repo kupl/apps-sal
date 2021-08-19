@@ -36,6 +36,7 @@ for i in range(90000):
         ans+=1
 print(ans)"""
 
+# ans=calc(1000000,3) # 15850
 t = int(input())
 for i in range(t):
     l, r = map(int, input().split())

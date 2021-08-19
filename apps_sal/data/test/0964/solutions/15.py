@@ -29,22 +29,28 @@ def print_logos(top, bottom, h1, h2):
 
 done = False
 
-for a in [True, False]:
+for a in [True, False]:  # flip logo 1
     if done:
         break
-    for b in [True, False]:
+    for b in [True, False]:  # flip logo 2
         if done:
             break
 
-        for c in [True, False]:
+        for c in [True, False]:  # flip logo 3
+            # try 3 side-by-side
             width = (x1 if a else y1) + (x2 if b else y2) + (x3 if c else y3)
+            # all heights are correct
             if width == (y1 if a else x1) and \
                width == (y2 if b else x2) and \
                width == (y3 if c else x3):
+                # success!
                 print_logos({'a': a, 'b': b, 'c': c}, {}, y1 if a else x1, 0)
                 done = True
                 break
 
+            # otherwise, try combinations [a, b] c, [a, c] b and [b, c] a
+
+            # [a, b], c
             width = (x1 if a else y1) + (x2 if b else y2)
             if width == (x3 if c else y3) and \
                (y1 if a else x1) == (y2 if b else x2) and \
@@ -53,6 +59,7 @@ for a in [True, False]:
                 done = True
                 break
 
+            # [a, c], b
             width = (x1 if a else y1) + (x3 if c else y3)
             if width == (x2 if b else y2) and \
                (y1 if a else x1) == (y3 if c else x3) and \
@@ -61,6 +68,7 @@ for a in [True, False]:
                 done = True
                 break
 
+            # [b, c], a
             width = (x3 if c else y3) + (x2 if b else y2)
             if width == (x1 if a else y1) and \
                (y3 if c else x3) == (y2 if b else x2) and \

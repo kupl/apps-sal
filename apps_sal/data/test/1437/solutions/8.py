@@ -1,3 +1,5 @@
+#import sys
+#sys.stdin = open("python/in", "r")
 
 s = input()
 enc = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_'

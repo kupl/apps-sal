@@ -1,5 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+        # Binary search
         if not weights:
             return 0
         left, right = max(weights), sum(weights)

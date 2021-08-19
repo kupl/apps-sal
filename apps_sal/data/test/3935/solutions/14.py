@@ -17,6 +17,7 @@ for x in b:
     cnt[countbit(x)] += 1
 
 mostcnt = cnt.most_common(1)
+#mostcnt is list
 
 ans = []
 for x in b:

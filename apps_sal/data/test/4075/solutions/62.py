@@ -17,5 +17,6 @@ for i in range(2**N):
     if temp == P:
         ans += 1
 
+    # print(temp)
 
 print(ans)

@@ -16,6 +16,7 @@ class Solution:
         max_ = 0
         for n in nums:
             m, o = operate(n)
+            # print(m,n,o)
             max_ = max(max_, m)
             ans += o
 

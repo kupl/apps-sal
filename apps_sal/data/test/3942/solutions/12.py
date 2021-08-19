@@ -19,9 +19,9 @@ def __starting_point():
             leftCount -= 1
             if leftCount < 0:
                 ansFlag = False
-        elif c == '
-          leftCount -= 1
-           if leftCount < 0:
+        elif c == '#':
+            leftCount -= 1
+            if leftCount < 0:
                 ansFlag = False
             else:
                 ansList.append(1)
@@ -39,9 +39,9 @@ def __starting_point():
                 leftCount -= 1
                 if leftCount < 0:
                     ansFlag = False
-            elif c == '
-              leftCount -= ansList[sharpCount]
-               sharpCount += 1
+            elif c == '#':
+                leftCount -= ansList[sharpCount]
+                sharpCount += 1
                 if leftCount < 0:
                     ansFlag = False
             else:

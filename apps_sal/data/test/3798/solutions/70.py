@@ -26,6 +26,7 @@ def solve():
             (s - a) >= 0 and\
                 (n - s) // a >= (s - a):
             b = (n - s) // a + 1
+            # print(b,s-a)
         a += 1
     if b > 0:
         print(b)

@@ -6,6 +6,7 @@ testcases = int(input())
 for testcase in range(testcases):
     n, m = list(map(int, input().split()))
     MAP = [input().strip() for i in range(n)]
+    # print(MAP)
 
     STR = [[] for i in range(26)]
 
@@ -13,6 +14,8 @@ for testcase in range(testcases):
         for j in range(m):
             if MAP[i][j] != ".":
                 STR[ord(MAP[i][j]) - 97].append([i, j])
+
+    # print(STR)
 
     for s in range(25, -1, -1):
         if STR[s] == []:

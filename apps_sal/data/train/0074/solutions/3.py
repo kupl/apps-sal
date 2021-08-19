@@ -3,6 +3,8 @@ from typing import List
 import sys
 input = sys.stdin.readline
 
+############ ---- Input Functions ---- ############
+
 
 def inp():
     return(int(input()))
@@ -25,11 +27,14 @@ def solve_hungarian(a: List[List[int]], n: int, m: int):
     """
     Implementation of Hungarian algorithm in n^2 m
     """
+    # potentials
     u = [0] * (n + 1)
     v = [0] * (m + 1)
 
+    # pair row of each col
     p = [0] * (m + 1)
 
+    # for each col the number of prev col along the augmenting path
     way = [0] * (m + 1)
 
     for i in range(1, n + 1):
@@ -38,12 +43,15 @@ def solve_hungarian(a: List[List[int]], n: int, m: int):
         minv = [float('inf')] * (m + 1)
         used = [False] * (m + 1)
 
+        # iterative Kun starts here
         condition = True
         while condition:
+            # mark the current col as reachable
             used[j0] = True
             i0 = p[j0]
             delta = float('inf')
 
+            # determine which col will become reachable after next potential update
             for j in range(1, m + 1):
                 if not used[j]:
                     cur = a[i0][j] - u[i0] - v[j]
@@ -53,20 +61,27 @@ def solve_hungarian(a: List[List[int]], n: int, m: int):
                     if minv[j] < delta:
                         delta = minv[j]
                         j1 = j
+                        # j1 will hold the col with min
+                        # way[j1] - the prev col in dfs
 
+            # update the potential
             for j in range(0, m + 1):
-                if used[j]:
+                if used[j]:  # if col j was discovered:
                     u[p[j]] += delta
                     v[j] -= delta
-                else:
+                else:  # not discovered - update min?
                     minv[j] -= delta
 
+            # j0 becomes the col on which the delta is achieved
             j0 = j1
+            # p[j0] == 0 => j0 - a col not in matching
             condition = p[j0] != 0
 
+        # the augmenting path was found - update the mapping
         condition = True
         while condition:
 
+            # j1 is the prev column of j0 in augmenting path
             j1 = way[j0]
             p[j0] = p[j1]
             j0 = j1
@@ -88,6 +103,7 @@ def solve(n, k, a, b):
         for j in range(k + 1, n + 1):
             A[i][j] = (k - 1) * b[i]
 
+        # turn into a max problem
     for i, row in enumerate(A):
         M = max(row)
         for j in range(n + 1):
@@ -116,6 +132,8 @@ def from_file(f):
     return f.readline
 
 
+# with open('test.txt') as f:
+#     input = from_file(f)
 t = inp()
 for _ in range(t):
     n, k = invr()

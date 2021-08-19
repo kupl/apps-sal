@@ -56,8 +56,8 @@ class UnionFind():
 N, K = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(N)]
 
-c_pattern = list()
-r_pattern = list()
+c_pattern = list()  # swapable なcの組み合わせ数
+r_pattern = list()  # swapable なrの組み合わせ数
 
 for c1 in range(N):
     for c2 in range(c1 + 1, N):
@@ -86,6 +86,7 @@ def total_pattern(pattern_list):
     for p in pattern_list:
         uf.union(p[0], p[1])
     ans = 1
+    # print(uf.roots())
     for r in uf.roots():
         ans *= math.factorial(uf.size(r))
 

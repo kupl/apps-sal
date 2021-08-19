@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = [i for i in input().split()]
     c = ""

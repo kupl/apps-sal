@@ -11,9 +11,10 @@ for k in range(K):
     for i in range(LR[k][0], LR[k][1] + 1):
         S.append(i)
 
-dp = [0] * N
-sdp = [0] * (N + 1)
+dp = [0] * N  # dpテーブル
+sdp = [0] * (N + 1)  # dpテーブルの累積和
 
+# DPの初期値を設定
 dp[0] = 1
 sdp[1] = 1
 

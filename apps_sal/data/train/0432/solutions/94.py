@@ -13,6 +13,7 @@ class Solution:
             while not Ct[start]:
                 start = heappop(nums)
             for i in range(start, start + k):
+               # print(num+i)
                 if not Ct[i]:
                     return False
                 if Ct[i] == 1:
@@ -23,6 +24,7 @@ class Solution:
         return True
 
     def isNStraightHand(self, hand, W):
+      #  heapify(hand)
 
         while hand:
             last_item = heappop(hand)

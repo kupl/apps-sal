@@ -13,4 +13,6 @@ class Solution:
             for i in range(3):
                 dp[row][i] = max(dp[row][i], dp[alt][i])
             dp[row][r] = max(dp[row][r], nums[n])
+        # for l in dp:
+        #     print(l)
         return dp[1 - N % 2][0]

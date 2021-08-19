@@ -14,10 +14,13 @@ class Solution:
         inf_num = float(inf)
         visited = [[[inf_num] * (k + 1) for _ in range(N)] for _ in range(M)]
 
+        # visited[0][0][k] = True
+
         queue = deque([(0, 0, k, 0)])
 
         while queue:
             i, j, kk, cost = queue.popleft()
+            # print(i, j, kk, cost)
             if i == M - 1 and j == N - 1:
                 return cost
 

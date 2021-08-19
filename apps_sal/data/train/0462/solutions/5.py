@@ -7,6 +7,7 @@ class Solution:
                     columns_to_check[i] = 1
                 else:
                     columns_to_check[i] = columns_to_check[i] + 1
+                # current_columns.remove(i)
 
     def countServers(self, grid: List[List[int]]) -> int:
         row_dim = len(grid)
@@ -18,6 +19,7 @@ class Solution:
         for x in range(row_dim):
             if 1 in grid[x]:
                 difference = column_dim - len([i for i in grid[x] if i == 0])
+                # more than 1
                 if difference > 1:
                     self.get_index_ones(grid[x], current_columns, columns_to_check)
                     result += difference

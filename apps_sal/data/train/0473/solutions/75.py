@@ -9,6 +9,7 @@ class Solution:
                 a = 0
                 for i in range(j - 1, -1, -1):
                     a = a ^ arr[i]
+                    # print(i, j, k, \"=>\", a, b)
                     if a == b:
                         c += 1
         return c

@@ -1,3 +1,6 @@
+# O(n) time and space
+# Keep a table of { odd number cnt: substrings with this odd number count}
+# For example: {1: 2} means there are two substrings so far with one odd number
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
 

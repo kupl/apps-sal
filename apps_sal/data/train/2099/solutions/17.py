@@ -1,3 +1,4 @@
+# coding: utf-8
 n, k = [int(i) for i in input().split()]
 ans = ['1']
 for i in range(k):

@@ -29,9 +29,15 @@ for p in [F, T]:
 
     for d, t, c in p:
 
+        # print(p)
+
         if c < cost[t]:
 
+            # print(c,cost[t])
+
             s += c - cost[t]
+
+            # print(s)
 
             cost[t] = c
 
@@ -41,11 +47,15 @@ for p in [F, T]:
 
     p.clear()
 
+    # print(q)
+
     p += q
 
+    # print(p)
 
 s, t = ans, (0, 0)
 
+# print(F,T)
 
 for f in F:
 
@@ -56,11 +66,23 @@ for f in F:
 
         elif T:
 
+            # print(T)
+
             t = T.pop()
+
+            # print(T)
+
+           # print(t)
 
             continue
 
+        # print(f)
+
         f = 0
 
+        # print(f)
 
 print(s if s < ans else -1)
+
+
+# Made By Mostafa_Khaled

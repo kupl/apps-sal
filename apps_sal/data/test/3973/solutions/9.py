@@ -19,6 +19,8 @@ def kaisa2_of_tousa(a, b, p, q, imos, n):
         imos[q + 2] += y
 
 
+# coding: utf-8
+# Your code here!
 read = sys.stdin.read
 readline = sys.stdin.readline
 
@@ -39,5 +41,7 @@ v = 0
 for i in range(1, m + 1):
     w = res[i] + res[i + m]
     v = min(v, w)
+    # print(w)
 
+# print(ans)
 print((ans + v))

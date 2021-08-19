@@ -16,6 +16,7 @@ class Solution:
         if(N == fun(tmp)):
             return True
 
+    #    print(nn,tmp)
         for x in range(nn, 20 * nn):
             tmp = tmp * 2
             if(N == fun(tmp)):

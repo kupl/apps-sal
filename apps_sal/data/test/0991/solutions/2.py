@@ -2,20 +2,24 @@ import heapq
 
 
 def dijkstra_heap(N, S, Smax, edge):
-    d = [float('inf')] * (10**4 * N)
+    d = [float('inf')] * (10**4 * N)  # 始点0から各頂点への最短距離
     used = [False] * (10**4 * N)
     d[S] = 0
     used[S] = True
     edgelist = []
+    # edgelist : [(0,S)からの暫定(未確定)最短時間,頂点,銀貨の枚数]のリスト
+    # edge[s] : sから出る枝の[重み,頂点,銀貨の枚数]のリスト
     for w, a in edge[0]:
         v, sil = a // 10**4, a % 10**4
         if v == 0 and S + sil <= Smax:
-            heapq.heappush(edgelist, [w, a + S])
+            heapq.heappush(edgelist, [w, a + S])  # sの隣の点は枝の重さがそのまま暫定最短距離となる
         elif v > 0 and S - sil >= 0:
-            heapq.heappush(edgelist, [w, v * 10**4 + (S - sil)])
+            heapq.heappush(edgelist, [w, v * 10**4 + (S - sil)])  # sの隣の点は枝の重さがそのまま暫定最短距離となる
     while len(edgelist):
+        # まだ使われてない頂点の中から最小の距離のものを探す→確定させる
         min_w, min_a = heapq.heappop(edgelist)
         min_v, min_sil = min_a // 10**4, min_a % 10**4
+        # min_w,min_v,min_sil : [0からの(確定)最短距離,頂点,銀貨の枚数]
         if used[min_a]:
             continue
         d[min_a] = min_w

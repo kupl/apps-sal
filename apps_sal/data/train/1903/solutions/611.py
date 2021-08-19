@@ -27,6 +27,7 @@ class Solution:
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 graph.append([i, j, d])
 
+        # sort by distance
         graph = sorted(graph, key=lambda x: x[2])
 
         k = len(graph)
@@ -35,6 +36,7 @@ class Solution:
         elif k == 1:
             return graph[0][2]
 
+        # MST via Kruskal
         x = Union(k)
         result = 0
         for i in range(k):

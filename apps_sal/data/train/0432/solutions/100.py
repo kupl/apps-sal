@@ -3,6 +3,7 @@ class Solution:
         if len(nums) % k > 0:
             return False
 
+        # Starting at smallest number, remove sequences of size k
         d = {}
 
         for num in nums:
@@ -10,6 +11,7 @@ class Solution:
 
         for num in nums:
             if d[num] > 0 and (num - 1 not in d or d[num - 1] < d[num]):
+                # num is start of a sequence; try removing k
                 for _ in range(k):
                     if num not in d or d[num] == 0:
                         return False

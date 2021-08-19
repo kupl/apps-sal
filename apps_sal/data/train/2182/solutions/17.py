@@ -36,7 +36,7 @@ while b_count[maxb] == 0 and maxb > 0:
     maxb -= 1
 i = 0
 while i < length:
-    if i & 1 == 0:
+    if i & 1 == 0:  # Alice
         if mina < maxb:
             result[left] = chr(ord('a') + mina)
             left += 1

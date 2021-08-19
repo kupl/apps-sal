@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -11,6 +12,7 @@ while t > 0:
                 l1 = l1[:int(len(l1) / 2)]
             else:
                 l1 = l1[int(len(l1) / 2):]
+            # print(l1)
         str3 += l1[0]
     print(str3)
 

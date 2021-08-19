@@ -5,8 +5,8 @@ n, k = list(map(int, input().split()))
 s = input().strip()
 
 
-seg_el = 1 << ((n + k + 1).bit_length())
-SEG = [1 << 40] * (2 * seg_el)
+seg_el = 1 << ((n + k + 1).bit_length())  # Segment treeの台の要素数
+SEG = [1 << 40] * (2 * seg_el)  # 1-indexedなので、要素数2*seg_el.Segment treeの初期値で初期化
 
 
 def getvalue(n, seg_el):
@@ -14,7 +14,7 @@ def getvalue(n, seg_el):
     ANS = 1 << 40
 
     ANS = min(SEG[i], ANS)
-    i >>= 1
+    i >>= 1  # 子ノードへ
 
     while i != 0:
         ANS = min(SEG[i], ANS)
@@ -23,7 +23,7 @@ def getvalue(n, seg_el):
     return ANS
 
 
-def updates(l, r, x):
+def updates(l, r, x):  # 区間[l,r)に関するminを調べる
     L = l + seg_el
     R = r + seg_el
 

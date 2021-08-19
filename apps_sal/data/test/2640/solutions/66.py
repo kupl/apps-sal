@@ -21,10 +21,10 @@ def main():
     for s, t in zip(S, T):
         b = NEG
         for i in range(len(s)):
-            if s[i] == '
-            if b != NEG:
-                m = max(m, i - b - 1 + max(t[b:i]))
-                b = NEG
+            if s[i] == '#':
+                if b != NEG:
+                    m = max(m, i - b - 1 + max(t[b:i]))
+                    b = NEG
             else:
                 if b == NEG:
                     b = i

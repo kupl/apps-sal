@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(t):
     fin, disttobol, tigacc, bolspeed = list(map(int, input().split()))

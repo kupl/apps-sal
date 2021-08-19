@@ -21,6 +21,7 @@ class Solver:
 
     @staticmethod
     def get_largest_power_of_2(n):
+        # for p in reversed(range(31)):
         for p in range(30, -1, -1):
             if 1 << p <= n:
                 return 1 << p
@@ -55,7 +56,10 @@ def main():
     n = int(stdin.readline())
     inp = list(map(int, stdin.readline().split()))
 
+    # print(n)
+    # print(inp)
     solver = Solver(inp)
+    # print(Solver.build_dict(inp))
     print(solver.solve())
 
 

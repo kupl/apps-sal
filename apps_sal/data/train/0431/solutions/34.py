@@ -6,11 +6,13 @@ class Solution:
         left, right = [None] * N, [None] * N
 
         for i in range(N):
+            # print(stack)
             while stack and A[i] <= A[stack[-1]]:
                 stack.pop()
 
             left[i] = stack[-1] if stack else -1
             stack.append(i)
+        # print(left)
         stack.clear()
 
         for i in range(N - 1, -1, -1):
@@ -18,6 +20,7 @@ class Solution:
                 stack.pop()
             right[i] = stack[-1] if stack else N
             stack.append(i)
+        # print(right)
 
         count = 0
 

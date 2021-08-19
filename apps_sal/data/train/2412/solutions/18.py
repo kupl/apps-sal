@@ -8,6 +8,7 @@ class Solution:
         index = 1
         while index < len(S):
             stack.append(S[index])
+            # print(stack)
             index += 1
 
             self.popDups(stack)
@@ -33,3 +34,16 @@ class Solution:
             else:
                 stack.append(this_item)
                 to_pop = False
+
+        # to_pop = True
+        # while to_pop and stack:
+        #     item = stack.pop()
+        #     if not stack:
+        #         stack.append(item)
+        #         to_pop = False
+        #     else:
+        #         next_item = stack.pop()
+        #         if item != next_item:
+        #             stack.append(next_item)
+        #             stack.append(item)
+        #             to_pop = False

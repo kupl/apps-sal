@@ -1,3 +1,4 @@
+# 1591. Strange Printer II
 
 def walk(grid):
     for i, row in enumerate(grid):

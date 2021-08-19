@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def f(t, arr):
 
@@ -17,6 +18,9 @@ def __starting_point():
 
     n, t = list(map(int, input().split()))
     arr = list(map(int, input().split()))
+
+    # for i in range(n):
+    #   list(map(int, input().split()))
 
     f(t, arr)
 

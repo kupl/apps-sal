@@ -1,4 +1,5 @@
 
+#N = int(input())
 
 N, L, A = map(int, input().split())
 

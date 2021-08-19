@@ -14,6 +14,7 @@ class Solution:
         max_c = max(cnt.values())
         if (len(c) == 2 and ((sum([1 for k in cnt if cnt[k] == max_c]) == 1 and max_c == min_c + 1) or (sum([1 for k in cnt if cnt[k] == min_c]) == 1 and min_c == 1))) or (len(c) == 1 and min_c == 1) or (len(cnt) == 1):
             return res
+        # print(cnt, min_c, max_c)
 
         for i in reversed(nums[2:]):
             res -= 1

@@ -1,10 +1,19 @@
 class Solution:
     def minDays(self, n):
+        # 好题
+        # 一共有n个橘子
+        # 每天有3中选项吃橘子
+        # 要么吃一个
+        # 如果橘子数字可以被2整除，吃一半
+        # 如果橘子数字可以被3整除，吃1 / 3
+        # 问最少几天吃完
 
+        # 思路：经典bfs，queue里放当前剩下的橘子数字即可
         queue = deque([n])
         visited = set()
         steps = 0
 
+        # bfs中很经典的一个时间复杂度的优化就是利用visited数组
         while queue:
             q_len = len(queue)
             for _ in range(q_len):

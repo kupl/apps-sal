@@ -53,7 +53,8 @@ def main2():
 
 
 def __starting_point():
-    main2()
+    # main1() # for C1
+    main2()  # for C2
 
 
 __starting_point()

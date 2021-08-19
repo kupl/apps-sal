@@ -4,7 +4,7 @@ from scipy.special import comb
 def bouncy_count(n):
     if n < 3:
         return 0
-    b = 10
+    b = 10  # Change for different bases
     incline_sum = 0
     decline_sum = 0
     for i in range(3, n + 1):

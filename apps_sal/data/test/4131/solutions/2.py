@@ -5,6 +5,7 @@ for i in range(m):
     p_y.append([p, y, i])
 
 p_y.sort()
+# print(p_y)
 
 res = [0] * m
 order = 0
@@ -16,6 +17,8 @@ for i in range(m):
         order += 1
     res[index] = [ken, order]
 
+
+# print(res)
 
 for i in range(m):
     ken = str(res[i][0]).zfill(6)

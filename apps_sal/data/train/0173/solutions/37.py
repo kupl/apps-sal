@@ -11,6 +11,7 @@ class Solution:
         for i, num in enumerate(arr):
             key = k - (num % k)
             if key in lookup and lookup[key] >= 1:
+                # print(key, num)
                 count += 1
                 lookup[key] -= 1
             else:

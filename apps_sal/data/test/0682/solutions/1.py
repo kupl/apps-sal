@@ -1,11 +1,14 @@
 r1, c1, r2, c2 = map(int, input().split())
 
+# Rook
 
 if(r2 != r1 and c1 != c2):
     print(2, end=" ")
 else:
     print(1, end=" ")
 
+
+# Bishop
 
 MoveInOne = False
 

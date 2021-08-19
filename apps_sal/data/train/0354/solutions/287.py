@@ -1,6 +1,7 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         to_mod = 10 ** 9 + 7
+        # the index end at, num of consecutive
         seq_num = [[0 for j in range(rollMax[i] + 1)] for i in range(6)]
         for i in range(6):
             if rollMax[i] > 0:

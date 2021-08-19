@@ -1,7 +1,7 @@
 n, m, k = map(int, input().split())
 k += 1
-dead = [0] * n
-block = [False] * k
+dead = [0] * n  # time of deadlock
+block = [False] * k  # ceil is blocked
 t = [tuple(map(int, input().split())) for i in range(n)]
 for j, s in enumerate(zip(*t), 1):
     q = [[] for i in range(k)]

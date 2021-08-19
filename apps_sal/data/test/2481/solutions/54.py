@@ -1,6 +1,7 @@
 h, w = map(int, input().split())
 c = [list(map(int, input().split())) for i in range(10)]
 
+# Froyed-Warshal
 for v in range(10):
     for s in range(10):
         for g in range(10):

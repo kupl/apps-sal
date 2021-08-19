@@ -34,4 +34,5 @@ class Solution:
             for b in bad:
                 del goodpieces[b]
 
+            # print(pieces)
         return latest

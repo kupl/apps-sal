@@ -32,6 +32,7 @@ def __starting_point():
                 inp = inp + '0'
             else:
                 inp = inp + '1'
+        # print inp
 
         a = np.zeros((1024), dtype=np.int)
         for j in range(n):
@@ -49,14 +50,19 @@ def __starting_point():
             a[p] = a[p] + 1
         count_2 = 0
 
+        # print a
+
         if n < 1024:
             dp = np.zeros((n + 1, 1024), dtype=np.int64)
             dp[0, 0] = 1
             for j in range(1, n + 1):
                 for k in range(1024):
+                    # print j-1
+                    # print k^int(bin_list[j-1],2)
 
                     dp[j, k] = (dp[j - 1][k] + dp[j - 1][k ^ int(bin_list[j - 1], 2)]) % (10**9 + 7)
 
+                # print dp
             p = 1023 ^ int(inp, 2)
 
             print(dp[n, p] % (10**9 + 7))
@@ -70,6 +76,8 @@ def __starting_point():
                 if a[j - 1] > 0:
                     l = power2(a[j - 1] - 1)
                 for k in range(1024):
+                    # print j-1
+                    # print k^int(bin_list[j-1],2)
                     if a[j - 1] > 0:
                         dp[j, k] = (((dp[j - 1][k] + dp[j - 1][k ^ (j - 1)]) % (10**9 + 7)) * l) % (10**9 + 7)
                     elif dp[j - 1][k] > 0:
@@ -77,6 +85,7 @@ def __starting_point():
 
                 if count_2 == count:
                     break
+                # print dp
             p = 1023 ^ int(inp, 2)
 
             print(dp[j, p] % (10**9 + 7))

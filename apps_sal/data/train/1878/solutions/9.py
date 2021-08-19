@@ -11,6 +11,7 @@ class Solution:
         if len(arr) < 2:
             return len(arr)
 
+        # Preprocess suffix min
         suffix_min = [float('inf')] * len(arr)
         suffix_min[-1] = arr[-1]
         suffix_max = [float('-inf')] * len(arr)
@@ -32,6 +33,7 @@ class Solution:
                 while j < len(arr) and running_max > suffix_min[j]:
                     running_max = max(running_max, arr[j])
                     j += 1
+                # Now j is at the index where all the following elements are greater than or equal to arr[j]
                 index = j + 1
             else:
                 index += 1

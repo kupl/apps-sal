@@ -11,7 +11,7 @@ class Trie():
     def insert(self, word):
         root = self.root
         for char in word:
-            root = root.children.setdefault(char, TrieNode())
+            root = root.children.setdefault(char, TrieNode())  # setdefault(key, default=None)
         root.isend = 1
 
 
@@ -36,3 +36,8 @@ class StreamChecker:
             else:
                 break
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

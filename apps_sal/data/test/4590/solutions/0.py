@@ -5,7 +5,7 @@ def solve():
     ret = 0
 
     A_cusum = [0]
-    A_border_index = 0
+    A_border_index = 0  # 超えるときのindex
     for a_ in A:
         A_end = A_cusum[-1]
         if A_end + a_ > K:

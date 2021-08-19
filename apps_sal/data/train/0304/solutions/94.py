@@ -18,5 +18,6 @@ class Solution:
                     continue
                 if b > a:
                     continue
+                # if b > 100 and a < 100: continue
                 res += ct[a] * ct[b] if a != b else ct[a]**2 - ct[a]
         return res

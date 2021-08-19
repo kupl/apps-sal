@@ -22,7 +22,7 @@ class Solution:
         return res
 
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
-        self.memo = {}
+        self.memo = {}  # start index, K -> result
 
         self.N = len(A)
         self.sums = [None] * len(A)

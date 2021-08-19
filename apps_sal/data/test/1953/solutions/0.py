@@ -7,4 +7,5 @@ for i in range(n):
     if int(a[i]) >= num:
         res += 1
         num += int(a[i])
+    #print(res, a[i])
 print(res)

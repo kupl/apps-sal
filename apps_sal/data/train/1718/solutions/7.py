@@ -2,8 +2,8 @@ def has_exit(board):
     def make(i, j, visited=None):
         if not visited:
             visited = []
-        if [i, j] in visited or not (0 <= i < len(board) and 0 <= j < len(board[0])) or board[i][j] == "
-        return False
+        if [i, j] in visited or not (0 <= i < len(board) and 0 <= j < len(board[0])) or board[i][j] == "#":
+            return False
         visited.append([i, j])
         if i == 0 or j == 0 or i == len(board) - 1 or j == len(board[0]) - 1:
             return True

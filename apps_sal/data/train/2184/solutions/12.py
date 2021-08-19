@@ -5,6 +5,7 @@ import sys
 def __starting_point():
     n, q = map(int, input().split())
     blocks = list(map(int, input().split()))
+    # create empty dictionary - unordered collection
     dif = dict()
 
     for i in range(n):

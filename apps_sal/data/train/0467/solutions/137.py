@@ -12,6 +12,7 @@ class Solution:
                     tmp.add(n // d)
                 if len(tmp) > 4:
                     break
+            # print(tmp)
             if len(tmp) == 4:
                 ans += sum(tmp)
         return ans

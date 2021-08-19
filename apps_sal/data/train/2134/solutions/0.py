@@ -14,6 +14,7 @@ ans = 0
 flag = False
 possible = True
 while Q and possible:
+    # print(Q)
     flag = not flag
     for _ in range(len(Q)):
         cur, v, curs = Q.popleft()

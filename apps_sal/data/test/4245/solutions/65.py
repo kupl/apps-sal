@@ -1,5 +1,7 @@
 A, B = map(int, input().split())
 
+# シミュレーションで解く場合：
+# 電源タップの個数をa, 差込口の個数をnumとおく
 a = 0
 num = 1
 while num < B:

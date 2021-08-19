@@ -8,11 +8,13 @@ class Solution:
         even_jumps, odd_jumps = [-1] * n, [-1] * n
         asc_sorted = sorted((val, i) for i, val in enumerate(A))
         desc_sorted = sorted((-val, i) for i, val in enumerate(A))
+        # odd jumps
         stack = deque()
         for val, i in asc_sorted:
             while stack and stack[-1] < i:
                 odd_jumps[stack.pop()] = i
             stack.append(i)
+        # even jumps
         stack = deque()
         for val, i in desc_sorted:
             while stack and stack[-1] < i:

@@ -3,6 +3,7 @@ class Solution:
 
         def dfs(emp_id):
 
+            # no subordinates
             if not graph[emp_id]:
                 return 0
             max_path = float('-inf')
@@ -10,6 +11,7 @@ class Solution:
                 max_path = max(max_path, time + dfs(subordinate))
             return max_path
 
+        # create graph from boss -> [(emp,informtime)]
         graph = collections.defaultdict(list)
         for emp, boss in enumerate(manager):
             graph[boss].append((emp, informTime[boss]))

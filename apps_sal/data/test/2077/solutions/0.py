@@ -5,6 +5,7 @@ import __pypy__
 
 
 def main():
+    #t = int(stdin.readline())
     n, m = list(map(int, stdin.readline().split()))
     tree = [list() for _ in range(n + 1)]
     mn = [0] * (n + 1)

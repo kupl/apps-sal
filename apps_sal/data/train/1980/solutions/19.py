@@ -17,6 +17,8 @@ class Skiplist:
 
         for i in range(15):
             self.heads[i].down = self.heads[i + 1]
+        # for up, down in zip(self.heads, self.heads[1:]):
+        #     up.down = down
 
     def search(self, target: int) -> bool:
         start = self.heads[0]
@@ -33,6 +35,7 @@ class Skiplist:
         start = self.heads[0]
         stack = []
         while start:
+            #print(start.val,start.next.val, start.id)
             if start.val < num <= start.next.val:
                 stack.append(start)
                 start = start.down
@@ -58,6 +61,7 @@ class Skiplist:
         start = self.heads[0]
         while start:
             if start.next.val == num:
+                # remove
                 start.next = start.next.__next__
                 start = start.down
 
@@ -66,3 +70,10 @@ class Skiplist:
             else:
                 start = start.__next__
         return True
+
+
+# Your Skiplist object will be instantiated and called as such:
+# obj = Skiplist()
+# param_1 = obj.search(target)
+# obj.add(num)
+# param_3 = obj.erase(num)

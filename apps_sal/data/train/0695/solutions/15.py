@@ -1,3 +1,4 @@
+# cook your dish here
 def optimized(x, y, n):
     if x == y:
         return 0

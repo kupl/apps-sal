@@ -1,22 +1,23 @@
 import math
 
 
-GRAVITY_ACC = 9.81 * 3.6 * 60.0
-DRAG = 60.0 * 0.3 / 3.6
-DELTA_T = 1.0 / 60.0
-G_THRUST = 60 * 3.6 * 3.6
-MASS = 80.0
-WATTS0 = 225.0
-D_WATTS = 0.5
+GRAVITY_ACC = 9.81 * 3.6 * 60.0  # gravity acceleration
+DRAG = 60.0 * 0.3 / 3.6  # force applied by air on the cyclist
+DELTA_T = 1.0 / 60.0  # in minutes
+G_THRUST = 60 * 3.6 * 3.6  # pedaling thrust
+MASS = 80.0  # biker's mass
+WATTS0 = 225.0  # initial biker's power
+D_WATTS = 0.5  # loss of power at each deltaT
 
 
 def temps(v0, slope, d_tot):
-    t = 0
-    gamma = 0
-    v = v0
-    d = 0
-    watts = WATTS0
+    t = 0  # time
+    gamma = 0  # total acceleration with its 3 components
+    v = v0  # speed
+    d = 0  # distance travelled
+    watts = WATTS0  # biker's power
 
+    # angle of inclination
     alpha = math.atan(slope / 100.0)
 
     while d < d_tot:

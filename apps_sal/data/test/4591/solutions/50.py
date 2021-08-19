@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 A, B, C, X, Y = list(map(int, input().split()))
 

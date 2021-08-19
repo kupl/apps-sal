@@ -12,6 +12,7 @@ class Solution:
                     minel = evl
                     minid = j
             intervals[i], intervals[minid] = intervals[minid], intervals[i]
+        # print(intervals)
 
         c = 0
         prevl = intervals[0][0]
@@ -33,3 +34,5 @@ class Solution:
             prevl = curl
             prevh = curh
         return len(intervals) - c
+
+        # return 1

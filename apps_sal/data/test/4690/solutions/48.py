@@ -1,3 +1,4 @@
+# 052_a
 A, B, C, D = list(map(int, input().split()))
 S1 = A * B
 S2 = C * D

@@ -23,5 +23,8 @@ class Solution:
                 c[p[i]] += c[i + 1]
                 p[i + 1] = p[i]
             if c[p[i]] == x and c[0] != 0:
+                # print(c)
+                # print(p)
+                # print()
                 ans += 1
         return ans

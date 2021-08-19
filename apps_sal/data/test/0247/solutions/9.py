@@ -6,7 +6,7 @@ ps = []
 
 
 def ff(a, b):
-    pp = []
+    pp = []  # left points
     dy = b[1] - a[1]
     dx = b[0] - a[0]
     for c in ps:

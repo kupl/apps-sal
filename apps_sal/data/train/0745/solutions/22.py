@@ -10,6 +10,7 @@ for t in range(int(input())):
     for i in range(n - 2, -1, -1):
         if ht_array[i] > ht_array[i + 1] + 1:
             ht_array[i] = ht_array[i + 1] + 1
+    # print(ht_array)
     max_height = max(ht_array)
     moves = sum_of_array - (max_height * max_height)
     print(moves)

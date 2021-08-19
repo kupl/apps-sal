@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 person_count = int(input())
 person_list = [input().split(" ") for _ in range(person_count)]

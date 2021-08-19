@@ -42,29 +42,38 @@ def main():
         print("No")
         return
 
+    # r-lの大きい順
     ls_plus.sort(key=lambda x: x[1] - x[0], reverse=True)
+    # lの小さい順
     ls_plus.sort(key=lambda x: x[0])
 
+    # l-rの小さい順
     ls_minus.sort(key=lambda x: x[0] - x[1])
+    # lの大さい順
     ls_minus.sort(key=lambda x: x[0], reverse=True)
 
     now_r = 0
     for ll in l_0:
         now_r += ll[1]
 
+    # now_l = 0
     for i in range(len(ls_plus)):
+        # l = ls[i][0]
         r = ls_plus[i][1]
         x = now_r - ls_plus[i][0]
         if x >= 0:
+            # now_l = now_l
             now_r = x + r
         else:
             print("No")
             return
 
     for i in range(len(ls_minus)):
+        # l = ls[i][0]
         r = ls_minus[i][1]
         x = now_r - ls_minus[i][0]
         if x >= 0:
+            # now_l = now_l
             now_r = x + r
         else:
             print("No")

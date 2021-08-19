@@ -12,3 +12,10 @@ class Solution:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
 
         return dp[len(text1)][len(text2)]
+
+    # $ a c e
+    # a
+    # b
+    # c
+    # d
+    # e

@@ -6,6 +6,7 @@ for i in range(n):
     s = input()
     s = s.split()
     num.append(s)
+# print(num)
 for i in num[0]:
     res.append(i)
 if n > 1:
@@ -35,6 +36,7 @@ if n == 3:
         for j in num[2]:
             res.append(str(int(i + j)))
             res.append(str(int(j + i)))
+# print(res)
 for i in range(1, 1001):
     if not (str(i) in res):
         print(i - 1)

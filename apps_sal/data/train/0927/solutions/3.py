@@ -1,5 +1,8 @@
+# cook your dish here
 try:
     def performOperations(N, op):
+        # Write your code here
+        # print(N, op)
         a = [i for i in range(1, N + 1)]
         m = set(a)
         s = sum(a)

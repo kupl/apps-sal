@@ -3,6 +3,7 @@ class Solution:
         M = len(balls)
         N = sum(balls)
         F = [math.factorial(n) for n in range(N // 2 + 1)]
+        # every box has at least N // 2 distinct colors, and has at most N distinct colors
 
         s1 = [0] * M
         s2 = [0] * M
@@ -10,6 +11,7 @@ class Solution:
         def find(i):
             if i == M:
                 if sum(s1) == sum(s2) and len([n for n in s1 if n]) == len([n for n in s2 if n]):
+                    # print(s1, s2)
                     base1 = F[N // 2]
                     for n in s1:
                         base1 //= F[n]

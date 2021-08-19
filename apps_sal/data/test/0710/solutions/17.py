@@ -4,6 +4,7 @@ def check(s):
     for i in range(4):
         x = abs(ord(s[i]) - ord(ss[i]))
         ans += min(x, 26 - x)
+        # print(ans)
     return ans
 
 

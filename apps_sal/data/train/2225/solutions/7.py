@@ -1,3 +1,4 @@
+# nimber: 0, 1, 2, 1, 4, 1, 2, 1, 8, 1, 2, 1, 4, 1, 2, 1, 16, 1, 2, 1, 4, 1, 2, 1, 8, 1, 2, 1, 4, 1, 2, 1, 32, ...
 
 class Node:
     def __init__(self, size, avail):
@@ -14,7 +15,7 @@ def makeTrie(strs, size):
     for s in strs:
         n = root
         for c in s:
-            i = int(c)
+            i = int(c)  # Change this to adapt. ex: ord(c)-ord("A")
             if not n[i]:
                 n[i] = Node(size, n.avail - 1)
             n = n[i]

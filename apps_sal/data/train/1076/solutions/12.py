@@ -1,4 +1,5 @@
 
+# cook your dish here
 def dist(a, b):
     if (a, b) in di:
         return di[(a, b)]
@@ -47,6 +48,8 @@ for t_iter in range(t):
                 distance[v] = distance[u] + 1
                 p[v] = u
                 qu.append(v)
+    # print(p)
+    # print(distance)
     di = {}
     for q_iter in range(q):
         a, da, b, db = map(int, input().split())

@@ -1,5 +1,7 @@
 import sys
 
+# inf = open('input.txt', 'r')
+# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -13,3 +15,5 @@ for _ in range(t):
         s = s % 10 + cashback
     spent += s
     print(spent)
+
+# inf.close()

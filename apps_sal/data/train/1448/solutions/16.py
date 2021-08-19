@@ -1,3 +1,5 @@
+# cook your dish here
+# Author : Ashutosh Wagh, Codechef : ashutosh0903
 for _ in range(int(input())):
     a, d, k, n, inc = list(map(int, input().split()))
     ans = a

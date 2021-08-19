@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 
 """
 
@@ -32,6 +33,9 @@ def solve(x0, y0, x1, y1, N, A):
                         dist[nx, ny] = d
                         nq.append((nx, ny))
         q = nq
+
+    # print(dist)
+    # print(points)
 
     ans = dist[x1, y1]
     return ans if ans != 0 else -1

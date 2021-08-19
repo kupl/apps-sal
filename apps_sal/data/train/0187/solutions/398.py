@@ -9,7 +9,8 @@ class Solution:
             if vacc <= 0:
                 wait += customers[i] - 4
                 pro += 4 * boardingCost - runningCost
-            elif customers[i] <= vacc:
+            # board all
+            elif customers[i] <= vacc:  # board=customers[i]+wait
                 pro += boardingCost * (customers[i] + wait) - runningCost
                 wait = 0
             else:

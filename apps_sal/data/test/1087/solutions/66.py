@@ -18,13 +18,16 @@ for d in range(MAX_DIGIT):
     cost0 = (1 << shift) * bit_count
     cost1 = (1 << shift) * (N - bit_count)
 
+    # small -> small
     if dp[d][SMALL] != -1:
         dp[d + 1][SMALL] = max(dp[d + 1][SMALL], dp[d][SMALL] + max(cost0, cost1))
 
+    # equal -> small
     if dp[d][EQUAL] != -1:
         if K >> shift & 1:
             dp[d + 1][SMALL] = max(dp[d + 1][SMALL], dp[d][EQUAL] + cost0)
 
+    # equal -> equal
     if dp[d][EQUAL] != -1:
         if K >> shift & 1:
             dp[d + 1][EQUAL] = max(dp[d + 1][EQUAL], dp[d][EQUAL] + cost1)

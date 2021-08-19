@@ -19,3 +19,9 @@ class TimeMap(object):
             else:
                 left = mid
         return values[left][1] if values[left][0] <= timestamp else ''
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)

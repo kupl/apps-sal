@@ -1,5 +1,9 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
+        # 9 ,4    ,     7,         10
+        #    ^
+        #             (1,-5): 2  (2, 3): 2   (3, 3):3
+        #                                    (3, -5):3
 
         dict = collections.defaultdict(lambda: 0)
 

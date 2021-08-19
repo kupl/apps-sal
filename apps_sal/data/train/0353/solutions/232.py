@@ -1,4 +1,7 @@
 class Solution:
+    # Version 1: Sliding window
+    # Count the mismatch count
+    # TC: O(nlogn), SC: O(1)
     '''
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7

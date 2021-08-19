@@ -1,3 +1,4 @@
+# cook your dish here
 def solve():
     x, r, a, b = map(int, input().split())
     d = 2 * 3.14 * r

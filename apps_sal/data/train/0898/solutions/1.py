@@ -1,3 +1,4 @@
+# cook your dish here
 def sol(z):
     r = len(str(z))
     if(z < int(str(9) * r)):

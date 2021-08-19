@@ -15,3 +15,8 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.prefixes = [node[letter] for node in chain([self.trie], self.prefixes) if letter in node]
         return any('end' in node for node in self.prefixes)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

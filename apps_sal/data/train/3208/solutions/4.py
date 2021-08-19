@@ -31,6 +31,8 @@ class MarketQueue():
         for finished in finished_customers:
             self.active_checkouts.remove(finished)
 
+# implementing requirements
+
 
 def queue_time(customers, n):
     return MarketQueue(customers, n).calculate_total_time()

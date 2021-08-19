@@ -1,7 +1,11 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
+        # s=set()
+        # b=set()
+        # x=s.intersection(b)
         glb = set()
         ct = 0
+        # d={}
         ds = {}
         for i in favoriteCompanies:
             for j in i:

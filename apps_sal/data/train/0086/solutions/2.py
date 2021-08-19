@@ -1,3 +1,5 @@
+# OM GANESHAY NAMH
+# GANPATI BAPPA MORYA
 import math
 import queue
 import heapq

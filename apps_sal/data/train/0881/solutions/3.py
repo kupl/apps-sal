@@ -8,4 +8,4 @@ for _ in range(t):
         if lst[i] <= lst[i + 1]:
             dp[i] = dp[i + 1] + 1
         count += dp[i]
-    print(count)
+    print(count)  # cook your dish here

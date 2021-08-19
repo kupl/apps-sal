@@ -5,6 +5,7 @@ class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
         @lru_cache(None)
+        # die value, consecutive rolls it came up, num rolls left
         def roll(val, cons, left):
             if left == 0:
                 return 1

@@ -3,6 +3,10 @@ class Solution:
 
         n = len(A)
 
+        # 2 4 6
+        # 2 1 4 6
+        # 2 3 4 6 8
+
         increment = 0
         num_steps = 0
         dp = {}

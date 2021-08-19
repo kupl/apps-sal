@@ -1,3 +1,4 @@
+# Memorize: arithmetic sequence has >=2 length.
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         memo = {}

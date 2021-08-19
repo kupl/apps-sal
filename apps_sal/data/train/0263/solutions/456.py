@@ -10,6 +10,7 @@ class Solution:
         def dfs(s, n):
             if n == 0:
                 return 1
+            # for v in moves[s]:
             return sum([dfs(v, n - 1) for v in moves[s]])
 
         answer = 0

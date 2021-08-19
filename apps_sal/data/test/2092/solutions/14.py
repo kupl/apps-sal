@@ -16,9 +16,12 @@ def army(weak, traps, t_max, n):
         if interval:
             t += 2
 
+#     print(t, t_max)
     return t <= t_max
 
 
+# inf = open('input.txt', 'r')
+# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, s.split())) for s in sys.stdin)
 
 m, n, k, t_max = next(reader)
@@ -30,14 +33,22 @@ for _ in range(k):
 
 a.sort(reverse=True)
 traps.sort(key=lambda x: x[2], reverse=True)
+# print(a)
+# print(traps)
 
+# binary search of max amount of soldiers to pass
 L = 0
 R = m + 1
 while L + 1 < R:
     check = (L + R) // 2
+#     print(check, a[check - 1])
     if army(a[check - 1], traps, t_max, n):
         L = check
     else:
         R = check
+#     print(L, R)
+#     print()
 
 print(L)
+
+# inf.close()

@@ -17,6 +17,10 @@ class Solution:
                 continue
             if (i, j) not in dist:
                 dist[(i, j)] = 1 + dist.get((previ, prevj), -1)
+                # if previ is None and prevj is None:
+                #     dist[(i, j)] = 0
+                # else:
+                #     dist[(i, j)] = 1 + dist[(previ, prevj)]
                 for di, dj in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
                     newi, newj = i + di, j + dj
                     queue.append((newi, newj, i, j))

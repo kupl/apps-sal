@@ -50,3 +50,8 @@ while True:
         m = next_free(m)
 
 print(dis)
+
+
+# binary search the ANSWER!!
+# choose an answer and check if it works
+# array [i] keeps track of how many zeros are before it

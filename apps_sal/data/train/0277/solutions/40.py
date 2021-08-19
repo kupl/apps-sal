@@ -9,6 +9,7 @@ class Solution:
             if b == a:
                 l[a] = 2
                 c = a + 1
+                # print(l,a,c)
                 b = c
                 while c < len(light) and l[c] == 1:
                     l[c] = 2
@@ -22,6 +23,7 @@ class Solution:
                 else:
                     l[a] = 1
                     k += 1
+            # print(i,l,k,a,b)
             if k == 0:
                 ans += 1
         return ans

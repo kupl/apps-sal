@@ -1,3 +1,4 @@
+# 解説解法
 n = int(input())
 xp = []
 xm = []

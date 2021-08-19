@@ -27,6 +27,7 @@ for _ in range(q):
                 cyc += 1
                 vis[j] = True
                 j = a[j]
+            # print('>> ', i, cyc)
             yeet += (cyc - 1) % 2
             yeet %= 2
 

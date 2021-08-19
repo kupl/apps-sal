@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 A, B, C, N = [int(i) for i in input().split()]
 count = A + B - C
 if C > A or C > B:

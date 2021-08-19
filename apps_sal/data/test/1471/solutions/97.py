@@ -14,6 +14,17 @@ def main():
 
     color = [-1] * (N + 1)
     color[1] = 0
+    # S = [1]
+    # while len(S):
+    #   now = S[-1]
+    #   for next_, w in G[now]:
+    #     if color[next_] != -1:
+    #       continue
+    #     S.append(next_)
+    #     color[next_] = (w % 2) ^ color[now]
+    #     break
+    #   else:
+    #     S.pop()
 
     def dfs(now):
         for next_, w in G[now]:

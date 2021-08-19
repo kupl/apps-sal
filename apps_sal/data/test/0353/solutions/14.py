@@ -1,6 +1,8 @@
 from sys import stdin as fin
+# fin = open("cfr373a.in")
 
 n = int(fin.readline())
+# n, m = map(int, fin.readline.split())
 nums = tuple(map(int, fin.readline().split()))
 
 ans = {15: "DOWN", 0: "UP"}

@@ -1,11 +1,13 @@
 import itertools
 
+# input
 H, W, K = list(map(int, input().split()))
 S = [list(map(int, input())) for _ in range(H)]
 
+# process
 ans = H * W
 
-for divr in range(1 << (H - 1)):
+for divr in range(1 << (H - 1)):    # 横方向の分割を総当たり
     row = 0
     Sr = [[S[0][i] for i in range(W)]]
     for i in range(1, H):
@@ -15,6 +17,7 @@ for divr in range(1 << (H - 1)):
         else:
             Sr[row] = [Sr[row][j] + S[i][j] for j in range(W)]
 
+    # 縦方向の分割を加算
     cnt = [0] * (row + 1)
     ans_ = row
     flg = True
@@ -37,4 +40,5 @@ for divr in range(1 << (H - 1)):
     if flg:
         ans = min(ans, ans_)
 
+# output
 print(ans)

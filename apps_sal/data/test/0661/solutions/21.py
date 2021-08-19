@@ -12,6 +12,7 @@ def main():
         else:
             print((-1))
         return
+    # M >= 2 and K < 2 ** M
     arr = list(map(str, [i for i in range(2 ** M) if i != K]))
     rev_arr = arr.copy()
     rev_arr.reverse()

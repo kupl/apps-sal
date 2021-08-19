@@ -1,3 +1,5 @@
+# dp
+# f(i) = suffixsum[i] - min(f(i+x) for x in range(1,4))
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         memo = dict()

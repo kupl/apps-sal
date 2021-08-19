@@ -3,6 +3,8 @@ a_list = list(map(int, input().split()))
 
 longest = 0
 for i in range(n):
+    # if i==0:
+    #     continue
     if i == n - 1:
         longest = max(longest, k - a_list[i] + a_list[0])
     else:

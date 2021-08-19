@@ -7,8 +7,9 @@ class Solution:
         while (True):
             zero_count = 0
             i = 0
+            # for i in range(n):
             while i < n:
-                if nums[i] % 2 == 1:
+                if nums[i] % 2 == 1:  # first odd num
                     break
                 elif nums[i] == 0:
                     zero_count += 1
@@ -28,3 +29,20 @@ class Solution:
                     ans += 1
 
         return ans
+#         ans = 0
+#         n = len(nums)
+#         zeros = len([i==0 for i in nums])
+#         if n==zeros: return ans
+#         for i in range(n):
+#             if nums[i]%2==1: # convert odd to even num
+#                 ans+=1
+#                 nums[i]-=1
+#                 if nums[i]==0:
+#                     zeros+=1
+#         if n==zeros: return ans
+
+#         while zeros<n:
+#             for i in range(n):
+#                 nums[i]//=2
+#             ans+=1
+#         return ans

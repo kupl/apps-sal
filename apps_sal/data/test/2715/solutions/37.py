@@ -13,5 +13,6 @@ if K == 1:
 if K == 0:
     N = 2
     l = [1, 1]
+##
 print(N)
 print(*l)

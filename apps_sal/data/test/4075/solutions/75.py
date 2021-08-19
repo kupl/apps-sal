@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 
+# import
+#import math
+#import numpy as np
 N, M = list(map(int, input().split()))
 
 K = {i: [] for i in range(M)}

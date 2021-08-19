@@ -5,10 +5,13 @@ class Solution:
             by_length[len(word)].add(word)
 
         longest = 1
-        seen = {*()}
+        seen = {*()}  # set()
         mx = len(by_length)
         mn = min(by_length)
+        # in descending order
         for length in sorted(by_length, reverse=True):
+           # if length - mn < longest:
+           #     break
             for word in by_length[length]:
                 if length - mn < longest:
                     break
@@ -24,5 +27,7 @@ class Solution:
                         pre = word[:i] + word[i + 1:]
                         if pre not in seen and pre in by_length[k - 1]:
                             stk.append((pre, k - 1, n + 1))
+               # if longest == mx:
+               #     return longest
 
         return longest

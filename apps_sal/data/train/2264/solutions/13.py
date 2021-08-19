@@ -9,6 +9,11 @@ def main():
     S, T = list(map(int, input().split()))
     E = [[] for _ in range(N + 1)]
     edges = []
+    # for _ in range(M):
+    #     u, v, d = map(int, input().split())
+    #     E[u].append((v, d))
+    #     E[v].append((u, d))
+    #     edges.append((u, v, d))
     for u, v, d in zip(*[iter(map(int, sys.stdin.read().split()))] * 3):
         E[u].append((v, d))
         E[v].append((u, d))
@@ -36,7 +41,7 @@ def main():
     Dist_T = dijksrtra(T)
     dist_st = Dist_S[T]
 
-    DAG_edges = []
+    DAG_edges = []  # S -> T
     DAG = [[] for _ in range(N + 1)]
     DAG_rev = [[] for _ in range(N + 1)]
     for u, v, d in edges:
@@ -49,6 +54,7 @@ def main():
             DAG[v].append(u)
             DAG_rev[u].append(v)
 
+    # トポロジカルソート
     V = []
     rem = [0] * (N + 1)
     for _, v in DAG_edges:
@@ -62,10 +68,31 @@ def main():
             if rem[u] == 0:
                 q.append(u)
 
+    # n_paths_S = [-1] * (N+1)
+    # n_paths_T = [-1] * (N+1)
     n_paths_S = [0] * (N + 1)
     n_paths_T = [0] * (N + 1)
     n_paths_S[S] = 1
     n_paths_T[T] = 1
+    # def calc_n_paths_S(v):
+    #     if n_paths_S[v] != -1:
+    #         return n_paths_S[v]
+    #     res = 0
+    #     for u in DAG_rev[v]:
+    #         res = (res + calc_n_paths_S(u)) % mod
+    #     n_paths_S[v] = res
+    #     return res
+    # def calc_n_paths_T(v):
+    #     if n_paths_T[v] != -1:
+    #         return n_paths_T[v]
+    #     res = 0
+    #     for u in DAG[v]:
+    #         res = (res + calc_n_paths_T(u)) % mod
+    #     n_paths_T[v] = res
+    #     return res
+
+    # ans = calc_n_paths_S(T)  # 全経路数
+    # calc_n_paths_T(S)
 
     for v in V:
         n = n_paths_S[v]
@@ -78,10 +105,11 @@ def main():
     ans = n_paths_S[T]
     ans = ans * ans % mod
 
-    for v, u in DAG_edges:
+    for v, u in DAG_edges:  # 辺ですれ違う場合
         if Dist_S[v] * 2 < dist_st and dist_st < Dist_S[u] * 2:
             ans = (ans - (n_paths_S[v] * n_paths_T[u])**2) % mod
 
+    # 頂点ですれ違う場合
     for v, (dist, ns, nt) in enumerate(zip(Dist_S, n_paths_S, n_paths_T)):
         if dist * 2 == dist_st:
             ans = (ans - (ns * nt)**2) % mod

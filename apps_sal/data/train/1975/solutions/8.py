@@ -21,3 +21,10 @@ class CustomStack:
         num = min(k, self.index)
         for i in range(num):
             self.origin_list[i] += val
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

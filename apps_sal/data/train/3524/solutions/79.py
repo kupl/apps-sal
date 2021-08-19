@@ -1,3 +1,4 @@
+#! python3
 
 import re
 dnaRegex = re.compile(r'T')

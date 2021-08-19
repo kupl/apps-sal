@@ -1,5 +1,6 @@
+# 053a
 
-x = int(input())
+x = int(input())    # レートxを代入
 
 if x < 1200:
     print('ABC')

@@ -14,15 +14,15 @@ class Solution:
         result = nneg = npos = 0
         for num in nums:
             if num == 0:
-                nneg = npos = 0
+                nneg = npos = 0     # reset
             elif num > 0:
-                npos = npos + 1
-                nneg = nneg + 1 if nneg else 0
+                npos = npos + 1                 # any pos prod stays neg
+                nneg = nneg + 1 if nneg else 0  # any neg prod stays neg
             else:
                 temp = nneg
-                nneg = npos + 1
-                npos = temp + 1 if temp else 0
-            result = max(result, npos)
+                nneg = npos + 1                 # any pos prod flips neg
+                npos = temp + 1 if temp else 0  # any neg prod flips pos
+            result = max(result, npos)          # Save max pos prod len
         return result
 
     def getMaxLenPow2(self, numso: List[int]) -> int:

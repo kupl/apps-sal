@@ -1,5 +1,6 @@
 from sys import stdin
 n = int(stdin.readline().strip())
+# n,m=map(int,stdin.readline().strip().split())
 s = stdin.readline().strip()
 ans = 101
 for i in range(0, 101):

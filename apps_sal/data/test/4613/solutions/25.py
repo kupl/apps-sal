@@ -4,14 +4,14 @@ H = []
 for i in range(M):
     a, b = list(map(int, input().split()))
     a -= 1
-    b -= 1
+    b -= 1  # 0index
     G[a].append([b, i])
-    G[b].append([a, i])
+    G[b].append([a, i])  # iを辺のIDとして保存
     H.append([a, b])
 ans = 0
 
 
-def dfs(v, ID):
+def dfs(v, ID):  # IDの辺を使えない
     visited.add(v)
     for u, idx in G[v]:
         if idx == ID or u in visited:

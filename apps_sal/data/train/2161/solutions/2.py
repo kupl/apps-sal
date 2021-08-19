@@ -69,3 +69,6 @@ for q in p:
 
 
 print(max(d) - 1)
+
+
+# Made By Mostafa_Khaled

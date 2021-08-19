@@ -1,3 +1,8 @@
+# coding: utf-8
+
+# https://atcoder.jp/contests/abc098/tasks/arc098_b
+# give up
+# 15:29-16:15
 
 
 def bin20(x):

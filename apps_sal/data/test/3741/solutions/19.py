@@ -7,40 +7,56 @@ INT_MAX = float('inf')
 
 def shortest_cycle(gr):
 
+    # To store length of the shortest cycle
     ans = INT_MAX
 
+    # For all vertices
     for i in gr:
 
+        # Make distance maximum
         dist = {x: int(1e9) for x in gr}
 
+        # Take a imaginary parent
         par = {x: -1 for x in gr}
 
+        # Distance of source to source is 0
         dist[i] = 0
         q = deque()
 
+        # Push the source element
         q.append(i)
 
+        # Continue until queue is not empty
         while q:
 
+            # Take the first element
             x = q.popleft()
 
+            # Traverse for all it's childs
             for child in gr[x]:
 
+                # If it is not visited yet
                 if dist[child] == int(1e9):
 
+                    # Increase distance by 1
                     dist[child] = 1 + dist[x]
 
+                    # Change parent
                     par[child] = x
 
+                    # Push into the queue
                     q.append(child)
 
+                # If it is already visited
                 elif par[x] != child and par[child] != x:
                     ans = min(ans, dist[x]
                               + dist[child] + 1)
 
+    # If graph contains no cycle
     if ans == INT_MAX:
         return -1
 
+    # If graph contains cycle
     else:
         return ans
 
@@ -104,3 +120,4 @@ else:
             print(minC+1)
         else:
             print(-1)'''
+        # print(minX)

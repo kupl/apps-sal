@@ -28,6 +28,7 @@ def to_chinese_numeral(n):
         for xiaoshu in tempxiaoshu:
             allxiaoshu.append(numerals[xiaoshu])
     n = int(n)
+    # print(allxiaoshu)
     while(tempdivide != 0.1):
         weishu = str(int(n // tempdivide))
         n = n % tempdivide
@@ -58,6 +59,9 @@ def to_chinese_numeral(n):
         elif(allweishu[weishu + 1] == "零" and nums[weishu] == ""):
             continue
 
+    # print(allweishu)
+    # print(allstrs)
+
     if(len(allstrs) > 1 and allstrs[-1] == "零"):
         allstrs = allstrs[:-1]
     if(allstrs == "负" or allstrs == ""):
@@ -69,5 +73,7 @@ def to_chinese_numeral(n):
     if(allstrs == ""):
         return "零"
     if(allstrs[-1] == "零" and len(allstrs) > 1):
+        # print(allstrs)
         return allstrs[:-1]
+    # print(allstrs)
     return allstrs

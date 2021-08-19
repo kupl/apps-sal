@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def fact(N):
     P = 1

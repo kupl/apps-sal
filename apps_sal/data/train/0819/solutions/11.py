@@ -1,3 +1,4 @@
+# cook your dish here
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b

@@ -1,4 +1,4 @@
-def vowel_recognition(input):
+def vowel_recognition(input):  # Played around with some maths haha took way too much time
     vl = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     n = len(input)
     count = 0

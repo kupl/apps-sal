@@ -1,8 +1,13 @@
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
+        # Given an interval of leaves in the range [i, j], we could pick
+        # some k, i <= k < j, such that [i, k] are the leaves on the
+        # left subtree and [k + 1, j] that of the right subtree
+        # For all k: f(i, j) = f(i, k) + f(k + 1, j) + max([i, k]) * max([k+1, j])
 
         n = len(arr)
 
+        # first pre-fill the max(i, j) function
         m = [None] * n
         for i in range(len(m)):
             m[i] = [float('-inf')] * n
@@ -13,6 +18,7 @@ class Solution:
                 mid = (i + j) // 2
                 m[i][j] = max(m[i][j], m[i][mid], m[mid + 1][j])
 
+        # now fill f()
         f = [None] * n
         for i in range(len(f)):
             f[i] = [float('inf')] * n

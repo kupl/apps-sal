@@ -3,6 +3,7 @@ class Solution:
         n = len(stones)
 
         dp = [[[math.inf for k in range(K + 1)] for j in range(n)] for i in range(n)]
+        # dp[i][j][k]: min cost of merging from i to j and finally having k piles
         for i in range(n):
             dp[i][i][1] = 0
 

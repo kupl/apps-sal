@@ -19,8 +19,8 @@ result = "NO"
 for box_index in BOX_INDEXES:
     hashtag_count = 0
     for index in box_index:
-        if data[index] == "
-        hashtag_count += 1
+        if data[index] == "#":
+            hashtag_count += 1
     if hashtag_count != 2:
         result = "YES"
         break

@@ -1,4 +1,8 @@
 from operator import itemgetter
+# int(input())
+# map(int,input().split())
+#[list(map(int,input().split())) for i in range(q)]
+#print("YES" * ans + "NO" * (1-ans))
 n = int(input())
 ai = list(map(int, input().split()))
 ai2 = [[ai[i], i + 1] for i in range(n)]

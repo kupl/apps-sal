@@ -24,7 +24,9 @@ def crosstable(players, results):
                    sb,
                    [transform(player.split()[1]) for player in players],
                    range(len(results))))
+    # print(res)
     res.sort(reverse=True)
+    #print(rank, res)
     ranksize = max([len(str(r)) for r in rank])
     namesize = max([len(name) for name in players])
     ptssize = max([len('%0.1f' % (score,)) for score in scores])
@@ -36,7 +38,7 @@ def crosstable(players, results):
                             else '0').rjust(ranksize) for pl1 in res]) for pl in res]
 
     resultat = [
-        '  '.join(['
+        '  '.join(['#'.rjust(ranksize),
                    'Player'.ljust(namesize),
                    ' '.join([str(i).rjust(ranksize) for i in range(1, len(players) + 1)]),
                    'Pts'.ljust(ptssize),

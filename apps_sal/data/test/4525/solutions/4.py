@@ -15,3 +15,7 @@ for _ in range(t):
     a.append(s)
     print("YES")
     print(*a)
+
+
+# a = list(map(int,input().split()))
+# n,m = map(int,input().split())

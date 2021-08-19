@@ -36,3 +36,10 @@ class DinnerPlates:
             heapq.heappush(self.q, index)
 
         return self.s[index].pop() if self.s[index] else -1
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

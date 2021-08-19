@@ -25,6 +25,7 @@ for __ in range(0, t):
 
     elif (x[0] == "-1"):
 
+        #print("%s %s" %(b[top],a[top][1]))
         print((b[top]), end=' ')
         print(a[top][1])
         foo = a.pop()

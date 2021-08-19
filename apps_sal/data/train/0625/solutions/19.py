@@ -1,4 +1,5 @@
 
+# code from gfg: https://www.geeksforgeeks.org/count-sub-arrays-sum-divisible-k/
 while(1):
     for _ in range(int(input())):
         n = int(input())

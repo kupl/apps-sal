@@ -127,6 +127,8 @@ def main():
                 G.add(i + n, 2 * n + i * n + j, 1, 0)
                 G.add(2 * n + i * n + j, tgt, 1, 2 * j + 1)
         _, ans = G.solve(src, tgt)
+        # print(G)
+        #print(leq, geq)
     print(ans)
     return
 

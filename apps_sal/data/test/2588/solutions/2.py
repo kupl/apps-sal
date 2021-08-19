@@ -23,4 +23,6 @@ for qq in range(q):
         else:
             dp_d[i] = 10 ** 20
 
+    # print(dp_u)
+    # print(dp_d)
     print(min(dp_d[n - 1] + a, dp_u[n - 1] + 2 * a) + b)

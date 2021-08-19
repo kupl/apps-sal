@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def binarySearch(self, val, G):
         start = 0
@@ -25,6 +30,7 @@ class Solution:
             if curr.val not in G:
                 i += 1
             curr = curr.__next__
+        # print(dict_clusters)
         count = 0
         for i in dict_clusters:
             if len(dict_clusters[i]) > 0:

@@ -23,7 +23,11 @@ def solve(n, lis):
         for j in nextDiv(lis[i]):
             dp[j] += dp[j - 1]
 
+    # print(dp)
     return (sum(dp) - 1) % int(1e9 + 7)
+
+###########################
+###########################
 
 
 def intRead():

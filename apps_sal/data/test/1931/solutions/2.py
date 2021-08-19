@@ -35,6 +35,7 @@ def main():
     n = iinput()
     res = 0
     while n >= q[0]:
+        #print(bisect.bisect_right(q, n) - 1, q[bisect.bisect_right(q, n) - 1], n)
         n -= q[bisect.bisect_right(q, n) - 1]
         res += 1
     print(res)

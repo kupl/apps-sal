@@ -55,6 +55,8 @@ def main():
     for x, y in ans:
         print((x, y))
 
+    # print(A)
+
 
 def __starting_point():
     main()

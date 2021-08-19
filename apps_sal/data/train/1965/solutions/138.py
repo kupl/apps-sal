@@ -8,6 +8,7 @@ class Solution:
                 t2.append([s, e])
             elif t == 3:
                 t3.append([s, e])
+        # print(t1,t2,t3)
 
         def find(x, arr):
             if x == arr[x]:
@@ -26,12 +27,14 @@ class Solution:
                 bob[g1] = g2
             else:
                 ans += 1
+        # print(alice, bob)
         for s, e in t1:
             g1, g2 = find(s, alice), find(e, alice)
             if g1 != g2:
                 alice[g1] = g2
             else:
                 ans += 1
+        # print(alice, bob, ans)
         for s, e in t2:
             g1, g2 = find(s, bob), find(e, bob)
             if g1 != g2:

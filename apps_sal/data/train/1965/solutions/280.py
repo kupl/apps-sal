@@ -49,8 +49,11 @@ class Solution:
                 cur_visited = set()
                 if node not in total_visited:
                     search(node)
+                    # super_nodes_list.append(cur_visited)
                     total_visited.update(cur_visited)
                     n_super_nodes += 1
+                    # for node2 in cur_visited:
+                    #     super_nodes[node2] = cur_visited
 
         create_super_nodes()
         dfs(0)

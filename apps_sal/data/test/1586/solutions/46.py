@@ -4,6 +4,7 @@ ans = 0
 if N == 0 or N % 2 == 1:
     ans = 0
 else:
+    # means N >= 2 and even
     digN = round(math.log(N, 5))
 
     i = 1

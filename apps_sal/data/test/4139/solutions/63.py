@@ -3,6 +3,7 @@ import math
 import itertools
 
 
+# \n
 def input():
     return sys.stdin.readline().rstrip()
 

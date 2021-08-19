@@ -6,6 +6,7 @@ for q in range(t):
     dic2 = {}
     for i in range(n):
         dic2[x[i]] = 1
+    # print dic2
     if len(dic2) == n:
         n += 2
         print((n * (n - 1) * (n - 2) * (n - 3)) / 24)
@@ -28,6 +29,7 @@ for q in range(t):
                     if x[q] in dic:
                         break
                     counter += 1
+                    # print i,j,p,q
 
         dic.clear()
     print(counter)

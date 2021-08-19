@@ -10,6 +10,7 @@ else:
         rgt = int(s[-d:], 2)
         lft = int(s[:-d], 2)
         c = 2**d
+        # print(d, lft, rgt+c, 2*c-1)
         if rgt + c >= k:
             if rgt + c > k:
                 ans = max(lft * 2, ans)

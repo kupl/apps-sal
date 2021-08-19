@@ -1,3 +1,4 @@
+# cook your dish here
 n, a = map(int, input().split())
 while(a):
     a = a - 1

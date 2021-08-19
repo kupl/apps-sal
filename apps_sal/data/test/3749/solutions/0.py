@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import functools
 
 
@@ -19,8 +20,10 @@ def gcd(f, g):
 
 
 def solve(n, x, a):
+    # (g) = (a_1, ..., a_n) is a principal ideal since F_2[x] is a PID
     g = functools.reduce(gcd, a)
 
+    # count h in F_2[x] s.t. h g <= x
     cnt = 0
     h = 0
     for k in reversed(list(range(x.bit_length() - g.bit_length() + 1))):

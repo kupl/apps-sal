@@ -4,6 +4,10 @@ N = int(input())
 ABs = [tuple(map(int, input().split())) for _ in range(N)]
 CDs = [tuple(map(int, input().split())) for _ in range(N)]
 
+# 0 <= i <   N  -> i: ABs[i]
+# N <= i < 2*N  -> i: CDs[i-N]
+# i == 2*N+1    -> start
+# i == 2*N+2    -> goal
 
 DG = nx.DiGraph()
 DG.add_nodes_from(list(range(2 * N + 3)))

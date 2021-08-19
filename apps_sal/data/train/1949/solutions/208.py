@@ -8,6 +8,7 @@ class Solution:
         for r in range(len(grid)):
             for c in range(len(grid[0])):
                 temp = self.goldHelper(grid, r, c, path)
+                # print(temp, r, c)
                 g = max(g, temp)
         return g
 

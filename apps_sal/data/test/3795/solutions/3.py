@@ -6,6 +6,7 @@ def getInt(): return int(input())
 def getVars(): return map(int, input().split())
 def getList(): return list(map(int, input().split()))
 def getStr(): return input().strip()
+# -------------------------------
 
 
 def addDictList(d, key, val):
@@ -30,6 +31,8 @@ def addDictSum(d, key, val):
     if key not in d:
         d[key] = 0
     d[key] += val
+
+# -------------------------------
 
 
 n = getInt()

@@ -13,6 +13,7 @@ class Solution:
     def visit_row(self, arr, i, j):
         if (i, j) in self.memo:
             return self.memo[(i, j)]
+        # Base case
         if i == len(arr) - 1:
             return arr[i][j]
         val = arr[i][j]

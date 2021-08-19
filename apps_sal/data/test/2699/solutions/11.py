@@ -30,3 +30,4 @@ for j in range(t):
     for i in range(y):
         print(o[i], end=" ")
     print()
+    # cook your dish here

@@ -15,5 +15,6 @@ while k > 0:
     else:
         l[mid] = l[mid] + (k // (same))
         k = 0
+    #print (l[mid],same)
     same += 1
 print(l[mid])

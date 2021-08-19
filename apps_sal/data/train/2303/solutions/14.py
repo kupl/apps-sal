@@ -7,6 +7,7 @@ chg = 10**6
 G = defaultdict(set)
 for _ in range(M):
     p, q, c = list(map(int, input().split()))
+    # 無向グラフ
     G[p].add(p + chg * c)
     G[p + chg * c].add(p)
     G[q].add(q + chg * c)

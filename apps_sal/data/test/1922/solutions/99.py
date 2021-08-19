@@ -4,6 +4,7 @@ from copy import copy, deepcopy
 from itertools import product, permutations, combinations, combinations_with_replacement
 from bisect import bisect_left, bisect_right
 from math import sqrt, gcd, ceil, floor, factorial
+# from fractions import gcd
 from functools import reduce
 from pprint import pprint
 from statistics import mean, median, mode
@@ -40,6 +41,7 @@ def mymin(data):
 
 
 def mycount(ls, x):
+    # lsはソート済みであること
     l = bisect_left(ls, x)
     r = bisect_right(ls, x)
     return (r - l)
@@ -112,6 +114,12 @@ def CS(n):
 
 def LS(n):
     return [list(input()) for _ in range(n)]
+
+# ddict = defaultdict(lambda: 0)
+# ddict = defaultdict(lambda: 1)
+# ddict = defaultdict(lambda: int())
+# ddict = defaultdict(lambda: list())
+# ddict = defaultdict(lambda: float())
 
 
 n, m = MI()

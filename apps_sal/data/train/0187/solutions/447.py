@@ -10,9 +10,11 @@ class Solution:
             gon[i] = 0
             if k < len(customers):
                 waiting += customers[k]
+             #   print(waiting, k)
             gon[i] = min(4, waiting)
             waiting -= gon[i]
             profit += gon[i] * boardingCost - runningCost
+            #print(profit, gon)
             if profit > max_profit:
                 max_profit, idx = profit, k + 1
             i = (i + 1) % 4

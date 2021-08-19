@@ -1,3 +1,19 @@
+#
+#    ------------------------------------------------
+#           ____          _     Generatered using
+#          / ___|        | |
+#         | |    __ _  __| | ___ _ __  ______ _
+#         | |   / _` |/ _` |/ _ \ '_ \|_  / _` |
+#         | |__| (_| | (_| |  __/ | | |/ / (_| |
+#          \____\____|\____|\___|_| |_/___\____|
+#
+#      GNU Affero General Public License v3.0
+#    ------------------------------------------------
+#    Author   : prophet
+#    Created  : 2020-07-21 10:48:41.540377
+#    UUID     : ueVtZeZVGsGHjX2O
+#    ------------------------------------------------
+#
 import collections
 import math
 import sys
@@ -72,6 +88,9 @@ def mapl(iterable, format=0):
         return list(map(str, iterable))
     elif format == 2:
         return list(map(list, iterable))
+#
+#   >>>>>>>>>>>>>>> START OF SOLUTION <<<<<<<<<<<<<<
+#
 
 
 def solve():
@@ -93,3 +112,8 @@ def solve():
 
 for i in range(input(11)):
     solve()
+# solve()
+
+#
+#   >>>>>>>>>>>>>>>> END OF SOLUTION <<<<<<<<<<<<<<<
+#

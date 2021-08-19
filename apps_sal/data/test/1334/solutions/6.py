@@ -4,6 +4,8 @@ def run():
     s = input()
     cs = sorted(set(s))
     kcs = {c: i for i, c in enumerate(cs)}
+    # print(kcs);return
+    # print(cs)
 
     if k > len(s):
         print(s + (cs[0] * (k - len(s))))

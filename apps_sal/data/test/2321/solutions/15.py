@@ -10,6 +10,8 @@ for test in range(0, t):
 
     for i in range(0, n):
 
+        # print(i)
+
         if s[i] == '<':
             prefix_len += 1
 
@@ -17,6 +19,8 @@ for test in range(0, t):
             break
 
     for i in range(n - 1, -1, -1):
+
+        # print(i)
 
         if s[i] == '>':
             suffix_len += 1

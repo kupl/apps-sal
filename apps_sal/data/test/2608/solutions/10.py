@@ -21,6 +21,8 @@ for c in range(cs):
     BW1 = getBW(x1, y1, x2, y2)
     BW2 = getBW(x3, y3, x4, y4)
     BWO = [0, 0]
+    #if x1 > x3: (x1, y1, x2, y2), (x3, y3, x4, y4) = (x3, y3, x4, y4), (x1, y1, x2, y2)
+    #xO1, xO2 = x1, min(x2, x4)
     xo1 = max(x1, x3)
     xo2 = min(x2, x4)
     yo1 = max(y1, y3)

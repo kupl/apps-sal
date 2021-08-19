@@ -1,3 +1,4 @@
+# C
 n = int(input())
 mod = 10e8 + 7
 

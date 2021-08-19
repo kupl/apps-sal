@@ -31,6 +31,7 @@ else:
             j += 1
             if(check(repeat)):
                 minm = min(minm, j - i)
+                # print("a",i,j)
                 boolean = True
             else:
                 boolean = False
@@ -40,6 +41,7 @@ else:
             i += 1
             if(check(repeat)):
                 boolean = True
+                # print("b",i,j)
                 minm = min(minm, j - i)
             else:
                 boolean = False
@@ -50,6 +52,7 @@ else:
         i += 1
         if(check(repeat)):
             boolean = True
+            # print(i,j)
             minm = min("c", minm, j - i)
         else:
             boolean = False

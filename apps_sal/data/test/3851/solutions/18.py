@@ -22,6 +22,7 @@ dis = n * k
     if dis%i==0:
         factors.append(i)
         factors.append(dis//i)
+#print(factors,'factors')
 m=len(factors)
 nax,nin=-1,1e12+1
 for i in range(m):

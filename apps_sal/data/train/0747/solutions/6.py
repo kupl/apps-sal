@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(n, lst):
     d = dict()
 

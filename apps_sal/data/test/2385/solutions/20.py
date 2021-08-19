@@ -6,6 +6,7 @@ MOD = 10 ** 9 + 7
 
 def solve(n, edge_list):
 
+    # mod
     factorial = [1] * n
     for i in range(1, n):
         factorial[i] = (factorial[i - 1] * i) % MOD
@@ -14,12 +15,14 @@ def solve(n, edge_list):
     for i in range(n - 2, 0, -1):
         factorial_inv[i] = (factorial_inv[i + 1] * (i + 1)) % MOD
 
+    # graph
     g = [[] for _ in range(n)]
     for i in range(n - 1):
         a, b = edge_list[i]
         g[a].append(b)
         g[b].append(a)
 
+    # root 0
     order = []
     parent = [-1] * n
     parent[0] = 0
@@ -34,6 +37,7 @@ def solve(n, edge_list):
                 children[p].append(q)
                 queue.append(q)
 
+    # n_children
     count_children_res = [-1] * n
 
     for x in order[::-1]:
@@ -56,6 +60,7 @@ def solve(n, edge_list):
                 r %= MOD
             assign_children_res[x] = r
 
+    # reverse direction
     assign_parents_res = [-1] * n
     assign_parents_res[0] = 1
 
@@ -65,10 +70,12 @@ def solve(n, edge_list):
         r *= pow(assign_children_res[x], MOD - 2, MOD)
         r *= factorial[count_children_res[x] + 1]
 
+        # r *= factorial[count_children_res[p] - count_children_res[x] - 1]
         r *= factorial_inv[count_children_res[p]]
 
         r *= assign_parents_res[p]
         r *= factorial[n - count_children_res[x] - 2]
+        # r *= factorial_inv[count_children_res[p] - count_children_res[x] - 1]
         r *= factorial_inv[n - count_children_res[p] - 1]
 
         r %= MOD
@@ -79,14 +86,17 @@ def solve(n, edge_list):
 
     for i in range(1, n):
         res = factorial[n - 1]
+        # children
         for j in children[i]:
             res *= assign_children_res[j]
             res *= factorial_inv[count_children_res[j] + 1]
             res %= MOD
+        # parent
         res *= assign_parents_res[i]
         res *= factorial_inv[n - 1 - count_children_res[i]]
         res %= MOD
         res_list[i] = res
+    # print(res_list)
     return res_list
 
 
@@ -110,6 +120,8 @@ def test():
 
 def __starting_point():
     test()
+    # r_star = solve(200000, [(i, 0) for i in range(1, 200000)])
+    # print(1)
     main()
 
 

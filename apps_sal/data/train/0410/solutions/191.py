@@ -34,9 +34,9 @@ class Solution:
         if n not in powers:
             power = 0
             while n != 1:
-                if n % 2:
+                if n % 2:   # n is odd
                     n = n * 3 + 1
-                else:
+                else:       # n is even
                     n //= 2
                 power += 1
                 if n in powers:

@@ -1,4 +1,10 @@
+# import sys
 from sys import stdout
+# from copy import copy, deepcopy
+# from functools import lru_cache
+# from string import ascii_lowercase
+# from math import inf
+# inf = float('inf')
 
 
 def main():
@@ -12,6 +18,7 @@ def solve_case():
     len_s = len(S)
     int_s = [ord(c) - ord('a') for c in S]
 
+    # next_char_pos[from_idx][letter_idx] := the position of the next letter `letter_idx` from `from_idx`
     next_char_pos = make_list((len_s + 1, 26), len_s)
     for from_idx in reversed(list(range(len_s))):
         for letter_idx in range(26):
@@ -21,6 +28,7 @@ def solve_case():
                 pos = next_char_pos[from_idx + 1][letter_idx]
             next_char_pos[from_idx][letter_idx] = pos
 
+    # non_subseq_len[from_idx] := the length of the shortest "non subsequence" in S[from_idx:]
     non_subseq_len = make_list([len_s + 2], len_s + 1)
     non_subseq_len[len_s] = 1
     non_subseq_len[len_s + 1] = 0
@@ -41,6 +49,8 @@ def solve_case():
         idx = ans_next_pos[idx]
     return ans
 
+#################################
+
 
 def read_str(): return input()
 def read_int(): return int(input())
@@ -51,6 +61,7 @@ def list_to_str(l, sep=' '): return sep.join(map(str, l))
 
 
 l2s = list_to_str
+# shape: tuple of ints | list of ints
 
 
 def make_list(shape, value=None):
@@ -60,6 +71,7 @@ def make_list(shape, value=None):
 
 
 def __starting_point():
+    # sys.setrecursionlimit(1000000)
     main()
 
 

@@ -4,6 +4,7 @@ class Solution:
         import collections
         distance = [[float('inf')] * n for _ in range(n)]
         graph = collections.defaultdict(list)
+        # initialize the graph and distance matrix
         for i, j, w in edges:
             distance[i][j] = distance[j][i] = w
             graph[i].append(j)
@@ -11,6 +12,7 @@ class Solution:
         for i in range(n):
             distance[i][i] = 0
 
+        # use dijkstra algorithm for every node
         global_min = [-1, -1]
         for i in range(n):
             count = 0

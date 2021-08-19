@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 x = []
 y = []
@@ -20,3 +21,4 @@ while(i < n - 1):
 a += (x[i] * y[0] - y[i] * x[0]) / 2
 
 print(abs(a))
+# print(x,y)

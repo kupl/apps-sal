@@ -7,10 +7,12 @@ def amazon_check_mate(king, amazon):
     board[king_pos[0]][king_pos[1]] = "K"
     board[amazon_pos[0]][amazon_pos[1]] = 'A'
     dirs = [[1, 0], [0, 1], [-1, 0], [0, -1], [1, -1], [-1, 1], [1, 1], [-1, -1], [1, 2], [2, 1], [1, -2], [2, -1], [-1, 2], [-2, 1], [-2, -1], [-1, -2]]
+    # king
     for i in range(8):
         row, col = king_pos[0] + dirs[i][0], king_pos[1] + dirs[i][1]
         if (0 <= row < 8) and (0 <= col < 8):
             board[row][col] = 'B' if (board[row][col] == ' ') else 'C'
+    # amazon
     for i in range(16):
         row, col = amazon_pos[0] + dirs[i][0], amazon_pos[1] + dirs[i][1]
         while (0 <= row < 8) and (0 <= col < 8) and board[row][col] in [' ', 'B']:
@@ -19,6 +21,7 @@ def amazon_check_mate(king, amazon):
             if 8 <= i:
                 break
             row, col = row + dirs[i][0], col + dirs[i][1]
+    # count
     res = [0, 0, 0, 0]
     for row in range(8):
         for col in range(8):

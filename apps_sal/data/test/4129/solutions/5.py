@@ -5,8 +5,12 @@ adj = [[] for i in range(N)]
 mark = [0 for i in range(N)]
 topo = []
 sys.setrecursionlimit(6000)
+#fin = open("999E.inp", "r")
+#fou = open("999E.out", "w")
+#n, m, s = map(int, fin.readline().split())
 n, m, s = list(map(int, input().split()))
 for i in range(m):
+    #u, v = map(int, fin.readline().split())
     u, v = list(map(int, input().split()))
     adj[u].append(v)
 
@@ -41,4 +45,5 @@ for i in range(n):
     if (mark[v] == 0):
         res += 1
         dfs(v)
+# fou.write(str(res))
 print(res)

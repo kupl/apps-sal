@@ -1,7 +1,7 @@
 import itertools
 
 
-def gta(limit, *args):
+def gta(limit, *args):  # find the base_list first
 
     x = max(len(str(l)) for l in args)
 

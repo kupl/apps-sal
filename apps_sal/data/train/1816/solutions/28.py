@@ -11,6 +11,7 @@ class Solution:
         ans = []
         for name in sorted(map.keys()):
             times = sorted(map[name])
+            # print(name, times)
 
             for i in range(len(times) - 2):
                 if times[i + 2] - times[i] <= 60:

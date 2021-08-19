@@ -15,8 +15,12 @@ import sys
 import threading
 from collections import deque, Counter, OrderedDict, defaultdict
 from heapq import *
+# from math import ceil, floor, log, sqrt, factorial, pow, pi, gcd
+# from bisect import bisect_left,bisect_right
+# from decimal import *,threading
 from fractions import Fraction
 mod = int(pow(10, 9) + 7)
+# mod = 998244353
 
 
 def ii(): return int(input())
@@ -214,6 +218,10 @@ def binsearch(a, l, r, x):
         else:
             r = mid + 1
     return -1
+
+
+# def input():
+#    return stdin.buffer.readline()
 
 
 def readTree(n):

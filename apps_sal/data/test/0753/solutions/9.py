@@ -1,6 +1,8 @@
 from fractions import gcd, Fraction, Decimal
 a, b, c, d = map(int, input().split())
 
+# c->a
+# d->b
 if(a / b < c / d):
     N = (b * c) - (a * d)
     D = b * c

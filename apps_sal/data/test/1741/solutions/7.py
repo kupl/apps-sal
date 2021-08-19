@@ -26,9 +26,12 @@ else:
                 ok = False
                 break
             delta = math.sqrt(y * (2 * mid - y))
+            # delta = math.sqrt(math.pow(mid, 2) - math.pow(mid-y, 2)) # 数据精度丢失
             a, b = max(a, x - delta), min(b, x + delta)
+            #print("x: {}, y: {}, a: {}, b: {}, delta: {}".format(x, y, a, b, delta))
         if not ok:
             continue
+        #print(a, b, l, r, mid)
         if a > b:
             l = mid
         else:

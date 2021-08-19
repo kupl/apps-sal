@@ -17,6 +17,8 @@ class Solution:
             ls -= A[c]
             ls += A[L + c]
 
+            # print(0+c,ls,L+c,A[c],A[L+c])
+
             dl[(0 + c + 1, L + c)] = ls
             c += 1
 
@@ -29,6 +31,8 @@ class Solution:
 
         dll = sorted(list(dl.items()), key=lambda x: x[1], reverse=True)
         mll = sorted(list(dm.items()), key=lambda x: x[1], reverse=True)
+
+        # print(dll,mll)
 
         f = -1
         for x in dll:

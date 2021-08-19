@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def solver(d, v, a):
     a.append(v)

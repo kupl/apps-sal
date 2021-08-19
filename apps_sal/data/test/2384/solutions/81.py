@@ -2,6 +2,7 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     dp = [[[-float("inf")] * 2 for j in range(3)] for i in range(n + 1)]
+    # dp[index][i//2+j個選んだ][直前の値を採用したか否か]
     dp[0][0][0] = 0
     for i in range(n):
         x = a[i]

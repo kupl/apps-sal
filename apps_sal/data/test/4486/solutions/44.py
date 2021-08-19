@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 S = list(input())
 S.insert(0, '0')

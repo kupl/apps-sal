@@ -9,3 +9,4 @@ class Solution:
             if k == 0:
                 return i
         return a2[-1] + k
+        # return 0

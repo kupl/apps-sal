@@ -1,3 +1,4 @@
+# coding: utf-8
 import numpy as np
 N, S = list(map(int, input().split()))
 A = [0] + list(map(int, input().split()))

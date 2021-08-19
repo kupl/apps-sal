@@ -3,6 +3,7 @@ from sys import stdin
 
 def kmp(pat, text, t):
     s = pat + "?" + text
+    # z[i] es el tamaño del prefijo mas largo de, formado por una subcadena s[i:...]
     z = [0 for i in range(len(s))]
     L = 0
     R = 0

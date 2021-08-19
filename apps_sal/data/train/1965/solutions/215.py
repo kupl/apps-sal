@@ -13,11 +13,17 @@ class Solution:
             parents[py] = px
             return px != py
 
+        # use union find for components
+        # init each node as a component
+        # once an edge is found (use num 3 first) then
+        # union the components, if there is change, then amount of components change
+        # if only one component left then the graph is traversable
         parents = [idx for idx in range(n)]
         removed_edges = 0
         for link in edges:
             if link[0] != 3:
                 continue
+            # only double linked edges first
             if not union(link[1] - 1, link[2] - 1):
                 removed_edges += 1
 
@@ -27,7 +33,7 @@ class Solution:
                 continue
             if not union(link[1] - 1, link[2] - 1):
                 removed_edges += 1
-        if len(Counter(find(i) for i in parents)) != 1:
+        if len(Counter(find(i) for i in parents)) != 1:  # LLRN - use find() instead of referring directly
             return -1
 
         parents = bob_parents

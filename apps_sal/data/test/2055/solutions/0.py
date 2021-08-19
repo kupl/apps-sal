@@ -3,6 +3,8 @@ import sys
 
 input = sys.stdin.readline
 
+############ ---- Input Functions ---- ############
+
 
 def inp():
     return (int(input()))
@@ -19,6 +21,9 @@ def inlt():
 def insr():
     s = input()
     return(list(map(int, list(s[:len(s) - 1]))))
+# def insr():
+#     s = input()
+#     return list(s[:len(s) - 1])
 
 
 def invr():
@@ -26,6 +31,7 @@ def invr():
 
 
 def check(cities, stations, k, allow):
+    # cities = cities.copy()
     n = len(cities)
     k = min(cities[0], k)
     last_st = stations[-1] - k
@@ -33,6 +39,7 @@ def check(cities, stations, k, allow):
     for i in range(n - 1):
         d = stations[i] - (c_i + cities[i + 1])
         if d > 0:
+            # cities[i + 1] = 0
             c_i = 0
             allow -= d
             if allow < 0:

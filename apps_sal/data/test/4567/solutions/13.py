@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 N = int(input())
 s = sorted([int(input()) for i in range(N)])
 

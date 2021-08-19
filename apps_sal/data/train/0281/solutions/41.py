@@ -3,7 +3,7 @@ def dist(s_c, t_c):
         return 0
     elif s_c < t_c:
         return ord(t_c) - ord(s_c)
-    else:
+    else:  # s_c > t_c
         return ord('z') - ord(s_c) + ord(t_c) - ord('a') + 1
 
 

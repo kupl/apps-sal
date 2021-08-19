@@ -37,13 +37,13 @@ y -= 1
 a -= 1
 b -= 1
 
-if (x == a) and (y == b):
+if (x == a) and (y == b):  # если начало и конец пути совпадают
     if ((x - 1 > -1) and (g[y][x - 1] == '.')) or ((x + 1 < m) and (g[y][x + 1] == '.')) or ((y - 1 > -1) and (g[y - 1][x] == '.')) or ((y + 1 < n) and (g[y + 1][x] == '.')):
         print('YES')
     else:
         print('NO')
 
-else:
+else:  # если финишная клетка треснувшая или у нее есть целые соседи
     f = False
     if g[b][a] == '.':
         f = True

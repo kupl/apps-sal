@@ -15,6 +15,7 @@ def ni(): return int(stdin.readline())
 def nf(): return float(stdin.readline())
 
 
+# 入力・隣接リスト作成
 n, m = li()
 graph = defaultdict(set)
 geta = pow(10, 7)

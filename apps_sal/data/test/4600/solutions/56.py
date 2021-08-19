@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 a = [input().split() for i in range(m)]
-wa = [0] * n
+wa = [0] * n  # ACまでのWA数
 ac = [0] * n
 
 for i in range(m):

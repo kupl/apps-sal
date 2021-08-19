@@ -15,6 +15,7 @@ while dl < n:
         if Pr[i] == -1:
             if Nm[i] != -1:
                 dl += 1
+                # print(Nm[i],'done',t)
             if kl < n:
                 Pr[i] = A[kl] - 1
                 Nm[i] = kl
@@ -24,6 +25,7 @@ while dl < n:
                 Pr[i] = -1
     for i in range(k):
         if m.floor(dl / n * 100 + 0.5) == A[Nm[i]] - Pr[i] and Nm[i] != -1:
+            # print(m.floor(dl/n*100+0.5),Nm[i])
             Rz[Nm[i]] = True
     t += 1
 print(sum(Rz))

@@ -1,3 +1,13 @@
+# py3com
+# pycom
+# ciphereck
+# t=int(input())
+# n=list(map(int,input().split()))
+# a,b=map(int,input().split())
+# print(n)
+# print(a)
+# n.sort()
+# print(*ans) to print list with spaces without brackets
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = 0

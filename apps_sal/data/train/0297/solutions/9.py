@@ -2,6 +2,7 @@ class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
 
         def count(tiles):
+            # print(tiles)
             counter = set()
             if len(tiles) == 1:
                 counter.add(tiles)
@@ -21,6 +22,7 @@ class Solution:
                             extra.add(j[:k] + tiles[idx] + j[k + 1:])
                     x.update(extra)
                     counter.update(x)
+            # print(counter)
             return counter
 
         return len(count(tiles))

@@ -27,4 +27,6 @@ def main():
         print(string)
 
 
+#import doctest
+# doctest.testmod()
 main()

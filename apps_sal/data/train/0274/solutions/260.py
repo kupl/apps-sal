@@ -1,6 +1,9 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # keep track of max and min value of sliding window
+        # mono decreasing deque
         max_deque = collections.deque()
+        # mono increasing deque
         min_deque = collections.deque()
         n = len(nums)
         l = 0
@@ -9,6 +12,9 @@ class Solution:
         for r in range(n):
             self.push_max_deque(max_deque, nums, r)
             self.push_min_deque(min_deque, nums, r)
+            # if current window violate the limit,
+            # then it is guarantee current num change either
+            # head of max_deque or min_deque
             while nums[max_deque[0]] - nums[min_deque[0]] > limit:
                 if max_deque[0] == l:
                     max_deque.popleft()

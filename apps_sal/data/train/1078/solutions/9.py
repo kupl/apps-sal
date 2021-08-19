@@ -13,4 +13,4 @@ for _ in range(int(input())):
         else:
             w = w[1:]
             c += 1
-    print(c)
+    print(c)  # cook your dish here

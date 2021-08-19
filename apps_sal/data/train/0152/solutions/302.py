@@ -5,7 +5,7 @@ class Solution:
 
         def isfail(mid):
             ans = 1
-            curr = position[0]
+            curr = position[0]  # alike greedy idea, we just put the first ball at position 0!
             for i in range(1, n):
                 if position[i] - curr >= mid:
                     ans += 1

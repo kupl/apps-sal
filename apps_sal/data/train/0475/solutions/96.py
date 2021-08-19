@@ -7,6 +7,7 @@ class Solution:
                 s += nums[j]
                 ans.append(s)
         ans = sorted(ans)
+        # print(ans)
         res = 0
         for i in ans[left - 1:right]:
             res += i

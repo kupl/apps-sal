@@ -6,8 +6,8 @@ C = np.zeros((H, W))
 for i in range(H):
     c = input()
     for j in range(len(c)):
-        if c[j] == "
-        C[i][j] = 1
+        if c[j] == "#":
+            C[i][j] = 1
 CH = []
 CW = []
 

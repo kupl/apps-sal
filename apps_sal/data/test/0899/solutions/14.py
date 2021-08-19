@@ -1,3 +1,6 @@
+# まずワーシャルフロイドの表を作る
+# 元の表で頂点A-Bを結ぶ距離が、ワーシャルフロイドの表で短縮されていたら、その辺は使わないで良いことになる
+# この個数を数える
 
 from scipy.sparse.csgraph import csgraph_from_dense
 from scipy.sparse.csgraph import floyd_warshall

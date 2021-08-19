@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 
 import sys
 sys.setrecursionlimit(300000)
 
-MOD = 1000000007
+MOD = 1000000007  # type: int
 
 
 def solve(N: int, C: "List[int]"):
@@ -28,8 +29,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    C = [int(next(tokens)) for _ in range(N)]
+    N = int(next(tokens))  # type: int
+    C = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, C)
 
 

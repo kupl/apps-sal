@@ -8,6 +8,7 @@ for i in m:
     marr2[int(i)] += 1
 low = 0
 high = 0
+# print(marr,marr2)
 for i in s:
     i = int(i)
     b = 0
@@ -18,9 +19,11 @@ for i in s:
             break
     if b == 0:
         low += 1
+# print(marr,marr2)
 for i in s:
     i = int(i)
     for j in range(i + 1, 10):
+        # print(j,marr2[j])
         if marr2[j] > 0:
             marr2[j] -= 1
             high += 1

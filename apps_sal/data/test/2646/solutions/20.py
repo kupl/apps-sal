@@ -10,6 +10,7 @@ for i in range(M):
 dist = [0] * (N + 1)
 q = [1]
 dist[0] = -1
+# print(to[:4])
 
 dist = [0] * N
 pre = [0] * N
@@ -21,6 +22,7 @@ while len(q) != 0:
             dist[i - 1] = dist[a - 1] + 1
             pre[i - 1] = a
             q.append(i)
+    # print(q)
 
 print("Yes")
 for i in range(1, N):

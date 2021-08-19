@@ -1,3 +1,5 @@
+# cook your dish here
+# Let's hack this code.
 
 from sys import stdin, stdout
 import math
@@ -32,6 +34,8 @@ def powerLL(n, p):
         p = int(p / 2)
         n = n * n % mod
     return result
+
+# --------------------------------------
 
 
 def myCode():

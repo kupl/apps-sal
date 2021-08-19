@@ -6,6 +6,7 @@ def main():
         field.append(line)
 
     ans = []
+    # zig-zag
     for i in range(H):
         if i % 2 == 0:
             for j in range(W):

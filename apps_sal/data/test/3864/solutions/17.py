@@ -35,7 +35,7 @@ n+2x-1
 """
 
 
-def inverse(a, mod):
+def inverse(a, mod):  # aのmodを法にした逆元を返す
     return pow(a, mod - 2, mod)
 
 

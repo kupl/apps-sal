@@ -1,6 +1,10 @@
+# cook your dish here
 def nextPowerOf2(n):
     count = 0
 
+    # First n in the below
+    # condition is for the
+    # case where n is 0
     if (n and not(n & (n - 1))):
         return n
 

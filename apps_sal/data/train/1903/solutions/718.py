@@ -12,7 +12,9 @@ class Solution:
                 p1 = (points[i][0], points[i][1])
                 p2 = (points[j][0], points[j][1])
                 connections.append((p1, p2, dist))
+        # print(self.father)
         connections = sorted(connections, key=lambda x: x[2])
+        # print(connections)
 
         res = 0
 

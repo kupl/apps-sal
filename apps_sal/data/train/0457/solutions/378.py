@@ -2,6 +2,7 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         @lru_cache(None)
         def dfs(amt, idx):
+            # print(amt, idx)
             if idx < 0:
                 if amt == 0:
                     return 0

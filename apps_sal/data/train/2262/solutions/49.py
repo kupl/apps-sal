@@ -8,7 +8,7 @@ input = sys.stdin.readline
 """
 
 R, C, N = map(int, input().split())
-pts = []
+pts = []  # 角度、番号
 def is_inner(x, y): return 0 < x < R and 0 < y < C
 
 

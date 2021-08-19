@@ -8,7 +8,7 @@ class Solution:
         if not strs:
             return ""
         cpy = strs.copy()
-        return self.__helper(cpy)
+        return self.__helper(cpy)  # 记得加 self
 
     def __helper(self, strs):
         if len(strs) == 1:
@@ -24,4 +24,4 @@ class Solution:
             prefix = s1[:j]
         strs[1] = prefix
         strs = strs[1:]
-        return self.__helper(strs)
+        return self.__helper(strs)  # 记得加 self

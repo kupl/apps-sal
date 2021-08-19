@@ -30,4 +30,5 @@ for loop in range(tt):
     if len(now) > 0:
         lis.append(now)
 
+    #print (lis)
     print(len(lis) - 1)

@@ -21,6 +21,8 @@ def main():
             if rx < bx and \
                ry < by and \
                tmp_r[1] < ry:
+               # b[0] - r[0] < tmp_b[0] - r[0] and \
+               # b[1] - r[1] < tmp_b[1] - r[1]:
                 tmp_r = r
 
         if tmp_r == (-1, -1):

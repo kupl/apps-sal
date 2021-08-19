@@ -1,3 +1,4 @@
+# cook your dish here
 def possible(l, n, k):
     pass
 
@@ -20,6 +21,8 @@ t = int(input())
 for _ in range(t):
     n, d = list(map(int, input().split()))
     l = list(map(int, input().split()))
+    # print(bs(l,n,d))
+    # k=[]
     for j in l[::-1]:
         c = d // j
         d = c * j

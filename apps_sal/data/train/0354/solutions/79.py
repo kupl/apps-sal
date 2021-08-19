@@ -10,3 +10,5 @@ class Solution:
                 for k in range(1, min(rollMax[j], i + 1)):
                     dp[i][j][k] = dp[i - 1][j][k - 1]
         return sum(dp[n - 1][j][k] for j in range(6) for k in range(K)) % (10**9 + 7)
+
+    # https://leetcode.com/problems/dice-roll-simulation/discuss/403862/Python-O(N)-Bottom-Up-DP-with-explaination

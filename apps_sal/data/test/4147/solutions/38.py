@@ -1,4 +1,7 @@
+# n=int(input())
 n, A, B, C = map(int, input().split())
+# l=list(map(int,input().split()))
+#l=[list(map(int,input().split())) for i in range(n)]
 l = [int(input()) for i in range(n)]
 
 INF = 10**9

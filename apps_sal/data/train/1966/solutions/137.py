@@ -16,11 +16,14 @@ class Solution:
             return sum(endhere)
         rows = mat[0][:]
         ans = counts(rows[:])
+        # print(ans)
         for i in range(1, len(mat)):
             for j in range(len(mat[0])):
                 if mat[i][j] == 1:
                     rows[j] += 1
                 else:
                     rows[j] = 0
+            # print(rows)
             ans += counts(rows[:])
+            # print(ans)
         return ans

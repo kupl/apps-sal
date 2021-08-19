@@ -3,8 +3,8 @@ from math import sqrt
 
 
 def solve():
-    s = input()
-    t = input()
+    s = input()  # Oleg's letters
+    t = input()  # Igor's letters
     n = len(s)
 
     s = sorted(s)[:(n + 1) // 2]
@@ -45,6 +45,8 @@ def solve():
                 ansr -= 1
                 igor -= 1
             pass
+
+        # print(ans)
 
     ans = ''.join(ans)
 

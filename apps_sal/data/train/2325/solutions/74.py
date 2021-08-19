@@ -1,3 +1,4 @@
+#from collections import deque,defaultdict
 def printn(x): return print(x, end='')
 def inn(): return int(input())
 
@@ -7,9 +8,10 @@ def inm(): return map(int, input().split())
 def ins(): return input().strip()
 
 
-DBG = True
+DBG = True  # and False
 BIG = 10**18
 R = 10**9 + 7
+#R = 998244353
 
 
 def ddprint(x):
@@ -25,7 +27,10 @@ for c in s:
 tacc = [0]
 for c in t:
     tacc.append(((1 if c == 'A' else 2) + tacc[-1]) % 3)
+# ddprint(sacc)
+# ddprint(tacc)
 q = inn()
 for i in range(q):
     a, b, c, d = inm()
+    #ddprint('{} {} {} {}'.format(sacc[b],sacc[a-1],tacc[d],tacc[c-1]))
     print('YES' if (sacc[b] - sacc[a - 1]) % 3 == (tacc[d] - tacc[c - 1]) % 3 else 'NO')

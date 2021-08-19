@@ -3,6 +3,8 @@ from collections import Counter
 n = int(input())
 a = list(map(int, input().split()))
 
+# a=[2,2,2,3,4,3,1,2,1,3,1,2,1,2,2,1,2,1]
+# n=len(a)
 
 a.sort()
 

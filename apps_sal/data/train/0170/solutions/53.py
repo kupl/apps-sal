@@ -22,6 +22,7 @@ class Solution:
         MIN = m + margin
         LENGTH1 = len(L1) - 1
         LENGTH2 = len(L2) - 1
+        # print(L1,L2)
 
         i = len(L1) - 1
         j = len(L2) - 1
@@ -32,12 +33,15 @@ class Solution:
 
                 a = LENGTH1 - i
                 b = j + 1
+                # print(i,j,a+b)
                 MIN = min(MIN, margin + a + b)
 
             else:
                 i -= 1
                 if j != LENGTH2:
                     j += 1
+                # print(i,j)
+        # print()
         i = 0
         j = 0
         while i < len(L1) and j < len(L2):
@@ -45,12 +49,14 @@ class Solution:
                 i += 1
                 a = LENGTH1 - i + 1
                 b = j
+                # print(i,j,a+b)
                 MIN = min(MIN, margin + a + b)
 
             else:
                 j += 1
                 if i != 0:
                     i -= 1
+                # print(i,j)
 
         if MIN < 0:
             MIN = 0

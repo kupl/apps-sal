@@ -79,3 +79,12 @@ for [u, v] in pair:
             max_S += x + y
 
 print(max(max_S + max_remain, max_S - minus))
+
+# 7 3
+# abb 2
+#aaa -3
+#bba -1
+#zyz -4
+# abb 5
+# aaa 7
+# xyx 4

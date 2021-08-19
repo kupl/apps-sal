@@ -34,6 +34,7 @@ class Solution:
                         ans = initial_node
 
             return ans if ans < float('inf') else min(initial)
+        # return method1()
 
         def method2():
             def dfs(node, vis):
@@ -49,8 +50,10 @@ class Solution:
                 if node not in seen:
                     vis = set([node])
                     dfs(node, vis)
+                    # caculate the number of infected node in the subgraph
                     infect = vis & s
                     if len(infect) == 1:
+                        # more number of nodes or smaller index
                         if len(vis) > subgraph_len or (len(vis) == subgraph_len and list(infect)[0] < del_node):
                             del_node, subgraph_len = list(infect)[0], len(vis)
                     seen |= vis

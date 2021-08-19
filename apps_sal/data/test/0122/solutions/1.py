@@ -1,6 +1,8 @@
 def solve():
     n = int(input())
+    #n, w = map(int, input().split())
     a = list(map(int, input().split()))
+    #a = [list(map(int, input().split())) for _ in range(n)]
     ok = 0
     Su = sum(a)
     di = dict()

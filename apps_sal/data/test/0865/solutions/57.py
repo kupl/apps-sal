@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 import numpy as np
@@ -28,9 +29,11 @@ for i in range(N):
     a, b = MAP()
     AB.append((a, b))
 
+# 各料理を時間の昇順でソート
 AB.sort(key=itemgetter(1), reverse=True)
 AB.sort(key=itemgetter(0))
 
+# 後は普通のナップザック
 TMAX = 6007
 dp = np.zeros((N + 1, TMAX), dtype=np.int64)
 for i in range(N):

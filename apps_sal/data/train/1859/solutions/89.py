@@ -15,4 +15,5 @@ class Solution:
                     left[i][j] = left[i][j + 1] + 1
                     down[i][j] = down[i + 1][j] + 1
                     output[i][j] = min(left[i][j], down[i][j], output[i + 1][j + 1] + 1)
+                #print(i, j, output[i][j], left[i][j], down[i][j])
         return sum(sum(x) for x in output)

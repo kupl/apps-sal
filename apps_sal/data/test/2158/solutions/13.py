@@ -1,3 +1,4 @@
+# maa chudaaye duniya
 from collections import defaultdict
 graph = defaultdict(list)
 n = int(input())
@@ -17,13 +18,18 @@ visited = [False for i in range(n + 1)]
 
 def dfs(node, parent, dist):
     visited[node] = True
+    # print(maxsf)
+    # print('checking ', node, parent)
+    # print(visited)
     if parent != -1:
         e = '{} : {}'.format(parent, node)
         e1 = '{} : {}'.format(node, parent)
         if e in weights:
             dist += weights[e]
+            # print(e, dist)
         else:
             dist += weights[e1]
+            # print(e1, dist)
         if dist > maxsf[0]:
             maxsf[0] = dist
     for children in graph[node]:

@@ -5,15 +5,15 @@ class Game():
         for i in range(1, board**2 + 1):
             numwork = ((i - 1) // board) * (2 * board + 1)
             numwork += (i - 1) % board + 1
-            work[i].append(numwork)
+            work[i].append(numwork)  # top edge
             line_list[numwork].append(i)
             numwork += board
-            work[i].append(numwork)
-            work[i].append(numwork + 1)
+            work[i].append(numwork)  # left edge
+            work[i].append(numwork + 1)  # right edge
             line_list[numwork].append(i)
             line_list[numwork + 1].append(i)
             numwork += board + 1
-            work[i].append(numwork)
+            work[i].append(numwork)  # bottom edge
             line_list[numwork].append(i)
         return work, line_list
 

@@ -5,3 +5,4 @@ def get_size(w, h, d):
     volume = w * h * d
     array.append(volume)
     return array
+    # your code here

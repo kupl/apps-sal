@@ -1,3 +1,4 @@
+# cook your dish here
 def xnor(a, b):
     if a == 0:
         return 1 ^ b

@@ -1,3 +1,5 @@
+# Note: Cuboid was misspelled and camelCased in problem statement, tests, and
+# required function signature.
 
 import functools
 import operator

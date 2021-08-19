@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc080/tasks/abc080_d
+# D - Recording
 
 N, C = list(map(int, input().split()))
 s = [0] * N
@@ -12,6 +14,7 @@ for i in range(N):
     L.append([t[i], c[i] - 1, 0])
 
 L.sort()
+# print(L)
 ans = 0
 tmp = 0
 

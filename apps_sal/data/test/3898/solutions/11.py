@@ -1,4 +1,4 @@
-N = int(input())
+N = int(input())  # количество островов
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 A.remove(0)

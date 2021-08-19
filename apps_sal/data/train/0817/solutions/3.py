@@ -4,4 +4,4 @@ for _ in range(int(input())):
     x = 0
     for i in a:
         x ^= i
-    print(x)
+    print(x)  # cook your dish here

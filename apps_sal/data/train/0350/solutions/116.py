@@ -20,5 +20,6 @@ class Solution:
                 if window[last] == 0:
                     del window[last]
                 j += 1
+            # print(j, i)
             res += i - j + 1
         return res

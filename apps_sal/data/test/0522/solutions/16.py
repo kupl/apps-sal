@@ -2,12 +2,14 @@ def baby_step_giant_step(g, y, p):
     """y = g^x (mod p)を満たすxを求める"""
     m = int(p**0.5) + 1
 
+    # Baby-step
     baby = {}
     b = 1
     for i in range(m):
         baby[b] = i
         b = (b * g) % p
 
+    # Giant-step
     gm = pow(b, p - 2, p)
     giant = y
     for i in range(m):

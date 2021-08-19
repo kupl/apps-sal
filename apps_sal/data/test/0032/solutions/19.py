@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: q7199
+# @Date:   2016-12-30 22:25:59
+# @Last Modified by:   q7199
+# @Last Modified time: 2016-12-30 22:30:38
 
 n = input()
 flag = True
@@ -19,6 +24,7 @@ for i in range(int(n)):
     elif way == "East":
         now[1] -= int(step)
     if now[0] > 20000 or now[0] < 0:
+        # print("NO")
         flag = False
         break
 if flag and now[0] == 0:

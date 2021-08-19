@@ -11,6 +11,7 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
+#################################################
 n = RI()[0]
 ti = [0] * 3
 tot = [0] * 3

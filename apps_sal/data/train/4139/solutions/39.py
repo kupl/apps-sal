@@ -1,4 +1,5 @@
 def rental_car_cost(d):
+    # your code
     if(d == 1):
         return 40
     elif(d >= 7):

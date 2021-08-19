@@ -1,3 +1,4 @@
+# cook your dish here
 d1, v1, d2, v2, p = list(map(int, input().split()))
 store = 0
 vac = 0
@@ -19,6 +20,11 @@ else:
     else:
         small = d2
         vac = v2
+
+    # for i in range(diff):
+    #     store +=vac
+    #     if
+    # print(store)
 
     while store < p:
         if i >= diff:

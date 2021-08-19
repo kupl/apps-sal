@@ -6,3 +6,5 @@ for _ in range(int(input())):
         print("Yes")
     else:
         print("No")
+
+    # cook your dish here

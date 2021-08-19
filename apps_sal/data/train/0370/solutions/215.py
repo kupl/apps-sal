@@ -32,4 +32,5 @@ class Solution:
             for i in range(len(items) - 1):
                 UF.union(items[i], items[i + 1])
 
+        # print(UF.p)
         return max(Counter([UF.find(i) for i in range(len(A))]).values())

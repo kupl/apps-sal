@@ -1,6 +1,7 @@
 n, m = map(int, input().split(" "))
 a = [list(map(int, input().split(" "))) for i in range(n)]
 ans = 0
+# print(a)
 for i in range(2 ** 3):
     total = []
     minus = [1 for _ in range(3)]

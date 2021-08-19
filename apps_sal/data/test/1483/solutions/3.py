@@ -8,6 +8,7 @@ for i in range(len(p)):
     max_score = 0
     curr = i
     while True:
+        #print(scores, curr)
         scores[curr] += 1
         if scores[curr] == 2:
             ans.append(curr + 1)

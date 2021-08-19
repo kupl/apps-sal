@@ -1,12 +1,22 @@
+######################################################################
+# Write your code here
 import random
 from collections import defaultdict as df
 import sys
 input = sys.stdin.readline
+#import resource
+#resource.setrlimit(resource.RLIMIT_STACK, [0x10000000, resource.RLIM_INFINITY])
+# sys.setrecursionlimit(0x100000)
+# Write your code here
 def RI(): return [int(x) for x in sys.stdin.readline().strip().split()]
 def rw(): return input().strip().split()
 
 
+#import heapq
+# heapq.heapify(li) heappush(li,4) heappop(li)
+# random.shuffle(list)
 infinite = float('inf')
+#######################################################################
 
 t = int(input())
 

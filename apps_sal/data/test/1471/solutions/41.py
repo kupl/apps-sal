@@ -1,6 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[3]:
 
 
 from collections import deque
+
+
+# In[4]:
 
 
 N = int(input())
@@ -9,6 +16,9 @@ for _ in range(N - 1):
     u, v, w = list(map(int, input().split()))
     g[u - 1].append([v - 1, w])
     g[v - 1].append([u - 1, w])
+
+
+# In[5]:
 
 
 que = deque()
@@ -23,3 +33,6 @@ while que:
         que.append(v)
 for i in seen:
     print(i)
+
+
+# In[ ]:

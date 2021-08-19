@@ -13,6 +13,8 @@ def pow(a, n, m=MOD):
         a = a * a % m
         n >>= 1
     return ret
+# def inv(a,p=MOD):
+#    return pow(a,p-2,p);
 
 
 def inv(a, m=MOD):

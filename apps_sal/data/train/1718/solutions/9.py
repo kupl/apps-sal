@@ -11,7 +11,7 @@ def has_exit(maze):
         for ni, nj, nv in nbs:
             if nv == 'b':
                 return True
-            if nv == '
-            continue
+            if nv == '#' or (ni, nj) in v:
+                continue
             q.append((ni, nj)) or v.add((ni, nj))
     return False

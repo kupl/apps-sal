@@ -8,8 +8,8 @@ xudlr = [0, 0, -1, 1]
 D = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '
-        continue
+        if S[i][j] == '#':
+            continue
         d = [[-1] * W for _ in range(H)]
         d[i][j] = 0
         Q = deque()
@@ -22,8 +22,8 @@ for i in range(H):
                 x1 = x + xudlr[k]
                 if y1 < 0 or y1 >= H or x1 < 0 or x1 >= W:
                     continue
-                if S[y1][x1] == '
-                continue
+                if S[y1][x1] == '#':
+                    continue
                 if d[y1][x1] != -1:
                     continue
                 d[y1][x1] = d[y][x] + 1

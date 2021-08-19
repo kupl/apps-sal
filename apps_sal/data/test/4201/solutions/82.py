@@ -3,10 +3,10 @@ board = [[-1 for j in range(w)] for i in range(h)]
 for i in range(h):
     color = input()
     for j in range(w):
-        if color[j] == "
-        board[i][j] = 1
+        if color[j] == "#":
+            board[i][j] = 1  # 黒=1
         else:
-            board[i][j] = 0
+            board[i][j] = 0  # 白=0
 ans = 0
 
 for row_choose in range(1 << h):

@@ -6,7 +6,7 @@ class Solution:
         if (i, j) not in memo:
             minV = float('inf')
             for k in cuts:
-                if k > i and k < j:
+                if k > i and k < j:  # Valid cutting point
                     l, r = self.dp(i, k, cuts, memo), self.dp(k, j, cuts, memo)
                     minV = min(minV, l + r)
             if minV != float('inf'):

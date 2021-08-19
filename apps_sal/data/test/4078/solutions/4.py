@@ -1,6 +1,7 @@
 from sys import stdin, stdout
 from collections import defaultdict
 import math
+#stdin = open('input.txt','r')
 I = stdin.readline
 P = stdout.write
 
@@ -17,6 +18,7 @@ for j in range(m):
 ans = 0
 a, b = 0, 0
 inter = set()
+# print(indi)
 for i in range(n):
     for j in range(n):
         nowint = indi[j].intersection(indi[i])
@@ -29,6 +31,7 @@ for i in range(n):
             inter = nowint
 
 print(ans)
+# print(indi[b],nowint)
 print(len(indi[b]))
 for i in indi[b]:
 

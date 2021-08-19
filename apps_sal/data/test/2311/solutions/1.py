@@ -17,6 +17,7 @@ def count(A):
     for s in segs:
         for i in range(1, s + 1):
             count[i] += (s - i + 1)
+    # print(count)
     return count
 
 

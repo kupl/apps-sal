@@ -1,3 +1,4 @@
+# Made By Mostafa_Khaled
 bot = True
 Mod = 1000000007
 
@@ -95,3 +96,6 @@ for j in range(0, l):
 
 
 print(str(ans % Mod))
+
+
+# Made By Mostafa_Khaled

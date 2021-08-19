@@ -14,6 +14,10 @@ class Solution:
             return used
 
         while l < r:
+            # 1 2 3 4 5
+            # l       r
+            # l-> bigger
+            # <-r smaller
             d = r - (r - l) // 2
             used = isValid(d)
             if used >= m:

@@ -7,9 +7,9 @@ class Solution:
         ans = 0
 
         for cmd in commands:
-            if cmd == -2:
+            if cmd == -2:  # left
                 di = (di - 1) % 4
-            elif cmd == -1:
+            elif cmd == -1:  # right
                 di = (di + 1) % 4
             else:
                 for k in range(cmd):

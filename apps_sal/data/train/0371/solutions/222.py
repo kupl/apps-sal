@@ -6,6 +6,7 @@ class Solution:
         for i, bus in enumerate(routes):
             for stop in bus:
                 buses[stop].append(i)
+        # print(buses)
         q = [S]
         result = 0
         took = set()

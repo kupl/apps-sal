@@ -17,6 +17,9 @@ for _ in range(N):
     else:
         E[y].append(x)
 
+# print(V)
+# print(E)
+# DFS
 visited = [False] * 200020
 willSearch = [False] * 200020
 Q = deque()
@@ -41,10 +44,12 @@ for v in V:
             edge_count += 1
             if visited[nxt] or willSearch[nxt]:
                 continue
+            # print(v,now,nxt)
 
             willSearch[nxt] = True
 
             Q.append(nxt)
+    #print(v,xcount, ycount, edge_count)
     ans += xcount * ycount
     ans -= edge_count // 2
 

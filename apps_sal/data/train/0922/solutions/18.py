@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 res = []
 for _ in range(n):

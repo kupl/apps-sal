@@ -13,6 +13,7 @@ class Solution:
 
     @lru_cache(maxsize=None)
     def recurse(self, amount: int, coins: tuple) -> int:
+        # print(amount)
         if amount < 0:
             return math.inf
         elif amount == 0:
@@ -23,6 +24,7 @@ class Solution:
             least = math.inf
             for c in coins:
                 val = self.recurse(amount - c, coins)
+                # print('{} = {}'.format(amount-c, val))
                 least = min(least, val)
 
             return least + 1

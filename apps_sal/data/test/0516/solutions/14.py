@@ -6,6 +6,7 @@ s, t = input(), input()
 res = 0
 res_details = []
 for i in range(m - n + 1):
+    # print(t[i:i+n])
     eq = 0
     detail = []
     for j in range(i, i + n):

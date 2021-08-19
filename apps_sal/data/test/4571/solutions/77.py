@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import Decimal  # floatの高精度ver, 渡すのはstr型で
 from functools import lru_cache
 from math import ceil
 from collections import OrderedDict
@@ -11,10 +11,17 @@ import math
 import heapq
 mod = 10**9 + 7
 inf = float("inf")
+# すべてのkeyが用意されてる defaultdict(int)で初期化
+# 順序を保ったdict
 def input(): return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(11451419)
+#メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
+# 引数にlistはだめ
+#######ここまでテンプレ#######
+# ソート、"a"+"b"、再帰ならPython3の方がいい
+#######ここから天ぷら########
 n, m = list(map(int, input().split()))
 A = 100 * (n - m) + 1900 * m
 p = pow(2, m)

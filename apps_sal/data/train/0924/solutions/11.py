@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import defaultdict
 from math import sqrt
 
@@ -86,3 +87,4 @@ for i in range(Q):
                     if p in pfk and p not in pfc:
                         pfc.append(p)
         print(len(pfc))
+       #print(prime_range)'''

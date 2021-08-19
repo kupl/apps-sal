@@ -3,11 +3,14 @@ class Solution:
         def dist_square(i): return points[i][0] ** 2 + points[i][1] ** 2
 
         def sort(i: int, j: int, K: int):
+            # partially sorts points[i...j+1] so the first K elements are the
+            # smallest K elements
             if i >= j:
                 return
 
+            # put random element as points[i] as the pivot
             k = random.randint(i, j)
-            points[i], points[k] = points[k], points[i]
+            points[i], points[k] = points[k], points[i]  # ???
 
             mid = partition(i, j)
             if K < mid - i + 1:
@@ -16,6 +19,8 @@ class Solution:
                 sort(mid + 1, j, K - (mid - i + 1))
 
         def partition(i: int, j: int) -> int:
+            # partition by pivot points[i], returning an index mid such that
+            # points[i] <= points[mid] <= points[j] for i < mid < j
             oi = i
             pivot = dist_square(i)
             i += 1

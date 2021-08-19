@@ -12,6 +12,7 @@ for i in range(1, 100):
         continue
     break
 
+# print(su)
 d = {0: 1}
 ans = 0
 cumulative_sum = 0

@@ -13,3 +13,9 @@ class ProductOfNumbers:
         if k >= len(self.A):
             return 0
         return self.A[-1] // self.A[-k - 1]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

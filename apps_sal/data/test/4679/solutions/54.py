@@ -1,5 +1,6 @@
 a_line = input()
 a_line = list(a_line)
+# print(a_line)
 b_line = input()
 b_line = list(b_line)
 
@@ -16,6 +17,7 @@ while(end == 0):
         else:
             temp = a_line[0]
             del a_line[0]
+            # print(a_line)
             turn = temp
 
     elif turn == "b":
@@ -24,6 +26,7 @@ while(end == 0):
         else:
             temp = b_line[0]
             del b_line[0]
+            # print(b_line)
             turn = temp
 
     else:
@@ -32,6 +35,7 @@ while(end == 0):
         else:
             temp = c_line[0]
             del c_line[0]
+            # print(b_line)
             turn = temp
 
 

@@ -3,7 +3,7 @@ class Random():
         self.seed = seed
 
     def random(self):
-        self.seed = (4123 * self.seed + 4321) % 4096
+        self.seed = (4123 * self.seed + 4321) % 4096  # whatever
         return self.seed / 4096
 
     def randint(self, start, end):

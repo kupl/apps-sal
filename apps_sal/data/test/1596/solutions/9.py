@@ -29,6 +29,7 @@ if(flag == 0):
 
     if(s[-1] == 'n' or s[-1] == 'u'):
         g.append(c)
+    # print(g)
     dp = [0, 1, 2, 3]
     ggg = 10
     if(len(g) > 0):

@@ -16,6 +16,7 @@ class Solution:
                         count = 0
                 else:
                     count = 0
+            # print(gotFlowers, x, m)
             return gotFlowers >= m
 
         sortedDays = sorted(list(set(bloomDay)))

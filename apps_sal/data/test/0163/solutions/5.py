@@ -8,8 +8,8 @@ while True:
     if i == j:
         print("YES")
         break
-    elif i >= j or a[i] == "
-    print("NO")
-    break
+    elif i >= j or a[i] == "#":
+        print("NO")
+        break
     else:
         i += k

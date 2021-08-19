@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Sep  9 14:33:00 2020
 
@@ -16,6 +17,7 @@ for a in A:
     if res > M:
         flag = True
         break
+    # print(res)
 """
 存在チェック
 ２で割り切れる個数同じ？
@@ -29,5 +31,7 @@ if flag:
     ans = 0
     print(ans)
 else:
+    #ans = (M - res(A)//2)//res + 1
+    #ans = (M-1)//res//2 + 1
     ans = (M // res + 1) // 2
     print(ans)

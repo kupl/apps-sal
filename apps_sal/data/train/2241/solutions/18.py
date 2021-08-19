@@ -1,3 +1,4 @@
+# キャンディーとN人の子供
 
 mod = 10**9 + 7
 N, C = map(int, input().split())
@@ -23,9 +24,12 @@ for cnt in range(C):
         pow_sum[i][cnt + 1] %= mod
 
 ans_dp = [[0 for i in range(C + 1)] for j in range(N + 1)]
+# ans_dp[x][y] = 0<=x<=N,0<=y<=C の場合のdp
 ans_dp[0][0] = 1
 for n in range(1, N + 1):
+    # ans_dp[n]の更新
     for c in range(C + 1):
+        # ans_dp[n][c]の更新
         for k in range(c + 1):
             ans_dp[n][c] += ans_dp[n - 1][k] * pow_sum[n - 1][c - k]
         ans_dp[n][c] %= mod

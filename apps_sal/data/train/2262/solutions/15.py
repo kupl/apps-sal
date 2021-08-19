@@ -29,6 +29,7 @@ for i in range(len(table)):
         H.pop()
     else:
         H.append(table[i][1])
+# print(H,table)
 while len(H) != 0 and H[0] == H[-1]:
     H.popleft()
     H.pop()

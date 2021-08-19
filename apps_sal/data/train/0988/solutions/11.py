@@ -1,7 +1,8 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
-    x, cur_bit = 0, 0
+    x, cur_bit = 0, 0  # max bit is the highest value bit (0-indexed)
     bitset = {}
     for ele in arr:
         while ele:

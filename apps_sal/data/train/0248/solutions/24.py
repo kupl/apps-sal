@@ -14,6 +14,7 @@ class Solution:
         yield x, y + 1
 
     def containsCycleInComponent(self, grid, startPoint):
+        # startPoint is the position (x,y)
         startX, startY = startPoint
         value = grid[startX][startY]
         if value is None:

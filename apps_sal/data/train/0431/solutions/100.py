@@ -19,6 +19,9 @@ class Solution:
 
             rarr[i] = righti - 1
 
+        # print(larr)
+        # print(rarr)
+
         count = 0
         for i in range(len(A)):
             r, l = rarr[i] - i, i - larr[i]

@@ -6,6 +6,7 @@ hsummation = [[int(S[0][k])]for k in range(W)]
 for k in range(W):
     for j in range(1, H):
         hsummation[k].append(hsummation[k][j - 1] + int(S[j][k]))
+# print(hsummation)
 ans = float('inf')
 anskouho = 0
 h = 2**(H - 1)
@@ -17,6 +18,7 @@ for j in range(2**(H - 1)):
         if binh[-k - 1] == '1':
             hlist.append(k)
     hlist.append(-1)
+    # print(hlist)
     anskouho = len(hlist) - 1
     now = 0
     while now < W:
@@ -38,4 +40,6 @@ for j in range(2**(H - 1)):
     else:
         ans = min(ans, anskouho)
 
+        # print(counter)
+# print(anskouho)
 print(ans)

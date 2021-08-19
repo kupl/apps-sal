@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 a1, a2 = input().split()
 a1, a2 = int(a1), int(a2)

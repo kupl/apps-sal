@@ -12,6 +12,7 @@ def winner(a, b):
 n, k = list(map(int, input().split()))
 S = input()
 
+# dp[2^k人のトーナメント][左端がSのi番目から始まるパターン] = 勝者の得意な手
 dp = [[''] * n for _ in range(k + 1)]
 for i in range(n):
     dp[0][i] = S[i]

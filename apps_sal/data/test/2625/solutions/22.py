@@ -9,4 +9,5 @@ for z in range(t):
             diff = i - x
             break
     ans = x + (k - 1) * diff
+    # print(diff)
     print(ans)

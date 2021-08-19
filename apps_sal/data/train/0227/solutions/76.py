@@ -9,6 +9,7 @@ class Solution:
 
             most_common = currentwindow[1]
 
+            # having this means we have to reduce the length of the window
             if (windowend - windowstart + 1 - most_common > K):
 
                 currentwindow[A[windowstart]] -= 1

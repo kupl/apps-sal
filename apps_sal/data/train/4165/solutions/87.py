@@ -4,3 +4,4 @@ def uni_total(string):
         cnt += ord(e)
 
     return cnt
+    # your code here

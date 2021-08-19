@@ -1,3 +1,4 @@
+# 28 B - Two Anagrams AC
 s = list(input())
 t = list(input())
 

@@ -11,6 +11,8 @@ import functools
 import collections
 import itertools
 
+# sys.stdin = open("input.txt", "r")
+
 
 def collectApple(tree):
     if not tree:

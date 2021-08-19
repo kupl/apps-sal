@@ -11,6 +11,7 @@ while True:
     changes = []
     for key in list(res.keys()):
         if len(res[key]) > 1:
+            # All choice = False options must be changed
             remove = []
             for i, index in enumerate(res[key]):
                 if choice[index]:

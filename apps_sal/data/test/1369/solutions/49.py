@@ -7,6 +7,7 @@ def circle3p(ps):
     A = []
     B = []
     for x, y in ps:
+        # eq = sp.Eq(x * a + y * b + c, - x * x - y * y)
         Ai = [x, y, 1]
         A.append(Ai)
         B.append(- x * x - y * y)

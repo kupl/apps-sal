@@ -1,5 +1,6 @@
 class Solution:
     def isMonotonic(self, arr: List[int]) -> bool:
+        # ok
         f = True
         n = len(arr)
         for i in range(n - 1):

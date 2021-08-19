@@ -1,3 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import OrderedDict
 
 n = int(input())
@@ -13,6 +14,7 @@ set_val = set(val_ar)
 val_ar = list(set_val)
 val_ar.sort()
 sec_mark = val_ar[1]
+# print sec_mark
 final_ar = []
 for i in ar:
     if(sec_mark == ar[i]):

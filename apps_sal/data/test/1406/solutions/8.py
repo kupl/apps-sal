@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, k, d = list(map(int, input().split()))
 if k ** d < n:

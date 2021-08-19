@@ -1,3 +1,4 @@
+# ABC168
 N = input()
 if N[-1] == '3':
     print('bon')

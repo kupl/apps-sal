@@ -5,12 +5,12 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-class BIT():
+class BIT():  # 1-indexed
     def __init__(self, size):
         self.table = [0 for _ in range(size + 2)]
         self.size = size
 
-    def Sum(self, i):
+    def Sum(self, i):  # 1からiまでの和
         s = 0
         while i > 0:
             s += self.table[i]
@@ -23,7 +23,7 @@ class BIT():
             i += (i & -i)
         return
 
-    def SegAdd(self, l, r, x):
+    def SegAdd(self, l, r, x):  # lからrにxを足す
         self.PointAdd(l, x)
         self.PointAdd(r + 1, -x)
         return
@@ -34,7 +34,7 @@ s = [list(map(int, input().split())) for _ in range(n)]
 s.sort(key=lambda x: x[1] - x[0])
 b = BIT(m)
 
-too_long = n
+too_long = n  # r-l+1よりも大きい区間（必ず訪れる）
 cur = 0
 for i in range(1, m + 1):
     while cur < n and s[cur][1] - s[cur][0] + 1 < i:

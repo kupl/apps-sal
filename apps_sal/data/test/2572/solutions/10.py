@@ -12,6 +12,8 @@ def mint():
 def mints():
     return list(map(int, minp().split()))
 
+#from math import ceil
+
 
 def solve():
     n, m = mints()

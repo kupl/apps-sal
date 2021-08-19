@@ -19,6 +19,8 @@ def __starting_point():
     for _ in range(T):
         n, m = list(map(int, next(cin).split()))
 
+        # n**2-m**2 = (n-m)*(n+m)
+
         if n - m == 1 and isprime(n + m):
             print('YES')
         else:

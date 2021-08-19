@@ -1,3 +1,4 @@
+# cook your dish here
 import math as m
 NUMBER = input().split()
 D1 = int(NUMBER[0])

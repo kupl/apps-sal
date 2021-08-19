@@ -8,6 +8,7 @@ class Solution:
         arr.sort()
 
         def get_candidates(sm, k, l, r):
+            # sm + k * x ≈ target
             if k == 0:
                 yield abs(sm - target), l
             else:

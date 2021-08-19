@@ -1,3 +1,4 @@
+# FlagDay
 
 data = input().split(" ")
 dances = int(data[1])

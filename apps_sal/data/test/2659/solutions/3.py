@@ -6,6 +6,8 @@ def cal(n):
         n //= 10
     return m / ret
 
+# n以上で s(n) が最小となる整数値
+
 
 def f(n):
     cand = []

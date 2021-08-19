@@ -1,3 +1,4 @@
+# cook your dish here
 
 li = list(map(int, input().split()))
 if li[0] - 1 < 0:

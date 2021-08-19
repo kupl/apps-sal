@@ -3,6 +3,7 @@ from functools import reduce
 
 class Solution:
     def longestDupSubstring(self, S: str) -> str:
+        # binary search + string hashing
         from functools import reduce
         A = [ord(c) - ord('a') for c in S]
         mod = 2 ** 63 - 1

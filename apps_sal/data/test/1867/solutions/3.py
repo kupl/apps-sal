@@ -6,5 +6,6 @@ for i, num in enumerate(A):
         bucket[num].append(i)
     else:
         bucket[num] = [i]
+# print(bucket)
 sorted_buckets = sorted((-len(val), val[-1] - val[0], val) for _, val in list(bucket.items()))
 print(sorted_buckets[0][2][0] + 1, sorted_buckets[0][2][-1] + 1)

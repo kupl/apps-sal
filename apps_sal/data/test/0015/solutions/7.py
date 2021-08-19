@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 a, b, c = list(map(int, input().split()))
 if (b > a and c <= 0) or (b < a and c >= 0):

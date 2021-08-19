@@ -11,8 +11,8 @@ def valid(grid, path, perm, start, goal):
         y += dy
         if (x, y) == goal:
             return True
-        if not (0 <= x < n and 0 <= y < m) or grid[x][y] == '
-        return False
+        if not (0 <= x < n and 0 <= y < m) or grid[x][y] == '#':
+            return False
 
     return False
 

@@ -1,16 +1,16 @@
-class Unionfind():
+class Unionfind():  # Unionfind
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x):
+    def find(self, x):  # グループの根
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def union(self, x, y):
+    def union(self, x, y):  # グループの併合
         x = self.find(x)
         y = self.find(y)
         if x == y:
@@ -20,7 +20,7 @@ class Unionfind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def roots(self):
+    def roots(self):  # 根のリスト
         return [i for i, x in enumerate(self.parents) if x < 0]
 
 

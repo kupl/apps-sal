@@ -3,6 +3,8 @@ from functools import lru_cache
 
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
+        # time complexity: O(n^2)
+        # space complexity: O(n)
         @lru_cache(maxsize=None)
         def score(l, r):
             if l == r:

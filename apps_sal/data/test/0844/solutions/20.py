@@ -53,6 +53,7 @@ def srch(lower_bound, current_search, upper_bound):
         zero_count = counts_by_idx[end_idx]['0'] - counts_by_idx[start_idx]['0']
         one_count = counts_by_idx[end_idx]['1'] - counts_by_idx[start_idx]['1']
         if one_count == zero_count:
+            # Try to go up
             curr_best = zero_count * 2
             new_search = current_search + ((upper_bound - current_search) // 2)
             return current_search, new_search, upper_bound

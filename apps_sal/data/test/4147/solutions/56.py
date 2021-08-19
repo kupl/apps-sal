@@ -1,3 +1,5 @@
+# N番目の竹をA,B,Cのいずれかに使うorどれにも使わないの全探索
+# 4 ^ 8 = 60000強
 
 import itertools
 import sys

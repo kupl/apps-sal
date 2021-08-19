@@ -9,6 +9,7 @@ def lcm(x, y):
 
 
 T = 1
+# T=int(sys.stdin.readline())
 for _ in range(T):
     n, k = list(map(int, input().split()))
     a, b = list(map(int, input().split()))

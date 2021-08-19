@@ -1,4 +1,5 @@
 def fraction(a, b):
+    # coding and coding..
     c = a + b
     if b > a:
         a, b = b, a

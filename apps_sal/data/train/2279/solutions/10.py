@@ -49,6 +49,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+################################# fast IO ###############################
 
 
 input = sys.stdin.buffer.readline

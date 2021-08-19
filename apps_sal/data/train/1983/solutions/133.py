@@ -37,3 +37,9 @@ class ProductOfNumbers:
                 p1 = p1 * self.nums[-account]
                 account += 1
             return p1
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

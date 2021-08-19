@@ -2,6 +2,26 @@
 cost = {}
 tip = {}
 
+# cost[(1, 0, 0)] = 0
+
+# cost[(2, 0, 0)] = 1
+# cost[(2, 1, 0)] = 1
+# cost[(2, 0, 1)] = 2
+# cost[(2, 1, 1)] = 2
+# cost[(2, 0, -1)] = 2
+# cost[(2, -1, 0)] = 2
+# cost[(2, -1, -1)] = 3
+
+# cost[(3, 1, 1)] = 1
+# cost[(3, 0, 0)] = 2
+# cost[(3, 0, 1)] = 1
+# cost[(3, 1, 0)] = 1
+
+# cost[(4, 0, 0)] = 1
+# cost[(4, 1, 1)] = 2
+# cost[(4, 0, 1)] = 1
+# cost[(4, 1, 0)] = 2
+
 
 d = {
     1: [(2, 1, 0), (3, 1, 0), (4, 0, 0), (3, 0, 1), (2, 0, 0), (4, 0, 1), (3, 1, 1)],
@@ -69,6 +89,7 @@ def conv(coords):
 
     tp = tip[(dd(center, o1), dd(center, o2))]
     (x, y) = center
+    # print(center, dd(center, o1), dd(center, o2))
     return (tp, x, y)
 
 
@@ -98,6 +119,8 @@ def solve(coords):
 
     dfs(t, x, y, 0, to)
 
+    # print(t, x, y)
+
     ans = 1e18
 
     for e in cost:
@@ -110,6 +133,8 @@ def solve(coords):
 
 lst = dfs(1, 0, 0, 0, cost)
 
+
+# print(len(cost))
 
 n = int(input())
 for i in range(n):

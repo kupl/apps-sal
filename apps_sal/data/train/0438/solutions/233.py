@@ -32,11 +32,12 @@ class Solution:
         uf = UF(n)
 
         for step, i in enumerate(arr):
-            i -= 1
+            i -= 1  # because of 1-index
             uf.ranks[i] = 1
 
             for j in (i - 1, i + 1):
                 if 0 <= j < n:
+                    # if j's parent to j constintutes a m-length array
                     if uf.ranks[uf.find(j)] == m:
                         ans = step
                     if uf.ranks[j] > 0:

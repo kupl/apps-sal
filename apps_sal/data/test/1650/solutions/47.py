@@ -21,3 +21,4 @@ for i in range(1, N):
         dpF[i] %= mod
 
 print(((dpT[-1] + dpF[-1]) % mod))
+#print(dpT, dpF)

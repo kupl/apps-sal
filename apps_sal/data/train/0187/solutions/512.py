@@ -1,6 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profits = [0]
+        # counts = []
         person_remain = customers[0]
         i = 1
         while(person_remain or i == 1):
@@ -13,6 +14,7 @@ class Solution:
 
         max_round = 0
         max_el = max(profits)
+        # print(profits)
         if(max_el <= 0):
             return -1
 

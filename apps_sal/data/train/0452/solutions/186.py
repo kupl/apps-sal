@@ -16,6 +16,7 @@ class Solution:
                     ans = float('inf')
                     curr_max = float('-inf')
                     for jj in range(ii, n - (day - 1)):
+                        #print(jj, day)
                         curr_max = max(curr_max, jobDifficulty[jj])
                         ans = min(ans, curr_max + dp(jj + 1, day - 1))
 
@@ -23,4 +24,5 @@ class Solution:
             return memo[(ii, day)]
 
         ans = dp(0, d)
+        # print(memo)
         return ans

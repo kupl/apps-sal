@@ -12,7 +12,7 @@ class Solution:
 
     def helper(self, formula):
         result = {}
-        j = 0
+        j = 0  # conventional i, j are reversed
         element = ""
         while j < len(formula):
             if formula[j] == "(":

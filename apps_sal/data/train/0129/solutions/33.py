@@ -7,6 +7,7 @@ class Solution:
         res = float('-inf')
         i = 1
         j = 0
+        # print(idx)
         while i < len(A):
             if j + 1 < len(idx) and idx[j + 1] < i:
                 j += 1

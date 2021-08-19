@@ -1,3 +1,4 @@
+# /usr/bin/env python3
 
 N = int(input())
 names = [input().split() for i in range(N)]

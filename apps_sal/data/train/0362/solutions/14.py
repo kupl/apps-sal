@@ -3,6 +3,8 @@ from functools import lru_cache
 
 class Solution:
     def numberWays(self, ppl_to_hats: List[List[int]]) -> int:
+        # 10 ppl, 40 hats.
+        # each person, choose a hat which is not taken.
         hats_to_ppl = [[] for _ in range(41)]
         for pid, hats in enumerate(ppl_to_hats):
             for hid in hats:
@@ -21,6 +23,7 @@ class Solution:
             for pid in hats_to_ppl[next_hid]:
                 pid_mask = 1 << pid
                 if pid_mask & ppl_assigned_bitmask == 0:
+                    # this person can wear.
                     ways += helper(pid_mask | ppl_assigned_bitmask, next_hid + 1)
                     ways %= MOD
 

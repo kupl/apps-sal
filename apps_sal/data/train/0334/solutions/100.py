@@ -12,7 +12,7 @@ class Solution:
             if n == 0:
                 return (0, 0)
 
-            last = dp(n - 1)
+            last = dp(n - 1)  # (val, lastword_index)
             ans = 0
             lastans = last[0]
             last_index = last[1]
@@ -23,9 +23,11 @@ class Solution:
                 if cost[last_index] <= cost[n]:
                     ans = lastans + cost[last_index]
                     next_index = n
+                    #print(n, last_index, ans)
                 else:
                     ans = lastans + cost[n]
                     next_index = last_index
+                    #print(n, n, ans)
             else:
                 ans = lastans
                 next_index = n

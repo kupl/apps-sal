@@ -4,6 +4,7 @@ class Solution:
         for start, end in requests:
             count_lst[start] += 1
             count_lst[end + 1] -= 1
+        # print(count_lst)
         ret_lst = [0] * (len(nums) + 1)
         for i in range(len(ret_lst)):
             if i == 0 and count_lst[i] != 0:
@@ -11,6 +12,7 @@ class Solution:
                 continue
 
             ret_lst[i] = ret_lst[i - 1] + count_lst[i]
+        # print(ret_lst)
         ret_lst.sort(reverse=True)
         nums.sort(reverse=True)
         ret_num = 0

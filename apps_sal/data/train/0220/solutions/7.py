@@ -5,6 +5,7 @@ class Solution:
         for i in range(l):
             gc.append(customers[i] * grumpy[i])
 
+        # print(gc)
         ms = 0
         mi = -1
         for i in range(l - X + 1):
@@ -18,4 +19,5 @@ class Solution:
             if grumpy[i] == 0 or i in allowed:
                 ans += customers[i]
 
+        # print(ans)
         return ans

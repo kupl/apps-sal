@@ -1,3 +1,4 @@
+# cook your dish here
 def find_gcd(x, y):
     while(y):
         x, y = y, x % y
@@ -16,6 +17,7 @@ def gcd_arr(l):
 
 
 def factors(n):
+    # print(n)
     if n == 0:
         return 1
     x = []

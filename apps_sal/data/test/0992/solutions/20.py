@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import numpy as np
 def input(): return sys.stdin.readline().rstrip()

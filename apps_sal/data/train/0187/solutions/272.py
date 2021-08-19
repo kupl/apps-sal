@@ -11,9 +11,10 @@ class Solution:
         maxRotations = -1
         maxProfit = profit = waitingList = 0
         for index, val in enumerate(customers):
-            waitingList += val
+            waitingList += val  # more people waiting in line
+            # People boarded
             peopleBoarded = min(4, waitingList)
-            waitingList -= peopleBoarded
+            waitingList -= peopleBoarded  # boarding
             profit += peopleBoarded * boardingCost - runningCost
             if maxProfit < profit:
                 maxRotations, maxProfit = index + 1, profit

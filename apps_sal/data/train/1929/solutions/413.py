@@ -42,3 +42,8 @@ class Trie:
     def __init__(self):
         self.end = False
         self.c = {}
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

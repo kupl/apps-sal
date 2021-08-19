@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 n, s = list(map(int, input().split(' ')))
 
 

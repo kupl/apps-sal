@@ -11,6 +11,7 @@ for i in range(t):
         a = 0
         b = div
         for i, item in enumerate(sint):
+            # b should take
             if item > div:
                 if b > item:
                     is_ok = False

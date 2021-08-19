@@ -50,7 +50,7 @@ def getLenInByte(part):
         return 2
     elif part[:4] == '1110':
         return 3
-    elif part[:5] == '11110':
+    elif part[:5] == '11110':  # 4 byte
         return 4
 
 
@@ -64,7 +64,7 @@ def from_utf8_binary(bitstring):
         joined = ''.join(nextbin)
 
         frombin = fromBin(joined)
-        result += frombin
+        result += frombin  # li[i] is a string
         i += bytelen
     return ''.join(result)
 

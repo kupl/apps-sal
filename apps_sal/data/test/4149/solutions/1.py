@@ -13,10 +13,10 @@ CKEY = sorted(list(C.keys()), reverse=True)
 
 x = 2750131
 
-L = math.floor(math.sqrt(x))
+L = math.floor(math.sqrt(x))  # 平方根を求める
 
 Primelist = [i for i in range(x + 1)]
-Primelist[1] = 0
+Primelist[1] = 0  # 1は素数でないので0にする.
 
 for i in Primelist:
     if i > L:

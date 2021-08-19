@@ -18,6 +18,7 @@ class Solution:
 
         if len(ncarr) > 0:
             nc = min(ncarr)
+            #accum += carr[ncarr.index(nc)]
             self.memory[amount] = nc
             return nc
         else:

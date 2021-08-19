@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -20,3 +22,4 @@ for i in range(m):
             ans += d * (n + 1) * (n - 1) // 4
 print(ans / n)
 finish = time.time()
+#print(finish - start)

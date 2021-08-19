@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -12,6 +13,7 @@ for _ in range(int(input())):
             ans2 = n - j - 1
             f = 7
             break
+    # print(ans1,ans2)
     if f != 7:
         print("1")
     else:

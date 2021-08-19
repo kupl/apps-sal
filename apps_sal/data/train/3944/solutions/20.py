@@ -1,3 +1,4 @@
+# For learning purposes. From slowest to fastest.
 def sum_triangular_numbers(n):
     return sum(i * (i + 1) // 2 for i in range(n + 1))
 

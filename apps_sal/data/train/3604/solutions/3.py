@@ -1,3 +1,4 @@
+# generate happy numbers up to LIMIT
 from bisect import bisect
 LIMIT = 300000
 HAPPY, SAD = set(), set()

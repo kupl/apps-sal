@@ -1,6 +1,7 @@
 N, K = map(int, input().split())
 P = list(map(int, input().split()))
 
+#期待値 : (p+1)//2
 range_total = sum(P[:K]) + K
 max_value = range_total
 for i in range(N - K):

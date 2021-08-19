@@ -10,6 +10,8 @@ idx = 0
 prev = -2
 
 
+# print(data)
+
 for d in data:
     if d > prev + 1:
         result += d

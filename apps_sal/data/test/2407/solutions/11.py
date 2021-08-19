@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# Educational Codeforces Round 74 B
 
 from heapq import heappush, heappop, heappushpop
 from itertools import permutations

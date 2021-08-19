@@ -25,5 +25,6 @@ def lucas_lehmer(n):
     s = 4
     M = 2**n - 1
     for i in range(n - 2):
+        # s = (s*s-2) % M
         s = (mod_equiv(s * s - 2, n)) % M
     return s == 0 or n == 2

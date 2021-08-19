@@ -19,5 +19,6 @@ if K <= N - tp:
 
 for i in range(s, g + 1):
     ans = min(ans, x[i] + x[i + K - 1] + min(x[i], x[i + K - 1]))
+    #print(x[i], x[i+K-1])
 
 print(ans)

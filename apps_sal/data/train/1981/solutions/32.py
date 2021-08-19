@@ -1,5 +1,7 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
+        # s,e,
+        # at most nlogn
         cnt = [0, 0]
         mod = 10**9 + 7
         requests.sort()

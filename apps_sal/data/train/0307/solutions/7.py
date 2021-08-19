@@ -1,5 +1,9 @@
 class Solution:
     def soupServings(self, N: int) -> float:
+        # 4,0
+        # 3,1
+        # 2,2
+        # 1,3
         if N % 25 == 0:
             N = N // 25
         else:

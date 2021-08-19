@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import accumulate
 import copy
 N = int(input())
@@ -19,5 +20,6 @@ for i in range(N):
             else:
                 temp += A[i] + A[j] + C[N - 1] - C[i] + C[j] - B[j]
         if temp > answer:
+            #print("temp: ",temp,"i: ",i,"j: ",j,"C: ",C)
             answer = temp + 0
 print(answer)

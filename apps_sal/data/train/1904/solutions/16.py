@@ -8,3 +8,14 @@ class Solution:
             else:
                 heapq.heappush(heap, (dist, x, y))
         return [[x, y] for dist, x, y in heap]
+
+#         heap = []
+
+#         for (x, y) in points:
+#             dist = -(x*x + y*y)
+#             if len(heap) == K:
+#                 heapq.heappushpop(heap, (dist, x, y))
+#             else:
+#                 heapq.heappush(heap, (dist, x, y))
+
+#         return [(x,y) for (dist,x, y) in heap]

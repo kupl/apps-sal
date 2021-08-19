@@ -45,6 +45,7 @@ else:
 
 v.sort()
 v1.sort()
+# print(v,v1)
 if f and v == ['B', 'G', 'R']:
     print('YES')
 elif f1 and v1 == ['B', 'G', 'R']:

@@ -30,6 +30,7 @@ for i in range(int(input())):
             s = 0
             break
         n += 1
+    # print(n, wlist)
     mlist = wlist[n:n + 3]
     if n >= 31:
         n = 0
@@ -47,6 +48,7 @@ for i in range(int(input())):
                 break
             n += 1
         mlist = wlist[n:n + 9]
+    # print(n, wlist)
     for j in range(len(q)):
         if q[j] > n - 1:
             x = q[j] - n

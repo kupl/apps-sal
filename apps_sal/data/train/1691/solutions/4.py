@@ -1,4 +1,5 @@
 import sys
+##from random import randint
 n, m, c = [int(i) for i in input().split()]
 matrix = [[0] * (m + 1) for i in range(n + 1)]
 cc = 1
@@ -16,6 +17,7 @@ for nn in range(1, n + 1):
             break
     if cc > c:
         break
+# print matrix
 
 for nnn in range(nn, n + 1):
     for mmm in range(mm, m + 1):

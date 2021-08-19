@@ -22,7 +22,9 @@ def modpow(a, n, mod):
 def main():
     L = input()
     N = len(L)
+    # a + b が小さいのが確定
     dp_1 = [0] * N
+    # a + b が大きいのか小さいのかわからない
     dp_2 = [0] * N
 
     dp_1[0] = 1
@@ -30,6 +32,7 @@ def main():
 
     for i in range(1, N):
         if L[i] == "1":
+            # (1, 0), (0, 1)の組み合わせで，a+bのi桁目が1
             dp_2[i] = dp_2[i - 1] * 2
 
             dp_1[i] = dp_2[i - 1] + dp_1[i - 1] * 3
@@ -37,6 +40,7 @@ def main():
             dp_2[i] %= MOD
             dp_1[i] %= MOD
         else:
+            # (1, 0), (0, 1)の組み合わせで，a+bのi桁目が1
             dp_2[i] = dp_2[i - 1]
 
             dp_1[i] = dp_1[i - 1] * 3

@@ -4,6 +4,9 @@ class Solution:
         for x in A:
             P.append((P[-1] + x) % K)
 
+        # print(P)
+
         count = collections.Counter(P)
 
+        # print(count)
         return sum(v * (v - 1) // 2 for v in count.values())

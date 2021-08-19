@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 class Bit:
     def __init__(self, n):

@@ -60,4 +60,6 @@ class Solution:
             if cnt[m]:
                 ret = index + 1
 
+            #print(index, a, cnt)
+
         return ret

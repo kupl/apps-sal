@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 def func():
     N = int(input())
@@ -20,6 +22,7 @@ def func():
                 if ans <= 0:
                     return -1
 
+    # validation
     for j in range(N):
         if sum(cells[j]) != mx:
             return -1

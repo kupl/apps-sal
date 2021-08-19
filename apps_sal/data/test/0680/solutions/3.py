@@ -1,3 +1,5 @@
+# list(map(int, input().split()))
+# map(int, input().split())
 
 class Coord():
     def __init__(self, x, y):

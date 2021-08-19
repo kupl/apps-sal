@@ -23,6 +23,8 @@ def i2(n):
     tmp = [list(mi()) for i in range(n)]
     return [list(i) for i in zip(*tmp)]
 
+# nまでの自然数が素数かどうかを表すリストを返す
+
 
 def makePrimeChecker(n):
     isPrime = [True] * (n + 1)

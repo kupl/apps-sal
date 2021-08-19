@@ -1,3 +1,5 @@
+# solution
+# online help taken
 
 h, w = map(int, input().split())
 ans = h * w

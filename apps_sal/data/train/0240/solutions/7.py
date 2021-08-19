@@ -4,6 +4,7 @@ class Solution:
         :type s: str
         :rtype: str
         """
+        # using bucket
         bucket = [None] * (len(s) + 1)
         hash_table = {}
         result = ''

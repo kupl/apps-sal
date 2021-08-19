@@ -3,6 +3,7 @@ def main():
     binary = 0
     ctr = 0
     temp = t
+# calculating binary
     while(temp > 0):
         binary = ((temp % n) * (10**ctr)) + binary
         temp = int(temp / n)

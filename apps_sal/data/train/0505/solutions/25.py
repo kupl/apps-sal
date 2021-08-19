@@ -3,7 +3,7 @@ class Solution:
         if len(s) == 0:
             return s
 
-        stack = []
+        stack = []  # save indexes of parenthesis
         out_s = ''
         i = 0
 

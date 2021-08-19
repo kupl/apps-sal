@@ -29,10 +29,13 @@ class Solution:
         for i in range(len(nums2)):
             d2[nums2[i]] = i
             pref2[i + 1] = pref2[i] + nums2[i]
+        # print(d1,d2)
         d1[0] = 0
         d2[0] = 0
         for i in range(1, n1):
 
             dp[i][0] = max(dp[i - 1][0], dp[i - 1][1]) + pref1[d1[l1[i]] + 1] - pref1[d1[l1[i - 1]]] - l1[i - 1]
             dp[i][1] = max(dp[i - 1][0], dp[i - 1][1]) + pref2[d2[l1[i]] + 1] - pref2[d2[l1[i - 1]]] - l1[i - 1]
+            # print(123,l1[i],dp[i][0],dp[i][1])
+        # print(l1)
         return (max(dp[n1 - 1][0], dp[n1 - 1][1]) + max(pref1[len(nums1)] - pref1[d1[l1[-1]]] - l1[-1], pref2[len(nums2)] - pref2[d2[l1[-1]]] - l1[-1])) % mod

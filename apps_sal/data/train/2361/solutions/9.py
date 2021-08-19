@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 def construct(A, count, MAX):
+    # print(ANS,A,count,MAX)
     B = []
     NMAX = 0
     for l, r in A:

@@ -15,12 +15,18 @@ def Hopcroft_Karp(adj, L):
     matching = [-1 for _ in range(N)]
 
     while True:
+        # If our matching changes, we need another iteration.
         extended = False
 
+        # Do a BFS starting at all unmatched left nodes.
         sources = [v for v in range(N) if matching[v] == -1 and L[v]]
 
+        # Keep track of your immediate predecessor in the BFS.
+        # -1 means an unvisited node. Sources have themselves as predecessor.
         bfs_pred = [-1 for _ in range(N)]
 
+        # Keep track of which BFS source started your subtree.
+        # -1 means an unvisited node.
         bfs_source = [-1 for _ in range(N)]
 
         for v in sources:
@@ -31,11 +37,14 @@ def Hopcroft_Karp(adj, L):
         while len(queue) > 0:
             cur = queue.popleft()
 
+            # If the node that started this subtree has been matched, stop growing the BFS.
             if matching[bfs_source[cur]] != -1:
                 continue
 
             for nb in adj[cur]:
                 if matching[nb] == -1:
+                    # We have found an augmenting path.
+                    # Use a clever loop to use the path to update the matching.
                     while nb != -1:
                         matching[nb], matching[cur], nb, cur = cur, nb, matching[cur], bfs_pred[cur]
                     extended = True

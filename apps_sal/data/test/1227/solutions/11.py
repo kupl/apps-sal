@@ -1,6 +1,8 @@
 N = input()
 k = int(input())
+# 桁数
 length = len(N)
+# dp[ 決めた桁数 ][ 未満フラグ ][0以外の個数] := 総数
 dp = [[[0 for _ in range(k + 1)] for _ in range(2)] for _ in range(length + 1)]
 dp[0][0][0] = 1
 
@@ -14,6 +16,7 @@ for i in range(length):
                 flag_less_next = 0
                 if flag_less == 1 or d < max_digit:
                     flag_less_next = 1
+                # 0 の時は0以外の個数は増えない
                 k_num_next = k_num
                 if d != 0:
                     k_num_next = k_num + 1

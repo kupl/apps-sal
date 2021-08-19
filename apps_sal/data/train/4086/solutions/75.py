@@ -13,3 +13,5 @@ def first_non_consecutive(arr):
     else:
         z = min(z)
         return z
+
+    # your code here

@@ -1,3 +1,4 @@
+# This code is dedicated to Olya S.
 from random import*
 
 n, k = list(map(int, input().split()))

@@ -1,4 +1,5 @@
 class Solution1:
+    # brute force
     def minNumberOperations(self, target: List[int]) -> int:
         max_bar, blocks = max(target), 0
         for bar in range(1, max_bar + 1):

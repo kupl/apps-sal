@@ -2,6 +2,9 @@ class Solution:
     def numSplits(self, s: str) -> int:
         res = 0
 
+        # construct dict from 1 to last
+        # iterate from 1 and remove the elm from dict (if 0 then del elm from dict) and add it to the set
+        # check if leng are equal
         fs = set()
 
         d = {}

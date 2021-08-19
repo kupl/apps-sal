@@ -1,6 +1,7 @@
 def main():
     N, K = list(map(int, input().split(' ')))
     A = list(map(int, input().split(' ')))
+    # Calculate divisors of sum(A)
     S = sum(A)
     divs = list()
     n = 1
@@ -13,6 +14,7 @@ def main():
                 divs.append(n)
         n += 1
     divs.sort(reverse=True)
+    # calc answer
     ans = S
     for d in divs:
         B = [a % d for a in A]

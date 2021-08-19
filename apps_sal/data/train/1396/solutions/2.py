@@ -1,3 +1,4 @@
+# suprabhat code
 import math
 t = int(input())
 for q in range(t):

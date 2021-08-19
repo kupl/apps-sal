@@ -18,6 +18,7 @@ class Solution:
                 if inside:
                     su += cost[i]
                     ans.append(su - m)
+                # ans.append(cost[i+1])
                 i += 1
 
             else:

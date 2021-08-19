@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, x, y = map(int, input().split())
 

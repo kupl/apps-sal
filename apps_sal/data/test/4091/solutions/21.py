@@ -2,8 +2,10 @@ n, k = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [[a[i], i] for i in range(n)]
 b.sort(reverse=True)
+# print(b)
 b = b[:k]
 b.sort(key=lambda x: x[1])
+# print(b)
 ans = 0
 for i in b:
     ans += i[0]

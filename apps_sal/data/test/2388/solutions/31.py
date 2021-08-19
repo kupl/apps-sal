@@ -12,6 +12,7 @@ class HeapSet:
 
     def insert(self, x):
         heappush(self.minQue, x)
+        #heappush(self.maxQue, -x)
         self.counter[x] += 1
 
     def erase(self, x):
@@ -44,14 +45,15 @@ def resolve():
     AB.sort()
     st = HeapSet()
     to_edge = [[] for _ in range(N)]
+    # treeを作成
     for i in range(N - 1, -1, -1):
-        x = AB[i][0]
-        d = AB[i][1]
+        x = AB[i][0]  # 初期位置
+        d = AB[i][1]  # 移動距離
 
         while st.min() and st.min()[0] < x + d:
             to_edge[i].append(st.min()[1])
             st.erase(st.min())
-        st.insert((x, i))
+        st.insert((x, i))  # 初期位置、頂点番号
 
     ans = 1
     for (x, v) in st.minQue:

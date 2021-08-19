@@ -2,6 +2,7 @@ from collections import defaultdict
 N, M = list(map(int, input().split()))
 section = [list(map(int, input().split())) for i in range(N)]
 
+# 区間の大きさごとに分類
 D = defaultdict(list)
 for sec in section:
     D[sec[1] - sec[0] + 1].append(sec)

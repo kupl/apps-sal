@@ -9,6 +9,9 @@ def find_gcd(list):
 
 def ain():
     return list(map(int, input().split()))
+# for _ in range(int(input()))
+# n = int(input())
+# a = list(map(int, input().split()))
 
 
 n = int(input())
@@ -24,3 +27,6 @@ y = 0
 for x in s:
     y += (x // z)
 print(str(y) + ' ' + str(z))
+
+
+# python3 p.py

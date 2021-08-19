@@ -12,12 +12,14 @@ else:
 
     intervals = defaultdict(list)
     for i in range(n + 1):
+        # [l, r]
         l = i * (i - 1) // 2
         r = i * (2 * n - i - 1) // 2
 
         a = (x * i) % d
         b = (x * i) // d
-        intervals[a].append((l + b, r + b))
+        intervals[a].append((l + b, r + b))  # [l, r]
+    # print(intervals)
 
     ans = 0
     for interval in list(intervals.values()):

@@ -7,10 +7,10 @@ class Solution:
             a = num - 1
             groups[a], index[a], length = 1, a, 1
             if a - 1 >= 0 and groups[a - 1] == 1:
-                left = index[a - 1]
+                left = index[a - 1]  # left index
                 if a - left == m:
                     count -= 1
-                index[left], index[a] = a, left
+                index[left], index[a] = a, left  # left end
                 length += (a - left)
             if a + 1 < len(arr) and groups[a + 1] == 1:
                 left, right = index[a], index[a + 1]

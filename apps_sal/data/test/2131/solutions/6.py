@@ -7,6 +7,12 @@ for i in range(n - 1):
     parameters = [int(s) for s in input().split(" ")]
     from_ = parameters[0]
     to = parameters[1]
+    # print(graph)
+    # print(from_)
+    # if not graph[from_]:
+    #     graph[from_] = []
+    # if not graph[to]:
+    #     graph[to] = []
     graph[from_].append(to)
     graph[to].append(from_)
     if len(graph[from_]) > 2:

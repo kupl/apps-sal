@@ -3,6 +3,8 @@ class Solution:
         dp = [[0] * (G + 1) for _ in range(P + 1)]
 
         dp[0][0] = 1
+        # for i in range(G+1):
+        #     dp[0][i] = 1
 
         for i in range(len(profit)):
             p = profit[i]

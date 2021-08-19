@@ -1,13 +1,17 @@
 from math import gcd
 
+# precalculations
 LIMIT = 10**6
 
+# an(n)
 an = [7]
 for n in range(2, LIMIT + 1):
     an.append(an[-1] + gcd(an[-1], n))
 
+# gn(n)
 gn = [1] + [y - x for x, y, in zip(an, an[1:])]
 
+# p(n)
 primes = []
 for x in gn:
     if x > 1 and x not in primes:

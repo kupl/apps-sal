@@ -25,6 +25,7 @@ def greaterCount(numList, m):
         else:
             countDic[sum] = 1
 
+    #print("m=", m, "number=", number, "sum=", sum, "total=", total, "rem=", rem, "countDic=", countDic)
     return total
 
 

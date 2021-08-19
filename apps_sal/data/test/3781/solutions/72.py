@@ -6,9 +6,10 @@ def inm(): return map(int, input().split())
 def ins(): return input().strip()
 
 
-DBG = True
+DBG = True  # and False
 BIG = 10**18
 R = 10**9 + 7
+#R = 998244353
 
 
 def ddprint(x):

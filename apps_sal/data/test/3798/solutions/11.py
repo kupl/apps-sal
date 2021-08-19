@@ -29,18 +29,21 @@ s = ni()
 root = floor(sqrt(n))
 ans = float("inf")
 
+# 3桁以上
 for p in range(2, root + 1):
     ds = digit_sum(n, p)
     if ds == s:
         ans = min(ans, p)
 
 
+# 2桁
 for a in range(1, root + 2):
     p = (n - s + a) / a
     b = s - a
     if p == int(p) and 0 < a < p and 0 <= b < p:
         ans = min(ans, int(p))
 
+# 1桁
 if n == s:
     ans = min(ans, n + 1)
 

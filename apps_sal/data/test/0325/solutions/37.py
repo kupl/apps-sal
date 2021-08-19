@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc137/tasks/abc137_e
 import sys
 from collections import deque
 
@@ -19,6 +20,7 @@ def main():
         G_rev[b].append(a)
         edge.append((a, b, c))
 
+    # Only consider nodes that can be reached from 1 and can reach N.
     reachable_1 = [False] * N
     reachable_N = [False] * N
 

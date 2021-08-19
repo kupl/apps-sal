@@ -7,6 +7,8 @@ class Solution:
             for j in range(n - 2, -1, -1):
                 if mat[i][j] == 1:
                     dp[i][j] = dp[i][j + 1] + 1
+        # for row in dp:
+        #     print(row)
         res = 0
         for i in range(m):
             for j in range(n):

@@ -1,4 +1,6 @@
 
+# 奇数 R U D
+# 偶数 L U D
 
 word = input()
 odd_v = ['R', 'U', 'D']

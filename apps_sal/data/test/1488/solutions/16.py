@@ -7,6 +7,7 @@ import collections
 import math
 
 
+# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 arr.sort()

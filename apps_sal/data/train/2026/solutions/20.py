@@ -6,11 +6,12 @@ def readline():
     return list(map(int, stdin.readline().strip().split()))
 
 
-def dijkstra():
+def dijkstra():  # , parent):
     n, d = readline()
     a = [0] + list(readline()) + [0]
     x = [0] * n
     y = [0] * n
+    # parent = [-1] * n  #  In case you want to know the path traveled
     for i in range(n):
         x[i], y[i] = readline()
     lower_cost = [inf] * n
@@ -30,6 +31,7 @@ def dijkstra():
                 diff = lower_cost[position] + d * (abs(x[k] - x[position]) + abs(y[k] - y[position])) - a[position]
                 if lower_cost[k] > diff:
                     lower_cost[k] = diff
+                    # parent[k] = position
     return lower_cost[-1]
 
 

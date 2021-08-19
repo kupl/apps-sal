@@ -6,6 +6,7 @@ class Solution:
 
         @lru_cache(None)
         def tallest_support_given_diff_of_pair(n, diff):
+            # max(L if (L, L - diff) can be built by rods[:n])
             if n == 0:
                 return 0 if diff == 0 else float('-inf')
 
@@ -16,7 +17,7 @@ class Solution:
                     n - 1,
                     diff - L,
                 ) + L
-            else:
+            else:  # diff < rods[n - 1]
                 new_rod_on_taller = tallest_support_given_diff_of_pair(
                     n - 1,
                     L - diff,

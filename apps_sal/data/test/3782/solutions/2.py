@@ -24,6 +24,7 @@ def div_by_a(border, dlist):
 answer = 10**9
 for a in alist:
     divlist = div_by_a(a, alist)
+    # print(divlist)
 
     cand_list = []
     for div in divlist:
@@ -31,6 +32,7 @@ for a in alist:
         cand_list.extend(div[:cand_num])
 
     cand_list.sort()
+    # print(cand_list)
     if len(cand_list) >= Q:
         answer = min(answer, cand_list[Q - 1] - a)
 

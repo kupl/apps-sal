@@ -22,7 +22,9 @@ def solve(b, s, t):
         if c in visited or c in b or c[0] < 0 or c[0] >= 1e6 or c[1] < 0 or c[1] >= 1e6:
             continue
         if c == t:
+            # found!
             return True
+        # search neighbors:
         dx = c[0] - s[0]
         dy = c[1] - s[1]
         if dx * dx + dy * dy > 200 * 200:
@@ -33,6 +35,7 @@ def solve(b, s, t):
         heapq.heappush(heap, create_priority_item((c[0] - 1, c[1]), t))
         heapq.heappush(heap, create_priority_item((c[0], c[1] + 1), t))
         heapq.heappush(heap, create_priority_item((c[0], c[1] - 1), t))
+    # we live in a cavity :(
     return False
 
 

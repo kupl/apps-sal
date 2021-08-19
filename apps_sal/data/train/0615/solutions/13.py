@@ -1,7 +1,9 @@
+# cook your dish here
 t = int(input())
 while t > 0:
     t -= 1
     n, tt = map(int, input().split())
+    # print(tt)
     l = list(map(int, input().split()))
     while tt > 0:
         a, b = map(int, input().split())

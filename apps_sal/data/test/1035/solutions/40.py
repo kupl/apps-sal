@@ -25,7 +25,7 @@ def main():
     def prime_decomposition(n):
         i = 2
         table = []
-        while i * i <= n:
+        while i * i <= n:  # sqrt(n)で計算が済む
             while n % i == 0:
                 n //= i
                 table.append(i)

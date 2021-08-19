@@ -9,12 +9,12 @@ def main():
         xy.append((i, x, y))
     xy.sort(key=lambda x: x[1])
     for i in range(len(xy) - 1):
-        node[xy[i][0]].append((abs(xy[i][1] - xy[i + 1][1]), xy[i + 1][0]))
-        node[xy[i + 1][0]].append((abs(xy[i][1] - xy[i + 1][1]), xy[i][0]))
+        node[xy[i][0]].append((abs(xy[i][1] - xy[i + 1][1]), xy[i + 1][0]))  # dis,num
+        node[xy[i + 1][0]].append((abs(xy[i][1] - xy[i + 1][1]), xy[i][0]))  # dis,num
     xy.sort(key=lambda x: x[2])
     for i in range(len(xy) - 1):
-        node[xy[i][0]].append((abs(xy[i][2] - xy[i + 1][2]), xy[i + 1][0]))
-        node[xy[i + 1][0]].append((abs(xy[i][2] - xy[i + 1][2]), xy[i][0]))
+        node[xy[i][0]].append((abs(xy[i][2] - xy[i + 1][2]), xy[i + 1][0]))  # dis,num
+        node[xy[i + 1][0]].append((abs(xy[i][2] - xy[i + 1][2]), xy[i][0]))  # dis,num
     from heapq import heappop, heappush
     visited = [False] * n
     visited[0] = True

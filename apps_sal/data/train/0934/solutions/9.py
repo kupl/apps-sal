@@ -29,5 +29,6 @@ while(t):
                 c1 = [j for j in c if j<=i]
                 for j in a1:
                     for k in c1:
+                        #if j<=i and i>=k:
                         sum = sum + value(j,i,k)'''
     print(sum % m)

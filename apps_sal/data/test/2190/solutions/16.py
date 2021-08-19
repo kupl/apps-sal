@@ -51,6 +51,8 @@ def solve(arr, k):
 
 
 def pp(input):
+    # T = int(input())
+    # for t in range(T):
     n, k = list(map(int, input().strip().split()))
     arr = list(map(int, input().strip().split()))
     print(solve(arr, k))

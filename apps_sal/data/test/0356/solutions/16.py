@@ -11,6 +11,7 @@ else:
     r = 0
     size = 0
     while l != n and r != m:
+        #print(sa, sb)
         if sa + line_a[l] > sb + line_b[r]:
             sb += line_b[r]
             r += 1

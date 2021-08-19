@@ -15,6 +15,7 @@ class Solution:
 
         @lru_cache
         def paths(i, n):
+            # number of ways to jump from i n times
             if n == 1:
                 return len(path[i])
             if n == 0:

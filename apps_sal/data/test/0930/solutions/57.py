@@ -1,10 +1,11 @@
 n, k = list(map(int, input().split()))
 mod = 10**9 + 7
 
+# nCrをmodで割った余りを求める。Nに最大値を入れて使用。
 N = n
-g1 = [1, 1]
-g2 = [1, 1]
-inverse = [0, 1]
+g1 = [1, 1]  # 元テーブル
+g2 = [1, 1]  # 逆元テーブル
+inverse = [0, 1]  # 逆元テーブル計算用テーブル
 
 
 def cmb(n, r, mod):

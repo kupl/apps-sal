@@ -11,6 +11,8 @@ return (None, length) if it isn't there
 
 
 class Solution:
+    # returns (answer, none) or (none, length of unencoded string)
+    # k is 0-indexed
     def _decode(self, s, k):
         number_ix = -1
         for i in reversed(range(len(s))):
@@ -19,6 +21,7 @@ class Solution:
                 break
 
         if number_ix == -1:
+            # string is all unencoded
             if k < len(s):
                 return (s[k], None)
             else:

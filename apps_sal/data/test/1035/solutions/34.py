@@ -2,11 +2,15 @@ import itertools
 import sys
 a, b = list(map(int, input().split()))
 
+# 最大公約数（ユークリッドの互除法）
+
 
 def gcd(A, B):
     while B != 0:
         A, B = B, A % B
     return A
+
+# 素因数分解
 
 
 def factorization(n):
@@ -27,3 +31,5 @@ def factorization(n):
 
 
 print((len(factorization(gcd(a, b))) + 1 if a != 1 and b != 1 else 1))
+# print(gcd(a,b))
+# print(factorization(gcd(a,b)))

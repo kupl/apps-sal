@@ -2,12 +2,16 @@ n, m = list(map(int, input().split()))
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
+# 縦軸の和、横軸の和を求めて、掛け合わせる。
+
+# listから、和を求める
 
 
 def calc(lis):
     num = len(lis)
     sum = 0
     for i in range(num):
+        #sum += x[i] * (num - i - 1) - x[i] * (i)
         sum += lis[i] * i - (lis[i] * (num - i - 1))
 
     return sum

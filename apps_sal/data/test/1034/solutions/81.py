@@ -1,3 +1,4 @@
+# D - Cake 123
 
 import heapq
 import itertools
@@ -40,6 +41,7 @@ for i in range(k):
     print((heapq.heappop(hqAns) * -1))
 
 '''
+# ans.2 #
 
 A.sort(reverse=True)
 B.sort(reverse=True)
@@ -61,6 +63,7 @@ for _ in range(k):
 
 '''
 
+# ans.1 #
 
 hq = []
 for i, j in itertools.product(A, B):

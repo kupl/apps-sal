@@ -7,6 +7,7 @@ class Solution:
         keys_found = set()
         n_candies = 0
         opn = []
+        # for i in range(len(initialBoxes)):
         for i in initialBoxes:
             if status[i] != 1:
                 boxes.add(i)
@@ -34,5 +35,6 @@ class Solution:
                 if k in keys_found:
                     initialBoxes.append(k)
                     visited.add(k)
+        # print(visited)
 
         return n_candies

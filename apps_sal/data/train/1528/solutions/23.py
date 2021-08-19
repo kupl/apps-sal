@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k = list(map(int, input().split()))
     coins = input().split()

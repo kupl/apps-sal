@@ -5,6 +5,7 @@ X = [p[0] for p in Plot]
 Y = [p[1] for p in Plot]
 X.sort()
 Y.sort()
+# 全2点間で長方形の辺を作り、その内内部点がK個のものだけ面積を比較する。
 ans = 10e20
 for x1, x2 in combinations(X, 2):
     for y1 in Y:

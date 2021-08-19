@@ -1,3 +1,4 @@
+# ARC072C - Sequence (ABC059C)
 def modify_seq(seq: list, is_positive: bool) -> int:
     cur, cnt = 0, 0
     for i in seq:

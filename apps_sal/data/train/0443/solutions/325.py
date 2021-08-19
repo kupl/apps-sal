@@ -30,6 +30,8 @@ class Solution:
                     candidates.pop()
 
         directions = [1, -1]
+        # -1 means decreasing order
         for direction in directions:
             backtrack(0, rating, [], 0, direction)
+        # return len(self.lst)
         return self.count

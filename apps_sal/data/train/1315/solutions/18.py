@@ -1,3 +1,4 @@
+# cook your dish here
 import sys
 n = int(input().strip())
 diz = {}

@@ -40,5 +40,19 @@ class Solution:
                     right += 1
                 if right - left > result:
                     result = right - left
+                # for i in range(start, len(subarrays)):
+                #     if subarrays[i][0] > window[0]:
+                #         break
+                #     start = i
+                # for i in range(len(subarrays)-1, end-1, -1):
+                #     if subarrays[i][1] < window[-1]:
+                #         break
+                #     end = i
 
+        # result = 0
+        # for curr_k in range(K, 0, -1)
+        #     i = 0
+        #     while i < len(subarrays) - 1:
+        #         gap = subarrays[i][1] + subarrays[i][0] - 1
+        #         if gap == curr_k:
         return result - 1

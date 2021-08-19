@@ -3,6 +3,9 @@ MOD = 20011
 
 def lego(x, y, consec, prev):
 
+    # X --> 0
+    # Y -- > 1
+
     if x >= r or y >= c:
         return 0
 

@@ -1,4 +1,5 @@
 3
+#coding: utf-8
 
 N, A, B = (int(i) for i in input().split())
 X = [int(x) for x in input().split()]

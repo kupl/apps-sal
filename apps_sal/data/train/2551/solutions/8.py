@@ -5,6 +5,11 @@ class Solution:
         :rtype: bool
         """
 
+        # ###method1
+        # while  "()" in s or "[]" in s or "{}" in s:
+        #     s = s.replace("()","").replace("[]","").replace("{}","")
+        # return len(s)==0
+
         stack = []
         dict = {")": "(", "]": "[", "}": "{"}
         for char in s:

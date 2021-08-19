@@ -1,7 +1,7 @@
 class Solution:
     def racecar(self, target: int) -> int:
 
-        queue = [[(0, 1)]]
+        queue = [[(0, 1)]]  # (position, speed)
         visited = {(0, 1)}
 
         seq = 0

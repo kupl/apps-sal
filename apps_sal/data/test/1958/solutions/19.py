@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, p = list(map(int, input().split()))
 arr = [input() for _ in range(n)]

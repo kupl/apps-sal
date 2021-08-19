@@ -27,14 +27,17 @@ def main():
     B.append(0)
     for i in range(q):
         B[i] += 1
+    # print(B)
     Bsum = [0] * A2
     for i in range(A2):
         Bsum[i] = Bsum[i - 1] + B[i]
+    # print(Bsum)
 
     pre = []
     for i in range(A2):
         for j in range(B[i]):
             pre.append(Bsum[i] - j)
+    # print(pre)
     answer = pre + ans
     print(*answer)
 

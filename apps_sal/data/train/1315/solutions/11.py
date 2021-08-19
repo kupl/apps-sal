@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 lst = []
 unique = 0

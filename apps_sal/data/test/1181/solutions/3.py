@@ -26,3 +26,6 @@ for i, q in enumerate(p):
             s = d
 
 print(sum(abs(t[i + 1] - t[i]) for i in range(m - 1)) - s)
+
+
+# Made By Mostafa_Khaled

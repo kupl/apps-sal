@@ -5,9 +5,11 @@ for i in n:
 
 nol = s[0]
 del s[0]
+# while 0 in s:
+#    s.remove(0)
 
 
-def C(n, k):
+def C(n, k):  # C(10,2)=45
     def fact(k):
         s = 1
         for i in range(1, k + 1):
@@ -17,7 +19,7 @@ def C(n, k):
 
 
 def var(nol, koeff):
-    def C(n, k):
+    def C(n, k):  # C(10,2)=45
         def fact(k):
             s = 1
             for i in range(1, k + 1):

@@ -1,9 +1,11 @@
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
+        # https://buptwc.com/2018/09/16/Leetcode-907-Sum-of-Subarray-Minimums/
         mod = 10 ** 9 + 7
         left = [-1] * len(A)
         right = [len(A)] * len(A)
 
+        # 计算left数组
         stack = [0]
         for i in range(1, len(A)):
             if A[i] > A[stack[-1]]:
@@ -17,6 +19,7 @@ class Solution:
                     left[i] = stack[-1]
             stack.append(i)
 
+        # 计算right数组
         stack = [len(A) - 1]
         for i in range(len(A) - 2, -1, -1):
             if A[i] > A[stack[-1]]:

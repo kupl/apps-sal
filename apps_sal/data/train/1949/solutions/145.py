@@ -19,6 +19,7 @@ class Solution:
         return gold + grid[root[0]][root[1]]
 
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+        # dfs search problem
         maxGold = 0
         for i in range(len(grid)):
             for j in range(len(grid[i])):

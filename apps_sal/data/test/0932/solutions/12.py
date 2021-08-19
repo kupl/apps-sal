@@ -1,5 +1,8 @@
+#fin, fout = open("input.txt"), open("output.txt", "w")
 n, m = map(int, input().split())
+#n, m = map(int, fin.readline().split())
 A = [list(map(int, input().split())) for i in range(n)]
+#A = [list(map(int, fin.readline().split())) for i in range(n)]
 I, J = [0] * n, [0] * m
 IS, JS = [0] * n, [0] * m
 CountI, CountJ = 0, 0
@@ -32,3 +35,5 @@ if (flag and not (sum(I) + sum(J) > 0 and sum(I) * sum(J) == 0)):
         print()
 else:
     print("NO")
+# fout.close()
+# fin.close()

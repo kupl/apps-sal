@@ -1,5 +1,6 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
+        # data structure: heap
         h = []
         for point in points:
             d = 0

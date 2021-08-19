@@ -35,8 +35,11 @@ class Solution:
         edges.sort()
         ans = 0
         for d, v1, v2 in edges:
+            # print(v1,v2,'a')
             if dsu.find(v1) != dsu.find(v2):
+                # print(v1,v2,'j')
                 ans += d
                 dsu.union(v1, v2)
 
+        # print(dsu.parent)
         return ans

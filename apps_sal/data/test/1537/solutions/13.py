@@ -13,6 +13,7 @@ for i in range(n - k + 1):
     for j in range(n - k + 1):
         res[-1].append(0)
 
+# ROWS
 
 l = {}
 r = {}
@@ -44,6 +45,7 @@ for j in range(n - k + 1):
             res[i][j] += 1
             tmp += 1
 
+# COLUMNS
 
 l = {}
 r = {}

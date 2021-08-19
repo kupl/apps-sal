@@ -23,7 +23,7 @@ if n % 2 == 0:
 else:
     n = n // 2 + 1
 for i in range(n):
-    if i != n - 1:
+    if i != n - 1:  # !!!!!!!!!
         teclight += gar[i]
         light -= gar[i]
         if gar[i] > 1:

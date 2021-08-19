@@ -19,10 +19,12 @@ class Solution:
             right_sum += i
             right_max.append(max(right_max[-1], right_sum))
         right_max = right_max[::-1]
+        # print(right_max)
 
         left_max = A[0]
         left_sum = A[0]
         for i in range(1, len(A) - 1):
+            # print(A[i], left_max, left_sum)
             left_sum += A[i]
             left_max = max(left_max, left_sum)
             max_sum = max(max_sum, left_max + right_max[i + 1])

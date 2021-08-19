@@ -9,15 +9,15 @@ class Solution:
                 if letter not in curr:
                     curr[letter] = {}
                 curr = curr[letter]
-            curr['
+            curr['#'] = f
 
         def dfs(curr):
-            if '
-                res.append(curr['
+            if '#' in curr:
+                res.append(curr['#'])
                 return
             for key in curr:
                 dfs(curr[key])
 
-        res=[]
+        res = []
         dfs(trie)
         return res

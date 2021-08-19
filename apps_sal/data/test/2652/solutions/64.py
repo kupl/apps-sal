@@ -16,10 +16,12 @@ for key in [itemgetter(1), itemgetter(2)]:
         d = min(abs(x1 - x2), abs(y1 - y2))
         edge.add((i1, i2, d))
 
+# csr形式に直す
 row, col, value = zip(*edge)
 value = np.array(value, dtype=int)
 graph = csr_matrix((value, (row, col)), shape=(N, N))
 
+# 最小全域木
 tree = minimum_spanning_tree(graph, overwrite=True).astype(int)
 answer = tree.sum()
 print(answer)

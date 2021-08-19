@@ -1,4 +1,5 @@
 import numpy as np
+# in your code
 
 
 def p(*args, **kargs):
@@ -25,8 +26,12 @@ def sol(A):
     def searchsorted(*args, **kargs):
         ret = np.searchsorted(*args, **kargs)
 
+#         print(args, kargs)
+#         print(ret)
         return ret
 
+    # python 保证余数>0，即，整除，向无穷小round。
+    # <= x，pairs that <= x
     def f(x):
         ret = 0
         if x >= 0:
@@ -47,7 +52,8 @@ def sol(A):
 
 f = sol([-4, -2, 3, 3])
 assert f(-12) == 2
-assert f(-6) == 4
+assert f(-6) == 4  # or 3
+# 二分搜索
 
 
 def bs(A, index):

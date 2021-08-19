@@ -4,6 +4,7 @@ import copy
 def main():
     N, M = [int(n) for n in input().split(" ")]
     edges = [[] for i in range(N)]
+    # edges[i] : edges from vertex i
     r = []
     for i in range(M):
         a, b = [int(x) for x in input().split(" ")]

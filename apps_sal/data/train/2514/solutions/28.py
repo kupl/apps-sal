@@ -5,6 +5,9 @@ class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         arr1, arr2 = Counter(arr1), set(arr2)
 
+        # print(arr1)
+        # print(arr2)
+
         res = 0
         for num in arr1:
             target = range(num - d, num + d + 1)

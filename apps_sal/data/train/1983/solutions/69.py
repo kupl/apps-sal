@@ -13,3 +13,8 @@ class ProductOfNumbers:
             self.history[k] = (self.numbers[len(self.numbers) - k] * self.getProduct(k - 1) if self.numbers[len(self.numbers) - k] else 0) if k else 1
 
         return self.history[k]
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

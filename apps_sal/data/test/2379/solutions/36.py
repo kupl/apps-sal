@@ -1,3 +1,4 @@
+# 解説を参考に作成
 
 
 def solve():
@@ -31,6 +32,8 @@ def solve():
             break
     right = list(reversed(right))
 
+    # print(left)
+    # print(right)
     for i in range(len(left)):
         if left[i] == right[i]:
             print((left[i] + 1))

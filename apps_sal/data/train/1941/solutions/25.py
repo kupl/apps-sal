@@ -6,6 +6,7 @@ class Solution:
             cur = 0
             for k in range(7):
                 for c in itertools.combinations(p[1:], k):
+                    # print(c)
                     cur += count[frozenset(tuple(p[0]) + c)]
             res.append(cur)
         return res

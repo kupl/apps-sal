@@ -1,3 +1,4 @@
+# cook your dish here
 def maxScore():
     for t in range(int(input())):
         n = int(input())

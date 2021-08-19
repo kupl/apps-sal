@@ -49,6 +49,7 @@ if cur:
 ans_up = 0
 ans_down = 0
 for i in numb:
+    #print(i, get_up(i), get_down(i))
     ans_up += get_up(i)
     ans_down += get_down(i)
 ans_up += ans_down // 100

@@ -8,7 +8,7 @@ else:
     a = k % (2 * (m - 1))
     b = k // (2 * (m - 1))
 
-    if a < m - 1:
+    if a < m - 1:  # low
         print(n - 2 * b, 2 + a)
     else:
         a -= (m - 1)

@@ -14,9 +14,9 @@ def count(x):
     n = len(s)
     cz = 3
     out = 0
-    for i in range(n - 2):
+    for i in range(n - 2):  # пробежали до сотен
         a = int(s[i])
-        k = n - i - 1
+        k = n - i - 1  # осталось знаков после i
 
         if a > 0:
             if cz == 3:
@@ -40,6 +40,7 @@ def count(x):
         out = out + 1
         return out
     if cz == 1:
+        #        out=out+1+int(s[n-2])
         if int(s[n - 2]) > 0:
             out = out + int(s[n - 2]) + 10
         else:

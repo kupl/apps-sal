@@ -30,7 +30,7 @@ def __starting_point():
     t = int(input())
     for _ in range(t):
         stri = str(input())
-        res(stri)
+        res(stri)  # cook your dish here
 
 
 __starting_point()

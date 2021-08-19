@@ -1,5 +1,6 @@
 import sys
 f = sys.stdin
+#f = open('H:\\Portable Python 3.2.5.1\\test_248B1.txt')
 s = 0
 a = [int(u) for u in f.readline().strip().split()]
 

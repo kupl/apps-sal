@@ -29,6 +29,8 @@ for _ in range(n):
             d1[(na, nb)] += 1
         else:
             d2[(na, nb)] += 1
+# print(d1)
+# print(d2)
 d1 = list(d1.items())
 ans = pow(2, zeroa, mod) + pow(2, zerob, mod) - 1
 ans %= mod
@@ -41,3 +43,4 @@ for (a, b), cnt1 in d1:
 ans += zero
 ans = (ans + mod - 1) % mod
 print(ans)
+# print(zeroa,zerob)

@@ -1,3 +1,4 @@
+# cook your dish here
 a = input()
 initial, final = 1, 1
 cinitial = 1

@@ -25,6 +25,10 @@ class Solution:
                     i += 2
                 else:
                     i += 1
+                # if cands[i][0]+1 < len(s) and s[cands[i][0]+1] == max_char:
+                #    if i>0 and cands[i-1][0]+1 < cands[i][1]:
+                #        continue
+                #    new_cands.append((cands[i][0]+1, cands[i][1]))
             '''
             skip = False
             for i in range(len(cands)):

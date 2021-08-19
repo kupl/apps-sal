@@ -18,3 +18,6 @@ for _ in range(int(input())):
             l = mid + 1
 
     print(res)
+
+
+# Made By Mostafa_Khaled

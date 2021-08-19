@@ -30,4 +30,6 @@ else:
             b += int(ele[i]) * (7**(r - i - 1))
         if a < n and b < m:
             c += 1
+            #print(a, b, end = ' ')
+            # print()
     print(c)

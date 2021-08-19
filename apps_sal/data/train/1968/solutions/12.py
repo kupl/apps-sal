@@ -34,8 +34,10 @@ class Solution:
             t.insert(f + '/')
         return [f[:-1] for f in t.search()]
 
+        # init
         n = len(folder)
 
+        # sort the folder
         folder = [f + '/' for f in folder]
         folder.sort()
 

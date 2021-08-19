@@ -4,7 +4,7 @@ class ProductOfNumbers:
         self.nums = []
         self.zeros = []
         self.product = 1
-        self.allProducts = {}
+        self.allProducts = {}  # index -> product at that index
 
     def add(self, num: int) -> None:
         if num == 0:
@@ -22,3 +22,9 @@ class ProductOfNumbers:
         if k == len(self.nums):
             return self.product
         return int(self.product / self.allProducts[len(self.nums) - 1 - k])
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

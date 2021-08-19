@@ -1,6 +1,10 @@
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
 
+        # First DFS to find the each island and the island components. Then do another DFS to find out
+        # the size of the islands if the were to join.
+        # TC = O(n^2), SC = O(n^2)
+
         m, n = len(grid), len(grid[0])
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 

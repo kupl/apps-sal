@@ -3,6 +3,7 @@ H, W = map(int, input().split())
 N = int(input())
 a = list(map(int, input().split()))
 
+# print(a)
 j = 1
 for i in range(H):
     x = deque()

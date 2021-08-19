@@ -5,6 +5,8 @@ len_n = len(n)
 dp0 = [[0] * (k + 1) for _ in range(len_n + 1)]
 dp1 = [[0] * (k + 1) for _ in range(len_n + 1)]
 dp0[0][0] = 1
+# dp0: N以下であることが未確定
+# dp1: N以下であることが確定
 for i, n_i in enumerate(n):
     for k_i in range(k + 1):
         if n_i == '0':

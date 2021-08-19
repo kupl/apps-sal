@@ -1,4 +1,5 @@
 def Guess_it(n, m):
+  # May the force be with you.
     if n == 0:
         return [[]]
     arrayStorage = {
@@ -12,6 +13,7 @@ def Guess_it(n, m):
     if m in arrayStorage:
         return arrayStorage[m]
     for i in range(6, m + 1):
+        # Case 1: comparing against 3
         arrayStorage[i] = []
         arraysTemp = arrayStorage[i - 3]
         for array in arraysTemp:
@@ -20,6 +22,7 @@ def Guess_it(n, m):
                 if elemToAdd not in arrayStorage[i]:
                     arrayStorage[i].append(elemToAdd)
 
+        # Case 2: comparing against 4
         arraysTemp = arrayStorage[i - 4]
         for array in arraysTemp:
             if sum(array) < n:
@@ -27,6 +30,7 @@ def Guess_it(n, m):
                 if elemToAdd not in arrayStorage[i]:
                     arrayStorage[i].append(elemToAdd)
 
+        # Case 3 against 5
         arraysTemp = arrayStorage[i - 5]
         for array in arraysTemp:
             if sum(array) < n:

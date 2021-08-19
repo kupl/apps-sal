@@ -13,6 +13,7 @@ for testcases in range(q):
     ind = 1
 
     while NOW >= 3:
+        # print(NOW,ind,ANS)
         if P[ind] < NOW - 1:
             NOW = P[ind] + 1
             continue

@@ -39,7 +39,9 @@ def solve():
     for i in range(len(q) - 1):
         f[q[i][1] - 1] = q[i + 1][0]
     f[q[-1][1] - 1] = q[0][0]
+    # print(q)
     print(' '.join(map(str, f)))
 
 
+# for i in range(mint()):
 solve()

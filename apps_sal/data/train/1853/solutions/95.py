@@ -6,12 +6,15 @@ class Solution:
             graph[start].append([distance, finish])
             graph[finish].append([distance, start])
 
+        # start from each node
+        # record all the neighbors that are within the threashold distance from the starting node
         reachable_within_threashold = {}
         import heapq
 
         for house in range(n):
             if house not in graph:
                 continue
+                #reachable_within_threashold[house] = []
             else:
                 heap = [[0, house]]
                 reachable_from_this_house = []
@@ -29,6 +32,7 @@ class Solution:
                         reachable_from_this_house.append(cur_house)
             reachable_within_threashold[house] = reachable_from_this_house
 
+        # print(reachable_within_threashold)
         for house in range(n - 1, -1, -1):
             if house not in reachable_within_threashold:
                 return house

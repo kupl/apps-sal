@@ -1,6 +1,7 @@
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         pos = [0, 0]
+        #deg = [[0,1],[1,0],[0,-1],[-1,0]]
         deg_x = 0
         deg_y = 1
         obstacles = set(map(tuple, obstacles))

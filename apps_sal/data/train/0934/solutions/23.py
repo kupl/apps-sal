@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for p in range(t):
     x, y, z = map(int, input().split())

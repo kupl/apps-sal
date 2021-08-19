@@ -31,13 +31,17 @@ for i in range(len(ans)):
 ss = 0
 i = 0
 while ss <= m:
+    #print(i, ss)
     if summ[i] < min1:
 
+        #print(i, ss, 1)
         i += 1
     else:
         if summ[i] == min1:
             if ss == m - 1:
                 break
+            #print(i, ss, 2)
             ss += 1
             i += 1
+# print(i)
 print(' '.join(map(str, ans[i])))

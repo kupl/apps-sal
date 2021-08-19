@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/1/26 23:58
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Brutality.py
 
 
 def main():

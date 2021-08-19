@@ -6,6 +6,8 @@ class DisjointSet:
         self.parent = [i for i in range(n)]
         self.rank = [1 for _ in range(n)]
 
+    # make a and b part of the same component
+    # union by rank optimization
     def union(self, a, b):
         pa = self.find(a)
         pb = self.find(b)
@@ -18,6 +20,8 @@ class DisjointSet:
             self.parent[pa] = pb
             self.rank[pb] += self.rank[pa]
 
+    # find the representative of the
+    # path compression optimization
     def find(self, a):
         if self.parent[a] == a:
             return a
@@ -39,8 +43,31 @@ class Solution:
         if n == 2:
             return distance(points[0], points[1])
 
+        # # Method 1: Prim's Alg with Heap
+        # d = {i:[] for i in range(n)}
+        # for i in range(n):
+        #     for j in range(i+1, n):
+        #         dist = distance(points[i], points[j])
+        #         d[i].append((dist, j))
+        #         d[j].append((dist, i))
+        # cost = 0
+        # connected = 1
+        # check = [True] + [False]*(n-1)
+        # heap = d[0]
+        # heapq.heapify(heap)
+        # while connected < n:
+        #     (dist, p) = heapq.heappop(heap)
+        #     if not check[p]:
+        #         cost += dist
+        #         connected += 1
+        #         check[p] = 1
+        #         for pair in d[p]:
+        #             heapq.heappush(heap, pair)
+        # return cost
+
+        # # Nethod 2: Another Implementation of Prim's Alg
         cost = 0
-        curr = 0
+        curr = 0  # select a random point as the starting point
         dist = [float('inf')] * n
         explored = set()
         explored.add(0)
@@ -58,3 +85,5 @@ class Solution:
             dist[curr] = float('inf')
             cost += min_d
         return cost
+
+        # Method 3: Kruskal's Alg with Disjoint Set

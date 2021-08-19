@@ -1,3 +1,4 @@
+# cook your dish here
 def change_of_state(state, cur_no):
     if cur_no == 1:
         if state == "R":

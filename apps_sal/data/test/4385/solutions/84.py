@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     antenna = [int(input()) for i in range(5)]

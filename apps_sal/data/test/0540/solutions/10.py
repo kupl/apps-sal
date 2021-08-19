@@ -44,4 +44,6 @@ else:
         vis[x[0]][x[1]] = True
         for i in getn(x):
             mystak.append(i)
+#	for i in vis:
+#		print(i)
     print('YES' if vis[dest[0]][dest[1]] and (len(getn(dest)) > 1 - dis or dat) else 'NO')

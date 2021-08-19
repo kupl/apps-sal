@@ -19,6 +19,7 @@ def lengthLongestPath(self, input):
         """
         h = {0: 0}
         maxlen = 0
+        # print(x.splitlines())
         for line in x.splitlines():
             name = line.lstrip('\t')
             depth = len(line) - len(name)

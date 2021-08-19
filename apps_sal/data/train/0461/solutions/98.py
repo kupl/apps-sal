@@ -12,8 +12,8 @@ class Node:
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
-        root = Node(headID, informTime[headID])
-        id_node_mapping = {headID: root}
+        root = Node(headID, informTime[headID])  # 0
+        id_node_mapping = {headID: root}  # {0: (0, 0)}
 
         def dfs(node):
             max_time = 0

@@ -1,4 +1,5 @@
 def categorize_study(p_value, requirements):
+    # Your code here.
     rate = p_value * (2**(6 - requirements))
     if rate < 0.05:
         if requirements != 0:

@@ -1,5 +1,6 @@
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
+        # we want to find the biggest loss of satisfaction in a X-hr period throughout the day.
         if len(customers) == X:
             return sum(customers)
         maxLoss = 0

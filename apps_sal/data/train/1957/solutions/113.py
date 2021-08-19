@@ -3,9 +3,9 @@ class Solution:
 
         n, m = len(grid), len(grid[0])
         vis = set()
-        vis.add((0, 0, 0))
+        vis.add((0, 0, 0))  # i,j,obstacleCount
 
-        q = [(0, 0, 0, 0)]
+        q = [(0, 0, 0, 0)]  # steps, i,j,obstacleCount
 
         def neighbors(i, j, oc):
             for x, y in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:

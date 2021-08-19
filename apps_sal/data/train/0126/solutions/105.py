@@ -9,6 +9,7 @@ class Solution:
                 if len(set(s[i:j + 1])) <= maxLetters:
                     counter[s[i:j + 1]] = counter.get(s[i:j + 1], 0) + 1
 
+        # print(counter)
         if list(counter.values()) == []:
             return 0
         return max(counter.values())

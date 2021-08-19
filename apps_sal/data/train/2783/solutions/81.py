@@ -9,4 +9,5 @@ def get_grade(s1, s2, s3):
     elif mean < 70 and mean >= 60:
         return "D"
     else:
+        # Code here
         return "F"

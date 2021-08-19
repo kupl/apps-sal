@@ -39,4 +39,6 @@ class Solution:
             if count >= 1:
                 res = i + 1
 
+            # print(left, right, res, count)
+
         return res

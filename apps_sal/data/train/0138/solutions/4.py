@@ -1,5 +1,7 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # 3:58 9/1/2020
+        # Max len of subarray with positive Product
 
         last = {1: -1}
         pro = 1

@@ -9,8 +9,8 @@ len1 = len(a) // 2 - 1
 len2 = len(a) // 2 - 1
 if len(a) % 2:
     len1 = len1 + 1
-i = 0
-j = 0
+i = 0  # first
+j = 0  # end
 flag = 0
 ai = 0
 aj = 0

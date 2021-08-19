@@ -1,3 +1,4 @@
+# cook your dish here
 
 def calc(array):
     result = 0

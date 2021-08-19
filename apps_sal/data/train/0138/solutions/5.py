@@ -14,4 +14,5 @@ class Solution:
             else:
                 dp[0][i + 1] = dp[1][i + 1] = 0
 
+        # print(dp)
         return max(dp[0])

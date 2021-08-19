@@ -13,3 +13,6 @@ class Solution:
             else:
                 dp[t] = dp[t + 1]
         return dp[1]
+
+        # dp
+        #    0 1 2 ....6

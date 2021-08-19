@@ -11,6 +11,7 @@ b2 = [int(x) for x in b2]
 
 
 def reduce(w, b):
+    # Fully covered:
     if b[0] <= w[0] and b[1] <= w[1] and b[2] >= w[2] and b[3] >= w[3]:
         return True
     if b[0] <= w[0] and b[1] <= w[1]:

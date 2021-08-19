@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -9,8 +10,8 @@ def solve(A: int, B: int):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    A = int(next(tokens))
-    B = int(next(tokens))
+    A = int(next(tokens))  # type: int
+    B = int(next(tokens))  # type: int
     answer = solve(A, B)
     print(answer)
 

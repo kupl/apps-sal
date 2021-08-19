@@ -5,6 +5,7 @@ from sys import stdin, stdout
 input = stdin.readline
 def lili(): return list(map(int, sys.stdin.readlines()))
 def li(): return list(map(int, input().split()))
+# for deque append(),pop(),appendleft(),popleft(),count()
 def I(): return int(input())
 def S(): return input().strip()
 

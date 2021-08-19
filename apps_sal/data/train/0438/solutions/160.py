@@ -1,3 +1,4 @@
+# 1562. Find Latest Group of Size M
 
 def find_latest_step(arr, group_size):
     n = len(arr)

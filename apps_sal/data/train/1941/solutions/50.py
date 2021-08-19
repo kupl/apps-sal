@@ -16,3 +16,13 @@ class Solution:
                 bfs += [m | 1 << (ord(c) - ord('a')) for m in bfs]
             ans.append(sum(cnt[m] for m in bfs))
         return ans
+        #     cur = 0
+        #     p_bit = 0
+        #     for c in p:
+        #         p_bit |= 1 << ord(c) - ord('a')
+        #     a = 1 << ord(p[0]) - ord('a')
+        #     for w in cnt:
+        #         if a & w and w & p_bit == w:
+        #             cur += cnt[w]
+        #     ans.append(cur)
+        # return ans

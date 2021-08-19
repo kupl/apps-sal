@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 def main():
@@ -7,12 +8,14 @@ def main():
     else:
         ans = min(W, H)
 
+        # Hを1:2で分割
         for i in range(3):
             d = (H // 3) - 1 + i
             if d > 0:
                 choco = [d * W, (H - d) * (W // 2), (H - d) * (W - W // 2)]
                 ans = min(ans, max(choco) - min(choco))
 
+        # Wを1:2で分割
         for i in range(3):
             d = (W // 3) - 1 + i
             if d > 0:

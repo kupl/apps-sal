@@ -1,4 +1,5 @@
 def next_day_of_week(current_day, available_week_days):
+    # coding and coding..
     d = {1: 1, 2: 2, 3: 4, 4: 8, 5: 16, 6: 32, 7: 64}
 
     while True:

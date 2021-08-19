@@ -55,6 +55,7 @@ def get_cases(r, k):
     sum_v = 0
     for i, v in enumerate(p):
         sum_v += v * ncr(k, i + 1)
+    #print(r, k, p, sum_v)
     return sum_v
 
 
@@ -62,6 +63,7 @@ def multiply(n, k):
     if n == 1:
         return 1
     f = factors(n)
+    # print(f)
     s = 1
     for r in f:
         s *= get_cases(r[1], k)

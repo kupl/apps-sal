@@ -11,6 +11,7 @@ for ii in range(t):
             s[i] = a[i] + s[i - 1]
         else:
             s[i] = a[i] + s[i - k]
+        # print('---',s[i], p)
         if s[i] <= p:
             last_ind = i
 

@@ -8,6 +8,7 @@ class Solution:
         while i <= j:
             mid = (i + j) // 2
             dist = sum(v if v < mid else mid for v in arr)
+            # print(i, j, mid, dist)
             if dist == target:
                 return mid
             elif dist < target:

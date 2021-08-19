@@ -7,6 +7,7 @@ C = list(map(int, input().split()))
 P = list(map(int, input().split()))
 
 DP = [[-1 << 30] * (n + 1) for i in range(5001)]
+# DP[k][cnt] = Aのmaxがkで, そういう人間がcnt人いるときのprofitの最大値
 
 for i in range(5001):
     DP[i][0] = 0

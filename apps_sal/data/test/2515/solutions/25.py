@@ -1,3 +1,4 @@
+# クエリにO(1)で返すためのテーブルを用意
 import numpy as np
 MAX = int(10e5 + 1)
 List = list(range(2, MAX))

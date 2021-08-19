@@ -18,12 +18,14 @@ class Solution:
                 return False
 
         def helper(i, j):
+            # print(visited)
 
             moves = [[-1, 0], [1, 0], [0, -1], [0, 1]]
             maxSum = 0
             for move in moves:
                 nextI, nextJ = move[0] + i, move[1] + j
                 if check(nextI, nextJ):
+                    # print(visited)
                     visited[(i, j)] = 1
                     maxSum = max(maxSum, helper(nextI, nextJ))
                     visited[(i, j)] = 0
@@ -33,8 +35,14 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if grid[i][j] != 0:
+                    # visited = [[-1] * n] * m
+                    # print(visited)
                     visited = initVisit(m, n)
                     visited[(i, j)] = 1
+                    # print(visited)
+                    # print(grid[i][j])
                     maxGold = max(maxGold, helper(i, j))
+                    # print(maxGold)
+                    # return 0
 
         return maxGold

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     yy, mm, dd = list(map(int, input().split(':')))
     if mm in [1, 3, 5, 7, 8, 10, 12]:

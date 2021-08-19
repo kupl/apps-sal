@@ -19,3 +19,6 @@ for i in l:
     cur //= 2
 
 print(ans)
+
+
+# Made By Mostafa_Khaled

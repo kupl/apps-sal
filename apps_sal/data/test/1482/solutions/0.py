@@ -1,3 +1,4 @@
+# CF Round 150. Div II Prob. A - Dividing Orange
 import sys
 
 In = sys.stdin

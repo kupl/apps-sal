@@ -27,6 +27,10 @@ for i, inds in enumerate(rem2ind):
 else:
     next_big = m
 next_small = next_big + 1
+# for i in range(next_big + 1, next_big + m):
+#    if len(rem2ind[i%m]) < R:
+#        next_small = i
+#        break
 
 moves = 0
 while next_big < m:
@@ -43,7 +47,34 @@ while next_big < m:
         moves += delta * step
         if c[next_small % m] >= R:
             next_small += 1
+#        print(next_big, next_small, delta, step, moves)
     next_big += 1
 
 print(moves)
 print(" ".join(map(str, a)))
+
+
+# def distribute(k, i):
+#    """ distribute i elements from position k to the following positions, not exceeding R"""
+#    while i > 0:
+#        c[k] -= i
+#        moves[k] += i
+#        k = (k+1) % m
+#        c[k] += i
+#        i = max(0, c[k] - R)
+#
+#moves = [0] * m
+#
+# for k in range(m):
+#    if c[k] > R:
+#        distribute(k, c[k] - R)
+#
+# print(sum(moves))
+#
+# for k, x in enumerate(a):
+#    while moves[x%m]:
+#        moves[x%m] -= 1
+#        x += 1
+#    a[k] = x
+#
+#print( " ".join(map(str, a)))

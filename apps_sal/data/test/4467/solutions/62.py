@@ -12,6 +12,8 @@ def c_2d_plane_2n_points_bipartite_graph():
         C.append(c)
         D.append(d)
 
+    # 赤い点の番号は 1~N とし，青い点の番号は N+1~2N とする
+    # ソースを 0 番とし，シンクを 2N+1 番とする
     graph = nx.DiGraph()
     graph.add_nodes_from(range(2 * N + 2))
     for i in range(N):

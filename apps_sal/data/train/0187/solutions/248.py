@@ -8,6 +8,7 @@ class Solution:
                 board = waitQ
             waitQ -= board
             profit = (prevBoard + board) * boardingCost - (i) * runningCost
+            # print(profit,i)
             if profit > MaxProf:
                 MaxProf = profit
                 res = i

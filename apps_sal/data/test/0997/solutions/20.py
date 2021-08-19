@@ -2,6 +2,7 @@ inp = input()
 
 inp = inp.replace(',', ';')
 tokens = inp.split(';')
+# print(tokens);
 
 a = []
 b = []

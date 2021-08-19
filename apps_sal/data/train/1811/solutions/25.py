@@ -12,3 +12,8 @@ class StockSpanner:
         stack.append((current_price, current_span))
 
         return current_span
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

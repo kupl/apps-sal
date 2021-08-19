@@ -27,12 +27,20 @@ for _ in range(tests):
             ls[i] = -ls[i]
             '''
       if i > 1 and ls[i - 2] < 0 and ls[i] - ls[i-2] >= ls[i-1]:
+       # There can be only one!
        if -ls[i-2] < ls[i]:
+        # We win!
         ls[i-2] = -ls[i-2]
         ls[i] = -ls[i]
+        #else:
+        # They win!
+        # Do nothing
       else:
+       # We both can go negative
        ls[i] = -ls[i]
       '''
+
+    # print(ls)
 
     ind = 1
 
@@ -48,6 +56,8 @@ for _ in range(tests):
             else:
                 pos.append(ind + 1)
             ind += 2
+
+        # print(pos,ls)
 
         if started:
             rec = [0] * (len(pos) + 1)

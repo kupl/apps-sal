@@ -16,6 +16,7 @@ for i in range(nbreq):
         print(pont)
     else:
         meches[int(req[1]) - 1] += int(req[2])
+        # print(meches)
         if meches[int(req[1]) - 1] > l and not trop_grand[int(req[1]) - 1]:
             trop_grand[int(req[1]) - 1] = True
             if nbmeches == 1:
@@ -29,3 +30,4 @@ for i in range(nbreq):
                     pont = max(0, pont - 1)
                 elif (not int(req[1]) - 1 == 0) and (not int(req[1]) - 1 == nbmeches - 1) and (not trop_grand[int(req[1])]) and (not trop_grand[int(req[1]) - 2]):
                     pont += 1
+        # print(trop_grand)

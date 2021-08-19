@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 
 sys.setrecursionlimit(10**9)
@@ -31,6 +33,8 @@ color = []
 visited[0] = K
 dfs(0)
 
+# print(way)
+# print(visited)
 ans = 1
 for item in visited:
     ans *= item

@@ -42,4 +42,5 @@ class Solution:
                         uf.union(i, j)
             if uf.ranks[i] == m == 1 and uf.parents[i] == i:
                 ans = step + 1
+            # print(step, i, uf.ranks, ans)
         return ans

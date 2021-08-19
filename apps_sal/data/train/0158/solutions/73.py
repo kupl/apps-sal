@@ -22,6 +22,8 @@ class Solution:
         Q.append((0, A))
         while(Q):
             lv, pat = Q.popleft()
+            # if pat==B:
+            #    return lv
 
             for new in G(pat):
                 if new not in visited:
@@ -29,3 +31,5 @@ class Solution:
                     Q.append((lv + 1, new))
                     if new == B:
                         return lv + 1
+
+            # print(Q,visited)

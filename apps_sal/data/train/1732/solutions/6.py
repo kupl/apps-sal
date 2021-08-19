@@ -31,7 +31,7 @@ def parse_equations(equations):
 def gaussian_elimination(A, x, b):
     n = len(A)
     if n < len(x):
-        return None
+        return None  # There will be free variables
     for a, b in zip(A, b):
         a.append(b)
     for i in range(len(x)):
@@ -62,7 +62,7 @@ def back_substitution(U, x):
     col = len(x) - 1
     for row in range(len(U) - 1, -1, -1):
         if U[row][col] == 0:
-            if round(U[row][len(x)], 9) != 0:
+            if round(U[row][len(x)], 9) != 0:  # b not in C(A)
                 return None
             continue
         answer[x[col]] = U[row][len(x)] / U[row][col]
@@ -79,7 +79,7 @@ class Equation:
 
     @classmethod
     def from_string(cls, eq):
-        obj_list = []
+        obj_list = []  # ax+by+cz-5=0 => [a,b,c]
         obj_regex = re.compile(r"-?\d*[a-z]+|-?\d+")
 
         substring = eq[0: eq.find("=")]
@@ -92,7 +92,7 @@ class Equation:
         found_obj = obj_regex.findall(substring)
         if len(found_obj):
             for obj in found_obj:
-                obj = obj[1:] if "-" in obj else "-" + obj
+                obj = obj[1:] if "-" in obj else "-" + obj  # Right hand objects become negative
                 obj_list.append(obj)
 
         s_regex = re.compile(r"[a-z]+")

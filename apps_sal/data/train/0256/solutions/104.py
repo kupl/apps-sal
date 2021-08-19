@@ -4,6 +4,8 @@ class Solution:
         lo = max(1, sum(piles) // H)
         hi = max(piles)
 
+        #t_hi = self.time_taken(piles, hi)
+
         while lo < hi:
 
             mid = (lo + hi) // 2
@@ -14,6 +16,7 @@ class Solution:
             if t_lo <= H:
                 return lo
             elif t_mid <= H:
+                #hi, t_hi = mid, t_mid
                 hi = mid
                 lo += 1
             else:

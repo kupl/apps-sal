@@ -1,6 +1,8 @@
 def get_issuer(number):
     number = str(number)
 
+    # if len(number) != (13 and 15 and 16):
+    #   return "Unknown"
     if number.startswith("4") and (len(number) == 13 or len(number) == 16):
         return "VISA"
     elif number.startswith(("51", "52", "53", "54", "55")) and len(number) == 16:

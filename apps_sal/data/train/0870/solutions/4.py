@@ -1,3 +1,5 @@
+# cook your dish here
+# code by RAJ BHAVSAR
 for _ in range(int(input())):
     s = str(input())
     dp = [0, 0, len(s), len(s), len(s), len(s)]

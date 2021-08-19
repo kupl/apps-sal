@@ -34,6 +34,7 @@ for zz in range(zzz):
             ub -= dx
         else:
             lb += dx
+        #print(ub, lb, dx)
 
     x = (lb + ub) // 2
     for i in range(4):

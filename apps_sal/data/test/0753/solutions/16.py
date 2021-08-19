@@ -9,9 +9,11 @@ while(1):
         else:
             ratio = 1
         if ratio == 0:
+            # ans=(bc-ad)/bc
             f = Fraction(b * c - a * d, b * c)
             print("%s" % (f))
         elif ratio == 1:
+            # ans=(ad-bc)/ad
             f = Fraction(a * d - b * c, a * d)
             print("%s" % (f))
         else:

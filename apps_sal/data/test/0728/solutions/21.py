@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# AUTHOR: haya14busa
 import sys
 import io
 
@@ -5,10 +8,13 @@ from collections import Counter
 
 
 def solve(n, vs):
+    # vs: votes
     assert 2 <= n <= 1000
+    # Limak's vote is vs[0]
     for v in vs:
         assert 1 <= v <= 1000
 
+    # limak's vote, rest's votes
     lv, rvs = vs[0], vs[1:]
     cnt = 0
 
@@ -43,6 +49,8 @@ def getinput():
 
 def iosolve():
     return str(solve(*getinput()))
+    # return 'YES' if solve(*getinput()) else 'NO' # for boolean output
+    # return '\n'.join(map(str, solve(*getinput()))) # for multiple line output
 
 
 def main():
@@ -60,30 +68,36 @@ def test():
     IO_TEST_CASES = [
 
         (
+            # INPUT
             '''\
 5
 5 1 11 2 8
             ''',
+            # EXPECT
             '''\
 4
             '''
         ),
 
         (
+            # INPUT
             '''\
 4
 1 8 8 8
             ''',
+            # EXPECT
             '''\
 6
             '''
         ),
 
         (
+            # INPUT
             '''\
 2
 7 6
             ''',
+            # EXPECT
             '''\
 0
             '''
@@ -91,10 +105,13 @@ def test():
 
     ]
 
+    # List[(List[arg for solve()], expect)]
     TEST_CASES = [
+        # ([], None),
     ]
 
-    import unittest
+    # You do need to see below
+    import unittest  # to save memory, import only if test required
     import sys
     import io
 
@@ -113,6 +130,7 @@ def test():
     for stdin, expect in IO_TEST_CASES:
         sys.stdin = io.StringIO(stdin.strip())
         art.equal(iosolve(), expect.strip())
+        # art.float_equal(float(iosolve()), float(expect.strip()), 10 ** -6)
 
 
 def getstdin_lines():

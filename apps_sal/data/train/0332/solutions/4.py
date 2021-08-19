@@ -4,9 +4,9 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        ss = "$
+        ss = "$#"
         for i in s:
-            ss += i + '
+            ss += i + '#'
         ss += '@'
         r = [0] * (len(ss) + 1)
         pos = 0
@@ -18,6 +18,7 @@ class Solution:
                 r[i] = 1
             while ss[i + r[i]] == ss[i - r[i]]:
                 r[i] += 1
+            # print(i, r[i])
             if r[i] + i > ma:
                 pos, ma = i, r[i] + i
         ans = sum(int(l / 2) for l in r)

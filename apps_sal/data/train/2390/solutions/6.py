@@ -19,6 +19,7 @@ while test < T:
 
     k = list(freq.values())
     k.sort(reverse=True)
+    # print(k)
     m = max(k)
 
     idx = 0

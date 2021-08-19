@@ -3,4 +3,4 @@ def summation(num):
     for i in range(num):
         somme += i + 1
     return somme
-    pass
+    pass  # Code here

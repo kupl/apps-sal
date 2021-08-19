@@ -13,13 +13,19 @@ elif n == 2:
 else:
     q = [1]
     v[1][0] = 1
+    # print(v)
     while q:
         t = q.pop()
+        # print(t,ans,len(v[t]))
         cnt = 2 - (t == 1)
         for i in range(1, len(v[t])):
+            # print(i)
             if v[v[t][i]][0] == 0:
                 q.append(v[t][i])
                 v[v[t][i]][0] = 1
                 ans = (ans * (k - cnt)) % mod
                 cnt += 1
+                # if cnt == k+1:
+                #     print(t,i,"Err")
+    # print(v)
     print(ans)

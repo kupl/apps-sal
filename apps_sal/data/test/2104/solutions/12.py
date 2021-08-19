@@ -8,6 +8,7 @@ def li():
     return list(map(int, input().split()))
 
 
+# https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
 def modInverse(a, m):
     m0 = m
     y = 0

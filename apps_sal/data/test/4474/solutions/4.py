@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 def tobase3(n):
     a = []
     while(n > 0):

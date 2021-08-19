@@ -15,3 +15,11 @@ class Solution:
             else:
                 seen[v] = i
         return res
+#         start, end = 0, 0
+
+#         for i in range(0, len(s)-1):
+#             if s[i] in vowel_dict:
+#                 vowel_dict[s[i]] +=1
+#                 end +=1
+
+#             end += 1

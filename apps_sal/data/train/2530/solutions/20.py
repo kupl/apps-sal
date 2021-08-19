@@ -15,6 +15,7 @@ class Solution:
         cnt = 0
         freq = Counter(time)
 
+       # print(freq)
         for ele in freq:
             if 60 - ele in freq and not ele == 60 - ele and freq[ele] > 0:
                 cnt += freq[ele] * freq[60 - ele]
@@ -22,6 +23,7 @@ class Solution:
 
             elif 60 - ele in freq and ele == 60 - ele:
                 cnt += nCr(freq[ele], 2)
+                # print(nCr(freq[ele],2))
             if ele == 0:
                 cnt += nCr(freq[ele], 2)
         return cnt

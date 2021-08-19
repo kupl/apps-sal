@@ -3,6 +3,7 @@ import heapq
 
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
+        # solution one just calculate all the power number
         pv_map = {}
 
         def pv(val):
@@ -19,6 +20,7 @@ class Solution:
                 cnt += 1
             pv_map[v] = cnt
             return cnt
+        # vs = sorted(range(lo, hi+1), key = lambda x: pv(x))[k-1]
         h = []
         for v in range(lo, hi + 1):
             p = pv(v)

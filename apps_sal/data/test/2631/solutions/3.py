@@ -14,11 +14,13 @@ class Solution:
 
         q = []
 
+        # always chose courses without prereq
         for i, count in enumerate(pre_count):
             if count == 0:
                 q.append(i)
 
         finish_num = 0
+        # take those courses which can be taken after finishing prereq
         while q:
             course = q.pop(0)
             finish_num += 1

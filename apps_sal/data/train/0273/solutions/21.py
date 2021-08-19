@@ -1,7 +1,7 @@
 class Solution:
     def racecar(self, target: int) -> int:
         record = collections.defaultdict(int)
-        cur = (0, 1)
+        cur = (0, 1)  # (position, speed)
         queue = collections.deque()
         queue.append(cur)
         record[cur] = 0

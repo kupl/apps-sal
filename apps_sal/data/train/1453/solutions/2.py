@@ -1,3 +1,4 @@
+# cook your dish here
 import collections
 n, q, k = map(int, input().split())
 a = list(map(int, input().split()))

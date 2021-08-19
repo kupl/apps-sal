@@ -10,11 +10,13 @@ loopend = 0
 remain = 0
 while(numofmove < K):
     now = A[now - 1]
+    # print(now)
     numofmove += 1
     placelist.append(now)
     if now in already:
         loopstart = placelist.index(now)
         loopend = numofmove
+        # print(remain,numofmove,loopstart,loopend,placelist)
         remain = (K - numofmove) % (loopend - loopstart)
         for i in range(remain):
             now = A[now - 1]

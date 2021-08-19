@@ -1,3 +1,4 @@
+# cook your dish here
 m, n = input().split()
 for i in range(int(n)):
     if m[-1] == '0':

@@ -4,6 +4,7 @@ class Solution:
         :type prices: List[int]
         :rtype: int
         """
+        # find the valley first, them sale at peak
         if not prices:
             return 0
         min_price = prices[0]

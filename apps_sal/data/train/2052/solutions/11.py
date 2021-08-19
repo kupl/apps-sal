@@ -1,3 +1,4 @@
+# Not Original Submission, Unable to solve the problem
 I = input
 n, m = map(int, I().split())
 b = [1] * n * 2

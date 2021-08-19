@@ -1,5 +1,7 @@
 import sys
 
+# inf = open('input.txt', 'r')
+# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -18,19 +20,19 @@ def LIS(a, n):
 
     tails = [0] * (n + 1)
     tails[0] = a[0]
-    seq_len = 1
+    seq_len = 1  # LIS for a[:1]
     for i in range(1, n):
 
-        if (a[i] > tails[0]):
-            tails[0] = a[i]
+        if (a[i] > tails[0]):  # edit for other order
+            tails[0] = a[i]    # new LIS start
             ans.append(1)
 
-        elif (a[i] < tails[seq_len - 1]):
-            tails[seq_len] = a[i]
+        elif (a[i] < tails[seq_len - 1]):  # edit for other order
+            tails[seq_len] = a[i]          # extend existing LIS
             seq_len += 1
             ans.append(seq_len)
 
-        else:
+        else:  # find LIS that ends in a[i] and update tail value for it
             pos = ceil(tails, -1, seq_len - 1, a[i])
             tails[pos] = a[i]
             ans.append(pos + 1)
@@ -44,3 +46,5 @@ ans = [1]
 res = LIS(s, n)
 print(res)
 print(*ans)
+
+# inf.close()

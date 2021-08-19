@@ -1,5 +1,6 @@
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
+        # 8:49 9/26/20
 
         def find_difficulty(d, w):
             n = len(d)
@@ -30,6 +31,9 @@ class Solution:
         total = 0
         pre = -1
         for i in range(len(worker)):
+            # if i > 0 and worker[i] == worker[i-1] and pre != -1:
+            #     total += profit[pre]
+            #     continue
             pre = find_difficulty(difficulty1, worker[i])
             if pre != -1:
                 total += profit[difficulty1[pre]]

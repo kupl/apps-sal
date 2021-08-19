@@ -8,6 +8,7 @@ for i in range(int(input())):
     m = (t // r) // (t // b + 1)
     if (t // r) % (t // b + 1):
         m += 1
+    # print(m)
     if k <= m:
         print("REBEL")
     else:

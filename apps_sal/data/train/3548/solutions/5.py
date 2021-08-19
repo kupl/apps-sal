@@ -1,8 +1,9 @@
 def polynomialize(roots):
     def add_root(poly, root):
-        poly1 = poly + [0]
-        poly2 = [0] + [-root * coef for coef in poly]
-        poly = [coef1 + coef2 for coef1, coef2 in zip(poly1, poly2)]
+        # Multiply poly * (x - root)
+        poly1 = poly + [0]  # Increase order (multiply by x)
+        poly2 = [0] + [-root * coef for coef in poly]  # Multiply by -root
+        poly = [coef1 + coef2 for coef1, coef2 in zip(poly1, poly2)]  # Add
         return poly
 
     def poly2str(poly):

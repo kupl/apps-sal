@@ -3,4 +3,5 @@ def sum_cubes(n):
     for i in range(1, n + 1):
         sum += i * i * i
 
+# main
     return sum

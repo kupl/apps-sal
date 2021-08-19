@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 input()
 s = input()
 c = 0

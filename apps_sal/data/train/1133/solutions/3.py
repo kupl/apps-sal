@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     import math as m
     for _ in range(int(input())):

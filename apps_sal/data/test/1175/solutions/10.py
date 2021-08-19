@@ -9,6 +9,7 @@ def main():
     md = 10 ** 9 + 7
     l, r = list(map(int, input().split()))
     n = int(math.log2(r)) + 1
+    # dp[i][t][f][g] i桁目まで見て最上位が決定済みか(t)、L<xが確定(f)、y<Rが確定
     dp = [[[[0] * 2 for _ in range(2)] for __ in range(2)] for ___ in range(n + 1)]
     dp[0][0][0][0] = 1
     ans = 0

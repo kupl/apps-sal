@@ -4,6 +4,8 @@ import functools
 
 class Solution:
     def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
+        # arr1i
+        # arr2j
         arr2 = sorted(set(arr2))
 
         @functools.lru_cache(None)

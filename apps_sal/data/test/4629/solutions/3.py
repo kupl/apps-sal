@@ -14,6 +14,8 @@ def d(x):
         x //= 2
     return(ans)
 
+# print(d(2))
+
 
 for i in range(q):
     n = N[i]

@@ -9,11 +9,11 @@ class Solution:
 
             for j in range(i):
                 L, R = None, None
-                if S[i - 2] == 'D':
+                if S[i - 2] == 'D':  # decreasing
                     L = j
                     R = i - 2
 
-                else:
+                else:  # increasing
                     L = 0
                     R = j - 1
 

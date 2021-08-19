@@ -5,7 +5,7 @@ def checkchoose(m, n):
         if m == ans:
             return k
         if m < ans:
-            return -1
+            return -1  # No need to search the other side of the triangle
     return -1
 
 

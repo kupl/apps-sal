@@ -36,3 +36,37 @@ for _ in range(t):
         print('')
     else:
         print(minshift(s))
+
+        # minalph = min(arr)
+
+        # pos = []
+
+        # for i in range(len(s)):
+        # 	if s[i] == minalph:
+        # 		pos += [i]
+
+        # # print(pos)
+
+        # offset = 1
+        # while True:
+        # 	tempmin = 'z'
+        # 	for i in range(len(pos)):
+        # 		tempmin = min(tempmin, s[(pos[i]+offset)%len(s)])
+
+        # 	temppos = []
+        # 	for i in range(len(pos)):
+        # 		if s[(pos[i]+offset)%len(s)] == tempmin:
+        # 			temppos += [pos[i]]
+
+        # 	pos = temppos[:]
+        # 	offset += 1
+        # 	# print(offset)
+        # 	# print(pos)
+
+        # 	if tempmin == minalph:
+        # 		break
+
+        # start = pos[0]
+        # for i in range(len(s)):
+        # 	print(s[(start+i)%len(s)], end='')
+        # print('')

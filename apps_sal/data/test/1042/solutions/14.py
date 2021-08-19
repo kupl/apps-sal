@@ -1,4 +1,8 @@
 
+# coding: utf-8
+
+# In[36]:
+
 
 import math
 

@@ -77,6 +77,7 @@ N = 2 * 10 ** 5 + 10
 root = build([0] * (N), 0, N - 1)
 
 ans = 0
+# print(s, s1)
 pointer = 0
 myset = set()
 for i in range(n):

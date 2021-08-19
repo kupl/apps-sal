@@ -1,3 +1,4 @@
+# cook your dish here
 def check_prime(num):
     for i in range(2, num):
 

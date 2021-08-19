@@ -5,6 +5,9 @@ class Solution:
         b = list(sorted(list(range(len(a))), key=lambda i: a[i]))
         c = list(sorted(list(range(len(a))), key=lambda i: -a[i]))
 
+        # print(b)
+        # print(c)
+
         odd_next = {}
         even_next = {}
         i = 1
@@ -45,6 +48,7 @@ class Solution:
                         can_go = False
                 odd = not odd
             if index == len(a) - 1:
+                # print(start)
                 paths += 1
 
         if len(a) - 1 not in list(odd_next.keys()):

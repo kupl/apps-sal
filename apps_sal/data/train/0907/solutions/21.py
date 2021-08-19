@@ -1,3 +1,4 @@
+# cook your dish here
 
 def answerFunction(s, n):
     prev = None
@@ -11,7 +12,7 @@ def answerFunction(s, n):
     if len(new) == 1:
         return "Invalid"
 
-    for i in range(len(new)):
+    for i in range(len(new)):  # HTHT
         if i == 0 and new[i] == 'T':
             return "Invalid"
         if new[i] == 'H':

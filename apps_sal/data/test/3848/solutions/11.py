@@ -33,3 +33,6 @@ while i >= 0 and i < n:
 else:
 
     print("NO" if i < 0 else "".join(s))
+
+
+# Made By Mostafa_Khaled

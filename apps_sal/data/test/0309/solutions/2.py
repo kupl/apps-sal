@@ -1,3 +1,5 @@
+# miracle!!
+# cannot believe!!
 
 (l, r) = list(map(int, input().split()))
 

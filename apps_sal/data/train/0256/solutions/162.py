@@ -1,3 +1,5 @@
+# upper_bound: max(piles)
+# lower_bound: ceil(sum(piles) / H)
 
 import math
 

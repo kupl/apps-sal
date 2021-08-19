@@ -1,3 +1,4 @@
+# B
 
 t = int(input())
 ans = []
@@ -10,9 +11,9 @@ for _ in range(t):
         l, r = list(map(int, input().split()))
         L.append(l)
         R.append(r)
-    time = [0 for _ in range(n)]
-    flag = [0 for _ in range(n)]
-    for i in range(1, max(R) + 1):
+    time = [0 for _ in range(n)]       # time[j] は人 j の待ち時間
+    flag = [0 for _ in range(n)]       # 待ちか否かのフラグ
+    for i in range(1, max(R) + 1):            # i は時間
         for j in range(n):
             if L[j] == i:
                 flag[j] = 1

@@ -1,3 +1,4 @@
+# 402B
 
 from sys import stdin
 

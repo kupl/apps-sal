@@ -7,6 +7,7 @@ import sys
 R, C, K = map(int, input().split())
 rcvs = [list(map(int, input().split())) for _ in range(K)]
 rcvs = np.array(rcvs, dtype=np.int64)
+# %%
 
 
 @njit
@@ -24,7 +25,7 @@ def main(rcvs):
             dp[i + 1][j + 1][0] = max(dp[i][j + 1])
             dp[i + 1][j + 1][1] = dp[i + 1][j + 1][0] + reward
 
-            for k in range(4):
+            for k in range(4):  # move downside without selecting
                 dp[i + 1][j + 1][k] = max(dp[i + 1][j][k], dp[i + 1][j + 1][k])
             if reward > 0:
                 for k in range(3):

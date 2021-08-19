@@ -10,6 +10,7 @@ class Solution:
 
         def returnIdx(idx, l, val):
             while idx < l:
+                #print(idx, l)
                 mid = idx + (l - idx) // 2
                 if comb[mid][0] < val:
                     idx = mid + 1

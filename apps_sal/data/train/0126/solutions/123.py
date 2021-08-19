@@ -10,6 +10,7 @@ class Solution:
             lMax = 0
             while end < len(s):
                 sub = s[start:end + 1]
+                # print(sub, self.checkUnique(sub))
                 if sub in freqMap or self.checkUnique(sub, maxLetters):
                     if sub not in freqMap:
                         freqMap[sub] = 1
@@ -19,6 +20,7 @@ class Solution:
                         lMax = freqMap[sub]
                 start += 1
                 end += 1
+            # print(lMax, gMax, minSize)
             if lMax > gMax:
                 gMax = lMax
             minSize += 1

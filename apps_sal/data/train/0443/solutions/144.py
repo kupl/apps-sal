@@ -1,6 +1,7 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
 
+        # Brute Force.
         teams = 0
         for i in range(0, len(rating)):
             for j in range(i + 1, len(rating)):

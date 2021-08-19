@@ -17,6 +17,8 @@ class Solution:
                 x2 = points[j][0]
                 y2 = points[j][1]
 
+                # check (x1, y2) and (x2, y1)
+
                 if x1 == x2:
                     continue
 

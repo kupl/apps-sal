@@ -1,4 +1,5 @@
 class Solution:
+    # Why would there be a situation that min(top[i + r - 1][j], top[i + r - 1][j + r - 1], left[i][j + r - 1], left[i + r - 1][j + r - 1]) > r???
     def largest1BorderedSquare(self, A):
         m, n = len(A), len(A[0])
         res = 0

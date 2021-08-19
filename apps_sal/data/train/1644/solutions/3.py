@@ -1,6 +1,6 @@
 import struct
 
-mapp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!
+mapp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"'
 dmapp = dict((v, k) for k, v in enumerate(mapp))
 
 

@@ -24,6 +24,7 @@ class Solution:
                         if b == c and i >= left:
                             poss.append(i)
 
+                    # if len(poss) > 1:
                     for p in poss:
                         swap(left, p)
                         otherswaps = helper(left + 1, right + 1, tuple(A + B))

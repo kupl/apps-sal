@@ -5,9 +5,12 @@ class Solution:
         if len(nums) == 1:
             return 1
 
+        # left and right index to take out the substring
         left = 0
         right = 1
+        # let current max and min equal to the first number
         cur_max = cur_min = nums[0]
+        # the max lense of the target substring is at least 1
         max_len = 1
 
         while right < len(nums):

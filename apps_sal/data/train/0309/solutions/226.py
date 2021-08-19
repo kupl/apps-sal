@@ -7,5 +7,6 @@ class Solution:
             for j in range(i):
                 diff = A[i] - A[j]
                 dp[i][diff] = dp[j].get(diff, 1) + 1
+                # print(dp[j][diff])
                 max_len = max(max_len, dp[i][diff])
         return max_len

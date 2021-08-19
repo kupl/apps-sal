@@ -4,6 +4,7 @@ inf = float('inf')
 
 
 def main(n, m, g, uv):
+    # 1<=E<=n-1
     eary = [inf] * m
     vary = [inf] * n
     vary[-1] = 0

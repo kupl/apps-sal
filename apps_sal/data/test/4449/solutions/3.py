@@ -22,6 +22,7 @@ for t in range(T):
         left += 2
         right -= 2
 
+    #print(areas, ok)
     if len(set(areas)) == 1 and ok:
         print('YES')
     else:

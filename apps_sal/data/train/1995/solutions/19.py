@@ -1,7 +1,10 @@
+# dict - get keys - dict.keys()
+# dict initialization : dict [key] = val OR dict = [key:value]
 
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
 
+        # sort trips by starting point to process them in correct order to detect overlap
         trips = sorted(trips, key=lambda x: x[1])
         currentPassengerCt = trips[0][0]
         tripList = dict()
@@ -12,17 +15,35 @@ class Solution:
             startPt = trips[idx][1]
             endPt = trips[idx][2]
 
+            #overlap = False
             for prevEndPoint in sorted(tripList.keys()):
                 if startPt >= prevEndPoint:
+                    # overlaps with 1 or more trips
+                    # remove finished trips from tripList
+                    # deduct passengers from currentPassengerCt
                     currentPassengerCt -= tripList[prevEndPoint]
                     del tripList[prevEndPoint]
+                    #overlap = True
 
+            # dont overlap with ANY previous trips, capacity <= target
+            # reset currentPassengerCt
+            # empty tripList
+
+            # if not overlap:
+            #    tripList = []
+            #    currentPassengerCt = 0
+
+            # add current trip to tripList
+            # update currentPassengerCt
             if endPt in tripList:
                 tripList[endPt] += numPassengers
             else:
                 tripList[endPt] = numPassengers
             currentPassengerCt += numPassengers
 
+            # if overlap, then sum(passengers) for all concurrent trips <= capacity
+            # if no overlap, #passengers for trip  <= capacity
+            # currentPassengerCt exceeded
             print(currentPassengerCt)
             if currentPassengerCt > capacity:
                 return False

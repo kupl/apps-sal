@@ -1,5 +1,6 @@
 n, B = list(map(int, input().split()))
 a = list(map(int, input().split()))
+# print(n, B, a)
 
 oMe = 0
 Bs = []

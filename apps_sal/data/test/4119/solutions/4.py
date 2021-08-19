@@ -1,7 +1,7 @@
 import heapq
 
-N, M = list(map(int, input().split()))
-X = list(map(int, input().split()))
+N, M = list(map(int, input().split()))  # N個の駒、M個の地点
+X = list(map(int, input().split()))  # 駒の座標
 
 
 if N >= M:

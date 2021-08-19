@@ -8,6 +8,7 @@ from numba import njit
 
 @njit('UniTuple(i8[:],4)(i1[:],i8,i8,i8)')
 def reachable(field, h2, w2, k):
+    # 各マスから上下左右にどこまで行けるか
     hw = h2 * w2
     up = np.full(hw, -1, dtype=np.int64)
     dw = np.full(hw, -1, dtype=np.int64)

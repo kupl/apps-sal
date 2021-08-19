@@ -7,6 +7,8 @@ from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
 
+# M = mod = 998244353
+
 
 def factors(n): return sorted(list(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))))
 def inv_mod(n): return pow(n, mod - 2, mod)
@@ -43,7 +45,11 @@ while i < len(l1):
             i += 2
         else:
             i += 1
+# print(cn)
 tot1 = sum(1 for i in cn if cn[i])
+
+
+# print(l1)
 
 
 i = 0

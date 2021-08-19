@@ -23,4 +23,5 @@ anslen = 0
 for i in range(1, len(ans)):
     anslen = max(anslen, ans[i] - ans[i - 1] - 1)
 
+# print(ans)
 print(anslen)

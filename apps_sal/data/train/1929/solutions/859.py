@@ -21,3 +21,8 @@ class StreamChecker:
                     ret = True
         self.curr = new_curr
         return ret
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

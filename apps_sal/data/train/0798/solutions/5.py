@@ -4,10 +4,11 @@ charms = [[*map(int, input().split())] for i in range(M)]
 
 dp = [[None for n in range(N)] for m in range(N)]
 
-dp[0][0] = grid[0][0]
+dp[0][0] = grid[0][0]  # Base case
 
 
 def valid_square(coord, charms):
+    # Checks to see if a square is valid
     for charm in charms:
         if abs(coord[0] + 1 - charm[0]) + abs(coord[1] + 1 - charm[1]) <= charm[2]:
             return True

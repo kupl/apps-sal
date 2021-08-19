@@ -1,3 +1,5 @@
+# Python code to demonstrate naive
+# method to compute gcd ( recursion )
 
 def gcd(a, b):
     if(b == 0):

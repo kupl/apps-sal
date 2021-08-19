@@ -14,10 +14,13 @@ def solve(N, M, A):
 
     D = {0: 0}
     for x, s in A:
+        #dprint(x, s)
+        # dprint(D)
         d = D.copy()
         for x0, c in d.items():
             if x - s <= x0 + 1:
                 nx = x + s
+                #dprint('  ', nx, '=>', c, '(x0=', x0, 'c=', c, ')')
                 if nx not in D:
                     D[nx] = c
                 else:
@@ -25,10 +28,12 @@ def solve(N, M, A):
             else:
                 nc = c + (x - s - x0 - 1)
                 nx = x + s + nc - c
+                #dprint('  ', nx, '=>', nc, '(x0=', x0, 'c=', c, ')')
                 if nx not in D:
                     D[nx] = nc
                 else:
                     D[nx] = min(D[nx], nc)
+        # dprint(D)
 
     best = M * 2
     for x, c in D.items():
@@ -39,6 +44,8 @@ def solve(N, M, A):
         best = min(best, c)
     return best
 
+
+###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

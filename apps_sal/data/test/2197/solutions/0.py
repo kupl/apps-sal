@@ -1,11 +1,13 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n, x = map(int, input().split())
 
 
 def mult(a, b):
+    # compute a*b
     c = [0] * 128
     for i in range(128):
         for j in range(128):
@@ -14,6 +16,7 @@ def mult(a, b):
 
 
 def quickpow(a, b):
+    # compute a**b
     if b == 1:
         return a
     if b & 1:

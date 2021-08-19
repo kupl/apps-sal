@@ -11,12 +11,12 @@ for j in range(1, w + 1):
             for b in range(-1, 2):
                 if a == 0 and b == 0:
                     continue
-                if ss[i + a][j + b] == '
-                s[i - 1][j - 1] += 1
+                if ss[i + a][j + b] == '#':
+                    s[i - 1][j - 1] += 1
 for j in range(w):
     for i in range(h):
-        if ss[i + 1][j + 1] == '
-        s[i][j] = '
+        if ss[i + 1][j + 1] == '#':
+            s[i][j] = '#'
 for i, d in enumerate(s):
     d = list(map(str, d))
     print((''.join(d)))

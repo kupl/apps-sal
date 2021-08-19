@@ -1,6 +1,6 @@
 import re
 
-syllables = re.compile(r'[aeyuio]+[^aeyuio ]*((?=e\b)e)?', flags=re.I)
+syllables = re.compile(r'[aeyuio]+[^aeyuio ]*((?=e\b)e)?', flags=re.I)  # consonant + vowel, ends with e, ignore case
 
 
 def is_haiku(text):

@@ -1,3 +1,4 @@
+# cook your dish here
 def checkStability(inp_arr, R, C, i, j):
     cell_cnt = 0
     for coordinates in ((i, j - 1), (i, j + 1), (i - 1, j), (i + 1, j)):

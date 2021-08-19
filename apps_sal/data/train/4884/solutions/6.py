@@ -6,6 +6,7 @@ def connect_the_dots(paper):
 
     for i, ligne in enumerate(laliste):
         listeCar = list(ligne)
+        # listeCar.pop()
         for j, car in enumerate(listeCar):
             if 97 <= ord(car) <= 122:
                 lesPositions.append((car, i, j))
@@ -13,12 +14,12 @@ def connect_the_dots(paper):
     pointA = lesPositions.pop()
     while lesPositions:
         pointB = lesPositions.pop()
-        if pointA[1] == pointB[1]:
+        if pointA[1] == pointB[1]:  # ligne verticale
             ext = [pointB[2], pointA[2]]
             for y in range(min(ext), max(ext) + 1):
                 tablo[pointA[1]][y] = '*'
 
-        elif pointA[2] == pointB[2]:
+        elif pointA[2] == pointB[2]:  # ligne horizontale
             ext = [pointB[1], pointA[1]]
             for x in range(min(ext), max(ext) + 1):
                 tablo[x][pointA[2]] = '*'

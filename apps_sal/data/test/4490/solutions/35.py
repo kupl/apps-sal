@@ -1,5 +1,7 @@
+# 入力
 b = input()
 
+# 処理&出力
 if b == 'A':
     print('T')
 elif b == 'T':

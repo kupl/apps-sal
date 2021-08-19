@@ -21,6 +21,7 @@ while low < high:
         r -= 1
 
     if l * (c[l] - low) - lowBuffer > (n - r - 1) * (high - c[r]) - highBuffer <= k:
+        #print(low,high,l,r,'highDown', (n-r-1)*(high-c[r])-highBuffer)
 
         k -= (n - r - 1) * (high - c[r]) - highBuffer
         lowBuffer += (n - r - 1) * (high - c[r]) - highBuffer
@@ -28,6 +29,7 @@ while low < high:
         high = c[r]
 
     elif (n - r - 1) * (high - c[r]) - highBuffer >= l * (c[l] - low) - lowBuffer <= k:
+        # print(low,high,l,r,'lowUp',l*(c[l]-low)-lowBuffer)
         k -= l * (c[l] - low) - lowBuffer
         highBuffer += l * (c[l] - low) - lowBuffer
         lowBuffer = 0

@@ -10,6 +10,7 @@ class Solution:
             pre = cut
 
         hori_max = max(hori_max, h - pre)
+        # print(hori_max)
         pre = 0
         vert_max = 0
         for i, cut in enumerate(verticalCuts):
@@ -17,4 +18,5 @@ class Solution:
             pre = cut
 
         vert_max = max(vert_max, w - pre)
+        # print(vert_max)
         return (hori_max * vert_max) % (10**9 + 7)

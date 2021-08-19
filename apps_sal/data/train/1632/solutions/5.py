@@ -5,4 +5,5 @@ def countOnesFromZero(num):
 
 
 def countOnes(left, right):
+    # Your code here!
     return countOnesFromZero(right) - countOnesFromZero(left) + bin(left).count('1')

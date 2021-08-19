@@ -1,5 +1,8 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        # build graph, use type 3 first
+        # then do alice and bob separately
+        # have dsu parents to build up alice and bob
 
         parentsA = list(range(n))
         parentsB = list(range(n))
@@ -20,13 +23,15 @@ class Solution:
         typeA = []
 
         for t, u, v in edges:
-            u, v = u - 1, v - 1
+            u, v = u - 1, v - 1  # make zero indexed, easier for UF
             if t == 3:
                 type3.append((u, v))
             elif t == 2:
                 typeB.append((u, v))
             elif t == 1:
                 typeA.append((u, v))
+
+        # now add type3 edges if they join together two new things
 
         add = 0
         for u, v in type3:
@@ -35,6 +40,7 @@ class Solution:
                 union(parentsA, u, v)
                 union(parentsB, u, v)
 
+        # now do type1 and 2 separately
         for u, v in typeA:
             if find(parentsA, u) != find(parentsA, v):
                 add += 1
@@ -45,8 +51,14 @@ class Solution:
                 add += 1
                 union(parentsB, u, v)
 
+        # print(len(type3), len(typeA), len(typeB))
+        # return
+
+        # print(add, type3, typeA, typeB)
+
         uniqA, uniqB = set(), set()
         for i in range(n):
+            # print(i, find(parentsA, i), find(parentsB, i))
             uniqA.add(find(parentsA, i))
             uniqB.add(find(parentsB, i))
 

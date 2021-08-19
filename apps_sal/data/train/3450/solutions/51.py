@@ -1,4 +1,5 @@
 def array(string):
+    # your code here
     v = string.split(',')
     if len(v) > 2:
         v.pop()

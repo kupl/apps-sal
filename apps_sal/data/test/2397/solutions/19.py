@@ -1,3 +1,4 @@
+# cf_contests E66
 import sys
 input = sys.stdin.readline
 n, k = list(map(int, input().split()))

@@ -15,6 +15,8 @@ def comb(n, m):
     elif n < 0 or m < 0:
         return 0
     else:
+        # print(inv)
+        # print(finv)
         ans = 1
         for i in range(n, n - m, -1):
             ans = (ans * i) % p

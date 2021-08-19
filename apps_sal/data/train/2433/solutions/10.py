@@ -5,8 +5,8 @@ class Solution:
         :type K: int
         :rtype: str
         """
-        S = "".join(S.split("-"))
-        S = S.upper()
+        S = "".join(S.split("-"))  # remove dash
+        S = S.upper()  # change to upper character
         num_group = len(S) // K
         start_idx = len(S) % K
 

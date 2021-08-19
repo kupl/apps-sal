@@ -8,6 +8,8 @@ class StockSpanner:
 
     def next(self, price):
 
+        #print(price, self.stack, self.ind, self.vals)
+
         self.vals += [price]
 
         while len(self.stack) > 0 and self.vals[self.stack[-1]] <= price:
@@ -22,7 +24,14 @@ class StockSpanner:
 
         self.ind += 1
 
+        # print(\"at end \", price, self.stack, self.ind, self.vals)
+
         if self.ind == 1:
             return 1
 
         return res
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

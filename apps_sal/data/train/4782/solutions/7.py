@@ -1,3 +1,5 @@
+# a skeleton class with required operators provided for convenience
+# feel free to use another approach
 import operator
 
 

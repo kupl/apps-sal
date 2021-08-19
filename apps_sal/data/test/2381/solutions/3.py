@@ -26,15 +26,21 @@ def main():
     change_plus = None
     change_minus = None
     if last_plus != None:
+        # マイナスを追加する
         for i in range(k, n):
             if a[i] <= 0:
                 change_plus = a[i]
                 break
     if last_minus != None:
+        # マイナスを追加する
         for i in range(k, n):
             if a[i] >= 0:
                 change_minus = a[i]
                 break
+
+    # print(kouho)
+    #print(last_plus, change_plus)
+    #print(last_minus, change_minus)
 
     if change_plus == None and change_minus == None:
         ans = 1

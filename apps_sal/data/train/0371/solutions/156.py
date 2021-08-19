@@ -3,6 +3,7 @@ class Solution(object):
         if S == T:
             return 0
 
+        # routes = map(set, routesList)
         for i, route in enumerate(routes):
             routes[i] = set(route)
         print(routes)

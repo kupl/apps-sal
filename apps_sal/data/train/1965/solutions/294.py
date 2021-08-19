@@ -3,6 +3,7 @@ class Solution:
 
         def find(x):
             if x != father[x]:
+                # path compression
                 father[x] = find(father[x])
             return father[x]
 

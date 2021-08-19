@@ -1,3 +1,5 @@
+#input = open("input.txt").readline
+#f = open("output.txt", "w")
 
 def greedy(le, su):
     if su > le * 9:
@@ -24,7 +26,7 @@ def get(li):
     return st
 
 
-mi = [0]
+mi = [0]  # mi is OK ans
 mi_str = "0"
 
 const = "9" * 500

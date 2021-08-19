@@ -45,7 +45,7 @@ def solve():
 
     inv_count = 0
     m = [0] * n
-    sb = True
+    sb = True  # sortable
     for i in range(d):
         k = 0
         for j in range(i, n, d):

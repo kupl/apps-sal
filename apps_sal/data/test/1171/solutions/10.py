@@ -7,7 +7,9 @@ targ = min(N, K)
 
 ans = -float("inf")
 
+#i: 左から取る回数
 for i in range(targ + 1):
+    #j: 右を取る回数
     for j in range(targ + 1 - i):
         get = sorted(V[:i] + V[N - j:])
         tmp = sum(get)

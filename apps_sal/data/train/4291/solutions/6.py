@@ -1,3 +1,4 @@
+# From slowest to fastest.
 
 from math import ceil
 

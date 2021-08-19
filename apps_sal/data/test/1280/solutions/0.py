@@ -35,3 +35,4 @@ for i in range(len(s)):
         string.add(tempStrHash)
 
 print(len(string))
+# print(datetime.now()-time1)

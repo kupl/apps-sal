@@ -4,7 +4,7 @@ n, k = map(int, input().split())
 li = [[] for _ in range(n + 1)]
 mod = 10**9 + 7
 ans = k
-perm = [1] * (n)
+perm = [1] * (n)  # 組み合わせ(k-2)P(要素)
 
 for i in range(n - 1):
     a, b = map(int, input().split())

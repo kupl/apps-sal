@@ -16,6 +16,7 @@ def Solve(slots):
     if slots < 3:
         return 0
 
+    # check
     s = math.sqrt(slots)
     if math.floor(s) == math.ceil(s):
         return check(s)

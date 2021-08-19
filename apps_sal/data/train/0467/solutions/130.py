@@ -20,7 +20,7 @@ class Solution:
                 continue
             if math.sqrt(num) % 1 == 0:
                 continue
-            if isprime(pow(num, 1 / 3)) or num == 4913:
+            if isprime(pow(num, 1 / 3)) or num == 4913:  # pow(4913, 1/3) == 16.999999999999996
                 ans += 1 + pow(num, 1 / 3) + pow(num, 2 / 3) + num
                 continue
             divisors = 0

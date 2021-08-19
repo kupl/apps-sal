@@ -22,6 +22,7 @@ class Solution:
         '''
         out = [0] * len(queries)
         for i, (l, r) in enumerate(queries):
+            #print(f'i:{i}, l:{l}, r:{r}')
             if l > 0:
                 out[i] = table[l - 1] ^ table[r]
             else:

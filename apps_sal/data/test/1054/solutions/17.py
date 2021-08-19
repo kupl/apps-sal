@@ -1,3 +1,4 @@
+#!/bin/env python3
 n = int(input())
 x, y = input().split(' ')
 x, y = int(x), int(y)

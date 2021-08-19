@@ -3,6 +3,7 @@ from collections import defaultdict, namedtuple
 
 def puzzle_solver(pieces, width, height):
 
+    # Lookup tree: top_left -> top_right -> bottom_left -> (bottom_right, id)
     catalogue = defaultdict(lambda: defaultdict(dict))
 
     rows, columns = 0, 0
@@ -16,14 +17,18 @@ def puzzle_solver(pieces, width, height):
 
     puzzle = tuple([None] * columns for _ in range(rows))
 
+    # top left corner
     puzzle[0][0] = catalogue[None][None][None]
 
+    # top row
     for col in range(1, columns):
         puzzle[0][col] = catalogue[None][None][puzzle[0][col - 1][0]]
 
+    # left column
     for row in range(1, rows):
         puzzle[row][0] = catalogue[None][puzzle[row - 1][0][0]][None]
 
+    # body
     for row in range(1, rows):
         for col in range(1, columns):
             top_left = puzzle[row - 1][col - 1][0]

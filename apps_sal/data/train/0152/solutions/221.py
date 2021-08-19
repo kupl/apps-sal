@@ -1,6 +1,8 @@
 class Solution:
 
     def allow(self, mid, position, m):
+        # check if the given distance is possible
+        # greedy approach: putting each ball in the first place
         balls = 1
         last = position[0]
         for i in range(1, len(position)):
@@ -11,6 +13,7 @@ class Solution:
 
     def maxDistance(self, position: List[int], m: int) -> int:
         o = Solution()
+        # binary search
         position.sort()
         low = 0
         high = 1000000000

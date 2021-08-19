@@ -1,3 +1,4 @@
+# THanks to easter eggs kata ;*
 
 def height(n, m):
     if n >= m:
@@ -23,3 +24,4 @@ def solve(emulator):
             h += tryh
         m -= 1
     return(h + 1)
+    # continue here

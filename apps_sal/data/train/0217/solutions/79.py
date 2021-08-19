@@ -6,3 +6,14 @@ class Solution:
             curr = {num | prev_num for prev_num in curr} | {num}
             result |= curr
         return len(result)
+
+
+#         result = set()
+#         prev = set([0])
+#         for num in A:
+#             curr = set([num])
+#             for prev_num in prev:
+#                 curr.add(prev_num | num)
+#             result |= curr
+#             prev = curr
+#         return len(result)

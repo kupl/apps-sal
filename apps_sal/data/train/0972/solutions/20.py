@@ -1,3 +1,4 @@
+# cook your dish here
 line1 = [int(x) for x in input().split()]
 n = line1[0]
 k = line1[1]

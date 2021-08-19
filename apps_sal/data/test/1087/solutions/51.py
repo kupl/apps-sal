@@ -2,6 +2,7 @@ import numpy as np
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
+# 最大桁数調べる
 MAX = max(len(bin(K)[2:]), len(bin(max(A))[2:]))
 
 
@@ -15,6 +16,7 @@ for i, a in enumerate(A):
 L = np.array(L)
 count = 0
 ones = L.sum(axis=0)
+# print(ones)
 for i in range(MAX):
     if ones[i] * 2 == N:
         continue

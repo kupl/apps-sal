@@ -9,6 +9,7 @@ while comb:
         posIni = x - i
         stringActual = (posIni, i)
         if (stringActual in setPrueba or (posIni < 5) or (lectura[posIni:x] == lectura[x:pos3])):
+            #print("encontrado en el set")
             continue
         else:
             sufix.add(lectura[posIni:x])

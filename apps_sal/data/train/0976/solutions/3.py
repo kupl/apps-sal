@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 arr = list(map(int, input().split()))
 b1 = b2 = maxb1 = maxb2 = b1pos = b2pos = 0

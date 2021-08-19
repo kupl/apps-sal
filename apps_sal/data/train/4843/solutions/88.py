@@ -3,6 +3,7 @@ combinationTotals = []
 
 def choose_best_sum(t, k, ls):
     combinationTotals.clear()
+    # your code
     ls.sort()
     total = 0
 

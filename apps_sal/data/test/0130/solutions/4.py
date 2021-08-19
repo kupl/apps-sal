@@ -22,6 +22,8 @@ for i in range(0, n):
             rht = max(rht, j)
             allBlackCount += 1
 
+# print(top,lft)
+# print(btm,rht)
 
 h = btm - top + 1
 w = rht - lft + 1

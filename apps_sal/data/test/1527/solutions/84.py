@@ -4,11 +4,11 @@ l = [list(input()) for i in range(H)]
 l_count = [[0] * W for i in range(H)]
 
 
-def answer(st_X, st_Y):
+def answer(st_X, st_Y):  # X,Y座標を指定してそこからの距離を考える
     tmp_X, tmp_Y = st_X, st_Y
     que = deque([[tmp_X, tmp_Y]])
     after = set()
-    while que:
+    while que:  # スタート地点からの距離を数えながら行ったことのない場所を探索する
         tmp_X, tmp_Y = que.popleft()
         nu = l_count[tmp_Y][tmp_X]
         after.add((tmp_X, tmp_Y))

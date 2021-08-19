@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 mod = 10**9 + 7
-nums = 5 * (10**5)
+nums = 5 * (10**5)  # 制約に合わせよう
 
 g1, g2, inverse = [1, 1], [1, 1], [0, 1]
 

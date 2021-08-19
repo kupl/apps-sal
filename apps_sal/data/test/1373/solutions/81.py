@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sat Sep 12 19:24:24 2020
 
@@ -17,3 +18,5 @@ for i in range(K + 1, T + 2):
     ans += higher - lower + 1
     ans %= key
 print(ans)
+# print(lower)
+# print(higher)

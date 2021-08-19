@@ -1,3 +1,4 @@
+# Description of the problem can be found at http://codeforces.com/contest/771/problem/B
 
 n, k = map(int, input().split())
 l_o = input().split()

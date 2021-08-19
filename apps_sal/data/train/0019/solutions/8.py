@@ -29,6 +29,10 @@ def test():
             ans = sumK
     cleanK(q)
     print(ans)
+#
+# def print2d(a):
+#     for i in a:
+#       print(' '.join(list(map(str, i))))
 
 
 t = int(input())

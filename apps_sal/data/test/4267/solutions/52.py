@@ -1,3 +1,4 @@
+# ABC174 A
 
 X = int(input())
 if X >= 30:

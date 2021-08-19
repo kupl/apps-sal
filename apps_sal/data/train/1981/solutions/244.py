@@ -7,10 +7,13 @@ class Solution:
         count = [0] * (n + 1)
         for request in requests:
             start, end = request
+            # amazing way to find frequency at each index without looping
+            # from start to end
             count[start] += 1
             count[end + 1] -= 1
 
         for i in range(1, n + 1):
+            # using prefix sum
             count[i] += count[i - 1]
         answer = 0
         nums.sort()

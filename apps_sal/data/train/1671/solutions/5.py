@@ -1,4 +1,10 @@
 
+# ------------------------------warmup----------------------------
+# *******************************
+# * AUTHOR:  RAJDEEP GHOSH      *
+# * NICK  :  Rajdeep2k          *
+# * INSTITUTION: IIEST, SHIBPUR *
+# *******************************
 import os
 import sys
 from io import BytesIO, IOBase
@@ -54,7 +60,10 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
+# -------------------game starts now---------------------------------------------------
 for _ in range(int(input()) if True else 1):
     n = (int)(input())
+    # l=list(map(int,input().split()))
+    # a,b=map(int,input().split())
     l = [1] * n
     print(*l)

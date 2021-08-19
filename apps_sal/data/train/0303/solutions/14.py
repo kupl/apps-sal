@@ -15,4 +15,5 @@ class Solution:
                     s = last_s - last_n * (j - 1) + n * j
                     dp[i % 2][j] = (s, n)
                     last_max = max(last_max, s)
+            #    print(i, j, dp[i][j])
         return last_max

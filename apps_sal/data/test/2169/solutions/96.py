@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc089/tasks/abc089_d
 
 import sys
 
@@ -17,6 +18,7 @@ def calc(x):
         return ret
 
 
+####################################################################
 sys.setrecursionlimit(10**5)
 H, W, D = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(H)]
@@ -34,6 +36,8 @@ for a in A:
 mv = [0] * (H * W + 1)
 for i in range(D):
     calc(H * W - i)
+    # print(H*W-i,calc(H*W-i))
+# print(mv)
 
 L = [0] * Q
 R = [0] * Q

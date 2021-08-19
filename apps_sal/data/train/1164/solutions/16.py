@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 """Python Version:3.7.1"""
+# start
 P, S = list(map(int, input().split()))
 COUNT = [0] * 101010
 A = []
@@ -14,3 +16,4 @@ for i in range(31):
     for j in range(P):
         if COUNT[j] == i:
             print(j + 1)
+# end

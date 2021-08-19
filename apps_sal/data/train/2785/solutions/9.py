@@ -7,6 +7,7 @@ def digit_sum(n):
 
 def digit_product(n):
     return reduce(lambda a, b: a * int(b), str(n), 1)
+    # return reduce(lambda a, b: a * b, map(int, str(n)), 1)
 
 
 def gcd(x, y):

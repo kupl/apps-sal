@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# coding: utf-8
 
 def debug(arg):
     if __debug__:
@@ -34,6 +36,12 @@ def main():
 
     debug(r)
     debug(l)
+
+    # a = sorted(set(l) & set(r))
+
+    # debug(a)
+    # for aa in a:
+    #     print(aa)
 
     for ll, rr in zip(l, sorted(r)):
         if ll == rr:

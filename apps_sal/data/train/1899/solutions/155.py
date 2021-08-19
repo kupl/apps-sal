@@ -18,6 +18,7 @@ class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         queue = collections.deque([])
         visited = set()
+        # find the first 1, and search all its neighbors to turn it into -1
         for i in range(len(A)):
             should_break = False
             for j in range(len(A[i])):
@@ -28,13 +29,16 @@ class Solution:
             if should_break:
                 break
 
+        # print(A, queue)
+        # BFS approach
         while len(queue) > 0:
             prev_val, i, j = queue.popleft()
-            next_val = prev_val - 1
+            next_val = prev_val - 1  # records the amount of steps
             print(('q', i, j, next_val))
-            if A[i][j] == 1:
+            if A[i][j] == 1:  # reached the other island
                 return -prev_val - 1
 
+             # push boundary of the island
             if i > 0 and A[i - 1][j] >= 0 and (i - 1, j) not in visited:
                 visited.add((i - 1, j))
                 queue.append((next_val, i - 1, j))

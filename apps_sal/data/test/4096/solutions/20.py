@@ -9,6 +9,7 @@ right = n + 1
 ans = 10**18 + 1
 while left != right:
     mid = (left + right) // 2
+    # print(mid,left,right)
     din = 0
     kaam = 0
     c = 0

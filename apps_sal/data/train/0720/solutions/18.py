@@ -2,26 +2,33 @@ cnt1_max = 315
 arr_size = [None] * cnt1_max
 for i in range(1, cnt1_max + 1):
     arr_size[i - 1] = (i * (i + 1), i)
+# print(arr_size)
 t = int(input())
 for _t in range(t):
     s = input().strip()
     n = len(s)
     tot1 = [0] * (n + 1)
+    # print(tot1)
     for i in range(1, n + 1):
         if s[i - 1] == '1':
             tot1[i] = tot1[i - 1] + 1
         else:
             tot1[i] = tot1[i - 1]
+    # print(tot1)
 
     beauty = 0
     for size, cnt in arr_size:
         i = 0
         limit = n - size
+        # print(size,cnt,limit)
         while i < limit + 1:
+            # print("tot1[i+size] " ,tot1[i+size],"  ", tot1[i])
             cnt1 = tot1[i + size] - tot1[i]
+            # print("cnt ",cnt1)
             if cnt1 == cnt:
                 beauty += 1
                 i += 1
             else:
                 i += abs(cnt1 - cnt)
+            # print("i :",i)
     print(beauty)

@@ -20,4 +20,6 @@ class Solution:
                 num += customers[count]
             count += 1
 
+            # print(current,kotae)
+
         return kotae

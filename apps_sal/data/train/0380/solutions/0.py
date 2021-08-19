@@ -27,7 +27,7 @@ class Solution:
             if not (0 <= int(part) <= 255):
                 return False
 
-            if part[0] == '0' and len(part) > 1:
+            if part[0] == '0' and len(part) > 1:  # invalid leading zero
                 return False
         return True
 

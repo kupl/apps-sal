@@ -1,3 +1,4 @@
+# cook your dish here
 def LSB(num, K):
     return bool(num & (1 << (K - 1)))
 

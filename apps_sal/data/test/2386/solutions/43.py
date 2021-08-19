@@ -19,4 +19,5 @@ while r - l > 2:
         r = m + 1
     elif mp1s >= ms and ms <= mm1s:
         break
+    #print(l, m, r, ls, ms, rs)
 print(ms)

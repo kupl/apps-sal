@@ -2,6 +2,7 @@ from collections import defaultdict
 N, M = list(map(int, input().split()))
 section = [list(map(int, input().split())) for i in range(N)]
 
+# 区間の大きさごとに分類
 D = defaultdict(list)
 for sec in section:
     D[sec[1] - sec[0] + 1].append(sec)
@@ -29,7 +30,7 @@ class BinaryIndexedTree:
 
 
 BIT = BinaryIndexedTree(M)
-certainly = 0
+certainly = 0  # 確実に通るもの
 
 for d in range(1, M + 1):
     for l, r in D[d - 1]:

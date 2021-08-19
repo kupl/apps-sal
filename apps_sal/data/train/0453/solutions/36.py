@@ -20,6 +20,7 @@ class Solution:
             return mem[(i, lastc, target)]
 
         result = recurse(0, 0, t)
+        # print(mem)
         if result == float('inf'):
             return -1
         return result

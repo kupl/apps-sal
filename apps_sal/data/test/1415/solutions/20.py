@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #335 (Div. 2)
 Problem 606 B. Testing Robots
 
 @author yamaton
@@ -31,6 +31,7 @@ def solve(x, y, x0, y0, s):
         pos0 = nx if 1 <= nx <= x else pos[0]
         pos1 = ny if 1 <= ny <= y else pos[1]
         pos = (pos0, pos1)
+        # pp(pos)
 
     result.append(x * y - len(seen))
     return result

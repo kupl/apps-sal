@@ -16,6 +16,8 @@ class Solution:
                 break
             curr = arr[i]
             min_e = i
+        # n - 1 - (max_s + 1) + 1 = n - 1 - max_ s
+        # min_e - 1 - 0 + 1 = min_e
         ans = min(n - max_s - 1, min_e)
 
         for s in range(max_s + 1):

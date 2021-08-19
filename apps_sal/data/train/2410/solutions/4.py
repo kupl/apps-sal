@@ -1,5 +1,6 @@
 class Solution:
     def isLongPressedName(self, name: str, typed: str) -> bool:
+        # as long as the current letter is a
         name_len, typed_len = len(name), len(typed)
         if name == typed:
             return True
@@ -10,11 +11,14 @@ class Solution:
         n_left, n_right = 0, 1
 
         while n_left < name_len and t_left < typed_len:
+            # print(n_left)
             while n_right < name_len and name[n_left] == name[n_right]:
                 n_right += 1
             while t_right < typed_len and typed[t_left] == typed[t_right]:
                 t_right += 1
 
+            # print(n_left, name[n_left])
+            # print(t_left, typed[t_left])
             if name[n_left] != typed[t_left] or (n_right - n_left) > (t_right - t_left):
                 return False
             else:

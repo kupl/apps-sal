@@ -1,3 +1,4 @@
+# cook your dish here
 import bisect
 MAXR = 100
 MAXN = 20000000

@@ -4,6 +4,31 @@ from collections import deque
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # min_stack = []
+        # max_stack = []
+        # for i, number in enumerate(nums):
+        #     _index = i
+        #     while max_stack and number > max_stack[-1][0]:
+        #         _, _index = max_stack.pop()
+        #     max_stack.append((number, _index))
+        #     _index = i
+        #     while min_stack and number < min_stack[-1][0]:
+        #         _, _index = min_stack.pop()
+        #     min_stack.append((number, _index))
+        # longest = -1
+        # start_index = len(nums) - 1
+        # print(max_stack)
+        # print(min_stack)
+        # while max_stack[-1][0] - min_stack[-1][0] <= limit:
+        #     longest = max(
+        #         longest,
+        #         abs(max_stack[-1][1] - min_stack[-1][1])
+        #     )
+        #     if max_stack[-1][1] > min_stack[-1][1]:
+        #         max_stack.pop()
+        #     else:
+        #         min_stack.pop()
+        # return longest
 
         left = 0
         min_q = deque()

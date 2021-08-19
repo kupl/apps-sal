@@ -1,3 +1,4 @@
+# harshad number
 n = int(input())
 flag = 0
 n_str = str(n)

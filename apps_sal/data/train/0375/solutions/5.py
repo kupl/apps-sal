@@ -16,7 +16,10 @@ class Solution:
 
         l = len(nums)
         n_size = max((maxV - minV) // (l - 1), 1)
+        # print(n_size)
         n = (maxV - minV) // n_size + 1
+        # print(n)
+        # return 0
         if n == 1:
             return maxV - minV
 

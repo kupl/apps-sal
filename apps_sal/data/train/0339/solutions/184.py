@@ -1,3 +1,9 @@
+# Similar to twoSum problem.
+# Let's consider how we can find if value a ** 2 exists as a product of any
+#   two elements in array [x, y, ..., z]
+# We can store in a set the value of a ** 2 / x for all x in array when fully divisible
+# If the next value in array exists in in set, then we found a match
+# The time complexity for finding one given value is O(N)
 from collections import defaultdict
 
 

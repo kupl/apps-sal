@@ -1,4 +1,10 @@
+# 1032. Stream of Characters
 
+# class TrieNode:
+#     def __init__(self, val=None, isEnd=False):
+#         self.val = val
+#         self.isEnd = isEnd
+#         self.next = {}
 
 class StreamChecker:
 
@@ -25,3 +31,8 @@ class StreamChecker:
                 return False
             node = node[ch]
         return '$' in node
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

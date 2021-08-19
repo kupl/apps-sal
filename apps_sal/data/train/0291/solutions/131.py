@@ -12,4 +12,6 @@ class Solution:
             else:
                 lst.append([1 + lst[-1][0], lst[-1][1]])
 
+        # print(lst)
+
         return sum([x[1] for x in lst]) % (10**9 + 7)

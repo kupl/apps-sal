@@ -11,6 +11,7 @@ def main():
     MAX = 10**7 + 1
     res = MAX * MAX
 
+    #MAX_P = int(math.sqrt(MAX))
     MAX_P = 3163
 
     primes = []

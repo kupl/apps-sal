@@ -1,6 +1,11 @@
+# coding: utf-8
+# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
+
+#n,q = map(int, readline().split())
+#*a, = map(int, readline().split())
 
 
 def get(i, l, r):
@@ -26,5 +31,6 @@ for i in range(1, n):
         v += get(i, l, r)
     dp[i] = v % MOD
     acc[i] = (acc[i - 1] + dp[i]) % MOD
+    # print(dp,acc)
 
 print(dp[n - 1] % MOD)

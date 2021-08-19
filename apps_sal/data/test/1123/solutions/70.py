@@ -1,7 +1,9 @@
+# %%
 N, K = list(map(int, input().split()))
 MOD = 10**9 + 7
 
 
+# %%
 ans = 0
 gcds = [0] * (K + 1)
 for i in reversed(list(range(1, K + 1))):

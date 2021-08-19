@@ -1,5 +1,7 @@
 
 def stringify_attrs(attrs):
+    # {'cls': 'ds', 'name': 'val'}
+    # 'class="ds" name="val"'
     result = ''
     for attr in attrs:
         new_attr = attrs[attr]
@@ -19,3 +21,5 @@ def html(tag, *bodies, **attrs):
     for body in bodies:
         result += '<' + tag + stringify_attrs(attrs) + '>' + body + '</' + tag + '>' + '\n'
     return result.strip()
+
+    # <тег имя="значение">body</тег>

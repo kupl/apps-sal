@@ -23,6 +23,8 @@ l_ch = set([i for i in range(2, min(m + 1, 1000000), 2)])
 l_ch.difference_update(chet)
 l_n.difference_update(nech)
 
+# print(l_ch)
+#print(l_n, nech)
 
 if len(l_ch) + len(chet) < n // 2 or len(l_n) + len(nech) < n // 2:
     print(-1)

@@ -8,6 +8,7 @@ for _ in range(m):
     b -= 1
     edges[a].append(b)
     edges[b].append(a)
+# print(edges)
 d = deque()
 d.append(0)
 visited = [False] * n
@@ -22,6 +23,7 @@ while d:
             visited[child] = True
             d.append(child)
             from_0[child] = from_0[x] + 1
+# print(from_0)
 if from_0[n - 1] == 2:
     print("POSSIBLE")
 else:

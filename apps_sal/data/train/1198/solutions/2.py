@@ -36,11 +36,13 @@ for i in range(n):
             ans[cur_gcd] += (n - j)
             break
         ans[cur_gcd] += 1
+# print(ans)
 
 keys = list(ans.keys())
 ans1 = [0] * lim
 for i in keys:
     for j in range(i, lim, i):
         ans1[j] += ans[i]
+# print(ans1[:10])
 for i in k:
     print(ans1[i])

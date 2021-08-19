@@ -19,3 +19,10 @@ for i in range(n):
 print(count)
 for i, j in swaps:
     print(i, j)
+
+
+# while 1>0:
+##    line = input()
+# if len(line.split())==0:
+# break
+# print(line)

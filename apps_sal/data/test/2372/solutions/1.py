@@ -7,7 +7,7 @@ def main():
         """
         -1 - unsearched
         -2 - candidate for warp
-        -3 - wall '
+        -3 - wall '#'
         """
         queue = deque()
         queue_warp = deque()

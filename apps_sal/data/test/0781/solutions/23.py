@@ -5,7 +5,8 @@ def main():
     mode = "filee"
     if mode == "file":
         f = open("test.txt", "r")
-
+    # f.readline()
+    # input()
     def get(): return [f.readline()[:-1] if mode == "file" else input()]
     for z in range(8):
         q = get()

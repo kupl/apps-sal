@@ -1,5 +1,5 @@
 """
-Codeforces Round 
+Codeforces Round #334 (Div. 2)
 
 Problem 604 B. More Cowbell
 
@@ -16,6 +16,7 @@ import sys
 
 
 def solve(xs, n, k):
+    # assert xs is sorted
     if k >= n:
         return xs[-1]
     ys1 = it.islice(xs, n - k)
@@ -23,6 +24,10 @@ def solve(xs, n, k):
     ys2rev = reversed(list(ys2))
     maxval = max(a + b for (a, b) in zip(ys1, ys2rev))
     return max(maxval, xs[-1])
+
+
+# def pp(*args, **kwargs):
+#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

@@ -1,3 +1,5 @@
+# class Solution:
+# def minEatingSpeed(self, piles: List[int], H: int) -> int:
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
 

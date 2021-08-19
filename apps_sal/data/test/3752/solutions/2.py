@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 k, d, t = [int(x) for x in input().split()]
 tt = t * 2
 t_loop = ((k - 1) // d + 1) * d

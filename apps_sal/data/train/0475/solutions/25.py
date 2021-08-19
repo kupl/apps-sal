@@ -9,5 +9,7 @@ class Solution:
                     sums[(i, j)] += sums[(i, j - 1)]
 
         s = sorted(sums.values())
+        # print(s)
+        # print(s[left-1: right])
         ret = sum(s[left - 1: right]) % (10**9 + 7)
         return ret

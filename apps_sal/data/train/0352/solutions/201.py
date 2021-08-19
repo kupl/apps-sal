@@ -1,5 +1,6 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
+        # longest path in a specially constructed DAG
         dp = [0 for i in range(len(words))]
         ans = 0
         words = sorted(words, key=lambda x: len(x))

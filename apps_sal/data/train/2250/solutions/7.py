@@ -36,7 +36,7 @@ for i in range(k):
         b = y - a * x
         d[(a, b)].append((x, y, i))
 ans = [-1] * k
-ray = (0, 0, 0, 1, 0)
+ray = (0, 0, 0, 1, 0)  # x, y, t, a, b
 visit = set()
 while ray:
     x, y, t, a, b = ray

@@ -1,3 +1,7 @@
+# ダイクストラ
+# 単一始点最短経路(正の辺のみ)
+# s=始点 n=頂点数 edgeは隣接リスト(edge=[[[1,2],[2,4]],[[2,1]],[]])
+# 0-indexed
 from heapq import heappop, heappush
 
 

@@ -8,6 +8,7 @@ dp = [0]
 s = 0
 c = 1
 while n:
+    # print(l)
     t = get_array()
     if t[0] == 2:
         l.append(t[1])
@@ -27,3 +28,6 @@ while n:
         s += t[1] * t[2]
         print(s / c)
     n -= 1
+    # r=s/c
+    # r="{0:.6f}".format(r)
+    # print(r)

@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 import collections
 n, q = list(map(int, input().split()))
 Q = collections.deque()
@@ -27,3 +29,6 @@ for _ in range(q):
                 s -= 1
     L.append(s)
 print('\n'.join(map(str, L)))
+
+
+# Made By Mostafa_Khaled

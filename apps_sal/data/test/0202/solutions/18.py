@@ -1,3 +1,4 @@
+# A
 
 xi, yi = map(int, input().split())
 xf, yf = map(int, input().split())

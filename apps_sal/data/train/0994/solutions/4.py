@@ -48,6 +48,7 @@ for _ in range(int(input())):
         if x % k == 0:
             b.append(k)
         k += 1
+    # print(b)
     po = 0
     pot = 0
     for i in b:
@@ -65,6 +66,8 @@ for _ in range(int(input())):
             c.append(summ)
         c.sort()
         l = len(c)
+        # print(i)
+        # print(c)
         for t in range(l):
             if c[t] >= x // i:
                 break
@@ -99,4 +102,5 @@ for _ in range(int(input())):
                             s += 1
                         else:
                             break
+                # print(count)
     print(count)

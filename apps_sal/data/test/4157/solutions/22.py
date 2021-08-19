@@ -1,3 +1,4 @@
+# Project name: CF-479-D
 
 n = int(input())
 a = list(map(int, input().split()))

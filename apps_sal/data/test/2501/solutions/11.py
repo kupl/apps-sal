@@ -6,6 +6,7 @@ dat = list(map(int, input().split()))
 buf = []
 for i in range(n):
     cnt[i - dat[i]].append(i)
+# print(buf)
 res = 0
 for i in range(n):
     x = i + dat[i]

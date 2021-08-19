@@ -1,5 +1,6 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/discuss/609701/Python-two-heap-solution
         minheap = [[nums[0], 0]]
         maxheap = [[-nums[0], 0]]
         left = -1

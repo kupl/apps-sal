@@ -40,12 +40,14 @@ def factor(x):
 d = {}
 for i in range(n):
     f = factor(a[i])
+    #print(f, a[i])
     if f not in d:
         d[f] = 1
     else:
         d[f] += 1
 
 ans = 0
+# print(d)
 for x in d:
     y = []
     for i in x:
@@ -56,5 +58,6 @@ for x in d:
             ans += d[x] * d[y]
         else:
             ans += d[x] * (d[y] - 1)
+    #print(x, y, ans)
 
 print(ans // 2)

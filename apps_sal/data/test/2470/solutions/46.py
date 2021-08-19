@@ -16,7 +16,7 @@ class Solution:
                     minKeep = min(minKeep, swap[i - 1][j])
                 if arr2[j] > arr1[i - 1]:
                     swap[i][j] = keep[i - 1] + 1
-                if j > 0:
+                if j > 0:  # arr2[j] > arr2[j-1] is always True
                     minSwap = min(minSwap, swap[i - 1][j - 1] + 1)
                 keep[i] = min(keep[i], minKeep)
                 swap[i][j] = min(swap[i][j], minSwap)

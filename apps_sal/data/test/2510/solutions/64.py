@@ -20,6 +20,8 @@ def union(x, y):
     parent[root_x] += parent[root_y]
     parent[root_y] = root_x
 
+# 今回これ使わないけど、どこに誰がいるのかはこれでわかる
+
 
 def members(n, x):
     root = find(x)

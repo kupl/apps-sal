@@ -11,9 +11,20 @@ class Solution:
             freqs[i] += 1
             freqs[j + 1] -= 1
 
+#         MADE ... prefix Sum ... algo ... to make if proper normalize ... the number of requests
+#         thru indexes..
         for i in range(1, n + 1):
             freqs[i] += freqs[i - 1]
 
+        # THIS IS TAKING o(n^2):- .... need to reduce this ... later part is amazingly fast
+#         TLE -------------------------------------------------------------------------------------------      so .. we implemented above logic ... to reduce complexity
+
+        # for req in requests:
+        #     for ind in range(req[0], req[1]+1):
+        #         mymap[ind] += 1
+
+
+#         freqs = sorted(mymap.values(), reverse=True)
         freqs = sorted(freqs[:-1], reverse=True)
         heap = [(-n, n) for n in nums]
 

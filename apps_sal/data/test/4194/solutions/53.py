@@ -10,6 +10,7 @@ i 番目の宿題をやるには Ai 日間かかります。
 N, M = list(map(int, input().split()))
 data = list(map(int, input().split()))
 
+# 全ての宿題にかかる日数 sum(data)
 
 if N - sum(data) < 0:
     print((-1))

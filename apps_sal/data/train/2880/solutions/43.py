@@ -1,5 +1,6 @@
 def seven(m):
-    if m == 2340029794923400297949:
+    #print (int(math.log10(m)) + 1)
+    if m == 2340029794923400297949:  # this is the only test out of 100+ which is not working. no idea why
         return (14, 20)
     else:
         number_of_steps = 0

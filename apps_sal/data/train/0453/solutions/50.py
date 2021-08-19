@@ -5,8 +5,16 @@ from collections import defaultdict
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
 
+        # DP(number of painted houses from left, last house color, number of groups in painted houses)
+        # DP(i, color, groups)
+        #       = min(DP(i - 1, x != color, groups - 1), DP(i - 1, color, groups)) + cost[i][x]
+
+        # m houses <= 100
+        # n colors <= 20
+        # number of states = m * n * target = 100 * 20 * 100 = 2e5
+
         INF = int(1e9)
-        DP = defaultdict(lambda: INF)
+        DP = defaultdict(lambda: INF)  # (groups, last_color) -> min cost
 
         if houses[0] == 0:
             for col in range(1, n + 1):
@@ -17,7 +25,7 @@ class Solution:
         for i in range(1, m):
             NDP = defaultdict(lambda: INF)
 
-            ByGroups = defaultdict(list)
+            ByGroups = defaultdict(list)  # (groups) -> [(cost, prev color)]
             for key, min_cost in DP.items():
                 groups_prev, col_prev = key
                 ByGroups[groups_prev].append((min_cost, col_prev))

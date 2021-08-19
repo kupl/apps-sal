@@ -1,3 +1,4 @@
+# cook your dish here
 it = list(map(int, input().split()))
 n, m = it[:2]
 w, b = it[2:4]
@@ -17,6 +18,7 @@ for j in range(n):
     ind = 0
     co = 0
     st = []
+    # print("j is",j)
     for i in ss[j]:
         if i[1] == 1:
             co += 1
@@ -25,7 +27,11 @@ for j in range(n):
                 continue
             a = i[0] - ind + 1
             b = 1 + 1
+            #  su=((a+b)*(a-b+1))//2
 
+            # st=[]
+        #    tot+=su
+            # print(a,b,tot)
             for ii in st:
                 a = ind
                 b = ii[0] - 1
@@ -34,8 +40,11 @@ for j in range(n):
 
                 su = ((a + b) * (a - b + 1)) // 2
                 tot += su
+                #  print(a,b,tot)
                 ind = ii[0] + 1
             st = [i[:]]
+            #   print(tot)
+            # ind=i[0]+1
         else:
             co = 0
             a = i[0] - ind + 1
@@ -43,19 +52,27 @@ for j in range(n):
             su = ((a + b) * (a - b + 1)) // 2
 
             tot += su
+            #  print(a,b,tot)
             ind = i[0] + 1
             for ii in st:
                 tot -= (i[0] - ii[0] + 1)
             st = []
+            #  print(tot)
     a = ind
     b = m - 1
+    #   print(a,b)
+    # print(tot)
     if a <= b:
         a = m - a
         b = m - b
 
+        # print(a,b)
         su = ((a + b) * (a - b + 1)) // 2
         tot += su
+    #  print(tot)
     for ii in st:
         tot -= (m - ii[0])
 
+    # print(tot)
+    # print()
 print(tot)

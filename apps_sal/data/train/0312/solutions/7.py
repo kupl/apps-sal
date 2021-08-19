@@ -4,6 +4,7 @@ class Solution:
         preSum = [0 for i in range(n + 1)]
         for i in range(1, n + 1):
             preSum[i] = preSum[i - 1] + A[i - 1]
+        # print(preSum)
         deque = []
         i = 0
         ans = n + 1
@@ -16,4 +17,5 @@ class Solution:
                 deque.pop()
             deque.append(i)
             i += 1
+            # print(deque)
         return ans if ans < n + 1 else -1

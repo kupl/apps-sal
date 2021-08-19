@@ -37,6 +37,8 @@ class Solution:
 
             return dfs(*source)
 
+        # return method1(blocked)
+
         def method2(blocked):
             if not blocked:
                 return True

@@ -57,10 +57,13 @@ def main():
 
         decided = set()
 
+        # randomly assign directions to edges not in min span
         for t in tofix:
             indegree[t[1]] += 1
             decided.add((t[0], t[1]))
 
+        # find leaf in finale
+        # fix random root i = 1
         cf = {}
         pf = {}
 
@@ -77,6 +80,8 @@ def main():
         visited = set()
         parent = {}
 
+        # create the min span tree , every child with one parent
+        # root is 1
         while len(visited) < n and len(visit) > 0:
 
             v = visit.pop()
@@ -97,6 +102,7 @@ def main():
         st = [1]
         sc = [1]
 
+        # get traversal order from kids to parents
         while len(st) < n + 1:
             if len(sc) == 0:
                 break
@@ -113,9 +119,11 @@ def main():
             pair2 = (h, g)
 
             if indegree[g] % 2 == 0:
+                # outgoing
                 decided.add(pair1)
                 indegree[h] += 1
             else:
+                # incoming
                 decided.add(pair2)
                 indegree[g] += 1
 

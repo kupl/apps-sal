@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     N, M = [int(x) for x in input().split()]
     edges = [0] * M

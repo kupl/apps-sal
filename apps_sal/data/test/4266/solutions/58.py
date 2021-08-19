@@ -1,4 +1,5 @@
 
+# https://atcoder.jp/contests/abc137/tasks/abc137_b
 
 k, x = map(int, input().split())
 ans_list = [x]

@@ -13,6 +13,7 @@ class Solution:
             else:
                 d[n] = 1
         total = 0
+        # 想清楚各种可能的边界情况
         for n in d:
             if d[n] % (n + 1) == 0:
                 total += d[n]

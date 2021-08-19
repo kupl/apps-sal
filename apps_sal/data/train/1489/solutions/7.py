@@ -1,5 +1,7 @@
 num, k = input().split()
 k = int(k)
+# print(num)
+# print(num[0])
 l = []
 old = ''
 for x in range(len(num)):

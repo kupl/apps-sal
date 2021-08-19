@@ -1,6 +1,9 @@
+# cook your dish here
 t = int(input())
 for x in range(t):
     a = list(input())
+    # print(a)
+    # flag = 1
     N = len(a)
     i = 0
     for i in range(i + 1, N):

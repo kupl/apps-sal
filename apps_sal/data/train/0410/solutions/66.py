@@ -10,6 +10,9 @@ class Solution:
                     x = x / 2
                 else:
                     x = x * 3 + 1
+            # if steps not in steps_to_ints:
+            #     steps_to_ints[steps] = []
+            # steps_to_ints[steps].append(steps)
             int_to_steps[start] = steps
 
         return sorted(list(int_to_steps.items()), key=lambda item: item[1])[k - 1][0]

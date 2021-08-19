@@ -33,4 +33,5 @@ m_reversed = min(m_reversed, d[i][1])
 gap = min(gap, M_other - m_reversed)
 ans2 = (M - m) * gap
 
+#print(ans1, ans2)
 print(min(ans1, ans2))

@@ -18,3 +18,8 @@ class Cashier:
         else:
             self.count -= 1
         return total_p
+
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)

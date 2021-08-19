@@ -37,6 +37,8 @@ class DynamicMedian():
         res2 = (self.r_sum - len(self.r_q) * self.median_high())
         return res1 + res2
 
+# Binary Indexed Tree (Fenwick Tree)
+
 
 class BIT():
     def __init__(self, n):

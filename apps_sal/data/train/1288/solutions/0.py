@@ -2,6 +2,7 @@ t = int(input())
 for _ in range(t):
     n, m = map(int, input().split())
     mat = [0 for i in range(n)]
+    #mat=[[0 for i in range(n)] for j in range(n)]
     for i in range(m):
         u, v = map(int, input().split())
         u, v = (u - 1), (v - 1)

@@ -14,6 +14,7 @@ class Solution:
         INF = float('inf')
         mem = {}
 
+        # O(M*N)
         def min_path(i, j):
             if i == M - 1 and j == N - 1:
                 return grid[i][j]

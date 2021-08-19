@@ -1,5 +1,6 @@
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+        # sort the set of all start and end
         T = []
         for i, s in enumerate(startTime):
             T.append((s, False, i))
@@ -16,5 +17,6 @@ class Solution:
             else:
                 curr = prev
             best[time] = curr
+            # print(\"index: {}, time: {}, curr: {}\".format(i, time, curr))
             prev = curr
         return best[T[-1][0]]

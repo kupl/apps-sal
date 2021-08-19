@@ -9,13 +9,16 @@ if icase == 0:
     x = [0] * n
     y = [0] * n
     for i in range(n):
+        #        xy[i]=list(map(int,input().split()))
         x[i], y[i] = list(map(int, input().split()))
 elif icase == 1:
     n = 3
+#    xy=[[1, 5], [3, 9], [7, 8]]
     x = [1, 3, 7]
     y = [5, 9, 8]
 elif icase == 2:
     n = 6
+#    xy=[[8, 3], [4, 9], [12, 19], [18, 1], [13, 5], [7, 6]]
     x = [8, 4, 12, 18, 13, 7]
     y = [3, 9, 19, 1, 5, 6]
 
@@ -52,11 +55,13 @@ icnt = 0
 length_sum = 0
 while que:
     w, s, t = heappop(que)
+#    print(w,s,t)
     root_s = find(s)
     root_t = find(t)
     if root_s != root_t:
         pair_lst[root_s] = root_t
         length_sum += w
         icnt += 1
+#        print(icnt)
 
 print(length_sum)

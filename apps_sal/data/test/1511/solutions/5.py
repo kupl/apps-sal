@@ -7,6 +7,7 @@ for i in range(kcore):
     core.append([])
     for j in range(ktact):
         core[i].append(int(work[j]))
+# ...
 zmemory = []
 for i in range(int(b[2])):
     zmemory.append(0)
@@ -15,6 +16,7 @@ answer = []
 for i in range(kcore):
     zcore.append(0)
     answer.append(0)
+# ...
 for i in range(ktact):
     freecore = []
     for j in range(kcore):
@@ -33,5 +35,6 @@ for i in range(ktact):
                         answer[j] = i + 1
                         zcore[k] = 1
                         answer[k] = i + 1
+# ...
 for i in range(kcore):
     print(answer[i])

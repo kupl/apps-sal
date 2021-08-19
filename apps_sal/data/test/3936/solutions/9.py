@@ -5,6 +5,7 @@ S2 = list(input())
 out = 1
 i = 0
 while i < N:
+    # print(i,S1[i])
     if i == 0:
         if S1[i] == S2[i]:
             out *= 3

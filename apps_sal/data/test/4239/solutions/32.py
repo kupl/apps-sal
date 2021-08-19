@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# import math
 n = int(input())
 
 ans = [-1] * (n + 1)

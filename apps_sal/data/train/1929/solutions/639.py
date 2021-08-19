@@ -10,7 +10,7 @@ class StreamChecker:
                 if c not in ptr:
                     ptr[c] = {}
                 ptr = ptr[c]
-            ptr['
+            ptr['#'] = ''
 
     def query(self, letter: str) -> bool:
         self.memo += letter
@@ -19,7 +19,12 @@ class StreamChecker:
             if c not in ptr:
                 return False
             ptr = ptr[c]
-            if '
+            if '#' in ptr:
                 return True
 
         return False
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

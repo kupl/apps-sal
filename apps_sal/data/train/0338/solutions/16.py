@@ -10,6 +10,7 @@ class Solution:
 
         @lru_cache(None)
         def DP(i=0, startswith_A=True, startswith_B=True, match_evil=0):
+            # # <= s and not startwsith evil[e:]
             if match_evil == len(evil):
                 return 0
             if i == n:

@@ -6,6 +6,9 @@ def main():
         print(1)
         return
 
+    # Only when there is no bit duplication in a group,
+    # it always meets the condition.
+    # l <= true_l < true_r < r
     ans = n
     l = 0
     now = a[0]
@@ -18,6 +21,9 @@ def main():
         for new_l in range(r - 1, l - 1, -1):
             if a[new_l] & a[r] != 0:
                 break
+        # else:
+            # print('Error')
+            # return
         new_l += 1
 
         for i in range(l, new_l):

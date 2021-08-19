@@ -8,12 +8,14 @@ for i in range(n):
 for i in range(n - 1):
     direct[root[i] - 1].append(i + 2)
 
+# print(direct)
 
 stack = [1]
 s = sums[0]
 work = True
 while(len(stack) > 0 and work):
     v = stack.pop()
+    # v is odd height
     for u in direct[v - 1]:
         if len(direct[u - 1]) == 0:
             sums[u - 1] = sums[v - 1]

@@ -15,6 +15,7 @@ class Solution:
                     i_s += 1
                 else:
                     if can_skip:
+                        # i_s += 1
                         can_skip = False
                         pass
                     else:
@@ -25,11 +26,15 @@ class Solution:
             return 0
 
         words.sort(key=lambda x: len(x))
+        # print(words)
         dp = [1] * len(words)
 
         for r in range(1, len(words)):
+            # print(r)
             for l in range(r):
                 if is_predecessor(words[l], words[r]):
+                    # print('ok',words[l], words[r], l, dp[l])
                     dp[r] = max(dp[r], dp[l] + 1)
 
+        # print(dp)
         return max(dp)

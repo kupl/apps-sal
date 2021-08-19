@@ -1,3 +1,4 @@
+# coding: utf-8
 n = int(input())
 ans = 0
 li1 = [int(i) for i in input().split()]

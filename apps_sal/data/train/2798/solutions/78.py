@@ -9,3 +9,5 @@ def to_alternating_case(s):
         else:
             new_line += a
     return new_line
+
+    # your code here

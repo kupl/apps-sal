@@ -1,9 +1,11 @@
 n, K = list(map(int, input().split(" ")))
+#n, K = map(int, f.readline().split())
 azaza = {}
 all = set()
 
 for i in range(n):
     a, b = list(map(int, input().split(" ")))
+    #a, b = map(int, f.readline().split())
 
     if a not in azaza:
         azaza[a] = []

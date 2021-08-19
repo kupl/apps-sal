@@ -2,7 +2,7 @@ def inpl(): return list(map(int, input().split()))
 
 
 H, W = inpl()
-ans = [["
+ans = [["#"] * (W + 2) for _ in range(H + 2)]
 
 for h in range(H):
     A = input()

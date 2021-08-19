@@ -4,6 +4,7 @@ def only_duplicates(a):
         for i in range(j + 1, len(a)):
             if a[j] == a[i]:
                 b.append(a[j])
+    # zhao ti shen ye mei you yong
     a = list(a)
 
     def seclect(i):

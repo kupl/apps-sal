@@ -1,16 +1,26 @@
+#!/usr/bin/env python3
+# atcoder
+# Türkler var mı?
+# Herkese memnün oldum
 import sys
+#from heapq import heapify, heappush, heappop
+#from heapq import nlargest, nsmallest
 
 
 def iimr(): return map(int, sys.stdin.readline().rstrip().split())
 
 
 readline = sys.stdin.readline
+# puorquoi le sys.stdin.buffer.readline() ne fonctionne plus sur atcoder?
+#sys.setrecursionlimit(10 ** 7)
+# INF = 1 << 30 # 大体 1e9
 
 
 def debug(*x):
     print(*x, file=sys.stderr)
 
 
+# s == self
 class atcoder():
     def __init__(s):
         f = open(0)

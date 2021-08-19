@@ -13,6 +13,7 @@ for _ in range(t):
                 break
             left = book + left % b
             cook += book
+        #  print(low,high,mid,cook)
         if high - low < 3:
             for i in range(low, high + 1):
                 cook = i

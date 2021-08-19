@@ -22,6 +22,8 @@ for i in range(n):
         if j > 0 and (M1[i][j] <= M1[i][j - 1] or M2[i][j] <= M2[i][j - 1]):
             f = 0
             break
+# print(M1)
+# print(M2)
 if f == 1:
     print("Possible")
 else:

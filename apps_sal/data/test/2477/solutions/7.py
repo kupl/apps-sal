@@ -17,6 +17,7 @@ def binsearch(minz, maxz):
 
     if ncut < K:
         return binsearch(minz, mid)
+    # else ncut == K
     maxx = 0
     for i in range(N):
         thiscut = int((logs[i] + mid - 1) / mid) - 1

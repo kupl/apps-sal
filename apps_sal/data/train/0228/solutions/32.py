@@ -6,6 +6,7 @@ class Solution:
                 vcnt[s[i - k]] -= 1
             if c in 'aeiou':
                 vcnt[c] = vcnt.get(c, 0) + 1
+            #res = max(res, sum(vcnt.values()))
             if sum(vcnt.values()) > res:
                 res = sum(vcnt.values())
         return res

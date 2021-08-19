@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n, *a = list(map(int, open(0).read().split()))
 for i in range(n - 1):
     if a[i] < 0:

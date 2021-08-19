@@ -3,6 +3,7 @@ class Solution:
         if len(nums) <= 3:
             return 0
         nums.sort()
+        # remove smallest 3
         min_diff = nums[-1] - nums[3]
 
         for i in range(3):

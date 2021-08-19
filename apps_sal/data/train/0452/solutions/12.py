@@ -9,7 +9,9 @@ class Solution:
         for i in range(1, len(jobDifficulty) + 1):
             for j in range(1, d + 1):
                 tmp = 0
+                # k-1 >= j-1
                 for k in range(i, j - 1, -1):
                     tmp = max(tmp, jobDifficulty[k - 1])
                     dp[i][j] = min(dp[i][j], dp[k - 1][j - 1] + tmp)
+        # print(dp)
         return dp[-1][-1] if dp[-1][-1] < float('inf') else -1

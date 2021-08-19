@@ -7,13 +7,13 @@ def missing(s):
             if s.startswith(str(n)[:len(s) - i], i):
                 i += j
             elif missing:
-                missing = None
+                missing = None  # 2 missing numbers
                 break
             else:
                 missing = n
         else:
             if not missing:
-                return -1
+                return -1  # No missing number
         if missing:
-            return missing
-    return -1
+            return missing  # 1 missing number
+    return -1  # Error in the sequence

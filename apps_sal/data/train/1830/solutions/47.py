@@ -13,6 +13,7 @@ class Solution:
                 if len(zeros_indices) == 0:
                     return []
 
+                # find index of dry day to use
                 index = 0
                 while(zeros_indices[index] < rains_dict[rains[i]]):
                     index += 1

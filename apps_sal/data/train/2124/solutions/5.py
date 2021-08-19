@@ -7,7 +7,9 @@ class Dinic():
         self.t = t
         self.graph = {}
         self.maxCap = 1000000
+        # dict các node lân cận
 
+        # e[0]: from,  e[1]: to,  e[2]: dung luong
         for e in listEdge:
 
             if e[0] not in self.graph:
@@ -15,6 +17,7 @@ class Dinic():
 
             if e[1] not in self.graph:
                 self.graph[e[1]] = []
+                # to     #cap   #reveser edge
             self.graph[e[0]].append([e[1], e[2], len(self.graph[e[1]])])
             self.graph[e[1]].append([e[0], 0, len(self.graph[e[0]]) - 1])
 
@@ -31,8 +34,10 @@ class Dinic():
             cur = Q.popleft()
 
             for index, e in enumerate(self.graph[cur]):
+                # Chỉ add vào các node kế tiếp nếu dung lượng cạnh > 0 và chưa được visit trước đấy
                 if e[1] > 0 and e[0] not in self.dist:
                     self.dist[e[0]] = self.dist[cur] + 1
+                    # add vào danh sách node kế tiếp của node hiện tại
                     self.curIter[cur].append(index)
                     Q.append(e[0])
 
@@ -47,13 +52,18 @@ class Dinic():
             indexPreEdge = self.graph[cur][indexEdge][2]
 
             if remainCap > 0 and self.dist[nextNode] > self.dist[cur]:
+                #self.next[cur] = indexEdge
                 flow = self.findPath(nextNode, min(f, remainCap))
 
                 if flow > 0:
                     self.path.append(cur)
                     self.graph[cur][indexEdge][1] -= flow
                     self.graph[nextNode][indexPreEdge][1] += flow
+                    # if cur == self.s:
+                    #    print(self.path, flow)
                     return flow
+                # else:
+                    # self.path.pop()
             self.curIter[cur].pop()
 
         return 0
@@ -71,6 +81,7 @@ class Dinic():
             while(True):
                 self.path = []
                 f = self.findPath(self.s, self.maxCap)
+                #print('iter', self.curIter)
                 if f == 0:
                     break
 
@@ -79,6 +90,8 @@ class Dinic():
 
         return maxflow
 
+    # Tìm tập node thuộc S và T
+    # sau khi đã tìm được max flow
     def residualBfs(self):
         Q = deque([self.s])
         side = {self.s: 's'}
@@ -117,6 +130,7 @@ edge = [list(map(int, input().split())) for _ in range(m)]
 l, r = 0, 1000000
 
 while r - l > 1e-9:
+    #print(l, r)
     md = (r + l) / 2
     edge_ = [[u, v, w // md] for u, v, w in edge]
     g = Dinic(edge_, 1, n)

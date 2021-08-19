@@ -1,10 +1,12 @@
 def alphabet_war(fight):
+    # The left side letters and their power:
     left = {
         "w": 4,
         "p": 3,
         "b": 2,
         "s": 1,
     }
+    # The right side letters and their power:
     right = {
         "m": 4,
         "q": 3,

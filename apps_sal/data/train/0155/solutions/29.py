@@ -35,4 +35,5 @@ class Solution:
 
         for i in range(len(arr)):
             max_pos = max(max_pos, helper(i))
+        # print(memo)
         return max_pos

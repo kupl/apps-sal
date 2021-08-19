@@ -1,5 +1,7 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
+        # a b c x a a x x b c d x d d a
+        #      |     |         |
 
         start = 0
         for i in range(len(s)):

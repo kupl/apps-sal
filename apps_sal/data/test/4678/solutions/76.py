@@ -8,8 +8,10 @@ if A[i] > A[i+1]:
 
 
 def step():
+    # 入力
     N = int(input())
     A = list(map(int, input().split()))
+    # 処理
     step_height_sum = 0
     for i in range(len(A) - 1):
         if A[i] > A[i + 1]:

@@ -18,6 +18,7 @@ class Solution:
                 max_queue.pop()
             min_queue.append(fast)
             max_queue.append(fast)
+            # print(min_queue, max_queue)
             while nums[max_queue[0]] - nums[min_queue[0]] > limit:
                 slow += 1
                 if max_queue[0] < slow:

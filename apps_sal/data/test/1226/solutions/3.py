@@ -1,4 +1,5 @@
 n, a, b = map(int, input().split())
+#sousuu = (2**n -1)%(10**9+7)
 
 
 def cmb(n, r, mod):
@@ -13,6 +14,10 @@ def cmb(n, r, mod):
 
 exceptA = cmb(n, a, 10**9 + 7)
 exceptB = cmb(n, b, 10**9 + 7)
+
+# print((sousuu-exceptA-exceptB)%(10**9+7))
+
+# 繰り返し2乗法
 
 
 def modPow(a, n, mod):

@@ -15,6 +15,8 @@ for i in range(k):
 safe = sorted(list([int(qi) - 1 for qi in input().split()]))
 
 
+# print(safe)
+
 def dist(lower, upper, row):
     if lower > upper:
         return dist(upper, lower, row)

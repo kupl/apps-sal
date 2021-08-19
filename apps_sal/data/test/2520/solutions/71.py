@@ -1,12 +1,12 @@
 import sys
 n, m, k = list(map(int, input().split()))
 
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10**9)  # 再帰の上限をあげる
 
-root = [-1 for i in range(n + 1)]
+root = [-1 for i in range(n + 1)]  # 自分が親ならグループの人数のマイナス倍を、そうでないなら（元）親の番号を示す
 
 
-def r(x):
+def r(x):  # 親は誰？
     if root[x] < 0:
         return x
     else:

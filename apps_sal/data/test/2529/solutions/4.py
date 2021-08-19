@@ -1,3 +1,4 @@
+# cook your dish here
 req, total = map(float, input().split())
 ans = total
 if req >= total:

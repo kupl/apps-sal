@@ -1,4 +1,9 @@
 
+# -*- coding: utf-8 -*-
+# @Date    : 2019-02-08 08:18:25
+# @Author  : raj lath (oorja.halt@gmail.com)
+# @Link    : link
+# @Version : 1.0.0
 
 from sys import stdin
 

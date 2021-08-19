@@ -1,3 +1,4 @@
+# Задача про банковский счет. от 30.05.13
 inner_data = input()
 if int(inner_data) >= 0:
     print(inner_data)

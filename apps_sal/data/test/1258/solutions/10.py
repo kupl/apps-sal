@@ -24,6 +24,7 @@ for i in d:
         break
 ans = [k]
 bef = k
+# print(d,k)
 for i in d:
     if (len(d[i]) == 2):
         for j in d[i]:
@@ -34,6 +35,7 @@ for i in d:
 
 ans += [p]
 ind = d[k][0]
+# print(ans)
 '''
 for i in d[tuple(ans)]:
     if i not in ans:
@@ -42,6 +44,7 @@ for i in d[tuple(ans)]:
         break
 '''
 nex = [ans[0], ans[1]]
+# print(ans)
 bef = 99999999999999
 for i in range(n - 2):
     for j in d2[tuple(nex)]:

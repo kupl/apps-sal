@@ -1,5 +1,6 @@
 N, M = map(int, input().split())
 S = list(input())
+# print(S)
 S.reverse()
 
 if S[0] == 1 or S[-1] == 1:
@@ -17,6 +18,7 @@ else:
         if count == M:
             det = -1
             break
+    # print(data)
 
 if det != -1:
     ans = []

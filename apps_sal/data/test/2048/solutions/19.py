@@ -5,6 +5,8 @@ def main():
     Max = 2 * sum(c)
 
     f = [x for x in c]
+    # f[i] means when the last element in the 3-elements sequence is the i-th element in the original sequence
+    # the minimum cost of the 3-element sequence
     for _ in range(2):
         for i in range(n - 1, -1, -1):
             min_fj = Max

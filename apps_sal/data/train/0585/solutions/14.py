@@ -1,3 +1,4 @@
+# cook your dish here
 def gcdf(x, y):
     while(y):
         x, y = y, x % y

@@ -15,6 +15,7 @@ def RS(): return input().rstrip().split()
 
 mod = 1e9 + 7
 eps = 1e-6
+#################################################
 n = RI()[0]
 a = RI()
 ans = 1

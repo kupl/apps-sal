@@ -28,7 +28,7 @@ def f():
         if last[3]:
             r -= last[3]
             res += (r + sum(t1[:4]), r + sum(t1[:2]) + t2[0], r + sum(t2[:2]))
-    else:
+    else:  # m == 2
         res += (r + sum(t1[:2]), r + t2[0])
         if last[1]:
             res.append(r - last[1] + t3[0])

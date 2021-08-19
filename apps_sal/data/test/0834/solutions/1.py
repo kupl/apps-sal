@@ -59,3 +59,5 @@ ans = mkl
 while ans < maxdis:
     ans += mkl
 print(ans)
+# print(inloop)
+# print(loopl)

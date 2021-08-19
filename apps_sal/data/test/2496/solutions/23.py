@@ -34,6 +34,7 @@ def resolve():
     N = I()
     A = LI()
 
+    # pairwise判定
     is_pc = True
     D = primeFactorization(max(A))
     pf = set()
@@ -50,6 +51,7 @@ def resolve():
         else:
             pf |= fact
 
+    # setwise判定
     is_sc = False
     if not is_pc:
         gcd = A[0]

@@ -15,6 +15,13 @@ else:
             tot += i * (i - 1)
             tot += (m - i - 1) * (m - i - 2)
             tot += 2 * 2**.5 * (m - 3)
+        # print(i,tot)
     tot *= R
     tot /= m * m
     print(tot)
+
+# print(
+# print(R*(2+(1+2**.5+(2*m-1)/3)*(m-1))/m)
+# print(R*(1+m+m*2**.5-2**.5+(2*m*m/3)-m+1/3)/m)
+# print(R*(1/m+2**.5-(2**.5)/m+2*m/3+1/3))
+# print(R/m+R*2**.5-(R*2**.5)/m+2*R*m/3+R/3)

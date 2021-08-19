@@ -1,6 +1,7 @@
 class UnionFind:
 
     def __init__(self, n):
+        # every node's parent is itself
         self.parents = list(range(n))
         self.ranks = [0] * n
 

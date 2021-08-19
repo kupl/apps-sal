@@ -8,7 +8,7 @@ class Solution:
                 seen[tree[right]] += 1
                 right += 1
 
-            ans = max(ans, right - left - 1)
+            ans = max(ans, right - left - 1)  # -1?
 
             left += 1
             seen[tree[left]] -= 1

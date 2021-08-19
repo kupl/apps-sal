@@ -1,4 +1,5 @@
 import sys
+#from math import *
 
 
 def eprint(*args):
@@ -34,4 +35,5 @@ while t > 0:
     else:
         for i in range(k, len(s)):
             a[j % k] += s[i]
+    # print(a)
     print(max(a))

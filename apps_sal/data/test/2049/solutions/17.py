@@ -19,6 +19,8 @@ for i in range(n - 1, 0, -1):
         b[i] = b[i + 1]
     else:
         b[i] = i
+# print(a)
+# print(b)
 for i in range(m):
     x, y = map(int, input().split())
     if b[a[x]] >= y:

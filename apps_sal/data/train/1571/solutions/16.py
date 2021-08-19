@@ -1,3 +1,6 @@
+# cook your dish here
+# cook your dish here
+# cook your dish here
 def gcd(d, s):
     if s == 0:
         return d

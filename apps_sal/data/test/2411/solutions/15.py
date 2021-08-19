@@ -49,7 +49,7 @@ for i in range(len(x)):
                 there[key] = 1
 
 
-ansarr = [0, 0]
+ansarr = [0, 0]  # [lines parallel to y-axis , lines parallel to x axis]
 for i in d:
     if i[0] == 'x':
         ansarr[0] += 1

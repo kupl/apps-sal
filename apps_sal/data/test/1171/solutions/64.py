@@ -20,8 +20,10 @@ for l in range(0, K + 1):
             tmp += V[j]
             have.append(V[j])
         h = len(have)
+        # print(have)
         have = sorted(have)
         for k in range(0, d):
+            # print(have,sum(have))
             if k >= h:
                 break
             if have[k] > 0:

@@ -9,5 +9,5 @@ def obfuscate(email):
         if m.group(0) == '.':
             return " [dot] "
 
-    rgx = re.compile(r'(@|\.)')
+    rgx = re.compile(r'(@|\.)')  # matches either an @ or a literal dot
     return re.sub(rgx, substitute, email)

@@ -18,4 +18,6 @@ class Solution:
                         graph[i][j] = d
 
         nei = {len(list(filter(lambda x: 0 < x <= dist, graph[i]))): i for i in range(n)}
+        # print(nei)
+        # print(graph)
         return nei[min(nei)]

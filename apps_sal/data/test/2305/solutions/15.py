@@ -11,6 +11,8 @@ def main():
         tree[a - 1].append(b - 1)
         tree[b - 1].append(a - 1)
 
+    # 1回以上 > 全体 - 1回も通らない
+    # 選べる数 = n(n+1)//2
     size_subtree = [1] * N
     num_v = [0] * N
     ans = [0] * N

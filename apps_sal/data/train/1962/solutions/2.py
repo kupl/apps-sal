@@ -4,6 +4,15 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        # L = nums.copy()
+        # L.sort()
+        # if len(L) <= 1:
+        #     return 0
+        # else:
+        #     if L[-1] >= L[-2]*2:
+        #         return nums.index(L[-1])
+        #     else:
+        #         return -1
 
         if len(nums) == 1:
             return 0

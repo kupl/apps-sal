@@ -1,10 +1,14 @@
 from sys import stdin, stdout
 
+#N = int(input())
+
+#arr = [int(x) for x in stdin.readline().split()]
 
 s = input()
 
 s = s.split(' ')
 
+# print(s)
 
 M = [0] * 9
 P = [0] * 9
@@ -12,6 +16,7 @@ S = [0] * 9
 
 for pile in s:
     pile = list(pile)
+    # print(pile)
     num = int(pile[0])
     tile = pile[1]
 

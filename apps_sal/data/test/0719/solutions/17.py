@@ -1,5 +1,6 @@
 import sys
 
+#f = open('input', 'r')
 f = sys.stdin
 
 d = [[0] * 11 for _ in range(11)]

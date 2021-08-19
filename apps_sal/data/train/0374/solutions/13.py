@@ -1,3 +1,4 @@
+# 18:31 -
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
 

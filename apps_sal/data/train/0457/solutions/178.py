@@ -7,7 +7,7 @@ class Solution:
             if not rem:
                 self.res = min(self.res, count)
             for i in range(pt, lenc):
-                if coins[i] <= rem < coins[i] * (self.res - count):
+                if coins[i] <= rem < coins[i] * (self.res - count):  # if hope still exists
                     dfs(i, rem - coins[i], count + 1)
 
         for i in range(lenc):

@@ -3,10 +3,12 @@ ar = list(map(int, input().split(" ")))
 
 
 def find_next(i, k):
+    # print ar, i , k
     count = 0
     last = i
     ind = i + 1
     while ind < N and count < k:
+        # print ind , count
         if ar[ind] > ar[last] and ind - last <= 100:
             count += 1
             last = ind

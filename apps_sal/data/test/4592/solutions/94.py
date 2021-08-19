@@ -1,6 +1,7 @@
 def factorize(n):
-    fct = []
-    b, e = 2, 0
+    # https://python.ms/factorize/#%E5%AE%9F%E8%A3%85
+    fct = []  # prime factor
+    b, e = 2, 0  # base, exponent
     while b * b <= n:
         while n % b == 0:
             n = n // b
@@ -20,6 +21,7 @@ for i in range(1, n + 1):
     num *= i
 
 fact = factorize(num)
+# print(fact)
 ans = 1
 for i in range(len(fact)):
     ans *= (fact[i][1] + 1)

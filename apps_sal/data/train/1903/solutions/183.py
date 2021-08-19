@@ -1,5 +1,8 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # turns out sorted + union find is the best
+        # but makes sense to write union find using nonlocal as they are less
+        # likely to TLE
 
         n = len(points)
         edges = []

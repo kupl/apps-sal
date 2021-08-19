@@ -2,6 +2,8 @@ class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         s = set(A)
         longest = 2
+        # brute force type of way
+        # start with each pair and build the highest fib sequence you can
         for i in range(len(A)):
             for j in range(i + 1, len(A)):
                 x, y = A[i], A[j]

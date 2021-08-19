@@ -52,6 +52,8 @@ class Solution:
                     dfs(A, (i, j), s)
                     I.append(s)
 
+        # print(len(I[0]), len(I[1]))
+
         level = {}
         visited = set()
         bfs(A)

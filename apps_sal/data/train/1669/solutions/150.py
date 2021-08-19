@@ -1,4 +1,5 @@
 class Solution:
+  # 184 ms
     def isNStraightHand(self, h, W):
         l = len(h)
         if l % W != 0:

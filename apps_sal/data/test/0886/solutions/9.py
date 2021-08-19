@@ -1,5 +1,6 @@
 def ans():
     ap = list(input())
+    #b= a[::-1]
     a = [int(i) for i in ap]
     ans = []
     kkk = -1

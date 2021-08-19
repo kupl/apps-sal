@@ -33,6 +33,18 @@ def main():
             r.append(i)
     l.reverse()
 
+    # if len(l) > 0:
+    #     L = [l[0]]
+    #     if len(l) > 1:
+    #         for i in range(1, len(l)):
+    #             L.append(L[i-1]+l[i])
+    #
+    # if len(r) > 0:
+    #     R = [r[0]]
+    #     if len(r) > 1:
+    #         for i in range(1, len(r)):
+    #             R.append(R[i-1]+r[i])
+
     R_len = len(r)
     L_len = len(l)
 

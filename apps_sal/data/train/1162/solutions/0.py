@@ -12,6 +12,8 @@ def __starting_point():
             try:
                 n = int(line.strip())
 
+               # print n
+
                 q = n / 7
                 rem = n % 7
 

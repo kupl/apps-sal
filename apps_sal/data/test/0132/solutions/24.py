@@ -13,6 +13,7 @@ def solution(sectors):
                 sum_sector += sectors[j]
                 j += 1
                 j %= n
+            #print(prev, sum_sector)
             if abs(360 - 2 * sum_sector) < min_diff:
                 min_diff = abs(360 - 2 * sum_sector)
             if abs(360 - 2 * prev) < min_diff:

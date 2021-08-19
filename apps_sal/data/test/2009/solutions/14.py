@@ -35,6 +35,7 @@ c1 -= 1
 r2, c2 = map(int, input().split())
 r2 -= 1
 c2 -= 1
+# a=list(map(int,input().split()))
 g = []
 for i in range(n):
     g.append(input())
@@ -44,6 +45,7 @@ com1 = []
 dfs(r1, c1, vis, g, com1)
 com2 = []
 dfs(r2, c2, vis, g, com2)
+# print(com1,com2)
 m = 1000000000000
 for i in com1:
     for j in com2:

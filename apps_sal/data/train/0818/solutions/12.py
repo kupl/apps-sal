@@ -1,3 +1,5 @@
+# cook your dish here
+# your code goes here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -12,6 +14,7 @@ for _ in range(int(input())):
             prefix[k] = prefix[k - 1] + 1
         else:
             prefix[k] = prefix[k - 1]
+    # print(prefix)
     for i in range(m):
         l, r = list(map(int, input().split()))
         l -= 1

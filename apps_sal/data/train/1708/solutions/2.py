@@ -21,9 +21,11 @@ class MemoryManager:
         if(size > self.lens):
             raise Exception("allocate size ERROR")
         else:
+            # index = 0
             tempindex = self.Firstindex
             while(tempindex):
                 if(tempindex.count(None) == 0):
+                    # print(tempindex)
                     break
                 else:
                     index = self.Firstindex.index(None)

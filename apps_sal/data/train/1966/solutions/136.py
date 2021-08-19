@@ -16,6 +16,7 @@ class Solution:
                         bound = j
             return count
 
+        # return count_submatrices(0, 0)
         total_count = 0
         for r, row in enumerate(mat):
             for c, cell in enumerate(row):

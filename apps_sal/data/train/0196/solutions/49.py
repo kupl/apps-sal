@@ -1,5 +1,6 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
+        # max(the max subarray sum, the total sum - the min subarray sum)
         max_sum = -float('inf')
         cur_max = -float('inf')
         total_sum = 0

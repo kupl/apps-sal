@@ -1,3 +1,4 @@
+# cook your dish here
 list0 = list(map(int, input().split()))
 n = list0[0]
 k = list0[1]

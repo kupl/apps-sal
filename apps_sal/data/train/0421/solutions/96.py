@@ -1,5 +1,6 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
+        # first store all the max chars in an array
         max_char = 'a'
         chars = []
         for i, char in enumerate(s):
@@ -8,6 +9,7 @@ class Solution:
                 chars.append(i)
 
         max_string = ''
+        # now build the max substring from the chars array
         for idx in chars:
             if s[idx:] > max_string:
                 max_string = s[idx:]

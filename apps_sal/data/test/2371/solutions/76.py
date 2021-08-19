@@ -1,4 +1,4 @@
-N, Z, W = map(int, input().split(" "))
+N, Z, W = map(int, input().split(" "))        # Z は要らん子
 
 a = list(map(int, input().split(" ")))
 

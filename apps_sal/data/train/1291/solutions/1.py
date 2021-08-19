@@ -1,3 +1,4 @@
+# codechef - easy - collide
 
 dirTable = {}
 dirTable["R"] = (1, 0)
@@ -27,24 +28,31 @@ for test in range(t):
         dya -= dye
 
         if dxa == 0 and dya == 0:
+            # print "Same direction, pass"
             continue
         elif dxa == 0:
             if xa != 0:
+                # print "parallel, pass"
                 continue
             else:
                 time = -ya * 1.0 / dya
+                # print time
                 if 0 < time < shortest:
                     shortest = time
         elif dya == 0:
             if ya != 0:
+                # print "parallel Y"
                 continue
             else:
                 time = -xa * 1.0 / dxa
+                # print time
                 if time > 0 and time < shortest:
                     shortest = time
         else:
+            # dx,dy both !=0
             tx = -xa * 1.0 / dxa
             ty = -ya * 1.0 / dya
+            # print tx,ty
             if tx == ty and 0 < tx < shortest:
                 shortest = tx
     if shortest < 1000:

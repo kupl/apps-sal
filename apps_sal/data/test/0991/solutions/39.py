@@ -9,8 +9,8 @@ input = sys.stdin.readline
 N, M, S = map(int, input().split())
 S = min(S, 2500)
 
-row = []
-col = []
+row = []  # start
+col = []  # end
 data = []
 
 for _ in range(M):

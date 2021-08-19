@@ -12,6 +12,7 @@ for _ in range(int(input())):
                 res[-1].add(l[temp])
                 temp = l[temp]
                 v[temp] = 1
+    # print(res)
     for i in res:
         for j in i:
             v[j] = len(i)

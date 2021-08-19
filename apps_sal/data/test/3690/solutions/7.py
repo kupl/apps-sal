@@ -11,6 +11,7 @@ def __starting_point():
     if t1_angle > t2_angle:
         t1_angle, t2_angle = t2_angle, t1_angle
 
+    # try going clockwise (from t1 to t2)
     can_go_clockwise = True
     can_go_counterclockwise = True
     for angle in hand_angles:

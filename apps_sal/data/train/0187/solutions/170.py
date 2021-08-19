@@ -9,6 +9,7 @@ class Solution:
         capacity = 4
 
         while waiting or wheel_turns < len(customers):
+            # Add new waiting customers, put passengers on ride, remove passengers from waiting.
             if wheel_turns < len(customers):
                 waiting += customers[wheel_turns]
 
@@ -17,6 +18,7 @@ class Solution:
             passengers = min(waiting, capacity)
             waiting -= passengers
 
+            # Update money.
             cur += (passengers * boardingCost) - runningCost
 
             if cur > best:

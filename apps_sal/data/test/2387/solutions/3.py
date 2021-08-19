@@ -1,6 +1,9 @@
 import sys
 input = sys.stdin.readline
 
+# up_list = []
+# down_list = []
+
 
 def count_scan(s):
     max_min = 0
@@ -26,11 +29,18 @@ def main():
     n = int(input())
     lst = [input() for _ in range(n)]
 
+    # up_list.sort(key=lambda x: x[1], reverse=True)
+    # down_list.sort(key=lambda x: x[1], reverse=False)
     txt = 'No'
     ans = 0
+    # print(lst)
+    # print(sorted([count_scan(lst) for i in lst],
+    #  reverse=True,
+    #  key=key))
     for max_min, c in sorted([count_scan(s) for s in lst],
                              reverse=True,
                              key=key):
+        # print(f"{max_min = }, {c = }, {ans = }")
         if max_min + ans < 0:
             break
         ans += c

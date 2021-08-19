@@ -25,6 +25,7 @@ class Solution:
             if pointer1 >= n1 or pointer2 >= n2:
                 return 0
             if text1[pointer1] == text2[pointer2]:
+                # move on to the next
                 x = 1 + lcs(pointer1 + 1, pointer2 + 1)
             else:
                 x = max(lcs(pointer1 + 1, pointer2), lcs(pointer1, pointer2 + 1))

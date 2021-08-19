@@ -11,4 +11,5 @@ class Solution:
             if i >= X:
                 ws -= A[i - X] * G[i - X]
             res = max(res, ws)
+            # print(i,j,s,res)
         return res + s

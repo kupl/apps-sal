@@ -4,6 +4,7 @@ babaa
 from sys import stdin
 
 
+# main starts
 string = list(stdin.readline().strip())
 odd_a = 0
 even_a = 0

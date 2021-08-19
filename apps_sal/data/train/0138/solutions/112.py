@@ -24,6 +24,7 @@ class Solution:
                     op = i
                     answer = max(answer, 1)
                 else:
+                    # np = -1
                     answer = max(answer, i - op + 1)
 
             else:

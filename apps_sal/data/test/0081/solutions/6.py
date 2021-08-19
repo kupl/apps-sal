@@ -16,3 +16,4 @@ else:
             import bisect
             y = bisect.bisect(lis, x // b)
             print(x // lis[y - 1] - b)
+# b < a

@@ -1,8 +1,15 @@
+#   In this template you are not required to write code in main
 
 import sys
 inf = float("inf")
 
 sys.setrecursionlimit(1000000)
+#from cmath import sqrt
+#from collections import deque, Counter, OrderedDict,defaultdict
+#from heapq import nsmallest, nlargest, heapify,heappop ,heappush, heapreplace
+#from math import ceil,floor,log,sqrt,factorial,pow,pi,gcd
+#from bisect import bisect_left,bisect_right
+#import numpy as np
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 abd = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8, 'j': 9, 'k': 10, 'l': 11, 'm': 12, 'n': 13, 'o': 14, 'p': 15, 'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24, 'z': 25}
@@ -24,6 +31,7 @@ def dfs(start):
                 visited[i] = True
                 ct_vertex += 1
                 stack.append(i)
+    # print(ct_vertex,ct_edges)
     if ct_edges == (ct_vertex * (ct_vertex - 1)):
         return True
     else:

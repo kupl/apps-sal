@@ -11,7 +11,7 @@ class Solution:
         while dq:
             size = len(dq)
             for i in range(size):
-                r, c, o = dq.popleft()
+                r, c, o = dq.popleft()  # o: remianing eliminate obstacle [o >= 0]
                 if r == m - 1 and c == n - 1:
                     return step
                 for d in dirs:

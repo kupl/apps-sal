@@ -17,6 +17,8 @@ class Solution:
                 if high > maxVal:
                     maxVal = high
 
+                # print(freq)
+
             for i in range(minVal + 1, maxVal + 2):
                 freq[i] = freq[i] + freq[i - 1]
 
@@ -24,8 +26,11 @@ class Solution:
 
         answer = 0
         freq = getFreq()
+        # print(freq)
         freq = sorted(freq)
         nums = sorted(nums)
+        # print(freq, nums)
         for i in range(1, len(nums) + 1):
             answer = (answer + (freq[i - 1] * nums[i - 1])) % (10**9 + 7)
+        # print('-----------')
         return answer

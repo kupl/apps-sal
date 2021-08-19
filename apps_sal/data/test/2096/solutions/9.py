@@ -11,6 +11,7 @@ for i in a:
 b = set(i for i in a if d[i] > 1)
 c = [i for i in a if d[i] == 1]
 
+##print('b =', b)
 
 mx = len(b) + (len(c) // 2)
 
@@ -34,9 +35,13 @@ for i, x in enumerate(a):
             answ[i] = '1'
             cnt_diff_1 += 1
 
+# print(d)
 cnt1 = cnt_diff_1
 cnt2 = 0
 
+# print(cnt_diff_1)
+# print(answ)
+# print(mx)
 
 for i, x in enumerate(a):
     if answ[i] == '1':
@@ -67,8 +72,16 @@ for i, x in enumerate(a):
         else:
             answ[i] = '1'
             cnt1 += 1
+##            print('cnt2 =', cnt2)
+# print(cnt_diff_2)
+##            print('cnt1 =', cnt1)
             cnt_diff_1 += 1
 
+##print(cnt_diff_1, cnt_diff_2)
+# print()
 
+##cnt1 = len(set(a[i] for i in range(2 * n) if answ[i] == '1'))
+##cnt2 = len(set(a[i] for i in range(2 * n) if answ[i] == '2'))
+##print(cnt1, cnt2)
 print(cnt_diff_1 * cnt_diff_2)
 print(' '.join(answ))

@@ -1,4 +1,5 @@
 n = int(input())
+# a, b = map(int, input().split())
 number = input()
 
 numpad = [['1', '2', '3'],

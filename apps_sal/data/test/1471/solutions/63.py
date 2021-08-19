@@ -13,6 +13,7 @@ def main():
                 else:
                     colors[adjnode[0]] = colors[node] ^ 1
                 dfs(adjnode[0])
+    # input
     n = int(input())
     edges = {e: [] for e in range(n)}
     for _ in range(n - 1):
@@ -21,9 +22,11 @@ def main():
         v -= 1
         edges[u].append((v, w))
         edges[v].append((u, w))
+    # process
     colors = [-1] * n
     colors[0] = 0
     dfs(0)
+    # output
     print(*colors, sep='\n')
 
 

@@ -4,6 +4,10 @@ class Solution:
             return 0
         dp = [-1 for i in range(a + 1)]
         dp[0] = 1
+        # for i in range(a+1):
+        # dp[0][i]=10**9
+        # for i in range(len(coins)+1):
+        # dp[i][0]=10**9
         coins.sort()
         for i in range(1, len(coins) + 1):
             for j in range(1, a + 1):
@@ -21,7 +25,9 @@ class Solution:
                     elif(c != -1):
                         dp[j] = c
 
+        # print(dp)
         if(dp[a] == -1):
             return -1
         else:
+            # ans=0
             return dp[a]

@@ -1,3 +1,4 @@
+# I haven't tested them, but I think candle_index is the best of these
 
 from random import randint
 

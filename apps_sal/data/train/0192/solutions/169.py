@@ -8,4 +8,5 @@ class Solution:
             mei_khud = piles.pop()
             chutiya = piles.pop(0)
             ans += mei_khud
+            #piles = piles[1:-2]
         return ans

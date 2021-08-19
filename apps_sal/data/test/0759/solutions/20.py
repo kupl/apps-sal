@@ -10,6 +10,7 @@ else:
     if hu % n != 0:
         hu = hu + n - hu % n
     p = min(p, hu * c / n)
+    # print(p)
     hu = lhu + ((19 - h) * 60 + (60 - m)) * d
     if hu % n != 0:
         hu = hu + n - hu % n

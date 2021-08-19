@@ -94,6 +94,11 @@ for tests in range(t):
             if CHECK[i][j] == 1 << 30:
                 search(i, j)
 
+                # print(i,j)
+
+    # print(CHECK)
+    # print(LOOP)
+
     USE = [[0] * m for i in range(n)]
 
     ANSM = 0

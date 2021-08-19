@@ -14,6 +14,7 @@ class Solution:
             return abs(max_q.top() - min_q.top()) <= limit
         res = 0
         while r < len(nums):
+            # print(max_q.queue, min_q.queue)
             if in_limit() is True:
                 res = max(res, r - l + 1)
                 r += 1

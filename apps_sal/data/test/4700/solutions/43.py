@@ -13,4 +13,5 @@ for i in range(m):
         good[ab[i][0] - 1] = False
         good[ab[i][1] - 1] = False
 
+# print(good)
 print((good.count(True)))

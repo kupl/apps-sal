@@ -10,3 +10,7 @@ def whatday(num):
         if dic[key] == num and num <= 7:
             return key
     return 'Wrong, please enter a number between 1 and 7'
+
+# test.assert_equals(whatday(1), 'Sunday')
+# test.assert_equals(whatday(2), 'Monday')
+# test.assert_equals(whatday(3), 'Tuesday')

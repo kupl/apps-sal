@@ -10,6 +10,7 @@ for i in element:
         b = w.index(i)
         for idx, item in enumerate(i):
             mark[b + idx] = 1
+# print(mark)
 
 if 0 in mark:
     print('NO')

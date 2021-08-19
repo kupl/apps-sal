@@ -2,11 +2,14 @@
 研究室PCでの解答
 '''
 import math
+#import numpy as np
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
+#from scipy.sparse.csgraph import dijkstra
+#from scipy.sparse import csr_matrix
 ipt = stdin.readline
 setrecursionlimit(10**7)
 mod = 10**9 + 7
@@ -24,6 +27,8 @@ def rev(n, mod=(10**9 + 7)):
         m2 >>= 1
         ni = (ni**2) % mod
     return nm
+
+# 素因数分解
 
 
 def factorization(n):

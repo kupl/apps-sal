@@ -1,6 +1,8 @@
 import random as random_
 del __import__("sys").modules['random']
 
+# Yeah, security isn't perfect yet
+
 
 class Random():
     def __init__(self, seed):

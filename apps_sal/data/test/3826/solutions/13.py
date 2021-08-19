@@ -5,6 +5,7 @@ def f(m):
             b[i] += 1
         else:
             b[i] = 1
+    # print(m,b)
     k = 0
     for i in b:
         if b[i] > 1:

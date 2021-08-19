@@ -9,9 +9,11 @@ class Solution:
         for row in rows:
             for col in [2, 4, 6]:
                 if (row, col) not in reserved and (row, col + 1) not in reserved and (row, col + 2) not in reserved and (row, col + 3) not in reserved:
+                    #print(reserved, row, col)
                     reserved.add((row, col))
                     reserved.add((row, col + 1))
                     reserved.add((row, col + 2))
                     reserved.add((row, col + 3))
+                    #print(row, col)
                     count += 1
         return count

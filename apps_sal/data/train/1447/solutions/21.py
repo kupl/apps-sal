@@ -27,6 +27,8 @@ for _ in range(t):
     sam.sort()
     sam2.sort()
 
+    # print("flag", flag, sam, sam2)
+
     if(sam != sam2):
         flag = 1
 

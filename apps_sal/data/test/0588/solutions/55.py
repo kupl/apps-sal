@@ -1,3 +1,4 @@
+# 無理やり0.1度ずつ行先を回す。
 
 import math
 import numpy as np
@@ -10,6 +11,7 @@ for _ in range(n):
     a = np.array(list(map(int, input().split())))
     eng_list.append(a)
 
+# 角度
 angles = []
 
 for i in range(n):
@@ -38,7 +40,7 @@ def distance(a):
     return dis
 
 
-pitch = 1
+pitch = 1  # 角度
 dist = []
 
 for ikisaki in np.arange(0, 360, pitch):

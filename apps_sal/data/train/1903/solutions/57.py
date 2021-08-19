@@ -16,10 +16,12 @@ class Solution:
             for j in range(i + 1, n):
                 temp.append((dist(i, j), i, j))
         temp.sort()
+        # print(temp)
         ans = 0
         for d, x, y in temp:
             u1, u2 = find(x), find(y)
             if u1 != u2:
                 a[u2] = u1
                 ans += d
+                # print(d,x,y)
         return ans

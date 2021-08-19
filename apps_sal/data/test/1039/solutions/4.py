@@ -6,6 +6,7 @@ n = int(input())
 l = [list(map(int, input().split())) for _ in range(n - 1)]
 q, k = list(map(int, input().split()))
 k -= 1
+# kからの距離
 tree = [[] for _ in range(n)]
 for a, b, c in l:
     a -= 1

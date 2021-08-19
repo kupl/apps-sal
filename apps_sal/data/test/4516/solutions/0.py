@@ -27,6 +27,7 @@ for i in range(1, m):
     foo[s + 1] += abs(p - q)
     foo[n + 1] -= abs(p - q)
 
+    # print(p, q, foo)
 
 for i in range(1, n + 1):
     foo[i] += foo[i - 1]

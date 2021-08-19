@@ -5,6 +5,8 @@ def rot_n(s, n):
 
     return answer
 
+# https://qiita.com/TodayInsane/items/94f495db5ba143a8d3e0
+
 
 N = int(input())
 S = str(input())

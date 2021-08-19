@@ -2,6 +2,7 @@ import re
 
 
 def domain_name(url):
+    # checking for URL keyword
     if "www" in url:
         url = url.replace("www.", "")
     regex1 = "\/\/[^.]+"

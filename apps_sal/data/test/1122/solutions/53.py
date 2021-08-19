@@ -1,3 +1,4 @@
+# coding:utf-8
 
 n, m = map(int, input().split())
 point_s = 0

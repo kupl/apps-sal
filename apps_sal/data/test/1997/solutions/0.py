@@ -41,9 +41,11 @@ for i in range(n - 1, -1, -1):
     x = order[i]
     for p in vc[x]:
         h[p] = h[x] + 1
+# parcurg
 for x in order:
     for p in vc[x]:
         size[x] += size[p]
+# maximum
 
 
 def solv(tp, mx):

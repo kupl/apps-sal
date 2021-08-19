@@ -42,4 +42,7 @@ for i in range(n):
             vali -= val_desc[j]
         p = max(vali, valj, coco - vali - valj)
         mp = min(mp, p)
+# print(desc)
+# print(val_desc)
+# print
 print(mp)

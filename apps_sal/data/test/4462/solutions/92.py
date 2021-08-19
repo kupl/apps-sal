@@ -9,6 +9,7 @@ for i in range(n):
         li[1] += 1
     else:
         li[0] += 1
+# print(li)
 
 if li[0] == 0:
     print("Yes")

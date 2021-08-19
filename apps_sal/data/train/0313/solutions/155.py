@@ -4,10 +4,11 @@ class Solution:
             return -1
 
         def condition(minDays):
+            #print(minDays,end=' ')
             bouq = 0
             bouq_flowers = 0
             for i in bd:
-                if i <= minDays:
+                if i <= minDays:  # The flower can be used
                     bouq_flowers += 1
                     if bouq_flowers == flowers_in_a_bouq:
                         bouq += 1
@@ -16,6 +17,7 @@ class Solution:
                             return True
                 if i > minDays:
                     bouq_flowers = 0
+                # print(i,minDays,bouq_flowers,bouq)
             return False
 
         l = min(bd)

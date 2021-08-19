@@ -1,16 +1,17 @@
+#!/usr/bin/env python3
 
 from sys import stdin
 from bisect import bisect_right
 
 
 def main():
-    n, m, k = stdin_get_ints_from_line()
-    x, s = stdin_get_ints_from_line()
+    n, m, k = stdin_get_ints_from_line()  # amount to brew, first cast count, second cask count 2*10^9, 2*10^5, 2*10^5
+    x, s = stdin_get_ints_from_line()  # time to brew, mana amount
 
-    a = stdin_get_ints_list_from_line()
-    b = stdin_get_ints_list_from_line()
-    c = stdin_get_ints_list_from_line()
-    d = stdin_get_ints_list_from_line()
+    a = stdin_get_ints_list_from_line()  # time to brew with ai first cast 2*10^9
+    b = stdin_get_ints_list_from_line()  # cost of first cast 2*10^9
+    c = stdin_get_ints_list_from_line()  # amount to brew instantly 2*10^9
+    d = stdin_get_ints_list_from_line()  # cost of second cast 2*10^9
 
     result = n * x
 

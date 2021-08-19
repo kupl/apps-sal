@@ -34,8 +34,10 @@ class Solution1:
 
         while q1:
             next_q = []
+            # current level
             while q1:
                 r, c = q1.pop()
+                # print(r, c, q1)
                 for dr, dc in directions:
                     if 0 <= r + dr < rows and 0 <= c + dc < cols:
                         if [r + dr, c + dc] in q2:
@@ -43,6 +45,8 @@ class Solution1:
                         if [r + dr, c + dc] not in blocked:
                             next_q.append([r + dr, c + dc])
                             seen.add((r + dr, c + dc))
+            # print('hi', next_q)
+            # update level queue
             q1 = next_q
             if len(q1) > len(q2):
                 q1, q2 = q2, q1

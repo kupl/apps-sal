@@ -1,6 +1,6 @@
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
-        stack = [['
+        stack = [['#', 0]]
         for c in s:
             if stack[-1][0] == c:
                 stack[-1][1] += 1

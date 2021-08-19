@@ -20,6 +20,7 @@ class Solution:
 
         while costHeap:
             cost, nextStart = heappop(costHeap)
+            # print(cur, nextStart, cost)
             if not visited[nextStart]:
                 result += cost
                 visited[nextStart] = True

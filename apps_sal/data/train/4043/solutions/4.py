@@ -11,6 +11,7 @@ def calc(gamemap):
         x_upper_limit = min(step + 1, x_max + 1)
         for x1, x2 in combinations(range(x_lower_limit, x_upper_limit), 2):
             y1, y2 = step - x1, step - x2
+            # store potential previous steps
             previous_steps = set()
             d1 = []
             if x1:
@@ -29,6 +30,7 @@ def calc(gamemap):
                     if _x1 != _x2:
                         previous_steps.add(((_x1, _y1), (_x2, _y2)))
             best_path_value = max([dynamic_table[points] for points in previous_steps])
+            # evaluate current path best value
             _dynamic_table[((x1, y1), (x2, y2))] = gamemap[x1][y1] + gamemap[x2][y2] + best_path_value
         dynamic_table = _dynamic_table
     return max(dynamic_table.values())

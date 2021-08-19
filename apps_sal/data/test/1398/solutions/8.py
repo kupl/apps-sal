@@ -15,3 +15,6 @@ for i in range(n):
     v = min(v, n + i - j - 1)
 
 open('output.txt', 'w').write(str(v))
+
+
+# Made By Mostafa_Khaled

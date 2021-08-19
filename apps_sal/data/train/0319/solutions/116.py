@@ -14,7 +14,7 @@ class Solution:
             for x in [1, 2, 3]:
                 sub = dfs(i + x, 1 - bob)
                 if bob:
-                    ans = min(ans, sub)
+                    ans = min(ans, sub)     # minimize what alex get
                 else:
                     ans = max(ans, sub + sum(stoneValue[i:i + x]))
 

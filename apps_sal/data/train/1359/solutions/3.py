@@ -34,12 +34,12 @@ for _ in range(int(input())):
                 c1 += 2
             elif i != me and i % 2 != me % 2:
                 c1 += 1
-        me += 1
+        me += 1  # odd now
         for i in a:
-            if i % 2 == me % 2:
+            if i % 2 == me % 2:  # odd odd 2
                 cc1 += 2
             else:
-                cc1 += 1
+                cc1 += 1  # odd even 1
     if ev and od:
         print(min(c, c1, cc, cc1))
     elif not ev:

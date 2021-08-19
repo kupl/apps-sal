@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 
 N = int(input().strip())
 A_list = list(map(int, input().rstrip().split()))
+# -----
 
 plus_h = {}
 minus_h = {}

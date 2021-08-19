@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     n, l, r = list(map(int, input().split()))
     mins = 0

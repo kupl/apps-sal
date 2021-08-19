@@ -34,6 +34,7 @@ def dfs(graph, start, goal):
                     visited[b] += 1
                     g_cnt += 1
         round += 1
+    # print(s_cnt, g_cnt)
     return s_cnt > g_cnt
 
 

@@ -43,6 +43,9 @@ d_B = bfs(v, edge)
 
 ans = 0
 for i in range(N):
+    # if(d_A[0]%2==d_B[0]%2):
+    #    continue
+    # else:
     if(d_A[i] < d_B[i]):
         tmp = max(d_A[i], d_B[i])
         ans = max(ans, tmp)

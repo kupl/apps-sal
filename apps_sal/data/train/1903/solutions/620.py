@@ -50,6 +50,7 @@ class Solution:
                 edges.append((u, v, dist))
 
         edges.sort(key=lambda x: x[2])
+        # print(edges)
 
         ds = UnionFind(n)
 

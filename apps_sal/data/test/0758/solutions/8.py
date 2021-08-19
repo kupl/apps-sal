@@ -33,6 +33,12 @@ def main(n, s):
 
 
 def main_input(info=0):
+    #n,p,k = map(int,input().split())
+    #t = [(int(x)-1,i+1) for i,x in enumerate(input().split())]
+    #l,r = list(range(n)), list(range(n))
+    # for i in range(n):
+    #    l[i],r[i] = map(int,input().split())
+    #    t = [map(int,input().split()) for x in range(n)]
     n = int(input())
     s = input()
     main(n, s)

@@ -26,8 +26,13 @@ def main():
     for x, y, w in res:
         print(s1 if x == "h" else s2, y, w)
 
+# NON-SOLUTION STUFF BELOW
+
 
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

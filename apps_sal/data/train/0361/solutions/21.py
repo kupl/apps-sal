@@ -27,6 +27,7 @@ class Solution:
             low = it
             s = iti
             e = s
+            # 往右找高度相同的                 填充的正方形边长不能撑破天花板
             while e < n and h[e] == h[s] and (e - s + 1) <= (m - low):
                 e += 1
             e -= 1

@@ -23,6 +23,7 @@ class Solution:
                     return ans
 
                 for route in graph[stop]:
+                    # if route not in seen_route:
                     for new_stop in routes[route]:
                         if new_stop not in seen_stop:
                             queue.append(new_stop)

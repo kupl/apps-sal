@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         paths = []
@@ -11,6 +17,7 @@ class Solution:
             pathsToLeafs(root.left, comp + [root.val])
             pathsToLeafs(root.right, comp + [root.val])
         pathsToLeafs(root, [])
+        # now this is converted to buy and sell stock atmost one time for all paths
 
         def maxDiff(a):
             val = 0

@@ -4,6 +4,9 @@ class Solution:
         if N == 1:
             return 0
 
+        # Kruskal's algorithm
+
+        # Sort the edges by cost
         edges = []
         for i in range(N):
             for j in range(i + 1, N):
@@ -13,6 +16,7 @@ class Solution:
                 edges.append((dist, i, j))
         edges.sort()
 
+        # Union find utility
         roots = [i for i in range(N)]
 
         def find(i):
@@ -30,7 +34,7 @@ class Solution:
             d, x, y = edges[i]
             i += 1
             rx, ry = find(x), find(y)
-            if find(x) == find(y):
+            if find(x) == find(y):  # If already connected, cannot use this edge
                 continue
             join(rx, ry)
             cnt += 1

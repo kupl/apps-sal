@@ -3,6 +3,9 @@ import itertools
 
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
+        # Dynamic Programming
+        # Time  complexity: O(K x N^2)
+        # Space complexity: O(N)
         P = [0] + list(itertools.accumulate(A))
         def average(i, j): return (P[j] - P[i]) / float(j - i)
 

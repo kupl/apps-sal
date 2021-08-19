@@ -15,7 +15,7 @@ class Solution:
                 reduceInds.popleft()
 
             if b == 0 and effectiveFlipCnt % 2 == 0 or b == 1 and effectiveFlipCnt % 2 == 1:
-                if i >= len(A) - K + 1:
+                if i >= len(A) - K + 1:  # No way to flip now, just check if it is 0
                     return -1
                 else:
                     maxFlipCnt += 1

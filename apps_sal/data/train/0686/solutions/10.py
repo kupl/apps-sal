@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     from math import sqrt
     for _ in range(int(input())):

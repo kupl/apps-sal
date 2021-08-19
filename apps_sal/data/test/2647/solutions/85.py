@@ -7,8 +7,8 @@ while q:
     x, y = q.popleft()
     for i, j in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
         h, w = x + i, y + j
-        if H > h > -1 and W > w > -1 and M[h][w] > '
-        C[h][w] = C[x][y] + 1
-        q.append([h, w])
+        if H > h > -1 and W > w > -1 and M[h][w] > '#' and C[h][w] < 2:
+            C[h][w] = C[x][y] + 1
+            q.append([h, w])
 c = C[H - 1][W - 1]
 print(-1 * (c < 2) or sum(m.count(".") for m in M) - c)

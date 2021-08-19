@@ -16,27 +16,32 @@ def arr_inp(n):
 
 def main():
     class graph:
+        # initialize graph
         def __init__(self, gdict=None):
             if gdict is None:
                 gdict = defaultdict(list)
             self.gdict, self.edges, self.l = gdict, [], defaultdict(int)
 
+        # add edge
         def addEdge(self, node1, node2, w=None):
             if w != None:
                 self.gdict[node1].append([node2, w])
                 self.gdict[node2].append([node1, w])
             else:
                 self.gdict[node1].append(node2)
+                # self.gdict[node2].append(node1)
             self.edges.append([node1, node2, w])
             self.l[node1] += 1
             self.l[node2] += 1
 
         def scc_utils(self, v):
 
+            # initilaize time and disc
             self.disc[v], self.low[v], self.stack[v] = self.time, self.time, 1
             self.time += 1
             self.st.append(v)
 
+            # loop edges
             for i in self.gdict[v]:
                 if self.disc[i] == -1:
                     self.scc_utils(i)
@@ -45,12 +50,15 @@ def main():
                 elif self.stack[i]:
                     self.low[v] = min(self.low[v], self.disc[i])
 
+                # print founded scc
             if self.low[v] == self.disc[v]:
                 node, mem = -1, defaultdict(int)
                 while node != v:
                     node = self.st.pop()
+                    # print(node, end=' ')
                     self.stack[node] = 0
                     mem[cost[node - 1]] += 1
+                # print(end='\n')
 
                 self.count += min(mem)
                 self.mi = ((self.mi % mod) * (mem[min(mem)] % mod)) % mod

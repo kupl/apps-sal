@@ -1,4 +1,5 @@
 import sys
+# sys.stdin = open("input.txt")
 
 
 def calc(a0, db, dc):

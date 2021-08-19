@@ -10,11 +10,13 @@ class Solution:
             return []
         root = Trie()
 
+        # add
         for sf in folder:
             lists = sf[1:].split('/')
             if lists:
-                self.add(root, lists)
+                self.add(root, lists)  # ['a'], ['a','b'], ['c','d'], ['c','d','e'], ['c','f']
 
+        # retrieve
         res = []
         self.dfs(root, [], res)
         return res

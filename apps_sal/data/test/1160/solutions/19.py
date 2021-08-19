@@ -6,6 +6,7 @@ def read(): return tuple(map(int, inp().split()))
 
 
 tz = dict([(v, i) for i, v in enumerate("S,M,L,XL,XXL,XXXL".split(","))])
+# print(tz)
 sz = list(read())
 n = read()[0]
 
@@ -15,6 +16,7 @@ def main():
     q = []
     for i in range(n):
         v = inp().split(",")
+        # print(sz)
         if len(v) == 1:
             v = v[0]
             ans[i] = v
@@ -25,7 +27,9 @@ def main():
             v = sorted([(tz[e], e, i) for e in v], key=lambda v: v[0])
             q += [v]
     q.sort(key=lambda v: v[0][0])
+    # print(q)
     for v in q:
+        #print(sz, v)
         if sz[v[0][0]] <= 0:
             if sz[v[1][0]] <= 0:
                 return ["NO"]
@@ -35,6 +39,7 @@ def main():
         else:
             sz[v[0][0]] -= 1
             ans[v[0][2]] = v[0][1]
+    # print(ans)
     return ["YES", [ans[i] for i in range(n)]]
 
 

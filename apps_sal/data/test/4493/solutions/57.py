@@ -1,3 +1,4 @@
+# 18 C - Takahashi's Information
 c = [list(map(int, input().split())) for _ in range(3)]
 
 cnt = 0

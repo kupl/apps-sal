@@ -10,6 +10,7 @@ class Solution:
                 while i < len(s) and s[i] == temp:
                     i += 1
                     n += 1
+                #print(n, s, cost, cost[t:t+n], sum(cost[t:t+n]), max(cost[t:t+n]))
                 ans += (sum(cost[t:t + n]) - max(cost[t:t + n]))
             else:
                 i += 1

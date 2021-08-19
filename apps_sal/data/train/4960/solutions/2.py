@@ -1,3 +1,4 @@
+# generate the first ~2000 elements
 from bisect import bisect
 HARSHAD = [n for n in range(1, 13000) if n % sum(map(int, str(n))) == 0]
 

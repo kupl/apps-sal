@@ -24,7 +24,8 @@ def bfs(src):
         print(v)
 
 
-for i in range(1):
+for i in range(1):  # int(stdin.readline())):
+    # n=int(stdin.readline())
     g = defaultdict(list)
     n, e = list(map(int, stdin.readline().split()))
     for _ in range(e):

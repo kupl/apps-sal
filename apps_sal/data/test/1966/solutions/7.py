@@ -18,6 +18,7 @@ def solve(n, cbs):
 
 
 def cost(n, p):
+    # print(p)
     n2 = 2 * n
     p2 = [p[:2], p[2:]]
     cost1 = sum(1 for i in range(n2) for j in range(n2) if p2[i // n][j // n][i % n][j % n] == (i + j) % 2)

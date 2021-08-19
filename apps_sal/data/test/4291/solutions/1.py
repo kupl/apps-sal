@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 14 00:57:13 2020
 
@@ -12,7 +13,10 @@ count = 0
 for i in range(len(S) - 1):
     if S[i:i + 2] == "AC":
         count += 1
+    # print(i)
     d[i + 1] = count
+# print(lis)
+# print(d)
 for i in range(Q):
     l, r = list(map(int, input().split()))
     ans = d[r - 1] - d[l - 1]

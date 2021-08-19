@@ -1,3 +1,4 @@
+# cook your dish here
 from fractions import Fraction
 for i in range(int(input())):
     N = int(input())

@@ -25,6 +25,7 @@ def perm(n, r):
 
 
 ans = pow(perm(M, N), 2, MOD)
+# r: AiとBiが一致する個数
 for r in range(1, N + 1):
     p = comb(M, r) * perm(N, r) * pow(perm(M - r, N - r), 2, MOD) % MOD
     p *= -(-1) ** (r % 2)

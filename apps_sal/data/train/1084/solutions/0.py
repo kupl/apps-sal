@@ -1,3 +1,4 @@
+# cook your dish here
 s = input()
 s1 = s[::-1]
 arr = []

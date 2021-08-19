@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 
+# import
+#import math
+#import numpy as np
 N, K = list(map(int, input().split()))
 R, S, P = list(map(int, input().split()))
 T = list(input())

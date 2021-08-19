@@ -1,2 +1,2 @@
-def alphabetic(s):
+def alphabetic(s):  # s is a lowercase string
     return "".join(sorted(s)) == s

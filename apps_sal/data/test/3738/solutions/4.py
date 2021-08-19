@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import operator
 table = {
     'U': (0, 1),

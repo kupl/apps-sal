@@ -1,5 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
+        # dp = defaultdict(int)
         dp = {}
         for i in range(1, len(A)):
             for j in range(i):

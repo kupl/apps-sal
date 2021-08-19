@@ -1,9 +1,9 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         '''
-        Two-row DP solution. dp[i][j] = 
+        Two-row DP solution. dp[i][j] = # of ways to get to position j in i steps.
         dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j] + dp[i - 1][j + 1] (need to take care of boundary conditions on first/last)
-        This is guarantee to be unique 
+        This is guarantee to be unique # of ways because we just look at what's the last step taken (stay, left, or right).
         The final answer is dp[steps][0]
         '''
         arrLen = min(steps // 2 + 1, arrLen)

@@ -8,6 +8,7 @@ class Solution:
         return [int(n) for n in nums if not n.startswith('0')]
 
     def reorderedPowerOf2(self, N: int) -> bool:
+        # make permutations of N
         permutations = self.permutations2(N)
         for permutation in permutations:
             if math.log2(permutation).is_integer():

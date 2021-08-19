@@ -12,6 +12,7 @@ files = True
 
 if getpass.getuser().lower() == 'frohe' and files:
     sys.stdin = open('test.in')
+    # sys.stdout = open('test.out', 'w')
 
 n = ria()[0]
 nm = {}

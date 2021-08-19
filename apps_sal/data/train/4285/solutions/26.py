@@ -1,4 +1,6 @@
 
+# formula: y-y1 = m(x-x1)
+
 
 def find_slope(points):
     x1, y1, x2, y2 = points[:]

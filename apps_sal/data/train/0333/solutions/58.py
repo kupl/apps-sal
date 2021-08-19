@@ -6,8 +6,11 @@ class Solution:
         for i, n in enumerate(arr):
             adj[n].append(i)
 
+        # for a in adj:
+        #    adj[a].sort(reverse=True)
+
         q = collections.deque()
-        q.append((0, 0))
+        q.append((0, 0))  # position, step
 
         used = [False] * len(arr)
 

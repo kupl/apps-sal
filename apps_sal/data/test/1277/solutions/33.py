@@ -32,6 +32,8 @@ for i in range(n):
         a = max(a, visitedv[i])
     elif visitedu[i] == visitedv[i]:
         b = min(b, visitedv[i])
+# print(visitedv)
+# print(visitedu)
 if b == 10**10:
     b = -1
 if a <= b:

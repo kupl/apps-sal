@@ -1,4 +1,5 @@
 def cookie(x):
+    # Good Luck
     if type(x) == type('x'):
         name = "Zach"
     elif type(x) == type(42) or type(x) == type(3.14):

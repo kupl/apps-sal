@@ -17,12 +17,14 @@ class Solution:
 
             if sm == target:
                 lans[j] = min(lans[j], j - i + 1)
+                # i += 1
 
             j += 1
 
         i, j = n - 1, n - 1
         while i > -1:
             sm = right[i] - (right[j + 1] if (j + 1 < n) else 0)
+            # print(i, j, sm)
 
             while sm > target and j >= i:
                 j -= 1
@@ -30,9 +32,12 @@ class Solution:
 
             if sm == target:
                 rans[i] = min(rans[i], j - i + 1)
+                # j -= 1
             i -= 1
 
         ans = math.inf
+        # print(lans)
+        # print(rans)
         mv = 999999999
         for i in range(n):
             mv = min(mv, lans[i])

@@ -13,4 +13,5 @@ for i in range(len(a) - 1):
     ll = max(a[i] + 1, l)
     rr = min(a[i + 1] - 1, r)
     ans = max(ans, rr - ll + 1)
+    #~ print(i, ans, a[i], a[i+1])
 print(ans)

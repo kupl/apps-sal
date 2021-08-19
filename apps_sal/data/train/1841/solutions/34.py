@@ -1,4 +1,6 @@
 class Solution:
+    # Time: O(n*log(n))
+    # Space: O(n)
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         median = arr[(len(arr) - 1) // 2]

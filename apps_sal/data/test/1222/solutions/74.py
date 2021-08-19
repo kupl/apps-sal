@@ -13,3 +13,5 @@ for i in range(K):
         queue.append(ans * 10 + x + 1)
 
 print(ans)
+
+# 解説+コードカンニングAC

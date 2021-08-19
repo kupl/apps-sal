@@ -19,8 +19,13 @@ def main():
         dp[i] = max(a[i] * i + dp[i - 2], dp[i - 1])
     print(dp[-1])
 
+# NON-SOLUTION STUFF BELOW
+
 
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

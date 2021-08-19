@@ -5,6 +5,7 @@ from string import ascii_letters
 import sys
 letters = ascii_letters
 input = stdin.readline
+#print = stdout.write
 
 for _ in range(int(input())):
     n = int(input())

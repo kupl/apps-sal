@@ -32,6 +32,18 @@ def bfs(x1, y1, d):
                 q.append((d + 1, x2, y2))
                 M[x2][y2] = d + 1
 
+                # if (0 <= x2 < H) and (0 <= y2 < W):
+                #     if m[x2][y2] == '@':
+                #         break
+                #     elif M[x2][y2] == -1:
+                #         M[x2][y2] = d + 1
+                #         q.append((d + 1, x2, y2))
+                #     elif M[x2][y2] == d + 1:
+                #         continue
+                #     else:
+                #         break
+                # else:
+                #     break
     print((-1))
 
 

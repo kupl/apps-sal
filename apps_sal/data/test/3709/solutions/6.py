@@ -1,3 +1,4 @@
+# IAWT
 n, k = list(map(int, input().split()))
 cnt = {}
 for i in range(2 ** k):

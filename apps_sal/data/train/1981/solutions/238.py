@@ -11,13 +11,17 @@ class Solution:
         for i in range(1, ln):
             c[i] += c[i - 1]
 
-        nums = sorted(nums, key=lambda x: -x)
+        #c = sorted([(i, v) for i, v in enumerate(c)], key=lambda x: -x[-1])
+        # print (c)
+        nums = sorted(nums, key=lambda x: -x)      # nlogn
         ctr = collections.defaultdict(lambda: 0)
         for cv in c:
             ctr[cv] += 1
+        # print (ctr)
 
         j = 0
         for i in range(len(requests), 0, -1):
+            # print (ctr[i])
             m = ctr[i]
             while m:
                 res += (nums[j] * i) % MOD

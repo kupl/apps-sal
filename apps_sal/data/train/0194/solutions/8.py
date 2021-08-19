@@ -12,8 +12,10 @@ class Solution:
 
         used = [False] * len(nums)
         nums = sorted(nums)
+        # print(nums)
 
         def check(nums, k, cur, pos):
+            # print(used, k, cur, pos)
             if k == 1:
                 return True
             for i in range(pos, -1, -1):

@@ -1,4 +1,8 @@
+#import numpy as np
 import math
+#from decimal import *
+#from numba import njit
+# @njit
 
 
 def main():

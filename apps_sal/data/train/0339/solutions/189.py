@@ -14,6 +14,9 @@ class Solution:
         for i in nums1:
 
             target = i * i
+            # if(target in seen):
+            #     count+=seen[target]
+            #     continue
             localcount = 0
             dictn = defaultdict(int)
             for j, x in enumerate(nums2):

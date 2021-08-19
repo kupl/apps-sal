@@ -29,6 +29,7 @@ def __starting_point():
     for i in range(1, n):
         arr[i] = arr[i - 1] + a[i]
 
+    # print(*arr)
     max_cost = arr[n - 1] * k
 
     b = sorted(arr[:n - 1])

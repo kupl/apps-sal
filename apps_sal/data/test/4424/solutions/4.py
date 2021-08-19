@@ -1,3 +1,4 @@
+# 150-A
 
 K, X = list(map(int, input().split()))
 

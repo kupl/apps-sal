@@ -1,10 +1,12 @@
 from collections import defaultdict
 n, m = map(int, input().split())
+# 逆順にunionfind
 
 
 class UnionFind:
     def __init__(self, n):
         class KeyDict(dict):
+            # 辞書にないときの対応
             def __missing__(self, key):
                 self[key] = key
                 return key
@@ -12,17 +14,22 @@ class UnionFind:
         self.rank = defaultdict(int)
         self.weight = defaultdict(lambda: 1)
 
+    # 根を探す
     def find(self, x):
         if self.parent[x] == x:
             return x
         else:
+            # 経路圧縮
+            # 自分自身じゃない場合は、上にさかのぼって検索(再帰的に)
             y = self.find(self.parent[x])
-            self.parent[x] = y
+            self.parent[x] = y  # 親の置き換え(圧縮)
             return self.parent[x]
 
+    # 結合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
+        # 低い方を高い方につなげる(親のランクによる)
         if self.rank[x] < self.rank[y]:
             self.parent[x] = y
             self.weight[y] += self.weight[x]
@@ -34,6 +41,8 @@ class UnionFind:
 
         if self.rank[x] == self.rank[y]:
             self.rank[x] += 1
+
+    # 判定
 
     def judge(self, x, y):
         return self.find(x) == self.find(y)

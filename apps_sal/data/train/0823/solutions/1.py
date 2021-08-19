@@ -12,4 +12,5 @@ def subset(n, s, l):
 
 for _ in range(int(input())):
     l = list(map(int, input().split()))
+    # l.sort()
     print("Yes" if subset(len(l), 0, l) else "No")

@@ -1,3 +1,4 @@
+# abc175c
 x, k, d = list(map(int, input().split()))
 x = abs(x)
 t = x // d

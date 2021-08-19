@@ -11,6 +11,7 @@ class Solution:
                 return hashh[(i, j)]
             if text1[i] == text2[j]:
                 hashh[(i, j)] = 1 + helper(text1, text2, i + 1, j + 1)
+                # return hashh[(i+1,j+1)]
             else:
                 temp1 = helper(text1, text2, i + 1, j)
                 temp2 = helper(text1, text2, i, j + 1)

@@ -15,6 +15,7 @@ def getList():
 
 
 def solve():
+    # n = getN()
     seqs = []
     tmp = "X"
     seq = 0
@@ -53,11 +54,14 @@ def solve():
         ans *= nst[(seq)] + mst[(seq)]
         ans %= MOD
     print(ans)
+    # print(nst, mst)
 
     return
 
 
 def main():
+    # q = getN()
+    # for _ in range(q):
     solve()
 
 

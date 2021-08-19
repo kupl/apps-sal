@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -15,6 +16,8 @@ for _ in range(t):
         xcor.append(a[i + 1] - a[i - 1])
     xcor.sort()
     ans = 0
+    # print(xcor)
+    # print(b)
     for i in range(n):
         ans = ans + xcor[i] * b[i]
     print(ans)

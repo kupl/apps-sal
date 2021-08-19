@@ -1,3 +1,4 @@
+# You lost the game.
 n = int(input())
 L = list(map(int, input().split()))
 R = [0 for _ in range(n)]

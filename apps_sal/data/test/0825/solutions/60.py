@@ -1,6 +1,7 @@
 import math
 n = int(input())
 
+# Prime factoring
 pf = []
 for i in range(2, math.ceil(n**0.5) + 1):
     temp = 0

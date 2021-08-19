@@ -1,3 +1,4 @@
+# cook your dish here
 r, c, k = map(int, input().split())
 matrix = []
 for _ in range(r):

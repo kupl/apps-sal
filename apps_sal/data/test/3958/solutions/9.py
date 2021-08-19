@@ -43,3 +43,6 @@ else:
     print(len(sol))
 
     print("\n".join([str(len(sub)) + " " + " ".join(map(str, sub)) for sub in sol]))
+
+
+# Made By Mostafa_Khaled

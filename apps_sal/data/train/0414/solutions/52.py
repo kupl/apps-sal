@@ -3,10 +3,13 @@ from collections import defaultdict
 
 class Solution:
     def getWinner(self, arr, k):
+        #r = []
         i = 0
         n = len(arr)
         z = defaultdict(int)
         while True:
+            #arr += r
+            #n = len(arr)
             while i < n - 1:
                 j = i + 1
                 if arr[j] > arr[i]:

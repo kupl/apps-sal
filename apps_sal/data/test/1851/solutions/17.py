@@ -1,4 +1,14 @@
+# stdin=open('input.txt')
 
+# def input():
+# 	return stdin.readline()[:-1]
+
+# a, b = map(int, input().split())
+
+# l = list(map(int, input().split()))
+
+
+# CODE BEGINS HERE.................
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -14,3 +24,4 @@ for i in range(n - 1):
 
 
 print(ans)
+# CODE ENDS HERE....................

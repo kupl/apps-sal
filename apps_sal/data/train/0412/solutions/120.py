@@ -14,4 +14,7 @@ class Solution:
 
                 arr[row][col] = temp
 
+        # for i in range(len(arr)):
+        #     print(i, arr[i])
+
         return arr[d - 1][target] % (1000000007)

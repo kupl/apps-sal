@@ -4,6 +4,9 @@ class Solution:
         if n % k != 0:
             return False
 
+        #start = 10**9
+        #end = 1
+
         v_cnt = collections.defaultdict(int)
         for v in nums:
             v_cnt[v] += 1

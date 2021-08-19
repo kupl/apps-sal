@@ -1,5 +1,7 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
+        # Binary search solution.
+        # https://leetcode.com/problems/magnetic-force-between-two-balls/discuss/794070/Python-Binary-search-solution-with-explanation-and-similar-questions
 
         position.sort()
 

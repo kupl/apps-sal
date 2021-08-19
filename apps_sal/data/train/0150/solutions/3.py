@@ -11,6 +11,8 @@ class Solution:
         for i in range(n - 2, -1, -1):
             maxi[i] = min(maxi[i + 1], A[i])
 
+        # print(mini)
+        # print(maxi)
         for i in range(n - 1):
             if mini[i] <= maxi[i + 1]:
                 return i + 1

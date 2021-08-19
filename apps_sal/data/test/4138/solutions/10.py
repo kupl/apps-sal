@@ -14,6 +14,7 @@ def check(x, k, i):
 
 
 def check2(x, k):
+    # print(x,k)
     l = 0
     for i in range(10, -1, -1):
         if x - 10 ** i >= 0:
@@ -34,10 +35,12 @@ def cal(x):
 def rv(x):
     c = []
     while x:
+        # print(x)
         c.append(x % 10)
         x //= 10
     c.append(0)
     c.reverse()
+    # print(c)
     return c
 
 
@@ -48,6 +51,7 @@ while q:
         i -= 1
     k -= sum[i]
     i += 1
+    # print("-1-", k)
 
     l = 1
     r = 10 ** 10
@@ -59,6 +63,8 @@ while q:
             r = m
     l -= 1
     k -= cnt[i - 1] * l + i * (1 + l) * l // 2
+
+    # print("-2-", k, l, i)
 
     ll = 1
     rr = 10 ** 10
@@ -72,7 +78,9 @@ while q:
     ll -= 1
     k -= cnt[cal(ll) - 1] + cal(ll) * (ll - 10**(cal(ll) - 1) + 1)
 
+    # print("-3-", k)
     c = rv(ll + 1)
+    # print(c, ll + 1)
     print(c[k])
 
     q -= 1

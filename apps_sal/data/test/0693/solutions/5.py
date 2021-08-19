@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 marr = list(map(int, input().split()))
 f = [0] * (m + 1)
 cnt, i = 0, 0
-valid = sum(marr)
+valid = sum(marr)  # m
 while(i < n):
     f[arr[i]] += 1
     if f[arr[i]] <= marr[arr[i] - 1]:

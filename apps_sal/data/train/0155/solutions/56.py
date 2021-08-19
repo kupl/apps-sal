@@ -1,6 +1,7 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         sorted_indexes = sorted(range(len(arr)), key=lambda i: arr[i])
+        # print(sorted_indexes)
         n = len(arr)
         dp = [1] * n
 

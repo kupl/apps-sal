@@ -4,6 +4,7 @@ for _ in range(n):
     sumxy = x + y
     div = sumxy // k
     rem = sumxy % k
+    # print("x,y,k,sumxy,div,rem",x,y,k,sumxy,div,rem)
     if (div % 2 == 0):
         print("Chef")
     else:

@@ -1,6 +1,9 @@
 import sys
 
 
+#sys.stdin = open("input.txt")
+#sys.stdout = open("output.txt", "w")
+
 n = int(input())
 
 k = []
@@ -13,6 +16,7 @@ for i in range(n):
     b.append(b1)
 
 zn = [(k[i] * x1 + b[i], k[i] * x2 + b[i]) for i in range(n)]
+# print(zn)
 zn.sort()
 found = False
 for i in range(n - 1):

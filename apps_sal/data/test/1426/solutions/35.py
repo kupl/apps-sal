@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 from heapq import heapify, heappop, heappush
 
@@ -7,8 +8,9 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# vertexごとに3つの状態数を持つ
 N, M = lr()
-graph = [[] for _ in range((N + 1) * 3)]
+graph = [[] for _ in range((N + 1) * 3)]  # 1-indexed
 for _ in range(M):
     a, b = lr()
     a *= 3

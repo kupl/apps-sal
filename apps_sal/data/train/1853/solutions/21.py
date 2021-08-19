@@ -9,12 +9,15 @@ class Solution:
             dist[source][target] = weight
             dist[target][source] = weight
 
+        # implementing floyd-warshall
         for node in range(n):
             for source in range(n):
                 for target in range(n):
                     new_dist = dist[source][node] + dist[node][target]
+                    #if source == target: new_dist = 0
                     dist[source][target] = min(dist[source][target], new_dist)
 
+        # print(dist)
         ncity = [n] * n
         for dindex, dlist in enumerate(dist):
             ncity[dindex] = [index for index, i in enumerate(dlist) if i <= distanceThreshold and i != 0]
@@ -24,6 +27,7 @@ class Solution:
                 if source not in ncity[target]:
                     ncity[target].append(source)
 
+        # print(ncity)
         min_count = 10001
         index = 0
         for cindex, city in enumerate(ncity):

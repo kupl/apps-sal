@@ -4,3 +4,4 @@ def opposite(number):
         return 0 - number
     else:
         return 0 - number
+  # your solution here

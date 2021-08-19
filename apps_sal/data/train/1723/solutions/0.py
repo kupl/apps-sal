@@ -1,8 +1,8 @@
-class Segment:
+class Segment:  # Instead of an abstract class, make it the implementation for all three subclasses
     def __init__(self, *coords):
-        self.control_points = coords
+        self.control_points = coords  # IMHO a getter/setter is overkill here
 
-    def control_points_at(self, t):
+    def control_points_at(self, t):  # Helper function
         p = self.control_points
         result = []
         while p:

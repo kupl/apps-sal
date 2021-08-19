@@ -24,6 +24,8 @@ def cnt(s, p):
 
         else:
 
+            # ab for all a, b != 0
+
             ans = 10 + 45 * (2**(len(s) - len(p)) - 2)
 
             ans += 36 * sum([2**l - 2 for l in range(2, len(s) - len(p))])
@@ -35,3 +37,6 @@ def cnt(s, p):
 
 
 print(cnt(input().strip(), '') - 1)
+
+
+# Made By Mostafa_Khaled

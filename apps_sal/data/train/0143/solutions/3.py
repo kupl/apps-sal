@@ -8,6 +8,8 @@ class Solution:
             count = 0
             types = []
 
+            # Scan pointer reaches the end of tree[]
+            # or until finding 3rd type of fruit
             while True:
                 if tree[scan_ptr] in types:
                     count += 1
@@ -18,7 +20,7 @@ class Solution:
                     tran_ptr = scan_ptr
                     types.append(tree[scan_ptr])
                     count += 1
-                else:
+                else:  # New type of fruit and types are full
                     break
                 scan_ptr += 1
                 if scan_ptr == len(tree):

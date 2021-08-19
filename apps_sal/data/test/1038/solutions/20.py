@@ -1,3 +1,4 @@
+# 54
 import sys
 
 
@@ -20,9 +21,11 @@ def ruiseki_xor(n):
             return 0
         else:
             return 1
+    # n は偶数
     return ruiseki_xor(n + 1) ^ (n + 1)
 
 
 a, b = LI()
+# a から b の 和 : (bまでの和) - (a - 1 までの和)
 ans = ruiseki_xor(b) ^ ruiseki_xor(a - 1)
 print(ans)

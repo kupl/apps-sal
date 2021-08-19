@@ -14,4 +14,5 @@ for i in range(int(input())):
 
     a += (x2 - x1) * (y2 - y1)
 
+# print(xmax,xmin,ymax,ymin,a,end="")
 print('YES' if xmax - xmin == ymax - ymin and a == (xmax - xmin) ** 2 else 'NO')

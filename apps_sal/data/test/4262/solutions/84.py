@@ -9,11 +9,14 @@ def main():
     second = tuple(int(v) for v in input().split())
     firstNum = None
     secondNum = None
+    # print( permutation)
     for i in range(len(permutation)):
+        # print(tuple(permutation[i]), first, second)
         if permutation[i] == first:
             firstNum = i + 1
         if permutation[i] == second:
             secondNum = i + 1
+    # print(firstNum, secondNum)
     ans = abs(firstNum - secondNum)
     return ans
 

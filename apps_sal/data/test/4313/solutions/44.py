@@ -1,3 +1,4 @@
+#a, b, k = map(int, input().split( ))
 n = int(input())
 V = list(map(int, input().split()))
 C = list(map(int, input().split()))

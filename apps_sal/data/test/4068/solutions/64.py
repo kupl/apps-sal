@@ -1,3 +1,4 @@
+# 96 C - Typical Stairs
 N, M = map(int, input().split())
 A = [int(input()) for _ in range(M)]
 A = set(A)

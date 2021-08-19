@@ -35,28 +35,34 @@ for i in range(1, n + 1):
     end = int(str(i)[0])
     if sta == 0:
         continue
+    # 1桁
     if sta == end:
         ans += 1
+    # 2桁
     if n_ketasuu >= 2 and sta * 10 + end <= n:
         ans += 1
+    # 3桁
     if n_ketasuu > 3 or (n_ketasuu == 3 and sta < sta_max):
         ans += 10
     elif n_ketasuu == 3 and sta == sta_max:
         ans += int(str(n)[1:n_ketasuu - 1])
         if end <= end_max:
             ans += 1
+    # 4桁
     if n_ketasuu > 4 or (n_ketasuu == 4 and sta < sta_max):
         ans += 100
     elif n_ketasuu == 4 and sta == sta_max:
         ans += int(str(n)[1:n_ketasuu - 1])
         if end <= end_max:
             ans += 1
+    # 5桁
     if n_ketasuu > 5 or (n_ketasuu == 5 and sta < sta_max):
         ans += 1000
     elif n_ketasuu == 5 and sta == sta_max:
         ans += int(str(n)[1:n_ketasuu - 1])
         if end <= end_max:
             ans += 1
+    # 6桁
     if n_ketasuu > 6 or (n_ketasuu == 6 and sta < sta_max):
         ans += 10000
     elif n_ketasuu == 6 and sta == sta_max:

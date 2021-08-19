@@ -45,12 +45,14 @@ class Solution:
             used[x] = True
 
             new_size = left + right + current
+            #print(x, left, right)
             counts[new_size] += 1
             if left > 0:
                 uunion(x, x - 1)
             if right > 0:
                 uunion(x, x + 1)
 
+            # print(counts)
             if counts[m] > 0:
                 latest = max(latest, index + 1)
         return latest

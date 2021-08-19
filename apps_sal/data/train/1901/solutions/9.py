@@ -43,6 +43,7 @@ class Solution:
                 if j < len(grid[i]) - 1 and grid[i][j + 1] != 0 and pos_dict[(i, j + 1)] not in visited:
                     visited.add(pos_dict[(i, j + 1)])
                     ret += grid[i][j + 1]
+                #print(pos, ret, checked, visited)
                 checked[pos] = ret
                 return ret
 
@@ -59,11 +60,14 @@ class Solution:
                 max_connect = max(max_connect, getSurrounding(grid, (i, j + 1), pos_dict, checked))
             return max_connect
 
+        # mark total island sizes
+        # { root: set(points in island) }
         d = dict()
         for i in range(len(grid)):
             for j in range(len(grid[i])):
                 if grid[i][j] == 1:
                     markIsland(grid, (i, j), (i, j), d)
+        # print(grid)
 
         max_size = 1
         pos_dict = dict()

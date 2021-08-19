@@ -1,3 +1,4 @@
+# B
 
 n = int(input())
 l = list(input())

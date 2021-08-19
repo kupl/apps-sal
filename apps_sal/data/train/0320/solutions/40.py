@@ -1,5 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
+        #m = max(nums)
         highest_bit = 0
         addone = 0
         for num in nums:

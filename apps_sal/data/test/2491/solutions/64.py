@@ -8,7 +8,7 @@ for i in range(m):
 
 dist = [float('inf')] * n
 dist[0] = 0
-for i in range(n - 1):
+for i in range(n - 1):  # なぜ？
     for st, en, score in edges:
         if dist[st] == float('inf'):
             continue

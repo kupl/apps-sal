@@ -1,3 +1,4 @@
+# cook your dish here
 def fun(s):
     p = 0
     m = 0

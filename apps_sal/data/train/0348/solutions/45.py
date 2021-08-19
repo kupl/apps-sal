@@ -1,5 +1,7 @@
 class Solution:
     def maximumSum(self, arr: List[int]) -> int:
+        # if len(arr) == 1:
+        #    return arr[0]
         nodel, delected = 0, 0
         res = float('-inf')
         for num in arr:

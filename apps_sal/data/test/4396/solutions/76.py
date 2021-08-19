@@ -1,5 +1,6 @@
 N = int(input())
 
+# やるだけ
 ans = 0.0
 for i in range(N):
     x, u = input().split()

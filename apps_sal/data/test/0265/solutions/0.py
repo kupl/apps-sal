@@ -1,7 +1,13 @@
+#  author: ThePonyCoder
+#  created: 23.06.2019, 21:58
+#  filename: f.py
+#  path: C:/Users/User/Desktop/python/Prog/CodeForces/rounds/cf_568/f.py
 
 import os
 
+# import random
 
+# sys.setrecursionlimit(999999999)
 import string
 
 from math import inf
@@ -58,10 +64,11 @@ def main():
     for i in range(m):
         c, k, *a = ri()
         bits = to_bits(a)
-        pizzas[bits].append((c, i + 1, bits))
+        pizzas[bits].append((c, i + 1, bits))  # цена, номер, маска
         pizzas[bits].sort()
         while len(pizzas[bits]) > 2:
             pizzas[bits].pop()
+    # pprint(pizzas)
 
     for mask_F in range(1 << 9):
         for mask_S in range(1 << 9):
@@ -85,6 +92,7 @@ def main():
                            s_pizza[1],
                            f_pizza[1]))
 
+                # bruting all masks
                 bmask = mask
                 while bmask:
                     satisfied_users += user_masks[bmask]

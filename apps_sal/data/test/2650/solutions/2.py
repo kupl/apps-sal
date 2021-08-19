@@ -84,6 +84,8 @@ def main():
             r.add(a)
             t[b].add(-a)
 
+        # print("ab",a,b,r.q,r.d)
+
     rr = []
     for c, d in cd:
         a = ca[c]
@@ -108,6 +110,7 @@ def main():
             r.add(a)
             t[d].add(-a)
 
+        # print("cd", c,d,r.q,r.d)
         rr.append(r.top())
 
     return JA(rr, "\n")

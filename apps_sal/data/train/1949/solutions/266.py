@@ -9,7 +9,7 @@ class Solution:
                 return 0
 
             gold = grid[i][j]
-            grid[i][j] = 0
+            grid[i][j] = 0  # mark as visited
 
             total = gold + max(dfs(i - 1, j),
                                dfs(i + 1, j),

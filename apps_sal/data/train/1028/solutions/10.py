@@ -1,3 +1,5 @@
+# cook your dish here
+# cook your dish here
 for nt in range(int(input())):
     num = int(input())
     sum = 0

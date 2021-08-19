@@ -23,6 +23,7 @@ class Solution:
             else:
                 continue
         res = ''
+        #print (index)
         for i in range(N):
             if i not in index:
                 res += s[i]

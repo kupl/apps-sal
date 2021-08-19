@@ -15,6 +15,8 @@ for i in range(8):
         elif table[i][j] == "B":
             ocrB.append(j)
 
+    #print(ocrA, ocrB)
+
     while ocrA != []:
         asteps = 0
         for j in range(i - 1, -1, -1):

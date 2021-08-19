@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
-        mp = defaultdict(int)
+        mp = defaultdict(int)  # key: elem_value, value: number_of_complement_elements
         mask = (1 << 16) - 1
         for x in A:
             y = mask ^ x

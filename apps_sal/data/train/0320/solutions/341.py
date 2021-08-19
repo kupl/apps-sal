@@ -21,8 +21,10 @@ class Solution:
                 if t[i] != 0:
                     flag = True
                 t[i] //= 2
+                # print (t[i], cnt, flag)
             if flag:
                 cnt += 1
+            # print (cnt, t)
             q += [(cnt, t)]
 
         return 0

@@ -4,6 +4,11 @@ class Solution:
             return 1
 
         n = len(s)
+        # dic = {}
+        # def helper(length,s,res):
+        #     if idx == n:
+        #         return
+        #     s = s[:]
 
         dp = [0] * (n + 1)
         dp[0] = [set()]
@@ -17,6 +22,7 @@ class Solution:
                     node = s[start:end]
                     last.add(node)
                     ls.append(last)
+                    #sub = last
             dp[end] = ls
         res = 0
         for i in dp[-1]:

@@ -24,11 +24,13 @@ for _ in range(t):
                 total += points[j - i]
             elif board[j] == ".":
                 total += points[j - i]
+            # print(total)
 
         total *= dw
 
         total *= tw
         values.append(total)
+    # print(values)
     maxi.append(max(values))
 for element in maxi:
     print(element)

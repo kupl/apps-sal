@@ -10,8 +10,8 @@ for mask_r in range(1 << H):
         black = 0
         for i in range(H):
             for j in range(W):
-                if ((mask_r >> i) & 1 == 0) and ((mask_c >> j) & 1 == 0) and G[i][j] == "
-                black += 1
+                if ((mask_r >> i) & 1 == 0) and ((mask_c >> j) & 1 == 0) and G[i][j] == "#":
+                    black += 1
         if black == K:
             ans += 1
 

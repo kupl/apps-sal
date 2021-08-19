@@ -21,6 +21,7 @@ def solve(n, a, b, xs):
                 return False
             elif f1 + f2 == 1:
                 g = int(f2)
+                # End of link
                 link = []
                 t = a if f1 else b
                 while x in id_:
@@ -29,6 +30,7 @@ def solve(n, a, b, xs):
                     if x + x == t:
                         break
                     t = a + b - t
+                # print(link)
                 if len(link) % 2 == 0:
                     for i, x in enumerate(link):
                         group[id_[x]] = g
@@ -39,6 +41,7 @@ def solve(n, a, b, xs):
                     for i, x in enumerate(link):
                         group[id_[x]] = g
                 else:
+                    # Found invalid link, answer is "NO"
                     return False
 
     return group

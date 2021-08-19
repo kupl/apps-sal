@@ -1,4 +1,5 @@
 n = int(input())
+# A→0,G→1,C→2,T→3
 dp = [[[[0] * 4 for _ in range(4)] for _ in range(4)] for _ in range(n + 1)]
 for i in range(4):
     for j in range(4):
@@ -12,6 +13,7 @@ for a in range(3, n):
     for i in range(4):
         for j in range(4):
             for k in range(4):
+                # lは新しい桁
                 for l in range(4):
                     if (j == 0 and k == 1):
                         if l == 2:
@@ -31,6 +33,7 @@ for a in range(3, n):
                             continue
                     dp[a + 1][j][k][l] += dp[a][i][j][k]
                     dp[a + 1][j][k][l] %= 10**9 + 7
+                    # print(i,j,k,l,dp[a+1][j][k][l])
 ans = 0
 for i in range(4):
     for j in range(4):

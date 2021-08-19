@@ -4,7 +4,7 @@ from collections import Counter
 class Solution:
     def numRescueBoats(self, people, limit):
 
-        people.sort(reverse=True)
+        people.sort(reverse=True)  # sort in descending order
         boats = 0
 
         r = len(people) - 1

@@ -10,7 +10,7 @@ class UnionFind():
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def unite(self, x, y):
+    def unite(self, x, y):  # UF.unite(a-1,b-1)
         x = self.find(x)
         y = self.find(y)
 
@@ -23,10 +23,10 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x):
+    def size(self, x):  # 今回は使っていない
         return -self.parents[self.find(x)]
 
-    def same(self, x, y):
+    def same(self, x, y):  # UF.same(a-1,b-1) True/False
         return self.find(x) == self.find(y)
 
 

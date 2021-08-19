@@ -13,6 +13,7 @@ else:
         part = part + 1
         j = i
         while (k - part > 1) & (j < n):
+            #print (i-1, j)
             matr[i - 1][j] = 1
             matr[j][i - 1] = 1
             j = j + 1

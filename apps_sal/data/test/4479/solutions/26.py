@@ -5,6 +5,7 @@ class Solution:
 
             val = min(A)
 
+            # if val <= 0:
             A.remove(val)
             A.append(-1 * val)
 

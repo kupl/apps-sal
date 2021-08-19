@@ -1,3 +1,4 @@
+# ref https://qiita.com/ZhangChaoran/items/71fab0e4b8647a93d3a0
 from collections import deque
 import sys
 input = sys.stdin.readline

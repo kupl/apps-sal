@@ -1,3 +1,4 @@
+# rjohari23
 
 n = eval(input())
 a = list(map(int, input().split()))
@@ -5,6 +6,7 @@ q = eval(input())
 while q:
 
     s = input().split()
+    # print s
     if s[0] == 'U':
         l = int(s[1])
         v = int(s[2])

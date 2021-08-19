@@ -9,7 +9,7 @@ def resolve():
     for i in range(H):
         board.append(['@'] + list(input()) + ['@'])
     board.append(['@'] * (W + 2))
-    board[ys][xs] = '
+    board[ys][xs] = '#'
 
     queue = deque([(xs, ys, 0)])
     while queue:

@@ -1,14 +1,14 @@
 import sys
 
 n, m, k = list(map(int, input().split()))
-s = list(map(int, sys.stdin.readline().split()))
-a = list(map(int, sys.stdin.readline().split()))
+s = list(map(int, sys.stdin.readline().split()))  # [int(x) for x in input().split()]  # blocked
+a = list(map(int, sys.stdin.readline().split()))  # a = [int(x) for x in input().split()]  # cost
 
 if m > 0 and s[0] == 0:
     print('-1')
 else:
 
-    block = [-1] * n
+    block = [-1] * n  # -1 free, otherwise index of a free one
     for i in range(m):
         if block[s[i] - 1] == -1:
             block[s[i]] = s[i] - 1
@@ -36,11 +36,15 @@ else:
             best_cost.append(MAX_COST)
         else:
             best_cost.append(a[i] * (-(-n // (i + 1))))
+    #sc = sorted(range(k), key=lambda x: best_cost[x])
+   # sc = sorted(range(k), key=best_cost.__getitem__)
     min_cost = MAX_COST
     for i in range(k):
-        test = i
+        test = i  # min(range(len(best_cost)), key=best_cost.__getitem__)
         if best_cost[test] >= min_cost:
             continue
+        #  if best_cost[test] >= min_cost or best_cost[test] >= MAX_COST:
+        #    break
         t_size = test + 1
         pos = 0
         count = 1

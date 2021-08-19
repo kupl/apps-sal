@@ -8,6 +8,7 @@ def solve():
         color = i + 1
         for j in range(i_cnt):
             a_line.append(color)
+    # wごとに区切ってlistに詰める
     ans = [[''] * w for _ in range(h)]
     cur = 0
     for i in range(h):

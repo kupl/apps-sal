@@ -1,4 +1,8 @@
 import sys
+# sys.stdin = open("in", "r")
+# sys.stdout = open("out", "w")
+
+# toposort from pajenegod, AC server: https://discordapp.com/channels/555883512952258563/578670185007808512/708046996207829093
 
 
 def toposort(graph):
@@ -14,6 +18,7 @@ def toposort(graph):
             stack.append(~node)
             stack += graph[node]
 
+    # cycle check
     for node in res:
         if any(found[nei] for nei in graph[node]):
             return None

@@ -22,11 +22,11 @@ def checkMeet(arr):
 t = int(input())
 for i in range(t):
     n, m = map(int, input().split())
-    lol = [['
+    lol = [['#']] * (m + 2)
     arr = [lol]
     for j in range(n):
         mo = [[x] for x in input()]
-        arr += [[['
+        arr += [[['#']] + mo + [['#']]]
     arr += [lol]
     meet = 0
     while AllDead(arr) == 0:
@@ -35,7 +35,7 @@ for i in range(t):
             for y in range(1, m + 1):
                 for z in arr[x][y]:
                     if z == 'U':
-                        if arr[x - 1][y] == ['
+                        if arr[x - 1][y] == ['#']:
                             do_nothing = 1
                         elif temp[x - 1][y] == ['-']:
                             temp[x - 1][y].remove('-')
@@ -46,7 +46,7 @@ for i in range(t):
                         if len(temp[x][y]) == 0:
                             temp[x][y] = ['-']
                     if z == 'D':
-                        if arr[x + 1][y] == ['
+                        if arr[x + 1][y] == ['#']:
                             do_nothing = 1
                         elif temp[x + 1][y] == ['-']:
                             temp[x + 1][y].remove('-')
@@ -57,7 +57,7 @@ for i in range(t):
                         if len(temp[x][y]) == 0:
                             temp[x][y] = ['-']
                     if z == 'L':
-                        if arr[x][y - 1] == ['
+                        if arr[x][y - 1] == ['#']:
                             do_nothing = 1
                         elif temp[x][y - 1] == ['-']:
                             temp[x][y - 1].remove('-')
@@ -68,7 +68,7 @@ for i in range(t):
                         if len(temp[x][y]) == 0:
                             temp[x][y] = ['-']
                     if z == 'R':
-                        if arr[x][y + 1] == ['
+                        if arr[x][y + 1] == ['#']:
                             do_nothing = 1
                         elif temp[x][y + 1] == ['-']:
                             temp[x][y + 1].remove('-')

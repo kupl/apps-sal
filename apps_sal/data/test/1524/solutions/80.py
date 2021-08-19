@@ -1,3 +1,11 @@
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(S):
     import math
     N = len(S)

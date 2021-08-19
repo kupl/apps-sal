@@ -5,6 +5,7 @@ graph = [[] for _ in range(K)]
 for i in range(K):
     graph[i].append(((i + 1) % K, 1))
     graph[i].append(((10 * i) % K, 0))
+# print(graph)
 
 dist = [-1] * K
 s, t = 1, 0
@@ -26,4 +27,5 @@ while queue:
     d += 1
     queue = list(new_queue)
 
+# print(dist)
 print(dist[0] + 1)

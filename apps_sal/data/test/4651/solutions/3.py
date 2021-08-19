@@ -24,4 +24,5 @@ for testcases in range(q):
         else:
             begin = nbegin
 
+        #print(begin," ",*A)
     print(*A)

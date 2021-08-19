@@ -1,4 +1,5 @@
 import sys
+# input = sys.stdin.buffer.readline
 input = sys.stdin.readline
 
 
@@ -9,8 +10,10 @@ l = 0
 maxx = sum(li) + (d - 1) * (m + 1)
 
 off = maxx - n
+# print(maxx,off)
 outlist = []
 for i in range(m):
+    # print(off,d)
     if (off) >= d:
 
         off -= (d - 1)
@@ -30,3 +33,4 @@ if maxx >= n:
     print(" ".join([str(a) for a in outlist]))
 else:
     print("NO")
+# print(l)

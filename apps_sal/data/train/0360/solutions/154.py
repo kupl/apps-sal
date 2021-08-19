@@ -11,6 +11,7 @@ class Solution:
                     cur_weight = w
                 else:
                     cur_weight += w
+                # print(f\"cap= {cap}, weight={w}, cur_weight={cur_weight}, days={days}\")
 
             return days
 
@@ -20,6 +21,7 @@ class Solution:
         while left < right:
             mid = left + (right - left) // 2
             time = count_days(mid)
+            # print(f\"cap={mid}, left={left}, right={right}, time={time}\")
             if time > limit:
                 left = mid + 1
             else:

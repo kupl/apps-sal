@@ -18,6 +18,8 @@ class Solution:
                 val = frozenset(t)
 
                 if self.is_unique(t):
+                    # print(t)
                     arr.append(t)
                     maxVal = max(maxVal, len(val))
+        # print(dct)
         return maxVal

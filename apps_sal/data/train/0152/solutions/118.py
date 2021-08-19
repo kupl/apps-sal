@@ -17,6 +17,8 @@ class Solution:
         right = position[-1] - position[0]
         while left < right:
             mid = (left + right + 1) // 2
+            # print(f'{mid=}')
+            # print(f'{isOK(mid)=}')
             if isOK(mid):
                 left = mid
             else:

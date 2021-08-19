@@ -1,11 +1,12 @@
 class DisjointSet:
     def __init__(self, n):
-        self.parent = [-1] * n
+        self.parent = [-1] * n  # If a node is root, its parent is the negative size
 
     def find(self, x):
         if self.parent[x] < 0:
             return x
         else:
+            # Path compression
             root = self.find(self.parent[x])
             self.parent[x] = root
             return root

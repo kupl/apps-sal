@@ -24,8 +24,11 @@ while 1:
             break
     if len(s) == 2:
         items = sorted(list(s))
+        # print("here", s, nb_occs, items)
         if (items[0] == 1 and nb_occs[1] == 1) or (items[1] == items[0] + 1 and nb_occs[items[1]] == 1):
             break
+    # print("x : ", x, s)
+    # print(nb_occs)
     v = u[x]
     nb_occs[d[v]] -= 1
     if nb_occs[d[v]] == 0:

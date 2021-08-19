@@ -15,9 +15,9 @@ def happy_numbers(n):
         for iii in range(wag):
             sum_sqr = sum_square(val2)
             if sum_sqr == 1:
-                happy.append(val)
+                happy.append(val)  # happy
                 break
-            elif sum_sqr in val_list:
+            elif sum_sqr in val_list:  # infinate loop
                 break
             else:
                 val_list.append(sum_sqr)

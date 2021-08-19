@@ -4,6 +4,7 @@ for _ in range(t):
     road = input()
     cost = 0
 
+    # get consequtive frequence, guranteed to start and end with one
     freq = []
     curr = "0"
     currFreq = 0
@@ -16,6 +17,7 @@ for _ in range(t):
             currFreq = 1
     freq.append(currFreq)
 
+    # If only a single sequence of 1's
     if len(freq) == 3:
         cost += pillarCost * freq[0]
         cost += pillarCost * 2 * (freq[1] + 1)
@@ -27,11 +29,13 @@ for _ in range(t):
         cost += pipeCost * (freq[0])
 
     else:
+        # represents ground level
         level = True
         switch = 0
 
         cost += pipeCost * (sum(freq))
         for i in range(len(freq)):
+            # zero at 0,2,4...
             if i % 2 == 0:
                 if level:
                     if i == 0 or i == len(freq) - 1:

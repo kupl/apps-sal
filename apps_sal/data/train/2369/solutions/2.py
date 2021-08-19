@@ -22,6 +22,7 @@ for testcase in range(Q):
 
     W.sort(reverse=True)
     W.append((0, 0))
+    # print(W)
 
     C2 = Counter([c[0] for c in C])
     S = sorted(list(C2.values()), reverse=True)
@@ -36,6 +37,8 @@ for testcase in range(Q):
 
         if NOW == 0:
             break
+
+    # print(ANS,sum(ANS))
 
     H = []
     i = 0

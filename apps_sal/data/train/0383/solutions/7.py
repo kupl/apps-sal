@@ -30,7 +30,7 @@ class Solution:
 
         threat = defaultdict(set)
 
-        for u in range(n):
+        for u in range(n):  # find infected which threaten uninfected components
             if not infected[u]:
                 for v in graph[u]:
                     if infected[v]:
@@ -39,8 +39,8 @@ class Solution:
         best = 0
         best_idx = -1
 
-        for v in sorted(initial):
-            preventable = set()
+        for v in sorted(initial):   # for each infected
+            preventable = set()     # find sum of size of distinct uninfected components threatened by one and only one
             for u in graph[v]:
                 if len(threat[find(u)]) == 1:
                     preventable.add(find(u))

@@ -25,10 +25,12 @@ def method(matrix, k):
                             except StopIteration:
                                 pass
                     if consecutive >= k:
+                        # If ended in consecutive empty seats with enough space
                         res += consecutive - k + 1
             if not is_transpose:
+                # Just a funny way of
                 if len(matrix) < k:
-                    break
+                    break  # Don't bother with transpose if consecutive seats are impossible
                 matrix = list(zip(*matrix))
     return res
 

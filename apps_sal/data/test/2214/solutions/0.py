@@ -39,6 +39,7 @@ else:
                 odd, even = even, odd + 1
         print(min(even, odd))
     elif m == 3:
+        #ee, eo, oe, oo = [0, 0, 0 ,0]
         ll = [0, 0, 0, 0]
         for nex in l:
             ll.reverse()

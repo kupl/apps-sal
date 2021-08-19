@@ -1,6 +1,7 @@
 def main():
     from collections import deque
 
+    # 一点更新・一点取得の加法BIT
     class BIT():
         def __init__(self, n):
             self.n = n
@@ -8,6 +9,7 @@ def main():
             self.bit = [0] * (n + 1)
             self.allsum = 0
 
+        # 初期化する
         def make_bit(self, a):
             n, bit = self.n, self.bit
             for i, j in enumerate(a):
@@ -17,6 +19,7 @@ def main():
                     bit[x] += j
                     x += x & (-x)
 
+        # 位置iに値vを足す
         def add(self, i, v):
             x, n, bit = i + 1, self.n, self.bit
             self.allsum += v
@@ -24,6 +27,7 @@ def main():
                 bit[x] += v
                 x += x & (-x)
 
+        # 位置0からiまでの和(sum(bit[:i]))を計算する
         def sum(self, i):
             ret, x, bit = 0, i, self.bit
             while x > 0:
@@ -31,9 +35,11 @@ def main():
                 x -= x & (-x)
             return ret
 
+        # 位置iからjまでの和(sum(bit[i:j]))を計算する
         def sum_range(self, i, j):
             return self.sum(j) - self.sum(i)
 
+        # 和がw以上となる最小のインデックスを求める
         def lowerbound(self, w):
             if w <= 0:
                 return 0

@@ -1,4 +1,6 @@
+#!python3
 
+# input
 Q = int(input())
 A, B = [None] * Q, [None] * Q
 for i in range(Q):

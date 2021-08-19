@@ -4,11 +4,16 @@ class Solution:
 
         pos = 0
         curr_capacity = capacity
-        ht = {}
+        ht = {}  # drop off location : passengers
         for trip in trips:
+            # if dropOff < trip[1]:
+            #     curr_capacity -=
+            # elif trip[0] > curr_capacity:
+            #     return False
             for prev in ht:
                 if prev <= trip[1]:
                     curr_capacity += ht[prev]
+                    # del ht[prev]
                     ht[prev] = 0
 
             if trip[0] > curr_capacity:

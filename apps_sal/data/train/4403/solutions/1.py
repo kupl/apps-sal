@@ -1,3 +1,4 @@
+# Bitwise operators? What's that? Don't need it
 def switch_endian(n, bits):
     if not (0 <= n < 2**bits and bits == 2**(bits.bit_length() - 1)):
         return

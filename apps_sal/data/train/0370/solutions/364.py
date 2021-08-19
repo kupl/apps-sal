@@ -27,6 +27,7 @@ class Solution:
             pr_set = self.primes_set(num)
             for q in pr_set:
                 primes[q].append(i)
+        # print(primes,UF.__dict__)
         for _, indexes in list(primes.items()):
             for i in range(len(indexes) - 1):
                 UF.union(indexes[i], indexes[i + 1])
@@ -38,11 +39,13 @@ class Solution:
         r = 0
         while g:
             gc = A[g.pop()]
+            # print(gc,g)
             ri = 1
             while True:
                 gm = set()
                 gc2 = 1
                 for i in g:
+                    # print(gc,i,A[i])
                     if gcd(A[i], gc) > 1:
                         ri += 1
                         gm.add(i)
@@ -61,6 +64,7 @@ class Solution:
         return self.p[x]
 
     def largestComponentSize(self, A: List[int]) -> int:
+        # @lru_cache(maxsize=None)
 
         self.p = list(range(len(A)))
 
@@ -73,6 +77,7 @@ class Solution:
         for i, v in enumerate(A):
             f = factors(v)
             f.add(v)
+            # print(i,v,f)
             fx += [f]
             for fi in f:
                 l = d.setdefault(fi, [])
@@ -85,8 +90,10 @@ class Solution:
         return max(Counter(self.find(i) for i in self.p).values())
 
         r = 0
+        # print(fx,d)
         while g:
             gi = [g.pop()]
+            # print(gi,g)
             g1 = [gi]
 
             while gi:

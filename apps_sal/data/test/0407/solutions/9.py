@@ -1,3 +1,4 @@
+# Minimum Sum
 from collections import defaultdict
 
 n = int(input())

@@ -3,7 +3,7 @@ def main():
     N = int(input())
     C = list(map(int, input().split(' ')))
     C.sort()
-    pow_2 = 1
+    pow_2 = 1  # 2 ** (2 * N - 2)
     for _ in range(2 * N - 2):
         pow_2 *= 2
         pow_2 %= MOD

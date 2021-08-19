@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 f0 = "What are you doing at the end of the world? Are you busy? Will you save us?"
 s0 = len(f0)
 f10 = "What are you doing while sending \""

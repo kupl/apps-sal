@@ -7,11 +7,14 @@ def dont_give_me_five(start, end):
     >>> dont_give_me_five(-11,10)
     >>> 20
     '''
+    # initialize return n
     n = 0
 
+    # iterate through numbers
     for i in range(start, end + 1):
 
+        # check for '5' in str(int)
         if '5' not in str(i):
             n += 1
 
-    return n
+    return n   # amount of numbers

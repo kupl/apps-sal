@@ -1,5 +1,6 @@
 def v_19(s):
     a = [0, 0, 0, 0]
+    #    n  e  i  t
 
     for i in range(len(s)):
         if s[i] == 'n':
@@ -26,3 +27,5 @@ else:
 q[1] = q[1] // 3
 
 print(min(q))
+
+# 1502218585911

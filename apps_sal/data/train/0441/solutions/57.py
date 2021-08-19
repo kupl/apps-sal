@@ -8,6 +8,7 @@ class Solution:
 
         count = 0
 
+        # Find all odd factors
         for i in range(1, int(math.sqrt(2 * N)) + 1, 1):
             if i % 2 == 0 and verify_even(i):
                 count += 1

@@ -12,6 +12,8 @@ for _ in range(n - 1):
     route[b - 1].append((a - 1, c))
 q, k = list(map(int, input().split()))
 
+# 再帰による深さ優先探索
+
 
 def Tree(s, g, c):
     distance[s] = c

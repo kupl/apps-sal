@@ -9,3 +9,4 @@ for i in range(n):
     ans_u += (a[i] - a_u)**2
     ans_d += (a[i] - a_d)**2
 print((min(ans_u, ans_d)))
+# print(round(-2.5),int(-2.5))

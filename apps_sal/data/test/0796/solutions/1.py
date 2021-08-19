@@ -56,5 +56,6 @@ for yoko in range(n):
             NDP[j] = (NDP[j] + PLUS[i][j] * DP[i]) % mod
 
     DP = NDP
+    # print(DP)
 
 print(DP[-1])

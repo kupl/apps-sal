@@ -22,6 +22,7 @@ class ProductOfNumbers:
             self.last0index = self.size
 
     def getProduct(self, k: int) -> int:
+        # print(self.running)
         if self.size == 1:
             return self.lst[0]
         if k > self.size:
@@ -32,3 +33,9 @@ class ProductOfNumbers:
             return self.running[-1]
 
         return int(self.running[-1] / self.running[self.size - k - 1])
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

@@ -8,6 +8,8 @@ def solve():
     S = input()[:-1]
     GX, GY = list(map(int, input().split()))
 
+    # 連続するFをまとめる ex.)FF->2
+    # 連続するTをまとめる ex.)TTT->T
     S_parsed = []
     prev = S[0]
     seq = 1
@@ -33,6 +35,7 @@ def solve():
         if S[-1] == "F":
             S_parsed.append(seq)
 
+    # x,yを分離して考える
     x_move = []
     y_move = []
 
@@ -46,11 +49,14 @@ def solve():
             else:
                 y_move.append(c)
 
+    # x,y分けて、GX,GYに到達できるかをdpで判定
     dp_x = set()
     if len(x_move) > 0:
         if S[0] != "T":
+            # Fから始まる場合は、正の方向からスタート
             dp_x.add(x_move[0])
         else:
+            # TTから始まってたら、どっち方向からでもスタートできる
             dp_x.add(x_move[0])
             dp_x.add(-x_move[0])
     else:

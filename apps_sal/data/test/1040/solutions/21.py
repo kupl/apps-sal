@@ -1,5 +1,6 @@
 import sys
 
+# B - Abbreviate Fox
 N = int(input())
 s = input()
 t = ''

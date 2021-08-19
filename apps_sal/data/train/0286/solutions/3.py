@@ -4,6 +4,8 @@ from itertools import accumulate
 
 class Solution:
     def getCombinations(self, balls, l, r, d):
+        # l, r: number of available position on left and right,
+        # d: difference of number of distinct color on left and right.
         if not balls:
             return d == 0
         if abs(d) > len(balls):

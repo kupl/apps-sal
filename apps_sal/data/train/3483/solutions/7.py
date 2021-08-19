@@ -1,3 +1,4 @@
+# Attempt without regex, let's use classic generator function.
 
 def string_parse_gen(string):
     counter, prev_char = 0, ''

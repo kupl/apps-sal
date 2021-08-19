@@ -12,8 +12,11 @@ for i in range(n):
 
 for curr in range(len(start)):
     x = start[curr]
+    # print(curr)
     while A[x][1] != 0:
+        # print(x)
         x = A[x][1] - 1
+    # print(x)
     if curr != len(start) - 1:
         A[x][1] = start[curr + 1] + 1
         A[A[x][1] - 1][0] = x + 1

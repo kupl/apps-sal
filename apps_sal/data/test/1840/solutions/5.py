@@ -19,6 +19,7 @@ base.sort()
 
 idx = sorted(range(len(A)), key=lambda k: A[k])
 A.sort()
+# print(base)
 s = 0
 k = -1
 ans = [0] * (N)
@@ -31,6 +32,7 @@ for i in range(N):
         else:
             break
 
+    # print(attack,s)
     ans[idx[i]] = s
 
 for num in ans:

@@ -3,6 +3,9 @@ from collections import deque
 
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
+        # if not sol return []
+
+        # start from target and trace back, use dfs each time change slice in stamp to ??? or ??X
 
         list_s, list_t = list(stamp), list(target)
         res = []

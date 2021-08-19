@@ -9,4 +9,5 @@ class Solution:
             s1 = s2
             s1.add(n)
             s |= s1
+        # print(s)
         return len(s)

@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(a, b, c):
     k = c // a
     n = b

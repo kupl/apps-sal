@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, k, x = map(int, input().split())
     lst = list()
@@ -9,5 +10,6 @@ for _ in range(int(input())):
             lst.append(0)
             if(len(lst) == n):
                 break
+        # print(lst)
     print(*lst, end=" ")
     print()

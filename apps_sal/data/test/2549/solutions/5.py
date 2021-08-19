@@ -2,6 +2,7 @@
 import sys
 input = sys.stdin.readline
 mod = 998244353
+# mod=10**9+7
 
 
 def frac(limit):
@@ -21,6 +22,8 @@ def mul(a, b):
 
 def div(a, b):
     return mul(a, pow(b, mod - 2, mod))
+#frac, fraci = frac(141398)
+# print(fraci)
 
 
 N, M = list(map(int, input().split()))

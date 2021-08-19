@@ -10,6 +10,7 @@ for i in range(n - 2, -1, -1):
     rem[i] = rem[i + 1] + s[i]
 
 for i, sun in enumerate(s):
+    # print(b, a, sun)
     if b == 0 and a == 0:
         break
     if b == 0:

@@ -2,12 +2,15 @@ class Solution:
     def pathInZigZagTree(self, label: int) -> List[int]:
         if label == 1:
             return [1]
+        # else:
         ans = []
         for i in range(50):
             if (2**i <= label) and (2**(i + 1) - 1 >= label):
                 break
+            # print(i)
         if i % 2 == 1:
             label = 2**i + 2**(i + 1) - 1 - label
+        # print(label)
         x = label
         for j in range(i, -1, -1):
             if j % 2 == 1:

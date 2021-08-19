@@ -13,6 +13,7 @@ class Solution:
         C = sorted(list(S1.intersection(S2)))
         if len(C) == 0:
             return max(sum(nums1), sum(nums2))
+#        print (C)
         ind1 = ind2 = 0
         n1 = []
         n2 = []
@@ -24,9 +25,11 @@ class Solution:
 
             n1.append(sum(nums1[ind1:H1[i] + 1]))
             n2.append(sum(nums2[ind2:H2[i] + 1]))
+#            print(n1,n2)
             ind1 = H1[i] + 1
             ind2 = H2[i] + 1
         n1.append(sum(nums1[ind1:]))
         n2.append(sum(nums2[ind2:]))
         n += max(sum(nums1[ind1:]), sum(nums2[ind2:]))
+#        print (n1,n2)
         return n % 1000000007

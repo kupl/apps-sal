@@ -1,4 +1,5 @@
 def next_item(xs, item):
+    # TODO: Implement me
     print(isinstance(xs, range))
     i = 0
 

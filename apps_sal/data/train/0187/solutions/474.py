@@ -9,6 +9,7 @@ class Solution:
 
         i = 0
         while i < len(customers) or waiting > 0:
+            #print(i, waiting, profit, maxProfit, maxRotation)
             net = 0 - runningCost
             if i < len(customers):
                 waiting += customers[i]
@@ -16,6 +17,7 @@ class Solution:
                 boarding = min(4, waiting)
                 waiting -= boarding
                 net += (boardingCost * boarding)
+            # print(net)
             profit += net
             if profit > maxProfit:
                 maxProfit = profit

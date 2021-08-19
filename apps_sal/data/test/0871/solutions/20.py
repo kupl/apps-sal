@@ -28,8 +28,11 @@ for _ in range(n):
     f = True
 
 
+# if found:
 if ff:
     print(0, 0)
 else:
     res = last + s + 1
     print("{} {}".format(res // 60, res % 60))
+# else:
+#     print()

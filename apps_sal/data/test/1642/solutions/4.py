@@ -14,3 +14,6 @@ for i in range(N - 2):
 MIN = min(MIN, dist(pts[N - 2], pts[N - 1], pts[0]))
 MIN = min(MIN, dist(pts[N - 1], pts[0], pts[1]))
 print(MIN / 2)
+
+
+# Made By Mostafa_Khaled

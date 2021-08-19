@@ -6,11 +6,13 @@ for i in range(int(input())):
     for i in range(k):
         wsum += a[i]
     msum = max(wsum, msum)
+    # st=wsum-a[k-1]+a[-1]
     for i in range(k, n + k - 1):
         if i < n:
             wsum += a[i] - a[i - k]
         else:
             wsum += a[abs(n - i)] - a[i - k]
+            # print(wsum)
 
         msum = max(wsum, msum)
     print(msum)

@@ -19,4 +19,5 @@ class Solution:
         ans = 0
         for i in dp:
             ans = (ans + i[1]) % mod
+            # print(i)
         return ans % mod

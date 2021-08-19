@@ -10,10 +10,14 @@ class Solution:
 
         for level in range(1, d):
 
+            #print(dp[level-1], dp[level])
             for face in range(1, f + 1):
                 for t in range(1, target + 1):
+
+                    # for face in range(1,f+1):
 
                     if t - face > 0:
                         dp[level][t] += dp[level - 1][t - face]
 
+        # print(dp)
         return dp[-1][-1] % (10**9 + 7)

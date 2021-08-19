@@ -11,5 +11,6 @@ for i in range(0, 2 * n, 2):
     cur_state_sasha = a[i][1]
     ans += abs(a[i + 1][1] - cur_state_dima)
     cur_state_dima = a[i + 1][1]
+    # print(ans)
 
 print(ans)

@@ -1,5 +1,6 @@
 from sys import stdin
 import math
+# stdin = open('in')
 
 n, k = map(int, stdin.readline().split())
 a = [int(x) for x in stdin.readline().split()]

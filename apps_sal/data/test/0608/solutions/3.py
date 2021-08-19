@@ -13,6 +13,8 @@ while scane < (n - 2):
             plus += 1
             if a[scane + 2] > 3:
                 r += 1
+               # print(r)
+               # print('--')
                 plus += 1
         scane += (plus)
     else:

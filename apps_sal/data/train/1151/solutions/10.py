@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import defaultdict
 l = []
 
@@ -7,6 +8,7 @@ def DFSUtil(d, temp, v, visited):
     temp.append(v)
     for i in d[v]:
         if visited[i] == False:
+            # Update the list
             temp = DFSUtil(d, temp, i, visited)
     return temp
 

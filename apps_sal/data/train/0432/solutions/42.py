@@ -4,6 +4,9 @@ from sortedcontainers import SortedDict
 
 class Solution:
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
+        # print('-----')
+        # print(f'hand: {hand}')
+        # print(f'W: {W}')
 
         if not hand:
             return True
@@ -22,6 +25,7 @@ class Solution:
                 if len(numPos) < W:
                     return False
                 else:
+                    # print(f'r={r} len(numPos)={len(numPos)} numPos={numPos}')
                     ll = list(numPos.islice(stop=W))
                     prev = ll[0] - 1
                     for n in ll:

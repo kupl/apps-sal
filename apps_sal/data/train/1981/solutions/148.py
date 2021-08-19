@@ -9,6 +9,7 @@ class Solution:
         prev = None
         mult = 0
         for key in sorted(reqdict.keys()):
+            #print([key, reqdict[key]])
             if reqdict[key] != 0:
                 if prev != None:
                     increments.append([mult, key - prev])
@@ -16,11 +17,13 @@ class Solution:
                 mult += reqdict[key]
 
         increments.sort()
+        # print(increments)
 
         x = len(increments) - 1
         ans = 0
         nums.sort()
         for i in range(len(nums) - 1, -1, -1):
+            #print([nums[i], increments[x][0]])
             if x >= 0 and increments[x][0] > 0:
                 ans = (ans + nums[i] * increments[x][0]) % (10**9 + 7)
 

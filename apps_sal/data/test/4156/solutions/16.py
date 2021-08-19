@@ -14,6 +14,7 @@ for step in a:
 
 d = max_p - min_p
 
+#print(max_p, min_p, d)
 
 if w - d + 1 > 0:
     print(w - d + 1)

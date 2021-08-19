@@ -17,12 +17,16 @@ def main():
         graph[b].append(a)
 
     depth = dfs(graph, u, n)
+    # print(depth)
     depth2 = dfs(graph, v, n)
+    # print(depth2)
     ans = 0
     ans2 = 10**6
     for i, j in zip(depth, depth2):
         if i < j:
             ans = max(j, ans)
+        # elif i == j:
+        #     ans2 = min(j,ans2)
 
     print(ans - 1)
 

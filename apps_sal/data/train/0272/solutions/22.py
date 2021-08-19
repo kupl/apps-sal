@@ -9,6 +9,9 @@ class Solution:
         for k in keys:
             for l in k:
                 allkz.add(l)
+        # for i, b in enumerate(status):
+            # if not b and b not in allkz:
+                # unreachable.add(b)
 
         opened = set()
         for i, b in enumerate(status):

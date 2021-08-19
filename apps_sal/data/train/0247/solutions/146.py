@@ -17,15 +17,23 @@ class Solution:
 
         minValue = sys.maxsize
         for i in range(n):
+            # if (targetSum[i] > 0):
             minValue = min(targetSum[i], minValue)
             beforeSum[i] = minValue
 
         minValue = sys.maxsize
         for i in reversed(list(range(1, n))):
+            # print(targetSum[i])
             startIndex = i - targetSum[i]
             if (startIndex >= 0):
                 afterSum[startIndex] = min(afterSum[startIndex], targetSum[i])
+                # print(f\"Setting aftersum[{startIndex}] = {afterSum[startIndex]}\")
+            # minValue = min(targetSum[i], minValue)
+            # afterSum[i - 1] = minValue
 
+        # print(f\"targetSum = {targetSum}\")
+        # print(f\"afterSum = {afterSum}\")
+        # print(f\"beforeSum = {beforeSum}\")
         minValue = sys.maxsize
         for i in range(len(arr)):
             minValue = min(minValue, beforeSum[i] + afterSum[i])

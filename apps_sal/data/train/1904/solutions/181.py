@@ -1,3 +1,4 @@
+# Max heap
 class Node:
     def __init__(self, x, y, d=None):
         self.x = x
@@ -32,6 +33,7 @@ def heapify(heap):
         p = parent(i)
 
         while i > 0 and heap[p].distance < heap[i].distance:
+            # print(heap[i].distance,i,p)
             swap(heap, i, p)
             i = p
             p = parent(i)
@@ -41,6 +43,7 @@ def replace_top(heap, node):
     t = heap[0]
     heap[0] = node
     n = len(heap)
+    # swap(heap,0,n-1)
     i = 0
     l = left(i)
     r = right(i)
@@ -71,13 +74,18 @@ class Solution:
             p = points[i]
             node = Node(p[0], p[1])
             heap.append(node)
+            # print(node.distance)
         heapify(heap)
         top = 0
+        # print(heap)
+        # print(\"max\",heap[top].distance)
         for i in range(K, n):
             p = points[i]
 
             distance = p[0] * p[0] + p[1] * p[1]
+            # print(p,distance)
             if heap[top].distance > distance:
                 node = Node(p[0], p[1], distance)
+                # print(p,node.distance)
                 replace_top(heap, node)
         return [[heap[i].x, heap[i].y] for i in range(K)]

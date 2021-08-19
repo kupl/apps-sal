@@ -103,6 +103,9 @@ for loop in range(N):
         else:
             now = tp_o(now, dep[now])
 
+#print (z_child)
+#print (o_child)
+#print (dep)
 
 ans = 0
 for i in range(len(z_child)):

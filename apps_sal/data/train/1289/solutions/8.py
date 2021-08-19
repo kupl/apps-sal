@@ -13,6 +13,7 @@ def comb(n, r):
         ret *= (n - i)
         ret /= (i + 1)
     return ret
+    # return factorial(n)/(factorial(n-r)*factorial(r))
 
 
 def solve(n):

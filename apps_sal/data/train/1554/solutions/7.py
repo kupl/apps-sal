@@ -1,3 +1,4 @@
+# cook your dish here
 def fun(M, B):
     if M == B:
         return M * 2

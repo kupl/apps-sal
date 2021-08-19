@@ -8,3 +8,5 @@ def cube_odd(arr):
 
     else:
         return a
+
+    # your code here - return None if at least a value is not an integer

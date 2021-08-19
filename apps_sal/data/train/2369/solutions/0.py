@@ -1,3 +1,4 @@
+# @author
 
 import sys
 
@@ -22,6 +23,8 @@ class GCandyBoxHardVersion:
             for x in rev_d:
                 rev_d[x].sort(key=lambda item: item[1])
 
+            # print(rev_d)
+
             cur = max(rev_d)
             cnt = max(rev_d)
             nb_candies = 0
@@ -44,9 +47,11 @@ class GCandyBoxHardVersion:
                         v = max_cnt
                         mx_f = rev_d[max_cnt][-1][1]
                 to_take = rev_d[v].pop()
+                # rev_d[cnt] -= 1
                 nb_candies += cur
                 given_away += min(to_take[1], cur)
                 cur -= 1
+                # rev_d[cnt - cur] += 1
             print(nb_candies, given_away)
 
 

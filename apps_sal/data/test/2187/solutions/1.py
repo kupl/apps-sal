@@ -4,7 +4,9 @@ def f(arr):
         arr[i] = d - arr[i]
 
 
+# for _ in range(1):
 for _ in range(int(input())):
+    # n, k = map(int, input().split())
     n = int(input())
     arr = list(map(int, input().split()))
     i = n - 1

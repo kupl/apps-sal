@@ -3,7 +3,9 @@ def check(arr, d, mm):
     k = -1
     for i in range(n):
         if (i) % d == 0:
+            # print("i is ",i)
             k += 1
+        # print("k is ",k)
         ss += max(0, arr[i] - k)
     if ss >= mm:
         return True

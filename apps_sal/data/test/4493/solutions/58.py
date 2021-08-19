@@ -2,6 +2,11 @@ import sys
 
 input = sys.stdin.readline
 
+# N
+# t1 x1 y1t1 x1 y1
+# t2 x2 y2t2 x2 y2
+# ⋮⋮
+# tN xN yNtN xN yN
 N = 3
 x = [0 for i in range(N)]
 y = [0 for i in range(N)]

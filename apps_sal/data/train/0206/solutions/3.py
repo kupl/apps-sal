@@ -10,16 +10,26 @@ class Solution:
 
         def winner(left, right, player):
             self.count += 1
+            # print(self.count)
             if left == right:
 
                 return player * nums[left]
+
+            # p1 selct max from each end
+            # remove the selected
+            # p2 selects max from each end
+            # do above seps until no mor num
+            # 1 5 2
+            #print( left, right)
 
             if memo[left][right] != 0:
                 print((nums[left:right + 1]))
                 return memo[left][right]
 
+            #self.count +=1
             a = player * nums[left] + winner(left + 1, right, -player)
 
+            #self.count +=1
             b = player * nums[right] + winner(left, right - 1, -player)
 
             if player == 1:

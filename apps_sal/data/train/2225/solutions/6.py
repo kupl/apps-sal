@@ -1,4 +1,5 @@
 from collections import deque
+# 節の定義
 
 
 class Node:
@@ -6,6 +7,7 @@ class Node:
         self.data = int(x)
         self.left = None
         self.right = None
+# 挿入
 
 
 def insert(node, x):
@@ -26,6 +28,7 @@ class Trie:
     def __init__(self):
         self.root = Node(0)
 
+    # 挿入
     def insert(self, x):
         insert(self.root, x)
 

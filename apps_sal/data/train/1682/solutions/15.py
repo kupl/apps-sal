@@ -1,3 +1,4 @@
+# cook your dish here
 number = input()
 number = list(number)
 number = list(map(int, number))
@@ -11,6 +12,7 @@ for i in range(len(number) - 1):
             d1[i] = k
             break
 d1[len(number) - 1] = number[len(number) - 1]
+# print(d1)
 Keymax = max(d1, key=d1.get)
 all_values = d1.values()
 max_value = max(all_values)

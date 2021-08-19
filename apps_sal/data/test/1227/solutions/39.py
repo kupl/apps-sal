@@ -25,6 +25,11 @@ for i in range(n):
                     if d < nd:
                         nk = 1
                 dp[ni][nj][nk] += dp[i][j][k]
+                # print(d,k)
+                # print(i,j,k,dp[i][j][k])
+                # print(ni,nj,nk,dp[ni][nj][nk])
+                # [print(i) for i in dp]
 
 ans = dp[n][K][0] + dp[n][K][1]
 print(ans)
+# [print(i) for i in dp]

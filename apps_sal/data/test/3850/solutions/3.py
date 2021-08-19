@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# http://codeforces.com/contest/830/problem/A
 import sys
 from operator import itemgetter
 
@@ -5,7 +7,7 @@ from operator import itemgetter
 def read(): return list(map(int, input().split()))
 
 
-n, k, p = read()
+n, k, p = read()  # n people, k keys, office location
 people, keys = sorted(read()), sorted(read())
 
 res = []

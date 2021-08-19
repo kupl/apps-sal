@@ -16,7 +16,9 @@ def read_strgrid(h):
 
 
 def main():
+    # input data
     n, k = map(int, read().split())
+    # solve
     '''
     半分全列挙する。n以下の数で作れる数rの組み合わせを考えるクロス表作ればわかる。
     r==n+1の時、n個
@@ -37,6 +39,7 @@ def main():
     for i in range(1, n * 2 + 1):
         cnt += combs[i] * combs[max(0, i - k)]
 
+    # print(combs)
     print(cnt)
 
     return None

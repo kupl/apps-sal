@@ -4,6 +4,7 @@ o = n // 2 + n % 2
 e = n // 2
 
 kk = [0] * (e + e + o)
+# print(kk)
 
 r = 0
 for i in range(e):

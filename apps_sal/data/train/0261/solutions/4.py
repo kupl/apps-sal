@@ -20,7 +20,11 @@ class Solution:
                 scan += 1
 
             nums[j], nums[big] = nums[big], nums[j]
+            # print(nums)
+            # print(big)
             return big
+
+        # 12 53 - 1 09
 
         i, j = 0, len(nums) - 1
         while i <= j:

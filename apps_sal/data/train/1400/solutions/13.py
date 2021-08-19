@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 powers = [1]
 for _ in range(20):

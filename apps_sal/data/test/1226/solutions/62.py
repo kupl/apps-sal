@@ -1,6 +1,6 @@
 def main():
     n, a, b = map(int, input().split())
-    mod = 10 ** 9 + 7
+    mod = 10 ** 9 + 7  # 素数
 
     def modpow(x, n, mod):
         res = 1
@@ -12,9 +12,11 @@ def main():
         return res
 
     def cmb(n, r):
+        # 分子(n*(n-1)*...*(n-r+1))
         nume = 1
         for i in range(n - r + 1, n + 1):
             nume = nume * i % mod
+        # 分母（1*2*...*r）
         deno = 1
         for j in range(1, r + 1):
             deno = deno * j % mod

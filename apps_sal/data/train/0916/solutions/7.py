@@ -3,6 +3,8 @@ def gcd(a, b):
         return b
     return gcd(b % a, a)
 
+# Function to return LCM of two numbers
+
 
 def lcm(a, b):
     return (a * b) / gcd(a, b)

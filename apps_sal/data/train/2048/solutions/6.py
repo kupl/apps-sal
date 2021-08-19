@@ -1,3 +1,4 @@
+# https://codeforces.com/problemset/problem/671/B
 
 n, k = list(map(int, input().split()))
 a = sorted(list(map(int, input().split())))
@@ -56,7 +57,10 @@ def solve(a, k):
             u -= remain // i
             break
 
-    return u - l
+    return u - l  # , a, l_arr, r_arr
 
 
 print(solve(a, k))
+
+# 4 1
+# 1 1 4 2

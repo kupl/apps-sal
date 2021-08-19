@@ -14,6 +14,7 @@ for cdd in candidates:
     for i in range(n):
         div_cdd[i] = a[i] % cdd
     div_cdd = sorted(div_cdd)
+    # calc need
     idx = n - sum(div_cdd) // cdd
     need = 0
     for i in range(idx):

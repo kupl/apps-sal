@@ -1,4 +1,5 @@
 def min_sum(arr):
+    # Your code here
     toplam = 0
     while True:
         buyuk = max(arr)

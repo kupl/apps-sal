@@ -3,6 +3,7 @@ class Solution:
 
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         result = []
+        # print(result, self.data)
         self.data = {}
         for i in range(len(graph)):
             if i in self.data:

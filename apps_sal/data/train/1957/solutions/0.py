@@ -1,3 +1,4 @@
+# O(M*N*K)
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         rows, cols = len(grid), len(grid[0])
@@ -18,10 +19,12 @@ class Solution:
                     if x < 0 or x >= cols or y < 0 or y >= rows:
                         continue
                     kk = p - grid[y][x]
-                    if kk <= visited[y][x]:
+                    if kk <= visited[y][x]:  # have visited here on a better path.
                         continue
-                    to_target = rows - y + cols - x - 2
-                    if kk >= to_target - 1 and visited[y][x] == -1:
+                    # early stop if there's shortcut (-1 because goal cell != 1)
+                    # But only applies when, comming from
+                    to_target = rows - y + cols - x - 2  # rows-r-1 + cols-c-1
+                    if kk >= to_target - 1 and visited[y][x] == -1:  # to_target == prev_min-1:
                         return steps + to_target
                     q.append((y, x, kk))
                     visited[y][x] = kk

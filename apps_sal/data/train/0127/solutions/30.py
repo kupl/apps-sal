@@ -4,7 +4,7 @@ mod_ = 10**9 + 7
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
         axis_group = G + 1
-        axis_profit = P + 1
+        axis_profit = P + 1  # sum(profit) + 1
         n_profit = len(profit)
 
         mat = [[0 for p in range(axis_profit)] for g in range(axis_group)]

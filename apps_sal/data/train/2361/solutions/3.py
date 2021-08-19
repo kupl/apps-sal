@@ -23,6 +23,8 @@ def solve():
     print(*a)
 
 
+# solve()
+
 T = ni()
 for _ in range(T):
     solve()

@@ -15,6 +15,8 @@ class Solution:
                 if sums[s - num]:
                     sums[s] |= sums[s - num] << 1
             sums[num] |= 1
+            # print(sums)
+        # print(sums)
         for s in range(max_sum + 1):
             for i in range(N - 1):
                 if (sums[s] >> i) & 1:

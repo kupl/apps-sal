@@ -10,9 +10,9 @@ ans = ["" for i in range(len(G))]
 for j in range(W):
     p = False
     for i in range(len(G)):
-        if G[i][j] == '
-        p = True
-        break
+        if G[i][j] == '#':
+            p = True
+            break
     if p:
         for i in range(len(G)):
             ans[i] += G[i][j]

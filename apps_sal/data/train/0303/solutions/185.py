@@ -21,6 +21,7 @@ class Solution:
                 return memo[i]
             val = -1
             sol = -1
+            # traverse k times or until end of array. + 1 to offset 0 index so we can multiply val * j straight up
             for j in range(1, min(k + 1, N - i + 1)):
                 val = max(val, arr[i + j - 1])
                 sol = max(sol, val * j + maxSum2(i + j))

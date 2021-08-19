@@ -10,6 +10,9 @@ class Solution:
         q = deque()
         n = len(grid)
         answer = float('inf')
+        #x1, y1, x2, y2, is_horizon, time
+        #   is_horozon = 1 : 가로
+        #   is_horizon = 0 : 세로
         init_pos = [0, 0, 0, 1, 1, 0]
         q.append(init_pos)
 
@@ -34,17 +37,21 @@ class Solution:
                         nxt_hrizon = 1 if nx1 == nx2 else 0
                         visit.add(((nx1, ny1), (nx2, ny2)))
                         q.append([nx1, ny1, nx2, ny2, nxt_hrizon, cost + 1])
+            # rotataion
             if is_horizon:
                 if x1 < n - 1 and grid[x1 + 1][y1] == 0 and grid[x2 + 1][y2] == 0:
+                    # clockwise
                     if ((x1, y1), (x2 + 1, y2 - 1)) not in visit:
                         visit.add(((x1, y1), (x2 + 1, y2 - 1)))
                         q.append([x1, y1, x2 + 1, y2 - 1, 0, cost + 1])
 
             else:
+                # counterclockwise
                 if y1 < n - 1 and grid[x1][y1 + 1] == 0 and grid[x2][y2 + 1] == 0:
                     if ((x1, y1), (x2 - 1, y2 + 1)) not in visit:
                         visit.add(((x1, y1), (x2 - 1, y2 + 1)))
                         q.append([x1, y1, x2 - 1, y2 + 1, 1, cost + 1])
+        # print(answer)
         if answer != float('inf'):
             return answer
         else:

@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 """
-Codeforces Round 
+Codeforces Round #319 (Div. 2)
 
 Problem 577 B. Modulo Sum
 

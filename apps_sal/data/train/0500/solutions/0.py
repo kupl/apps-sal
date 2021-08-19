@@ -12,7 +12,7 @@ class Solution:
         stack = [0]
         cur_num = 0
         digits = '0123456789'
-        s += '
+        s += '#'
 
         for c in s:
             if c == ' ':

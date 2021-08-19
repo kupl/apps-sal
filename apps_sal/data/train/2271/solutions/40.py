@@ -28,6 +28,7 @@ def resolve():
         x, y = LI_()
         G[x].append(y)
         G[y].append(x)
+    # print(G)
 
     visited = [False] * N
 
@@ -38,12 +39,14 @@ def resolve():
             if not visited[n]:
                 dfs(n, tmp)
 
+    # 連結成分内はswapで自由な位置に移動可能
     c = []
     for i in range(N):
         if not visited[i]:
             tmp = []
             dfs(i, tmp)
             c.append(tmp)
+    # print(c)
 
     ans = sum([len({p[j] for j in i} & set(i)) for i in c])
     print(ans)

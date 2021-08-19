@@ -2,6 +2,8 @@ import sys
 3
 
 
+#deb = print
+
 def deb(*a): pass
 
 
@@ -32,17 +34,20 @@ for line, bird in shoot_rec:
     line = int(line) - 1
     bird = int(bird)
 
+    # left
     if line != 0:
         lines[line - 1] += bird - 1
 
+    # right
     if line != len(lines) - 1:
         lines[line + 1] += lines[line] - bird
 
+    # Killed and Move
     lines[line] = 0
 
     deb(lines)
 
 
-deb("
+deb("#########")
 for i in lines:
     print(i)

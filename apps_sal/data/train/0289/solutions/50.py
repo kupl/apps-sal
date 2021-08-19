@@ -6,10 +6,12 @@ class Solution:
         maxL = maxM = result = 0
 
         for i in range(M, len(prefix_sum) - L):
+            # optimal when L-list start at i+1 and occur after M-list
             maxM = max(maxM, prefix_sum[i] - prefix_sum[i - M])
             result = max(result, maxM + prefix_sum[i + L] - prefix_sum[i])
 
         for i in range(L, len(prefix_sum) - M):
+            # optimal when M-list start at i+1 and occur after L-list
             maxL = max(maxL, prefix_sum[i] - prefix_sum[i - L])
             result = max(result, maxL + prefix_sum[i + M] - prefix_sum[i])
 

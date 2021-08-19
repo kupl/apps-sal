@@ -40,3 +40,8 @@ def find_closest(a: List[int], target: int, lower: bool) -> int:
     if lower:
         return high
     return low
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

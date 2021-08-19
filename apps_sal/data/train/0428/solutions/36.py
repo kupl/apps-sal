@@ -2,16 +2,18 @@ class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         R, C = len(grid), len(grid[0])
 
+        # The points of interest
         location = {v: (r, c)
                     for r, row in enumerate(grid)
                     for c, v in enumerate(row)
-                    if v not in '.
+                    if v not in '.#'}
 
         def neighbors(r, c):
             for cr, cc in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
                 if 0 <= cr < R and 0 <= cc < C:
                     yield cr, cc
 
+        # The distance from source to each point of interest
         def bfs_from(source):
             r, c = location[source]
             seen = [[False] * C for _ in range(R)]
@@ -22,9 +24,9 @@ class Solution:
                 r, c, d = queue.popleft()
                 if source != grid[r][c] != '.':
                     dist[grid[r][c]] = d
-                    continue
+                    continue  # Stop walking from here if we reach a point of interest
                 for cr, cc in neighbors(r, c):
-                    if grid[cr][cc] != '
+                    if grid[cr][cc] != '#' and not seen[cr][cc]:
                         seen[cr][cc] = True
                         queue.append((cr, cc, d + 1))
             return dist
@@ -32,6 +34,7 @@ class Solution:
         dists = {place: bfs_from(place) for place in location}
         target_state = 2 ** sum(p.islower() for p in location) - 1
 
+        # Dijkstra
         pq = [(0, '@', 0)]
         final_dist = collections.defaultdict(lambda: float('inf'))
         final_dist['@', 0] = 0
@@ -43,10 +46,10 @@ class Solution:
                 return d
             for destination, d2 in dists[place].items():
                 state2 = state
-                if destination.islower():
+                if destination.islower():  # key
                     state2 |= (1 << (ord(destination) - ord('a')))
-                elif destination.isupper():
-                    if not(state & (1 << (ord(destination) - ord('A')))):
+                elif destination.isupper():  # lock
+                    if not(state & (1 << (ord(destination) - ord('A')))):  # no key
                         continue
 
                 if d + d2 < final_dist[destination, state2]:

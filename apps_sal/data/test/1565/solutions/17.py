@@ -6,6 +6,8 @@ while(a[l] == '0' and a[r] == '0'):
     l -= 1
     r += 1
 
+# print(l)
+# print(r)
 ans = -1
 
 if(a[l] != '0' and l > 0):

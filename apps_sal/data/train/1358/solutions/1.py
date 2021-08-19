@@ -11,6 +11,7 @@ while t:
             char[c] += 1
     counts = list(char.values())
     counts.sort()
+    #counts = counts[::-1]
     l = len(counts)
     ans = len(w) + 1
     for i in range(l):

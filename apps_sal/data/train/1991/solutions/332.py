@@ -9,6 +9,7 @@ class Solution:
 
             if index == finish:
                 paths += 1
+                # return paths
 
             if dp[index][fuel] != -1:
                 return dp[index][fuel]

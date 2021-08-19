@@ -19,10 +19,12 @@ def solve(length, cities):
             lastR = i
         if(code == 'P'):
 
+            # B case
             if(lastB != None):
                 result += abs(i - lastB)
                 maxB = max(maxB, abs(i - lastB))
 
+            # R case
             if(lastR != None):
                 result += abs(i - lastR)
                 maxR = max(maxR, abs(i - lastR))

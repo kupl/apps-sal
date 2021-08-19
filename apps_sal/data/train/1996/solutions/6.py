@@ -1,5 +1,6 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # first find all the nodes that does not have out degree
         if not graph:
             return None
         n = len(graph)

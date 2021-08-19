@@ -1,3 +1,4 @@
+# 31
 S = str(input())
 
 list = []

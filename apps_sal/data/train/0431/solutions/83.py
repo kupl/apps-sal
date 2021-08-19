@@ -20,6 +20,7 @@ class Solution:
                 count += right[stack.pop()]
             right[i] = count
             stack.append(i)
+       # print(left,right)
         sum = 0
         for i in range(len(A)):
             sum = sum + (left[i] * right[i] * A[i])

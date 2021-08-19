@@ -1,8 +1,14 @@
+# CF 241/A 1300
 
+# S = supply in city i
+# D = distance from c[i] to c[i + 1]
+# k = refresh interval
+# min time to arrive at C[n] where n = m + 1
 
 def f(k, D, S):
     n = len(D)
 
+    # travel time is at least the sum of all distances
     time = sum(D)
 
     fuel = 0
@@ -10,10 +16,14 @@ def f(k, D, S):
 
     for i in range(n):
         assert fuel >= 0
+        # enter i-th city
+        # fuel is either negative (we need extra) or zero
+        # add S[i] fuel for free
+        # subtract distance to city i+1
         fuel += (S[i] - D[i])
         if S[i] > S[best]:
             best = i
-        if fuel < 0:
+        if fuel < 0:  # best station for i..lastpos
             need = -fuel
             count = need // S[best]
             if need % S[best] != 0:

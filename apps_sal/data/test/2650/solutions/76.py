@@ -28,13 +28,16 @@ for _ in range(q):
     old = belong[c]
     belong[c] = d
 
+    # 元いた幼稚園と新しい幼稚園の最強園児を削除キューに入れる
     heappush(delete_maxs, -yochien_rates[old][0])
     if yochien_rates[d]:
         heappush(delete_maxs, -yochien_rates[d][0])
 
+    # 新しい幼稚園のratesと全体のratesの更新
     heappush(yochien_rates[d], -rate[c])
     heappush(maxs, -yochien_rates[d][0])
 
+    # oldの更新
     heappush(delete_yochien_rates[old], -rate[c])
     while delete_yochien_rates[old] and yochien_rates[old][0] == delete_yochien_rates[old][0]:
         heappop(yochien_rates[old])
@@ -42,6 +45,7 @@ for _ in range(q):
     if yochien_rates[old]:
         heappush(maxs, -yochien_rates[old][0])
 
+    # 最小値計算
     while delete_maxs and maxs[0] == delete_maxs[0]:
         heappop(maxs)
         heappop(delete_maxs)

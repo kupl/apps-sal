@@ -21,3 +21,18 @@ class Solution:
             counts += backtrack(pos, n - 1)
 
         return counts % (10**9 + 7)
+
+#         cur_hops = 1
+#         prev_counts = [1]*10
+#         cur_counts = [0]*10
+
+#         while cur_hops < n:
+#             cur_hops += 1
+#             cur_counts = [0]*10
+
+#             for pos in range(10):
+#                 for nbr in moves[pos]:
+#                     cur_counts[pos] += prev_counts[nbr]
+#             prev_counts = cur_counts
+
+#         return sum(prev_counts)%(10**9+7)

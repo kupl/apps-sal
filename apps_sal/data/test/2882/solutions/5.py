@@ -4,6 +4,15 @@ class Solution:
         :type n: int
         :rtype: List[str]
         """
+        # if n==0:
+        #     return [""]
+        # prev = self.generateParenthesis(n-1)
+        # results = set()
+        # for r in prev:
+        #     results.add('('+r+')')
+        #     results.add('()'+r)
+        #     results.add(r+'()')
+        # return sorted(list(set(results)))
 
         def gen(n, open_par, res, res_set):
             print(res)

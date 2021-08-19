@@ -1,3 +1,4 @@
+# your code goes here
 n, k = input().strip().split()
 k = int(k)
 n_ = ""
@@ -5,6 +6,7 @@ count = 0
 count_rem = 0
 possible = False
 for i in reversed(n):
+    # print(count, count_rem)
     if count >= k:
         possible = True
         break

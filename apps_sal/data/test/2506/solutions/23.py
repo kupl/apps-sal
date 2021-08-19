@@ -1,3 +1,4 @@
+# 過去の提出を見ながら解いた
 
 def main():
     N, M = list(map(int, input().split()))
@@ -5,12 +6,16 @@ def main():
     a.sort()
 
     def count(mid) -> int:
-        cnt = 0
-        j = N
+        cnt = 0  # (i,j)>=mid の個数
+        j = N  # j: iと組んでペア和>=midを満たすjの下限, 初期値は範囲外=条件を満たすjはない
         for i in range(N):
             while j > 0 and a[i] + a[j - 1] >= mid:
                 j -= 1
-            cnt += N - j
+            # j==0 or a[i]+a[j]>=mid
+            # j==0
+            # 現在のiに対しすべてのaの要素が相方になる。
+            # 一度そのようなiに達したら、それ以降のiはすべてこの条件を満たす。
+            cnt += N - j  # iに対し[j,N)が相方になる
         return cnt
 
     def binary_search(*, ok: int, ng: int, is_ok: 'function') -> int:
@@ -36,12 +41,12 @@ def main():
     *acc, = accumulate(a)
 
     ans = 0
-    j = N
+    j = N  # j: iと組んでペア和>=midを満たすjの下限, 初期値は範囲外=条件を満たすjはない
     for i in range(N):
         while j > 0 and a[i] + a[j - 1] >= ma:
             j -= 1
-        ans += a[i] * (N - j) + acc[N] - acc[j]
-    ans += (ma - 1) * (M - count(ma))
+        ans += a[i] * (N - j) + acc[N] - acc[j]  # i側の寄与=ペア数,j側の寄与=acc
+    ans += (ma - 1) * (M - count(ma))  # ペア和maではMペア組めないが、ma-1で埋められる
 
     print(ans)
 

@@ -1,3 +1,5 @@
+# counter, delete them one-by-one
+#{1:1, 2:2, 3:3, 4:2, 5:1, 9:1, 10:1, 11:1}
 from collections import Counter
 
 

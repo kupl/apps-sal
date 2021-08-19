@@ -5,6 +5,9 @@ input = sys.stdin.readline
 N = int(input())
 A = [int(x) for x in input().split()]
 
+# B_x = max {A_y | y\subset x}
+# と思ったが、2元ずつ持つ必要がある。
+# (値、何番から来たか)
 B = []
 for n, a in enumerate(A):
     arr = [(0, 0), (a, n)]

@@ -71,6 +71,7 @@ def power2(n):
 '''
 '''
 for i in range(t):
+    #n,m=map(int,input().split())
     n,m=1,0
     graph=defaultdict(set)
     for i in range(m):
@@ -115,6 +116,7 @@ print(e-s)
 '''
 t=int(input())
 for i in range(t):
+    #n,m=map(int,input().split())
     n=int(input())
     x=int(sqrt(n))
     if x*x==n:
@@ -131,6 +133,7 @@ mod = 10**9 + 7
 a = b = c = 0
 x = 1
 for ch in arr:
+    # print(ch,a,b,c)
     if ch == 'a':
         a = (a + x) % mod
     elif ch == 'b':

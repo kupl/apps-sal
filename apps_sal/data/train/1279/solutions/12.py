@@ -25,6 +25,7 @@ while(t):
         p[i] = (p[i][1], p[i][0])
 
     p.sort()
+    # print(p)
 
     if (len(p) > 2):
         n = len(p)

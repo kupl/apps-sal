@@ -1,3 +1,4 @@
+# rock sci paper
 import math
 for _ in range(1):
     n = int(input())

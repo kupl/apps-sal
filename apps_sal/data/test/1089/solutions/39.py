@@ -48,14 +48,18 @@ def nCr(n, r):
     return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD
 
 
+# X：+ax*(ax - 1) * N - ax * (M - ax) * N = ax*N*(ax-1-M+ax) = ax*N*(2ax-1-M)がN個＆nCr(N*M-2, K-2))回
 ans = 0
 
 for i in range(1, M + 1):
     tmp = (((((i * N) % MOD) * (2 * i - 1 - M)) % MOD) * N) % MOD
 
+    #print("~~~", i*N, 2*i - 1 - M,tmp, nCr(N*M-2, K-2))
+
     tmp *= nCr(N * M - 2, K - 2)
 
     tmp %= MOD
+    #print("pppp", tmp)
     ans += tmp
 
     ans %= MOD

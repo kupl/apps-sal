@@ -9,7 +9,7 @@ class Solution:
         for i in range(len(routes)):
             if S in routes[i]:
                 seen.add(i)
-                queue.append((i, 1))
+                queue.append((i, 1))  # enqueue
             if T in routes[i]:
                 targets.add(i)
             for j in range(i + 1, len(routes)):

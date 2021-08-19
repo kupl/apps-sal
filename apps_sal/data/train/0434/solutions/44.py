@@ -18,5 +18,5 @@ class Solution:
                 last_cnt = cur_cnt
 
         if size == sum(nums):
-            return size - 1
+            return size - 1  # [1,1,1,1]
         return max_

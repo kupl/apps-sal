@@ -34,6 +34,7 @@ class Solution:
             this_word = this_item[0]
             this_chain_len = this_item[1]
             max_len_so_far = max(max_len_so_far, this_chain_len)
+            # this_item_possible_length = this_chain_len + len(word_lengths[])
             neighbors = graph_dict[this_word]
             for neighbor in neighbors:
                 if neighbor not in visited:

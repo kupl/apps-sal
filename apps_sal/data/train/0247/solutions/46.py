@@ -49,6 +49,8 @@ class Solution:
 
         min_length = 2 * len(arr)
 
+        # print(left_sub_array, right_sub_array)
+
         for index, val in enumerate(left_sub_array[:-1]):
 
             min_length = min(min_length, val + right_sub_array[index + 1])

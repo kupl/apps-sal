@@ -17,6 +17,7 @@ for i in arr:
         if myset[i] > 1:
             nset.add(i)
     elif int(cb + '0', 2) - i in myset:
+        # print(i,int(cb+'0',2)-i)
         nset.add(i)
         nset.add(int(cb + '0', 2) - i)
 count = 0

@@ -38,6 +38,7 @@ for index in range(n - 1, -1, -1):
         Map[A[index]] += 1
     else:
         Map[A[index]] = 1
+    # print(Map[A[index]])
     Atmp[index] = (Map[A[index]])
     Work.update(Map[A[index]], 1)
 
@@ -51,4 +52,5 @@ for i in range(n):
 
     Work.update(Atmp[i], -1)
     ans += Work.sum(Map[A[i]] - 1)
+    # print(ans)
 stdout.write("%d" % ans)

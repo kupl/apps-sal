@@ -5,6 +5,7 @@ for i in range(5):
     if capa[i] == min(capa):
         transmin = i
 
+# print(N//capa[transmin],transmin)
 
 if capa[transmin] >= N:
     print((5))

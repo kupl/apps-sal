@@ -24,7 +24,7 @@ def dfs_from(root):
         crt = stack[-1]
         if visited[crt]:
             stack.pop(-1)
-            if len(a[crt]) > 1:
+            if len(a[crt]) > 1:  # not a leaf
                 child[crt], depth[crt] = max([(c, depth[c] + 1) for c in a[crt]
                                               if c != parent[crt]],
                                              key=lambda x: x[1])

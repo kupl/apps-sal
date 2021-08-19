@@ -21,8 +21,8 @@ def search_around(y, x, seen, queue):
     for u, t in [(y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)]:
         if u < 0 or t < 0 or u >= Y or t >= X:
             continue
-        elif Map[u][t] == '
-        continue
+        elif Map[u][t] == '#' or seen[u][t] != -1:
+            continue
         queue.append((u, t))
         seen[u][t] = count + 1
 
@@ -30,8 +30,8 @@ def search_around(y, x, seen, queue):
 cnt = 0
 for M in Map:
     for m in M:
-        if m == '
-        cnt += 1
+        if m == '#':
+            cnt += 1
 
 b = bfs(0, 0, Y - 1, X - 1)
 if b == None:

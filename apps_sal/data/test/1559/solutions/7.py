@@ -1,10 +1,12 @@
 L = int(input())
 str_A = (input())
 
+#str_A  = str(A)
 
 lens = len(str_A)
 
 if lens % L == 0 and str_A != ("9" * lens):
+    # print(1)
     build = -1
     for i in range(L, lens):
         if str_A[i] < str_A[i % L]:

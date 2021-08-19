@@ -1,3 +1,7 @@
+# cook your dish here
+#import sys
+# input=sys.stdin.readline
+# m=int(input())
 for nt in range(int(input())):
     a, b = list(map(int, input().split()))
     n = abs(a - b)

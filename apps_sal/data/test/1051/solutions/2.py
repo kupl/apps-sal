@@ -1,5 +1,6 @@
 
 import sys
+# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 k = int(input())

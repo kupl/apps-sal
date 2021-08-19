@@ -23,6 +23,7 @@ class Solution:
                     if curr > currmin:
                         break
             if curr <= currmin:
+                # print(i, curr)
                 currmin = curr
                 currv = i
         return currv

@@ -35,9 +35,12 @@ class CodeforcesTask713ASolution:
             for query in self.queries:
                 if query[0] in "+-":
                     pattern = pattern_repr(query[1])
+                    # print(pattern)
                     current = root
                     while pattern:
+                        # print(current.node_id)
                         if pattern[0]:
+                            # going right
                             if current.right:
                                 current = current.right
                             else:
@@ -45,6 +48,7 @@ class CodeforcesTask713ASolution:
                                 current = current.right
                                 node_id += 1
                         else:
+                            # going left
                             if current.left:
                                 current = current.left
                             else:
@@ -53,17 +57,21 @@ class CodeforcesTask713ASolution:
                                 node_id += 1
                         pattern = pattern[1:]
                     current.key += 1 if query[0] == "+" else -1
+                    #print(current.key, current.node_id)
                 else:
                     pattern = [int(x) for x in "0" * (LVL - len(query[1])) + query[1]]
                     current = root
+                    # print(pattern)
                     while pattern:
                         if pattern[0]:
+                            # going right
                             if current.right:
                                 current = current.right
                             else:
                                 current = Node(0)
                                 pattern = []
                         else:
+                            # going left
                             if current.left:
                                 current = current.left
                             else:

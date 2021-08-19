@@ -12,8 +12,8 @@ S = np.array(S)
 
 for h in range(1, H + 1):
     for w in range(1, W + 1):
-        if S[h, w] == '
-            print('
+        if S[h, w] == '#':
+            print('#', end='')
         else:
-            print(np.sum(S[h - 1:h + 2, w - 1:w + 2] == '
+            print(np.sum(S[h - 1:h + 2, w - 1:w + 2] == '#'), end="")
     print()

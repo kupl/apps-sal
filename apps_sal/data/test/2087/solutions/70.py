@@ -1,3 +1,4 @@
+# Simple Math
 
 ABC = list(map(int, input().split()))
 

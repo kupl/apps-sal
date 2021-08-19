@@ -1,5 +1,10 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
+        #         lis = []
+        #         for i in range(0, len(rating)):
+        #             lis.append(i, rating[i])
+
+        #         lis.sort(key = lambda x : x[1])
 
         count = 0
 

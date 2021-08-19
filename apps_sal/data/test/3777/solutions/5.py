@@ -41,7 +41,7 @@ class LcaDoubling:
     def __init__(self, n, links, root=0):
         self.depths = [-1] * n
         self.max_paths = [[-1] * (n + 1)]
-        self.ancestors = [[-1] * (n + 1)]
+        self.ancestors = [[-1] * (n + 1)]  # 頂点数より1個長くし、存在しないことを-1で表す。末尾(-1)要素は常に-1
         self._init_dfs(n, links, root)
 
         prev_ancestors = self.ancestors[-1]
@@ -125,8 +125,14 @@ def construct_spanning_tree(n, uvw):
 
 
 def solve(n, m, x, uvw):
+    # 最小全域木(MST)のコスト総和がXと一致するなら、MSTに白黒含めれば良い（ただし同率の辺は考慮）
+    # そうでないなら、MST以外の辺を使えるのはせいぜい1本まで→各辺の取り替えコスト増加分を見る
+    # MST以外の辺(u, v)を採用する際に代わりに除かれる辺は、MST上で{u, v}を結ぶパスの最大コスト辺
 
     mst_weight, spanning_links, not_spanning_links = construct_spanning_tree(n, uvw)
+    # print(mst_weight)
+    # print(spanning_links)
+    # print(not_spanning_links)
     if x < mst_weight:
         return 0
     diff = x - mst_weight
@@ -136,6 +142,7 @@ def solve(n, m, x, uvw):
     for u, v, w in not_spanning_links:
         lca, mp = lcad.get_lca_with_max_path(u, v)
         inc = w - mp
+        # print(u, v, w, lca, mp, inc)
         if inc < diff:
             lower_count += 1
         elif inc > diff:
@@ -144,10 +151,15 @@ def solve(n, m, x, uvw):
             exact_count += 1
 
     MOD = 10 ** 9 + 7
+    # x >= mst_weight の場合、MSTの辺は全て同じ色として
+    # lower_count も全てそれと同じ色
+    # exact_count は「全てがMSTと同じ色」でない限りどのような塗り方でもよい
+    # upper_count はどのような塗り方でもよい
     replace_to_exact_link = 2 * (pow(2, exact_count, MOD) - 1) * pow(2, upper_count, MOD) % MOD
     if diff > 0:
         return replace_to_exact_link
 
+    # x == mst_weight の場合は、MSTが全て同じ色でない限りどのような塗り方でもよいパターンも追加
     use_first_spanning = (pow(2, n - 1, MOD) - 2) * pow(2, m - n + 1, MOD) % MOD
     return (use_first_spanning + replace_to_exact_link) % MOD
 

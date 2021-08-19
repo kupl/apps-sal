@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 (M, N) = map(int, input().split())
 
@@ -16,5 +18,6 @@ for m in range(M):
             time = max(time, man[n]) + times[m][n]
         man[n] = time
     print(time, end=' ')
+    # print("man = ", man)
 
 print()

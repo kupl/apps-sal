@@ -27,5 +27,6 @@ for i in range(0, n + 1):
         if k == a[i]:
             continue
         t = b[i + 1] + (c[n + 1] - c[i]) - 1
+    # dbvar(t)
     ans = max(ans, t)
 print(ans)

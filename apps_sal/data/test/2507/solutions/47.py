@@ -12,6 +12,7 @@ ng = -1
 
 
 def isOk(x):
+    # 時間がxになるためには、A_iをx/F_i以下まで減らす必要がある
     return A.sum() - np.minimum(A, x // F).sum() <= K
 
 

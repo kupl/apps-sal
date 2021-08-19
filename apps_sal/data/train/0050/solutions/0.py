@@ -19,6 +19,7 @@ for tcase in range(int(input())):
         ctr += (1 if ls[i] == 2 else -1)
         if ctr not in rdct:
             rdct[ctr] = eaten
+    #print(oneneed, ldct, rdct)
 
     best = 99**99
     for k in list(rdct.keys()):

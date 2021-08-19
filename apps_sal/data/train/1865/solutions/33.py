@@ -1,20 +1,22 @@
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
+        # where can player move next?
         def player_moves(box_i, box_j, p_i, p_j):
             res = []
-            if p_i > 0 and grid[p_i - 1][p_j] != '
-            res.append((p_i - 1, p_j))
-            if p_i < len(grid) - 1 and grid[p_i + 1][p_j] != '
-            res.append((p_i + 1, p_j))
-            if p_j > 0 and grid[p_i][p_j - 1] != '
-            res.append((p_i, p_j - 1))
-            if p_j < len(grid[0]) - 1 and grid[p_i][p_j + 1] != '
-            res.append((p_i, p_j + 1))
+            if p_i > 0 and grid[p_i - 1][p_j] != '#' and (p_i - 1, p_j) != (box_i, box_j):
+                res.append((p_i - 1, p_j))
+            if p_i < len(grid) - 1 and grid[p_i + 1][p_j] != '#' and (p_i + 1, p_j) != (box_i, box_j):
+                res.append((p_i + 1, p_j))
+            if p_j > 0 and grid[p_i][p_j - 1] != '#' and (p_i, p_j - 1) != (box_i, box_j):
+                res.append((p_i, p_j - 1))
+            if p_j < len(grid[0]) - 1 and grid[p_i][p_j + 1] != '#' and (p_i, p_j + 1) != (box_i, box_j):
+                res.append((p_i, p_j + 1))
             return res
 
+        # Can player walk to this cell?
         def is_accessible(cell_i, cell_j, box_i, box_j, p_i, p_j):
-            if grid[cell_i][cell_j] == '
-            return False
+            if grid[cell_i][cell_j] == '#':
+                return False
             q = deque()
             visited = set()
             q.append((p_i, p_j))
@@ -31,17 +33,19 @@ class Solution:
                             visited.add(nex)
             return False
 
+        # each state is defined by box location and player location
         def box_moves(state):
             res = set()
             box_i, box_j, p_i, p_j = state[0], state[1], state[2], state[3]
-            if box_i > 0 and is_accessible(box_i - 1, box_j, box_i, box_j, p_i, p_j) and box_i + 1 < len(grid) and grid[box_i + 1][box_j] != '
-            res.add((box_i + 1, box_j, box_i, box_j))
-            if box_i < len(grid) - 1 and is_accessible(box_i + 1, box_j, box_i, box_j, p_i, p_j) and box_i - 1 >= 0 and grid[box_i - 1][box_j] != '
-            res.add((box_i - 1, box_j, box_i, box_j))
-            if box_j > 0 and is_accessible(box_i, box_j - 1, box_i, box_j, p_i, p_j) and box_j + 1 < len(grid[0]) and grid[box_i][box_j + 1] != '
-            res.add((box_i, box_j + 1, box_i, box_j))
-            if box_j < len(grid[0]) - 1 and is_accessible(box_i, box_j + 1, box_i, box_j, p_i, p_j) and box_j - 1 >= 0 and grid[box_i][box_j - 1] != '
-            res.add((box_i, box_j - 1, box_i, box_j))
+            # first check box's four neighbor if empty floor cell, and accessible to player, the cell of opposite direction should also be empty. Then moves, update box & player location
+            if box_i > 0 and is_accessible(box_i - 1, box_j, box_i, box_j, p_i, p_j) and box_i + 1 < len(grid) and grid[box_i + 1][box_j] != '#':  # push down, player replace box location
+                res.add((box_i + 1, box_j, box_i, box_j))
+            if box_i < len(grid) - 1 and is_accessible(box_i + 1, box_j, box_i, box_j, p_i, p_j) and box_i - 1 >= 0 and grid[box_i - 1][box_j] != '#':   # push up
+                res.add((box_i - 1, box_j, box_i, box_j))
+            if box_j > 0 and is_accessible(box_i, box_j - 1, box_i, box_j, p_i, p_j) and box_j + 1 < len(grid[0]) and grid[box_i][box_j + 1] != '#':  # push right
+                res.add((box_i, box_j + 1, box_i, box_j))
+            if box_j < len(grid[0]) - 1 and is_accessible(box_i, box_j + 1, box_i, box_j, p_i, p_j) and box_j - 1 >= 0 and grid[box_i][box_j - 1] != '#':  # push left
+                res.add((box_i, box_j - 1, box_i, box_j))
             return res
 
         def start_state():

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 S = input()
 N = len(S)

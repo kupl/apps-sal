@@ -27,9 +27,12 @@ for i in range(n):
 
     l = list(map(int, I().split()))
 
-    if l[0] == 1:
+    if l[0] == 1:  # To add
 
         lca(l[1], l[2], l[3])
 
     else:
         print(lca(l[1], l[2], 0))
+
+
+# Made By Mostafa_Khaled

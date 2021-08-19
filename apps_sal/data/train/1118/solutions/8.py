@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input().strip())
 for _ in range(t):
     n = int(input().strip())
@@ -11,10 +12,13 @@ for _ in range(t):
         check2 = check2 + str((c1 + 1) % 2)
         c1 = (c1 + 1) % 2
 
+    # print(check1)
+    # print(check2)
     no1 = 0
     no2 = 0
     for i in range(n):
         no1 = no1 + (1 if (not bits[i] == check1[i]) else 0)
         no2 = no2 + (1 if (not bits[i] == check2[i]) else 0)
+        # print(no1,no2)
 
     print(min(no1, no2))

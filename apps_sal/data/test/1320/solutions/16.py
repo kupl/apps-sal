@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -23,3 +25,4 @@ for i in range(n):
 
 print(ans // 2)
 finish = time.time()
+#print(finish - start)

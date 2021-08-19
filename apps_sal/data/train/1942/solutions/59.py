@@ -17,6 +17,8 @@ class Solution:
 
         favoriteCompanies = sorted(favoriteCompanies, key=lambda x: len(x), reverse=True)
 
+        # print(group)
+        # print(favoriteCompanies)
         ans = []
         for i in range(len(favoriteCompanies)):
             if len(ans) == 0:

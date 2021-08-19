@@ -1,3 +1,23 @@
+# prime power always 0
+# two prime powers?
+#
+# == 1 prime factor
+#   trivial
+# == 2 prime factors
+#   p^a q^b
+#   if a + b > 2: then fine
+#   p*q
+#   (remaining with p)
+#   p*p*q
+#   (remaining with q)
+# >= 3 prime factors is fine
+#   what ordering?
+#   p*q*r
+#   (all left with p)
+#   p*q
+#   (all left with q)
+#   q*r
+#   (all left with r)
 
 from collections import defaultdict as dd, deque
 
@@ -20,6 +40,7 @@ def divisors(n):
     factors = []
     while i * i <= n:
         if n % i == 0:
+            # If divisors are equal, print only one
             if n // i == i:
                 factors.append(i)
             else:

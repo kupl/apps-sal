@@ -34,6 +34,7 @@ for _ in range(val()):
             he.append(i)
     ans = 0
     counts = defaultdict(int)
+    # print(he)
 
     while he:
         i = he.popleft()
@@ -49,4 +50,5 @@ for _ in range(val()):
                     if j not in visited:
                         he.append(j)
                     visited[j] = 1
+                    # print(j, he)
     print(ans)

@@ -11,6 +11,7 @@ class Solution:
         while hi - 1 >= 0 and arr[hi - 1] <= arr[hi]:
             hi -= 1
 
+        # [0..lo]    [hi..N-1]
         res = min(N - lo - 1, hi)
         j = hi
         for i in range(lo + 1):

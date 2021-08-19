@@ -8,7 +8,7 @@ class Solution:
         for i in range(steps):
             nextdp = [0] * l
             for j in range(l):
-                if j - 1 >= 0:
+                if j - 1 >= 0:  # LEFT
                     nextdp[j] += dp[j - 1]
                 nextdp[j] += dp[j]
                 if j + 1 < l:

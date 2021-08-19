@@ -1,3 +1,5 @@
+# 10:28 -> misunderstood the problem
+# dp
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         dp = [0 for num in arr]
@@ -14,4 +16,5 @@ class Solution:
                 if total_sum > max_at_i:
                     max_at_i = total_sum
             dp[i] = max_at_i
+            # print(dp)
         return dp[-1]

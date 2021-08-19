@@ -7,6 +7,7 @@ class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         self.cache = {}
         k = K
+        # 2d kernel
         n, m = len(mat), len(mat[0]) if len(mat) else 0
 
         @lru_cache
@@ -42,6 +43,7 @@ class Solution:
                 res[i][j] = getcolsum(ans, i, j, k)
         return res
 
+        # brute force
         ans = [[0 for j in range(m)] for i in range(n)]
         for i in range(n):
             for j in range(m):

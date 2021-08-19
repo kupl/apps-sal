@@ -1,3 +1,4 @@
+# Reference: https://betrue12.hateblo.jp/entry/2020/09/15/180849
 
 import sys
 from itertools import accumulate

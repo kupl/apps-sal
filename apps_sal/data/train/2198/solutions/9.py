@@ -22,6 +22,7 @@ def amb2(s):
             if l1[i] == 'u':
                 l1 = l1[0:i] + ['o', 'o'] + l1[i + 1:]
                 s1 = ''.join(l1)
+                # print(s1)
                 break
     return ''.join(l1)
 

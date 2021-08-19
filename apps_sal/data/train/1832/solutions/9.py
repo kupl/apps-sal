@@ -12,6 +12,7 @@ class Solution:
         res = 0
         while queue:
             d, head = heapq.heappop(queue)
+            # print(d, head)
             if d > flag.get(head):
                 continue
             res += 1

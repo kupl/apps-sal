@@ -16,7 +16,7 @@ for i in range(l):
         if z == -1:
             z = c0
             loc = i
-if z == -1:
+if z == -1:  # no 2
     for i in range(c0):
         print(0, end='')
     for i in range(c1):

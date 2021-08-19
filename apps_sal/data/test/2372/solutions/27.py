@@ -18,7 +18,7 @@ def main(ss, ch, cw, dh, dw):
     n = h * w
     seen = np.full(n, inf, np.int64)
     seen[start] = 0
-    q = [(0, start)]
+    q = [(0, start)]  # ワープ回数, 現在位置, 最後の道の位置
     while q:
         pnum, pu = hpp(q)
         ux, uy = divmod(pu, w)
@@ -37,6 +37,7 @@ def main(ss, ch, cw, dh, dw):
                 num = pnum + vv
                 if x < 0 or y < 0 or x >= h or y >= w or ss[x][y]:
                     continue
+        #         print(x,y)
                 if seen[u] > num:
                     seen[u] = num
                     hp(q, (num, u))
@@ -58,8 +59,8 @@ dw -= 1
 rows, cols = h, w
 
 OK = "."
-NG = "
+NG = "#"
 
-ss = np.array([[c == "
+ss = np.array([[c == "#" for c in input()] for _ in range(h)])
 
 print(main(ss, ch, cw, dh, dw))

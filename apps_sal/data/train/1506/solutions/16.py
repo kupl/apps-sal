@@ -10,22 +10,32 @@ n, m = get_ints()
 a = []
 arr = [[0 for _ in range(m + 2)] for _ in range(n + 2)]
 for _ in range(n):
+  # t = get_array()
     t = list(input())
+    # t.append('0')
     a.append(t)
 
 for i in range(n):
     for j in range(m):
         a[i][j] = int(a[i][j])
 
+# print(a)
+# print(arr)
+
 
 q = int(input())
 for _ in range(q):
     x1, y1, x2, y2 = get_ints()
+    # x1-=1
+    # y1-=1
+    # x2-=1
+    # y2-=1
     arr[x1][y1] += 1
     arr[x2 + 1][y2 + 1] += 1
     arr[x1][y2 + 1] -= 1
     arr[x2 + 1][y1] -= 1
 
+# print("hello ",arr)
 
 for i in range(1, n + 1):
     for j in range(1, m + 1):
@@ -39,8 +49,13 @@ for i in range(1, n + 1):
         elif(a[i - 1][j - 1] == 1 and arr[i][j] % 2 == 1):
             a[i - 1][j - 1] = 0
 
+# print(arr)
+# print(a)
 
 for i in range(n):
     for j in range(m):
         print(a[i][j], end="")
     print()
+
+# for i in range(n):
+#     print(''.join(map(str,a[i])))

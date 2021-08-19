@@ -12,10 +12,11 @@ text1 0  0 0 0 0
 
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        # dp[i][j] reprents the length of the longest common subsequence for text1[:i] and text2[:j]
         m, n = len(text1) + 1, len(text2) + 1
         dp = [[0] * n for _ in range(m)]
         res = 0
-        for i in range(1, m):
+        for i in range(1, m):  # start from one char
             for j in range(1, n):
                 if text1[i - 1] == text2[j - 1]:
                     dp[i][j] = dp[i - 1][j - 1] + 1

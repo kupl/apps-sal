@@ -14,4 +14,5 @@ else:
             if s[i] == s[i - 1]:
                 dp[i][1] = (1 + dp[i - 1][0]) % mod
 
+    # pprint(dp)
     print((dp[-1][0] + dp[-1][1] + 1) % mod)

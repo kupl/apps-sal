@@ -4,6 +4,7 @@ class Solution:
         ans = -1
         cur = 0
         nrotate = 0
+        # print(\"--------\")
         if boardingCost * 4 < runningCost:
             return -1
         rotate = 0
@@ -13,15 +14,18 @@ class Solution:
             if waits > 4:
                 waits -= 4
                 cur += boardingCost * 4 - runningCost
+                # rotate += 1
                 if ans < cur:
                     ans = cur
                     nrotate = rotate
             elif waits * boardingCost > runningCost:
                 cur += boardingCost * waits - runningCost
+                # rotate += 1
                 if cur > ans:
                     ans = cur
                     nrotate = rotate
                 waits = 0
+            # print(cur)
         while waits * boardingCost > runningCost:
             if waits > 4:
                 waits -= 4
@@ -37,4 +41,5 @@ class Solution:
                     ans = cur
                     nrotate = rotate
                 waits = 0
+            # print(cur)
         return nrotate

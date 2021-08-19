@@ -20,4 +20,5 @@ while t != 0:
     d1 = len(m)
 
     print(d1, d2)
+    # print(m)
     t -= 1

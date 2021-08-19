@@ -4,6 +4,8 @@ from collections import defaultdict
 
 input = stdin.readline
 
+# n, k = map(int, input().split(" "))
+# l = list(map(int, input().split(" ")))
 
 n = int(input())
 l = list(map(int, input().split(" ")))
@@ -12,6 +14,24 @@ k = math.ceil(math.log2(n))
 dp = [[0] * k for i in range(2 ** k)]
 
 
+# def make_sparse(l, n, k):
+#     """Making sparse table, replace max with needed function like[GCD, Min, max, sum]"""
+#     for i in range(n):
+#         dp[i][0] = l[i]
+#
+#     for j in range(1, k + 1):
+#         i = 0
+#         while i + (1 << j) <= n:
+#             dp[i][j] = math.gcd(dp[i][j - 1], dp[i + (1 << (j - 1))][j - 1])
+#             i += 1
+#
+#
+# def querys(l, r):
+#     j = int(math.log2(r - l + 1))
+#     return math.gcd(dp[l][j], dp[r - (1 << j) + 1][j])
+
+
+# make_sparse(l, n, k)
 d = defaultdict(int)
 g = defaultdict(int)
 d[l[0]] = 1

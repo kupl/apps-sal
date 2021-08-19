@@ -1,3 +1,4 @@
+#81,48,48 |31, 48, 48
 
 class Solution:
     def minDifference(self, nums: List[int]) -> int:
@@ -13,6 +14,7 @@ class Solution:
             biggest.remove(min(biggest))
             smallest.remove(max(smallest))
 
+        # print(simplified)
         if len(biggest) < 4:
             return 0
 
@@ -23,6 +25,7 @@ class Solution:
             new_biggest, new_smallest, changes = bfs.pop(0)
 
             if changes == 3:
+                # print(current)
                 opt = min(
                     opt,
                     max(new_biggest) - min(new_smallest)
@@ -33,3 +36,4 @@ class Solution:
             bfs.append((list(new_biggest), new_smallest[1:], changes + 1))
 
         return opt
+        # return max(b) - min(s)

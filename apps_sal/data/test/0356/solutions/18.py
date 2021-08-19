@@ -10,6 +10,7 @@ res = 0
 x, y = 0, 0
 last_i, last_j = -1, -1
 while(i < n and j < m):
+    # print(i,j,x,y)
     if(last_i != i):
         x += a[i]
     if(last_j != j):

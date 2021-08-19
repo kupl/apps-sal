@@ -1,6 +1,7 @@
 __author__ = 'kitkat'
 import sys
 
+#sys.stdin = open("in.txt")
 try:
     while True:
         n, k, x = list(map(int, input().split(" ")))

@@ -2,6 +2,7 @@ import sys
 sys.setrecursionlimit(10**6)
 
 n, u, v = list(map(int, input().split()))
+# よりたかはしくんが早く辿り着ける葉のうち、青木君から最も遠いで
 u -= 1
 v -= 1
 

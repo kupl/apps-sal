@@ -2,7 +2,7 @@ class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         prof = rots = wait = 0
         maxp = float('-inf')
-        maxr = -1
+        maxr = -1               # result
         for c in customers:
             rots += 1
             wait += c

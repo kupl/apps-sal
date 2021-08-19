@@ -1,10 +1,17 @@
 
+# stdin=open('input.txt')
+
+# def input():
+# 	return stdin.readline()[:-1]
 
 '''
 stdout=open('output.txt',mode='w+')
 def print(x,end='\n'):
 	stdout.write(str(x)+end)
 '''
+#map(int, input().split())
+
+# CODE BEGINS HERE.................
 
 
 import math
@@ -35,6 +42,7 @@ for i in lines:
         m[i[0]] += 1
     else:
         m[i[0]] = 1
+# print(m)
 
 count = 0
 
@@ -46,3 +54,7 @@ for i in m:
 
 
 print(count)
+
+# CODE ENDS HERE....................
+
+# stdout.close()

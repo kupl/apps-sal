@@ -14,6 +14,8 @@ def sumOfDigits(x):
         x //= 10
 
     return prod
+# Returns the maximum number
+# with maximum sum of digits.
 
 
 def findMax(x):
@@ -30,12 +32,15 @@ def findMax(x):
                 cur > ans)):
             ans = cur
 
+        # reduces the number
+        # to one unit less
         x = x // 10
         b = b * 10
 
     return ans
 
 
+#stdin = open('input.txt','r')
 I = stdin.readline
 n = int(I())
 

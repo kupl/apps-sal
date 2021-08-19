@@ -15,6 +15,7 @@ class Solution:
                 if i - arr[i] >= 0:
                     graph[i].add(i - arr[i])
 
+        # bfs
         queue = deque([start])
         seen = set([])
         while queue:

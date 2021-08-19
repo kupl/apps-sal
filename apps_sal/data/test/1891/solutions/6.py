@@ -1,5 +1,7 @@
 import bisect
 
+# Turn list(str) into list(int)
+
 
 def getIntList(lst):
     assert type(lst) is list

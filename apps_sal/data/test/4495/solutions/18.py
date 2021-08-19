@@ -27,6 +27,8 @@ def lcm(a: int, b: int):
 def dist(x1, y1, x2, y2):
     return abs(x1 - x2) + abs(y1 - y2)
 
+#vD = [chr(ord("a")+i) for i in range(26)]
+
 
 def ran():
     vRan = [random.randint(1, 10),
@@ -38,6 +40,7 @@ def ran():
 def bye(res):
     sT = "No Yes".split()
     print((sT[res]))
+    # return
 
 
 def sol_n(a, b, c):
@@ -52,6 +55,9 @@ def sol_n(a, b, c):
 
 
 def sol(a, b, c):
+    #a,b,c = linput()
+    # 3 6 9 12 15
+    # 1 2 3 4  5
 
     res = 0
     L = -(-a // c)
@@ -62,10 +68,12 @@ def sol(a, b, c):
 
 
 def deb():
+    #vI = linput()
     vI = ran()
+    # print(vI)
     I = sol_n(*vI)
     J = sol(*vI)
-    if 1:
+    if 1:  # I!=J:
         print((vI, I, J))
 
 
@@ -75,6 +83,8 @@ def main():
 
 
 def __starting_point():
+    # for _ in "*"*1000:
+    #	deb()
     main()
 
 

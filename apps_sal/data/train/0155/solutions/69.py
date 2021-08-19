@@ -1,6 +1,9 @@
 
+# 1340. Jump Game V
 
-class Solution2:
+class Solution2:  # bottom-up dp
+    # Time complexity O(NlogN + ND), where we are given D <= N
+    # Space complexity O(N) for dp
     def maxJumps(self, arr, d):
         n = len(arr)
         dp = [1] * n
@@ -14,6 +17,25 @@ class Solution2:
 
 
 class Solution:
+
+    # All element are pushed in and poped from stack1&2 only once,
+    # strick O(N) time. 复杂度严格符合O(N)。
+
+    # Decreasing Stack + DP
+    # Use a stack to keep the index of decreasing elements.
+    # Iterate the array A. When we meet a bigger element a,
+    # we pop out the all indices j from the top of stack,
+    # where A[j] have the same value.
+
+    # Then we update dp[i] and dp[stack[-1]].
+
+    # Since all indices will be pushed and popped in stack,
+    # appended and iterated in L once,
+    # the whole complexity is guaranteed to be O(N).
+
+    # All element are pushed in and poped from stack1&2 only once, strick O(N) time.
+    # Time complexity O(N); Space complexity O(N)
+    # Python runtime 120ms, beats 100%
 
     def maxJumps(self, arr, d):
         n = len(arr)
@@ -33,7 +55,9 @@ class Solution:
         return max(dp[:-1])
 
 
-class Solution1:
+class Solution1:  # top-down dp
+    # Time complexity O(ND)
+    # Space complexity O(N) for dp
     def maxJumps(self, arr: List[int], d: int) -> int:
 
         n = len(arr)
@@ -51,3 +75,5 @@ class Solution1:
             return res[i]
 
         return max(list(map(dp, list(range(n)))))
+
+    # range(0, n) as input of dp func, then get the max of their results

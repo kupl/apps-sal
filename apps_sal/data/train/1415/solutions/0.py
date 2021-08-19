@@ -11,6 +11,7 @@ for _ in range(int(input())):
         else:
             a += s[i]
             b += k[i]
+    # print(a,b)
     if a == a[::-1] or b == b[::-1]:
         print("YES")
     else:

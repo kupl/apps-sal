@@ -19,4 +19,5 @@ class Solution:
                     res = i + 1
                 if counts[1] == 1:
                     res = i + 1
+            # print(freq, counts)
         return res

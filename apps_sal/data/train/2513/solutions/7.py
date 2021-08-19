@@ -5,6 +5,7 @@ class Solution:
         :rtype: int
         """
 
+   #    my fourth solution.........
         if n <= 0:
             return
 
@@ -22,6 +23,7 @@ class Solution:
                 return int(str((n + i - (thres - (i + 1) * 9 * 10**i)) // (i + 1) + nbase)[(n + i - (thres - (i + 1) * 9 * 10**i)) % (i + 1)])
 
         """
+    #    my third solution....beat 93%....
          if n <= 0:
              return
          
@@ -72,6 +74,7 @@ class Solution:
          """
 
         """
+    #    my second solution........beat 96%....
          if n <= 0:
              return
          
@@ -104,6 +107,7 @@ class Solution:
          """
 
         """
+    #    my first solution...........beat 93%.....
          if n <= 0:
              return
          

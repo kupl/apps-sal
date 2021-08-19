@@ -1,3 +1,4 @@
+# codeforces_1041A_live
 def gi(): return list(map(int, input().split()))
 
 

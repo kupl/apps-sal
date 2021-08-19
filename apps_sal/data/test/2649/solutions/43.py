@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 def get_points_and_convert(pts):

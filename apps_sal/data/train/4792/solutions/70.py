@@ -32,6 +32,7 @@ class Parser(object):
     def __repr__(self):
         return f"{self.__class__.__name__}({self.string}, {self.failed})"
 
+    # primitive combinators
     def look(self):
         """Returns a copy of self (with new_parser.failed == True)
         For running a parser without affecting self
@@ -90,6 +91,7 @@ class Parser(object):
             return self.satisfy(lambda x: x.casefold() == character.casefold())
         return self.satisfy(character.__eq__)
 
+    # more complex calls
     def many(self, methodname, *args, **kwargs):
         """Will parse while predicate holds true
         Returns list of results of predicate
@@ -100,7 +102,7 @@ class Parser(object):
         while not self.failed:
             res = func(self)
             if self.failed:
-                self.failed = False
+                self.failed = False  # can be dangerous if you don't know what previous state was?
                 break
             results.append(res)
         return results
@@ -134,7 +136,7 @@ class NumParser(Parser):
     def parse_float(self):
         """Parses floats"""
         intpart = self.parse_int()
-        if self.failed:
+        if self.failed:  # need a failure check here because sign requires intpart to exist
             return None
         sign = -1 if intpart < 0 else 1
         self.option(None, "char", ".")

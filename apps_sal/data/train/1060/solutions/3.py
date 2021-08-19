@@ -5,6 +5,7 @@ for o in range(t):
     l = list(p)
     one = l.count('1')
     zero = l.count('0')
+    # print(one,zero)
     count = 0
     for i in range(n):
         if l[i] == '1':

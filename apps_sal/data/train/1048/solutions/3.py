@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
 
     l, k = map(float, input().split())

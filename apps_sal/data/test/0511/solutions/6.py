@@ -1,4 +1,5 @@
 def gcd(a, b):
+    # print(a,b)
     if b == 0:
         return a
     return gcd(b, a % b)
@@ -21,11 +22,13 @@ while b > 0:
     for i in divi:
         mods.append(b % i)
     m = min(mods)
+    #km = 1
     t += m
     b -= m
     b2 = b
     b //= gcd(a, b)
     a //= gcd(a, b2)
+    # print(a,b)
     if a == 1:
         t += b
         break

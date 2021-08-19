@@ -1,4 +1,7 @@
 class Solution:
+    # BFS
+    # To avoid TLE, if already visited (i,j) with given new_k don't visit again (Complexity: O((m*n)*k) == O((m*n)^2))
+    # OR if lvl_cnt > m*n then return -1
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         HT, WT = len(grid), len(grid[0])
         TARGET = (HT - 1, WT - 1)

@@ -11,7 +11,7 @@ class StreamChecker:
                 curnode = curnode[ch]
             curnode['is_end'] = True
 
-        self.leads = [self.root]
+        self.leads = [self.root]  # the pointers to the threads we follow right now
 
     def query(self, letter: str) -> bool:
         next_leads = [self.root]
@@ -26,3 +26,8 @@ class StreamChecker:
 
         self.leads = next_leads
         return found_word
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -15,12 +15,15 @@ class Solution:
 
             return 0
 
+            # i    j    st rw
         start_pos = (0, 0, 0, k)
         q = collections.deque([])
         q.append(start_pos)
         seen = set()
         seen.add((0, 0, k))
+        # vis[h-1][w-1]= \"X\"
         while q:
+            # print(\"Q\",q)
 
             i, j, step, rw = q.popleft()
             if i == h - 1 and j == w - 1:
@@ -33,10 +36,14 @@ class Solution:
 
             moves = [bw, rt, lf, fw]
 
+    #         print(moves)
             for move in moves:
                 ni, nj = move
+                # print(\">\",move)
                 map_state = check_map(ni, nj, rw)
                 if map_state in (0, -1) and (ni, nj, rw + map_state) not in seen:
+                    # if map_state == -1:
+                    # print(map_state)
                     q.append([ni, nj, step + 1, rw + map_state])
                     seen.add((ni, nj, rw + map_state))
         return -1

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import time
 
@@ -26,3 +28,4 @@ for x1 in range(r):
 
 print(ans)
 finish = time.time()
+#print(finish - start)

@@ -20,8 +20,8 @@ Nは50までなので、とりあえず５０とする（小さすぎなけれ�
 N = 50
 ans = [49] * 50
 
-cnt_all = K // N
-rem = K % N
+cnt_all = K // N  # 全体に1足される回数
+rem = K % N  # 初めのrem個の要素は N - (rem-1)され、残りの要素は普通にrem減る
 
 for i in range(N):
     if i < rem:

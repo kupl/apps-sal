@@ -11,4 +11,5 @@ class Solution:
                     cost = abs(locations[j] - locations[i])
                     if cost + f <= fuel:
                         dp[f][i] += dp[f + cost][j]
+        # print(dp)
         return sum([dp[f][finish] for f in range(fuel + 1)]) % MOD

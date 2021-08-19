@@ -43,6 +43,7 @@ for i in range(n):
 
     if i != n - 1:
         input()
+# print(mat)
 ans = 0
 for i in range(n):
     for j in range(m):

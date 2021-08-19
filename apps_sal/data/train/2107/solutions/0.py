@@ -19,6 +19,7 @@ def main():
             if left_paren_count + wild_count < right_paren_count:
                 break
             if left_paren_count < wild_count + right_paren_count:
+                # Should fix one '?' as '('
                 wild_count -= 1
                 left_paren_count += 1
                 if wild_count < 0:

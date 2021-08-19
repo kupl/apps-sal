@@ -17,6 +17,7 @@ class Solution:
 
         best = len(nums)
         matched = set()
+        # for i, n in enumerate(psums):
         for ri, n in enumerate(reversed(psums)):
             i = len(psums) - ri - 1
             match = -n % p

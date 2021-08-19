@@ -1,12 +1,13 @@
 class Solution:
 
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
+        # [1,2,3,10,4,2,3,5]
 
         r = len(arr) - 1
         while r > 0 and arr[r] >= arr[r - 1]:
             r -= 1
 
-        ret = r
+        ret = r  # worst case, remove all left
         l = 0
 
         for l in range(len(arr)):

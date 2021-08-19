@@ -23,6 +23,7 @@ if x >= y:
         while (p not in findNumbers(xt)):
             xt += 50
             k += 0.5
+##            print(str(k) + " " + str(xt) )
 
         print(int(k + 0.5))
 else:
@@ -31,6 +32,7 @@ else:
     if xt < y:
         xt += 100
         k += 1
+# print(xt)
     while (p not in findNumbers(xt) and xt >= y):
         xt -= 50
     if p in findNumbers(xt) and xt >= y:
@@ -40,5 +42,6 @@ else:
         while (p not in findNumbers(xt)):
             xt += 50
             k += 0.5
+##            print(str(k) + " " + str(xt) )
 
         print(int(k + 0.5))

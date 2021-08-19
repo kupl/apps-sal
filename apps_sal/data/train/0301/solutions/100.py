@@ -1,5 +1,6 @@
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
+        # Longest common subsequence
         dp = collections.defaultdict(int)
         for i in range(len(A)):
             for j in range(len(B)):

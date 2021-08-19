@@ -16,6 +16,7 @@ def main():
         to[a].append(b)
         to[b].append(a)
 
+    # bfs
     INF = 10 ** 18
     dp = [INF] * N
     ans = [0] * N
@@ -30,6 +31,7 @@ def main():
         while stack:
             now, pre, old = pop()
 
+            # 復元
             if now == -1:
                 dp[pre] = old
                 continue
@@ -42,6 +44,8 @@ def main():
             ans_idx = bisect_left(dp, INF)
             ans[now] = ans_idx
 
+            # 復元用 頂点
+            # (フラグ, 変更したidx, 前の値)
             push((-1, idx, old))
 
             for nv in to[now]:

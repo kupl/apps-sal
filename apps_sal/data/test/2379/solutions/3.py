@@ -2,7 +2,7 @@ def main():
     N, K, C = map(int, input().split())
     S = input()
 
-    L = [-1] * K
+    L = [-1] * K  # 0-ind
 
     i = 0
     cur = 0
@@ -15,7 +15,7 @@ def main():
             i += C
         i += 1
 
-    R = [-1] * K
+    R = [-1] * K  # 0-ind
 
     i = N - 1
     cur = K - 1
@@ -28,7 +28,7 @@ def main():
             i -= C
         i -= 1
 
-    ans = (l + 1 for l, r in zip(L, R) if l == r)
+    ans = (l + 1 for l, r in zip(L, R) if l == r)  # 1-ind
     print(*ans, sep='\n')
 
 

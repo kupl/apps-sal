@@ -1,6 +1,6 @@
 def main():
     h = int(input())
-    l = [c == '
+    l = [c == '#' for _ in range(h) for c in input()]
     if not (l[0] or l[-1] or sum(l) % 5):
         l[-1] = True
         w, idx = len(l) // h, 0

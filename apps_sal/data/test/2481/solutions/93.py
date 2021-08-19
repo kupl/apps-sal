@@ -8,6 +8,7 @@ def main():
     c = [[int(i) for i in input().split()] for _ in range(10)]
     a = [[int(i) for i in input().split()] for _ in range(h)]
 
+    # Warshall-Floyd
     for k in range(10):
         for i in range(10):
             for j in range(10):

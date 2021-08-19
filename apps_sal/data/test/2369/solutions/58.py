@@ -7,6 +7,7 @@ import math
 from copy import deepcopy
 import queue
 import numpy as np
+# sympy as syp(素因数分解とか)
 Mod = 1000000007
 fact = [1, 1]
 factinv = [1, 1]
@@ -67,7 +68,7 @@ class UnionFind:
         return self.findroot(x) == self.findroot(y)
 
 
-def main():
+def main():  # startline-------------------------------------------
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
@@ -80,7 +81,7 @@ def main():
 
 
 def __starting_point():
-    main()
+    main()  # endline===============================================
 
 
 __starting_point()

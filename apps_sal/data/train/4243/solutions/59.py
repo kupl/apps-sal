@@ -1,3 +1,4 @@
+# create an array called websites that has "codewars" as its only value
 def find_average(n):
     sum_n = 0
     for i in n:

@@ -10,6 +10,7 @@ def divisors(N):
             B = int(N / i)
             tmp = max(len(str(B)), len(str(i)))
             result = min(result, tmp)
+    # 自身でしか割れない
     if result == 1e12:
         result = len(str(N))
     return result

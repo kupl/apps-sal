@@ -4,6 +4,7 @@ class Solution:
         satisfy = 0
         unsatisfied = []
         max_value = 0
+        # Base cases
         if not customers:
             return []
         elif not grumpy or N == 1:

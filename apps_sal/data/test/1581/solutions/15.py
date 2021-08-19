@@ -7,6 +7,7 @@ def main(N, K):
     while i <= N:
         v = N // i
         j = N // v
+        # keys.append((v, j - i + 1))
         W.append(j - i + 1)
         i += j - i + 1
 
@@ -34,7 +35,10 @@ def main(N, K):
 
 def __starting_point():
     N, K = list(map(int, input().strip().split()))
+    # import time
+    # t = time.time()
     print((main(N, K)))
+    # print(time.time() - t)
 
 
 __starting_point()

@@ -43,10 +43,12 @@ def dfs(u=0):
 def main():
     for u, p in enumerate(pp, 1):
         to[p - 1].append(u)
+    # print(to)
     if dfs():
         print("POSSIBLE")
     else:
         print("IMPOSSIBLE")
+    # print(ww)
 
 
 main()

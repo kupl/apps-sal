@@ -8,10 +8,10 @@ def permutation_average(n):
         else:
             return n * factorial(n - 1)
 
-    averager = factorial(length)
+    averager = factorial(length)  # denominator of the average
 
-    def get_coefficient(width):
-        coefficient = 0
+    def get_coefficient(width):  # after adding up all the digits, a pattern is seen dependent on
+        coefficient = 0  # the number of digits there are. This exploits that
         if width <= 1:
             coefficient = 1
         else:
@@ -21,7 +21,7 @@ def permutation_average(n):
         return coefficient
 
     total = 0
-    for index in digits:
+    for index in digits:  # just multiplying the same coefficient (ironically enough) with every digit
         multiplier = get_coefficient(length)
         total += multiplier * index
 

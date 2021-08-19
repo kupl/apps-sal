@@ -17,6 +17,10 @@ class Solution:
                 if down[r][c]:
                     down[r][c] += down[r + 1][c]
 
+        # print(grid)
+        # print(down)
+        # print(right)
+
         RET = 0
         for r in range(ROWS):
             for c in range(COLS):

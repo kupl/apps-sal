@@ -1,3 +1,4 @@
+# cook your dish here
 for a0 in range(int(input())):
     n = int(input())
     s, x = "", ""

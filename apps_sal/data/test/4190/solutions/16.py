@@ -17,4 +17,5 @@ for i in a:
         v = p[v]
     count[v % n] -= 1
     ans.append((v + i) % n)
+    # print(ans,p,count)
 print(" ".join(map(str, ans)))

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def solve():
     N, M = list(map(int, input().split()))
     S = list(map(int, input().split()))

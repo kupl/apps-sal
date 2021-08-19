@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/counting-inversions/
 from sys import stdin, stdout
 
 

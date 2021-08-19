@@ -1,5 +1,7 @@
 import math
 dp = [[[math.inf for i in range(105)] for i in range(105)] for i in range(105)]
+# dp[x][y][z] denote index x , beauty y , using paint z
+# dp[x][y][z] denotes cost of it
 
 n, m, k = list(map(int, input().split()))
 k += 1

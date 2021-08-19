@@ -8,6 +8,7 @@ def simplify(poly):
         coef = sign * int(coef or 1)
         vars = ''.join(sorted(vars))
         terms[vars] = terms.get(vars, 0) + coef
+    # sort by no. of variables
     terms = sorted(list(terms.items()), key=lambda v_c: (len(v_c[0]), v_c[0]))
     return ''.join(map(format_term, terms)).strip('+')
 

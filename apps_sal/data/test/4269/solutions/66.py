@@ -1,3 +1,4 @@
+# "Bad"が二回出たり。"Bad""Good"になったりする。なぜだ？？　　
 S = input()
 Pass = list(S)
 

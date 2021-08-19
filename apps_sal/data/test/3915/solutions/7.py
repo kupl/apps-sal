@@ -27,10 +27,15 @@ rub = 0
 pi = 0
 prime()
 for i in range(1, 1200000):
+    # print(palindrom(i))
     if pr[i] == 0:
         pi += 1
     if palindrom(i):
         rub += 1
+    # print(i,pi,rub)
     if pi * q <= rub * p:
         res = i
 print(res)
+
+
+# Made By Mostafa_Khaled

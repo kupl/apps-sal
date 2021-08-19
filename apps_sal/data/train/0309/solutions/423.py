@@ -9,4 +9,7 @@ class Solution:
                 d = delta = z - y
                 dp2[z, d] = max(dp2[z, d], dp[y, d] + 1)
             dp.update(dp2)
+            # for k, v in dp.items():
+            #     print(k, v)
+            # print()
         return max(dp.values())

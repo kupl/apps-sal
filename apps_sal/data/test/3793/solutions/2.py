@@ -36,6 +36,7 @@ for l2 in perm(l, 3):
         if s2 == 0:
             continue
         s = round(s2**.5)
+        # if s**2 != s2: continue
         for p2 in perm(l2[2]):
             if dist2(p0, p2) != s2 or dist2(p1, p2) != 2 * s2:
                 continue
@@ -63,3 +64,4 @@ for l2 in perm(l, 3):
 
 if not solved:
     print("NO")
+#if not poss(1,[l[0]]): print("NO")

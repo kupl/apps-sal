@@ -21,3 +21,9 @@ class ProductOfNumbers:
         if done < count:
             update(i)
         return self.nums[i][0]
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

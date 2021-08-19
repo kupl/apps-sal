@@ -47,6 +47,7 @@ def resolve():
         res.append(i)
     res.append(k)
     print((*res))
+    # print(debug(res, k))
 
 
 def __starting_point():

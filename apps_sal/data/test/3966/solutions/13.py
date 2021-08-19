@@ -20,5 +20,9 @@ else:
         n += 1
     ans -= l2[-1]
 
+#ans = sum_l(l2)
+# for i in range(l1-1):
+#    ans += sum_l(l2)
+#    l2.pop(0)
 
 print(ans)

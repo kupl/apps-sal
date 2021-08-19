@@ -6,6 +6,7 @@ input = iter(_INPUT_LINES).__next__
 
 def go():
     n = int(input())
+    # n, h, l, r = map(int, input().split())
     a = list(map(int, input().split()))
     e = {i: set() for i in range(n)}
     for _ in range(n - 1):
@@ -61,5 +62,6 @@ def go():
     return ' '.join(map(str, sums))
 
 
+# t = int(input())
 for _ in range(1):
     print(go())

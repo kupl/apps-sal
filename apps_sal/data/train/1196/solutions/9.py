@@ -22,6 +22,7 @@ for tt in range(t):
         x = []
         for j in range(n):
             x.append(arr[j][i])
+        # print(x)
         y = [0] * (n)
         y[0] = x[0]
         for j in range(1, n):

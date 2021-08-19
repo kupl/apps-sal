@@ -29,17 +29,20 @@ one = 0
 for i in arr:
     if i == 1:
         one += 1
+# print(one)
 if one == 1:
     print(-1)
 else:
 
     ans = inf
     karr = pf(one)
+    # print(karr)
     p = 0
     minik = ()
     indexarr = []
     for k in karr:
         ansk = 0
+        # print(k)
         for i in range(n):
             if arr[i] == 1:
                 p += 1
@@ -47,8 +50,12 @@ else:
                 if p == k:
                     avg = sum(indexarr) / k
                     mini = absdif(indexarr, indexarr[p // 2])
+                    # print(str(mini)+"###")
                     p = 0
                     ansk += mini
+                    # print(k,ansk)
                     indexarr = []
+        # print(one)
+        # print(k,ansk)
         ans = min(ans, ansk)
     print(ans)

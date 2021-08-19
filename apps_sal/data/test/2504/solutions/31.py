@@ -1,5 +1,6 @@
 from scipy.sparse.csgraph import floyd_warshall
 
+# 下準備
 N, M, L = map(int, input().split())
 d = [[float("inf") for i in range(N)] for j in range(N)]
 answer_d = [[float("inf") for i in range(N)] for j in range(N)]
@@ -9,6 +10,7 @@ for i in range(M):
 for i in range(N):
     d[i][i] = 0
 
+# 燃料補給回数の最小値を求める
 d = floyd_warshall(d)
 for i in range(N):
     for j in range(N):
@@ -16,6 +18,7 @@ for i in range(N):
             answer_d[i][j] = answer_d[j][i] = 1
 d = floyd_warshall(answer_d)
 
+# クエリを答える
 Q = int(input())
 answer = [-1] * Q
 for i in range(Q):

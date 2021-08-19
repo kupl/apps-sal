@@ -34,6 +34,7 @@ elif P == "X":
     X.append(cnt)
 else:
     Y.append(cnt)
+# print(A,X,Y)
 
 DX1 = {}
 DX1[0] = 1
@@ -44,6 +45,7 @@ for i in X:
         DX2[j - i] = 1
     DX1 = DX2
     DX2 = {}
+# print(DX1)
 if x - A[0] in DX1:
     flagx = 1
 else:

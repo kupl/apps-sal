@@ -1,3 +1,6 @@
+# How do I handle input that is out of bounds of the rectangle?
+# Can the new value be negative or 0?
+# Give the same row values and col values
 class SubrectangleQueries:
 
     def __init__(self, rectangle: List[List[int]]):
@@ -10,3 +13,9 @@ class SubrectangleQueries:
 
     def getValue(self, row: int, col: int) -> int:
         return self.rectangle[row][col]
+
+
+# Your SubrectangleQueries object will be instantiated and called as such:
+# obj = SubrectangleQueries(rectangle)
+# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
+# param_2 = obj.getValue(row,col)

@@ -13,6 +13,7 @@ class Solution:
         while True:
             next_even = even_palindrome(even)
             next_odd = odd_palindrome(odd)
+            # print(next_even, next_odd)
             cur = min(next_even, next_odd)
             if cur >= N and is_prime(cur):
                 return cur

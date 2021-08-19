@@ -1,1 +1,1 @@
-def opposite(number): return -number
+def opposite(number): return -number  # Lambda is so much fun

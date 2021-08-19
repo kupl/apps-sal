@@ -16,9 +16,10 @@ def fn(pos):
     return dp[pos]
 
 
-for _ in range(1):
+for _ in range(1):  # int(stdin.readline())):
     n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
+    # print(dp)
     dp = [0] * n
     dp[0] = a[0]
     if n == 1:

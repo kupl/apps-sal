@@ -13,6 +13,7 @@ for i in range(len(S) - 1, -1, -1):
     dic[cur] += 1
 
 ans = 0
+# 0は単独でもよい
 for key, val in dic.items():
     if key == 0:
         ans += val

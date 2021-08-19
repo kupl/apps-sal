@@ -1,5 +1,7 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
+        # backtrack/ bfs/dfs?
+        # back -> longest to smallest?
 
         words.sort(key=lambda x: len(x))
         print(words)
@@ -23,6 +25,7 @@ class Solution:
             dic[word] = N
             nonlocal longest_chain
             longest_chain = max(longest_chain, N)
+            # print(N,longest_chain,word)
             return N
 
         for i in range(len(words) - 1, -1, -1):

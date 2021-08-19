@@ -14,6 +14,8 @@ class Solution:
 
         for i in range(len(keyName)):
             curr = keyTime[i]
+            # if cnt[keyName[i]]:
+            #    print(diff(cnt[keyName[i]][0], curr))
             while cnt[keyName[i]] and diff(cnt[keyName[i]][0], curr):
                 cnt[keyName[i]].popleft()
             if len(cnt[keyName[i]]) >= 2:

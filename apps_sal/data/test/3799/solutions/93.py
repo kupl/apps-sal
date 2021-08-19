@@ -1,3 +1,4 @@
+# D問題
 S = list(str(input()))
 Slen = len(S)
 

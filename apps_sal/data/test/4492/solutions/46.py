@@ -16,3 +16,4 @@ else:
             else:
                 a[i + 1] -= tmp
     print(eat)
+    # print(a)

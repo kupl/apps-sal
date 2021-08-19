@@ -14,6 +14,7 @@ for _ in range(0, T):
     s = [0] + [int(x) for x in input().split()]
     L = [1] * len(s)
     for i in range(1, len(L)):
+        # tt=L[i]
         ptr = i + i
         while(ptr <= n):
             if(s[ptr] > s[i]):

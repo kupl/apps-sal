@@ -1,4 +1,5 @@
 def switcheroo(string):
+    # your code here
     result = ''
     for letter in string:
         if letter == 'a':

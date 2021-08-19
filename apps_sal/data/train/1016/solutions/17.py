@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -7,6 +8,7 @@ for i in range(t):
         s, j = list(map(int, input().split()))
         c = j - s
         new.append(c)
+    # print(new);
     for i in new:
         if i > 5:
             d = d + 1

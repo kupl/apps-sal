@@ -15,4 +15,5 @@ def choose_best_sum(t, k, ls):
                 min_ostatok = t - summa
                 print(min_ostatok)
     print(result)
+    # your code
     return result

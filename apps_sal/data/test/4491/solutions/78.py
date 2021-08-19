@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 n = int(input())
 a = [list(map(int, input().split())) for i in range(2)]
 
@@ -8,4 +9,5 @@ for i in range(1, 3):
         now = a[i - 1][j - 1]
         dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + now
 
+# print(dp)
 print((dp[-1][-1]))

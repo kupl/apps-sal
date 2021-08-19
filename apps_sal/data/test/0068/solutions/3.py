@@ -3,10 +3,12 @@ def valid(step, tx, ty, nx, ny, s, d):
     fx = 0
     fy = 0
     for i in range(len(s)):
+        # insert
         c = s[i]
         fx += d[c][0]
         fy += d[c][1]
         if i >= step:
+            # remove
             c = s[i - step]
             fx -= d[c][0]
             fy -= d[c][1]

@@ -44,6 +44,7 @@ def skip(tape, pc, out, stack):
 
 
 def back(tape, pc, out, stack):
+    # return None
     if stack[-1] != 0:
         pc -= 1
         c = tape[pc]
@@ -79,3 +80,4 @@ def interpreter(tape):
             pc += 1
         c = tape[pc: pc + 1]
     return out
+    # Happy Coding! :)

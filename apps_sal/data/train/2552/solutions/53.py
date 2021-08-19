@@ -11,3 +11,7 @@ class Solution:
             if temp >= minCount:
                 return arr[i]
             pp = arr[i]
+
+        # from collections import Counter
+        # c = Counter(arr)
+        # return list(c.most_common(1))[0][0]

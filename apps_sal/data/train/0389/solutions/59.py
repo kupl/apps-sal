@@ -18,6 +18,7 @@ class Solution:
         if len(a) > len(b):
             a, b = b, a
 
+        # d = {-i for i in a}
         d = set()
 
         def r1(s, arr, n):
@@ -35,8 +36,11 @@ class Solution:
                 if n and r1(ss, list(arr), n - 1):
                     return True
 
+        # print(a)
         if r1(0, a, len(a) // 2):
             return True
+        # print(d)
+        # print(b)
 
         def r2(s, arr, n):
             xx = None
@@ -54,4 +58,5 @@ class Solution:
                     return True
         if r2(0, b, len(b) // 2 - 1):
             return True
+        # print(d)
         return False

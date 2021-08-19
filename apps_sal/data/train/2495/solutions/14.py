@@ -1,6 +1,12 @@
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
+        # this is basically a buble sort kinda technique, but not sorted
+        # if need to do this then??
+        # put first element in place based on target
+        # reverse from i to numIndex
+        # increase i
 
+        # or iterate both at the same time and check for 0 at the end
         if len(target) != len(arr):
             return False
         mp = {}

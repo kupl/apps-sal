@@ -1,5 +1,6 @@
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
+        # The Edge Case not needed here: if k > len(cardPoints) or k<=0: raise ValueErro('')
         left, right = [0], [0]
         for i in range(k):
             left.append(left[-1] + cardPoints[i])

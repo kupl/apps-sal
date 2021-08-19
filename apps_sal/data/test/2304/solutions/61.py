@@ -17,11 +17,12 @@ for i in range(m):
     edge[r].append((l, -d))
 
 """
+# BFS解放
 flag = True
 dist = [inf] * n
 for i in range(n):
     if not flag: break
-    if dist[i] == inf: 
+    if dist[i] == inf: # 偽の場合、連結で既に訪れている
         dist[i] = 0
         dq = deque([i])
         while dq:
@@ -41,6 +42,7 @@ else:
     print('No')
 """
 
+# DFS解法
 dist = [inf] * n
 
 

@@ -56,9 +56,11 @@ else:
         r = i
 
         real_l = l
+# print(res)
         for j in range(m):
             res[righti(l)] = res[l]
             res[lefti(r)] = res[r]
+##            print(res, l, r, i, m)
 
             l = righti(l)
             r = lefti(r)

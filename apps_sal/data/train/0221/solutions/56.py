@@ -21,12 +21,14 @@ class Solution:
             return -1
 
         lo, hi = 0, len(S)
+        # cand = ''
         pos = -1
         while lo < hi:
             mid = (lo + hi + 1) // 2
             idx = exists(mid)
             if idx != -1:
                 lo = mid
+                # cand = S[idx - mid + 1: idx + 1]
                 pos = idx
             else:
                 hi = mid - 1

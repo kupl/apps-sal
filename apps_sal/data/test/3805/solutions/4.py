@@ -1,5 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-stack = ['
+stack = ['#']
 for c in input():
     if stack[-1] == c:
         stack.pop()

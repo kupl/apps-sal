@@ -14,6 +14,8 @@ def prt():
     print()
     print()
 
+# prt()
+
 
 def lines():
     rows = []
@@ -30,6 +32,7 @@ def lines():
             if not may:
                 break
             rows.append(i + 1)
+        # prt()
     return rows
 
 
@@ -48,6 +51,7 @@ def cols():
             if not may:
                 break
             stolbs.append(i + 1)
+        # prt()
     return stolbs
 
 

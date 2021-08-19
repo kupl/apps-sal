@@ -4,6 +4,7 @@ class Solution:
 
         for el in A:
             i = 0
+            # counter = {0: dict(), 1: dict()}
             counter = [dict(), dict()]
             for ch in el:
                 if ch not in counter[i]:

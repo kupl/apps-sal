@@ -6,6 +6,7 @@ for num, e in enumerate(input().strip().split()):
     secuencia[num] = [en, 0, num]
     ma = max(ma, en)
 escritura = ["1"] * len(secuencia)
+# ma = max((x[0] for x in secuencia))
 bit = [0] * (ma + 1)
 
 
@@ -25,6 +26,21 @@ def update_x(x, l, max_n, val):
             return
         x += (x & -x)
 
+# def index_list(item, alist, first=0, last=-1):
+#     pos = first
+#     while first <= last:
+#         midpoint = (first + last) // 2
+#         pos = midpoint
+#         if alist[midpoint][1] == item:
+#             return midpoint
+#         else:
+#             if item > alist[midpoint][1]:
+#                 last = midpoint - 1
+#             else:
+#                 first = midpoint + 1
+#                 pos += 1
+#     return pos
+
 
 def new_get_secuence(e):
     num = secuencia[e][0]
@@ -40,6 +56,26 @@ secuencia.sort(key=lambda x: (-x[1], -x[2]))
 ultimos = [(ma + 1, 0, n)]
 partir = 0
 moment_max = secuencia[0][1]
+# while moment_max > 0:
+#     terminar = n
+#     usados = []
+#     for e in range(partir, n):
+#         if secuencia[e][1] < moment_max:
+#             terminar = e
+#             break
+#         for element in ultimos:
+#             if secuencia[e][2] < element[2]:
+#                 if secuencia[e][0] < element[0]:
+#                     usados.append(secuencia[e])
+#                     break
+#     if len(usados) == 1:
+#         escritura[usados[0][2]] = "3"
+#     else:
+#         for e in usados:
+#             escritura[e[2]] = "2"
+#     ultimos = usados
+#     partir = terminar
+#     moment_max -= 1
 usados = []
 for e in secuencia:
     if e[1] < moment_max:

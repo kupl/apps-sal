@@ -1,3 +1,4 @@
+# E - Roadwork
 from bisect import bisect_left
 from operator import itemgetter
 
@@ -6,7 +7,7 @@ def main():
     N, Q, *STXD = list(map(int, open(0).read().split()))
     D = STXD[3 * N:]
     ans = [-1] * Q
-    road = [-1] * Q
+    road = [-1] * Q  # (road[i] = x) := if -1: open / else: closed until x
     for s, t, x in sorted(zip(*[iter(STXD[: 3 * N])] * 3), key=itemgetter(2)):
         l, r = bisect_left(D, s - x), bisect_left(D, t - x)
         while l < r:

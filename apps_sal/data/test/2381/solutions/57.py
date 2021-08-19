@@ -33,6 +33,8 @@ else:
         if As[i] < 0:
             sign *= -1
     if sign < 0:
+        #print(As,ans) ###
+        # ansを正にする
         rm_p = None
         rm_n = None
         for i in range(K):
@@ -52,6 +54,7 @@ else:
                 apd_zp = As[K + i]
             if apd_n == None and As[K + i] < 0:
                 apd_n = As[K + i]
+        #print(rm_n,rm_p,apd_n,apd_zp) ###
 
         if rm_n == None or apd_zp == None:
             rm = rm_p

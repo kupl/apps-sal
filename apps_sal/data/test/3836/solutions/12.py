@@ -1,3 +1,4 @@
+#!usr/bin/python
 
 n = int(input())
 s = [[], [], [], []]

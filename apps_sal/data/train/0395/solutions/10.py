@@ -2,6 +2,7 @@ class Solution:
     ans = 0
 
     def bfs(self, index, even, odd, curr):
+        # print(index, curr)
         if index == len(even) - 1:
             self.ans += 1
             return

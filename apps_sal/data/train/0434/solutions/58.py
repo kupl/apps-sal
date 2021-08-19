@@ -27,3 +27,22 @@ class Solution:
             return 0
         else:
             return len(nums) - 1
+
+        # sumnums = sum(nums)
+        # if sumnums==len(nums):
+        #     return sumnums-1
+        # elif sumnums ==0:
+        #     return 0
+        # elif sumnums == 1:
+        #     return 1
+        # else:
+        #     temp = []
+        #     for i in range(len(nums)):
+        #         temp1 = [nums[i]]
+        #         for j in range(i+1, len(nums)):
+        #             if sum(temp1+[nums[j]])>=len(temp1):
+        #                 temp1.append(nums[j])
+        #             else:
+        #                 break
+        #         temp.append(temp1)
+        #     return max([len(x) for x in temp])-1

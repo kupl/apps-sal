@@ -15,6 +15,7 @@ for q in range(Q):
     su = list(su)
     i = 0
     d = 1
+    # print(su)
     ll = 0
     while i < len(su) and i >= 0:
         if su[i].isdigit():
@@ -50,4 +51,7 @@ for q in range(Q):
             else:
                 i += 1
             ll = 1
+        # print(su,i,d)
+        # print(arr)
+    # print(su)
     print(*arr)

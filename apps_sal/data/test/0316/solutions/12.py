@@ -1,6 +1,11 @@
 import math
 import sys
 
+# imgur.com/Pkt7iIf.png
+
+#n, m = map(int, input().split())
+#n = int(input())
+#d = list(map(int, input().split()))
 
 n = int(input())
 r = 0

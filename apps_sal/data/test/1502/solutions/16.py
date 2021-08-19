@@ -1,4 +1,10 @@
+# bits = list(map(int, bin(int(input()))[2:]))
+# while len(bits) < 4:
+# bits.append(0)
 
+# bits = [bits[0], bits[1] ^ bits[0], bits[2] ^ (bits[1] | bits[0]), bits[3] ^ (bits[0] | bits[1] | bits[2])]
+
+# print(bits[0] + bits[1] * 2 + bits[2] * 4 + bits[3] * 8)
 
 r = int(input())
 if r == 0:

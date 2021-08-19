@@ -9,6 +9,7 @@ ss = sum(A)
 
 
 for i in range(min(N, M + 1)):
+    # Remove i the i less powerful superheroes
     if i > 0:
         ss = ss - A[i - 1]
 

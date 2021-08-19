@@ -24,3 +24,4 @@ class Solution:
                 l = mid + 1
 
         return l
+# leetcode submit region end(Prohibit modification and deletion)

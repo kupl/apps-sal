@@ -1,6 +1,8 @@
+#! /bin/python
 n = int(input())
 tab = list(map(int, input().split()))
 tab = sorted(tab, reverse=True)
+#  print(tab)
 maxi = 0
 tmpOdd = 0
 maxOdd = 0

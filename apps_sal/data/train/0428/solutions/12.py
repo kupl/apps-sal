@@ -9,14 +9,14 @@ class Solution:
             if grid[i][j] in ['.', '@']:
                 res.append((i, j, keys))
             elif grid[i][j].islower():
-                if grid[i][j] in keys_list:
+                if grid[i][j] in keys_list:  # already picked key, treat as empty cell
                     res.append((i, j, keys))
-                else:
+                else:  # pick up new key
                     keys_list.append(grid[i][j])
                     new_keys = ''.join(keys_list)
                     res.append((i, j, new_keys))
             elif grid[i][j].isupper():
-                if grid[i][j].lower() in keys_list:
+                if grid[i][j].lower() in keys_list:  # treat lock as empty cell if have the key
                     res.append((i, j, keys))
             return res
 

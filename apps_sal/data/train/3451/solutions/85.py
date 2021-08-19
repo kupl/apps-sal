@@ -1,6 +1,8 @@
 def next(a, b):
     return 3 - (a + b) % 3
 
+# R=1, G=2, B=3
+
 
 def rgb_to_number(string):
     rgb = ["R", "G", "B"]

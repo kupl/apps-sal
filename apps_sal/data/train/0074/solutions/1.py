@@ -34,6 +34,10 @@ def main():
                     if cur < dp[j + 1][e]:
                         dp[j + 1][e] = cur
                         log[j + 1][e] = log[j][e] + [i]
+        # print(ab)
+        # p2D(dp)
+        # p2D(log)
+        # print()
         mn = mne = inf
         for e in range(n):
             cur = dp[-1][e]

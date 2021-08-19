@@ -24,6 +24,7 @@ for _ in range(T):
         for a in alph:
             if a:
                 a.append(a[0] + len(s))
+        # print(alph)
         cur = len(s) - 1
         ans = 0
         for i in range(len(t)):

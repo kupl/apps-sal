@@ -13,6 +13,7 @@ def solve():
         G[u - 1].append(v - 1)
         G[v - 1].append(u - 1)
 
+    # Euler tour technique
     S = []
     FS = [0] * N
     LS = [0] * N
@@ -38,6 +39,7 @@ def solve():
 
     L = len(S)
     lg = [0] * (L + 1)
+    # Sparse Table
     for i in range(2, L + 1):
         lg[i] = lg[i >> 1] + 1
     st = [[L] * (L - (1 << i) + 1) for i in range(lg[L] + 1)]

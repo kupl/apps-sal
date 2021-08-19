@@ -1,3 +1,5 @@
+# E
+# greedy
 n = input()
 n = n[::-1] + "0"
 l = len(n)
@@ -19,9 +21,11 @@ for i, v in enumerate(n):
         kuriagari = 1
     if v == 5:
         if int(n[i + 1]) < 5:
+            #delete is better
             ans += v
             kuriagari = 0
         if int(n[i + 1]) >= 5:
+            #kuriagari is promising
             ans += 10 - v
             kuriagari = 1
 

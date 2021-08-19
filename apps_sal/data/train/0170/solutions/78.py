@@ -24,5 +24,5 @@ class Solution:
         return res
 
 
-print(Solution().findLengthOfShortestSubarray([1, 3, 2, 4]))
-print(Solution().findLengthOfShortestSubarray([1, 2, 3, 10, 4, 2, 3, 5]))
+print(Solution().findLengthOfShortestSubarray([1, 3, 2, 4]))  # 1
+print(Solution().findLengthOfShortestSubarray([1, 2, 3, 10, 4, 2, 3, 5]))  # 3

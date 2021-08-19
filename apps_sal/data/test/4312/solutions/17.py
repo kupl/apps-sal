@@ -33,19 +33,20 @@ class Monster:
         return self.hp <= 0
 
 
+# 標準入力から A, B, C, D を取得する
 a, b, c, d = list(map(int, input().split()))
 
-takahashi_monster = Monster(a, b)
-aoki_monster = Monster(c, d)
+takahashi_monster = Monster(a, b)   # 高橋モンスター
+aoki_monster = Monster(c, d)    # 青木モンスター
 result = "ret"
 
 while True:
-    aoki_monster.fight(b)
+    aoki_monster.fight(b)   # 高橋の攻撃
     if aoki_monster.is_loser():
         result = "Yes"
         break
 
-    takahashi_monster.fight(d)
+    takahashi_monster.fight(d)  # 青木の攻撃
     if takahashi_monster.is_loser():
         result = "No"
         break

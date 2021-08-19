@@ -4,6 +4,7 @@ import collections
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
 
+        # for each substring of length, find unique chars
         maxC = Counter()
         ans = 0
         sz = minSize

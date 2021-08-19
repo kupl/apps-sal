@@ -18,6 +18,7 @@ class Solution:
 
             while counters[i] and k >= i:
                 num = counters[i].pop()
+                #del dict[num]
                 result -= 1
                 k -= i
         return result

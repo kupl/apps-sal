@@ -7,6 +7,8 @@ inf = 1 << 30
 def solve():
     n = int(sys.stdin.readline())
 
+    # r_max = MAX, b_min = MIN にしたとき
+
     r_max = b_max = 0
     r_min = b_min = inf
 
@@ -27,9 +29,15 @@ def solve():
 
     ans1 = (r_max - r_min) * (b_max - b_min)
 
+    # print('r_max = MAX, b_min = MIN -> ', ans1, file=sys.stderr)
+
+    # r_max = MAX, r_min = MIN にしたとき
+
     ans2 = (r_max - b_min)
 
     p.sort(key=itemgetter(0))
+
+    # print(*p, sep='\n', file=sys.stderr)
 
     b_min = p[0][0]
     b_max = p[-1][0]
@@ -47,12 +55,16 @@ def solve():
         b_min = min(p[i + 1][0], y_min)
         b_max = max(b_max, p[i][1])
 
+        # print(b_min, b_max, b_max - b_min, file=sys.stderr)
+
         dif_b = min(dif_b, b_max - b_min)
 
         if y_min < p[i + 1][0]:
             break
 
     ans2 *= dif_b
+
+    # print('r_max = MAX, r_min = MIN ->', ans2, file=sys.stderr)
 
     ans = min(ans1, ans2)
 

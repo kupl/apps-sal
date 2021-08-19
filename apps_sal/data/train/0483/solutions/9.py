@@ -1,5 +1,6 @@
 class Solution:
 
+    # two pointer, O(N) time
     def maxArea(self, height):
         """
         :type height: List[int]
@@ -12,6 +13,7 @@ class Solution:
 
         while left < right:
 
+            # area = height * width
             area = min(height[left], height[right]) * (right - left)
 
             if area > max_area:

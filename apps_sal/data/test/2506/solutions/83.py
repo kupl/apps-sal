@@ -21,6 +21,9 @@ S = [0] * (N + 1)
 for i in range(N):
     S[i + 1] = S[i] + A[i]
 
+# [ok, ng) - Maximum
+# (ng, ok] - Minimum
+# ok が 最終的な答え
 ok = 0
 ng = 10 ** 21
 while abs(ok - ng) > 1:

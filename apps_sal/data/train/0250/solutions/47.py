@@ -17,11 +17,14 @@ class Solution:
                 return rec(m + 1, r, heap, newQ)
 
         for r, q in workers:
+            #print('before heap: ', heap)
             heap = rec(0, len(heap) - 1, heap, q)
+            #print('after heap: ', heap)
             qsum += q
             if len(heap) > K:
 
                 p = heap.pop(-1)
+                #print('heapq.heappop(heap): ',p, 'r:', r, 'qsum: ',qsum)
                 qsum += -p
             if len(heap) == K:
                 res = min(res, qsum * r)

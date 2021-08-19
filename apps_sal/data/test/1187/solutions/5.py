@@ -1,4 +1,6 @@
 import math
+# import sys
+# input = sys.stdin.readline
 n, m = [int(i) for i in input().split(' ')]
 d = [[] for i in range(n)]
 done = [False for i in range(n)]

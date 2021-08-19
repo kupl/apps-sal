@@ -8,8 +8,11 @@ def main():
     inf = 10 ** 20
 
     t = int(input())
+#    t, a, b = map(int, input().split())
+#    t = 1
 
     for _ in range(1, t + 1):
+        #    print("Case #{}: ".format(_), end = '')
         n = int(input())
 
         total = 1

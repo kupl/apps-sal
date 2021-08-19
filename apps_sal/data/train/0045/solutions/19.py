@@ -1,6 +1,7 @@
 l = [1]
 for i in range(70):
     l.append(2 * l[-1] + 1)
+# print(l[-1])
 l = [(ll * (ll + 1)) // 2 for ll in l]
 lll = [l[0]]
 for i in range(1, 70):

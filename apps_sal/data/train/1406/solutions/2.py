@@ -1,5 +1,7 @@
+# cook your dish here
 from sys import stdin, stdout
 
+# Taken from geeksforgeeks
 BitsSetTable256 = [0] * 256
 
 
@@ -38,3 +40,6 @@ for _ in range(int(stdin.readline())):
             stdout.write("{} {}\n".format(even, odd))
         else:
             stdout.write("{} {}\n".format(odd, even))
+
+    #stdout.write("{} {} {} {} ".format(N,Q,inpList,*queryList))
+    # cook your dish here

@@ -1,3 +1,5 @@
+# coding: utf-8
+# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
@@ -24,6 +26,7 @@ else:
     for x in range(M, 0, -1):
         if (n - s) % x == 0:
             b = (n - s) // x + 1
+            # print(b)
             if x < b and 0 <= s - x < b:
                 print(b)
                 break

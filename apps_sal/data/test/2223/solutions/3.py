@@ -37,6 +37,7 @@ def dfs_new(adj, n):
                 tree_size += subtree_size
             sol[i] = [tree_size, rem]
             stack.pop(-1)
+    # print(sol)
     return sol[1][1]
 
 

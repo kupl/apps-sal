@@ -1,5 +1,7 @@
 class Solution:
     def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
+        # f[i,j], the maximum full one can have, using j stations, stop at station i,
+        # f[i,j] = f[i],  j implied by iteration
         if target <= startFuel:
             return 0
 

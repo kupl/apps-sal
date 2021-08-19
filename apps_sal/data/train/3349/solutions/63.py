@@ -1,8 +1,10 @@
 def find_missing_number(sequence):
 
+    # проверка на не пустую строку
     if not sequence:
         return 0
 
+    # проверка на int каждого элемента
     try:
         sequence = [int(elem) for elem in sequence.split()]
     except ValueError:

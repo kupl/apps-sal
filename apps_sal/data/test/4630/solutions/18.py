@@ -46,9 +46,13 @@ def solve():
     n = getN()
     nums = getList()
     uf = UnionFind(n)
+    # print(nums)
     for i, num in enumerate(nums):
         uf.par[i + 1] = uf.find(i + 1)
         uf.par[num] = uf.find(num)
+        # print(uf.size)
+        # print(uf.par)
+        # print("============")
         if not uf.same_check(i + 1, num):
             uf.union(i + 1, num)
 
@@ -58,6 +62,8 @@ def solve():
     for i in range(n):
         ans.append(uf.size[uf.par[i + 1]])
     print(*ans)
+    # print(uf.size)
+    # print(uf.par)
 
 
 def main():

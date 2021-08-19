@@ -7,7 +7,7 @@ class Solution:
             while k:
                 [pos, vel] = q.popleft()
                 if pos == T:
-                    return depth
+                    return depth  # \\U0001f3af target T found
                 cand = []
                 if abs(T - (pos + vel) < T):
                     cand.append([pos + vel, 2 * vel])

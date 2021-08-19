@@ -32,6 +32,7 @@ def sieve(n):
 
 
 t = int(input())
+# n,m=[int(x) for x in input().split()]
 
 for ii in range(t):
     s = input()
@@ -65,4 +66,5 @@ for ii in range(t):
             s2 += 32
         else:
             s2 += 8
+    # print(s,ss)
     print(s1 - s2)

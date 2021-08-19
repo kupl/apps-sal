@@ -9,8 +9,10 @@ class Solution:
             return rst
 
         xloc = defaultdict(set)
+#        yloc = defaultdict(set())
         for p in points:
             xloc[p[0]].add(p[1])
+#            yloc[p[1]].add(p[0])
         minarea = float('inf')
         xkeys = list(xloc.keys())
         for x1 in xkeys:

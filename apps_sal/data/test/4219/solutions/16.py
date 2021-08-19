@@ -15,9 +15,11 @@ for h in range(2**N):
     for g in range(N):
         if h >> g & 1:
             l[g] = 1
+    # print(l)
     for gg in range(N):
         if l[gg] == 1:
             temp_ = syogen[gg]
+            # print(temp_)
             for n in range(temp_[0]):
                 if l[temp_[1][n][0] - 1] == temp_[1][n][1]:
                     continue
@@ -27,6 +29,7 @@ for h in range(2**N):
         if flag == 1:
             break
         elif flag == 0 and gg == N - 1:
+            # print(bin(h))
             ans = max(ans, sum(l))
 
 print(ans)

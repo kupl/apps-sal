@@ -20,23 +20,23 @@ k из этих вершин являются столицами государ�
 """
 
 
-def dfs(u, vis):
+def dfs(u, vis):  # поиск в глубину
     vis.add(u)
     for v in g[u]:
         if v not in vis:
             dfs(v, vis)
 
 
-n, m, k = list(map(int, list(input().split())))
-govs_ind = list(map(int, list(input().split())))
-orig = set()
-countries = set(range(1, n + 1))
+n, m, k = list(map(int, list(input().split())))  # n-вершин, m-ребер, k-столиц
+govs_ind = list(map(int, list(input().split())))  # индексы столиц
+orig = set() 							# множество ребер (ребра - кортежи (u, v))
+countries = set(range(1, n + 1))			# множество городов
 
 g = [[] for i in range(n + 1)]
 
 for i in range(m):
     u, v = list(map(int, list(input().split())))
-    orig.add((u, v))
+    orig.add((u, v)) 		# в правильном порядке добавляем ребра
     g[u].append(v)
     g[v].append(u)
 

@@ -30,3 +30,5 @@ def total(arr):
             return final
 
     return final
+    # lol i know it is too long; but I already did the 'Is a number prime?' Kata, and
+    # so I decided to use it here.

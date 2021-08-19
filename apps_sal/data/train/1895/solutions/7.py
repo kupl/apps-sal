@@ -5,15 +5,19 @@ class Solution:
         :rtype: bool
         """
         x_count, o_count = 0, 0
+        # Count number of X and O
         for string in board:
             for c in string:
                 if c == "X":
                     x_count += 1
                 if c == "O":
                     o_count += 1
+        # If number of X is two more than or less than that of O, return False
         if x_count - o_count >= 2 or x_count - o_count < 0:
             return False
 
+        # Check winner, we can only have one winner. To check winner,
+        # there are total 8 combinations.
         x_win = 0
         o_win = 0
         if board[0] == 'XXX' or board[1] == 'XXX' or board[2] == 'XXX':

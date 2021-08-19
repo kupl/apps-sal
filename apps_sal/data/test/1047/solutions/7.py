@@ -1,4 +1,5 @@
 3
+# -*- coding: utf8 -*-
 
 
 def main():

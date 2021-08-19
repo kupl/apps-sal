@@ -6,6 +6,7 @@ class Solution:
         res = 0
         ans = 0
         for i in range(len(customers)):
+            # print(profit)
             customers[i] += res
             if customers[i] > 4:
                 res = customers[i] - 4
@@ -19,6 +20,7 @@ class Solution:
 
         step = 1
         while res > 0:
+            # print(profit)
             if res > 4:
                 profit += 4 * boardingCost - runningCost
             else:

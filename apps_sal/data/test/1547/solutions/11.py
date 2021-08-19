@@ -1,3 +1,5 @@
+# fin = open('input.txt', 'r')
+# fout = open('output.txt', 'w')
 
 n, m, k = map(int, input().split())
 

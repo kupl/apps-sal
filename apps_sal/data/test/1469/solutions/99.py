@@ -12,18 +12,27 @@ def lin(): return list(IN())
 
 mod = 1000000007
 
+# +++++
+
 
 def main():
     L = int(input())
+    #b , c = tin()
+    #s = input()
     v = int(math.log2(L))
+    # pa(v)
     num_p = v
     path_info = []
     for i in range(v):
         path_info.append([i, i + 1, 0])
         path_info.append([i, i + 1, 2**i])
 
+    # for li in path_info:
+    #	print(*li)
+
     nokori = L - (2 ** v)
 
+    # print(nokori)
     for i in range(v + 1):
         m = v - i
         if 2 ** m <= nokori:
@@ -35,6 +44,7 @@ def main():
         print((*[f + 1, t + 1, w]))
 
 
+# +++++
 isTest = False
 
 
@@ -63,6 +73,7 @@ def __starting_point():
         isTest = True
     else:
         pass
+        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

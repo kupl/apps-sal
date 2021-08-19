@@ -1,3 +1,4 @@
+# You lost the game.
 
 n = int(input())
 s = str(input())

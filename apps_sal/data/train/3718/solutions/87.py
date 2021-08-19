@@ -7,6 +7,6 @@ def divisors(n):
         if n % i == 0:
             if n / i == i:
                 cnt = cnt + 1
-            else:
+            else:  # Otherwise count both
                 cnt = cnt + 1
     return cnt

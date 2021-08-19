@@ -1,5 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
+        # keep track of maximum profit
+        #
         q_len = current_profit = 0
         max_profit = ans = -1
         for rotation, new_people in enumerate(customers):

@@ -19,6 +19,10 @@ for i in range(m):
             x = (CR[j][i] - i % m) // m
             SCORE[(j - x) % n] += 1
 
+        # print(SCORE)
+
+    # print(SCORE)
+
     ANS += min([n + j - SCORE[j] for j in range(n)])
 
 print(ANS)

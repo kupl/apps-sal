@@ -46,4 +46,4 @@ if b - c * n <= n and n <= b * n - c:
         elif i == '=':
             print(s + ' = ' + str(n))
 else:
-    print('Impossible')
+    print('Impossible')  # '''

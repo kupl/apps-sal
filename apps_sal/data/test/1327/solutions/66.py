@@ -31,5 +31,7 @@ for i in range(2**3):
     p = [1, 1, 1]
     for j in range(3):
         p[j] = pm[(i >> j) & 1]
+    # print(p)
+    # print(f(*p))
     tmp = max(tmp, f(*p))
 print(tmp)

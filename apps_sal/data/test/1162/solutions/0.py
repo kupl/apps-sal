@@ -27,10 +27,11 @@ def C(n, k):
 
 
 def candy(n, k):
+    # print(n, k)
     return C(n + k - 1, k - 1)
 
 
-def count_game(k, n, x):
+def count_game(k, n, x):  # k players, n points total, no player can have x point or more
     if(k == 0):
         if(n == 0):
             return 1
@@ -39,6 +40,7 @@ def count_game(k, n, x):
     ans = 0
     for i in range(0, k + 1):
         t = n - x * i
+        # print(i, C(k, i))
         if(t < 0):
             break
         if(i % 2):
@@ -53,9 +55,10 @@ gamesize = count_game(p, s - r, int(1e18))
 gamesize = inverse(gamesize)
 ans = 0
 for q in range(r, s + 1):
-    for i in range(0, p):
+    for i in range(0, p):  # exactly i people have the same score
         t = s - (i + 1) * q
         if(t < 0):
             break
+        # print(q, i, count_game(p-i-1, t, q));
         ans = (ans + C(p - 1, i) * count_game(p - i - 1, t, q) * gamesize * inverse(i + 1)) % base
 print(ans)

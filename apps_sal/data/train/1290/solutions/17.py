@@ -1,3 +1,4 @@
+# cook your dish here
 n = input()
 
 lent = len(n)

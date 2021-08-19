@@ -1,3 +1,4 @@
+# x, y 0以上
 def dp1(x, y):
     if x == 0 and y == 0:
         return 0
@@ -7,6 +8,7 @@ def dp1(x, y):
         return (max(x, y) - 1) * 2
 
 
+# xが負
 def dp2(x, y):
     if x >= y:
         return 2 * x - 1
@@ -14,6 +16,7 @@ def dp2(x, y):
         return 2 * y - 2
 
 
+# x, yが負
 def dp3(x, y):
     if x == y:
         return 2 * x

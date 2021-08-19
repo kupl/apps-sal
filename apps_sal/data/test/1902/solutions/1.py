@@ -1,3 +1,5 @@
+# python3
+# utf-8
 
 class Trie:
     def __init__(self):
@@ -30,6 +32,7 @@ class Trie:
         for letter in word:
             if letter not in curr_node.letter___node:
                 if curr_state == 1:
+                    # print(presses_saved)
                     if '$' in curr_node.letter___node:
                         return min(len(word) - 1,
                                    len(word) - 1 - presses_saved + 1
@@ -41,6 +44,7 @@ class Trie:
             if curr_node.words_nr > 1:
                 curr_node = curr_node.letter___node[letter]
             elif curr_node.words_nr == 1:
+                # print(letter, presses_saved)
                 if curr_state == 0:
                     curr_state = 1
                 presses_saved += 1
@@ -71,6 +75,7 @@ while(1):
         text += line + '\n'
     except:
         break
+# print(text)
 ans = 0
 syms = ['\n', '.', ',', '?', '!', "'", '-']
 for sym in syms:
@@ -85,6 +90,7 @@ for word in idx___word:
         continue
     count = root.count_word(word)
     check = root.check_word(word)
+    # print(word, check, count)
     ans += count
     if not check:
         root.add_word(word)

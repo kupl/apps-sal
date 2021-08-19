@@ -15,9 +15,9 @@ for i in range(n):
             Distance[i][j] = float("inf")
 
 
-for k in range(n):
-    for i in range(n):
-        for j in range(n):
+for k in range(n):  # k個までの町を使ってのDisが知れているときに
+    for i in range(n):  # 町iと
+        for j in range(n):  # 町jとの最短距離は、
             length = Distance[i][k] + Distance[k][j]
             if Distance[i][j] > length:
                 Distance[i][j] = length

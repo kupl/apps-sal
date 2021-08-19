@@ -3,8 +3,8 @@ H += 2
 W += 2
 for i in range(H):
     if i == 0 or i == H - 1:
-        out = '
+        out = '#' * W
     else:
         a = input()
-        out = '
+        out = '#{}#'.format(a)
     print(out)

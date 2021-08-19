@@ -1,3 +1,4 @@
+# cook your dish here
 mod = 1000000007
 for _ in range(int(input())):
     arr = list(map(int, input().split()))

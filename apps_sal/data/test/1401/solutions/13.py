@@ -17,6 +17,7 @@ f = [0 for i in range(0, n + 1)]
 dp = [0 for i in range(0, n + 1)]
 ans = 1
 while cnt < len(q):
+    # print(cnt,len(q))
     now = q[cnt]
     cnt += 1
     for x in e[now]:

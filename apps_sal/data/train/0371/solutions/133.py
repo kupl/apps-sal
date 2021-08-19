@@ -1,4 +1,5 @@
 class Solution:
+    # O(n_stops x n_buses) time, O(n_stops x n_buses) space
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         num_buses = len(routes)
         bus_to_stop = defaultdict(set)

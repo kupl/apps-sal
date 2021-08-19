@@ -23,8 +23,8 @@ class Solution:
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 if i + dx < 0 or i + dx >= m or j + dy < 0 or j + dy >= n:
                     continue
-                if grid[i + dx][j + dy] == '
-                continue
+                if grid[i + dx][j + dy] == '#':
+                    continue
 
                 yield i + dx, j + dy
 

@@ -12,9 +12,9 @@ for _ in range(n):
 a = OrderedDict(sorted(a.items()))
 a = [item for item in a.items()]
 
-k = 0
-su = 0
-mu = 0
+k = 0  # starting element
+su = 0  # current sum
+mu = 0  # current maximum friendship
 for i in range(len(a)):
     su += a[i][1]
     while a[i][0] - a[k][0] >= d:

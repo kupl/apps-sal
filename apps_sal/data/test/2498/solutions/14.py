@@ -22,6 +22,7 @@ if sum(count2) == count2[0] * N:
     for i in range(N):
         buf = A[i] * buf // GCM(buf, A[i])
     buf *= 2**(count2 - 1)
+    # print(buf)
     n = M // buf
     print((n + 1) // 2)
 

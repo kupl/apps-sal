@@ -27,7 +27,7 @@ class Solution:
 
         for s in range(1, 1 << N):
             for i in range(N):
-                if s & (1 << i):
+                if s & (1 << i):  # valid dp[s][i] check
                     prev = s - (1 << i)
                     for j in range(N):
                         if j != i and prev & (1 << j):
@@ -47,6 +47,7 @@ class Solution:
         s = 2**N - 1
         res = A[ind]
         child_ind = ind
+        # print(s, ind)
         ind = parent[s][ind]
         s = s - (1 << child_ind)
         while s and ind >= 0:
@@ -54,6 +55,7 @@ class Solution:
             pre_len = len(A[ind]) - len(A[child_ind]) + g[ind][child_ind]
             res = A[ind][:pre_len] + res
             child_ind = ind
+            # print(s, ind)
             ind = parent[s][ind]
             s = s - (1 << child_ind)
 

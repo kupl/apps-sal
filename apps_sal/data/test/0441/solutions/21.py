@@ -1,6 +1,8 @@
 n, a, b = [int(x) for x in input().split()]
 all = a + b
+# print(all)
 s = input()
+# print(s)
 l = 0
 ls = []
 for c in s:

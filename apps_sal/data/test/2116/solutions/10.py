@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 n, m, k = list(map(int, input().split()))
 l = list(map(int, input().split()))
 t = 0

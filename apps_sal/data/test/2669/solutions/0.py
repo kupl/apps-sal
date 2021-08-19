@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 count = []
 a = [int(i) for i in input().split()]

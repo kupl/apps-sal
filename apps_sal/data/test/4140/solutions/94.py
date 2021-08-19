@@ -1,7 +1,7 @@
 s = input()
 n = len(s)
 
-x, y = 0, 0
+x, y = 0, 0  # x:0101... y:1010
 for i in range(n):
     if i % 2 == 0:
         if s[i] == '0':

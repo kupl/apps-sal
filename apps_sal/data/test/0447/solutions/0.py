@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 
 def addmod(left, right, modulo=1000000007):

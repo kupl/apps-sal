@@ -1,5 +1,6 @@
 a, b, c, x, y = map(int, input().split())
 
+# set x >= y
 if x < y:
     x, y = y, x
     a, b = b, a

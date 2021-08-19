@@ -1,5 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
+        # 每次maintain，到之前为止，正的有多长，负的有多长，然后maintain max len
         pos, neg = 0, 0
         asr = 0
         for num in nums:
@@ -13,4 +14,5 @@ class Solution:
                 n_neg = pos + 1 if pos else 1
                 pos, neg = n_pos, n_neg
             asr = max(asr, pos)
+            # print(pos,neg)
         return asr

@@ -4,6 +4,8 @@ import itertools
 import string
 import sys
 
+###
+
 
 def powmod(x, p, m):
     if p <= 0:
@@ -11,6 +13,8 @@ def powmod(x, p, m):
     if p <= 1:
         return x % m
     return powmod(x * x % m, p // 2, m) * (x % m)**(p % 2) % m
+
+###
 
 
 def to_basex(num, x):
@@ -27,6 +31,8 @@ def from_basex(it, x):
         p *= x
     return ret
 
+###
+
 
 def core():
     n, k = [int(x) for x in input().split()]
@@ -41,6 +47,8 @@ def core():
             groups.append([])
         groups[-1].append(a[i])
         last_ch = ch
+
+    # print(groups)
 
     ans = 0
     for g in groups:

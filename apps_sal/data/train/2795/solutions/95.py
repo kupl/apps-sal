@@ -1,2 +1,3 @@
 def cockroach_speed(s):
+    # Cockroaches just seem fast because time slows when they fly toward you...
     return (int(s * 100000 / 3600))

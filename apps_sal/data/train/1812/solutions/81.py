@@ -23,3 +23,8 @@ class MajorityChecker:
             left //= 2
         topcount, topnum = max((ct, num) for num, ct in list(c.items()))
         return topnum if topcount >= threshold else -1
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

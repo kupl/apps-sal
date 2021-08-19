@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 n = int(input())
 s = input()
@@ -23,5 +24,8 @@ candidates = []
 for i in range(n):
     candidates.append(right_E[i] + left_W[i])
 
+#print('candidates =', candidates)
+#print('right_E =', right_E)
+#print('left_W =', left_W)
 ans = min(candidates)
 print(ans)

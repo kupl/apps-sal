@@ -1,6 +1,9 @@
 import sys
 import math
+# sys.setrecursionlimit(100000000)
 input = sys.stdin.readline
+
+############ ---- USER DEFINED INPUT FUNCTIONS ---- ############
 
 
 def inp():
@@ -18,6 +21,8 @@ def insr():
 
 def invr():
     return(list(map(int, input().split())))
+################################################################
+############ ---- THE ACTUAL CODE STARTS BELOW ---- ############
 
 
 t = inp()

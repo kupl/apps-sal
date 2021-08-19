@@ -5,6 +5,10 @@ def main():
 
     import sys
     import math
+    #fi = open('input.txt', 'r')
+    #fo = open('output.txt', 'w+')
+    #fi = open(QWE +".in", "r")
+    #fo = open(QWE + ".out", "w+")
 
     n = input()
     ln = len(n)
@@ -20,6 +24,7 @@ def main():
                 if q < n:
                     d[i] = min(d[i], d[j - 1] * n + q)
     print(d[m])
+    # print(d)
 
 
 main()

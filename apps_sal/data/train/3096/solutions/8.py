@@ -5,10 +5,10 @@ def josephus(itemlist, interval):
         return itemlist
 
     count = 1
-    disposal = []
+    disposal = []  # list which stores order in which items get deleted
 
-    while len(disposal) != length:
-        index = 0
+    while len(disposal) != length:  # loop runs unti; every item has been deleted
+        index = 0  # gives an index. Useful if there are duplicates of items in a list
         for item in itemlist:
             if count == interval:
 
@@ -17,7 +17,7 @@ def josephus(itemlist, interval):
                 count = 1
 
                 try:
-                    print(itemlist[index])
+                    print(itemlist[index])  # sees if there is another number after the deleted one. Catches numbers at the end of the list which get's deleted
                 except:
                     break
 

@@ -4,6 +4,7 @@ class Solution:
         heapq.heapify(heap)
         ret_num = 0
         for i in range(1, right + 1):
+            # print(heap)
             cur, idx = heapq.heappop(heap)
             if idx < len(nums) - 1:
                 heapq.heappush(heap, [nums[idx + 1] + cur, idx + 1])

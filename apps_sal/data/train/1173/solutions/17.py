@@ -1,3 +1,4 @@
+# cook your dish here
 test_cases = int(input())
 for test in range(test_cases):
     n = int(input())

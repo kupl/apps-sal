@@ -3,15 +3,17 @@ def main():
     input = sys.stdin.readline
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
+    #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby, product
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
 
+    #inf = 10**17
     mod = 10**9 + 7
 
     n, k = map(int, input().split())
-    adj = [[] for _ in range(n)]
+    adj = [[] for _ in range(n)]  # 頂点数, 場合によって変える
     for _ in range(n - 1):
         a, b = map(int, input().split())
         adj[a - 1].append(b - 1)

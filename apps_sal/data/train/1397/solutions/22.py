@@ -7,7 +7,9 @@ for i in range(t):
     d = defaultdict(list)
     for j, i in enumerate(A):
         d[i].append(j)
+    # print(d)
     keys = sorted(d.keys())
+    # print(keys)
     pk = 0
     ans = 1
     prev = None
@@ -18,4 +20,5 @@ for i in range(t):
             ans += 1
         pos = d[i][pos]
         pk = pos
+        # print(pk)
     print(ans)

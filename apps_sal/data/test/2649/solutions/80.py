@@ -5,7 +5,8 @@ import sys
 import math
 import itertools
 import bisect
-import heapq
+import heapq  # .heapify:Priority Queueに変換
+# .heappop:最小値取得, .heappush:要素挿入
 from copy import copy
 from collections import deque, Counter
 from decimal import Decimal

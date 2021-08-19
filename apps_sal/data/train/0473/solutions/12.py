@@ -1,5 +1,6 @@
 class Solution:
     def countTriplets(self, arr: List[int]) -> int:
+        # S1
         ans, size = 0, len(arr)
         xor = [0] * size
         xor[0] = arr[0]

@@ -16,3 +16,23 @@ class Solution:
                     dp[i] = max(dp[i], average(i, j) + dp[j])
 
         return dp[0]
+
+#         N = len(A)
+#         cache = dict()
+#         def getMaxScore(i,k):
+#             if k <= 0:
+#                 return 0
+#             if (i,k) in cache:
+#                 return cache[(i,k)]
+
+#             maxScore = -float(\"inf\")
+#             for j in range(i,N):
+#                 leftArray = A[i:j+1]
+#                 # print(leftArray)
+#                 score = float(sum(leftArray))/len(leftArray) + getMaxScore(min(j+1,N),k-1)
+#                 maxScore = max(maxScore,score)
+
+#             cache[(i,k)] = maxScore
+#             return maxScore
+
+#         return getMaxScore(0,K)

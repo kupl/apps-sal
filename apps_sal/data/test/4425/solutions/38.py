@@ -14,6 +14,8 @@ for i in range(1, N + 1):
     else:
         prob = decimal.Decimal(1 / N)
 
+    # print(prob)
     ans = decimal.Decimal(ans + prob)
+    # print(ans)
 
 print(ans)

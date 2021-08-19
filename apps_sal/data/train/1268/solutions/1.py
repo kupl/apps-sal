@@ -1,3 +1,4 @@
+# cook your dish here
 from math import gcd
 def abc(n, a, d): return n * (2 * a + (n - 1) * d) // 2
 

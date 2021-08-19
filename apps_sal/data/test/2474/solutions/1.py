@@ -1,8 +1,12 @@
+#import sys
+# sys.setrecursionlimit(10**5)
 MOD = 10**9 + 7
 
+# input
 N = int(input())
 C = list(map(int, input().split()))
 
+# process
 C.sort(reverse=True)
 ans = 0
 
@@ -14,4 +18,5 @@ else:
 
     ans *= 4**(N - 1)
 
+# output
 print((ans % MOD))

@@ -1,4 +1,5 @@
 n = int(input())
+#x, y = map(int, input().split(" "))
 arr = input().split(" ")
 for i in range(n):
     arr[i] = int(arr[i])

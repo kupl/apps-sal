@@ -5,7 +5,13 @@ import functools
 
 import copy
 import math
+# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline # 神奇快读，无法运行调试
 GANS = []
+
+# def print(*args): # 神奇快写，最后得写上os.write
+#     nonlocal GANS
+#     for i in args:
+#         GANS.append(f'{i}'.encode())
 
 
 def cmp(x, y):
@@ -18,6 +24,7 @@ s = input()
 
 ans = []
 
+# s = s[::-1]
 
 cur = []
 ctr = []
@@ -36,6 +43,9 @@ for p, i in enumerate(s[::-1]):
                     f = False
                 if pv[-1] >= i:
                     f = False
+                # elif len(cur)>=3:
+                #     if cur[-3]>=i:
+                #         f = False
         if f and p == pos[-1] + 1:
             cur.pop()
             pos.pop()
@@ -60,3 +70,9 @@ for p, i in enumerate(s[::-1]):
 
 for i in range(len(ans)):
     print(ctr[-i - 1], ans[-i - 1])
+    # print()
+    # print(len(i),end=' ')
+    # if len(i)>10:
+    #     print(i[:5]+'...'+i[-2:])
+    # else:
+    #     print(i)

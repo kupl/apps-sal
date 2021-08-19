@@ -15,10 +15,12 @@ def print(arg, *argv, end=None):
 
 def mapi(): return map(int, input().split())
 def maps(): return map(str, input().split())
+#---------------------------------------------------------------#
 
 
 def solve():
     t = 1
+    #t = int(input())
     for _ in range(t):
         n = int(input())
         ss = []
@@ -49,6 +51,8 @@ def solve():
                     i += 1
                     j += 1
                 length += 1
+
+#---------------------------------------------------------------#
 
 
 def __starting_point():

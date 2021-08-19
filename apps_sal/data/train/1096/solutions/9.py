@@ -1,3 +1,4 @@
+# cook your dish here
 n, v, w = list(map(int, input().strip().split()))
 s = []
 e = []

@@ -5,6 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
+# SOLUTION
+
 
 def main():
     n = read(0)
@@ -21,7 +23,13 @@ def main():
     return n[:last] + n[-1] + n[last + 1:-1] + n[last]
 
 
+# HELPERS
+
+
 def read(mode=2):
+    # 0: String
+    # 1: List of strings
+    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

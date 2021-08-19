@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def main():
     N, K = list(map(int, input().split()))
     mod = 7 + 10 ** 9

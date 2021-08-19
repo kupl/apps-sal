@@ -4,10 +4,12 @@ d = [False] * (n + 4)
 d[0] = True
 res = 1
 for i in range(n):
+    # print(d)
     if d[data[i]]:
         d[data[i]] = False
         d[i + 1] = True
     else:
         d[i + 1] = True
         res += 1
+# print(d)
 print(res)

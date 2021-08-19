@@ -23,6 +23,7 @@ for i in range(n):
             tmp = (tmp + old_array[j]) % MODULO
             new_array[j] = tmp % MODULO
             j -= 1
+    # print(old_array)
 
 tmp = 0
 

@@ -6,3 +6,8 @@ class Solution:
                 if j == '1':
                     cache[ind] += 1
         return sum(cache.values()) + max(cache.keys())
+        # result = 0
+        # max_digit = max(cache.keys())
+        # for i in range(max_digit + 1):
+        #     result += cache[i] + 1
+        # return result - 1

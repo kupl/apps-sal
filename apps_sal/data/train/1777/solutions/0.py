@@ -1,5 +1,5 @@
 '''
-Challenge Fun 
+Challenge Fun #20: Edge Detection
 https://www.codewars.com/kata/58bfa40c43fadb4edb0000b5/train/python
 
 For a rectangular image given in run-length encoding (RLE) as
@@ -61,15 +61,17 @@ def edge_detection(image):
 
 def fill_buffer(width, data):
     buf = []
-    rowcounts = dict()
+    rowcounts = dict()      # row: rowcount
 
     row, row_ndx = [], 0
     while data:
         val, runlen = data.pop(0), data.pop(0)
         if row == [] and runlen > 3 * width:
             buf += [[val] * width] * 3
+            # There's a top, middle, and bottom row; middle has a row count
             rowcounts[row_ndx + 1] = (runlen // width) - 2
             row_ndx += 3
+            # Values from run that didn't fit in the above rows.
             row = [val] * (runlen % width)
             continue
 
@@ -79,14 +81,19 @@ def fill_buffer(width, data):
         if len(row) < width:
             continue
 
+        # Here, row is full, with mixed values, and there may be some
+        # (many!) values left over from the last (val, runlen) pair that
+        # was read from data.
         buf.append(row)
         row_ndx += 1
         row = []
 
         if row == [] and runlen > 3 * width:
             buf += [[val] * width] * 3
+            # There's a top, middle, and bottom row; middle has a row count
             rowcounts[row_ndx + 1] = (runlen // width) - 2
             row_ndx += 3
+            # Values from run that didn't fit in the above rows.
             row = [val] * (runlen % width)
             continue
 
@@ -107,6 +114,7 @@ def pairs_from(iterable, fillvalue=None):
     Yields iterable's elements in pairs. If iterable is exhausted after
     an odd number of elements, completes the last pair with fillvalue.
     '''
+    # This is the 'grouper' recipe from the itertools documentation.
     args = [iter(iterable)] * 2
     return itertools.zip_longest(*args, fillvalue=fillvalue)
 
@@ -117,9 +125,11 @@ def detect_edges(inbuf):
 
     outbuf = [([-1] * width).copy() for _ in range(length)]
 
+    # Single pixel
     if 1 == width == length:
         return [[0]]
 
+    # Single row
     if 1 == length:
         outbuf[0][0] = abs(inbuf[0][0] - inbuf[0][1])
         outbuf[0][width - 1] = abs(inbuf[0][width - 2] - inbuf[0][width - 1])
@@ -129,6 +139,7 @@ def detect_edges(inbuf):
                                  abs(val - inbuf[0][col + 1]))
         return outbuf
 
+    # Single column
     if 1 == width:
         outbuf[0][0] = abs(inbuf[0][0] - inbuf[1][0])
         outbuf[length - 1][0] = abs(inbuf[length - 2][0]
@@ -139,9 +150,13 @@ def detect_edges(inbuf):
                                  abs(val - inbuf[row + 1][0]))
         return outbuf
 
-    BOT = length - 1
-    RT = width - 1
+    # At least a 2 x 2 image. Unroll what we'd rather do in loops and
+    # list comprehensions.
 
+    BOT = length - 1        # convenience; last data row
+    RT = width - 1          # convenience; last data column
+
+    # Corners
     top_lf, top_rt = inbuf[0][0], inbuf[0][RT]
     bot_lf, bot_rt = inbuf[BOT][0], inbuf[BOT][RT]
     outbuf[0][0] = max(abs(top_lf - inbuf[0][1]),
@@ -157,6 +172,7 @@ def detect_edges(inbuf):
                           abs(bot_rt - inbuf[BOT - 1][RT]),
                           abs(bot_rt - inbuf[BOT][RT]))
 
+    # Top and bottom (except corners)
     for col in range(1, RT):
         val = inbuf[0][col]
         outbuf[0][col] = max(abs(val - inbuf[0][col - 1]),
@@ -171,6 +187,7 @@ def detect_edges(inbuf):
                                abs(val - inbuf[BOT][col - 1]),
                                abs(val - inbuf[BOT][col + 1]))
 
+    # Left edge (except corners)
     for row in range(1, BOT):
         val = inbuf[row][0]
         outbuf[row][0] = max(abs(val - inbuf[row - 1][0]),
@@ -185,6 +202,7 @@ def detect_edges(inbuf):
                               abs(val - inbuf[row + 1][RT - 1]),
                               abs(val - inbuf[row + 1][RT]))
 
+    # Finallly! The interior
     for row in range(1, BOT):
         for col in range(1, RT):
             val = inbuf[row][col]
@@ -197,12 +215,15 @@ def detect_edges(inbuf):
                                    abs(val - inbuf[row + 1][col]),
                                    abs(val - inbuf[row + 1][col + 1]),
                                    )
+    # Now wasn't that fun?
     return outbuf
 
 
 def encode(buf, rowcounts):
     width = len(buf[0])
 
+    # Initial list of (value, runlength) pairs. Not necessarily a
+    # run-length encoding, as successive values might be equal.
     val_rl = list()
 
     for row_ndx in range(len(buf)):
@@ -215,6 +236,7 @@ def encode(buf, rowcounts):
                 val_rl.append((val, count))
 
     encoding = list()
+    # Now condense val_rl into a true run-length encoding.
     (old_val, old_rl) = val_rl.pop(0)
     for (val, rl) in val_rl:
         if val == old_val:

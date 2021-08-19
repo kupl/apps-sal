@@ -21,3 +21,18 @@ class Solution:
                 DP[pile_no][M] = suffix_sum[pile_no] - min_next_player
 
         return DP[0][1]
+
+#         # @lru_cache(None)
+#         def dfs(pile_no, M):
+#             if pile_no > N-1:
+#                 return 0
+#             if DP[pile_no][M] > 0:
+#                 return DP[pile_no][M]
+#             min_next_player = suffix_sum[pile_no]
+#             for x in range(1, min(2*M + 1, N+1)):
+#                 min_next_player = min(min_next_player, dfs(pile_no + x, max(x,M)))
+
+#             DP[pile_no][M] = suffix_sum[pile_no] - min_next_player
+#             return DP[pile_no][M]
+
+#         return dfs(0, 1)

@@ -30,6 +30,8 @@ class Solution:
 
             return maxlen
 
+        # return dp_matrix_based()
+
         def dict_based():
             '''
             Less space and simpler
@@ -40,6 +42,7 @@ class Solution:
                 for j in range(i):
                     diff = A[i] - A[j]
                     if diff not in dp:
+                        # save an inner dictionary with the higher index
                         dp[diff] = {i: 2}
                     else:
                         dic = dp[diff]

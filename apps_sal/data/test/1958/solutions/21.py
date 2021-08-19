@@ -9,13 +9,15 @@ def __starting_point():
     cost = {}
     for i in range(n):
         buyer += [input()]
-    a = 1
+    # buyer.reverse()
+    a = 1  # last will always be halfplus
     for i in range(n - 2, -1, -1):
         if buyer[i] == 'half':
             a = 2 * a
         elif buyer[i] == 'halfplus':
             a = 2 * a + 1
 
+    # buyer.reverse()
     cost = 0
     for i in range(n):
         if a % 2 == 0:

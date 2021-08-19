@@ -4,6 +4,7 @@ class Solution:
         self.amount = amount
         self.cache = {}
 
+        # Run
         res = self.getValue(self.amount)
         if res is None:
             return -1
@@ -19,6 +20,7 @@ class Solution:
             return 0
         if amount in self.coins:
             return 1
+        # Recurse
         min_count = None
         for coin in self.coins:
             count = self.getValue(amount - coin)

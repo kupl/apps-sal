@@ -16,6 +16,9 @@ pos_or = [
     {(0, 3), (1, 3), (2, 3), (3, 3), (1, 2)}
 ]
 
+# for i in range(4):
+#     for j in range(4):
+#         print(i, j, [x for x in pos_and[i].intersection(pos_or[j])])
 
 res1 = []
 flag1 = False

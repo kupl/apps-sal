@@ -4,10 +4,13 @@ mod = 10**9 + 7
 
 v = []
 if k == n:
+    # 全掛け算
     v = a
 elif k % 2 and max(a) < 0:
+    # 答えは負
     v = sorted([a[i] for i in range(n) if a[i] < 0], reverse=True)[:k]
 else:
+    # 答えは正
     a = sorted(a, key=lambda x: abs(x), reverse=True)
     pi = ni = -1
     cnt = 0

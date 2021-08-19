@@ -8,8 +8,10 @@ for i in range(1, 99):
     S += 26**i
     Length += 1
     if N <= S:
+        # print(count)
         break
 k = N - S + 26**count
+# print(k)
 x = k - 1
 ans = ""
 for i in range(Length):

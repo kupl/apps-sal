@@ -1,7 +1,10 @@
+# cook your dish here
 n = int(input())
 s = list(map(int, input().split()))
 f = list(map(int, input().split()))
 t = list(map(lambda x, y: (x, y), s, f))
+#ts=sorted(t,key=lambda x:x[0])
+# print(ts)
 end = 0
 tt = []
 k = 0

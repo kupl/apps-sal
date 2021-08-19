@@ -143,6 +143,7 @@ class SegmentTree:
 
 
 def practice2_j():
+    # https://atcoder.jp/contests/practice2/tasks/practice2_j
     N, _, *AQ = list(map(int, open(0).read().split()))
     A, Q = AQ[:N], AQ[N:]
     tree = SegmentTree(A, -1, max)
@@ -158,6 +159,7 @@ def practice2_j():
 
 
 def staticrmq():
+    # https://judge.yosupo.jp/problem/staticrmq
     N, Q, *ALR = list(map(int, open(0).read().split()))
     A, LR = ALR[:N], ALR[N:]
     tree = SegmentTree(A, (10 ** 10) + 1, min)
@@ -166,6 +168,7 @@ def staticrmq():
 
 
 def dsl_2_a():
+    # https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_A
     N, Q, *X = list(map(int, open(0).read().split()))
     tree = SegmentTree([2 ** 31 - 1] * N, 2 ** 31 - 1, min)
     res = []
@@ -178,6 +181,7 @@ def dsl_2_a():
 
 
 def abc125_c():
+    # https://atcoder.jp/contests/abc125/tasks/abc125_c
     from math import gcd
 
     N, *A = list(map(int, open(0).read().split()))
@@ -187,6 +191,9 @@ def abc125_c():
 
 
 def __starting_point():
+    # practice2_j()
+    # staticrmq()
+    # dsl_2_a()
     abc125_c()
 
 

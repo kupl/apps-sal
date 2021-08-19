@@ -1,4 +1,5 @@
 class Solution:
+    # @lru_cache(None)
     def stoneGame(self, piles: List[int]) -> bool:
         result = dict()
 
@@ -21,4 +22,6 @@ class Solution:
             return result[(start, end)]
         Alex(0, len(piles) - 1)
         summ = sum(piles)
+        # print(result[(0, len(piles - 1))])
+        # print(summ)
         return result[(0, len(piles) - 1)] > (summ - result[(0, len(piles) - 1)])

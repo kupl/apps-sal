@@ -1,11 +1,15 @@
 for q in range(int(input())):
 
     data = input()
+    # if data in ["WW", "AA", "SS", "DD"]:
+    #     print(2)
+    #     continue
     mx = [0, 0, 0, 0]
     x = 0
     y = 0
     pos = [[-1], [-1], [-1], [-1]]
     for i in range(len(data)):
+        # print(x,y)
         d = data[i]
         if d == "W":
             y += 1
@@ -40,6 +44,8 @@ for q in range(int(input())):
         if y == mx[2]:
             pos[2].append(i)
 
+    # print(mx)
+    # print(pos)
     wid = mx[3] - mx[1] + 1
     hei = mx[0] - mx[2] + 1
     ans = wid * hei

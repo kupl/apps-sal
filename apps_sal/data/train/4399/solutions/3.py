@@ -1,3 +1,4 @@
+# number the cube faces like a dice 1-6
 def folding(grid, face, list_on_face, remain_list):
     faces = [face]
     dirs = [1, -1, 5, -5]
@@ -38,8 +39,9 @@ def new_grid(face, direction, grid):
 
 
 def fold_cube(number_list):
-    faces = folding(grid=[3, 5, 2, 4],
+    faces = folding(grid=[3, 5, 2, 4],  # in dir [1,-1,5,-5]
                     face=1,
                     list_on_face=number_list[0],
                     remain_list=number_list[1:])
     return sorted(faces) == list(range(1, 7))
+    # return True or False

@@ -18,4 +18,5 @@ for you in range(t):
     while(curr < n - 1):
         curr += maxpref[curr]
         count += 1
+        # print(curr)
     print(count)

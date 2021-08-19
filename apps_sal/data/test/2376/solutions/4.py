@@ -1,3 +1,4 @@
+# Simple Knapsack
 N, W = map(int, input().split())
 d = {i: [] for i in range(0, 4)}
 for i in range(N):

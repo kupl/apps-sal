@@ -25,5 +25,6 @@ class Solution:
             i = j
             while j < len(nums) and nums[j] != 0:
                 j += 1
+            # print(str(i)+'->'+str(j))
             res = max(res, check(nums[i:j]))
         return res

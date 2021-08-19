@@ -12,6 +12,7 @@ L.sort(key=lambda x: x[1])
 ans_d = defaultdict()
 dp = [0] * (N + 1)
 for i, v in enumerate(L):
+    # k = 6 - len(str(v[0]))
     s = ''
     if (dp[v[0]] != 0):
         l_dp = 6 - len(str(dp[v[0]] + 1))

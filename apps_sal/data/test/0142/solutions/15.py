@@ -6,6 +6,7 @@ for i in range(1, n):
     c[i] = min(c[i], 2 * c[i - 1])
 for i in range(n - 2, -1, -1):
     c[i] = min(c[i], c[i + 1])
+#print (c)
 
 
 res = L // 2 ** (n - 1) * c[n - 1]

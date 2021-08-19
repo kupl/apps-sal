@@ -1,7 +1,10 @@
+# input
 n = int(input())
 letter = str(input())
 
+# variables
 
+# main
 if '1' not in letter:
     print(0)
     quit()

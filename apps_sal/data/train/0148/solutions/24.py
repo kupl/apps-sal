@@ -9,6 +9,9 @@ class Solution:
         for i in range(len(arr)):
             difficulty[i] = arr[i][0]
             profit[i] = arr[i][1]
+        # print(difficulty)
+        # print(profit)
+        # print(worker)
         prev = [profit[0]]
         for i in range(1, len(profit)):
             prev.append(max(profit[i], prev[-1]))
@@ -23,6 +26,10 @@ class Solution:
 
             if(difficulty[i] <= worker[j]):
                 i += 1
+            # elif(difficulty[i]==worker[j]):
+            #     # p+=prev[i]
+            #     i+=1
+            #     # j+=1
             else:
                 x = i - 1
                 while(x >= 0 and difficulty[x] > worker[j]):

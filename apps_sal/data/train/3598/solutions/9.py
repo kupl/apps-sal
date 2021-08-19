@@ -1,3 +1,4 @@
+# What do you mean computationally wasteful?
 def plane_seat(a):
     return {
         f'{row}{seat}': f'{end}-{side}'

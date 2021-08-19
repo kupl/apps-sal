@@ -1,12 +1,13 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         '''
+        # Complexity of n^2
         i = 0
         j = 0
 
         maxSize = 0
         while j < len(nums):
-            k = j - 1 
+            k = j - 1 # 1
             while k >= i:
                 if abs(nums[k] - nums[j]) > limit:
                     i = k + 1 
@@ -25,6 +26,15 @@ class Solution:
         minQ = collections.deque([])
         maxQ = collections.deque([])
         maxSize = 0
+
+        # maxS = 3
+        # ep  - 4
+        # sp  - 2
+
+        #  0 1 2 3 4 5
+        # 10 1 2 1 7 2
+        # minQ (3,1)
+        # maxQ (4,7)
 
         while eP < len(nums):
             while minQ and minQ[-1][0] > nums[eP]:

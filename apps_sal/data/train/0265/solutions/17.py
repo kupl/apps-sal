@@ -7,6 +7,6 @@ class Solution:
             running_sum += nums[i]
             if running_sum - target in lookup:
                 count += 1
-                lookup = {}
+                lookup = {}  # reset the map
             lookup[running_sum] = i
         return count

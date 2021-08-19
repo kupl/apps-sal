@@ -36,6 +36,7 @@ for x in A[1:]:
     if cnt == N - 2:
         ans += x
         cnt += 1
+        # 奇数の場合
     else:
         ans += 2 * x
         cnt += 2

@@ -9,12 +9,17 @@ class Solution:
         for i, v in enumerate(A):
             cum_sum += v
             if v > 0:
+                # find any matches and remove them, since will never have a better match
                 while queue and cum_sum - queue[0][1] >= K:
                     e = queue.popleft()
+                    #print('remove candidate from start:', e)
                     result = min(result, i - e[0])
             else:
+                # for negative numbers pop off any greater cum sums, which will never be a better target
                 while queue and cum_sum <= queue[-1][1]:
                     e = queue.pop()
+                    #print('remove lesser from end:', e)
 
             queue.append((i, cum_sum))
+            # print(queue)
         return result if result <= len(A) else -1

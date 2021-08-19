@@ -1,4 +1,5 @@
 def Dragon(n):
+    # your code here
     if(type(n) != type(1)):
         return ''
     if(n < 0):

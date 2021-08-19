@@ -1,5 +1,6 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
+        # union find
         parent = {}
 
         def find(a):
@@ -22,7 +23,7 @@ class Solution:
             y = 2
             factors = []
             while num >= y * y:
-                if num % y == 0:
+                if num % y == 0:  # even so 2 is a factor
                     factors.append(y)
                     while num % y == 0:
                         num = num // y

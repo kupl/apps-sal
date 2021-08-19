@@ -36,17 +36,17 @@ def gen_primes():
     How to populate a list with some range of generated values:
         list(itertools.islice((p for p in gen_primes_opt()), beg_num, end_num)))
     '''
-    yield 2
-    prime_divs = collections.defaultdict(list)
+    yield 2                                     # return the first prime number
+    prime_divs = collections.defaultdict(list)  # map numbers to their prime divisors
     candidate = 3
     while True:
         if candidate in prime_divs:
             for prime_div in prime_divs[candidate]:
                 prime_divs[prime_div * 2 + candidate].append(prime_div)
-            del prime_divs[candidate]
+            del prime_divs[candidate]           # sieve no longer needed for candidate
         else:
-            yield candidate
-            prime_divs[candidate * candidate] = [candidate]
+            yield candidate                     # yield the next prime number
+            prime_divs[candidate * candidate] = [candidate]  # start sieve for sqaure
         candidate += 2
 
 
@@ -105,7 +105,7 @@ class Solution:
             else:
                 primes.append(x)
 
-        factors = collections.defaultdict(list)
+        factors = collections.defaultdict(list)         # compute factors of each 'a'
         for a in A:
             x = a
             for p in primes:
@@ -115,15 +115,15 @@ class Solution:
                     factors[a].append(p)
                     while x % p == 0:
                         x //= p
-            if x > 1:
+            if x > 1:                                   # a new prime found
                 factors[a].append(x)
                 primes.append(x)
 
         primes = list(set(primes))
         n = len(primes)
-        p2i = {p: i for i, p in enumerate(primes)}
+        p2i = {p: i for i, p in enumerate(primes)}       # prime to index
 
-        parent = [i for i in range(n)]
+        parent = [i for i in range(n)]                  # union-find on primes
 
         def find(i):
             if i != parent[i]:
@@ -138,8 +138,8 @@ class Solution:
         for a in A:
             if factors[a]:
                 p0 = factors[a][0]
-                for p in factors[a][1:]:
+                for p in factors[a][1:]:                # link two primes if they are factors of 'a'
                     union(p2i[p0], p2i[p])
 
-        count = collections.Counter(find(p2i[factors[a][0]]) for a in A if factors[a])
+        count = collections.Counter(find(p2i[factors[a][0]]) for a in A if factors[a])      # each 'a' corresponds to a prime index
         return max(count.values())

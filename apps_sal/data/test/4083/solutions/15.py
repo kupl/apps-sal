@@ -11,6 +11,7 @@ for i in arr:
     t.append(0)
     karms.append(t)
 
+# print(*karms)
 
 ans = 1e15
 for i in range(0, arr[-1] + 1):

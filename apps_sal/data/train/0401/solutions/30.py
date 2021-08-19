@@ -18,6 +18,8 @@ class Solution:
                     if nums[i] + nums[j] == mod:
                         return div * 3
                     for k in range(j + 1, n):
+                        #print(i, j, k)
+                        #print(nums[i], nums[j:k])
                         sum_val += nums[i] + sum(nums[j:k])
                         if sum_val == mod:
                             return div * 3

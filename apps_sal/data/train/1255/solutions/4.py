@@ -1,3 +1,4 @@
+# cook your dish here
 alpha = "abcdefghijklmnopqrstuvwxyz"
 for _ in range(int(input())):
     s, k = input().split()

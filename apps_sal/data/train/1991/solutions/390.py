@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        self.mp = {}
+        # print(start, finish, fuel)
+        self.mp = {}  # key: start-finish-fuel; val: numWays
         return self.dfs(locations, start, finish, fuel)
 
     def dfs(self, locations: List[int], start: int, finish: int, fuel: int) -> int:

@@ -1,3 +1,5 @@
+# cook your dish here
+# JUST FIND IT
 def splitting(arr):
     if len(arr) == len(set(arr)):
         return 0
@@ -25,6 +27,7 @@ def splitting(arr):
                     tmp_sum = ev_od[i][2] - ev_od[occur[n]][2] - n
                 else:
                     tmp_sum = 0
+            # print(tmp_sum)
             ans = max(ans, tmp_sum)
         occur[n] = i
     return ans

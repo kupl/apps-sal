@@ -14,4 +14,5 @@ class Solution:
                 for i in range(N):
                     nums[i] //= 2
                 res += 1
+            # print(nums, res)
         return res

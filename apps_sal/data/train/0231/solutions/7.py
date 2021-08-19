@@ -8,6 +8,7 @@ class Solution:
 
         while i < len(nums):
             tmp = nums[i]
+            # exchange to its right idx
             while tmp != i + 1 and tmp > 0 and tmp < len(nums):
                 nums[i] = nums[tmp - 1]
                 nums[tmp - 1] = tmp

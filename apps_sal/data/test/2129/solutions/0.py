@@ -46,4 +46,5 @@ for ti in range(t):
     for ei in range(m):
         u, v = [int(s) for s in next(lines).split()]
         edges.append((u, v))
+    # print(edges)
     print(solve(n, m, edges))

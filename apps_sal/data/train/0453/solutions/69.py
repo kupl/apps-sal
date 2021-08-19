@@ -1,5 +1,7 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+       # f[house i][j neighborhoods][color k] 1<=j<=i
+       # =min(f[house i-1][j neighborhoods][color k],f[house i-1][j-1 neighborhoods][color l!=k]) + cost[i][k] if houses[i] == 0
 
         f = [[-1] * n for i in range(target + 1)]
         if houses[0]:

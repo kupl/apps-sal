@@ -26,6 +26,8 @@ for i in range(N):
 
 dist = floyd_warshall(dist)
 dist[dist == INF] = 0
+# dist=dist.astype(int)
+# print(dist)
 
 Q = int(input())
 ans = [0] * Q

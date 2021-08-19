@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        memo = {0: (0, 0)}
+        memo = {0: (0, 0)}  # (+1,*2)
 
         def helper(num):
             if num not in memo:

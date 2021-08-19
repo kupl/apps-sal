@@ -1,4 +1,5 @@
 def stringy(size):
+    # Good Luck!
     value = True
     result = ''
     for i in range(size):

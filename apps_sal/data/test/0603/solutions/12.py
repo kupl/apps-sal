@@ -9,4 +9,6 @@ m = min(A)
 ans = solve(A, m)
 if m:
     ans = max(ans, solve(A, m - 1))
+    # if m > 1:
+    #  ans = max(ans, solve(A, m-2))
 print(ans)

@@ -7,6 +7,7 @@ def calc(a, b):
         area1 = b // 2 * i
         area2 = -(-b // 2) * i
         area3 = a * b - (area1 + area2)
+        #print(area1, area2, area3)
         ret = min(ret, max(area1, area2, area3) - min(area1, area2, area3))
     return ret
 
@@ -19,5 +20,6 @@ else:
         area1 = min(h, w) * i
         area2 = min(h, w) * ((max(h, w) - i) // 2)
         area3 = min(h, w) * (-(-(max(h, w) - i) // 2))
+        #print(area1, area2, area3)
         ans = min(ans, max(area1, area2, area3) - min(area1, area2, area3))
     print((min(calc(h, w), calc(w, h), ans)))

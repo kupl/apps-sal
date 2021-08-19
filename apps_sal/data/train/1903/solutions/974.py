@@ -34,4 +34,7 @@ class Solution:
                 self.union(uf, point1, point2)
                 cost += edgeCost
 
+            # if len(uf) == len(points):
+            #     break
+
         return cost

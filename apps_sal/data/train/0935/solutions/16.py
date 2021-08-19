@@ -6,4 +6,4 @@ for i in range(int(input())):
         else:
             print(1)
     else:
-        print((-1))
+        print((-1))  # cook your dish here

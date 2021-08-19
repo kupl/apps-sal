@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 a = list(map(int, input().strip().split()))
 b = list(map(int, input().strip().split()))
@@ -30,3 +31,24 @@ if(len(d[e + 1:]) != 0):
     h = c[e] + max(d[e + 1:])
 s2 = max(g, h)
 print(max(max(a), s1, s2))
+
+
+#maxa = a[n-1]
+# for i in range(n-1):
+#   maxa = max(a[i],maxa)
+#  for j in range(i+1,n):
+#     ssumi = a[i] + a[j]
+#    if(j - i == 1):
+#       if(i>=1):
+#          ssumi += max(0,p[n-1]+p[i-1]-p[j])
+#     else:
+#        ssumi += max(0,p[n-1]-p[j])
+# else:
+#   if(i>=1):
+#      ssumi += max(p[j-1]-p[i],p[n-1]- p[j]+ p[i-1])
+# else:
+#    ssumi += max(p[j-1]-p[i],p[n-1]- p[j])
+# print(i,j,ssumi)
+# if(ssum < ssumi):
+#   ssum = ssumi
+# print(max(ssum,maxa),maxa)

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/1/20 20:36
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Ayoub and Lost Array.py
 
 
 def main():

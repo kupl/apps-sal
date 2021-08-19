@@ -1,6 +1,8 @@
+# https://atcoder.jp/contests/abc095/tasks/arc096_b
+# 写真参考
 
 
-from bisect import bisect_left, bisect_right
+from bisect import bisect_left, bisect_right  # , insort_left, insort_right
 from itertools import product, permutations, combinations, accumulate
 from operator import itemgetter
 from collections import defaultdict, Counter, deque
@@ -18,7 +20,7 @@ def read_col(H):
     '''
     H is number of rows
     A列、B列が与えられるようなとき
-    ex1)A,B=read_col(H)    ex2) A,=read_col(H) 
+    ex1)A,B=read_col(H)    ex2) A,=read_col(H) #一列の場合
     '''
     ret = []
     for _ in range(H):
@@ -27,7 +29,8 @@ def read_col(H):
 
 
 MOD = 10**9 + 7
-INF = 2**31
+INF = 2**31  # 2147483648 > 10**9
+# default import
 
 
 N, C = read_ints()
@@ -49,11 +52,12 @@ def ret_candi(X, V):
     V_accum = list(accumulate(V))
     V_accum_r = list(accumulate(reversed(V)))[::-1]
     A, B = [], []
-    katamiti_max = 0
+    katamiti_max = 0  # 必ず折れ曲がるとも限らないので
     for i in range(N):
         katamiti_max = max(katamiti_max, V_accum[i] - X[i])
         A.append(V_accum[i] - 2 * X[i])
         B.append((V_accum_r[i]) - (C - X[i]))
+    # print(A, B)
     return A, B, katamiti_max
 
 

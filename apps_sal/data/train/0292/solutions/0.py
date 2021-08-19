@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/maximum-of-absolute-value-expression/discuss/340075/c%2B%2B-beats-100-(both-time-and-memory)-with-algorithm-and-image
 class Solution:
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
         N = len(arr1)

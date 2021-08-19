@@ -1,3 +1,4 @@
+# cook your dish here
 import math as m
 for i in range(int(input())):
     ND = input().split()

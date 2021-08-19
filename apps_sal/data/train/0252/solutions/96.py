@@ -1,6 +1,6 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        dp = [n + 2 for _ in range(n + 2)]
+        dp = [n + 2 for _ in range(n + 2)]  # minimum number of taps to water i
         dp[0] = 0
         for i, amount in enumerate(ranges):
             left = max(0, i - amount)

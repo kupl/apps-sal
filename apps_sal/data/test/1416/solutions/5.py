@@ -1,3 +1,4 @@
+#n = int(input())
 n, w = [int(c) for c in input().split()]
 a = [int(c) for c in input().split()]
 a.sort()

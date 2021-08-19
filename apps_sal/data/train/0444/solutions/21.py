@@ -6,8 +6,10 @@ class Solution:
         left = n
         uncenrtain = 1
         while left >= 2:
+            # print(f'left={left}, good={uncenrtain}/{left}, uncenrtain={uncenrtain}*({left}-2)/{left}')
             good += uncenrtain / left
             uncenrtain = uncenrtain * (left - 2) / left
             left -= 1
+            # print('good=', good)
 
         return good

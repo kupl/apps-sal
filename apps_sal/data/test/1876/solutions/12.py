@@ -28,6 +28,7 @@ for i in range(1, n + 1):
     b = []
     if visited[i] == False:
         bfs(i)
+    # print(b)
     f = len(b)
     count = (count + pow(f, k, MOD)) % MOD
 

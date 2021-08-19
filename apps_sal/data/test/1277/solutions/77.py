@@ -13,6 +13,7 @@ d_from_u = [float('inf') for _ in range(N)]
 d_from_v = [float('inf') for _ in range(N)]
 d_from_u[u] = 0
 d_from_v[v] = 0
+# print(tonari)
 
 now = [u]
 d = 0
@@ -38,6 +39,8 @@ while now:
                 nextvisit.append(t)
     now = nextvisit
 
+# print(d_from_u)
+# print(d_from_v)
 
 distance = []
 for U, V in zip(d_from_u, d_from_v):
@@ -45,6 +48,7 @@ for U, V in zip(d_from_u, d_from_v):
 
 distance.sort(key=lambda x: x[1])
 
+# print(distance)
 ans = 0
 while distance:
     d = distance.pop()

@@ -1,3 +1,4 @@
+# coding: utf-8
 from heapq import heappop, heappush
 from itertools import permutations
 

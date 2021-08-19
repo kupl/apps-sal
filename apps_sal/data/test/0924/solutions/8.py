@@ -25,4 +25,5 @@ i = min((r0 - r1) // g, (r0 - l1) // g)
 if i >= max(C(l0 - r1, g), C(l0 - l1, g)):
     c[3] = r1 - l1 + 1
 
+# print(c)
 print(max(c))

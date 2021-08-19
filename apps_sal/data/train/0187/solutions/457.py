@@ -5,10 +5,15 @@ class Solution:
             waiting += arr
             on_cart = waiting if waiting < 4 else 4
             waiting -= on_cart
+            # print(\"waiting:\",waiting)
             curr_prof = curr_prof + on_cart * boardingCost - runningCost
             if curr_prof > max_prof:
                 max_prof = curr_prof
                 max_prof_ind = ind + 1
+                # print(max_prof)
+            # else:
+                # print(\"losing money\")
+            # print(curr_prof)
 
             return (waiting, max_prof, max_prof_ind, curr_prof)
 

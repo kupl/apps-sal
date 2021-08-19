@@ -15,7 +15,7 @@ class Solution:
         n = len(matrix[0])
         count = 0
         dest = m * n
-        way = 0
+        way = 0  # 0> 1v 2< 3^
         offset = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         while count < dest:
             res.append(matrix[i][j])

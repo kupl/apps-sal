@@ -20,3 +20,9 @@ for _ in range(int(input())):
         else:
             count = 0
     print(ans)
+
+# 2
+# 13 2
+# 0101110000101
+# 6 3
+# 100001

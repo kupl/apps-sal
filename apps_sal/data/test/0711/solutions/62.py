@@ -1,5 +1,6 @@
 import sys
 sys.setrecursionlimit(10 ** 9)
+# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 def MI(): return list(map(int, input().split()))
@@ -14,6 +15,12 @@ def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
 
 
 INF = float('inf')
+# from math import ceil, floor, log2
+# from collections import deque
+# from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
+# from heapq import heapify, heappop, heappush
+# import numpy as np
+# from numpy import cumsum  # accumulate
 
 
 def prime_factorization(n):
@@ -41,6 +48,7 @@ def mcomb(n, k, mod):
 
     A = mfac(n, n - k + 1, mod)
     B = mfac(k, 1, mod)
+    # B = mpow(B,mod-2,mod)
     B = pow(B, mod - 2, mod)
     return A * B % mod
 

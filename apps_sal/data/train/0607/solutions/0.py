@@ -23,6 +23,7 @@ for _ in range(int(input())):
             if curr_gcd == 1:
                 count += 1
                 i += 1
+                # print(i)
                 break
             i += 1
     print(count)

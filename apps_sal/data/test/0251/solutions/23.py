@@ -15,6 +15,7 @@ for i in range(m - 2, -1, -1):
     a[i] += a[i + 1]
 cnt = 0
 cnt1 = 0
+# print(a)
 for i in range(m - 1, 0, -1):
     if(cnt1 + a[i] > k):
         cnt1 = a[i]

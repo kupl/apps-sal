@@ -4,6 +4,8 @@ class Solution:
         dp[0] = False
         dp[1] = True
         dp[2] = False
+        #dp[3] = True
+        # dp[4] =
 
         squares = [i**2 for i in range(1, floor(sqrt(n)) + 1)]
 
@@ -14,4 +16,5 @@ class Solution:
                 if dp[i - square] == False:
                     dp[i] = True
                     break
+        # print(dp)
         return dp[n]

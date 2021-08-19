@@ -1,3 +1,4 @@
+# https://www.cnblogs.com/grandyang/p/12287146.html
 class Solution:
     def beautifulArray(self, N: int) -> List[int]:
         lst = [1]
@@ -6,4 +7,5 @@ class Solution:
             tmp2 = [2 * i for i in lst]
             tmp1.extend(tmp2)
             lst = [i for i in tmp1 if i <= N]
+            # print (lst)
         return lst

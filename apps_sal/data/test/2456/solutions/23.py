@@ -1,6 +1,7 @@
 import sys
 lines = sys.stdin.readlines()
 T = int(lines[0].strip())
+# (N, K) = map(int, lines[0].strip().split(" "))
 for t in range(T):
     (n, r) = map(int, lines[t + 1].strip().split(" "))
     mini = min(n - 1, r)

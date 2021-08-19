@@ -1,14 +1,21 @@
+# copy for experience
+# E
 N = int(input())
 P_list = list(map(int, input().split()))
 X_list = list(map(int, input().split()))
 
+# graph
 child_list = [[] for _ in range(N + 1)]
 for i in range(2, N + 1):
     child_list[P_list[i - 2]].append(i)
 
+# from root
+# minimize local total weight
 
 color1 = [0] + X_list
 color2 = [0] * (N + 1)
+
+# solve knapsack
 
 
 def solve_knapsack(L, M):

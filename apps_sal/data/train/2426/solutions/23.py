@@ -9,6 +9,8 @@ class Solution:
         for i in range(K, -1, -1):
             max1.add(A[-1] - i)
 
+        # print(min1,max1)
+
         s1 = min1 & max1
         if len(s1) > 0:
             return 0

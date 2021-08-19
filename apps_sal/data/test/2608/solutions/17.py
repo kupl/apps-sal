@@ -3,6 +3,9 @@ input = sys.stdin.readline
 
 testcase = int(input())
 T = [list(map(int, input().split())) for i in range(testcase * 3)]
+# n,m=map(int,input().split())
+# WHITE=list(map(int,input().split()))
+# BLACK=list(map(int,input().split()))
 
 
 def COMMON(WHITE, BLACK):
@@ -35,18 +38,25 @@ for test in range(testcase):
     ANSB = n * m // 2
     ANSW = n * m - ANSB
 
+    # print(ANSB,ANSW,end="!")
+
     WHITE2 = COMMON(WHITE, BLACK)
 
     k = BtoW(WHITE)
     ANSB -= k
     ANSW += k
 
-    if WHITE2[0] > WHITE2[2] or WHITE2[1] > WHITE2[3]:
+    # print(ANSB,ANSW,end="!")
+
+    # print(x5,y5,x6,y6)
+    if WHITE2[0] > WHITE2[2] or WHITE2[1] > WHITE2[3]:  # 共通部なし
         True
     else:
         l = BtoW(WHITE2)
         ANSB += l
         ANSW -= l
+
+    # print(ANSB,ANSW,end="!")
 
     m = WtoB(BLACK)
 

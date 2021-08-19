@@ -38,9 +38,11 @@ class Solution:
         factor_index = collections.defaultdict(int)
         for idx, num in enumerate(A):
             factors = decompose(num)
+            # print(\"factors\", factors)
             unions.size[idx] += 1
             for factor in factors:
                 if factor not in factor_index:
                     factor_index[factor] = idx
                 unions.union(factor_index[factor], idx)
+                # print(\"factor\", factor, \"unions\", unions.parent, unions.size )
         return max(unions.size)

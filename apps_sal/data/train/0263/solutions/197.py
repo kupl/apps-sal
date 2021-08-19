@@ -1,5 +1,7 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
+        # dp(0, digit) = 0
+        # dp(n steps, digit) = sum(dp(n - 1, f) for f in digit's friends)
         if n == 0:
             return 0
 

@@ -1,10 +1,15 @@
 import sys
 
+# this solves only a specific orientation
+# is fine because we consider all orientations
 import itertools
 
 
 def can(h1, w1, h2, w2, h3, w3, c1, c2, c3, tot):
+    #height = h1
     if tot % h1 == 0 and tot // h1 == h1:
+        # side by side or on top of each other are the two options
+        # side by side
         if h1 == h2 == h3:
             print(h1)
             for r in range(h1):

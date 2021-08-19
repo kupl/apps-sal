@@ -4,14 +4,14 @@ def main():
     for i in range(10):
         c = [int(m) for m in input().split(" ")]
         C.append(c)
-    A = [0] * 10
+    A = [0] * 10  # 0 ~ 9, idx = 10 -> -1
     for i in range(H):
         a = [int(m) for m in input().split(" ")]
         for j in range(W):
             if a[j] != -1:
                 A[a[j]] += 1
 
-    MP = [[C[i][1] for i in range(10)]]
+    MP = [[C[i][1] for i in range(10)]]  # MP[0] -> overwrite once, MP[1] -> overwrite twice
     for i in range(9):
         MP.append([min([(C[k][j] + MP[-1][j]) for j in range(10)]) for k in range(10)])
 

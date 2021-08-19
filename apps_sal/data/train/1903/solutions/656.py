@@ -28,8 +28,10 @@ class Solution:
             parent[i] = i
             rank[i] = 0
         ans = 0
+        # print(edges,parent,rank)
         for x, y, w in edges:
             if find(x) != find(y):
+                # print(x,y,w)
                 ans += w
                 union(x, y)
         return ans

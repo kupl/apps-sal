@@ -16,6 +16,8 @@ for qq in range(t):
         r2 = h2 - D
         r2 /= float(2.0)
 
+        # print r1, r2
+
         if r1 > 0.000000000:
             a = r1
         elif r2 > 0.0:

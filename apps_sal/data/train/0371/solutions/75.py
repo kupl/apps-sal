@@ -25,6 +25,7 @@ class Solution:
         targets = set()
         visited = set()
         for node, route in enumerate(routes):
+            # print(\"T: %s node: %s route: %s\" %(T,node,route))
             if T in route:
                 targets.add(node)
             if S in route:
@@ -32,6 +33,7 @@ class Solution:
 
         def bfs(S, T):
             queue = collections.deque()
+            # print(\"target: %s\" %(targets))
             for bus in stopToBusDict[S]:
                 queue.append([bus, 1])
             while len(queue) != 0:

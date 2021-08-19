@@ -11,6 +11,7 @@ for i in range(1 << n):
         l[j] = 1 if i & 1 else 0
         i >>= 1
 
+    # light check
     for j in range(m):
         s = sum([l[k] for k in ks[j][1:]])
         if s % 2 != p[j]:

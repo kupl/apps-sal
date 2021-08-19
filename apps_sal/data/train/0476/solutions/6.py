@@ -8,6 +8,7 @@ class Solution:
 
         maxTime = 0
         res = 0
+        # print(times)
         for t in range(len(times) - 1, -1, -1):
             if times[t][1] >= maxTime:
                 res += 1

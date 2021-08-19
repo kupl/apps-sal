@@ -31,6 +31,7 @@ class Solution:
             BIT.add(r + 1, -1)
         count_index = []
         for i in range(n):
+            # this is O(n log n), can be optimized to O(n) by modifying BIT.data
             count_index.append((BIT.prefix(i), i))
         count_index.sort()
         nums.sort()

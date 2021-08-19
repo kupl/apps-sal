@@ -8,4 +8,5 @@ class Solution:
                 if i - coin >= 0 and memo[i - coin] < minv:
                     minv = memo[i - coin]
             memo[i] = 1 + minv
+        # print(memo)
         return memo[amount] if memo[amount] != float('inf') else -1

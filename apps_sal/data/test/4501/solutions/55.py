@@ -10,7 +10,7 @@ for i in range(n):
     else:
         B.append(A[i])
 n = len(B)
-dp = [[0] * 5010 for i in range(n + 1)]
+dp = [[0] * 5010 for i in range(n + 1)]  # 0と2505を対応
 for i in range(1, n + 1):
     dp[i] = dp[i - 1][0:5010]
     dp[i][2505 + B[i - 1]] += 1

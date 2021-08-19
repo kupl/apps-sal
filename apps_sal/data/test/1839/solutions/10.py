@@ -1,6 +1,9 @@
 import sys
 
 
+#sys.stdin = open("input.txt")
+#sys.stdout = open("output.txt", "w")
+
 n = int(input())
 
 vert = [False for i in range(n)]

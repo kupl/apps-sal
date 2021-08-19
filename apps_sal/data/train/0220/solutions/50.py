@@ -3,6 +3,7 @@ import numpy as np
 
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
+        #satisfiedCustomer = sum(customers) - sum(np.multiply(customers,grumpy))
 
         satisfiedCustomer = 0
         for i in range(len(customers)):

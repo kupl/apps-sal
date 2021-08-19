@@ -77,3 +77,8 @@ class StreamChecker:
         self.d = tuple(new_d)
         self.store[tuple(self.k)] = (self.d, r)
         return r
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -13,3 +13,7 @@ class Cashier:
             total *= self.discount
             self.n = self.temp
         return total
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)

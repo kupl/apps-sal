@@ -5,6 +5,7 @@ now = 0
 maxd = 0
 while True:
     vis[now] = maxd
+    # print(now,maxd)
     if now >= b:
         now -= b
     else:
@@ -13,6 +14,8 @@ while True:
         break
     maxd = max(maxd, now)
 ans = 0
+# for i in range(0,a+b):
+# print(vis[i])
 for i in range(0, a + b):
     if vis[i] != -1:
         ans += max(0, m - vis[i] + 1)

@@ -14,7 +14,7 @@ for i in range(0, N - 1):
 
 weight = L
 for i in range(0, N - 1):
-    if Lbin[i] == '1':
+    if Lbin[i] == '1':  # 2^iの位
         weight -= 2 ** i
         E.append(((i + 1, N), weight))
         M += 1

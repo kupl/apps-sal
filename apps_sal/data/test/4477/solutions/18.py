@@ -20,6 +20,7 @@ def li(): return list(mi())
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 mod = 1000000007
+# mod=998244353
 inf = float("inf")
 vow = ['a', 'e', 'i', 'o', 'u']
 dx, dy = [-1, 1, 0, 0], [0, 0, 1, -1]

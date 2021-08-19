@@ -16,3 +16,8 @@ class StockSpanner:
 
         self.arr.append([price, count])
         return count
+
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

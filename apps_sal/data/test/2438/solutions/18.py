@@ -48,5 +48,6 @@ for i in range(n):
         update(BE[i] + 1, 1)
         ANS += getvalue(BE[i] + 1)
 
+    # print(i,ANS)
 
 print(ANS)

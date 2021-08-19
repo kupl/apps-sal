@@ -100,6 +100,7 @@ def solved():
 
 
 def get_me(prob, mod):
+    # return 100, prob
     return (100 * pow(prob, mod - 2, mod)) % mod
 
 
@@ -115,6 +116,8 @@ def solvee():
 
         curr_me += me
         curr_me %= mod
+
+    # curr_q_me = pow(curr_q_me, mod - 2, mod)
 
     print(curr_me)
 

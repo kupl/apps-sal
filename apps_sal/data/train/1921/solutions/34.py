@@ -47,7 +47,18 @@ class DinnerPlates:
         if(curlen == 0):
             return -1
 
+        # if(curlen==1):
+        #    self.heapnonempty.remove(0-index)
+        #    heapify(self.heapnonempty)
+
         if(curlen - 1 < self.capacity and curlen == self.capacity and index != len(self.stacks) - 1):
             heappush(self.heapnonfull, index)
 
         return self.stacks[index].pop()
+
+
+# Your DinnerPlates object will be instantiated and called as such:
+# obj = DinnerPlates(capacity)
+# obj.push(val)
+# param_2 = obj.pop()
+# param_3 = obj.popAtStack(index)

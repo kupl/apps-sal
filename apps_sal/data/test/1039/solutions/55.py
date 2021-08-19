@@ -8,7 +8,7 @@ xylist = [list(map(int, input().split())) for _ in range(Q)]
 inf = float("inf")
 
 
-def dijkstra(graph, start):
+def dijkstra(graph, start):  # graphは隣接リスト(繋がっている先, コスト)
     vsize = len(graph)
     dist = [inf] * vsize
     seen = [False] * vsize
@@ -17,7 +17,7 @@ def dijkstra(graph, start):
     heapify(pq)
 
     dist[start] = 0
-    heappush(pq, (0, start))
+    heappush(pq, (0, start))  # heapではtuple[0]で比較されるのでこの順番で追加する
     while pq:
         cost, u = heappop(pq)
         seen[u] = True

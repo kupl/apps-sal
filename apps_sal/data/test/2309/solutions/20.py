@@ -31,6 +31,9 @@ if p_a != 0:
     ost.append((p_a, p_b, p_c))
 
 
+# print(r)
+# print(ost)
+
 i = 0
 p_a, p_c = 0, ''
 for a, b, c in ost:
@@ -42,6 +45,7 @@ for a, b, c in ost:
         continue
     p_a, p_b, p_c = a, b, c
 
+# print(r)
 r_final = r[:i]
 
 for j in range(i, len(r), 2):

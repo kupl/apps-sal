@@ -2,9 +2,12 @@ n = int(input())
 wall = list(map(int, input().split()))
 
 
+# try from left
+# try from right
 if n == 1:
     print("YES")
 else:
+    # update all to parity
     in1 = []
     for i in range(n):
         wall[i] = wall[i] % 2
@@ -14,6 +17,7 @@ else:
     if len(in1) == 0 or len(in1) == n:
         print("YES")
 
+    # fix differences in parity
     else:
         if len(in1) == 1:
             if (n - 1) % 2 == 0 and in1[0] % 2 == 0 and (n - in1[0] - 1) % 2 == 0:

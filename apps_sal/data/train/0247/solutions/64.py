@@ -15,7 +15,9 @@ class Solution:
                     smallest[i] = len(q)
                 else:
                     smallest[i] = min(len(q), smallest[i - 1])
+                    # if q[0] > 0:
                     result = min(result, smallest[q[0] - 1] + len(q))
             else:
+                # if i > 0:
                 smallest[i] = smallest[i - 1]
         return -1 if result == math.inf else result

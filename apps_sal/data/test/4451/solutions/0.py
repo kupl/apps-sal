@@ -12,6 +12,7 @@ DP = [0] * (n + 1)
 for i in range(3, n - 2):
     DP[i] = max(DP[i - 1], DP[i - 3] + B[i][0] - B[i - 1][0])
 
+# print(DP)
 
 MAX = max(DP)
 

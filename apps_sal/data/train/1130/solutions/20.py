@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 for _ in range(int(input())):
     N, D = list(map(int, input().split(' ')))

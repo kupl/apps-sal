@@ -1,5 +1,6 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
+        # O(n) T | O(n) S
         count = collections.Counter(A)
         to_move = []
         num_moves = 0

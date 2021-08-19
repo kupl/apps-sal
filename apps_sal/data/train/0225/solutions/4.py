@@ -7,7 +7,7 @@ class Solution:
         for i, d in enumerate(dominoes):
             if d == 'R':
                 force = max_force
-            elif d == 'L':
+            elif d == 'L':  # have to use elif here, not if
                 force = 0
             else:
                 force = max(0, force - 1)
@@ -35,3 +35,6 @@ class Solution:
             else:
                 result += 'L'
         return result
+
+# TC: O(N)
+# SC: O(N)

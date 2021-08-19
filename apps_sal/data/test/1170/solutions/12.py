@@ -9,6 +9,8 @@ for x in range(n):
             if x % d == 0:
                 s = x // d
                 n = (s + d) // 2
+               # if int(n) != n:
+                #  continue
                 nm = s - n
                 if nm == 0:
                     continue

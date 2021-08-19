@@ -11,7 +11,7 @@ class Solution:
                 prefix[i + 1] = 1
             elif tmp + arr[i] < target:
                 tmp += arr[i]
-            else:
+            else:  # tmp + arr[i] > target
                 tmp += arr[i]
                 while tmp > target and start < i:
                     tmp -= arr[start]
@@ -28,7 +28,7 @@ class Solution:
                 suffix[i] = 1
             elif tmp + arr[i] < target:
                 tmp += arr[i]
-            else:
+            else:  # tmp + arr[i] > target
                 tmp += arr[i]
                 while tmp > target and start > i:
                     tmp -= arr[start]
@@ -37,6 +37,9 @@ class Solution:
                     suffix[i] = start - i + 1
 
             suffix[i] = min(suffix[i], suffix[i + 1])
+
+#         print(prefix)
+#         print(suffix)
 
         min_val = float('INF')
         for i in range(n):

@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     s = input()
     count = 0
@@ -11,5 +12,6 @@ for _ in range(int(input())):
         if i != 0 and j != len(s) and s[i - 1] == s[j]:
             count += 1
         count += l * (l - 1) // 2
+        # print(s[i:j],count)
         i = j
     print(count)

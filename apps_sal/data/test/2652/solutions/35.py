@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
 import sys
 
 sys.setrecursionlimit(10**9)
 
 N = int(input())
+# XY_L = [[int(_) for _ in input().split()] for __ in range(N)]
 X_L = [None] * N
 Y_L = [None] * N
 for i in range(N):
@@ -58,6 +60,37 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+# class UnionFind():
+#     def __init__(self, n):
+#         self.rank = [1] * n
+#         self.par = [int(_) for _ in range(n)]
+
+#     def find(self, x):
+#         if self.par[x] == x:
+#             return x
+#         else:
+#             self.par[x] == self.find(self.par[x])
+#             return self.par[x]
+
+#     def unite(self, x, y):
+#         p_x = self.find(x)
+#         p_y = self.find(y)
+#         if p_x == p_y:
+#             return False
+#         if self.rank[p_x] < self.rank[p_y]:
+#             self.par[p_x] = p_y
+#         else:
+#             self.par[p_y] = p_x
+#             if self.rank[p_x] == self.rank[p_y]:
+#                 self.rank[p_x] += 1
+#         return True
+
+#     def same(self, x, y):
+#         if self.find(x) == self.find(y):
+#             return True
+#         else:
+#             return False
+
 
 X_L.sort()
 Y_L.sort()
@@ -79,6 +112,8 @@ for _ in range(2 * N - 2):
         continue
     UF.unite(_i, _j)
     ans += _d
+    # if _ % 1000 == 0:
+    #     print(_,ans)
 
 
 print(ans)

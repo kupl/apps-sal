@@ -1,3 +1,4 @@
+# coding: utf-8
 def union(s, n):
     i = 0
     while i < n:

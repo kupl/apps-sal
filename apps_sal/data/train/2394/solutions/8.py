@@ -1,3 +1,5 @@
+# Created by: WeirdBugsButOkay
+# 28-06-2020, 20:12:37
 
 import math
 
@@ -5,6 +7,7 @@ import math
 def solve():
     n = int(input())
     s = input()
+    #n = len(s)
     bal = 0
     ans = 0
     for i in range(0, n):

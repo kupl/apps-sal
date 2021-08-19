@@ -1,8 +1,8 @@
 import sys
 from typing import List
 
-slist = input().split(',')
-stack = [1 << 30]
+slist = input().split(',')  # type: List[str]
+stack = [1 << 30]  # type: List[int]
 res = [[]]
 
 for s in slist:

@@ -7,6 +7,9 @@ for _ in range(n - 1):
     tree[k].append(l)
     tree[l].append(k)
 
+# for i in range(99999):
+#    tree[i+1].append(i+2)
+#    tree[i+2].append(i+1)
 
 visited = set()
 s = 0

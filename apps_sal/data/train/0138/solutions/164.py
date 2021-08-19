@@ -1,6 +1,11 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
 
+        # [1,2,3,-1,-2,3,0,-3,-4,1,2]
+        # [*,*,*,*,*,*,-,*,*,*,*]
+        # [-1,1,1,2,3]
+        # [-,*,*,*,*]
+
         cp = 1
         fp = -1
         fn = None

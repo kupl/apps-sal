@@ -1,3 +1,4 @@
+# reference sol:-31772413
 def r(): return list(map(int, input().split()))
 
 

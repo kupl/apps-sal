@@ -7,3 +7,7 @@ def not_so_random(b, w):
         return 'Black'
     else:
         return 'White'
+
+  # b & w => black
+  # b & b => white
+  # w & w => white

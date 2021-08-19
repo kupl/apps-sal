@@ -26,6 +26,7 @@ for s in range(1, len(STC) + 1):
                 aq[i] = max(aq[i], c[i])
         tot = sum(aq)
         if N >= tot:
+            # print(aq,cb)
             ans += sgn * ch(N - tot + 3, 3)
     sgn *= -1
 print(ans)

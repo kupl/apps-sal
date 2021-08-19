@@ -10,7 +10,7 @@ class Solution:
         while start < n:
             type1, type2, type2_pos = -1, -1, -1
             i = start
-            while i < n:
+            while i < n:  # i represents the end pos
                 if type1 == -1:
                     type1 = tree[i]
 

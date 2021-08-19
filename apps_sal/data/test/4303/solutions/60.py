@@ -1,5 +1,7 @@
+# n=int(input())
 n, k = list(map(int, input().split()))
 xl = list(map(int, input().split()))
+#l=[list(input()) for i in range(h)]
 
 if 0 in xl:
     k -= 1
@@ -15,6 +17,8 @@ else:
     startpoint = max(0, zeropoint - k)
     cur = startpoint
     while cur + k <= endpoint and cur <= zeropoint:
+        # print(cur)
+        # もし折り返すなら
         if cur < zeropoint < cur + k:
             tempdis = abs(xl[cur] - xl[cur + k])
             tempdis += min(abs(xl[cur]), xl[cur + k])

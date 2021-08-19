@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 n = int(input())
 c1 = list(map(int, input().split()))[1:]

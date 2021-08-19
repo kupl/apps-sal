@@ -10,6 +10,7 @@ for i, a in enumerate(A):
 B = list(d.items())
 B.sort()
 
+# print(B)
 
 ans = [0] * n
 while True:

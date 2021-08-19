@@ -12,8 +12,10 @@ for i in range(n):
             continue
         if(a[i] == a[j][::-1]):
             t = a[i] + t + a[j]
+            # print(t)
             x[i] = 1
             x[j] = 1
+# print(t)
 for i in range(n):
     if(x[i] == 1):
         continue

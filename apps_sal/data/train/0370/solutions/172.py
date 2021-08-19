@@ -24,10 +24,14 @@ class Solution:
         primes = defaultdict(list)
         for i in range(len(A)):
             prime = self.primeFactors(A[i])
+            # print(A[i])
+            # print(prime)
             for pr in prime:
                 primes[pr].append(i)
+        # print(primes)
         for k, v in list(primes.items()):
             for i in range(len(v) - 1):
                 fu.union(v[i], v[i + 1])
         c = Counter([fu.find(i) for i in range(len(A))])
+        # print(c)
         return max(c.values())

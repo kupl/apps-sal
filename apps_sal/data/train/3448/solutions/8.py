@@ -8,3 +8,4 @@ def f(n):
 
     except:
         None
+    # pass

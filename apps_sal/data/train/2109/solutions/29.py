@@ -1,3 +1,4 @@
+# seishin.py
 from math import sqrt
 Q = int(input())
 for i in range(Q):

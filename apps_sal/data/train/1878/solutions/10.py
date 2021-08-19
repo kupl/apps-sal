@@ -19,6 +19,9 @@ class Solution:
 
         count = 1
 
+        # print(right_min)
+        # print(left_max)
+
         for i in range(0, len(arr) - 1):
             if left_max[i] <= right_min[len(arr) - i - 2]:
                 count += 1

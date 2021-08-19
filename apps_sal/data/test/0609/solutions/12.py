@@ -22,6 +22,7 @@ for i in range(n):
                     d = 0
             elif s != c * j + b + c * (n - 2 * j - 2) + b + c * j:
                 d = 0
+                #print(i,j,s, c*j + b + c*(n-2*j-2) + b + c*j)
 if d == 1:
     print('YES')
 else:

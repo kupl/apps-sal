@@ -39,4 +39,5 @@ class Solution:
             for k in primeFactor(A[i]):
                 dic.setdefault(k, i)
                 union(i, dic[k])
+        # print(rank)
         return max(Counter([find(i) for i in range(len(A))]).values())

@@ -3,6 +3,7 @@ m = 998244353
 n = int(input())
 
 
+#a = list(map(int,input().split()))
 a = list(input().split())
 digits = defaultdict(int)
 

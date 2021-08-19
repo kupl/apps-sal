@@ -13,6 +13,11 @@ import time
 import copy
 import bisect
 from operator import itemgetter
+#from heapq import heappush, heappop
+#import numpy as np
+#from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
+#from scipy.sparse import csr_matrix
+#from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
 sys.setrecursionlimit(10**7)
 inf = 10**20
 mod = 10**9 + 7
@@ -24,7 +29,7 @@ def ni(): return int(ns())
 def nf(): return float(ns())
 def na(): return list(map(int, stdin.readline().split()))
 def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
 
 
 N, M = na()

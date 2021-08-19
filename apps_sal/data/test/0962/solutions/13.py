@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 from collections import deque
 import sys
@@ -15,6 +16,7 @@ def main():
 
     Ans = [1] * (N + 1)
 
+    # 全ての頂点から, 閉路が存在しないかを確認する
     for s in range(N):
         prev = [-1] * N
         dist = [-1] * N
@@ -27,9 +29,11 @@ def main():
                     dist[nv] = dist[v] + 1
                     prev[nv] = v
                     dq.append(nv)
+                # 次が 0番目(開始地点) なら閉路あり
                 if dist[nv] == 0 and prev[nv] == -1:
                     prev[nv] = v
 
+        # 開始地点の前 が -1でない => 閉路あり
         if prev[s] != -1:
             v = prev[s]
             ans = set()

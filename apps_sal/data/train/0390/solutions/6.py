@@ -1,5 +1,7 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
+        # dpi = true if exists dpj for j = 1 -> square i that dpj = false
+        # else dpi = false
 
         wins = [False] * (n + 1)
         for i in range(1, n + 1):

@@ -5,12 +5,12 @@ class Solution:
 
         mem_factorial = {}
 
-        def factorial(v):
+        def factorial(v):   # e.g., given v = 3, compute 3! = 3*2*1
             if v not in mem_factorial:
                 mem_factorial[v] = v * factorial(v - 1) if v != 0 else 1
             return mem_factorial[v]
 
-        def permutation(arr):
+        def permutation(arr):  # e.g., given arr=[1,1,2,3],compute the number of all distinct permutations, such as `1123`, `1132`..
             prod = 1
             for v in arr:
                 prod *= factorial(v)

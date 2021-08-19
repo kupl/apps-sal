@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/largest-odd-divisor-game-to-check-which-player-wins/
 from sys import stdin, stdout
 
 

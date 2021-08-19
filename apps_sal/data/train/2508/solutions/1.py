@@ -1,7 +1,7 @@
 
 class Solution:
     def heightChecker(self, heights: List[int]) -> int:
-        count = 0
+        count = 0  # Counter
         b = sorted(heights)
         for x in range(len(heights)):
             if heights[x] != b[x]:

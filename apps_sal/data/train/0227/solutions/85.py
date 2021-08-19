@@ -9,9 +9,11 @@ class Solution:
             if A[end] == 1:
                 hash_count[A[end]] += 1
             max_count = max(max_count, hash_count[1])
+            # print(f\" {max_count + K}  comp  {end - start + 1}\")
             if max_count + K < (end - start + 1):
                 if A[start] == 1 and hash_count.get(1):
                     hash_count[1] -= 1
                 start += 1
             max_result = max(max_result, end - start + 1)
+            # print(max_result)
         return max_result

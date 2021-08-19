@@ -20,12 +20,16 @@ class Solution:
             return 1
 
         prob = 0
+        # option1
         prob += 0.25 * self.helper(A - 100, B)
 
+        # option2
         prob += 0.25 * self.helper(A - 75, B - 25)
 
+        # option3
         prob += 0.25 * self.helper(A - 50, B - 50)
 
+        # option4
         prob += 0.25 * self.helper(A - 25, B - 75)
 
         self.memory[(A, B)] = prob

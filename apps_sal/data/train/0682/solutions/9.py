@@ -16,14 +16,21 @@ for i in range(n - 1, -1, -1):
             end = i
             break
     ans[i] = coins[i]
+# print('start, end',start,end)
 mid = start + (end - start) // 2
 s = start
 e = end
 while s <= end:
+    # print(s,e,'s,e')
+    # print('ans->',ans)
+    # print(ans[s],coins[e])
     ans[s] = coins[e]
+    # print(ans[s],coins[e])
     s += 1
     e -= 1
+    # print()
 
+# print(ans)
 start += 1
 end += 1
 for i in range(n):

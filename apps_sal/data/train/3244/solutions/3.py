@@ -8,3 +8,5 @@ def cheapest_quote(papers):
         papers %= price
 
     return round(cost, 2)
+
+    # 7kyu kata number one thousand

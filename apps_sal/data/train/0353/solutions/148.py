@@ -8,10 +8,13 @@ class Solution:
         res = 0
         j = n - 1
         for i in range(j + 1):
+            # 固定起始i找最右端点
             while i <= j and nums[i] + nums[j] > target:
                 j -= 1
             if i > j:
                 continue
+            # 此时i--j之间子序列都可以，
+            # 只要最小值为第i项
             '''
             In subarray nums[i~j]:
             min = nums[i], max = nums[j]

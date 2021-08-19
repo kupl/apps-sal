@@ -5,9 +5,11 @@ class Solution:
         return max(self.recurse('', set(), 0, True), self.recurse('', set(), 0, False))
 
     def recurse(self, prefix: str, letters: set, index: int, include: bool):
+        # Base case
         if index >= len(self.array):
             return len(prefix)
 
+        # Recursive case
         if include and len(self.array[index]) == len(set(self.array[index])):
             if any(letter in letters for letter in self.array[index]):
                 return len(prefix)

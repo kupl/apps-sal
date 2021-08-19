@@ -82,6 +82,7 @@ class Union_Find():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
+# ================================================
 N, M = map(int, input().split())
 P = list(map(lambda x: int(x) - 1, input().split()))
 

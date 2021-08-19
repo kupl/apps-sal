@@ -1,3 +1,11 @@
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, Q, S, LRi):
     cumulative_sum = [0, 0]
     for i in range(1, N):
@@ -15,6 +23,14 @@ def __starting_point():
     S = input()
     LRi = [[int(i) for i in input().split()] for _ in range(Q)]
     solve(N, Q, S, LRi)
+
+    # # test
+    # from random import randint
+    # from func import random_str
+    # N, Q = 10 ** 5, 10 ** 5
+    # S = random_str(N, 'ACGT')
+    # LRi = [sorted([randint(1, N) for _ in range(2)]) for _ in range(Q)]
+    # solve(N, Q, S, LRi)
 
 
 __starting_point()

@@ -17,6 +17,9 @@ class Solution:
                 while minq[0][1] < left:
                     heapq.heappop(minq)
 
+            # print(maxq)
+            # print(minq)
+
             res = max(res, i - left + 1)
 
         return res

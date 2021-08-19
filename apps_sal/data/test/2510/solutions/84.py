@@ -36,4 +36,5 @@ for i in range(M):
 for i in range(N):
     par[i] *= -1
 
+# print(par)
 print(max(par))

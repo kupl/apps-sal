@@ -9,6 +9,7 @@ def main():
     route = []
     istuka = [0] * (n + 1)
     next = 1
+    # 同じ街に訪れるまでループ
     for _ in range(k):
         if istuka[next] == 1:
             break

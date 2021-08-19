@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 (n, ), *q = [[*map(int, i.split())] for i in open(0)]
 ans = [0] * n
 for i, p in enumerate(q):

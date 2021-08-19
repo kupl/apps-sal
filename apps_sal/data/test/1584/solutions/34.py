@@ -34,15 +34,20 @@ N = int(input())
 L = list(map(int, input().split()))
 
 L.sort()
+# print(L)
 count = 0
 for i in range(N):
     for j in range(i + 1, N):
+        # i = N - i - 1
+        # j = N - j - 1
         a = L[i]
         b = L[j]
         k = bisect.bisect_left(L, a + b, lo=j) - 1
 
         if k < N:
             c = L[k]
+            # print(a, b, c, a+b)
+            # print(i, j, k)
             count += max(k - j, 0)
 
 

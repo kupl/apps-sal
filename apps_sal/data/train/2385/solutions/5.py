@@ -24,7 +24,7 @@ def findCycle(source, getNbr):
 def markTime(cycle, getNbr):
     cycleLen = len(cycle)
     q = deque(cycle)
-    dist = {x: cycleLen - 1 - i for i, x in enumerate(cycle)}
+    dist = {x: cycleLen - 1 - i for i, x in enumerate(cycle)}  # distance to reach cycle[-1]
     while q:
         node = q.popleft()
         d = dist[node]
@@ -65,8 +65,11 @@ def solve(R, C, grid, directions):
     seen = set()
     for i in range(R * C):
         if i not in seen:
+            # BFS until found cycle
             cycle = findCycle(i, getNbr)
             uniqueTimes = len(cycle)
+            # Find all nodes going to cycle
+            # Each starting node going into cycle will have a collision timestamp mod cycle len
             dist = markTime(cycle, getNbrT)
             uniqueBlackTimes = set()
             for j, t in list(dist.items()):

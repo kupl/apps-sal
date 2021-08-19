@@ -11,3 +11,6 @@ t = [k + 1 for k in r if all(d(i, j, k) <= 0 for i in r for j in r)] if n < 12 e
 
 for q in [len(t)] + t:
     print(q)
+
+
+# Made By Mostafa_Khaled

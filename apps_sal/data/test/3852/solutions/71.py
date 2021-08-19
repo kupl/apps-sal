@@ -1,3 +1,4 @@
+# ARC086_B Non Decreasing
 def nonDecreasing(N, A):
     Amin = min(A)
     Amax = max(A)
@@ -6,6 +7,8 @@ def nonDecreasing(N, A):
 
     res = []
 
+    # 右をどんどん増やしていく
+    # Amaxは正の数のはず
     if abs(Amax) > abs(Amin):
         for i in range(1, N):
             while A[i - 1] > A[i]:
@@ -15,6 +18,8 @@ def nonDecreasing(N, A):
                     Amax = A[i]
                     Amax_index = i + 1
 
+    # 左をどんどん減らしていく
+    # Aminは負の数のはず
     else:
         for i in range(N - 1, 0, -1):
             while A[i - 1] > A[i]:

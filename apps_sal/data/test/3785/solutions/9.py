@@ -23,8 +23,8 @@ while not q.empty():
             continue
         if lvl[nx][ny]:
             continue
-        if a[nx][ny] == '
-        continue
+        if a[nx][ny] == '#':
+            continue
         lvl[nx][ny] = lvl[x][y] + 1
         q.put((nx, ny))
         ans.append((-lvl[nx][ny], nx, ny))

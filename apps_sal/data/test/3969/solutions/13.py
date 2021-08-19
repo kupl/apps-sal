@@ -1,3 +1,5 @@
+# Basta encontrar la medida del mayor subarray que es no-decreciente.
+# Con cada inserción podemos aumentar este número en 1.
 
 n = int(input().split()[0])
 a = []

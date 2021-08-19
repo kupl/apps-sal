@@ -1,3 +1,6 @@
+# Date [ 2020-08-15 21:54:45 ]
+# Problem [ e.py ]
+# Author Koki_tkg
 
 from numba import njit, i8
 import numpy as np
@@ -8,6 +11,7 @@ from itertools import combinations, product
 import bisect
 from collections import Counter, deque, defaultdict
 
+# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 6 + 7
 INF = 10 ** 9
 PI = 3.14159265358979323846

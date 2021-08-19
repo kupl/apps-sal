@@ -50,6 +50,7 @@ for i in range(len(A) - 1, -1, -1):
 loc_list.appendleft(alpha_list)
 loc_list_last.appendleft(alpha_list_last)
 ans = deque([])
+# print(loc_list)
 for i in range(26):
     if loc_list[0][i] == -1:
         x = i
@@ -60,11 +61,13 @@ if len(loc_list) > 1:
     mozi = x
     for n in range(1, len(loc_list)):
         loc = loc_list[n][mozi]
+        #print(loc, mozi)
         for i in range(26):
             if loc_list_last[n][i] <= loc:
                 ans.append(i)
                 mozi = i
                 break
+# print(loc_list)
 
 ans2 = []
 

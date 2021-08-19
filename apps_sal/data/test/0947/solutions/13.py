@@ -11,5 +11,9 @@ def spf(n):
 
 for i in range(T):
     n = int(input())
+    #n,m = map(int, input().split())
+    #a,b = map(int, input().split())
+    #a = list(map(int,input().split()))
+    #a = list(input())
     s = spf(n)
     print(n // s, (s - 1) * n // s)

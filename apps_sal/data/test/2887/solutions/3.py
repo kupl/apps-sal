@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 s = list(map(int, input().split()))
 e = list(map(int, input().split()))

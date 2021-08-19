@@ -1,6 +1,7 @@
 class Trie:
     def __init__(self):
         self.children = defaultdict(bool)
+        # self.children = {}
 
     def insert(self, word):
         if word == '':
@@ -26,6 +27,10 @@ class StreamChecker:
         newPointers = []
         retFlag = False
         self.pointers.append(self.root)
+        # if letter in self.root.children:
+        #     newPointers.append(self.root.children[letter])
+        #     if '@' in self.root.children[letter].children:
+        #         retFlag = True
         for p in self.pointers:
             newP = p.children[letter]
             if newP:

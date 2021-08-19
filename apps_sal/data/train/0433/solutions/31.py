@@ -5,6 +5,7 @@ class Solution:
 
         min_sum = k * threshold
 
+        # first sum!
         running_sum = sum(arr[0:k])
 
         if running_sum >= min_sum:

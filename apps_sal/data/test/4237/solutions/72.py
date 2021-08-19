@@ -23,6 +23,7 @@ def LSS(): return input().split()
 def resolve():
     A, B, C, D = LI()
 
+    # X以下の自然数でCでもDでも割り切れないものの個数
     def f(X):
         ret = X - X // C - X // D + X // (C * D // math.gcd(C, D))
         return ret

@@ -1,4 +1,5 @@
 
+# -*-coding: utf-8 -*-
 
 import sys
 
@@ -13,6 +14,7 @@ def main():
 
     for t, d in S:
         if t in st:
+            # 累積報酬和のリスト
             y_0.append(y_0[-1] + d)
         else:
             st.add(t)

@@ -33,4 +33,5 @@ rights_sums = rights_sums[::-1]
 ans = -float('inf')
 for i in range(len(lefts_sums)):
     ans = max(ans, lefts_sums[i] + rights_sums[i])
+# print(lefts_sums, rights_sums)
 print(ans)

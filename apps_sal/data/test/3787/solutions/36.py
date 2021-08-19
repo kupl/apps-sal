@@ -1,3 +1,6 @@
+#########################
+#
+# ######
 
 N, A, B = [int(_) for _ in input().split()]
 if N < A + B - 1 or A * B < N:

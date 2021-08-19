@@ -2,7 +2,8 @@ def main():
     mode = "filee"
     if mode == "file":
         p = open("test.txt", "r")
-
+    # f.readline()
+    # input()
     def get(): return [int(x) for x in (p.readline() if mode == "file" else input()).split()]
     [a, b, c, d, e, f] = get()
     g = [[a, b, "A"], [c, d, "B"], [e, f, "C"]]

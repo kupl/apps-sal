@@ -44,5 +44,7 @@ for i in range(0, k):
             print(i + 1)
             kk += 1
             break
+     # for i in range(0,n):
+     #   print(l[i])
 if kk == 0:
     print(0)

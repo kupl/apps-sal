@@ -29,6 +29,7 @@ for i in range(n):
     for j in range(m):
         if i + j == limit:
             b[i][j] = 0
+# print(b)
 
 t2[n - 1][m - 1] = {b[n - 1][m - 1]: 1}
 for i in range(m - 2, -1, -1):
@@ -52,6 +53,8 @@ for i in range(n - 2, -1, -1):
 
 res = 0
 
+# print(t)
+# print(t2)
 
 for i in range(n):
     for j in range(m):
@@ -61,5 +64,12 @@ for i in range(n):
         for k2 in list(t2[i][j].keys()):
             if (k2 ^ k) in tk:
                 res += t2[i][j][k2] * t[i][j][k2 ^ k]
+#				print(k2, t2[i][j][k2], t[i][j][k2^k])
 
 print(res)
+
+# print(t)
+# try:
+#	print(t[n-1][m-1][k])
+# except KeyError:
+#	print(0)

@@ -23,9 +23,9 @@ def bfs():
         for i in range(4):
             nx = p[0] + dx[i]
             ny = p[1] + dy[i]
-            if 0 <= nx < H and 0 <= ny < W and maze[nx][ny] != "
-            que.append((nx, ny))
-            d[nx][ny] = d[p[0]][p[1]] + 1
+            if 0 <= nx < H and 0 <= ny < W and maze[nx][ny] != "#" and d[nx][ny] == float("inf"):
+                que.append((nx, ny))
+                d[nx][ny] = d[p[0]][p[1]] + 1
 
     return d[gx][gy]
 

@@ -1,6 +1,14 @@
+# -*- coding: utf-8 -*-
 import bisect
+# import heapq
+# import math
+# import random
 import sys
 from collections import Counter
+# from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
+# from functools import lru_cache, reduce
+# from itertools import combinations, combinations_with_replacement, product, permutations
+# from operator import add, mul, sub
 
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
@@ -90,6 +98,14 @@ def main():
     A = read_int_n()
     B = read_int_n()
     print(slv(N, M, K, A, B))
+
+    # N = 40000
+    # M = 40000
+    # K = random.randint(1, N*M)
+    # K =10
+    # A = random.choices([0, 1], k=N)
+    # B = random.choices([0, 1], k=M)
+    # print(slv(N, M, K, A, B))
 
 
 def __starting_point():

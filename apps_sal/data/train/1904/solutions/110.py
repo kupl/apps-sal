@@ -14,3 +14,8 @@ class Solution:
         res = [points[tmp[i]] for i in range(K)]
         print(res)
         return res
+        # sorted_m.keys()
+        # return res
+        # res = sorted(res)
+        # print(res)
+        # return res[:K]

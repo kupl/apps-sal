@@ -2,6 +2,7 @@
 
 class Combination:
     def __init__(self, n_max, mod=10 ** 9 + 7):
+        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -15,7 +16,10 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    def __call__(self, n, r):
+    # "n 要素" は区別できる n 要素
+    # "k グループ" はちょうど k グループ
+
+    def __call__(self, n, r):  # self.C と同じ
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def nCr(self, n, r):

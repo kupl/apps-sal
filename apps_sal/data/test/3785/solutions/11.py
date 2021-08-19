@@ -1,3 +1,4 @@
+# 377A
 from sys import stdin
 
 __author__ = 'artyom'

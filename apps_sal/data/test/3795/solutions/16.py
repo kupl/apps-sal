@@ -2,6 +2,8 @@ import math
 import sys
 import collections
 
+# imgur.com/Pkt7iIf.png
+
 
 def getdict(n):
     d = {}

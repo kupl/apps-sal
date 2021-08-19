@@ -9,6 +9,7 @@ for i in range(N):
     dAl[L] += 1
     dAr[R] += 1
 
+# dictの中を見る
 ans = 0
 for k, v in dAl.items():
     ans += v * dAr[k]

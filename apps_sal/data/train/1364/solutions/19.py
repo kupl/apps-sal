@@ -1,3 +1,4 @@
+# cook your dish here
 def cnt(x):
     return sum(x[-i - 1] - x[i] for i in range(len(x) // 2))
 

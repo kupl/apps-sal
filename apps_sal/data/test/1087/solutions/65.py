@@ -14,6 +14,7 @@ for i in range(42):
     if B[i][1] != 0:
         B[i][0] = n - B[i][1]
 B.reverse()
+# print(B)
 temp = 0
 max_ = 0
 for i, (b0, b1) in enumerate(B):

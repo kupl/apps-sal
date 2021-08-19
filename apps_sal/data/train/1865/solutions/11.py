@@ -30,8 +30,8 @@ def get_info(a):
     walls = set()
     for i in range(len(a)):
         for j in range(len(a[0])):
-            if a[i][j] == '
-            walls.add((i, j))
+            if a[i][j] == '#':
+                walls.add((i, j))
             if a[i][j] == 'S':
                 person = (i, j)
             if a[i][j] == 'T':

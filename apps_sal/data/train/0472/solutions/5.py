@@ -6,6 +6,7 @@ class Solution:
         while st:
             idx = st.pop()
             jump = jumps[idx]
+            # print(jump, st)
             if jump < 0:
                 continue
 

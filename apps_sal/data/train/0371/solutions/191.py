@@ -5,6 +5,7 @@ class Solution:
 
         routes = [set(stops) for stops in routes]
 
+        # there is no reason to take the same bus twice
         taken = set()
         dq = collections.deque()
 

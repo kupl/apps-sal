@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 
@@ -8,6 +9,7 @@ def lr(): return list(map(int, sr().split()))
 
 
 MOD = 10 ** 9 + 7
+# K回の移動が終わった後、人がいる部屋の数はNからN-K
 
 
 def cmb(n, k):
@@ -39,14 +41,17 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 10 ** 6
+U = 10 ** 6  # 階乗テーブルの上限
 fact, fact_inv = make_fact(U, MOD)
 
 N, K = lr()
 answer = 0
 for x in range(N, max(0, N - K - 1), -1):
+    # x個の家には1人以上いるのでこの人たちは除く
     can_move = N - x
+    # x-1の壁をcan_move+1の場所に入れる
     answer += cmb(N, x) * cmb(x - 1 + can_move, can_move)
     answer %= MOD
 
 print((answer % MOD))
+# 31

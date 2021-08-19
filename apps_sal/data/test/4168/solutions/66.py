@@ -1,3 +1,4 @@
+# C - Base -2 Number
 
 N = int(input())
 

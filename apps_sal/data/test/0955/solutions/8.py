@@ -33,5 +33,6 @@ for opt in ['A|B|C', 'AB|C', 'AC|B', 'BC|A', 'ABC']:
     if cur < ans:
         ans = cur
 
+    #print(opt, cur)
 
 print(-1 if ans == BigInt else ans)

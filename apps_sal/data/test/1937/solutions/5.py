@@ -5,6 +5,7 @@ sys.setrecursionlimit(2000)
 
 def __starting_point():
 
+    # single variables
     n = [int(val) for val in input().split()][0]
     b = [int(val) for val in input().split()]
 

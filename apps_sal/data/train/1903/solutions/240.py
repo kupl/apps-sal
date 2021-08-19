@@ -9,6 +9,7 @@ class Solution:
         dis[0] = 0
         while m < n:
             w, i = heapq.heappop(q)
+            # print(j, i, w)
             if visited[i]:
                 continue
             visited[i] = 1

@@ -3,6 +3,7 @@ def main():
     a = list(map(int, input().split()))
     a.sort()
     ans = 0
+    # print(a)
     for i in range(1, N, 1):
         ans += a[i] - a[i - 1]
 

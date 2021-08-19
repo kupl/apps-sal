@@ -3,7 +3,7 @@ class Solution:
         if len(s) <= k:
             return 0
 
-        def num_change(w):
+        def num_change(w):  # number need to change to become palindrome
             l, r = 0, len(w) - 1
             count = 0
             while l < r:

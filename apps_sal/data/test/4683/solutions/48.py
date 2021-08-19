@@ -10,3 +10,9 @@ for i, j in zip(A[:N - 1], B):
     ans += i * j
     ans %= MOD
 print(ans)
+# ans = 0
+# for i in range(N-1):
+#     ans += A[i] * B[i]
+#     ans %= MOD
+#
+# print(ans)

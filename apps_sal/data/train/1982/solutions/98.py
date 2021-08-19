@@ -10,6 +10,8 @@ class Solution:
             relations[a].append(b)
             relations[b].append(a)
 
+        # print(relations)
+
         colors = [0] * (N)
         for i, v in enumerate(relations):
             q = []

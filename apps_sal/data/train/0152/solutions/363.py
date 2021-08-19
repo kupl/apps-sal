@@ -2,10 +2,13 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
+        # distances = [i for i in range(10**9)]
+        # distances.sort()
 
         hi = 10**9 - 1
         li = 0
         while li <= hi:
+            # print(\"li \",li,\"hi \",hi)
             if li == hi:
                 return li
             mid = (hi + li) // 2

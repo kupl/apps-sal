@@ -17,3 +17,6 @@ for i in range(int(input())):
         t = [(p, q), (q, p), (s, r), (r, s)]
 
         print('no' if all(x > u or (x - u) % 3 or y > v or (y - v) % 3 for x, y in t) else 'yes')
+
+
+# Made By Mostafa_Khaled

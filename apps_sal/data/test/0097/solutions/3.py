@@ -16,6 +16,7 @@ def getTransIntList(n):
 
 
 n, m, x, y, vx, vy = getIntList()
+# Возвращает НОД d и коэффициенты k1, k2: k1*n1+k2*n2=d
 
 
 def GCDKoef(n1, n2):
@@ -26,6 +27,7 @@ def GCDKoef(n1, n2):
     while n2 > 0:
         k, r = divmod(n1, n2)
         n1, n2 = n2, r
+        # r=n1-n2*k
         k11, k12, k21, k22 = k21, k22, k11 - k21 * k, k12 - k22 * k
     return n1, k11, k12
 
@@ -34,6 +36,9 @@ def solveSystemCongruence(a1, n1, a2, n2):
     d, k1, k2 = GCDKoef(n1, n2)
     if (a1 - a2) % d != 0:
         return None
+    # t===a1(n1), t===a2(n2), d=GCD(n1, n2), d=n1*k1+n2*k2
+    # r=a1%d=a2%d; a1=r+d*x1 a2=r+d*x2
+    # t=r+x1*n2*k2+x2*n1*k1===r+d*x1=a1(n1) ===r+d*x2=a2(n2)
     r = a1 % d
     x1 = (a1 - r) // d
     x2 = (a2 - r) // d

@@ -8,6 +8,7 @@ def sampleVariance(V):
     return (X, S)
 
 
+# That awkward moment when you realized that variance is sigma^2 but you just took the stat course this semester
 for i in range(int(input())):
     V = list(map(int, input().split()))
     X, S = sampleVariance(V)

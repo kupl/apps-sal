@@ -1,8 +1,10 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
+    # print(A)
     for i in range(1, N + 1):
         A[i - 1] -= i
+    # print(A)
     A.sort()
     b = A[N // 2]
     ans = 0

@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     if n < m:
-        n, m = m, n
+        n, m = m, n  # n > m
 
     if m == 1:
         print("YES")

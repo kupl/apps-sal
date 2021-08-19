@@ -21,6 +21,7 @@ for _ in range(t):
                 prev = i
     if flag:
         l.append((prev, len(m) - 1))
+    # print(l)
     if(len(l) == 1):
         print(a)
     elif (len(l) == 0):

@@ -4,9 +4,11 @@ class Solution:
             h, m = list(map(int, s.split(':')))
             return h * 60 + m
         kt = list(map(hm_to_min, keyTime))
+        # print(kt)
         c = defaultdict(list)
         for i, k in enumerate(keyName):
             bisect.insort(c[k], kt[i])
+        # print(c)
         res = []
         for k in c:
             for i in range(2, len(c[k])):

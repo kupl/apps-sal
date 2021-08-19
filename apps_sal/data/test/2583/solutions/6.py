@@ -14,7 +14,7 @@ def is_prime(n):
 def winnable(n):
     if n == 2:
         return True
-    elif not (n - 1) & n:
+    elif not (n - 1) & n:  # is power of 2
         return False
     elif n & 1:
         return True

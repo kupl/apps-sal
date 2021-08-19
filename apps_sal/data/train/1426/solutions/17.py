@@ -1,7 +1,10 @@
 t = int(input())
 for i in range(t):
+    # n = number of customers, m = number of flavors
     n, m = map(int, input().split(" "))
+    # c for number of each flavor
     c = [int(j) for j in input().split(" ")]
+    # customer for customer preference data
 
     revenue = 0
     finallist = []

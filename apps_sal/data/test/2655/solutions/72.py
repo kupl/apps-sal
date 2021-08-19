@@ -21,6 +21,8 @@ N = I()
 A = LI()
 
 A.sort(reverse=True)
+# print(A)
+# half = math.ceil(len(A)/2)
 q, mod = divmod(len(A), 2)
 
 if mod == 0:

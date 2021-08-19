@@ -1,4 +1,5 @@
 class Solution:
+    # 1599
     def minOperationsMaxProfit(self, customers: 'List[int]', board: int, run: int) -> int:
         waiting = 0
         curr, best, rotate = 0, -math.inf, 0

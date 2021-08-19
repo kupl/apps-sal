@@ -1,4 +1,5 @@
 
+# -*- coding: utf-8 -*-
 
 import sys
 
@@ -34,6 +35,7 @@ class UnionFind:
 
     def get_table(self):
         return self.table
+# python template for atcoder1
 
 
 sys.setrecursionlimit(10**9)

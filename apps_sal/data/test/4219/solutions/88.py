@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 
+# input
 n = int(input())
 a = [0 for _ in range(n)]
 x = [[] for _ in range(n)]
@@ -11,6 +13,8 @@ for i in range(n):
         x[i].append(x_)
         y[i].append(y_)
 
+# calc
+# Full search
 max_honest = 0
 for i in range(2**n):
     s = []
@@ -25,6 +29,10 @@ for i in range(2**n):
     for j in range(n):
         for k in range(a[j]):
             if s[j] == 1 and s[x[j][k]] != y[j][k]:
+                # print('######')
+                #print('x[{}][{}] = {}'.format(j, k, x[j][k]))
+                #print('y[{}][{}] = {}'.format(j, k, y[j][k]))
+                #print('s[x[{}][{}]] = {}'.format(j, k, s[x[j][k]]))
                 ok = False
                 break
         if not ok:

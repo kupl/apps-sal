@@ -13,13 +13,16 @@ def merge(array1, array2):
 
 
 def validate_pin(pin):
+    # return true or false
 
     key = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
+    # check conditions
     if len(pin) == 6 or len(pin) == 4:
         p = [i for i in pin]
         m = merge(key, p)
 
+        # check lengths
         if len(set(m)) == len(key):
             return True
         return False

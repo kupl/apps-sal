@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 
 N, M = list(map(int, input().rstrip().split()))
+# -----
 ans = []
 delta = 0
 visited = set()

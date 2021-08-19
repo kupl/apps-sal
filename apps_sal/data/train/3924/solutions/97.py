@@ -9,3 +9,5 @@ def reverse_words(text):
             a.insert(0, j)
         resarr.append(s.join(a))
     return t.join(resarr)
+
+  # go for it

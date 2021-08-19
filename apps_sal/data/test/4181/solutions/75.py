@@ -13,8 +13,9 @@ for i in range(N):
         if d <= A[i + 1]:
             cnt += d
             A[i + 1] -= d
-        else:
+        else:  # つまり d > A[i+1]
             cnt += A[i + 1]
             A[i + 1] = 0
+#  print('i=', i, cnt)
 
 print(cnt)

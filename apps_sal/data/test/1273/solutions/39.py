@@ -1,10 +1,19 @@
+# coding: utf-8
 import math
 from collections import defaultdict
 from heapq import heappop, heappush
 import sys
+#from operator import itemgetter
 sysread = sys.stdin.buffer.readline
 read = sys.stdin.buffer.read
 sys.setrecursionlimit(10**7)
+#from itertools import product, accumulate, combinations, product
+#import bisect
+#import numpy as np
+#from copy import deepcopy
+#from collections import deque
+#from decimal import Decimal
+#from numba import jit
 
 INF = 1 << 50
 EPS = 1e-8
@@ -53,6 +62,8 @@ def run():
 
     for c in cols:
         print(c)
+
+    #print(a ^ b)
 
 
 def __starting_point():

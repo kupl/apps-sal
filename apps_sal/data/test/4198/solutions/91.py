@@ -6,6 +6,7 @@ def test(N):
     return A * N + B * L <= X
 
 
+# 二分探索
 left = 0
 right = 10 ** 30
 while left + 1 < right:

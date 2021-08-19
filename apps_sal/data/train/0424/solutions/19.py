@@ -1,8 +1,10 @@
 class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
+        # define the iteration scheme
         size = len(A)
         shifts = [ii for ii in range(size)]
 
+        # count overlap
         max_overlap = 0
         for x in shifts:
             for y in shifts:

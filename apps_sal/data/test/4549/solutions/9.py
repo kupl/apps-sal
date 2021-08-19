@@ -18,15 +18,15 @@ def solve():
     dy = [1, -1, 0, 0]
     for i in range(h):
         for j in range(w):
-            if grid[i][j] != "
-            continue
+            if grid[i][j] != "#":
+                continue
             ok = False
             for k in range(4):
                 i2 = i + dy[k]
                 j2 = j + dx[k]
-                if 0 <= i2 < h and 0 <= j2 < w and grid[i2][j2] == "
-                ok = True
-                break
+                if 0 <= i2 < h and 0 <= j2 < w and grid[i2][j2] == "#":
+                    ok = True
+                    break
             if not ok:
                 return False
     return True

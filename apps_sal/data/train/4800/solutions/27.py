@@ -7,3 +7,6 @@ def hotpo(n):
             n = 3 * n + 1
         x += 1
     return x
+
+# if(number is even) number = number / 2
+# if(number is odd) number = 3*number + 1

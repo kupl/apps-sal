@@ -6,6 +6,7 @@ class Solution:
         dp[nums2[-1]] = nums2[-1]
         while i >= 0 or j >= 0:
             v1, v2 = nums1[i] if i >= 0 else -1, nums2[j] if j >= 0 else -1
+            # print(i,j,v1,v2,dp)
             if v1 > v2:
                 dp[v1] = v1 + dp[nums1[i + 1]]
                 i -= 1

@@ -1,3 +1,4 @@
+# cook your dish here
 n, m = map(int, input().split())
 l, d, k = {}, {}, {}
 for i in range(n):

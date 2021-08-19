@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
 import sys
 
 sys.setrecursionlimit(10**9)
 
 N = int(input())
+# XY_L = [[int(_) for _ in input().split()] for __ in range(N)]
 X_L = [None] * N
 Y_L = [None] * N
 for i in range(N):

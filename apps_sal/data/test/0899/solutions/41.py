@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc051/submissions/1055446
 
 def main():
     import sys

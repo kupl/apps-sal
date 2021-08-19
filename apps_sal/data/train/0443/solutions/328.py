@@ -1,5 +1,6 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
+        # return sum(1 for i in range(len(rating)) for j in range(i) for k in range(j) if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k])
 
         max_rating = 100000
 

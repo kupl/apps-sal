@@ -8,9 +8,11 @@ def longest_subsequence(sequence):
     subsequence[0] = float("-inf")
     for value in sequence:
         j = bisect(subsequence, value)
-        if subsequence[j - 1] != value:
+        if subsequence[j - 1] != value:  # strict increasing
             subsequence[j] = value
     return bisect_left(dp, float("inf")) - 1
+# print(longest_subsequence([9, 13, 2, 10, 4, 13, 11, 13]))
+# return
 
 
 def dfs(vertex):
@@ -18,7 +20,7 @@ def dfs(vertex):
     value = a[vertex]
     j = bisect(subsequence, value)
     previous = subsequence[j]
-    if subsequence[j - 1] != value:
+    if subsequence[j - 1] != value:  # strict increasing
         subsequence[j] = value
     ans[vertex] = bisect_left(subsequence, float("inf")) - 1
     for node in adjacent[vertex]:

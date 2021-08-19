@@ -10,3 +10,6 @@ class Solution:
         for table in alpha_cust:
             ans.append([table[0]] + [str(table[1].count(i)) for i in menu])
         return ans
+
+#         print(menu)
+#         print(alpha_cust)

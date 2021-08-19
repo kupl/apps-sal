@@ -12,7 +12,7 @@ class Solution:
         dist = [float('inf')] * n
         dist[0] = 0
         s = set(range(n))
-        heap = [(0, 0)]
+        heap = [(0, 0)]  # PQ for (distance,node)
         while heap:
             d, u = heapq.heappop(heap)
             if u not in s:
@@ -22,4 +22,5 @@ class Solution:
                 if v in s and g[u][v] < dist[v]:
                     dist[v] = g[u][v]
                     heapq.heappush(heap, (dist[v], v))
+        # print(dist)
         return sum(dist)

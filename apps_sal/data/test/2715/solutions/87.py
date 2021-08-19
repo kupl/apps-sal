@@ -4,10 +4,12 @@ import collections
 import bisect
 import itertools
 
+# import numpy as np
 
 sys.setrecursionlimit(10 ** 7)
 INF = 10 ** 20
 MOD = 10 ** 9 + 7
+# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline().rstrip())
@@ -15,6 +17,8 @@ def ns(): return map(int, sys.stdin.readline().rstrip().split())
 def na(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def na1(): return list(map(lambda x: int(x) - 1, sys.stdin.readline().rstrip().split()))
 
+
+# ===CODE===
 
 def main():
     k = ni()

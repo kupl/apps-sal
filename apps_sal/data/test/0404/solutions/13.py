@@ -2,8 +2,8 @@ b = int(input())
 
 
 def factorize(n):
-    fct = []
-    b, e = 2, 0
+    fct = []  # prime factor
+    b, e = 2, 0  # base, exponent
     while b * b <= n:
         while n % b == 0:
             n = n // b
@@ -18,7 +18,7 @@ def factorize(n):
 
 def divisorize(fct):
     try:
-        b, e = fct.pop()
+        b, e = fct.pop()  # base, exponent
     except:
         return []
     pre_div = divisorize(fct) if fct else [[]]

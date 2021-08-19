@@ -1,3 +1,4 @@
+# Prim's algorithm
 from collections import defaultdict
 from heapq import *
 

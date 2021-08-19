@@ -23,3 +23,5 @@ def satisfiable(f, table):
         return table[f.name]
     x = [satisfiable(i, table) for i in f.args]
     return all(x) if f.is_and() else any(x) if f.is_or() else not all(x)
+
+# very INeffecient

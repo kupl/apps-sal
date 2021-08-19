@@ -32,7 +32,9 @@ def dfs_stack(u, al, al_c, d):
 
     while len(stack) > 0:
         v = stack.pop()
+        ###
         al_c[v] = d
+        ###
 
         for w in al[v]:
             if seen[w] == 0:

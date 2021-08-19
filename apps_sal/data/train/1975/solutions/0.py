@@ -25,3 +25,10 @@ class CustomStack:
                 self.add[-1] += val
                 return
             self.add[k - 1] += val
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

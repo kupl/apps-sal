@@ -1,5 +1,6 @@
 class Solution:
     def isIsomorphic(self, s1, s2):
+        # encode strings
         enc1, enc2 = [], []
         count1, count2 = 0, 0
         dict1, dict2 = dict(), dict()
@@ -17,4 +18,4 @@ class Solution:
                 count2 += 1
                 dict2[char2] = count2
                 enc2.append(dict2[char2])
-        return enc1 == enc2
+        return enc1 == enc2  # compare encodings

@@ -1,6 +1,7 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
         '''        
+        # top-down TLE
         dp = [0] + [float('inf')]*n
         def helper(k):
             if not (1<= k <= n):
@@ -23,7 +24,9 @@ class Solution:
         return dp[-1] if dp[-1] != float('inf') else -1
 
         '''        
+        # greedy
         covers = sorted([[i-x, i+x] for i, x in enumerate(ranges)], key = lambda x: (x[0], -x[1]))
+        #print(covers)
         res, prev_end, end = 0, -float('inf'), 0
         for src, dest in covers:
             if src > end or end >= n:

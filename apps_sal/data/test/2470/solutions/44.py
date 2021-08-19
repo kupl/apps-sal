@@ -25,14 +25,19 @@ class Solution:
             if key in dp:
                 return dp[key]
 
+            # print(key)
+
+            # all possible results
             pos = []
 
+            # don't make changes here
             if i1 == 0 or arr1[i1 - 1] < arr1[i1]:
                 res = help(i1 + 1, i2)
                 if res != -1:
                     pos.append(res)
 
             if i1 != 0:
+                # make change
                 i2 = self.binary_search_right(arr2, i2, len(arr2), arr1[i1 - 1])
                 if i2 != len(arr2):
                     tmp = arr1[i1]
@@ -42,6 +47,7 @@ class Solution:
                         pos.append(res + 1)
                     arr1[i1] = tmp
             else:
+                # make change
                 if i2 < len(arr2) and arr2[i2] < arr1[i1]:
                     tmp = arr1[i1]
                     arr1[i1] = arr2[i2]

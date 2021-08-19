@@ -3,8 +3,8 @@ class Solution:
         return ord(c) - ord('a')
 
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        first_letters = {chr(c): set([]) for c in range(ord('a'), ord('z') + 1)}
-        word_masks = {}
+        first_letters = {chr(c): set([]) for c in range(ord('a'), ord('z') + 1)}  # maps chars to set of words containing the char
+        word_masks = {}  # maps bitmask of word to its index
         for i, w in enumerate(words):
             mask = 0
             for c in w:

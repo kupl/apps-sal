@@ -22,7 +22,7 @@ size = [1 for _ in range(n)]
 rank = [0 for _ in range(n)]
 
 
-def find(x):
+def find(x):  # 木の根を求める
     if par[x] == x:
         return x
     else:

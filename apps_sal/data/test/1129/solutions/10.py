@@ -10,6 +10,7 @@ for i in range(n - 2, -1, - 1):
 mn = 2222222222222222
 ind = 0
 for i in range(n):
+    #print(l[i] , r[i])
     if mn > l[i] + r[i]:
         mn = l[i] + r[i]
         ind = i

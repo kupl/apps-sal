@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
 
+#############
+# Libraries #
+#############
 
 from functools import lru_cache
 from collections import Counter
@@ -10,10 +14,21 @@ import math
 import sys
 input = sys.stdin.readline
 
+#from math import gcd
+
+#############
+# Constants #
+#############
 
 MOD = 10**9 + 7
 INF = float('inf')
 AZ = "abcdefghijklmnopqrstuvwxyz"
+
+#############
+# Functions #
+#############
+
+######INPUT######
 
 
 def I(): return int(input().strip())
@@ -25,6 +40,8 @@ def SLs(n): return list(input().strip() for _ in range(n))
 def ILL(n): return [list(map(int, input().split())) for _ in range(n)]
 def SLL(n): return [list(map(str, input().split())) for _ in range(n)]
 
+######OUTPUT######
+
 
 def P(arg): print(arg); return
 def Y(): print("Yes"); return
@@ -34,13 +51,18 @@ def PE(arg): print(arg); return()
 def YE(): print("Yes"); return()
 def NE(): print("No"); return()
 
+#####Shorten#####
+
 
 def DD(arg): return defaultdict(arg)
+
+#####Inverse#####
 
 
 def inv(n): return pow(n, MOD - 2, MOD)
 
 
+######Combination######
 kaijo_memo = []
 
 
@@ -78,6 +100,8 @@ def nCr(n, r):
     ret = ret * gyaku_kaijo(n - r) % MOD
     return ret
 
+######Factorization######
+
 
 def factorization(n):
     arr = []
@@ -95,6 +119,8 @@ def factorization(n):
         arr.append([n, 1])
     return arr
 
+#####MakeDivisors######
+
 
 def make_divisors(n):
     divisors = []
@@ -104,6 +130,8 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
     return divisors
+
+#####MakePrimes######
 
 
 def make_primes(N):
@@ -117,15 +145,21 @@ def make_primes(N):
     primeNum.extend(seachList)
     return primeNum
 
+#####GCD#####
+
 
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 
+#####LCM#####
+
 
 def lcm(a, b):
     return a * b // gcd(a, b)
+
+#####BitCount#####
 
 
 def count_bit(n):
@@ -134,6 +168,8 @@ def count_bit(n):
         n &= n - 1
         count += 1
     return count
+
+#####ChangeBase#####
 
 
 def base_10_to_n(X, n):
@@ -152,6 +188,8 @@ def base_10_to_n_without_0(X, n):
         return base_10_to_n_without_0(X // n, n) + [X % n]
     return [X % n]
 
+#####IntLog#####
+
 
 def int_log(n, a):
     count = 0
@@ -160,19 +198,23 @@ def int_log(n, a):
         count += 1
     return count
 
+#############
+# Main Code #
+#############
+
 
 A, B = IL()
 print(100, 100)
-A = ["
-B= ["
+A = ["#"] * (25 * 50 - (A - 1)) + ["."] * (A - 1)
+B = ["#"] * (B - 1) + ["."] * (25 * 50 - (B - 1))
 for j in range(25):
     for i in range(50):
         print(A.pop(), end="")
         if i == 49:
-            print("
+            print("#")
         else:
-            print("
-    print("
+            print("#", end="")
+    print("#" * 100)
 for j in range(25):
     print("." * 100)
     for i in range(50):

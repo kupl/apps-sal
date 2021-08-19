@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 import numpy as np
@@ -30,8 +31,10 @@ def bisearch_min(mn, mx, func):
     while ng + 1 < ok:
         mid = (ok + ng) // 2
         if func(mid):
+            # 下を探しに行く
             ok = mid
         else:
+            # 上を探しに行く
             ng = mid
     return ok
 
@@ -41,16 +44,20 @@ A = LIST()
 
 
 def check(omit):
+    # 部分和DP
     dp = np.zeros(K, dtype=np.bool)
     prev = np.zeros(K, dtype=np.bool)
     dp[0] = prev[0] = 1
     for i in range(N):
+        # まとめて遷移
         if i != omit and A[i] < K:
             prev[A[i]:] |= dp[:K - A[i]]
         dp = prev.copy()
+    # 今回の値A[omit]を足してKに到達できるような部分和があれば、これは必要
     for j in range(max(0, K - A[omit]), K):
         if dp[j]:
             return True
+    # なければ不要
     return False
 
 

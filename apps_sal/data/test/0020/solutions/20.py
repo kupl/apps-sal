@@ -1,3 +1,4 @@
+# 786
 h, m = list(map(int, input().split(':')))
 
 

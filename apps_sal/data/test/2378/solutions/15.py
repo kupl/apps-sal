@@ -1,3 +1,4 @@
+# classを使うのをやめてlistで実施する
 import sys
 sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline

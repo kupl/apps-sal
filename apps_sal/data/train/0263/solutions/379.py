@@ -3,6 +3,8 @@ class Solution:
 
         dp = [1 for x in range(10)]
 
+        # jumpMap = {1: [6, 8], 2: [7, 9], 3: [8, 4], 4: [9, 3, 0]: 5: [], 6: [1, 7, 0], 7: [2, 6], 8: [1, 3], 9: [4, 2], 0: [4, 6]}
+
         for index in range(n - 1):
 
             newDp = [dp[4] + dp[6],

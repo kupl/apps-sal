@@ -6,9 +6,11 @@ for i in range(n):
 A = [[0 for x in range(n)] for x in range(n)]
 B = [[0 for x in range(n)] for x in range(n)]
 
+# Diagonals
 for i in range(n):
     B[i][i] = W[i][i]
 
+# The rest
 for i in range(n):
     for j in range(i, n):
         A[i][j] = (W[i][j] + W[j][i]) / 2

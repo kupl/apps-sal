@@ -16,6 +16,7 @@ for i in range(n):
             y2 = max(y2, i)
             c1 = 1
 
+#print(x1, x2, y1, y2)
 
 count = 0
 

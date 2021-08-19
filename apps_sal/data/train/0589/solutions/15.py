@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for _ in range(t):
     arr = input()
@@ -5,8 +6,8 @@ for _ in range(t):
     temp = []
     while i < len(arr):
         count = 0
-        while i < len(arr) and arr[i] == '
-        i += 1
+        while i < len(arr) and arr[i] == '#':
+            i += 1
         while i < len(arr) and arr[i] == '.':
             count += 1
             i += 1

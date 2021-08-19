@@ -14,4 +14,5 @@ class Solution:
 
                 ways[i][j] = c
 
+        # print(ways)
         return ways[d][n] % (10**9 + 7)

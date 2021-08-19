@@ -1,3 +1,5 @@
+# B - Balance
+# https://atcoder.jp/contests/abc129/tasks/abc129_b
 
 n = int(input())
 w = list(map(int, input().split()))

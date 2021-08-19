@@ -15,4 +15,6 @@ class Solution:
                         d[A[i]] += d[A[j]] * d[k]
             ans += d[A[i]]
             ans %= 10**9 + 7
+        # print(d)
         return ans
+        # return sum(d[key] for key in d)

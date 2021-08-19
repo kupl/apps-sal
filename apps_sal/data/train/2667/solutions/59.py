@@ -1,4 +1,5 @@
 def zero_fuel(distance_to_pump, mpg, fuel_left):
+    # Happy Coding! ;)
     if fuel_left == 0:
         return distance_to_pump <= mpg
     elif fuel_left > 0:

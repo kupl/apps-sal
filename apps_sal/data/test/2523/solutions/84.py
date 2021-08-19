@@ -1,3 +1,4 @@
+# D 3424320
 S = input()
 N = len(S)
 center_i = N // 2

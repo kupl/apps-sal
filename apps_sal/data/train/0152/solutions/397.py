@@ -23,5 +23,6 @@ class Solution:
                 max_distance = max(max_distance, mi)
             else:
                 hi = mi - 1
+            #print(lo, hi)
 
         return max_distance

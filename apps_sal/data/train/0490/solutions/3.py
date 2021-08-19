@@ -3,6 +3,7 @@ class Solution:
         list_of_rooms_visited = [0]
 
         def check(arr):
+            # print(list_of_rooms_visited)
             for j in arr:
                 if j not in list_of_rooms_visited:
                     list_of_rooms_visited.append(j)

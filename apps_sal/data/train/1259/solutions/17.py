@@ -1,3 +1,4 @@
+# cook your dish here
 T = int(input())
 for j in range(T):
     ran = list(map(int, input().rstrip().split()))

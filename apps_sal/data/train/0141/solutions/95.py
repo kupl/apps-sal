@@ -42,4 +42,5 @@ class Solution:
 
         traverse(0, 0, [])
 
+        # print(boats)
         return self.ans

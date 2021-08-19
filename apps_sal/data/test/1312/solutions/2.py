@@ -1,3 +1,4 @@
+# A
 from math import ceil, floor
 n, m = list(map(int, input().split()))
 L = []

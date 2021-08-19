@@ -3,3 +3,5 @@ def problem(a):
         return a * 50 + 6
     except:
         return 'Error'
+
+# yeah boy

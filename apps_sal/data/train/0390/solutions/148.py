@@ -7,7 +7,10 @@ class Solution:
         dp[1] = True
 
         for m in range(2, n + 1):
+            #             if sqrt(m) == int(sqrt(m)) :
 
+            #                 dp[m] = True
+            #                 continue
             i = 1
             while i**2 < m:
                 if not dp[m - i**2]:

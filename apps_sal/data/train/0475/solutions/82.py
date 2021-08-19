@@ -7,4 +7,5 @@ class Solution:
                 prev += nums[j]
                 a.append(prev)
         a.sort()
+        # print(a)
         return sum(a[left - 1:right]) % (10**9 + 7)

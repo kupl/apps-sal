@@ -7,8 +7,8 @@ def main():
     string = s().strip()
     while True:
         output = []
-        if '
-        return
+        if '#' in string:
+            return
         for i in string:
             if i in save:
                 output.append(save[i])

@@ -27,4 +27,4 @@ for i in range(int(input())):
     if(sum(list(list2)) >= x):
         print("YES")
     else:
-        print("NO")
+        print("NO")  # cook your dish here

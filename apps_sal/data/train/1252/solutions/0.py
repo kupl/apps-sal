@@ -1,3 +1,4 @@
+# cook your dish here
 import math
 N = 10**6
 sum_arr = [0] * (N + 1)

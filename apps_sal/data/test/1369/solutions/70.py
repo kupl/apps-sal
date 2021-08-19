@@ -47,6 +47,7 @@ for i in range(N):
     xi, yi = map(int, input().split())
     xylist.append((xi, yi))
 
+# print(xylist)
 
 if N == 2:
     x, y, r = get_circle_2p(xylist[0], xylist[1])
@@ -55,7 +56,9 @@ else:
     min_radius = float("inf")
     for i in range(N):
         for j in range(i + 1, N):
+            # print(xylist[i],xylist[j])
             x, y, r = get_circle_2p(xylist[i], xylist[j])
+            # print(x,y,r)
             if r > min_radius:
                 continue
 
@@ -74,7 +77,9 @@ else:
     for i in range(N):
         for j in range(i + 1, N):
             for k in range(j + 1, N):
+                # print(xylist[i],xylist[j],xylist[k])
                 x, y, r = get_circle_3p(xylist[i], xylist[j], xylist[k])
+                # print(x,y,r)
                 if r > min_radius:
                     continue
 

@@ -1,5 +1,11 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
+        # This is basically BFS on state graph
+        # State is (path ending at P, k)
+        # We don't need the whole path because the first path ending at P willl
+        # be better than later paths ending at P with same k
+        # Hence, different paths ending with same P can be collapsed to one state
+        # represented by P
         rows, cols = len(grid), len(grid[0])
         if rows == 1 and cols == 1:
             return 0

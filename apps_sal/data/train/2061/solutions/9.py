@@ -8,7 +8,8 @@ def get_center(ps):
 
 def get_shape(ps):
     """
-    0: 
+    0: #.  1: ##  2: .#  3: ##
+       ##     #.     ##     .#
     """
     xs, ys = list(zip(*ps))
     xs, ys = list(xs), list(ys)

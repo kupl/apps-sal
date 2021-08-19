@@ -1,3 +1,4 @@
+# from duongtnhat's submission #17754492
 
 def ok(u, a, b, n, k):
     for i in range(n):

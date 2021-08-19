@@ -26,6 +26,7 @@ while i >= 0:
     else:
         r[i] = cnt
         i -= 1
+# print(l,r)
 r.append(0)
 if r[1] < k:
     print(1)

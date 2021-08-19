@@ -1,3 +1,5 @@
+# どの2点間も辺を辿れば到達できる　＝　連結グラフ
+# どう頑張ってもたどり着けない　＝　非連結グラフ
 N, M = list(map(int, input().split()))
 AB = [list(map(int, input().split())) for i in range(M)]
 
@@ -50,6 +52,7 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
+# 1辺を省いてUnionFindしたとき、グループ数が２以上になったらその辺は「橋」
 ans = 0
 for i in range(M):
     u = UnionFind(N)

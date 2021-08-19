@@ -14,5 +14,6 @@ ans = 10**6
 for i in range(n):
     right[s[i]] -= 1
     ans = min(ans, left['W'] + right['E'])
+    # print(left,right)
     left[s[i]] += 1
 print(ans)

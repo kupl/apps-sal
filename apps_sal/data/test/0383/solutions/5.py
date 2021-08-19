@@ -14,6 +14,7 @@ for i in range(2, n + 1):
             N += Nd[0][i - j]
     Nd[0][i] = N
 
+    # if i==2: continue
     N = 0
     for j in range(1, k + 1):
         if i >= j:
@@ -23,6 +24,7 @@ for i in range(2, n + 1):
                 N += Nd[1][i - j]
     Nd[1][i] = N
 
+    # print(Nd)
 
 if d > 1:
     print(Nd[1][n] % 1000000007)

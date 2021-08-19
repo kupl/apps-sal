@@ -37,15 +37,31 @@ class Solution:
             disjointSet.makeSet(val)
         factors = collections.defaultdict(set)
         ans = 0
+        # print(disjointSet.size,disjointSet.parent)
         for val in A:
             for i in range(1, int(val**0.5) + 1):
                 if i == 1:
+                    # if val in factors:
+                    #     ans=max(ans,disjointSet.union(factors[val],val))
+                    # factors[val]=val
                     factors[val].add(val)
                     continue
                 if val % i != 0:
                     continue
                 factors[i].add(val)
                 factors[val // i].add(val)
+                # if i in factors:
+                #     res=disjointSet.union(factors[i],val)
+                #     # print(res,factors[i],val)
+                #     ans=max(ans,res)
+                # factors[i]=val
+                # tmp=val//i
+                # if tmp in factors:
+                #     res=disjointSet.union(factors[tmp],val)
+                #     # print(res,factors[tmp],val)
+                #     ans=max(ans,res)
+                # factors[tmp]=val
+        # print(factors,disjointSet.parent,disjointSet.size)
         for _, itms in list(factors.items()):
             items = list(itms)
             i = 1

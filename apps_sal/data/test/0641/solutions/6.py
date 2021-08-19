@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 line = input().split()
 n = int(line[0])
 if line[2] == 'month':

@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
@@ -53,6 +54,8 @@ def solve():
         ans = "a" * (p - 2) + "b" + "a" * (k - p + 1) + "b" + "a" * (n - k - 1)
         print(ans)
     return
+
+# Solve
 
 
 def __starting_point():

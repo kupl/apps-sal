@@ -14,6 +14,7 @@ class DisjointSetUnion():
 
     def union(self, x, y):
         px, py = self.find(x), self.find(y)
+        # x and y are in the same set
         if px == py:
             return px
         if self.size[px] > self.size[py]:

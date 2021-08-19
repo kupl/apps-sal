@@ -14,6 +14,8 @@ class Trie:
             curr = curr.children[ch]
         curr.is_word = '/' + '/'.join(word)
 
+    # def (self, node):
+
 
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:

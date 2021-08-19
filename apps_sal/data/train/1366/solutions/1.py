@@ -15,4 +15,6 @@ for i in range(int(input())):
         else:
             ind2 = k
             break
+    # print(ind1,ind2)
+    # print(a[ind1:ind2+1])
     print(len(a[ind1:ind2 + 1]))

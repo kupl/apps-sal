@@ -33,9 +33,15 @@ class Solution:
                         if fac not in factor_dic:
                             factor_dic[fac] = idx
                         else:
+                            # if idx == 2:
+                            #     print(idx, fac)
+                            #     print(factor_dic)
                             uf.union(idx, factor_dic[fac])
             if a not in factor_dic:
                 factor_dic[a] = idx
             else:
                 uf.union(idx, factor_dic[a])
+        # print(factor_dic)
+        # print(uf.parents)
+        # print(uf.size)
         return max(uf.size)

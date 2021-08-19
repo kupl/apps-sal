@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     def isprime(n):
         if n == 1:

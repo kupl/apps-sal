@@ -4,3 +4,4 @@ def square_sum(numbers):
     for k in range(0, x):
         z += numbers[k]**2
     return z
+    # your code here

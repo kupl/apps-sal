@@ -1,5 +1,8 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
+        # Solution 1: Use two heaps
+        # Time O(NogN)
+        # Space O(N)
 
         maxq, minq = [], []
         res = i = 0

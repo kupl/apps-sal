@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     N = int(input())
 
@@ -17,6 +18,7 @@ for _ in range(int(input())):
         else:
             h[ele] = [0, 1]
 
+    # print(h)
     flag = 0
     res = 0
     AtoB, BtoA, swaps = [], [], []
@@ -46,4 +48,5 @@ for _ in range(int(input())):
                 res += ele
             else:
                 res += 2 * minAB
+    # print(swaps)
     print(res)

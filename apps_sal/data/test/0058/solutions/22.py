@@ -3,6 +3,7 @@ from math import ceil
 n = int(input())
 a = int(input())
 b = int(input())
+# 5
 k = 2 * b + 4 * a
 br = 0
 

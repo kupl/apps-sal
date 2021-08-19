@@ -6,16 +6,20 @@ class Solution:
         def fesible(mid):
             c, n, l = 0, 0, []
             b = [(i - mid) for i in bloomDay]
+            # print(b)
             for i in range(len(b)):
+                # print(l)
                 if b[i] <= 0 and i != (len(b) - 1):
                     c += 1
                 elif b[i] <= 0 and i == (len(b) - 1):
+                    ##
                     c += 1
                     l.append(c)
                 elif b[i] > 0:
                     l.append(c)
                     c = 0
 
+            # print(l)
             l2 = [j for j in l if j >= k]
             ss = 0
             for i in l2:
@@ -28,6 +32,7 @@ class Solution:
         left, right = min(bloomDay), max(bloomDay) + 1
         while left < right:
             mid = left + (right - left) // 2
+            # print(mid)
             if fesible(mid):
                 right = mid
                 v = 1

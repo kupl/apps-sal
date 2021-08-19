@@ -1,3 +1,4 @@
+# cook your dish here
 s = int(input())
 for i in range(s):
     n = int(input())
@@ -12,6 +13,7 @@ for i in range(s):
             for i in range(c, len(h) - 1):
                 if h[i] - h[i + 1] == 1:
                     d = d + 1
+            # print(d);
             if d == n - 1:
                 print('yes')
             else:

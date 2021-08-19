@@ -1,6 +1,6 @@
 s = str(input())
 j = 0
-ss = 'heidi
+ss = 'heidi#'
 for i in s:
     if i == ss[j]:
         j += 1

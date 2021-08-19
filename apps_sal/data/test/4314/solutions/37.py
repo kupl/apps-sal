@@ -6,14 +6,14 @@ a = np.array(a)
 a2 = []
 a3 = []
 for i in range(h):
-    if "
-    a2.append(a[i])
+    if "#" in a[i]:
+        a2.append(a[i])
 a2 = np.array(a2)
 a2 = a2.T
 
 for i in range(len(a2)):
-    if "
-    a3.append(a2[i])
+    if "#" in a2[i]:
+        a3.append(a2[i])
 a3 = np.array(a3)
 a3 = a3.T
 for i in range(len(a3)):

@@ -26,6 +26,7 @@ class ModTools:
 
     def __init__(self, MAX, MOD):
 
+        # nCrならn、nHrならn+rまで作る
         MAX += 1
         self.MAX = MAX
         self.MOD = MOD
@@ -56,5 +57,6 @@ M = N - K
 mt = ModTools(N, MOD)
 
 for k in range(1, K + 1):
+    # M+1箇所の隙間からk箇所選ぶ * k箇所に対してK個を最低1個以上入れながら割り振る(写像の6相)
     res = mt.nCr(M + 1, k) * mt.nCr(K - 1, k - 1) % MOD
     print(res)

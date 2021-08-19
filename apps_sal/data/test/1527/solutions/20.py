@@ -20,8 +20,8 @@ def solveMaze(s):
             nextW = now[1] + int(dir4[i][1])
             nextTime = now[2] + 1
 
-            if nextH < 0 or nextH >= H or nextW < 0 or nextW >= W or maze[nextH][nextW] == "
-            continue
+            if nextH < 0 or nextH >= H or nextW < 0 or nextW >= W or maze[nextH][nextW] == "#" or times[nextH][nextW] <= nextTime:
+                continue
             else:
                 times[nextH][nextW] = nextTime
                 q.put([nextH, nextW, nextTime])

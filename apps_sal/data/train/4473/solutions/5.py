@@ -1,4 +1,5 @@
 def xp_to_target_lvl(current_xp='', target_lvl=''):
+    # good luck ^_^
     if isinstance(current_xp, int) and isinstance(target_lvl, int):
         if current_xp >= 0 and 1 <= target_lvl <= 170:
             a = [314]

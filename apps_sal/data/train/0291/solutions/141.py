@@ -20,6 +20,7 @@ class Solution:
             else:
                 ones += 1
 
+        # print(ones,zeroes)
         total = n * (n + 1) // 2
         total -= ones * (ones - 1) // 2
         total -= (zeroes + zeroes * (zeroes - 1) // 2)

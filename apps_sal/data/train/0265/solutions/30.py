@@ -20,6 +20,9 @@ class Solution:
 
         intervals = []
         for i in range(n + 1):
+            # for temp in dct[k+dp[i]]:
+            #     if(temp>i):
+            #         intervals.append((i,temp))
 
             left = bisect_right(dct[k + dp[i]], i)
             if(left != len(dct[k + dp[i]])):

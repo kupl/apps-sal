@@ -1,4 +1,10 @@
 import bisect
+# from collections import deque
+# from collections import Counter
+# from fractions import gcd # >=Python3.5 # lcm（最小公倍数） = (a*b)//gcd(a,b)
+# from fractions import Fraction
+# from math import gcd # <Python3.5
+# from math import sqrt
 
 n = int(input())
 li = [int(input()) for i in range(n)]

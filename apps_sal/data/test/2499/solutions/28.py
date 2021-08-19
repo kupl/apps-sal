@@ -4,8 +4,10 @@ A = np.array(list(map(int, input().split())), dtype=np.int64)
 
 xor = np.bitwise_xor.reduce(A)
 
+# 1の個数が奇数個の桁は定数
 odd_digit = [1 << i for i in range(60) if xor & (1 << i)]
 
+# 1の個数が奇数個の桁は無視する
 for i in odd_digit:
     A = A & (~i)
 

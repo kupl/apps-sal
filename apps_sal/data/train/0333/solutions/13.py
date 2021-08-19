@@ -17,3 +17,17 @@ class Solution:
                     if nei == len(arr) - 1:
                         return distance + 1
                     d.append((nei, distance + 1))
+
+        # def bfs():
+        #     from collections import deque
+        #     Q = deque([(0,0)])
+        #     seen = {0}
+        #     while Q:
+        #         i, d = Q.popleft()
+        #         if i==len(arr)-1:return d
+        #         for j in [i-1, i+1]+a_i[arr[i]][::-1]:
+        #             if 0<=j<len(arr) and j!=i and j not in seen:
+        #                 seen.add(j)
+        #                 if j==len(arr)-1:return d+1
+        #                 Q.append((j,d+1))
+        # return bfs()

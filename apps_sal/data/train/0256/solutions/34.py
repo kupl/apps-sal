@@ -16,6 +16,7 @@ class Solution:
                 return float('inf')
             mid = (start + end + 1) // 2
             h = getH(mid)
+            # print(mid, h)
             if h < H:
                 if mid > start:
                     return min(mid, bs(start, mid - 1))

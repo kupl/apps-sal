@@ -4,6 +4,7 @@ import itertools as it
 from math import gcd, floor, ceil, factorial
 import sys
 input = sys.stdin.readline
+# sys.setrecursionlimit(10**6)
 
 
 def inp():
@@ -25,6 +26,14 @@ def inpls():
 def _debug(obj):
     print(obj, file=sys.stderr)
 
+# import decimal
+# from decimal import Decimal
+# decimal.getcontext().prec = 10
+
+
+# from heapq import heappush, heappop, heapify
+# import math
+
 
 def lcd(a, b):
     return a * b // gcd(a, b)
@@ -42,6 +51,8 @@ def chmax(dp, i, x):
         dp[i] = x
         return True
     return False
+
+# ---------------------------------------
 
 
 N, M = inpl()

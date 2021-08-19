@@ -1,3 +1,6 @@
+#fin = open("input.txt")
+#a1, b1 = map(int, fin.readline().split())
+#a2, b2 = map(int, fin.readline().split())
 a1, b1 = list(map(int, input().split()))
 a2, b2 = list(map(int, input().split()))
 F, S = [a1, b1], [a2, b2]

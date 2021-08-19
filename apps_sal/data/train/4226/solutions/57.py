@@ -5,3 +5,4 @@ def remove_smallest(numbers):
     else:
         a.remove(min(a))
         return a
+    #raise NotImplementedError("TODO: remove_smallest")

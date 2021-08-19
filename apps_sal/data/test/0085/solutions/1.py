@@ -7,7 +7,7 @@ for i in range(4):
     size[i] = int(size[i])
 
 totalsize = [size[0] * size[1], size[2] * size[3]]
-num = [0, 0, 0, 0, 0, 0, 0, 0]
+num = [0, 0, 0, 0, 0, 0, 0, 0]  # 2s in first dimension of 1, 3s in first...
 base = [size[0], size[1], size[2], size[3]]
 for i in range(4):
     temp = size[i]

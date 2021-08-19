@@ -13,8 +13,10 @@ class Solution:
                 else:
                     heappush(pq, -tot)
 
+        # print(pq)
         sums = 0
         for i in range(right - left + 1):
             sums += heappop(pq)
+            # print(sums)
 
         return -sums % (10**9 + 7)

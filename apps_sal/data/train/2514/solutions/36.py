@@ -4,3 +4,5 @@ class Solution:
         dist_matrix = [all(abs(x - y) > d for y in arr2) for x in arr1]
 
         return sum(dist_matrix)
+
+        # return len([1 for dist_lst in dist_matrix if min(dist_lst)>d])

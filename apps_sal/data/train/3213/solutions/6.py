@@ -1,4 +1,5 @@
 def sum_of_a_beach(beach):
+    # your code
     words = ["Sand", "Water", "Fish", "Sun"]
     count = 0
     for word in words:

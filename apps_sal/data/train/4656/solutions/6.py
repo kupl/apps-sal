@@ -12,6 +12,8 @@ def center_of(chars):
         index = index_large % size
         center += chars[index]
 
+    # print(center)
+
     for n in range(1, center_calc):
         if center[:n] == center[n:2 * n] and center[n:2 * n] == center[2 * n:3 * n] and center[2 * n:3 * n] == center[3 * n:4 * n]:
             return center[:n]

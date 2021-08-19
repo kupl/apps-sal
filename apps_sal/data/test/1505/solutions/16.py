@@ -8,24 +8,31 @@ vlx, vly = -vy, vx
 vrx, vry = vy, -vx
 midcx = px + vx * -d
 midcy = py + vy * -d
+# 1
 x = px + vx * b
 y = py + vy * b
 print(x, y)
+# 2
 x = px + vlx * a / 2
 y = py + vly * a / 2
 print(x, y)
+# 3
 x = px + vlx * c / 2
 y = py + vly * c / 2
 print(x, y)
+# 4
 x = midcx + vlx * c / 2
 y = midcy + vly * c / 2
 print(x, y)
+# 5
 x = midcx + vrx * c / 2
 y = midcy + vry * c / 2
 print(x, y)
+# 6
 x = px + vrx * c / 2
 y = py + vry * c / 2
 print(x, y)
+# 7
 x = px + vrx * a / 2
 y = py + vry * a / 2
 print(x, y)

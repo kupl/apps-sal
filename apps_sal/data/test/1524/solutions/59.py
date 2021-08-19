@@ -9,6 +9,7 @@ for i in range(len(S)):
         tmp = (childlen + int(childlen % 2 == 1)) // 2
         res[i - 1] += tmp
         res[i] += childlen - tmp
+        # print(i, tmp, childlen, res[i - 1], res[i])
         childlen = 0
 
 for i in reversed(range(len(S))):

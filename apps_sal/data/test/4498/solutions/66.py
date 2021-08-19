@@ -1,3 +1,5 @@
+# Aさん:a Bさん:b Cさん:c
+# 距離がd以内のとき会話可能
 
 a, b, c, d = map(int, input().split())
 

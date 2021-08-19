@@ -1,3 +1,7 @@
+# V: 頂点数
+# g[v] = {(w, cost)}:
+#     頂点vから遷移可能な頂点(w)とそのコスト(cost)
+# r: 始点の頂点
 
 from heapq import heappush, heappop
 import sys
@@ -30,6 +34,7 @@ for i in range(M):
     g[i + 2].add((1, abs(x - fx) + abs(y - fy)))
     vs.append((i + 2, x, y))
 
+#tg = [dict() for _ in range(M+2)]
 vs.sort(key=lambda x: (x[1], x[2]))
 for (b, bx, by), (i, x, y) in zip(vs, vs[1:]):
     c = min(x - bx, abs(y - by))
@@ -42,4 +47,5 @@ for (b, bx, by), (i, x, y) in zip(vs, vs[1:]):
     g[i].add((b, c))
     g[b].add((i, c))
 
+# print(g)
 print(min(dijkstra(M + 2, g, 0), abs(fy - sy) + abs(fx - sx)))

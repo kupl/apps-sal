@@ -3,6 +3,7 @@ h2, a2 = map(int, input().split())
 ans = 0
 ad = []
 while 1:
+    # print(h1)
     ans += 1
     if h1 <= a2 and h2 > a1:
         h1 += c1

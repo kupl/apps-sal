@@ -1,4 +1,5 @@
 def merge_arrays(first, second):
+    # your code here
     s = first + second
     s.sort()
     l = []

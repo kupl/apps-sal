@@ -1,3 +1,5 @@
+# import sys
+# input = sys.stdin.readline
 
 t = int(input())
 for i in range(t):
@@ -10,6 +12,7 @@ for i in range(t):
     ss = st.count("S")
 
     w = -((-n) // 2)
+    # print(min(r,ss),min(s,pp),min(p,rr),w)
     if min(r, ss) + min(s, pp) + min(p, rr) >= w:
         print("YES")
         ANS = ["n"] * n

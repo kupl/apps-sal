@@ -8,10 +8,13 @@ for i in range(N):
 
 answer = 0
 
+# for first row
 if any(e == '1' for e in table[0]):
     answer = 2
+# for last row
 elif any(e == '1' for e in table[-1]):
     answer = 2
+# for first and  last column
 else:
     for i in range(N):
         if table[i][0] == '1':

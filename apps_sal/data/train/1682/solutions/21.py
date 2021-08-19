@@ -15,6 +15,7 @@ for i in range(1, len(l)):
         l3.append(i + 1)
         l1.append(int(s))
 '''print(max(l1),l1,l3)
+#,l2[l1.index(max(l1))],l3[l1.index(max(l1))])'''
 if l3[1 + l1.index(max(l1))] == len(l):
     print("{}:{}-{}".format(max(l1), l3[l1.index(max(l1))], l3[1 + l1.index(max(l1))]))
 else:

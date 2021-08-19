@@ -2,6 +2,7 @@ N, A, B = list(map(int, input().split()))
 v = list(map(int, input().split()))
 v = sorted(v, reverse=True)
 
+# (合計, 個数)
 max_avg = (sum(v[:A]), A)
 
 t = v[A - 1]

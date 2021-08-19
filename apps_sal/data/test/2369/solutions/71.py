@@ -18,6 +18,7 @@ def c(n, k):
 
 ans = 0
 for i in range(k - 1, n):
+    # a[i]がmax
     ans += a[i] * c(i, k - 1) % mod
 a = list(reversed(a))
 for i in range(k - 1, n):

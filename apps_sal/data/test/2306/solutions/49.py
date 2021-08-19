@@ -7,7 +7,7 @@ for i in range(n - 1, 0, -1):
     maxspeed[i] = min(v[i], v[i - 1], t[i] + maxspeed[i + 1])
 
 
-def dist(i, first):
+def dist(i, first):  # distance,lastspeed
     ta = v[i] - first
     tb = v[i] - maxspeed[i + 1]
     if ta + tb <= t[i]:

@@ -15,6 +15,7 @@ for _ in range(t):
             if l[i][j] == '1':
                 d[i] = 1
                 e[j] = 1
+    # ans=[]
     if sum(d.values()) + sum(e.values()) == 0:
         k = [-1] * m
         for i in range(n):

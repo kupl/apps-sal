@@ -9,7 +9,7 @@ eo = 0
 for query in range(Q):
     temp = list(map(str, input().split()))
     if temp[0] == "1":
-        eo += 1
+        eo += 1  # 反転したということになる
     else:
         if temp[1] == "1":
             if eo % 2 == 0:
@@ -21,6 +21,7 @@ for query in range(Q):
                 s.append(temp[2])
             else:
                 s.appendleft(temp[2])
+# print(s)
 s = list(s)
 if eo % 2 == 0:
     ans = "".join(s)

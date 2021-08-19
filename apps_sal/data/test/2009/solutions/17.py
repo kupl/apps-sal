@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/2/25 0:05
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : C. Connect.py
 
 from collections import deque
 
@@ -35,6 +40,8 @@ def main():
 
     floodfill(r1, c1, grid, '*')
     floodfill(r2, c2, grid, '-')
+    # for i in range(n):
+    #     print(grid[i])
 
     if grid[r1][c1] == grid[r2][c2]:
         print(0)
@@ -48,6 +55,8 @@ def main():
                     pos2.append((i, j))
 
         ret = float('inf')
+        # print(len(pos1))
+        # print(len(pos2))
         for rs, cs in pos1:
             for rt, ct in pos2:
                 ret = min(ret, (rt - rs) ** 2 + (ct - cs) ** 2)

@@ -13,7 +13,7 @@ class Solution:
                     t_pos = (r, c)
 
         def is_empty(r, c):
-            return 0 <= r < R and 0 <= c < C and grid[r][c] != '
+            return 0 <= r < R and 0 <= c < C and grid[r][c] != '#'
 
         visited = set()
         queue = [tuple(b_pos + s_pos)]

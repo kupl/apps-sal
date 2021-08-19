@@ -68,6 +68,7 @@ class Solution:
 
         for nei in self.getNeis(p):
             if self.inGrid(nei) and self.isGround(nei) and nei not in self.firstIsland:
+                # if self.inGrid(nei) and self.isGround(nei) and self.isWaterAround(nei) and nei not in self.firstIsland:
                 self.embraceIsland(nei)
 
     def isWaterAround(self, p):

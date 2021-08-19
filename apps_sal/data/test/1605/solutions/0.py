@@ -2,6 +2,10 @@ string = input()
 length = len(string)
 goodbad = [[1, 0, 0, 0] for x in range(length)]
 
+# good odd
+# bad odd
+# good even
+# bad even
 
 for i in range(length - 1):
     if string[i] == string[i + 1]:

@@ -10,9 +10,11 @@ lv = [tuple(map(int, input().split())) for _ in range(M)]
 
 
 def solve(w, lv):
+    # どのようにしても橋が崩落してしまう
     if max(w) > min(_[1] for _ in lv):
         return -1
 
+    # 前処理
     lv.sort(key=lambda x: x[1])
     vs = []
     ls = []
@@ -22,6 +24,7 @@ def solve(w, lv):
             ls.append(l)
 
     ans = -2
+    # ラクダたちの隊列を全探索
     for p in permutations(w):
         cum_weights = [0]
         positions = [0]

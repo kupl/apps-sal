@@ -18,4 +18,10 @@ class Solution:
                 no_tech[i] = no_tech[i - 1] + customers[i]
                 tech[i] = tech[i - 1] + customers[i]
 
+            # print(customers[max(0, (i-X) + 1) : i+1])
+
+            # print(tech)
+            # print(no_tech)
+            # print()
+
         return tech[-1]

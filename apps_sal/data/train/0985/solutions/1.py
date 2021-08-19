@@ -1,3 +1,4 @@
+#author : dokueki
 
 import sys
 
@@ -23,6 +24,7 @@ def main():
     a = []
     for _ in range(n):
         a.append(int(sys.stdin.readline()))
+    # print(a)
     print(dp(a, n))
 
 

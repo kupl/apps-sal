@@ -1,5 +1,6 @@
 import sys
 
+# stdin = open("testdata.txt", "r")
 ip = sys.stdin
 
 

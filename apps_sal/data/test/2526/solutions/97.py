@@ -18,4 +18,7 @@ apple.sort()
 
 sweet = apple[-x - y:].sum()
 
+# print(x,y,a,b,c)
+# print(p,q,r)
+# print(apple)
 print(sweet)

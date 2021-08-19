@@ -4,7 +4,9 @@ def ne(c):
     return 'L'
 
 
+# for _ in range(1):
 for _ in range(int(input())):
+    # n, k = map(int, input().split())
     n = int(input())
     s = input()
     ans = 0
@@ -16,7 +18,7 @@ for _ in range(int(input())):
         while s[i] == s[0]:
             i += 1
         s = s[i:] + s[:i]
-    lst = '
+    lst = '#'
     cnt = 0
     for i in range(n):
         if lst != s[i]:

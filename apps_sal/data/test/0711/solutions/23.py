@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def modinv(a, mod):
     return pow(a, mod - 2, mod)
 
@@ -7,17 +8,18 @@ MOD = 10**9 + 7
 
 class Factorial:
     def __init__(self, n, mod):
+        # O(n + log mod)
         self.f = f = [0] * (n + 1)
         f[0] = b = 1
         for i in range(1, n + 1):
             f[i] = b = b * i % mod
         self.inv = inv = [0] * (n + 1)
-        inv[n] = b = modinv(self.f[n], mod)
+        inv[n] = b = modinv(self.f[n], mod)  # pow(self.f[n], -1, mod) が Google Colab, Python ver. が低く Error
         for i in range(n, 0, -1):
             inv[i - 1] = b = b * i % mod
         self.mod = mod
 
-    def __call__(self, n, k):
+    def __call__(self, n, k):  # self.C() と同じ
         return self.C(n, k)
 
     def factorial(self, i):
@@ -50,11 +52,11 @@ def factorize(n) -> list:
             n //= b
             e += 1
         if e:
-            fct += (b, e),
+            fct += (b, e),  # b,
         b += 1
         e = 0
     if n > 1:
-        fct += (n, 1),
+        fct += (n, 1),  # n,
     return fct
 
 

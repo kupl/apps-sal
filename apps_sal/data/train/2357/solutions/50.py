@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 from heapq import heappush, heappop, heappushpop
 from itertools import permutations

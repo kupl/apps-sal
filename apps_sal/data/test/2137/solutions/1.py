@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 [n, a, b] = list(map(int, input().strip().split()))
 bis = [tuple(map(int, input().strip().split())) for _ in range(n)]

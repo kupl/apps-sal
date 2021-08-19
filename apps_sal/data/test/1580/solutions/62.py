@@ -1,3 +1,5 @@
+# float型を許すな
+# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -20,6 +22,7 @@ def printni(x): print(('\n'.join(list(map(str, x)))))
 
 inf = 10**17
 mod = 10**9 + 7
+# https://note.nkmk.me/python-union-find/
 
 
 class UnionFind():

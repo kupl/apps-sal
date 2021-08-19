@@ -10,6 +10,7 @@ class Solution:
                 times += 1
                 curr_profit = 4 * boardingCost - runningCost
                 customers[i + 1] = customers[i + 1] + customers[i] - 4
+            # print(customers)
             profit.append(curr_profit)
         while customers[-1] > 4:
             times += 1

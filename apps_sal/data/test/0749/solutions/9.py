@@ -7,6 +7,7 @@ for i in range(len(a)):
 for i in range(len(S)):
     S[i] += [len(a)]
 min = [-1 for i in range(26)]
+# print(S)
 for i in range(26):
     for j in range(1, len(S[i])):
         if min[i] < S[i][j] - S[i][j - 1]:

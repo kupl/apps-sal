@@ -3,6 +3,7 @@ def main():
     a = [list([int(x) - 1 for x in input().split()]) for _ in range(n)]
     for i in range(n):
         a[i].reverse()
+    # print(a)
     s = set()
 
     def check(i, s):

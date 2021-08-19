@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 
+# input = stdin.readline
 
 def solve(n, m, original, temp):
     def judge(sy, sx):

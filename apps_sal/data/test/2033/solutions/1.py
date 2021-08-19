@@ -3,6 +3,7 @@ from collections import deque
 def input(): return sys.stdin.readline().strip()
 
 
+# for i in range(int(input())):
 n, m = list(map(int, input().split()))
 g = {}
 for i in range(m):

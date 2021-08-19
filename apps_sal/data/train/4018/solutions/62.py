@@ -2,6 +2,7 @@ def isDigit(string):
 
     clean_string = string.strip()
 
+    # edge case
     if string == "-0":
         return True
 

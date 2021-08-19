@@ -13,6 +13,7 @@ class Solution:
             d_u[ele] = arr.count(ele)
 
         d_u = sorted(list(d_u.items()), key=lambda x: x[1], reverse=True)
+        # print(d_u)
         s = 0
         size = 0
         for ele in d_u:

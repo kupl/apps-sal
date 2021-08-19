@@ -2,6 +2,7 @@ def test():
     from math import factorial as f
     cnt = 0
     i = 1
+   # while cnt != 100000+1:
     for i in range(1, 100 + 1):
         s = str(f(i))
         cnt = 0
@@ -10,7 +11,7 @@ def test():
                 cnt += 1
             else:
                 break
-        print(cnt, end=" ")
+        print(cnt, end=" ")  # , f(i))
         i += 1
     print(cnt, end=" ")
 

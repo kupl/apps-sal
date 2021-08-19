@@ -1,16 +1,16 @@
-def tokenise(s, split='*
+def tokenise(s, split='*#. '):
     """
-    Takes a string and splits it on any of the characters in the split string,
-    yields each split with the character used to split as it's prefix, with
-    the exception of spaces followed by another split character, when spaces
+    Takes a string and splits it on any of the characters in the split string, 
+    yields each split with the character used to split as it's prefix, with 
+    the exception of spaces followed by another split character, when spaces 
     are removed
 
     Example:
-        split('.abc
+        split('.abc #123 .def.ghi *')
     will yield the following strings:
-        '.abc', '
+        '.abc', '#123', '.def', '.ghi', '*'
     """
-    buffer=''
+    buffer = ''
     for c in s:
         if c in split:
             if buffer.strip():
@@ -23,20 +23,20 @@ def tokenise(s, split='*
 
 def score_selector(selector):
     """
-    Given a CSS selector build a score for the selector that can be used for
+    Given a CSS selector build a score for the selector that can be used for 
     sorting precendence.
 
     Returns a tuple with counts of the following:
         (stars, ids, classes, tagnames)
-    Stars are numbered positively, the others are numbered negatively
+    Stars are numbered positively, the others are numbered negatively 
     so that natural ordering can be used without having to specify a key
     for the sort call.
     """
-    low, ids, classes, tags=0, 0, 0, 0
+    low, ids, classes, tags = 0, 0, 0, 0
     for part in tokenise(selector):
         if part.startswith('.'):
             classes -= 1
-        elif part.startswith('
+        elif part.startswith('#'):
             ids -= 1
         elif part.startswith('*'):
             low += 1

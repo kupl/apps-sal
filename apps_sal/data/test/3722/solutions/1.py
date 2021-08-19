@@ -29,3 +29,21 @@ if c in ["BAAA", "BAAB", "ABBA", "BBBA"]:
             ans += [(ans[-1] + ans[-2]) % (10**9 + 7)]
 
         print((ans[-1]))
+
+
+# 2darray
+## [[0] * 4 for i in range(3)]
+
+# import itertools
+# import sys
+# return
+
+# l_2d = [[20, 3, 100], [1, 200, 30], [300, 10, 2]]
+# sorted(l_2d, key=lambda x: x[0])
+## [[1, 200, 30], [20, 3, 100], [300, 10, 2]]
+
+# import numpy as np
+# l_2d_t = np.array(l_2d).T.tolist()
+# l_2d_ts = sorted(l_2d_t, key=lambda x: x[0])
+# np.array(l_2d_ts).T.tolist()
+## [[3, 20, 100], [200, 1, 30], [10, 300, 2]]

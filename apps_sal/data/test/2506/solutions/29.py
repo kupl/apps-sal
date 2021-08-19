@@ -23,6 +23,7 @@ while ok - ng > 1:
         ng = x
     else:
         ok = x
+# print(ok)
 p = [0] * (n + 1)
 for i in range(n):
     p[i + 1] = p[i] + l[i]

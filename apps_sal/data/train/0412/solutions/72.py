@@ -1,5 +1,7 @@
+# from (D * F * target) -> O(D * target)
 class Solution:
     def numRollsToTarget(self, D: int, F: int, target: int) -> int:
+        # dp[d][t] -> how many ways to form t using d dices
         dp = [[0] * (target + 1) for _ in range(2)]
         dp[0][0] = 1
         for d in range(1, D + 1):

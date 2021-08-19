@@ -1,3 +1,4 @@
+# B - Small and Large Integers
 A, B, K = map(int, input().split())
 
 ans = []

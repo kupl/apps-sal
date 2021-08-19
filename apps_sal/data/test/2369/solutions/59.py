@@ -15,6 +15,7 @@ def cmb(n, k, p):
     return fact[n] * factinv[k] * factinv[n - k] % p
 
 
+# N = 10 ** 6
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % MOD)
     inv.append((-inv[MOD % i] * (MOD // i)) % MOD)

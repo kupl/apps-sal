@@ -4,6 +4,8 @@ class Solution:
             grid[i] = grid[i].replace('\\\\', '*')
         N = len(grid)
         record = [[[0, 0, 0, 0] for j in range(N)] for i in range(N)]
+        #visited = set()
+        # print(grid)
         count = 0
 
         def dfs(i, j, k):

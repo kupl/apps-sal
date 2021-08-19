@@ -14,7 +14,7 @@ class Solution:
             r += 1
         return r - l - 1
 
-        '''
+        '''#queue kind of slow
         l = 0
         r = 0
         max_len = 0
@@ -28,8 +28,10 @@ class Solution:
                 r += 1
             elif(nums[r] == 0 and zeros == 1):
                 if(queue[0] == 0):
+                    #zero in front
                     while(len(queue) > 0 and queue[0] == 0):
                         queue.pop(0)
+                #zero in the middle
                 else:
                     while(len(queue) > 0 and queue[0] == 1):
                         queue.pop(0)

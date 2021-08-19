@@ -2,6 +2,7 @@ class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         r = 0
         a = list(chars)
+        # print(a)
         for i in words:
             b = a.copy()
             s = False
@@ -13,4 +14,5 @@ class Solution:
 
             if s != True:
                 r += len(i)
+                # print(s,r,b,a)
         return r

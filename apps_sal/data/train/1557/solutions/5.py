@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -12,11 +13,13 @@ for i in range(t):
             c1 = c1 + 1
         else:
             c0 = c0 + 1
+    # print(c1,c0);
     for i in r:
         if i == '1':
             d1 = d1 + 1
         else:
             d0 = d0 + 1
+    # print(d0,d1);
     if ((c0 == d0) and (c1 == d1)):
         print('YES')
     else:

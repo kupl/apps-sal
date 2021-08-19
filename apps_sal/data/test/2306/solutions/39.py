@@ -1,3 +1,6 @@
+# AtCoder Beginner Contest 076
+# D - AtCoder Express
+# https://atcoder.jp/contests/abc076/tasks/abc076_d
 
 
 def solve(T, V, velocity):

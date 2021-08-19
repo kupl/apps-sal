@@ -1,8 +1,11 @@
+# the obvious approach...
 def parse_float(string):
     try:
         return float(string)
     except ValueError:
         return None
+
+# hand rolled
 
 
 def parse_float(string):

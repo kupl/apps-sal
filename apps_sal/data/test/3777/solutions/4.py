@@ -20,6 +20,7 @@ def find_root(x):
     return z
 
 
+# min spanning tree
 tree = [set() for _ in range(N + 1)]
 min_tree_size = 0
 for u, v, w in UVW:
@@ -32,6 +33,8 @@ for u, v, w in UVW:
     tree[u].add((v, w))
     tree[v].add((u, w))
 
+# treeにおける2頂点の間の辺の最大値を求めたい
+# LCA。2^n個手前およびそこまでの最大値を覚える
 
 parent = [[0] * 12 for _ in range(N + 1)]
 max_wt = [[0] * 12 for _ in range(N + 1)]
@@ -55,6 +58,7 @@ dfs()
 
 
 def max_wt_between(x, y):
+    # LCA しながら重みの最大値を得る
     wt = 0
     dx, dy = depth[x], depth[y]
     if dx > dy:
@@ -80,6 +84,7 @@ def max_wt_between(x, y):
     return max(wt, max_wt[x][0], max_wt[y][0])
 
 
+# 各edgeに対して、その辺を含む最小の全域木の大きさを求める
 min_size = []
 for u, v, w in UVW:
     if (v, w) in tree[u]:
@@ -95,8 +100,11 @@ gr = sum(1 if s > X else 0 for s in min_size)
 if eq == 0:
     answer = 0
 elif sm == 0:
+    # eq 内の辺が完全同色でなければよい
     answer = (pow(2, eq, MOD) - 2) * pow(2, gr, MOD) % MOD
 else:
+    # sm 内が完全同色でなければならない。
+    # eq 内は、smの色と異なる色を持っていれば何でもよい
     answer = 2 * (pow(2, eq, MOD) - 1) * pow(2, gr, MOD) % MOD
 
 print(answer)

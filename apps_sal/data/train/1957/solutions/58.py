@@ -9,6 +9,7 @@ class Solution:
         if n == 1 and m == 1:
             return 0
         while queue:
+            # print(queue)
             tmp = queue
             queue = []
             for i, j, eliminate in tmp:

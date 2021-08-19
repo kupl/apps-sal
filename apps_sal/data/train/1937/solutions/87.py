@@ -21,3 +21,10 @@ class ThroneInheritance:
             self.ans.append(cur)
         for child in self.nation[cur]:
             self.dfs(child)
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

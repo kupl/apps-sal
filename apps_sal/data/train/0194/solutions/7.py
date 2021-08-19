@@ -34,6 +34,8 @@ class Solution:
                         return True
                     subsets[i] -= selected
                 if subsets[i] == 0:
+                    # this line is important, otherwise TLE.
+                    # if subsets[i] is 0 then later subsets are all zeros. No need to try them all.
                     break
             nums.append(selected)
             return False

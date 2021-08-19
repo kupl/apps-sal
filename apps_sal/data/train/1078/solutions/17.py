@@ -1,3 +1,4 @@
+# cook your dish here
 for h in range(int(input())):
     s, w1, w2, w3 = map(int, input().split())
     sum1 = w1 + w2 + w3

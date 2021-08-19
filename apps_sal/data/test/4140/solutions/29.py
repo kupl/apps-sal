@@ -1,5 +1,6 @@
 S = list(input())
 
+# 白から
 cnt1 = 0
 for i, s in enumerate(S):
     if i % 2 == 0:
@@ -9,6 +10,7 @@ for i, s in enumerate(S):
         if s != '1':
             cnt1 += 1
 
+# 黑から
 cnt2 = 0
 for i, s in enumerate(S):
     if i % 2 == 0:

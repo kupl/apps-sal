@@ -8,6 +8,7 @@ MOD = 10**9 + 7
 
 class DSU:
     def __init__(self, N):
+        # R * C is the source, and isn't a grid square
         self.par = list(range(N + 1))
         self.rnk = [0] * (N + 1)
         self.sz = [1] * (N + 1)
@@ -39,7 +40,7 @@ def solve(N, K, edges):
     for u, v, w in edges:
         u -= 1
         v -= 1
-        if w == 0:
+        if w == 0:  # red
             dsu.union(u, v)
 
     ans = pow(N, K, MOD)
@@ -50,7 +51,7 @@ def solve(N, K, edges):
     return ans
 
 
-for tc in range(1):
+for tc in range(1):  # rri()):
     N, K = rrm()
     edges = [rrm() for _ in range(N - 1)]
     print(solve(N, K, edges))

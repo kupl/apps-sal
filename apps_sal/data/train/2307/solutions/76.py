@@ -1,3 +1,4 @@
+#coding: utf-8
 N, A, B = list(map(int, input().split()))
 X = list(map(int, input().split()))
 dp = [float("inf") for _ in range(N)]

@@ -1,3 +1,4 @@
+# cook your dish here
 def solve(a, b):
     for i in a:
         for j in b:

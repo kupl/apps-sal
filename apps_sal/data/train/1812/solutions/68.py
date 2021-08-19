@@ -75,3 +75,8 @@ class MajorityChecker:
 
     def query(self, left: int, right: int, threshold: int) -> int:
         return self.ST.retrieveLargestStats(left, right, threshold)
+
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)

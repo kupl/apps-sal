@@ -8,7 +8,7 @@ Soldier = namedtuple('Soldier', 'i,speed')
 
 def queue_battle(d, *args):
     armies = [Army(i, deque(starmap(Soldier, enumerate(q)))) for i, q in enumerate(args)]
-    bullets = [[] for _ in range(len(armies))]
+    bullets = [[] for _ in range(len(armies))]        # bullet[i] shoots at armies[i+1]
     t = 0
 
     while len(armies) > 1:

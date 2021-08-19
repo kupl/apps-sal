@@ -9,6 +9,7 @@ class Solution:
         move = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         flag = False
 
+        # find the first land
         for i in range(R):
             if flag:
                 break
@@ -41,6 +42,7 @@ class Solution:
         return res
 
     def dfs(self, i, j, A, chk, q):
+        # print(i, j)
         if chk[i][j] == 1:
             return
 

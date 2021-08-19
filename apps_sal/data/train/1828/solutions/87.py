@@ -22,3 +22,5 @@ class Solution:
                     heapq.heappush(heap, (cnt1, num1))
 
         return res
+
+# Run time O(NlogN), space O(N)

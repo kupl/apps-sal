@@ -25,5 +25,6 @@ for i in range(len(graph)):
         vis = [0] * N
         dfs(0, gn)
         if not(all(vis)):
+            # print(i+1, graph[i][j]+1,gn,vis)
             ans += 1
 print(ans)

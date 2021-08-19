@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     s, sg, fg, d, t = map(int, input().split())
     dif = float(d * 180 / t)

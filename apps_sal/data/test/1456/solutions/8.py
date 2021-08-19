@@ -12,6 +12,8 @@ def __starting_point():
         table.append(input())
     for i in range(2 * n):
         newT.append([1] * (2 * n))
+    #table = [input() for i in range(n)]
+    #newT = [[1] * (2 * n) for i in range(2 * n)]
 
     for i in range(n):
         for j in range(n):

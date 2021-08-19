@@ -13,6 +13,8 @@ for i in range(n - 1):
 
 result = 1
 
+# for i in range(n):
+#    print(T_inv[i])
 
 for i in range(n):
     for child in T_inv[i]:

@@ -6,6 +6,7 @@ class Solution:
     def findDivisor(self, num):
         min_gap = num
         min_gap_saved = []
+        # for i in range(int(sqrt(num)), 0, -1):
         for i in range(1, int(sqrt(num)) + 1):
             if num % i == 0:
                 gap = abs(i - num // i)

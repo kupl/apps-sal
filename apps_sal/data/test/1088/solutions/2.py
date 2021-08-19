@@ -68,6 +68,8 @@ def main():
     row = UnionFind(N)
     column = UnionFind(N)
 
+    # row
+
     for i in range(N - 1):
         for j in range(i + 1, N):
             for w in range(N):

@@ -12,4 +12,5 @@ for nt in range(int(input())):
         if (cur + loop) < 0:
             ans += (i + 1)
             loop += 1
+            # print (cur,ans,loop)
     print(ans + n)

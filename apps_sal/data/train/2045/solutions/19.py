@@ -9,6 +9,8 @@ def inint():
 def inlst():
     return(list(map(int, input().split())))
 
+# returns a List of Characters, which is easier to use in Python as Strings are Immutable
+
 
 def instr():
     s = input()
@@ -18,6 +20,8 @@ def instr():
 def invar():
     return(list(map(int, input().split())))
 
+############ ---- Input function template ---- ############
+
 
 def isOdd(num):
     return (num & 1) == 1
@@ -25,6 +29,8 @@ def isOdd(num):
 
 n, m = invar()
 
+# build function
+# 2n+1 is needed as 1-index would be used
 tree = [{'round_num': m, 'winner': -1} for _ in range(2 * n + 1, 0, -1)]
 
 
@@ -61,8 +67,10 @@ for _ in range(m):
     li, ri, xi = invar()
     rounds.append({'left': li, 'right': ri, 'winner': xi})
 
+# iterating input in reverse order
 for idx in range(m - 1, -1, -1):
     round = rounds[idx]
+    # update winner for all the knights in tournament. except for winner itself
     if round['winner'] > 0:
         modify(round['left'], round['winner'] - 1, {'round_num': idx, 'winner': round['winner']})
     if round['winner'] < n:

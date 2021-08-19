@@ -26,6 +26,7 @@ class Solution:
         ptr1 = 0
         ptr2 = 1
         while True:
+            # print(ptr1, ptr2)
             winner = arr[ptr1] if arr[ptr1] > arr[ptr2] else arr[ptr2]
             if winner not in win_counts:
                 win_counts[winner] = 1

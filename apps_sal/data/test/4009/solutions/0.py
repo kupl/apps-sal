@@ -5,4 +5,5 @@ if s[-y - 1] == '1':
     res -= 1
 else:
     res += 1
+# print(s)
 print(res)

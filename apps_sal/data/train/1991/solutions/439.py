@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/count-all-possible-routes/discuss/843602/Java-or-DP-all-approaches --> another dp solution
 class Solution:
     def countRoutes(self, a: List[int], s: int, e: int, f: int) -> int:
         ans, n = 0, len(a)

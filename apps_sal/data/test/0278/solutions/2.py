@@ -31,3 +31,6 @@ if cnt > 1:
     ans += cnt
 
 print(ans)
+
+
+# Made By Mostafa_Khaled

@@ -1,16 +1,19 @@
+#!/usr/bin/env python3
 
 def main():
     n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
 
+    # dig: マッチ本数 -> 使える数字
     nm = [999, 2, 5, 5, 4, 5, 6, 3, 7, 6]
     dig = [None for i in range(8)]
     for x in sorted(a):
         dig[nm[x]] = x
 
+    # dp[j]: j本のマッチを使って作れる最大の数 tuple(桁数d, prevj, lastdig)
     dp = [None for j in range(n + 1)]
     dp[0] = (0, None, None)
-    for j in range(1, n + 1):
+    for j in range(1, n + 1):  # もらう
         for use in [2, 3, 4, 5, 6, 7]:
             jp = j - use
             if jp < 0:

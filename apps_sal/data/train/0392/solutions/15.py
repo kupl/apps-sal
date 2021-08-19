@@ -42,6 +42,8 @@ class Solution:
                 zc[1] += 1
                 j += 1
 
+            # print(zc)
+
             lv = 0
             rv = 0
             if zc[0] > 0:

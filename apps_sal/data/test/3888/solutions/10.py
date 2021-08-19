@@ -1,4 +1,5 @@
 N = int(input())
+# from random import randint
 if N <= 5:
     A = [[0] * N for _ in range(N)]
     A[0] = list(map(int, input().split()))
@@ -28,6 +29,9 @@ else:
     for j in range(4):
         B[0][j] = A[0][j]
 
+    # A[0] = [randint(0,2) for _ in range(N)]
+    # for i in range(N-1):
+        # A[i+1][0] = randint(0,2)
     for i in range(1, 4):
         for j in range(1, N):
             lis = [0] * 3

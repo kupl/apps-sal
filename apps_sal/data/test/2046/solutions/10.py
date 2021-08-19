@@ -1,4 +1,5 @@
 from sys import stdin as fin
+# fin = open("cfr398a.in", "r")
 
 n = int(fin.readline())
 arr = list(map(int, fin.readline().split()))

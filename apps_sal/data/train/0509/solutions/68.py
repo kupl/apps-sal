@@ -17,8 +17,11 @@ while q:
     for nei, w in G[node]:
         if ans[nei]:
             continue
+        # 現在のノードに書き込まれた数と、辺の数字が一致
         if ans[node] == w:
+            # 異なる数字を次のノードに入れる
             ans[nei] = w + 1 if w < n else 1
+        # 現在のノードに書き込まれた数と、辺の数字が不一致
         else:
             ans[nei] = w
         q.append(nei)

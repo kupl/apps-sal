@@ -9,8 +9,9 @@ for i in range(m):
 
 ans = 0
 
-for i in itertools.permutations(range(n), n):
-    if i[0] == 0:
+for i in itertools.permutations(range(n), n):  # iterools.permutations(list, size)
+    # 頂点は0か？
+    if i[0] == 0:  # 頂点は１ではないことに注意
         for j in range(n):
             if j == n - 1:
                 ans += 1

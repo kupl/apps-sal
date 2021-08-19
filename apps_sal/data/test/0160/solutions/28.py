@@ -25,6 +25,7 @@ ans = 1
 flg = False
 for i in adiv:
     a_ = np.sort(a % i)
+    # print(i, a_)
     msum = a_.sum()
     msum_ = 0
     for j in range(-1, -n - 1, -1):

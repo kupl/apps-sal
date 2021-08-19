@@ -87,6 +87,7 @@ class UnionFind():
 
 mod = 10**9 + 7
 
+# --maincode----------------
 
 n = ini()
 a = inl()

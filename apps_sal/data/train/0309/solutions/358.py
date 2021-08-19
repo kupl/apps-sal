@@ -9,4 +9,5 @@ class Solution:
                 dp[i][x] = max(dp[j][x] + 1 if x in dp[j] else 0, 2 if x not in dp[i] else dp[i][x])
                 res = max(dp[i][x], res)
 
+        # print(dp)
         return res

@@ -2,6 +2,7 @@ def ll(): return list(map(int, input().split()))
 
 
 testcases = 1
+# testcases = ll()
 for _ in range(testcases):
     [x1, y1, x2, y2] = ll()
     [x3, y3, x4, y4] = ll()

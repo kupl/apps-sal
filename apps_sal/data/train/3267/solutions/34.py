@@ -1,4 +1,5 @@
 def well(x):
+    # your code here
     NG = 0
     for i in range(len(x)):
         if(x[i] == "good"):

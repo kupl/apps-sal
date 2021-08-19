@@ -32,6 +32,7 @@ for i in range(0, x + 1):
 l = [0]
 for i in range(x):
     l.append(k[i + 1] - k[i])
+    # a[i]+b[i]
 
 s1 = 0
 s2 = 0

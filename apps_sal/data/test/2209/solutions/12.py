@@ -21,6 +21,7 @@ hs = [0 for _ in ts]
 
 for i in range(n - 2, -1, -1):
     hs[i] = hs2[i + 1] + hs[i + 1]
+#print(ss, hs2, hs)
 
 for i in range(n):
     res += ss[i] * hs[i]

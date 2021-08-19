@@ -10,6 +10,7 @@ for i in range(n):
         a = a // 2
     arr[cou] += 1
     ll[i] = cou
+# print(arr)
 m = arr.index(max(arr))
 res = []
 rak = 0

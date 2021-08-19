@@ -1,6 +1,6 @@
 n, b, t = (int(i) for i in input().split())
 c = [0] * b
-a = []
+a = []  # kitten
 for i in range(n):
     s = input()
     a.append(s)

@@ -4,6 +4,7 @@ input = sys.stdin.readline
 t = int(input())
 while t:
     n = int(input())
+    # n,m=map(int,input().split())
     l = list(map(int, input().split()))
     st = 0
     for i in range(n):

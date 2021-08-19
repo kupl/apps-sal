@@ -1,3 +1,6 @@
+# mst
+# sort edge->union find
+# choose min that is not connected
 def distance(u, v):
     return abs(u[0] - v[0]) + abs(u[1] - v[1])
 
@@ -13,7 +16,7 @@ class Solution:
                 u, v = points[i], points[j]
                 dis = distance(u, v)
                 distances.append((dis, i, j))
-        distances.sort()
+        distances.sort()  # distance, u, v
 
         def find(i):
             while i != parent[i]:

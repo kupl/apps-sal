@@ -1,4 +1,5 @@
 def rle(s):
+    # ex. '01100011110' -> [1 2 3 4 1]
     before_c = s[0]
     ret = list()
     cnt = 0
@@ -24,6 +25,7 @@ def main():
     if len(seq_cnt) == 2:
         print(max(seq_cnt))
         return
+    # cumsum
     cumsum_seq_cnt = [0 for _ in range(len(seq_cnt))]
     rev_cumsum_seq_cnt = [0 for _ in range(len(seq_cnt))]
     cumsum_seq_cnt[0] = seq_cnt[0]
@@ -31,6 +33,7 @@ def main():
     for i in range(1, len(seq_cnt)):
         cumsum_seq_cnt[i] = cumsum_seq_cnt[i - 1] + seq_cnt[i]
         rev_cumsum_seq_cnt[i] = rev_cumsum_seq_cnt[i - 1] + seq_cnt[-1 - i]
+    # search
     max_k = cumsum_seq_cnt[0]
     rev_max_k = rev_cumsum_seq_cnt[0]
     for i in range(1, len(seq_cnt)):

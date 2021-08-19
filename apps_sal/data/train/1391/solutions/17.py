@@ -1,3 +1,4 @@
+# find disjoint intervals
 
 from collections import defaultdict
 for _ in range(int(input())):
@@ -11,6 +12,7 @@ for _ in range(int(input())):
 
     ans = 0
 
+    # print(times)
     for c in list(times.values()):
         c.sort(key=lambda x: x[1])
         finish_time = 0

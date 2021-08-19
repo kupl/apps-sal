@@ -1,7 +1,7 @@
-N = int(input())
+N = int(input())  # 市の数
 XY = [list(map(int, input().split())) for _ in range(N)]
-C = list(map(int, input().split()))
-K = list(map(int, input().split()))
+C = list(map(int, input().split()))  # 市 i に発電所を建てるコスト
+K = list(map(int, input().split()))  # つなげるコスト
 
 CC = [-1] * N
 Ans = [-2] * N

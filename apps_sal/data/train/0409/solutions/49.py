@@ -30,6 +30,10 @@ class Solution:
                 cum_sum2 %= MOD
             max_sum2 = max(cum_sum2, max_sum2)
 
+        # print(max_sum)
+        # print(cum_sum)
+        # print(max_sum2)
+        # print(cum_sum2)
         if sum(arr) > 0:
             return (max_sum + ((sum(arr)) % MOD) * (k - 1)) % MOD
         else:

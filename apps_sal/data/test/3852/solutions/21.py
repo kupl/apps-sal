@@ -1,4 +1,15 @@
-from math import floor, sqrt, factorial, hypot, log
+#
+# 　　  ⋀_⋀
+#　　  (･ω･)
+# .／ Ｕ ∽ Ｕ＼
+#  │＊　合　＊│
+#  │＊　格　＊│
+#  │＊　祈　＊│
+#  │＊　願　＊│
+#  │＊　　　＊│
+#      ￣
+#
+from math import floor, sqrt, factorial, hypot, log  # log2ないｙｐ
 from itertools import accumulate, permutations, combinations, product, combinations_with_replacement
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect_right
@@ -44,15 +55,19 @@ def main():
     MIN = min(A)
     print(2 * N - 1)
     if abs(MAX) < abs(MIN):
+        # 全部負にする
         min_idx = A.index(MIN) + 1
         for i in range(1, N + 1):
             print(min_idx, i)
+        # 累積和
         for i in range(2, N + 1)[::-1]:
             print(i, i - 1)
     else:
+        # 全部非負にする
         max_idx = A.index(MAX) + 1
         for i in range(1, N + 1):
             print(max_idx, i)
+        # 累積和
         for i in range(1, N):
             print(i, i + 1)
 

@@ -5,6 +5,7 @@ class Solution:
         while min_speed <= max_speed:
             pivot = min_speed + (max_speed - min_speed) // 2
             r = sum([math.ceil(x / pivot) for x in piles])
+            # r=sum(hours)
             if r == H:
                 return pivot
             elif min_speed == max_speed and r >= H:

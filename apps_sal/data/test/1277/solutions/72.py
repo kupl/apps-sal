@@ -10,7 +10,7 @@ graph = [[] for _ in range(n)]
 for i in range(n - 1):
     a, b = map(int, rd().split())
     graph[a - 1].append(b - 1)
-    graph[b - 1].append(a - 1)
+    graph[b - 1].append(a - 1)  # 有向グラフなら消す
 
 
 def dfs(v, p=-1):

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def get_count(S, H, W, i, j):
     num = 0
@@ -22,8 +23,8 @@ def get_count(S, H, W, i, j):
 
     for y in range(start_j, end_j, 1):
         for x in range(start_i, end_i, 1):
-            if S[j + y][i + x] == "
-            num += 1
+            if S[j + y][i + x] == "#":
+                num += 1
 
     return num
 

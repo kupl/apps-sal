@@ -5,6 +5,9 @@ N, M = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
+# node : 0<=i<=3*N-1, i:minus i+1: delete i+2: plus
+# start : 3*N
+# goal : 3*N+1
 
 EDGE = [dict() for i in range(3 * N + 2)]
 V = 3 * N + 2
@@ -31,7 +34,7 @@ while True:
     ROUTE = [-1] * V
     Q = [(start, float("inf"))]
 
-    while Q:
+    while Q:  # DFS
         NOW, cost = Q.pop()
         if NOW == goal:
             break
@@ -46,11 +49,11 @@ while True:
 
     ANS += cost
     i = goal
-    while i != start:
+    while i != start:  # goalからたどり,Routeを使ってEDGEの更新
         j = ROUTE[i]
-        EDGE[j][i] -= cost
+        EDGE[j][i] -= cost  # 使ったルートをいけなく更新
         if j in EDGE[i]:
-            EDGE[i][j] += cost
+            EDGE[i][j] += cost  # 逆向きに進めるようにする.これらを重みつきにすれ普通のフロー
         else:
             EDGE[i][j] = cost
 

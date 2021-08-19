@@ -7,6 +7,7 @@ for i in range(n - 1):
     cnt[i] -= x
     cnt[i] = max(cnt[i], 0)
 temp_cnt = cnt[::]
+# print(cnt)
 for i in range(n - 1):
     if temp_cnt[i] == 0:
         continue
@@ -15,6 +16,7 @@ for i in range(n - 1):
         temp_cnt[i + 1] -= min(A[i + 1], temp_cnt[i])
         temp_cnt[i] = 0
         temp_cnt[i + 1] = max(temp_cnt[i + 1], 0)
+    # print(ans1)
 ans1 += temp_cnt[-1]
 
 

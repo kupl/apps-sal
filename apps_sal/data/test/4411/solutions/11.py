@@ -1,3 +1,5 @@
+# DPっぽいな
+# 愚直に書く
 
 from heapq import heappop, heappush
 import sys
@@ -46,13 +48,20 @@ for i in range(n):
 
 segments.sort()
 cursor = 0
+# 右端、左端
 heap = []
 ans = []
+# 前からみていく
 for i in range(m):
+    # segments足すかどうか
+    # 全体でO(N)
     while cursor != n and segments[cursor][0] == i:
+        # -右端, 左端
         heappush(heap, (-segments[cursor][1], segments[cursor][0], segments[cursor][2]))
         cursor += 1
     cnt = max(0, RAQ.query(i) - k)
+    #ans += cnt
+    # cnt個セグメントを消さなきゃいけない
     while cnt:
         r, l, p = heappop(heap)
         r = -r

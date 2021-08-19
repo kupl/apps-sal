@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 po = 0
 ne = 0
@@ -15,6 +16,7 @@ for i in range(t):
         remaining_slices = sum - s
         print("IMPOSSIBLE", remaining_slices)
         ne = ne + remaining_slices
+# print(po,ne)
 if(po >= ne):
     print("POSSIBLE")
 else:

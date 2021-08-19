@@ -1,3 +1,4 @@
+# cook your dish here
 from itertools import permutations
 for _ in range(int(input())):
     a = list(input())

@@ -8,6 +8,7 @@ class Solution:
             max_sub += sub_times
         return max_div + max_sub
 
+    # 返回除2的次数和减1的次数
     @lru_cache
     def calc_steps(self, num):
         if num == 0:

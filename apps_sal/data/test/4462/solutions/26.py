@@ -1,5 +1,13 @@
+# import
+#import math
+#import numpy as np
 N = int(input())
+# = input()
+# = map(int, input().split())
 a = list(map(int, input().split()))
+# = [input(), input()]
+# = [list(map(int, input().split())) for _ in range(N)]
+# = {i:[] for i in range(N)}
 
 alen = N
 two = 0

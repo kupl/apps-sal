@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 23 16:50:38 2020
 
@@ -12,8 +13,10 @@ for a in A:
         d[a] += 1
     else:
         d[a] = 1
+# print(d)
 for key in d.keys():
     if d[key] % 2 == 1:
         ans += 1
         d[key] = 0
+# print(d)
 print(ans)

@@ -14,6 +14,7 @@ class Solution:
                 max_earn = earn
                 res = cnt
             men -= min(men, 4)
+            #print(men, earn)
         while men > 0:
             cnt += 1
             earn += min(men, 4) * boardingCost
@@ -22,4 +23,5 @@ class Solution:
                 max_earn = earn
                 res = cnt
             men -= min(men, 4)
+            #print(men, earn)
         return res

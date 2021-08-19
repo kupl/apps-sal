@@ -1,5 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        #dp_table = {0:0}
         dp_table = [float('inf')] * (amount + 1)
         dp_table[0] = 0
         return self.dp(dp_table, coins, amount)
@@ -11,6 +12,7 @@ class Solution:
             return -1
         if dp_table[amount] != float('inf'):
             return dp_table[amount]
+        # 求最小值：
         res = float('inf')
         for coin in coins:
             subpb = self.dp(dp_table, coins, amount - coin)

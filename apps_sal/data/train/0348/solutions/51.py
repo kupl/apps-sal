@@ -21,4 +21,7 @@ class Solution:
                 max_ending_here0[i - 2] + arr[i],
                 arr[i])
 
+        # print(max_ending_here0)
+        # print(max_ending_here1)
+
         return max(max_ending_here1)

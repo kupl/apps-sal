@@ -4,7 +4,7 @@ class Solution:
         ratios = [(w / q, i) for i, (q, w) in enumerate(zip(quality, wage))]
         ratios.sort()
 
-        heap = []
+        heap = []  # -q
         sumq = 0
         ans = math.inf
 
@@ -13,7 +13,9 @@ class Solution:
             heapq.heappush(heap, (-quality[i]))
             if len(heap) > K:
                 q = heapq.heappop(heap)
-                sumq += q
+                sumq += q  # q is negative
             if len(heap) == K:
                 ans = min(ans, sumq * ratio)
         return ans
+
+        # 7 2.5 6

@@ -1,6 +1,14 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
 
+        # general: create arrays of strings of each length,
+
+        # minimum is one, max is length of the longest word
+
+        # sort and split by length
+
+        # BFS by length and at each
+
         words.sort(key=lambda x: len(x))
 
         wordLevels = {}
@@ -19,6 +27,7 @@ class Solution:
         return result
 
     def getChain(self, word, wordLevels, length):
+        # dfs here
 
         level = len(word)
         for i in range(len(word)):

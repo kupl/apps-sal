@@ -15,6 +15,8 @@ for i in range(len(s)):
             break
     pref += [arr[:]]
 
+# for x in pref:
+# 	print(x)
 
 q = int(sys.stdin.readline().strip())
 
@@ -46,7 +48,11 @@ for _ in range(q):
     ans += pref[-1][ind] * (r // len(s))
     r %= len(s)
 
+    # print("AA", ans, r)
+
     if r != 0:
         ans += pref[r - 1][ind]
 
     print(ans)
+
+    # print(rem, done, prev)

@@ -12,6 +12,7 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if mat[i][j] == 1:
+                    # dp only counts num from looking left
                     dp[i + 1][j + 1] = dp[i + 1][j] + 1
                     res += dp[i + 1][j + 1]
 

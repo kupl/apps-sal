@@ -1,7 +1,8 @@
 def row_sum_odd_numbers(n):
+    # your code here
 
-    k = int((1 + n) * n / 2)
-    m = int((1 + n - 1) * (n - 1) / 2)
+    k = int((1 + n) * n / 2)  # 3
+    m = int((1 + n - 1) * (n - 1) / 2)  # 1
 
     if(k == 1):
         return 1

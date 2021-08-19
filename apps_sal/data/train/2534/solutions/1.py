@@ -7,6 +7,9 @@ class Solution:
             s2 = s[i + 1:]
             i2 = list(s2).count('1')
             total = i1 + i2
+            # print(total)
             if total >= maxi:
                 maxi = total
+            # print(maxi)
+            # print(i1,i2)
         return maxi

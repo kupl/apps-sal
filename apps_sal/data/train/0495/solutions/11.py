@@ -18,6 +18,9 @@ class Solution:
 
         n = len(stones)
         total = sum(stones)
+        # memo keeps track of whether or not we can get a sum of exactly T for
+        # the smaller of the two sets (thus, T <= sum(A)/2) using numbers
+        # from 0 .. i
         memo = {}
 
         def dp(i, t):

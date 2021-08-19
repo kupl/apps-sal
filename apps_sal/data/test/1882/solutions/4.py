@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Fri Jan 12 18:46:09 2018
 
@@ -19,7 +20,9 @@ def __starting_point():
     for i in range(n):
         a, b = list(map(int, input().split()))
         listi.append((a, b, i))
+    # print(listi)
     listi = sorted(listi, key=lambda x: x[1])
+    # print(listi)
     time: list = [0] * (n + 1)
     count: list = [0] * (n + 1)
     for (a, t, ind) in listi:
@@ -40,10 +43,12 @@ def __starting_point():
         (idx + 1 for (a, t, idx) in listi if a >= max_score),
         max_score
     )))
+    # print(listi)
     '''for a, t, idx in listi:
         if idx > max_score:
             print(idx,sep=" ")
             '''
+    # print(idx+1 for  in listi )
 
 
 __starting_point()

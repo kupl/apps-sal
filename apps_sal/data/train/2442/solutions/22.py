@@ -14,5 +14,5 @@ class Solution:
                 j = stack.pop()
                 a = a + j[0]
                 c[j] -= 1
-            c += Counter()
+            c += Counter()  # erases all counts of 0
         return a

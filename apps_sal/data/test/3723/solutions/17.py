@@ -1,3 +1,5 @@
+#!/usr/bin/env pypy3
+# -*- coding: UTF-8 -*-
 
 def prime_t(t):
     i = 2

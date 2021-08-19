@@ -7,6 +7,7 @@ else:
     for i in range(1, min(n, m) + 1):
         temp *= i
         temp %= mod
+    # print(temp)
     if n != m:
         print((temp**2 * (max(n, m)) % mod))
     else:

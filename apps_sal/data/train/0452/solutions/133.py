@@ -13,6 +13,7 @@ class Solution:
                 rest = f(i - 1, k - 1, cache)
                 total = today + rest
                 m = min(m, total)
+            # print(i,j,m)
             cache[(i, j)] = m
             return m
         sol = f(d, len(jobDifficulty) - 1, {})

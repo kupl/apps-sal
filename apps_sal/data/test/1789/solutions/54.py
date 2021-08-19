@@ -43,7 +43,7 @@ def gi():
 
 
 def gtc(tc, ans):
-    print(("Case
+    print(("Case #" + str(tc) + ":", ans))
 
 
 def cil(n, m):
@@ -59,7 +59,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j]=a[j], a[i]
+    a[i], a[j] = a[j], a[i]
 
 
 def si():
@@ -84,19 +84,19 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y=mi()
+        x, y = mi()
         a[x].append(y)
         a[y].append(x)
 
 
-t=1
-uu=t
+t = 1
+uu = t
 
 
 while t > 0:
     t -= 1
-    a, b, x, y=mi()
-    y=min(y, 2 * x)
+    a, b, x, y = mi()
+    y = min(y, 2 * x)
     if a > b:
         print(((a - b - 1) * y + x))
     else:

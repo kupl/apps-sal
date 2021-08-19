@@ -37,6 +37,8 @@ for _ in range(t):
         extra_time -= a * extra_easy
         extra_hard = min(extra_time // b, tot_hard - must_hard)
 
+        #print(tm, extra_easy, extra_hard, must_easy, must_hard)
+
         score = max(score, extra_easy + extra_hard + must_easy + must_hard)
 
         if task_t[perm[i]] == 0:

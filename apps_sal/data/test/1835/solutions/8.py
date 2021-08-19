@@ -28,6 +28,7 @@ def solve():
         cnt1 += cnt["1"]
         cnt0 += cnt["0"]
 
+    # print(iso, ise, cnt1, cnt0)
     if not iso and cnt1 % 2 and cnt0 % 2:
         print(n - 1)
     else:

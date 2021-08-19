@@ -19,6 +19,7 @@ ds = [ds[ind] for ind in index]
 
 
 def _sub(i):
+    # 深さ優先探索しながらi番目以下の組み合わせと、次に調べるべき番号を返す
     if i == n - 1:
         return 2, n
     res = 1

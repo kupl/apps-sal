@@ -1,7 +1,10 @@
+# cook your dish here
 MOD = (10**9) + 7
 
 
 def ncr(n, r, p):
+    # initialize numerator
+    # and denominator
     num = den = 1
     for i in range(r):
         num = (num * (n - i)) % p
@@ -36,6 +39,7 @@ for _ in range(int(input())):
         else:
             temp2 = 0
 
+        # print(value,ans,temp1,temp2)
         ans = (ans * (arr[x]**(value - temp2 - temp1))) % MOD
 
     print(ans)

@@ -10,4 +10,5 @@ for _ in range(int(input())):
         arr[len(arr) - 1] -= k
     elif arr[len(arr) - 1] < 0:
         arr[len(arr) - 1] -= k
+   # print(arr)
     print(abs(arr[0] - arr[len(arr) - 1]))

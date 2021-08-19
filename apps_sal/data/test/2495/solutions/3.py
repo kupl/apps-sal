@@ -1,3 +1,4 @@
+# ARC072C - Sequence (ABC059C)
 import sys
 input = sys.stdin.readline
 
@@ -6,6 +7,7 @@ def main():
     n = int(input())
     lst = tuple(map(int, input().split()))
 
+    # start with positive number
     cur, cnt_1 = 0, 0
     for i, j in enumerate(lst):
         new = cur + j
@@ -18,6 +20,7 @@ def main():
         else:
             cur += j
 
+    # start with negative number
     cur, cnt_2 = 0, 0
     for i, j in enumerate(lst):
         new = cur + j

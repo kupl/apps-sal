@@ -4,4 +4,5 @@ def reverse(st):
 
     st = ' '.join(st)
     st.strip()
+    # Your Code Here
     return ' '.join(st.split())

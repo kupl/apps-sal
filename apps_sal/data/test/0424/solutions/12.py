@@ -19,3 +19,6 @@ for i in range(f[n], n + 1):
     ans = min(ans, f[i])
 
 print(ans)
+
+
+# Made By Mostafa_Khaled

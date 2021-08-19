@@ -43,7 +43,9 @@ for moveIndex in range(0, k):
         j -= 1
         if board[i][j] == 0:
             board[i][j] = 1
+            #print( board )
             if checkFail(i, j):
                 isFail = True
                 res = moveIndex + 1
+                #print( "found!!!" + str(res) )
 print(res)

@@ -11,6 +11,7 @@ class Solution:
             if (total, k, idx) in memo:
                 return memo[(total, k, idx)]
 
+            # pick
             pick = dfs(total - A[idx], k - 1, idx + 1)
             not_pick = dfs(total, k, idx + 1)
 

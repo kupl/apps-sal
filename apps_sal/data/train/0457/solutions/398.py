@@ -24,4 +24,5 @@ class Solution:
             mini = min(mini, self.coindp(i - coin) + 1)
 
         self.memo[i] = mini
+        # print(self.memo)
         return self.memo[i]

@@ -15,6 +15,7 @@ class Solution:
         return dp[-1][-1]
 
     def helper(self, sub_s, l_idx, r_idx):
+        # 计算将sub_s转换为回文数，需要最少的操作字符数
         count = 0
         while l_idx < r_idx:
             if sub_s[l_idx] != sub_s[r_idx]:

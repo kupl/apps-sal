@@ -5,6 +5,7 @@ class Solution:
             names[n].add(t)
         for name in names:
             names[name] = sorted(names[name])
+        # print(names)
 
         def timediff(t1, t2):
             t1 = list(map(int, t1.split(':')))

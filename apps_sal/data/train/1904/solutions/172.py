@@ -1,5 +1,6 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
+        # quick sort with partition
         def dist(x): return x[0]**2 + x[1]**2
 
         def partition(start, end):
@@ -9,6 +10,7 @@ class Solution:
 
             border = start
             for cur in range(start, end):
+                # sort in descending order
                 if dist(points[cur]) <= dist(points[pivot]):
                     points[cur], points[border] = points[border], points[cur]
                     border += 1

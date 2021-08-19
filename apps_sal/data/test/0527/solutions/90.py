@@ -22,6 +22,7 @@ def main():
             print(-1)
             return False
         p = bisect_right(index_list[tt], prev)
+        # print('tt={}, prev={}, p={}, ans={}'.format(tt, prev, p, ans))
         if p < leng[tt]:
             prev = index_list[tt][p]
         else:

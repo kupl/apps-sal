@@ -1,3 +1,4 @@
+# IAWT
 n, k, q = list(map(int, input().split()))
 l = [list(map(int, input().split())) for i in range(n)]
 qs = [list(map(int, input().split())) for i in range(q)]

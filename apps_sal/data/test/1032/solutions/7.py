@@ -1,5 +1,6 @@
 import sys
 lines = sys.stdin.readlines()
+# (N, K) = map(int, lines[0].strip().split(" "))
 (n, p) = map(int, lines[0].strip().split(" "))
 arr = list(map(int, lines[1].strip().split(" ")))
 arr.sort()

@@ -1,3 +1,4 @@
+# n = list(map(int,unput().split()))
 def print_lst(lst):
     print(" ".join(map(str, lst)))
 

@@ -5,6 +5,7 @@ class Solution:
         d = [[0, 1], [1, 0]]
         n = len(grid)
         while q:
+            # print(q)
             node = q.popleft()
             if node[0] == (n - 1) and node[1] == (n - 2) and node[2] == 0:
                 return node[3]

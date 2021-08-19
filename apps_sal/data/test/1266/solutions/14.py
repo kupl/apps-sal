@@ -11,14 +11,14 @@ n = ri()
 x0, y0 = rai()
 
 rays = [
-    [[], lambda x, y: x == x0 and y > y0],
-    [[], lambda x, y: x == x0 and y < y0],
-    [[], lambda x, y: y == y0 and x > x0],
-    [[], lambda x, y: y == y0 and x < x0],
-    [[], lambda x, y: x - x0 == y - y0 and x > x0],
-    [[], lambda x, y: x - x0 == y - y0 and x < x0],
-    [[], lambda x, y: x - x0 == -(y - y0) and x > x0],
-    [[], lambda x, y: x - x0 == -(y - y0) and x < x0],
+    [[], lambda x, y: x == x0 and y > y0],             # top
+    [[], lambda x, y: x == x0 and y < y0],             # bottom
+    [[], lambda x, y: y == y0 and x > x0],             # right
+    [[], lambda x, y: y == y0 and x < x0],             # left
+    [[], lambda x, y: x - x0 == y - y0 and x > x0],    # right top
+    [[], lambda x, y: x - x0 == y - y0 and x < x0],    # left bottom
+    [[], lambda x, y: x - x0 == -(y - y0) and x > x0],  # right bottom
+    [[], lambda x, y: x - x0 == -(y - y0) and x < x0],  # left top
 ]
 
 for i in range(n):

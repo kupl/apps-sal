@@ -22,6 +22,9 @@ for i in range(1, n):
     ANS2 += F[i] * (2 * n - i)
 
 
+# SABUN[i]=F[i+1]*2+S[i]*(2*n-1-i-i)+S[i+1]*(n-3-i-i)+SUM[2*i]*i
+
+
 x = ANS1
 y = ANS2
 ANS = [x, y]
@@ -32,5 +35,6 @@ for i in range(0, max(0, n - 2), 2):
     y = y - F[i + 1] * (2 * n - i - i - 4) - F[i + 2] * (2 * n - i - i - 4) + SUM[i + 2] * 2
     ANS.append(x)
     ANS.append(y)
+    # print(ANS,i)
 
 print(max(ANS))

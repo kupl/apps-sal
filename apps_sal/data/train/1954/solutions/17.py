@@ -10,12 +10,14 @@ class Solution:
             for t in s:
                 c |= 1 << d[t]
             p.append(c)
+        # print(p)
 
         self.tar = 2**len(req_skills) - 1
         self.r_len = len(people)
         self.r = []
 
         def dfs(l, t, cur):
+            # print(l, t, cur, self.r)
             if cur == self.tar and len(l) < self.r_len:
                 self.r_len = len(l)
                 self.r = l.copy()

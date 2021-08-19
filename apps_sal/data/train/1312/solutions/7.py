@@ -1,3 +1,4 @@
+# Program question at: http://www.codechef.com/MARCH12/problems/SPOON
 
 t = int(input())
 while t > 0:

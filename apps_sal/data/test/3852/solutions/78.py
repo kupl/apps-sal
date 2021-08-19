@@ -16,6 +16,7 @@ if abs(MIN) <= abs(MAX):
         if A[i] < 0:
             A[i] += MAX
             ans.append([max_i + 1, i + 1])
+    # print(A)
 
     for i in range(N - 1):
         if A[i] > A[i + 1]:
@@ -27,6 +28,7 @@ else:
         if A[i] > 0:
             A[i] += MIN
             ans.append([min_i + 1, i + 1])
+    # print(A)
 
     for i in range(N - 1, 0, -1):
         if A[i] < A[i - 1]:

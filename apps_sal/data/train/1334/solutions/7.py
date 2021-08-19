@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 nums = list(map(int, input().split()))
 if n < 3:

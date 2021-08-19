@@ -12,6 +12,7 @@ class Solution:
             if nums[left] + nums[right] > target:
                 right -= 1
             else:
+                # need to use fast_pow here
                 count = (count + (1 << (right - left))) % MOD
                 left += 1
         return count

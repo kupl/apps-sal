@@ -12,8 +12,10 @@ class Solution:
             current_run = 1
         counts.append(current_run)
 
+        # Reverse sort the counts.
         counts.sort(reverse=True)
 
+        # Remove numbers until at least half are removed.
         numbers_removed_from_arr = 0
         set_size = 0
         for count in counts:

@@ -1,3 +1,5 @@
+# cook your dish here
+# https://www.codechef.com/ABCC2020/problems/PASSHACK
 for _ in range(int(input())):
     digits = list(input())
     inc, out = 0, ""

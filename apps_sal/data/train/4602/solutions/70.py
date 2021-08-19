@@ -1,3 +1,4 @@
+# write the function is_anagram
 def is_anagram(test, original):
     originalLower = [val for val in original.lower()]
     arr = test.lower()

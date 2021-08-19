@@ -24,4 +24,5 @@ def shortest_path(target, queue, visited):
     return shortest_path(target, queue, visited)
 
 
+#print(shortest_path(2, {(0, 0)}, set()))
 print(max([shortest_path(x % n, {(0, x // n)}, set()) for x in range(n * n)]))

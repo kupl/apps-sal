@@ -3,6 +3,8 @@ import re
 import sys
 3
 
+# BEGIN template
+
 
 def dbg(x, y=''):
     if len(y) > 0:
@@ -11,10 +13,12 @@ def dbg(x, y=''):
 
 
 oo = 0x3f3f3f3f3f3f3f3f
+# END template
 
 
 def main():
     for t in range(int(input())):
+        # input
         n = int(input())
         users = input().split()
         users_set = set(users)
@@ -28,14 +32,17 @@ def main():
                 user = users.index(user)
                 alts.add(user)
             else:
+                # this shit is pretty fucked up, dude
                 for alt in users_set - {x for x in re.split('[^A-Za-z0-9]+', text)}:
                     alts.add(users.index(alt))
             msg[i] = dict(user=user, text=text, users=alts)
+        # remove before and after
         for i in range(1, m + 1):
             if 1 <= i - 1:
                 msg[i]['users'].discard(msg[i - 1]['user'])
             if i + 1 <= m:
                 msg[i]['users'].discard(msg[i + 1]['user'])
+        # compute answer
         dp = [[0 for j in range(n + 5)] for i in range(m + 5)]
         for i in range(n + 5):
             dp[m + 1][i] = oo
@@ -45,6 +52,7 @@ def main():
                     if k != j and dp[i + 1][k]:
                         dp[i][j] = k
                         break
+        # output
         if not dp[1][0]:
             print('Impossible')
             continue

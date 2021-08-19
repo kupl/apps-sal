@@ -9,3 +9,5 @@ class Solution:
                     dp2[nxt] += cnt
             dp = dp2
         return sum(dp) % (10**9 + 7)
+    # time:  O(n)
+    # space: O(1)

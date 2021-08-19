@@ -69,6 +69,7 @@ class Solution:
         for k in more_keys:
             more_total += more_than_half[k]
 
+        # we can pair up each of the less than half weights
         total_boats += (less_total + half + 1) // 2 + more_total
 
         return total_boats

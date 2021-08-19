@@ -20,6 +20,8 @@ for i in range(m):
 usb_cost.sort(reverse=True)
 ps_cost.sort(reverse=True)
 
+# print(usb_cost)
+# print(ps_cost)
 
 ans = 0
 ans_sum = 0

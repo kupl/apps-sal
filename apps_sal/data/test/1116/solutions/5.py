@@ -9,6 +9,7 @@ for i in range(n):
         continue
     if r < b:
         r, b = b, r
+    # a > b
     g = gcd(r, b)
     m = 1 + (r - g - 1) // b
     if m >= k:

@@ -1,3 +1,4 @@
+#!python3
 n = int(input())
 a = input().split()
 a = [int(i) for i in a]
@@ -8,6 +9,7 @@ def solve(n, a, added):
     new = []
 
     for i in range(0, 2**n - 1, 2):
+        # print(last[i])
         x = last[i]
         y = last[i + 1]
         new.append(max(x, y))

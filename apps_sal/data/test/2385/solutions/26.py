@@ -3,6 +3,7 @@ def main():
     sys.setrecursionlimit(10**9)
     input = sys.stdin.readline
 
+    # comb
     mod = 1000000007
 
     def make_fact(n):
@@ -28,6 +29,7 @@ def main():
         graph[a].append(b)
         graph[b].append(a)
 
+    # dfs
     root = 1
     parent = [0] * (N + 1)
     order = []
@@ -41,6 +43,7 @@ def main():
             parent[y] = x
             stack.append(y)
 
+    # 方向ごと？
     size_d = [0] * (N + 1)
     dp_d = [1] * (N + 1)
 

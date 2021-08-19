@@ -6,6 +6,7 @@ for i in range(1, N + 1):
     A_ruisekiwa[i] = A_ruisekiwa[i - 1] + A_list[i - 1]
 
 
+# print(A_ruisekiwa)
 ans = 0
 for i in range(N):
     a = K + A_ruisekiwa[i]

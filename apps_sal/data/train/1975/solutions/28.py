@@ -23,3 +23,10 @@ class CustomStack:
         while(i < k and i < self._len):
             self._stack[self._len - i - 1] += val
             i += 1
+
+
+# Your CustomStack object will be instantiated and called as such:
+# obj = CustomStack(maxSize)
+# obj.push(x)
+# param_2 = obj.pop()
+# obj.increment(k,val)

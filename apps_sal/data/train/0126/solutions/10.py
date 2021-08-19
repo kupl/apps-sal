@@ -16,4 +16,5 @@ class Solution:
             while e - i + 1 >= minSize:
                 res[s[i:e + 1]] += 1
                 i += 1
+        # print(res)
         return res.most_common(1)[0][1] if res else 0

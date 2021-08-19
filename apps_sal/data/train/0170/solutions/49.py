@@ -4,6 +4,7 @@ class Solution:
         if N == 1:
             return 0
 
+        # Find left_end and right start
         left_end, right_start = 0, N - 1
         for i in range(1, N):
             if A[i] >= A[i - 1]:
@@ -17,11 +18,13 @@ class Solution:
             else:
                 break
 
+        # Increasing array, no need to do anything
         print((left_end, right_start))
         if left_end > right_start:
             return 0
         ret = min(N - left_end - 1, right_start)
 
+        # Two pointer
         j = right_start
         for i in range(left_end + 1):
             if j < N and A[i] <= A[j]:

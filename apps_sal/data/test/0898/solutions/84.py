@@ -4,6 +4,7 @@ def resolve():
 
     ans = 1
     for A in range(1, int(M ** 0.5) + 1):
+        # 約数判定
         if M % A != 0:
             continue
         B = M // A

@@ -1,5 +1,7 @@
 class Solution:
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
+        # dp[i] = nums[i] + max(dp[j] j - i <= k)
+        # max(dp)
         n = len(nums)
         from collections import deque
         q = deque()

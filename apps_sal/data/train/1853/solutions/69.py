@@ -10,8 +10,11 @@ class Solution:
         queue = deque([])
         for i in range(n):
 
+            #distance , node
             queue.append((i, 0))
 
+            # current represent a hash map of all of the cities and
+            # their distances from i
             curr = {}
 
             while queue:
@@ -27,6 +30,7 @@ class Solution:
                         queue.append((nei, newDist + dist))
 
             output.append(len(curr) - 1)
+            # print(output)
 
         for node in reversed(range(len(output))):
             if output[node] == min(output):

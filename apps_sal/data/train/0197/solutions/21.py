@@ -10,6 +10,7 @@ class Solution:
             else:
                 return False
 
+        # find 'abc'
         i = 0
         while i < len(S) and S[i:i + 3] != 'abc':
             i += 1

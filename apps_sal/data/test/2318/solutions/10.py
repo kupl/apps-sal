@@ -11,6 +11,7 @@ def chk(s, t):
                 j += 1
             i += 1
             j += 1
+            # print(i, j)
             if i == len(s) and j == len(t):
                 return "YES"
         else:

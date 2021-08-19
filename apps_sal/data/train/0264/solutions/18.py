@@ -10,6 +10,7 @@ class Solution:
             return len(string)
 
     def maxUnique(self, arr: List[str], index: int, curr_string: str, result: List[int]) -> List[int]:
+        #     print(uniqueLength(curr_string))
         if(index == len(arr)) and (self.uniqueLength(curr_string) > result[0]):
             result[0] = len(curr_string)
             return

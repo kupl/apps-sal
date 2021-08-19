@@ -1,7 +1,14 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[8]:
 
 
 import sys
 sys.setrecursionlimit(10**9)
+
+
+# In[10]:
 
 
 n = int(input())
@@ -12,6 +19,9 @@ for _ in range(n - 1):
     t[a].append(b)
     t[b].append(a)
     ab.append((min(a, b), max(a, b)))
+
+
+# In[11]:
 
 
 k = max(list(map(len, t)))
@@ -34,3 +44,6 @@ dfs(0, 0, 0)
 print(k)
 for i in ab:
     print((d[i]))
+
+
+# In[ ]:

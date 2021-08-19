@@ -7,8 +7,8 @@ dy = [0, 1, 0, -1]
 mx = 0
 for h in range(H):
     for w in range(W):
-        if field[h][w] == "
-        continue
+        if field[h][w] == "#":
+            continue
         dist = [[-1] * W for _ in range(H)]
         dist[h][w] = 0
         que = deque([])
@@ -21,8 +21,8 @@ for h in range(H):
 
                 if (nu < 0) or (nu >= H) or (nv < 0) or (nv >= W):
                     continue
-                if field[nu][nv] == "
-                continue
+                if field[nu][nv] == "#":
+                    continue
                 if dist[nu][nv] != -1:
                     continue
 

@@ -3,6 +3,7 @@ from collections import deque
 
 
 def main():
+    # 入力
     readline = stdin.readline
     n, m = map(int, readline().split())
     G = [[] for _ in range(n + 1)]

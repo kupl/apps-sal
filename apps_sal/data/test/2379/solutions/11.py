@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 
 
@@ -8,6 +9,7 @@ def lr(): return list(map(int, sr().split()))
 
 N, K, C = lr()
 S = sr()
+# 左からと右からでそれぞれ貪欲、重なったところが必須
 left = []
 right = []
 

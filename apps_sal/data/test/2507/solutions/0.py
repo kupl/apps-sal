@@ -7,6 +7,7 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
+# 二分探索
 N, K = lr()
 A = np.array(lr())
 F = np.array(lr())
@@ -19,8 +20,8 @@ def check(x):
     return count <= K
 
 
-left = 10 ** 12
-right = -1
+left = 10 ** 12  # 可能
+right = -1  # 不可能
 while left > right + 1:
     mid = (left + right) // 2
     if check(mid):
@@ -29,3 +30,4 @@ while left > right + 1:
         right = mid
 
 print(left)
+# 51

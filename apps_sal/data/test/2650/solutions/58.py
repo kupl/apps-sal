@@ -1,8 +1,18 @@
+# coding: utf-8
 from heapq import heappop, heappush
 import sys
+# from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
 sys.setrecursionlimit(10 ** 7)
+#from collections import OrderedDict, defaultdict
+#import math
+#from itertools import product, accumulate, combinations, product
+# import bisect# lower_bound etc
+#import numpy as np
+# from copy import deepcopy
+#from collections import deque
+#import numba
 
 
 def binary_search(arr, operator='max'):

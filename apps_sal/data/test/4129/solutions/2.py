@@ -21,6 +21,7 @@ topo = []
 
 
 def dfs(u):
+    # print(u)
     for v in G[u]:
         if not vis[v]:
             vis[v] = True

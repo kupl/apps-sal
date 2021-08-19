@@ -29,9 +29,11 @@ def calculate_new_base(old_base, height):
 cuts = []
 for i in range(int(n) - 1):
     cut_height = bin_search(new_base, 0, curr_height)
+    # print(cut_height)
     cuts.append(cut_height)
     new_base = calculate_new_base(new_base, cut_height)
     curr_height = curr_height - cut_height
+    # print(new_base, curr_height)
 cuts_sum = 0
 to_print = []
 for cut in cuts:

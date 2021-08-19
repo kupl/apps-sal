@@ -28,4 +28,5 @@ class Solution:
         res = 0
         for i in range(6):
             res += dp[i][-1] % m
+        # print(dp)
         return res % m

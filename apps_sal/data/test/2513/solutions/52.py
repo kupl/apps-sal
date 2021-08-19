@@ -1,6 +1,7 @@
 def main():
     N = int(input())
     s = input()
+    # 0 sheep 1 wolf
     for i in [[0, 0], [0, 1], [1, 0], [1, 1]]:
         t = i[:]
         for j in s[1:]:

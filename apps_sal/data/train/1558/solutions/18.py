@@ -8,9 +8,11 @@ for _ in range(int(input())):
             a = x // r
             b = x % r
 
+            # ans.add((a,b))
             ans[a][b] = True
             a = x % c
             b = x // c
+            # ans.add((a,b))
             ans[a][b] = True
 
         for x in range(0, r * c, i + 1):

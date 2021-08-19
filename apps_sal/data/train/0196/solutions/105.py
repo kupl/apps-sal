@@ -12,6 +12,7 @@ class Solution:
             prefix[i] = prefix[i - 1] + arr[i]
 
         prefix.insert(0, 0)
+        # monotonic increasing array
         dq = deque([0])
         res = -float('inf')
         for i in range(1, len(prefix)):

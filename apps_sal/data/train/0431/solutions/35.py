@@ -3,6 +3,7 @@ class Solution:
         MOD = 10 ** 9 + 7
         n = len(A)
 
+        # previous less element
         stack = []
         left = [None] * n
         for i in range(n):
@@ -13,6 +14,16 @@ class Solution:
             else:
                 left[i] = -1
             stack.append(i)
+        # next less element
+        # stack = []
+        # right = [None] * n
+        # for i in range(n-1,-1,-1):
+        #     # note A[i] < A[stack[-1]]
+        #     while stack and A[i] < A[stack[-1]]:
+        #         stack.pop()
+        #     # note right[i] = n if not stack
+        #     right[i] = stack[-1] if stack else n
+        #     stack.append(i)
         stack = []
         right = [n] * n
         for i in range(n):

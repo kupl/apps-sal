@@ -9,4 +9,4 @@ get_div = LC(None)(lambda n: set(sum([[i, n // i] for i in range(2, int(n ** .5)
 def find_int_inrange(a, b):
     d = {i: len(get_div(get_score1(str(i))) & get_div(get_score2(str(i)))) for i in range(a, b)}
     m = max(d.values())
-    return [m] + sorted([i for i, j in d.items() if j == m])
+    return [m] + sorted([i for i, j in d.items() if j == m])  # sorted for py 3.4

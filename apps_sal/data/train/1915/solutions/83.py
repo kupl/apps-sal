@@ -13,11 +13,11 @@ class Solution:
             if i == m - 1:
                 return index == n - 1
             nxt_index = set()
-            if index == n - 1:
+            if index == n - 1:  # rule 2
                 nxt_index |= pos[t[i + 1]]
-            elif s[index + 1] == t[i + 1]:
+            elif s[index + 1] == t[i + 1]:  # rule 0
                 nxt_index.add(index + 1)
-            if s[0] == t[i + 1]:
+            if s[0] == t[i + 1]:  # rule 1
                 nxt_index.add(0)
             return any(dfs(i + 1, j) for j in nxt_index)
 

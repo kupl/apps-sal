@@ -28,6 +28,7 @@ for time in range(1, max_time + 1):
                 dp[time][it] = (dp[time - items[it - 1][0]][it - 1][0] + items[it - 1][2], list(dp[time - items[it - 1][0]][it - 1][1]))
                 dp[time][it][1].append(items[it - 1][3])
 
+# print(dp)
 
 res = max(dp[max_time])
 

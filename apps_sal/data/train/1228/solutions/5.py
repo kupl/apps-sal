@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     n = n * 4 - 1

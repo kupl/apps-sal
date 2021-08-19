@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -.- coding: utf-8 -.-
 
 lucky = int(input())
 lucky = str(lucky)

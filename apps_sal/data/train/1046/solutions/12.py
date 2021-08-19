@@ -19,6 +19,7 @@ while(t):
         if sum(lb) > b:
             lb.remove(i)
             break
+    # print(ll,"\n",lb)
     if len(ll) > len(lb):
         print("Limak")
     else:

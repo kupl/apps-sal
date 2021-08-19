@@ -1,6 +1,8 @@
 s = input()
 p = 10**9 + 7
 a = []
+#ind = []
+#k = -1
 for ch in s:
     if ch == 'a':
         if len(a) == 0 or a[-1][1] == True:

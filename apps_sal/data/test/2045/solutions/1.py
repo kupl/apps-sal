@@ -4,6 +4,9 @@ input = sys.stdin.readline
 n = int(input())
 L = list(input().split())
 
+# n=2*10**5
+# L=["aaa","bbb"]*(10**5)
+
 
 ANS = [L[0]]
 LEN2 = len(L[0])
@@ -18,15 +21,15 @@ TABLE1 = [0]
 TABLE2 = [0]
 
 
-def hash_ij0(i, j):
+def hash_ij0(i, j):  # [i,j)のハッシュ値を求める
     return (TABLE0[j] - TABLE0[i] * pow(p, j - i, mod0)) % mod0
 
 
-def hash_ij1(i, j):
+def hash_ij1(i, j):  # [i,j)のハッシュ値を求める
     return (TABLE1[j] - TABLE1[i] * pow(p, j - i, mod1)) % mod1
 
 
-def hash_ij2(i, j):
+def hash_ij2(i, j):  # [i,j)のハッシュ値を求める
     return (TABLE2[j] - TABLE2[i] * pow(p, j - i, mod2)) % mod2
 
 
@@ -46,13 +49,20 @@ for i in range(1, n):
 
     plus = -1
 
+    # print(NEXT)
+
     for j in range(min(LEN, LEN2)):
         ha0 = (p * ha0 % mod0 + ord(NEXT[j]) - 48) % mod0
         ha1 = (p * ha1 % mod1 + ord(NEXT[j]) - 48) % mod1
         ha2 = (p * ha2 % mod2 + ord(NEXT[j]) - 48) % mod2
 
+        # print(ha1,TABLE1)
+        # print(hash_ij1(LEN2-j-1,LEN2))
+
         if ha0 == hash_ij0(LEN2 - j - 1, LEN2) and ha1 == hash_ij1(LEN2 - j - 1, LEN2) and ha2 == hash_ij2(LEN2 - j - 1, LEN2):
             plus = j
+
+    # print(plus)
 
     if plus == -1:
         ANS.append(NEXT)

@@ -6,7 +6,7 @@ for i in range(test):
     sum_ = 0
     x = eval(input())
     while(x > 25):
-        if(x % powOf5):
+        if(x % powOf5):			# not 0
             sum_ += (x / powOf5) * coeff
             x %= powOf5
             powOf5 /= 5
@@ -16,6 +16,7 @@ for i in range(test):
             powOf5 /= 5
         coeff /= 10
 
+        # print  str(sum_) + ' ' +  str(powOf5) + ' ' + str(coeff)
     mod = x % 5
     if mod == 0:
         mod = 5

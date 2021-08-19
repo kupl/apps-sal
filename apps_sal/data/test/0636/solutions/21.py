@@ -11,6 +11,8 @@ def main():
 
     ans = []
 
+    # print(count)
+
     a.sort()
     s = 0
     count = 0

@@ -19,8 +19,10 @@ class Solution:
                 ans.append(curr[1])
                 if(curr[0] != -1):
                     heapq.heappush(barcodes, (curr[0] + 1, curr[1]))
+                # print(barcodes)
             else:
                 while(True):
+                    # print(barcodes,ans)
                     curr = heapq.heappop(barcodes)
                     if(ans[-1] != curr[1]):
                         ans.append(curr[1])

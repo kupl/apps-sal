@@ -1,3 +1,4 @@
+# Longest non-increasing subsequenceの長さを求める
 import sys
 input = sys.stdin.readline
 
@@ -17,7 +18,7 @@ def bisect_right_reverse(L, target):
 N = int(input())
 A = [int(input()) for _ in range(N)]
 
-dp = [-1]
+dp = [-1]  # A[i] >= 0なので、A[0] > dp[0]となる。
 for i in range(N):
     k = bisect_right_reverse(dp, A[i])
     if k == len(dp):

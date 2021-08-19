@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Wed Oct 16 20:35:46 2013
 
@@ -18,4 +19,6 @@ for i in range(n):
         for j in range(len(a)):
             d[a[j]] = b[j]
 
+# for i in range(1,len(d)):
+#    sys.stdout.write(str(d[i])+" ")
 print(' '.join(map(str, d[1:])))

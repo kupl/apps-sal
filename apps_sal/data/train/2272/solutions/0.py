@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def main():
     N = int(input())
@@ -9,6 +10,9 @@ def main():
         D = [x & ((1 << (k + 1)) - 1) for x in B]
         C.sort()
         D.sort()
+        # print(f'k = {k}')
+        # print(f'C = {C}')
+        # print(f'D = {D}')
         p, q, r = 0, 0, 0
         for i in range(N - 1, -1, -1):
             while p < N:
@@ -24,6 +28,7 @@ def main():
                     break
                 r += 1
             x = ((q - p) + (N - r)) % 2
+            # print(p, q, r, x)
             ans = ans ^ (x << k)
     print(ans)
 

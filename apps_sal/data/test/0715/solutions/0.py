@@ -8,6 +8,9 @@ Language: Python 3.3.4
 
 class IOHandlerObject(object):
     def getInput(self, mode=2):
+        # 0: String
+        # 1: List of strings
+        # 2: List of integers
         inputs = input().strip()
         if mode == 0:
             return inputs
@@ -26,6 +29,7 @@ IOHandler = IOHandlerObject()
 g = IOHandler.getInput
 w = IOHandler.writeOutput
 
+############################## SOLUTION ##############################
 a, b, c, d = g(0), g(0), g(0), g(0)
 r = [(len(a) - 2, 0), (len(b) - 2, 1), (len(c) - 2, 2), (len(d) - 2, 3)]
 r.sort()

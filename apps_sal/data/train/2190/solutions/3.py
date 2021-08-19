@@ -21,3 +21,6 @@ for i in range(n - 1):
         s[j] += 1
 
 print(max(s))
+
+
+# Made By Mostafa_Khaled

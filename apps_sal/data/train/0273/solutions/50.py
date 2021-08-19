@@ -7,6 +7,7 @@ class Solution:
             for pos, speed in nodes:
                 if pos == target:
                     return length
+                # A
                 for new_pos, new_speed in [
                     (pos + speed, speed * 2),
                     (pos, -1 if speed > 0 else 1),

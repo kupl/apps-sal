@@ -16,5 +16,6 @@ else:
 while count != n:
     if sum(temp) == 10:
         count += 1
+        # print(temp)
     temp += 9
 print(temp - 9)

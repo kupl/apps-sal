@@ -1,5 +1,10 @@
 S = input()
 
+#print ((len(S)-1)//2)
+#print ((len(S)+3)//2)
+#print (S[0:(len(S)-1)//2])
+#print (S[((len(S)+3)//2)-1:len(S)])
+#print (S[::-1])
 
 Skai1 = S[0:(len(S) - 1) // 2]
 Skai1 = Skai1[::-1]

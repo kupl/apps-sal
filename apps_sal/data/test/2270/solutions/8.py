@@ -32,6 +32,8 @@ for i in range(q):
         elif c[b] == 1:
             del d[2][b]
 
+    # print (c)
+    # print (d)
     if len(d[4]) >= 2:
         print("YES")
     elif len(d[4]) == 1 and len(d[2]) >= 2:

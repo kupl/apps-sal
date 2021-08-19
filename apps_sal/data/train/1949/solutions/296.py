@@ -3,6 +3,7 @@ class Solution:
         result = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
+                # Search max possible return starting from this cell
                 result = max(self.search(grid, i, j), result)
         return result
 
@@ -16,6 +17,7 @@ class Solution:
         temp = result
         grid[x][y] = 0
 
+        # Search all neighbours
         result += max(self.search(grid, x - 1, y),
                       self.search(grid, x, y - 1),
                       self.search(grid, x + 1, y),

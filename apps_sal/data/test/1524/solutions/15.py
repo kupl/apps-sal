@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 
+# import
+#import math
+#import numpy as np
 S = input()
 ls = len(S)
 

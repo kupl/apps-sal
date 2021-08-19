@@ -1,3 +1,4 @@
+# cook your dish here
 test = int(input())
 for _ in range(test):
     n, x = map(int, input().split())

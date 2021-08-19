@@ -67,5 +67,7 @@ for _ in range(m):
         j = uctoi[v, c]
     to[i].append(j)
     to[j].append(i)
+# print(to)
+# print(fin)
 
 solve()

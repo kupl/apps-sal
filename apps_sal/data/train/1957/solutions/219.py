@@ -11,10 +11,12 @@ class Solution:
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         bfs = []
         visited = set()
-        heappush(bfs, [0, k, (0, 0)])
+        heappush(bfs, [0, k, (0, 0)])  # cur_moves, k, position
         while bfs:
             cur_moves, k_left, pos = heappop(bfs)
             i, j = pos
+            # if cur_moves >=20:
+            #     print(cur_moves, k_left, pos)
             if (i, j, k_left) in visited:
                 continue
             visited.add((i, j, k_left))

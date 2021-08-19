@@ -1,3 +1,4 @@
+# cook your dish here
 for i in range(int(input())):
     s, sg, fg, d, t = map(int, input().split())
     sc = s + (d * 180 / t)

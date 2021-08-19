@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline

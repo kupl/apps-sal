@@ -17,6 +17,7 @@ def LF(): return list(map(float, input().split()))
 def Init(H, W, num): return [[num for i in range(W)] for j in range(H)]
 
 
+# 素数判定
 def Eratosthenes(n):
     from math import sqrt
     res = [True] * (n + 1)

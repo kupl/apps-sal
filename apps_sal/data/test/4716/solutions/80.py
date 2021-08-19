@@ -1,3 +1,4 @@
+# coding: utf-8
 
 num, choose_num = map(int, input().split())
 total = 0

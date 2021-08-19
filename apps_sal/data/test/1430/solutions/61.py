@@ -36,6 +36,7 @@ if s[0] == '1':
             if i + k <= len(off) - 1:
                 b += off[i + k]
             b -= off[i - 1]
+        # print (a,b)
         s = a + b
         ans = max(ans, s)
 else:
@@ -53,6 +54,7 @@ else:
                 b += off[i + k - 1]
             b -= off[i - 2]
         s = a + b
+        # print (a,b)
         ans = max(ans, s)
 if ans == 0:
     print(n)

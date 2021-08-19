@@ -1,5 +1,5 @@
 import sys
-input = sys.stdin.readline
+input = sys.stdin.readline  # for speed up
 sys.setrecursionlimit(10**7)
 
 n, m, k = list(map(int, input().split()))
@@ -29,6 +29,7 @@ for ii in range(len(aa)):
             pass
         else:
             r = max(r, ii + jj)
+            # print(r,ii,jj)
             jmax = jj
             break
 print(r)

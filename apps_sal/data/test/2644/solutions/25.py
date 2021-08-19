@@ -1,3 +1,4 @@
+# swap(ps[right-1], ps[right]), swap(ps[right-2], ps[right-1]), ... swap(ps[left], ps[left+1])
 def f(left, right, ps, acc):
     for i in range(right - 1, left - 1, -1):
         ps[i], ps[i + 1] = ps[i + 1], ps[i]

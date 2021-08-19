@@ -1,5 +1,5 @@
 class Solution:
-    def primeFactors(self, n):
+    def primeFactors(self, n):  # Prime factor decomposition
         out = set()
         while n % 2 == 0:
             out.add(2)

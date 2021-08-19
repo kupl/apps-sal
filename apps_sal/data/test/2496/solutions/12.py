@@ -2,8 +2,10 @@ N = int(input())
 A = list(map(int, input().split()))
 
 
+# number_to_prime[i]: i の最小の素因数, iが素数ならば0
 number_to_prime = [0] * (10**6 + 1)
 
+# preprocess
 for i in range(2, 10**6 + 1):
     if not number_to_prime[i]:
         j = 1

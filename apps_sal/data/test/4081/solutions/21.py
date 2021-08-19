@@ -6,18 +6,23 @@ p = 0
 b = []
 for i in range(n):
     if a[0] >= a[-1] and a[-1] > p:
+        # print("R",end='')
         p = a.pop()
         b.append("R")
     elif a[0] >= a[-1] and a[0] > p:
+        # print("L",end='')
         p = a.popleft()
         b.append("L")
     elif a[-1] >= a[0] and a[0] > p:
+        # print("L",end='')
         p = a.popleft()
         b.append("L")
     elif a[-1] >= a[0] and a[-1] > p:
+        # print("R",end='')
         p = a.pop()
         b.append("R")
     else:
         break
+# print()
 print(len(b))
 print("".join(b))

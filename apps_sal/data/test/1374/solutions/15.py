@@ -19,6 +19,7 @@ def search(c):
     return res_nega
 
 
+# binary search
 a_sorted = sorted(a_list)
 left = 0
 right = N

@@ -1,3 +1,5 @@
+# //author : 'Amit Singh Sansoya @amit3200'
+# //it was all meant to happen as i was all talk!
 import string
 for _ in range(int(input())):
     s, k = list(map(str, input().split()))

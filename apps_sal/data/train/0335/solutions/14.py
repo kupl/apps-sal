@@ -3,6 +3,7 @@ class Solution:
         s = sum(rods)
         n = len(rods)
 
+        # diff, max_height
         dp = {0: 0}
 
         for num in rods:

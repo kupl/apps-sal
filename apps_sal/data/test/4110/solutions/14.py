@@ -24,6 +24,8 @@ def resolve():
     D, G = LI()
     pc = [LI() for _ in range(D)]
 
+    # コンプリートする問題を全パターン試す
+    # 足りない分があれば解いてない最高点数の問題で埋める
     ans = sum([i[0] for i in pc])
     for i in range(2 ** D):
         score = 0

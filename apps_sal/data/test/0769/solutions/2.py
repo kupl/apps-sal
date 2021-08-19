@@ -5,6 +5,7 @@ for i in range(10 * b):
     a *= 10
     d = a // b
     a = a % b
+    # print(a, d)
     if c == d:
         print(i + 1)
         break

@@ -11,3 +11,4 @@ def strong_num(number):
     if number == int(sum(ff)):
         return 'STRONG!!!!'
     return 'Not Strong !!'
+    # Flez

@@ -4,6 +4,7 @@ class Solution:
 
         A.sort()
         for i in A:
+            # Logic for checking half and double of number
             if i / 2 in seen:
                 seen[i / 2] -= 1
                 if seen[i / 2] == 0:

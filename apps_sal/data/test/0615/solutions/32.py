@@ -15,6 +15,7 @@ INF = float('inf')
 
 N = int(input())
 A = list(map(int, input().split()))
+# 最初が0
 cs = cumsum(A)
 assert len(cs) == N + 1
 
@@ -29,6 +30,8 @@ def calc_diff(d1, d2, d3):
     return max(diffs) - min(diffs)
 
 
+# 切る位置
+# dn: n 番目の数列の開始インデックス
 d0 = 0
 d1 = 1
 d2 = 2

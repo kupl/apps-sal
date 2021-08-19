@@ -4,7 +4,7 @@ from functools import reduce
 _ACRONYMS = {
     'KPI': 'key performance indicators',
     'EOD': 'the end of the day',
-    'EOP': 'the end of the day',
+    'EOP': 'the end of the day',    # snafu in the tests?
     'TBD': 'to be decided',
     'WAH': 'work at home',
     'IAM': 'in a meeting',

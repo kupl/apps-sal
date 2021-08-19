@@ -6,6 +6,7 @@ XH.sort(key=lambda x: x[0])
 ans = 0
 
 XN = [[x, ceil(h / A)] for x, h in XH]
+# 左端のモンスターに攻撃が必要な回数はそこから2*Dだけ右にあるモンスターにまで波及できる
 cnum = 0
 que = deque()
 ans = 0

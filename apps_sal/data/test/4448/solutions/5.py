@@ -16,25 +16,30 @@ for _ in range(M):
 
 sales = sorted(sales, key=lambda x: x[0])
 
-last_sales = {k: -1 for k in range(N + 1)}
+# print(N, M)
+# print(n_items)
+# print(sales)
+# last_sales = [0 for _ in range(N)] # last sale day
+last_sales = {k: -1 for k in range(N + 1)}  # for convenience ...
 final_sol = 99999999
 
 for i in range(M):
     sale_day, sale_type = sales[i]
     last_sales[sale_type] = sale_day
-    if i != M - 1:
-        if sales[i + 1][0] == sale_day:
+    if i != M - 1:  # not last sale
+        if sales[i + 1][0] == sale_day:  # same sale day
             continue
 
     total = 0
     lasts = last_sales.items()
-    lasts = sorted(lasts, key=lambda x: x[1])
+    lasts = sorted(lasts, key=lambda x: x[1])  # sort by day
     burle = 0
     before_lastday = -1
     for stype, last_sday in lasts:
         if stype == 0:
             continue
         if last_sday == -1:
+            # non-sale item
             total += n_items[stype - 1] * 2
             continue
 
@@ -49,6 +54,7 @@ for i in range(M):
         burle -= bought
         total += bought + 2 * left
 
+    # print(sale_day, total)
     sol = max(sale_day, total)
     if final_sol > sol:
         final_sol = sol

@@ -4,10 +4,14 @@ import os
 from io import BytesIO, IOBase
 py2 = round(0.5)
 
+# OLD VERSION
 
 if py2:
     from future_builtins import ascii, filter, hex, map, oct, zip
     range = xrange
+
+
+# FastIO for PyPy2 and PyPy3 by Pajenegod,
 
 
 class FastI(object):

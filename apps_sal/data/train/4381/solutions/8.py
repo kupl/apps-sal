@@ -1,4 +1,5 @@
 def min_unfairness(arr, k):
+    # your code here
     if k < 2:
         return 0
     arr.sort()

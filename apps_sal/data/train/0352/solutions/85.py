@@ -4,6 +4,7 @@ class Solution:
         for w in words:
             wordsbylen[len(w)].append(w)
 
+        # @functools.lru_cache(None)
         def get_longest_derivate(word):
             potential = wordsbylen[len(word) + 1]
             possible = [1]

@@ -16,6 +16,7 @@ while i <= n - 1:
         elif zcnt > k:
             break
     l = j - i
+    # print(i,j,zcnt)
     if l > max:
         max = l
         Ansp = [i, j]

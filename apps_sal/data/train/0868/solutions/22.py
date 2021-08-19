@@ -41,6 +41,7 @@ for _ in range(int(input())):
             if l[j] > max:
                 max = l[j]
             if value not in s:
+                ####
                 s.add(value)
                 x = max
                 hallo_frnd[value] = max

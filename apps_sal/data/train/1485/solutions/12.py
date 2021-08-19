@@ -12,7 +12,9 @@ for i in range(t):
             elif l1[k] and k >= n // 2:
                 c2 += 1
         diff.append(c1 - c2)
+    # print(diff)
     current_diff = sum(diff)
+    # print(current_diff)
     new = []
     for kk in range(len(diff)):
         new.append(abs(current_diff - 2 * diff[kk]))

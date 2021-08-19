@@ -9,8 +9,8 @@ N, M = input_row()
 C = np.zeros((M, N), dtype=np.int32)
 
 for i in range(M):
-    s = np.array(input_row()[1:])
-    C[i, s - 1] = 1
+    s = np.array(input_row()[1:])  # ignore k
+    C[i, s - 1] = 1  # s_ to zero index.
 
 p = input_row()
 

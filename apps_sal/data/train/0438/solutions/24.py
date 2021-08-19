@@ -8,6 +8,7 @@ class Solution:
 
         for i in arr:
             i = i - 1
+            # print(counter)
             if i - 1 >= 0 and i + 1 < len(arr):
                 curr = forward[i - 1] + 1 + backward[i + 1]
                 counter[forward[i - 1]] -= 1

@@ -1,3 +1,5 @@
+# A - Two Rectangles
+# https://atcoder.jp/contests/abc052/tasks/abc052_a
 
 square = list(map(int, input().split()))
 

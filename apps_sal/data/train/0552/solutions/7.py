@@ -20,4 +20,9 @@ def solve():
         print(abs(sum(a) - 2 * sum(b)))
 
 
+# import sys
+# def fast():
+#     sys.stdin = open("input.txt", "r")
+#     sys.stdout = open("output.txt", "w")
+# fast()
 solve()

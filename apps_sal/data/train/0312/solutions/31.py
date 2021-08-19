@@ -2,6 +2,7 @@ class Solution:
     def shortestSubarray(self, arr, k):
         n = len(arr)
 
+        # build prefix sums
         pSums = [0]
         for x in arr:
             pSums.append(pSums[-1] + x)

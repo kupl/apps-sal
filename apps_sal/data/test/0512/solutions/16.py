@@ -25,6 +25,7 @@ def main():
             flag = True
             for i in range(lo, lo + (hi - lo + 1) // 2):
                 x, y = arr[i], arr[i + (hi - lo + 1) // 2]
+                # print(x,y)
                 if x == [0, 0] and y == [0, 0]:
                     continue
                 elif x == [0, 0]:
@@ -51,6 +52,8 @@ def main():
         print("Yes")
     else:
         print("No")
+    # print(ans)
+    # print(arr)
 
 
 def __starting_point():

@@ -36,8 +36,8 @@ class Solution:
         edges = sorted(graph, key=lambda x: x[2])
         subsets = [[x, 0] for x in range(len(points))]
 
-        e = 0
-        i = 0
+        e = 0  # counts how many edges have been added
+        i = 0  # tracks location in edges array
         total_cost = 0
 
         while e < len(points) - 1:
@@ -50,6 +50,7 @@ class Solution:
                 e += 1
             else:
                 pass
+                # discard the edge
 
             i += 1
         return total_cost

@@ -1,3 +1,5 @@
+# cook your dish here
+# from queue import PriorityQueue
 import bisect
 for _ in range(int(input())):
     n, l = map(int, input().split())
@@ -45,5 +47,14 @@ for _ in range(int(input())):
             ind = bisect.bisect_right(tmp, dp[i][il])
             pq_l[il].insert(ind, [dp[i][il], i])
 
+            # print(i, pq_l, dif_l)
+
+            # dp[i][1] = max(dp[i][1], dif)
+            # for il in range(2,l):
+            #     if dp[j][il-1] == -1:
+            #         break
+            #     dp[i][il] = max(dp[i][il], min(dif, dp[j][il-1]))
             ans = max(ans, dp[i][-1])
+    #     print(dp)
+    # print(dic)
     print(ans)

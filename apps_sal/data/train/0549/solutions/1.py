@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def main():
     N = int(input())
@@ -15,6 +16,7 @@ def main():
                 if H2[i] > e - 1:
                     C2 += H2[i] - (e - 1)
                     H2[i] = e - 1
+            # print C+C2, H2, C+C1, H
             if C1 <= C2:
                 C += C1
             else:

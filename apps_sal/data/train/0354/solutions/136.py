@@ -14,7 +14,16 @@ class Solution:
                         dp[i][j][1] += sum(dp[i - 1][m][h] for h in range(1, rollMax[m - 1] + 1))
 
                 for k in range(1, K):
+                    # print()
+                    # print(i, j, k)
+                    # print(i-j, j, k-1)
                     dp[i][j][k + 1] += dp[i - 1][j][k]
+
+        # for i in range(1, n+1):
+            # for j in range(1, 7):
+                # print()
+                # print(\"i, j: \", i, j)
+                # print(\"dp[i][j]: \", dp[i][j])
 
         ans = 0
         for m in range(1, M + 1):

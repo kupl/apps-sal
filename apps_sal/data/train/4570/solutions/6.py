@@ -2,4 +2,4 @@ import regex
 
 
 def clean_string(s):
-    return regex.sub(r'[^
+    return regex.sub(r'[^#]((?R)*)#+|\A#+', '', s)

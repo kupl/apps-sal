@@ -49,6 +49,7 @@ def sol(s):
     return dp[len(s)]
 
 
+# main code
 for _ in range(ii()):
     s = si()
     ans = sol(s)

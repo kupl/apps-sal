@@ -1,3 +1,4 @@
+# cook your dish here
 
 N = int(input().strip())
 activity_choices = [int(i) for i in input().strip().split(" ")]

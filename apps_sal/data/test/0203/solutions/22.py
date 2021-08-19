@@ -11,9 +11,13 @@ for i in range(n):
         D.append(i)
 
 
+# print(R)
+# print(D)
+
 while R and D:
     r = R.popleft()
     d = D.popleft()
+    #print(str(r) + " is R and D " + str(d))
     if r < d:
         R.append(n + r)
     else:

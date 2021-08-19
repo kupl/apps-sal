@@ -1,7 +1,7 @@
 import math
 n, k = map(int, input().split())
 num = 0
-for i in range(1, n + 1):
+for i in range(1, n + 1):  # サイコロの出た目
     if i >= k:
         num += 1 / n
     else:

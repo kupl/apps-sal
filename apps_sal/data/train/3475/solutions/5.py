@@ -2,6 +2,7 @@ import re
 
 
 def to_integer(string):
+    # your code here
     result = re.compile(r'^(\+|-)?(0b[01]+|0o[0-7]+|0x(\d|[abcdefABCDEF])+|\d+)\Z').match(string)
     if not result:
         return None

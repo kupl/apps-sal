@@ -4,7 +4,7 @@ k = int(input())
 mini = n * m - k
 if mini < 1:
     print(0)
-elif d * n <= c:
+elif d * n <= c:  # easier one at a time
     print(d * mini)
 else:
     total = (mini // n) * c

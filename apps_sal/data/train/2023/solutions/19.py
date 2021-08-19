@@ -11,3 +11,10 @@ for i in range(cantG - 1):
         print(j + i * sizeG, end=" ")
 for j in range(n, (cantG - 1) * sizeG, -1):
     print(j, end=" ")
+
+# for i in range(int(n/2)):
+ #   print((i+1)*2, end=" ")
+# for i in range(int(n/2)):
+#    print((i+1)*2-1, end=" ")
+# if n % 2==1:
+#    print(n)

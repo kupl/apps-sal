@@ -3,7 +3,7 @@ def compare(s1, s2):
     integer_two = 0
     if s1 != None:
         for i in s1.upper():
-            if i.isalpha():
+            if i.isalpha():  # equal-ing to true isnt necessary
                 integer_one = integer_one + ord(i)
             else:
                 integer_one = 0

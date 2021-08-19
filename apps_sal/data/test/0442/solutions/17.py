@@ -21,6 +21,7 @@ def main():
             q = r - 1 - x - x * x
     if q <= 0:
         print("NO")
+#    return output
 
 
 def __starting_point():

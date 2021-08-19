@@ -2,6 +2,7 @@ class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         ln = len(arr)
 
+        #win = arr[0]
         cnt = -1
         idx = 0
 
@@ -11,6 +12,8 @@ class Solution:
         while True:
             idx = 0
             arr2 = []
+
+            # print(arr)
 
             for i in range(1, ln):
                 if arr[idx] > arr[i]:
@@ -25,6 +28,7 @@ class Solution:
                     return arr[idx]
 
             arr = [arr[idx]] + arr2
+            # print(arr2)
 
         return 0
         pass

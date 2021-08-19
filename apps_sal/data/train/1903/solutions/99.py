@@ -7,6 +7,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         adjList = {}
         edges, n, ans = [], len(points), 0
+        # add edges
         for i in range(n):
             for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])

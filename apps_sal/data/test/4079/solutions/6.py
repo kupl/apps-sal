@@ -37,6 +37,7 @@ for _ in range(ri(1)):
     f = 1
     b = list(set(a))
     b.sort()
+    # print(b)
     if len(a) != len(b):
         f = 0
     for i in range(1, len(b)):

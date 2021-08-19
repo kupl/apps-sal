@@ -17,6 +17,8 @@ for i in range(1, n.bit_length()):
     for j in range(LIST[i - 1], LIST[i]):
         heapq.heappush(H, B[j])
 
+    # print(H)
+
     x = heapq.heappop(H)
     ANS += x
 

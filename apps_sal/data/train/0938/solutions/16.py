@@ -12,9 +12,11 @@ def func():
                     if(A[j] not in I):
                         m += 1
                         marker[j] = 0
+                        # print "hello",A[j],m
                     else:
                         marker[j] = 1
                         count += (m * (m + 1) / 2)
+                        # print "oops",count,m
                         m = 0
                 else:
                     if(marker[j] == 0 and A[j] != new_element):

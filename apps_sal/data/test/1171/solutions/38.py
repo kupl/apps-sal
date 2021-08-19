@@ -2,8 +2,8 @@ n, k = map(int, input().split())
 v = list(map(int, input().split()))
 m = min(n, k)
 ans = 0
-for i in range(m + 1):
-    for j in range(m + 1 - i):
+for i in range(m + 1):  # A
+    for j in range(m + 1 - i):  # B
         l = []
         l = l + v[0:i] + v[n - j:n]
         l.sort()

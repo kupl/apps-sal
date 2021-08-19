@@ -11,6 +11,7 @@ for _ in range(T):
     for i in range(len(S)):
         if S[i] in data.keys():
             S[i] = data[S[i]]
+    ###
     S = "".join(S)
     if '.' in S:
         S = S.strip('0').rstrip('.')

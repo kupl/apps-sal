@@ -8,6 +8,7 @@ class Solution(object):
                 memo[t, s] = cur_stmp if s == S else []
                 return memo[t, s]
             if (t, s) not in memo:
+                # complete match, find successor
                 if s == S:
                     for i in range(S):
                         if stamp[i] == target[t]:
@@ -23,10 +24,12 @@ class Solution(object):
                     if suff_stmp:
                         memo[t, s] = suff_stmp
                     else:
+                        # add word cut and find predeccessor
                         suff_stmp = dfs(t + 1, 0, [t + 1])
                         memo[t, s] = cur_stmp + suff_stmp if suff_stmp else []
 
                 elif stamp[s] != target[t]:
+                    # add word cut and find predeccessor
                     if stamp[0] == target[t]:
                         suff_stmp = dfs(t, 0, [t])
                         memo[t, s] = cur_stmp + suff_stmp if suff_stmp else []

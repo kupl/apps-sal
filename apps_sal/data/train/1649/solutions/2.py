@@ -21,7 +21,7 @@ d = {"CLOSED": {"APP_PASSIVE_OPEN": "LISTEN",
 
 
 def traverse_TCP_states(events):
-    state = "CLOSED"
+    state = "CLOSED"  # initial state, always
     for event in events:
         if event not in d[state]:
             return "ERROR"

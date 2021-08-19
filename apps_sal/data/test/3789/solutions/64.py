@@ -10,10 +10,16 @@ import itertools
 from collections import deque, Counter, defaultdict
 from operator import mul
 import copy
+# ! /usr/bin/env python
+# -*- coding: utf-8 -*-
 import heapq
 sys.setrecursionlimit(10**6)
+# INF =  float("inf")
 INF = 10**18
 mod = 10**9 + 7
+# mod = 998244353
+
+# Dinic's algorithm
 
 
 class Dinic:
@@ -22,6 +28,7 @@ class Dinic:
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
+        # 始点ノードidx，終点ノードidx，容量をinput
         forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
@@ -62,6 +69,7 @@ class Dinic:
         return 0
 
     def flow(self, s, t):
+        # source/targetノードのidxを入力すると最大フロー（＝最小カット）が出力
         flow = 0
         INF = 10**9 + 7
         G = self.G

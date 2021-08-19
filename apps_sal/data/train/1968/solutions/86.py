@@ -23,6 +23,11 @@ class Solution:
 
         ret = []
 
+        # print(self.tree)
+        # print(self.tree.folders)
+        # print(self.tree.folders['a'].folders)
+        # print(self.tree.folders['a'].exist)
+
         def buildPath(curr, path):
             if curr is None:
                 return

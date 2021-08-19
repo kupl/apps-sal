@@ -2,6 +2,7 @@ import sys
 from collections import *
 import heapq
 import math
+# from math import gcd
 import bisect
 import copy
 from itertools import permutations, accumulate, combinations, product
@@ -36,6 +37,7 @@ for i in range(n):
             elif lst[j][1] < s:
                 lst[j] = stc[i]
                 break
+# print(lst)
 ans = 0
 for i in range(c):
     if lst[i] != 0:

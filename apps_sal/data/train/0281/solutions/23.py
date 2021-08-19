@@ -18,3 +18,8 @@ class Solution:
                         return False
                     seen.add(diff)
         return True
+        # alpha = '0abcdefghijklmnopqrstuvwxyz'
+        # aplha_d = {}
+        # val = 1
+        # for i in range(len(aplha)):
+        #     aplha_d[aplha[i]]

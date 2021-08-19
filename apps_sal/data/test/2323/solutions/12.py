@@ -23,6 +23,8 @@ MAX = max(s)
 MIN = min(s)
 C = len(set(s))
 ansList = []
+#print(miss, mx)
+# print(pSOfMiss)
 mL = len(miss)
 q = int(input())
 for _ in range(q):
@@ -41,6 +43,7 @@ for _ in range(q):
             notThere = pSOfMiss[-1] - pSOfMiss[idx - 1] - ((r - l) * (mL - idx))
         else:
             notThere = pSOfMiss[-1] - ((r - l) * (mL - idx))
+        #print(l, r, notThere, idx)
         ans = (MAX + r) - (MIN + l) + 1 - notThere
         ansList.append(ans)
 

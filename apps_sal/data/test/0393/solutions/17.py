@@ -1,3 +1,4 @@
+# your code goes here
 N = int(input())
 
 chairs = input()

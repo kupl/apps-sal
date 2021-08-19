@@ -13,6 +13,7 @@ class Solution:
             wait = max(0, wait - 4)
 
             tmp_profit = board * boardingCost - (i + 1) * runningCost
+            # print(\"{} {} {} {} {}\".format(i + 1, board, wait, tmp_profit, max_profit))
             if tmp_profit > max_profit:
                 max_profit = tmp_profit
                 ans = i + 1

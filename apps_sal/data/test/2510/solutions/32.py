@@ -4,6 +4,8 @@ from typing import List
 class DSU:
     def __init__(self, n: int = 0) -> None:
         self._n: int = n
+        # root node: -1 * component size
+        # otherwise: parent
         self.parent_or_size: List[int] = [-1] * n
 
     def merge(self, a: int, b: int) -> int:

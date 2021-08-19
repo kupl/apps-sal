@@ -9,12 +9,14 @@ class Solution:
         s = 2
 
         while i <= j:
+            # prioritize heavier one
             while s and j >= 0:
                 if k - people[j] < 0:
                     break
                 k -= people[j]
                 j -= 1
                 s -= 1
+            # check if we can fit any remainig lighter people
             while s and i < N:
                 if k - people[i] < 0:
                     break

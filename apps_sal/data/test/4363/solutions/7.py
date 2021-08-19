@@ -1,7 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# FileName: 	B
+# CreatedDate:  2020-10-01 02:02:04 +0900
+# LastModified: 2020-10-01 02:04:56 +0900
+#
 
 
 import os
 import sys
+# import numpy as np
+# import pandas as pd
 
 
 def main():

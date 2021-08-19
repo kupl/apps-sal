@@ -10,6 +10,7 @@ for i in range(m - 1):
     temp = (l[i + 1] + n - l[i]) % n
     if(temp == 0):
         temp = n
+    # print(temp)
     if(a[l[i]] == -1 and temp in s):
         a[l[i]] = temp
         s.remove(temp)

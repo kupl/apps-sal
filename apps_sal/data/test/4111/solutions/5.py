@@ -10,6 +10,7 @@ for i in range(n):
 s = 0
 e1 = 0
 d1 = 0
+#print(e, d)
 for i in range(n - 1, -1, -1):
     if (i + 1) % 2 == 0:
         e = e - L[i]
@@ -21,4 +22,5 @@ for i in range(n - 1, -1, -1):
         if e + e1 == d + d1:
             s += 1
         e1 += L[i]
+    #print(e, d, e1, d1)
 print(s)

@@ -10,6 +10,7 @@ try:
         count1 = l[j] * x
         while(i < j):
             if(count1 > 0 and i != j):
+                # print(count1,i)
                 if(l[i] <= count1):
                     count1 = count1 - l[i]
                     i = i + 1
@@ -18,8 +19,10 @@ try:
                     l[i] = l[i] - count1
                     count1 = 0
             if(count1 <= 0):
+                # print(count1,i)
                 j = j - 1
                 count1 = count1 + l[j] * x
+                # print(count1,i,j)
                 if(i != j):
                     bj = bj + 1
                 else:

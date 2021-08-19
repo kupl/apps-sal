@@ -1,3 +1,4 @@
+# TODO: type solution here
 class Node(object):
     def __init__(self, label):
         self.label = label
@@ -13,20 +14,23 @@ class DisjointSet(object):
         self.nodes = [Node(i) for i in range(n)]
 
     def find(self, u):
-        if u != u.par:
+        if u != u.par:  # here we user path compression trick
             u.par = self.find(u.par)
         return u.par
 
     def unite(self, u, v):
         u, v = self.find(u), self.find(v)
-        if u == v:
+        if u == v:  # u and v are in the same component
             return False
 
+        # making v the vertex with bigger size
         if u.size > v.size:
             u, v = v, u
 
+        # merging two components
         u.par = v
 
+        # updating maximum size as size
         v.size += u.size
         v.sum += u.sum
 

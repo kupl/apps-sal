@@ -1,5 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+        # eights.sort()
         left = max(weights)
         right = sum(weights)
 
@@ -28,4 +29,5 @@ class Solution:
 
             else:
                 left = mid + 1
+                # ight=mid-1
         return res

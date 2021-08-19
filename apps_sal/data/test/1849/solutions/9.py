@@ -14,6 +14,7 @@ for i in range(n, 0, -1):
     else:
 
         now = 10 * 2 * 9 * pow(10, n - i - 1, mod)
+        #print (now)
         now += 10 * (n - i - 1) * 81 * pow(10, n - i - 2, mod)
         ans.append(now % mod)
 

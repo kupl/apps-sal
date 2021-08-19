@@ -16,6 +16,7 @@ for _ in range(int(stdin.readline())):
         curr = 0
 
         for j in _list:
+            #print('curr={} m={} j={} possible={}'.format(curr,m,j,possible))
             if j > curr:
                 curr = j
             if curr + precision > j + D:

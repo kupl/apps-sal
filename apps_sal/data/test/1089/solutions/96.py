@@ -1,8 +1,10 @@
+#!python3
 
 def LI():
     return list(map(int, input().split()))
 
 
+# input
 N, M, K = LI()
 
 MOD = 10 ** 9 + 7

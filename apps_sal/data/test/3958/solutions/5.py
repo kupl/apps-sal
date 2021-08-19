@@ -29,6 +29,7 @@ def solution():
             else:
                 print("-1")
                 return
+    # print(result)
     if ones:
         print("-1")
         return

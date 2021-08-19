@@ -3,6 +3,7 @@ import math
 
 n, w = [int(x) for x in input().split()]
 l = [int(x) for x in input().split()]
+# sorted(l, reverse=False)
 qw = l[:]
 l.sort(reverse=True)
 
@@ -20,6 +21,7 @@ else:
         else:
             e = []
             q[x] = q[x] + rem
+            #q = zip(l,q)
             for qq in qw:
                 inx = l.index(qq)
                 e.append(q[inx])

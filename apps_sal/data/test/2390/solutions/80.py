@@ -1,3 +1,8 @@
+# coding: utf-8
+
+# https://atcoder.jp/contests/abc095/tasks/arc096_b
+# 16:55-17:08 chudan
+# 12:45-13:08 done
 
 
 def main():
@@ -23,8 +28,8 @@ def main():
         cal += v[N - 1 - i]
         cal_anti[i] = cal if cal > cal_anti[i - 1] else cal_anti[i - 1]
 
-    ans = max(cal_clock[-1], cal_anti[-1])
-    for k in range(N - 1):
+    ans = max(cal_clock[-1], cal_anti[-1])  # 引き返さない場合
+    for k in range(N - 1):  # 途中で引き返す場合
         cand_1 = cal_clock[k] - x[k] + cal_anti[N - 2 - k]
         cand_2 = cal_anti[k] - (C - x[N - 1 - k]) + cal_clock[N - 2 - k]
         ans = max(ans, cand_1, cand_2)

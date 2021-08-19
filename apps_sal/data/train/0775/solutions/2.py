@@ -1,5 +1,8 @@
+# https://www.codechef.com/LTIME63B/problems/GHMC
+# Finally.... I properly understood what needs to be done.
 
 def ctlt(arr, val):
+    # find number of values in sorted arr < val
     if arr[0] >= val:
         return 0
     lo = 0
@@ -36,8 +39,9 @@ for _ in range(int(input())):
 
     while not valsdone and n >= k:
         if n == k:
-            lo = x + d + 1
+            lo = x + d + 1  # put out of range
         else:
+            # find best maxfill (before val support)
             lo = 1
             hi = x + 1
             while hi - lo > 1:
@@ -51,6 +55,7 @@ for _ in range(int(input())):
         valsdone = True
         checkto = ctlt(ps, lo) - 1
         if checkto >= valchecked:
+            # support all vals
             for p in ps[valchecked + 1:checkto + 1]:
                 if lastp + d >= p:
                     isolbelow = False
@@ -64,6 +69,7 @@ for _ in range(int(input())):
                 lastp = p
             valchecked = checkto
             if valsdone and isolbelow:
+                # check gap to maxfill
                 if lastp + d >= lo:
                     isolbelow = False
                 else:

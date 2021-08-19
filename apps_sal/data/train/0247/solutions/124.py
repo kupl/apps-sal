@@ -3,10 +3,12 @@ import bisect
 
 class Solution:
     def minSumOfLengths(self, arr, target):
+        # inclusive, inclusive sliding window pointers
         lo = 0
         hi = 0
         cur = arr[0]
 
+        # store (end, start) pairs of valid subarrays
         running_min = []
 
         ans = 1e9

@@ -4,6 +4,7 @@ class Solution:
         if n == 0:
             return 0
         joined = [0 for i in range(n)]
+        # downto = [0 for i in range(n)]
         left = 0
         right = 0
         result = 0

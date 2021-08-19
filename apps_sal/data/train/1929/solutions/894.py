@@ -1,3 +1,5 @@
+# 08-23-2020
+# Day 23 stream of characters
 
 class StreamChecker:
 
@@ -35,3 +37,8 @@ class StreamChecker:
         self.current_tries = new_tries
 
         return res
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

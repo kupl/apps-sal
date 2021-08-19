@@ -16,6 +16,7 @@ if abs(1.0 - p) > 1e-6:
             a1 /= (1 - p)
             s += 1
         a2 = (1 - p) ** (s - i)
+        #print(a1, a2, s, i)
         ans += a1 * a2 * min(i, n)
 else:
     ans = min(n, t)

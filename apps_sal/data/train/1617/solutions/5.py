@@ -10,7 +10,7 @@ def converter(n, decimals=0, base=pi):
     if n == 0:
         digits = 1
     else:
-        digits = floor(log(n) / log(base) + 1)
+        digits = floor(log(n) / log(base) + 1)  # Only counts digits before the decimal
     piggyBank = n
     base36 = ({
         10: "A", 11: "B", 12: "C", 13: "D", 14: "E",
@@ -20,6 +20,7 @@ def converter(n, decimals=0, base=pi):
         30: "U", 31: "V", 32: "W", 33: "X", 34: "Y",
         35: "Z"
     })
+    # Now to create the output
     output = ""
     power = digits - 1
     debugList = []

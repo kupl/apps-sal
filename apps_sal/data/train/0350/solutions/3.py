@@ -1,11 +1,13 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+        # seems like you need 3 pointers, shink from either side
         ans, ctr, lb, count = 0, {}, 0, 0
         for i, val in enumerate(A):
             if val not in ctr:
                 ctr[val] = 0
             ctr[val] += 1
 
+            # try to code it up first
             while len(ctr) > K:
                 ctr[A[lb]] -= 1
                 if ctr[A[lb]] == 0:
@@ -23,6 +25,7 @@ class Solution:
                     p2 += 1
                 ans += count
                 for k, v in ctr1.items():
+                    # recover step, kind of lame
                     ctr[k] = ctr.get(k, 0) + v
         return ans
 

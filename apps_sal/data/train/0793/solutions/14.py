@@ -1,3 +1,4 @@
+# cook your di
 import math
 n, r = map(int, input().split())
 l = list(map(int, input().split()))

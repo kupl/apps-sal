@@ -10,6 +10,7 @@ class Solution:
             while j < n:
                 while j < n and position[j] - position[i] < gap:
                     j += 1
+                # print(i, j, ct)
                 if j < n:
                     ct += 1
                     i = j
@@ -18,6 +19,8 @@ class Solution:
                 if ct == m:
                     return True
             return False
+
+        # print(canFit(999999999))
 
         lo = 1
         hi = position[-1] - position[0]

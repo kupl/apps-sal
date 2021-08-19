@@ -29,7 +29,7 @@ for _ in range(q):
                 allowD = True
             elif x == minX:
                 allowA = False
-        else:
+        else:  # if v == 'D':
             x += 1
             if x > maxX:
                 maxX = x

@@ -18,6 +18,8 @@ class Solution:
             start[new_start] = new_end
             end[new_end] = new_start
             groups[new_end - new_start + 1].add((new_start, new_end))
+            # print(groups)
             if len(groups[m]) > 0:
                 ans = idx + 1
+            # print(groups)
         return ans

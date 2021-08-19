@@ -7,6 +7,7 @@ denum = 1
 for i in p:
     num = (num + denum) * 100 % M
     denum = denum * i % M
+#print(num, denum)
 g = gcd(num, denum)
 num = num // g
 denum = denum // g

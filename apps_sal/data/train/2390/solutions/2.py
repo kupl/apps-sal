@@ -15,3 +15,4 @@ for _ in range(q):
                 break
         ans += u[i]
     print(ans)
+    # print(u)

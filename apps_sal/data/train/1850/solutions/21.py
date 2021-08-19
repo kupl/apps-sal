@@ -1,5 +1,6 @@
 class Solution:
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
+        # build graph as adj_list
         adj_list = defaultdict(list)
         for v1, v2 in edges:
             adj_list[v1].append(v2)
@@ -27,6 +28,7 @@ class Solution:
                 res[c] = res[t] - subT_size[c] * 2 + tot
                 preorder(c, t)
 
+        # main
         res[root] = postorder(root, -1)
         tot = subT_size[root]
         preorder(root, -1)

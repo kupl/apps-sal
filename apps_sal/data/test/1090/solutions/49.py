@@ -1,3 +1,11 @@
+# import sys
+# sys.setrecursionlimit(10 ** 6)
+# import bisect
+# from collections import deque
+# from decorator import stop_watch
+#
+#
+# @stop_watch
 def solve(N, K, S):
     sachi = 0
     L_cluster, R_cluster = (0, 1) if S[0] == 'R' else (1, 0)
@@ -23,8 +31,11 @@ def solve(N, K, S):
 
 
 def __starting_point():
+    # N = int(input())
     N, K = list(map(int, input().split()))
     S = input()
+    # As = [int(i) for i in input().split()]
+    # Bs = [int(i) for i in input().split()]
     solve(N, K, S)
 
 

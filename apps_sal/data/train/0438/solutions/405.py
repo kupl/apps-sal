@@ -6,6 +6,7 @@ class Solution:
         for i, n in enumerate(arr):
             left, right = comps[n - 1], comps[n + 1]
             comps[n - left] = comps[n + right] = comps[n] = left + right + 1
+            # print(comps)
 
             size[comps[n]] += 1
             size[left] -= 1

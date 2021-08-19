@@ -9,6 +9,7 @@ else:
         print(1, h + 2)
     for i in range(h + 2, d + 1):
         print(i, i + 1)
+    #alr = d + 1
     add_to = 1
     if (d == h):
         add_to = 2

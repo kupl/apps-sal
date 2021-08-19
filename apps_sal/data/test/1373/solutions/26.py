@@ -1,3 +1,4 @@
+#amari = (10**100)%(10**9+7)
 def sm(i):
     tmpp = 0
     for j in range(i):
@@ -16,10 +17,12 @@ def bi(i, N):
 def main():
     N, K = list(map(int, input().split()))
     ans = 0
+    #loopnum = (N+1) - K + 1
     for i in range(K, N + 2, 1):
         if i == K:
             small, numsmall = sm(i)
             big, numbig = bi(i, N)
+            # print(numsmall,numbig)
         else:
             small += numsmall + 1
             numsmall += 1

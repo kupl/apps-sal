@@ -8,6 +8,8 @@ curr_empl = set()
 day_empl = set()
 d_s = 0
 for i in range(n):
+    # print(curr_empl)
+    # print(day_empl)
     e = A[i]
     if e < 0:
         if -e not in curr_empl:

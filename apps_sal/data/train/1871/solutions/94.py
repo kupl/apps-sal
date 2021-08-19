@@ -1,5 +1,13 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
+        # Map each node with a list of its ancestors
+        # We can do that by iterating with DFS and path
 
         q = [(root, [])]
 

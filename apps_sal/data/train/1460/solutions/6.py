@@ -1,3 +1,4 @@
+# cook your dish here
 d, wage, tip = map(int, input().split())
 
 arr = list(map(int, input().split()))

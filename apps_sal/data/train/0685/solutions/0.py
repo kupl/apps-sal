@@ -1,3 +1,4 @@
+# https://www.codechef.com/problems/RECTLIT
 
 def assess(sq, points):
     EWct = 0
@@ -15,8 +16,10 @@ def assess(sq, points):
         return 'yes'
     if len(points) == 2:
         return 'no'
+    # now 3 points
     if NSct == 1 and EWct == 1:
         return 'yes'
+    # 3 points, one on edge
     x = -1
     for a, b in points:
         if EWct > 0:
@@ -33,7 +36,7 @@ def assess(sq, points):
                 x = a
             else:
                 y = a
-    if (e - x) * (e - y) < 0:
+    if (e - x) * (e - y) < 0:  # edge splits mids
         return 'no'
     else:
         return 'yes'

@@ -13,6 +13,7 @@ class Solution:
         target = (1 << n) - 1
         dp = [1000000 for i in range(target + 1)]
         dp[0] = 0
+        # parent[k] = (j, i) means the skillset represented by k is constructed from skilset represented by j plus the skillset of ith people. from j to k we use i. In this way we can construct the result backward and
         parent = [0] * (target + 1)
 
         for i in range(len(people)):

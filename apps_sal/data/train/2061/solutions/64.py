@@ -19,8 +19,12 @@ for _ in range(T):
     else:
         transy = 1 - isdown
 
+    # print(ldx, ldy, transx, transy)
     ans = 0
     if ldx == ldy != 0 and (isdown == isleft):
         ans += 1
+    # transy = max( transy, abs(ldx))
+    # transx = max(transx , (ldy))
     ans += max(transy + abs(ldy), transx + abs(ldx))
     print(ans)
+    # print((ax, bx, cx).count(curx) , (ay, by, cy).count(cury))

@@ -1,4 +1,5 @@
 def stringy(size):
+    # Good Luck!
     s = ''
     for i in range(0, size):
         if(i % 2 == 0):

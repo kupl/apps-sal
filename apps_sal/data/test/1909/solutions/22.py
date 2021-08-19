@@ -1,3 +1,4 @@
+# python3
 import sys
 import threading
 import os.path
@@ -16,6 +17,7 @@ def main():
         input = open('in.txt', 'r')
     else:
         input = sys.stdin
+    # --------------------------------INPUT---------------------------------
     n, k = list(map(int, input.readline().split()))
     lis = list(map(int, input.readline().split()))
 
@@ -33,6 +35,7 @@ def main():
             break
 
     output = ans2
+    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('out.txt'):
         open('out.txt', 'w').writelines(str(output))
     else:
@@ -41,6 +44,7 @@ def main():
 
 def __starting_point():
     main()
+# threading.Thread(target=main).start()
 
 
 __starting_point()

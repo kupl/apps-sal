@@ -11,12 +11,15 @@ def rwh_primes1(n):
 
 
 primes = rwh_primes1(1000000)
+# print(primes)
 plookup = set(primes)
 S = []
+# print(len(primes))
 prime = 10**9 + 7
 for i in range(2, 10000):
     if i in plookup:
         S.append(primes[i - 1])
+# print(len(S))
 
 
 def __starting_point():

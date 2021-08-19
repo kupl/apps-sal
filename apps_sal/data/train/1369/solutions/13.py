@@ -1,3 +1,4 @@
+# cook your dish here
 def primes(n):
     count = 0
     prime = [True for i in range(n + 1)]

@@ -6,7 +6,7 @@ class Solution:
         if grid[0][0] != 0:
             return -1
         if m == 1 and n == 1:
-            return 0
+            return 0  # no need to walk
         di = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
         def get_nei(i, j):

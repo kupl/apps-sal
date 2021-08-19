@@ -10,6 +10,7 @@ for i in range(n - 1):
         ans += max(0, f - e + 1)
         if a == b:
             ans -= 1
+        # print(ans)
     a, b = c, d
 
 print(ans)

@@ -6,7 +6,6 @@ def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
 
-
 """
 和はN+1以下である．
 A列とB列の両方で共通して持てるのは1個までなので．
@@ -74,7 +73,7 @@ def main():
     unit = (N - A) // (B - 1)
     rem = (N - A) % (B - 1)
 
-    right = N - A
+    right = N - A  # 各グループの右端
     for i in range(B - 1):
         left = right - unit
         if rem:

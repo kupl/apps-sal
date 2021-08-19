@@ -33,3 +33,8 @@ class StreamChecker:
                     finded = True
         self.left = right
         return finded
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

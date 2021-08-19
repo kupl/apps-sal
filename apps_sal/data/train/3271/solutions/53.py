@@ -1,4 +1,5 @@
 def arr(*n):
+    # [ the numbers 0 to N-1 ]
     print(*n)
     res = []
     if(n == () or n == 0):

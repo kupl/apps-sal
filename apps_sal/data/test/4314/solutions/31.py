@@ -4,8 +4,8 @@ for i in range(h):
     table.append(list(input()))
 count = 0
 while True:
-    if not '
-       table.pop(count)
+    if not '#' in table[count]:
+        table.pop(count)
         h -= 1
         count = 0
         continue
@@ -20,8 +20,8 @@ else:
         tmp = []
         for i in range(h):
             tmp.append(table[i][count])
-        if not '
-           for j in range(h):
+        if not '#' in tmp:
+            for j in range(h):
                 table[j].pop(count)
             w -= 1
             count = 0

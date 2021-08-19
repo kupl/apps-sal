@@ -19,9 +19,11 @@ class Solution:
                     return math.inf
                 return 1
 
+            # Pick first clip
             if memo[i + 1][curr[1]] == None:
                 memo[i + 1][curr[1]] = dp(i + 1, curr[1])
 
+            # Don't pick first clip
             if memo[i + 1][start] == None:
                 memo[i + 1][start] = dp(i + 1, start)
 

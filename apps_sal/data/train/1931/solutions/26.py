@@ -1,3 +1,14 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def dfs(self, nums, i, tree_node, memo):
         if i >= len(nums):
@@ -8,6 +19,7 @@ class Solution:
         key = str(i) + ':' + str(id(tree_node))
         if key in memo:
             return memo[key]
+        # print('i: ' + str(i) +  ', node: ' + str(id(tree_node)))
 
         if tree_node.val == nums[i]:
             left = self.dfs(nums, i + 1, tree_node.left, memo)

@@ -28,6 +28,7 @@ X = INT()
 A = []
 for i in range(1, 2 * (int(sqrt(X)) + 1)):
     a = i * (i + 1) // 2
+    # print(a)
     if a <= X:
         A.append(a)
     else:
@@ -35,6 +36,8 @@ for i in range(1, 2 * (int(sqrt(X)) + 1)):
         mi = A.pop()
         ma = a
         break
+# print(mi, ma)
+# print(ans)
 if mi == X:
     print(ans)
 else:

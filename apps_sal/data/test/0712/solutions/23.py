@@ -13,5 +13,6 @@ for i in range(1, t + 1):
             dp[i][j] += dp[i - 1][j - 1] * p
 ans = 0
 for i in range(n + 1):
+    # print(i,dp[t][i])
     ans += i * dp[t][i]
 print(ans)

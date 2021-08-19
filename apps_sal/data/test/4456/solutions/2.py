@@ -4,11 +4,14 @@ q = [int(i) for i in input().split()]
 offs = ord("a")
 
 ans = [chr(offs + k - 1)] * n
+# ans = ""
 pmore = set()
 qmore = set()
 
 let = 0
+# cnt = 0
 for i in range(n):
+    # cnt += 1
     pi = p[i]
     qi = q[i]
     if qi in pmore:
@@ -29,6 +32,8 @@ for i in range(n):
 
 
 if let == k:
+    # if len(ans) < n:
+    #     ans += chr(offs+k-1) * (n- len(ans))
     print("YES")
     print("".join(ans))
 else:

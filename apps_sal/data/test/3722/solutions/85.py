@@ -24,6 +24,8 @@ def main():
         dp = temp
     v2 = sum(dp) % mod
 
+    # print(v1, v2)
+
     if cAB == 'B':
         if cBB == 'B':
             return 1

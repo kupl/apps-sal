@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     def inv(arr):
         arr1 = [0] * (len(arr))

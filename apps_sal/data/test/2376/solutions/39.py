@@ -27,14 +27,18 @@ w3 = list(accumulate(w3))
 w4 = [0] + w4
 w4 = list(accumulate(w4))
 
+# print(w1,w2,w3,w4)
+# print(len(w1),len(w2),len(w3),len(w4))
 
 ans = 0
 for a in range(len(w1)):
     for b in range(len(w2)):
         for c in range(len(w3)):
             for d in range(len(w4)):
+                # print(a,b,c,d)
                 wei = w * a + (w + 1) * b + (w + 2) * c + (w + 3) * d
                 val = w1[a] + w2[b] + w3[c] + w4[d]
+                # print(wei,val)
                 if wei <= W:
                     ans = max(val, ans)
 

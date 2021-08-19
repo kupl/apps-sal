@@ -5,6 +5,7 @@ class Solution:
         for i in range(0, 10, 3):
             final_ans_digits[i] = digits[i]
 
+        # append all digits whose quant > 3
         left_numbers = list()
         for i in [1, 2, 4, 5, 7, 8]:
             if digits[i] > 3:
@@ -14,11 +15,15 @@ class Solution:
                 left_numbers += [i] * digits[i]
 
         mod = sum(left_numbers) % 3
+        # but we may need to exclude a couple of numbers
         if not mod:
             pass
         elif not(left_numbers[0] - mod) % 3:
+            # have to exclude number, can exclude the smallest
             digits[left_numbers[0]] -= 1
         else:
+            # have to exclude some numbers
+            # option 1: exclude a single number
             num1 = None
             for n in left_numbers:
                 if not (n - mod) % 3:
@@ -26,6 +31,7 @@ class Solution:
                     digits[n] -= 1
                     break
             if num1 is None:
+                # option 2: exclude two numbers
                 num2 = None
                 for i in range(1, len(left_numbers)):
                     if not (left_numbers[i] + left_numbers[0] - mod) % 3:

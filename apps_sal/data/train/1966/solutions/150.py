@@ -6,10 +6,10 @@ class Solution:
             stack, dp = [], [0] * (n)
             for j in range(n):
                 histogram[j] = 0 if mat[i][j] == 0 else histogram[j] + 1
-                while stack and histogram[j] < histogram[stack[-1]]:
+                while stack and histogram[j] < histogram[stack[-1]]:  # increasing stack
                     stack.pop()
                 if stack:
-                    dp[j] = dp[stack[-1]] + histogram[j] * (j - stack[-1])
+                    dp[j] = dp[stack[-1]] + histogram[j] * (j - stack[-1])  # Important!!
                 else:
                     dp[j] = histogram[j] * (j + 1)
                 stack.append(j)

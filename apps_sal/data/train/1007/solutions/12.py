@@ -7,6 +7,7 @@ for _ in range(T):
     N = int(input())
     A = [int(i) for i in input().split()]
 
+    # isGcd = False
     a = A[0]
     for i in range(1, N):
         a = gcd(a, A[i])

@@ -9,6 +9,7 @@ class Solution:
         for i in range(n):
             for j in range(i + 1, n):
                 for k in range(j, n):
+                    # print(i, j, k)
                     if xor[i] ^ xor[j] == xor[j] ^ xor[k + 1]:
                         ans += 1
         return ans

@@ -1,3 +1,4 @@
+# 37
 n, k, q = map(int, input().split())
 start_point = k - q
 list = [start_point for i in range(n)]

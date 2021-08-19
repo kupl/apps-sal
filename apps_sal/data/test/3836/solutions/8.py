@@ -30,8 +30,11 @@ else:
         tot += co
         ali += co
         bob += co
+    # print(ali,bob,tot)
     rem.sort(reverse=True)
+    # print(rem)
     mn = min(ali, bob)
     re = max(2 * mn - tot, 0)
+    # print(re)
     ans += sum(rem[:re])
     print(ans)

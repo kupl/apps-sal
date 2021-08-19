@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(200002)
 
@@ -9,6 +10,7 @@ for i in range(m):
 
     graph[l - 1].append([r - 1, d])
     graph[r - 1].append([l - 1, -d])
+# print(graph)
 
 
 def dfs(s):

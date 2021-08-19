@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 
 a, b = list(map(int, input().split()))
@@ -8,10 +9,13 @@ def sums(s, l, b):
         p = 1
         for x in l:
             p *= (x[1] + 1)
+        #print("ok, s=",s,p)
         return p
 
     if not l:
+        #print("malo: ", s)
         return 0
+    #print(s, end=" ")
 
     p = 0
     for i in range(l[0][1] + 1):
@@ -53,6 +57,15 @@ def wise(a, b):
         factors[d] += 1
 
         return sums(1, list(factors.items()), b)
+
+# for i in range(10000):
+    # print(i)
+    #a, b = map(int, input().split())
+    ##a = random.randint(0,100000)
+    ##b = random.randint(0,100000)
+    # if wise(a, b) != naive(a, b):
+        # print("!!!")
+    #print(a, b, wise(a, b), naive(a, b))
 
 
 print(wise(a, b))

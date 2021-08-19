@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Sun Sep 13 12:06:59 2020
 
@@ -17,6 +18,7 @@ def solve():
     steps = list()
     count = 0
     index = 0
+    # 段差数え
     for i in range(N + 1):
         if i == A[index]:
             if count == 0:
@@ -34,6 +36,7 @@ def solve():
 
     smax = max(steps)
     fibs = [0] * smax
+    # fibテーブル生成 O(n)
     for i in range(smax):
         if i == 0 or i == 1:
             fibs[i] = 1
@@ -42,8 +45,13 @@ def solve():
     else:
         ans = 1
         for s in steps:
+            # print(s)
             ans *= fibs[s - 1]
+            # print(ans)
             ans %= key
+    # print(A)
+    # print(steps)
+    # print(fibs)
     return ans
 
 

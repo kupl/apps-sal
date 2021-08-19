@@ -31,8 +31,8 @@ def numdigits(n):
 def primesupto(n):
     isp = [True] * (n + 1)
     isp[0], isp[1] = False, False
-    for i, x in enumerate(isp):
-        if x:
+    for i, x in enumerate(isp):  # for each number
+        if x:  # found a prime
             mults = i * i
             while mults <= n:
                 isp[mults] = False
@@ -47,13 +47,16 @@ def maxarrays(a, b):
 nr, nc = getlist(int)
 mat = getmatrix(nr, str)
 
+# print(mat)
 rows = map(lambda row: set(row), mat)
+# print('----')
 
 total = set()
 for r in rows:
     total.update(r)
 total -= set(['B', 'W', 'G'])
+# print(total)
 out = len(total)
 
 
-print("
+print("#Black&White" if out == 0 else "#Color")

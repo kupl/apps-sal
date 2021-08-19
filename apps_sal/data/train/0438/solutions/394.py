@@ -31,6 +31,7 @@ class Solution:
             uf.ranks[i] = 1
             for j in [i - 1, i + 1]:
                 if 0 <= j < n:
+                    # 查看未合并前上一步时，是否为m
                     if uf.ranks[uf.find(j)] == m:
                         res = step
                     if uf.ranks[j]:

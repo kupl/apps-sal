@@ -2,7 +2,7 @@ from scipy.sparse.csgraph import maximum_bipartite_matching
 from scipy.sparse import coo_matrix
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
 def input(): return sys.stdin.readline().rstrip()
 

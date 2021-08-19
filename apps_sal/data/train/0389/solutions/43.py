@@ -35,8 +35,11 @@ class Solution:
                 if n and r1(ss, list(arr), n - 1):
                     return True
 
+        # print(a)
         if r1(0, a, len(a) // 2):
             return True
+        # print(d)
+        # print(b)
 
         def r2(s, arr, n):
             xx = None
@@ -54,4 +57,5 @@ class Solution:
                     return True
         if r2(0, b, len(b) // 2 - 1):
             return True
+        # print(d)
         return False

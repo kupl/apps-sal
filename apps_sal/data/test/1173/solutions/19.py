@@ -7,12 +7,12 @@ q = deque(list(range(N)))
 d = [0 for i in range(N)]
 pairs = [-1 for i in range(N)]
 while q:
-    a = q.popleft()
+    a = q.popleft()  # qの左端の選手のindexをpopleft
     if len(L[a]) == 0:
         continue
     b = L[a].popleft()
 
-    if pairs[b] == a:
+    if pairs[b] == a:  # bのリクエストがaなら
         d[a] = d[b] = max(d[a], d[b]) + 1
         q.append(a)
         q.append(b)

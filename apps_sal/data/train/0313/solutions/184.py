@@ -8,6 +8,7 @@ class Solution:
             num_flowers = 0
 
             for bloom in bloomDay:
+                # Flower bloomed
                 if bloom > value:
                     num_flowers = 0
                 else:

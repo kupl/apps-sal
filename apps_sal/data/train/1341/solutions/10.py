@@ -20,6 +20,7 @@ while T > 0:
         else:
             lo = mid + 1
     ans = n - lo
+    # print(ans)
     for i in range(n - 1):
         if prefix[i]:
             lo = i + 1
@@ -33,6 +34,7 @@ while T > 0:
             ans += (n - lo + 1)
             if lo == i + 1 or (lo == n - 1 and a[lo] < a[i]):
                 ans -= 1
+            # print(ans)
         else:
             break
     if prefix[-1]:

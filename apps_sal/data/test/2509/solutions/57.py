@@ -9,6 +9,7 @@ else:
         q = N % b
         cnt += p * max(0, b - K)
         cnt += max(0, q - K + 1)
+        #print(p * max(0, b-K),max(0,q-K+1))
 
 
 print(cnt)

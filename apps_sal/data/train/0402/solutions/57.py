@@ -7,6 +7,7 @@ class Solution:
                 return False
 
             visited.add((x, y))
+            # max blocked cell = 200
             if len(visited) > 20000 or [x, y] == sink:
                 return True
             return dfs(x + 1, y, sink, visited) or dfs(x - 1, y, sink, visited) or dfs(x, y + 1, sink, visited) or dfs(x, y - 1, sink, visited)

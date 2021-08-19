@@ -16,6 +16,8 @@ def bitsum(tree, index):
 
 n, m, c = list(map(int, input().split()))
 tree = [0 for _ in range(n + 1)]
+# for i in range(n):
+#     bitadd(tree,i,c)
 for _ in range(m):
     q = input().split()
     if q[0] == "Q":

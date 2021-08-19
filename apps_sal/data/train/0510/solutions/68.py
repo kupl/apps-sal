@@ -10,6 +10,7 @@ class SegTree:
 
     def update(self, index, char):
         i = self.N - 1 + index
+        # アルファベットがある = bitが立っている
         self.tree[i] = 1 << (ord(char) - ord("a"))
         while i > 0:
             i = (i - 1) // 2
@@ -18,12 +19,15 @@ class SegTree:
     def get(self, a, b):
         return self.query(a, b, 0, 0, self.N)
 
+    # k : ノードの番号
+    # l : ノードkの受け持つ区間
+    # r : ノードkの受け持つ区間
     def query(self, a, b, k, l, r):
-        if r <= a or b <= l:
+        if r <= a or b <= l:  # 区間外
             return 0
-        elif a <= l and r <= b:
+        elif a <= l and r <= b:  # 受け持ち区間は完全に含まれている
             return self.tree[k]
-        else:
+        else:  # 一部含まれてる
             left = self.query(a, b, 2 * k + 1, l, (l + r) // 2)
             right = self.query(a, b, 2 * k + 2, (l + r) // 2, r)
             return left | right

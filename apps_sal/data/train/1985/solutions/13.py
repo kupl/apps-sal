@@ -41,6 +41,12 @@ class Solution:
                     for i in range(0, len(matrix) // 2 + 1):
                         quadrant1.append(matrix[i][0:len(matrix[0]) // 2 + 1])
 
+                    # print("1")
+                    # print(quadrant1)
+                    # print(quadrant2)
+                    # print(quadrant3)
+                    # print()
+
                     return helper(quadrant1, target, i_base, j_base) or helper(quadrant2, target, i_base, j_base + len(matrix[0]) // 2 + 1) or helper(quadrant3, target, i_base + len(matrix) // 2 + 1, j_base)
 
                 else:
@@ -48,6 +54,12 @@ class Solution:
 
                     for i in range(len(matrix) // 2, len(matrix)):
                         quadrant4.append(matrix[i][len(matrix[0]) // 2:])
+
+                    # print("2")
+                    # print(quadrant2)
+                    # print(quadrant3)
+                    # print(quadrant4)
+                    # print()
 
                     return helper(quadrant4, target, i_base + len(matrix) // 2, j_base + len(matrix[0]) // 2) or helper(quadrant2, target, i_base, j_base + len(matrix[0]) // 2 + 1) or helper(quadrant3, target, i_base + len(matrix) // 2 + 1, j_base)
 

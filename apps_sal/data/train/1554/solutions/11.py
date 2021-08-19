@@ -1,3 +1,4 @@
+# cook your dish here
 def chocoValue(a, b):
     if a < b:
         a, b = b, a

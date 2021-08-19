@@ -11,6 +11,7 @@ def divider(n):
     dividers.sort()
     dividers.remove(1)
     return dividers
+# nの約数を抽出する関数を定義(1以外)
 
 
 cnt = len(divider(N - 1))

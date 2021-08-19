@@ -20,7 +20,7 @@ def men_still_standing(cards):
             number = int(foul[1:3])
             cardColor = foul[3]
 
-        else:
+        else:  # 3 letters
             number = int(foul[1])
             cardColor = foul[2]
 

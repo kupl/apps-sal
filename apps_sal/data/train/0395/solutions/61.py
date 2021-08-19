@@ -5,6 +5,7 @@ class Solution:
 
         n = len(A)
 
+        # get next pos for odd/even jumps
         next_pos = [[-1] * 2 for _ in range(n)]
 
         stack = []
@@ -56,3 +57,5 @@ class Solution:
                 ret += 1
 
         return ret
+
+        # dp for odd/even jumps whether can get the end

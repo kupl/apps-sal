@@ -28,5 +28,6 @@ if v[0] == target:
         ans += comb(n, i)
     print(ans)
 else:
+    #print((n, fromk))
     ans = comb(n, fromk)
     print(ans)

@@ -26,3 +26,23 @@ def solver(n, k, a, b, c, d):
 
 
 main()
+#print(solver(7, 11, 2, 4, 7, 3))
+
+# def reorder(path, n, a, b, c, d):
+# 	for i in range(len(path)):
+# 		if path[i] == a:
+# 			path[i] = 1
+# 		elif path[i] == b:
+# 			path[i] = n
+# 		elif path[i] == c:
+# 			path[i] = 2
+# 		elif path[i] == d:
+# 			path[i] = 3
+# 		elif path[i] == 1:
+# 			path[i] = a
+# 		elif path[i] == n:
+# 			path[i] = b
+# 		elif path[i] == 2:
+# 			path[i] = c
+# 		elif path[i] == 3:
+# 			path[i] = d

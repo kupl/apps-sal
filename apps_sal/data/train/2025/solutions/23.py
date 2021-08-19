@@ -20,6 +20,7 @@ for p in pr:
     x = p
     prm.append(x)
     while True:
+        # print(x)
         x *= p
         if x > n:
             break

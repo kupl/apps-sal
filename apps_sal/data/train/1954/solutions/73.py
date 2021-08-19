@@ -10,6 +10,7 @@ class Solution:
             curr_skill = 0
             for skill in skills:
                 curr_skill |= (1 << skill_map[skill])
+            # print(curr_skill)
 
             nr = {}
             for s, t in res.items():
@@ -21,5 +22,6 @@ class Solution:
                 elif len(res[k]) > len(nt):
                     res[k] = nt
             res.update(nr)
+            # print(res, nr)
 
         return list(res[(1 << n) - 1])

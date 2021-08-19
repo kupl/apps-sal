@@ -15,6 +15,7 @@ def queens(position, size):
 
     print(x)
     pos_step = []
+    # making the board
     board = np.empty([size, size], dtype=object)
     for i in range(size):
         for j in range(size):
@@ -22,11 +23,13 @@ def queens(position, size):
     print(board)
     board_states = list(np.empty([size, size], dtype=object))
 
+    # position coordinates
     pos = list(np.where(board == position))
     print(pos)
     if len(pos[0]) == 0:
         return None
 
+    # first queen
     new_queen(position, size, board, board_states, pos_step, x)
     board_states.append(np.copy(board))
 
@@ -44,16 +47,20 @@ def new_queen(new_position, size, board, board_states, pos_step, x):
 
     pos = list(np.where(board == new_position))
 
+    # row
     for i in range(size):
         board[i, pos[1]] = "  "
 
+    # column
     for i in range(size):
         board[pos[0], i] = "  "
 
+    # diagonal1
     if pos[1] - pos[0] >= 0:
         np.fill_diagonal(board[:, int(pos[1] - pos[0]):], "  ")
     else:
         np.fill_diagonal(board[int(pos[0] - pos[1]):], "  ")
+    # diagonal2
     if pos[0] + pos[1] >= size:
         np.fill_diagonal(board[int(pos[1] - (size - pos[0]) + 1):, ::-1], "  ")
     else:
@@ -67,8 +74,8 @@ def find_spot(size, board, board_states, pos_step, w_col, col_steps, x):
     fill = 0
     i = w_col[0]
     for j in range(size):
-        if board[j, i] == "  " or board[j, i] == "
-        continue
+        if board[j, i] == "  " or board[j, i] == "# ":
+            continue
 
         pos_found = str(str(alph[i]) + str(x[-j - 1]))
         new_queen(pos_found, size, board, board_states, pos_step, x)
@@ -89,7 +96,7 @@ def find_spot(size, board, board_states, pos_step, w_col, col_steps, x):
         board = np.copy(board_states[-1])
         w_col = col_steps[-1].copy()
         d_spot = list(np.where(board == pos_step[-1]))
-        board[d_spot[0], d_spot[1]] = "
+        board[d_spot[0], d_spot[1]] = "# "
         del board_states[-1]
         board_states.append(np.copy(board))
         del pos_step[-1]

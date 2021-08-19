@@ -5,4 +5,5 @@ class Solution:
         sMax = ''
         for i in inds:
             sMax = max(sMax, s[i:])
+            # print(sMax, inds)
         return sMax

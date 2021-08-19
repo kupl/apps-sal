@@ -5,7 +5,7 @@ def solve(n, sizes):
               'a': last,
               'b': 0, }
 
-    flag_a = 1
+    flag_a = 1     # next candy to eat
     flag_b = n - 1
     turn = 'b'
 

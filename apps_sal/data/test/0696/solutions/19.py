@@ -1,3 +1,4 @@
+# python 3
 """
 Modular arithmetic:
 This has something to do with Extended Euclidean Algorithm
@@ -18,6 +19,7 @@ def cows_and_primitive_roots(p_int):
                 break
         if not divisible:
             count += 1
+            # print(x)
 
     return count
 

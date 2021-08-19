@@ -52,3 +52,6 @@ while i < n - 1:
 print(count)
 
 print(' '.join([str(r) for r in c]))
+
+
+# Made By Mostafa_Khaled

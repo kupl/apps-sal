@@ -6,5 +6,6 @@ temp = a[-1]
 for i in range(2, n + 1):
     ans += a[-i] * temp
     temp += a[-i]
+#  print("ans = {} temp = {}".format(ans,temp))
 
 print(ans % lim)

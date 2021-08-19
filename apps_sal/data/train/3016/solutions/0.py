@@ -1,6 +1,6 @@
 from itertools import product
 
-NOTES = [['C'], ['C
+NOTES = [['C'], ['C#', 'Db'], ['D'], ['D#', 'Eb'], ['E'], ['F'], ['F#', 'Gb'], ['G'], ['G#', 'Ab'], ['A'], ['A#', 'Bb'], ['B']] * 2
 config = [('Major', 4), ('Minor', 3)]
 
 DCT_CHORDS = {c: mode for mode, offset in config

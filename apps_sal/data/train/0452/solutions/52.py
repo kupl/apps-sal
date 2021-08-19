@@ -1,5 +1,10 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+        # dp
+        # time: O(n^2 * d)
+        # space: O(nd)
+
+        # dp[i][j]=min(dp[k][j-1]+max(jobD[k:i]))
 
         if len(jobDifficulty) < d:
             return -1

@@ -14,6 +14,7 @@ for i in range(m):
 s = []
 for i in range(n):
     s.append(list(turn[i]))
+# ------------------------------------------
 
 
 for i in range(m):

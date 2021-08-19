@@ -1,7 +1,7 @@
 class Solution:
     def shortestPalindrome(self, s):
         rev = s[::-1]
-        aux = s + '
+        aux = s + '#' + rev
         num = self.getNextArray(aux)
         return rev[:-num] + s
 

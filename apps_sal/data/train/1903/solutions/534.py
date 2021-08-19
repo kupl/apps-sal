@@ -1,5 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # https://leetcode.com/problems/min-cost-to-connect-all-points/discuss/843995/Python-3-or-Min-Spanning-Tree-or-Prim's-Algorithm
         def manhattan(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         n, c = len(points), collections.defaultdict(list)
         for i in range(n):

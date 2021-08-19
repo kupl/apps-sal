@@ -12,3 +12,5 @@ def movie(card, ticket, perc):
         B = B + ticket * perc**i
 
     return i
+
+    # your code

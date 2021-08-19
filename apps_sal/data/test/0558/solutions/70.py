@@ -10,7 +10,7 @@ inv[1] = 1
 
 for i in range(2, N + 1):
     fact[i] = fact[i - 1] * i % MOD
-    inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
+    inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD  # //で良いのかな?
 
 
 def main():

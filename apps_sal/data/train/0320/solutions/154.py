@@ -8,6 +8,8 @@ class Solution:
                 return ops
             ops += self.perform_division(nums)
         return ops
+        # jesli nieparzytte to odejmij 1
+        # jesli wszystkie parzyste to podziel
 
     def is_end(self, nums):
         return all(i == 0 for i in nums)

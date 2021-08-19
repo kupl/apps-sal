@@ -1,4 +1,10 @@
+# Codeforces.com round #668
+# Problem B
 import sys
+
+#
+# BEGIN TEMPLATE
+#
 
 
 def input():
@@ -6,6 +12,7 @@ def input():
 
 
 def getInt():
+    # Assumes next line consists of only one integer and returns an integer
     return int(input())
 
 
@@ -15,6 +22,10 @@ def getIntIter():
 
 def getIntList():
     return list(getIntIter())
+
+#
+# END TEMPLATE
+#
 
 
 for _ in range(getInt()):

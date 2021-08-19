@@ -6,6 +6,7 @@ n = int(input())
 arr = list(map(int, input().split()))
 arr = arun(arr)
 arr = arr[:n - 2] + [arr[-1]] + arr[n - 2:n - 1]
+# print(arr)
 ans = ["NO", "YES"]
 ind = 1
 for i in range(n):

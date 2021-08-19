@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import heapq
 import sys
 try:
@@ -30,8 +31,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))
-    a = [int(next(tokens)) for _ in range(3 * N)]
+    N = int(next(tokens))  # type: int
+    a = [int(next(tokens)) for _ in range(3 * N)]  # type: "List[int]"
     solve(N, a)
 
 

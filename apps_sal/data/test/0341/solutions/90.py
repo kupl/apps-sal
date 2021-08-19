@@ -13,7 +13,9 @@ for i in range(K):
     score += p[human[i]]
 
 for i in range(K, N):
+    #human[i] = cnv[T[i]]
     if human[i - K] == cnv[T[i]]:
+        #human[i] = T[i]
         continue
     else:
         human[i] = cnv[T[i]]

@@ -1,7 +1,7 @@
 from collections import deque
 
 H, W = list(map(int, input().split()))
-S = [[c == '
+S = [[c == '#' for c in input()] for _ in range(H)]
 
 
 def bfs(i, j):

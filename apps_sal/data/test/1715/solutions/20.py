@@ -23,7 +23,7 @@ for i in range(b):
     T[i + 1] = ni()
 
 
-def bs(x, ls):
+def bs(x, ls):  # ls == S or T
     ok = 0
     ng = len(ls) - 1
     while ng - ok > 1:
@@ -32,13 +32,13 @@ def bs(x, ls):
             ok = idx
         else:
             ng = idx
-    return ok
+    return ok  # xよりも左にあるidxを返す
 
 
 def solve(x):
     ids = bs(x, S)
-    s1 = S[ids]
-    s2 = S[ids + 1]
+    s1 = S[ids]  # 自分より左
+    s2 = S[ids + 1]  # 自分と同じか右
     idt = bs(x, T)
     t1 = T[idt]
     t2 = T[idt + 1]

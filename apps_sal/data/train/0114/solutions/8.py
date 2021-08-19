@@ -14,6 +14,7 @@ for _ in range(int(input())):
 
     for i in range(n - 1, 0, -1):
         h[i] = max(h[i + 1], h[i])
+    # print(h)
     if ma < max(a):
         print(-1)
     else:
@@ -23,6 +24,7 @@ for _ in range(int(input())):
         i = 0
         while i < n:
             ma = max(a[i], ma)
+            # print(ma,i,ans)
             if h[i - prev + 1] < ma:
                 prev = i
                 ans += 1

@@ -37,12 +37,12 @@ ans = max(length)
 color = defaultdict(int)
 
 
-def coloring(n, previous, col):
+def coloring(n, previous, col):  # 頂点nにpreviousから色colで辿ってきた。
     cnt = 1
     for x in graph[n]:
         if x == previous:
             color[(n, x)] = col
-            color[(x, n)] = col
+            color[(x, n)] = col  # やってきた頂点との間における色
         else:
             if cnt == col:
                 cnt += 1

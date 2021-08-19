@@ -1,6 +1,7 @@
 class Solution:
     def jobScheduling(self, startTime, endTime, profit):
         jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[1])
+        # print(jobs)
 
         dp = [0] * len(jobs)
         dp[0] = jobs[0][-1]

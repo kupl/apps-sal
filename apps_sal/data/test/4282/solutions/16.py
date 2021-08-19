@@ -15,6 +15,7 @@ if ans[-1] not in a[ans[-2]]:
 for i in range(1, n - 1):
 
     options = a[ans[i]]
+    #print('We are at', ans[i], options, ans)
     idx = options.index(ans[-1])
     rem = options[1 - idx]
     ans.append(rem)

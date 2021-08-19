@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -28,6 +29,7 @@ def solve(N, L, X, Y, A):
         print(1)
         print(X)
     else:
+        # try to add 1 mark
         for a in vs:
             for b, c in [(a + X, Y), (a + Y, X), (a - X, Y), (a - Y, X)]:
                 if 0 <= b <= L:
@@ -36,6 +38,7 @@ def solve(N, L, X, Y, A):
                         print(b)
                         return
 
+        # add 2 marks
         print(2)
         print('{} {}'.format(X, Y))
 

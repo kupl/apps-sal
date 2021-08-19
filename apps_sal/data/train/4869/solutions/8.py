@@ -13,8 +13,11 @@ def rekursiveSonFinder(family, secondGeneration):
     if ((family['gender'] == 'female') or (len(family['children']) < 7)):
         return '/'
     elif(isItAChainOfSons(family['children'])):
+        # a seventh son of a seventh son
         if(secondGeneration):
+            # print('found name: ', family['children'][6]['name'])
             return '/' + family['children'][6]['name']
+            # a seventh son
         else:
             return rekursiveSonFinder(family['children'][6], True)
 
@@ -38,7 +41,9 @@ def rekursiveIteration(family):
 def find_seventh_sons_of_seventh_sons(jstring):
     familyTree = json.loads(jstring)
     listOfSons = rekursiveIteration(familyTree)
+    # print(listOfSons)
     listOfSons = listOfSons.split('/')
+    # print(listOfSons)
     solution = set()
     for name in listOfSons:
         if (name != ''):

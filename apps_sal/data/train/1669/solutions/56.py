@@ -3,6 +3,7 @@ class Solution:
         hand.sort()
 
         def helper(hand):
+            # print(hand)
             if not hand:
                 return
             if len(hand) % W != 0:

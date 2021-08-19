@@ -12,3 +12,14 @@ if k > 0:
         pf(a)
 
 print(" ".join(map(str, a)))
+
+
+# while True:
+#   cmd = raw_input("=> ")
+#   if cmd == 'e':
+#       print("bye")
+#       break
+#   elif cmd == 'r':
+#       pf()
+#       print(a)
+#   else: print("command not implemented")

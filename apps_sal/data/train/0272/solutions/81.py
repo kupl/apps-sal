@@ -1,6 +1,7 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 
+        # topo sort
         parent = collections.defaultdict(int)
         for i, row in enumerate(containedBoxes):
             for j in row:
@@ -11,6 +12,7 @@ class Solution:
         res = 0
         seen = set()
         while bfs:
+            # print(bfs)
             box, st = bfs.popleft()
             if box in seen:
                 continue

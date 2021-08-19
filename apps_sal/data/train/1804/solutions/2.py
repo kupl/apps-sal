@@ -6,11 +6,13 @@ import itertools
 def recoverSecret(triplets):
     """triplets is a list of triplets from the secret string. Return the string."""
 
+    # Build a reverse directed graph of letters
     graph = Graph()
     for triplet in triplets:
         for i, j in pairwise(triplet):
             graph[i].goes_to(graph[j])
 
+    # Pop off orphan letters one-by-one to form the word
     def cardinality(node): return len([p for p in node.parents if p.value in graph])
     getnext = functools.partial(min, graph.viewvalues(), key=cardinality)
     word = (graph.pop(getnext().value).value for i in xrange(len(graph)))

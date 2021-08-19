@@ -13,5 +13,6 @@ class Solution:
         for i in range(lo, hi + 1):
             ip = getPower(i)
             ans.append((ip, i))
+        # print(ans)
         ans.sort()
         return ans[k - 1][1]

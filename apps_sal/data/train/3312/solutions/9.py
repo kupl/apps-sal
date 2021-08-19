@@ -1,7 +1,20 @@
+# METHOD ONE ~ list comprehension
 "100 seconds per 1000 runs of Lorem Ipsum"
+# def anagram_counter(s):
+#     return sum([1for i,c in enumerate(s)for w in s[i+1:]if sorted(c)==sorted(w)])
 
+# METHOD TWO ~ standard iteration
 "50 seconds per 1000 runs of Lorem Ipsum"
+# def anagram_counter(words):
+#    anagram_count = 0
+#    for i, current in enumerate(words):#                    FUN FACT:
+#        cenrrtu = sorted(current)
+#        for word in words[i+1:]:
+#            if cenrrtu == sorted(word):#     Lorum Ipsum contains 6,862 anagram matches
+#                anagram_count += 1
+#    return anagram_count
 
+# METHOD THREE ~ comparing sets to counts
 "0.5 seconds per 1000 runs of Lorem Ipsum"
 
 

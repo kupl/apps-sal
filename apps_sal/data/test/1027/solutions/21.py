@@ -20,5 +20,6 @@ for i in range(len(arr)):
         if(j == 14):
             j = 0
     if(cur > ans):
+        # print(arr[i])
         ans = cur
 print(ans)

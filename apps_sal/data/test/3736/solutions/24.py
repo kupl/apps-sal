@@ -1,7 +1,10 @@
+# Name : Sachdev Hitesh
+# College : GLSICA
 
 user = input()
 resu = user[::-1]
 s = len(user)
+# print(s)
 c = 0
 if user == resu:
     for i in user:

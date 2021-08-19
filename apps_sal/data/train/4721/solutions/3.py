@@ -1,4 +1,5 @@
 def convert_temp(temp, from_scale, to_scale):
+    # Lookup table of x -> Kelvin conversions
     input_lookup = {
         'C': lambda x: x + 273.15,
         'F': lambda x: ((x + 359.67) * 5) / 9,
@@ -10,6 +11,7 @@ def convert_temp(temp, from_scale, to_scale):
         "Ro": lambda x: (((x - 7.5) * 40) / 21) + 273.15
     }
 
+    # Lookup table of Kevin -> y conversions
     output_lookup = {
         'C': lambda x: x - 273.15,
         'F': lambda x: ((x * 9) / 5) - 459.67,
@@ -21,4 +23,5 @@ def convert_temp(temp, from_scale, to_scale):
         "Ro": lambda x: (((x - 273.15) * 21) / 40) + 7.5
     }
 
+    # Pass result from input_lookup into output_lookup and round result to match desired output
     return round(output_lookup[to_scale](input_lookup[from_scale](temp)))

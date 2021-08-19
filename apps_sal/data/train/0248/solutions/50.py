@@ -18,10 +18,12 @@ class Solution:
 
         for r in range(n_row):
             for c in range(n_col):
+                # check right
                 if r + 1 < n_row and grid[r][c] == grid[r + 1][c]:
                     if self.find((r, c)) == self.find((r + 1, c)):
                         return True
                     self.union((r, c), (r + 1, c))
+                # check down
                 if c + 1 < n_col and grid[r][c] == grid[r][c + 1]:
                     if self.find((r, c)) == self.find((r, c + 1)):
                         return True

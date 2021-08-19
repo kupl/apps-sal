@@ -1,4 +1,5 @@
 def f(r, l):
+    # 3,2
     tmp = [0 for i in range(r + l)]
     if (r + l) % 2 == 0:
         tmp[r - 1] = (r + l) // 2

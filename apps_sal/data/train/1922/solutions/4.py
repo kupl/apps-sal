@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
 
     @lru_cache(None)
@@ -11,6 +17,7 @@ class Solution:
             cam_off = self.helper(node.left, False, False) + self.helper(node.right, False, False)
             return min(cam_on, cam_off)
 
+        # Not covered
         cam_on = 1 + self.helper(node.left, True, False) + self.helper(node.right, True, False)
         cam_on_left = self.helper(node.left, False, True) + self.helper(node.right, False, False) if node.left != None else inf
         cam_on_right = self.helper(node.left, False, False) + self.helper(node.right, False, True) if node.right != None else inf

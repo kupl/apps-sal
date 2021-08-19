@@ -16,6 +16,7 @@ else:
         d = 0
         for i in a[::-1]:
             d = (d * k + int(i)) % 7272763523821
+            # print(d)
         if d == 0:
             print('Yes')
         else:

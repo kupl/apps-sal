@@ -4,7 +4,7 @@ class Solution:
         score = self.solve(0, stoneValue)
         return 'Alice' if score > 0 else 'Bob' if score < 0 else 'Tie'
 
-    def solve(self, i, stoneValue):
+    def solve(self, i, stoneValue):  # score diff
         n = len(stoneValue)
         if i >= n:
             return 0
@@ -19,6 +19,6 @@ class Solution:
             if i + x - 1 >= n:
                 break
             presum += stoneValue[i + x - 1]
-            res = max(res, presum - self.solve(i + x, stoneValue))
+            res = max(res, presum - self.solve(i + x, stoneValue))  # min-max process
         self.cache[i] = res
         return res

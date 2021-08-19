@@ -4,6 +4,7 @@ import math
 def list_squared(m, n):
     final = []
     for i in range(m, n):
+        # find sum of squared divisiors
         divisors = find_divisors(i)
         sum_sqrd = sum([d * d for d in divisors])
         if math.sqrt(sum_sqrd).is_integer():

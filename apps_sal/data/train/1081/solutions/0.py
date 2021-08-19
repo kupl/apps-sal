@@ -1,9 +1,10 @@
+# cook your dish here
 import string
 from collections import OrderedDict
 from itertools import zip_longest
 dic = OrderedDict(zip(string.ascii_uppercase, range(0, 26)))
 keys = [98, 57, 31, 45, 46]
-t = int(input())
+t = int(input())  # number of test cases
 s1 = []
 for i in range(t):
     s = input()

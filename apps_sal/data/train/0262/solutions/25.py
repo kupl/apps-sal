@@ -1,3 +1,5 @@
+# 1307. Verbal Arithmetic Puzzle
+# version 2
 
 def make_zip(lists):
     i = 0
@@ -23,6 +25,7 @@ def make_order(words, result):
             lhs.append(f'c{i}')
         excess = f'c{i+1}'
         formulas[excess] = (lhs, rhs, excess)
+    # order determined
     return order, formulas
 
 
@@ -47,6 +50,7 @@ def walk_solutions(puzzle, index, repl, crepl):
     (words, result, order, formulas, nonzero) = puzzle
 
     if index == len(order):
+        # check top digit zero
         last_ch = order[-1]
         if crepl[last_ch] != 0:
             return
@@ -63,6 +67,7 @@ def walk_solutions(puzzle, index, repl, crepl):
             (lhs, rhs, _) = formula
             excess = find_excess(lhs, rhs, repl, crepl)
             if excess >= 0 and excess % 10 == 0:
+                # successful
                 crepl[ch] = excess // 10
                 yield from walk_solutions(puzzle, index + 1, repl, crepl)
                 del crepl[ch]

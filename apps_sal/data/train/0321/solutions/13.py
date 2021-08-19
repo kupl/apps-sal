@@ -19,3 +19,20 @@ class Solution:
                 else:
                     return False
         return True
+#         freqs1 = [0]*26
+#         freqs2 = [0]*26
+#         stringlen = len(s1)
+#         for i in range(stringlen):
+#             freqs1[ord(s1[i])-97]+=1
+#             freqs2[ord(s2[i])-97]+=1
+#         for i in range(26):
+#             if freqs1[i]>=freqs2[i]:
+#                 break
+#         else:
+#             return True
+#         for i in range(26):
+#             if freqs2[i]>=freqs1[i]:
+#                 break
+#         else:
+#             return True
+#         return False

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 def main():
     N, K = list(map(int, input().strip().split()[:2]))

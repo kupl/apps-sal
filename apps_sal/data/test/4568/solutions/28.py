@@ -3,12 +3,14 @@ s = input()
 
 alphabets = [chr(i + 97) for i in range(26)]
 
+# forward
 l1 = [0] * (n - 1)
 now = [False] * 26
 for i in range(n - 1):
     now[ord(s[i]) - 97] = True
     l1[i] = now.copy()
 
+# backward
 l2 = [0] * (n - 1)
 now = [False] * 26
 for i in range(n - 1, 0, -1):

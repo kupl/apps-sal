@@ -6,7 +6,7 @@ def inm(): return list(map(int, input().split()))
 def ins(): return input().strip()
 
 
-DBG = True
+DBG = True  # and False
 BIG = 999999999
 R = 10**9 + 7
 

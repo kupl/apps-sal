@@ -43,6 +43,7 @@ else:
                 break
 
         used[p] = 1
+        #print(p, a[p])
         if p > pos:
             ans += a[p]
         i //= 2

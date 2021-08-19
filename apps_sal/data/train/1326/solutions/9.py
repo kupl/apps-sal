@@ -1,3 +1,4 @@
+# cook your dish here
 for u in range(int(input())):
     n = int(input())
     gas = list(map(int, input().split()))[:n]

@@ -13,4 +13,5 @@ class Solution:
             for i in range(6):
                 for v in range(rollMax[i]):
                     C[k + 1][i][v] = A[(i, v)] % p
+#        print(C)
         return(sum([sum(row) for row in C[-1]]) % p)

@@ -47,6 +47,7 @@ class Solution:
 
             opal = odd(o)
             epal = even(e)
+            #print (opal, epal)
 
             if opal < epal:
                 if opal >= N and isPrime(opal):

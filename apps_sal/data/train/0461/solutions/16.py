@@ -1,5 +1,6 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
+        # create graph
         graph = collections.defaultdict(list)
         for idx, mgr in enumerate(manager):
             if idx == headID:

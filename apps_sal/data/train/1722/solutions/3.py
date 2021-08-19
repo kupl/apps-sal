@@ -15,7 +15,7 @@ class Machine:
         :param num: which should be calculated
         :returns: calculated value
         """
-        cmd = cmd % len(self.lambdas)
+        cmd = cmd % len(self.lambdas)  # This was very annoying, since it is done in the sample tests but not in the random tests
         self.last_command = cmd
         return self.lambdas[self.commands[cmd]](num)
 

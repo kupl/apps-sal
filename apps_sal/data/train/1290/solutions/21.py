@@ -1,3 +1,4 @@
+# cook your dish here
 s = input()
 if len(s) == 1:
     print(1)

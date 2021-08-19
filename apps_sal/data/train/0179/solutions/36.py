@@ -20,7 +20,9 @@ class Solution:
 
                 ans = min(ans, inc + backtrack(s, start + 1, last, last_cnt + 1, left, memo))
             else:
+                # delete
                 delete_res = backtrack(s, start + 1, last, last_cnt, left - 1, memo)
+                # keep
                 keep_res = 1 + backtrack(s, start + 1, s[start], 1, left, memo)
 
                 ans = min(delete_res, keep_res)

@@ -9,5 +9,6 @@ class Solution:
                 r -= 1
             else:
                 res += pow(2, r - l, mod)
+                #res += 2**(r-l)
                 l += 1
         return res % mod

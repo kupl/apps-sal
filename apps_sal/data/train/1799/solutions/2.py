@@ -62,16 +62,20 @@ def solve(queens: List[Tuple[int, int]], size: int) -> Optional[str]:
         queen_coverage = [(coverage[qr][qc], qr, qc) for qr, qc in queens]
 
         if all(qc[0] == 0 for qc in queen_coverage):
+            # Found solution
             break
 
+        # Find most coverage on queens, and chose a random queen with that coverage
         most = max(qc[0] for qc in queen_coverage[1:])
         candidates = [
             (qr, qc, i)
             for i, (c, qr, qc) in enumerate(queen_coverage[1:], 1)
             if c == most
         ]
+        # Target queen
         tr, tc, ti = choice(candidates)
 
+        # Find the positions with the lowest coverage on the same row
         best, best_pos = None, []
         for r in range(size):
             if r == tr:
@@ -82,6 +86,7 @@ def solve(queens: List[Tuple[int, int]], size: int) -> Optional[str]:
             elif cov == best:
                 best_pos.append(r)
 
+        # Move to a random row on the column (from options with the lowest coverage)
         queens[ti] = (choice(best_pos), tc)
         if cycle > 20:
             return None
@@ -104,11 +109,14 @@ def queens(position, size):
 
     fixed_r, fixed_c = decode(position, size)
     while True:
+        # Build an initialrandomised state where no two queens share the same row or column
         rr = [i for i in range(size) if i != fixed_r]
         cc = [i for i in range(size) if i != fixed_c]
         shuffle(rr)
         shuffle(cc)
         queens = [(r, c) for r, c in zip([fixed_r] + rr, [fixed_c] + cc)]
+        # Attempt to reduce conflicts until we find a solution
         result = solve(queens, size)
         if result:
             return result
+        # Looks like we found a local optimum, so re-randomise and start again

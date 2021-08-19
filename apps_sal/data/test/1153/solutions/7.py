@@ -12,10 +12,13 @@ while i < n or j < m:
         if i < n and j < m:
             x, y = f[i], s[j]
         r += 1
+        # print(r)
     elif x < y:
         i += 1
         x += f[i]
+        # print(1, x)
     elif y < x:
         j += 1
         y += s[j]
+        # print(2, y)
 print(r)

@@ -7,9 +7,9 @@ for i in range(1 << H):
         cnt = 0
         for h in range(H):
             for w in range(W):
-                if c[h][w] == '
-                if (i >> h) % 2 == 0 and (j >> w) % 2 == 0:
-                    cnt += 1
+                if c[h][w] == '#':
+                    if (i >> h) % 2 == 0 and (j >> w) % 2 == 0:
+                        cnt += 1
         if cnt == K:
             ans += 1
 print(ans)

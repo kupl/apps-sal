@@ -2,7 +2,7 @@ from functools import lru_cache
 L, A, B, mod = list(map(int, input().split()))
 
 
-def keta(k):
+def keta(k):  # k-桁の数の初項、末項、項数を求める
     if A >= 10**k:
         return 0, 0, 0
     begin = 10**(k - 1)
@@ -19,7 +19,7 @@ def keta(k):
 
 
 @lru_cache(maxsize=None)
-def f(n, r):
+def f(n, r):  # 1+r+...+r**(n-1)
     if n == 1:
         return 1
     if n % 2 == 0:
@@ -28,7 +28,7 @@ def f(n, r):
 
 
 @lru_cache(maxsize=None)
-def g(n, r):
+def g(n, r):  # 0+r+2*r**2+...+(n-1)*r**(n-1)
     if n == 1:
         return 0
     if n % 2 == 0:
@@ -44,7 +44,10 @@ for i in range(18, 0, -1):
     if kou <= 0:
         continue
 
+    # print(i,sh,ma,kou)
+
     ANS = (keta_count * (ma * f(kou, 10**i) - B * g(kou, 10**i)) + ANS) % mod
+    # print(ANS)
     keta_count = keta_count * pow(10, kou * i, mod)
 
 print(ANS)

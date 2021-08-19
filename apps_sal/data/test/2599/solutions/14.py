@@ -27,6 +27,7 @@ for _ in range(int(input())):
             ca = cal(i, j, k)
             if (n < ca):
                 continue
+            #print(i, j, ca)
             if ((n - ca) % (k + 1)):
                 continue
             t = str(10 - j)
@@ -40,6 +41,7 @@ for _ in range(int(input())):
                 t += str(min(9, m))
                 m -= min(9, m)
             t = t[::-1]
+            #print('YES!!!!', i, j, ca)
             if (st):
                 if (int(t) < int(st)):
                     st = t

@@ -3,8 +3,8 @@ d = [int(x) for x in input().split()]
 s = sum(d)
 ans = []
 for i in d:
-    ss = A - n + 1
-    sd = s - i - (n - 1)
+    ss = A - n + 1  # require when another 1
+    sd = s - i - (n - 1)  # another +-
     if(ss <= 0 or A > s):
         ans.append(i)
     else:

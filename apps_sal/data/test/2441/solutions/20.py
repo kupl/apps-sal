@@ -33,25 +33,30 @@ def main():
                 call_stack.append((v, 0))
                 while call_stack:
                     v, pi = call_stack.pop()
+                    # If this is first time we see v
                     if pi == 0:
                         v.index = i
                         v.lowlink = i
                         i += 1
                         stack.append(v)
                         v.on_stack = True
+                    # If we just recursed on something
                     if pi > 0:
                         prev = v.adj[pi - 1]
                         v.lowlink = min(v.lowlink, prev.lowlink)
+                    # Find the next thing to recurse on
                     while pi < len(v.adj) and v.adj[pi].index is not None:
                         w = v.adj[pi]
                         if w.on_stack:
                             v.lowlink = min(v.lowlink, w.index)
                         pi += 1
+                    # If we found something with index=None, recurse
                     if pi < len(v.adj):
                         w = v.adj[pi]
                         call_stack.append((v, pi + 1))
                         call_stack.append((w, 0))
                         continue
+                    # If v is the root of a connected component
                     if v.lowlink == v.index:
                         comp = []
                         while True:
@@ -127,6 +132,9 @@ def main():
 
         return result
 
+    # print(scc3(vs))
+    # print(scc2(vs))
+    # print(scc(vs))
     res = 0
     ways = 1
     for comp in scc3(vs):

@@ -39,19 +39,24 @@ task = [(sx, sy), (tx, ty)]
 
 while task:
     x, y = task.pop()
+    # 既出の元も含めて辺の個数を数える
+    # 未出の元を同値に追加
+    # x,y両方満たすものは、x側にだけ入れる
     for x1 in [x - R, x + R]:
         if not (x1 in X_to_Y):
             continue
         arr, move_right = X_to_Y[x1]
         left = bisect.bisect_left(arr, y - R)
         right = bisect.bisect_right(arr, y + R)
-        answer += right - left
+        # [left, right) が辺で結べるターゲット
+        answer += right - left  # 辺の個数
         i = left
         while i < right:
             y1 = arr[i]
             if (x1, y1) not in equiv_class:
                 equiv_class.add((x1, y1))
                 task.append((x1, y1))
+            # なるべく、既に居ない元は見ないで済ませるように
             next_i = move_right[i]
             if next_i >= right:
                 break
@@ -63,18 +68,20 @@ while task:
         arr, move_right = Y_to_X[y1]
         left = bisect.bisect_left(arr, x - R + 1)
         right = bisect.bisect_right(arr, x + R - 1)
-        answer += right - left
+        # [left, right) が辺で結べるターゲット
+        answer += right - left  # 辺の個数
         i = left
         while i < right:
             x1 = arr[i]
             if (x1, y1) not in equiv_class:
                 equiv_class.add((x1, y1))
                 task.append((x1, y1))
+            # なるべく、既に居ない元は見ないで済ませるように
             next_i = move_right[i]
             if next_i >= right:
                 break
             move_right[i] = right
             i = next_i
 
-answer //= 2
+answer //= 2  # 両方向から辺を見た
 print(answer)

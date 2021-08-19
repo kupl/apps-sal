@@ -14,12 +14,18 @@ for i in range(n):
         a[k] = False
         a1[k] += 1
     else:
+        # print('!!!')
         ans += a1[k]
         a1[k] += 1
     if b[l]:
         b[l] = False
         b1[l] += 1
     else:
+        # print('!!!')
         ans += b1[l]
         b1[l] += 1
+# print(a)
+# print(a1)
+# print(b)
+# print(b1)
 print(ans)

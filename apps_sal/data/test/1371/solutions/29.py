@@ -13,5 +13,6 @@ for i in range(s + 1):
         continue
     for j in range(i - 3 + 1):
         dp[i] += (dp[j]) % mod
+    # dp[i-1] + dp[i-3]
 
 print(dp[s] % mod)

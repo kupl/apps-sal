@@ -1,3 +1,4 @@
+# 094b
 
 def atc_094b(NMX: str, Ai_input: str) -> int:
     N, M, X = list(map(int, NMX.split(" ")))

@@ -4,6 +4,7 @@ def main():
 def __starting_point():
     main()
 '''
+# A
 
 
 def main():

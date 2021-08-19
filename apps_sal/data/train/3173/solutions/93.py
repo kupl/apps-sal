@@ -4,4 +4,4 @@ def create_array(n):
     while i <= n:
         res += [i]
         i += 1
-    return res
+    return res  # I solved this Kata on  7/29/2019  04:16 AM...#Hussam'sCodingDiary

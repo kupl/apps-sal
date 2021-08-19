@@ -19,6 +19,7 @@ def main():
     r = m
     while l + 1 < r:
         mid = (l + r) // 2
+        # print(l, r, mid)
         if check(mid, nums, m):
             r = mid
         else:

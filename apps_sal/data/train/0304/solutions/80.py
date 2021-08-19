@@ -13,6 +13,6 @@ class Solution:
                         continue
                     res += age_count[i] * age_count[j]
                     if i == j:
-                        res -= age_count[i]
+                        res -= age_count[i]  # One doesn't send request to himself
 
         return res

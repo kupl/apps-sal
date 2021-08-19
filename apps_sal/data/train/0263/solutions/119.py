@@ -31,13 +31,20 @@ class Solution:
         for i in range(0):
             xmoves += dialer(i, n)
             print(('i ', i, 'moves', dialer(i, n), 'tot ', xmoves))
+        # return xmoves % (10**9+7)
 
         prev = [1] * 10
         for hop in range(2, n + 1):
+            # print('zzzzzzzzzz')
+            #print('prev ',prev)
+            #print('curr ',curr)
             curr = [0] * 10
             for i in range(10):
                 for move in moves[i]:
                     curr[i] += prev[move]
 
+                    #print('i ',i,'curr[i] ',curr[i],'prev ',prev[i],'move')
+            #print('prev ',prev)
+            #print('curr ',curr)
             prev = curr
         return sum(prev) % (10**9 + 7)

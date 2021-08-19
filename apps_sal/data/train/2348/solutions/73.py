@@ -51,6 +51,7 @@ def binary_search_int(ok, ng, test, a, b):
     return ok
 
 
+######################################################################################
 input = sys.stdin.readline
 
 N = int(input())

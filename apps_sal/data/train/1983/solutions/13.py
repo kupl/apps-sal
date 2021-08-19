@@ -21,3 +21,8 @@ class ProductOfNumbers:
         x = h(i, m) * h(m + 1, j)
         d[(i, j)] = x
         return x
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

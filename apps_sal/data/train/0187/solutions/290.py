@@ -17,6 +17,7 @@ class Solution:
             if max_prof < cur_prof:
                 max_prof = cur_prof
                 res = i + 1
+            # print(serv, waiting, cur_prof)
             i += 1
 
         if max_prof == 0:

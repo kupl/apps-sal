@@ -2,6 +2,7 @@ n, q = list(map(int, input().split()))
 servers = [0] * n
 for _ in range(q):
     t, k, d = list(map(int, input().split()))
+    # free = [i for i, x in enumerate(servers) if x < t]
     free = []
     for sn in range(n):
         if servers[sn] < t:

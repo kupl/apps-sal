@@ -10,3 +10,5 @@ class Solution:
         for c, _ in sort:
             ans += c
         return ans
+
+        # return ''.join(sorted(votes[0], key=count.get))

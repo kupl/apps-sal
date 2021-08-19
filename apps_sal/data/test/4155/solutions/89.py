@@ -17,7 +17,9 @@ def solve():
         if l >= r:
             return 0
         mh = min(H[l:r])
+        # debug(H[l:r], mh)
         if mh < b:
+            # debug(mh, b, l, r)
             return 0
         res = mh - b
         i = l

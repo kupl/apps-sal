@@ -1,6 +1,7 @@
 3
 
 s = input()
+# s = '124'
 n = len(s)
 
 ans = 0

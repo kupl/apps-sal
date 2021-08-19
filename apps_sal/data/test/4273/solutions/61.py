@@ -1,5 +1,5 @@
 n = int(input())
-k = [0] * 5
+k = [0] * 5  # M-A-R-C-H
 for _ in range(n):
     s = input()[0]
     if s == "M":

@@ -48,4 +48,6 @@ class Solution:
             numbers_found += find_numbers(position, 1)
             numbers_found %= mod_val
 
+        # print(sorted(nums))
+
         return numbers_found

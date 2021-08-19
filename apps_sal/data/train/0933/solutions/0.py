@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 
 def gc(c):
     return 'a' <= c <= 'h'

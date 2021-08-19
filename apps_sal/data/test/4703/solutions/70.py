@@ -4,5 +4,5 @@ def dfs(i, sum1):
     return dfs(i + 1, sum1 + "+" + s[i]) + dfs(i + 1, sum1 + s[i])
 
 
-s = input()
+s = input()  # 一以上9以下
 print(dfs(1, s[0]))

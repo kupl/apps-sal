@@ -8,6 +8,7 @@ class Solution:
         if node in visited:
             return False
 
+        # never seen before
         visited.add(node)
         adjNodes = graph[node]
         if len(adjNodes) != 0:
@@ -18,10 +19,13 @@ class Solution:
             if not isEventuallySafe:
                 return False
 
+        # eventually safe, or safe
         eventuallySafe.add(node)
         return True
 
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # isSafe(n) <==> n.edges = {}
+        # isEventuallySafe(n) <=> for_all e IN n.edges, isEventuallySafe(n) || isSafe(n)
 
         eventuallySafe = set()
         visited = set()

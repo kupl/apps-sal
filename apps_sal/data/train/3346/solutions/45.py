@@ -2,6 +2,7 @@ import math
 
 
 def is_prime(num):
+    # I'm sure this could be optimized
     if num % 2 == 0:
         return False
     else:

@@ -1,3 +1,9 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
 
@@ -21,6 +27,8 @@ class Solution:
                     cur_val = val + root.val + right_val
                 else:
                     cur_val = val + root.val
+
+                #print (cur_val,root.val)
 
                 if (left_del_str == 'del'):
                     root.left = None

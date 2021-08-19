@@ -1,3 +1,4 @@
+# cook your dish here
 a = list(map(str, input().split()))
 b = []
 for j in a:

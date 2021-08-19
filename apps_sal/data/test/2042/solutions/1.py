@@ -1,6 +1,7 @@
 import sys
 from queue import deque
 
+# sys.stdin = open('ivo.in')
 
 move = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 n, m, k = map(int, sys.stdin.readline().split())

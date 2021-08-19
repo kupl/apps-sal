@@ -40,6 +40,7 @@ class Solution:
                 v = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 li.append((v, i, j))
         heapq.heapify(li)
+        #li.sort(key = lambda x:x[2])
         while li:
             p = heapq.heappop(li)
             if u.find(p[1]) != u.find(p[2]):

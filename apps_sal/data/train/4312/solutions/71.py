@@ -8,9 +8,12 @@ def pick_peaks(arr):
             pos.append(i)
             peaks.append(arr[i])
 
+        # checking plateau cases
         elif arr[i] > arr[i - 1] and arr[i] == arr[i + 1]:
             n = 0
             for j in range(i + 1, len(arr)):
+                # for the values that come after the possible plateau value
+                # check to see that it decreases after staying constant
 
                 if arr[j] == arr[i]:
                     n += 1

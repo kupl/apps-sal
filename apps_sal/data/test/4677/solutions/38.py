@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 s = input()
 len_s = len(s)
 

@@ -9,9 +9,12 @@ def solve(s):
 
     r = r[:len(r) - 1]
 
+    # print(r)
+
     counter = 0
     for i in reversed(x):
         for j in reversed(i):
+            # print(j)
             if r[counter] == "":
                 r[counter] = j
             else:

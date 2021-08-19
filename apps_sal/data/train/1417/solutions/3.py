@@ -1,3 +1,4 @@
+# cook your dish here
 from collections import Counter
 import string
 import math
@@ -17,18 +18,22 @@ def vary(arrber_of_variables):
 
 def makedict(var):
     return dict(Counter(var))
+# i am noob wanted to be better and trying hard for that
 
 
 def printDivisors(n):
     divisors = []
+    # Note that this loop runs till square root
     i = 1
     while i <= math.sqrt(n):
 
         if (n % i == 0):
 
+            # If divisors are equal, print only one
             if (n // i == i):
                 divisors.append(i)
             else:
+                # Otherwise print both
                 divisors.extend((i, n // i))
         i = i + 1
     return divisors
@@ -36,6 +41,8 @@ def printDivisors(n):
 
 def countTotalBits(num):
 
+    # convert number into it's binary and
+    # remove first two characters 0b.
     binary = bin(num)[2:]
     return(len(binary))
 

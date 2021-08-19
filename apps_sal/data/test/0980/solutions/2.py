@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 n, k = list(map(int, input().split()))
 
@@ -50,6 +51,7 @@ else:
                 check2 = True
                 break
             mid.append(nn[0][i])
+        # print(diff)
         if not check:
             res = list(nn[0])
             check = False
@@ -61,9 +63,11 @@ else:
                         continue
                     res[diff[i]], res[j] = res[j], res[diff[i]]
                     ans = ''.join(res)
+                    # print(ans)
                     check = True
                     for x in range(n):
                         mid = [ans[y] for y in range(k) if nn[x][y] != ans[y]]
+                        # print(len(diff))
                         if len(mid) == 2:
                             continue
                         elif len(mid) == 0 and check2:

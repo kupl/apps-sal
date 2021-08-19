@@ -1,3 +1,4 @@
+# Binary Indexed Tree (Fenwick Tree)
 import sys
 
 

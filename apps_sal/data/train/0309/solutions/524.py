@@ -9,5 +9,6 @@ class Solution:
                 diff = A[i] - A[j]
                 dp[i][diff] = dp[i].get(diff, 0)
                 dp[i][diff] = max(dp[i][diff], dp[j].get(diff, 0) + 1)
+                # if dp[i][diff]==6: print(A[i],A[j], diff)
                 ans = max(ans, dp[i][diff])
         return ans + 1

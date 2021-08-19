@@ -17,10 +17,11 @@ while(i < N):
         while(index + now <= maxA):
             so_list[index + now] = 0
             index += now
-    right = bisect.bisect_right(A, now)
+    right = bisect.bisect_right(A, now)  # 同じ数字はいくつある？
     if right - i == 1:
         if flag == 1:
             ans += 1
+            # print(now)
         i = right
     else:
         i += 1

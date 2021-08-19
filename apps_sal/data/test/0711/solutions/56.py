@@ -17,6 +17,7 @@ def prime_factors(n):
     return d
 
 
+# Combination
 MOD = 10**9 + 7
 MAX = 2 * 10**5
 fac = [1, 1] + [0] * MAX

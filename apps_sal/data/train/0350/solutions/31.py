@@ -19,6 +19,7 @@ class Solution:
                     break
                 c[A[r]] += 1
                 r += 1
+            #print(c, l, fr, r)
             if len(c) == K:
                 result += r - fr + 1
             fc[A[l]] -= 1

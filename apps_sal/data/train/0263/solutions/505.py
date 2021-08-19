@@ -22,3 +22,6 @@ class Solution:
                 totalPaths = (totalPaths + paths(i, j, N)) % maxi
 
         return totalPaths
+
+# Inspired from Sriram's Java Solution
+# https://leetcode.com/problems/knight-dialer/discuss/190787/How-to-solve-this-problem-explained-for-noobs!!!

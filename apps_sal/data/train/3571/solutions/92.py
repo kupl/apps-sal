@@ -1,4 +1,5 @@
 def is_divisible(wall_length, pixel_size):
+    # Your code here.
     t = True
     f = False
     text = wall_length % pixel_size

@@ -6,6 +6,7 @@ class Solution:
 
         MOD = 10**9 + 7
 
+        # @lru_cache(None)
         def calculate(pos, steps):
             nonlocal dp
 

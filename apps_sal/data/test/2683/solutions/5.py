@@ -1,3 +1,4 @@
+# cook your code here
 
 
 def checkRow(A, row, N, K):
@@ -62,18 +63,21 @@ def chck(A, N, K):
     flag = 0
 
     if(flag == 0):
+        # row
         for i in range(N):
             flag = checkRow(A, i, N, K)
             if(flag == 1):
                 break
 
     if(flag == 0):
+        # col
         for j in range(N):
             flag = checkCol(A, j, N, K)
             if(flag == 1):
                 break
 
     if(flag == 0):
+        # diag
         for i in range(N - K + 1):
             for j in range(N - K + 1):
                 flag = checkDiag(A, i, j, N, K)

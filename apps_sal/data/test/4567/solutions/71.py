@@ -10,6 +10,7 @@ if a % 10 != 0:
     print(a)
 else:
     if x == 9999:
+        # ぜんぶ10で割り切れるので駄目
         print((0))
     else:
         print((a - x))

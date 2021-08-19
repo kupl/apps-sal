@@ -3,6 +3,7 @@ class Solution:
         ingress = [0] * n
         g = defaultdict(list)
 
+        # construct a graph and ingress
         for i in range(n):
             if leftChild[i] != -1:
                 ingress[leftChild[i]] += 1
@@ -12,9 +13,11 @@ class Solution:
                 ingress[rightChild[i]] += 1
                 g[i].append(rightChild[i])
 
+        # check only one root or two ingress
         if ingress.count(0) > 1 or max(ingress) > 1:
             return False
 
+        # check any cycle
         def dfs(node):
 
             visited.add(node)
@@ -36,6 +39,6 @@ class Solution:
         for i in range(n):
             if i not in visited:
                 if dfs(i):
-                    return False
+                    return False  # cycle detected
 
         return True

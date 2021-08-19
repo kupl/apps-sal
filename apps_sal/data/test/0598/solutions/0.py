@@ -24,6 +24,7 @@ def solve(inp, *args):
         second_travels_processed = travels_by_len_processed.get(second_travel_len, [])
         for first_travel in first_travels:
             l1, r1, c1 = first_travel
+            # now we look for cheapest travels which have l2 > r1
             idx = bisect.bisect_right(second_travels_processed, (r1, float("inf")))
             if 0 <= idx < len(second_travels_processed):
                 best_price = min(best_price, c1 + second_travels_processed[idx][1])

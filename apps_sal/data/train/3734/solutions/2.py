@@ -1,5 +1,5 @@
 from regex import findall, match
-from random import randint
+from random import randint  # This is useless here seeing the test cases but let's do it well
 
 
 def roll(desc, verbose=False):

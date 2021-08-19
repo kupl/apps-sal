@@ -1,4 +1,5 @@
 class Solution(object):
+    # Rabin-Karp Algorithm (rolling hash)
     def repeatedStringMatch1(self, A, B):
         """
         :type A: str
@@ -37,6 +38,7 @@ class Solution(object):
                 return q if i < q * len(A) else q + 1
 
         return -1
+    # KMP
 
     def repeatedStringMatch(self, A, B):
         """
@@ -56,6 +58,7 @@ class Solution(object):
                 f[i + 1] = j
             return f
 
+        # kmp
         f = get_fail(B)
         j = 0
         vis = {0}

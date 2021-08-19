@@ -10,5 +10,5 @@ def increment_string(s):
     if not num:
         return s + '1'
 
-    fmt = "0{}d".format(len(num))
+    fmt = "0{}d".format(len(num))  # so it preverses the amount of digits
     return s + format(int(num[::-1]) + 1, fmt)

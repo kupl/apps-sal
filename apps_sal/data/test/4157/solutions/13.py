@@ -17,5 +17,6 @@ for i in range(n):
 
 w = [i for i in d]
 w.sort(reverse=1)
+# print(w)
 for i in range(n):
     print(d[w[i]], end=' ')

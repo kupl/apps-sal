@@ -1,3 +1,4 @@
+# cook your dish here
 try:
     t = int(input())
     for i in range(t):
@@ -6,6 +7,7 @@ try:
         flag = 0
         for i in range(rc):
             matr.append(list(map(int, input().split())))
+    #    print(matr)
         for i in range(rc - 1):
             for j in range(rc - 1):
                 if(matr[i][j] == 1):

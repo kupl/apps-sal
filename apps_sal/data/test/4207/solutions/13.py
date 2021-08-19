@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2019/3/7 23:32
+# @Author  : LunaFire
+# @Email   : gilgemesh2012@gmail.com
+# @File    : D. Zero Quantity Maximization.py
 
 import math
 from collections import Counter

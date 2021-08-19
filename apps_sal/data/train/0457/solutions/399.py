@@ -3,6 +3,7 @@ import math
 
 class Solution:
     trellis = None
+    # O(S*n), O(S) for memoisation table
 
     def coinChange(self, coins: List[int], amount: int) -> int:
         if self.trellis == None:

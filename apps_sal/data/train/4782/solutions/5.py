@@ -5,6 +5,8 @@ class Placeholder:
     num = -1
 
     def __init__(self, so_farr=[]):
+        #         if Placeholder.num != -1:
+        #             Placeholder.num = -1
         self.so_far = so_farr
 
     def __call__(self, *args):

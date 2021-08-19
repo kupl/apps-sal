@@ -1,3 +1,4 @@
+# cook your dish here
 def walk(n, m, o):
     a = 0
     b = 0

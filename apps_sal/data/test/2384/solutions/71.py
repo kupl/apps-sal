@@ -1,9 +1,14 @@
+# coding: utf-8
+#import numpy as np
 inf = float('inf')
 
 
 def main():
+    # input
     N = int(input())
     A = [0] + list(map(int, input().split()))
+#    N = 2*10**5-1
+#    A = [0] + np.random.randint(-10**9, 10**9, 2*10**5-1).tolist()
 
     dp1 = [-inf] * (N + 1)
     dp2 = [-inf] * (N + 1)
@@ -24,6 +29,9 @@ def main():
     else:
         ans = max(dp1[-2:] + dp2[-2:])
 
+    # print(DP0)
+    # print(DP1)
+    # print(DP2)
     print(ans)
 
 

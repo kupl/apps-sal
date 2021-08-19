@@ -6,6 +6,8 @@ class Solution:
         dp[0][0] = A[0]
         for i in range(len(A)):
             for j in range(K):
+             #               if i == 0 and j != 0:
+             #                  continue
                 if j == 0:
                     dp[i][j] = avg(A[:i + 1])
                 else:

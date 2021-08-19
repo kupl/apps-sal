@@ -3,3 +3,5 @@ def past(h, m, s):
     c = s * 1000
     b = m * 60000
     return a + b + c
+
+    # Good Luck!

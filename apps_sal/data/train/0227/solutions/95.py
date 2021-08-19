@@ -1,7 +1,7 @@
 class Solution:
     def longestOnes(self, A, K: int) -> int:
         ans = count = 0
-        j = 0
+        j = 0  # valid range is [i:j]
         for i in range(len(A)):
             if i > 0 and A[i - 1] == 0:
                 count -= 1

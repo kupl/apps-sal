@@ -36,6 +36,7 @@ class Solution:
         final = 0
         dp = collections.defaultdict(lambda: -1)
 
+        # 普通dfs
         def dfs(row, path):
             if row >= n:
                 return 0
@@ -48,6 +49,7 @@ class Solution:
                 count += dfs(row + 1, path | (1 << hat))
             return count % LIMIT
 
+        #  复杂度 O(2^40 * 10).
         def dfs_dp(row, path):
             if row >= n:
                 return 0
@@ -62,6 +64,9 @@ class Solution:
                 count += dfs_dp(row + 1, path | (1 << hat))
             dp[(row, path)] = count % LIMIT
             return count % LIMIT
+
+        # 与其person映射hat, 不如hat映射person
+        # 复杂度 O(2^10 * 40).
 
         hat_map = collections.defaultdict(set)
         for person, j in enumerate(hats):

@@ -1,8 +1,9 @@
+# dp[k][i] = # of ways at step k in i position
 
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
 
-        dp = [[0] * (steps // 2 + 2) for _ in range(steps + 1)]
+        dp = [[0] * (steps // 2 + 2) for _ in range(steps + 1)]  # 如果k=500, i可以去到250 length 有251个
         dp[0][0] = 1
         M = 10**9 + 7
 

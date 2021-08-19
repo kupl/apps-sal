@@ -9,6 +9,7 @@ else:
     n -= m
     while low <= high:
         mid = (low + high) // 2
+        # print(mid,(mid*(mid+1))//2)
         if (mid * (mid + 1)) // 2 >= n:
             pos = mid
             high = mid - 1

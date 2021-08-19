@@ -9,6 +9,7 @@ def avoid(rains):
         elif r not in full:
             full[r] = ix
         else:
+            # we're gonna have a flood
             if not zeros:
                 return []
 
@@ -23,7 +24,7 @@ def avoid(rains):
                 return []
 
             sol[zix] = r
-            full[r] = ix
+            full[r] = ix  # update filling day
 
     while zeros:
         sol[zeros.pop()] = 1

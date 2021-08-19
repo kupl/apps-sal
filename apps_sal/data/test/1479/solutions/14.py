@@ -13,6 +13,7 @@ class CodeforcesTask436BSolution:
         result_row = [0 for x in range(self.n_m_k[1])]
         for x in range(self.n_m_k[0]):
             for y in range(self.n_m_k[1]):
+                # print(x, y)
                 field = self.field[x][y]
                 if field == "R":
                     pos = y + x

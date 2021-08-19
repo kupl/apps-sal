@@ -3,6 +3,7 @@ class Solution:
         m = len(arr)
         n = len(arr[0])
         dp = [[float('inf') for j in range(n)] for i in range(m)]
+        # initialization
         for j in range(n):
             dp[0][j] = arr[0][j]
 
@@ -15,6 +16,7 @@ class Solution:
                 elif sec_min_idx is None or dp[i - 1][j] < dp[i - 1][sec_min_idx]:
                     sec_min_idx = j
 
+            # print(\"min_idx\", min_idx, \"sec_min_idx\", sec_min_idx)
             for j in range(n):
                 if j == min_idx:
                     dp[i][j] = dp[i - 1][sec_min_idx] + arr[i][j]

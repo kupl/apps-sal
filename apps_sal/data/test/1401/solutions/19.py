@@ -32,3 +32,6 @@ while ch:
             ch += [(x, nom, max(l + c, c))]
 
 print(nn - ans)
+
+
+# Made By Mostafa_Khaled

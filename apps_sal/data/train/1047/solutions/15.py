@@ -15,6 +15,8 @@ for i in range(0, t):
         x, y = input().split()
         x = int(x)
         y = int(y)
+        # insert(arr,x-y)
+        # insert(brr,x+y)
         arr.insert(0, x - y)
         brr.insert(0, x + y)
     arr.sort()

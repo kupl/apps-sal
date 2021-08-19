@@ -17,8 +17,10 @@ def dist(i, p, n):
 [n, p] = [int(s) for s in input().split()]
 s = input().strip()
 
-p = p - 1
+p = p - 1  # change to 0-based
 
+
+# print(s)
 
 count1 = 0
 d = [0 for i in range(n)]
@@ -45,3 +47,6 @@ else:
     count = count1 + 2 * min(abs(d1), abs(d2)) + max(abs(d1), abs(d2))
 
 print(count)
+
+
+##        print(' '.join(map(str,A[i])))

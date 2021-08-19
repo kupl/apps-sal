@@ -18,6 +18,7 @@ while i < m:
         if f < s:
             ans += 'L' * min(l[i][0] - count, s - f)
             s -= min(l[i][0] - count, s - f)
+            # print(min(l[i][0] - count,s-f))
             count = l[i][0]
 
     else:
@@ -39,6 +40,7 @@ while i < m:
                     s -= 1
         i += 1
         count += 1
+    # print(s)
 
     if s == f:
         break

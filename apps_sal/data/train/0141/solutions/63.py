@@ -1,3 +1,5 @@
+# 1, 2, 2, 3 limit = 4
+# l        r
 
 
 class Solution:

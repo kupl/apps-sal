@@ -7,7 +7,9 @@ class Solution:
             heapq.heappush(maxq, [-nums[r], r])
             heapq.heappush(minq, [nums[r], r])
             while -maxq[0][0] - minq[0][0] > limit:
+                # condition not satisfied, move left pointer ahead
                 l = min(maxq[0][1], minq[0][1]) + 1
+                # all values before left pointer are now useless
                 while maxq[0][1] < l:
                     heapq.heappop(maxq)
                 while minq[0][1] < l:

@@ -1,3 +1,4 @@
+# coding: utf-8
 import sys
 import numpy as np
 from collections import Counter
@@ -9,6 +10,7 @@ def lr(): return list(map(int, sr().split()))
 
 
 MOD = 10 ** 9 + 7
+# 素因数分解をして、それぞれの因数をどこに入れるか
 
 
 def cmb(n, k):
@@ -40,11 +42,11 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 10 ** 6
+U = 10 ** 6  # 階乗テーブルの上限
 fact, fact_inv = make_fact(U, MOD)
 
 
-def prime_factorize(n):
+def prime_factorize(n):  # Nの素因数分解
     A = []
     while n % 2 == 0:
         A.append(2)
@@ -71,3 +73,5 @@ for v in list(counter.values()):
     answer %= MOD
 
 print((answer % MOD))
+# np.int64とint型の違いに注意
+# 16

@@ -31,8 +31,10 @@ def alphabet_war(fight):
             pow = 1
 
         if i in left_side:
+            # 'wpbs'
             left_power += pow
         elif i in right_side:
+            # 'mqdz'
             right_power += pow
 
     if left_power > right_power:

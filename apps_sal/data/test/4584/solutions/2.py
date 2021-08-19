@@ -1,3 +1,4 @@
+# coding=utf-8
 
 def __starting_point():
     N = int(input())
@@ -7,6 +8,8 @@ def __starting_point():
 
     for i in range(len(li)):
         ans[li[i]] += 1
+
+    # print(ans)
 
     for i in range(1, N + 1):
         print((ans[i]))

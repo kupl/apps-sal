@@ -8,7 +8,7 @@ T_total = 0
 for i in range(1, N):
     if t[i] <= T_end:
         T_end = t[i] + T
-    else:
+    else:  # t[i] > T_end
         T_total += T_end - T_start
         T_start = t[i]
         T_end = t[i] + T

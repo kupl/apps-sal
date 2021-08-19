@@ -12,6 +12,57 @@ def egcd(a, b):
 def modin(a, m):
     g, x, y = egcd(a, m)
     return x % m
+# def gcdexten(a,b,x,y):
+# 	if a == 0:
+# 		x = 0
+# 		y = 1
+# 		return b
+# 	x1 = y1 = 0
+# 	gcd = gcdexten(b%a,a,x1,y1)
+
+# 	x = y1 - (b/a) * x1
+# 	y = x1
+# 	return gcd
+
+# def modin(a):
+# 	m = 10**9 + 7
+# 	x = y = 0
+# 	g = gcdexten(a,m,x,y)
+# 	res = (x%m + m)%m
+# 	return res
+
+# void modInverse(int a, int m)
+# {
+#     int x, y;
+#     int g = gcdExtended(a, m, &x, &y);
+#     if (g != 1)
+#         cout << "Inverse doesn't exist";
+#     else
+#     {
+#         // m is added to handle negative x
+#         int res = (x%m + m) % m;
+#         cout << "Modular multiplicative inverse is " << res;
+#     }
+# }
+# int gcdExtended(int a, int b, int *x, int *y)
+# {
+#     // Base Case
+#     if (a == 0)
+#     {
+#         *x = 0, *y = 1;
+#         return b;
+#     }
+
+#     int x1, y1; // To store results of recursive call
+#     int gcd = gcdExtended(b%a, a, &x1, &y1);
+
+#     // Update x and y using results of recursive
+#     // call
+#     *x = y1 - (b/a) * x1;
+#     *y = x1;
+
+#     return gcd;
+# }
 
 
 def combi(a, b):
@@ -26,6 +77,7 @@ def combi(a, b):
     for i in range(b + 1, a + 1):
         temp = (temp * i % mod) % mod
     denom = modin(math.factorial(a - b), mod)
+    # print denom
     return (temp % mod * denom % mod) % mod
 
 
@@ -61,6 +113,7 @@ for _ in range(eval(input())):
     for i in count_list:
         sub_2 += (n - i) * i
     sub_2 /= 2
+    # print sub_2
 
     sub_3 = 0
     for i in range(count):
@@ -89,8 +142,13 @@ for _ in range(eval(input())):
                 temp += count_list[j] * (n - count_list[i] - count_list[j])
         temp /= 2
         sub_4_3 += ((count_list[i] * (count_list[i] - 1)) * temp) / 2
+        # print sub_4_3
     sub_4_3 *= 2
+    # sub_4 = ((sub_4_2%mod + sub_4_3%mod) + sub_4_4%mod)%mod
+    # sub_tot = ((sub_2%mod + sub_3%mod)%mod + sub_4%mod)%mod
     sub_4 = sub_4_3 + sub_4_4 + sub_4_2
     sub_tot = sub_2 + sub_3 + sub_4
 
+    # print((total * (total - 1)) - (total * sub_tot%mod))%mod
+    # print ((total)* (total - 1 - (((sub_3 + sub_2)%mod + (sub_4_4 +sub_4_3)%mod)%mod + sub_4_2%mod)))% mod
     print((total * (total - (sub_tot + 1) % mod) % mod) % mod)

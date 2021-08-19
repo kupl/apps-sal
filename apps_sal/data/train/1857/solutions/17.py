@@ -5,6 +5,7 @@ class Solution:
             reserved[r[0]] = reserved.get(r[0], set())
             reserved[r[0]].add(r[1])
 
+        # we can fit 2 groups for all rows with no reservations
         ans = 2 * (n - len(reserved.keys()))
         for _, reservations in reserved.items():
             middle = True

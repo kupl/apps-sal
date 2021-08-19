@@ -1,3 +1,5 @@
+# 2 2 4 1 4 1
+# 1 4 1 2 2
 n = int(input())
 a = list(map(int, input().split()))
 i2 = 0

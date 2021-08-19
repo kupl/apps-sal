@@ -1,6 +1,9 @@
 class Solution:
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], ID: int, level: int) -> List[str]:
+        # friends is an adjacency list: person -> list<friends of person>
+        # watchedvideos: person -> list of videos
 
+        # find subset of friends with provided level
         freqs = dict()
         visited = set()
         visited.add(ID)

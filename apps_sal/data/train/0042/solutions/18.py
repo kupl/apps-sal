@@ -31,14 +31,18 @@ for _ in range(t):
                 tot = 0
                 for ii in range(i):
                     if st[-ii - 1] == "1":
+                      #  print(ii)
                         tot += aa[ii]
                 le = tot - i
                 try:
                     xx = ss[j - 1]
                     if (j - xx) >= le:
                         ans += 1
+                     #   print(i,j,tot,st)
                 except:
                     if le == 0:
                         ans += 1
+                    #    print(i,j,tot,st)
                     pass
     print(ans)
+ #   print()

@@ -8,6 +8,9 @@ class Solution:
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
+        # This is Prim algo and I need an array for the min_priority
+        # to get the algo in time O(n**2), otherwise it will be too
+        # slow with a factor of log(n)
         all_ = set(range(n))
         s = set([0])
         tot = 0

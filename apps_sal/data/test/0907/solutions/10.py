@@ -29,6 +29,7 @@ if missed != []:
         can = True
 else:
     can = True
+# second half
 first = pairs[0][1]
 missed = []
 for i in range(m):

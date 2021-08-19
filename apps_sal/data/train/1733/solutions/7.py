@@ -16,8 +16,8 @@ def knight(p1, p2):
         Generate next moves
         eg. spos = (a, 1) == (1, 1) == (x, y)
         """
-        dx = [-2, -1, 1, 2, 2, 1, -1, -2]
-        dy = [1, 2, 2, 1, -1, -2, -2, -1]
+        dx = [-2, -1, 1, 2, 2, 1, -1, -2]  # relative directions x
+        dy = [1, 2, 2, 1, -1, -2, -2, -1]  # relative directions y
         for d in range(8):
             nx = spos[0] + dx[d]
             ny = spos[1] + dy[d]
@@ -29,8 +29,10 @@ def knight(p1, p2):
 
     while len(que) > 0:
 
+        # generate next positions and put them in que
         sp, step = que.pop()
         for nm in _gen_move(sp):
+            # check if next move is last
             nm_ = mapper[nm[0]] + str(nm[1])
             if nm_ == p2:
                 return step

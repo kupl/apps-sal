@@ -37,4 +37,5 @@ class Solution:
                 res[b] = res[b - 1]
             n = int(n / 2)
             b = b + 1
+        # print(g,f,res)
         return res[-1]

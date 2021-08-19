@@ -1,5 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-"""Codeforces Round 
+"""Codeforces Round #552 (Div. 3)
 
 Problem E. Two Teams
 
@@ -28,7 +30,7 @@ def remove_me(to_left, to_right, index):
 
 def join_team(n, k, students):
     teams = ['0'] * n
-    mydict = dict(list(zip(students, list(range(n)))))
+    mydict = dict(list(zip(students, list(range(n)))))    # {skill: id}
     to_left = [i - 1 for i in range(n)]
     to_right = [i + 1 for i in range(n)]
 

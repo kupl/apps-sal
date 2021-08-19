@@ -1,6 +1,7 @@
 n, m = list(map(int, input().split()))
 l_n = [list(map(int, input().split())) for _ in range(n)]
 l_m = [list(map(int, input().split())) for _ in range(m)]
+# print(l_n,l_m)
 
 
 for i, j in l_n:

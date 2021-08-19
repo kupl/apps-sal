@@ -10,10 +10,13 @@ R = Q - 1
 start = 0
 sign = "-"
 
+# N: 処理する区間の長さ
 
 N0 = 2**(N - 1).bit_length()
 data = [0] * (2 * N0)
 INF = 0
+# 区間[l, r+1)の値をvに書き換える
+# vは(t, value)という値にする (新しい値ほどtは大きくなる)
 
 
 def update(l, r, v):
@@ -29,6 +32,7 @@ def update(l, r, v):
             L += 1
         L >>= 1
         R >>= 1
+# a_iの現在の値を取得
 
 
 def query(k):

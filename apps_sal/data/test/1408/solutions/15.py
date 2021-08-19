@@ -3,6 +3,7 @@ dif = []
 li1 = []
 li2 = []
 a1 = b1 = 0
+# print(lis)
 for i in range(n):
     a, b = list(map(int, input().split()))
     if a == 1:
@@ -21,6 +22,7 @@ for i in range(l1 + 1):
             s += li1[k]
         for k in range(j, l2):
             s += li2[k]
+#        print(i,j,s)
         if i + 2 * j >= s:
             ans = min(ans, i + 2 * j)
 print(ans)

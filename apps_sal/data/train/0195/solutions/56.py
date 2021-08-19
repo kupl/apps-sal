@@ -1,6 +1,7 @@
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
 
+        # ans = 0
         n = len(A)
 
         @lru_cache(None)

@@ -1,3 +1,4 @@
+# You lost the game.
 import sys
 T = list(map(int, input().split()))
 L = [[] for _ in range(6)]
@@ -36,6 +37,7 @@ a = 0
 ok = 1
 R = ["" for _ in range(n)]
 
+# S
 if len(L[0]) <= T[0]:
     for x in L[0]:
         R[x] = "S"
@@ -48,6 +50,7 @@ a = max(0, len(D[0]) - T[0])
 for i in range(min(len(D[0]), T[0])):
     R[D[0][i]] = "S"
 
+# M
 if a + len(L[1]) <= T[1]:
     for i in range(len(D[0]) - a, len(D[0])):
         R[D[0][i]] = "M"
@@ -62,6 +65,7 @@ a = max(0, len(D[1]) - T[1])
 for i in range(min(len(D[1]), T[1])):
     R[D[1][i]] = "M"
 
+# L
 if a + len(L[2]) <= T[2]:
     for i in range(len(D[1]) - a, len(D[1])):
         R[D[1][i]] = "L"
@@ -76,6 +80,7 @@ a = max(0, len(D[2]) - T[2])
 for i in range(min(len(D[2]), T[2])):
     R[D[2][i]] = "L"
 
+# XL
 if a + len(L[3]) <= T[3]:
     for i in range(len(D[2]) - a, len(D[2])):
         R[D[2][i]] = "XL"
@@ -90,6 +95,7 @@ a = max(0, len(D[3]) - T[3])
 for i in range(min(len(D[3]), T[3])):
     R[D[3][i]] = "XL"
 
+# XXL
 if a + len(L[4]) <= T[4]:
     for i in range(len(D[3]) - a, len(D[3])):
         R[D[3][i]] = "XXL"
@@ -104,6 +110,7 @@ a = max(0, len(D[4]) - T[4])
 for i in range(min(len(D[4]), T[4])):
     R[D[4][i]] = "XXL"
 
+# XXXL
 if a + len(L[5]) <= T[5]:
     for i in range(len(D[4]) - a, len(D[4])):
         R[D[4][i]] = "XXXL"

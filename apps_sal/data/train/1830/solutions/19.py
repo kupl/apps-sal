@@ -21,6 +21,7 @@ class Solution:
 
                 if j < dic[n]:
                     return []
+                # print(stack)
                 stack.pop(stack.index(j))
                 output[j] = n
                 dic[n] = i

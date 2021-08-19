@@ -3,7 +3,7 @@ x1 = []
 y0 = []
 y1 = []
 n = int(input())
-s = 0
+s = 0  # Variable to add rects. areas together
 for i in range(n):
     l = list(map(int, input().split()))
     x0.extend([l[0]])

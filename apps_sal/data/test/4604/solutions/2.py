@@ -5,6 +5,10 @@ ARR = [2, 4, 4, 0, 2]
 
 N = 7
 ARR = [6, 4, 0, 2, 4, 0, 2]
+#
+# N = 8
+# ARR = [7, 5, 1, 1, 7, 3, 5, 3]
+#
 N = int(input())
 ARR = list(map(int, input().split()))
 

@@ -1,4 +1,6 @@
+# B - Hina Arare
 
+# N
 N = int(input())
 my_list = list(input().split())
 

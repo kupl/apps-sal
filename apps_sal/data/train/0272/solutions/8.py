@@ -9,7 +9,7 @@ class Solution:
             opened_new = False
             for b_i in range(l - 1, -1, -1):
                 my_box = my_boxes[b_i]
-                if status[my_box] or my_box in my_keys:
+                if status[my_box] or my_box in my_keys:  # already open
                     my_boxes.pop(b_i)
                     my_boxes.extend(containedBoxes[my_box])
                     candy_count += candies[my_box]

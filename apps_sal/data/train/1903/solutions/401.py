@@ -14,6 +14,8 @@ class Solution:
                 h[p1][p2] = d
                 h[p2][p1] = d
 
+        # print(h)
+
         total = 0
         ans = 0
         queue = [(0, 0)]
@@ -21,6 +23,7 @@ class Solution:
             d, node = heappop(queue)
             if visited[node]:
                 continue
+            # print(d, node)
             total += 1
             ans += d
             visited[node] = True

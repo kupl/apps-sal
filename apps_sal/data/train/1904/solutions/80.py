@@ -2,10 +2,11 @@ class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         def dist(i): return points[i][0]**2 + points[i][1]**2
 
-        def quicksort(points, K):
+        def quicksort(points, K):  # points: list of index
             print(points, K)
             if not points:
                 return
+            # pivot = points[random.randint(0,len(points)-1)]
 
             pivot = points[-1]
             l, r, m = [], [], []

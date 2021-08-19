@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 N = int(input())
 T = list(map(int, input().split()))
 M = int(input())

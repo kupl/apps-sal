@@ -12,4 +12,12 @@ class Solution:
                     ans = ans + dp[i - j - 1]
                 dp[i] = max(dp[i], ans)
 
+
+#                 if i-p-1>=0:
+#                     ans=dp[i-p-1]+(p+1)*max(A[i-p:i+1])
+#                     print(A[i-p-1],(p+1)*max(A[i-p:i+1]))
+#                     dp[i]=max(dp[i],ans)
+
+        # print(dp)
+
         return dp[-1]

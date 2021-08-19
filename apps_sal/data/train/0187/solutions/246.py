@@ -15,6 +15,7 @@ class Solution:
                 max_profit = profit
                 max_rounds = rounds
 
+        # remaining waiting list
         while waiting:
             profit += min(4, waiting) * boardingCost
             waiting -= min(4, waiting)

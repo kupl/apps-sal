@@ -8,6 +8,7 @@ def solve(A, N):
         for i in range(32):
             if (1 << i) & x:
                 bitCover[i] += 1
+    # Everything that is covered will be deleted in the final result
     best = (0,)
     for j, x in enumerate(A):
         result = 0

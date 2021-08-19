@@ -9,7 +9,7 @@ def solve(s, a, b, c):
 
 
 def main():
-    t = int(input())
+    t = int(input())  # cook your dish here
 
     for _ in range(t):
         line = input().strip()

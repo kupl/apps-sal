@@ -23,6 +23,7 @@ while len(a) > 1:
             inner_min = a[i]
 
     k = min(a[0], a[n - 1], (inner_min + 1) // 2)
+    #print("a: ", a, "; k = ", k)
     b = []
     new_char = []
     for i in range(n):
@@ -34,6 +35,7 @@ while len(a) > 1:
             if a[i] > 2 * k:
                 b.append(a[i] - 2 * k)
                 new_char.append(char[i])
+# print(b)
     ans += k
     if len(b) > 1:
         c = [0] * n
@@ -50,6 +52,7 @@ while len(a) > 1:
         if new_char[len(b) - 2] == new_char[len(b) - 1]:
             c[count] += b[len(b) - 1]
         else:
+            #count += 1
             newnew_char.append(new_char[i + 1])
             c[count] = b[len(b) - 1]
         a = c[:count + 1]

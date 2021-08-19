@@ -6,5 +6,7 @@ class Solution:
                 continue
             else:
 
+                # for j in range(i, len(s)):
+                #     if s[i:j+1]>ans:
                 ans = max(s[i:], ans)
         return ans

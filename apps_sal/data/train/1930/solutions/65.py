@@ -3,6 +3,7 @@ class Cashier:
     def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):
         self.customers = 0
         self.n = n
+        # self.prod=products
         self.prices = prices
         self.discount = discount
         self.products = {}
@@ -18,3 +19,8 @@ class Cashier:
             bill = bill - (bill * self.discount / 100)
             self.customers = 0
         return bill
+
+
+# Your Cashier object will be instantiated and called as such:
+# obj = Cashier(n, discount, products, prices)
+# param_1 = obj.getBill(product,amount)[null,500.0,4000.0,800.0,4000.0,4000.0,7350.0,2500.0]

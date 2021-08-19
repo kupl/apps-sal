@@ -1,3 +1,5 @@
+#!/usr/bin/env	python
+# -*-coding:utf-8 -*-
 n = int(input())
 i = j = n >> 1
 a = 1

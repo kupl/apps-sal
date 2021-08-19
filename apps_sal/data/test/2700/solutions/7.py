@@ -13,5 +13,6 @@ for test in range(t):
             ans += (d - i)
         elif i < c:
             ans += (d - c + 1)
+        # print ans
 
     print(ans)

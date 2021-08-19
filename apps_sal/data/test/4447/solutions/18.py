@@ -20,6 +20,7 @@ for i in range(2 * m):
 
     while len(lis[cur]) < k and free != []:
         ele, mm = free.pop()
+        # print(ele,mm)
         lis[cur].append(ele)
         a[ele] += (i - mm)
         ans += (i - mm)

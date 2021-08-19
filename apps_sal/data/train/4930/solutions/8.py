@@ -8,13 +8,16 @@ def find_zero_sum_groups(my_list, n):
     subs = []
     sumsubs = []
     for i in range(n, n + 1):
+        #         print(list(combinations(my_list, i)))
         temp = [list(x) for x in combinations(my_list, i)]
         if len(temp) > 0:
             subs.extend(temp)
     subs.sort()
     for x in subs:
         x.sort()
+#         x.sort(key=lambda x: x[0])
 
+#         print(x)
         if sum(x) == 0 and x not in sumsubs:
             sumsubs.append(x)
     for x in sumsubs:

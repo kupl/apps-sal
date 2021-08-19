@@ -44,6 +44,7 @@ def helper(l, r):
     ans1 = helper(l, mid)
     ans2 = helper(mid + 1, r)
     ans3 = merge(l, mid, r)
+    #print(ans1, ans2, ans3)
     return ans1 + ans2 + ans3
 
 

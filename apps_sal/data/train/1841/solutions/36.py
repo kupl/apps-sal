@@ -7,6 +7,7 @@ class Solution:
         med = arr[end // 2]
         def is_greater(x, y): return abs(x - med) > abs(y - med)
         while end >= start:
+            # 3 cases - equality is a separate case
             if is_greater(arr[start], arr[end]):
                 res.append(arr[start])
                 start += 1

@@ -8,6 +8,11 @@ class Solution:
                     remaining_skills.appendleft(skill)
             return remaining_skills
 
+        # BFS by # of people
+        # can reduce expansion by searching rarest skills first
+
+        # map required skills to people
+        # has_skill[\"java\"] == a list of people (int index into people) who have that skill
         has_skill = dict()
         for person, skills in enumerate(people):
             for skill in skills:
@@ -15,10 +20,13 @@ class Solution:
                 experts.append(person)
                 has_skill[skill] = experts
 
+        # sort skills by rarity
         rare_skills = [(len(people), skill) for (skill, people) in list(has_skill.items())]
         rare_skills.sort()
         rare_skills = [skill for _, skill in rare_skills]
 
+        # queue holds pairs:
+        #   (skills, team)
         q = deque()
         q.append((deque(rare_skills), []))
         while q:
@@ -27,6 +35,7 @@ class Solution:
             if not skills:
                 return team
 
+            # choose a member to fulfill next rarest skill
             skill = skills[0]
             for person in has_skill[skill]:
                 remaining_skills = fulfill_skills(skills, person)

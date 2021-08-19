@@ -18,4 +18,5 @@ class Solution:
             if revn - cost > maxp:
                 maxp = revn - cost
                 ans = no
+        # print(revn, cost)
         return ans if revn > cost else -1

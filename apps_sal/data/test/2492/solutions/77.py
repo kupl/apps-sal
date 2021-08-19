@@ -1,4 +1,10 @@
+# https://maspypy.com/atcoder-%E5%8F%82%E5%8A%A0%E6%84%9F%E6%83%B3-2019-02-16abc-155#toc3
+# https://atcoder.jp/contests/abc155/submissions/10152895
+# 写経
 
+
+# 条件を満たす要素を抽出
+# ndarray[条件式]
 
 def binary_search(*, ok, ng, func):
     while abs(ok - ng) > 1:
@@ -49,10 +55,10 @@ def main():
         """
         cnt = 0
         if x >= 0:
-            cnt += zero.size * N
-        cnt += np.searchsorted(a=A, v=x // pos, side='right').sum()
-        cnt += (N - np.searchsorted(a=A, v=(-x - 1) // (-neg), side='right')).sum()
-        cnt -= ((A * A) <= x).sum()
+            cnt += zero.size * N  # (a:=0)*v<=x
+        cnt += np.searchsorted(a=A, v=x // pos, side='right').sum()  # (a:>0)*v<=x
+        cnt += (N - np.searchsorted(a=A, v=(-x - 1) // (-neg), side='right')).sum()  # (a:<0)*v<=x
+        cnt -= ((A * A) <= x).sum()  # i==j
         assert cnt % 2 == 0
         return cnt // 2
 

@@ -1,6 +1,7 @@
 
 class UnionFind(object):
     def __init__(self, n):
+        # * only idff from template is it starts at 0
         self.count = n
         self.parent = [i for i in range(n)]
         self.rank = [1 for _ in range(n)]
@@ -33,6 +34,7 @@ class Solution:
         g = collections.defaultdict(list)
         n = len(points)
         heap = []
+        # create graph
         for i in range(n):
             for j in range(i + 1, n):
                 distance = manhattan(points[i], points[j])

@@ -3,6 +3,7 @@ s1 = list(map(int, input().split()))
 s1.pop(0)
 s2 = list(map(int, input().split()))
 s2.pop(0)
+#print(s1, s2, n)
 c = 0
 while s1 and s2 and c < 10**5:
     if s1[0] > s2[0]:

@@ -2,6 +2,8 @@ from collections import Counter
 import sys
 input = sys.stdin.readline
 
+#n = int(input())
+#l = list(map(int, input().split()))
 
 '''
 a=[]
@@ -26,6 +28,7 @@ a = list(map(int, input().split()))
 a.sort()
 l = cal(a[-1], a)
 ll = Counter(a)
+# print(l,ll)
 ans = 0
 for i in range(n):
     if ll[a[i]] == 1:

@@ -9,6 +9,7 @@ class Solution:
             new_q = []
             while len(queue) != 0:
                 k = queue[0]
+                # visited.append(k)
                 del queue[0]
                 for i in friends[k]:
                     if i not in visited:
@@ -24,6 +25,11 @@ class Solution:
                     ans[v] += 1
 
     def dfs(self, id: int, cur_level: int, target_level: int, friends: List[List[int]], watchedVideos: List[List[str]], ans: dict, visited: List[int]):
+        # can't work even if we have visited
+        # A -> B,C
+        # B -> C
+        # to A, C is level 1
+        # but DFS will traverse A->B->C, and think C is level 2
         if id in visited:
             return
         visited.append(id)
@@ -41,6 +47,8 @@ class Solution:
 
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         ans = {}
+        # visited = []
+        # self.dfs(id, 0, level, friends, watchedVideos, ans, visited)
         self.bfs(id, level, friends, watchedVideos, ans)
         ret = [k for k, v in sorted(list(ans.items()), key=lambda item: (item[1], item[0]))]
 

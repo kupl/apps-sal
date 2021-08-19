@@ -1,3 +1,4 @@
+# oimv
 d = int(input())
 for tt in range(d):
     n = int(input())

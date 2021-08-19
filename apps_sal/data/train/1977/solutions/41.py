@@ -17,10 +17,12 @@ class Solution:
                 edge_found = False
                 while len(Q) > 0:
                     x, y = Q.popleft()
+                    # print(x,y)
                     if self.is_edge(x, y):
                         edge_found = True
                     for p, q in self.nbrs(x, y):
                         if (not visited[p][q]) and (grid[p][q] == 0):
+                            #print('adding ', p, q)
                             visited[p][q] = True
                             Q.append((p, q))
                 if not edge_found:

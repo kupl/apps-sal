@@ -17,7 +17,11 @@ def inpl():
 
 
 start_time = time.perf_counter()
+# ------------------------------
 
+# bingo = [[0] * 3 for i in range(3)]
+# bingo[0][0] = 1
+# print(bingo)
 
 bingo = []
 for i in range(3):
@@ -47,5 +51,6 @@ if bingo[0][2] == -1 and bingo[1][1] == -1 and bingo[2][0] == -1:
 print('Yes' if bl else 'No')
 
 
+# -----------------------------
 end_time = time.perf_counter()
 print('time:', end_time - start_time, file=sys.stderr)

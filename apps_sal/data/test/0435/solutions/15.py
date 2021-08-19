@@ -4,6 +4,7 @@ N, K = map(int, stdin.readline().split())
 
 charArr = list(stdin.readline().strip())
 
+# print(charArr)
 
 bad = 0
 front = 0

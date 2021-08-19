@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def solve(n, m, b):
     b = [1] + b
@@ -13,6 +14,7 @@ def test():
     print("test passes")
 
 
+# test()
 tmp = input()
 n, m = list(map(int, tmp.split()))
 tmp = input()

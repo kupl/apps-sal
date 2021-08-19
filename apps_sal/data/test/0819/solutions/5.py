@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def m(k, a):
     if (k == 1):

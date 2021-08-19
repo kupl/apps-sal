@@ -5,6 +5,8 @@ inf = float('inf')
 N = int(input())
 A = list(map(int, input().split()))
 
+# sum_max[k] : [0,k)のうちN個までの総和の最大値
+# sum_min[k] : (3N-1-k,3N-1]のうちN個までの総和の最小値
 sum_max = [0] * (3 * N + 1)
 sum_min = [0] * (3 * N + 1)
 

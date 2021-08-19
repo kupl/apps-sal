@@ -1,6 +1,8 @@
 class Solution:
 
+    # def findLatestStep(self, arr: List[int], m: int) -> int:
     def fstep(self, arr, start_idx, end_idx, step, m):
+        # u can't hit end idx
         n = end_idx - start_idx
         if n == m:
             return step + 1

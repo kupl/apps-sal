@@ -1,4 +1,6 @@
 s = input()
+# 0: red
+# 1: blue
 n = len(s)
 
 cnt_r = 0

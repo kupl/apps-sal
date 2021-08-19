@@ -8,6 +8,7 @@ for i in range(n):
     sett[s[i]].append(s[i + 1:] + s[:i])
 ans = 0
 
+# ao fazer sett.items(), é realizado unpack da chave,valor para k,l, respectivamente
 for k, l in list(sett.items()):
     tmp = 0
     for j in range(n - 1):
@@ -26,4 +27,5 @@ for k, l in list(sett.items()):
     tmp /= n
     ans += tmp
 
+# precisao 10^6
 print('{:.7}'.format(ans))

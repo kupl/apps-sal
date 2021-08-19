@@ -1,3 +1,4 @@
+# cook your dish here
 """
 At first when you look at the problem you nitice that it may be a depth search     problem
 so you made a column and row number form yourself and readlised that all     diagonals

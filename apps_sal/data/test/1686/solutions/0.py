@@ -40,6 +40,8 @@ class Task:
 
     def printAnswer(self):
         print(self.answer)
+        # for line in self.answer:
+        #    print(line)
 
 
 task = Task()

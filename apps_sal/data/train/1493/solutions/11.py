@@ -49,6 +49,7 @@ def solve(s, c):
         cost = 0
         B = []
         G = []
+    # print(eqcost,cost)
     if(bcount == gcount):
         return min(eqcost, cost)
     return eqcost

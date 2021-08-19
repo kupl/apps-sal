@@ -17,6 +17,7 @@ class Solution:
 
             if sign != prevsign and sign != 0:
                 maxrun = max(maxrun, i - runstart + 1)
+                # print(maxrun,i,runstart)
             elif sign != 0:
                 runstart = i - 1
             else:

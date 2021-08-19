@@ -4,6 +4,7 @@ import copy
 def calprofit(lines_removed, j):
 
     lines_set = copy.deepcopy(differentline[j])
+    #print("chk", lines_set)
     iterator = 0
 
     while(iterator < len(lines_set) and lines_removed > 0):
@@ -12,6 +13,8 @@ def calprofit(lines_removed, j):
         lines_set[iterator] = lines_set[iterator] - possible
         lines_removed = lines_removed - possible
         iterator = iterator + 1
+
+        # if lines_removed still remains after deleting all  the lines then no triangle possible
 
     if(lines_removed > 0):
         return 0
@@ -28,6 +31,7 @@ def calprofit(lines_removed, j):
     for iterator3 in range(len(lines_set)):
         sum3 = sum3 + lines_set[iterator3] * (sum2 - temp[iterator3])
     sum3 = sum3 // 3
+    # print(sum3)
     return sum3
 
 
@@ -48,8 +52,11 @@ for i in range(int(input())):
         chk.sort()
         differentline.append(chk)
 
+    # print(differentline)
+
     weight = [0] + [int(i) for i in input().split()]
 
+    ##  KNAPSACK   ##
     profit = []
     dp = []
 
@@ -72,6 +79,7 @@ for i in range(int(input())):
             for lines_removed in range(removable_item + 1):
                 demo = lines_removed * weight[j]
 
+                # calculting profit  ## after removing lines_removed number of lines from color of j
                 if(profit[lines_removed][j] == -1):
                     profit[lines_removed][j] = calprofit(lines_removed, j)
 

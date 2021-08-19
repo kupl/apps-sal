@@ -1,3 +1,4 @@
+# coding: utf-8
 
 import math
 
@@ -23,6 +24,7 @@ def g(a):
     ly = 0
     ry = 1000
     for j in range(100):
+        #print("    ly = " + str(ly) + " ry = " + str(ry))
         c1 = (ly * 2 + ry) / 3
         c2 = (ly + ry * 2) / 3
         if max_dist([a, c1]) > max_dist([a, c2]):
@@ -35,6 +37,7 @@ def g(a):
 lx = 0
 rx = 1000
 for i in range(100):
+    #print("lx = " + str(lx) + " rx = " + str(rx))
     c1 = (lx * 2 + rx) / 3
     c2 = (lx + rx * 2) / 3
     if g(c1) > g(c2):

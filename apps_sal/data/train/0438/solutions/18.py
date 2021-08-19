@@ -1,9 +1,9 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
-        f = [ii for ii in range(n)]
-        b = [0 for ii in range(n)]
-        s = [0 for ii in range(n)]
+        f = [ii for ii in range(n)]     # union find
+        b = [0 for ii in range(n)]      # whether turns to 1
+        s = [0 for ii in range(n)]      # sum
 
         def findunion(n):
             if f[n] == n:

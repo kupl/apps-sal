@@ -22,6 +22,7 @@ class Solution:
         for node in initial:
             connectedNodes = self.calcConnectedNodes(graph, node)
             intersected = connectedNodes.intersection(initialSet)
+            # even if i removed this node, there are other nodes that will infect it, so no need
             if len(intersected) >= 2:
                 continue
             if maxNodesConnected == -1 or len(connectedNodes) > maxNodesConnected or (len(connectedNodes) == maxNodesConnected and node < nodeToRemove):

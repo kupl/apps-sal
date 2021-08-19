@@ -1,3 +1,4 @@
+# cook your dish here
 t = int(input())
 for s in range(0, t):
     n = int(input())

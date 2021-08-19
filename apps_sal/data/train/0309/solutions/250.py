@@ -12,6 +12,8 @@ class Solution:
             for i in range(j):
                 d.setdefault(2 * A[j] - A[i], {})
                 d[2 * A[j] - A[i]].setdefault(A[j] - A[i], 2)
+                # print(i, j, d[2 * A[j] - A[i]])
             d[A[j]] = {0: zero}
+            # print(d)
         res = max([max(v.values()) for v in list(d.values())])
         return res

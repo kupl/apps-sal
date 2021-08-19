@@ -5,6 +5,7 @@ class Node(object):
 
 
 def get_nth(node, index):
+    # Your code goes here.
     if node is None or index < 0:
         raise LookupError('invalid index')
     for i in range(index):

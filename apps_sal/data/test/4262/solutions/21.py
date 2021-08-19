@@ -6,7 +6,9 @@ m = sorted(p)
 a = 0
 b = 0
 cnt = 1
+# print(p,q)
 for i in itertools.permutations(m, n):
+    # print(list(i))
     if list(i) == p:
         a += cnt
     if list(i) == q:

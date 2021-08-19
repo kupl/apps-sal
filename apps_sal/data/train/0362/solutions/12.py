@@ -9,6 +9,7 @@ class Solution:
             dp_new = dict(dp)
             for person in hat2persons[hat]:
                 for state, cnt in dp.items():
+                    # print(f'{bin(state)}/{state}: {cnt}, {dp}: {dp[state]}')
                     if state & (1 << person) == 0:
                         if state | (1 << person) not in dp_new:
                             dp_new[state | (1 << person)] = cnt

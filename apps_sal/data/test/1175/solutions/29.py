@@ -11,18 +11,21 @@ for i in reversed(list(range(60))):
         for k in range(2):
             for s in range(2):
                 pre = dp[i + 1][j][k][s]
-                for x, y in [(0, 0), (0, 1), (1, 1)]:
+                for x, y in [(0, 0), (0, 1), (1, 1)]:  # excpet for (1,0) (because of x<y)
                     nj, nk, ns = j, k, s
+                    # s
                     if (s == 0 and x == 0 and y == 1):
-                        continue
+                        continue  # skip for not x==y==1
                     if (s == 0 and x & y):
                         ns = 1
+                    # j
                     if (j == 0 and lb == 1 and x == 0):
-                        continue
+                        continue  # skip for x<l
                     if (j == 0 and lb == 0 and x == 1):
                         nj = 1
+                    # k
                     if (k == 0 and rb == 0 and y == 1):
-                        continue
+                        continue  # skip for r<y
                     if (k == 0 and rb == 1 and y == 0):
                         nk = 1
 

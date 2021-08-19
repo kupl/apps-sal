@@ -1,5 +1,7 @@
+#n = int(input())
 n, m = map(int, input().split())
 xl = list(map(int, input().split()))
+#al=[list(input()) for i in range(n)]
 xl.sort()
 difl = []
 

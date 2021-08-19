@@ -8,6 +8,7 @@ for i in range(m):
 dists = [n + 1] * (n + 1)
 distt = [n + 1] * (n + 1)
 
+# BFS find distance
 T = [s]
 count = 0
 while T:

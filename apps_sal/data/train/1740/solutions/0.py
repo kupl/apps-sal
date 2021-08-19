@@ -24,6 +24,7 @@ class family:
         return self.names[name]['sex'] == sex
 
     def set_parent_of(self, c, p):
+        # Create child and/or parent if they do not exist
         for n in [c, p]:
             if n not in self.names:
                 self.names[n] = {'sex': '', 'parentof': [], 'childof': []}
@@ -33,6 +34,7 @@ class family:
         if c == p or len(self.names[c]['childof']) == 2:
             return False
 
+        # descendants and ancestors
         for tree, direction, name in [(self.names[c]['parentof'], 'parentof', p), (self.names[p]['childof'], 'childof', c)]:
             while tree:
                 if name in tree:
@@ -45,6 +47,8 @@ class family:
             if new_sex + self.names[old_p]['sex'] in ['mm', 'ff']:
                 return False
 
+            # Check for clashing parents
+            # Get all couple and create a putative sex dictionary S
             couples = {tuple(self.names[n]['childof']) for n in self.names if len(self.names[n]['childof']) > 1} | {tuple((old_p, p))}
 
             S = {p: new_sex or 'm'}

@@ -35,8 +35,10 @@ def check(arr, k, tgt):
 
 mn = 0
 mx = 3 * (10 ** 9)
+# print(nums, sm)
 while(mx - mn > 1):
     md = (mx + mn) // 2
+    # print(md)
     if check(nums, k, md):
         mn = md
     else:

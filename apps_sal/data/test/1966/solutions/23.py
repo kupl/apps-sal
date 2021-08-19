@@ -19,12 +19,15 @@ def read_board(n, numb):
     for i in range(n):
         line = input()
         board.append([int(c) for c in line])
+    # board = [[int(c) for c in input().strip()] for i in range(n)]
     if numb != 3:
         input()
     return board
 
 
 boards = [read_board(n, i) for i in range(4)]
+# a = [[1, 0, 1], [0, 0, 0], [0, 0, 1]]
+# print(boards)
 
 
 def _calc_line(l, start=1):

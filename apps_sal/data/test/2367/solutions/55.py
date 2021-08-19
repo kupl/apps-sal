@@ -38,12 +38,22 @@ def main():
     for x in range(B, W):
         v = calc.combination(n=(H - A - 1) + x, r=x)
         u = calc.combination(n=(A - 1) + (W - 1 - x), r=A - 1)
+        # (H-1)-(H-A)+(W-1)-x
         ans = (ans + v * u) % MOD
     print(ans)
 
 
 def __starting_point():
     main()
+
+# import sys
+#
+# sys.setrecursionlimit(10 ** 7)
+#
+# input = sys.stdin.readline
+# rstrip()
+# int(input())
+# map(int, input().split())
 
 
 __starting_point()

@@ -1,3 +1,4 @@
+# cook your dish here
 """
   Url: https://www.codechef.com/problems/FUZZYLIN
 """
@@ -47,5 +48,6 @@ for k, v in list(D.items()):
         T[j] += v
         x += 1
         j = k * x
+#print(m, D, T)
 for k in K:
     print(T[k])

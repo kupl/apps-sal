@@ -1,3 +1,4 @@
+# cook your dish here
 """def power(x, y): 
     res = 1
     x=x
@@ -32,13 +33,17 @@ def maxPrimeFactors (n):
     return int(Prime)
 
 
+#import collections
 array = [0] * 100001
 for i in range(1, 100001):
     array[i] = maxPrimeFactors(i)
 t = int(input())
 for _ in range(t):
     n = int(input())
+    # b,g=map(int,input().split())
+    # x2,y2=map(int,input().split())
     arr = list(map(int, input().split()))
+    # m,k=map(int,input().split())
     d = {}
     for i in range(n):
         prime_fact = array[arr[i]]

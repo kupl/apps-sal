@@ -13,6 +13,7 @@ class Solution:
         while queue:
             for _ in range(len(queue)):
                 i, j, K = queue.popleft()
+                # print(i,j,K)
                 if i == M - 1 and j == N - 1:
                     return minpath
                 if grid[i][j]:
@@ -25,6 +26,7 @@ class Solution:
                     seen[r, c] = K
                     queue.append((r, c, K))
             minpath += 1
+            # print('minpath', minpath)
         return -1
 
         '''
@@ -41,6 +43,7 @@ class Solution:
             if (i, j, k) not in memo:
                 if grid[i][j] == 1:
                     k -= 1
+                # Mark as seen
                 orig, grid[i][j] = grid[i][j], -1
                 res = float('inf')
                 for r, c in [(i + 1, j), (i - 1, j), (i, j - 1), (i, j + 1)]:

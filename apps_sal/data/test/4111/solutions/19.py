@@ -5,10 +5,12 @@ e = [0]
 for i in range(1, n):
     o.append(o[i - 1] if i % 2 == 1 else o[i - 1] + a[i])
     e.append(e[i - 1] if i % 2 == 0 else e[i - 1] + a[i])
+# print(o,e)
 c = 0
 for i in range(1, n):
     od = o[i] - a[i] + e[-1] - e[i - 1]
     ev = e[i] - a[i] + o[-1] - o[i - 1]
+    # print(od,ev)
     if od == ev:
         c += 1
 se = so = 0

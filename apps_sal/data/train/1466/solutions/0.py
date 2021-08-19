@@ -1,3 +1,4 @@
+# cook your dish here
 n, q = map(int, input().split())
 ls = [int(i) for i in input().split()]
 cur = 0

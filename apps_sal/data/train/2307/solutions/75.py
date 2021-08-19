@@ -27,6 +27,7 @@ class UnionFind(list):
 
         if rx == ry:
             return
+        # unite by size
         if self.size(x) < self.size(y):
             rx, ry = ry, rx
         self[rx] += self[ry]

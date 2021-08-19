@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+#import sys; sys.stdin=open('input_file.txt')
+# ------------------------------------------
 import numpy as np
 
 N, M = list(map(int, input().split()))

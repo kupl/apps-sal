@@ -7,6 +7,7 @@ V = list(map(int, input().split()))
 
 XV = [(X[i], V[i]) for i in range(n)]
 
+#compression_dict_x={a: ind for ind, a in enumerate(sorted(set(X)))}
 compression_dict_v = {a: ind + 2 for ind, a in enumerate(sorted(set(V)))}
 
 XV = [(XV[i][0], compression_dict_v[XV[i][1]]) for i in range(n)]
@@ -51,6 +52,8 @@ def getvalue2(v):
 ANS = 0
 for x, v in XV:
     ANS += (getvalue2(LEN) - getvalue2(v - 1)) - (getvalue1(LEN) - getvalue1(v - 1)) * x
+    # print(getvalue2(LEN),getvalue2(v-1),getvalue1(LEN),getvalue1(v-1))
+    # print(x,v,ANS)
 
     update1(v, 1)
     update2(v, x)

@@ -1,3 +1,4 @@
+# -*-coding:utf-8-*-
 import heapq
 import sys
 input = sys.stdin.readline

@@ -6,6 +6,7 @@ def main():
     d = Counter(list(map(int, input().split())))
     d[0] = 0
     if max(d.values()) < 3:
+        # print(sum(_ == 2 for _ in d.values()))
         print(Counter(list(d.values()))[2])
     else:
         print(-1)

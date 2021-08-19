@@ -1,6 +1,7 @@
 import math
 import sys
 from collections import defaultdict
+#input = sys.stdin.readline
 def nt(): return list(map(int, input().split()))
 
 

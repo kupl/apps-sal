@@ -7,6 +7,7 @@ w.sort()
 lv.sort(key=lambda x: x[1])
 seq = list(range(N))
 x = list(permutations(seq))
+# print(lv,w)
 vs = [0]
 ls = [0]
 ans = float("inf")
@@ -16,6 +17,7 @@ for i in range(M):
     ma = max(ma, lv[i][0])
     vs.append(lv[i][1])
     ls.append(ma)
+# print(ls,vs)
 
 for i in range(N):
     if w[i] > lv[0][1]:
@@ -27,16 +29,22 @@ for tuples in x:
     for i in tuples:
         buf = buf + w[i]
         cuml.append(buf)
+    # print(cuml)
     disttable = [[0] * N for _ in range(N)]
     dist = [0] * N
     for i in range(N + 1):
         for j in range(i + 2, N + 1):
             weight = cuml[j] - cuml[i]
             ind = bisect_left(vs, weight)
+            # print(weight,ind)
             disttable[i][j - 1] = ls[ind - 1]
+    # print(disttable)
     for i in range(N):
         for j in range(i + 1, N):
             dist[j] = max(dist[j], dist[i] + disttable[i][j])
+        # print(dist)
+    # input()
+    # print()
     ans = min(ans, dist[N - 1])
 
 if flag == 1:

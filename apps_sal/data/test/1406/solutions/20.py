@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 
@@ -8,6 +9,7 @@ def main():
 
     for i in range(d):
         blocksize = blocksize // k + (blocksize % k != 0)
+    # print(blocksize)
 
     if(blocksize > 1):
         print("-1")

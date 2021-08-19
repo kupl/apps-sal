@@ -12,6 +12,8 @@ for i in range(n):
     else:
         eaten[t] = True
         d2.append(d2[-1] + d)
+# print(d1)
+# print(d2)
 ans = 0
 for i in range(1, k + 1):
     if k - i >= len(d1):

@@ -49,6 +49,7 @@ while stack:
             stack.append(next_)
             parent[next_] = now_
 
+# print ('parent', parent)
 
 size1 = [1] * (N + 1)
 dp1 = [1] * (N + 1)
@@ -62,6 +63,8 @@ for i in DAG[::-1]:
     dp1[parent[i]] *= (dp1[i] * F.ifactorial(size1[i])) % MOD
     dp1[parent[i]] %= MOD
 
+# print (dp1)
+# print (size1)
 
 size2 = [1] * (N + 1)
 dp2 = [1] * (N + 1)
@@ -83,6 +86,11 @@ for i in DAG[1::]:
     x *= F.factorial(size2[i] - 2)
     dp2[i] = x % MOD
 
+# print ('size1', size1)
+# print ('size2', size2)
+# print ('dp1', dp1)
+# print ('dp2', dp2)
+# print (G)
 
 fact = F.factorial(N - 1)
 for x in range(1, N + 1):

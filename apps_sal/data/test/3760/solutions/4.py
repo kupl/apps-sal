@@ -16,3 +16,6 @@ cx, cy = (a + 1) // 2, (b + 1) // 2
 dx, dy = min(n - a, max(cx, x) - cx), min(m - b, max(cy, y) - cy)
 
 print(dx, dy, a + dx, b + dy)
+
+
+# Made By Mostafa_Khaled

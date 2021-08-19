@@ -9,6 +9,7 @@ graph = defaultdict(list)
 for i in range(n - 1):
     graph[i + 2].append(par[i])
     graph[par[i]].append(i + 2)
+# print(graph)
 weight = [0] * (n + 1)
 weight[1] = suma[0]
 queue = collections.deque([1])
@@ -38,8 +39,10 @@ while queue:
                     ok = False
                 else:
                     weight[child] = (suma[child - 1] - suma[vertex - 1])
+            # print(child,vertex,weight,suma[child-1],suma[vertex-1])
             queue.append(child)
             visited.add(child)
+# print(weight,ok,suma)
 if ok == True:
     print(sum(weight))
 else:

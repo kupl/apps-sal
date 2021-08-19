@@ -1,3 +1,4 @@
+# cook your dish here
 x = list(map(int, input().strip().split()))
 n, m, w, b = x[0], x[1], x[2], x[3]
 l = [[0] * m for _ in range(n)]

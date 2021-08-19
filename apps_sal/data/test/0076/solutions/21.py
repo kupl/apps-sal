@@ -1,9 +1,16 @@
+# JMD
+# Nagendra Jha-4096
 
+#a=list(map(int,sys.stdin.readline().split(' ')))
+#n,k,s= map(int, sys.stdin.readline().split(' '))
 
 import sys
 import math
 
+#import fractions
+#import numpy
 
+###File Operations###
 fileoperation = 0
 if(fileoperation):
     orig_stdout = sys.stdout
@@ -13,7 +20,10 @@ if(fileoperation):
     sys.stdin = inputfile
     sys.stdout = outputfile
 
+###Defines...###
 mod = 1000000007
+
+###FUF's...###
 
 
 def nospace(l):
@@ -21,12 +31,14 @@ def nospace(l):
     return ans
 
 
+##### Main ####
 n, m, a, b = map(int, sys.stdin.readline().split(' '))
 val = (m - (n % m)) * a
 v2 = (n % m) * b
 print(min(val, v2))
 
 
+#####File Operations#####
 if(fileoperation):
     sys.stdout = orig_stdout
     sys.stdin = orig_stdin

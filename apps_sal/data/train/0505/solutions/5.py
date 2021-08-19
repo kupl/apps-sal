@@ -6,6 +6,7 @@ class Solution:
         from collections import defaultdict
         data_dict = defaultdict(list)
 
+        # here, we record what parentheses need to be removed
         for index in range(0, len(s)):
             char = s[index]
 
@@ -23,11 +24,13 @@ class Solution:
 
         s_list = list(s)
 
+        # now we remove the extra parentheses
         for char in stack:
             parentheses_index_list = data_dict[char]
             remove_char_index = parentheses_index_list.pop()
             s_list.pop(remove_char_index)
 
+            # change_index
             if char == '(':
                 parentheses_index_list = data_dict[')']
                 for index in range(0, len(parentheses_index_list)):

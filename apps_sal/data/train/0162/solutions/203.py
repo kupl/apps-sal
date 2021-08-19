@@ -22,6 +22,7 @@ class Solution:
                 return 0
             c1, c2 = s1[-1], s2[-1]
             sub1, sub2 = s1[:-1], s2[:-1]
+            # print(sub1, c1, sub2, c2)
             if c1 == c2:
                 return lcs_of_sub(sub1, sub2) + 1
             return max(

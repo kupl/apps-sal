@@ -1,5 +1,6 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
+        # no out/ all out are safe state
         degree = [len(row) for row in graph]
         children = collections.defaultdict(list)
 

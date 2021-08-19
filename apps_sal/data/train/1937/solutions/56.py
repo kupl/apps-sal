@@ -31,4 +31,12 @@ class ThroneInheritance:
             for e in n.children:
                 dfs(e)
         dfs(self.root)
+        # if ans: ans[0] = 'king'
         return ans
+
+
+# Your ThroneInheritance object will be instantiated and called as such:
+# obj = ThroneInheritance(kingName)
+# obj.birth(parentName,childName)
+# obj.death(name)
+# param_3 = obj.getInheritanceOrder()

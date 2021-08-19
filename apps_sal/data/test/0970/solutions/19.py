@@ -4,6 +4,7 @@ s.sort()
 
 sum_even = 0
 sum_odd = 0
+# Even
 for i, k in enumerate(s):
     sum_even += abs(k - (i * 2 + 2))
 for i, k in enumerate(s):

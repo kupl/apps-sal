@@ -2,8 +2,15 @@ class Solution:
 
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
 
+        #         def asPerTime(string):
+        #             return string.split(',')[1]
+
+        #         transactions.sort(key=asPerTime)
+
+        # dictionary
         personDict = dict()
 
+        # outputList
         outSet = set()
 
         for transaction in transactions:

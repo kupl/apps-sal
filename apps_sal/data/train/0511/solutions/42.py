@@ -1,3 +1,4 @@
+# 排他的論理和 x^y
 n = int(input())
 a = list(map(int, input().split()))
 k = 0

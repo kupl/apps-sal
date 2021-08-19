@@ -7,6 +7,8 @@ for i in range(n):
 
 L.sort(key=lambda x: x[1])
 
+# print(L)
+
 
 def c(x):
     for i in range(x[0], x[1] + 1):
@@ -30,6 +32,7 @@ while i < n:
         ans += 1
 
     i += 1
+# print(T)
 A.sort()
 print(ans)
 print(" ".join([str(i) for i in A]))

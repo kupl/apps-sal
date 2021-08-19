@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 14 18:32:27 2020
 
@@ -19,6 +20,8 @@ def solve():
     X.sort()
     d = [X[i + 1] - X[i] for i in range(M - 1)]
     d.sort()
+    # print(X)
+    # print(d)
     return sum(d[0:M - N])
 
 

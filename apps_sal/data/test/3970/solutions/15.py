@@ -2,6 +2,7 @@ import sys
 k = int(sys.stdin.readline().split()[1])
 t = list(map(lambda s: int(s), sys.stdin.readline().split()))
 t.sort()
+# print(t)
 
 
 def find(x, a, b):
@@ -25,6 +26,7 @@ for i in range(len(t)):
         s += 1
         u[i] = False
         j = find(t[i] * k, 0, len(t) - 1)
+        # print(t[i] * k, j)
         if j is not None:
             u[j] = False
 print(s)

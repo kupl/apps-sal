@@ -17,6 +17,7 @@ for _ in range(int(input())):
     count = 0
     for i in array:
         count += 1
+        # print(count,tot)
         for j in i:
             if(j in tot):
                 tot.remove(j)

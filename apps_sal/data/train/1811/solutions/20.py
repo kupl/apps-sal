@@ -11,3 +11,7 @@ class StockSpanner:
             self.stack[-2][1] += self.stack[-1][1]
             del self.stack[-1]
         return self.stack[-1][1]
+
+# Your StockSpanner object will be instantiated and called as such:
+# obj = StockSpanner()
+# param_1 = obj.next(price)

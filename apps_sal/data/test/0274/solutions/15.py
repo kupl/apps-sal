@@ -1,3 +1,4 @@
+# This code is dedicated to Olya S.
 l = int(input())
 n = input()
 
@@ -16,6 +17,7 @@ def getstate(g, line, ml):
         return 2
 
 
+#Find max bracket#
 ml = 1
 cl = 1
 for b in n:
@@ -25,6 +27,7 @@ for b in n:
             ml = cl
     else:
         cl -= 2
+######MAP######
 sc = []
 for b in n:
     if b == '[':
@@ -33,6 +36,7 @@ for b in n:
     else:
         ml += 2
         sc.append([ml, False])
+#####################
 for i in range(ml):
     for j in range(l):
         g = sc[j]

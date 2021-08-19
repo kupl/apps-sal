@@ -46,6 +46,7 @@ for h in range(10):
                         if nx + ny == 0:
                             continue
                         if (x * nx + y * ny - (w - h)) % 10 == 0:
+                            # print('Y',(x,nx),(y,ny),x*nx+y*ny,(w,h),zm)
                             zm = min(zm, nx + ny - 1)
                 if zm < 30:
                     zz = zm

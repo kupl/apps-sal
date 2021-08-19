@@ -13,4 +13,5 @@ r1 = 0
 for i in range(1, m):
     r1 += a.count(i)
 r2 = r1 + a.count(m) - 1
+# print(r1, r2)
 print(r1 // k * 5 + r1 + 1, r2 // k * 5 + r2 + 1)

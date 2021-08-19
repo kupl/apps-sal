@@ -1,3 +1,4 @@
+# Reverse Directions problem - Dec Cook off on Code Chef
 import sys
 
 
@@ -114,6 +115,9 @@ def ReadInput(fPath):
 
 
 def __starting_point():
+    # TestCases
+    # print ReverseDirections(["Begin", "Right", "Right", "Left"])
+    # print ReverseDirections(["Begin","Left","Left","Right","Right","Right"])
     directions = ParseInput(sys.stdin.readlines())
     for d in directions:
         d.ReversedDirections = ReverseDirections(d.Directions)

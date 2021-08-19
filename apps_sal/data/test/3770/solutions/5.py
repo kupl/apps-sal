@@ -7,6 +7,7 @@ class Dinic:
     def __init__(self, vnum):
         self.edge = [[] for i in range(vnum)]
         self.n = vnum
+        # infはint型の方が良いかもね
         self.inf = 10**9 + 7
 
     def addedge(self, st, en, c):

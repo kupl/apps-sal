@@ -11,6 +11,12 @@ INF = float("inf")
 IINF = 10 ** 18
 
 
+# MOD = 10 ** 9 + 7
+
+
+# MOD = 998244353
+
+
 def get_factorials(max, mod=None):
     """
     階乗 0!, 1!, 2!, ..., max!
@@ -77,16 +83,29 @@ class Combination:
         if n < r:
             return 0
         return (
-            self._factorials[n] *
-            self._finvs[r]
-            % self._mod *
-            self._finvs[n - r]
+            self._factorials[n]
+            * self._finvs[r]
+            % self._mod
+            * self._finvs[n - r]
             % self._mod
         )
 
 
 P = int(sys.stdin.readline())
 A = list(map(int, sys.stdin.readline().split()))
+
+
+# A = np.array(A, dtype=int)
+# vpow = np.vectorize(lambda a, b: pow(a, b, P))
+# mat = []
+# for i in range(P):
+#     mat.append(vpow(i, np.arange(P)))
+# print(np.array(mat).sum(axis=1) % P)
+# print(np.array(mat).sum(axis=0) % P)
+# mat = np.hstack((mat, [[a] for a in A]))
+#
+# print(mat)
+#
 
 
 def power_table():
@@ -97,8 +116,12 @@ def power_table():
     return ret
 
 
+# 解説AC
+# f(x) = 1−(x - j)^(P - 1) は、x == j のとき1、それ以外のとき0
+# A[j] == 1 である j について上記の式を足し合わせる
 comb = Combination(max=P - 1, mod=P)
 ncr = np.array([comb.ncr(P - 1, i) for i in range(P)])
+# power[i][j]: (-j)^i
 power = power_table()
 
 B = np.zeros(P, dtype=int)

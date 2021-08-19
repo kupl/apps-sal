@@ -11,6 +11,7 @@ for i in range(M):
         bit += (1 << (t - 1))
     keys[i] = (cost, bit)
 
+# 全ての鍵の組み合わせでDP
 INF = 10 ** 8 + 1
 dp = [INF for i in range(2 ** N)]
 dp[0] = 0

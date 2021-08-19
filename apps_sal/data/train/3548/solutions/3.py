@@ -13,8 +13,11 @@ def coefficients(roots):
             coeffs[i] -= r * coeffs[i - 1]
     return coeffs
 
+# numpy.poly1d gives slighty different coeffs
+
 
 def polynomialize(roots):
+    #coeffs = list(map(int, np.poly1d(roots, True)))
     coeffs = coefficients(roots)
     z = zip(reversed(range(len(coeffs))), coeffs)
     res = [string(next(z)[0])]

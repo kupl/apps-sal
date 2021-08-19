@@ -1,9 +1,24 @@
+# stdin=open('input.txt')
 import math
 from sys import stdin, stdout
 
 
 def input():
     return stdin.readline()[:-1]
+
+
+# # stdout=open('output.txt',mode='w+')
+
+# # def print(x, end='\n'):
+# # 	stdout.write(str(x) +end)
+
+
+# # a, b = map(int, input().split())
+
+# # l = list(map(int, input().split()))
+
+
+# CODE BEGINS HERE.................
 
 
 class disjoint_set:
@@ -47,3 +62,7 @@ for i in range(m):
 for i in range(n):
     print(ds.size[ds.find(i)], end=' ')
 print('')
+
+# CODE ENDS HERE....................
+
+# stdout.close()

@@ -1,4 +1,5 @@
 def opposite(number):
+    # your solution here
     numbers = str(number)
     if isinstance(number, int):
         if numbers[0] == "-":

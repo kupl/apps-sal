@@ -10,3 +10,13 @@ class Solution:
                 nxt[i][j] = sum(dp[i - 1][j - x] for x in range(1, f + 1) if j >= x) % mod
             dp = nxt
         return dp[-1][-1]
+
+        # mod = 10**9 + 7
+        # @lru_cache(None)
+        # def dfs(d, curr):
+        #     if d == 0:
+        #         return curr == 0
+        #     if d < 0 or curr < 0:
+        #         return 0
+        #     return sum(dfs(d - 1, curr - x) for x in range(1, f + 1)) % mod
+        # return dfs(d, target)

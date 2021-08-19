@@ -1,3 +1,4 @@
+# coding: utf-8
 import queue
 
 
@@ -12,9 +13,11 @@ class Dinic:
         self.iter = [0 for _ in range(v)]
 
     def add_edge(self, from_, to, cap):
+        # to: 行き先, cap: 容量, rev: 反対側の辺
         self.G[from_].append({'to': to, 'cap': cap, 'rev': len(self.G[to])})
         self.G[to].append({'to': from_, 'cap': 0, 'rev': len(self.G[from_]) - 1})
 
+    # sからの最短距離をbfsで計算
     def bfs(self, s):
         self.level = [-1 for _ in range(self.V)]
         self.level[s] = 0
@@ -28,6 +31,7 @@ class Dinic:
                     self.level[e['to']] = self.level[v] + 1
                     que.put(e['to'])
 
+    # 増加バスをdfsで探す
     def dfs(self, v, t, f):
         if v == t:
             return f
@@ -47,6 +51,7 @@ class Dinic:
         flow = 0
         while True:
             self.bfs(s)
+            # bfsで到達不可
             if self.level[t] < 0:
                 return flow
             self.iter = [0 for _ in range(self.V)]
@@ -61,6 +66,8 @@ def __starting_point():
     a = [list(input()) for i in range(H)]
     Dn = Dinic(2 + H + W)
     INF = 10**15
+    # 0,1~H,H+1~H+1+W.H+W+1
+    # 0 1+range(H),H+1+range(W),H+W+1
     s = (-1, -1)
     t = (-1, -1)
     for i in range(H):

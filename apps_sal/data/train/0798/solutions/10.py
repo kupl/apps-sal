@@ -27,7 +27,7 @@ for charm in charms:
 
     safeCoords = np.array(list(filter(lambda x: inBounds(x[0]) and inBounds(x[1]), zip(seqX, seqY))))
     finalCoords = (safeCoords[:, 0], safeCoords[:, 1])
-    safeArr[finalCoords] = arr[finalCoords]
+    safeArr[finalCoords] = arr[finalCoords]  # acceptable places
 
 if (safeArr[0, 0] == block) or (safeArr[-1, -1] == block):
     print('NO')

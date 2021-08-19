@@ -1,6 +1,7 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
 
+        # NOT MY CODE TRIALS
         A = nums
 
         def atMost(k):

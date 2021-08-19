@@ -16,9 +16,9 @@ class Solution:
 
             res = 0
             if pickupsLeft > 0:
-                res += pickupsLeft * orderHelper(pickupsLeft - 1, heldPackages + 1)
+                res += pickupsLeft * orderHelper(pickupsLeft - 1, heldPackages + 1)  # pickup an available package
             if heldPackages > 0:
-                res += heldPackages * orderHelper(pickupsLeft, heldPackages - 1)
+                res += heldPackages * orderHelper(pickupsLeft, heldPackages - 1)  # deliver a held package
             res = res % (10**9 + 7)
 
             orderResults[key] = res

@@ -46,6 +46,7 @@ for a, b, c in ABC:
     bf.add_edge(a - 1, b - 1, -c)
 bf.fill_cost()
 negative_loops = bf.fill_cost(check=True)
+# print(negative_loops, bf.cost)
 if N - 1 in negative_loops:
     print('inf')
 else:

@@ -32,7 +32,7 @@ class Solution:
         neighbors: [j-target,j+1]
 
         edge cases:
-        -if 
+        -if # of color neighborhoods > target: return -1
         -num houses < target: return -1
         '''
         prev = [[0] * n for _ in range(target + 1)]
@@ -49,6 +49,7 @@ class Solution:
                             colorCost + min(prev[numNeighbors - 1][c] for c in range(n) if c != color)
                         )
                         if numNeighbors == target and h == m - 1:
+                            # print(h,numNeighbors,color,out,dp[numNeighbors][color])
                             out = min(out, dp[numNeighbors][color])
                 else:
                     color = house - 1
@@ -61,4 +62,9 @@ class Solution:
                         out = min(out, dp[numNeighbors][color])
             prev = dp
 
+        # out = None
+        # if houses[-1]==0:
+        #     out = min(prev[target][c] for c in range(n))
+        # else:
+        #     prev[target][houses[-1]-1]
         return out if out != float('inf') else -1

@@ -10,6 +10,7 @@ class Solution:
             return False
 
         words = sorted(words, key=len)
+        # print(words)
         for i in range(1, n):
             for j in range(i):
                 l1, l2 = len(words[j]), len(words[i])
@@ -18,4 +19,5 @@ class Solution:
                         if lis[i] < lis[j] + 1:
                             lis[i] = lis[j] + 1
 
+        # print(lis)
         return max(lis)

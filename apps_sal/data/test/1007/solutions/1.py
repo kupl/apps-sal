@@ -1,5 +1,6 @@
 import sys
 sys.setrecursionlimit(100000000)
+# def input(): return sys.stdin.readline()[:-1]
 def iin(): return int(input())
 def impin(): return list(map(int, input().split()))
 def irrin(): return [int(x) for x in input().split()]

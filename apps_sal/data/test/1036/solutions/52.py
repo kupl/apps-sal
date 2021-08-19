@@ -31,6 +31,7 @@ def judge(a, b):
 
 for k in range(K):
     N = len(S)
+    # print(S)
     T = ""
     for i in range(0, N, 2):
         T += judge(S[i], S[i + 1])

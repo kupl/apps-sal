@@ -1,4 +1,7 @@
+#import sys
 
+#sys.stdin = open('input.txt')
+#sys.stdout = open('output.txt', 'w')
 
 s = input().split()
 num = int(s[0])

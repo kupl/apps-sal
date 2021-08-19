@@ -8,11 +8,11 @@ S += ["." * (W + 2)]
 def solve():
     for i in range(1, H + 1):
         for j in range(1, W + 1):
-            if S[i][j] != "
-            continue
+            if S[i][j] != "#":
+                continue
             for y, x in ((0, 1), (0, -1), (1, 0), (-1, 0)):
-                if S[i + y][j + x] == "
-                break
+                if S[i + y][j + x] == "#":
+                    break
             else:
                 return "No"
     return "Yes"

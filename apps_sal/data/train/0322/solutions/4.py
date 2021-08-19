@@ -9,6 +9,7 @@ class Solution:
         i = 0
         count = 0
         while maxValue < n:
+            # print(i, count, nums[i]-1, maxValue)
             if i >= len(nums):
                 while maxValue < n:
                     maxValue += maxValue + 1

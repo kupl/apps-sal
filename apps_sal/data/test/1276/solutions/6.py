@@ -5,6 +5,9 @@ s = input()
 
 c = Counter(s)
 
+# ans = 1
+# for i in list(c.values()):
+#     ans*=i
 
 r = s.count('R')
 g = s.count('G')

@@ -28,6 +28,7 @@ def lcount(a, b, x):
 
 
 for k in range(l):
+    # i桁目を求める
     tmp = pow(2, k + 1)
     bb = [item % (tmp) for item in b]
     aa = [item % (tmp) for item in a]

@@ -12,6 +12,10 @@ for i in range(n - 1):
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
 
+# ab=[list(map(int, input().split())) for _ in range(n-1)]
+# for a,b in ab:
+#     graph[a-1].append(b-1)
+#     graph[b-1].append(a-1)
 
 dist = [[-1, -1] for _ in range(n)]
 dist[v][0] = 0

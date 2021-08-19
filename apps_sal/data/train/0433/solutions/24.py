@@ -14,6 +14,7 @@ class Solution:
         for i in range(0, n - k + 1):
 
             if (presum[i + k] - presum[i]) / k >= threshold:
+                # print(arr[start:end])
                 ans += 1
 
         return ans

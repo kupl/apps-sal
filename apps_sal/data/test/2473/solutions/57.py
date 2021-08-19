@@ -1,3 +1,8 @@
+# coding: utf-8
+
+# 11:50-
+# 50min: give up
+# 15:15-15:58 done
 
 
 def main():
@@ -17,18 +22,21 @@ def main():
 
     t = 0
     while t <= N - K:
+        # n_inside = N - t
 
         top_i, top_x, top_y = points_ysort[t]
 
         outsides_bottom = []
         b = 0
         while b < N:
+            # n_inside -= b
 
             bottom_i, bottom_x, bottom_y = points_ysort_rev[b]
 
             if bottom_i == top_i:
                 break
 
+            # outsides_left = []
             n_outsides_left = 0
             l = 0
             while l < N:
@@ -41,6 +49,7 @@ def main():
                     l += 1
                     continue
 
+                # outsides_right = []
                 n_outsides_right = 0
                 r = 0
                 while r < N:
@@ -63,9 +72,11 @@ def main():
                     if area < min_area:
                         min_area = area
 
+                    # outsides_right.append(right_i)
                     n_outsides_right += 1
                     r += 1
 
+                # outsides_left.append(left_i)
                 n_outsides_left += 1
                 l += 1
 

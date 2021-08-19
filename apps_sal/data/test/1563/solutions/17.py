@@ -9,6 +9,8 @@ for i in range(m):
     x, y = list(map(int, input().strip().split()))
     x -= 1
     y -= 1
+    # print(color)
+    #print(color[x], color[y])
     if color[x] != color[y]:
         colors[color[x]].add(color[y])
         colors[color[y]].add(color[x])

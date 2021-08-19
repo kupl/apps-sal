@@ -6,6 +6,7 @@ a = [(i, v) for i, v in enumerate(a)]
 a.sort(key=lambda x: x[1], reverse=True)
 
 dp = [[-1] * (m + 1) for m in range(n + 1)]
+# m: 何人選んだか, l: 左を選んだ人数
 
 
 def f(m, l):

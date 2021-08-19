@@ -1,7 +1,7 @@
 N, M = list(map(int, input().split()))
 ab = [list(map(int, input().split())) for _ in range(M)]
 
-ab.sort(key=lambda x: x[1])
+ab.sort(key=lambda x: x[1])  # Sort the list of (a, b) by b
 
 ans = 0
 cur = -1

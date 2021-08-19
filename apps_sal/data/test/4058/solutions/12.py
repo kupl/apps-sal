@@ -16,10 +16,12 @@ def f():
     nb = 0
     i = 0
     while i < n:
+        # find the rightmost heater covering i
         j = prev[min(i + r, n - 1)]
         if j < 0 or j + r < i:
             return -1
         nb += 1
+        # next place to heat is the first not covered by the selected heater
         i = j + r + 1
 
     return nb

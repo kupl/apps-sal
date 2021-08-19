@@ -15,6 +15,7 @@ class StreamChecker:
             prev['None'] = None
         self.array_nodes = []
         self.root = root
+        # print(self.root)
 
     def query(self, letter: str) -> bool:
         if letter in self.root:
@@ -28,3 +29,8 @@ class StreamChecker:
                     result = True
         self.array_nodes = nodes
         return result
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

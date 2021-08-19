@@ -22,7 +22,7 @@ for i in range(h):
             a += li[i][j]
     linew.append(a)
 for i in range(len(linew)):
-    if "
-    continue
+    if "#" not in linew[i]:
+        continue
     else:
         print(linew[i])

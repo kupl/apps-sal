@@ -15,14 +15,14 @@ class uf:
         self.n = n
         self.l = [-1] * n
 
-    def ro(self, n):
+    def ro(self, n):  # root
         if self.l[n] < 0:
             return n
         r = self.ro(self.l[n])
         self.l[n] = r
         return r
 
-    def me(self, a, b):
+    def me(self, a, b):  # merge
         ra = self.ro(a)
         rb = self.ro(b)
         if self.l[ra] > self.l[rb]:
@@ -34,13 +34,13 @@ class uf:
     def size(self, n):
         return -self.l[self.ro(n)]
 
-    def sa(self, a, b):
+    def sa(self, a, b):  # same
         return self.ro(a) == self.ro(b)
 
-    def rl(self):
+    def rl(self):  # roots list
         return [i for i, v in enumerate(self.l) if v < 0]
 
-    def len(self):
+    def len(self):  # len(roots)
         return len(self.rl())
 
     def ul(self):

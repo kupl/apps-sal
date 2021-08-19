@@ -6,6 +6,7 @@ d = {i: [] for i in range(26)}
 for i, c in enumerate(S):
     d[ord(c) - ord("a")].append(i)
 
+# print(d)
 for _ in range(Q):
     q = input().split()
     if int(q[0]) == 1:

@@ -22,6 +22,7 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # Prim
         N = len(points)
 
         def dist(i, j):
@@ -47,6 +48,7 @@ class Solution:
 
         return ans
 
+        # Kruskal
         N = len(points)
         edges = []
         for u in range(N - 1):
@@ -54,6 +56,7 @@ class Solution:
                 edges.append([u, v, abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])])
 
         def MST():
+            # Kruskals, edges sorted
             dsu = DSU(N)
             ans = 0
             for u, v, w in sorted(edges, key=lambda e: e[2]):

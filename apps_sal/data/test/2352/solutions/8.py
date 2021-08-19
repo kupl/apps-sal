@@ -154,8 +154,10 @@ for _ in range(t):
                 ans.append(lsn)
                 for r in range(rs[i][0], rs[i][1] + 1):
                     for c in range(cs[i][0], cs[i][1] + 1):
+                        # show(i,(r-1,c-1),t[r-1][c-1])
                         if ord(t[r - 1][c - 1]) - 97 < i:
                             ng = True
+            # show(i,*rs[i],*cs[i])
 
     if ng:
         print('NO')

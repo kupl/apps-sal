@@ -7,6 +7,7 @@ for i in range(50):
     patty_num.append(2 * patty_num[-1] + 1)
 
 
+# レベルnバーガーの下からx段目までに含まれるパティの数を返す
 def dfs(n, x):
     if burger_size[n] == x:
         return patty_num[n]

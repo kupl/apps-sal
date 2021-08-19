@@ -30,12 +30,14 @@ def main():
             j, c = y[0], y[1]
             if not u[j]:
                 u[j] = True
+                #print("dfs", j, path, c)
                 al2 = al
                 np = max(path + c, c)
                 if np > x[j]:
                     al2 = True
                 if al2:
                     r += 1
+                #print(j , np , x[j], al2)
                 q.append((j, np, al2))
 
     print(r)

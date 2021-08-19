@@ -4,9 +4,9 @@ def main():
     for i in range(n):
         for j in range(m):
             if photo[i][j] in 'CMY':
-                print("
+                print("#Color")
                 return
-    print("
+    print("#Black&White")
 
 
 main()

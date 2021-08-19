@@ -2,7 +2,7 @@ import sys
 INF = float("inf")
 
 
-def Bellmanford(n, edges, r):
+def Bellmanford(n, edges, r):  # rは始点
     d = [INF] * n
     d[r] = 0
 

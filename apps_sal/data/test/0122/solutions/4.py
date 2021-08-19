@@ -1,4 +1,7 @@
 
+# Python Interpreter Version: Python 3.5.2
+#
+# Note: Educational Codeforces Round 21
 
 def divPos(arr):
     sumArr = sum(arr)
@@ -18,6 +21,7 @@ def divPos(arr):
 def __starting_point():
     n = input()
     arr = [int(x) for x in input().split()]
+    # arr = [2,2,3,4,5]
     if divPos(arr) or divPos(arr[::-1]):
         print('YES')
     else:

@@ -19,6 +19,8 @@ for i in range(len(B)):
         y.append(B[i][1])
 lolka = 0
 aaa = 0
+# print(x)
+# print(y)
 print(len(x) * len(y))
 for i in range(n):
     if i in x:
@@ -34,3 +36,25 @@ for i in range(n):
         else:
             print(2, end=' ')
 print()
+
+# B, C = [], []
+# for i in range(n):
+
+
+# S = list(set(A))
+# where = [0] * 101
+# am1, am2 = 0, 0
+# for i in range(len(S)):
+#     if(i % 2 == 0):
+#         where[S[i]] = 1
+#         am1 += 1
+#     else:
+#         where[S[i]] = 2
+#         am2 += 1
+# used = [0] * 201
+# for i in range(n):
+#     if not used[A[i]]:
+#         print(where[A[i]])
+#         used[A[i]] = True
+#     else:
+#         print(3 - where[A[i]])

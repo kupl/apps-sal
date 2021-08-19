@@ -21,8 +21,10 @@ def main():
     ans = 0
     for i in [A, B]:
         if i % 2 == 1:
+            # 偶数個
             if (i // 2) % 2 == 1:
                 i = 0
+            # 奇数個
             else:
                 i = 1
         else:

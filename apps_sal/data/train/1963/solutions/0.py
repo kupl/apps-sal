@@ -12,5 +12,6 @@ class Solution:
                 s = special[si]
                 if all(n >= s[i] for i, n in enumerate(needs)):
                     p = min(p, dfs(curr + s[-1], special[si:], [n - s[i] for i, n in enumerate(needs)]))
+                # else: p=min(p, dfs(curr, special[si+1:], needs))
             return p
         return dfs(0, special, needs)

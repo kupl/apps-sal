@@ -16,3 +16,10 @@ while N[i] != n:
         i = N[i]
 
 print('Yes' if count % 2 else 'No')
+
+# print(count)
+#i = 0
+# while i != n:
+#    print(s[i], end='')
+#    i = N[i]
+# print()

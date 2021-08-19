@@ -9,6 +9,9 @@ class Solution:
             if memo[remaining]:
                 return memo[remaining]
 
+            # res initialize as infinity, but in this case
+            # total amount is `amount`, we at most have `amount` 1 coins
+            # so, `amount+1` can be considered as a maximum
             res = amount + 1
             for coin in coins:
                 count = dfs(remaining - coin)

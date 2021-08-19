@@ -11,6 +11,7 @@ for m in range(q):
         if a[i] % 2 == 1:
             kolvo += 1
             nechet.append(i + 1)
+    #print(kolvo, k)
     if (kolvo >= k) and ((kolvo - k) % 2 == 0):
         otsh = []
         for i in range(k - 1):

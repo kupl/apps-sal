@@ -1,4 +1,5 @@
 def sale_hotdogs(n):
+    # your code here
     if n < 5:
         p = 100 * n
     elif n == 0:

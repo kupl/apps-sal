@@ -2,6 +2,7 @@ s, x = map(int, input().split())
 a, b = 1, 0
 for i in range(50):
     c, d = s & (1 << i), x & (1 << i)
+    # print(i, a, b, c, d)
     if c == d:
         if c:
             a, b = 2 * a, 0

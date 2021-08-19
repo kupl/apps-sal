@@ -25,6 +25,7 @@ class StreamChecker:
         self.tree = Tree()
         for word in words:
             self.tree.insert(word[::-1])
+        # self.printTree(self.tree.root)
         self.letter = []
 
     def query(self, letter: str) -> bool:
@@ -39,3 +40,7 @@ class StreamChecker:
             cur = cur.child[self.letter[i]]
             i -= 1
         return cur.isWord
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

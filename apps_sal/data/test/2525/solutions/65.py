@@ -1,6 +1,6 @@
 S = input()
 Q = int(input())
-pre = ''
+pre = ''  # 逆順
 suf = ''
 rev = 0
 for i in range(Q):

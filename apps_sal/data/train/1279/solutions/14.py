@@ -1,3 +1,4 @@
+# Author: Dancing Monkey | Created: 09.DEC.2018
 
 for _ in range(int(input())):
     n = int(input())

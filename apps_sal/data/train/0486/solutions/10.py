@@ -6,7 +6,10 @@ class Solution:
             for i in range(len(S) - size + 1):
                 st.add(S[i:i + size])
 
+        # print(st)
+
         for i in range(1, N + 1):
+            # print(bin(i)[2:])
             if not bin(i)[2:] in st:
 
                 return False

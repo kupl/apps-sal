@@ -2,6 +2,7 @@ from sys import stdin, stdout
 L = list(map(int, stdin.readline().split()))
 n = L[0]
 k = L[1]
+# a=list(map(int,stdin.readline().split()))
 a = [int(c) for c in stdin.readline().split()]
 
 nbr0 = 0
@@ -27,6 +28,7 @@ for i in range(len(a)):
 if i == (n - 1) and (i - posi + 1) > taillemax:
     p = posi
     taillemax = i - posi + 1
+    # print(p,posi)
 
 print(taillemax)
 ch = ""

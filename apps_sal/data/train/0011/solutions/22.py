@@ -33,6 +33,8 @@ count = 0
 for line in sys.stdin:
     if count == 0:
         n = int(line.strip().split(' ')[0])
+        #k = int(line.strip().split(' ')[1])
+        #m = int(line.strip().split(' ')[2])
         count += 1
         continue
     s = line.strip()

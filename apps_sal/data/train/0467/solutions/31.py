@@ -7,6 +7,8 @@ class Solution:
                 if i % j == 0:
                     temp.add(j)
                     temp.add(int(i / j))
+                # if len(temp) > 4:
+                #     break
             if len(temp) == 4:
                 out += sum(temp)
         return out

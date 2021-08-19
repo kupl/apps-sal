@@ -5,6 +5,7 @@ ans = ""
 
 for i in A:
     for j, k in W.items():
+        # print(k,W[i],n,W[i]+n,(W[i]+n)%26)
         if k == ((W[i] + n) % 26):
             ans += j
 print(ans)

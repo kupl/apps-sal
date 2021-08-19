@@ -10,6 +10,7 @@ def fold_cube(number_list):
         if ((number_list[j] - 5) in number_list):
             connections += 1
 
+    # in cube 6 faces are connected by 5 edges
     if connections != 5:
         return False
 

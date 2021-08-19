@@ -14,6 +14,7 @@ for t in range(T):
         c = chr(_c)
         if not cc[c]:
             continue
+        # print('before', c, Y, expected_scores)
         poss = []
         next_expected_scores = list(expected_scores)
         for pos in range(M):
@@ -28,5 +29,6 @@ for t in range(T):
             expected_scores = next_expected_scores
             for p in poss:
                 Y[p] = c
+        # print('after', c, Y, expected_scores)
 
     print(''.join(Y))

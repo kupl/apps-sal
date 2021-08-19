@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 from bisect import bisect_left

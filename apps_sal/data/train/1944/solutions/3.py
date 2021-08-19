@@ -18,6 +18,7 @@ class Solution:
         r = 0
         left = True
         for i in range(1, size):
+            # print(i)
             if equation[i] == "=":
                 l = r
                 r = i + 1
@@ -35,6 +36,7 @@ class Solution:
                 r = i
                 self.lastEq(equation[l:r + 1], left)
 
+        #print(str(self.lx)+"x"+" "+str(self.lc) +" = " + str(self.rx) + "x " + str(self.rc))
         x = self.lx - self.rx
         c = self.rc - self.lc
         if x == 0 and c == 0:

@@ -5,4 +5,5 @@ for i in range(len(s)):
     s3 = s[:i] + 'K' + s[i + 1:]
     m = max(m, s2.count('VK'))
     m = max(m, s3.count('VK'))
+    # print(s2,s3)
 print(m)

@@ -3,6 +3,7 @@ import io
 _INPUT = """\
 2
 """
+# sys.stdin = io.StringIO(_INPUT) # 提出時にコメントアウト
 
 
 def main():

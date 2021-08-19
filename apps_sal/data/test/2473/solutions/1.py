@@ -1,3 +1,4 @@
+# 55:33
 import numpy as np
 
 N, K, *XY = list(map(int, open(0).read().split()))

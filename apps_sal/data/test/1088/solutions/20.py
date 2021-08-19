@@ -69,6 +69,7 @@ class WeightedUnionFind:
         return self.sizes[self.find(x)]
 
 
+# print(a)
 retsu = WeightedUnionFind(n)
 gyo = WeightedUnionFind(n)
 
@@ -80,6 +81,7 @@ for i in range(n):
         else:
             if not retsu.same(i, j):
                 retsu.union(i, j)
+# print(retsu)
 for i in range(n):
     for j in range(i + 1, n):
         for l in range(n):
@@ -97,6 +99,9 @@ def keisan(ans, m):
         ans *= i + 1
         ans %= mod
     return ans
+
+# print(retsu.par)
+# print(gyo.par)
 
 
 for i in range(n):

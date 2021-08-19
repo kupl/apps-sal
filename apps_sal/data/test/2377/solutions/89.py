@@ -9,9 +9,11 @@ for i in range(N):
 
 B = sorted(B)
 index = bisect.bisect_left(B, m)
+# print(index)
 
 over = sum(B[index:])
 if over >= H:
+    # Bのみ
     now = 0
     i = 1
     while now < H:

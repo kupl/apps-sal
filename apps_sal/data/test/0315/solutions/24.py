@@ -6,7 +6,7 @@ def do():
     while(1):
         if (i + 1 >= n):
             break
-        curSum = a[i] + a[i + 1]
+        curSum = a[i] + a[i + 1]  # check if i+1 > n
         need = k - curSum
         totalNeed += max(0, need)
         if (need > 0):

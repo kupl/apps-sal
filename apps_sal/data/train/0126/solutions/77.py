@@ -10,6 +10,7 @@ class Solution:
                         possible[win] += 1
                     else:
                         possible[win] = 1
+        # print(possible)
         if possible:
             return max(possible.values())
         else:

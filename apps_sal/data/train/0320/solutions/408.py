@@ -9,9 +9,9 @@ class Solution:
             if num in memo:
                 return memo[num]
 
-            if num & 1:
+            if num & 1:  # odd
                 num_ways = 1 + minSteps(num - 1)
-            else:
+            else:  # even
                 num_ways = minSteps(num // 2)
 
             memo[num] = num_ways

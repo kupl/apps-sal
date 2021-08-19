@@ -1,3 +1,4 @@
+#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations
@@ -80,6 +81,8 @@ def solve():
         ans %= mod
     print((ans * pow(2, (mod - 2) * n % (mod - 1), mod) % mod))
     return
+
+# Solve
 
 
 def __starting_point():

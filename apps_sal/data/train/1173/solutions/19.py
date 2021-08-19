@@ -9,10 +9,12 @@ def solve(C, N):
     for i in range(len(C)):
         r = r ^ C[i]
         cnt[r].append(i)
+    # print(cnt)
     res = 0
     for l in cnt:
         for k in range(len(cnt[l]) - 1):
             for j in range(k + 1, len(cnt[l])):
+                # print(l,cnt[l][k],cnt[l][j],abs(cnt[l][k]-cnt[l][j])-1)
                 res += abs(cnt[l][k] - cnt[l][j]) - 1
     return res
 

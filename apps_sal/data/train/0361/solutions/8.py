@@ -14,7 +14,9 @@ class Solution:
                 e = s
                 while e + 1 < m and curr[e + 1] == minh:
                     e += 1
+                #print(curr, minh, s, e)
                 for i in range(min(e - s + 1, n - minh), 0, -1):
+                    #print(curr, i)
                     nxt = curr[:]
                     for j in range(s, s + i):
                         nxt[j] += i

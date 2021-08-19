@@ -1,5 +1,6 @@
 import numpy as np
 
+# A, B, C = [11, 12, 15]
 A, B, C = list(map(int, input().split()))
 
 

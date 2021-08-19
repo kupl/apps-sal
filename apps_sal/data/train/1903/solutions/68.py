@@ -37,5 +37,9 @@ class Solution:
             if ufind(i) != ufind(j):
                 uunion(i, j)
                 total += edge
+        # for edge, i, j in edges:
+        #     if ufind(i) != ufind(j):
+        #         uunion(i, j)
+        #         total += edge
 
         return total

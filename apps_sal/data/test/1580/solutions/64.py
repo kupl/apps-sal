@@ -19,6 +19,7 @@ for i in range(m):
 
 dp = [0] * n
 
+# print(dic)
 
 for i in range(n):
     if dp[i] == 0:
@@ -28,11 +29,14 @@ for i in range(n):
             for j in dic[i]:
                 dp[j] = count
                 q.put(j)
+        # print(dp)
         while not q.empty():
             temp = q.get()
+            # print(temp)
             if temp in dic:
                 for j in dic[temp]:
                     if dp[j] == 0:
                         dp[j] = count
                         q.put(j)
+# print(dp)
 print(count)

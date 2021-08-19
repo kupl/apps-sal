@@ -1,10 +1,12 @@
 import sys
 
+# import numba as nb
 import numpy as np
 
 input = sys.stdin.readline
 
 
+# @nb.njit("i8(i8[:],i8,i8)", cache=True)
 def solve(N, K, L):
     dp = np.zeros(shape=(L + 1, 2, K + 1), dtype=np.int64)
     dp[0][0][0] = 1

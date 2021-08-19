@@ -21,6 +21,7 @@ class Solution:
                 ret = max(s1) - min(s1)
             if s2:
                 ret = max(max(s2) - min(s2), ret)
+            # print(s1, s2, ret)
             return ret
         ans = 0
         l = 0

@@ -1,10 +1,10 @@
 from math import ceil
 
 
-def binary(N, LIST, num):
+def binary(N, LIST, num):  # 二分探索 # N:探索要素数
     l, r = -1, N
     while r - l > 1:
-        if LIST[(l + r) // 2] > num:
+        if LIST[(l + r) // 2] > num:  # 条件式を代入
             r = (l + r) // 2
         else:
             l = (l + r) // 2

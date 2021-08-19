@@ -14,5 +14,6 @@ for _ in range(N):
         vt = k * T
         va = k * A
 
+    # print(vt,va)
 
 print(vt + va)

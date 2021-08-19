@@ -19,6 +19,8 @@ class Solution:
             size = len(q)
             while size > 0:
                 top = q.popleft()
+                # if top == length - 1:
+                #     return level
                 if top - 1 >= 0 and top - 1 not in s:
                     s.add(top - 1)
                     q.append(top - 1)

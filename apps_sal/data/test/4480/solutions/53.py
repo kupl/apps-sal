@@ -12,6 +12,7 @@ class Solution:
             if check1 != 1 and curr_sum == target:
                 check1 = 1
                 continue
+            # print(target, curr_sum)
             if check1 and curr_sum == target * 2 and i < len(A) - 1:
                 check2 = 1
                 break

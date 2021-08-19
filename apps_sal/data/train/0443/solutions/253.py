@@ -1,6 +1,7 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
 
+        # rating.sort()
         def ascend(nums, curLargest, count):
             if count == 3:
                 return 1

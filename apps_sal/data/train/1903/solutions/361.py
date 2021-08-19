@@ -10,28 +10,38 @@ class Solution:
 
         parent = defaultdict(lambda: -1)
 
+        # ----------------------------------------------
+
         def find_parent(x, y):
 
             if parent[(x, y)] == -1:
                 return x, y
 
             else:
+                #print( parent[(x,y)] )
                 parent[(x, y)] = find_parent(*parent[(x, y)])
                 return parent[(x, y)]
+
+        # ----------------------------------------------
 
         def merge(x1, y1, x2, y2):
 
             if x1 == x2 and y1 == y2:
                 return
 
+            # x2, y2 merge to x1, y1
             parent_of_i = find_parent(x1, y1)
             parent_of_j = find_parent(x2, y2)
 
             parent[parent_of_j] = parent_of_i
 
+        # ----------------------------------------------
+
         def dist(pi, pj):
 
             return abs(pi[0] - pj[0]) + abs(pi[1] - pj[1])
+
+        # ----------------------------------------------
 
         for i in range(n - 1):
             for j in range(i + 1, n):

@@ -1,5 +1,7 @@
 n = int(input())
+#n, W = map(int, input().split())
 al = list(map(int, input().split()))
+#al=[list(input()) for i in range(n)]
 
 
 def div2(v, a):

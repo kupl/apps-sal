@@ -1,3 +1,4 @@
+# cook your dish here
 n = int(input())
 lis = list(map(int, input().split()))[:n]
 arr = list(set(lis))

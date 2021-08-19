@@ -1,6 +1,6 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        mp = {}
+        mp = {}  # for union find
         ans = 0
 
         def find(a):
@@ -10,7 +10,7 @@ class Solution:
                 mp[a] = find(mp[a])
             return mp[a]
 
-        def union(a, b):
+        def union(a, b):  # b is smaller
             pa = find(a)
             pb = find(b)
             if pa != pb:

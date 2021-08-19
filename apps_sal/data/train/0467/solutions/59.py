@@ -10,6 +10,7 @@ class Solution:
                 if n % d == 0:
                     tmp.add(d)
                     tmp.add(n // d)
+            # print(tmp)
             if len(tmp) == 4:
                 ans += sum(tmp)
         return ans

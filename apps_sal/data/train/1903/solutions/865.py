@@ -11,9 +11,11 @@ class Solution:
                 dist = abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
                 edges.append((dist, p1, p2))
         edges.sort()
+        # print(edges)
 
         self.roots = {(x, y): (x, y) for x, y in points}
         self.ranks = {(x, y): 0 for x, y in points}
+        # print(self.roots)
 
         ans = 0
         for edge in edges:
@@ -31,6 +33,7 @@ class Solution:
         elif self.ranks[p1_root] > self.ranks[p2_root]:
             self.roots[p2_root] = p1_root
         else:
+            # when its equal - choose whichever and update the ranks
             self.roots[p1_root] = p2_root
             self.ranks[p2_root] += 1
 

@@ -18,6 +18,7 @@ class Solution:
                     for pivot in range(len(cWord)):
                         if cWord[:pivot] + cWord[pivot + 1:] == word:
                             auxGraph[word].add(cWord)
+        # print(auxGraph)
         ans = 0
         auxDeque = collections.deque()
         for _, word in auxList:
@@ -25,6 +26,7 @@ class Solution:
                 pass
             else:
                 seen[word] = True
+                # DFS or BFS
                 auxDeque.append((1, word))
 
                 while len(auxDeque) > 0:

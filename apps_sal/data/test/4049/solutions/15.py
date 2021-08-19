@@ -8,10 +8,12 @@ ma += min([arr1[0], arr2[1]])
 ma += min([arr1[1], arr2[2]])
 ma += min([arr1[2], arr2[0]])
 mi = n + 1
+# print(a,b)
 for x in range(2):
     for y in range(2):
         for z in range(2):
             aa, bb = a[x * 4 + y * 2 + z], b[x * 4 + y * 2 + z]
+            # print(aa,bb,arr1,arr2,a[x*4+y*2+z],b[x*4+y*2+z])
             xx, yy, zz = min([aa[0], bb[0]]), min([aa[1], bb[1]]), min([aa[2], bb[2]])
             m = [0] * (10)
             if(x == 0):
@@ -42,4 +44,5 @@ for x in range(2):
             t += min([aa[1] + m[1], bb[2] + m[5]])
             t += min([aa[2] + m[2], bb[0] + m[3]])
             mi = min([mi, t])
+            # print(x,y,z,t)
 print(mi, ma)

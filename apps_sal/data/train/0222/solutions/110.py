@@ -16,6 +16,7 @@ class Solution:
 
                 c = 0
                 while total in d:
+                    #print(total, one_behind, two_behind)
                     if c == 0:
                         c += 3
                     else:
@@ -24,5 +25,7 @@ class Solution:
                     total = one_behind + two_behind
 
                 res = max(res, c)
+            # break
 
+        # print(res)
         return res

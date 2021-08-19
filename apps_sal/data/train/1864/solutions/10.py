@@ -76,6 +76,7 @@ class Solution:
             return None
 
         if expression[offset] != '{':
+            # this is a letter
             try:
                 word_end = expression.index('{', offset)
             except ValueError:
@@ -83,6 +84,7 @@ class Solution:
 
             return Letter(expression[offset:word_end], self.parse(expression, word_end))
 
+        # parse union
         close_idx = self.find_close_brace(expression, offset)
         return Union(self.parse_union(expression[offset + 1:close_idx]), self.parse(expression, close_idx + 1))
 

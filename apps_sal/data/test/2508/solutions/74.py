@@ -23,6 +23,7 @@ for h in range(1, H + 1):
 dp[sth][stw] = 0
 
 
+# Seen = [[INF]*W for _ in range(H)]
 XY = {(1, 0), (-1, 0), (0, 1), (0, -1)}
 
 
@@ -31,6 +32,7 @@ def bfs(sth, stw, glh, glw):
     next_q.append((sth, stw))
 
     while len(next_q) != 0:
+        # キュー取り出し(先頭)
         h, w = next_q.popleft()
         for dh, dw in XY:
             for sk in range(1, K + 1):

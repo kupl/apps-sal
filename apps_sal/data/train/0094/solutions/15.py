@@ -2,7 +2,13 @@ import os
 import sys
 import io
 
+# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline # 神奇快读，无法运行调试
 GANS = []
+
+# def print(*args): # 神奇快写，最后得写上os.write
+#     nonlocal GANS
+#     for i in args:
+#         GANS.append(f'{i}'.encode())
 
 
 t = int(input())

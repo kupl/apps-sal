@@ -34,3 +34,17 @@ class Trie:
         self.current = [node.children[char] for node in self.current if char in node.children]
 
         return any(node.complete for node in self.current)
+
+#         if not self.current or char not in self.current.children:
+#             self.current = self.root
+#             print(char, 'reset current')
+
+#         self.current = self.current.children.get(char)
+
+#         if self.current and self.current.complete:
+#             return True
+#         return False
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

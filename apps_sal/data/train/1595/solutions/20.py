@@ -38,6 +38,7 @@ def calc(S, filters_str):
 
     counts = [[0] * IMG_SPACE for i in range(N)]
 
+    # init
     row = counts[N - 1]
     for i in range(IMG_SPACE):
         n = 0
@@ -47,11 +48,14 @@ def calc(S, filters_str):
             n += 1
         row[i] = n
 
+    # pass
     for j in range(N - 2, -1, -1):
         row = counts[j]
         next_row = counts[j + 1]
         for i in range(IMG_SPACE):
             row[i] = (next_row[i] + next_row[i ^ filters_num[j]]) % MOD
+
+    #~ pprint.pprint(counts)
 
     return counts[0][img_num]
 

@@ -9,6 +9,7 @@ for x in t:
 
 p = 0
 
+# print(new_dict.items())
 
 while(k > 0):
     if(new_dict[max(new_dict, key=new_dict.get)] >= k):
@@ -18,4 +19,5 @@ while(k > 0):
         p = p + new_dict[max(new_dict, key=new_dict.get)]**2
         k = k - new_dict[max(new_dict, key=new_dict.get)]
         del new_dict[max(new_dict, key=new_dict.get)]
+    #	print("hello\n")
 print(p)

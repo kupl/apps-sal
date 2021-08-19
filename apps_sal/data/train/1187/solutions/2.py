@@ -42,6 +42,7 @@ def solve(a):
     size += ans[0]
     ways *= ans[1]
     ways %= mod
+    # print(a,ways,size)
     return (size, ways)
 
 

@@ -7,7 +7,7 @@ flip = a > b
 if flip:
     a, b = b, a
 
-f = [['
+f = [['#' for _ in range(100)] for __ in range(100)]
 
 i, j = (0, 0)
 
@@ -37,7 +37,7 @@ for _ in range(a - 1):
 
 if flip:
     for i in range(100):
-        f[i] = list(['.' if x == '
+        f[i] = list(['.' if x == '#' else '#' for x in f[i]])
 
 for row in f:
     print((''.join(row)))

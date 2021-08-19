@@ -11,6 +11,7 @@ def make_divisors(n):
             if i != n // i:
                 divisors.append(n // i)
 
+    # divisors.sort()
     return divisors
 
 

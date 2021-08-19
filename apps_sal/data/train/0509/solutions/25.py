@@ -48,6 +48,10 @@ class UnionFind:
 
     def union(self, x: int, y: int):
         """x,yが属する木をunion"""
+        # 根を比較する
+        # すでに同じ木に属していた場合は何もしない.
+        # 違う木に属していた場合はrankを見てくっつける方を決める.
+        # rankが同じ時はrankを1増やす
         x = self.find(x)
         y = self.find(y)
         if x == y:
@@ -107,11 +111,14 @@ def Kruskal(maxV, edges):
 
     return newAdj
 
+# ラベルを色と呼ぶ
+
 
 N, M = MI()
 dd = defaultdict(int)
 Edge = []
 
+# 多重辺は無視しても行けそう
 
 for _ in range(M):
     u, v, c = MI()
@@ -125,7 +132,9 @@ for _ in range(M):
     dd[(u, v)] = c
     dd[(v, u)] = c
 
+# 木で十分かな
 adj = Kruskal(N, Edge)
+# print(adj)
 
 Col = [-1] * N
 
@@ -139,9 +148,10 @@ while not q.empty():
 
     v, p = q.get()
 
-    if Col[p] != dd[(v, p)]:
+    if Col[p] != dd[(v, p)]:  # 親を繋げられてないなら
         Col[v] = dd[(v, p)]
     else:
+        # 親とつなげるためには違う色である必要あり
         if Col[p] == 0:
             Col[v] = 1
         else:
@@ -152,6 +162,7 @@ while not q.empty():
             continue
         q.put((nv, v))
 
+# rootの色を決める，隣接色以外
 col_0 = [0] * N
 for v in adj[0]:
     col_0[Col[v]] += 1
@@ -160,6 +171,7 @@ for i in range(N):
     if col_0[i] == 0:
         Col[0] = i
         break
+# print(col_0)
 
 for i in range(N):
     print((Col[i] + 1))

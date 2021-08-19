@@ -1,5 +1,8 @@
 n, m = list(map(int, input().split()))
+# friend array
 f = [i for i in range(n)]
+
+# 友だち集合の中で最小IDを返す
 
 
 def find(x):
@@ -8,6 +11,8 @@ def find(x):
     ret = find(f[x])
     f[x] = ret
     return ret
+
+# 友だち集合を作る
 
 
 def union(x, y):

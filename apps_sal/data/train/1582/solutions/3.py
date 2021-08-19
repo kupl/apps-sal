@@ -1,4 +1,5 @@
 
+# q2
 n = int(input())
 df = str(input())
 df = list(df)
@@ -10,6 +11,7 @@ while(l > 1):
         if(df[i - 1] == df[i]):
             df.pop(i)
             l -= 1
+            # print(df)
             ans += 1
         else:
             i += 1

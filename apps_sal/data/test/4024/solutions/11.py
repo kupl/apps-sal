@@ -10,6 +10,7 @@ kosten = 0
 preis = 0
 laenge0 = laenge = len(s)
 
+# one step:
 while (anz < k) and laenge:
     laenge -= 1
     kuerzer = []

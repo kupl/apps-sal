@@ -1,4 +1,8 @@
 def test_c(n, m, G):
+    #n, m = [int(x) for x in input().split()]
+    #G = []
+    # for i in range(n):
+    #    G.append(list(input()))
     mid = [[False for i in range(m)] for j in range(n)]
     vis = [[False for i in range(m)] for j in range(n)]
     L = [[1 for i in range(m)] for j in range(n)]
@@ -24,7 +28,8 @@ def test_c(n, m, G):
         for j in range(m):
             if mid[i][j] == True and vis[i][j] == False:
                 if i - L[i][j] >= 0 and i + L[i][j] < n:
-                    if L[i - L[i][j]][j] == L[i][j] and L[i + L[i][j]][j] >= L[i][j]:
+                    if L[i - L[i][j]][j] == L[i][j] and L[i + L[i][j]][j] >= L[i][j]:  # 单条L*1的flag
+                        #cnt += 1
                         k = 1
                         vis[i][j] = True
                         while j + k < m and G[i][j] == G[i][j + k] and L[i][j] == L[i][j + k] and mid[i][j + k] == True:
@@ -32,6 +37,7 @@ def test_c(n, m, G):
                                L[i + L[i][j]][j + k] >= L[i][j] and G[i + L[i][j]][j + k] == G[i + L[i][j]][j]:
                                 vis[i][j + k] = True
                                 k += 1
+                                #cnt += 1
                             else:
                                 break
                         cnt += int(((k + 1) * k) // 2)
@@ -70,7 +76,8 @@ def __starting_point():
         for j in range(m):
             if mid[i][j] == True and vis[i][j] == False:
                 if i - L[i][j] >= 0 and i + L[i][j] < n:
-                    if L[i - L[i][j]][j] == L[i][j] and L[i + L[i][j]][j] >= L[i][j]:
+                    if L[i - L[i][j]][j] == L[i][j] and L[i + L[i][j]][j] >= L[i][j]:  # 单条L*1的flag
+                        #cnt += 1
                         k = 1
                         vis[i][j] = True
                         while j + k < m and G[i][j] == G[i][j + k] and L[i][j] == L[i][j + k] and mid[i][j + k] == True:
@@ -78,6 +85,7 @@ def __starting_point():
                                L[i + L[i][j]][j + k] >= L[i][j] and G[i + L[i][j]][j + k] == G[i + L[i][j]][j]:
                                 vis[i][j + k] = True
                                 k += 1
+                                #cnt += 1
                             else:
                                 break
                         cnt += int(((k + 1) * k) // 2)

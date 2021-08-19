@@ -1,6 +1,7 @@
 def main():
     n = int(input())
     q = str(input())
+    # 0 = B, 1 = G, 2 = R
     d = [0] * 3
 
     for e in q:

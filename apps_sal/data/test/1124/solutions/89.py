@@ -5,6 +5,7 @@ n = int(input())
 a = set(map(int, input().split()))
 a = list(a)
 a.sort()
+# print(a)
 
 while len(a) > 1:
     d = set([a[0]])

@@ -1,3 +1,5 @@
+# 写経
+# https://atcoder.jp/contests/abc168/submissions/13414936
 from math import gcd
 from collections import Counter
 mod = 10**9 + 7
@@ -24,7 +26,7 @@ def resolve():
     for (a, b), v in C.items():
         if b > 0:
             if (b, -a) in C:
-                ans *= -1 + pow(2, v, mod) + pow(2, C[(b, -a)], mod)
+                ans *= -1 + pow(2, v, mod) + pow(2, C[(b, -a)], mod)  # 仲の悪い組み合わせが一緒に入らないように，別々に入れるか入れないかを判定 空集合は共通しているので引く
                 ans %= mod
             else:
                 cnt += v

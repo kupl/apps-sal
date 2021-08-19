@@ -19,3 +19,9 @@ for i in range(n):
         if pp(s[:i] + s[(j + 1):], t):
             ans = max(ans, j - i + 1)
 print(ans)
+
+
+# print(pp('bbaba', 'bb'))
+
+# s = '0123456789'
+# print(s[:2] + s[4:])

@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/arc108/submissions/18282738
 
 def main():
     from collections import deque

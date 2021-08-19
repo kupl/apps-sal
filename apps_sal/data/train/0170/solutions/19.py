@@ -17,11 +17,13 @@ class Solution:
             return 0
         sol = max(len(l), len(r))
         i, j = 0, 0
+        # print(l, r)
         while i < len(l) and j < len(r):
             if l[i] <= r[j]:
                 i += 1
             else:
                 while j < len(r) and l[i] > r[j]:
                     j += 1
+            # print(i, j)
             sol = max(sol, i + len(r) - j)
         return len(arr) - sol

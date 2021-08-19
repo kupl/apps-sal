@@ -1,3 +1,4 @@
+# cook your dish here
 mod = 10 ** 8 + 7
 
 
@@ -14,6 +15,7 @@ for _ in range(int(input())):
     a_l = list(map(int, input().split()))
     b_l = list(map(int, input().split()))
 
+    # 0: m end, 1: n end
     f_dp = [[[{} for _ in range(n + 1)] for _ in range(m + 1)] for _ in range(2)]
 
     f_dp[0][1][0] = {1: 1}
@@ -32,6 +34,7 @@ for _ in range(int(input())):
 
     for i in range(1, n + 1):
         for j in range(1, m + 1):
+            # m end
             if j - 2 >= 0 and b_l[j - 1] != b_l[j - 2]:
                 addi = 1
             else:
@@ -46,6 +49,7 @@ for _ in range(int(input())):
             for kk, vv in list(f_dp[1][j - 1][i].items()):
                 dic_add(f_dp[0][j][i], kk + addi, vv)
 
+            # n end
             if i - 2 >= 0 and a_l[i - 1] != a_l[i - 2]:
                 addi = 1
             else:

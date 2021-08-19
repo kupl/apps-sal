@@ -61,6 +61,9 @@ def solve(N, S, A):
     return lb
 
 
+###############################################################################
+# AUXILIARY FUNCTIONS
+
 DEBUG = 'DEBUG' in os.environ
 
 

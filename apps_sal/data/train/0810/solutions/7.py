@@ -1,3 +1,4 @@
+# cook your dish here
 for _ in range(int(input())):
     n, q = list(map(int, input().split()))
     arr = list(map(int, input().split()))
@@ -8,6 +9,7 @@ for _ in range(int(input())):
         else:
             k = s[1]
             num = arr[k]
+            # print(k, num)
             if k == n - 1:
                 print(-1)
                 continue

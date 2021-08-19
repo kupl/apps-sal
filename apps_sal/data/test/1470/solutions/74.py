@@ -1,5 +1,7 @@
 import math
 x = int(input())
+# 6,5,6,5 ・・・と得点していく
+# 答えはx/5.5付近
 t = math.ceil(x / 5.5)
 
 

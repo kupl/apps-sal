@@ -63,6 +63,7 @@ def main():
         elif current_len > 4:
             total_confused += 2
 
+    # print(total_ba, total_confused, total_ab)
     if total_ba >= 1 and total_ab >= 1:
         print('YES')
     elif total_confused >= 2:

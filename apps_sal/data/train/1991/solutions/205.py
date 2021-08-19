@@ -13,6 +13,7 @@ def neigh(start, locations, fuel):
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         if(abs(locations[finish] - locations[start]) > fuel):
+            # print(fuel,abs(locations[finish]-locations[start]))
             return 0
         n = len(locations)
         dp = [[-1 for i in range(fuel + 1)] for j in range(n)]
@@ -23,6 +24,7 @@ class Solution:
             if(dp[start][fuel] != -1):
                 return dp[start][fuel]
             neighs = neigh(start, locations, fuel)
+            # print(start,neighs,fuel)
             count = 0
             if(start == finish):
                 count += 1

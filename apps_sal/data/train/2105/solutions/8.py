@@ -17,6 +17,7 @@ def eratosthenes(n):
             x += p
 
     return is_composite
+    # return [k for k in range(2, n+1) if not is_composite[k]]
 
 
 n = int(input())

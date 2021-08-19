@@ -9,7 +9,7 @@ class StreamChecker:
                 if c not in node:
                     node[c] = {}
                 node = node[c]
-            node['
+            node['#'] = {}
 
         self.table = []
 
@@ -21,4 +21,9 @@ class StreamChecker:
             if letter in node:
                 tmp.append(node[letter])
         self.table = tmp
-        return any('
+        return any('#' in node for node in self.table)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

@@ -1,7 +1,7 @@
 class Solution:
     def coinChange(self, coins: [int], amount: int) -> int:
         self.ans = float('inf')
-        self.dict = {}
+        self.dict = {}  # amount : [depth]
         coins.sort(reverse=True)
 
         def helper(num, depth):

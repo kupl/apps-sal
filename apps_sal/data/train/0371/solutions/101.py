@@ -3,13 +3,17 @@ class Solution:
         if S == T:
             return 0
 
+        # build graph, with each route being a vertex of the graph
         graph = collections.defaultdict(list)
         for i in range(len(routes)):
             for j in range(i + 1, len(routes)):
+                # if two routes share any common stops, they are neighbors
                 if set(routes[i]) & set(routes[j]):
                     graph[tuple(routes[i])].append(tuple(routes[j]))
                     graph[tuple(routes[j])].append(tuple(routes[i]))
 
+        # BFS all routes to find shortest path between any two routes containing
+        # S and T respectively
         min_buses = float('inf')
         for route in graph:
             visited = set()

@@ -35,6 +35,7 @@ class Solution:
         for i in range(1, n):
             x = table[i][0]
             loca = find(table, x)
+            # print(loca,table[i])
             if loca >= 0:
                 ans = table[i][2] + dp[loca]
             else:

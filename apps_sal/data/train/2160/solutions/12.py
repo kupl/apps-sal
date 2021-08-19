@@ -9,6 +9,7 @@ currentLength = 0
 possible = sumV % k == 0
 target = sumV // k
 for v in V:
+    #print(str(count) + ' ' + str(currentLength))
     count += 1
     currentLength += v
     if currentLength == target:

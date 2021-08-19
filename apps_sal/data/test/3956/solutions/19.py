@@ -21,6 +21,7 @@ def solve_sub(k, n, p, factorials, invs):
     ret = 0
     fp, ik = factorials[p], invs[k - 1]
     for q in range(1, min(p, n // 2) + 1):
+        # tmp1 = factorials[p + q - 1] * invs[q] * invs[p - 1] % MOD
         tmp1 = (fp * invs[q] % MOD) * invs[p - q] % MOD
         tmp2 = (factorials[k + n - 2 * q - 1] * invs[n - 2 * q] % MOD) * ik % MOD
         if q % 2 == 1:

@@ -20,6 +20,7 @@ for _ in range(int(input())):
         if s2 > s:
             i1 -= 1
             s2 -= a[i1]
+        # print(sm, s1, s2, a, i, i1, ans)
         if i1 > i:
             sm -= s2
             a = a1[i1:][::-1]

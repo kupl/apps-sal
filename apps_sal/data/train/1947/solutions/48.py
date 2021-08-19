@@ -11,6 +11,7 @@ class Solution:
         return res
 
     def createMapWordB(self, B):
+        # Simplify B to be the combination of all letters
         max_B = [0] * 26
         for b in B:
             temp_B = self.createSingleWordCount(b)

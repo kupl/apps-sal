@@ -1,3 +1,4 @@
+# https://codeforces.com/contest/1183/problem/F
 
 
 def solve(a_s):

@@ -16,6 +16,8 @@ def solve():
     for i in range(n - 1, -1, -1):
         es[i] |= es[i + 1]
 
+    # print(es)
+
     if not es[0]:
         print(0)
     elif es[0] and (not es[1]):
@@ -47,6 +49,8 @@ def solve():
             left = 2 * kr
             right = m + 1
 
+        # print(left, right)
+
         for i in range(1, lim):
             if not e[i]:
                 left, right = min(left + 1, right + m + 2), min(right + 1, left + m + 2)
@@ -64,6 +68,8 @@ def solve():
                         break
 
                 left, right = min(left + 1 + 2 * kr, right + m + 2), min(right + 1 + 2 * (m + 1 - kl), left + m + 2)
+
+            # print(left, right)
 
         kr = kl = -1
 

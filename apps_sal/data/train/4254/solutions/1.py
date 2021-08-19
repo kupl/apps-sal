@@ -1,4 +1,7 @@
 def solve(eq):
+    #
+    # implemantation takes advantage of abscence of spaces
+    #
     leq = (eq.replace('*', ' * ')
              .replace('/', ' / ')
              .replace('+', ' + ')

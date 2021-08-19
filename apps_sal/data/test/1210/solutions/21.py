@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 N, p = map(int, input().split())
 blah = []
 for _ in range(N):

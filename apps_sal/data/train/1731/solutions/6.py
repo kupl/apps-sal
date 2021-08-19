@@ -65,8 +65,8 @@ def interpret(s):
                 stack.insert(0, 0)
             else:
                 stack[-1], stack[-2] = stack[-2], stack[-1]
-        if i == '
-           if direction == 'right':
+        if i == '#':
+            if direction == 'right':
                 k += 1
             elif direction == 'left':
                 k -= 1

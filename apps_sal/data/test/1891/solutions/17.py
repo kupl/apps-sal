@@ -25,3 +25,12 @@ def recurs(start, end, sum_all, array):
 
 
 print(recurs(1, n + 1, k, a))
+
+# import numpy as np
+
+# print('Введите количество уравнений:')
+# n = int(input())
+# print('Введите линейные коэфициенты:')
+# a = np.array([list(float(t) for t in input().split()) for i in range(n)])
+
+# print(a.shape)

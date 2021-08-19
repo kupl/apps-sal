@@ -10,6 +10,7 @@ class Solution:
                 count1 = count1 + s1.pop()[1]
             s1.append((A[i], count1))
             left[i] = count1
+            # for j in range(len(A)-1,-1,-1):
             j = len(A) - 1 - i
             count2 = 1
             while len(s2) > 0 and A[j] < s2[-1][0]:

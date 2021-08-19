@@ -58,6 +58,9 @@ class Solution:
 
             if m in size_counts and size_counts[m] > 0:
                 last = i + 1
+            # for _, l in parent.items():
+            #     if size[find(l)] == m:
+            #         last = i + 1
 
             seen.add(num)
         return last

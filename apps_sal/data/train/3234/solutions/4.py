@@ -3,14 +3,14 @@ from functools import reduce
 
 
 def min_in_dict(in_dict, original_arr):
-    positions = []
+    positions = []  # output variable
     min_value = float("inf")
     for key, val in in_dict.items():
         if val == min_value:
             positions.append([original_arr.index(key), key])
         if val < min_value:
             min_value = val
-            positions = []
+            positions = []  # output variable
             positions.append([original_arr.index(key), key])
     return positions
 

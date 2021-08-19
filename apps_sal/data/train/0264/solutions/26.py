@@ -4,6 +4,7 @@ class Solution:
         def isUniqueChars(s):
             return len(set(s)) == len(s)
 
+        # Get filter out bad input.
         arr = [set(w) for w in arr if isUniqueChars(w)]
         results = list(arr)
 

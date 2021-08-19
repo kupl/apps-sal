@@ -13,6 +13,7 @@ M.sort()
 msum = sum([M[i][0] for i in range(n)])
 ans = sum(A[:n]) - msum
 ans0 = ans
+# print(ans0)
 
 for i in range(n):
     heapq.heappush(Q0, A[i])
@@ -20,6 +21,7 @@ for i in range(n):
     Ana[M[n + i][1]] = 1
 
 for i in range(n):
+    #print("i",i, Q0,Q1,Ana)
     if Ana[n + i] == 0:
         heapq.heappush(Q0, A[n + i])
         ans0 += A[n + i] * 2
@@ -36,10 +38,12 @@ for i in range(n):
         ans0 += A[n + i]
         ochi = heapq.heappop(Q0)
         ans0 -= ochi
+    # print(ans0)
     ans = max(ans, ans0)
 
 
 saigo = sum((sorted(A[:n * 2]))[n:]) - sum(A[n * 2:])
+# print(saigo)
 
 ans = max(ans, saigo)
 

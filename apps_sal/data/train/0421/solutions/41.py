@@ -8,8 +8,10 @@ class Solution:
             new_starts = []
             for i, start in enumerate(starts):
                 if i > 1 and starts[i - 1] + offset == start:
+                    # swallow
                     continue
                 if start + offset == n:
+                    # end of s
                     break
                 if s[start + offset] == max_end:
                     new_starts.append(start)

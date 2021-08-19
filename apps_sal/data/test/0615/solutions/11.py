@@ -33,7 +33,9 @@ for k in range(1, len(lst_accum) - 2):
         R = third_last - second_last
         diff = abs(S - R)
 
+    #print(first_cut, k, third_cut)
     min_diff = min(min_diff, max(P, Q, R, S) - min(P, Q, R, S))
+    # print(min_diff)
 
 
 print(min_diff)

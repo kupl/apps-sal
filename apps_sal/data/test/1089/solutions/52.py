@@ -7,9 +7,12 @@ def main():
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
+    #from math import gcd
 
+    #inf = 10**17
     mod = 10**9 + 7
 
+    # max_nCrまで調べられる
     max_n = 4 * 10**5
     fac, inv = [1] * (max_n + 1), [0] * (max_n + 1)
     for i in range(2, max_n + 1):
@@ -18,6 +21,7 @@ def main():
     for i in range(max_n, 0, -1):
         inv[i - 1] = inv[i] * i % mod
 
+    # nCrを求める
     def ncr(n, r):
         return fac[n] * inv[r] * inv[n - r] % mod
 
@@ -26,6 +30,7 @@ def main():
     base = ncr(n * m - 2, k - 2)
 
     res = 0
+    # x方向
     for i in range(1, m):
         res += n**2 * i * (m - i)
         res %= mod

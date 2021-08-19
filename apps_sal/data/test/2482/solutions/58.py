@@ -18,7 +18,7 @@ class UnionFind(object):
         if u == v:
             return False
         if self.size[u] > self.size[v]:
-            u, v = v, u
+            u, v = v, u  # size[u] <= size[v]
         self.size[v] += self.size[u]
         self._par[u] = v
 

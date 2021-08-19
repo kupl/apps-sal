@@ -29,6 +29,7 @@ class AVL:
         self.root = Node()
 
     def insert(self, key):
+        # 値の挿入
         if self.root.key is None:
             self.root.key = key
             return
@@ -48,6 +49,7 @@ class AVL:
         else:
             p.right = new_node
 
+        # バランスの確認
         cursor = p
         while cursor:
             if cursor.left is not None:

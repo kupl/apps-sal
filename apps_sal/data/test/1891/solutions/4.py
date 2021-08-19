@@ -8,6 +8,7 @@ a_is.sort()
 
 def how_many(i, j):
     count = bisect.bisect_left(a_is, j) - bisect.bisect_left(a_is, i)
+    # print('i, j, count', i, j, count)
     return count
 
 

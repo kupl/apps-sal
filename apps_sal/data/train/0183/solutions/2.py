@@ -7,6 +7,7 @@ class Solution:
         for i in range(n1):
             for j in range(n2):
                 dp[i + 1][j + 1] = max(dp[i][j] + max(0, nums1[i] * nums2[j]), dp[i][j + 1], dp[i + 1][j])
+        # print(dp)
         if dp[-1][-1] != 0:
             return dp[-1][-1]
         nums1.sort()

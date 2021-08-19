@@ -14,7 +14,10 @@ for ele in g:
     else:
         s += ']'
 
+#s = input()
+#t = len(s)
 stack = []
+# print(s)
 deptho = 0
 if len(s) > 0:
     deptho = 1
@@ -25,6 +28,7 @@ d[0] = deptho
 d[1] = 0
 d[2] = 0
 
+#vis = [0]*n
 stack = []
 depth = []
 

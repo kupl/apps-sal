@@ -33,3 +33,4 @@ if n <= 2:
     print('YES')
 else:
     print(f(a))
+#print(' '.join([str(i) for i in a]))

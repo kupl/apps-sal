@@ -7,6 +7,7 @@ for i in range(n):
         for k in range(d):
             ans += abs(c[i][k] - c[j][k]) ** 2
         ans = ans**0.5
+        # print(ans)
         if ans.is_integer():
             cnt += 1
 print(cnt)

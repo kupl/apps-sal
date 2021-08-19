@@ -14,9 +14,11 @@ class PokerHand(object):
         seenFour = []
 
         for card in handList:
+            # Detect flush hand
             if suit not in card:
                 isHandFlush = False
 
+            # Replace cards denomination by real value
             if card[0] == "T":
                 handList[handList.index(card)], card = 10, 10
             elif card[0] == "J":
@@ -30,6 +32,7 @@ class PokerHand(object):
             else:
                 handList[handList.index(card)], card = int(card[0]), int(card[0])
 
+            # Check pairs, triple and four of a kind
             if card in seenCards:
                 if card in seenTriple:
                     seenFour.append(card)
@@ -41,51 +44,56 @@ class PokerHand(object):
                     seenPairs.append(card)
             seenCards.append(card)
 
+        # Check if hand is straight
         handList = sorted(handList)
         if sum(handList) == (handList[-1] * (handList[-1] + 1)) / 2 - ((handList[0] - 1) * (handList[0]) / 2):
             isHandStraight = True
         else:
             isHandStraight = False
 
+        # Store highest card
         highestCard = handList[-1]
 
+        # Store highest hand value
         highestValue = 0
 
+        # Store highest value after a match
         cardsOutsideCombination = []
 
+        # Calculate hand score
         handScore = 0
         if highestCard == 14 and isHandStraight and isHandFlush:
-            handScore = 9
+            handScore = 9  # Royal Flush
         elif isHandStraight and isHandFlush:
-            handScore = 8
+            handScore = 8  # Straight Flush
             highestValue = highestCard
         elif len(seenFour) == 1:
-            handScore = 7
+            handScore = 7  # Four of a kind
             highestValue = seenFour[0]
             for card in handList:
                 if card not in seenFour:
                     cardsOutsideCombination.append(card)
         elif len(seenTriple) == 1 and len(seenPairs) == 1:
-            handScore = 6
+            handScore = 6  # Full House
             highestValue = seenTriple[0]
         elif isHandFlush:
-            handScore = 5
+            handScore = 5  # Flush
         elif isHandStraight:
-            handScore = 4
+            handScore = 4  # Straight
         elif len(seenTriple) == 1:
-            handScore = 3
+            handScore = 3  # Three of a kind
             highestValue = seenTriple[0]
             for card in handList:
                 if card not in seenTriple:
                     cardsOutsideCombination.append(card)
         elif len(seenPairs) == 2:
-            handScore = 2
+            handScore = 2  # Two pairs
             highestValue = sorted(seenPairs)[-1]
             for card in handList:
                 if card not in seenPairs:
                     cardsOutsideCombination.append(card)
         elif len(seenPairs) == 1:
-            handScore = 1
+            handScore = 1  # Pair
             highestValue = seenPairs[0]
             for card in handList:
                 if card not in seenPairs:
@@ -97,6 +105,12 @@ class PokerHand(object):
         hand1 = self.handProcess(self.hand.split())
         hand2 = self.handProcess(other.hand.split())
 
+        # Check winner by hand combination score
+        # Then by the value of the card of the combination
+        # Then by the highest card of the hand
+        # Then, iteratively, by the value of the highest card outside the combination
+        # Then, iteratively, by the highest card of the hand when not entirely equal
+        # Else, it's a tie !
         if hand1[0] > hand2[0]:
             return "Win"
         elif hand1[0] < hand2[0]:

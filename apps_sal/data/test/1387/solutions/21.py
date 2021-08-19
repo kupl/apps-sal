@@ -14,6 +14,7 @@ from collections import defaultdict
 def main(n, t, a):
     j = 1
     while j < n:
+        # print(j,a[j-1])
         j += a[j - 1]
         if j == t:
             print("YES")

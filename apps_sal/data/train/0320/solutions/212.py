@@ -16,5 +16,6 @@ class Solution:
 
             if not allzeros:
                 ans += 1
+            # print(ans, nums)
 
         return ans

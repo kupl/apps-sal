@@ -1,6 +1,9 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
 
+        # 针对每一组点, check 有没有另外两个点可以组成一个长方形
+        # (1, 2) 和 (4, 3), 检查有没有 (1, 3) 和 (4, 2)
+
         points_set = set(map(tuple, points))
         min_area = float('inf')
 

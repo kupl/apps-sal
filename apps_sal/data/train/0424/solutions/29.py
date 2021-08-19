@@ -1,5 +1,7 @@
 class Solution:
+    # Naming assumes row major.
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
+        # move A through all the valid positions in B's coordinate space.
         a_1_locations = set()
         b_1_locations = set()
 

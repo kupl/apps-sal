@@ -1,3 +1,4 @@
+# reversing the code does not mean keeping the spaces at the same place wtf
 def solve(s):
     spaceIndex = []
     result = []

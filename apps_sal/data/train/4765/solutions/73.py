@@ -1,5 +1,6 @@
 class Hero(object):
     def __init__(self, name=None):
+        # Add default values here
         if name is None:
             self.name = 'Hero'
         else:

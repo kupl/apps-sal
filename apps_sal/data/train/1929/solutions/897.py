@@ -24,6 +24,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         newPointers = []
+        # print(self.pointers)
         retFlag = False
         if letter in self.root.children:
             newPointers.append(self.root.children[letter])
@@ -37,3 +38,8 @@ class StreamChecker:
                     retFlag = True
         self.pointers = newPointers
         return retFlag
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

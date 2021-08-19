@@ -8,12 +8,15 @@ class Solution:
                     b += 1
                     if b == len(weights):
                         count += 1
+                        # double loop, should directly return
                         return count <= D
                 count += 1
                 total = 0
             return count <= D
 
         total = sum(weights)
+        # attention: lb also bound by max element, or it can't fit in
+        # so why not set lb directly to be the maximum element!
         lb = max(weights)
         ub = total
         while lb < ub:

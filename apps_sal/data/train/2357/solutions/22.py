@@ -2,14 +2,14 @@ import sys
 def input(): return sys.stdin.readline().rstrip()
 
 
-def permutation(n, r, mod=10**9 + 7):
+def permutation(n, r, mod=10**9 + 7):  # 順列数
     permutation = 1
     for i in range(r):
         permutation = permutation * (n - i) % mod
     return permutation
 
 
-def combination(n, r, mod=10**9 + 7):
+def combination(n, r, mod=10**9 + 7):  # 組み合わせ数
     r = min(n - r, r)
     bunshi = permutation(n, r, mod)
     bunbo = 1

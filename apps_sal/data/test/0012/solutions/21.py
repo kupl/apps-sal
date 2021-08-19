@@ -3,6 +3,7 @@ def longestSubSeg(a, n):
     l = 0
     max_len = 0
     ctG = 0
+    # i decides current ending point
     for i in range(0, n):
         if a[i] == 'S':
             cnt0 += 1

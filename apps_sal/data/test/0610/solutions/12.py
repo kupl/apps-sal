@@ -1,12 +1,16 @@
+# your code goes here
 arr = input().split()
 a = int(arr[0])
 b = int(arr[1])
+#print('a = ' + str(a) + 'b = ' + str(b))
 
 if a % 2 == 1 and b % 2 == 1:
     if a < b:
+        #		print('a')
         a -= 1
         flag = 1
     else:
+        #		print('b')
         b -= 1
         flag = 2
 elif a % 2 == 1:

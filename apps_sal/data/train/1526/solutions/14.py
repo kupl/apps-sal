@@ -31,6 +31,22 @@ def main():
                 b.append(s)
             else:
                 a.append(s)
+        # for _ in range(l):
+        #     flag = False
+        #     s = input()
+        #     for i in range(len(s)-2):
+        #         if s[i] not in vowels:
+        #             if s[i+1] not in vowels or s[i+2] not in vowels:
+        #                 flag = True
+        #                 break
+        #         else:
+        #             if s[i+1] not in vowels and s[i+2] not in vowels:
+        #                 flag = True
+        #                 break
+        #     if flag:
+        #         b.append(s)
+        #     else:
+        #         a.append(s)
         xa = {}
         fxa = {}
         xb = {}
@@ -79,3 +95,4 @@ def main():
 
 
 main()
+# print(time.time()-start_time)

@@ -1,3 +1,4 @@
+# 166 B
 N, K = list(map(int, input().split()))
 A = []
 for i in range(K):

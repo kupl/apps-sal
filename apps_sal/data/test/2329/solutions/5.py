@@ -63,12 +63,14 @@ for i in range(n):
             tower[id].append((start, end))
             tower[id].append((i + 1, i + 1))
 
+# print(tower)
 test = []
 for i in range(m):
     for start, end in tower[i]:
         if end != n:
             test.append((t[start - 1], t[end]))
 
+# print(test)
 start = [-1] * len(test)
 end = [m - 1] * len(test)
 temp = [[] for i in range(m)]

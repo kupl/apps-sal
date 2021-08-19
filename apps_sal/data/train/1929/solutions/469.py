@@ -10,22 +10,23 @@ class Trie:
         curr = self.root
         for c in s:
             curr = curr[c]
-        curr['
+        curr['#']
 
     def find(self, s: List[str]):
         curr = self.root
         for i in range(len(s) - 1, -1, -1):
             val = s[i]
 
-            if '
+            if '#' in curr:
                 return True
             elif val in curr:
                 curr = curr[val]
             else:
                 return False
 
-        return '
+        return '#' in curr
 
+# just use a trie bro
 
 
 class StreamChecker:
@@ -37,3 +38,8 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
         return self.trie.find(self.queries)
+
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)

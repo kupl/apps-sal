@@ -2,8 +2,8 @@ h, w = list(map(int, input().split()))
 fields = [list(input()) for _ in range(h)]
 ans = [[0] * w] * h
 for i in range(h):
-    if "
-    ans[i] = [1] * w
+    if "#" not in fields[i]:
+        ans[i] = [1] * w
 for i in range(w):
     count = 0
     for j in range(h):

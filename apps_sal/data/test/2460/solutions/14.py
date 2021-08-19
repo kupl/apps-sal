@@ -1,4 +1,10 @@
 def main():
+    # n = int(input())
+    # a, b = list(map(int, input().split()))
+    # if abs(a - 1) + abs(b - 1) <= abs(n - a) + abs(n - b) + 1:
+    #     print("White")
+    # else:
+    #     print("Black")
     one = list(map(int, input().split()))
     location = list(map(int, input().split()))
     flag = list(map(int, input().split()))

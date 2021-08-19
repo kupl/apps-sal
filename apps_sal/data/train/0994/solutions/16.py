@@ -36,9 +36,14 @@ try:
                     else:
                         dict1[list1[i] - list1[j]] = 1
                     j += 1
+            # print(list2)
+            # print(dict1)
             for k in list2:
+                # dict1[k]-=1
                 if(y - k in dict1):
                     c += dict1[y - k]
+                # c+=dict1(y-k)
+                # dict1[k]+=1
         print(c)
 except:
     pass

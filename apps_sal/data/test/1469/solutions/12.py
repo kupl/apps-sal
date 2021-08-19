@@ -1,3 +1,4 @@
+# mada dame datta.
 def main():
     L = int(input())
     b = bin(L)[2:]

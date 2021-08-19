@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 
@@ -32,10 +33,12 @@ for i in range(M):
     G[a][b] = c
     G[b][a] = c
 
+# 全体グラフの最短距離(ここから必要な頂点間だけ使う)
 wf = floyd_warshall(G)
 
 ans = INF
 for r in range(R):
+    # TSP(巡回セールスマン)
     dp = list2d(1 << R, R, INF)
     dp[1 << r][r] = 0
     for bit in range(1, (1 << R) - 1):

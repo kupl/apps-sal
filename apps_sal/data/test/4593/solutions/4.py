@@ -1,4 +1,5 @@
 x = int(input())
+# p >= 2, b >= 1
 if x == 1:
     ans = 1
 else:

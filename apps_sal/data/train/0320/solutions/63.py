@@ -11,4 +11,5 @@ class Solution:
                 nxt.append(num // 2)
         if nxt:
             ans += 1
+        # print(ans, nxt)
         return ans + self.minOperations(nxt)

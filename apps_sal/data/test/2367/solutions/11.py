@@ -34,19 +34,23 @@ dis_mid = h - a - 1
 for i in range(w - b):
     mids[i] = binomial_coefficients(dis_mid + i + b, i + b)
 
+# print(mids)
 
 mids_down = [0] * (w - b)
 dis_mid = a
 for i in range(w - b):
     mids_down[i] = binomial_coefficients(dis_mid + w - b - i - 1, w - b - i - 1)
 
+# print(mids_down)
 
 for i in range(w - b - 1):
     mids_down[i] -= mids_down[i + 1]
 
+# print(mids_down)
 
 for i in range(w - b):
     mids[i] = (mids[i] * mids_down[i]) % mod
 
+# print(mids)
 
 print(sum(mids) % mod)

@@ -12,6 +12,13 @@ class Solution:
                 return dp_dict[(K, N)]
             ans = inf
 
+            # # normal
+            # for i in range(1, N+1):
+            #     ans = min(ans, max(dp(K-1, i-1), dp(K,N-i))+1)
+            # dp_dict[(K, N)] = ans
+            # return ans
+
+            # binary
             low, high = 1, N
             while low <= high:
                 mid = (high + low) // 2

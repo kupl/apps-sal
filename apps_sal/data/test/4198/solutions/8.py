@@ -24,6 +24,7 @@ if canbuy(1):
         else:
             maxv = midv - 1
         midv = math.ceil((maxv + minv) / 2)
+        # print(maxv,midv,minv)
 
     print(midv)
 else:

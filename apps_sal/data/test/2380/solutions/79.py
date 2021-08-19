@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 
+# input = stdin.readline
 
 def solve(n, m, a, queries):
     res = 0

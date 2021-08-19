@@ -13,6 +13,7 @@ RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 mod = int(1e9 + 7)
 eps = 1e-6
+#################################################
 x = RI()[0]
 x %= 360
 if x > 180:

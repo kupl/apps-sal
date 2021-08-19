@@ -14,11 +14,11 @@ def mutations(alice1, bob1, ini, take):
         return -1
     while True:
         alice__, bob__ = find_first(initial, alice), find_first(initial, bob)
-        if take_up:
+        if take_up:  # bob
             if bob__ == -1:
                 return 0
             initial = bob[bob__]
-        else:
+        else:  # alice
             if alice__ == -1:
                 return 1
             initial = alice[alice__]

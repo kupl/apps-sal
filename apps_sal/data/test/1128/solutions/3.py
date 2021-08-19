@@ -1,3 +1,4 @@
+#!/bin/env python3
 a, m = input().split(' ')
 a, m = int(a), int(m)
 d = set()

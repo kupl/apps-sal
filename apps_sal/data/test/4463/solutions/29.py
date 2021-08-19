@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**6)
 
@@ -11,6 +12,7 @@ s = "".join(s)
 t = "".join(t)
 
 ans = sorted([s, t])
+# print(ans)
 
 if ans[0] == t:
     print("No")

@@ -1,3 +1,4 @@
+# cook your dish here
 def MinimumHours(n, h, a):
     a.sort()
     b = a[0]

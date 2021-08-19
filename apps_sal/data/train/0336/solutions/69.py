@@ -1,5 +1,10 @@
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
+        # s -> {a: 1, b: 2}
+        # t -> {a: 2, b: 1}
+
+        # s -> {f: 1, r: 1, i: 1, e: 1, n: 1, d: 1}
+        # t -> {}
 
         counter = {}
         count = 0

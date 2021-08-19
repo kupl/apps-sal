@@ -3,7 +3,7 @@ def needs_trailing(segment):
     for i in segment:
         if i == '(':
             open_parens += 1
-        elif i == ')' or i == '
+        elif i == ')' or i == '#':
             open_parens -= 1
 
         if open_parens < 0:
@@ -13,16 +13,16 @@ def needs_trailing(segment):
 
 line = input()
 extra_parens = needs_trailing(line)
-last_segment_needs = needs_trailing(line.split('
+last_segment_needs = needs_trailing(line.split('#')[-1])
 
-if extra_parens < 0:
+if extra_parens < 0:  # too many ) already in string
     print(-1)
-elif last_segment_needs > 0:
+elif last_segment_needs > 0:  # end block isn't beautiful, can't fix
     print(-1)
 else:
-    outputs=[1 for i in range(line.count('
-    outputs[-1] += needs_trailing(line)
-    new_str=line.rpartition('
+    outputs = [1 for i in range(line.count('#'))]
+    outputs[-1] += needs_trailing(line)  # if valid, add all extras to the last space
+    new_str = line.rpartition('#')[0].replace('#', ')') + outputs[-1] * ')' + line.rpartition('#')[-1]
     if needs_trailing(new_str) != 0:
         print(-1)
     else:

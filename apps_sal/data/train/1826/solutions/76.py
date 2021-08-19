@@ -1,5 +1,6 @@
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
+        # Obvious DP for O(MNK), do a second DP to bring down to O(MN)
         M, N = len(mat), len(mat[0])
         tsum, lsum = [[0 for _ in range(N)] for _ in range(M)], [[0 for _ in range(N)] for _ in range(M)]
         for i in range(M):

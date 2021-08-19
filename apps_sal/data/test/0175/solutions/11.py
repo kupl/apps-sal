@@ -1,3 +1,4 @@
+#n = int(input())
 a, b = list(map(int, input().split()))
 while(a > 0 and b > 0):
     if a >= 2 * b:

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from itertools import combinations_with_replacement
 
 

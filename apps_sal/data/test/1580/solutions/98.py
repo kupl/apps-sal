@@ -3,6 +3,9 @@ readline = sys.stdin.readline
 
 N, M = list(map(int, readline().split()))
 
+# by size
+# 0-indexed
+
 
 class UnionFind:
     N = 0
@@ -29,6 +32,7 @@ class UnionFind:
         if x == y:
             return
         if self.size[x] > self.size[y]:
+            # 大きい方にくっつける
             self.parent[y] = x
             self.size[x] += self.size[y]
         else:

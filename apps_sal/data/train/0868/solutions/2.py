@@ -33,4 +33,5 @@ for _ in range(int(input())):
             f = b.count(x)
             if f in b:
                 res += 1
+            # res+=Beauty(array,f,n)
     print(res)

@@ -1,4 +1,6 @@
+# C問題
 
+# ループ処理をスキップするコード→break,continue,return(関数方式)
 x, n = map(int, input().split())
 P = list(map(int, input().split()))
 xm = x

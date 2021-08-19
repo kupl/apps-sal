@@ -1,6 +1,17 @@
 n = int(input())
 s = input().strip()
 
+# n = 5
+# s = 'logva'
+
+# n = 4
+# s = 'nfio'
+
+# n = 2
+# s = 'no'
+
+# n = 4
+# s = 'abba'
 
 assert(len(s) == n)
 
@@ -31,4 +42,5 @@ while i < n:
     is_left = not is_left
     i += 1
 
+# print(ans)
 print(''.join(ans))

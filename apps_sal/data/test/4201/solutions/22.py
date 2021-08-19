@@ -7,8 +7,8 @@ for maskR in range(2**h):
         black = 0
         for i in range(h):
             for j in range(w):
-                if (((maskR >> i) & 1) == 0 and
-                        ((maskC >> j) & 1) == 0 and c[i][j] == '
+                if (((maskR >> i) & 1) == 0
+                        and ((maskC >> j) & 1) == 0 and c[i][j] == '#'):
                     black += 1
         if black == k:
             cnt += 1

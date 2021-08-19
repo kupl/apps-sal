@@ -8,6 +8,7 @@ class Solution:
                 if pattern[j] == pattern[i]:
                     pat[i] = j
         res = []
+        # print(pat)
         for word in words:
             wlen = len(word)
             flag = 0

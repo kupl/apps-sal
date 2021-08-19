@@ -1,4 +1,5 @@
 def what_century(year):
+    # code must go here
     if year[2:] == "00":
         century = year[:2]
     else:

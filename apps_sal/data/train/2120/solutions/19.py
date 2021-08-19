@@ -1,3 +1,5 @@
+# besme taala
+# ya_hossein
 from sys import stdin
 input = stdin.readline
 n, sum, point = int(input()), 0, 1

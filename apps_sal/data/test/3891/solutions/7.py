@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 h, w = list(map(int, input().split()))
 f = [input() for y in range(h)]
 ly = 0

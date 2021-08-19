@@ -3,6 +3,15 @@ class Solution:
         import heapq
         n = len(points)
 
+        # find MST, can use krukals or prim's algo
+        # pq = []
+        # for i in range(n - 1):
+        #     x1, y1 = points[i]
+        #     for j in range(i + 1, n):
+        #         x2, y2 = points[j]
+        #         d = abs(x2 - x1) + abs(y2 - y1)
+        #         pq.append((d, i, j))
+
         pq = [(0, 0)]
         seen = [False] * n
         totalCost = 0

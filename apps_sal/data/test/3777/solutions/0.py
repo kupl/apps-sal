@@ -103,6 +103,7 @@ for i in range(idx, M):
 
 root = 0
 P, L, Cs = parorder(tEdge, root)
+#C = getcld(P)
 
 Leng = [0] * N
 for i in L[1:]:

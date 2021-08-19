@@ -4,6 +4,7 @@ for i in range(N):
     t, d = map(int, input().split())
     sushi.append((t, d))
 sushi.sort(key=lambda x: (x[0], -x[1]))
+# print(sushi)
 X = [sushi[0][1]]
 Y = []
 for i in range(1, N):
@@ -20,6 +21,10 @@ for i in X:
 for i in Y:
     SY.append(SY[-1] + i)
 ans = 0
+# print(X)
+# print(Y)
+# 1<=x<len(X)
+# K-len(Y)<=x<=
 for x in range(max(1, K - len(Y)), min(len(SX), K + 1)):
     ans = max(SX[x] + SY[K - x] + x * x, ans)
 print(ans)

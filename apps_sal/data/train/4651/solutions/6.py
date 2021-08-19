@@ -11,4 +11,4 @@ def christmas_tree(height):
         l1 += '**'
         l2 += '**'
         l3 += '**'
-    return r + ' ' * ((sz - 3) // 2) + '
+    return r + ' ' * ((sz - 3) // 2) + '###' if height > 2 else ''

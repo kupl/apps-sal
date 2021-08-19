@@ -22,6 +22,7 @@ def main():
 
         inf = 10**18
         dist = np.full((n, MAX_S + 1), inf, dtype=int)
+        # time, remain, node
         que = []
         push(xs, ss, 0)
         while que:

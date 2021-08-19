@@ -144,3 +144,8 @@ def amazon_check_mate(king, amazon):
     connected[0] = 0
     place_pieces(board, king, amazon, connected)
     return count_states(board, connected)
+    # 0 = safe
+    # 8 = whiteking
+    # 9 = amazon
+    # 2 = attacked
+    # 3 = black king can't be here

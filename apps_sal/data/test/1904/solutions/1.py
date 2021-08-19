@@ -5,7 +5,7 @@ n = int(input())
 S = input()
 A = list(map(int, input().split()))
 
-DP = [0] * 4
+DP = [0] * 4  # None,"h","ha","har"まででくいとめる
 DP[0] = 0
 
 for i in range(n):
