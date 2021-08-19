@@ -1,14 +1,7 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/22 23:41
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Playlist.py
-
 import heapq
 import atexit
 import io
 import sys
-
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -21,19 +14,17 @@ def write():
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     songs = []
     for _ in range(n):
-        t, b = map(int, input().split())
+        (t, b) = map(int, input().split())
         songs.append((b, t))
     songs.sort(reverse=True)
-    # print(songs)
-
     ret = 0
-    curr_count, curr_sum = 0, 0
+    (curr_count, curr_sum) = (0, 0)
     h = []
     for i in range(n):
-        b, t = songs[i]
+        (b, t) = songs[i]
         heapq.heappush(h, t)
         curr_sum += t
         curr_count += 1

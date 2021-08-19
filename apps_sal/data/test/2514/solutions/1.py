@@ -6,8 +6,7 @@ Q = int(input())
 B = [0] * Q
 C = [0] * Q
 for i in range(Q):
-    B[i], C[i] = map(int, input().split())
-
+    (B[i], C[i]) = map(int, input().split())
 D = collections.Counter(A)
 s = sum(A)
 for i in range(Q):
@@ -15,6 +14,4 @@ for i in range(Q):
     D[C[i]] += D[B[i]]
     s = s + C[i] * D[B[i]]
     D[B[i]] = 0
-#  A = [C[i] if B[i]==A[j] else A[j] for j in range(N)]
-#  print(A)
     print(s)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -9,7 +8,7 @@ import itertools
 import bisect
 from scipy.special import comb
 import copy
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def zz():

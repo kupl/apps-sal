@@ -12,27 +12,32 @@ import random
 import time
 import copy
 import bisect
-#from operator import itemgetter
-#from heapq import heappush, heappop
-#import numpy as np
-#import sympy
-#from scipy.sparse.csgraph import breadth_first_order, depth_first_order, shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
-#from scipy.sparse import csr_matrix
 from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
 import sys
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
+
+
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
 
 
 N = ni()
@@ -41,7 +46,7 @@ Q = ni()
 ans = sum(A)
 d = collections.Counter(A)
 for i in range(Q):
-    B, C = na()
+    (B, C) = na()
     ct_b = d[B]
     if ct_b == 0:
         print(ans)

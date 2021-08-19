@@ -1,7 +1,4 @@
-# http://codeforces.com/contest/791/problem/B
-
 nax = 150123
-
 edges = [[] for _ in range(nax)]
 vis = [False for j in range(nax)]
 
@@ -21,13 +18,11 @@ def dfs(a, cnt_vertices, cnt_edges):
 
 
 def main():
-    n, m = list(map(int, str(input()).strip().split()))
-
+    (n, m) = list(map(int, str(input()).strip().split()))
     for _ in range(m):
-        a, b = list(map(int, str(input()).strip().split()))
+        (a, b) = list(map(int, str(input()).strip().split()))
         edges[a].append(b)
         edges[b].append(a)
-
     for i in range(1, n + 1):
         if not vis[i]:
             cnt_vertices = [0]
@@ -36,7 +31,6 @@ def main():
             if cnt_edges[0] != cnt_vertices[0] * (cnt_vertices[0] - 1):
                 print('NO')
                 return 0
-
     print('YES')
 
 

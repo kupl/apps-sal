@@ -10,28 +10,37 @@ from bisect import bisect, bisect_left, insort, insort_left
 from fractions import gcd
 from heapq import heappush, heappop
 from functools import reduce
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
-mod = 10**9 + 7
-#from decimal import *
-
+mod = 10 ** 9 + 7
 s = input()
 K = INT()
-
-
 substr = []
-
 for l in range(len(s)):
     r = l + 1
     while r < len(s) + 1:
-        #print(l, r, substr)
         if bisect(substr, s[l:r]) == 5:
             break
         elif s[l:r] in substr:
@@ -41,7 +50,4 @@ for l in range(len(s)):
             substr = substr[:5]
             if s[l:r] in substr:
                 r += 1
-
-
-# print(substr)
-print((substr[K - 1]))
+print(substr[K - 1])

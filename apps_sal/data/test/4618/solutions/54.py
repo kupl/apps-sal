@@ -1,6 +1,5 @@
 s = input()
 k = int(input())
-
 cand = []
 for i in range(len(s)):
     temp = ''
@@ -9,9 +8,7 @@ for i in range(len(s)):
             continue
         temp += s[i + j]
         cand.append(temp)
-
 cand.sort()
-# print(cand)
 ans = cand.pop(0)
 k -= 1
 while k != 0:
@@ -20,5 +17,4 @@ while k != 0:
         continue
     ans = temp
     k -= 1
-
 print(ans)

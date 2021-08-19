@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def main():
     s = input()
     N = len(s)
@@ -9,7 +6,7 @@ def main():
     for i in range(1, K + 1):
         for j in range(N - i + 1):
             X.add(s[j:j + i])
-    print((sorted(X)[K - 1]))
+    print(sorted(X)[K - 1])
 
 
 def __starting_point():
