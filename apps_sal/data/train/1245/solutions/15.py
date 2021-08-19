@@ -9,4 +9,4 @@ try:
                 a += 2
             print()
 except:
-    pass  # cook your dish here
+    pass

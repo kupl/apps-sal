@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, d = input().split()
+    (n, d) = input().split()
     n = list(n)
     x = int(d)
     y = n.copy()

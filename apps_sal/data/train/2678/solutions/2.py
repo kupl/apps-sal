@@ -1,19 +1,10 @@
-op_table = {
-    "+": lambda a, b: a + b,
-    "-": lambda a, b: a - b,
-    "*": lambda a, b: a * b,
-    "/": lambda a, b: a // b,
-    "^": lambda a, b: a**b,
-    "%": lambda a, b: a % b,
-}
+op_table = {'+': lambda a, b: a + b, '-': lambda a, b: a - b, '*': lambda a, b: a * b, '/': lambda a, b: a // b, '^': lambda a, b: a ** b, '%': lambda a, b: a % b}
 
 
 def no_order(equation):
     result = op2 = 0
-    func_name = "+"
-
-    # dummy add to force prior operation to be run
-    formula = equation.replace(" ", "") + "+"
+    func_name = '+'
+    formula = equation.replace(' ', '') + '+'
     for ch in formula:
         if ch.isdigit():
             op2 *= 10
@@ -27,5 +18,4 @@ def no_order(equation):
                 return None
             func_name = ch
             op2 = 0
-
     return result

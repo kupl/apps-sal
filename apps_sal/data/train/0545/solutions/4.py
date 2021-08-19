@@ -1,8 +1,6 @@
-
-# island=[[0 for i in range(k+2)]for j in range(n)
 for _ in range(int(input())):
     island = []
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     for i in range(n):
         l = [int(i) for i in input().split()]
         l = l[1:]
@@ -20,7 +18,6 @@ for _ in range(int(input())):
         print('sad')
         continue
     f1 = 0
-    # print(island)
     for i in range(n):
         f2 = 1
         for j in island[i]:
