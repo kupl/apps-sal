@@ -1,16 +1,14 @@
-#!/usr/bin/env python3
 import sys
-INF = float("inf")
-
-MOD = 1000000007  # type: int
+INF = float('inf')
+MOD = 1000000007
 
 
 class Combination(object):
 
     def __init__(self, N, mod=MOD):
-        fac, finv, inv = [0] * (N + 1), [0] * (N + 1), [0] * (N + 1)
-        fac[:2] = 1, 1
-        finv[:2] = 1, 1
+        (fac, finv, inv) = ([0] * (N + 1), [0] * (N + 1), [0] * (N + 1))
+        fac[:2] = (1, 1)
+        finv[:2] = (1, 1)
         inv[1] = 1
         for i in range(2, N + 1):
             fac[i] = fac[i - 1] * i % mod
@@ -33,15 +31,14 @@ class Combination(object):
         return fac[n] * (finv[k] * finv[n - k] % mod) % mod
 
 
-def solve(N: int, C: "List[int]"):
-
+def solve(N: int, C: 'List[int]'):
     ans = 0
     C.sort(reverse=True)
-    for i, c in enumerate(C, start=1):
+    for (i, c) in enumerate(C, start=1):
         b = c * (pow(2, 2 * N - 2, MOD) * (i + 1)) % MOD
         ans += b
         ans %= MOD
-    print((ans % MOD))
+    print(ans % MOD)
     return
 
 
@@ -52,8 +49,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    C = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    C = [int(next(tokens)) for _ in range(N)]
     solve(N, C)
 
 

@@ -1,9 +1,9 @@
-# AC
 import sys
 from math import gcd
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0

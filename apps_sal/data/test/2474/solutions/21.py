@@ -1,4 +1,3 @@
-
 def resolve():
     MOD = 10 ** 9 + 7
     N = int(input())
@@ -9,8 +8,7 @@ def resolve():
         P[i + 1] %= MOD
     ans = 0
     for i in range(N):
-        # 各ビットの係数: (2^r + 2^r-1 * r) * 2^l
-        l, r = i, N - i - 1
+        (l, r) = (i, N - i - 1)
         now = P[r]
         if r != 0:
             now += P[r - 1] * r

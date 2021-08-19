@@ -1,5 +1,3 @@
-# coding: utf-8
-
 num = int(input())
 str = input().split()
 table = list(str)
@@ -12,8 +10,7 @@ for i in range(num):
         continue
     else:
         count += 1
-
 if count == 2 or count == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

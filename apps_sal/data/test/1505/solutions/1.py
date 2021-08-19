@@ -3,6 +3,7 @@ import math
 
 
 class Vector:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -75,29 +76,22 @@ class Vector:
 
     def __str__(self):
         return str(self.x) + ' ' + str(self.y)
-        # return "{:.2f} {:.2f}".format(self.x, self.y)
 
 
-px, py, vx, vy, a, b, c, d = [int(i) for i in input().split()]
-# px, py, vx, vy, a, b, c, d = [int(i) for i in "8 8 0 2 8 3 4 5".split()]
-
+(px, py, vx, vy, a, b, c, d) = [int(i) for i in input().split()]
 LEFT = math.pi * 0.5
 RIGHT = -math.pi * 0.5
 BACK = math.pi
-
 p = Vector(px, py)
 v = Vector(vx, vy)
-
 v.normalize()
-
 A = p + v * b
 B = p + v.rotatedLeft() * (a / 2)
 C = p + v.rotatedLeft() * (c / 2)
-D = C + (-v) * d
+D = C + -v * d
 F = p + v.rotatedRight() * (c / 2)
-E = F + (-v) * d
+E = F + -v * d
 G = p + v.rotatedRight() * (a / 2)
-
 print(A)
 print(B)
 print(C)
