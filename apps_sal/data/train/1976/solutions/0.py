@@ -20,6 +20,7 @@ class MagicDictionary:
         :type word: str
         :rtype: bool
         """
+
         def diffnumber(a, b):
             count = 0
             for i in range(len(a)):
@@ -30,9 +31,3 @@ class MagicDictionary:
             if len(x) == len(word) and diffnumber(x, word) == 1:
                 return True
         return False
-
-
-# Your MagicDictionary object will be instantiated and called as such:
-# obj = MagicDictionary()
-# obj.buildDict(dict)
-# param_2 = obj.search(word)

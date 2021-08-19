@@ -2,12 +2,11 @@ import sys
 from collections import deque
 
 
-class UnionFindVerSize():
+class UnionFindVerSize:
+
     def __init__(self, init):
         """ N個のノードのUnion-Find木を作成する """
-        # 親の番号を格納する。自分が親だった場合は、自分の番号になり、それがそのグループの番号になる
         self._parent = [n for n in range(0, len(init))]
-        # グループのサイズ（個数）
         self._size = [1] * len(init)
         self._dict = {key: 0 for key in init}
         for i in range(len(init)):
@@ -20,7 +19,7 @@ class UnionFindVerSize():
             x = self._dict[x]
         if self._parent[x] == x:
             return x
-        self._parent[x] = self.find_root(self._parent[x], 0)  # 縮約
+        self._parent[x] = self.find_root(self._parent[x], 0)
         return self._parent[x]
 
     def unite(self, x, y):
@@ -31,8 +30,6 @@ class UnionFindVerSize():
         gy = self.find_root(y, 0)
         if gx == gy:
             return
-
-        # 小さい方を大きい方に併合させる（木の偏りが減るので）
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy
             self._size[gy] += self._size[gx]
@@ -42,13 +39,13 @@ class UnionFindVerSize():
 
     def get_size(self, x):
         x = self._dict[x]
-        """ xが属するグループのサイズ（個数）を返す """
+        ' xが属するグループのサイズ（個数）を返す '
         return self._size[self.find_root(x, 0)]
 
     def is_same_group(self, x, y):
         x = self._dict[x]
         y = self._dict[y]
-        """ xとyが同じ集合に属するか否か """
+        ' xとyが同じ集合に属するか否か '
         return self.find_root(x, 0) == self.find_root(y, 0)
 
     def calc_group_num(self):
@@ -62,14 +59,13 @@ class UnionFindVerSize():
 
 
 input = sys.stdin.readline
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 company = {}
 cedge = {}
 node = N
 edge = {i: [] for i in range(N)}
 for i in range(M):
-    u, v, c = map(int, input().split())
+    (u, v, c) = map(int, input().split())
     edge[u - 1].append((v - 1, 1))
     edge[v - 1].append((u - 1, 1))
     if c - 1 not in company:
@@ -78,10 +74,9 @@ for i in range(M):
     company[c - 1].append(u - 1)
     company[c - 1].append(v - 1)
     cedge[c - 1].append((u - 1, v - 1))
-
 for i in company:
     uf = UnionFindVerSize(company[i])
-    for u, v in cedge[i]:
+    for (u, v) in cedge[i]:
         uf.unite(u, v)
     data = {}
     for v in company[i]:
@@ -95,13 +90,12 @@ for i in company:
             edge[v].append((node, 0))
             edge[node].append((v, 1))
         node += 1
-
-dist = [10**20] * node
+dist = [10 ** 20] * node
 dist[0] = 0
 que = deque([(0, 0)])
 while que:
-    v, d = que.popleft()
-    for nv, c in edge[v]:
+    (v, d) = que.popleft()
+    for (nv, c) in edge[v]:
         if dist[nv] > d + c:
             if c == 1:
                 dist[nv] = d + c
@@ -109,7 +103,5 @@ while que:
             else:
                 dist[nv] = d + c
                 que.appendleft((nv, d + c))
-
-
 ans = dist[N - 1]
-print(ans if ans != 10**20 else -1)
+print(ans if ans != 10 ** 20 else -1)

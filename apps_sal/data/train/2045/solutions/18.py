@@ -3,33 +3,27 @@ input = sys.stdin.readline
 
 
 def inint():
-    return(int(input()))
+    return int(input())
 
 
 def inlst():
-    return(list(map(int, input().split())))
-
-# returns a List of Characters, which is easier to use in Python as Strings are Immutable
+    return list(map(int, input().split()))
 
 
 def instr():
     s = input()
-    return(list(s[:len(s) - 1]))
+    return list(s[:len(s) - 1])
 
 
 def invar():
-    return(list(map(int, input().split())))
-
-############ ---- Input function template ---- ############
+    return list(map(int, input().split()))
 
 
 def isOdd(num):
-    return (num & 1) == 1
+    return num & 1 == 1
 
 
-n, m = invar()
-
-# build function
+(n, m) = invar()
 tree = [{'round_num': m, 'winner': -1} for _ in range(2 * n + 1, 0, -1)]
 
 
@@ -39,10 +33,8 @@ def modify(left, right, pair):
     while left <= right:
         if isOdd(left):
             tree[left] = pair
-
         if not isOdd(right):
             tree[right] = pair
-
         left = int((left + 1) / 2)
         right = int((right - 1) / 2)
 
@@ -55,22 +47,18 @@ def query(pos):
         if tree[pos]['round_num'] < min:
             winner = tree[pos]['winner']
             min = tree[pos]['round_num']
-
         pos >>= 1
-
     return winner + 1 if winner > -1 else 0
 
 
 rounds = []
 for _ in range(m):
-    li, ri, xi = invar()
+    (li, ri, xi) = invar()
     rounds.append({'left': li - 1, 'right': ri - 1, 'winner': xi - 1})
-
 for idx in range(m - 1, -1, -1):
     round = rounds[idx]
     if round['winner'] > 0:
         modify(round['left'], round['winner'] - 1, {'round_num': idx, 'winner': round['winner']})
     if round['winner'] < n:
         modify(round['winner'] + 1, round['right'], {'round_num': idx, 'winner': round['winner']})
-
 print(*[query(i) for i in range(n)])

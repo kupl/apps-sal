@@ -1,7 +1,7 @@
-# dfs, with status: UNKNOWN, VISITING, VISITED
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
-        UNKNOWN, VISITING, VISITED = 0, 1, 2
+        (UNKNOWN, VISITING, VISITED) = (0, 1, 2)
         status = [UNKNOWN] * len(graph)
 
         def dfs(node):
@@ -19,4 +19,4 @@ class Solution:
         for n in range(len(graph)):
             if status[n] == UNKNOWN:
                 dfs(n)
-        return sorted([x for x, stat in enumerate(status) if stat == VISITED])
+        return sorted([x for (x, stat) in enumerate(status) if stat == VISITED])

@@ -16,16 +16,11 @@ class MagicDictionary:
 
         def add_word(trie_root, word):
             p = trie_root
-
             for character in word:
                 if character not in p:
                     p[character] = dict()
                 p = p[character]
-
-            p['\0'] = True
-
-        # for word in dictionary:
-        #    add_word(self.trie_root, word)
+            p['\x00'] = True
         self.original_words = set(dictionary)
 
     def search(self, word):
@@ -34,42 +29,11 @@ class MagicDictionary:
         :type word: str
         :rtype: bool
         """
-
-        """
-         active_tries = list()
-         active_tries.append(self.trie_root)
-         is_tolerable = True
-         
-         for character in word:
-             next_active_tries = list()
-             for trie in active_tries:
-                 if character in trie:
-                     next_active_tries.append(trie[character])
-                 if character not in trie:
-                     if is_tolerable:
-                         is_tolerable = False
-                         for c, next_trie in trie.items():
-                             if c != '\0':
-                                 next_active_tries.append(next_trie)
-             active_tries = next_active_tries
-             if not active_tries:
-                 break
-         
-         return any('\0' in trie for trie in active_tries) and not is_tolerable
-         """
-
-        charset = "abcdefghijklmnopqrstuvwxyz"
-
-        for index, character in enumerate(word):
+        "\n         active_tries = list()\n         active_tries.append(self.trie_root)\n         is_tolerable = True\n         \n         for character in word:\n             next_active_tries = list()\n             for trie in active_tries:\n                 if character in trie:\n                     next_active_tries.append(trie[character])\n                 if character not in trie:\n                     if is_tolerable:\n                         is_tolerable = False\n                         for c, next_trie in trie.items():\n                             if c != '\x00':\n                                 next_active_tries.append(next_trie)\n             active_tries = next_active_tries\n             if not active_tries:\n                 break\n         \n         return any('\x00' in trie for trie in active_tries) and not is_tolerable\n         "
+        charset = 'abcdefghijklmnopqrstuvwxyz'
+        for (index, character) in enumerate(word):
             for replaced_character in charset:
                 if character != replaced_character:
                     if word[:index] + replaced_character + word[index + 1:] in self.original_words:
                         return True
-
         return False
-
-
-# Your MagicDictionary object will be instantiated and called as such:
-# obj = MagicDictionary()
-# obj.buildDict(dict)
-# param_2 = obj.search(word)

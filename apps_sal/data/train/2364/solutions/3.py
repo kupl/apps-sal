@@ -1,16 +1,16 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-inf = int(1e9)
+inf = int(1000000000.0)
 for i in range(int(input())):
-    n, m, a, b, c = list(map(int, input().split()))
+    (n, m, a, b, c) = list(map(int, input().split()))
     a -= 1
     b -= 1
     c -= 1
     cost = list(map(int, input().split()))
     g = [[] for _ in range(n)]
     for i in range(m):
-        a2, b2 = list(map(int, input().split()))
+        (a2, b2) = list(map(int, input().split()))
         g[a2 - 1].append(b2 - 1)
         g[b2 - 1].append(a2 - 1)
 
@@ -29,18 +29,15 @@ for i in range(int(input())):
     lvA = bfs(a)
     lvB = bfs(b)
     lvC = bfs(c)
-    # print(lvA, lvB, lvC)
-    ans = int(1e18)
+    ans = int(1e+18)
     cost.sort()
     cost.insert(0, 0)
     for i in range(1, len(cost)):
         cost[i] += cost[i - 1]
-    # print(cost)
     for i in range(n):
         d1 = lvB[i]
         d2 = lvA[i] + lvC[i]
         if d1 + d2 >= len(cost):
             continue
-        # print(f'i={i}, d1={d1}, d2={d2}')
         ans = min(ans, cost[d1] * 2 + cost[d1 + d2] - cost[d1])
     print(ans)

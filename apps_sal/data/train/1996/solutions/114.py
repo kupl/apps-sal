@@ -1,8 +1,8 @@
-# 0: unknown, 1: visiting, 2: safe
 from collections import defaultdict
 
 
 class Solution:
+
     def eventualSafeNodes(self, graph):
         state = defaultdict(int)
         N = len(graph)
