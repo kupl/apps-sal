@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 def main():
-    n, pos, l, r = [int(_) for _ in input().split(' ')]
+    (n, pos, l, r) = [int(_) for _ in input().split(' ')]
     if l is 1 and r == n:
         print(0)
         return
