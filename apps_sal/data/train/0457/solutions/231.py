@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort(reverse=True)
         return self.dfs(coins, 0, 0, amount, -1)
@@ -8,12 +9,8 @@ class Solution:
             return cnt
         if idx >= len(coins):
             return -1
-
-        # Trim
         if minCnt > 0 and cnt + amount // coins[idx] + 1 > minCnt:
             return -1
-
-        # Select [0, amount//coins[idx] ]
         for i in range(amount // coins[idx], -1, -1):
             res = self.dfs(coins, idx + 1, cnt + i, amount - coins[idx] * i, minCnt)
             if res != -1:
