@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 """
 
 created by shuangquan.huang at 1/7/20
@@ -7,7 +5,6 @@ created by shuangquan.huang at 1/7/20
 reverse thinking of merging instead of split
 
 """
-
 import collections
 import time
 import os
@@ -27,11 +24,10 @@ class Node:
 
 
 def solve(W, H, N, A):
-    xs = [0] + [v for t, v in A if t == 0] + [W]
-    ys = [0] + [v for t, v in A if t == 1] + [H]
+    xs = [0] + [v for (t, v) in A if t == 0] + [W]
+    ys = [0] + [v for (t, v) in A if t == 1] + [H]
     xs.sort()
     ys.sort()
-
     xlist = Node(0)
     h = xlist
     xnodes = {0: h}
@@ -43,7 +39,6 @@ def solve(W, H, N, A):
         h.right = n
         n.left = h
         h = n
-
     ylist = Node(0)
     h = ylist
     ynodes = {0: h}
@@ -53,10 +48,9 @@ def solve(W, H, N, A):
         h.right = n
         n.left = h
         h = n
-
     ans = []
     maxarea = maxh * maxw
-    for t, v in reversed(A):
+    for (t, v) in reversed(A):
         ans.append(maxarea)
         if t == 0:
             node = xnodes[v]
@@ -69,22 +63,20 @@ def solve(W, H, N, A):
         node.left.right = node.right
         node.right.left = node.left
         maxarea = maxh * maxw
-
     return ans[::-1]
 
 
 def solve2(W, H, N, A):
     ws = [(-W, 0, W)]
     hs = [(-H, 0, H)]
-    iw, ih = set(), set()
+    (iw, ih) = (set(), set())
     ans = []
-
-    xs, ys = [0, W], [0, H]
-    for t, v in A:
+    (xs, ys) = ([0, W], [0, H])
+    for (t, v) in A:
         if t == 0:
             bisect.insort_left(xs, v)
             i = bisect.bisect_left(xs, v)
-            l, m, r = xs[i - 1], xs[i], xs[i + 1]
+            (l, m, r) = (xs[i - 1], xs[i], xs[i + 1])
             iw.add((l - r, l, r))
             heapq.heappush(ws, (l - m, l, m))
             heapq.heappush(ws, (m - r, m, r))
@@ -93,23 +85,21 @@ def solve2(W, H, N, A):
         else:
             bisect.insort(ys, v)
             i = bisect.bisect_left(ys, v)
-            l, m, r = ys[i - 1], ys[i], ys[i + 1]
+            (l, m, r) = (ys[i - 1], ys[i], ys[i + 1])
             ih.add((l - r, l, r))
             heapq.heappush(hs, (l - m, l, m))
             heapq.heappush(hs, (m - r, m, r))
             while hs[0] in ih:
                 heapq.heappop(hs)
-        w, h = ws[0], hs[0]
+        (w, h) = (ws[0], hs[0])
         ans.append(w[0] * h[0])
-
     return ans
 
 
-W, H, N = map(int, input().split())
+(W, H, N) = map(int, input().split())
 A = []
 for i in range(N):
-    a, b = input().split()
+    (a, b) = input().split()
     c = 0 if a == 'V' else 1
     A.append((c, int(b)))
-
 print('\n'.join(map(str, solve(W, H, N, A))))

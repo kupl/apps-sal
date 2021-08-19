@@ -3,7 +3,6 @@ for _ in range(q):
     n = int(input())
     s = input()
     s = list(map(int, s))
-    # raze wins if odd
     r = []
     prz = []
     for i in range(n):
@@ -16,8 +15,7 @@ for _ in range(q):
             print(2)
         else:
             print(1)
+    elif r.count(1) > 0:
+        print(1)
     else:
-        if r.count(1) > 0:
-            print(1)
-        else:
-            print(2)
+        print(2)

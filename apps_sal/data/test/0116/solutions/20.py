@@ -1,5 +1,3 @@
-#!/usr/local/env python3
-# -*- encoding: utf-8 -*-
 import sys
 
 
@@ -16,29 +14,25 @@ def readnlines(f_in):
 
 
 def print_args():
-    print("Recieved {} arguments = {}.".format(len(sys.argv), sys.argv))
+    print('Recieved {} arguments = {}.'.format(len(sys.argv), sys.argv))
 
 
 def intersect(l1, r1, l2, r2):
     left = max(l1, l2)
     right = min(r1, r2)
-    return left, right, max(0, right - left + 1)
+    return (left, right, max(0, right - left + 1))
 
 
 def solve():
-    #    print_args()
-    # m = readnlines(sys.stdin)
     line = sys.stdin.readline().strip()
-    l1, r1, l2, r2, k = [int(i) for i in line.split()]
-    left, right, inters = intersect(l1, r1, l2, r2)
-    #print("left={}, right={}, intesec={}".format(left, right, inters))
+    (l1, r1, l2, r2, k) = [int(i) for i in line.split()]
+    (left, right, inters) = intersect(l1, r1, l2, r2)
     if inters < 1:
         return 0
+    elif k >= left and k <= right:
+        return inters - 1
     else:
-        if (k >= left) and (k <= right):
-            return inters - 1
-        else:
-            return inters
+        return inters
 
 
 def __starting_point():

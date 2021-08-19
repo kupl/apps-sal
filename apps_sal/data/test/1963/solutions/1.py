@@ -2,13 +2,13 @@ import math
 
 
 class SegmentTree:
+
     def __init__(self, data, default=0, func=lambda a, b: math.gcd(a, b)):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
@@ -37,7 +37,6 @@ class SegmentTree:
         stop += 1
         start += self._size
         stop += self._size
-
         res = self._default
         while start < stop:
             if start & 1:
@@ -51,17 +50,17 @@ class SegmentTree:
         return res
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
 class SegmentTree1:
+
     def __init__(self, data, default=9999999999999999999999999999999, func=lambda a, b: min(a, b)):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
@@ -90,7 +89,6 @@ class SegmentTree1:
         stop += 1
         start += self._size
         stop += self._size
-
         res = self._default
         while start < stop:
             if start & 1:
@@ -104,7 +102,7 @@ class SegmentTree1:
         return res
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
 n = int(input())
@@ -119,7 +117,7 @@ ed = [] + l[::-1]
 s3 = SegmentTree(ed)
 s4 = SegmentTree1(ed)
 d2 = dict()
-while(s < n):
+while s < n:
     if s in d1:
         d1[s] = e - s - 1
     else:
@@ -141,7 +139,7 @@ else:
     d1.update({s: e - s - 1})
 e = 0
 s = 0
-while(s < n):
+while s < n:
     if s in d2:
         d2[n - 1 - s] = e - s - 1
     else:
@@ -162,10 +160,9 @@ if s in d2:
 else:
     d2.update({n - 1 - s: e - s - 1})
 ans = 0
-# print(d1,d2)
 for j in d1:
     if j in d2:
-        if 0 <= j + d1[j] < n and 0 <= j - d2[j] < n and 0 <= j < n and s2.query(j, j + d1[j]) == s2.query(j - d2[j], j):
+        if 0 <= j + d1[j] < n and 0 <= j - d2[j] < n and (0 <= j < n) and (s2.query(j, j + d1[j]) == s2.query(j - d2[j], j)):
             d1[j] += d2[j]
     ans = max(ans, d1[j])
 for j in d2:
@@ -173,7 +170,7 @@ for j in d2:
 s = 0
 e = s + ans
 w = []
-while(e < n):
+while e < n:
     if s2.query(s, e) == s1.query(s, e):
         w.append(s + 1)
     s += 1

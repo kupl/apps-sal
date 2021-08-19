@@ -9,11 +9,9 @@ def power(a, p):
         return lol
 
 
-x, y, l, r = map(int, input().split())
-
+(x, y, l, r) = map(int, input().split())
 i = 0
 d = {}
-
 while 1:
     k = power(x, i)
     j = 0
@@ -34,7 +32,6 @@ for k in d.keys():
 ans = 0
 arr.sort()
 for k in arr:
-    # print(k)
     if k >= l:
         ans = max(ans, k - last - 1)
         last = k

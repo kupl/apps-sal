@@ -1,24 +1,33 @@
 import sys
 import heapq as hq
-
 readline = sys.stdin.readline
 
 
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
+def ns():
+    return readline().rstrip()
 
 
-eps = 10**-7
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+eps = 10 ** (-7)
 
 
 def solve():
-    n, k = nm()
+    (n, k) = nm()
     a = nl()
     ans = [0] * n
-    ok = 10**9
-    ng = -4 * 10**18
+    ok = 10 ** 9
+    ng = -4 * 10 ** 18
     while ok - ng > 1:
         mid = (ok + ng) // 2
         ck = 0
@@ -26,8 +35,7 @@ def solve():
             d = 9 - 12 * (mid + 1 - a[i])
             if d < 0:
                 continue
-            ck += min(a[i], int((3 + d**.5) / 6 + eps))
-        # print(mid, ck)
+            ck += min(a[i], int((3 + d ** 0.5) / 6 + eps))
         if ck > k:
             ng = mid
         else:
@@ -36,18 +44,17 @@ def solve():
         d = 9 - 12 * (ok + 1 - a[i])
         if d < 0:
             continue
-        ans[i] = min(a[i], int((3 + d**.5) / 6 + eps))
-    # print(ans)
+        ans[i] = min(a[i], int((3 + d ** 0.5) / 6 + eps))
     rk = k - sum(ans)
     l = list()
     for i in range(n):
         if ans[i] < a[i]:
-            hq.heappush(l, (-a[i] + 3 * ans[i]**2 - 3 * ans[i] + 1, i))
+            hq.heappush(l, (-a[i] + 3 * ans[i] ** 2 - 3 * ans[i] + 1, i))
     for _ in range(rk):
-        v, i = hq.heappop(l)
+        (v, i) = hq.heappop(l)
         ans[i] += 1
         if ans[i] < a[i]:
-            hq.heappush(l, (-a[i] + 3 * ans[i]**2 - 3 * ans[i] + 1, i))
+            hq.heappush(l, (-a[i] + 3 * ans[i] ** 2 - 3 * ans[i] + 1, i))
     print(*ans)
     return
 
