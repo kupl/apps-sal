@@ -2,15 +2,13 @@ from operator import itemgetter
 
 
 def bin_search(lo, hi, key):
-    while (lo < hi):
+    while lo < hi:
         md = (hi + lo) // 2
-        if (md >= key(md)):
+        if md >= key(md):
             hi = md
-            #print("new hi:", hi)
         else:
             lo = md + 1
-            #print("new lo:", lo)
-    return lo  # or hi, they're equal at this point
+    return lo
 
 
 def key_func(budget, prices):
@@ -25,13 +23,11 @@ def key_func(budget, prices):
 
 
 def survive(i, j, k):
-    # nonlocal y, m, p, penumsorted
     toadd = [i, j, k]
     newy = list(y)
     newmhp = m[0]
-    for i, item in enumerate(penumsorted):
+    for (i, item) in enumerate(penumsorted):
         newy[item[0]] = y[item[0]] + toadd[i]
-    # print(vars())
     while newy[0] > 0 and newmhp > 0:
         oldmhp = newmhp
         newy[0] -= max(0, m[1] - newy[2])

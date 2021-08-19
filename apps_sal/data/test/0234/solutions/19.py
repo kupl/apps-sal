@@ -4,20 +4,18 @@ import math
 
 
 def main():
-    #T = int(input())
-    # for _ in range(T):
     testcase()
 
 
 def testcase():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     table = []
     for i in range(n):
         table.append(list(input()))
     if solve(table, n, m):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def solve(l, n, m):
@@ -31,7 +29,7 @@ def solve(l, n, m):
                 else:
                     continue
             if z != neighbours(l, i, j):
-                debug("i,j:", i, j)
+                debug('i,j:', i, j)
                 return False
     return True
 
@@ -39,10 +37,10 @@ def solve(l, n, m):
 def neighbours(l, i, j):
     n = [(0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1)]
     s = 0
-    for x, y in n:
+    for (x, y) in n:
         try:
             if j + y >= 0 and i + x >= 0:
-                s += (1 if l[i + x][j + y] == '*' else 0)
+                s += 1 if l[i + x][j + y] == '*' else 0
         except IndexError:
             pass
     return s

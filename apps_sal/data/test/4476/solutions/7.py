@@ -2,6 +2,7 @@ import math
 
 
 class Read:
+
     @staticmethod
     def string():
         return input()
@@ -20,7 +21,7 @@ class Read:
 
 
 def solve():
-    a, b = Read.list_int()
+    (a, b) = Read.list_int()
     if a == b:
         print(0)
     elif a > b:
@@ -28,14 +29,12 @@ def solve():
             print(1)
         else:
             print(2)
+    elif (b - a) % 2 == 1:
+        print(1)
     else:
-        if (b - a) % 2 == 1:
-            print(1)
-        else:
-            print(2)
+        print(2)
 
 
-# query_count = 1
 query_count = Read.int()
 while query_count:
     query_count -= 1

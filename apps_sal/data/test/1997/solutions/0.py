@@ -6,7 +6,7 @@ vc = [[] for i in range(0, n)]
 cvc = [[] for i in range(0, n)]
 nr = [0] * n
 for i in range(0, n - 1):
-    a, b = [int(number) for number in fin.readline().split()]
+    (a, b) = [int(number) for number in fin.readline().split()]
     a -= 1
     b -= 1
     vc[a].append(b)
@@ -41,11 +41,9 @@ for i in range(n - 1, -1, -1):
     x = order[i]
     for p in vc[x]:
         h[p] = h[x] + 1
-# parcurg
 for x in order:
     for p in vc[x]:
         size[x] += size[p]
-# maximum
 
 
 def solv(tp, mx):

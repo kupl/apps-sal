@@ -1,7 +1,6 @@
 t = int(input().strip())
 for _ in range(t):
-    a, b = list(map(int, input().strip().split()))
-    #nums = [int(i) for i in input().strip().split()]
+    (a, b) = list(map(int, input().strip().split()))
     if a == b:
         print(0)
     elif a > b:
@@ -9,8 +8,7 @@ for _ in range(t):
             print(1)
         else:
             print(2)
+    elif (b - a) % 2 != 0:
+        print(1)
     else:
-        if (b - a) % 2 != 0:
-            print(1)
-        else:
-            print(2)
+        print(2)

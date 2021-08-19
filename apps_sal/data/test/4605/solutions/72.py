@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 s = 0
 ans = 0
 

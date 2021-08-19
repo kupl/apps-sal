@@ -10,7 +10,7 @@ for i in range(1, n + 1):
     visit[i] = False
 while n1:
     n1 -= 1
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     d[a].append(b)
     d[a].append(c)
     d1[a] += 1
@@ -22,7 +22,6 @@ while n1:
     d1[c] += 1
 d1 = dict(sorted(list(d1.items()), key=lambda x: x[1]))
 for i in d1:
-    # print(i)
     if not visit[i]:
         visit[i] = True
         l1.append(i)
@@ -32,5 +31,4 @@ for i in d1:
             visit[j] = True
             l1.append(j)
             x += d[j]
-    # print(l1)
 print(*l1)

@@ -1,4 +1,3 @@
-#!/user/bin/env pypy3
 import sys
 from functools import reduce
 
@@ -9,11 +8,7 @@ def fast_input():
 
 def digit_sum(num: int) -> int:
     str_num = str(num)
-    return reduce(
-        lambda acc, n: acc + int(n),
-        list(str_num),
-        0
-    )
+    return reduce(lambda acc, n: acc + int(n), list(str_num), 0)
 
 
 def solve(n: int, a: int, b: int) -> int:

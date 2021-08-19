@@ -3,7 +3,6 @@ mod = 998244353
 
 
 def poly_mul(f, g):
-    # 参考: https://judge.yosupo.jp/submission/2380
     Lf = len(f)
     Lg = len(g)
     L = Lf + Lg - 1
@@ -21,7 +20,7 @@ def poly_mul(f, g):
     x = (ifft(fft(fl, fft_len) * fft(gl, fft_len))[:L] + 0.5).astype(np.int64) % mod
     y = (ifft(fft(fl + fh, fft_len) * fft(gl + gh, fft_len))[:L] + 0.5).astype(np.int64) % mod
     z = (ifft(fft(fh, fft_len) * fft(gh, fft_len))[:L] + 0.5).astype(np.int64) % mod
-    return (x + ((y - x - z) << 15) + (z << 30)) % mod
+    return (x + (y - x - z << 15) + (z << 30)) % mod
 
 
 def poly_inv(fps, n=None):
@@ -38,7 +37,7 @@ def poly_inv(fps, n=None):
 
 
 def poly_div(fps1, fps2):
-    n1, n2 = len(fps1), len(fps2)
+    (n1, n2) = (len(fps1), len(fps2))
     if n1 < n2:
         return np.zeros((0,), dtype=np.int64)
     n = n1 - n2 + 1
@@ -47,7 +46,7 @@ def poly_div(fps1, fps2):
 
 
 def poly_mod(fps1, fps2):
-    n1, n2 = len(fps1), len(fps2)
+    (n1, n2) = (len(fps1), len(fps2))
     if n1 < n2:
         return fps1
     res = fps1[:n2 - 1] - poly_mul(poly_div(fps1, fps2), fps2)[:n2 - 1]
@@ -108,35 +107,33 @@ def poly_differential(fps):
 
 
 def lagrange_interpolation(X, Y, mod):
-    # old
     n = len(X)
     g = [0] * (n + 1)
     g[0] = 1
-    for i, x in enumerate(X):
+    for (i, x) in enumerate(X):
         for j in range(i, -1, -1):
-            g[j + 1] += g[j] * (-x) % mod
+            g[j + 1] += g[j] * -x % mod
     res = [0] * n
-    for x, y in zip(X, Y):
+    for (x, y) in zip(X, Y):
         f = g[:]
         denom = 0
         v = 1
-        pow_x = [1]  # x の idx 乗
+        pow_x = [1]
         for _ in range(n - 1):
             v = v * x % mod
             pow_x.append(v)
-        pow_x.reverse()  # n-1 乗 ~ 0 乗
-        for i, po in enumerate(pow_x):
+        pow_x.reverse()
+        for (i, po) in enumerate(pow_x):
             f_i = f[i]
-            f[i + 1] += f_i * x % mod  # f = g / (x - x_i) を組立除法で求める
+            f[i + 1] += f_i * x % mod
             denom = (denom + f_i * po) % mod
         denom_inv = pow(denom, mod - 2, mod)
-        for i, f_i in enumerate(f[:n]):
-            res[i] += (f_i * y * denom_inv)  # % mod  # mod が大きいと 64bit に収まらなくなるのでひとつずつ mod 取った方がいいか？
+        for (i, f_i) in enumerate(f[:n]):
+            res[i] += f_i * y * denom_inv
     return [v % mod for v in res]
 
 
 def polynomial_interpolation(xs, ys):
-    # 参考: https://rsk0315.hatenablog.com/entry/2020/04/05/203210
     assert len(xs) == len(ys)
     threshold = 8
     as_strided = np.lib.stride_tricks.as_strided
@@ -197,10 +194,7 @@ def polynomial_interpolation(xs, ys):
             f1 = fpss[i, j:j + half + 1].copy()
             f2 = fpss[i, j + half:j + step + 1].copy()
             f1[-1] = f2[-1] = 1
-            fpss2[i + 1, j:min(j + step, n)] = (
-                poly_mul(fpss2[i, j:j + half], f2) +
-                poly_mul(fpss2[i, j + half:min(j + step, n)], f1)
-            ) % mod
+            fpss2[i + 1, j:min(j + step, n)] = (poly_mul(fpss2[i, j:j + half], f2) + poly_mul(fpss2[i, j + half:min(j + step, n)], f1)) % mod
     return fpss2[bit, :n]
 
 
@@ -208,4 +202,4 @@ mod = int(input())
 A = np.array(input().split(), dtype=np.int64)
 X = np.arange(mod, dtype=np.int64)
 Ans = polynomial_interpolation(X, A)
-print((" ".join(map(str, Ans.tolist()))))
+print(' '.join(map(str, Ans.tolist())))
