@@ -4,4 +4,4 @@ def my_first_kata(a, b):
     if a is 0 or b is 0:
         return False
     else:
-        return a % b + + b % a
+        return a % b + +b % a

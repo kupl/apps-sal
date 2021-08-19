@@ -13,5 +13,4 @@ def primeFactors(n):
         else:
             r = r + '(' + str(i) + '**' + str(k) + ')'
         i += 1
-
     return r

@@ -2,7 +2,7 @@ from math import factorial
 
 
 def am_i_wilson(n):
-    if n > 1 and n < 1000 and (factorial(n - 1) + 1) % (n ** 2) == 0:
+    if n > 1 and n < 1000 and ((factorial(n - 1) + 1) % n ** 2 == 0):
         return True
     else:
         return False

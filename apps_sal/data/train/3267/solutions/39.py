@@ -1,9 +1,8 @@
 def well(x):
-
-    c = x.count("good")
+    c = x.count('good')
     if c < 1:
-        return "Fail!"
+        return 'Fail!'
     elif 1 <= c <= 2:
-        return "Publish!"
+        return 'Publish!'
     else:
-        return "I smell a series!"
+        return 'I smell a series!'

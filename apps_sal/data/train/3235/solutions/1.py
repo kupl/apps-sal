@@ -6,4 +6,4 @@ def decompose_single_strand(single_strand):
 
 
 def decompose(strand):
-    return ' '.join([strand[i: i + 3] for i in range(0, len(strand), 3)])
+    return ' '.join([strand[i:i + 3] for i in range(0, len(strand), 3)])

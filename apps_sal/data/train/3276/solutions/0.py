@@ -6,4 +6,4 @@ def missing(nums, s):
             ans.append(s[i])
         return ''.join(ans).lower()
     except IndexError:
-        return ("No mission today")
+        return 'No mission today'

@@ -1,5 +1,5 @@
 def even_or_odd(number):
-    solution = "Odd"
+    solution = 'Odd'
     if number % 2 == 0:
-        solution = "Even"
+        solution = 'Even'
     return solution

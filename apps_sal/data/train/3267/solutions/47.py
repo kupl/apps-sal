@@ -3,7 +3,6 @@ def well(x):
     for i in x:
         if i == 'good':
             c += 1
-
     if c == 1 or c == 2:
         return 'Publish!'
     elif c > 2:

@@ -1,7 +1,7 @@
 def robot_transfer(matrix, k):
     res = []
-    for r, rows in enumerate(matrix):
-        for c, point in enumerate(rows):
+    for (r, rows) in enumerate(matrix):
+        for (c, point) in enumerate(rows):
             kk = 1
             while kk <= k:
                 t = list(map(int, point.split(',')))

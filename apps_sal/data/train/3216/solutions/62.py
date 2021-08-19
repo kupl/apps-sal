@@ -8,5 +8,5 @@ def movie(card, ticket, perc):
     while sys_a <= math.ceil(sys_b):
         time += 1
         sys_a = ticket * time
-        sys_b += ticket * (perc ** time)
+        sys_b += ticket * perc ** time
     return time

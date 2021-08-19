@@ -7,6 +7,6 @@ def movie(card, ticket, perc):
     count = 0
     while not math.ceil(pc) < math.ceil(pt):
         count += 1
-        pc += ticket * (perc**count)
+        pc += ticket * perc ** count
         pt += ticket
     return count

@@ -1,5 +1,5 @@
 def land_perimeter(grid):
-    s, m = len(grid), len(grid[0])
+    (s, m) = (len(grid), len(grid[0]))
     ans = 0
     for x in range(s):
         for y in range(m):
@@ -9,5 +9,4 @@ def land_perimeter(grid):
                     ans -= 2
                 if y < m - 1 and grid[x][y + 1] == 'X':
                     ans -= 2
-
-    return ('Total land perimeter: {}'.format(ans))
+    return 'Total land perimeter: {}'.format(ans)

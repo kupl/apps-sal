@@ -1,5 +1,5 @@
 def well(x):
-    y = "good"
+    y = 'good'
     count = 0
     cw = 0
     while len(x) > cw:
@@ -9,8 +9,8 @@ def well(x):
         else:
             cw = cw + 1
     if count == 1 or count == 2:
-        return "Publish!"
+        return 'Publish!'
     elif count > 2:
-        return "I smell a series!"
+        return 'I smell a series!'
     else:
-        return "Fail!"
+        return 'Fail!'

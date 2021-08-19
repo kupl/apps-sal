@@ -10,4 +10,4 @@ def primeFactors(n):
             n /= div
         else:
             div += 1
-    return ''.join([f"({k}**{v})" if v > 1 else f"({k})" for k, v in power.items()])
+    return ''.join([f'({k}**{v})' if v > 1 else f'({k})' for (k, v) in power.items()])

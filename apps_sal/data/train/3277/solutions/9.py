@@ -1,10 +1,10 @@
 def calc_type(a, b, res):
     if a - b == res:
-        return "subtraction"
+        return 'subtraction'
     if a + b == res:
-        return "addition"
+        return 'addition'
     if a * b == res:
-        return "multiplication"
+        return 'multiplication'
     if a / b == res:
-        return "division"
-    return "no operation"
+        return 'division'
+    return 'no operation'

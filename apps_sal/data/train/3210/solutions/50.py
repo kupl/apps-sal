@@ -1,5 +1,7 @@
 def c(lista):
-    def x(a): return (a, lista.count(a))
+
+    def x(a):
+        return (a, lista.count(a))
     return x
 
 
@@ -20,11 +22,10 @@ def remover(lista):
 
 
 def get_strings(city):
-    letters = remover(list((city.lower())))
+    letters = remover(list(city.lower()))
     huss = list(map(c(city.lower()), letters))
-
     s = ''
-    for letter, co in huss:
+    for (letter, co) in huss:
         if letter == ' ':
             continue
         s = s + letter + ':' + star(co) + ','

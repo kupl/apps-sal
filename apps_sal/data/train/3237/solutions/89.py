@@ -1,6 +1,6 @@
 def even_or_odd(number):
-    r = (number) / 2
+    r = number / 2
     if r % 1:
-        return ("Odd")
+        return 'Odd'
     else:
-        return ("Even")
+        return 'Even'

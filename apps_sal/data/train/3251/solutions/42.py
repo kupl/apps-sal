@@ -11,7 +11,7 @@ def primeFactors(x):
             x //= prime_int
         prime_int += 1
     phrase = ''
-    for digit, count in primes.items():
+    for (digit, count) in primes.items():
         if count == 1:
             phrase += f'({digit})'
             continue

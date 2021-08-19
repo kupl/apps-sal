@@ -1,5 +1,3 @@
-
-
 def arr(n=[]):
     if not n:
         return []

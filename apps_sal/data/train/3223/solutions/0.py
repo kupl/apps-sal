@@ -4,7 +4,7 @@ from bisect import bisect_left
 def sierpinski():
     x = s = 0
     while 1:
-        for a in 4, 9, 56, 61:
+        for a in (4, 9, 56, 61):
             s += x + a
             yield s
         x += 65

@@ -1,4 +1,5 @@
-def land(a): return sum(t == ('X', 'X') for r in a for t in zip(r, r[1:])) * 2
+def land(a):
+    return sum((t == ('X', 'X') for r in a for t in zip(r, r[1:]))) * 2
 
 
 def land_perimeter(a):

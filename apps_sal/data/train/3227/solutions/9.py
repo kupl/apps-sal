@@ -1,4 +1,4 @@
-love = str.maketrans("abcdefghijklmnopqrstuvwxyz", 'LOVELOVELOVELOVELOVELOVELO')
+love = str.maketrans('abcdefghijklmnopqrstuvwxyz', 'LOVELOVELOVELOVELOVELOVELO')
 
 
 def to_lover_case(string):

@@ -8,11 +8,8 @@ def movie(card, ticket, perc):
     while not finnished:
         n += 1
         a = ticket * n
-
-        previous_total += (ticket * (perc**n))
+        previous_total += ticket * perc ** n
         b = math.ceil(card + previous_total)
-
         if a > b:
             finnished = True
-
     return n

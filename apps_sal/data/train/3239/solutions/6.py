@@ -1,1 +1,1 @@
-guess_hat_color = lambda*a: len({*a[1:3]})
+guess_hat_color = lambda *a: len({*a[1:3]})

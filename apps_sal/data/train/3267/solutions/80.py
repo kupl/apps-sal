@@ -1,4 +1,3 @@
-
 def well(x):
     good_count = 0
     for idea in x:

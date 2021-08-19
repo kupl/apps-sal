@@ -6,9 +6,8 @@ def unlucky_days(year):
     end_date = date(year, 12, 31)
     delta_days = (end_date - start_date).days
     count = 0
-
     for n in range(delta_days):
-        if(start_date.strftime("%a %d") == "Fri 13"):
+        if start_date.strftime('%a %d') == 'Fri 13':
             count = count + 1
-        start_date = start_date + (timedelta(days=1))
+        start_date = start_date + timedelta(days=1)
     return count

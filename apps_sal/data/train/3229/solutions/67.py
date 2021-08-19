@@ -6,5 +6,4 @@ def am_i_wilson(n):
     print(n)
     for i in range(1, n):
         p *= i
-
     return (p + 1) % (n * n) == 0

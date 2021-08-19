@@ -8,11 +8,8 @@ def movie(card, ticket, perc):
         i = i + 1
         if i == 1:
             v = ticket * perc
-
         elif i > 1:
-            v = (v * perc)
-
+            v = v * perc
         card += v
-
-        if math.ceil(card) < (ticket * i):
+        if math.ceil(card) < ticket * i:
             return i

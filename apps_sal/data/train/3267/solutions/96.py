@@ -7,5 +7,4 @@ def well(x):
         return 'Publish!'
     elif goodCounter > 2:
         return 'I smell a series!'
-
     return 'Fail!'

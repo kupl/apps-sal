@@ -1,12 +1,12 @@
 def primeFactors(n):
-    if isinstance(((n + 1) / 6), int) or isinstance(((n - 1) / 6), int):
+    if isinstance((n + 1) / 6, int) or isinstance((n - 1) / 6, int):
         return n
     g = n
     pf = ''
     prime = 2
     while g != 1:
         count = 0
-        if (prime - 1) % 6 == 0 or (prime + 1) % 6 == 0 or prime == 2 or prime == 3:
+        if (prime - 1) % 6 == 0 or (prime + 1) % 6 == 0 or prime == 2 or (prime == 3):
             while g % prime == 0:
                 g = g / prime
                 count += 1

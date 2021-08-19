@@ -1,1 +1,2 @@
-def arr(n=int()): return list(range(int(), n))
+def arr(n=int()):
+    return list(range(int(), n))

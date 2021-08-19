@@ -8,10 +8,10 @@ def get_strings(city):
         if i in string:
             index = index + 1
         else:
-            if index == (len(city) - 1) and i not in string:
-                string += i.lower() + ':' + ('*' * asterisks)
-            if index != (len(city) - 1):
-                string += i.lower() + ':' + ('*' * asterisks) + ','
+            if index == len(city) - 1 and i not in string:
+                string += i.lower() + ':' + '*' * asterisks
+            if index != len(city) - 1:
+                string += i.lower() + ':' + '*' * asterisks + ','
                 index = index + 1
     if string[-1] == ',':
         lst = list(string)

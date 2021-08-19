@@ -1,13 +1,1 @@
-arr\
-    =\
-    lambda\
-    n\
-    =\
-    0:\
-    [
-
-        * range
-        (
-            n
-        )
-    ]
+def arr(n=0): return [*range(n)]

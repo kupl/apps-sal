@@ -9,4 +9,4 @@ def movie(card, ticket, perc):
             return i
         else:
             i += 1
-            card += ticket * (perc**i)
+            card += ticket * perc ** i

@@ -6,7 +6,7 @@ def sum_pow_dig_seq(start, n, k):
     while x not in seen_at:
         series.append(x)
         seen_at[x] = i
-        x = sum(int(d) ** n for d in str(x))
+        x = sum((int(d) ** n for d in str(x)))
         i += 1
     i_first = seen_at[x]
     cycle_length = i - i_first

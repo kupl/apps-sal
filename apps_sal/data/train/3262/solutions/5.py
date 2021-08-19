@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def key(s):
     s = s.lower().replace(' ', '')
-    return min(s[i:] + s[:i] for i in range(len(s)))
+    return min((s[i:] + s[:i] for i in range(len(s))))
 
 
 def group_cities(seq):

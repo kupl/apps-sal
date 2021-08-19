@@ -3,7 +3,7 @@ def sum_pow_dig_seq(start, n, k):
     for i in range(0, k):
         c = 0
         for d in str(start):
-            c += int(d)**n
+            c += int(d) ** n
         r.append(c)
         start = c
     for i in range(0, k):

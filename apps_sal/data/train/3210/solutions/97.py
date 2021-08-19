@@ -10,4 +10,4 @@ def get_strings(city):
             cityAmount[city[x].lower()] += '*'
         else:
             cityAmount[city[x].lower()] = '*'
-    return ",".join(("{}:{}".format(*i) for i in list(cityAmount.items())))
+    return ','.join(('{}:{}'.format(*i) for i in list(cityAmount.items())))

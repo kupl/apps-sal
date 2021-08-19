@@ -1,2 +1,2 @@
 def any_odd(x):
-    return x & 0xaaaaaaaa != 0
+    return x & 2863311530 != 0

@@ -12,5 +12,4 @@ def primeFactors(n: int) -> str:
             list_result.append(i)
     if n > 2:
         list_result.append(int(n))
-
-    return ''.join([f"({i})" if list_result.count(i) == 1 else f"({i}**{list_result.count(i)})" for i in sorted(list(set(list_result)))])
+    return ''.join([f'({i})' if list_result.count(i) == 1 else f'({i}**{list_result.count(i)})' for i in sorted(list(set(list_result)))])

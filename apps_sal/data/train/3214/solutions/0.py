@@ -1,9 +1,9 @@
 def change(st):
-    new = ""
+    new = ''
     st = st.lower()
-    for letter in "abcdefghijklmnopqrstuvwxyz":
+    for letter in 'abcdefghijklmnopqrstuvwxyz':
         if letter in st:
-            new += "1"
+            new += '1'
         else:
-            new += "0"
+            new += '0'
     return new

@@ -5,8 +5,8 @@ def get_strings(city):
     myList = []
     counter = Counter(city.lower())
     for letter in counter:
-        if letter == " ":
+        if letter == ' ':
             pass
         else:
-            myList.append(letter + ":" + str("*" * city.lower().count(letter)))
-    return ",".join(myList)
+            myList.append(letter + ':' + str('*' * city.lower().count(letter)))
+    return ','.join(myList)

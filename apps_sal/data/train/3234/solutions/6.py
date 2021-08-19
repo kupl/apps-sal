@@ -13,7 +13,7 @@ def select_subarray(arr):
         else:
             q_vals.append(math.fabs(reduce(operator.mul, a, 1) / sum_a))
     selected = min(filter(lambda x: x is not None, q_vals))
-    indexes = [i for i, x in enumerate(q_vals) if x == selected]
+    indexes = [i for (i, x) in enumerate(q_vals) if x == selected]
     result = []
     for index in indexes:
         result.append([index, arr[index]])

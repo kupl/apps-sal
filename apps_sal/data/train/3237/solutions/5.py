@@ -1,8 +1,7 @@
 def even_or_odd(number):
-    status = ""
+    status = ''
     if number % 2 == 0:
-        status = "Even"
+        status = 'Even'
     else:
-        status = "Odd"
-
+        status = 'Odd'
     return status

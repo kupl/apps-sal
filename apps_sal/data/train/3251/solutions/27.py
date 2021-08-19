@@ -19,9 +19,4 @@ def primeFactors(n):
     if n != 1:
         primes[n] = 1
     primes = sorted(list(primes.items()), key=lambda k: k[0])
-    return "".join(
-        [
-            "({}**{})".format(k, v) if v > 1 else "({})".format(k)
-            for k, v in primes
-        ]
-    )
+    return ''.join(['({}**{})'.format(k, v) if v > 1 else '({})'.format(k) for (k, v) in primes])

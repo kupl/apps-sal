@@ -12,5 +12,5 @@ def movie(card, ticket, perc):
         sb += nou
         prev = nou
         sa += ticket
-        if (ceil(sb) < sa):
+        if ceil(sb) < sa:
             return i

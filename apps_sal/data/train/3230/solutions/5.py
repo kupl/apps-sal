@@ -4,6 +4,6 @@ def the_biggest_search_keys(*args):
     for a in args:
         by_len.setdefault(len(a), []).append(a)
     try:
-        return ', '.join(fmt(b) for b in sorted(by_len[max(by_len)]))
+        return ', '.join((fmt(b) for b in sorted(by_len[max(by_len)])))
     except ValueError:
         return "''"

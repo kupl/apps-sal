@@ -1,5 +1,5 @@
 def decompose_single_strand(dna):
-    return '\n'.join('Frame {}: {}'.format(k + 1, frame(dna, k)) for k in range(3))
+    return '\n'.join(('Frame {}: {}'.format(k + 1, frame(dna, k)) for k in range(3)))
 
 
 def frame(s, k):

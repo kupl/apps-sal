@@ -1,5 +1,5 @@
 def any_odd(x):
-    bin = "{0:b}".format(x)
+    bin = '{0:b}'.format(x)
     bin = bin[::-1]
     odd = 0
     print(bin)

@@ -9,5 +9,5 @@ def movie(card, ticket, perc):
         if math.ceil(ticket_b) < ticket_a:
             return tickets
         ticket_a += ticket
-        ticket_b += ticket * (perc**(tickets + 1))
+        ticket_b += ticket * perc ** (tickets + 1)
         tickets += 1

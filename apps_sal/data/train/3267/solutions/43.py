@@ -1,5 +1,5 @@
 def well(x):
-    temp = x.count("good")
+    temp = x.count('good')
     if 0 < temp < 3:
         return 'Publish!'
     elif temp > 2:

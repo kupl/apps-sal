@@ -1,4 +1,3 @@
-
 def arr(n=0):
     if n > 0:
         x = []

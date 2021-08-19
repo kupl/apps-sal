@@ -7,6 +7,6 @@ def movie(card, ticket, perc):
     visits = 0
     while priceA <= math.ceil(priceB):
         visits += 1
-        priceB += ticket * perc**visits
+        priceB += ticket * perc ** visits
         priceA += ticket
     return visits

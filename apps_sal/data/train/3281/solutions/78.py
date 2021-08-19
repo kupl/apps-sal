@@ -7,5 +7,4 @@ def unlucky_days(year):
         dato = date(year, i, 13)
         if dato.weekday() == 4:
             contador += 1
-
     return contador

@@ -7,4 +7,4 @@ def divide(weight):
         answer = True
     elif x != y:
         answer = False
-    return(answer)
+    return answer

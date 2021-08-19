@@ -6,5 +6,5 @@ def regressionLine(x, y):
         and b (slope) of Regression Line 
         (Y on X).
     """
-    a, b = np.polyfit(x, y, 1)
-    return round(b, 4), round(a, 4)
+    (a, b) = np.polyfit(x, y, 1)
+    return (round(b, 4), round(a, 4))

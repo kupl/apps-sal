@@ -1,7 +1,7 @@
 def sum_pow_dig_seq(start, n, k):
-    def next_(v):
-        return sum(int(c) ** n for c in str(v))
 
+    def next_(v):
+        return sum((int(c) ** n for c in str(v)))
     history = []
     history_set = set()
     x = start

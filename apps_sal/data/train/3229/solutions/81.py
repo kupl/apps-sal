@@ -8,7 +8,6 @@ def is_prime(n):
         return False
     if n == 2:
         return True
-
     for x in range(2, ceil(sqrt(n))):
         if n % x == 0:
             return False
@@ -23,7 +22,6 @@ def fact(n):
 def am_i_wilson(P):
     if not is_prime(P):
         return False
-
     if P - 1 <= 0:
         return False
     try:

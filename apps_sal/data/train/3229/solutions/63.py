@@ -1,6 +1,5 @@
 from functools import lru_cache
 import sys
-
 sys.setrecursionlimit(10000)
 
 
@@ -23,6 +22,6 @@ def is_prime(n):
 def am_i_wilson(n):
     print(n)
     try:
-        return n > 0 and is_prime(n) and (factorial_cache(n - 1) + 1) % (n * n) == 0
+        return n > 0 and is_prime(n) and ((factorial_cache(n - 1) + 1) % (n * n) == 0)
     except:
         return False

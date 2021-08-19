@@ -5,5 +5,5 @@ def find_average(nums):
     for num in nums:
         sum_nums += num
         count_nums += 1
-        average = (sum_nums / count_nums)
+        average = sum_nums / count_nums
     return average

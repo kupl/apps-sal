@@ -1,10 +1,10 @@
 def even_or_odd(number):
     if number == 0:
-        return("Even")
+        return 'Even'
     elif number % 2 == 0:
-        return("Even")
+        return 'Even'
     else:
-        return("Odd")
+        return 'Odd'
 
 
 even_or_odd(2)

@@ -2,7 +2,7 @@ import math
 
 
 def movie(card, ticket, perc):
-    a, count = ticket, 1
+    (a, count) = (ticket, 1)
     ticket_p = perc * ticket
     b = card + ticket_p
     while a <= math.ceil(b):

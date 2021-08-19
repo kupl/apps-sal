@@ -9,8 +9,6 @@ def get_strings(city):
             collect[text[i]] = ':' + counter * '*'
         else:
             counter += 1
-
-    for x, y in list(collect.items()):
+    for (x, y) in list(collect.items()):
         record.append(x + y)
-
     return ','.join(record)
