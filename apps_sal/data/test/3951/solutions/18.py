@@ -1,7 +1,7 @@
 from collections import Counter
 from fractions import gcd
 input()
-g, v = Counter(list(map(int, input().split()))), []
+(g, v) = (Counter(list(map(int, input().split()))), [])
 while g:
     x = max(g)
     g[x] -= 1
@@ -10,6 +10,3 @@ while g:
     v.append(x)
     g += Counter()
 print(' '.join(map(str, v)))
-
-
-# Made By Mostafa_Khaled

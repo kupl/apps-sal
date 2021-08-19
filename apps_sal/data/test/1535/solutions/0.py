@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
-
 
 def gcd(a, b):
     if a < 0:
@@ -21,14 +19,14 @@ def gcd(a, b):
 
 
 def main():
-    n, x0, y0 = read()
+    (n, x0, y0) = read()
     lines = set()
     for i in range(n):
-        x, y = read()
+        (x, y) = read()
         x -= x0
         y -= y0
         if x < 0 or (x == 0 and y < 0):
-            x, y = -x, -y
+            (x, y) = (-x, -y)
         g = gcd(x, y)
         x //= g
         y //= g
@@ -36,13 +34,7 @@ def main():
     return len(lines)
 
 
-# HELPERS
-
-
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -52,13 +44,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

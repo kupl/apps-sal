@@ -2,7 +2,6 @@ S = list(input())
 
 
 def check(x):
-    # print(S[len(S)-x:x])
     for y in S[len(S) - x:x]:
         if y != S[len(S) - x]:
             break
@@ -21,4 +20,4 @@ def bisect(l, r):
         return bisect(mid, r)
 
 
-print((bisect(0, len(S) + 1)))
+print(bisect(0, len(S) + 1))

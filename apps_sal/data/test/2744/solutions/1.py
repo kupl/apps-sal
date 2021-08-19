@@ -3,17 +3,14 @@ import sys
 import os
 from io import BytesIO, IOBase
 py2 = round(0.5)
-
 if py2:
     from future_builtins import ascii, filter, hex, map, oct, zip
     range = xrange
 
 
-# FastIO for PyPy2 and PyPy3 by Pajenegod
-
-
 class FastI(object):
-    def __init__(self, fd=0, buffersize=2**14):
+
+    def __init__(self, fd=0, buffersize=2 ** 14):
         self.stream = stream = BytesIO()
         self.bufendl = 0
 
@@ -38,23 +35,25 @@ class FastI(object):
         self.bufendl -= 1
         return self.stream.readline()
 
-    def input(self): return self.readline().rstrip(b'\r\n')
+    def input(self):
+        return self.readline().rstrip(b'\r\n')
 
 
 class FastO(IOBase):
+
     def __init__(self, fd=1):
         stream = BytesIO()
         self.flush = lambda: os.write(fd, stream.getvalue()) + stream.truncate(0) + stream.seek(0)
         self.write = stream.write if py2 else lambda s: stream.write(s.encode())
 
 
-sys.stdin, sys.stdout = FastI(), FastO()
+(sys.stdin, sys.stdout) = (FastI(), FastO())
 input = sys.stdin.readline
-
-big = 3E12
+big = 3000000000000.0
 
 
 class segheap:
+
     def __init__(self, data):
         n = len(data)
         m = 1
@@ -62,7 +61,6 @@ class segheap:
             m *= 2
         self.n = n
         self.m = m
-
         self.data = [big] * (2 * m)
         for i in range(n):
             self.data[i + m] = data[i]
@@ -98,7 +96,6 @@ class segheap:
 s = sys.stdin.read().replace(b'\r', b'')
 inp = []
 numb = 0
-
 for i in range(len(s)):
     if s[i] >= 48:
         numb = 10 * numb + s[i] - 48
@@ -107,14 +104,11 @@ for i in range(len(s)):
         numb = 0
 if s[-1] >= 48:
     inp.append(numb)
-
 ind = 0
-
 n = inp[ind]
 ind += 1
 m = inp[ind]
 ind += 1
-
 coupl = [[] for _ in range(n)]
 cost = [[] for _ in range(n)]
 for _ in range(m):
@@ -126,11 +120,8 @@ for _ in range(m):
     coupl[u].append(v)
     cost[u].append(w)
     cost[v].append(w)
-
 best = [1.0 * inp[ind + i] for i in range(n)]
-
 Q = segheap(best)
-
 while Q.data[1] != big:
     c = Q.data[1]
     node = Q.mini()
@@ -142,7 +133,6 @@ while Q.data[1] != big:
         if C < best[nei]:
             best[nei] = C
             Q.setter(nei, C)
-
 for x in best:
     sys.stdout.write(str(int(x)))
     sys.stdout.write('\n')

@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 def main():
-    n, m, x = list(map(int, input().split()))
+    (n, m, x) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     for i in range(m):
         if a[i] > x:

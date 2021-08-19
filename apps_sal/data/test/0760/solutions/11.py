@@ -1,4 +1,4 @@
-s, r = input(), int(input())
+(s, r) = (input(), int(input()))
 
 
 def compare(a, b):
@@ -9,7 +9,6 @@ def f(s, n, N):
     if not s or n < 2 * N:
         return N
     for i in range(n // 2, 0, -1):
-        #print(s, n, i, N)
         if compare(s[:i], s[i:2 * i]):
             return f(s[1:], n - 1, max(i, N))
     return f(s[1:], n - 1, N)
