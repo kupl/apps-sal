@@ -16,9 +16,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
 n = N()
 s = {}
 for i in range(n):
@@ -27,7 +24,6 @@ for i in range(n):
         s[a] += 1
     else:
         s[a] = 1
-
 s = sorted(s.items(), key=lambda x: x[1], reverse=True)
 m = s[0][1]
 s2 = []
@@ -36,7 +32,6 @@ for i in range(len(s)):
         s2.append(s[i][0])
     else:
         break
-
 s2.sort()
 for i in s2:
     print(i)

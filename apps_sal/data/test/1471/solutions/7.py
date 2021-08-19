@@ -1,9 +1,9 @@
 from collections import deque
 n = int(input())
 col = [-1] * n
-e = [[[], []]for i in range(n)]
+e = [[[], []] for i in range(n)]
 for i in range(n - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     u -= 1
     v -= 1
     w %= 2
@@ -11,7 +11,6 @@ for i in range(n - 1):
     e[v][w].append(u)
 col[0] = 1
 dq = deque([])
-# pop/append/(append,pop)_left/in/len/count/[]/index/rotate()(右へnずらす)
 dq.append(0)
 while dq:
     a = dq.pop()

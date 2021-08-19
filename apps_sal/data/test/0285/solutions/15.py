@@ -6,25 +6,22 @@ Problem 593 B. Anton and Lines
 @author yamaton
 @date 2015-11-04
 """
-
 import itertools as it
 import functools
 import operator
 import collections
 import math
 import sys
-
-
-EPSILON = 0.0000001
+EPSILON = 1e-07
 
 
 def solve(x1, x2, kbs, n):
     at_x1 = [k * (x1 + EPSILON) + b for (k, b) in kbs]
     at_x2 = [k * (x2 - EPSILON) + b for (k, b) in kbs]
-    order1 = [i for _, i in sorted(zip(at_x1, it.count()))]
+    order1 = [i for (_, i) in sorted(zip(at_x1, it.count()))]
     print_stderr('at_x1:', at_x1)
     print_stderr('at_x2:', at_x2)
-    return any(at_x2[i] > at_x2[j] for (i, j) in zip(order1, order1[1:]))
+    return any((at_x2[i] > at_x2[j] for (i, j) in zip(order1, order1[1:])))
 
 
 def print_stderr(*args, **kwargs):
@@ -38,7 +35,7 @@ def tf_to_yn(tf):
 def main():
     n = int(input())
     [x1, x2] = [int(i) for i in input().strip().split()]
-    kbs = [tuple(int(i) for i in input().strip().split()) for _ in range(n)]
+    kbs = [tuple((int(i) for i in input().strip().split())) for _ in range(n)]
     result = solve(x1, x2, kbs, n)
     print(tf_to_yn(result))
 

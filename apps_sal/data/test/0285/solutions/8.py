@@ -1,24 +1,20 @@
 n = int(input())
-a = input().split(" ")
+a = input().split(' ')
 x1 = int(a[0])
 x2 = int(a[1])
 coor1 = []
 coor2 = []
-eps = 0.000000001
+eps = 1e-09
 for i in range(n):
-    a = input().split(" ")
+    a = input().split(' ')
     k = int(a[0])
     b = int(a[1])
     coor1.append((k * (x1 + eps) + b, i))
     coor2.append((k * (x2 - eps) + b, i))
-# print(coor1)
-# print(coor2)
 coor1.sort()
 coor2.sort()
-# print(coor1)
-# print(coor2)
-s = "NO"
+s = 'NO'
 for i in range(len(coor1)):
-    if (coor1[i][1] != coor2[i][1]):
-        s = "YES"
+    if coor1[i][1] != coor2[i][1]:
+        s = 'YES'
 print(s)

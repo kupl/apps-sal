@@ -1,5 +1,4 @@
-# coding: utf-8
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = input()
 ans = 0
 if P == 2:
@@ -21,5 +20,5 @@ else:
         bai %= P
         cnt[v] += 1
     for i in range(P):
-        ans += ((cnt[i] - 1) * cnt[i]) // 2
+        ans += (cnt[i] - 1) * cnt[i] // 2
 print(ans)

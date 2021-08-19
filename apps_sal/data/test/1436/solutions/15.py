@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-
 from sys import stdin
-
 stdin.readline()
 cnt = 0
 acc = 0

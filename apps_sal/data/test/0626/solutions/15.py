@@ -1,9 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-#a = [4, 2, 3, 0, 1]
 used = [False for i in range(n)]
 k = 0
-
 for i in range(n):
     flag = False
     for j in range(n):

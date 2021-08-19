@@ -7,5 +7,4 @@ for i in range(s - 2, -1, -1):
     if i + 1 >= x:
         alive -= 1
     x = min(x, i - a[i] + 1)
-    # print(i,x,alive)
 print(alive)

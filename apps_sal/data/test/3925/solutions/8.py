@@ -8,7 +8,6 @@ for i in range(1, len(s)):
         ans = max(ans, res)
         res = 1
 ans = max(ans, res)
-# print(ans)
 res1 = 1
 for i in range(1, len(s)):
     if s[i] != s[i - 1]:
@@ -23,8 +22,7 @@ for i in range(len(s) - 2, res1 - 1, -1):
         break
 if len(s) == 1:
     print(1)
+elif s[0] == s[-1] or res1 + res2 > len(s):
+    print(ans)
 else:
-    if s[0] == s[-1] or res1 + res2 > len(s):
-        print(ans)
-    else:
-        print(max(ans, res1 + res2))
+    print(max(ans, res1 + res2))

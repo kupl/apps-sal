@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 m = 0
 for i in range(k):
     s = a[i::k]

@@ -1,5 +1,3 @@
-# = map(int, input().split())
-# = list(map(int, input().split()))
 import sys
 import math
 n = int(input())
@@ -13,7 +11,7 @@ for i in range(1, n):
     if z[i] * 2 <= a:
         ans.append(i + 1)
         sum_ += z[i]
-if (sum_ * 2 > sum_s):
+if sum_ * 2 > sum_s:
     print(len(ans))
     print(*ans)
 else:

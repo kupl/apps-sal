@@ -1,11 +1,12 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 class TreeNode:
+
     def __init__(self, num):
         self.num = num
-        self.vertexs = []  # (ノード番号, 距離)
+        self.vertexs = []
         self.color = None
 
     def set_color(self, color):
@@ -13,6 +14,7 @@ class TreeNode:
 
 
 class Tree:
+
     def __init__(self, N):
         self.nodes = [TreeNode(i) for i in range(N)]
 
@@ -24,7 +26,7 @@ class Tree:
         self.nodes[0].set_color(0)
 
         def set_color(node, prev_node):
-            for n, w in node.vertexs:
+            for (n, w) in node.vertexs:
                 if n != prev_node.num:
                     continue
                 if w % 2 == 0:
@@ -35,16 +37,18 @@ class Tree:
         self.do_and_next(0, -1, set_color)
 
     def print_tree_num(self):
-        for i, node in enumerate(self.nodes):
+        for (i, node) in enumerate(self.nodes):
             print(i, node.vertexs, node.color)
 
     def print_tree_deep(self):
-        def print_color(x, p): return print(x.color)
+
+        def print_color(x, p):
+            return print(x.color)
         self.do_and_next(0, -1, print_color)
 
     def do_and_next(self, node_num, prev_node_num, f):
         f(self.nodes[node_num], self.nodes[prev_node_num])
-        for n, w in self.nodes[node_num].vertexs:
+        for (n, w) in self.nodes[node_num].vertexs:
             if n == prev_node_num:
                 continue
             self.do_and_next(n, node_num, f)
@@ -57,8 +61,7 @@ class Tree:
 N = int(input())
 tree = Tree(N)
 for _ in range(N - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     tree.set_vertex(u, v, w)
-
 tree.set_color()
 tree.print_color()

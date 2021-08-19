@@ -1,5 +1,4 @@
-# E - Divisible Substring
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = input()
 ans = 0
 if P == 2 or P == 5:
@@ -13,7 +12,7 @@ else:
     for i in range(N - 1, -1, -1):
         tmp = (r10 * int(S[i]) + tmp) % P
         l[tmp] += 1
-        r10 = (r10 * 10) % P
+        r10 = r10 * 10 % P
     for x in l:
         ans += x * (x - 1) // 2
 print(ans)

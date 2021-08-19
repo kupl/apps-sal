@@ -1,6 +1,5 @@
 from itertools import permutations as P
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = n - 1
 b = m - 1
 x = 0
@@ -25,11 +24,9 @@ else:
         a = 0
         b = 0
         for i in range(x):
-            a += int(ele[i]) * (7**(x - i - 1))
+            a += int(ele[i]) * 7 ** (x - i - 1)
         for i in range(x, r):
-            b += int(ele[i]) * (7**(r - i - 1))
+            b += int(ele[i]) * 7 ** (r - i - 1)
         if a < n and b < m:
             c += 1
-            #print(a, b, end = ' ')
-            # print()
     print(c)
