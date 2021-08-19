@@ -1,6 +1,6 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        # Bottom Up DP
         if not text1 or not text2:
             return 0
         mem = [[0] * len(text2) for _ in range(len(text1))]
