@@ -1,8 +1,5 @@
-# coding: utf-8
-# Your code here!
-
 def solve(s, c):
-    if(len(s) == 1):
+    if len(s) == 1:
         if s[0] == c:
             return 0
         else:

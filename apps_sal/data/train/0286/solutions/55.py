@@ -1,4 +1,5 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         total = 0
         valid = 0
@@ -23,11 +24,8 @@ class Solution:
             if i == len(balls):
                 if sum(a.values()) != sum(b.values()):
                     return
-                p1, p2 = getComb(a), getComb(b)
-                # print(a, b)
-                # print(p1, p2)
+                (p1, p2) = (getComb(a), getComb(b))
                 total += p1 * p2
-
                 if len(a) == len(b):
                     valid += p1 * p2
             else:
@@ -39,6 +37,5 @@ class Solution:
                     if b[i] == 0:
                         del b[i]
                     dfs(i + 1, a, b)
-
         dfs(0, {}, {})
         return valid / total

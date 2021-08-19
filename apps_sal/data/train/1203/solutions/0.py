@@ -1,21 +1,20 @@
 import math
 f = math.factorial
 for u in range(eval(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     for j in range(q):
-        i, k = list(map(int, input().split()))
+        (i, k) = list(map(int, input().split()))
         if k > i:
             c = 0
             print(c)
         else:
-            a = 2**(n - i)
+            a = 2 ** (n - i)
             b = 1
             d = int(i - 1)
             e = 1
             h = 1
             g = 1
-            # b=f(i-1)/f(k-1)/f(i-k)
-            if(k - 1 > i - k):
+            if k - 1 > i - k:
                 for z in range(i - k):
                     b = b * d
                     d = d - 1
@@ -29,7 +28,6 @@ for u in range(eval(input())):
                     e = e * g
                     g = g + 1
                 b = b / e
-
             c = a * b
             c = c % 1000000007
             print(c)

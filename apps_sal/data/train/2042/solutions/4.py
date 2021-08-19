@@ -1,9 +1,9 @@
 def main():
-    n, a, b, t = list(map(int, input().split()))
+    (n, a, b, t) = list(map(int, input().split()))
     b += 1
-    l = [b if char == "w" else 1 for char in input()]
+    l = [b if char == 'w' else 1 for char in input()]
     t -= sum(l) - a * (n + 2)
-    hi, n2 = n, n * 2
+    (hi, n2) = (n, n * 2)
     n3 = n2 + 1
     lo = res = 0
     l *= 2
@@ -25,5 +25,4 @@ def __starting_point():
     main()
 
 
-# Made By Mostafa_Khaled
 __starting_point()

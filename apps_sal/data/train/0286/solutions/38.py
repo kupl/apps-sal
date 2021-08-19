@@ -1,11 +1,11 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         self.n = len(balls)
         self.mem = {0: 1}
         self.mem2 = {}
         self.balls = balls
         rv = self.dfs(0, [], [])
-        #print(self.mem2, self.mem)
         return rv / self.multinomial(balls)
 
     def dfs(self, idx, lefts, rights):
@@ -17,7 +17,6 @@ class Solution:
             if sum(lefts) != sum(rights):
                 return 0
             return self.multinomial(lefts) * self.multinomial(rights)
-
         rv = 0
         for i in range(0, self.balls[idx] + 1):
             x1 = i
@@ -46,7 +45,6 @@ class Solution:
         key = tuple(arr)
         if key in self.mem2:
             return self.mem2[key]
-
         res = self.frac(sum(arr))
         for x in arr:
             res //= self.frac(x)
