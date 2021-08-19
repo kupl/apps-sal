@@ -1,4 +1,3 @@
-# for finding lcm we need to know gcd
 def gcd(a, b):
     while b != 0:
         temp = b
@@ -9,17 +8,16 @@ def gcd(a, b):
 
 def lcm(a, b):
     g = gcd(a, b)
-    lc = (a * b) // g
+    lc = a * b // g
     return lc
 
 
-while(1):
+while 1:
     try:
         a = list(map(int, input().split()))
         maxi = a[0] if a[0] > a[1] else a[1]
         if maxi == a[0]:
             mini = a[1]
-
         else:
             maxi = a[1]
             mini = a[0]
@@ -32,6 +30,5 @@ while(1):
             maxi = a[3]
             mini = a[2]
         print(maxi // l - (mini - 1) // l)
-
     except EOFError:
         break

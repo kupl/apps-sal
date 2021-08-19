@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-x, a, b = map(int, input().split())
+(x, a, b) = map(int, input().split())
 if a - b >= 0:
     print('delicious')
 elif a - b >= -x:

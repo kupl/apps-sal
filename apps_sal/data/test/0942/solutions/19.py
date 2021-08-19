@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -11,13 +10,13 @@ def __starting_point():
         a[x] = a.get(x, 0) + 1
         a_s[i] = x
     for i in a:
-        if (i < 1) or (i > n):
-            print("Impossible")
+        if i < 1 or i > n:
+            print('Impossible')
             return
         if a[i] % i != 0:
-            print("Impossible")
+            print('Impossible')
             return
-    print("Possible")
+    print('Possible')
     used = 0
     col = {}
     num = {}
@@ -31,7 +30,7 @@ def __starting_point():
         else:
             num[x] += 1
             b.append(col[x])
-    print(" ".join(map(str, b)))
+    print(' '.join(map(str, b)))
 
 
 __starting_point()

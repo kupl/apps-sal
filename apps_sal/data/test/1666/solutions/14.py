@@ -1,6 +1,4 @@
-# coding=utf-8
-
-x, y, a, b = list(map(int, input().split(' ')))
+(x, y, a, b) = list(map(int, input().split(' ')))
 ans = 0
 result = ''
 for i in range(a, x + 1):

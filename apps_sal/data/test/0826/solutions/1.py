@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def binarySearch(ok, ng, test):
     """ 
     Binary search
@@ -10,7 +8,7 @@ def binarySearch(ok, ng, test):
         test(function) : テスト対象の関数
     Returns:
         ok(int) : test(x) == True を確実に満たす点で、
-        　　　　　　　　　　　　　　　　　　　　最終的に求まるもの。
+        \u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000最終的に求まるもの。
     Note:
         https://www.forcia.com/blog/001434.html
 
@@ -29,6 +27,6 @@ def test(x):
 
 
 n = int(input())
-k = binarySearch(1, 10**18 + 10, test)
+k = binarySearch(1, 10 ** 18 + 10, test)
 ans = n - k + 1
 print(ans)

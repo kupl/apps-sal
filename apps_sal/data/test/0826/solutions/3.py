@@ -1,15 +1,11 @@
 def resolve():
-    # n=int(input())
-    # a,b=map(int,input().split())
-    # x=list(map(int,input().split()))
-    #a=[list(map(lambda x:int(x)%2,input().split())) for _ in range(h)]
     n = int(input())
     l = 0
-    r = 10**18
+    r = 10 ** 18
     m = 0
     while l + 1 < r:
         m = (l + r) // 2
-        if (m * (m + 1) // 2) <= n + 1:
+        if m * (m + 1) // 2 <= n + 1:
             l = m
         else:
             r = m

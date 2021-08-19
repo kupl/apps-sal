@@ -1,12 +1,12 @@
-# Please DON'T hack me! TY!
 import sys
 
 
 def unique(lst):
-    return list(dict((o, o) for o in lst).values())
+    return list(dict(((o, o) for o in lst)).values())
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0

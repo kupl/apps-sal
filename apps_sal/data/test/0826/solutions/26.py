@@ -21,9 +21,9 @@ def tcase():
 
 def solve():
     n = readInt()
-    lo, hi = 1, n
+    (lo, hi) = (1, n)
     while lo < hi:
-        mid = (lo + hi + 1) >> 1
+        mid = lo + hi + 1 >> 1
         if mid * (mid + 1) // 2 <= n + 1:
             lo = mid
         else:
@@ -31,5 +31,4 @@ def solve():
     print(n - lo + 1)
 
 
-# tcase()
 solve()
