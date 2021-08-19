@@ -17,10 +17,8 @@ def viread():
     return list(map(int, input().strip().split()))
 
 
-# code goes here
-n, k = viread()
+(n, k) = viread()
 d = deque(viread())
-# print(d)
 solved = 0
 while len(d) != 0 and (d[0] <= k or d[-1] <= k):
     if d[0] <= k:
@@ -29,5 +27,4 @@ while len(d) != 0 and (d[0] <= k or d[-1] <= k):
     elif d[-1] <= k:
         d.pop()
         solved += 1
-    # print(d)
 print(solved)

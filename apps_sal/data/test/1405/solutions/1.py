@@ -2,8 +2,6 @@ import sys
 sys.setrecursionlimit(10000)
 n = int(input())
 a = list(map(int, input().split()))
-
-# sa = dict(zip(a, range(n)))
 sb = {}
 for num in a:
     if not num in sb:

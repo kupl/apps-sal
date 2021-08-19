@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 def main():
-    n, t, k, d = list(map(int, input().split()))
+    (n, t, k, d) = list(map(int, input().split()))
     method_a = (n + k - 1) // k * t
     done = 0
     i = 0
@@ -19,8 +17,7 @@ def main():
                 b_progress = 0
                 done += k
         i += 1
-
-    print("YES" if i < method_a else "NO")
+    print('YES' if i < method_a else 'NO')
 
 
 try:

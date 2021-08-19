@@ -4,7 +4,6 @@ import math
 from math import gcd
 import itertools as it
 from collections import deque
-
 input = sys.stdin.readline
 
 
@@ -18,8 +17,6 @@ def inpl():
 
 INF = 1001001001
 
-# ---------------------------------------
-
 
 def main():
     n = inp()
@@ -27,9 +24,9 @@ def main():
     x = inp()
     y = inp()
     if n > k:
-        print((x * k + y * (n - k)))
+        print(x * k + y * (n - k))
     else:
-        print((x * n))
+        print(x * n)
 
 
 main()
