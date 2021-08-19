@@ -7,9 +7,7 @@ class GetOutOfLoop(Exception):
 
 
 def __starting_point():
-
     n_cases = int(sys.stdin.readline())
-
     for case in range(n_cases):
         board = [list(sys.stdin.readline().rstrip()) for i in range(8)]
         knight_init_loc = [None, None]
@@ -19,9 +17,7 @@ def __starting_point():
                 if board[current_i][current_j] == 'K':
                     knight_init_loc[knight] = (current_i, current_j)
                     knight += 1
-
         to_explore = collections.deque()
-
         to_explore.append((knight_init_loc[0], 0))
         explored = set()
         try:
@@ -31,8 +27,8 @@ def __starting_point():
                 candidates = set()
                 for inc_i in [-2, 2]:
                     for inc_j in [-2, 2]:
-                        next_i, next_j = current_i + inc_i, current_j + inc_j
-                        if 0 <= next_i < 8 and 0 <= next_j < 8 and (next_i, next_j) not in explored:
+                        (next_i, next_j) = (current_i + inc_i, current_j + inc_j)
+                        if 0 <= next_i < 8 and 0 <= next_j < 8 and ((next_i, next_j) not in explored):
                             candidates.add(((next_i, next_j), current_step + 1))
                 for (s, next_step) in candidates:
                     if s == knight_init_loc[1] and next_step % 2 == 0:

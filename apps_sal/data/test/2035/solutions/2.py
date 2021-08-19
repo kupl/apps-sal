@@ -1,14 +1,8 @@
-n, sx, sy = map(int, input().split())
+(n, sx, sy) = map(int, input().split())
 b = [0] * 4
-"""
-    |
-    1
----2-0---
-    3
-    |
-"""
+'\n    |\n    1\n---2-0---\n    3\n    |\n'
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if sy == y:
         if sx < x:
             b[0] += 1

@@ -1,10 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = {v: [] for v in range(1, n + 1)}
 for e in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u].append(v)
     g[v].append(u)
-
 glob_vis = set()
 
 
@@ -12,7 +11,7 @@ def bfs(v):
     vis = set([v])
     glob_vis.add(v)
     q = [v]
-    qi, e = 0, 0
+    (qi, e) = (0, 0)
     while qi < len(q):
         v = q[qi]
         for u in g[v]:
@@ -31,5 +30,4 @@ for v in range(1, n + 1):
         res = bfs(v)
         if res[0] == res[1] - 1:
             min_sep += 1
-
 print(min_sep)

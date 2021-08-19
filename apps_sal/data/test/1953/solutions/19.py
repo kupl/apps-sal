@@ -7,5 +7,4 @@ for i in range(x):
     if s <= y[i]:
         ct += 1
         s += y[i]
-
 print(ct)

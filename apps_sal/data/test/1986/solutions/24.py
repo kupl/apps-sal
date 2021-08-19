@@ -7,11 +7,10 @@ def ost(a, b):
     return 0
 
 
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 ans = 0
 for i in range(n):
-    f, t = map(int, input().split())
+    (f, t) = map(int, input().split())
     tmp = 0
     if t > k:
         tmp = f - (t - k)

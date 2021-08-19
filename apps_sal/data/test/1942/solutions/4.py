@@ -4,7 +4,7 @@ def slv(n, l, r):
     c = 0
     ans = []
     for i in range(1, n):
-        nl, nr = c, c + 2 * (n - i) - 1
+        (nl, nr) = (c, c + 2 * (n - i) - 1)
         c = nr + 1
         if l > nr:
             continue
@@ -20,5 +20,5 @@ def slv(n, l, r):
 
 t = int(input())
 for _ in range(t):
-    n, l, r = list(map(int, input().split()))
+    (n, l, r) = list(map(int, input().split()))
     slv(n, l, r)

@@ -16,9 +16,9 @@ def getTransIntList(n):
 
 
 n = int(input())
-a, x = getTransIntList(n)
+(a, x) = getTransIntList(n)
 m = int(input())
-b, y = getTransIntList(m)
+(b, y) = getTransIntList(m)
 
 
 def solve():
@@ -37,4 +37,4 @@ def solve():
     return result
 
 
-print((solve()))
+print(solve())

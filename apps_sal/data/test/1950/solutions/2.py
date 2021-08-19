@@ -1,10 +1,13 @@
 import heapq
-def ip(): return map(int, input().split())
+
+
+def ip():
+    return map(int, input().split())
 
 
 n = ip()
 l = list(ip())
-if (len(l) % 2 == 0):
+if len(l) % 2 == 0:
     l.append(0)
 heapq.heapify(l)
 pen = 0

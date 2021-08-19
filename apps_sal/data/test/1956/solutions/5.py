@@ -27,7 +27,7 @@ def lose(s, e):
 def main():
     res = [False, True]
     for _ in range(int(input())):
-        s, e = [int(x) for x in input().split()]
+        (s, e) = [int(x) for x in input().split()]
         if res == [True, True]:
             continue
         if res == [False, False]:

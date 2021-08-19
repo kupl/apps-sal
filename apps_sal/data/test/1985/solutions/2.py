@@ -2,13 +2,11 @@ import sys
 
 
 def main():
-    k, n = map(int, sys.stdin.readline().split())
+    (k, n) = map(int, sys.stdin.readline().split())
     a = list(map(int, sys.stdin.readline().split()))
     b = list(map(int, sys.stdin.readline().split()))
-
     for i in range(1, k):
         a[i] = a[i - 1] + a[i]
-
     c = set()
     for i in range(k):
         x = b[0] - a[i]
@@ -22,7 +20,6 @@ def main():
                 break
         if flag:
             c.add(x)
-
     print(len(c))
 
 

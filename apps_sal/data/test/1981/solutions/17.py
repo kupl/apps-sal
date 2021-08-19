@@ -1,17 +1,13 @@
 from collections import defaultdict
 from collections import namedtuple
-
 State = namedtuple('State', ['node', 'remain', 'parent'])
-
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 cats = [int(x) for x in input().split()]
-
 graph = defaultdict(set)
 for _ in range(n - 1):
-    i, j = [int(x) - 1 for x in input().split()]
+    (i, j) = [int(x) - 1 for x in input().split()]
     graph[i].add(j)
     graph[j].add(i)
-
 ans = 0
 stack = [State(0, m, None)]
 while stack:
@@ -25,5 +21,4 @@ while stack:
                 num_of_children += 1
         if num_of_children == 0:
             ans += 1
-
 print(ans)

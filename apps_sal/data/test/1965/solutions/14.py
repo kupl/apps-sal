@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     if set(arr) == {x}:
         print(0)

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 diff = [0] * n
 out = [0] * n
 for i in range(n):

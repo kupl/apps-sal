@@ -1,6 +1,6 @@
 queries = []
 for q in range(int(input())):
-    old, new = input().split()
+    (old, new) = input().split()
     done = False
     for elem in queries:
         if old == elem[-1]:

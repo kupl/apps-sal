@@ -1,7 +1,7 @@
 n = int(input())
 d = {}
 for i in range(n):
-    a, b = input().split()
+    (a, b) = input().split()
     bo = True
     for j in d:
         if a == d[j]:

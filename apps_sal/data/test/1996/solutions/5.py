@@ -3,10 +3,8 @@ nemog = set()
 mog = set()
 for i in range(26):
     mog.add(chr(97 + i))
-
 cnt = 0
 flag = False
-
 for i in range(n):
     s = input()
     if s[0] == '.':

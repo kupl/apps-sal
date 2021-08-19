@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     s = input()
     s0 = s.count('0')
     s1 = s.count('1')

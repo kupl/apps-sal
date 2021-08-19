@@ -1,5 +1,5 @@
 def check(m, mid, aa, dd, edays):
-    avail, ee = [True] * (m + 1), []
+    (avail, ee) = ([True] * (m + 1), [])
     for i in range(mid, -1, -1):
         day = edays[i]
         exam = dd[day]
@@ -10,7 +10,7 @@ def check(m, mid, aa, dd, edays):
                 break
     else:
         return False
-    pool, prev = 0, -1
+    (pool, prev) = (0, -1)
     for day in reversed(ee):
         pool += day - prev - aa[dd[day]]
         if pool < 0:
@@ -20,11 +20,11 @@ def check(m, mid, aa, dd, edays):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     dd = list(map(int, input().split()))
-    edays = [i for i, e in enumerate(dd) if e]
+    edays = [i for (i, e) in enumerate(dd) if e]
     aa = [0, *(int(s) + 1 for s in input().split())]
-    lo, hi = 0, len(edays)
+    (lo, hi) = (0, len(edays))
     try:
         while lo < hi:
             mid = (lo + hi) // 2

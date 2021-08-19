@@ -2,18 +2,14 @@ import sys
 
 
 def solve():
-    k, n = list(map(int, sys.stdin.readline().split()))
+    (k, n) = list(map(int, sys.stdin.readline().split()))
     mks = list(map(int, sys.stdin.readline().split()))
     pts = list(map(int, sys.stdin.readline().split()))
-
     for i in range(1, k):
         mks[i] = mks[i - 1] + mks[i]
-
     mks = sorted(mks)
     pts = sorted(pts)
-
     vals = set()
-
     for i in range(k - n + 1):
         cand = pts[0] - mks[i]
         j = 0
@@ -27,7 +23,6 @@ def solve():
                 break
         if j == len(pts):
             vals.add(cand)
-
     print(len(vals))
 
 

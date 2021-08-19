@@ -22,4 +22,4 @@ for j in range(0, len2):
 if l <= r:
     print(r - l + 1)
 else:
-    print("0")
+    print('0')

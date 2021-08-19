@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-n, m, x, y = map(int, input().split())
+mod = 10 ** 9 + 7
+(n, m, x, y) = map(int, input().split())
 for i in range(y, m + 1):
     print(x, i)
 for i in range(y - 1, 0, -1):

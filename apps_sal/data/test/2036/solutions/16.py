@@ -1,4 +1,4 @@
-n, m, sx, sy = map(int, input().split())
+(n, m, sx, sy) = map(int, input().split())
 used = [[False] * m for i in range(n)]
 print(sx, sy)
 for j in range(1, sy):

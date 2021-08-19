@@ -1,5 +1,5 @@
 inp = str(input()).split(' ')
-w, h = int(inp[0]), int(inp[1])
+(w, h) = (int(inp[0]), int(inp[1]))
 image = []
 for x in range(h):
     row = str(input())

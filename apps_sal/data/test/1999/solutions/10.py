@@ -6,20 +6,17 @@ import bisect
 
 
 def solution(n, arr):
-
     count = {}
-    for i, num in enumerate(arr):
+    for (i, num) in enumerate(arr):
         if num in count:
             heapq.heappush(count[num], i)
         else:
             count[num] = [i]
-
     pq = []
-    for num, c in count.items():
+    for (num, c) in count.items():
         occs = len(c)
         if occs >= 2:
             heapq.heappush(pq, num)
-
     while pq:
         num = heapq.heappop(pq)
         if len(count[num]) < 2:
@@ -36,7 +33,6 @@ def solution(n, arr):
             count[num * 2] = [j]
         if len(count[num]) >= 2:
             heapq.heappush(pq, num)
-
     res = [str(ai) for ai in arr if ai != None]
     print(len(res))
     print(' '.join(res))

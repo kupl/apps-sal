@@ -1,11 +1,9 @@
-n, k = list(map(int, input().split()))
-a, b = [[] for row in range(6)], [[0 for col in range(n + 1)] for row in range(6)]
-
+(n, k) = list(map(int, input().split()))
+(a, b) = ([[] for row in range(6)], [[0 for col in range(n + 1)] for row in range(6)])
 for i in range(k):
     a[i] = list(map(int, input().split()))
     for j in range(n):
         b[i][a[i][j]] = j
-
 dp = [1] * n
 for i in range(n):
     for j in range(i):

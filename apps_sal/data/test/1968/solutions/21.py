@@ -1,4 +1,4 @@
-num, limit = list(map(int, input().split()))
+(num, limit) = list(map(int, input().split()))
 l = []
 for i in range(num):
     li = list(map(int, input().split()))

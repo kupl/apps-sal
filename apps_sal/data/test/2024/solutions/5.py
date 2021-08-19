@@ -15,10 +15,8 @@ for i in range(2, n):
         else:
             new[j] += out[j] * (i - 1)
             new[j] %= M
-
     new[i] = big
-    bigN = (i * big) % M
-
+    bigN = i * big % M
     out = new
     big = bigN
 print((big + sum(out)) % M)

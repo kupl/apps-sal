@@ -7,9 +7,9 @@ found = {}
 x = 1
 out = 0
 for j in a:
-    while 2**x <= j:
+    while 2 ** x <= j:
         x += 1
-    left = 2**x - j
+    left = 2 ** x - j
     try:
         out += found[left]
     except:

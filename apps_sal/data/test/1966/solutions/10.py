@@ -8,7 +8,7 @@ def read_data():
         if j < 3:
             input().strip()
         pieces.append(a)
-    return n, pieces
+    return (n, pieces)
 
 
 def solve():
@@ -34,5 +34,5 @@ def solve():
     return sum
 
 
-n, pieces = read_data()
+(n, pieces) = read_data()
 print(solve())

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = sorted(set(map(int, input().split())))
 cur = 0
 l = len(a)

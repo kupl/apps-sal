@@ -21,8 +21,7 @@ def lm():
 
 
 def solve():
-    n, m, x, y = mi()
-
+    (n, m, x, y) = mi()
     print(x, y)
     for i in range(1, m + 1):
         if not i == y:
@@ -37,7 +36,6 @@ def solve():
                 for i in reversed(list(range(1, m + 1))):
                     print(j, i)
             par = (par + 1) % 2
-
     return
 
 

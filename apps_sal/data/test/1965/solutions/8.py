@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    N, X = list(map(int, input().split()))
+    (N, X) = list(map(int, input().split()))
     A = [int(a) for a in input().split()]
     if A.count(X) == N:
         print(0)

@@ -1,10 +1,16 @@
 import sys
-def ii(): return sys.stdin.readline().strip()
-def idata(): return [int(x) for x in ii().split()]
+
+
+def ii():
+    return sys.stdin.readline().strip()
+
+
+def idata():
+    return [int(x) for x in ii().split()]
 
 
 def solve():
-    n, x = idata()
+    (n, x) = idata()
     data = idata()
     flag = 0
     summ = 0

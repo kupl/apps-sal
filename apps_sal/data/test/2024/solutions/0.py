@@ -14,7 +14,7 @@ m = len(b)
 ba = [0] * m
 cn = [0] * (m + 1)
 k = h = 0
-for i, x in enumerate(b):
+for (i, x) in enumerate(b):
     while h < m and x[0] >= b[h][0] * 2:
         h += 1
     ba[i] = h - 1

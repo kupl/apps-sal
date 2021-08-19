@@ -1,7 +1,7 @@
 dic = {}
 s = int(input())
 i = 0
-while (i < s):
+while i < s:
     x = input()
     h = x.split()
     if h[0] in dic:
@@ -11,4 +11,4 @@ while (i < s):
     i += 1
 print(len(dic))
 for x in dic:
-    print(dic[x] + " " + x)
+    print(dic[x] + ' ' + x)

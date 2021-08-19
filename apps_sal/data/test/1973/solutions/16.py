@@ -15,13 +15,10 @@ for i in range(1, n):
             m = i
         elif b.count(t) == 1:
             m = i
-
     elif len(c) == 3:
         d = sorted(c)
         if d[1] == 1 and b.count(1) == 1:
             m = i
         elif d[2] - d[1] == 1 and b.count(d[2]) == 1:
             m = i
-
-
 print(m + 1)

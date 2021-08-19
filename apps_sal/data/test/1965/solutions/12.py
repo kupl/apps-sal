@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     f = True
     g = False
@@ -15,8 +15,7 @@ for _ in range(t):
         print(0)
     elif s == 0:
         print(1)
+    elif g:
+        print(1)
     else:
-        if g:
-            print(1)
-        else:
-            print(2)
+        print(2)

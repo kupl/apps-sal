@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 dias = [int(x) for x in input().split()]
 prep = [int(x) for x in input().split()]
 
@@ -18,8 +18,8 @@ def es_posible(nu):
 if not es_posible(n):
     print(-1)
 else:
-    lo, hi = 0, n
-    while(hi > lo):
+    (lo, hi) = (0, n)
+    while hi > lo:
         mid = (hi + lo) // 2
         if es_posible(mid):
             hi = mid

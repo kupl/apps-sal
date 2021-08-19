@@ -2,7 +2,7 @@ def mi():
     return map(int, input().split())
 
 
-n, m = mi()
+(n, m) = mi()
 a = list(mi())
 s = 0
 t = []

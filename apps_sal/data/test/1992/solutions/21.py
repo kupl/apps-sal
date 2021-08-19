@@ -1,7 +1,7 @@
-n, m, k = (int(x) for x in input().split())
+(n, m, k) = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
 forward = dict(enumerate(a))
-backward = dict((y, x) for (x, y) in enumerate(a))
+backward = dict(((y, x) for (x, y) in enumerate(a)))
 b = [int(x) for x in input().split()]
 res = 0
 for x in b:

@@ -23,4 +23,4 @@ while ptr + 1 < len(p):
 ans.append(p[-1])
 print(len(ans))
 for i in ans:
-    print(i + 1, end=" ")
+    print(i + 1, end=' ')

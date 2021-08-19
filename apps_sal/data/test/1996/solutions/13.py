@@ -10,9 +10,8 @@ for i in range(n):
         otv = set(s[1]) & otv
     elif s[0] == '.':
         otv -= set(s[1])
-    else:
-        if i != n - 1:
-            otv -= set(s[1])
+    elif i != n - 1:
+        otv -= set(s[1])
     if len(otv) == 1:
         break
 for bb in range(i + 1, n):

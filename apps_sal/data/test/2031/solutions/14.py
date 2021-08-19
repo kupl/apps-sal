@@ -18,8 +18,7 @@ for k in range(1, n + 1):
     ans = arr_ind[:k]
     ans.sort(key=f)
     ans_array.append(ans)
-
 tests = int(input())
 for test in range(tests):
-    k, pos = map(int, input().split())
+    (k, pos) = map(int, input().split())
     print(ans_array[k - 1][pos - 1][0])

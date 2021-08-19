@@ -10,7 +10,7 @@ n = int(input())
 ns = []
 ans = 0
 for i in range(n):
-    x, y = in_list()
+    (x, y) = in_list()
     ns.append(x - y)
     ans += -x + y * n
 ns.sort(reverse=True)

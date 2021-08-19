@@ -1,4 +1,4 @@
-n, k, l = list(map(int, input().split()))
+(n, k, l) = list(map(int, input().split()))
 a = sorted(list(map(int, input().split(' '))))
 index = 0
 for i in a:

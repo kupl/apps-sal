@@ -1,5 +1,5 @@
 t = input().split(' ')
-n, k = int(t[0]), int(t[1])
+(n, k) = (int(t[0]), int(t[1]))
 T = input().split(' ')
 for i in range(n):
     T[i] = int(T[i])

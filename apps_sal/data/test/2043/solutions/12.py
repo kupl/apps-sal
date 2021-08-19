@@ -1,5 +1,4 @@
 __author__ = 'ruckus'
-
 s = input()
 t = input()
 inlines = []

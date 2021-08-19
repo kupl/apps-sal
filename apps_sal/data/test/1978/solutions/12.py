@@ -35,7 +35,6 @@ for i in range(n):
 m = int(input())
 ms = gns()
 ms = [x - 1 for x in ms]
-
 ans = [ms[0]]
 l = ms[0]
 for i in range(1, m - 1):

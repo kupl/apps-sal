@@ -5,7 +5,7 @@ for i in range(n):
     b.append([a[i], -i])
 b.sort(reverse=True)
 for i in range(int(input())):
-    k, pos = map(int, input().split())
+    (k, pos) = map(int, input().split())
     ans = 0
     z = []
     for i in range(k):

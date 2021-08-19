@@ -2,7 +2,7 @@ n = int(input())
 a = list(map(int, input().split()))
 m = int(input())
 for i in range(m):
-    k, pos = map(int, input().split())
+    (k, pos) = map(int, input().split())
     save = []
     for j in range(len(a)):
         save.append(a[j])

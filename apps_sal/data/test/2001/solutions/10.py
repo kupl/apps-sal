@@ -2,12 +2,11 @@ import sys
 
 
 def numIN():
-    return(map(int, sys.stdin.readline().strip().split()))
+    return map(int, sys.stdin.readline().strip().split())
 
 
-MOD = 10**9 + 7
-
-n, q = numIN()
+MOD = 10 ** 9 + 7
+(n, q) = numIN()
 l = [int(i) for i in input()]
 pre = []
 s = 0
@@ -15,7 +14,7 @@ for i in l:
     s += i
     pre.append(s)
 for i in range(q):
-    l, r = numIN()
+    (l, r) = numIN()
     l -= 1
     r -= 1
     if l != 0:

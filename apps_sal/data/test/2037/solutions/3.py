@@ -1,11 +1,8 @@
-n, m = [int(v) for v in input().split()]
+(n, m) = [int(v) for v in input().split()]
 a = [int(v) - 1 for v in input().split()]
-
 cnt = [0] * n
 nonzero = 0
-
 ans = []
-
 for ai in a:
     cnt[ai] += 1
     if cnt[ai] == 1:
@@ -19,5 +16,4 @@ for ai in a:
             ans.append(True)
             continue
     ans.append(False)
-
-print(''.join('01'[v] for v in ans))
+print(''.join(('01'[v] for v in ans)))

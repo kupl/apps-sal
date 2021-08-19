@@ -4,7 +4,6 @@ def inpmap():
 
 n = int(input())
 arr = list(inpmap())
-
 dc = {}
 for i in range(n):
     x = arr[i]

@@ -1,13 +1,12 @@
 import sys
 it = iter(sys.stdin.readlines())
 input = it.__next__
-n, k = list(map(int, input().split()))
-d, c = [0] * n, [0] * n
+(n, k) = list(map(int, input().split()))
+(d, c) = ([0] * n, [0] * n)
 for i in range(n):
-    a, b = list(map(int, input().split()))
-    d[i], c[i] = a, k - b
-
-p, r, pre, suf, sm, mx = list(range(n)), [0] * n, c[:], c[:], c[:], c[:]
+    (a, b) = list(map(int, input().split()))
+    (d[i], c[i]) = (a, k - b)
+(p, r, pre, suf, sm, mx) = (list(range(n)), [0] * n, c[:], c[:], c[:], c[:])
 
 
 def find(x):
@@ -17,7 +16,7 @@ def find(x):
 
 
 def union(x, y, w):
-    x, y = find(x), find(y)
+    (x, y) = (find(x), find(y))
     z = y if r[y] > r[x] else x
     r[x] += r[x] == r[y]
     mx[z] = max(mx[x], mx[y], suf[x] + pre[y])
@@ -29,6 +28,6 @@ def union(x, y, w):
 
 
 ans = max(0, max(c))
-for w, i in sorted((d[i + 1] - d[i], i) for i in range(n - 1)):
+for (w, i) in sorted(((d[i + 1] - d[i], i) for i in range(n - 1))):
     ans = max(ans, union(i, i + 1, w))
 print(ans)

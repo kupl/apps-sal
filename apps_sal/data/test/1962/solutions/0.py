@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-N, K, L = mi()
+(N, K, L) = mi()
 A = li()
 A.sort()
 end = 1

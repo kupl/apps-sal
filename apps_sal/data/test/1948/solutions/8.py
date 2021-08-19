@@ -17,20 +17,17 @@ def bfs(G, s):
     return d
 
 
-n, x = list(map(int, stdin.readline().split()))
+(n, x) = list(map(int, stdin.readline().split()))
 x = x - 1
-
 graph = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = list(map(int, stdin.readline().split()))
+    (a, b) = list(map(int, stdin.readline().split()))
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
-
 d_Alice = bfs(graph, 0)
 d_Bob = bfs(graph, x)
-
 resp = d_Alice[x]
-for i, v in enumerate(graph):
+for (i, v) in enumerate(graph):
     if len(v) == 1 and d_Alice[i] > d_Bob[i]:
         resp = max(resp, d_Alice[i])
 print(2 * resp)

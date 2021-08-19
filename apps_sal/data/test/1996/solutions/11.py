@@ -27,6 +27,6 @@ for i in range(j - 1):
     s = input()
     if s[0] == '!' or s[0] == '?':
         lol += 1
-if not(p == 0):
+if not p == 0:
     s = input()
 print(lol)

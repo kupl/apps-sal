@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = [int(i) for i in input().split()]
-res, s = 0, ""
+(res, s) = (0, '')
 for i in range(m):
     b = [int(x) for x in input().split()]
     if b[0] == 1:

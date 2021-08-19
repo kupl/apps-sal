@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 for row in range(n):
     for col in range(n):
         if row == col:

@@ -2,11 +2,10 @@ from collections import deque
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     test = list(map(int, input().split()))
     prepare = list(map(int, input().split()))
     least_days = sum(prepare) + m
-
     if least_days > len(test):
         print(-1)
         return

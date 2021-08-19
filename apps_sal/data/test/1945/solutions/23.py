@@ -1,7 +1,7 @@
 n = int(input())
 d = {}
 for i in range(n):
-    old, new = input().split()
+    (old, new) = input().split()
     already = True
     for i in d:
         if old == d[i]:
@@ -11,4 +11,4 @@ for i in range(n):
         d[old] = new
 print(len(d))
 for i in d.keys():
-    print(str(i) + " " + str(d[i]))
+    print(str(i) + ' ' + str(d[i]))

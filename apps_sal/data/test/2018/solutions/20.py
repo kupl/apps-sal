@@ -1,8 +1,8 @@
 import math
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 g = math.gcd(n, m)
 for qq in range(q):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     if a == 1:
         x = (b - 1) // (n // g)
     else:
@@ -12,6 +12,6 @@ for qq in range(q):
     else:
         y = (d - 1) // (m // g)
     if x == y:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

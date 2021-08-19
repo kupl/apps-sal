@@ -1,7 +1,7 @@
 def main():
     s = input()
     t = input()
-    i, j, m, l = 0, len(t) - 1, 0, len(s) - 1
+    (i, j, m, l) = (0, len(t) - 1, 0, len(s) - 1)
     while i < j:
         if m != len(s):
             if t[i] == s[m]:

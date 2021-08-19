@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 li = [0] * 1002
 for i in range(0, n):
     a = input()

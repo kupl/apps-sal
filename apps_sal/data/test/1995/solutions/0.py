@@ -7,8 +7,8 @@ def shift(x, k):
 
 
 for i in range(int(input())):
-    l, r, k = tuple(map(int, input().split()))
+    (l, r, k) = tuple(map(int, input().split()))
     l -= 1
-    k %= (r - l)
+    k %= r - l
     s = s[:l] + shift(s[l:r], k) + s[r:]
 print(s)

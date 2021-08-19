@@ -1,12 +1,10 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 A = []
 for i in range(n):
     s = input()
     A.append(2 if s == 'half' else 1)
-
 A.pop()
 A = A[::-1]
-
 h = p // 2
 ans = h
 c = 1

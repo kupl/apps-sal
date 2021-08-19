@@ -7,7 +7,7 @@ may = [set(i) for i in ma]
 for i in s:
     if not i in c:
         c.add(i)
-        if len(c) > 1 and not c in may:
+        if len(c) > 1 and (not c in may):
             ans += 1
             c = set(i)
 if c:

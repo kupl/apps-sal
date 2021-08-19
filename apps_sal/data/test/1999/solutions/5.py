@@ -46,13 +46,12 @@ while i < lx or j < ly:
     elif j >= ly:
         r = x[i]
         i += 1
+    elif x[i] < y[j]:
+        r = x[i]
+        i += 1
     else:
-        if x[i] < y[j]:
-            r = x[i]
-            i += 1
-        else:
-            r = y[j]
-            j += 1
+        r = y[j]
+        j += 1
     l = len(d[r])
     if l % 2 != 0:
         ans[d[r][-1]] = r

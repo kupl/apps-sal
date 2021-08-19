@@ -1,7 +1,6 @@
-n, k, l = list(map(int, input().split()))
+(n, k, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a0 = min(a)
-
 v = []
 for ai in a:
     if ai <= a0 + l:
@@ -26,5 +25,4 @@ else:
         else:
             i += 1
         b -= 1
-
 print(ans)

@@ -5,12 +5,12 @@ elBs = set()
 s = 0
 n = int(input())
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     elA[x] = y
     elAs.add(x)
 m = int(input())
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     elB[x] = y
     elBs.add(x)
 w = elAs & elBs

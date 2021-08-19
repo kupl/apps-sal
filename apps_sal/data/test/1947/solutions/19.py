@@ -1,4 +1,4 @@
-n, m, l = list(map(int, input().split()))
+(n, m, l) = list(map(int, input().split()))
 l += 1
 hair = [1] * (n + 1)
 other_end = [1] * (n + 1)
@@ -31,7 +31,7 @@ for _ in range(m):
         else:
             print(res - 1)
     else:
-        t1, p, d = list(map(int, t.split()))
+        (t1, p, d) = list(map(int, t.split()))
         old = hair[p]
         hair[p] += d
         if hair[p] >= l > old:

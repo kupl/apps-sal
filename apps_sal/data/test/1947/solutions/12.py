@@ -1,4 +1,4 @@
-n, m, l = list(map(int, input().split()))
+(n, m, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c = 0
 if a[0] > l:
@@ -14,19 +14,19 @@ for i in range(m):
     if s[0] == '0':
         print(c)
     else:
-        _, x, y = list(map(int, s.split()))
+        (_, x, y) = list(map(int, s.split()))
         if a[x - 1] <= l and a[x - 1] != 0:
             if a[x - 1] + y > l:
-                if x != 1 and x != n and a[x - 2] != 0 and a[x] != 0:
+                if x != 1 and x != n and (a[x - 2] != 0) and (a[x] != 0):
                     c += 1
                     a[x - 1] = 0
-                elif x == 1 and n != 1 and a[x] != 0:
+                elif x == 1 and n != 1 and (a[x] != 0):
                     a[x - 1] = 0
                     c += 1
-                elif x == n and n != 1 and a[x - 2] != 0:
+                elif x == n and n != 1 and (a[x - 2] != 0):
                     a[x - 1] = 0
                     c += 1
-                elif x != 1 and x != n and a[x - 2] == 0 and a[x] == 0:
+                elif x != 1 and x != n and (a[x - 2] == 0) and (a[x] == 0):
                     c -= 1
                     a[x - 1] = 0
                 elif n == 1:

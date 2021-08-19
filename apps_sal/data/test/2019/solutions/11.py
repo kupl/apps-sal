@@ -9,6 +9,6 @@ for _ in range(t):
         else:
             cnt2 += 1
     if min(cnt1, cnt2) % 2 == 1:
-        print("DA")
+        print('DA')
     else:
-        print("NET")
+        print('NET')

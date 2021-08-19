@@ -1,4 +1,4 @@
-boys, girls = list(map(int, input().split()))
+(boys, girls) = list(map(int, input().split()))
 h = 1
 i = 1
 print(boys + girls - 1)

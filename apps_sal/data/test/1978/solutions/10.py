@@ -27,4 +27,4 @@ while i <= m - 1:
         i -= 1
 path.append(p[m - 1])
 print(len(path))
-print(" ".join(map(str, path)))
+print(' '.join(map(str, path)))

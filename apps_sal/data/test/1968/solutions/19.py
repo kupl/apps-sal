@@ -1,5 +1,4 @@
-
-n, v = list(map(int, input().split()))
+(n, v) = list(map(int, input().split()))
 count = 0
 res = []
 
@@ -17,6 +16,5 @@ for i in range(n):
     if f(a):
         count += 1
         res.append(i + 1)
-
 print(count)
-print(' '.join(str(e) for e in res))
+print(' '.join((str(e) for e in res)))

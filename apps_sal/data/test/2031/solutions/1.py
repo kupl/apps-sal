@@ -5,7 +5,7 @@ a = list(map(int, input().split()))
 m = int(input())
 for i in range(m):
     f = a.copy()
-    k, pos = list(map(int, input().split()))
+    (k, pos) = list(map(int, input().split()))
     for l in range(n - k):
         if mins[l] == 0:
             mins[l] = min(f)

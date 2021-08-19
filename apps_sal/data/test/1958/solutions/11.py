@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 data = [input() for i in range(n)]
 q = 0
 pol = 0

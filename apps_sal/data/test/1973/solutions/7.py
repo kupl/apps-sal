@@ -16,7 +16,6 @@ for i in range(n):
     elif kek and lol[-1] - 1 == lol[-2]:
         max_ = max(max_, i + 1)
         continue
-
     kek = True
     for j in range(1, len(lol) - 1):
         if lol[j] != lol[j + 1]:

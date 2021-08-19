@@ -1,7 +1,7 @@
 c = int(input())
 ans = 0
 q = 0
-m = [[i, 1]for i in 'abcdefghijklmnopqrstuvwxyz']
+m = [[i, 1] for i in 'abcdefghijklmnopqrstuvwxyz']
 for i in range(c):
     suma = 0
     for j in range(26):
@@ -17,7 +17,7 @@ for i in range(c):
                 m[j][1] = 0
     elif x == '!':
         for j in range(26):
-            if not(m[j][0] in a):
+            if not m[j][0] in a:
                 m[j][1] = 0
         if q:
             ans += 1

@@ -13,13 +13,14 @@ def win(s, e):
         return win(s, e // 4)
 
 
-def lose(s, e): return (True if e // 2 < s else win(s, e // 2))
+def lose(s, e):
+    return True if e // 2 < s else win(s, e // 2)
 
 
 def main():
     res = [False, True]
     for _ in range(int(input())):
-        s, e = [int(x) for x in input().split()]
+        (s, e) = [int(x) for x in input().split()]
         if res == [True, True]:
             continue
         if res == [False, False]:

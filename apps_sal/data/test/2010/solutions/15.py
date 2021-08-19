@@ -1,5 +1,5 @@
 values = [*list(map(int, input().split()))]
-n, m = values
+(n, m) = values
 array = [*list(map(int, input().split()))]
 ad = 0
 result = []
@@ -13,5 +13,4 @@ for i in range(m):
     if op[0] == 3:
         index = op[1] - 1
         result.append(str(array[index] + ad))
-
 print('\n'.join(result))

@@ -1,10 +1,10 @@
 from math import gcd
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 d = gcd(n, m)
 x = n // d
 y = m // d
 for _ in range(q):
-    sx, sy, ex, ey = map(int, input().split())
+    (sx, sy, ex, ey) = map(int, input().split())
     p1 = 0
     p2 = 0
     if sx == 1:

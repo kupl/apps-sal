@@ -15,21 +15,17 @@ def rl():
 def solve():
     n = ri()
     A = rl()
-
     first_wrong = -1
     first_break = -1
     skip = False
-
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         if i + 1 == a:
             if first_wrong != -1 and first_break == -1:
                 first_break = i
-        else:
-            if first_wrong == -1:
-                first_wrong = i
-            elif first_break != -1:
-                skip = True
-
+        elif first_wrong == -1:
+            first_wrong = i
+        elif first_break != -1:
+            skip = True
     if first_wrong == -1:
         print(0)
     elif not skip:
@@ -39,7 +35,6 @@ def solve():
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

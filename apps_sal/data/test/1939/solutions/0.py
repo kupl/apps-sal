@@ -1,15 +1,13 @@
-N, k = map(int, input().split())
-
+(N, k) = map(int, input().split())
 ind = 0
 for i in range(N):
     for j in range(N):
-        if(j != N - 1):
-            if(j == i):
-                print(k, end=" ")
+        if j != N - 1:
+            if j == i:
+                print(k, end=' ')
             else:
-                print(0, end=" ")
+                print(0, end=' ')
+        elif j == i:
+            print(k)
         else:
-            if(j == i):
-                print(k)
-            else:
-                print(0)
+            print(0)

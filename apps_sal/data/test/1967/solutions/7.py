@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 a = ['' for i in range(m)]
 for i in range(m):
     a[i] = input()
@@ -19,5 +19,4 @@ for i in range(n):
     for s in a:
         ans += s[i]
     b.append(ans)
-
 printImage(b)

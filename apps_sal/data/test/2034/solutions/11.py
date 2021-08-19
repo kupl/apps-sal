@@ -1,14 +1,13 @@
 from sys import setrecursionlimit
-
 setrecursionlimit(200000)
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     graph = [[] for _ in range(n + 1)]
     avail = [True] * (n + 1)
     for _ in range(m):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         graph[x].append(y)
         graph[y].append(x)
 
@@ -22,7 +21,6 @@ def main():
             return res
         else:
             return False
-
     res = 0
     for j in range(1, n + 1):
         if avail[j]:

@@ -1,4 +1,4 @@
-n, A, B = map(int, input().split())
+(n, A, B) = map(int, input().split())
 L = list(map(int, input().split()))
 a = L[0]
 S = sum(L)

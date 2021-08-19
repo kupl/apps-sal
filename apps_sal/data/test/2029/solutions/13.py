@@ -1,4 +1,4 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 tree = [[] for i in range(n)]
 for i in range(n - 1):
     inp = list([int(x) - 1 for x in input().split()])

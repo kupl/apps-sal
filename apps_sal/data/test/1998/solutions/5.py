@@ -1,4 +1,4 @@
-n, s, b, k = map(int, input().split())
+(n, s, b, k) = map(int, input().split())
 a = list('1' + input() + '1')
 ans = []
 cnt = 0

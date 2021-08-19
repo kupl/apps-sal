@@ -1,12 +1,12 @@
 import math
 s = input()
-a, b, n = s.split()
-a, b, n = int(a), int(b), int(n)
+(a, b, n) = s.split()
+(a, b, n) = (int(a), int(b), int(n))
 for cas in range(0, n):
     s = input()
-    l, t, m = s.split()
-    l, t, m = int(l), int(t), int(m)
-    L, R = l, (t - a) // b + 1
+    (l, t, m) = s.split()
+    (l, t, m) = (int(l), int(t), int(m))
+    (L, R) = (l, (t - a) // b + 1)
     if R < L:
         print(-1)
         continue

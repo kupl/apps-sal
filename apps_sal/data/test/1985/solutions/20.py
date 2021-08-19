@@ -1,6 +1,5 @@
 import sys
-
-k, n = [int(i) for i in sys.stdin.readline().split()]
+(k, n) = [int(i) for i in sys.stdin.readline().split()]
 rate = [int(i) for i in sys.stdin.readline().split()]
 rem = dict()
 for i in sys.stdin.readline().split():
@@ -9,11 +8,9 @@ for i in sys.stdin.readline().split():
         rem[v] += 1
     else:
         rem[v] = 1
-
 for i in range(len(rate)):
     if i > 0:
         rate[i] += rate[i - 1]
-
 ans = set()
 ref = next(iter(rem))
 for i in range(len(rate)):
@@ -26,5 +23,4 @@ for i in range(len(rate)):
                 del cnt[v]
     if len(cnt) == 0:
         ans.add(ref - rate[i])
-
 print(len(ans))

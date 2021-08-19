@@ -6,11 +6,9 @@ for i in range(n):
             print(-1)
         else:
             print(a // 4)
+    elif a < 9:
+        print(-1)
+    elif a - 9 < 4 and a - 9 > 0:
+        print(-1)
     else:
-        if a < 9:
-            print(-1)
-        else:
-            if a - 9 < 4 and a - 9 > 0:
-                print(-1)
-            else:
-                print(1 + (a - 9) // 4)
+        print(1 + (a - 9) // 4)

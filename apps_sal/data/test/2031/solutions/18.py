@@ -2,7 +2,7 @@ n = int(input())
 data = list(map(int, input().split()))
 m = int(input())
 for _ in range(m):
-    k, pos = list(map(int, input().split()))
+    (k, pos) = list(map(int, input().split()))
     s = data[:]
     ans = []
     for i in range(k):

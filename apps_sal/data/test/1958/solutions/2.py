@@ -1,5 +1,4 @@
 3
-
 (n, p) = tuple(map(int, input().split()))
 buyers = list()
 for i in range(n):

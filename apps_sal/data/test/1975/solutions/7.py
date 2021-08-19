@@ -1,6 +1,5 @@
-
 def main():
-    nm = input().split(" ")
+    nm = input().split(' ')
     n = int(nm[0])
     m = int(nm[1])
     nos = 0
@@ -14,11 +13,12 @@ def main():
         nos += 1
     print(nos)
     for i in pairs:
-        pair = str(i[0]) + " " + str(i[1])
+        pair = str(i[0]) + ' ' + str(i[1])
         print(pair)
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

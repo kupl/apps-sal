@@ -18,5 +18,4 @@ for i in range(n):
             if len(s) == 1:
                 ma = max(ma, i + 1)
                 break
-
 print(ma)

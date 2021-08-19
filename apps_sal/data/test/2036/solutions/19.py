@@ -1,4 +1,4 @@
-n, m, x, y = map(int, input().split())
+(n, m, x, y) = map(int, input().split())
 print(x, y)
 for i in range(1, m + 1):
     if i != y:
@@ -12,5 +12,4 @@ for i in range(1, n + 1):
         else:
             for j in range(m, 0, -1):
                 print(i, j)
-
         t = not t

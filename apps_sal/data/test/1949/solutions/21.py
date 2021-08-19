@@ -1,5 +1,5 @@
-l, times = map(int, input().split(" "))
-line = list(map(int, input().split(" ")))
+(l, times) = map(int, input().split(' '))
+line = list(map(int, input().split(' ')))
 line.sort()
 subtracted = 0
 curri = 0

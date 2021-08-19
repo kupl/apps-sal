@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 d = {}
 max_vert = 1
 for i in range(n - 1):

@@ -1,11 +1,9 @@
 (k, n) = (int(i) for i in input().split())
-
 a = []
 prev = 0
 for i in input().split():
     prev = prev + int(i)
     a.append(prev)
-
 b = [int(i) for i in input().split()]
 kands = set()
 for i in a:

@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = input()
 Q = []
 for _ in range(q):
@@ -9,15 +9,14 @@ for i in a:
     if i == '1':
         ab += 1
     d.append(ab)
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 p = [1]
 i = 1
 for _ in range(n):
-    i = (i * 2) % mod
+    i = i * 2 % mod
     p.append(i)
-
-for l, r in Q:
+for (l, r) in Q:
     y = r - l + 1
     x = d[r] - d[l - 1]
     y -= x
-    print(((p[x] - 1) * p[y]) % mod)
+    print((p[x] - 1) * p[y] % mod)

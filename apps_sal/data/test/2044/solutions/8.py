@@ -1,5 +1,5 @@
 cur = 0
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ans = []
 for a in map(int, input().split()):
     cur += a

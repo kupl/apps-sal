@@ -2,7 +2,7 @@ q = int(input())
 current = []
 begin = []
 for i in range(q):
-    old, new = input().split()
+    (old, new) = input().split()
     for ind in range(len(current)):
         if current[ind] == old:
             current[ind] = new

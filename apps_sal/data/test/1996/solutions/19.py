@@ -1,5 +1,5 @@
 n = int(input())
-setr = set(chr(i) for i in range(ord('a'), ord('z') + 1))
+setr = set((chr(i) for i in range(ord('a'), ord('z') + 1)))
 setnr = set()
 ans = 0
 letter = ''

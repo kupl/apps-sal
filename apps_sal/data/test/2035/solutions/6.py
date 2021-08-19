@@ -3,14 +3,12 @@ import math
 
 def main():
     (n, xs, ys) = tuple([int(x) for x in input().split()])
-
     p1 = 0
     p2 = 0
     p3 = 0
     p4 = 0
     for i in range(n):
         (x, y) = tuple([int(x) for x in input().split()])
-
         if x < xs:
             p1 += 1
         if x > xs:
@@ -19,7 +17,6 @@ def main():
             p3 += 1
         if y > ys:
             p4 += 1
-
     p = max(p1, p2, p3, p4)
     print(p)
     best = []

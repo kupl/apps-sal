@@ -1,12 +1,10 @@
 def solve():
-    N, P = list(map(int, input().split()))
+    (N, P) = list(map(int, input().split()))
     m = []
     for i in range(N):
         s = input()
         m.append(s)
-
     m.reverse()
-
     cur = 0
     ans = 0
     for s in m:
@@ -16,7 +14,6 @@ def solve():
             nex = cur * 2
         ans += nex * P // 2
         cur = nex
-
     print(ans)
 
 

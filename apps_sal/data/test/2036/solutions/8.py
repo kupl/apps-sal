@@ -1,4 +1,4 @@
-x, y, x0, y0 = map(int, input().split())
+(x, y, x0, y0) = map(int, input().split())
 print(x0, y0)
 print(1, y0)
 print(1, 1)

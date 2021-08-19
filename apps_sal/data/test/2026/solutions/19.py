@@ -1,8 +1,8 @@
 n = int(input())
 A = input()
 count = 0
-B = {"L": 0, "R": 1, "U": 2, "D": 3}
-C = {"L": "R", "R": "L", "U": "D", "D": "U"}
+B = {'L': 0, 'R': 1, 'U': 2, 'D': 3}
+C = {'L': 'R', 'R': 'L', 'U': 'D', 'D': 'U'}
 res = [0, 0, 0, 0]
 for i in A:
     if res[B[C[i]]] == 0:

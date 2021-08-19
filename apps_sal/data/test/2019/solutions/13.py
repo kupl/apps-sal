@@ -10,12 +10,11 @@ def sol():
             else:
                 zr -= 1
                 tot += 1
+        elif on == 0:
+            zr += 1
         else:
-            if on == 0:
-                zr += 1
-            else:
-                on -= 1
-                tot += 1
+            on -= 1
+            tot += 1
     if tot % 2:
         print('DA')
     else:

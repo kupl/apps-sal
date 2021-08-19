@@ -1,11 +1,8 @@
 import heapq
 n = int(input())
 a = list(map(int, input().split()))
-
 if n % 2 == 0:
     a.append(0)
-
-
 heapq.heapify(a)
 ans = 0
 while len(a) > 1:

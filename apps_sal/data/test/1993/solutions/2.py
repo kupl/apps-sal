@@ -1,10 +1,10 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 
 
 class DisjointSetUnion:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.size = [1] * n
@@ -15,15 +15,14 @@ class DisjointSetUnion:
         while a != self.parent[a]:
             a = self.parent[a]
         while acopy != a:
-            self.parent[acopy], acopy = a, self.parent[acopy]
+            (self.parent[acopy], acopy) = (a, self.parent[acopy])
         return a
 
     def union(self, a, b):
-        a, b = self.find(a), self.find(b)
+        (a, b) = (self.find(a), self.find(b))
         if a != b:
             if self.size[a] < self.size[b]:
-                a, b = b, a
-
+                (a, b) = (b, a)
             self.num_sets -= 1
             self.parent[b] = a
             self.size[a] += self.size[b]
@@ -38,7 +37,6 @@ class DisjointSetUnion:
 l = []
 for i in range(n):
     l.append(input().strip())
-
 UF = DisjointSetUnion(n * m)
 for i in range(n):
     for j in range(m):
@@ -48,7 +46,6 @@ for i in range(n):
         if j < m - 1:
             if l[i][j] == '.' and l[i][j + 1] == '.':
                 UF.union(m * i + j, m * i + j + 1)
-
 out = []
 for i in range(n):
     curr = []
@@ -62,9 +59,8 @@ for i in range(n):
             for d in range(4):
                 nx = i + dx[d]
                 ny = j + dy[d]
-                if 0 <= nx < n and 0 <= ny < m and l[nx][ny] == '.':
+                if 0 <= nx < n and 0 <= ny < m and (l[nx][ny] == '.'):
                     adj.add(UF.find(m * nx + ny))
-
             outV = 1
             for v in adj:
                 outV += UF.set_size(v)

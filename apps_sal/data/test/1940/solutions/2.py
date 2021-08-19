@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 W = [int(x) for x in input().split()]
 ans = 0
 for w in W:

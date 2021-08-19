@@ -17,7 +17,7 @@ def rfa():
     return [float(i) for i in input().split()]
 
 
-eps = 1e-9
+eps = 1e-09
 
 
 def is_equal(a, b):
@@ -33,11 +33,9 @@ ar = []
 for i in range(1, n + 1):
     if i % 2 == 0:
         ar.append(i)
-
 for i in range(1, n + 1):
     if i % 2 == 1:
         ar.append(i)
-
 for i in range(1, n + 1):
     if i % 2 == 0:
         ar.append(i)

@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 an = [0] + list(map(int, input().split()))
 na = [0] * (n + 1)
 bm = list(map(int, input().split()))

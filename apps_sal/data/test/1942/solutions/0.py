@@ -19,7 +19,7 @@ def nl():
 
 
 def solve():
-    n, L, R = nl()
+    (n, L, R) = nl()
     L -= 1
     R -= 1
     SM = 0

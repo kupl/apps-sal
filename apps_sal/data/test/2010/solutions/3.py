@@ -1,7 +1,7 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     aa = list(map(int, input().split()))
-    delta, res = 0, []
+    (delta, res) = (0, [])
     for _ in range(m):
         l = list(map(int, input().split()))
         if l[0] == 1:

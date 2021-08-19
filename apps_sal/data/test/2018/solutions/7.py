@@ -1,8 +1,6 @@
 import math
-
 (n, m, q) = list(map(int, input().split(' ')))
 lcm = n * m // math.gcd(n, m)
-
 for i in range(0, q):
     (x1, y1, x2, y2) = list(map(int, input().split(' ')))
     p1 = int(0)
@@ -15,7 +13,7 @@ for i in range(0, q):
         p2 = y2 * m
     else:
         p2 = y2 * n
-    if ((p1 - 1) // lcm) == ((p2 - 1) // lcm):
+    if (p1 - 1) // lcm == (p2 - 1) // lcm:
         print('YES')
     else:
         print('NO')

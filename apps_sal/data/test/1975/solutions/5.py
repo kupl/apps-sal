@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ii = set()
 jj = set()
-
 ans = []
 for i in range(1, n + 1):
     for j in range(1, m + 1):
@@ -10,5 +9,5 @@ for i in range(1, n + 1):
             ii.add(i)
             jj.add(j)
 print(len(ans))
-for a, b in ans:
+for (a, b) in ans:
     print(a, b)

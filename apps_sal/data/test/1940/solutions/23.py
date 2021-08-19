@@ -1,5 +1,5 @@
 import math
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 line = list(map(int, input().split()))
 cnt = 0
 for x in line:

@@ -1,6 +1,13 @@
-def ii(): return int(input())
-def kk(): return map(int, input().split())
-def ll(): return list(kk())
+def ii():
+    return int(input())
+
+
+def kk():
+    return map(int, input().split())
+
+
+def ll():
+    return list(kk())
 
 
 class Node:
@@ -53,7 +60,7 @@ def remove(ite, node):
 def traverse(ite, node):
     res = 0
     for v in ite:
-        i, node = node.next(v ^ 1)
+        (i, node) = node.next(v ^ 1)
         res = 2 * res + (i ^ v)
     return res
 
@@ -61,9 +68,9 @@ def traverse(ite, node):
 root = Node(None, -1)
 make((0 for _ in range(31)), root)
 for _ in range(ii()):
-    s, i = input().split()
+    (s, i) = input().split()
     i = int(i)
-    ite = (min(1, (2**x) & i) for x in range(30, -1, -1))
+    ite = (min(1, 2 ** x & i) for x in range(30, -1, -1))
     if s == '+':
         make(ite, root)
     elif s == '-':

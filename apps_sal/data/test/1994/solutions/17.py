@@ -1,14 +1,14 @@
-'''
-You have a string s = s1s2...s|s|, where |s| is the length of string s, and si its i-th character.
+"""
+You have a string s\u2009=\u2009s1s2...s|s|, where |s| is the length of string s, and si its i-th character.
 
 Let's introduce several definitions:
 
-    A substring s[i..j] (1 ≤ i ≤ j ≤ |s|) of string s is string sisi + 1...sj.
-    The prefix of string s of length l (1 ≤ l ≤ |s|) is string s[1..l].
-    The suffix of string s of length l (1 ≤ l ≤ |s|) is string s[|s| - l + 1..|s|]. 
+    A substring s[i..j] (1\u2009≤\u2009i\u2009≤\u2009j\u2009≤\u2009|s|) of string s is string sisi\u2009+\u20091...sj.
+    The prefix of string s of length l (1\u2009≤\u2009l\u2009≤\u2009|s|) is string s[1..l].
+    The suffix of string s of length l (1\u2009≤\u2009l\u2009≤\u2009|s|) is string s[|s|\u2009-\u2009l\u2009+\u20091..|s|]. 
 
 Your task is, for any prefix of string s which matches a suffix of string s, print the number of times it occurs in string s as a substring.
-'''
+"""
 
 
 def prefix_function(s):

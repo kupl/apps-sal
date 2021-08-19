@@ -1,7 +1,8 @@
 from sys import *
 
 
-class graph():
+class graph:
+
     def __init__(self, n, v):
         self.G = dict()
         for i in range(1, n + 1):
@@ -42,7 +43,7 @@ def BFS(G, v):
     return ret
 
 
-n, m = (int(z) for z in stdin.readline().split())
+(n, m) = (int(z) for z in stdin.readline().split())
 G = graph(n, 0)
 for i in range(m):
     s = [int(z) for z in stdin.readline().split()]

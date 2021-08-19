@@ -1,4 +1,5 @@
 class heap:
+
     def __init__(self, maxn):
         self.a = [0] * maxn
         self.size = 0
@@ -12,12 +13,12 @@ class heap:
                 j = r
             if self.a[i] <= self.a[j]:
                 break
-            self.a[i], self.a[j] = self.a[j], self.a[i]
+            (self.a[i], self.a[j]) = (self.a[j], self.a[i])
             i = j
 
     def shift_up(self, i):
         while i and self.a[i] < self.a[(i - 1) // 2]:
-            self.a[i], self.a[(i - 1) // 2] = self.a[(i - 1) // 2], self.a[i]
+            (self.a[i], self.a[(i - 1) // 2]) = (self.a[(i - 1) // 2], self.a[i])
             i = (i - 1) // 2
 
     def erase_min(self):

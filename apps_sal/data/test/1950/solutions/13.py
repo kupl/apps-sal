@@ -1,5 +1,4 @@
 import heapq as h
-
 n = int(input())
 line2 = input().split()
 a = []

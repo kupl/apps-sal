@@ -1,5 +1,5 @@
 def takeinput():
-    b, g = list(map(int, input().split()))
+    (b, g) = list(map(int, input().split()))
     boy = [0] * b
     girl = [0] * g
     ans = []

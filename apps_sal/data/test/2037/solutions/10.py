@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 reach = [0] * 100001
 current = 1
 count = [0] * 100001

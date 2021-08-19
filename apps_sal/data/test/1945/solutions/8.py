@@ -15,9 +15,8 @@ for i in range(n):
             names.append(queries[i][j])
             if j == 0:
                 f.append(queries[i][j])
-            else:
-                if queries[i][j] not in l:
-                    l.append(queries[i][j])
+            elif queries[i][j] not in l:
+                l.append(queries[i][j])
 print(len(f))
 for k in range(len(f)):
     print(f[k], l[k])

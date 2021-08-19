@@ -11,4 +11,4 @@ for s in stuff:
         happy = True
         break
     lp = s[1]
-print("Happy Alex" if happy else "Poor Alex")
+print('Happy Alex' if happy else 'Poor Alex')

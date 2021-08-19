@@ -7,22 +7,22 @@ for you in range(t):
     li = [int(i) for i in l]
     poss = 1
     for i in li:
-        if(i != x):
+        if i != x:
             poss = 0
             break
-    if(poss):
+    if poss:
         print(0)
         continue
     poss = 0
     for i in li:
-        if(i == x):
+        if i == x:
             poss = 1
             break
-    if(poss):
+    if poss:
         print(1)
         continue
     z = sum(li)
-    if(z == n * x):
+    if z == n * x:
         print(1)
         continue
     print(2)

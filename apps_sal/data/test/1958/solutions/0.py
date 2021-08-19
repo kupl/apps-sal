@@ -1,9 +1,9 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 temp = [input() for i in range(n)]
 num = 0
 num2 = 0
 for i in range(n - 1, -1, -1):
-    if temp[i] == "halfplus":
+    if temp[i] == 'halfplus':
         num *= 2
         num += 1
         num2 += num / 2 * p

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mas = list(map(int, input().split()))
 pol = [0] * n
 null = 0

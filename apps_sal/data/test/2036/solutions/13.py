@@ -19,19 +19,19 @@ def rl():
     return list(map(int, input().split()))
 
 
-n, m, x, y = rm()
+(n, m, x, y) = rm()
 print(x, y)
 print(1, y)
 go = True
 for i in range(1, n + 1):
     if go:
         for j in range(1, m + 1):
-            if (i == x and j == y) or (i == 1 and j == y):
+            if i == x and j == y or (i == 1 and j == y):
                 continue
             print(i, j)
     else:
         for j in range(m, 0, -1):
-            if (i == x and j == y) or (i == 1 and j == y):
+            if i == x and j == y or (i == 1 and j == y):
                 continue
             print(i, j)
     go = not go

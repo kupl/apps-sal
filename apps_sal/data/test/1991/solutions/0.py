@@ -20,7 +20,6 @@ for _ in range(r1(int)):
     if g:
         print(0)
         continue
-
     g = True
     c = 0
     p = False

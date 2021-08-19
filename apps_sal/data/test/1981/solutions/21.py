@@ -12,7 +12,7 @@ def count_cats(f, a, m, n, c):
     s = 0
     nodes = [(n, c)]
     while nodes:
-        n, c = nodes.pop()
+        (n, c) = nodes.pop()
         z = a[n]
         t = z + c if z else 0
         if t <= m:
@@ -34,7 +34,7 @@ def solve(n, m, a, e):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     e = []
     for i in range(n):

@@ -18,7 +18,7 @@ def gcd(a, b):
 
 
 for i in range(n - 1):
-    a, b = map(int, input().strip().split())
+    (a, b) = map(int, input().strip().split())
     tree[a - 1].append(b - 1)
     tree[b - 1].append(a - 1)
 segment_vals = [{} for i in range(n)]

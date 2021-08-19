@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
-
 s = 0
 ans = 0
 for i in range(n):

@@ -1,5 +1,4 @@
 n = int(input())
-
 ans = []
 for i in range(n):
     if i % 2 == 1:
