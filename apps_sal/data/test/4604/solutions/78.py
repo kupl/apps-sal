@@ -1,5 +1,5 @@
 N = int(input())
-*A, = sorted(map(int, input().split()))
+(*A,) = sorted(map(int, input().split()))
 
 
 def f(x):
@@ -14,4 +14,4 @@ if N % 2 == 0:
     a = f(1)
 else:
     a = A[0] == 0 and f(2)
-print(2**(N // 2) % (10**9 + 7) * a)
+print(2 ** (N // 2) % (10 ** 9 + 7) * a)

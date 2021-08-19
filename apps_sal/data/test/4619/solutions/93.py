@@ -1,7 +1,7 @@
-w, h, n = map(int, input().split())
-x, y, a = [], [], []
+(w, h, n) = map(int, input().split())
+(x, y, a) = ([], [], [])
 for i in range(n):
-    X, Y, A = map(int, input().split())
+    (X, Y, A) = map(int, input().split())
     x.append(X)
     y.append(Y)
     a.append(A)
@@ -41,5 +41,4 @@ for i in range(n):
         m3(y[i])
     else:
         m4(y[i])
-
 print(sum(map(sum, zahyou)))

@@ -24,4 +24,4 @@ def ans(x):
 
 
 for j in range(n):
-    print((ans(j)))
+    print(ans(j))

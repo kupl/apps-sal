@@ -10,4 +10,4 @@ for i in range(0, K + 1):
                 ans.add(t)
 ans = list(ans)
 ans.sort()
-print((ans[K - 1]))
+print(ans[K - 1])

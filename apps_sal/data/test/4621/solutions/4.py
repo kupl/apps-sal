@@ -1,5 +1,5 @@
 def main():
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
     for _ in range(H):
         C = input()
         print(C)

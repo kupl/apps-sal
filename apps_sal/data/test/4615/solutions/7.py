@@ -1,8 +1,6 @@
 import bisect
 import heapq
-
-a, b, c, d, e, f = map(int, input().split())
-
+(a, b, c, d, e, f) = map(int, input().split())
 w = set()
 temp = [a * i for i in range((30 - 1) // a + 2)]
 for i in temp:
@@ -12,7 +10,6 @@ for i in temp:
 w = list(w)
 w.remove(0)
 w.sort()
-
 s = set()
 temp = [c * i for i in range((3000 - 1) // c + 2)]
 for i in temp:
@@ -21,7 +18,6 @@ for i in temp:
         i += d
 s = list(s)
 s.sort()
-
 queue = []
 heapq.heapify(queue)
 for i in w:

@@ -1,7 +1,7 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     ans = 1
     A.sort()
     if N % 2 == 0:

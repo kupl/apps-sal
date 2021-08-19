@@ -1,5 +1,4 @@
-A, B, C, D = [int(input()) for i in range(4)]
-
+(A, B, C, D) = [int(input()) for i in range(4)]
 if A <= B:
     train = A
 else:
@@ -8,6 +7,5 @@ if C <= D:
     bus = C
 else:
     bus = D
-
-answer = (train + bus)
+answer = train + bus
 print(answer)

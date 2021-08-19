@@ -1,8 +1,7 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 query = [tuple(map(int, input().split())) for _ in range(n)]
-
-sx, sy = 0, 0
-for x, y, a in query:
+(sx, sy) = (0, 0)
+for (x, y, a) in query:
     if a == 1:
         sx = max(sx, x)
     elif a == 2:

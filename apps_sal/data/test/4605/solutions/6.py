@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 
 
 def caluculate(n):
@@ -13,5 +13,4 @@ ans = 0
 for i in range(N + 1):
     if A <= caluculate(i) <= B:
         ans += i
-
 print(ans)

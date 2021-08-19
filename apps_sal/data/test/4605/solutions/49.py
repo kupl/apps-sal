@@ -13,9 +13,7 @@ def sum(n):
 
 
 count = 0
-
 for i in range(1, N + 1):
     if A <= sum(i) <= B:
         count += i
-
 print(count)

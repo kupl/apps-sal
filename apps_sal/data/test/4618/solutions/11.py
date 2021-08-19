@@ -7,6 +7,5 @@ for i in range(len(S)):
             s = S[i:i + j]
             if not s in abc:
                 abc.append(S[i:i + j])
-
 abc = sorted(abc)
-print((abc[k - 1]))
+print(abc[k - 1])

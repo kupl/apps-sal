@@ -1,4 +1,4 @@
 a = input()
-b = ('ABC')
+b = 'ABC'
 c = b + a
 print(c)

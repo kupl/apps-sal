@@ -1,9 +1,9 @@
 import queue
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 route = [[] for _ in range(n)]
 vals = []
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     route[a - 1].append(b - 1)
     route[b - 1].append(a - 1)
     vals.append([a - 1, b - 1])

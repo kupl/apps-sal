@@ -1,8 +1,8 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 a = []
 b = []
 for e in range(M):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     a.append(x)
@@ -24,7 +24,6 @@ def solve(e):
         y = find(b, parent)
         if x != y:
             parent[x] = y
-
     for i in range(M):
         if i == e:
             continue

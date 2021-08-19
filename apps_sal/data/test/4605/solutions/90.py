@@ -1,5 +1,4 @@
-n, a, b = map(int, input().split())
-
+(n, a, b) = map(int, input().split())
 ans = 0
 for num in range(n + 1):
     str_num = str(num)

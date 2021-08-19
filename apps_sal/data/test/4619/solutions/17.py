@@ -1,7 +1,7 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 xya = [list(map(int, input().split())) for _ in range(n)]
-x, y, a = zip(*xya)
-xl, xr, yb, yt = 0, w, 0, h
+(x, y, a) = zip(*xya)
+(xl, xr, yb, yt) = (0, w, 0, h)
 for i in range(n):
     if a[i] == 1:
         xl = max(xl, x[i])

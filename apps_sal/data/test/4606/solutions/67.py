@@ -1,1 +1,1 @@
-print(f"ABC{input()}")
+print(f'ABC{input()}')

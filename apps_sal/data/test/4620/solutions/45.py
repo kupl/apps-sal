@@ -3,7 +3,7 @@ C = []
 S = []
 F = []
 for _ in range(n - 1):
-    c, s, f = map(int, input().split())
+    (c, s, f) = map(int, input().split())
     C.append(c)
     S.append(s)
     F.append(f)

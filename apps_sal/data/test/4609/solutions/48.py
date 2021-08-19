@@ -2,9 +2,7 @@ N = int(input())
 A = []
 for n in range(N):
     A.append(int(input()))
-
 A.sort()
-
 cnt = 1
 ans = 0
 for n in range(1, N):

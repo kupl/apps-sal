@@ -1,3 +1,2 @@
-a, b = list(map(int, input().split()))
-
-print((a - int(a > b)))
+(a, b) = list(map(int, input().split()))
+print(a - int(a > b))

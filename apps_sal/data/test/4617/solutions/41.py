@@ -1,4 +1,4 @@
-c = [""] * 2
+c = [''] * 2
 c[0] = input()
 c[1] = input()
 s = True

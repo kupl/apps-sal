@@ -6,7 +6,6 @@ for i in range(n):
         paper[a] = 1
     else:
         paper.pop(a)
-
 res = 0
 for value in list(paper.values()):
     if value == 1:

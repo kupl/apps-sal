@@ -1,4 +1,5 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
 N = int(input())
@@ -12,7 +13,7 @@ def main():
             print(i)
             return 0
         a = A[a - 1]
-    print((-1))
+    print(-1)
 
 
 def __starting_point():

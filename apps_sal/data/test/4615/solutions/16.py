@@ -1,5 +1,4 @@
-A, B, C, D, E, F = map(int, input().split())
-
+(A, B, C, D, E, F) = map(int, input().split())
 ws = set()
 for a in range(0, F + 1, 100 * A):
     for b in range(0, F + 1, 100 * B):
@@ -7,14 +6,12 @@ for a in range(0, F + 1, 100 * A):
             break
         ws.add(a + b)
 ws.remove(0)
-
 ss = set()
 for c in range(0, F + 1, C):
     for d in range(0, F + 1, D):
         if c + d > F:
             break
         ss.add(c + d)
-
 best_s = -1
 best_w = 1
 for w in ws:

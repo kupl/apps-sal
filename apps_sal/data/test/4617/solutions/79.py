@@ -5,6 +5,6 @@ for i in range(2):
         if C[i][j] != C[1 - i][2 - j]:
             flag = False
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,6 +1,5 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 dic = {}
 for i in A:
     if i not in list(dic.keys()):
@@ -10,7 +9,7 @@ for i in A:
 dic = sorted(list(dic.items()), key=lambda x: x[1], reverse=True)
 k = 0
 ans = 0
-for key, value in dic:
+for (key, value) in dic:
     if k >= K:
         ans += value
     k += 1

@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 con = 0
 for i in range(1, N + 1):
     a1 = i // 10000

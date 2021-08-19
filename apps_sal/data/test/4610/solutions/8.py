@@ -1,5 +1,5 @@
 import operator
-n, k = [int(_) for _ in input().split()]
+(n, k) = [int(_) for _ in input().split()]
 D = dict()
 A = [int(_) for _ in input().split()]
 for _ in range(n):

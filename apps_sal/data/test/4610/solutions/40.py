@@ -1,9 +1,7 @@
 from collections import Counter
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 cnt = Counter(a)
-
 l = len(cnt)
 t = l - k
 ans = 0

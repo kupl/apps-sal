@@ -7,4 +7,4 @@ for i in range(l):
         if i + j <= l:
             A.add(s[i:i + j])
 ANS = sorted(A)
-print((ANS[k - 1]))
+print(ANS[k - 1])

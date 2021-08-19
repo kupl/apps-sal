@@ -1,17 +1,15 @@
 import copy
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 path_matrix = [[0 for i in range(N)] for j in range(N)]
 L = [[] for i in range(M)]
-
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     path_matrix[a - 1][b - 1] = 1
     path_matrix[b - 1][a - 1] = 1
     L[i].append(a)
     L[i].append(b)
-
-color_white = ["W" for i in range(N)]
-color_black = ["B" for i in range(N)]
+color_white = ['W' for i in range(N)]
+color_black = ['B' for i in range(N)]
 visited = copy.deepcopy(color_white)
 
 
@@ -22,14 +20,13 @@ def path(x, y):
 
 
 def DFS(x, tim):
-    visited[x - 1] = "B"
+    visited[x - 1] = 'B'
     if visited == color_black:
         return True
     total_ans = 0
     for i in range(N):
-        if tim[x - 1][i] == 1 and visited[i] == "W":
+        if tim[x - 1][i] == 1 and visited[i] == 'W':
             total_ans = int(DFS(i + 1, tim))
-
     return total_ans
 
 
@@ -40,5 +37,4 @@ for i in range(M):
         ans += 1
     path_matrix[L[i][0] - 1][L[i][1] - 1] = 1
     path_matrix[L[i][1] - 1][L[i][0] - 1] = 1
-
 print(ans)

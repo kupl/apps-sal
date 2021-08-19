@@ -1,5 +1,5 @@
 N = int(input())
-P = [(0, 0, 0)] + [tuple(int(x) for x in input().split()) for _ in range(N)]
+P = [(0, 0, 0)] + [tuple((int(x) for x in input().split())) for _ in range(N)]
 
 
 def travelable(p, q):
@@ -11,4 +11,4 @@ def travelable(p, q):
         return False
 
 
-print('Yes' if all(travelable(p, q) for p, q in zip(P[:N], P[1:])) else 'No')
+print('Yes' if all((travelable(p, q) for (p, q) in zip(P[:N], P[1:]))) else 'No')

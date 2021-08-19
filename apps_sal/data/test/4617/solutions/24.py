@@ -1,6 +1,5 @@
 data1 = input()
 data2 = input()
-
 count = 3 - 1
 sw = 0
 i = 0
@@ -11,6 +10,6 @@ while i <= count:
     i += 1
     j -= 1
 if sw == 3:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

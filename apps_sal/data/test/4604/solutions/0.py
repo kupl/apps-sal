@@ -15,17 +15,16 @@ def p(p):
 if n % 2 == 1:
     res = True
     for i in range(n):
-        if a[i] != ((i + 1) // 2) * 2:
+        if a[i] != (i + 1) // 2 * 2:
             res = False
     if res:
         print(p(n // 2))
     else:
         print(0)
-
 else:
     res = True
     for i in range(n):
-        if a[i] != (i // 2) * 2 + 1:
+        if a[i] != i // 2 * 2 + 1:
             res = False
     if res:
         print(p(n // 2))

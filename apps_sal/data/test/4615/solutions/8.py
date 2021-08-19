@@ -1,5 +1,4 @@
-a, b, c, d, e, f = map(int, input().split())
-
+(a, b, c, d, e, f) = map(int, input().split())
 ans = -1
 ans_water = -1
 ans_sugar = -1
@@ -23,8 +22,8 @@ for ia in range(f // (a * 100) + 2):
                     continue
                 if sugar + water > f:
                     continue
-                if (100 * sugar) / (sugar + water) > ans:
-                    ans = (100 * sugar) / (sugar + water)
+                if 100 * sugar / (sugar + water) > ans:
+                    ans = 100 * sugar / (sugar + water)
                     ans_water = water
                     ans_sugar = sugar
 print(ans_sugar + ans_water, ans_sugar)

@@ -3,7 +3,6 @@ a = []
 b = []
 for i in range(n):
     a.append(int(input()))
-
 next = a[0] - 1
 b.append(next + 1)
 for i in range(n):

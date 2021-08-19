@@ -10,7 +10,6 @@ for i in range(N + 1):
     if a[pivot] == 1:
         break
     pivot = a[pivot]
-
 if len(step) > N:
     print(-1)
 else:

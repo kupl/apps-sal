@@ -1,6 +1,5 @@
 with open(0) as f:
-    N, *a = map(int, f.read().split())
-
+    (N, *a) = map(int, f.read().split())
 from itertools import count
 p = 0
 seen = {0}

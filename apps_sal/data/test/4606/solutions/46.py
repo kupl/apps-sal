@@ -1,6 +1,6 @@
 def iroha():
     num = int(input())
-    print(("ABC" + str(num)))
+    print('ABC' + str(num))
 
 
 def __starting_point():

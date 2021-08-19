@@ -1,5 +1,4 @@
-N, A, B = map(int, input().split())
-
+(N, A, B) = map(int, input().split())
 Sum = 0
 for i in range(N):
     o = (i + 1) // 10000
@@ -10,5 +9,4 @@ for i in range(N):
     e = o + a + b + c + d
     if e >= A and e <= B:
         Sum = Sum + (i + 1)
-
 print(Sum)

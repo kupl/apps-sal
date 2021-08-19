@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.nodes = n
         self.parents = [i for i in range(n)]
@@ -35,11 +36,10 @@ class UnionFind:
 
 
 adj = []
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 for m in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     adj.append([a - 1, b - 1])
-
 ans = 0
 for i in range(M):
     uf = UnionFind(N)

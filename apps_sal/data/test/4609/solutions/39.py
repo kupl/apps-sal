@@ -7,7 +7,6 @@ for i in range(n):
         d[a] -= 1
     else:
         d[a] += 1
-
 ans = 0
 for v in list(d.values()):
     if v > 0:

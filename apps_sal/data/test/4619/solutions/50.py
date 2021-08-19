@@ -1,7 +1,7 @@
-w, h, n = list(map(int, input().split()))
+(w, h, n) = list(map(int, input().split()))
 ans = [[0 for _ in range(w)] for _ in range(h)]
 for i in range(n):
-    x, y, a = list(map(int, input().split()))
+    (x, y, a) = list(map(int, input().split()))
     if a == 1:
         for j in range(h):
             ans[j][:x] = [1 for _ in range(x)]

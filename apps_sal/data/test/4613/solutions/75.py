@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parent = [i for i in range(self.n)]
@@ -27,13 +28,12 @@ class UnionFind():
         return self.find_root(x) == self.find_root(y)
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 edge = []
 bridge = 0
 for _ in range(M):
     e = list(map(lambda x: int(x) - 1, input().split()))
     edge.append(e)
-
 for i in range(M):
     uf = UnionFind(N)
     for j in range(M):
@@ -42,5 +42,4 @@ for i in range(M):
         uf.unite(edge[j][0], edge[j][1])
     if uf.find_root(edge[i][0]) != uf.find_root(edge[i][1]):
         bridge += 1
-
 print(bridge)

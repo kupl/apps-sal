@@ -1,5 +1,4 @@
-A, B, C = list(map(int, input().split()))
-
+(A, B, C) = list(map(int, input().split()))
 if A - B == 0:
     print(C)
 elif A - C == 0:

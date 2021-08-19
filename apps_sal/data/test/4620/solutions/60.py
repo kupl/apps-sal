@@ -4,7 +4,7 @@ timetable = [list(map(int, input().split())) for _ in range(n - 1)]
 
 def nextstn(t, stn):
     if t >= timetable[stn][1]:
-        return (((t + timetable[stn][2] - 1) // timetable[stn][2]) * timetable[stn][2]) + timetable[stn][0]
+        return (t + timetable[stn][2] - 1) // timetable[stn][2] * timetable[stn][2] + timetable[stn][0]
     else:
         return timetable[stn][1] + timetable[stn][0]
 

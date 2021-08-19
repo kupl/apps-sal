@@ -1,5 +1,5 @@
 from collections import Counter
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(map(int, input().split()))
 num = Counter(s)
 if len(num) <= k:
@@ -11,8 +11,6 @@ else:
     for i in sorted(num.values()):
         if a == n:
             break
-
         ans += i
         a += 1
-
     print(ans)

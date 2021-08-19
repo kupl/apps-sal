@@ -8,8 +8,7 @@ def calc_sum(num):
 
 
 def main():
-
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     ans = 0
     for i in range(1, n + 1):
         num = calc_sum(i)

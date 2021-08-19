@@ -1,5 +1,5 @@
 import numpy as np
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 loc = [input() for _ in range(n)]
 
 
@@ -16,6 +16,6 @@ def black(x, y, i):
 
 mtx = np.ones((w, h), dtype=int)
 for l in loc:
-    x, y, i = map(int, l.split())
+    (x, y, i) = map(int, l.split())
     black(x, y, i)
 print(mtx.sum())

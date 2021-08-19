@@ -1,7 +1,7 @@
-W, H, N = (int(T) for T in input().split())
+(W, H, N) = (int(T) for T in input().split())
 XYA = [[0], [W], [0], [H]]
 for TN in range(0, N):
-    X, Y, A = (int(T) for T in input().split())
+    (X, Y, A) = (int(T) for T in input().split())
     if A in [1, 2]:
         XYA[A - 1].append(X)
     else:

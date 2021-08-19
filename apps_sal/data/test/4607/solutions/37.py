@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 takahashi = a - 1
 if b >= a:
     takahashi += 1

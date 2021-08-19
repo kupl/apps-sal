@@ -3,7 +3,6 @@ d = []
 visited = [False for _ in range(N + 1)]
 for _ in range(N):
     d.append(int(input()) - 1)
-
 i = 0
 cnt = 0
 while True:
@@ -19,5 +18,4 @@ while True:
         visited[i] = True
         cnt += 1
         i = d[i]
-
 print(cnt)

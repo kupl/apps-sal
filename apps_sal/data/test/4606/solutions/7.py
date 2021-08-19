@@ -1,2 +1,2 @@
 N = int(input())
-print(f"ABC{N}")
+print(f'ABC{N}')

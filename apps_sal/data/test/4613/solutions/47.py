@@ -1,10 +1,10 @@
 import copy
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 s = [[] for i in range(N)]
 m = []
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s[a - 1].append(b)
     s[b - 1].append(a)
     m.append([a, b])

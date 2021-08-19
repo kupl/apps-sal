@@ -1,11 +1,10 @@
-
-url = "https://atcoder.jp//contests/abc047/tasks/abc047_b"
+url = 'https://atcoder.jp//contests/abc047/tasks/abc047_b'
 
 
 def main():
-    w, h, n = list(map(int, input().split()))
+    (w, h, n) = list(map(int, input().split()))
     xya = [list(map(int, input().split())) for _ in range(n)]
-    x, y = [0, w], [0, h]
+    (x, y) = ([0, w], [0, h])
     for low in xya:
         if low[2] == 1 and x[0] < low[0]:
             x[0] = low[0]
@@ -18,7 +17,7 @@ def main():
     xs = x[1] - x[0]
     ys = y[1] - y[0]
     if xs < 0 or ys < 0:
-        print((0))
+        print(0)
     else:
         ans = xs * ys
         print(ans)

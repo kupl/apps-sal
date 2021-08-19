@@ -1,8 +1,7 @@
-W, H, N = map(int, input().split())
-A, B, C, D = [0], [W], [0], [H]
-
+(W, H, N) = map(int, input().split())
+(A, B, C, D) = ([0], [W], [0], [H])
 for i in range(N):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         A.append(x)
     elif a == 2:
@@ -11,10 +10,8 @@ for i in range(N):
         C.append(y)
     elif a == 4:
         D.append(y)
-
 W = min(B) - max(A)
 H = min(D) - max(C)
-
 if W < 0 or H < 0:
     ans = 0
 else:

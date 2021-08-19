@@ -1,7 +1,5 @@
-N, A, B = list(map(int, input().split()))
-
+(N, A, B) = list(map(int, input().split()))
 ans = 0
-
 for i in range(1, N + 1, 1):
     stri = str(i)
     sum = 0
@@ -10,5 +8,4 @@ for i in range(1, N + 1, 1):
     else:
         if sum >= A and sum <= B:
             ans += i
-
 print(ans)

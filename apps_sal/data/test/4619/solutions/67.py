@@ -1,8 +1,8 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 x_pos = [0, w]
 y_pos = [0, h]
 for _ in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         x_pos[0] = max(x_pos[0], x)
     elif a == 2:

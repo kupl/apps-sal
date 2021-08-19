@@ -1,6 +1,5 @@
 s = input().rstrip()
 k = int(input())
-
 n = len(s)
 ss = set()
 for i in range(n):

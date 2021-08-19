@@ -1,7 +1,7 @@
-w, h, n = map(int, input().split())
-l, r, d, u = (0, w, 0, h)
+(w, h, n) = map(int, input().split())
+(l, r, d, u) = (0, w, 0, h)
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         l = max(l, x)
     elif a == 2:

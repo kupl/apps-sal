@@ -1,4 +1,5 @@
 class UnionFindWithSize:
+
     def __init__(self, size):
         self.parent = [i for i in range(size)]
         self.size = [1] * size
@@ -10,7 +11,7 @@ class UnionFindWithSize:
         return self.parent[x]
 
     def unite(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return
         if self.size[x] < self.size[y]:
@@ -28,14 +29,14 @@ class UnionFindWithSize:
 
 
 def __starting_point():
-    N, M = map(int, input().split())
-    edges = [tuple(map(lambda x:int(x) - 1, input().split())) for _ in range(M)]
+    (N, M) = map(int, input().split())
+    edges = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(M)]
     ans = 0
     for i in range(M):
         uf = UnionFindWithSize(N)
         for j in range(M):
             if j != i:
-                a, b = edges[j]
+                (a, b) = edges[j]
                 uf.unite(a, b)
         if uf.sizeofset(0) != N:
             ans += 1

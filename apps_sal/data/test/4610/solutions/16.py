@@ -1,10 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
-
 d = {}
 for a in A:
     d[a] = d.get(a, 0) + 1
-
 if len(d) <= k:
     print(0)
 else:

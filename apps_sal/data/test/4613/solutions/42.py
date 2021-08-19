@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = [set() for i in range(n)]
 e = []
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     s[a].add(b)
@@ -27,7 +27,7 @@ def dfs(u, v, c):
 
 cnt = 0
 for i in range(m):
-    x, y = e[i][0], e[i][1]
+    (x, y) = (e[i][0], e[i][1])
     visited = [0 for i in range(n)]
     d = []
     dfs(x, y, 0)

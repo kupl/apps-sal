@@ -16,6 +16,6 @@ for i in range(Row):
     y = List[i][2]
     T = List[i][0]
 if flag:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

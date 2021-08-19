@@ -11,7 +11,7 @@ for i in range(N):
     if i > K:
         break
 ttl = []
-for k, v in cnt.items():
+for (k, v) in cnt.items():
     ttl.extend(v)
 ttl.sort()
 print(ttl[K - 1])

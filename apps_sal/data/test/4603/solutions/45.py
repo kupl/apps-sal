@@ -2,7 +2,6 @@ A = int(input())
 B = int(input())
 C = int(input())
 D = int(input())
-
 if A <= B:
     train = A
 else:
@@ -11,6 +10,5 @@ if C <= D:
     bus = C
 else:
     bus = D
-
-answer = (train + bus)
+answer = train + bus
 print(answer)

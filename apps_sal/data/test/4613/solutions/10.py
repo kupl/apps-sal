@@ -1,8 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [tuple(map(int, input().split())) for i in range(M)]
 
 
 class UnionFind:
+
     def __init__(self, N):
         self.parent = [i for i in range(N)]
         self._size = [1] * N
@@ -24,7 +25,7 @@ class UnionFind:
         if ra == rb:
             return
         if self._size[ra] < self._size[rb]:
-            ra, rb = rb, ra
+            (ra, rb) = (rb, ra)
         self._size[ra] += self._size[rb]
         self.parent[rb] = ra
         self.count += 1
@@ -36,10 +37,10 @@ class UnionFind:
 ans = 0
 for i in range(M):
     uf = UnionFind(N)
-    for j, (a, b) in enumerate(AB):
+    for (j, (a, b)) in enumerate(AB):
         if i == j:
             continue
-        a, b = a - 1, b - 1
+        (a, b) = (a - 1, b - 1)
         if uf.is_same(a, b):
             continue
         uf.unite(a, b)

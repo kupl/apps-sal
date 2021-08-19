@@ -1,5 +1,4 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 if int(a) == int(b):
     print(c)
 if int(a) == int(c):

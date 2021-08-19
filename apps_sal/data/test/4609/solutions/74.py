@@ -1,8 +1,14 @@
 from functools import partial, reduce
 from collections import Counter
 import sys
-def IS(): return sys.stdin.readline().rstrip()
-def II(): return int(IS())
+
+
+def IS():
+    return sys.stdin.readline().rstrip()
+
+
+def II():
+    return int(IS())
 
 
 def f_chain(*args):
@@ -13,10 +19,7 @@ def main():
     n = II()
     aa = [II() for _ in range(n)]
     c_cnt = Counter(aa).values()
-    f_chain(c_cnt,
-            partial(map, lambda x: 1 if x % 2 == 1 else 0),
-            sum,
-            print)
+    f_chain(c_cnt, partial(map, lambda x: 1 if x % 2 == 1 else 0), sum, print)
 
 
 def __starting_point():

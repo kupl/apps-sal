@@ -1,7 +1,10 @@
 import bisect as bs
-N, K = (int(x) for x in input().split())
+(N, K) = (int(x) for x in input().split())
 A = sorted([int(x) for x in input().split()])
-def f(X, x): return bs.bisect_right(X, x) - bs.bisect_left(X, x)
+
+
+def f(X, x):
+    return bs.bisect_right(X, x) - bs.bisect_left(X, x)
 
 
 cnt = sorted([f(A, a) for a in set(A)], reverse=True)

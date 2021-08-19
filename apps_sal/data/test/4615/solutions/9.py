@@ -1,4 +1,4 @@
-a, b, c, d, e, f = map(int, input().split())
+(a, b, c, d, e, f) = map(int, input().split())
 ans = [-1] * 9999
 ans[a * 100] = 0
 ans[b * 100] = 0

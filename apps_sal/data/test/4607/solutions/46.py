@@ -1,4 +1,4 @@
-month, day = map(int, input().split())
+(month, day) = map(int, input().split())
 takahashi_days = month
 if day >= month:
     print(takahashi_days)

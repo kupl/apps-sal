@@ -13,7 +13,6 @@ while True:
     else:
         a = line[a]
         check[a] += 1
-
     if check[a] > 1:
         count = -1
         break

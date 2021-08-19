@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-p = 10**9 + 7
+p = 10 ** 9 + 7
 
 
 def main(n, a):
@@ -12,13 +12,13 @@ def main(n, a):
         c.insert(0, 0)
     if a != c:
         return 0
-    return 2**(h % (p - 1)) % p
+    return 2 ** (h % (p - 1)) % p
 
 
 def __starting_point():
     n = int(input())
     a = list(map(int, sys.stdin.readline().strip().split()))
-    print((main(n, a)))
+    print(main(n, a))
 
 
 __starting_point()

@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.size = [1 for i in range(n)]
@@ -24,7 +25,7 @@ class UnionFind:
         return self.size[self.root(x)]
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 AB = [list([int(x) - 1 for x in input().split()]) for _ in range(M)]
 ans = 0
 for i in range(M):

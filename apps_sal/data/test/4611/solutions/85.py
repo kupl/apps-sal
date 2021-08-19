@@ -18,6 +18,6 @@ for j in range(n):
     else:
         fail += 1
 if fail == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

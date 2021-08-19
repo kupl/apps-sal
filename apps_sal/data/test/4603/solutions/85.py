@@ -2,8 +2,6 @@ a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
-
 train = min(a, b)
 bus = min(c, d)
-
 print(train + bus)

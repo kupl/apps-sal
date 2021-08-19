@@ -1,9 +1,8 @@
 N = int(input())
 l = []
 for i in range(N - 1):
-    c, s, f = map(int, input().split())
+    (c, s, f) = map(int, input().split())
     l.append([c, s, f])
-
 for i in range(N - 1):
     time = l[i][1] + l[i][0]
     for j in range(i + 1, N - 1):

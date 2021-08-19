@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
 D = dict.fromkeys(range(1, n + 1), 0)
 ans = 0

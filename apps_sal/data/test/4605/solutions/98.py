@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 result = 0
 
 
@@ -14,5 +14,4 @@ for i in range(N + 1):
     count = FindSomeOfDegit(i)
     if A <= count <= B:
         result += i
-
 print(result)

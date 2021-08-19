@@ -1,14 +1,13 @@
 import copy
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 lsside = [[] for i in range(N + 1)]
 lsline = []
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     lsside[a].append(b)
     lsside[b].append(a)
     lsline.append([a, b])
-
 ans = 0
 lsloop = []
 for i in range(M):

@@ -1,4 +1,4 @@
-a, b, c, d, e, f = map(int, input().split())
+(a, b, c, d, e, f) = map(int, input().split())
 s = set()
 for i in range(30 // a + 1):
     for j in range(30 // b + 1):

@@ -1,11 +1,9 @@
 from scipy.sparse.csgraph import floyd_warshall
 import numpy as np
-N, M = (int(x) for x in input().split())
-edge = [tuple(int(x) for x in input().split()) for _ in range(M)]
-
+(N, M) = (int(x) for x in input().split())
+edge = [tuple((int(x) for x in input().split())) for _ in range(M)]
 INF = 100
 tmpl_graph = [[INF if i != j else 0 for j in range(N)] for i in range(N)]
-
 ans = 0
 for E in edge:
     edgeWithoutE = edge.copy()

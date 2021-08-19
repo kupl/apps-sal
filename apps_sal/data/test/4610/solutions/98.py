@@ -1,5 +1,5 @@
 import collections
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
 c = collections.Counter(a)
 l = len(c)

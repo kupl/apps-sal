@@ -1,12 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-
 a = sorted(a)
-
 num = 0
 judge = 0
-
 if len(a) % 2 == 1:
     if a[0] == 0:
         for i in range(1, n, 2):
@@ -27,7 +23,6 @@ else:
             print(0)
             judge = 1
             break
-
 if judge == 0:
-    result = (2**num) % (10**9 + 7)
+    result = 2 ** num % (10 ** 9 + 7)
     print(result)

@@ -5,4 +5,4 @@ for _ in range(N):
     if a not in A:
         A[a] = 0
     A[a] = 1 - A[a]
-print((sum(A.values())))
+print(sum(A.values()))

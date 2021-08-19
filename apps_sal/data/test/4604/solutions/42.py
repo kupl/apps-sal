@@ -15,4 +15,4 @@ else:
 if judge == 1:
     print(0)
 else:
-    print((2**(n // 2)) % (10**9 + 7))
+    print(2 ** (n // 2) % (10 ** 9 + 7))

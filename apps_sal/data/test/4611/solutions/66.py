@@ -12,7 +12,7 @@ now = 0
 can = 1
 start = [0, 0]
 for i in range(n):
-    t, x, y = [int(i) for i in input().split()]
+    (t, x, y) = [int(i) for i in input().split()]
     goal = [x, y]
     if not func(start, goal, t - now):
         can = 0
@@ -20,8 +20,7 @@ for i in range(n):
     else:
         start = goal
         now = t
-
 if can == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

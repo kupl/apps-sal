@@ -1,8 +1,6 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 C = [input() for i in range(H)]
-
 ans = ['' for i in range(H * 2)]
-
 for i in range(H):
     for j in range(W):
         ans[2 * i] += C[i][j]

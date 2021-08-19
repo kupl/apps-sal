@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 r = 0
 for i in range(n + 1):
     c = 0
@@ -8,6 +8,4 @@ for i in range(n + 1):
         j = j // 10
     if a <= c and c <= b:
         r += i
-
-
 print(r)

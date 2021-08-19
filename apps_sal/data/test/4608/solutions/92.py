@@ -2,7 +2,6 @@ n = int(input())
 a = [0] * n
 for i in range(n):
     a[i] = int(input())
-
 now = 1
 for i in range(1, n + 10):
     now = a[now - 1]
@@ -10,4 +9,4 @@ for i in range(1, n + 10):
         print(i)
         break
 else:
-    print((-1))
+    print(-1)

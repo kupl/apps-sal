@@ -2,9 +2,8 @@ n = int(input())
 al = []
 for i in range(n):
     al.append(int(input()))
-
 al.sort()
-al.append(10**9 + 1)
+al.append(10 ** 9 + 1)
 cnt = 1
 ans = 0
 for j in range(n):

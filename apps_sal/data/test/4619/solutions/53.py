@@ -1,8 +1,8 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 l = [[0] * w for _ in range(h)]
 count = 0
 for _ in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         for i in range(h):
             for j in range(x):
@@ -27,5 +27,4 @@ for _ in range(n):
                 if l[i][j] == 0:
                     l[i][j] = 1
                     count += 1
-
 print(w * h - count)

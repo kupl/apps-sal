@@ -2,19 +2,33 @@ import sys
 stdin = sys.stdin
 
 
-def ip(): return int(sp())
-def fp(): return float(sp())
-def lp(): return list(map(int, stdin.readline().split()))
-def sp(): return stdin.readline().rstrip()
-def yp(): return print('Yes')
-def np(): return print('No')
+def ip():
+    return int(sp())
+
+
+def fp():
+    return float(sp())
+
+
+def lp():
+    return list(map(int, stdin.readline().split()))
+
+
+def sp():
+    return stdin.readline().rstrip()
+
+
+def yp():
+    return print('Yes')
+
+
+def np():
+    return print('No')
 
 
 s = list(sp())
 k = ip()
-
 ans = set()
-
 alpa = list(set(s))
 alpa.sort()
 ch = 0
@@ -24,7 +38,6 @@ for i in range(len(alpa)):
         siyou.append(alpa[i])
     else:
         break
-
 for x in siyou:
     for i in range(len(s)):
         if s[i] == x:
@@ -35,7 +48,6 @@ for x in siyou:
                     ans.add(st)
     if len(ans) > k:
         break
-
 ans = list(ans)
 ans.sort()
 print(ans[k - 1])

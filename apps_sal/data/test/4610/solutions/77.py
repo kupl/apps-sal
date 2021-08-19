@@ -1,5 +1,5 @@
 from collections import Counter
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a1 = Counter(a).most_common()
 num = 0

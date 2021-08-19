@@ -9,7 +9,6 @@ def mod_pow(a, n, mod):
     :param mod: 法
     :return: a^n (mod m)
     """
-
     result = 1
     a_n = a
     while n > 0:
@@ -23,10 +22,9 @@ def mod_pow(a, n, mod):
 N = int(input())
 A = Counter(tuple(map(int, input().split(' '))))
 MOD = 10 ** 9 + 7
-
 if A[0] > 1:
-    print((0))
-elif sum([key for key, value in list(A.items()) if value == 1]) != 0:
-    print((0))
+    print(0)
+elif sum([key for (key, value) in list(A.items()) if value == 1]) != 0:
+    print(0)
 else:
-    print((mod_pow(2, N // 2, MOD)))
+    print(mod_pow(2, N // 2, MOD))

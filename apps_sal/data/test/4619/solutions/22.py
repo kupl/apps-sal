@@ -1,16 +1,11 @@
-W, H, N = map(int, input().split())
+(W, H, N) = map(int, input().split())
 X = Y = 0
-
-
 for i in range(N):
-    x, y, a = map(int, input().split())
-
+    (x, y, a) = map(int, input().split())
     if a == 1:
         X = max(X, x)
-
     elif a == 2:
         W = min(W, x)
-
     elif a == 3:
         Y = max(Y, y)
     else:

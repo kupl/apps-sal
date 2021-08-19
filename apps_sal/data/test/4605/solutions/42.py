@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 
 
 def calc(N):
@@ -14,5 +14,4 @@ for i in range(1, N + 1):
     ans = calc(i)
     if A <= ans <= B:
         sum_num += i
-
 print(sum_num)

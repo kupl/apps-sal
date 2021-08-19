@@ -1,2 +1,2 @@
-a, *b, c = input()
-print(a, len(b), c, sep="")
+(a, *b, c) = input()
+print(a, len(b), c, sep='')

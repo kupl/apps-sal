@@ -8,18 +8,15 @@ if n % 2 == 1:
         if i % 2 != 0:
             print(0)
             break
+        elif i == 0:
+            if a_count[i] != 1:
+                print(0)
+                break
+        elif a_count[i] == 2:
+            ans = ans * 2 % (10 ** 9 + 7)
         else:
-            if i == 0:
-                if a_count[i] != 1:
-                    print(0)
-                    break
-
-            else:
-                if a_count[i] == 2:
-                    ans = (ans * 2) % (10**9 + 7)
-                else:
-                    print(0)
-                    break
+            print(0)
+            break
     else:
         print(ans)
 else:
@@ -28,12 +25,10 @@ else:
         if j % 2 != 1:
             print(0)
             break
+        elif a_count[j] == 2:
+            ans = ans * 2 % (10 ** 9 + 7)
         else:
-            if a_count[j] == 2:
-                ans = (ans * 2) % (10**9 + 7)
-
-            else:
-                print(0)
-                break
+            print(0)
+            break
     else:
         print(ans)

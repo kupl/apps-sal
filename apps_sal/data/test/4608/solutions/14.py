@@ -12,7 +12,7 @@ else:
             print(total + 1)
             break
         elif total > n:
-            print("-1")
+            print('-1')
             break
         else:
             i = a[i] - 1

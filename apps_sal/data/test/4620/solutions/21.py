@@ -1,5 +1,5 @@
 N = int(input())
-C, S, F = map(list, zip(*[list(map(int, input().split())) for i in range(N - 1)]))
+(C, S, F) = map(list, zip(*[list(map(int, input().split())) for i in range(N - 1)]))
 r = [0] * N
 for i in range(N - 2, -1, -1):
     x = S[i] + C[i]

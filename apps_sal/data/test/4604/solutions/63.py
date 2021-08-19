@@ -1,5 +1,5 @@
 N = int(input())
-*A, = sorted(map(int, input().split()))
+(*A,) = sorted(map(int, input().split()))
 
 
 def f(x):
@@ -12,9 +12,8 @@ def f(x):
 a = True
 if N % 2 == 0:
     a = f(1)
+elif A[0] != 0:
+    a = False
 else:
-    if A[0] != 0:
-        a = False
-    else:
-        a = f(2)
-print(2**(N // 2) % (10**9 + 7) if a else 0)
+    a = f(2)
+print(2 ** (N // 2) % (10 ** 9 + 7) if a else 0)
