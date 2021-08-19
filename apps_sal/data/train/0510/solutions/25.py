@@ -1,25 +1,24 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
-# ライブラリ参照https://atcoder.jp/contests/practice2/submissions/16580070
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 class SegmentTree:
-
-    __slots__ = ["func", "e", "original_size", "n", "data"]
+    __slots__ = ['func', 'e', 'original_size', 'n', 'data']
 
     def __init__(self, length_or_list, func, e):
         self.func = func
         self.e = e
         if isinstance(length_or_list, int):
             self.original_size = length_or_list
-            self.n = 1 << ((length_or_list - 1).bit_length())
+            self.n = 1 << (length_or_list - 1).bit_length()
             self.data = [self.e] * self.n
         else:
             self.original_size = len(length_or_list)
-            self.n = 1 << ((self.original_size - 1).bit_length())
-            self.data = [self.e] * self.n + length_or_list + \
-                [self.e] * (self.n - self.original_size)
+            self.n = 1 << (self.original_size - 1).bit_length()
+            self.data = [self.e] * self.n + length_or_list + [self.e] * (self.n - self.original_size)
             for i in range(self.n - 1, 0, -1):
                 self.data[i] = self.func(self.data[2 * i], self.data[2 * i + 1])
 
@@ -28,8 +27,7 @@ class SegmentTree:
         self.data[index] = value
         index //= 2
         while index > 0:
-            self.data[index] = self.func(
-                self.data[2 * index], self.data[2 * index + 1])
+            self.data[index] = self.func(self.data[2 * index], self.data[2 * index + 1])
             index //= 2
 
     def folded(self, l, r):
@@ -55,13 +53,11 @@ class SegmentTree:
         return self.data[self.n + index]
 
     def max_right(self, l, f):
-        # assert f(self.e)
         if l >= self.original_size:
             return self.original_size
         l += self.n
         left_folded = self.e
         while True:
-            # l //= l & -l
             while l % 2 == 0:
                 l //= 2
             if not f(self.func(left_folded, self.data[l])):
@@ -77,9 +73,7 @@ class SegmentTree:
                 break
         return self.original_size
 
-    # 未verify
     def min_left(self, r, f):
-        # assert f(self.e)
         if r == 0:
             return 0
         r += self.n
@@ -105,13 +99,13 @@ def orr(x, y):
 def main():
     N = int(input())
     S = input()
-    S = list(map(lambda c: 2**(ord(c) - ord('a')), list(S)))
+    S = list(map(lambda c: 2 ** (ord(c) - ord('a')), list(S)))
     Q = int(input())
     seg = SegmentTree(S, orr, 0)
     for _ in range(Q):
-        num, x, y = input().split()
+        (num, x, y) = input().split()
         if num == '1':
-            seg.replace(int(x) - 1, 2**(ord(y) - ord('a')))
+            seg.replace(int(x) - 1, 2 ** (ord(y) - ord('a')))
         else:
             bits = seg.folded(int(x) - 1, int(y))
             print(sum(map(int, list(bin(bits))[2:])))

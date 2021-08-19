@@ -10,7 +10,7 @@ class CombinationIterator:
     def __next__(self) -> str:
         curr = self.precom[self.index]
         res = []
-        for i, c in enumerate(curr):
+        for (i, c) in enumerate(curr):
             if c == '1':
                 res.append(self.sym[i])
         self.index -= 1
@@ -22,15 +22,10 @@ class CombinationIterator:
         return True
 
     def __pre(self, N, M):
-        maxi = 2**N
+        maxi = 2 ** N
         res = []
         for curr in range(maxi):
             binary = bin(curr)[2:]
             if binary.count('1') == M:
                 res.append(binary.zfill(N))
         return res
-
-# Your CombinationIterator object will be instantiated and called as such:
-# obj = CombinationIterator(characters, combinationLength)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()

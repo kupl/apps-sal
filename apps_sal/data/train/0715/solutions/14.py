@@ -1,9 +1,7 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 from string import ascii_uppercase as alp
 import sys
 input = sys.stdin.readline
-inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
-
+(inp, ip) = (lambda: int(input()), lambda: [int(w) for w in input().split()])
 dt = {}
 for i in range(26):
     dt[alp[i]] = 27 - i

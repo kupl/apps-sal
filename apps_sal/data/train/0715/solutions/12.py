@@ -1,4 +1,3 @@
-# cook your dish here
 n = input()
 s = 0
 freq = {}

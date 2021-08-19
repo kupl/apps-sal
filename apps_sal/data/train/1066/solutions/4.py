@@ -2,18 +2,32 @@ import math
 from collections import defaultdict as dd
 from sys import stdin, stdout
 input = stdin.readline
-def geti(): return list(map(int, input().strip().split()))
-def getl(): return list(map(int, input().strip().split()))
-def gets(): return input()
-def geta(): return int(input())
-def print_s(s): stdout.write(s + '\n')
+
+
+def geti():
+    return list(map(int, input().strip().split()))
+
+
+def getl():
+    return list(map(int, input().strip().split()))
+
+
+def gets():
+    return input()
+
+
+def geta():
+    return int(input())
+
+
+def print_s(s):
+    stdout.write(s + '\n')
 
 
 def solve():
     for _ in range(geta()):
         n = geta()
         num = list(map(int, list(str(n))))
-        # print(num)
         index = -1
         for i in range(len(num) - 1):
             if num[i] > num[i + 1]:
