@@ -1,14 +1,11 @@
 class Solution:
-    def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
 
+    def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
         if not grid:
             return 0
-
         m = len(grid)
         n = len(grid[0])
-        # brute force
         max_len = max(m, n)
-
         row_count = [[grid[i][0]] for i in range(m)]
         for i in range(m):
             for j in range(1, n):
@@ -16,7 +13,6 @@ class Solution:
                     row_count[i].append(row_count[i][j - 1] + 1)
                 else:
                     row_count[i].append(0)
-
         col_count = [[grid[0][j] for j in range(n)]]
         for i in range(1, m):
             col_count.append([])
@@ -25,7 +21,6 @@ class Solution:
                     col_count[i].append(col_count[i - 1][j] + 1)
                 else:
                     col_count[i].append(0)
-
         for l in range(max_len, 0, -1):
             for i in range(m - l + 1):
                 for j in range(n - l + 1):
@@ -36,21 +31,14 @@ class Solution:
     def find_board(self, i, j, l, row_count, col_count):
         if l == 1:
             return row_count[i][j] == 1
-
         l = l - 1
-        # check four coners
-        x, y = i + l, j + l
-
+        (x, y) = (i + l, j + l)
         if row_count[i][y] <= l:
             return False
-
         if row_count[x][y] <= l:
             return False
-
         if col_count[x][j] <= l:
             return False
-
         if col_count[x][y] <= l:
             return False
-
         return True

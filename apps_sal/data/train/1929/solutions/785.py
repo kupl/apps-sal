@@ -10,7 +10,7 @@ class StreamChecker:
                     t[w] = {}
                 t = t[w]
             t['#'] = '#'
-        print((self.trie))
+        print(self.trie)
 
     def query(self, letter: str) -> bool:
         s = [self.trie]
@@ -19,8 +19,3 @@ class StreamChecker:
                 s.append(ele[letter])
         self.pointers = s
         return any(['#' in ele for ele in self.pointers])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

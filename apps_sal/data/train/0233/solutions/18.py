@@ -1,12 +1,7 @@
-#
-# *-------*
-# | \\ 0 / |
-# | 3 * 1 |
-# | / 2 \\ |
-# *-------*
 class DSU:
+
     def __init__(self, N):
-        self.pres = list(range(N))  # 初始，每个节点指向自己
+        self.pres = list(range(N))
 
     def setRoot(self, i, root):
         while self.pres[i] != root:
@@ -28,16 +23,14 @@ class DSU:
 
 
 class Solution:
+
     def regionsBySlashes(self, grid: List[str]) -> int:
+
         def getPos(N, h, w, i):
             return N * 4 * h + 4 * w + i
-
-        #   借鉴三角面片思路
         N = len(grid)
         NN4 = N * N * 4
         dsu = DSU(NN4)
-
-        #   合并临近矩形
         for h in range(N):
             for w in range(N):
                 p = getPos(N, h, w, 0)
@@ -48,8 +41,6 @@ class Solution:
                     dsu.merge(p + 2, pD + 0)
                 if w < N - 1:
                     dsu.merge(p + 1, pR + 3)
-
-        #   检查输入网格
         for h in range(N):
             for w in range(N):
                 p = getPos(N, h, w, 0)
@@ -63,5 +54,4 @@ class Solution:
                     dsu.merge(p + 0, p + 1)
                     dsu.merge(p + 0, p + 2)
                     dsu.merge(p + 0, p + 3)
-
-        return sum(dsu.findRoot(x) == x for x in range(NN4))
+        return sum((dsu.findRoot(x) == x for x in range(NN4)))

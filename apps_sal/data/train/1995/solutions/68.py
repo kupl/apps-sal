@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         ans_dic = [0] * 1000
         for i in trips:
@@ -9,5 +10,4 @@ class Solution:
                         return False
                 else:
                     ans_dic[j] = i[0]
-        # print(ans_dic)
         return True
