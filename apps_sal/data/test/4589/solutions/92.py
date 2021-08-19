@@ -1,9 +1,9 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 s = [list(input()) for _ in range(h)]
 bomb_count = 0
 for i in range(h):
     for j in range(w):
-        if s[i][j] == "#":
+        if s[i][j] == '#':
             continue
         else:
             for k in range(3):
@@ -18,9 +18,9 @@ for i in range(h):
                         continue
                     elif b > w - 1:
                         continue
-                    if s[a][b] == "#":
+                    if s[a][b] == '#':
                         bomb_count += 1
             s[i][j] = str(bomb_count)
             bomb_count = 0
 for i in range(h):
-    print("".join(s[i]))
+    print(''.join(s[i]))

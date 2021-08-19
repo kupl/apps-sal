@@ -1,11 +1,7 @@
 dx = [1, 0, -1, 0, 1, -1, -1, 1]
 dy = [0, 1, 0, -1, 1, 1, -1, -1]
-
-# 入力
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 S = [input() for _ in range(H)]
-
-# 各マス (i, j) について順に処理
 for i in range(H):
     for j in range(W):
         if S[i][j] != '.':
@@ -14,11 +10,10 @@ for i in range(H):
         for d in range(8):
             ni = i + dx[d]
             nj = j + dy[d]
-            if ni < 0 or ni >= H or nj < 0 or nj >= W:
+            if ni < 0 or ni >= H or nj < 0 or (nj >= W):
                 continue
             if S[ni][nj] == '#':
                 counter += 1
         S[i] = S[i].replace('.', str(counter), 1)
-
 for row in S:
     print(row)

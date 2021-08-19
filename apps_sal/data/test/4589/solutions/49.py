@@ -1,17 +1,15 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 m = []
-
 for i in range(H):
     s = input()
     t = []
     for i in s:
-        t.append(1 if i == "#" else 0)
+        t.append(1 if i == '#' else 0)
     m.append(t)
-
 for i in range(H):
     for j in range(W):
         if m[i][j] == 1:
-            print("#", end="")
+            print('#', end='')
             continue
         count = 0
         if i != 0:
@@ -30,5 +28,5 @@ for i in range(H):
             count += m[i][j - 1]
         if j != W - 1:
             count += m[i][j + 1]
-        print(count, end="")
+        print(count, end='')
     print()

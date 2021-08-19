@@ -1,9 +1,8 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 s = []
 t = []
 for i in range(h):
     s.append(input())
-
 for i in range(h):
     t.append([])
     for j in range(w):
@@ -36,6 +35,5 @@ for i in range(h):
             t[i].append(str(mines))
         else:
             t[i].append('#')
-
 for i in range(len(t)):
     print(''.join(t[i]))

@@ -1,14 +1,23 @@
-'''桁dpの典型問題　n以下の非負整数について条件を満たすものの個数を求める
-nより小さいことが確定しているかどうかで場合分けをし、遷移を書いて式にすれば良い。'''
+"""桁dpの典型問題\u3000n以下の非負整数について条件を満たすものの個数を求める
+nより小さいことが確定しているかどうかで場合分けをし、遷移を書いて式にすれば良い。"""
 import sys
-
 stdin = sys.stdin
 
 
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(stdin.readline().rstrip())
-def nm(): return map(int, stdin.readline().split())
-def nl(): return list(map(int, stdin.readline().split()))
+def ns():
+    return stdin.readline().rstrip()
+
+
+def ni():
+    return int(stdin.readline().rstrip())
+
+
+def nm():
+    return map(int, stdin.readline().split())
+
+
+def nl():
+    return list(map(int, stdin.readline().split()))
 
 
 n = ns()
@@ -28,6 +37,4 @@ for i in range(len(n)):
             dp[i + 1][j][0] += dp[i][j][0]
     dp[i + 1][k][1] += dp[i][k][1]
     dp[i + 1][k][x > 0] += dp[i][k][0]
-    # インデックスjのところが拾いきれていないので拾う
-    # iとkはぶつかっていないので普通に二重ループでかける
 print(sum(dp[len(n)][k]))

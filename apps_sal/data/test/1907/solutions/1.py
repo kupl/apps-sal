@@ -3,9 +3,7 @@ import math
 
 
 def dist(x, y):
-    return ((x[0] - y[0])**2 + (x[1] - y[1])**2)**0.5
-
-# Is b inside a
+    return ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5
 
 
 def inside(a, b):
@@ -18,14 +16,12 @@ def inside(a, b):
 n = int(stdin.readline().rstrip())
 pointList = []
 for _ in range(n):
-    x, y, r = list(map(int, stdin.readline().rstrip().split()))
+    (x, y, r) = list(map(int, stdin.readline().rstrip().split()))
     pointList.append((x, y, r))
-
 pointList.sort(key=lambda x: x[2], reverse=True)
 positiveCounter = [0] * n
 group = [0] * n
 parent = [-1] * n
-
 spaciousness = 0
 for i in range(n):
     contained = -1
@@ -46,5 +42,4 @@ for i in range(n):
         else:
             positiveCounter[i] = 1
             spaciousness += math.pi * pointList[i][2] * pointList[i][2] * positiveCounter[i]
-
 print(spaciousness)

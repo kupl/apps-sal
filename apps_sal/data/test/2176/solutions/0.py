@@ -10,35 +10,27 @@ MOD = 998244353
 n = int(input())
 fact = [1]
 for i in range(1, n + 1):
-    fact.append((fact[-1] * i) % MOD)
-
+    fact.append(fact[-1] * i % MOD)
 seq = []
-ca, cb = Counter(), Counter()
+(ca, cb) = (Counter(), Counter())
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ca[a] += 1
     cb[b] += 1
     seq.append((a, b))
-
 ans = fact[n]
 ans %= MOD
-# print(ans)
-
 res = 1
 for v in ca.values():
     res *= fact[v]
     res %= MOD
 ans -= res
 ans %= MOD
-# print(ans)
-
 res = 1
 for v in cb.values():
     res *= fact[v]
     res %= MOD
 ans -= res
-# print(ans)
-
 seq.sort(key=lambda x: (x[0], x[1]))
 cur = seq[0][0]
 res = 1
@@ -68,7 +60,6 @@ for v in ctmp.values():
     tmp %= MOD
 res *= tmp
 res %= MOD
-
 ans += res
 ans %= MOD
 print(ans)
