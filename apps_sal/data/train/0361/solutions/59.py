@@ -1,11 +1,10 @@
 class Solution:
+
     def tilingRectangle(self, m: int, n: int) -> int:
         self.ans = m * n
 
         def helper(h=[0] * n, res=0):
-
-            #print(h, res, ans)
-            if all(x == m for x in h):
+            if all((x == m for x in h)):
                 self.ans = min(self.ans, res)
                 return
             if res >= self.ans:

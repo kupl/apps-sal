@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 for i in range(a):
     n = int(input())
@@ -15,6 +14,6 @@ for i in range(a):
         h2.append(g[i])
         h2.append(b[i])
     if h1 == sorted(h1) or h2 == sorted(h2):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

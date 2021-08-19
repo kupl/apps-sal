@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
     n = int(input())
@@ -9,7 +8,7 @@ for _ in range(T):
     b1 = b.copy()
     g1 = g.copy()
     lim = 2 * n
-    k1, k2 = 1, 1
+    (k1, k2) = (1, 1)
     for i in range(lim):
         if my_list[i] in b and i % 2 == 0:
             b.remove(my_list[i])

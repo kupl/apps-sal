@@ -1,8 +1,9 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         INF = 9999999
         dist = [[INF for j in range(n)] for i in range(n)]
-        graph = [[]for i in range(n)]
+        graph = [[] for i in range(n)]
         for e in edges:
             i = e[0]
             j = e[1]
@@ -13,7 +14,6 @@ class Solution:
                 for j in range(n):
                     if i != j:
                         dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
-        # print(dist)
         ans = -1
         mm = n
         for i in range(n):
