@@ -1,8 +1,8 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 can = False
 pairs = []
 for i in range(m):
-    a, b = map(int, input().strip().split())
+    (a, b) = map(int, input().strip().split())
     pairs.append([a, b])
 first = pairs[0][0]
 missed = []
@@ -29,7 +29,6 @@ if missed != []:
         can = True
 else:
     can = True
-# second half
 first = pairs[0][1]
 missed = []
 for i in range(m):

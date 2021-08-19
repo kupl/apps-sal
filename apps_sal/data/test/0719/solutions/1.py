@@ -1,7 +1,7 @@
 def sum(n):
     ans = 0
     while n > 0:
-        ans += (n % 10)
+        ans += n % 10
         n = n // 10
     return ans
 
@@ -16,6 +16,5 @@ else:
 while count != n:
     if sum(temp) == 10:
         count += 1
-        # print(temp)
     temp += 9
 print(temp - 9)

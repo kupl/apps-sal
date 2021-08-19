@@ -1,4 +1,3 @@
-# coding: utf-8
 for i in range(8):
     s = input()
     s1 = set([s[j] for j in range(8) if j % 2 == 0])

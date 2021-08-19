@@ -1,13 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep 15 00:43:39 2020
 
 @author: liang
 """
-
 N = int(input())
 H = [int(x) for x in input().split()]
-
 ans = 0
 for i in range(max(H)):
     count = 0

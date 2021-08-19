@@ -1,6 +1,5 @@
 N = int(input())
 h = list(map(int, input().split()))
-
 l = 0
 flag = 1
 count = 0
@@ -23,7 +22,6 @@ while l < N:
         for k in range(l, r + 1):
             h[k] -= 1
         count += 1
-        # print(h)
     elif flag == 0:
         break
 print(count)

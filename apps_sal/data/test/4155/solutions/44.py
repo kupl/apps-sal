@@ -4,7 +4,6 @@ tmp = [0 for i in range(n)]
 ans = 0
 right = 0
 left = n - 1
-
 while tmp != h:
     for i in range(n):
         if tmp[i] != h[i]:
@@ -21,7 +20,4 @@ while tmp != h:
     for i in range(right, left + 1):
         tmp[i] += 1
     ans += 1
-#    print(right,left,ans)
-#    print(tmp)
-
 print(ans)

@@ -6,7 +6,7 @@ input = sys.stdin.readline
 class Graph(object):
     """docstring for Graph"""
 
-    def __init__(self, n, d):  # Number of nodes and d is True if directed
+    def __init__(self, n, d):
         self.n = n
         self.graph = [[] for i in range(n)]
         self.parent = [-1 for i in range(n)]
@@ -17,7 +17,7 @@ class Graph(object):
         if not self.directed:
             self.graph[y].append(x)
 
-    def bfs(self, root):  # NORMAL BFS
+    def bfs(self, root):
         self.parent = [-1 for i in range(self.n)]
         queue = [root]
         queue = deque(queue)
@@ -30,11 +30,11 @@ class Graph(object):
                     queue.append(i)
                     self.parent[i] = element
 
-    def dfs(self, root, ans):  # Iterative DFS
+    def dfs(self, root, ans):
         stack = [root]
         vis = [0] * self.n
         stack2 = []
-        while len(stack) != 0:  # INITIAL TRAVERSAL
+        while len(stack) != 0:
             element = stack.pop()
             if vis[element]:
                 continue
@@ -44,8 +44,7 @@ class Graph(object):
                 if vis[i] == 0:
                     self.parent[i] = element
                     stack.append(i)
-
-        while len(stack2) != 0:  # BACKTRACING. Modify the loop according to the question
+        while len(stack2) != 0:
             element = stack2.pop()
             m = [0, 0]
             for i in self.graph[element]:
@@ -59,7 +58,7 @@ class Graph(object):
             ans[element] = m
         return ans
 
-    def shortestpath(self, source, dest):  # Calculate Shortest Path between two nodes
+    def shortestpath(self, source, dest):
         self.bfs(source)
         path = [dest]
         while self.parent[path[-1]] != -1:
@@ -88,7 +87,6 @@ class Graph(object):
         vis = [0] * self.n
         while len(stack) != 0:
             e = stack[-1]
-            # print (e,ans)
             if vis[e]:
                 stack.pop()
                 if self.parent[e] != -1:
@@ -118,7 +116,7 @@ n = int(input())
 g = Graph(n, False)
 arr = list(map(int, input().split()))
 for i in range(n - 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     g.addEdge(x - 1, y - 1)
 ans = [[0, 0] for i in range(n)]
 a = g.dfs(0, ans)

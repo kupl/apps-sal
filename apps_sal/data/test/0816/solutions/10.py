@@ -1,6 +1,5 @@
-n, x = [int(i) for i in input().split()]
+(n, x) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-
 ax = [i ^ x for i in a]
 a.sort()
 ax.sort()
@@ -18,7 +17,6 @@ while pos < n and posx < n:
             posx += 1
             cx += 1
         else:
-            #print(c, cx, pos, posx)
             total += c * cx
             c = 1
             cx = 1
@@ -28,7 +26,6 @@ while pos < n and posx < n:
         posx += 1
     else:
         pos += 1
-#print(total, a, ax)
 if x > 0:
     print(total // 2)
 else:

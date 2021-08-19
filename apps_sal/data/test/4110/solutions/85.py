@@ -1,14 +1,16 @@
-#!/usr/bin/env python3
 import sys
 from itertools import combinations_with_replacement, product
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    D, G = list(map(int, input().split()))
+    (D, G) = list(map(int, input().split()))
     problem = []
     for i in range(1, D + 1):
-        p, c = list(map(int, input().split()))
+        (p, c) = list(map(int, input().split()))
         problem.append([i, p, c])
     ans = 10000000
     for bit in list(product([0, 1], repeat=D)):
@@ -22,7 +24,7 @@ def main():
             else:
                 notcomp.append(problem[i])
         while nokori > 0 and notcomp:
-            score, p, c = notcomp.pop()
+            (score, p, c) = notcomp.pop()
             if score * (p - 1) * 100 <= nokori:
                 nokori -= score * (p - 1) * 100
                 pnum += p - 1
