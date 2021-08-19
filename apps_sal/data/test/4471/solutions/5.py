@@ -4,4 +4,4 @@ for i in range(int(input())):
     kek = [0, 0]
     for x in arr:
         kek[x % 2] += 1
-    print("YES" if kek[0] == 0 or kek[1] == 0 else "NO")
+    print('YES' if kek[0] == 0 or kek[1] == 0 else 'NO')

@@ -1,7 +1,7 @@
 def main():
     q = int(input())
     thirds = [1]
-    while thirds[-1] < 1e19:
+    while thirds[-1] < 1e+19:
         thirds.append(thirds[-1] * 3)
     for t in range(q):
         a = int(input())

@@ -1,10 +1,11 @@
-def gcd(a, b): return gcd(b, a % b) if b else a
+def gcd(a, b):
+    return gcd(b, a % b) if b else a
 
 
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         total = 0
         total -= b * (c // 2)
         total += a * (c // 2)

@@ -1,6 +1,5 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 ts = list(map(int, input().split()))
-
 ans = 0
 now = 0
 for i in ts[1:]:

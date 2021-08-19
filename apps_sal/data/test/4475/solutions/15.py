@@ -4,7 +4,6 @@ def find(a, b, x, y, n):
     a -= min_val
     n -= min_val
     b -= n
-
     return a * b
 
 
@@ -25,9 +24,8 @@ def main():
     t = int(input())
     ans = []
     for i in range(t):
-        a, b, x, y, n = list(map(int, input().split()))
+        (a, b, x, y, n) = list(map(int, input().split()))
         solve(a, b, x, y, n, ans)
-
     print('\n'.join(ans))
 
 

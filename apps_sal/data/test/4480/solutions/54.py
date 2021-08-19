@@ -1,9 +1,10 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         s = sum(A)
         s1 = 0
         i = 0
-        print((s // 3))
+        print(s // 3)
         while i < len(A):
             s1 += A[i]
             if s1 == s // 3:

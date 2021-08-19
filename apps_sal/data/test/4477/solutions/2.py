@@ -25,11 +25,11 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     x = n % 10
     s = 10 * (x - 1)
     l = len(str(n))
-    s += (l * (l + 1)) // 2
+    s += l * (l + 1) // 2
     print(s)

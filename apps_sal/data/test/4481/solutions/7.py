@@ -8,9 +8,8 @@ for i in range(n):
         S[s] += 1
 m = max(S.values())
 ans = []
-
-for key, value in S.items():
+for (key, value) in S.items():
     if value == m:
         ans.append(key)
 ans.sort()
-print(*ans, sep="\n")
+print(*ans, sep='\n')

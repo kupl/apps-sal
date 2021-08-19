@@ -7,5 +7,4 @@ b = b.replace('a', 'T')
 b = b.replace('b', 'A')
 b = b.replace('c', 'G')
 b = b.replace('d', 'C')
-
 print(b)

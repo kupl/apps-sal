@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 l = list(map(int, input().split()))
 old = 0
 ans = t

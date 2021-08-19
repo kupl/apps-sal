@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 lst = list(map(int, input().split())) + [10 ** 12]
 sec = 0
 for i in range(n):

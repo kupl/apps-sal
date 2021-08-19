@@ -9,6 +9,6 @@ for _ in range(int(input())):
         else:
             odd += 1
     if odd == 0 or even == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

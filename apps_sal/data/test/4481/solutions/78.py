@@ -7,6 +7,6 @@ for i in range(n):
     else:
         count_dict[i] = 0
 max_value = max(count_dict.values())
-for key, value in sorted(count_dict.items()):
+for (key, value) in sorted(count_dict.items()):
     if value == max_value:
         print(key)

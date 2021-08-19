@@ -10,5 +10,5 @@ def solve(a, b, x, y, n):
 
 
 for _ in range(int(input())):
-    a, b, x, y, n = list(map(int, input().split()))
+    (a, b, x, y, n) = list(map(int, input().split()))
     print(min(solve(a, b, x, y, n), solve(b, a, y, x, n)))

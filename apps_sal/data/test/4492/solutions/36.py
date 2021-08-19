@@ -1,6 +1,6 @@
 def solve():
     ans = 0
-    N, x = map(int, input().split())
+    (N, x) = map(int, input().split())
     A = list(map(int, input().split()))
     if A[0] > x:
         ans += A[0] - x

@@ -12,7 +12,7 @@ def readList(func=int):
 t = read()
 for _ in range(t):
     num = read()
-    tot = ((num % 10) - 1) * 10
+    tot = (num % 10 - 1) * 10
     for i in range(len(str(num))):
         tot += i + 1
     print(tot)

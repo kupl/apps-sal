@@ -1,14 +1,10 @@
 q = int(input())
-
 if q > 0:
     left = 0
     right = 0
-
     d = dict()
-
     [q_type, q_id] = input().split()
     d[q_id] = 0
-
     for i in range(q - 1):
         [q_type, q_id] = input().split()
         if q_type == 'L':

@@ -1,6 +1,7 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
-        average, part, cnt = sum(A) // 3, 0, 0
+        (average, part, cnt) = (sum(A) // 3, 0, 0)
         for a in A:
             part += a
             if part == average:

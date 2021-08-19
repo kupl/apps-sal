@@ -4,7 +4,7 @@ matr = [0] * (2 * n + 1)
 head = n - 1
 tail = n
 for i in range(n):
-    st, n = input().split()
+    (st, n) = input().split()
     n = int(n)
     if st == 'L':
         matr[head] = n

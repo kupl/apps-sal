@@ -1,4 +1,4 @@
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 t.append(float('inf'))
 ans = 0

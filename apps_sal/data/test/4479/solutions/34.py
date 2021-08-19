@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
         if not A:
             return sum(A)

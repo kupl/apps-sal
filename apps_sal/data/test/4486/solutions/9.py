@@ -1,4 +1,5 @@
 class Odd:
+
     def __init__(self, s: str):
         self.s = s
 

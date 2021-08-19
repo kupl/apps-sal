@@ -7,4 +7,4 @@ for _ in range(int(input())):
         if (Max - i) % 2 != 0:
             Check = False
             break
-    print("YES" if Check else "NO")
+    print('YES' if Check else 'NO')

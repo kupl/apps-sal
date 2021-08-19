@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b, x, y, n = map(int, input().split())
+    (a, b, x, y, n) = map(int, input().split())
     mina1 = max(x, a - n)
     minb1 = max(y, b - (n - a + mina1))
     minb2 = max(y, b - n)

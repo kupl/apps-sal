@@ -14,11 +14,9 @@ diff_dic = {}
 for m in m_list:
     diff = diff_dic.get(m, 0)
     diff_dic[m] = diff + 1
-
 max_ = 0
-for key, add in add_dic.items():
+for (key, add) in add_dic.items():
     total = add - diff_dic.get(key, 0)
     if total > max_:
         max_ = total
-
 print(max_)

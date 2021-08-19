@@ -1,7 +1,6 @@
 N = int(input())
 a1 = list(map(int, input().split()))
 a2 = list(map(int, input().split()))
-
 maxim = 0
 for i in range(N):
     count = 0

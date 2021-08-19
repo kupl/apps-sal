@@ -1,4 +1,4 @@
-n, x = [int(s) for s in input().split()]
+(n, x) = [int(s) for s in input().split()]
 a_list = [int(s) for s in input().split()]
 ans = 0
 temp = a_list[0] - x

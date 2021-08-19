@@ -3,7 +3,7 @@ minimum = 0
 maximum = -1
 d = {}
 for i in range(q):
-    a, b = input().split()
+    (a, b) = input().split()
     b = int(b)
     if a == 'L':
         minimum -= 1

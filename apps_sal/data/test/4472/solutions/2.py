@@ -1,15 +1,12 @@
 length = int(input())
 string1 = input()
 string2 = input()
-
 changes = 0
 for i in range(length // 2):
     c1 = string1[i]
     c2 = string1[length - 1 - i]
-
     c3 = string2[i]
     c4 = string2[length - 1 - i]
-
     if c1 == c2 and c3 == c4:
         continue
     if c1 == c3 and c2 == c4:

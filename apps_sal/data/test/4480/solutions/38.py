@@ -1,4 +1,5 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         t = sum(A)
         if t % 3 != 0:

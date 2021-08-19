@@ -1,6 +1,6 @@
 class Solution:
-    def canThreePartsEqualSum(self, A: List[int]) -> bool:
 
+    def canThreePartsEqualSum(self, A: List[int]) -> bool:
         s = sum(A)
         if s % 3 != 0:
             return False
@@ -13,5 +13,4 @@ class Solution:
                 d = 1
             elif d == 1 and c == 2 * x:
                 return True
-
         return False

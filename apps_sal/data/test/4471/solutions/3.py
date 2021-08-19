@@ -5,7 +5,7 @@ for i in range(t):
     f = data[0] % 2
     for i in data:
         if i % 2 != f:
-            print("NO")
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')

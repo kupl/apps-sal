@@ -1,10 +1,3 @@
 b = input()
-
-dict = {
-    'A': 'T',
-    'T': 'A',
-    'C': 'G',
-    'G': 'C'
-}
-
+dict = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
 print(dict[b])

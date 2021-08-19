@@ -23,7 +23,7 @@ while T > 0:
                 for j in range(0, i):
                     a[j] = 0
                 break
-        ans, k = 0, 1
+        (ans, k) = (0, 1)
         for i in range(0, p):
             ans += a[i] * k
             k *= 3

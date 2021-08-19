@@ -1,5 +1,5 @@
 def cost(x):
-    cost = (x - ave)**2
+    cost = (x - ave) ** 2
     return cost
 
 

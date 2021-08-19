@@ -1,4 +1,4 @@
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 t = list(map(int, input().split()))
 ans = 0
 for i in range(n - 1):

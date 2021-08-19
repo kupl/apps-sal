@@ -1,4 +1,5 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         cusum = 0
         cusum_list = list()

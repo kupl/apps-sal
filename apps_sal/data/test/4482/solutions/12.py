@@ -10,6 +10,6 @@ for i in range(N):
     trial += i
     mid = 0
     for j in range(N):
-        mid += (trial - List[j])**2
+        mid += (trial - List[j]) ** 2
     res = min(res, mid)
 print(res)

@@ -1,4 +1,5 @@
-def i(): return int(input())
+def i():
+    return int(input())
 
 
-print(((i() - i()) % i()))
+print((i() - i()) % i())

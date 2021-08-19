@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 ans = float('inf')
 for x in range(-100, 101, 1):
     c = 0

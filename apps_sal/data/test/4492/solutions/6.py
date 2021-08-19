@@ -1,4 +1,4 @@
-N, X = (int(T) for T in input().split())
+(N, X) = (int(T) for T in input().split())
 A = [int(T) for T in input().split()]
 Eat = 0
 for AN in range(0, N - 1):

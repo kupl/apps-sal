@@ -1,4 +1,5 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         if len(A) < 3:
             return False
@@ -15,6 +16,6 @@ class Solution:
             target = total - 2 * s
             if prefixSumMap.get(target) != None:
                 for j in prefixSumMap[target]:
-                    if j < i and j > 0 and sumUpto[j - 1] == s:
+                    if j < i and j > 0 and (sumUpto[j - 1] == s):
                         return True
         return False

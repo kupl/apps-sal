@@ -1,6 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = abs(N - M)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = 1
 for i in range(N):
     n *= N - i

@@ -9,5 +9,4 @@ sumy = 0
 for i in a:
     sumx += (i - x) ** 2
     sumy += (i - y) ** 2
-
 print(min([sumx, sumy]))

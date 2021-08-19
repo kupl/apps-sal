@@ -1,6 +1,6 @@
 import collections
 n = int(input())
-s = [""] * n
+s = [''] * n
 for i in range(n):
     s[i] = input()
 s = collections.Counter(s)

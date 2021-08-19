@@ -11,10 +11,8 @@ def test():
         pass
     else:
         print('Wrong input')
-
     for i in sec_num:
         arr.append(int(i))
-
     for i in range(0, len(arr) - 1):
         num = arr[i]
         num_2 = arr[i + 1]
@@ -22,7 +20,6 @@ def test():
             ans += b
         else:
             ans += num_2 - num
-
     ans += b
     print(ans)
 

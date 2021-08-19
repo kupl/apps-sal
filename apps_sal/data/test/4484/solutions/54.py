@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-n, m = max(n, m), min(n, m)
+(n, m) = map(int, input().split())
+(n, m) = (max(n, m), min(n, m))
 div = 10 ** 9 + 7
 res = 1
 if n - m == 0:

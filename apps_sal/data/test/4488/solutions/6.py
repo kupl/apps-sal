@@ -2,12 +2,12 @@ a = input()
 b = input()
 if len(a) == len(b):
     if a == b:
-        print("EQUAL")
+        print('EQUAL')
     elif a < b:
-        print("LESS")
+        print('LESS')
     else:
-        print("GREATER")
+        print('GREATER')
 elif len(a) < len(b):
-    print("LESS")
+    print('LESS')
 else:
-    print("GREATER")
+    print('GREATER')

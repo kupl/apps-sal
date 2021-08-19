@@ -6,7 +6,6 @@ for i in range(n):
         a[s] = a[s] + 1
     else:
         a[s] = 1
-
 m = int(input())
 for i in range(m):
     t = str(input())

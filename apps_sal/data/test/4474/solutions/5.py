@@ -1,4 +1,4 @@
-arr = [3**i for i in range(40)]
+arr = [3 ** i for i in range(40)]
 s = sum(arr)
 t = int(input())
 for _ in range(t):

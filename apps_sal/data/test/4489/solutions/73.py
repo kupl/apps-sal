@@ -16,7 +16,6 @@ for i in range(m):
         t[a] = 1
     else:
         t[a] += 1
-
 S = list(s.keys())
 T = list(t.keys())
 for i in range(len(S)):
@@ -25,5 +24,4 @@ for i in range(len(S)):
     else:
         count = s[S[i]]
     ans = max(ans, count)
-
 print(ans)

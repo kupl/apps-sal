@@ -8,7 +8,7 @@ for i in range(n):
         S[s] = 1
 ans = []
 cnt = 0
-for k, v in S.items():
+for (k, v) in S.items():
     if v >= cnt:
         if v > cnt:
             ans = []

@@ -16,9 +16,7 @@ def point(x):
 
 
 ans = 0
-
 for word in set(s):
     if ans < point(word):
         ans = point(word)
-
 print(ans)

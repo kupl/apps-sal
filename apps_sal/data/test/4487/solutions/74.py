@@ -1,10 +1,10 @@
 def atc_060a(input_value: str) -> str:
-    A, B, C = list(map(str, input_value.split(" ")))
+    (A, B, C) = list(map(str, input_value.split(' ')))
     if A[-1] == B[0] and B[-1] == C[0]:
-        return "YES"
+        return 'YES'
     else:
-        return "NO"
+        return 'NO'
 
 
 input_value = input()
-print((atc_060a(input_value)))
+print(atc_060a(input_value))

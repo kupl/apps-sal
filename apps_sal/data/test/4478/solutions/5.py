@@ -1,4 +1,5 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 k = int(input())
@@ -17,18 +18,16 @@ for i in range(k):
     if ok:
         break
     for j in range(len(a[i])):
-
         x = s[i] - a[i][j]
         tmp = dict.get(x)
-        if (tmp != None):
+        if tmp != None:
             ok = True
-            print("YES")
+            print('YES')
             print(i + 1, j + 1)
             print(tmp[0] + 1, tmp[1] + 1)
             break
-
     for j in range(len(a[i])):
         x = s[i] - a[i][j]
         dict[x] = [i, j]
 if not ok:
-    print("NO")
+    print('NO')

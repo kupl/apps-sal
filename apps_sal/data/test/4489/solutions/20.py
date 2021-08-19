@@ -7,8 +7,7 @@ for i in range(n):
 m = int(input())
 for i in range(m):
     d2[input()] += 1
-
 ans = 0
-for k, v in list(d1.items()):
+for (k, v) in list(d1.items()):
     ans = max(ans, v - d2[k])
 print(ans)

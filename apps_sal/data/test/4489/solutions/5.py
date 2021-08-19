@@ -10,7 +10,6 @@ scores = []
 for i in range(len(blue)):
     score = blue.count(blue[i]) - red.count(blue[i])
     scores.append(score)
-
 if max(scores) < 0:
     print(0)
 else:

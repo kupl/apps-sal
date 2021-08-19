@@ -1,4 +1,4 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 time = list(map(int, input().split()))
 ans = 0
 for i in range(N - 1):

@@ -1,4 +1,4 @@
-n, T = map(int, input().split())
+(n, T) = map(int, input().split())
 t = list(map(int, input().split()))
 ans = 0
 for i in range(n - 1):
@@ -6,6 +6,5 @@ for i in range(n - 1):
         ans += T
     else:
         ans += t[i + 1] - t[i]
-
 ans += T
 print(ans)

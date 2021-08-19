@@ -1,2 +1,2 @@
 d = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
-print((d[input()]))
+print(d[input()])

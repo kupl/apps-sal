@@ -6,7 +6,6 @@ m = int(input())
 b = []
 for i in range(m):
     b.append([input(), 0])
-
 res = 0
 for i in range(n):
     c = 0

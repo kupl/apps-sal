@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 b1 = []
 b2 = []
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a == 1:
         b1.append(b)
     if b == n:

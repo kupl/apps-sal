@@ -1,4 +1,4 @@
-N, x = map(int, input().split())
+(N, x) = map(int, input().split())
 a = list(map(int, input().split()))
 result = 0
 if a[0] > x:

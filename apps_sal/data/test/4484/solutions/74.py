@@ -9,7 +9,7 @@ def factorial(n, mod):
     return fact
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if abs(N - M) > 1:
     print(0)
 else:

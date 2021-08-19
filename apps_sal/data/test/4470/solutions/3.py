@@ -4,10 +4,10 @@ def main():
         t = int(input())
         ans = 0
         while t % 5 == 0:
-            t = (4 * t) // 5
+            t = 4 * t // 5
             ans += 1
         while t % 3 == 0:
-            t = (2 * t) // 3
+            t = 2 * t // 3
             ans += 1
         while t % 2 == 0:
             t //= 2

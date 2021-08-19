@@ -6,15 +6,11 @@ for i in range(N):
         dic[S[i]] = 1
     else:
         dic[S[i]] += 1
-
 maxI = max(dic.values())
 ans = []
-
 for keys in list(dic.keys()):
     if dic[keys] == maxI:
         ans.append(keys)
-
 ans.sort()
-
 for i in ans:
     print(i)

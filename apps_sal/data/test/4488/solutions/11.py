@@ -1,9 +1,8 @@
 A = int(input())
 B = int(input())
-
 if A == B:
-    print("EQUAL")
+    print('EQUAL')
 elif A > B:
-    print("GREATER")
+    print('GREATER')
 else:
-    print("LESS")
+    print('LESS')

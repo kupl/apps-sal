@@ -26,7 +26,7 @@ for i in range(v):
     else:
         ans += 2
 if n & 1:
-    i = (n) // 2
+    i = n // 2
     if a[i] != b[i]:
         ans += 1
 print(ans)

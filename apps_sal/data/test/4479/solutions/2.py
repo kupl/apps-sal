@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
         S = 0
         negs = []
@@ -12,13 +13,13 @@ class Solution:
             else:
                 posmin = min(posmin, A[i])
         if K is 0:
-            return(S)
+            return S
         negs.sort()
         if K <= len(negs):
-            return(S - 2 * sum(negs[:K]))
+            return S - 2 * sum(negs[:K])
         elif (K - len(negs)) % 2 is 0:
-            return(S - 2 * sum(negs[:K]))
+            return S - 2 * sum(negs[:K])
         elif posmin < -negmax:
-            return(S - 2 * sum(negs[:K]) - 2 * posmin)
+            return S - 2 * sum(negs[:K]) - 2 * posmin
         else:
-            return(S - 2 * sum(negs[:K]) + 2 * negmax)
+            return S - 2 * sum(negs[:K]) + 2 * negmax

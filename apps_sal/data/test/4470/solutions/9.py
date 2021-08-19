@@ -2,7 +2,7 @@ q = int(input())
 for q in range(q):
     n = int(input())
     ans = 0
-    while (n != 1):
+    while n != 1:
         if n % 5 == 0:
             n = n // 5 * 4
         elif n % 3 == 0:

@@ -4,7 +4,7 @@ mi = 0
 ma = 0
 input()
 for i in range(n - 1):
-    r, id = input().split()
+    (r, id) = input().split()
     id = int(id)
     if r == 'L':
         mi -= 1

@@ -1,23 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [0] * m
 b = [0] * m
 for i in range(m):
-    a[i], b[i] = list(map(int, input().split()))
-'''
-check = 0
-
-
-for i in range(m):
-    if a[i] == 1:
-        check = b[i]
-        for j in range(m):
-            if a[j] == check and b[j] == n:
-                print("POSSIBLE")
-                return
-
-print("IMPOSSIBLE")
-
-'''
+    (a[i], b[i]) = list(map(int, input().split()))
+'\ncheck = 0\n\n\nfor i in range(m):\n    if a[i] == 1:\n        check = b[i]\n        for j in range(m):\n            if a[j] == check and b[j] == n:\n                print("POSSIBLE")\n                return\n\nprint("IMPOSSIBLE")\n\n'
 start = []
 leave = []
 for i in range(m):
@@ -25,8 +11,7 @@ for i in range(m):
         start.append(b[i])
     elif b[i] == n:
         leave.append(a[i])
-
 if set(start) & set(leave):
-    print("POSSIBLE")
+    print('POSSIBLE')
 else:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')

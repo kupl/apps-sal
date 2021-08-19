@@ -11,7 +11,7 @@ def resolve():
         card = input()
         red_cards.append(card)
     red_cards = sorted(red_cards)
-    former = ""
+    former = ''
     cards_points = []
     for card in blue_cards:
         point = 0

@@ -10,4 +10,4 @@ for _ in range(M):
     t = input()
     if t in s:
         s[t] -= 1
-print((max(max(0, x) for x in list(s.values()))))
+print(max((max(0, x) for x in list(s.values()))))

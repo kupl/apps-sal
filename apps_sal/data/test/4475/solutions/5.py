@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, x, y, n = list(map(int, input().split()))
+    (a, b, x, y, n) = list(map(int, input().split()))
     posa = max(a - n, x)
     posb = max(b - n, y)
     if posa < posb:

@@ -1,6 +1,5 @@
 from math import factorial
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n == m:
     ans = factorial(n) % (10 ** 9 + 7)
     ans = ans ** 2 % (10 ** 9 + 7)

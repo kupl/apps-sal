@@ -10,7 +10,7 @@ def data_input():
 
 
 def binary_search(array, x):
-    left, right = -1, len(array)
+    (left, right) = (-1, len(array))
     while left + 1 != right:
         middle = (left + right) // 2
         if array[middle] >= x:
@@ -21,7 +21,7 @@ def binary_search(array, x):
 
 
 def solve_of_problem():
-    a, b = data_input()
+    (a, b) = data_input()
     if (b - a) % 2 == 1 and a < b:
         print(1)
     elif (b - a) % 2 == 0 and b < a:

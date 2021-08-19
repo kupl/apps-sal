@@ -1,8 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-
 ans = 0
-for i, j in zip(range(N - 1), range(1, N)):
+for (i, j) in zip(range(N - 1), range(1, N)):
     Asum = A[i] + A[j]
     if Asum <= K:
         continue
@@ -14,5 +13,4 @@ for i, j in zip(range(N - 1), range(1, N)):
     d = min(eat, A[i])
     A[i] -= d
     ans += d
-
 print(ans)

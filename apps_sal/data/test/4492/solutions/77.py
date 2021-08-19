@@ -1,10 +1,10 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-N, X = f()
-*A, = f()
+(N, X) = f()
+(*A,) = f()
 A = [0] + A
-
 c = 0
 for i in range(N):
     c += max(0, A[i] + A[i + 1] - X)

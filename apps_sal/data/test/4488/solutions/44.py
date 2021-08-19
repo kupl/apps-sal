@@ -1,7 +1,7 @@
-a, b = int(input()), int(input())
+(a, b) = (int(input()), int(input()))
 if a > b:
-    print("GREATER")
+    print('GREATER')
 elif a < b:
-    print("LESS")
+    print('LESS')
 else:
-    print("EQUAL")
+    print('EQUAL')

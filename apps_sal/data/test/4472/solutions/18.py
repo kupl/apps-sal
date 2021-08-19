@@ -1,14 +1,9 @@
-
 n = int(input())
-
 a = input()
 b = input()
-
 ans = 0
-
 if n % 2 != 0 and a[n // 2] != b[n // 2]:
     ans = 1
-
 for i in range(n // 2):
     s = [a[i], b[i], a[n - i - 1], b[n - i - 1]]
     d = dict()
@@ -31,6 +26,4 @@ for i in range(n // 2):
             ans += 1
             continue
         ans += 1
-
-
 print(ans)

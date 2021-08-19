@@ -1,4 +1,4 @@
-A, B, C = input().split()
+(A, B, C) = input().split()
 
 
 def answer(A: int, B: int, C: int) -> str:
@@ -8,4 +8,4 @@ def answer(A: int, B: int, C: int) -> str:
         return 'NO'
 
 
-print((answer(A, B, C)))
+print(answer(A, B, C))

@@ -1,4 +1,4 @@
-a, b = int(input()), int(input())
+(a, b) = (int(input()), int(input()))
 if a > b:
     print('GREATER')
 elif a < b:

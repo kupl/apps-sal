@@ -1,9 +1,8 @@
-
 class Solution:
+
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
         ans = sum(A)
         A.sort()
-
         for i in range(len(A)):
             if not K or A[i] == 0:
                 break
@@ -17,5 +16,4 @@ class Solution:
                     else:
                         ans -= 2 * A[i]
                 break
-
         return ans

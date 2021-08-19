@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 mod = 10 ** 9 + 7
 
 
@@ -20,5 +20,4 @@ if abs(m - n) <= 1:
     if n == m:
         res *= 2
     res %= mod
-
 print(res)

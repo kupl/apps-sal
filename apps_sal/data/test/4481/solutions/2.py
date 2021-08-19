@@ -8,7 +8,7 @@ for i in range(n):
         d[s] = 1
 mx = max(d.values())
 ans = ['']
-for k, v in d.items():
+for (k, v) in d.items():
     if v == mx:
         ans.append(k)
 ans.sort()

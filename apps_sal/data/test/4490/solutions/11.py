@@ -1,4 +1,3 @@
-
 n = str(input())
 if n == 'A':
     print('T')

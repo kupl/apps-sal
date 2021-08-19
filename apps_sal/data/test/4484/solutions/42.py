@@ -14,11 +14,11 @@ def perm(n, k, MOD):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     if N == M + 1 or N + 1 == M:
-        ans = (perm(N, N, MOD) * perm(M, M, MOD)) % MOD
+        ans = perm(N, N, MOD) * perm(M, M, MOD) % MOD
     elif N == M:
-        ans = (2 * (perm(N, N, MOD) * perm(M, M, MOD))) % MOD
+        ans = 2 * (perm(N, N, MOD) * perm(M, M, MOD)) % MOD
     else:
         ans = 0
     print(ans)

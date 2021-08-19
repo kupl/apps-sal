@@ -1,17 +1,13 @@
 from math import ceil
-
 n = int(input())
-
 word1 = input()
 word2 = input()
-
 combined = []
 for i in range(ceil(n / 2)):
     if i > n / 2 - 1:
         combined.append([word1[i], word2[i]])
     else:
-        combined.append([word1[i], word1[- i - 1], word2[i], word2[- i - 1]])
-
+        combined.append([word1[i], word1[-i - 1], word2[i], word2[-i - 1]])
 count = 0
 for l in combined:
     s = set(l)

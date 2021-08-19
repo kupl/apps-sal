@@ -1,4 +1,4 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 lsT = list(map(int, input().split()))
 tend = T
 ans = T

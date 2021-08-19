@@ -7,6 +7,6 @@ for i in range(t):
     for el in arr:
         s += (el - mn) % 2
     if s == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

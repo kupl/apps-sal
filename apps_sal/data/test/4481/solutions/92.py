@@ -1,5 +1,5 @@
 N = int(input())
-dic, rst = {}, []
+(dic, rst) = ({}, [])
 for i in range(N):
     key = input()
     if key in dic:
@@ -7,5 +7,5 @@ for i in range(N):
     else:
         dic[key] = 1
 max_val = max(dic.values())
-rst = [key for key, value in dic.items() if value == max_val]
+rst = [key for (key, value) in dic.items() if value == max_val]
 [print(i) for i in sorted(rst)]

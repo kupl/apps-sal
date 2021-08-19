@@ -1,4 +1,4 @@
-N, X = (int(T) for T in input().split())
+(N, X) = (int(T) for T in input().split())
 A = list(map(int, input().split()))
 ans = 0
 for i in range(0, N - 1):

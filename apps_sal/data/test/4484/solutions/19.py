@@ -1,9 +1,6 @@
-n, m = list(map(int, input().split()))
-
-mod = 10**9 + 7
+(n, m) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 ans = 1
-
-
 if abs(n - m) >= 2:
     ans = 0
 elif abs(n - m) == 1:
@@ -20,6 +17,4 @@ elif abs(n - m) == 0:
     ans **= 2
     ans *= 2
     ans %= mod
-
-
 print(ans)

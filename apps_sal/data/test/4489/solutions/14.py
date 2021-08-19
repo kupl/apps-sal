@@ -6,7 +6,6 @@ m = int(input())
 t = []
 for i in range(m):
     t.append(input())
-
 words = set(s + t)
 max_val = 0
 for word in words:

@@ -11,7 +11,6 @@ for i in range(q):
     while n % 5 == 0:
         num += 3
         n //= 5
-
     if n == 1:
         print(num)
     else:

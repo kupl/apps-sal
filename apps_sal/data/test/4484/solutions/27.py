@@ -1,17 +1,41 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
-INF = 10**20
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
+INF = 10 ** 20
 MOD = 10 ** 9 + 7
-def I(): return int(input())
-def F(): return float(input())
-def S(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LS(): return input().split()
+
+
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def S():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LS():
+    return input().split()
 
 
 def fact_mod(n, MOD):
@@ -23,8 +47,7 @@ def fact_mod(n, MOD):
 
 
 def resolve():
-    N, M = LI()
-
+    (N, M) = LI()
     if N == M:
         ans = 2 * pow(fact_mod(N, MOD), 2, MOD)
         ans %= MOD
@@ -34,7 +57,7 @@ def resolve():
         ans %= MOD
         print(ans)
     else:
-        print((0))
+        print(0)
 
 
 def __starting_point():

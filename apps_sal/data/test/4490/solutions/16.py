@@ -4,4 +4,4 @@ asn = ''
 s = str(input())
 for i in range(4):
     if s == a[i]:
-        print((b[i]))
+        print(b[i])

@@ -7,9 +7,9 @@ for _ in range(q):
         if n % 2 == 0:
             n //= 2
         elif n % 3 == 0:
-            n = (n // 3) * 2
+            n = n // 3 * 2
         elif n % 5 == 0:
-            n = (n // 5) * 4
+            n = n // 5 * 4
         else:
             break
     if n == 1:

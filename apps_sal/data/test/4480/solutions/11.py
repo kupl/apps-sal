@@ -1,10 +1,10 @@
 class Solution:
-    def canThreePartsEqualSum(self, A: List[int]) -> bool:
 
+    def canThreePartsEqualSum(self, A: List[int]) -> bool:
         sumA = sum(A)
         if sumA % 3 != 0:
             return False
-        tmpSum, isFound, eachPart = 0, 0, sumA // 3
+        (tmpSum, isFound, eachPart) = (0, 0, sumA // 3)
         for i in A:
             tmpSum += i
             if tmpSum == eachPart:

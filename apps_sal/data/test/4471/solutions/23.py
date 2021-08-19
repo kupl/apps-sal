@@ -5,7 +5,7 @@ def go():
     n = int(input())
     a = list(map(int, input().split()))
     ma = min(a)
-    return 'YES' if all((aa - ma) % 2 == 0 for aa in a) else 'NO'
+    return 'YES' if all(((aa - ma) % 2 == 0 for aa in a)) else 'NO'
 
 
 t = int(input())

@@ -1,4 +1,4 @@
-N, x = map(int, input().split())
+(N, x) = map(int, input().split())
 values = map(int, input().split())
 count = 0
 v1 = next(values)

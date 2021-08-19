@@ -1,9 +1,7 @@
-a, b = [int(input()) for i in range(2)]
-
+(a, b) = [int(input()) for i in range(2)]
 if a > b:
-    print("GREATER")
-
+    print('GREATER')
 elif a < b:
-    print("LESS")
+    print('LESS')
 else:
-    print("EQUAL")
+    print('EQUAL')

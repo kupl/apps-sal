@@ -6,11 +6,11 @@ def factorial(a):
     return result
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if N == M:
-    ans = 2 * (factorial(N)**2) % 1000000007
+    ans = 2 * factorial(N) ** 2 % 1000000007
 elif abs(N - M) == 1:
-    ans = max(N, M) * (factorial(min(N, M))**2) % 1000000007
+    ans = max(N, M) * factorial(min(N, M)) ** 2 % 1000000007
 else:
     ans = 0
 print(ans)

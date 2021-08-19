@@ -1,4 +1,4 @@
-N, K = (int(T) for T in input().split())
+(N, K) = (int(T) for T in input().split())
 Per = [int(T) for T in input().split()]
 Wat = 0
 for X in range(0, N - 1):

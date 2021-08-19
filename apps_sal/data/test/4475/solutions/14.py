@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, x, y, n = list(map(int, input().split()))
+    (a, b, x, y, n) = list(map(int, input().split()))
     c = max(a - n, x)
     d = max(b - n, y)
     if c < d:

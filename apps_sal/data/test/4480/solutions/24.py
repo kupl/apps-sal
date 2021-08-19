@@ -1,4 +1,5 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         x = 0
         for i in A:
