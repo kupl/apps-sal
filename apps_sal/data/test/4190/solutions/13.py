@@ -14,4 +14,4 @@ for x in a:
     r += [(x + v) % n]
     d[v] -= 1
 for i in r:
-    print(i, end=" ")
+    print(i, end=' ')

@@ -1,9 +1,9 @@
 import sys
 import math
-lines = [s.rstrip("\n") for s in sys.stdin.readlines()]
+lines = [s.rstrip('\n') for s in sys.stdin.readlines()]
 s = lines.pop(0)
-k, = [int(num) for num in lines.pop(0).split(" ")]
-days = 5000 * (10 ** 12)
+(k,) = [int(num) for num in lines.pop(0).split(' ')]
+days = 5000 * 10 ** 12
 for n in s:
     log_k = math.log10(k)
     n = int(n)

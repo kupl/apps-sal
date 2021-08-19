@@ -1,4 +1,4 @@
-L, R = map(int, input().split())
+(L, R) = map(int, input().split())
 k = 0
 l = 2020
 m = 2020

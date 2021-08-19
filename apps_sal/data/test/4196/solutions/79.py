@@ -18,7 +18,6 @@ r = [A[-1]] * n
 for i in range(n - 1):
     l[i + 1] = gcd(l[i], A[i + 1])
     r[-i - 2] = gcd(r[-i - 1], A[-i - 2])
-
 ans = 0
 for i in range(n):
     if i == 0:

@@ -1,8 +1,6 @@
 s = input()
-
 ans = True
 cnt = 0
-
 for (i, char) in enumerate(s):
     if i == 0:
         if char != 'A':
@@ -11,10 +9,9 @@ for (i, char) in enumerate(s):
     elif 2 <= i and i <= len(s) - 2:
         if char == 'C':
             cnt += 1
-    else:
-        if char.isupper():
-            ans = False
-            break
+    elif char.isupper():
+        ans = False
+        break
 if cnt == 1 and ans:
     print('AC')
 else:

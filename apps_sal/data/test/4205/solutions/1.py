@@ -6,6 +6,6 @@ for i in range(N):
     if P[i] != A[i]:
         count += 1
 if count <= 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

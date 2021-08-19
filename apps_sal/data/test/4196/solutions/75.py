@@ -1,6 +1,6 @@
-from math import*
+from math import *
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 L = [0]
 l = A[0]
 for a in A:

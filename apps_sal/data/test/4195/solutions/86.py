@@ -1,5 +1,4 @@
-d, n = map(int, input().split())
-
+(d, n) = map(int, input().split())
 if d == 0:
     if n == 100:
         print(101)
@@ -10,8 +9,7 @@ elif d == 1:
         print(10100)
     else:
         print(n * 100)
+elif n == 100:
+    print(100 ** 2 * 100 + 10000)
 else:
-    if n == 100:
-        print(100**2 * 100 + 10000)
-    else:
-        print(100**2 * n)
+    print(100 ** 2 * n)

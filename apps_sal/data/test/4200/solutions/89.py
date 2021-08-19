@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 vote = list(map(int, input().split()))
 sum = 0
 for i in range(N):

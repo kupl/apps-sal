@@ -3,6 +3,6 @@ D = li[0]
 T = li[1]
 S = li[2]
 if S * T >= D:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

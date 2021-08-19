@@ -2,7 +2,7 @@ import re
 
 
 def answer(s: str) -> str:
-    pattern = r'A[a-z]+C[a-z]+'
+    pattern = 'A[a-z]+C[a-z]+'
     return 'AC' if re.fullmatch(pattern, s) else 'WA'
 
 

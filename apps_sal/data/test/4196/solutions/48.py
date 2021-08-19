@@ -1,5 +1,5 @@
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 
 
 def gcd(a, b):
@@ -17,7 +17,6 @@ def cum(array, merge, unit):
 
 cum1 = cum(A, gcd, A[0])
 cum2 = cum(A[::-1], gcd, A[-1])[::-1]
-
 res = []
 for i in range(N):
     if i == 0:
@@ -27,5 +26,4 @@ for i in range(N):
     else:
         tmp = gcd(cum1[i], cum2[i + 1])
     res.append(tmp)
-
 print(max(res))

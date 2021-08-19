@@ -1,5 +1,5 @@
-D, N = map(int, input().split())
+(D, N) = map(int, input().split())
 if N != 100:
-    print(100**D * N)
+    print(100 ** D * N)
 else:
-    print(100**D * (N + 1))
+    print(100 ** D * (N + 1))

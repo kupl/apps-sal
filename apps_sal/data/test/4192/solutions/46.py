@@ -1,6 +1,5 @@
 import sys
-
-d, t, s = sys.stdin.readline().strip().split(' ')
+(d, t, s) = sys.stdin.readline().strip().split(' ')
 d = int(d)
 t = int(t)
 s = int(s)

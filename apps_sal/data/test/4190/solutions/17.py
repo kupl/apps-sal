@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-has = [0] * (n)
+has = [0] * n
 ans = []
 for i in range(n):
     has[b[i]] += 1

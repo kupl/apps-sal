@@ -26,7 +26,7 @@ for _ in range(n):
         if a1[2] == a2[1] == a3[0]:
             flag = 1
     if flag == 1:
-        print("Yes")
+        print('Yes')
         break
 if flag == 0:
-    print("No")
+    print('No')

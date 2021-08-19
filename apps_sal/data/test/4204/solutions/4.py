@@ -1,7 +1,5 @@
-
 S = input()
 K = int(input())
-
 i = 0
 ans = 1
 while i < K:

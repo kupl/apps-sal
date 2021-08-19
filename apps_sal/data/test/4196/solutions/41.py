@@ -1,5 +1,4 @@
 import math
-
 N = int(input())
 A = list(map(int, input().split()))
 L = [0] * (N + 1)

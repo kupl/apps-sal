@@ -1,4 +1,4 @@
-A, B, X = map(int, input().split())
+(A, B, X) = map(int, input().split())
 
 
 def d(n):

@@ -13,5 +13,5 @@ def li():
 n = ii()
 a = li()
 a.sort()
-ans = sum(a[i + 1] - a[i] for i in range(0, n, 2))
+ans = sum((a[i + 1] - a[i] for i in range(0, n, 2)))
 print(ans)

@@ -1,6 +1,6 @@
-D, T, S = (int(x) for x in input().split())
+(D, T, S) = (int(x) for x in input().split())
 tmp = D / S
 if tmp <= T:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

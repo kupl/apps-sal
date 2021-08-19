@@ -9,5 +9,4 @@ for x in a:
         best = max(best, cnt)
     else:
         cnt = 0
-
 print(best)

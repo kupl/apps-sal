@@ -1,5 +1,5 @@
-d, t, s = list(map(int, input().split()))
+(d, t, s) = list(map(int, input().split()))
 if s * t < d:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

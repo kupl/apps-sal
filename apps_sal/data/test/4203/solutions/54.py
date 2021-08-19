@@ -1,5 +1,4 @@
 S = input()
-
 if S.startswith('A'):
     if S[1].islower() and S[-1].islower():
         count_lower = 0

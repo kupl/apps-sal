@@ -1,6 +1,5 @@
-L, R = map(int, input().split())
+(L, R) = map(int, input().split())
 p = 2019
-
 if R - L >= p:
     print(0)
 else:

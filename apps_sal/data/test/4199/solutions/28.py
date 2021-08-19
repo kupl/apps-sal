@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 h = list(map(int, input().split()))
 
 
@@ -10,4 +10,4 @@ def answer(n: int, k: int, h: list) -> int:
     return ans
 
 
-print((answer(n, k, h)))
+print(answer(n, k, h))

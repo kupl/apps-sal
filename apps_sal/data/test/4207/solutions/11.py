@@ -1,13 +1,12 @@
 import math
 import collections
-
 n = int(input())
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 z = list(zip(a, b))
 zz = []
 doublezeros = 0
-for idx, t in enumerate(z):
+for (idx, t) in enumerate(z):
     if t[0] == 0 and t[1] != 0:
         continue
     if t[0] == 0 and t[1] == 0:

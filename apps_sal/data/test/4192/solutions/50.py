@@ -1,6 +1,5 @@
-dis, time, spd = map(int, input().split())
-
+(dis, time, spd) = map(int, input().split())
 if dis / spd <= time:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

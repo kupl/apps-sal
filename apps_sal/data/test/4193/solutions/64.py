@@ -24,13 +24,11 @@ for _ in range(3):
 n = int(input())
 for _ in range(n):
     b.append(int(input()))
-
 for i in range(n):
     for j in range(3):
         for k in range(3):
             if b[i] == A[j][k]:
                 A[j][k] = 0
-
 ans = bingo(A)
 if ans:
     print('Yes')

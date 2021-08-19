@@ -2,7 +2,7 @@ def gcd(x, y):
     if x == 0 or y == 0:
         return max(x, y)
     if x < y:
-        x, y = y, x
+        (x, y) = (y, x)
     if x % y == 0:
         return y
     return gcd(y, x % y)

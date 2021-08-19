@@ -7,6 +7,6 @@ for i in range(n):
     if s[i] != t[i]:
         cnt += 1
 if cnt < 3:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

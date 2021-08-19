@@ -1,17 +1,24 @@
 import math
-def i_input(): return int(input())
 
 
-def i_map(): return map(int, input().split())
+def i_input():
+    return int(input())
 
 
-def i_list(): return list(map(int, input().split()))
+def i_map():
+    return map(int, input().split())
 
 
-def i_row(N): return [int(input()) for _ in range(N)]
+def i_list():
+    return list(map(int, input().split()))
 
 
-def i_row_list(N): return [list(map(int, input().split())) for _ in range(N)]
+def i_row(N):
+    return [int(input()) for _ in range(N)]
+
+
+def i_row_list(N):
+    return [list(map(int, input().split())) for _ in range(N)]
 
 
 aaa = i_row_list(3)
@@ -27,7 +34,6 @@ xlos2 = 0
 for i in range(3):
     colm = 0
     rows = 0
-
     for j in range(3):
         colm += aaa[i][j]
         rows += aaa[j][i]
@@ -39,6 +45,4 @@ for i in range(3):
 if ans != 'Yes':
     if xlos1 == 0 or xlos2 == 0:
         ans = 'Yes'
-
-
 print(ans)

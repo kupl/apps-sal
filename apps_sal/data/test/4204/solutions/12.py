@@ -1,6 +1,5 @@
 S = input()
 K = int(input())
-
 ones = 0
 inf = None
 for c in S:
@@ -9,7 +8,6 @@ for c in S:
     else:
         inf = c
         break
-
 if K <= ones:
     print('1')
 else:

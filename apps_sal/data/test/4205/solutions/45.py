@@ -5,6 +5,6 @@ for i in range(N):
     if d[i] != i + 1:
         ans += 1
 if ans >= 3:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

@@ -1,5 +1,4 @@
 S = input()
-
 flag = 1
 c_count = 0
 if S[0] == 'A':
@@ -7,9 +6,8 @@ if S[0] == 'A':
         if 2 <= i <= len(S) - 2:
             if S[i] == 'C':
                 c_count += 1
-        else:
-            if S[i].islower() == False:
-                flag = 0
+        elif S[i].islower() == False:
+            flag = 0
 else:
     flag = 0
 if c_count == 1 and flag == 1:

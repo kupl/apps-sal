@@ -37,7 +37,7 @@ for i in range(n):
         if int(h[k]) == j:
             h.pop(k)
             h.insert(k, 0)
-if a == [0, 0, 0] or b == [0, 0, 0] or c == [0, 0, 0] or d == [0, 0, 0] or e == [0, 0, 0] or f == [0, 0, 0] or g == [0, 0, 0] or h == [0, 0, 0]:
-    print("Yes")
+if a == [0, 0, 0] or b == [0, 0, 0] or c == [0, 0, 0] or (d == [0, 0, 0]) or (e == [0, 0, 0]) or (f == [0, 0, 0]) or (g == [0, 0, 0]) or (h == [0, 0, 0]):
+    print('Yes')
 else:
-    print("No")
+    print('No')

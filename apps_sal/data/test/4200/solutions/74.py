@@ -1,13 +1,12 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 A = sorted(A, reverse=True)
 S = sum(A)
-ans = "No"
+ans = 'No'
 for i in range(M):
     if A[i] >= S / (4 * M):
-        ans = "Yes"
+        ans = 'Yes'
     else:
-        ans = "No"
+        ans = 'No'
         break
 print(ans)

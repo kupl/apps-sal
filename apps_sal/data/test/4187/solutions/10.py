@@ -9,5 +9,4 @@ for ai in a:
     else:
         max_ones = max(max_ones, ones)
         ones = 0
-
 print(max_ones)

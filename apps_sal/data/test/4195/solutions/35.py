@@ -1,6 +1,5 @@
-D, N = map(int, input().split())
+(D, N) = map(int, input().split())
 count = 0
-
 if D == 0:
     for i in range(N):
         count += 1

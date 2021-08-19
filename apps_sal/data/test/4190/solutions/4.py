@@ -1,4 +1,5 @@
-class MinArray():
+class MinArray:
+
     def __init__(self, n, a, b):
         self.n = n
         self.a = a
@@ -6,7 +7,6 @@ class MinArray():
         self.cnts = [0] * self.n
         self.par = [i for i in range(self.n)]
         self.size = [1] * self.n
-
         for v in self.b:
             self.cnts[v] += 1
 
@@ -18,7 +18,7 @@ class MinArray():
         return v
 
     def union(self, u, v):
-        u, v = self.find(u), self.find(v)
+        (u, v) = (self.find(u), self.find(v))
         self.par[u] = v
 
     def build_tree(self):

@@ -1,8 +1,7 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     homeworks = tuple(map(int, input().split()))
-
-    print((max(-1, n - sum(homeworks))))
+    print(max(-1, n - sum(homeworks)))
     return
 
 

@@ -7,12 +7,11 @@ for x in b:
         for j in range(3):
             if A[i][j] == x:
                 c[i][j] = 1
-
 if c[0] == [1, 1, 1] or c[1] == [1, 1, 1] or c[2] == [1, 1, 1]:
-    print("Yes")
+    print('Yes')
 elif [c[0][0], c[1][0], c[2][0]] == [1, 1, 1] or [c[0][1], c[1][1], c[2][1]] == [1, 1, 1] or [c[0][2], c[1][2], c[2][2]] == [1, 1, 1]:
-    print("Yes")
+    print('Yes')
 elif [c[0][0], c[1][1], c[2][2]] == [1, 1, 1] or [c[2][0], c[1][1], c[0][2]] == [1, 1, 1]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

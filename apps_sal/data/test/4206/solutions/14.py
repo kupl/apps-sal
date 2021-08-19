@@ -21,14 +21,6 @@ for A in L:
             f[i] = False
             k += 1
     kk = 0
-    '''
-    x=0
-    for i in range(1,m):
-        x+=A[i]
-        if x%3==0:
-            x=0
-            kk+=1
-    '''
+    '\n    x=0\n    for i in range(1,m):\n        x+=A[i]\n        if x%3==0:\n            x=0\n            kk+=1\n    '
     ans += max(k, kk)
-
 print(ans)

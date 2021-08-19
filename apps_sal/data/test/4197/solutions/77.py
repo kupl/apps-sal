@@ -5,6 +5,6 @@ for i in range(N):
 A.sort()
 ans = ''
 for tup in A:
-    v, i = tup
+    (v, i) = tup
     ans += str(i) + ' '
 print(ans)

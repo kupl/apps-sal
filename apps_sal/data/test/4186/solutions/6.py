@@ -1,8 +1,11 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n,) = I()
 l = I()
 l.sort()
 count = 0

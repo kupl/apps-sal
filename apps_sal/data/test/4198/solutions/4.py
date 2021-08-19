@@ -1,5 +1,5 @@
-A, B, X = list(map(int, input().split()))
-right = 10**9
+(A, B, X) = list(map(int, input().split()))
+right = 10 ** 9
 left = 0
 while abs(right - left) > 1:
     N = (left + right) // 2

@@ -1,14 +1,15 @@
 from math import gcd
 
 
-class SegTree():
+class SegTree:
+
     def segfunc(self, x, y):
         return gcd(x, y)
 
     def __init__(self, ide, init_val):
         n = len(init_val)
         self.ide_ele = ide
-        self.num = 2**(n - 1).bit_length()
+        self.num = 2 ** (n - 1).bit_length()
         self.seg = [self.ide_ele] * 2 * self.num
         for i in range(n):
             self.seg[i + self.num - 1] = init_val[i]

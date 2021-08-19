@@ -1,7 +1,7 @@
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 m = 2019
 if l // m < r // m:
-    print((0))
+    print(0)
 else:
     ans = m
     for i in range(l % m, r % m + 1):

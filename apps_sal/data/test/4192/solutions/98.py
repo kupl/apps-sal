@@ -1,5 +1,5 @@
-D, T, S = map(int, input().split())
+(D, T, S) = map(int, input().split())
 if T < D / S:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

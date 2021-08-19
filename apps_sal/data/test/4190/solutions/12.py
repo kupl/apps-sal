@@ -4,7 +4,6 @@ import collections
 def solve(n, a, b):
     c = collections.Counter(b)
     nex = list(range(1, n)) + [0]
-
     res = []
     for x in a:
         v = (n - x) % n

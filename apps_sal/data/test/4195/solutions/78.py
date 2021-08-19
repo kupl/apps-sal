@@ -1,5 +1,4 @@
-d, n = list(map(int, input().split()))
-
+(d, n) = list(map(int, input().split()))
 if n < 100:
     print(pow(100, d) * n)
 else:

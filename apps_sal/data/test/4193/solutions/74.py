@@ -12,11 +12,9 @@ def check_bingo(A, B):
     for row in range(3):
         if A[row][0] and A[row][1] and A[row][2]:
             return True
-
     for col in range(3):
         if A[0][col] and A[1][col] and A[2][col]:
             return True
-
     if A[0][0] and A[1][1] and A[2][2]:
         return True
     if A[0][2] and A[1][1] and A[2][0]:
@@ -30,5 +28,4 @@ for row in range(3):
             A[row][col] = True
         else:
             A[row][col] = False
-
-print("Yes" if check_bingo(A, B) else "No")
+print('Yes' if check_bingo(A, B) else 'No')

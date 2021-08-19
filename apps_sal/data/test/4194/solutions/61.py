@@ -1,4 +1,3 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-print((max(-1, n - sum(a))))
+print(max(-1, n - sum(a)))

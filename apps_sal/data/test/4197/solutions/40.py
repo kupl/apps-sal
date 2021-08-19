@@ -12,7 +12,7 @@ class Solution:
     def answer(self):
         d = dict(zip(self.an, Solution.values))
         for i in range(1, n + 1):
-            print(d[i], end=" ")
+            print(d[i], end=' ')
 
 
 conditions = Solution(n, an)

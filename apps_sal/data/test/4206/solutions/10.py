@@ -1,9 +1,6 @@
 ls = [int(i) % 3 for i in input()]
-
 ls.reverse()
-
 cnt = 0
-
 lst = 0
 sub = 0
 for i in ls:
@@ -14,5 +11,4 @@ for i in ls:
     else:
         lst = (lst + i) % 3
         sub = i
-
 print(cnt)

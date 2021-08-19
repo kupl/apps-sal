@@ -1,5 +1,4 @@
 S = str(input())
-
 N = len(S)
 flag = True
 cnt = 0

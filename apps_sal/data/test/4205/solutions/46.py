@@ -10,10 +10,9 @@ def solve():
         if P[i] != i + 1:
             diff += 1
     if diff <= 2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
     return 0
 
 

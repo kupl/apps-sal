@@ -3,12 +3,12 @@ def main():
     n = int(input())
     a = sorted(list(map(int, input().split())))
     if n == 2:
-        print((a[1]))
+        print(a[1])
         return
     ans = 0
     g = math.gcd(a[0], a[1])
     ans_list = []
-    for i in range(1, int(g**0.5) + 1):
+    for i in range(1, int(g ** 0.5) + 1):
         if g % i == 0:
             ans_list.append(i)
     ans_list.append(g)
@@ -22,7 +22,7 @@ def main():
                 ans = an
     g = math.gcd(a[1], a[2])
     ans_list = []
-    for i in range(1, int(g**0.5) + 1):
+    for i in range(1, int(g ** 0.5) + 1):
         if g % i == 0:
             ans_list.append(i)
     ans_list.append(g)
@@ -36,7 +36,7 @@ def main():
                 ans = an
     g = math.gcd(a[0], a[2])
     ans_list = []
-    for i in range(1, int(g**0.5) + 1):
+    for i in range(1, int(g ** 0.5) + 1):
         if g % i == 0:
             ans_list.append(i)
     ans_list.append(g)

@@ -1,6 +1,5 @@
-d, t, s = (int(x) for x in input().split())
-
+(d, t, s) = (int(x) for x in input().split())
 if s * t < d:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

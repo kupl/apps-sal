@@ -2,7 +2,7 @@ s = str(input())
 k = int(input())
 con = 0
 for i in s:
-    if i == "1":
+    if i == '1':
         con += 1
     else:
         break

@@ -1,5 +1,4 @@
 S = input()
-
 if S[0] == 'A':
     c = list(S[2:-1])
     if c.count('C') == 1:

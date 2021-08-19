@@ -1,8 +1,7 @@
 s = [int(i) for i in input()]
-
 count = 0
 current = []
-for h, i in enumerate(s):
+for (h, i) in enumerate(s):
     for j in range(len(current)):
         current[j] = current[j] * 10 + i
     current.append(i)

@@ -2,7 +2,6 @@ import math
 from collections import deque
 N = int(input())
 A = list(map(int, input().split()))
-
 M = 0
 L = deque([0])
 R = deque([0])

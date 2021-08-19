@@ -1,9 +1,7 @@
 s = [int(x) % 3 for x in input()]
-
 i = 0
 ans = 0
 n = len(s)
-
 while i < n:
     if s[i] == 0:
         ans += 1

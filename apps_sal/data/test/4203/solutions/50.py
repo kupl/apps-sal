@@ -1,6 +1,5 @@
 s = input()
 ans = 'WA'
-
 if s[0] == 'A':
     if s[2:-1].count('C') == 1:
         index = s[2:-1].find('C') + 2

@@ -6,4 +6,4 @@ for i in s:
         c += 1
     else:
         break
-print(s[c] if k > c else "1")
+print(s[c] if k > c else '1')

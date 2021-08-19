@@ -1,5 +1,5 @@
-a, b, x = list(map(int, input().split()))
-r = 10**9 + 1
+(a, b, x) = list(map(int, input().split()))
+r = 10 ** 9 + 1
 l = 0
 while r - l > 1:
     m = (r + l) // 2

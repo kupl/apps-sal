@@ -6,7 +6,7 @@ B = list(map(int, input().split()))
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -21,9 +21,7 @@ for i in range(n):
         D.append(0)
     else:
         D.append((A[i] // gcd(A[i], B[i]), B[i] // gcd(A[i], B[i])))
-
 C = Counter(D)
-
 if len(C) == 0:
     print(ANS)
 else:

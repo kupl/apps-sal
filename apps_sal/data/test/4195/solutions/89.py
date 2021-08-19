@@ -1,4 +1,4 @@
-d, n = map(int, input().split())
+(d, n) = map(int, input().split())
 if d == 0:
     if n == 100:
         print(101)

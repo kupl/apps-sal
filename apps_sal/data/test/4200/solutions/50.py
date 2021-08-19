@@ -1,5 +1,5 @@
 from numpy import cumsum
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 result = cumsum(a)[-1]
 mi = result / (4 * m)

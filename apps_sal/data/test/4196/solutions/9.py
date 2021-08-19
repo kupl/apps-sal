@@ -1,5 +1,4 @@
 import math
-
 N = int(input().rstrip())
 A = list(map(int, input().rstrip().split()))
 l = [A[0]]

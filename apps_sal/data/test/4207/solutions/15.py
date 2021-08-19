@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -21,7 +21,7 @@ for i in range(n):
         else:
             z = 1
         v = gcd(abs(a[i]), abs(b[i]))
-        x[(z, abs(a[i]) // v, abs(b[i]) // v)] += 1
+        x[z, abs(a[i]) // v, abs(b[i]) // v] += 1
 if len(x) > 0:
     print(max(x.values()) + p)
 else:

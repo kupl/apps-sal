@@ -1,5 +1,4 @@
-A, B, X = map(int, input().split())
-
+(A, B, X) = map(int, input().split())
 Nmax = 10 ** 9
 Nmin = 1
 Nmid = (Nmax + Nmin) // 2

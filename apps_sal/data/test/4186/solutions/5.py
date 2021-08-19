@@ -2,13 +2,9 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-
-'''
-
+'\n\n'
 n = int(input())
 a = list(mi())
-
 a.sort()
 s = 0
 for i in range(n):

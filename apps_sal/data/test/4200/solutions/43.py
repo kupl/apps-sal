@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 aa = list(map(int, input().split()))
 total_aa = sum(aa)
 cnt = 0

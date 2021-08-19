@@ -1,7 +1,6 @@
 a = [list(map(int, input().split())) for _ in range(3)]
 n = int(input())
 b = [int(input()) for _ in range(n)]
-
 for i in range(n):
     for j in range(3):
         for k in range(3):
@@ -30,6 +29,6 @@ def bingo(board):
 
 
 if bingo(a):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

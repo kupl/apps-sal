@@ -1,5 +1,5 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if a / c > b:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

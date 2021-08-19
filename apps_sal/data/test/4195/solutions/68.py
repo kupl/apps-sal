@@ -1,5 +1,4 @@
-d, n = list(map(int, input().split()))
-
+(d, n) = list(map(int, input().split()))
 if d == 0:
     if n == 100:
         ans = 101
