@@ -1,13 +1,12 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         bus_stop_dict = collections.defaultdict(set)
-        # each stop corresponds to all the buses
         for i in range(len(routes)):
             for stop in routes[i]:
                 bus_stop_dict[stop].add(i)
-
         seen_bus = set()
         seen_stop = set()
         stop_list = []
@@ -31,8 +30,6 @@ class Solution:
                         if s not in seen_stop:
                             seen_stop.add(s)
                             new_list.append(s)
-
             stop_list = new_list
             ans += 1
-
         return -1

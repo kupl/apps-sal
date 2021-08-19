@@ -1,6 +1,7 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        '''
+        """
         # BFS
         # Treat each bus stop as node => TLE
         # A node is connected with all nodes in the same route(s)
@@ -29,13 +30,7 @@ class Solution:
                         visited.add(v)
             buses += 1
         return -1
-        '''
-
-        # BFS
-        # Treat each bus route as node
-        # A node is connected with all routes that share a common bus stop
-
-        # Build up adjacency list
+        """
         adj = collections.defaultdict(set)
         n = len(routes)
         for i in range(n):
@@ -45,17 +40,13 @@ class Solution:
                 if set(u).intersection(set(v)):
                     adj[i].add(j)
                     adj[j].add(i)
-
-        # Build up bus stop -> bus route mapping
         stop2routes = collections.defaultdict(set)
-        for route, stops in enumerate(routes):
+        for (route, stops) in enumerate(routes):
             for stop in stops:
                 stop2routes[stop].add(route)
-
         if S == T:
             return 0
-
-        adj[-1] = stop2routes[S]  # route -1 is connected to all routes that contains S
+        adj[-1] = stop2routes[S]
         q = collections.deque()
         q.append(-1)
         visited = set()
