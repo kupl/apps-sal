@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         ans = 0
 
@@ -13,10 +14,8 @@ class Solution:
                     c2[curr] -= 1
                     if c2[curr] == 0:
                         c2.pop(curr)
-                    # print(num,curr,c2)
                     if num % curr == 0 and num // l2[i] in c2:
                         ans += c2[num // l2[i]]
-
         helper(nums1, nums2)
         helper(nums2, nums1)
         return ans

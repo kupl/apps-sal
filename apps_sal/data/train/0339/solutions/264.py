@@ -1,12 +1,6 @@
 class Solution:
-    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
 
-        # x = [i for i in range(1000)]
-        # y = [i for i in range(1000)]
-        # ans = 0
-        # for a in x:
-        #     for b in y:
-        #         ans += a*b % 1000000
+    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
 
         def cal(nums1, nums2):
             ans = 0
@@ -29,5 +23,4 @@ class Solution:
                     d[b] += 1
             print(ans)
             return ans
-
         return cal(nums1, nums2) + cal(nums2, nums1)

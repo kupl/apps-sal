@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def mul(self, x):
         ans = []
         n = len(x)
@@ -16,7 +17,6 @@ class Solution:
         cy = Counter(y)
         same = set(x).intersection(set(y))
         for num in same:
-            # print(num, cx, cy)
             ans += cx[num] * cy[num]
         return ans
 
