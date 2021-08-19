@@ -1,4 +1,4 @@
-def min_special_mult(arr):  # just simple "straight forward"...
+def min_special_mult(arr):
     narr = []
     l = []
     c = 0
@@ -16,9 +16,9 @@ def min_special_mult(arr):  # just simple "straight forward"...
                 l.append(a)
                 c += 1
     if c == 1:
-        return "There is 1 invalid entry: " + l[0]
+        return 'There is 1 invalid entry: ' + l[0]
     if c > 0:
-        return "There are " + str(c) + " invalid entries: " + str(l)
+        return 'There are ' + str(c) + ' invalid entries: ' + str(l)
     narr.sort()
     n = narr[-1]
     n1 = n

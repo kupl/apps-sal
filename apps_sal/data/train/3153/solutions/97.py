@@ -1,5 +1,4 @@
 def playerRankUp(pts):
-    # your code here
     if pts < 100:
         return False
     elif pts >= 100:

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -13,5 +12,5 @@ for _ in range(t):
     for i in range(1, n + 1):
         height = min(l[i], r[i])
         max_h = max(max_h, height)
-    ans = sum(a) - max_h**2
+    ans = sum(a) - max_h ** 2
     print(ans)

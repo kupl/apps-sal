@@ -1,8 +1,5 @@
-# cook your dish here
 from math import gcd
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
-    # c = pow(a,b-2,b)
-    # print(gcd(a,c))
+    (a, b) = list(map(int, input().split()))
     print(gcd(a, b))

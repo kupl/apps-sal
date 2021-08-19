@@ -1,10 +1,9 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     k = int(input())
     num = int(k / n)
-    if (k / n == num):
+    if k / n == num:
         print(0)
     else:
         x = max(n * (1 + num) - k, 0)
