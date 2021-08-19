@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if not s:
             return s
@@ -6,17 +7,13 @@ class Solution:
         for c in s:
             if c > max_char:
                 max_char = c
-
         largest = s
-        cur, prev = 0, 0
+        (cur, prev) = (0, 0)
         for i in range(len(s)):
             if s[i] == max_char:
-                #print(i, s[i], s[cur:i+1])
                 if cur and s[cur:] > largest:
                     largest = s[cur:]
                 cur = i
-
         if cur and s[cur:] > largest:
             largest = s[cur:]
-
         return largest

@@ -1,5 +1,5 @@
 class Solution:
-    # O(n^2) time, O(1) space
+
     def lastSubstring(self, s: str) -> str:
         best = 0
         n = len(s)
@@ -7,7 +7,7 @@ class Solution:
             if s[i] > s[best]:
                 best = i
             elif s[i] == s[best]:
-                idx1, idx2 = best, i
+                (idx1, idx2) = (best, i)
                 while idx2 < n and s[idx1] == s[idx2]:
                     idx1 += 1
                     idx2 += 1
@@ -16,7 +16,7 @@ class Solution:
         return s[best:]
 
     def lastSubstring(self, s: str) -> str:
-        i, j, k = 0, 1, 0
+        (i, j, k) = (0, 1, 0)
         n = len(s)
         while j + k < n:
             if s[i + k] == s[j + k]:

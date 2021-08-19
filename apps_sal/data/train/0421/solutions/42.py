@@ -1,21 +1,18 @@
 class Solution:
-    def lastSubstring(self, s: str) -> str:
 
+    def lastSubstring(self, s: str) -> str:
         pos = defaultdict(list)
         large = 'a'
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             pos[c].append(i)
             large = max(large, c)
-
         remain = set(pos[large])
         sz = 1
-        # print(remain)
         while len(remain) > 1:
             large = ''
             for idx in remain:
                 if idx + sz < len(s) and s[idx + sz] > large:
                     large = s[idx + sz]
-
             to_remove = set()
             for idx in remain:
                 if idx + sz in remain:

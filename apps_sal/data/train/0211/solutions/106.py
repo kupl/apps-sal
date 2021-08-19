@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         d = {}
         for i in s:
@@ -9,7 +10,7 @@ class Solution:
         if len(d) == len(s):
             return len(d)
 
-        def waysToSplit(s):  # return list of sequences
+        def waysToSplit(s):
             if not s:
                 return []
             if len(s) == 1:
@@ -23,11 +24,8 @@ class Solution:
                         res.append(first + seq)
                 res.append([s])
             return res
-
         maxCount = 1
-
         sequences = waysToSplit(s)
-        # print(sequences)
         for seq in sequences:
             s = set()
             count = 0
