@@ -4,5 +4,4 @@ def make_negative(number):
     elif number == 0:
         return 0
     else:
-        return (number - (number * 2))
-    # ...
+        return number - number * 2

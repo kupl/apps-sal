@@ -3,4 +3,3 @@ def make_negative(number):
         return number * -1
     else:
         return number
-    # ...

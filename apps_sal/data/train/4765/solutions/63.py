@@ -1,7 +1,7 @@
 class Hero(object):
+
     def __init__(self, name=None):
-        # Add default values here
-        self.name = "Hero" if name is None else name
+        self.name = 'Hero' if name is None else name
         self.position = '00'
         self.health = 100
         self.damage = 5

@@ -1,7 +1,4 @@
-# 3x + 5y + 7z
-
 t = int(input())
-
 while t:
     t -= 1
     n = int(input())

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -7,6 +6,6 @@ for i in range(t):
     s1.sort()
     s2.sort()
     if s1 == s2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

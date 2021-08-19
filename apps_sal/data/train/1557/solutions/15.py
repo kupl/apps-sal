@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     n = int(input())
     a = list(input())
@@ -14,9 +13,8 @@ for t in range(int(input())):
                 else:
                     pass
         if len(a) == len(s):
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
     else:
-        print("YES")
+        print('YES')
