@@ -4,7 +4,7 @@ import bisect
 def s1(n):
     result = 0
     for i in range(1, int(n ** 0.5) + 1):
-        q, r = divmod(n, i)
+        (q, r) = divmod(n, i)
         if r == 0:
             result += i
             if q != i:

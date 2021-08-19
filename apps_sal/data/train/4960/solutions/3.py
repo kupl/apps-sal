@@ -1,4 +1,5 @@
 class Harshad:
+
     @staticmethod
     def is_valid(number):
         a = list(str(number))

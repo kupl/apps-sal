@@ -1,11 +1,12 @@
 class Node(object):
+
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
 def count_if(node, fn):
-    n, c = node, 0
+    (n, c) = (node, 0)
     while n:
         if fn(n):
             c += 1

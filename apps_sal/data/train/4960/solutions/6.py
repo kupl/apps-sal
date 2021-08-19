@@ -3,6 +3,7 @@ D = {}
 
 
 class Harshad:
+
     @staticmethod
     def is_valid(number):
         return D.get(number, D.setdefault(number, not number % sum(map(int, str(number)))))

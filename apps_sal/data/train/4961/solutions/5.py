@@ -1,6 +1,6 @@
 def box(coords):
-    nw, se = [0, 0], [0, 0]
-    for y, x in coords:
+    (nw, se) = ([0, 0], [0, 0])
+    for (y, x) in coords:
         if x < nw[1]:
             nw[1] = x
         if y > nw[0]:

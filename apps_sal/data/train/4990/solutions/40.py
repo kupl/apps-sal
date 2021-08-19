@@ -1,7 +1,6 @@
 def solution(string, ending):
     if len(ending) > len(string):
         return False
-
     out = True
     inc = 0
     revString = string[::-1]

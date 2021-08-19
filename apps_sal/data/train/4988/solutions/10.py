@@ -1,1 +1,1 @@
-square = (2).__rpow__
+square = 2 .__rpow__

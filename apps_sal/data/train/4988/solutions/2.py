@@ -1,1 +1,2 @@
-def square(n): return n * n
+def square(n):
+    return n * n

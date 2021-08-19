@@ -1,6 +1,7 @@
 class Node(object):
+
     def __init__(self, data, nxt=None):
-        self.data, self.next = data, nxt
+        (self.data, self.next) = (data, nxt)
 
 
 def sorted_insert(head, data):

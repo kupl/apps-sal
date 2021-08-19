@@ -5,4 +5,4 @@ def is_uppercase(inp):
     return True
 
 
-print(is_uppercase("LD"))
+print(is_uppercase('LD'))

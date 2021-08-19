@@ -46,18 +46,14 @@ def bingo(card, numbers):
                 break
         else:
             return True
-
         for i in range(1, len(copy)):
             if copy[-i][i - 1] != None and copy[-i][i - 1] != 'FREE SPACE':
                 break
         else:
             return True
-
         return False
-
     markBoard()
     t = checkVerticle() or checkLateral() or checkCross()
-
     return t
 
 

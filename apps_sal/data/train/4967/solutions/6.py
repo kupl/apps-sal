@@ -9,5 +9,5 @@ def knapsack(capacity, items):
             space -= items[best_index][0]
         else:
             ratios[best_index] = 0
-        if all(ratio == 0 for ratio in ratios):
+        if all((ratio == 0 for ratio in ratios)):
             return collection

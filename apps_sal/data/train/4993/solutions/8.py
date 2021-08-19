@@ -18,11 +18,11 @@ def temps(v, slope, d_tot):
         thrust = 0
         if power > 0 and v > 0:
             thrust = g_thrust * power / v / mass
-        gamma = - gravityParallel - airDrag + thrust
-        if abs(gamma) <= 1e-5:
+        gamma = -gravityParallel - airDrag + thrust
+        if abs(gamma) <= 1e-05:
             gamma = 0
         v += gamma / 60
-        if v - 3 <= 1e-2:
+        if v - 3 <= 0.01:
             return -1
         travelled += v / 60 / 60
         power -= power_loss

@@ -5,4 +5,4 @@ for w in WORD_LIST:
 
 
 def wanted_words(vowels, consonants, forbidden):
-    return [w for w in WORD_INDEX[vowels + consonants, vowels] if not any(c in w for c in forbidden)]
+    return [w for w in WORD_INDEX[vowels + consonants, vowels] if not any((c in w for c in forbidden))]

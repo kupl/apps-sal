@@ -13,7 +13,7 @@ class Word:
     def is_upper(self):
         string = self.string
         for i in range(len(string)):
-            if not (self.isup(string[i])):
+            if not self.isup(string[i]):
                 return False
         return True
 

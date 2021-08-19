@@ -2,4 +2,4 @@ import math
 
 
 def square(n):
-    return n**(math.sqrt(4))
+    return n ** math.sqrt(4)

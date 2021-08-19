@@ -1,4 +1,5 @@
 class Harshad:
+
     @staticmethod
     def is_valid(number):
         return number % sum(map(int, str(number))) == 0

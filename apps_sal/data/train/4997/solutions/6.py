@@ -10,7 +10,7 @@ def sigma(n):
 
 
 def equal_sigma1(nmax):
-    i, s = 2, 0
+    (i, s) = (2, 0)
     while i <= nmax:
         rev = int(str(i)[::-1])
         if i != rev and sigma(i) == sigma(rev):

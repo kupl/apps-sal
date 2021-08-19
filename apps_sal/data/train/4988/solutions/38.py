@@ -1,5 +1,5 @@
 def square(n):
-    result = ""
+    result = ''
     if True:
-        result = n**2
+        result = n ** 2
     return result

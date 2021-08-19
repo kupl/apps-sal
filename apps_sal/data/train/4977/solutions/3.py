@@ -1,7 +1,5 @@
 def goals(laLiga, copaDelRey, championsLeague):
-
     resultado = laLiga + copaDelRey + championsLeague
-
     return resultado
 
 

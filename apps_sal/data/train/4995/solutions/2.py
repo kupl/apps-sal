@@ -1,4 +1,5 @@
 class HTMLGen:
+
     def __init__(self):
         tags = ['a', 'b', 'p', 'body', 'div', 'span', 'title', 'comment']
         for tag in tags:

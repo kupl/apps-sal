@@ -4,7 +4,7 @@ def solution(string, ending):
     elif ending == '':
         return True
     else:
-        for x, y in zip(string[::-1], ending[::-1]):
+        for (x, y) in zip(string[::-1], ending[::-1]):
             if x != y:
                 return False
     return True

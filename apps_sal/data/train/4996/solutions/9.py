@@ -6,7 +6,7 @@ def fib(n):
 
 
 def fizz_buzzify(l):
-    return ["Fizz" * (n % 3 == 0) + "Buzz" * (n % 5 == 0) or n for n in l]
+    return ['Fizz' * (n % 3 == 0) + 'Buzz' * (n % 5 == 0) or n for n in l]
 
 
 def fibs_fizz_buzz(n):
