@@ -7,78 +7,11 @@ from itertools import *
 from operator import *
 from functools import *
 import sys
-'''
-@lru_cache(None)
-def fact(x):
-    if x<2:
-        return 1
-    return fact(x-1)*x
-
-@lru_cache(None)
-def per(i,j):
-    return fact(i)//fact(i-j)
-
-@lru_cache(None)
-def com(i,j):
-    return per(i,j)//fact(j)
-
-def linc(f,t,l,r):
-    while l<r:
-        mid=(l+r)//2
-        if t>f(mid):
-            l=mid+1
-        else:
-            r=mid
-    return l
-
-def rinc(f,t,l,r):
-    while l<r:
-        mid=(l+r+1)//2
-        if t<f(mid):
-            r=mid-1
-        else:
-            l=mid
-    return l
-
-def ldec(f,t,l,r):
-    while l<r:
-        mid=(l+r)//2
-        if t<f(mid):
-            l=mid+1
-        else:
-            r=mid
-    return l
-
-def rdec(f,t,l,r):
-    while l<r:
-        mid=(l+r+1)//2
-        if t>f(mid):
-            r=mid-1
-        else:
-            l=mid
-    return l
-
-def isprime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
-    return True
-
-def power2(n):
-    while not n&1:
-        n>>=1
-    return n==1
-'''
-'''
-import time
-s=time.time()
-e=time.time()
-print(e-s)
-'''
-
+'\n@lru_cache(None)\ndef fact(x):\n    if x<2:\n        return 1\n    return fact(x-1)*x\n\n@lru_cache(None)\ndef per(i,j):\n    return fact(i)//fact(i-j)\n\n@lru_cache(None)\ndef com(i,j):\n    return per(i,j)//fact(j)\n\ndef linc(f,t,l,r):\n    while l<r:\n        mid=(l+r)//2\n        if t>f(mid):\n            l=mid+1\n        else:\n            r=mid\n    return l\n\ndef rinc(f,t,l,r):\n    while l<r:\n        mid=(l+r+1)//2\n        if t<f(mid):\n            r=mid-1\n        else:\n            l=mid\n    return l\n\ndef ldec(f,t,l,r):\n    while l<r:\n        mid=(l+r)//2\n        if t<f(mid):\n            l=mid+1\n        else:\n            r=mid\n    return l\n\ndef rdec(f,t,l,r):\n    while l<r:\n        mid=(l+r+1)//2\n        if t>f(mid):\n            r=mid-1\n        else:\n            l=mid\n    return l\n\ndef isprime(n):\n    for i in range(2,int(n**0.5)+1):\n        if n%i==0:\n            return False\n    return True\n\ndef power2(n):\n    while not n&1:\n        n>>=1\n    return n==1\n'
+'\nimport time\ns=time.time()\ne=time.time()\nprint(e-s)\n'
 t = int(input())
 for i in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = []
     for i in range(n):
         arr.append(list(map(int, input().split())))
@@ -92,51 +25,13 @@ for i in range(t):
                 if len(tmp) == 1:
                     continue
                 elif len(tmp) == 2:
-                    (x, y), (a, b) = tmp
+                    ((x, y), (a, b)) = tmp
                     ans += abs(arr[x][y] - arr[a][b])
                 else:
                     res = []
-                    for x, y in tmp:
+                    for (x, y) in tmp:
                         res.append(arr[x][y])
                     res.sort()
-                    ans += min(sum(abs(res[i] - res[j]) for j in range(4)) for i in range(1, 3))
-
+                    ans += min((sum((abs(res[i] - res[j]) for j in range(4))) for i in range(1, 3)))
     print(ans)
-'''
-n,m=map(int,input().split())
-a=[]
-b=[]
-c=[]
-d=[]
-for i in range(n):
-    ai,bi=map(int,input().split())
-    a.append(ai)
-    b.append(bi)
-for i in range(m):
-    ci,di=map(int,input().split())
-    c.append(ci)
-    d.append(di)
-dic={}
-for i in range(n):
-    for j in range(m):
-        x=c[j]-a[i]+1
-        y=d[j]-b[i]+1
-        if x>0 and y>0:
-            if x in dic:
-                dic[x]=min(dic[x],y)
-            else:
-                dic[x]=y
-#print(dic)
-if not dic:
-    ans=0
-else:
-    res=sorted(dic.items())    
-    n=len(res)
-    ans=res[-1][0]
-    ym=res[-1][1]
-    for i in range(n-2,-1,-1):
-        ans=min(ans,res[i][0]+ym)
-        ym=max(ym,res[i][1])
-    ans=min(ym,ans)
-print(ans)
-'''
+'\nn,m=map(int,input().split())\na=[]\nb=[]\nc=[]\nd=[]\nfor i in range(n):\n    ai,bi=map(int,input().split())\n    a.append(ai)\n    b.append(bi)\nfor i in range(m):\n    ci,di=map(int,input().split())\n    c.append(ci)\n    d.append(di)\ndic={}\nfor i in range(n):\n    for j in range(m):\n        x=c[j]-a[i]+1\n        y=d[j]-b[i]+1\n        if x>0 and y>0:\n            if x in dic:\n                dic[x]=min(dic[x],y)\n            else:\n                dic[x]=y\n#print(dic)\nif not dic:\n    ans=0\nelse:\n    res=sorted(dic.items())    \n    n=len(res)\n    ans=res[-1][0]\n    ym=res[-1][1]\n    for i in range(n-2,-1,-1):\n        ans=min(ans,res[i][0]+ym)\n        ym=max(ym,res[i][1])\n    ans=min(ym,ans)\nprint(ans)\n'

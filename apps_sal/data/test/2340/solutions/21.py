@@ -1,10 +1,9 @@
 t = int(input())
 for _ in range(t):
-    h, n = list(map(int, input().split()))
+    (h, n) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     p.reverse()
     s = n - 1
-    # print(s)
     c = 0
     l = h
     while 1:

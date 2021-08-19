@@ -1,5 +1,4 @@
 from collections import deque
-
 n = int(input())
 g = []
 visited = []
@@ -16,17 +15,15 @@ def initialize():
         max_child_color.append(0)
         parent.append(0)
     for i in range(n - 1):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         g[u] += [v]
         g[v] += [u]
-    # print(g)
 
 
 def get_color(u):
     for i in range(max_child_color[u] + 1, n + 1):
         if i != color[parent[u]] and i != color[u]:
             max_child_color[u] = i
-            # print(f'Setting max child color of node = {u} to color {i}')
             return i
 
 
@@ -49,9 +46,9 @@ def __starting_point():
     initialize()
     bfs(1)
     print(max(color))
-    c_string = ""
+    c_string = ''
     for i in range(1, n + 1):
-        c_string += str(color[i]) + " "
+        c_string += str(color[i]) + ' '
     print(c_string)
 
 

@@ -12,11 +12,9 @@ def mint():
 def mints():
     return list(map(int, minp().split()))
 
-#from math import ceil
-
 
 def solve():
-    n, m = mints()
+    (n, m) = mints()
     a = [None] * n
     for i in range(n):
         a[i] = list(mints())
@@ -26,7 +24,7 @@ def solve():
             for j in range(m):
                 if j <= m - 1 - j:
                     s = set([(x, y) for x in (i, n - 1 - i) for y in (j, m - 1 - j)])
-                    v = [a[x][y] for x, y in s]
+                    v = [a[x][y] for (x, y) in s]
                     v.sort()
                     c = v[len(v) // 2]
                     for x in v:

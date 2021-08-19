@@ -1,8 +1,6 @@
-# map(int, input().split())
-
 rw = int(input())
 for wewq in range(rw):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [0] * n
     f = 0
     for i in range(n):

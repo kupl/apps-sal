@@ -1,21 +1,15 @@
-#!/usr/bin/env python
-
 n = int(input())
-
 seenx = set()
 seeny = set()
 xs = []
 ys = []
-
 for _ in range(4 * n + 1):
-    x, y = list(map(int, input().strip().split()))
+    (x, y) = list(map(int, input().strip().split()))
     seenx.add(x)
     seeny.add(y)
     xs.append(x)
     ys.append(y)
-
-badx, bady = -1, -1
-
+(badx, bady) = (-1, -1)
 minx = min(xs)
 maxx = max(xs)
 if xs.count(minx) < n:
@@ -33,12 +27,10 @@ if bady == -1:
     elif ys.count(maxy) < n:
         bady = maxy
         badx = xs[ys.index(maxy)]
-
-if badx == -1:  # the point is inside the square
-    for i, x in enumerate(xs):
+if badx == -1:
+    for (i, x) in enumerate(xs):
         if x not in (minx, maxx) and ys[i] not in (miny, maxy):
             badx = x
             bady = ys[i]
             break
-
 print(badx, bady)

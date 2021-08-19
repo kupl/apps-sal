@@ -8,7 +8,7 @@ def getcnt(fromplatform, toplatform):
 
 
 for _ in range(int(input())):
-    h, n = list(map(int, input()[:-1].split()))
+    (h, n) = list(map(int, input()[:-1].split()))
     platforms = deque(list(map(int, input()[:-1].split())))
     currenth = h
     platforms.popleft()
@@ -26,5 +26,4 @@ for _ in range(int(input())):
                 currenth = platforms[0] + 1
         else:
             currenth = platforms[0] + 1
-        # print(currenth)
     print(ans)

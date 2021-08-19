@@ -1,14 +1,10 @@
-#!/usr/bin/env python3
-
 ss = [input().strip() for _ in range(2)]
 n = len(ss[0])
-
 cnt = 0
 had1 = False
 had2 = False
-
 for i in range(n):
-    ccur = sum(s[i] == '0' for s in ss)
+    ccur = sum((s[i] == '0' for s in ss))
     if ccur == 2:
         if had1:
             cnt += 1
@@ -30,5 +26,4 @@ for i in range(n):
     else:
         had1 = False
         had2 = False
-
 print(cnt)
