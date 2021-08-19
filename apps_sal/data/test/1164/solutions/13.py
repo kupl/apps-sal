@@ -1,7 +1,5 @@
 from decimal import *
 
-# newstr = oldstr.replace("M", "")
-
 
 def add(l):
     num = list()
@@ -34,7 +32,7 @@ def prt(n):
     n = str(n)
     n = n[::-1]
     first = True
-    res = ""
+    res = ''
     while len(n) > 0:
         if first:
             s = n[:2][::1] if len(n) >= 2 else n[:1] + '0'
@@ -42,7 +40,7 @@ def prt(n):
             res += '.'
             n = n[len(s):]
         else:
-            tmp = ""
+            tmp = ''
             for i in range(3):
                 if len(n) == 0:
                     break
@@ -50,17 +48,13 @@ def prt(n):
                 n = n[1:]
             tmp += '.'
             res += tmp
-
         first = False
-
     res = res[::-1]
-
     if len(res) == 3:
         res = '0' + res
-    else:
-        if res[0] == '.':
-            res = res[1:]
-    if len(res) >= 3 and res[-1] == '0' and res[-2] == '0' and res[-3] == '.':
+    elif res[0] == '.':
+        res = res[1:]
+    if len(res) >= 3 and res[-1] == '0' and (res[-2] == '0') and (res[-3] == '.'):
         res = res[:-3]
     return res
 

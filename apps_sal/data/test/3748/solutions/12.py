@@ -22,7 +22,7 @@ cba
 分からないけど探索すればよさそう
 →ペアになる列・行さえ決まればいい
 
-(11*9*7*5*3*1)**2　→ 10^8ぐらい　最大12**2回探索するので…ア
+(11*9*7*5*3*1)**2\u3000→ 10^8ぐらい\u3000最大12**2回探索するので…ア
 1ms解法は何…
 
 あらかじめありうるペアだけ列挙しておく？
@@ -45,7 +45,7 @@ cba
 4132
 3421→ok…？
 
-必要十分条件なのか…？　700点だし…？
+必要十分条件なのか…？\u3000700点だし…？
 
 反例:
 12Z34
@@ -74,7 +74,6 @@ ZYXYZ
 次に横で見てって、各ペアの数字が全て対になってる物があるか調べればいい
 →ペア通り数 * H * H * W
 """
-
 from sys import stdin
 import sys
 
@@ -90,15 +89,11 @@ def pair(end, lis):
             pair(end + [lis[j]], lis[:j] + lis[j + 1:])
 
 
-H, W = map(int, stdin.readline().split())
-
+(H, W) = map(int, stdin.readline().split())
 S = []
 for i in range(H):
     s = stdin.readline()
     S.append(s[:-1])
-#print (S)
-
-# ペア列挙
 p = []
 if W % 2 == 0:
     pair([], [i for i in range(W)])
@@ -106,19 +101,14 @@ else:
     tmp = [i for i in range(W)]
     for i in range(W):
         pair([i, i], tmp[:i] + tmp[i + 1:])
-
-#print (p)
-
 for pl in p:
     able = [True] * H
     flag = 0
-
     for i in range(H):
         if able[i]:
             for j in range(i + 1, H):
                 if not able[j]:
                     continue
-
                 tmpf = True
                 for w in range((W + 1) // 2):
                     if S[i][pl[2 * w]] != S[j][pl[2 * w + 1]] or S[j][pl[2 * w]] != S[i][pl[2 * w + 1]]:
@@ -141,9 +131,8 @@ for pl in p:
                     able[i] = False
                 if flag == 2:
                     break
-
     if flag != 2:
-        print("YES")
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

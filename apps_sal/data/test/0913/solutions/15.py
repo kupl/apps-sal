@@ -1,10 +1,6 @@
 import sys
-
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
-
 n = int(input())
 r = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -18,10 +14,8 @@ for i in range(n):
 if share == 0:
     print(-1)
 else:
-    score, rem = divmod(ctr, share)
+    (score, rem) = divmod(ctr, share)
     if rem == 0:
         print(score)
     else:
         print(score + 1)
-
-# inf.close()

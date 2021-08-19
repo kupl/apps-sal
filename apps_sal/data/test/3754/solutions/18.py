@@ -2,17 +2,17 @@ def main(n, d):
     mod = 998244353
 
     def cmb(n, r, mod):
-        if (r < 0 or r > n):
+        if r < 0 or r > n:
             return 0
         r = min(r, n - r)
-        return (g1[n] * g2[r] * g2[n - r]) % mod
-    g1 = [1, 1]  # g1[i]=i! % mod　:階乗
-    g2 = [1, 1]  # g2[i]=(i!)^(-1) % mod　:階乗の逆元
+        return g1[n] * g2[r] * g2[n - r] % mod
+    g1 = [1, 1]
+    g2 = [1, 1]
     inverse = [0, 1]
     for i in range(2, n + 1):
-        g1.append((g1[-1] * i) % mod)
-        inverse.append((-inverse[mod % i] * (mod // i)) % mod)
-        g2.append((g2[-1] * inverse[-1]) % mod)
+        g1.append(g1[-1] * i % mod)
+        inverse.append(-inverse[mod % i] * (mod // i) % mod)
+        g2.append(g2[-1] * inverse[-1] % mod)
     ret = 1
     zan = 0
     for x in d:
@@ -34,4 +34,4 @@ def main(n, d):
 
 n = int(input())
 d = list(map(int, input().split()))
-print((main(n, d)))
+print(main(n, d))
