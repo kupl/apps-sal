@@ -1,8 +1,5 @@
-# You lost the game.
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 L = [str(input()) for _ in range(n)]
-
 x = y = ok = 0
 for i in range(n):
     for j in range(m):
@@ -16,7 +13,6 @@ for i in range(n):
 l = y
 while l < m and L[x][l] == 'X':
     l += 1
-
 ok = 0
 att = 0
 for i in range(x + 1, n):
@@ -27,16 +23,14 @@ for i in range(x + 1, n):
             if j < y or j >= l or att:
                 ok = -1
                 break
-        else:
-            if vu and j >= y and j < l:
-                ok = -1
-                break
-            elif j >= y and j < l:
-                att = 1
+        elif vu and j >= y and (j < l):
+            ok = -1
+            break
+        elif j >= y and j < l:
+            att = 1
     if ok or vu == 0:
         break
-
 if ok == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

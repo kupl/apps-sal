@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 input = sys.stdin.readline
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.size = [1] * n
@@ -29,7 +29,6 @@ class DisjointSet:
         y = self.root(y)
         if x == y:
             return
-
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.max_member[y] = max(self.max_member[x], self.max_member[y])
@@ -40,10 +39,10 @@ class DisjointSet:
                 self.rank[x] += 1
 
 
-n, m = [int(item) for item in input().split()]
+(n, m) = [int(item) for item in input().split()]
 DS = DisjointSet(n)
 for i in range(m):
-    u, v = [int(item) - 1 for item in input().split()]
+    (u, v) = [int(item) - 1 for item in input().split()]
     DS.unite(u, v)
 goal = 0
 par = 0

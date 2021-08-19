@@ -1,5 +1,5 @@
 from collections import defaultdict, deque
-MOD = (10**9) + 7
+MOD = 10 ** 9 + 7
 
 
 def bfs(v):
@@ -14,10 +14,10 @@ def bfs(v):
                 visited[i[0]] = True
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 g = defaultdict(list)
 for _ in range(n - 1):
-    x, y, c = list(map(int, input().split()))
+    (x, y, c) = list(map(int, input().split()))
     g[x].append((y, c))
     g[y].append((x, c))
 visited = [False] * (n + 1)
@@ -28,9 +28,7 @@ for i in range(1, n + 1):
     b = []
     if visited[i] == False:
         bfs(i)
-    # print(b)
     f = len(b)
     count = (count + pow(f, k, MOD)) % MOD
-
 ans = (ans - count) % MOD
 print(ans)

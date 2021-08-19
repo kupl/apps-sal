@@ -7,9 +7,6 @@ Language: Python 3.3.4
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -19,26 +16,24 @@ def read(mode=2):
         return [int(x) for x in inputs.split()]
 
 
-def write(s="\n"):
+def write(s='\n'):
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
-# SOLUTION
-n, m, k = read()
-
+(n, m, k) = read()
 if n + m - 2 < k:
     print(-1)
 else:
     mx = 0
     if n > k:
-        mx = max(mx, (n // (k + 1)) * m)
+        mx = max(mx, n // (k + 1) * m)
     else:
         mx = max(mx, 1 * (m // (k - n + 2)))
     if m > k:
-        mx = max(mx, (m // (k + 1)) * n)
+        mx = max(mx, m // (k + 1) * n)
     else:
         mx = max(mx, 1 * (n // (k - m + 2)))
     print(mx)

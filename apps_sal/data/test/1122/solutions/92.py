@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -8,10 +7,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(10000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -43,20 +42,18 @@ def solve(N, M):
     for d in range(M, 0, -2):
         ans.append((now, now + d))
         now += 1
-
     now = M + 1
     for d in range(M - 1, 0, -2):
         ans.append((now, (now + d) % N))
         now += 1
-
     return ans
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     ans = solve(N, M)
     for x in ans:
-        print(f"{x[0] + 1} {x[1] + 1}")
+        print(f'{x[0] + 1} {x[1] + 1}')
 
 
 def __starting_point():

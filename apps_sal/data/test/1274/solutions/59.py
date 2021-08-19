@@ -1,6 +1,5 @@
 import sys
 from itertools import accumulate
-
 input = sys.stdin.readline
 
 
@@ -28,14 +27,9 @@ class SegmentTree:
         self.__build(X)
 
     def __build(self, X):
-        # Initialize all nodes
-        self.node = [[self.init_v, -1] for _ in range(2 * self.N)]  # 1-based index
-
-        # Elementary intervals are stored
-        for i, x in enumerate(X, self.N):
+        self.node = [[self.init_v, -1] for _ in range(2 * self.N)]
+        for (i, x) in enumerate(X, self.N):
             self.node[i] = [x, i - self.N + 1]
-
-        # The internal nodes correspond to intervals that are the union of elementary intervals
         for i in range(self.N - 1, 0, -1):
             self.node[i] = self.func(self.node[i << 1], self.node[i << 1 | 1])
 
@@ -80,31 +74,28 @@ def func(a, b):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     AB = [None] * N
     for i in range(N):
         AB[i] = tuple(map(int, input().split()))
-
     AB.sort(key=lambda x: x[0])
     B = [0] * N
     C = [0] * (1 + 10 ** 5)
-    for i, (a, b) in enumerate(AB):
+    for (i, (a, b)) in enumerate(AB):
         B[i] = b
         C[a] += 1
     C = list(accumulate(C))
-
     st = SegmentTree(N, B, func, -1)
     ans = 0
     l = 1
     for r in C[1:M + 1]:
         if r == 0:
             continue
-        x, i = st.query(l, r + 1)
+        (x, i) = st.query(l, r + 1)
         if x == -1:
             continue
         ans += x
         st.update(i, -1)
-
     print(ans)
 
 
