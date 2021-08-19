@@ -6,7 +6,6 @@ Problem 689 B. Mike and Shortcuts
 @author yamaton
 @date 2016-07-09
 """
-
 import itertools as it
 import functools
 import operator
@@ -17,14 +16,12 @@ import sys
 
 def solve(xs, n):
     nodes = list(range(1, n + 1))
-
     neighbors = collections.defaultdict(set)
-    for from_, to_ in zip(nodes, nodes[1:]):
+    for (from_, to_) in zip(nodes, nodes[1:]):
         neighbors[from_].add(to_)
         neighbors[to_].add(from_)
-    for from_, to_ in enumerate(xs, 1):
+    for (from_, to_) in enumerate(xs, 1):
         neighbors[from_].add(to_)
-
     distance = {1: 0}
     q = collections.deque([1])
     while q:

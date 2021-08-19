@@ -12,16 +12,15 @@ for _ in range(int(input())):
             zero = True
     neg.sort()
     pos.sort()
-    res = -float("inf")
+    res = -float('inf')
     if zero:
         res = 0
-    for i in range(6):  # i = number of -
+    for i in range(6):
         if len(neg) < i or len(pos) < 5 - i:
             continue
         ar = neg[-i:] + pos[:5 - i]
         if i % 2 == 0:
             ar = neg[:i] + pos[-(5 - i):]
-        #print(i, ar)
         acc = 1
         for e in ar:
             acc *= e

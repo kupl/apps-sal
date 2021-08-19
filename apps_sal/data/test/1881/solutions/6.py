@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 arr = [[] for i in range(256)]
 ans = []
 for i in p:
@@ -10,7 +9,6 @@ for i in p:
         while c < k and j >= 0:
             if len(arr[j]) + c > k:
                 break
-            # temp=len(arr[j])
             if len(arr[j]) != 0:
                 arr[i].extend(arr[j])
                 break
@@ -21,4 +19,3 @@ for i in p:
         arr[i].sort()
     ans.append(arr[i][0])
 print(*ans)
-# print(arr)

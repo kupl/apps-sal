@@ -5,7 +5,7 @@ X = [0] * 2015
 Y = [0] * 2015
 eps = 1e-12
 for i in range(n):
-    X[i], Y[i] = list(map(int, input().split(" ")))
+    (X[i], Y[i]) = list(map(int, input().split(' ')))
 ans = (n - 2) * (n - 1) * n // 6
 sum = 0
 for i in range(n):
@@ -17,7 +17,6 @@ for i in range(n):
             tot += 1
         else:
             cnt += 1
-    #cnt -= 1
     sum += (cnt - 1) * cnt // 2
     k = sorted(k[:tot]) + k[tot:]
     cnt = 1

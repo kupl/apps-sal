@@ -6,11 +6,9 @@ Problem 597A Divisibility
 @author yamaton
 @date 2015-11-11
 """
-
 import math
 import random
 import sys
-
 import functools
 
 
@@ -19,7 +17,7 @@ def solve(k, a, b):
 
 
 def p(*args, **kwargs):
-    return print(file=sys.stderr, *args, **kwargs)
+    return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

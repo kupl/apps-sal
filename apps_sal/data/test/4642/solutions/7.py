@@ -15,8 +15,6 @@ def eprint(*args):
 
 
 zz = 1
-
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -41,7 +39,7 @@ def fli():
 
 
 def comp(a, b):
-    if(a > b):
+    if a > b:
         return 2
     return 2 if a == b else 0
 
@@ -59,7 +57,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j] = a[j], a[i]
+    (a[i], a[j]) = (a[j], a[i])
 
 
 def si():
@@ -84,18 +82,17 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y = mi()
+        (x, y) = mi()
         a[x].append(y)
         a[y].append(x)
 
 
 t = fi()
-
 while t > 0:
     t -= 1
-    n, x, y = mi()
+    (n, x, y) = mi()
     p = n - 2
-    x, y = max(x, y), min(x, y)
+    (x, y) = (max(x, y), min(x, y))
     for i in range(1, p + 2):
         if (x - y) % i == 0:
             ans = i
@@ -105,5 +102,5 @@ while t > 0:
             break
         mini = x - i * p
     for i in range(n):
-        print(mini + p * i, end=" ")
+        print(mini + p * i, end=' ')
     print()

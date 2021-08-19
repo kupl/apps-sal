@@ -1,6 +1,3 @@
-# problem: let's play nim
-# problem id: arc105 d
-
 import sys
 from collections import Counter
 
@@ -13,13 +10,13 @@ def solve():
     n = int(input())
     a = list(map(int, input().split()))
     if n % 2 != 0:
-        print("Second")
+        print('Second')
     else:
         prt = dict(Counter(a))
-        if any(v % 2 != 0 for v in list(prt.values())):
-            print("First")
+        if any((v % 2 != 0 for v in list(prt.values()))):
+            print('First')
         else:
-            print("Second")
+            print('Second')
     return
 
 

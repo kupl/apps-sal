@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-
-#############
-# Libraries #
-#############
-
 from functools import lru_cache
 from collections import Counter
 from collections import deque
@@ -14,53 +8,60 @@ import math
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
-
-#from math import gcd
-
-#############
-# Constants #
-#############
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 INF = float('inf')
-AZ = "abcdefghijklmnopqrstuvwxyz"
-
-#############
-# Functions #
-#############
-
-######INPUT######
+AZ = 'abcdefghijklmnopqrstuvwxyz'
 
 
-def I(): return int(input().strip())
-def S(): return input().strip()
-def IL(): return list(map(int, input().split()))
-def SL(): return list(map(str, input().split()))
-def ILs(n): return list(int(input()) for _ in range(n))
-def SLs(n): return list(input().strip() for _ in range(n))
-def ILL(n): return [list(map(int, input().split())) for _ in range(n)]
-def SLL(n): return [list(map(str, input().split())) for _ in range(n)]
+def I():
+    return int(input().strip())
 
 
-#####Shorten#####
-def DD(arg): return defaultdict(arg)
-
-#####Inverse#####
+def S():
+    return input().strip()
 
 
-def inv(n): return pow(n, MOD - 2, MOD)
+def IL():
+    return list(map(int, input().split()))
 
 
-######Combination######
+def SL():
+    return list(map(str, input().split()))
+
+
+def ILs(n):
+    return list((int(input()) for _ in range(n)))
+
+
+def SLs(n):
+    return list((input().strip() for _ in range(n)))
+
+
+def ILL(n):
+    return [list(map(int, input().split())) for _ in range(n)]
+
+
+def SLL(n):
+    return [list(map(str, input().split())) for _ in range(n)]
+
+
+def DD(arg):
+    return defaultdict(arg)
+
+
+def inv(n):
+    return pow(n, MOD - 2, MOD)
+
+
 kaijo_memo = []
 
 
 def kaijo(n):
-    if(len(kaijo_memo) > n):
+    if len(kaijo_memo) > n:
         return kaijo_memo[n]
-    if(len(kaijo_memo) == 0):
+    if len(kaijo_memo) == 0:
         kaijo_memo.append(1)
-    while(len(kaijo_memo) <= n):
+    while len(kaijo_memo) <= n:
         kaijo_memo.append(kaijo_memo[-1] * len(kaijo_memo) % MOD)
     return kaijo_memo[n]
 
@@ -69,11 +70,11 @@ gyaku_kaijo_memo = []
 
 
 def gyaku_kaijo(n):
-    if(len(gyaku_kaijo_memo) > n):
+    if len(gyaku_kaijo_memo) > n:
         return gyaku_kaijo_memo[n]
-    if(len(gyaku_kaijo_memo) == 0):
+    if len(gyaku_kaijo_memo) == 0:
         gyaku_kaijo_memo.append(1)
-    while(len(gyaku_kaijo_memo) <= n):
+    while len(gyaku_kaijo_memo) <= n:
         gyaku_kaijo_memo.append(gyaku_kaijo_memo[-1] * pow(len(gyaku_kaijo_memo), MOD - 2, MOD) % MOD)
     return gyaku_kaijo_memo[n]
 
@@ -89,13 +90,11 @@ def nCr(n, r):
     ret = ret * gyaku_kaijo(n - r) % MOD
     return ret
 
-######Factorization######
-
 
 def factorization(n):
     arr = []
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -108,19 +107,15 @@ def factorization(n):
         arr.append([n, 1])
     return arr
 
-#####MakeDivisors######
-
 
 def make_divisors(n):
     divisors = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             divisors.append(i)
             if i != n // i:
                 divisors.append(n // i)
     return divisors
-
-#####MakePrimes######
 
 
 def make_primes(N):
@@ -134,21 +129,15 @@ def make_primes(N):
     primeNum.extend(seachList)
     return primeNum
 
-#####GCD#####
-
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
-
-#####LCM#####
 
 
 def lcm(a, b):
     return a * b // gcd(a, b)
-
-#####BitCount#####
 
 
 def count_bit(n):
@@ -158,8 +147,6 @@ def count_bit(n):
         count += 1
     return count
 
-#####ChangeBase#####
-
 
 def base_10_to_n(X, n):
     if X // n:
@@ -168,7 +155,7 @@ def base_10_to_n(X, n):
 
 
 def base_n_to_10(X, n):
-    return sum(int(str(X)[-i - 1]) * n**i for i in range(len(str(X))))
+    return sum((int(str(X)[-i - 1]) * n ** i for i in range(len(str(X)))))
 
 
 def base_10_to_n_without_0(X, n):
@@ -176,8 +163,6 @@ def base_10_to_n_without_0(X, n):
     if X // n:
         return base_10_to_n_without_0(X // n, n) + [X % n]
     return [X % n]
-
-#####IntLog#####
 
 
 def int_log(a, n):
@@ -187,25 +172,21 @@ def int_log(a, n):
         count += 1
     return count
 
-#############
-# Main Code #
-#############
-
 
 def solve():
     N = I()
     A = IL()
     if N % 2:
-        print("Second")
+        print('Second')
     else:
         dic = DD(int)
         for a in A:
             dic[a] = 1 - dic[a]
         for k in dic:
             if dic[k]:
-                print("First")
+                print('First')
                 return
-        print("Second")
+        print('Second')
 
 
 T = I()

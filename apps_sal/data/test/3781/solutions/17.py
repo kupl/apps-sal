@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 def ri():
     return int(input())
 
@@ -19,7 +16,7 @@ def main():
         n = ri()
         la = rli()
         if n % 2 == 1:
-            print("Second")
+            print('Second')
             continue
         count = {}
         for a in la:
@@ -31,9 +28,9 @@ def main():
                 ok = False
                 break
         if ok:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
 
 
 def __starting_point():

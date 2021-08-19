@@ -1,7 +1,7 @@
-'''input
+"""input
 4
 1 10 100 1000
-'''
+"""
 from sys import stdin, setrecursionlimit
 import math
 from bisect import bisect_left
@@ -23,14 +23,12 @@ def check(circle):
     return True
 
 
-# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 arr.sort()
 circle = []
 circle = deque(circle)
 circle.append(arr[0])
-
 flag = 0
 for i in range(1, n):
     if flag == 0:
@@ -39,11 +37,9 @@ for i in range(1, n):
     else:
         circle.appendleft(arr[i])
         flag = 0
-
 circle = list(circle)
-# print(circle)
 if check(circle):
-    print("YES")
+    print('YES')
     print(*circle)
 else:
-    print("NO")
+    print('NO')

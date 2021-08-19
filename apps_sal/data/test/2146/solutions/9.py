@@ -1,4 +1,3 @@
-# 689B
 n = int(input())
 s = input()
 g = {}
@@ -10,7 +9,6 @@ for i in s.split():
     if src < n - 1:
         g[src].append(src + 1)
     src += 1
-
 energy = [-1] * n
 q = []
 q.append(0)

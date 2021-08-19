@@ -2,7 +2,6 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-
     m = []
     p = []
     cnt0 = 0
@@ -15,15 +14,12 @@ for _ in range(t):
             cnt0 += 1
     p = sorted(p, reverse=True)
     m = sorted(m)
-
-    # ppppp
     ans = -10 ** 20
     tmp = 1
     if len(p) >= 5:
         for i in range(5):
             tmp *= p[i]
         ans = max(tmp, ans)
-    # ppppm
     tmp = 1
     if len(p) >= 4 and len(m) >= 1:
         for i in range(4):
@@ -31,7 +27,6 @@ for _ in range(t):
         for i in range(1):
             tmp *= m[~i]
         ans = max(tmp, ans)
-    # pppmm
     tmp = 1
     if len(p) >= 3 and len(m) >= 2:
         for i in range(3):
@@ -39,7 +34,6 @@ for _ in range(t):
         for i in range(2):
             tmp *= m[i]
         ans = max(tmp, ans)
-    # ppmmm
     tmp = 1
     if len(p) >= 2 and len(m) >= 3:
         for i in range(2):
@@ -47,7 +41,6 @@ for _ in range(t):
         for i in range(3):
             tmp *= m[~i]
         ans = max(tmp, ans)
-    # pmmmm
     tmp = 1
     if len(p) >= 1 and len(m) >= 4:
         for i in range(1):
@@ -55,7 +48,6 @@ for _ in range(t):
         for i in range(4):
             tmp *= m[i]
         ans = max(tmp, ans)
-    # mmmmm
     tmp = 1
     if len(m) >= 5:
         for i in range(5):
@@ -63,5 +55,4 @@ for _ in range(t):
         ans = max(tmp, ans)
     if cnt0 > 0:
         ans = max(0, ans)
-
     print(ans)

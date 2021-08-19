@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = [[0] * m for i in range(n)]
     for i in range(n):
         arr[i] = list(map(int, input().split()))
@@ -14,8 +14,5 @@ for _ in range(int(input())):
             kek[arr[i][j]] += 1
         brr.append(kek)
     for i in range(len(brr) // 2):
-        ans += min(brr[i][0] + brr[-i - 1][0],
-                   brr[i][1] + brr[-i - 1][1])
-    # if len(brr) % 2 == 1:
-    #     ans += min(brr[len(brr) // 2])
+        ans += min(brr[i][0] + brr[-i - 1][0], brr[i][1] + brr[-i - 1][1])
     print(ans)

@@ -1,6 +1,13 @@
-def rr(): return input().strip()
-def rri(): return int(rr())
-def rrm(): return list(map(int, rr().split()))
+def rr():
+    return input().strip()
+
+
+def rri():
+    return int(rr())
+
+
+def rrm():
+    return list(map(int, rr().split()))
 
 
 def solve(N, A):
@@ -13,7 +20,7 @@ def solve(N, A):
     return ans
 
 
-for tc in range(1):  # rri()):
+for tc in range(1):
     N = rri()
     A = rrm()
     print(solve(N, A))
