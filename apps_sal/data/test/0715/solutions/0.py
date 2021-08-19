@@ -7,10 +7,8 @@ Language: Python 3.3.4
 
 
 class IOHandlerObject(object):
+
     def getInput(self, mode=2):
-        # 0: String
-        # 1: List of strings
-        # 2: List of integers
         inputs = input().strip()
         if mode == 0:
             return inputs
@@ -19,18 +17,16 @@ class IOHandlerObject(object):
         if mode == 2:
             return [int(x) for x in inputs.split()]
 
-    def writeOutput(self, s="\n"):
+    def writeOutput(self, s='\n'):
         if isinstance(s, list):
-            s = " ".join(s)
+            s = ' '.join(s)
         print(s)
 
 
 IOHandler = IOHandlerObject()
 g = IOHandler.getInput
 w = IOHandler.writeOutput
-
-############################## SOLUTION ##############################
-a, b, c, d = g(0), g(0), g(0), g(0)
+(a, b, c, d) = (g(0), g(0), g(0), g(0))
 r = [(len(a) - 2, 0), (len(b) - 2, 1), (len(c) - 2, 2), (len(d) - 2, 3)]
 r.sort()
 t = -1
@@ -41,8 +37,7 @@ if r[3][0] >= r[2][0] * 2:
         t = r[3][1]
     else:
         t = 5
-
 if t == -1 or t == 5:
-    print("C")
+    print('C')
 else:
     print(chr(65 + t))

@@ -1,7 +1,4 @@
-# 603_C
-
 t = int(input())
-
 for i in range(0, t):
     n = int(input())
     ln = [0]
@@ -23,4 +20,4 @@ for i in range(0, t):
     if not oned:
         ln.append(1)
     print(len(ln))
-    print(" ".join([str(j) for j in sorted(ln)]))
+    print(' '.join([str(j) for j in sorted(ln)]))

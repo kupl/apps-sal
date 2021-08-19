@@ -1,5 +1,3 @@
-# 写経
-# https://atcoder.jp/contests/abc171/submissions/14574647
 from functools import reduce
 
 
@@ -14,10 +12,8 @@ def comb(n, max_k, mod):
         res[i] *= t
         t *= n - i
         t %= mod
-
-    n = reduce(lambda x, y: (x * y) % mod, range(1, max_k + 1), 1)
+    n = reduce(lambda x, y: x * y % mod, range(1, max_k + 1), 1)
     n = pow(n, -1, mod)
-
     for i in reversed(range(max_k + 1)):
         res[i] *= n
         res[i] %= mod
@@ -26,7 +22,7 @@ def comb(n, max_k, mod):
     return res
 
 
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def resolve():
@@ -35,7 +31,6 @@ def resolve():
     res = 0
     x = 1
     com = comb(N + K, K, MOD)
-
     for c in com:
         res += x * c
         res %= MOD

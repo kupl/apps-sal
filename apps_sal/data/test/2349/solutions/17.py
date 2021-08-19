@@ -19,15 +19,12 @@ def solve(N):
         if ans[-1] != v:
             ans.append(v)
         i += 1
-
     v = ans[-1]
     for i in range(v - 1, -1, -1):
         ans.append(i)
     ans.reverse()
     return ans
 
-
-###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

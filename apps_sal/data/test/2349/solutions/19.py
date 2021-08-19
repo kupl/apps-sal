@@ -1,8 +1,4 @@
 import sys
-
-
-# inf = open('input.txt', 'r')
-# reader = (int(line.rstrip()) for line in inf)
 reader = (int(s.rstrip()) for s in sys.stdin)
 
 
@@ -26,5 +22,3 @@ for _ in range(t):
     ans = rating(n)
     sys.stdout.write(str(len(ans)) + '\n')
     sys.stdout.write(' '.join(map(str, ans)) + '\n')
-
-# inf.close()

@@ -1,16 +1,3 @@
-# from fractions import gcd
-# from datetime import date, timedelta
-# from heapq import*
-# import math
-# from collections import defaultdict, Counter, deque
-# import sys
-# from bisect import *
-# import itertools
-# import copy
-# sys.setrecursionlimit(10 ** 7)
-# MOD = 10 ** 9 + 7
-
-
 def main():
     t = int(input())
     for _ in range(t):
