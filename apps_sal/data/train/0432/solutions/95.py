@@ -1,12 +1,9 @@
-# counter
-#
-
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         n = len(nums)
         if n % k != 0:
             return False
-
         counter = collections.Counter(nums)
         keys = sorted(counter)
         print(keys)

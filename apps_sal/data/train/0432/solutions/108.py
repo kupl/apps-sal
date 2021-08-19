@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
         if len(hand) % W:
             return False
@@ -22,4 +23,4 @@ class Solution:
                     del cnt[i]
             if not cnt:
                 return True
-        return False  # never happen
+        return False

@@ -3,11 +3,8 @@ from sortedcontainers import SortedDict
 
 
 class Solution:
-    def isPossibleDivide(self, hand: List[int], W: int) -> bool:
-        # print('-----')
-        # print(f'hand: {hand}')
-        # print(f'W: {W}')
 
+    def isPossibleDivide(self, hand: List[int], W: int) -> bool:
         if not hand:
             return True
         elif len(hand) % W != 0:
@@ -19,13 +16,11 @@ class Solution:
                     numPos[n] += 1
                 else:
                     numPos[n] = 1
-
             numRounds = len(hand) // W
             for r in range(numRounds):
                 if len(numPos) < W:
                     return False
                 else:
-                    # print(f'r={r} len(numPos)={len(numPos)} numPos={numPos}')
                     ll = list(numPos.islice(stop=W))
                     prev = ll[0] - 1
                     for n in ll:
@@ -36,5 +31,4 @@ class Solution:
                             prev = n
                         else:
                             return False
-
             return True

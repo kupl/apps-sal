@@ -4,11 +4,8 @@ from sortedcontainers import SortedSet
 
 
 class Solution:
-    def isPossibleDivide(self, hand: List[int], W: int) -> bool:
-        # print('-----')
-        # print(f'hand: {hand}')
-        # print(f'W: {W}')
 
+    def isPossibleDivide(self, hand: List[int], W: int) -> bool:
         if not hand:
             return True
         elif len(hand) % W != 0:
@@ -16,14 +13,12 @@ class Solution:
         else:
             counts = Counter(hand)
             ns = SortedSet(list(counts.keys()))
-
             numRounds = len(hand) // W
             for r in range(numRounds):
                 if len(ns) < W:
                     return False
                 else:
                     nn = list(ns.islice(stop=W))
-                    # print(f'r={r} nn={nn} ns={ns} counts={counts}')
                     prev = ns[0] - 1
                     for n in nn:
                         if n == prev + 1:
@@ -33,5 +28,4 @@ class Solution:
                             prev = n
                         else:
                             return False
-
             return True

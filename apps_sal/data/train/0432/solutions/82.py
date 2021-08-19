@@ -1,6 +1,6 @@
 class Solution:
-    def isPossibleDivide(self, nums: List[int], k: int) -> bool:
 
+    def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
         count = dict(Counter(nums))
@@ -13,5 +13,4 @@ class Solution:
                     else:
                         count[num + i] -= count[num]
             count[num] = 0
-           # print(count)
         return all([a == 0 for a in list(count.values())])

@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if k == 1:
             return True
@@ -22,8 +23,7 @@ class Solution:
                         heapq.heappush(waiting[num + 1], remain - 1)
                     else:
                         waiting[num + 1] = [remain - 1]
-            # print(waiting)
-        for k, v in list(waiting.items()):
+        for (k, v) in list(waiting.items()):
             if len(v) > 0:
                 return False
         return True
