@@ -1,4 +1,4 @@
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 min = 105
 ans = 105
 if n != 0:

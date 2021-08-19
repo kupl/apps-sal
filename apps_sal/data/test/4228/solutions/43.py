@@ -1,7 +1,5 @@
 lst = input()
 lst = lst.split()
-
-
 for i in range(len(lst)):
     lst[i] = int(lst[i])
 N = lst[0]
@@ -16,8 +14,6 @@ for i in range(2, N + 1):
     tlst.append(t)
     t = abs(t)
     lste.append(t)
-
-
 slst = sorted(lste)
 l = slst[0]
 if tlst.count(-l) > 0:

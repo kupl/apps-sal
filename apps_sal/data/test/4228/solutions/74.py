@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 m = 1000
 for i in range(l, l + n):
     if abs(i) < m:

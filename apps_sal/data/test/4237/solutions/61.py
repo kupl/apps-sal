@@ -1,5 +1,5 @@
 import math
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 if A % C == 0:
     divC = B // C - A // C + 1
 else:

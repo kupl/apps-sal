@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 
 
 def cf(x1, x2):
@@ -9,4 +9,4 @@ def cf(x1, x2):
     return cf
 
 
-print(cf(A, B)[-(K)])
+print(cf(A, B)[-K])

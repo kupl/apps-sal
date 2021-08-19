@@ -8,16 +8,12 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 s = input()
 t = input()
-
 tmp = 0
 res = 0
-
 res = INF
 ls = len(s)
 lt = len(t)
@@ -27,5 +23,4 @@ for i in range(ls - lt + 1):
         if t[j] != s[i + j]:
             tmp += 1
     res = min(res, tmp)
-
 print(res)

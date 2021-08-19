@@ -3,8 +3,6 @@ T = input()
 lens = len(S)
 lent = len(T)
 mincnt = lent
-
-
 if lens == lent:
     if S == T:
         mincnt = 0
@@ -22,5 +20,4 @@ else:
                 cnt += 1
         if cnt < mincnt:
             mincnt = cnt
-
 print(mincnt)

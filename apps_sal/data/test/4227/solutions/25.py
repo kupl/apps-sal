@@ -1,15 +1,13 @@
 import sys
 import itertools
-sys.setrecursionlimit(10**6)
-
-N, M = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 6)
+(N, M) = list(map(int, input().split()))
 tmp = [x for x in range(1, N)]
 Cases = itertools.permutations(tmp)
 G = [[] for _ in range(N)]
 seen = [0] * N
-
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     G[a].append(b)

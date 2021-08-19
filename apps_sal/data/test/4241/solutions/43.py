@@ -8,5 +8,4 @@ for i in range(n - len(t) + 1):
         if s[i + j] != t[j]:
             cnt += 1
     ans = min(ans, cnt)
-
 print(ans)

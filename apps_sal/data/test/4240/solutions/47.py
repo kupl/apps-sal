@@ -9,9 +9,9 @@ def ans103(S: str, T: str):
         if T == S:
             jugde_count += 1
     if jugde_count > 0:
-        return "Yes"
+        return 'Yes'
     else:
-        return "No"
+        return 'No'
 
 
 print(ans103(S, T))

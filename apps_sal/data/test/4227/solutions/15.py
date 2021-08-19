@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 
 
 def dfs(node):
@@ -16,10 +16,9 @@ def dfs(node):
 
 graph = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
-
 visited = [False for _ in range(N)]
 visited[0] = True
-print((dfs(0)))
+print(dfs(0))

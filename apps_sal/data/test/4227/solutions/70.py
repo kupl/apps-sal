@@ -11,14 +11,13 @@ def dfs(v):
     return res
 
 
-N, M, *ab = list(map(int, open(0).read().split()))
+(N, M, *ab) = list(map(int, open(0).read().split()))
 g = [[] for _ in range(N)]
-for a, b in zip(*[iter(ab)] * 2):
+for (a, b) in zip(*[iter(ab)] * 2):
     a -= 1
     b -= 1
     g[a].append(b)
     g[b].append(a)
-
 visited = [0] * N
 visited[0] = 1
-print((dfs(0)))
+print(dfs(0))

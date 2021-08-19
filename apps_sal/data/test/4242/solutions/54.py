@@ -1,5 +1,5 @@
 def main():
-    a, b, k = list(map(int, input().split()))
+    (a, b, k) = list(map(int, input().split()))
     ans = []
     count = 0
     for i in range(1, min(a, b) + 1):

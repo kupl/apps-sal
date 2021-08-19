@@ -1,12 +1,12 @@
 import itertools
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 routes = list(itertools.permutations([i for i in range(2, n + 1)]))
 nodes = {}
 ans = 0
 for i in range(1, n + 1):
     nodes[i] = []
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     nodes[a].append(b)
     nodes[b].append(a)
 for i in range(len(routes)):

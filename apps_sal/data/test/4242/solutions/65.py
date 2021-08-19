@@ -1,4 +1,4 @@
-A, B, K = list(map(int, input().split()))
+(A, B, K) = list(map(int, input().split()))
 
 
 def ans120(A: int, B: int, K: int):
@@ -13,4 +13,4 @@ def ans120(A: int, B: int, K: int):
     return ans_list[-K]
 
 
-print((ans120(A, B, K)))
+print(ans120(A, B, K))

@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 m = list(range(l, l + n))
 if m[-1] < 0:
     print(sum(m[:n - 1]))

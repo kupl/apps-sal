@@ -9,7 +9,7 @@ def answer(s: str, t: str) -> str:
 def main():
     s = input()
     t = input()
-    print((answer(s, t)))
+    print(answer(s, t))
 
 
 def __starting_point():

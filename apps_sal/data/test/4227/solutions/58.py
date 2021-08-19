@@ -16,12 +16,12 @@ def dfs(A: list):
             A.pop()
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 node = [set() for _ in range(n + 1)]
 for x in sys.stdin.readlines():
-    a, b = list(map(int, x.split()))
+    (a, b) = list(map(int, x.split()))
     node[a].add(b)
     node[b].add(a)
 ans = [0]
 dfs([1])
-print((ans[0]))
+print(ans[0])

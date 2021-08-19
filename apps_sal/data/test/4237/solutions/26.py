@@ -9,6 +9,6 @@ def f(x, c, d):
     return res
 
 
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 ans = f(b, c, d) - f(a - 1, c, d)
 print(ans)

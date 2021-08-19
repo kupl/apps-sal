@@ -1,4 +1,4 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 p = list(map(int, input().split()))
 mini = 100000
 for i in range(X + 200):

@@ -7,9 +7,9 @@ def answer(x: int, n: int, p: List[int]) -> int:
 
 
 def main():
-    x, n = list(map(int, input().split()))
+    (x, n) = list(map(int, input().split()))
     p = list(map(int, input().split()))
-    print((answer(x, n, p)))
+    print(answer(x, n, p))
 
 
 def __starting_point():

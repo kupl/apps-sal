@@ -1,5 +1,5 @@
 n = int(input())
-s = input() + "K"
+s = input() + 'K'
 count = 0
 ans = []
 i = 0
@@ -11,9 +11,9 @@ while i < n:
         ans.append(s[i])
         ans.append(s[i + 1])
         i += 2
-if ans[-1] == "K":
+if ans[-1] == 'K':
     ans.pop()
     ans.pop()
     count += 1
 print(count)
-print("".join(ans))
+print(''.join(ans))

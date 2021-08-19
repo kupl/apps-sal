@@ -1,9 +1,7 @@
 import sys
 readline = sys.stdin.readline
-
 S = readline().rstrip()
 T = readline().rstrip()
-
 ans = 10 ** 10
 for s_ind in range(len(S)):
     if s_ind + len(T) > len(S):
@@ -16,5 +14,4 @@ for s_ind in range(len(S)):
                 break
     if ans > change:
         ans = change
-
 print(ans)

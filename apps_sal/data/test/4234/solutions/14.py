@@ -10,7 +10,7 @@ def go():
             i += 1
         else:
             i += 2
-    a = ''.join(i for i in a if i is not None)
+    a = ''.join((i for i in a if i is not None))
     if len(a) % 2 == 1:
         a = a[:-1]
     return '{}\n{}'.format(n - len(a), a)

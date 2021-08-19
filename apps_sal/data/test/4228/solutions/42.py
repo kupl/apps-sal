@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 ans = l
 k = 0
 sum = 0

@@ -1,4 +1,4 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 if N != 0:
     p = set(map(int, input().split()))
     for i in range(N):

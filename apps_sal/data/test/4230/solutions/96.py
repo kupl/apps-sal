@@ -7,13 +7,12 @@ def rii():
 
 
 def solve():
-    X, N = rii()
+    (X, N) = rii()
     P = set(rii())
-    n = m = float("inf")
+    n = m = float('inf')
     if not P:
         print(X)
         return
-
     for i in range(min(P) - 1, max(P) + 2):
         if i not in P:
             d = abs(i - X)
@@ -22,7 +21,6 @@ def solve():
             elif d < m:
                 m = d
                 n = i
-
     print(n)
 
 

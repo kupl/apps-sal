@@ -1,4 +1,4 @@
-N, L = map(int, input().split())
+(N, L) = map(int, input().split())
 chosen = 1000
 for i in range(1, N + 1):
     taste_eaten = L + i - 1

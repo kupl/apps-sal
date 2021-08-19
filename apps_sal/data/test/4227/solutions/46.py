@@ -1,19 +1,17 @@
 def OneStrokePath():
     from collections import deque
     import copy
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     graph = [[] for _ in range(n)]
     ans = 0
-
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         graph[a - 1].append(b - 1)
         graph[b - 1].append(a - 1)
     q = deque()
     q.append([0, []])
-
     while q:
-        x0, route0 = q.pop()
+        (x0, route0) = q.pop()
         if x0 in route0:
             continue
         route1 = copy.deepcopy(route0)

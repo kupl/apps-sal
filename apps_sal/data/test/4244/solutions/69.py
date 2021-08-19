@@ -10,5 +10,5 @@ if y / N - z >= 0.5:
 else:
     g = z
 for s in x:
-    d += (s - g)**2
+    d += (s - g) ** 2
 print(d)

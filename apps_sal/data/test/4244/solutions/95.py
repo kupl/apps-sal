@@ -1,6 +1,5 @@
 a = 0
 b = 0
-
 N = int(input())
 X = list(map(int, input().split()))
 avg = sum(X) // N

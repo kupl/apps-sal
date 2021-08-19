@@ -1,9 +1,7 @@
-X, N = list(map(int, input().split()))
+(X, N) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 ans = None
 diff = 1000
-
 if X not in p:
     ans = X
 else:
@@ -13,5 +11,4 @@ else:
         if abs(X - i) < diff:
             diff = abs(X - i)
             ans = i
-
 print(ans)

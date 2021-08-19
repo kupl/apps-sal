@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -18,11 +17,9 @@ def f(n, a):
 
 def main():
     N = int(readline())
-
     ans = INF
     for i in range(N + 1):
         ans = min(ans, f(i, 6) + f(N - i, 9))
-
     print(ans)
     return
 

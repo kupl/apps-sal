@@ -10,7 +10,6 @@ if L > 0:
                 a[i] = a[i] + 1
     A = sorted(a, reverse=True)
     print(len(T) - A[0])
-
 if L == 0:
     for l in range(len(S)):
         if S[l] == T[l]:

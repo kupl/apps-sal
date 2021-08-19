@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 lst = []
 for n in range(1, min(A, B) + 1):
     if B % n == 0:

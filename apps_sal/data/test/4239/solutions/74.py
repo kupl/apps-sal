@@ -1,5 +1,4 @@
 N = int(input())
-
 ans = N
 for i in range(N + 1):
     x = 0
@@ -12,5 +11,4 @@ for i in range(N + 1):
         x += y % 9
         y //= 9
     ans = min(x, ans)
-
 print(ans)

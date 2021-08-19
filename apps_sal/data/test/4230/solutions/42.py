@@ -1,6 +1,5 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 p = list(map(int, input().split()))
-
 if N == 0 or X < min(p) or X > max(p):
     print(X)
 else:

@@ -7,6 +7,6 @@ else:
     for p in range(min(x), max(x)):
         meter = 0
         for xi in x:
-            meter += pow((xi - p), 2)
+            meter += pow(xi - p, 2)
         ans.append(meter)
     print(min(ans))

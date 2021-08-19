@@ -1,11 +1,8 @@
 import itertools
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 s = [list(map(int, input().split())) for _ in range(M)]
-
 lst = [x for x in range(2, N + 1)]
 l = itertools.permutations(lst)
-
 ans = 0
 for num in l:
     t = [1] + list(num)
@@ -17,5 +14,4 @@ for num in l:
             break
     if ok:
         ans += 1
-
 print(ans)

@@ -1,8 +1,6 @@
 S = input()
 T = input()
-
-ans = 10**9
-
+ans = 10 ** 9
 for i in range(len(S) - len(T) + 1):
     ans_sub = 0
     for j in range(len(T)):

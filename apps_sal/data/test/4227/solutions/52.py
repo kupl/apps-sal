@@ -1,9 +1,9 @@
 def abc054c_one_stroke_path():
     import itertools
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     e = [set() for _ in range(n + 1)]
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         e[a].add(b)
         e[b].add(a)
     pattern = itertools.permutations(range(2, n + 1))

@@ -10,9 +10,7 @@ def divisor(n):
     return table
 
 
-A, B, K = map(int, input().split(" "))
-
+(A, B, K) = map(int, input().split(' '))
 a_divisor = divisor(A)
 b_divisor = divisor(B)
-
 print(sorted(list(set(a_divisor) & set(b_divisor)), reverse=True)[K - 1])

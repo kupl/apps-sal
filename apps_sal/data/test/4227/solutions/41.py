@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 D = {}
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in D:
         D[a] = set()
     if b not in D:
@@ -17,7 +17,7 @@ else:
     while len(task) > 0:
         pos = 0
         log = set()
-        pos, log = task.pop(0)
+        (pos, log) = task.pop(0)
         log.add(pos)
         for i in D[pos]:
             if i not in log:

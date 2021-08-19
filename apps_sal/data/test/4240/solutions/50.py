@@ -1,7 +1,6 @@
 S = list(input())
 T = list(input())
 ans = 'No'
-
 for i in S:
     tmp = S.pop()
     S.insert(0, tmp)
@@ -9,5 +8,4 @@ for i in S:
     if S == T:
         ans = 'Yes'
         break
-
 print(ans)

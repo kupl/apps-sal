@@ -7,6 +7,5 @@ for i in range(len(S)):
         cnt = 1
         print('Yes')
         break
-
 if cnt == 0:
     print('No')

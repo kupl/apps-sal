@@ -1,4 +1,4 @@
-X, N = list(map(int, input().split()))
+(X, N) = list(map(int, input().split()))
 p = input()
 
 
@@ -21,4 +21,4 @@ def ans170(X: int, N: int, p: str):
                 count += 1
 
 
-print((ans170(X, N, p)))
+print(ans170(X, N, p))

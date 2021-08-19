@@ -1,4 +1,4 @@
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 a = 101
 b = 101

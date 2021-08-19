@@ -5,9 +5,8 @@ a = 0
 b = 0
 c = 0
 for i in X:
-    a += (i - T)**2
-    b += (i - T - 1)**2
-    c += (i - T + 1)**2
-
+    a += (i - T) ** 2
+    b += (i - T - 1) ** 2
+    c += (i - T + 1) ** 2
 ans = min(a, b)
 print(min(ans, c))

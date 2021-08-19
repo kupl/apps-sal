@@ -5,6 +5,6 @@ for i in range(len(List)):
     ans += int(List[i])
     ans %= 9
 if ans % 9 == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

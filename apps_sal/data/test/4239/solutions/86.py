@@ -1,5 +1,4 @@
 from collections import deque
-
 N = int(input())
 units = set()
 i = 0
@@ -11,7 +10,6 @@ while 9 ** i <= N:
     units.add(9 ** i)
     i += 1
 units = sorted(units)
-
 mins = list(range(N + 1))
 for i in range(1, len(units)):
     unit = units[i]

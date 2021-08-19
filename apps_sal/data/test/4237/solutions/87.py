@@ -12,7 +12,7 @@ def f(k):
     return b // k - (a - 1) // k
 
 
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 ALL = b - a + 1
 ans = ALL - (f(c) + f(d) - f(lcm([c, d])))
 print(ans)

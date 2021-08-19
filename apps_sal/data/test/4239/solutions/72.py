@@ -1,7 +1,6 @@
 N = int(input())
 dp = [N] * 110000
 dp[0] = 0
-
 for i in range(N):
     j = 0
     while i + 9 ** j <= N:
@@ -11,5 +10,4 @@ for i in range(N):
     while i + 6 ** k <= N:
         dp[i + 6 ** k] = min(dp[i + 6 ** k], dp[i] + 1)
         k += 1
-
 print(dp[N])

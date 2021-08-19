@@ -1,7 +1,7 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 for i in range(x + 1):
     if 2 * (x - i) + 4 * i == y:
-        print("Yes")
+        print('Yes')
         break
 else:
-    print("No")
+    print('No')

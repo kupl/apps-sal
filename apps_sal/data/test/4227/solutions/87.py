@@ -13,14 +13,12 @@ def dfs(v, used):
     return ans
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 matrix = [[0] * n for _ in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     matrix[a - 1][b - 1] = 1
     matrix[b - 1][a - 1] = 1
-
 used = [False] * n
 used[0] = True
-
 print(dfs(0, used))

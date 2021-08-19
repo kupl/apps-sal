@@ -1,5 +1,4 @@
-n, l = map(int, input().split())
-
+(n, l) = map(int, input().split())
 ringo = []
 for i in range(l, l + n):
     ringo.append(i)

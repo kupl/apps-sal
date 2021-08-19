@@ -15,7 +15,7 @@ def readInteger():
 
 
 def readStringSet(n):
-    return sys.stdin.readline().split(" ")[:n]
+    return sys.stdin.readline().split(' ')[:n]
 
 
 def readIntegerSet(n):
@@ -30,25 +30,20 @@ def main(X, N, P):
     mP = {}
     for p in P:
         mP[p] = p
-
     if X not in mP:
         return X
-
     i = 0
     while True:
         if X - i not in mP:
             return X - i
-
         if X + i not in mP:
             return X + i
-
         i += 1
 
 
 def __starting_point():
-    _X, _N = readIntegerSet(2)
+    (_X, _N) = readIntegerSet(2)
     _P = readIntegerSet(_N)
-
     print(main(_X, _N, _P))
 
 

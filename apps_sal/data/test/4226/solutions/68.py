@@ -1,11 +1,10 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 count = 0
-
 for i in range(0, X + 1):
     if i * 2 + (X - i) * 4 == Y:
         count += 1
         break
 if count > 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

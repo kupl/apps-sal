@@ -1,7 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 arr = sorted(arr)
-
 if k == 0:
     if arr[0] - 1 >= 1:
         print(arr[0] - 1)

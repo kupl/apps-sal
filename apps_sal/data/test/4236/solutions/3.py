@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 num = []
 for i in range(n):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     num.append([l, r])
 ans = []
 for i in range(1, m + 1):

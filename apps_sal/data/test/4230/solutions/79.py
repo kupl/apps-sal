@@ -1,9 +1,7 @@
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 ans = 0
 d_ans = 101
-
 for i in range(-1, 102):
     for j in p:
         if i == j:
@@ -15,5 +13,4 @@ for i in range(-1, 102):
             d_ans = d
         elif d_ans == d and ans > i:
             ans = i
-
 print(ans)

@@ -8,7 +8,6 @@ def resolve():
             if S[i:i + len(T)][j] == T[j]:
                 count2 += 1
         count1.append(len(T) - count2)
-
     print(min(count1))
 
 

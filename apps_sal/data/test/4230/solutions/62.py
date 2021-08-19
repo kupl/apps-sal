@@ -1,4 +1,4 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 p = list(map(int, input().split()))
 count = -1
 while True:

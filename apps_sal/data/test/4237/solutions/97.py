@@ -12,5 +12,5 @@ def num(a, c, d):
     return a - m_a_c - m_a_d + m_a_cd
 
 
-a, b, c, d = list(map(int, input().split()))
-print((num(b, c, d) - num(a - 1, c, d)))
+(a, b, c, d) = list(map(int, input().split()))
+print(num(b, c, d) - num(a - 1, c, d))

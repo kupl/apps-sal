@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if M >= 0:
     a_list = [i for i in range(M + 1, M + N)]
 elif N + M > 0:

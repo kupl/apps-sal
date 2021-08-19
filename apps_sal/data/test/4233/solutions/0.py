@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 pole = []
 metka = []
 for i in range(n):
@@ -13,12 +13,11 @@ for i in range(n):
             metka[i].append(1)
 k = 0
 ans = []
-
 for i in range(n):
     for j in range(m):
         if pole[i][j] == '*':
             e = 0
-            while i - e - 1 >= 0 and j - e - 1 >= 0 and i + e + 1 < n and j + e + 1 < m and pole[i - e - 1][j] == '*' and pole[i][j - e - 1] == '*' and pole[i + e + 1][j] == '*' and pole[i][j + e + 1] == '*':
+            while i - e - 1 >= 0 and j - e - 1 >= 0 and (i + e + 1 < n) and (j + e + 1 < m) and (pole[i - e - 1][j] == '*') and (pole[i][j - e - 1] == '*') and (pole[i + e + 1][j] == '*') and (pole[i][j + e + 1] == '*'):
                 e = e + 1
                 metka[i][j] = 0
                 metka[i - e][j] = 0

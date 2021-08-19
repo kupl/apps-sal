@@ -1,7 +1,6 @@
 s = str(input())
 t = str(input())
 ans = 10000
-
 for i in range(len(s) - len(t) + 1):
     tmp = 0
     u = s[i:i + len(t)]

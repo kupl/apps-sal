@@ -1,5 +1,5 @@
 from math import gcd
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 lcm = c * d // gcd(c, d)
 a -= 1
 p = b // c - a // c

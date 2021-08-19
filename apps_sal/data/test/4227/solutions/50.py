@@ -1,8 +1,8 @@
 from itertools import permutations
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [tuple(map(int, input().split())) for _ in range(M)]
 m = [set() for _ in range(27)]
-for a, b in AB:
+for (a, b) in AB:
     m[a].add(b)
     m[b].add(a)
 

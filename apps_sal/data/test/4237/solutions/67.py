@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 
 
 def mul_count(v, w, n):
@@ -25,9 +25,8 @@ def koyaku(x, y):
 
 c_mul = mul_count(a, b, c)
 d_mul = mul_count(a, b, d)
-
 cd_common = koyaku(c, d)
 cd_mul = c * d // cd_common
 common_mul = mul_count(a, b, cd_mul)
 yobun = c_mul + d_mul - common_mul
-print((b - a + 1 - yobun))
+print(b - a + 1 - yobun)

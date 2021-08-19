@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 list_x = [l + x - 1 for x in range(1, n + 1)]
 applepai = sum(list_x)
 list_dif = []

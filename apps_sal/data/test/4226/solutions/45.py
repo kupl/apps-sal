@@ -7,10 +7,10 @@ i = 0
 something = True
 while i <= animals:
     if i * 4 + j * 2 == legs:
-        print("Yes")
+        print('Yes')
         something = False
         break
     i = i + 1
     j = j - 1
 if something is True:
-    print("No")
+    print('No')

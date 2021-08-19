@@ -5,6 +5,6 @@ def f(x):
     return x - (x // C + x // D - x // lcm)
 
 
-A, B, C, D = list(map(int, input().split()))
+(A, B, C, D) = list(map(int, input().split()))
 lcm = C * D // gcd(C, D)
-print((f(B) - f(A - 1)))
+print(f(B) - f(A - 1))

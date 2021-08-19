@@ -1,5 +1,4 @@
 N = int(input())
-
 INF = 10 ** 9
 
 

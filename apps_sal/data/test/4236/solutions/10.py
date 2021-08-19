@@ -1,5 +1,5 @@
 def go():
-    n, m = [int(i) for i in input().split(' ')]
+    (n, m) = [int(i) for i in input().split(' ')]
     x = [0] * (m + 1)
     for i in range(n):
         a = [int(i) for i in input().split(' ')]

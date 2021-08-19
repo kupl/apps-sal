@@ -1,4 +1,4 @@
-integer1, integer2, term = map(int, input().split())
+(integer1, integer2, term) = map(int, input().split())
 term_value = max(integer1, integer2)
 largest_term = 0
 while term_value <= 100:

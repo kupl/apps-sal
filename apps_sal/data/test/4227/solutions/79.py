@@ -1,11 +1,10 @@
 import itertools
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 li = []
 for i in range(N):
     li.append([-1 for i in range(N)])
-
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     li[a - 1][b - 1] = 1
     li[b - 1][a - 1] = 1
 an = 0

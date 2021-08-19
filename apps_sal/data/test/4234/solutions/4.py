@@ -1,10 +1,8 @@
 from collections import deque
 n = int(input())
 S = input()
-
 QUE = deque(S)
 ANS = []
-
 while QUE:
     if len(QUE) == 1:
         QUE.pop()
@@ -16,6 +14,5 @@ while QUE:
         y = QUE.popleft()
         ANS.append(x)
         ANS.append(y)
-
 print(n - len(ANS))
-print("".join(ANS))
+print(''.join(ANS))

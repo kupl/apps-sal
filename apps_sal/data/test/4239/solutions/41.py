@@ -14,7 +14,7 @@ def draw(x, y):
         if x1 == 0 or x2 == 0:
             return y
         else:
-            return(min(draw(x1, y), draw(x2, y)))
+            return min(draw(x1, y), draw(x2, y))
 
 
 print(draw(n, 0))

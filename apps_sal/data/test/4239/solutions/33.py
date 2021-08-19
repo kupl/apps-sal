@@ -9,17 +9,16 @@ def main(n):
     a1 = 6
     a2 = 9
     for i in range(1, 100):
-        if a1**i <= n:
-            arr.append(a1**i)
+        if a1 ** i <= n:
+            arr.append(a1 ** i)
         else:
             break
     for i in range(1, 100):
-        if a2**i <= n:
-            arr.append(a2**i)
+        if a2 ** i <= n:
+            arr.append(a2 ** i)
         else:
             break
     arr.sort()
-
     for i in range(1, n + 1):
         temp = i
         for j in arr:
@@ -27,7 +26,6 @@ def main(n):
                 break
             temp = min(temp, dp[i - j] + 1)
         dp.append(temp)
-
     print(dp[n])
 
 

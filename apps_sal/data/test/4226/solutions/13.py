@@ -1,4 +1,4 @@
-X, Y = list(map(int, input().split()))
+(X, Y) = list(map(int, input().split()))
 ans = 'No'
 for a in range(X + 1):
     b = X - a

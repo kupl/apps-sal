@@ -3,11 +3,11 @@ from functools import lru_cache
 
 def main():
     n = int(input())
-    dp = [float("inf")] * (n + 1)
+    dp = [float('inf')] * (n + 1)
     dp[0] = 0
     for i in range(n):
         dp[i + 1] = min(dp[i + 1], dp[i] + 1)
-        j, k = 6, 9
+        (j, k) = (6, 9)
         while i + j <= n:
             dp[i + j] = min(dp[i + j], dp[i] + 1)
             j *= 6

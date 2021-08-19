@@ -1,9 +1,8 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 to = [[] for _ in range(N)]
-
 for _ in range(M):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     to[a].append(b)
     to[b].append(a)
 
@@ -11,7 +10,6 @@ for _ in range(M):
 def dfs(v, seen):
     if seen == [1] * N:
         return 1
-
     res = 0
     for nv in to[v]:
         if not seen[nv]:
@@ -24,7 +22,7 @@ def dfs(v, seen):
 def main():
     seen = [0] * N
     seen[0] = 1
-    print((dfs(0, seen)))
+    print(dfs(0, seen))
 
 
 def __starting_point():

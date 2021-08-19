@@ -4,7 +4,7 @@ def resolve():
     p = round(sum(x) / n)
     ans = 0
     for i in range(n):
-        ans += (x[i] - p)**2
+        ans += (x[i] - p) ** 2
     print(ans)
 
 

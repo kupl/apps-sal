@@ -1,5 +1,4 @@
-N, L = map(int, input().split())
-
+(N, L) = map(int, input().split())
 total = N * (L - 1) + N * (N + 1) / 2
 lowest = 10 ** 10
 for i in range(1, N + 1):

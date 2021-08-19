@@ -12,4 +12,4 @@ def answer(s: str, t: str) -> str:
         return 'No'
 
 
-print((answer(s, t)))
+print(answer(s, t))

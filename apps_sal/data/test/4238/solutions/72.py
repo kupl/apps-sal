@@ -6,9 +6,9 @@ def ans176(N: str):
     for i in range(len(str(N))):
         sum += int(str(N)[i])
     if sum % 9 == 0:
-        return("Yes")
+        return 'Yes'
     else:
-        return("No")
+        return 'No'
 
 
 print(ans176(N))

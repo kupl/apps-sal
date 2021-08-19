@@ -1,6 +1,5 @@
 s = input()
 t = input()
-
 mn = 1001
 for i in range(len(s) - len(t) + 1):
     sm = 0

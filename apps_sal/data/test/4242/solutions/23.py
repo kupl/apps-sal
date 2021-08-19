@@ -2,7 +2,7 @@ import math
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -13,5 +13,5 @@ def make_divisors(n):
     return lower_divisors + upper_divisors[::-1]
 
 
-a, b, k = list(map(int, input().split()))
-print((make_divisors(math.gcd(a, b))[-k]))
+(a, b, k) = list(map(int, input().split()))
+print(make_divisors(math.gcd(a, b))[-k])

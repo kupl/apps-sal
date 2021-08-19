@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = []
 ans = []
 for i in range(n):
@@ -13,4 +13,4 @@ for i in range(1, m + 1):
         ans.append(i)
 print(len(ans))
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

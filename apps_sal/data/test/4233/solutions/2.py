@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 used = [[True] * m for i in range(n)]
 Pole = [0] * n
 M = []
@@ -8,8 +8,8 @@ for i in range(n):
     for g in range(m):
         if Pole[i][g] == '*':
             k = 0
-            while i - k - 1 >= 0 and i + k + 1 < n and g - k - 1 >= 0 and g + k + 1 < m:
-                if Pole[i - k - 1][g] == '*' and Pole[i + k + 1][g] == '*' and Pole[i][g - k - 1] == '*' and Pole[i][g + k + 1] == '*':
+            while i - k - 1 >= 0 and i + k + 1 < n and (g - k - 1 >= 0) and (g + k + 1 < m):
+                if Pole[i - k - 1][g] == '*' and Pole[i + k + 1][g] == '*' and (Pole[i][g - k - 1] == '*') and (Pole[i][g + k + 1] == '*'):
                     used[i - k - 1][g] = False
                     used[i + k + 1][g] = False
                     used[i][g - k - 1] = False

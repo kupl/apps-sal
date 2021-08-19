@@ -1,6 +1,5 @@
 S = list(input())
 T = list(input())
-
 ans = 0
 for i in range(len(S)):
     s = S[i:]
@@ -11,5 +10,4 @@ for i in range(len(S)):
         if s[j] == T[j]:
             tmp += 1
     ans = max(ans, tmp)
-
 print(len(T) - ans)

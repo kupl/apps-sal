@@ -9,5 +9,5 @@ def solve(a, c, d):
     return x
 
 
-A, B, C, D = list(map(int, input().split()))
-print((solve(B, C, D) - solve(A - 1, C, D)))
+(A, B, C, D) = list(map(int, input().split()))
+print(solve(B, C, D) - solve(A - 1, C, D))

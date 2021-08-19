@@ -1,8 +1,6 @@
 n = int(input())
 s = list(input())
-
 res = []
-
 l = 0
 r = 1
 while r < n:
@@ -12,8 +10,6 @@ while r < n:
         r = l + 1
     else:
         r += 1
-
 k = n - len(res)
-
 print(k)
 print(*res, sep='')

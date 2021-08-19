@@ -6,17 +6,16 @@ def input():
 
 
 sys.setrecursionlimit(20000000)
-
 MOD = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
     N = int(input())
     if N % 9 == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

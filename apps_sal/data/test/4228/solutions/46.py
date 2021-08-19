@@ -1,4 +1,4 @@
-N, L = map(int, input().split())
+(N, L) = map(int, input().split())
 S = (2 * L + N - 1) * N // 2
 if L <= 0 <= L + N - 1:
     ans = S

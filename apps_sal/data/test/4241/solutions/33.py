@@ -1,6 +1,5 @@
 S = input()
 T = input()
-
 ans = len(S)
 for i in range(len(S) - len(T) + 1):
     count = 0

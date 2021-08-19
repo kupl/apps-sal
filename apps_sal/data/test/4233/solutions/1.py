@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 table = [[0] * (m + 2)]
 for i in range(n):
     table.append([0])

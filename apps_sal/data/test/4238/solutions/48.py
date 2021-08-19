@@ -1,5 +1,5 @@
 n = list(map(int, input().split()))
-ans = "Yes"
+ans = 'Yes'
 if sum(n) % 9:
-    ans = "No"
+    ans = 'No'
 print(ans)

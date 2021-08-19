@@ -1,6 +1,6 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 ps = list(map(int, input().split()))
-bgr, smr = X, X
+(bgr, smr) = (X, X)
 while bgr <= 100:
     if bgr not in ps:
         break
