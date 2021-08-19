@@ -1,4 +1,5 @@
 class Solution:
+
     def countNegatives(self, grid: List[List[int]]) -> int:
         count = 0
         for i in range(len(grid), 0, -1):

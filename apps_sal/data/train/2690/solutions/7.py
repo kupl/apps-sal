@@ -1,5 +1,5 @@
 import re
-P = re.compile('\([^\(\)]*\)')
+P = re.compile('\\([^\\(\\)]*\\)')
 
 
 def remove_parentheses(s):

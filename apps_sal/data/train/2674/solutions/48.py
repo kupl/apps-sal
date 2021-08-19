@@ -1,7 +1,7 @@
 def two_sort(array):
     array.sort()
     x = array[0]
-    s = ""
+    s = ''
     for i in x:
-        s += "***" + i
+        s += '***' + i
     return s[3:]

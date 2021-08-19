@@ -7,8 +7,7 @@ def solve(s):
             k = k + s[i]
             if i == len(s) - 1:
                 mas.append(int(k))
-        else:
-            if k != '':
-                mas.append(int(k))
-                k = ''
+        elif k != '':
+            mas.append(int(k))
+            k = ''
     return max(mas)

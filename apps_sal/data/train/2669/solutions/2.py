@@ -5,7 +5,7 @@ def calculate_next_el(prev_el):
     if prev_el < 10:
         return 2 * prev_el
     else:
-        multiplication = reduce((lambda x, y: x * y), [x for x in map(int, str(prev_el)) if x > 0], 1)
+        multiplication = reduce(lambda x, y: x * y, [x for x in map(int, str(prev_el)) if x > 0], 1)
         return prev_el + multiplication
 
 

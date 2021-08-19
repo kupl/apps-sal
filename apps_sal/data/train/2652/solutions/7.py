@@ -5,16 +5,10 @@ def isInvalid(lines, y, x, chars):
 
 
 def isSquare(lines, x, y, size):
-    if isInvalid(lines, y, x, '+') or \
-       isInvalid(lines, y + size, x, '+') or \
-       isInvalid(lines, y, x + size, '+') or \
-       isInvalid(lines, y + size, x + size, '+'):
+    if isInvalid(lines, y, x, '+') or isInvalid(lines, y + size, x, '+') or isInvalid(lines, y, x + size, '+') or isInvalid(lines, y + size, x + size, '+'):
         return False
     for s in range(size + 1):
-        if isInvalid(lines, y, x + s, '+-') or \
-           isInvalid(lines, y + s, x, '+|') or \
-           isInvalid(lines, y + size, x + s, '+-') or \
-           isInvalid(lines, y + s, x + size, '+|'):
+        if isInvalid(lines, y, x + s, '+-') or isInvalid(lines, y + s, x, '+|') or isInvalid(lines, y + size, x + s, '+-') or isInvalid(lines, y + s, x + size, '+|'):
             return False
     return True
 

@@ -1,7 +1,7 @@
 def almost_increasing_sequence(sequence):
     prev = sequence[0] - 1
     n = 0
-    for i, x in enumerate(sequence):
+    for (i, x) in enumerate(sequence):
         if x <= prev:
             if n:
                 return False

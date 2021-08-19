@@ -1,5 +1,5 @@
 from collections import Counter
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ar = list(map(int, input().split()))
 ar_set = set(ar)
 ar_counter = Counter(ar)
@@ -12,5 +12,4 @@ for element in intersect_ar_a:
     result += ar_counter[element]
 for element in intersect_ar_b:
     result -= ar_counter[element]
-
 print(result)

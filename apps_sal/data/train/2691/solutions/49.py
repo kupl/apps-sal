@@ -8,5 +8,4 @@ def solve(s):
                 largest = number
         else:
             number = 0
-
     return largest

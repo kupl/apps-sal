@@ -5,5 +5,4 @@ def find_needed_guards(k):
             if k[i - 1] == False:
                 total += 1
                 k[i] = True
-
     return total

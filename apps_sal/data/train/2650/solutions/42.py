@@ -1,7 +1,7 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 words = [input() for i in range(n)]
 words = list(sorted(words))
-s = ""
+s = ''
 for i in range(n):
     s += words[i]
 print(s)

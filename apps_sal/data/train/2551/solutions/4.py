@@ -1,11 +1,12 @@
 class Solution:
+
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
         correct = ['()', '[]', '{}']
-        out = ""
+        out = ''
         a = s
         while self.contains(a, correct):
             for sym in correct:

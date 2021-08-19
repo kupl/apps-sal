@@ -1,5 +1,8 @@
 from itertools import chain, repeat
-def mul(x): return x[0] * x[1]
+
+
+def mul(x):
+    return x[0] * x[1]
 
 
 def bad_apples(apples):

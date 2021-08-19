@@ -1,12 +1,12 @@
 class Solution:
+
     def longestWord(self, words):
         """
         :type words: List[str]
         :rtype: str
         """
-
         words.sort()
-        words_set, longest_word = set(['']), ''
+        (words_set, longest_word) = (set(['']), '')
         for word in words:
             if word[:-1] in words_set:
                 words_set.add(word)

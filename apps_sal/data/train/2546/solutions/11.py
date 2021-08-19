@@ -1,4 +1,5 @@
 class Solution:
+
     def numIdenticalPairs(self, nums: List[int]) -> int:
         pairCount = 0
         i = 0

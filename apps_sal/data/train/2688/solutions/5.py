@@ -1,5 +1,7 @@
 def repeat_sequence_len(n):
-    def f(n): return sum(int(c) ** 2 for c in str(n))
+
+    def f(n):
+        return sum((int(c) ** 2 for c in str(n)))
     tortoise = n
     rabbit = f(n)
     while tortoise != rabbit:

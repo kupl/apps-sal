@@ -15,5 +15,4 @@ def solve(arr):
         i += 1
         if s_int != '':
             integ.append(int(s_int))
-
     return max(integ)

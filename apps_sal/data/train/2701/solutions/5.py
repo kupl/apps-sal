@@ -17,9 +17,7 @@ def get_score(arr):
             lines += 1
         else:
             continue
-
         if lines >= 10:
             level += 1
             lines -= 10
-
     return score

@@ -1,11 +1,11 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         bank = {5: 0, 10: 0, 20: 0}
-
         for bill in bills:
             bank[bill] += 1
             change = bill - 5
-            if change and not bank[5]:
+            if change and (not bank[5]):
                 return False
             elif change == 15:
                 if bank[10]:

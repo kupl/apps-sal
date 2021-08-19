@@ -4,7 +4,7 @@ def bingo(array):
         if i in list(set(array)):
             ctr += 1
     if ctr == 5:
-        return "WIN"
+        return 'WIN'
     else:
-        return "LOSE"
+        return 'LOSE'
     pass

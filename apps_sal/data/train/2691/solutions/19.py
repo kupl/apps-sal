@@ -11,4 +11,4 @@ def solve(s):
     for i in b:
         if i.isdigit() == True:
             talha.append(int(i))
-    return(max(talha))
+    return max(talha)

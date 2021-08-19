@@ -1,6 +1,6 @@
 def bad_apples(apples):
-    bad = (x if x else y for x, y in apples if (not x) ^ (not y))
-    result, flag = [], True
+    bad = (x if x else y for (x, y) in apples if (not x) ^ (not y))
+    (result, flag) = ([], True)
     for x in apples:
         if all(x):
             result.append(x)

@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         num = [0, 0]
         for i in bills:
@@ -8,7 +9,7 @@ class Solution:
                 num[1] += 1
                 num[0] -= 1
             elif i == 20:
-                if (num[0] >= 1 and num[1] >= 1):
+                if num[0] >= 1 and num[1] >= 1:
                     num[1] -= 1
                     num[0] -= 1
                 elif num[0] >= 3:

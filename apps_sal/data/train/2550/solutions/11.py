@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         from collections import deque
         fives = deque()
@@ -10,14 +11,13 @@ class Solution:
                 elif i == 10:
                     tens.append(10)
                     fives.pop()
+                elif len(tens) != 0 and len(fives) != 0:
+                    tens.pop()
+                    fives.pop()
                 else:
-                    if len(tens) != 0 and len(fives) != 0:
-                        tens.pop()
-                        fives.pop()
-                    else:
-                        fives.pop()
-                        fives.pop()
-                        fives.pop()
+                    fives.pop()
+                    fives.pop()
+                    fives.pop()
         except IndexError:
             return False
         return True

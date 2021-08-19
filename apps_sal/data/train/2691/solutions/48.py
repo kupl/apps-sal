@@ -3,6 +3,6 @@ def solve(s):
         if letter.isdigit():
             pass
         else:
-            s = s.replace(letter, " ")
+            s = s.replace(letter, ' ')
     numberList = map(int, s.split())
     return max(numberList)

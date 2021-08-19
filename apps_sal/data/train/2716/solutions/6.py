@@ -6,8 +6,8 @@ def munge(st, mapping):
 
 
 def encode(st):
-    return munge(st, {a: b for a, b in CYPHER})
+    return munge(st, {a: b for (a, b) in CYPHER})
 
 
 def decode(st):
-    return munge(st, {b: a for a, b in CYPHER})
+    return munge(st, {b: a for (a, b) in CYPHER})

@@ -1,13 +1,11 @@
 import sys
 from datetime import datetime as dt
-
-dformat = "%a %d %b %Y %H:%M:%S %z"
+dformat = '%a %d %b %Y %H:%M:%S %z'
 
 
 def time_delta(t1, t2):
     first = dt.strptime(t1, dformat)
     second = dt.strptime(t2, dformat)
-
     return int(abs((first - second).total_seconds()))
 
 

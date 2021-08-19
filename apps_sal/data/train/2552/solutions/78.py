@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         largeArr = {}
         tempCount = 0

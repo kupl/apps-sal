@@ -1,10 +1,10 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         if len(arr) == 0:
             return -1
         if len(arr) == 1:
             return arr[0]
-
         p1 = p2 = 0
         arrLen = len(arr)
         while p2 < arrLen:

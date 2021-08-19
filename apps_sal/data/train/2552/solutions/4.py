@@ -1,6 +1,6 @@
 class Solution:
-    def findSpecialInteger(self, arr: List[int]) -> int:
 
+    def findSpecialInteger(self, arr: List[int]) -> int:
         setter = set(arr)
         a_fourth = len(arr) / 4
         for elem in setter:

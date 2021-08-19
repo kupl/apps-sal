@@ -1,9 +1,8 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
-
-        goal_count = len(arr) * .25
+        goal_count = len(arr) * 0.25
         temp_list = []
-
         for num in arr:
             if len(arr) == 1:
                 return arr[0]

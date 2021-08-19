@@ -8,7 +8,7 @@ def bubble(a):
         swapped = False
         for j in range(len(a) - i - 1):
             if a[j] > a[j + 1]:
-                a[j], a[j + 1] = a[j + 1], a[j]
+                (a[j], a[j + 1]) = (a[j + 1], a[j])
                 r.append(list(a))
                 swapped = True
         i += 1

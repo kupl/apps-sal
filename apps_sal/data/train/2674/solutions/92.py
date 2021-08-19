@@ -4,5 +4,4 @@ def two_sort(array):
     j = []
     for i in k[0]:
         j.append(i)
-
     return '***'.join(j)

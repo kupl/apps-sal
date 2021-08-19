@@ -1,7 +1,7 @@
 def solution(s):
-    newStr = ""
+    newStr = ''
     for letter in s:
         if letter.isupper():
-            newStr += " "
+            newStr += ' '
         newStr += letter
     return newStr

@@ -7,7 +7,7 @@ def navigate(s, e):
     j = 0
     rowdis = 0
     coldis = 0
-    for k, v in d.items():
+    for (k, v) in d.items():
         if k == s:
             i = v[0]
             j = v[1]

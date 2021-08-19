@@ -1,19 +1,16 @@
 class Solution:
-    def lemonadeChange(self, A: List[int]) -> bool:
 
+    def lemonadeChange(self, A: List[int]) -> bool:
         if A[0] != 5:
             return False
         if len(A) == 0:
             return True
-
         dk = {5: 0, 10: 0, 20: 0}
-
         for i in range(len(A)):
             if A[i] in dk:
                 dk[A[i]] += 1
             else:
                 dk[A[i]] = 1
-
             if A[i] == 10:
                 if dk[5] < 1:
                     return False

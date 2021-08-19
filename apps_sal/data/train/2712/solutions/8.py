@@ -1,9 +1,9 @@
 def calculate_loneliness(s, ind):
     rng = int(s[ind])
     if ind - rng < 0:
-        res_str = s[: ind] + s[ind + 1:ind + rng + 1]
+        res_str = s[:ind] + s[ind + 1:ind + rng + 1]
         return sum([int(char) for char in res_str])
-    res_str = s[ind - rng: ind] + s[ind + 1:ind + rng + 1]
+    res_str = s[ind - rng:ind] + s[ind + 1:ind + rng + 1]
     return sum([int(char) for char in res_str])
 
 
@@ -21,7 +21,6 @@ def loneliest(n):
         if lst[i] == 1:
             if lone_list[i] < min_1:
                 min_1 = lone_list[i]
-
     if min(lone_list) == min_1:
         return True
     return False

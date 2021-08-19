@@ -1,10 +1,10 @@
 class Solution:
+
     def countNegatives(self, grid: List[List[int]]) -> int:
 
         def binarysearch(arr):
             low = 0
             high = len(arr) - 1
-
             while low <= high:
                 mid = (low + high) // 2
                 if arr[mid] < 0:

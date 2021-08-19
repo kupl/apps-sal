@@ -3,7 +3,7 @@ def solve(a):
     c = 0
     for i in a:
         if i.isalpha():
-            a = a.replace(i, " ")
+            a = a.replace(i, ' ')
     a = a.split()
     for x in range(len(a)):
         b[x] = int(a[x])

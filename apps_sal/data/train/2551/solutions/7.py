@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s):
         """
         :type s: str
@@ -10,9 +11,8 @@ class Solution:
         for b in s:
             if b in lefty:
                 L.append(b)
-            else:
-                if len(L) == 0 or D[b] != L.pop():
-                    return False
+            elif len(L) == 0 or D[b] != L.pop():
+                return False
         if len(L) != 0:
             return False
         else:

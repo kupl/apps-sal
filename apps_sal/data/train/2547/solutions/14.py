@@ -1,6 +1,6 @@
 class Solution:
-    def countNegatives(self, grid: List[List[int]]) -> int:
 
+    def countNegatives(self, grid: List[List[int]]) -> int:
         count = 0
         for arr in grid:
             count += len(arr) - self.NegStart(arr)

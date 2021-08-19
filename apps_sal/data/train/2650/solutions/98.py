@@ -6,7 +6,7 @@ def answer(n: int, l: int, s: List[str]) -> str:
 
 
 def main():
-    n, l = map(int, input().split())
+    (n, l) = map(int, input().split())
     s = [input() for _ in range(n)]
     print(answer(n, l, s))
 

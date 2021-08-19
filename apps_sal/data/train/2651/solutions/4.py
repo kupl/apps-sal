@@ -1,7 +1,7 @@
 def chsgn(k):
     r = []
     for x in k:
-        if (x < 0):
+        if x < 0:
             r.append(-x)
         else:
             r.append(x)
@@ -18,7 +18,7 @@ def prod2sum(a, b, c, d):
     e2 = k[1]
     f1 = k[2]
     f2 = k[3]
-    if ((e1 == f2) and (f1 == e2)) or ((e1 == e2) and (f1 == f2)):
+    if e1 == f2 and f1 == e2 or (e1 == e2 and f1 == f2):
         res = [[min(e1, f1), max(e1, f1)]]
     else:
         res = [[min(e1, f1), max(e1, f1)]]

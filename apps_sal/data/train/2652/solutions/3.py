@@ -9,11 +9,7 @@ def count_squares(lines):
                 if lines[l][j] == '+':
                     try:
                         n = j - i
-                        if lines[l + n][i] == '+' == lines[l + n][j] \
-                                and all(lines[m][i] not in ' -' for m in range(l + 1, l + n)) \
-                                and all(lines[m][j] not in ' -' for m in range(l + 1, l + n)) \
-                                and all(lines[l][m] not in ' |' for m in range(i + 1, j)) \
-                                and all(lines[l + n][m] not in ' |' for m in range(i + 1, j)):
+                        if lines[l + n][i] == '+' == lines[l + n][j] and all((lines[m][i] not in ' -' for m in range(l + 1, l + n))) and all((lines[m][j] not in ' -' for m in range(l + 1, l + n))) and all((lines[l][m] not in ' |' for m in range(i + 1, j))) and all((lines[l + n][m] not in ' |' for m in range(i + 1, j))):
                             tot += 1
                     except:
                         pass

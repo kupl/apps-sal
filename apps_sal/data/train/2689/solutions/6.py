@@ -3,6 +3,6 @@ employees = [{'first_name': 'Ollie', 'last_name': 'Hepburn', 'role': 'Boss'}, {'
 
 def find_employees_role(name):
     for i in employees:
-        if i.get("first_name") + " " + i.get("last_name") == name:
-            return i["role"]
-    return "Does not work here!"
+        if i.get('first_name') + ' ' + i.get('last_name') == name:
+            return i['role']
+    return 'Does not work here!'

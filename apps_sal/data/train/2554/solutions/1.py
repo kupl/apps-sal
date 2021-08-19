@@ -1,27 +1,25 @@
 class Solution:
+
     def longestWord(self, words):
         """
         :type words: List[str]
         :rtype: str
         """
         if len(words) == 0:
-            return ""
-
+            return ''
         words.sort(key=lambda x: (len(x), x))
         memo = set()
         maxlen = 0
-        maxword = ""
+        maxword = ''
         for word in words:
             if len(word) <= 1:
                 memo.add(word)
                 maxlen = 1
-                if maxword == "":
+                if maxword == '':
                     maxword = word
-            else:
-                if word[:-1] in memo:
-                    memo.add(word)
-                    if len(word) > maxlen:
-                        maxlen = len(word)
-                        maxword = word
-
+            elif word[:-1] in memo:
+                memo.add(word)
+                if len(word) > maxlen:
+                    maxlen = len(word)
+                    maxword = word
         return maxword

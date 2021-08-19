@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def countNegatives(self, grid: List[List[int]]) -> int:
         g = np.array(grid)
         g = list(np.concatenate(g))

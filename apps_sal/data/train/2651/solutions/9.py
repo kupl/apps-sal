@@ -1,5 +1,7 @@
 def as_pair(z):
-    def pos_int(x): return abs(int(x))
+
+    def pos_int(x):
+        return abs(int(x))
     return sorted(map(pos_int, [z.real, z.imag]))
 
 

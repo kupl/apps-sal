@@ -8,7 +8,6 @@ def solve(number):
         elif numb.isdigit():
             numb_list.append(numb)
             temp = sorted(''.join(numb_list).split())
-
     for el in temp:
         el = int(el)
         int_mun.append(el)

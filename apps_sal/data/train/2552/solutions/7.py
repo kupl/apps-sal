@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         x = len(arr) / 4
         i = 0

@@ -1,6 +1,6 @@
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 s = []
 for i in range(n):
     s.append(input())
 s.sort()
-print((''.join(s)))
+print(''.join(s))

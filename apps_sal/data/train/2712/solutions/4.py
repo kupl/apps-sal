@@ -12,9 +12,8 @@ def loneliest(number):
         if i == 1:
             if temp < ans1:
                 ans1 = temp
-        else:
-            if temp < ans:
-                ans = temp
+        elif temp < ans:
+            ans = temp
         x += 1
     if ans1 <= ans:
         return True

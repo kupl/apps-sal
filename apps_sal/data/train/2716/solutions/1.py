@@ -1,4 +1,4 @@
-CIPHER = ("aeiou", "12345")
+CIPHER = ('aeiou', '12345')
 
 
 def encode(st):

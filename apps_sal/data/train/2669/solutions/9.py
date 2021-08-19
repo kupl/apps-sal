@@ -14,9 +14,9 @@ def convergence(n):
         if n < 10:
             n = n + n
         else:
-            n = n + reduce(lambda h, k: h * k, (int(i) for i in str(n) if i != "0"))
+            n = n + reduce(lambda h, k: h * k, (int(i) for i in str(n) if i != '0'))
         if x < 10:
             x = x + x
         else:
-            x = x + reduce(lambda h, k: h * k, (int(i) for i in str(x) if i != "0"))
+            x = x + reduce(lambda h, k: h * k, (int(i) for i in str(x) if i != '0'))
     return sorted(list(s2)).index(list(s1.intersection(s2))[0])

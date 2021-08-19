@@ -1,5 +1,5 @@
 import datetime
 import calendar
-m, d, y = list(map(int, input().split()))
+(m, d, y) = list(map(int, input().split()))
 input_date = datetime.date(y, m, d)
-print((calendar.day_name[input_date.weekday()].upper()))
+print(calendar.day_name[input_date.weekday()].upper())

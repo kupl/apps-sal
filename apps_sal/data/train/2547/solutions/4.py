@@ -1,4 +1,5 @@
 class Solution:
+
     def countNegatives(self, grid: List[List[int]]) -> int:
         i = 0
         j = 0
@@ -9,7 +10,6 @@ class Solution:
                 if grid[i][j] < 0:
                     count += 1
                 j += 1
-
             i += 1
             j = 0
         return count

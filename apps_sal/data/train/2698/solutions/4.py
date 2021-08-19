@@ -2,13 +2,13 @@ def sum_arrays(array1, array2):
     arr = []
     if array1 == [0] and array2 == [0]:
         return arr
-    if not array1 and not array2:
+    if not array1 and (not array2):
         return arr
     if len(array1) == 0:
         return array2
     if len(array2) == 0:
         return array1
-    str1, str2 = '', ''
+    (str1, str2) = ('', '')
     for i in array1:
         str1 += str(i)
     for i in array2:

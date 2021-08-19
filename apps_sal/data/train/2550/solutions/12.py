@@ -1,9 +1,9 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         fives = 0
         tens = 0
         twenties = 0
-
         for i in bills:
             print(f'fives {fives}')
             print(f'tens {tens}')

@@ -10,7 +10,6 @@ def solve(s):
         else:
             list_of_numbers.append(current)
             current = ''
-
     while '' in list_of_numbers:
         list_of_numbers.remove('')
     list_of_ints = []

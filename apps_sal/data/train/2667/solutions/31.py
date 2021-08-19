@@ -1,1 +1,2 @@
-def zero_fuel(a, b, c): return a <= b * c
+def zero_fuel(a, b, c):
+    return a <= b * c

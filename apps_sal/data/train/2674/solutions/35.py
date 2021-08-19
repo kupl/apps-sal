@@ -5,4 +5,4 @@ def two_sort(array):
         returnArr.append(firstElem[i])
         returnArr.append('***')
     returnArr.append(firstElem[-1])
-    return "".join(returnArr)
+    return ''.join(returnArr)

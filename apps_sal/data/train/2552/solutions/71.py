@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         quarter = len(arr) // 4
         count = 1

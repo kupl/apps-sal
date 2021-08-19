@@ -1,1 +1,2 @@
-def two_sort(l): return '***'.join(sorted(l)[0])
+def two_sort(l):
+    return '***'.join(sorted(l)[0])

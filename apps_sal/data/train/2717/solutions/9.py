@@ -1,2 +1,2 @@
 def scf(xs):
-    return next((i for i in range(2, min(xs, default=1) + 1) if all(x % i == 0 for x in xs)), 1)
+    return next((i for i in range(2, min(xs, default=1) + 1) if all((x % i == 0 for x in xs))), 1)

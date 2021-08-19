@@ -14,10 +14,10 @@ def extract(seq, v):
 
 
 def convergence(n):
-    gen1, genN = genSequence(1), genSequence(n)
-    seq1, seqN = {next(gen1)}, {next(genN)}
+    (gen1, genN) = (genSequence(1), genSequence(n))
+    (seq1, seqN) = ({next(gen1)}, {next(genN)})
     while True:
-        a, b = next(gen1), next(genN)
+        (a, b) = (next(gen1), next(genN))
         seq1.add(a)
         seqN.add(b)
         if a in seqN:

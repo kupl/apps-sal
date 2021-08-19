@@ -1,4 +1,5 @@
 class Solution:
+
     def reorderSpaces(self, text: str) -> str:
         s = text.split()
         if len(s) == 1:
@@ -11,7 +12,7 @@ class Solution:
         for c in s:
             result += c
             num += 1
-            if num <= (len(s) - 1):
+            if num <= len(s) - 1:
                 result += ' ' * count
         qqqqqqqqq = [3] * 100000
         if extra != 0:

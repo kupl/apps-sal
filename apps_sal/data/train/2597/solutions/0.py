@@ -6,4 +6,4 @@ for i in range(1, n + 1, 1):
     h = h.upper()
     b = str(bin(i))[2:]
     d = str(i)
-    print(('{:>{width}} {:>{width}} {:>{width}} {:>{width}}'.format(d, o, h, b, width=w)))
+    print('{:>{width}} {:>{width}} {:>{width}} {:>{width}}'.format(d, o, h, b, width=w))

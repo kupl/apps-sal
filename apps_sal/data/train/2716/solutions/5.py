@@ -3,4 +3,4 @@ def cipher(mode):
     return lambda s: s.translate(table)
 
 
-encode, decode = cipher(1), cipher(-1)
+(encode, decode) = (cipher(1), cipher(-1))

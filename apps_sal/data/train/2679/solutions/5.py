@@ -2,7 +2,7 @@ def hamster_me(code, message):
     import string
     alpha = string.ascii_lowercase
     alplist = []
-    clist = ""
+    clist = ''
     c = 0
     for x in message:
         while True:

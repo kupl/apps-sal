@@ -5,7 +5,7 @@ def solve(n):
     if s and lh == hh[::-1]:
         return True
     diffs = 0
-    for u, v in zip(lh, hh[::-1]):
+    for (u, v) in zip(lh, hh[::-1]):
         if u != v:
             diffs += 1
         if diffs > 1:

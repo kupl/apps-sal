@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         a = list(set(arr))
         print(a)
@@ -8,4 +9,4 @@ class Solution:
             b = a[i]
             per = arr.count(a[i]) / len(arr)
             i += 1
-        return(b)
+        return b

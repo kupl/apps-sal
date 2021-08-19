@@ -2,11 +2,11 @@ import re
 
 
 def remove_parentheses(s):
-    ret, count = "", 0
+    (ret, count) = ('', 0)
     for letter in s:
-        if letter == "(":
+        if letter == '(':
             count += 1
-        elif letter == ")":
+        elif letter == ')':
             count -= 1
         elif count == 0:
             ret += letter

@@ -3,15 +3,14 @@ def args_to_string(args):
     for arg in args:
         if isinstance(arg, str):
             params.append(arg)
-        else:
+        elif arg:
+            first = arg.pop(0)
             if arg:
-                first = arg.pop(0)
-                if arg:
-                    if len(first) == 1:
-                        first = '-' + first
-                    else:
-                        first = '--' + first
-                params.append(first)
-                for a in arg:
-                    params.append(a)
+                if len(first) == 1:
+                    first = '-' + first
+                else:
+                    first = '--' + first
+            params.append(first)
+            for a in arg:
+                params.append(a)
     return ' '.join(params)

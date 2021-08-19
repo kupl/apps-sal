@@ -1,14 +1,13 @@
 def solve(s):
-    s += "."
+    s += '.'
     arr = []
-    num = ""
+    num = ''
     for i in s:
         if i.isnumeric():
             num += i
         else:
-            if num != "":
+            if num != '':
                 arr.append(int(num))
-            num = ""
+            num = ''
     arr.sort()
-
     return arr[-1]

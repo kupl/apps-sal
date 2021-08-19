@@ -1,5 +1,7 @@
 class Solution:
+
     def numPrimeArrangements(self, n: int) -> int:
+
         def fac(m):
             result = 1
             for i in range(1, m + 1):
@@ -19,4 +21,4 @@ class Solution:
         for i in range(1, n + 1):
             if PrimeTell(i):
                 Sum += 1
-        return fac(Sum) * fac(n - Sum) % (10**9 + 7)
+        return fac(Sum) * fac(n - Sum) % (10 ** 9 + 7)

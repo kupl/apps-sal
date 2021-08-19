@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         fives = 0
         tens = 0

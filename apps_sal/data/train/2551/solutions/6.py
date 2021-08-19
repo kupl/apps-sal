@@ -1,17 +1,17 @@
 class Solution:
+
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
         if len(s) % 2 != 0:
-            return(False)
-
+            return False
         stack = []
         for i in range(len(s)):
             stack.append(s[i])
             if stack[0] == ')' or stack[0] == ']' or stack[0] == '}':
-                return(False)
+                return False
             if stack[-1] == ')':
                 if stack[-2] == '(':
                     stack.pop()
@@ -25,6 +25,6 @@ class Solution:
                     stack.pop()
                     stack.pop()
         if stack == []:
-            return(True)
+            return True
         else:
-            return(False)
+            return False
