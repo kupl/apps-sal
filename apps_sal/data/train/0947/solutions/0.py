@@ -35,14 +35,12 @@ def longest(k):
 
 n = int(input())
 l = []
-# parent=[0]*n
 d = {}
 cost = {}
 for i in range(n):
     l.append(input())
     d[i] = []
     cost[i] = 0
-
 for i in range(n):
     for j in range(n):
         if i != j:
@@ -60,8 +58,6 @@ for i in range(n):
                 if y == 2:
                     d[i].append(j)
 ans = 0
-# print(d)
-
 for i in range(n):
     ans = max(ans, longest(i))
 print(ans + 1)

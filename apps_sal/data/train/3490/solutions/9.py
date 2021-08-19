@@ -1,4 +1,5 @@
 class BinaryTree:
+
     def __init__(self, value, left=None, right=None, parent=None):
         self.value = value
         self.left = left
@@ -7,16 +8,16 @@ class BinaryTree:
 
     def __str__(self):
         if self.left or self.right:
-            s = "(" + str(self.value)
+            s = '(' + str(self.value)
             sl = self.left or '#'
             sr = self.right or '#'
-            for l in str(sl).split("\n"):
-                s += "\n  " + l
-            for l in str(sr).split("\n"):
-                s += "\n  " + l
-            return s + ")"
+            for l in str(sl).split('\n'):
+                s += '\n  ' + l
+            for l in str(sr).split('\n'):
+                s += '\n  ' + l
+            return s + ')'
         else:
-            return f"{self.value}"
+            return f'{self.value}'
 
     def add(self, val):
         if val < self.value:
@@ -49,18 +50,14 @@ class BinaryTree:
                 x = x.parent
             if x:
                 return x.value
-
         return -1
 
 
 def array_manip(array):
     if not array:
         return []
-
     result = []
     b = BinaryTree(array[-1])
-
     for item in reversed(array):
         result.append(b.add(item).nxt())
-
     return result[::-1]

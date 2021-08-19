@@ -1,7 +1,5 @@
 def checkValidity(a, b, c):
-
-    # check condition
-    if (a + b <= c) or (a + c <= b) or (b + c <= a):
+    if a + b <= c or a + c <= b or b + c <= a:
         return False
     else:
         return True
@@ -18,12 +16,12 @@ for i in range(y - 2):
         b = li[j]
         c = li[j + 1]
         if checkValidity(a, b, c):
-            x = str(a) + " " + str(b) + " " + str(c)
-            print("YES")
+            x = str(a) + ' ' + str(b) + ' ' + str(c)
+            print('YES')
             print(x)
             f = 1
             break
     if f == 1:
         break
 if f == 0:
-    print("NO")
+    print('NO')

@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     n = int(input())
     a = list(map(int, input().split()))
@@ -11,11 +10,10 @@ try:
             x[1] = a[i + 1]
             x[2] = a[i + 2]
     if x[0] == x[1] == x[2] == -1:
-        print("NO")
+        print('NO')
     else:
         x.sort()
-        print("YES")
+        print('YES')
         print(x[2], x[1], x[0])
-
 except EOFError:
     pass

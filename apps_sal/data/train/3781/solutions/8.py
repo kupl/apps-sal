@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from collections import defaultdict
 from itertools import islice
 
@@ -39,7 +38,7 @@ def prod_int_partII(n, s):
     r = []
     d = decompose(n)
     ds = [i for i in range(2, n) if n % i == 0]
-    total = sum(i for _, i in list(d.items()))
+    total = sum((i for (_, i) in list(d.items())))
     q = defaultdict(list)
 
     def aux(m, ci, c, i=0, p=[]):
@@ -53,4 +52,4 @@ def prod_int_partII(n, s):
                     aux(m // ds[j], ci, c - 1, j, p + [ds[j]])
     for i in range(2, total + 1):
         aux(n, i, i)
-    return [sum(len(i) for i in list(q.values())), len(q[s]), q[s][0] if len(q[s]) == 1 else q[s]]
+    return [sum((len(i) for i in list(q.values()))), len(q[s]), q[s][0] if len(q[s]) == 1 else q[s]]

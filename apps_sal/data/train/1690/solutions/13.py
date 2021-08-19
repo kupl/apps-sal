@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 
 
@@ -24,7 +23,7 @@ def find_relatives(list1):
     return rel1
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 listim = list(map(int, input().split()))
 listim = listim[1:]
 listcit = []
