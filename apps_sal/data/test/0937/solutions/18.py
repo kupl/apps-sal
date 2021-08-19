@@ -1,5 +1,5 @@
 L = input().split()
-n, m = list(map(int, L))
+(n, m) = list(map(int, L))
 L = input().split()
 a = list(map(int, L))
 L = input().split()
@@ -16,8 +16,7 @@ for i in range(n - m + 1):
     tmp = ta[i]
     tmp = tmp + ttot[i + m] - ttot[i]
     tmp = tmp + (ta[n] - ta[i + m])
-    if (tmp > Max):
+    if tmp > Max:
         Max = tmp
         pos = i + 1
-#print(ttot, ta);
 print(Max)

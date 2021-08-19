@@ -1,10 +1,10 @@
 from heapq import heapify, heappush, heappop
 import sys
-n, m, r_ = list(map(int, input().split()))
+(n, m, r_) = list(map(int, input().split()))
 r = list(map(int, input().split()))
-g = [[]for _ in range(n)]
+g = [[] for _ in range(n)]
 for _ in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     a -= 1
     b -= 1
     g[a].append([b, c])
@@ -16,12 +16,12 @@ def dks(t0, t1):
     todo = [[0, t0]]
     heapify(todo)
     while todo:
-        d, t = heappop(todo)
+        (d, t) = heappop(todo)
         kyori[t] = d
         if t == t1:
             break
         l = g[t]
-        for li, c in l:
+        for (li, c) in l:
             if kyori[li] == -1:
                 heappush(todo, [c + d, li])
     return kyori[t1]
@@ -29,10 +29,10 @@ def dks(t0, t1):
 
 ans = pow(10, 9)
 allr = []
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
-def dfs(s, k):  # s:list, k:set
+def dfs(s, k):
     if len(k) == 1:
         s.append(k.pop())
         return [s]
@@ -49,11 +49,10 @@ for i in range(r_ - 1):
         k = dks(r[i] - 1, r[j] - 1)
         d[r[i] - 1, r[j] - 1] = k
         d[r[j] - 1, r[i] - 1] = k
-
 for j in range(len(allr)):
     r1 = allr[j]
     ansi = 0
     for i in range(r_ - 1):
-        ansi += d[(r1[i] - 1, r1[i + 1] - 1)]
+        ansi += d[r1[i] - 1, r1[i + 1] - 1]
     ans = min(ans, ansi)
 print(ans)

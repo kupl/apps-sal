@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 d = {}
@@ -8,25 +8,12 @@ for i in range(n):
         d[a[i]] = [b[i]]
     else:
         d[a[i]].append(b[i])
-
-'''
-print(a)
-print(b)
-print('--------')
-print(d)
-'''
+"\nprint(a)\nprint(b)\nprint('--------')\nprint(d)\n"
 for i in d:
     if len(d[i]) > 1:
         d[i].pop(d[i].index(max(d[i])))
         e.extend(d[i])
 e.sort()
-'''
-print(d)
-print(e)
-'''
-
+'\nprint(d)\nprint(e)\n'
 w = k - len(set(a))
-# print(w)
-
-# print(e[0:w])
 print(sum(e[0:w]))

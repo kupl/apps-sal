@@ -7,10 +7,9 @@ def input():
 
 
 def main():
-    N, M, R = list(map(int, input().split()))
+    (N, M, R) = list(map(int, input().split()))
 
     def warshall_floyd(d):
-        # d[i][j]: iからjへの最短距離
         for k in range(N):
             for i in range(N):
                 for j in range(N):
@@ -18,18 +17,17 @@ def main():
                     if d[i][j] > tmp:
                         d[i][j] = tmp
         return d
-
     r = list(map(int, input().split()))
-    d = [[float("inf")] * N for i in range(N)]
+    d = [[float('inf')] * N for i in range(N)]
     for i in range(M):
-        x, y, z = list(map(int, input().split()))
+        (x, y, z) = list(map(int, input().split()))
         d[x - 1][y - 1] = z
         d[y - 1][x - 1] = z
     for i in range(N):
-        d[i][i] = 0  # 自身のところに行くコストは０
+        d[i][i] = 0
     D = warshall_floyd(d)
     P = list(permutations(r))
-    cost = float("inf")
+    cost = float('inf')
     for p in P:
         c = 0
         for i in range(R - 1):

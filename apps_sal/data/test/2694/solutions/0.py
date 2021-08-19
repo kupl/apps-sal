@@ -1,12 +1,11 @@
-# cook your dish here
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 blasters = []
 for _ in range(k):
     blasters.append(list(map(int, input().split())))
 grid = [[0 for _ in range(m)] for _ in range(n)]
 for blaster in blasters:
     flag = 0
-    x, y, t, f = blaster
+    (x, y, t, f) = blaster
     x -= 1
     y -= 1
     grid[x][y] = -1

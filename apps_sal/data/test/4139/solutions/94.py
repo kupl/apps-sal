@@ -1,7 +1,5 @@
 N = int(input())
 
-# 4**9 = 2**18 <= 10^6
-
 
 def dfs(keta, x):
     if x > N:
@@ -20,7 +18,7 @@ def dfs(keta, x):
             else:
                 return 0
             x //= 10
-        if three > 0 and five > 0 and seven > 0:
+        if three > 0 and five > 0 and (seven > 0):
             return 1
     else:
         ans = 0
