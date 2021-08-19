@@ -8,18 +8,9 @@ class SubrectangleQueries:
         end = (row2, col2)
         diffr = row2 - row1
         diffc = col2 - col1
-
-        # self.grid[row1][col1] = newValue
-
         for r in range(diffr + 1):
             for c in range(diffc + 1):
                 self.grid[row1 + r][col1 + c] = newValue
 
     def getValue(self, row: int, col: int) -> int:
         return self.grid[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)

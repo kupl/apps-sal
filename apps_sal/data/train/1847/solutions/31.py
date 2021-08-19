@@ -8,13 +8,7 @@ class SubrectangleQueries:
         self.updates.append((row1, col1, row2, col2, newValue))
 
     def getValue(self, row: int, col: int) -> int:
-        for a, b, c, d, v in reversed(self.updates):
+        for (a, b, c, d, v) in reversed(self.updates):
             if a <= row <= c and b <= col <= d:
                 return v
         return self.orig[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)

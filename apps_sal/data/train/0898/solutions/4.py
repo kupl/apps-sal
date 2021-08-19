@@ -1,8 +1,7 @@
-# cook your dish here
 for _ in range(int(input())):
-    M, N = input().split()
-    m, n = int(M), int(N)
-    x = 1 * 10**len(N)
+    (M, N) = input().split()
+    (m, n) = (int(M), int(N))
+    x = 1 * 10 ** len(N)
     if n == x - 1:
         print(m * len(N), m)
     else:

@@ -1,8 +1,5 @@
-# cook your dish here
-
 for i in range(int(input())):
-    m, n = map(int, input().split())
-
+    (m, n) = map(int, input().split())
     if n < 9:
         y = 0
     elif n >= 9 and n < 99:

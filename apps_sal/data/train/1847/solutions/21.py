@@ -8,16 +8,10 @@ class SubrectangleQueries:
         self.patches.append((row1, col1, row2, col2, newValue))
 
     def matchesPatch(self, row, col, patch):
-        return patch[0] <= row and row <= patch[2] and patch[1] <= col and col <= patch[3]
+        return patch[0] <= row and row <= patch[2] and (patch[1] <= col) and (col <= patch[3])
 
     def getValue(self, row: int, col: int) -> int:
         for patch in reversed(self.patches):
             if self.matchesPatch(row, col, patch):
                 return patch[-1]
         return self.rect[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)
