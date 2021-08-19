@@ -1,12 +1,10 @@
-# your code goes here
 def printo(arr):
     for i in range(len(arr)):
         print(arr[i], end=' ')
     print('')
 
 
-n, k = (int(e) for e in input().strip().split())
-
+(n, k) = (int(e) for e in input().strip().split())
 arr = [int(e) for e in input().strip().split()]
 flag = 0
 if k == 0:

@@ -1,9 +1,8 @@
-# class Solution:
-#     def numTeams(self, rating: List[int]) -> int:
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         asc = dsc = 0
-        for i, v in enumerate(rating):
+        for (i, v) in enumerate(rating):
             llc = rgc = lgc = rlc = 0
             for l in rating[:i]:
                 if l < v:

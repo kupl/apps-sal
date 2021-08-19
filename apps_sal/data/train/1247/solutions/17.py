@@ -21,11 +21,10 @@ def merge(arr, start, mid, end):
             temp[k] = arr[q]
             q += 1
             k += 1
-            inv += (mid - p + 1)
+            inv += mid - p + 1
     for i in range(k):
         arr[start] = temp[i]
         start += 1
-
     return inv
 
 
@@ -40,37 +39,31 @@ def mergesort(arr, start, end):
 
 
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     a = [0] * len(p)
-
-    # transformation
     for i in range(len(p)):
         a[p[i] - 1] = i
-
     m = []
     k = [i for i in range(n)]
     inv_count = 0
     for i in range(d):
         h = []
         for j in range(n):
-            if (i + j * (d)) >= n:
+            if i + j * d >= n:
                 break
-            h.append(a[i + j * (d)])
-            # print(h)
+            h.append(a[i + j * d])
         m.append(h)
         inv_count += mergesort(m[-1], 0, len(m[-1]) - 1)
-    # print(m)
     s = [0] * n
     for i in range(d):
         for j in range(n):
-            if (i + j * (d)) >= n:
+            if i + j * d >= n:
                 break
-            s[i + j * (d)] = m[i][j]
+            s[i + j * d] = m[i][j]
     mb = True
-    # print('s',s)
     for i in range(n):
-        if(s[i] == k[i]):
+        if s[i] == k[i]:
             continue
         else:
             mb = False

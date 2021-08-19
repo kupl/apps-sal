@@ -21,11 +21,10 @@ def merge(arr, start, mid, end):
             temp[k] = arr[q]
             q += 1
             k += 1
-            inv += (mid - p + 1)
+            inv += mid - p + 1
     for i in range(k):
         arr[start] = temp[i]
         start += 1
-
     return inv
 
 
@@ -40,12 +39,11 @@ def mergesort(arr, start, end):
 
 
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     p = list(map(int, input().split()))
-
     inv_count = 0
     m = [0] * n
-    sb = True  # sortable
+    sb = True
     for i in range(d):
         k = 0
         for j in range(i, n, d):
@@ -53,14 +51,12 @@ for _ in range(int(input())):
             k += 1
         b = m[0:k]
         inv_count += mergesort(b, 0, k - 1)
-
         k = 0
         for j in range(i, n, d):
-            if not(b[k] == (j + 1)):
+            if not b[k] == j + 1:
                 sb = False
                 break
             k += 1
-
     if sb:
         print(inv_count)
     else:
