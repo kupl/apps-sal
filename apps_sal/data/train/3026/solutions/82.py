@@ -3,4 +3,4 @@ def min_value(digits):
         digits[i] = str(digits[i])
     digits = set(digits)
     digits = sorted(list(digits))
-    return int("".join(digits))
+    return int(''.join(digits))

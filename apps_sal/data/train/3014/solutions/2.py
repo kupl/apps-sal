@@ -1,9 +1,9 @@
 def simple_transposition(text):
     rowOne = True
-    one = ""
-    two = ""
+    one = ''
+    two = ''
     for x in text:
-        if(rowOne):
+        if rowOne:
             one += x
         else:
             two += x

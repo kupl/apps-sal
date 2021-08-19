@@ -2,9 +2,7 @@ def get_issuer(number):
 
     def helper(n, x):
         return str(n).startswith(x)
-
     L = len(str(number))
-
     if L == 15 and (helper(number, '34') or helper(number, '37')):
         return 'AMEX'
     elif L == 16 and helper(number, '6011'):

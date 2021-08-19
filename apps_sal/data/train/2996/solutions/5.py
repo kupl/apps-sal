@@ -1,5 +1,5 @@
 def how_much_coffee(events):
-    EVENTS = ("cat", "dog", "movie", "cw")
+    EVENTS = ('cat', 'dog', 'movie', 'cw')
     cups = 0
     for event in events:
         if event.lower() in EVENTS:

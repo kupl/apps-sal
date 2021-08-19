@@ -2,6 +2,6 @@ def elevator(left, right, call):
     aa = abs(left - call)
     bb = abs(right - call)
     if aa < bb:
-        return "left"
+        return 'left'
     else:
-        return "right"
+        return 'right'

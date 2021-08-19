@@ -8,6 +8,6 @@ def palindrome(a):
             else:
                 return False
         else:
-            return "Not valid"
+            return 'Not valid'
     else:
-        return "Not valid"
+        return 'Not valid'

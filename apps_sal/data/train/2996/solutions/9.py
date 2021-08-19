@@ -4,7 +4,7 @@ import re
 def how_much_coffee(events):
     c = 0
     for event in events:
-        m = re.match(r'^(cw|dog|cat|movie)$', event, re.I)
+        m = re.match('^(cw|dog|cat|movie)$', event, re.I)
         if m:
             if event.isupper():
                 c += 2
@@ -13,4 +13,4 @@ def how_much_coffee(events):
     if c <= 3:
         return c
     else:
-        return "You need extra sleep"
+        return 'You need extra sleep'

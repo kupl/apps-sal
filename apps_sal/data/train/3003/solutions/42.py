@@ -4,4 +4,4 @@ def args_count(*args, **kwargs):
         count += 1
     for item in kwargs:
         count += 1
-    return(count)
+    return count

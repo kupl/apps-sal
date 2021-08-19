@@ -1,6 +1,6 @@
 def elevator(left, right, call):
     if left == right:
-        return "right"
+        return 'right'
     elif left == call:
         return 'left'
     elif left < right <= call:

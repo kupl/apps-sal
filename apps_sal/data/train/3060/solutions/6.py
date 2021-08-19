@@ -8,8 +8,7 @@ def get_required(player, enemy):
         return 'Pray for a tie!'
     elif difference == 0:
         return 'Random'
+    elif difference > 0:
+        return '(' + str(6 - difference + 1) + '..' + '6)'
     else:
-        if difference > 0:
-            return '(' + str(6 - difference + 1) + '..' + '6)'
-        else:
-            return '(1' + '..' + str(6 - abs(difference - 1)) + ')'
+        return '(1' + '..' + str(6 - abs(difference - 1)) + ')'

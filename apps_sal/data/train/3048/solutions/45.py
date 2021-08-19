@@ -1,11 +1,10 @@
 def alternateCase(s):
-    k = ""
+    k = ''
     for x in s:
-        if x in "qwertyuioplkjhgfdsazxcvbnm":
+        if x in 'qwertyuioplkjhgfdsazxcvbnm':
             k = k + x.upper()
-        elif x in "QWERTYUIOPASDFGHJKLZXCVBNM":
+        elif x in 'QWERTYUIOPASDFGHJKLZXCVBNM':
             k = k + x.lower()
         else:
             k = k + x
-
     return k

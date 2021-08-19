@@ -7,4 +7,4 @@ def limit(num):
 
 
 def rgb(r, g, b):
-    return "{:02X}{:02X}{:02X}".format(limit(r), limit(g), limit(b))
+    return '{:02X}{:02X}{:02X}'.format(limit(r), limit(g), limit(b))

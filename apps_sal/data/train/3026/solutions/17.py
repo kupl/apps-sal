@@ -4,7 +4,7 @@ def min_value(digits):
     for i in numbers:
         if i in digits:
             num.append(i)
-    string = ""
+    string = ''
     for i in num:
         string += str(i)
     return int(string)

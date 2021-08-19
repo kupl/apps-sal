@@ -4,5 +4,5 @@ def min_value(digits):
         if i not in newDigits:
             newDigits.append(i)
     sortDigits = sorted(newDigits)
-    strDigits = ([str(i) for i in sortDigits])
+    strDigits = [str(i) for i in sortDigits]
     return int(''.join(strDigits))

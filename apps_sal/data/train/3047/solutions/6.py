@@ -2,9 +2,9 @@ from itertools import groupby
 
 
 def repeating_fractions(numerator, denominator):
-    integer, fractional = str(numerator / float(denominator)).split('.')
+    (integer, fractional) = str(numerator / float(denominator)).split('.')
     grouped = []
-    for k, g in groupby(fractional):
+    for (k, g) in groupby(fractional):
         try:
             next(g)
             next(g)

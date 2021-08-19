@@ -1,6 +1,6 @@
 def simple_transposition(text):
-    r1 = ""
-    r2 = ""
+    r1 = ''
+    r2 = ''
     for ch in range(len(text)):
         if ch % 2 == 0:
             r1 += text[ch]

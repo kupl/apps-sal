@@ -39,5 +39,5 @@ def min_value(digits):
     d = mysort(d)
     ans = 0
     for x in d:
-        ans = (ans * 10) + x
+        ans = ans * 10 + x
     return ans

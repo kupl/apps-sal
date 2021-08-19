@@ -1,6 +1,6 @@
 def palindrome(num, s):
-    if type(num) is not int or type(s) is not int or num < 0 or s < 0:
-        return "Not valid"
+    if type(num) is not int or type(s) is not int or num < 0 or (s < 0):
+        return 'Not valid'
     result = []
     while s:
         if is_pal(num):

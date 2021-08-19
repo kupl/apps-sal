@@ -1,5 +1,5 @@
 def min_value(digits):
-    st = ""
+    st = ''
     calc = sorted(list(set(digits)))
     for nums in calc:
         st = st + str(nums)

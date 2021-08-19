@@ -1,5 +1,4 @@
 from string import ascii_lowercase, ascii_uppercase
-
 translation_table = str.maketrans(ascii_lowercase + ascii_uppercase, ascii_uppercase + ascii_lowercase)
 
 

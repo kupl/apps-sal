@@ -1,4 +1,5 @@
 class Numerical_paindrom_exception(Exception):
+
     def __init__(self):
         pass
 

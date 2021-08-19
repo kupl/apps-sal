@@ -1,1 +1,2 @@
-def alphabetic(str): return sorted(str) == list(str)
+def alphabetic(str):
+    return sorted(str) == list(str)

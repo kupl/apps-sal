@@ -1,10 +1,9 @@
 def sum_str(a, b):
-
-    if not a and not b:
+    if not a and (not b):
         return '0'
-    elif b == "":
+    elif b == '':
         return a
-    elif a == "":
+    elif a == '':
         return b
     else:
         a = int(a)

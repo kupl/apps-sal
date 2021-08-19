@@ -9,4 +9,4 @@ def func(n):
 
 
 def obtain_max_number(arr):
-    return max(k * (1 << (v.bit_length() - 1)) for k, v in Counter(chain.from_iterable(map(func, arr))).items())
+    return max((k * (1 << v.bit_length() - 1) for (k, v) in Counter(chain.from_iterable(map(func, arr))).items()))

@@ -7,4 +7,4 @@ def sum_str(a, b):
         if b:
             return b
         else:
-            return "0"
+            return '0'

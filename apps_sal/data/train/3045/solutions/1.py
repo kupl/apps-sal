@@ -1,5 +1,5 @@
 def elevator(left, right, call):
     if abs(left - call) >= abs(right - call):
-        return "right"
+        return 'right'
     else:
-        return "left"
+        return 'left'

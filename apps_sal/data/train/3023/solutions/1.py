@@ -5,7 +5,7 @@ def best_match(goals1, goals2):
         if goals1[i] - goals2[i] < bestDiff:
             bestIndex = i
             bestDiff = goals1[i] - goals2[i]
-        if (goals1[i] - goals2[i] == bestDiff) and (goals2[i] > goals2[bestIndex]):
+        if goals1[i] - goals2[i] == bestDiff and goals2[i] > goals2[bestIndex]:
             bestIndex = i
             bestDiff = goals1[i] - goals2[i]
     return bestIndex

@@ -10,9 +10,9 @@ def one_line_comment_replace(comment):
 
 
 def get_textliterals(pv_code):
-    pv_code = re.sub(r'/\*.*\*/', lambda mo: comment_replace(mo.group()), pv_code)
-    pv_code = re.sub(r'(--.*)', lambda mo: one_line_comment_replace(mo.group()), pv_code)
-    pv_code = re.sub(r"\'\'", '  ', pv_code)
+    pv_code = re.sub('/\\*.*\\*/', lambda mo: comment_replace(mo.group()), pv_code)
+    pv_code = re.sub('(--.*)', lambda mo: one_line_comment_replace(mo.group()), pv_code)
+    pv_code = re.sub("\\'\\'", '  ', pv_code)
     results = list()
     while "'" in pv_code:
         start_index = pv_code.index("'")

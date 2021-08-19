@@ -2,9 +2,9 @@ def sum_mul(n, m):
     print(n)
     print(m)
     if n <= 0:
-        return "INVALID"
+        return 'INVALID'
     elif m <= 0:
-        return "INVALID"
+        return 'INVALID'
     if n == m:
         return 0
     res = 0

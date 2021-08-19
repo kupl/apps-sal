@@ -7,9 +7,4 @@ def levenshtein(a, b):
         dist = 0
     else:
         dist = 1
-
-    return min(
-        levenshtein(a[1:], b) + 1,
-        levenshtein(a, b[1:]) + 1,
-        levenshtein(a[1:], b[1:]) + dist
-    )
+    return min(levenshtein(a[1:], b) + 1, levenshtein(a, b[1:]) + 1, levenshtein(a[1:], b[1:]) + dist)

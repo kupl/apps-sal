@@ -1,6 +1,6 @@
 def sum_mul(n, m):
     if n < 1 or m < 1:
-        return'INVALID'
+        return 'INVALID'
     s = 0
     x = n
     while x < m:

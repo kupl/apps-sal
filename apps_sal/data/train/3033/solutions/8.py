@@ -1,5 +1,5 @@
 def interpreter(tape):
-    cells, cell, out = {}, 0, ''
+    (cells, cell, out) = ({}, 0, '')
     for c in tape:
         if c == '>':
             cell += 1

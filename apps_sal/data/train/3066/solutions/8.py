@@ -1,5 +1,5 @@
 def solve(s):
-    sign, res, x = [], [], False
+    (sign, res, x) = ([], [], False)
     for c in s:
         if c in '()-+':
             if c == '(':

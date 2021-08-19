@@ -7,4 +7,4 @@ def min_value(d):
     L1 = []
     for i in L:
         L1.append(str(i))
-    return int("".join(L1))
+    return int(''.join(L1))

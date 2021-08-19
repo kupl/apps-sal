@@ -4,4 +4,4 @@ def min_value(digits):
     for i in digits:
         if i not in unique_digits:
             unique_digits.append(i)
-    return int(''.join(str(e) for e in unique_digits))
+    return int(''.join((str(e) for e in unique_digits)))

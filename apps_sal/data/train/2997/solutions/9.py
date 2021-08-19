@@ -1,5 +1,5 @@
 def rgb(r, g, b):
-    return "{:02X}{:02X}{:02X}".format(clamp(r), clamp(g), clamp(b))
+    return '{:02X}{:02X}{:02X}'.format(clamp(r), clamp(g), clamp(b))
 
 
 def clamp(x):

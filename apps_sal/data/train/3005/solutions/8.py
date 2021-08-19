@@ -1,7 +1,7 @@
 def f(n):
     n = n + 2
-    a, b = 0, 1
+    (a, b) = (0, 1)
     while n > 0:
-        a, b = b, a + b
+        (a, b) = (b, a + b)
         n -= 1
     return a - 1

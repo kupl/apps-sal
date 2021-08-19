@@ -5,4 +5,4 @@ def getMatrixProduct(a, b):
     try:
         return np.matmul(a, b).tolist()
     except:
-        return - 1
+        return -1

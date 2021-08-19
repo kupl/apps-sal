@@ -1,2 +1,2 @@
 def sort_array(value):
-    return "".join(sorted(list(value)))
+    return ''.join(sorted(list(value)))

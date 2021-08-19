@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def factorsOf(n):
-    p, d = 2, defaultdict(int)
+    (p, d) = (2, defaultdict(int))
     while p * p <= n:
         while not n % p:
             d[p] += 1
@@ -15,4 +15,4 @@ def factorsOf(n):
 
 
 def mul_power(n, k):
-    return reduce(int.__mul__, (f**(n % k and k - n % k) for f, n in factorsOf(n).items()), 1)
+    return reduce(int.__mul__, (f ** (n % k and k - n % k) for (f, n) in factorsOf(n).items()), 1)

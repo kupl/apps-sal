@@ -9,5 +9,5 @@ def factorsRange(n, m):
         if len(templist) >= 1:
             dlist.update({x: templist})
         else:
-            dlist.update({x: ["None"]})
+            dlist.update({x: ['None']})
     return dlist

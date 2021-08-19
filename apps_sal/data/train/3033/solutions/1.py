@@ -4,6 +4,7 @@ from io import StringIO
 
 
 class State:
+
     def __init__(self):
         self.selector = 0
         self.cells = defaultdict(c_ubyte)
@@ -31,7 +32,6 @@ class State:
 
     def out(self):
         self.output.write(chr(self.cell.value))
-
     commands = defaultdict(lambda self: 0, {'>': right, '<': left, '+': inc, '*': out})
 
 

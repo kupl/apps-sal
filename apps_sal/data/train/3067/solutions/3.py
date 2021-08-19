@@ -1,1 +1,2 @@
-def getVolumeOfCubiod(l, w, d): return l * w * d
+def getVolumeOfCubiod(l, w, d):
+    return l * w * d

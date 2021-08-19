@@ -1,5 +1,5 @@
 def bowling_score(rolls):
-    i, score = 0, 0
+    (i, score) = (0, 0)
     for _ in range(10):
         oneBall = frame = rolls[i]
         i += 1

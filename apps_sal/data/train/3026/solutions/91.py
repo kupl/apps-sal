@@ -1,5 +1,5 @@
 def min_value(digits):
-    min = ""
+    min = ''
     dig2 = list(dict.fromkeys(digits))
     dig2.sort()
     for i in dig2:

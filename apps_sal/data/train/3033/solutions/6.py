@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 def interpreter(tape):
-    i, res, D = 0, [], defaultdict(int)
+    (i, res, D) = (0, [], defaultdict(int))
     for c in tape:
         if c == '>':
             i += 1

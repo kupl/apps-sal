@@ -6,6 +6,6 @@ def get_issuer(n):
         return 'AMEX'
     if n[:4] == '6011' and len(n) == 16:
         return 'Discover'
-    if n[:1] == '5' and int(n[1]) < 6 and len(n) == 16:
+    if n[:1] == '5' and int(n[1]) < 6 and (len(n) == 16):
         return 'Mastercard'
     return 'Unknown'

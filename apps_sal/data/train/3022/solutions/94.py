@@ -1,7 +1,6 @@
 def two_highest(arg1):
     if type(arg1) is str:
         return False
-
     else:
         l = [i for i in set(arg1)]
         result = []
@@ -12,5 +11,4 @@ def two_highest(arg1):
             j += 1
             if j == 2:
                 break
-
     return result

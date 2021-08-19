@@ -1,4 +1,5 @@
 def palindrome(num):
+
     def helper():
         if type(num) == str or num < 0:
             return 'Not valid'

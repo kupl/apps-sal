@@ -1,7 +1,6 @@
 import re
-
-excluded = re.compile(r'\b(a[ts]?|the|o[nf]|upon|in)\b')
-non_char = re.compile(r'[^a-z]+')
+excluded = re.compile('\\b(a[ts]?|the|o[nf]|upon|in)\\b')
+non_char = re.compile('[^a-z]+')
 
 
 def word_count(s):

@@ -1,6 +1,6 @@
 def hex_word_sum(string):
-    string = string.replace("O", "0")
-    string = string.replace("S", "5")
+    string = string.replace('O', '0')
+    string = string.replace('S', '5')
     new = string.split()
     sum = 0
     for i in new:

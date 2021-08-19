@@ -7,5 +7,5 @@ def alternateCase(s):
             lst.append(x.lower())
         else:
             lst.append(x)
-    x = "".join(lst)
+    x = ''.join(lst)
     return x

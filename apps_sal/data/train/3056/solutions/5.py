@@ -1,5 +1,5 @@
 def palindrome(num, s):
-    if isinstance(num, str) or num < 0 or isinstance(s, str) or s < 0:
+    if isinstance(num, str) or num < 0 or isinstance(s, str) or (s < 0):
         return 'Not valid'
     t = []
     i = 1

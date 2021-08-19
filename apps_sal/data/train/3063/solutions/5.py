@@ -9,6 +9,5 @@ def mix_fruit(arr):
             total += 7
         else:
             total += 9
-
     answer = round(total / total_number_of_fruits)
     return answer

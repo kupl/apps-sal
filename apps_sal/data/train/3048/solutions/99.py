@@ -6,5 +6,5 @@ def alternateCase(s):
         elif i.islower():
             lst.append(i.upper())
         else:
-            lst.append(" ")
-    return "".join(lst)
+            lst.append(' ')
+    return ''.join(lst)

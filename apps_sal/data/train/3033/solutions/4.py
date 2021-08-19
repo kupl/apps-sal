@@ -7,7 +7,6 @@ def interpreter(tape):
 
 
 class Tick:
-
     instr = {'+': '_incrm', '*': '_addAs', '<': '_movL', '>': '_movR'}
 
     def __init__(self):
@@ -17,7 +16,7 @@ class Tick:
         self.s = 0
 
     def __call__(self, instruct):
-        for ins, cnt in [(self.instr[k], int(len(list(v)))) for k, v in groupby(instruct)]:
+        for (ins, cnt) in [(self.instr[k], int(len(list(v)))) for (k, v) in groupby(instruct)]:
             getattr(self, ins)(cnt)
         return self.word
 

@@ -1,4 +1,4 @@
-trans = str.maketrans("abcdeghjklmnopqrsuwxyz", "vkbaapqstuvwnyzabpfghi")
+trans = str.maketrans('abcdeghjklmnopqrsuwxyz', 'vkbaapqstuvwnyzabpfghi')
 
 
 def vowel_back(st):

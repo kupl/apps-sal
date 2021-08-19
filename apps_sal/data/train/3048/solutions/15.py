@@ -1,5 +1,5 @@
 def alternateCase(s):
-    result = ""
+    result = ''
     for letter in s:
         if letter.islower():
             result += letter.upper()
@@ -7,5 +7,4 @@ def alternateCase(s):
             result += letter.lower()
         else:
             result += letter
-
     return result

@@ -1,7 +1,6 @@
 from collections import Counter
 from math import ceil
-
-PRIMES = [2] + [n for n in range(3, 1000, 2) if all(n % d for d in range(3, int(n**0.5) + 1, 2))]
+PRIMES = [2] + [n for n in range(3, 1000, 2) if all((n % d for d in range(3, int(n ** 0.5) + 1, 2)))]
 
 
 def get_factors(n):
@@ -18,7 +17,7 @@ def get_factors(n):
 
 
 def mul_power(n, k):
-    factors, lcm = get_factors(n), 1
-    for p, e in factors.items():
-        lcm *= p**(ceil(e / k) * k)
+    (factors, lcm) = (get_factors(n), 1)
+    for (p, e) in factors.items():
+        lcm *= p ** (ceil(e / k) * k)
     return lcm // n

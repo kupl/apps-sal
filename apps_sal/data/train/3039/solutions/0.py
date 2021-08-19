@@ -2,7 +2,7 @@ from bisect import bisect_left as bl, bisect_right as br
 
 
 def gen(n):
-    if n >= 10**16:
+    if n >= 10 ** 16:
         return
     for i in range(10):
         x = 10 * n + i
@@ -13,7 +13,7 @@ def gen(n):
             yield y
 
 
-L = sorted(x for n in range(1, 10) for x in gen(n))
+L = sorted((x for n in range(1, 10) for x in gen(n)))
 
 
 def rthn_between(a, b):

@@ -6,4 +6,4 @@ def flatten(seq):
 
 
 def locate(seq, value):
-    return any(e == value for e in flatten(seq))
+    return any((e == value for e in flatten(seq)))
