@@ -1,14 +1,18 @@
 from bisect import bisect_left as bl, bisect_right as br, insort
 import sys
 import heapq
-#from math import *
 from collections import defaultdict as dd, deque
-def data(): return sys.stdin.readline().strip()
-def mdata(): return map(int, data().split())
 
 
-# sys.setrecursionlimit(1000000)
-mod = int(1e9 + 7)
+def data():
+    return sys.stdin.readline().strip()
+
+
+def mdata():
+    return map(int, data().split())
+
+
+mod = int(1000000000.0 + 7)
 
 
 def bfs(x):
