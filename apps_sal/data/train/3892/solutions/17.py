@@ -1,11 +1,11 @@
 def grader(input):
     if input > 1 or input < 0.6:
-        return "F"
+        return 'F'
     elif input >= 0.9:
-        return "A"
+        return 'A'
     elif input >= 0.8:
-        return "B"
+        return 'B'
     elif input >= 0.7:
-        return "C"
+        return 'C'
     else:
-        return "D"
+        return 'D'

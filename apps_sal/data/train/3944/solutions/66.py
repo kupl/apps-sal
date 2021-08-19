@@ -4,5 +4,4 @@ def sum_triangular_numbers(n):
     for i in range(2, n + 2):
         x.append(s)
         s += i
-
     return sum(x)

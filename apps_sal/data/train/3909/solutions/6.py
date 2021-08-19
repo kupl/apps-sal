@@ -1,4 +1,5 @@
 def is_keith_number(n):
+
     def rec(ds, i):
         d = sum(ds)
         ds = ds[1:]

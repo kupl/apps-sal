@@ -1,6 +1,6 @@
 def reverse_fizzbuzz(s):
     s = s.split()
-    d = next((i for i, j in enumerate(s) if j.isdigit()), -1)
+    d = next((i for (i, j) in enumerate(s) if j.isdigit()), -1)
     if d != -1:
         return list(range(int(s[d]) - len(s[:d]), int(s[d]) + len(s[d:])))
     else:

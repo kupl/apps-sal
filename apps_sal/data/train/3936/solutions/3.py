@@ -1,13 +1,5 @@
 from functools import reduce
-
-config = {
-    'fib': ([0, 0, 0, 1], lambda a: a[3] + a[2]),
-    'jac': ([0, 0, 0, 1], lambda a: a[3] + 2 * a[2]),
-    'pad': ([0, 1, 0, 0], lambda a: a[2] + a[1]),
-    'pel': ([0, 0, 0, 1], lambda a: 2 * a[3] + a[2]),
-    'tet': ([0, 0, 0, 1], lambda a: a[3] + a[2] + a[1] + a[0]),
-    'tri': ([0, 0, 0, 1], lambda a: a[3] + a[2] + a[1])
-}
+config = {'fib': ([0, 0, 0, 1], lambda a: a[3] + a[2]), 'jac': ([0, 0, 0, 1], lambda a: a[3] + 2 * a[2]), 'pad': ([0, 1, 0, 0], lambda a: a[2] + a[1]), 'pel': ([0, 0, 0, 1], lambda a: 2 * a[3] + a[2]), 'tet': ([0, 0, 0, 1], lambda a: a[3] + a[2] + a[1] + a[0]), 'tri': ([0, 0, 0, 1], lambda a: a[3] + a[2] + a[1])}
 
 
 def zozonacci(p, l):

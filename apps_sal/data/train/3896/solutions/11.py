@@ -1,4 +1,5 @@
 def solution(number):
+
     def s(m):
         n = (number - 1) // m
         return n * m * (n + 1) // 2

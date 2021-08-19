@@ -1,15 +1,13 @@
 def grader(score):
-
-    result = "F"
+    result = 'F'
     if score >= 0.6 and score < 0.7:
-        result = "D"
+        result = 'D'
     elif score >= 0.7 and score < 0.8:
-        result = "C"
+        result = 'C'
     elif score >= 0.8 and score < 0.9:
-        result = "B"
+        result = 'B'
     elif score >= 0.9 and score <= 1.0:
-        result = "A"
+        result = 'A'
     else:
-        result = "F"
-
+        result = 'F'
     return result

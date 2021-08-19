@@ -3,7 +3,7 @@ import numpy as np
 
 def micro_world(bacteria, k):
     bacteria = np.array(sorted(bacteria))
-    for index, j in enumerate(bacteria):
+    for (index, j) in enumerate(bacteria):
         if j < 0:
             continue
         for i in bacteria[index:]:

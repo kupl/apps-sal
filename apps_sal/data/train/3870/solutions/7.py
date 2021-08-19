@@ -13,6 +13,6 @@ def solve(s):
     c = 0
     for i in s_rev:
         if c + 1 in res:
-            s_rev[c] = s_rev[c] + " "
+            s_rev[c] = s_rev[c] + ' '
         c += 1
-    return ''.join(i for i in s_rev)
+    return ''.join((i for i in s_rev))

@@ -1,7 +1,6 @@
 from itertools import chain
-
-CACHE, INF = {}, float('inf')
-lst = list(chain.from_iterable(('', d) for d in '123456789'))[1:]
+(CACHE, INF) = ({}, float('inf'))
+lst = list(chain.from_iterable((('', d) for d in '123456789')))[1:]
 
 
 def dfs(i=1, nOps=0):
@@ -16,5 +15,4 @@ def dfs(i=1, nOps=0):
 
 
 dfs()
-
 operator_insertor = CACHE.get

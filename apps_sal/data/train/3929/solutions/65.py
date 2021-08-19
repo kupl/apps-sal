@@ -1,3 +1,3 @@
 def reverse(a):
-    res = " ".join(reversed(a.split()))
+    res = ' '.join(reversed(a.split()))
     return res

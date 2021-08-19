@@ -9,5 +9,4 @@ def grader(score):
     0.7 or greater  "C"
     0.6 or greater  "D"
     """
-
-    return 'F' if score > 1 or score < .6 else {6: 'D', 7: 'C', 8: 'B', 9: 'A', 10: 'A'}.get(int(score * 10))
+    return 'F' if score > 1 or score < 0.6 else {6: 'D', 7: 'C', 8: 'B', 9: 'A', 10: 'A'}.get(int(score * 10))

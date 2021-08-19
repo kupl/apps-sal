@@ -1,12 +1,12 @@
 def reverse_words(text):
-    output = ""
-    word = ""
+    output = ''
+    word = ''
     for i in text:
-        if i != " ":
+        if i != ' ':
             word += i
         else:
             output += word[::-1]
             output += i
-            word = ""
+            word = ''
     output += word[::-1]
     return output

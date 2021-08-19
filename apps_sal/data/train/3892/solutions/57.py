@@ -1,10 +1,10 @@
 def grader(score):
     if float(score) >= 0.9 and float(score) <= 1:
-        return "A"
+        return 'A'
     if float(score) >= 0.8 and float(score) < 0.9:
-        return "B"
+        return 'B'
     if float(score) >= 0.7 and float(score) < 0.8:
-        return "C"
+        return 'C'
     if float(score) >= 0.6 and float(score) < 0.7:
-        return "D"
-    return "F"
+        return 'D'
+    return 'F'

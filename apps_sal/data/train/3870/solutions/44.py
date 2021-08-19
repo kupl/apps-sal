@@ -12,7 +12,6 @@ def solve(s):
             arr.append(a)
             a += 1
     for k in arr:
-        st += " "
+        st += ' '
         st = st[0:k] + ' ' + st[k:-1]
-
     return st

@@ -3,5 +3,5 @@ def reverse_words(text):
     for i in range(len(words)):
         words[i] = words[i][::-1]
     if '  ' in text:
-        return "  ".join(words)
-    return " ".join(words)
+        return '  '.join(words)
+    return ' '.join(words)

@@ -10,5 +10,4 @@ def sum_triangular_numbers(n):
             triangular_numbers.append(number)
     for num in triangular_numbers:
         numberz = numberz + num
-
     return numberz

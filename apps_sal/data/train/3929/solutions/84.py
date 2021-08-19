@@ -1,16 +1,14 @@
 def reverse(st):
     salida = []
-    word = ""
+    word = ''
     for i in range(len(st)):
-        if st[i] == " " or i == len(st):
-            if word != "":
+        if st[i] == ' ' or i == len(st):
+            if word != '':
                 salida.append(word)
-
             salida.append(st[i])
-            word = ""
+            word = ''
         else:
             word += st[i]
-
     salida.append(word)
-    a = "".join(salida[::-1]).replace("  ", " ")
-    return a.replace("  ", " ").strip(" ")
+    a = ''.join(salida[::-1]).replace('  ', ' ')
+    return a.replace('  ', ' ').strip(' ')

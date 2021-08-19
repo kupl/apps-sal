@@ -14,5 +14,4 @@ def product_sans_n(l):
                 if i != j:
                     s *= l[j]
             r.append(s)
-
     return r

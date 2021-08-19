@@ -1,4 +1,5 @@
-def tri(x): return (x * (x + 1)) / 2
+def tri(x):
+    return x * (x + 1) / 2
 
 
 def sum_triangular_numbers(n):

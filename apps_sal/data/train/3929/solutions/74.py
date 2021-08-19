@@ -1,5 +1,5 @@
 def reverse(st):
-    n = ""
+    n = ''
     s = st.split()
     i = len(s) - 1
     while i >= 0:
@@ -7,6 +7,6 @@ def reverse(st):
             n = n + s[i]
             i = i - 1
             continue
-        n = n + " " + s[i]
+        n = n + ' ' + s[i]
         i = i - 1
     return n

@@ -1,6 +1,6 @@
 def clock_degree(s):
-    hour, minute = map(int, s.split(':'))
-    if not (0 <= hour < 24) or minute < 0:
+    (hour, minute) = map(int, s.split(':'))
+    if not 0 <= hour < 24 or minute < 0:
         return 'Check your time !'
     hour %= 12
     minute %= 60

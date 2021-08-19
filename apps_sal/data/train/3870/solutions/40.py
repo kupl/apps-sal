@@ -1,5 +1,5 @@
 def solve(s):
-    d = ""
+    d = ''
     for i in range(len(s)):
         el = s[i]
         if el.isalpha():

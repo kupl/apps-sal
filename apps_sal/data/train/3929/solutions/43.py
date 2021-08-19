@@ -3,5 +3,5 @@ def reverse(st):
     result = []
     for i in range(len(ls) - 1, -1, -1):
         result.append(ls[i])
-    result = " ".join(result)
+    result = ' '.join(result)
     return result

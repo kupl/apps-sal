@@ -3,11 +3,9 @@ def missing(seq):
         my_seq = last = seq[:digits]
         n = int(my_seq)
         missing = None
-
         while len(my_seq) < len(seq):
             n += 1
             my_seq += str(n)
-
             if not seq.startswith(my_seq):
                 if missing == None:
                     missing = n
@@ -16,8 +14,6 @@ def missing(seq):
                     break
             else:
                 last = my_seq
-
         if my_seq == seq and missing:
             return missing
-
     return -1

@@ -1,7 +1,7 @@
 def missing(s):
     i = 1
     while True:
-        start, missing, j = int(s[:i]), [], i
+        (start, missing, j) = (int(s[:i]), [], i)
         number = start + 1
         while j <= len(s) - len(str(number)):
             if int(s[j:j + len(str(number))]) != number:

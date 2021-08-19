@@ -5,17 +5,15 @@ def kangaroo(kanga1, rate1, kanga2, rate2):
         velocidad_acercamiento = rate1 - rate2
         if velocidad_acercamiento <= 0:
             return False
+        elif (kanga2 - kanga1) % velocidad_acercamiento == 0:
+            return True
         else:
-            if (kanga2 - kanga1) % velocidad_acercamiento == 0:
-                return True
-            else:
-                return False
+            return False
     else:
         velocidad_acercamiento = rate2 - rate1
         if velocidad_acercamiento <= 0:
             return False
+        elif (kanga1 - kanga2) % velocidad_acercamiento == 0:
+            return True
         else:
-            if (kanga1 - kanga2) % velocidad_acercamiento == 0:
-                return True
-            else:
-                return False
+            return False

@@ -3,4 +3,4 @@ def reverse(st):
     st2 = []
     for words in word:
         st2.insert(0, words)
-    return " ".join(st2)
+    return ' '.join(st2)

@@ -3,9 +3,9 @@ def binary_simulation(s, q):
     r = []
     for x in q:
         if x[0] == 'I':
-            _, a, b = x
-            n ^= ((1 << (b - a + 1)) - 1) << (a - 1)
+            (_, a, b) = x
+            n ^= (1 << b - a + 1) - 1 << a - 1
         else:
-            _, a = x
-            r += ['01'[n & (1 << (a - 1)) > 0]]
+            (_, a) = x
+            r += ['01'[n & 1 << a - 1 > 0]]
     return r

@@ -1,5 +1,5 @@
 def total(lst):
-    return sum(lst[i] for i in primes_gen(len(lst)))
+    return sum((lst[i] for i in primes_gen(len(lst))))
 
 
 def primes_gen(limit):

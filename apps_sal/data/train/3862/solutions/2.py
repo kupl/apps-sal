@@ -1,5 +1,4 @@
 from string import ascii_lowercase as aLow
-
 TABLE = str.maketrans(aLow, aLow[::-1])
 
 

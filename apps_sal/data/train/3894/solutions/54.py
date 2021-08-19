@@ -6,5 +6,4 @@ def solve(s):
             countupp += 1
         elif letter.islower():
             countlow += 1
-
     return s.lower() if countlow - countupp >= 0 else s.upper()

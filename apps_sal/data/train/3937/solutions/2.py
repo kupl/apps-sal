@@ -1,6 +1,5 @@
 def max_sumDig(nMax, maxSum):
     answers = []
-
     for i in range(1000, nMax + 1):
         good = True
         n = [int(x) for x in str(i)]
@@ -9,6 +8,5 @@ def max_sumDig(nMax, maxSum):
                 good = False
         if good == True:
             answers.append(i)
-
-    num, tot = len(answers), sum(answers)
-    return [num, min(answers, key=lambda x: abs(x - (tot / float(num)))), tot]
+    (num, tot) = (len(answers), sum(answers))
+    return [num, min(answers, key=lambda x: abs(x - tot / float(num))), tot]

@@ -1,12 +1,5 @@
 from collections import defaultdict
-
-
-names = defaultdict(lambda: 'non-smooth', {
-    2: 'power of 2',
-    3: '3-smooth',
-    5: 'Hamming number',
-    7: 'humble number',
-})
+names = defaultdict(lambda: 'non-smooth', {2: 'power of 2', 3: '3-smooth', 5: 'Hamming number', 7: 'humble number'})
 
 
 def is_smooth(n):

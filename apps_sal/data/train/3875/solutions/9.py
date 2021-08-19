@@ -7,7 +7,7 @@ def draw(waves):
     height = max(waves)
     width = len(waves)
     matrix = [[EMPTY for x in range(width)] for y in range(height)]
-    for y, value in enumerate(waves):
+    for (y, value) in enumerate(waves):
         for x in range(value):
             matrix[x][y] = FILLED
     for row in range(height - 1, -1, -1):

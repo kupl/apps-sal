@@ -1,6 +1,5 @@
 def gcd(a, b):
     while a != b:
-
         if a > b:
             a = a - b
         if b > a:

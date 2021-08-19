@@ -1,4 +1,3 @@
-
 def product_sans_n(nums):
     p = 1
     zeroes = nums.count(0)

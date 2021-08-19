@@ -2,7 +2,7 @@ def solve(msg):
     l = 'abcdefghijklmnopqrstuvwxyz'
     U = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     msg = list(msg)
-    lc, Uc = 0, 0
+    (lc, Uc) = (0, 0)
     for i in range(len(msg)):
         if msg[i] in l:
             lc += 1

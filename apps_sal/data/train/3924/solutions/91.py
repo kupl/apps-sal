@@ -1,15 +1,14 @@
 def reverse_words(text):
-    tempWord = ""
-    result = ""
+    tempWord = ''
+    result = ''
     for i in range(len(text)):
-        if text[i] != " ":
+        if text[i] != ' ':
             tempWord += text[i]
             if i == len(text) - 1:
                 result += tempWord[::-1]
+        elif text[i - 1] != ' ':
+            result += tempWord[::-1] + ' '
+            tempWord = ''
         else:
-            if text[i - 1] != " ":
-                result += tempWord[::-1] + " "
-                tempWord = ""
-            else:
-                result += " "
+            result += ' '
     return result

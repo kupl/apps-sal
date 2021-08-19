@@ -3,4 +3,4 @@ def sort_twisted37(lst):
 
 
 def comp(n):
-    return int(str(n).translate(str.maketrans("37", "73")))
+    return int(str(n).translate(str.maketrans('37', '73')))

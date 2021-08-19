@@ -8,6 +8,6 @@ def baby_count(x):
         letters[2] -= 1
         babies += 1
     if babies == 0:
-        return 'Where\'s the baby?!'
+        return "Where's the baby?!"
     else:
         return babies

@@ -6,5 +6,4 @@ def solve(s):
     rev_s = list(s[::-1].replace(' ', ''))
     for idx in ws_indices:
         rev_s.insert(idx, ' ')
-
     return ''.join(rev_s)

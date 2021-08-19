@@ -17,14 +17,13 @@ def multipes_sum(divisor, n):
 
 def something(limit, divisors, size):
     """How should I name this?"""
-    return sum(multipes_sum(prod(numbers), limit)
-               for numbers in combinations(divisors, size))
+    return sum((multipes_sum(prod(numbers), limit) for numbers in combinations(divisors, size)))
 
 
 def divisors_multiples_sum(n, divisors=()):
     result = 0
     for i in range(len(divisors)):
-        result += (-1)**i * something(n, divisors, i + 1)
+        result += (-1) ** i * something(n, divisors, i + 1)
     return int(result)
 
 

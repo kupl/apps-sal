@@ -2,7 +2,7 @@ def dollar_to_speech(value):
     x = value.lstrip('$')
     if float(x) < 0:
         return 'No negative numbers are allowed!'
-    dollars, cents = map(int, x.split('.'))
+    (dollars, cents) = map(int, x.split('.'))
     speech = []
     if cents:
         speech.append('{} cent{}'.format(cents, 's' if cents != 1 else ''))

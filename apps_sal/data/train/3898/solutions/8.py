@@ -9,7 +9,7 @@ def f(l, d):
 
 def convert_to_dms(lat, lon):
     a = float(lat)
-    ns = ["S", "N"][a >= 0]
+    ns = ['S', 'N'][a >= 0]
     b = float(lon)
-    we = ["W", "E"][b >= 0]
-    return f(a, ns), f(b, we)
+    we = ['W', 'E'][b >= 0]
+    return (f(a, ns), f(b, we))

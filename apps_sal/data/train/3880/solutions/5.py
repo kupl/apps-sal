@@ -8,5 +8,5 @@ def is_smooth(n):
                 primes.add(p)
                 n //= p
     if n != 1:
-        return "non-smooth"
-    return {2: "power of 2", 3: "3-smooth", 5: "Hamming number", 7: "humble number"}[max(primes)]
+        return 'non-smooth'
+    return {2: 'power of 2', 3: '3-smooth', 5: 'Hamming number', 7: 'humble number'}[max(primes)]

@@ -1,5 +1,5 @@
 def dollar_to_speech(value):
-    d, c = map(int, value[1:].split('.'))
+    (d, c) = map(int, value[1:].split('.'))
     if d < 0:
         return 'No negative numbers are allowed!'
     if d == 0 == c:

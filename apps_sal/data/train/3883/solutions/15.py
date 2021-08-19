@@ -3,13 +3,13 @@ from itertools import zip_longest
 
 def solve(s):
     print(s)
-    a = list(map(s.lower().count, "aeiou"))
+    a = list(map(s.lower().count, 'aeiou'))
     print('lv', sum(a))
     l = len(s)
     lv = sum(a)
     lc = l - lv
     print('l', l, 'lc', lc)
-    vw, cn = [], []
+    (vw, cn) = ([], [])
     if abs(lv - lc) > 1:
         return 'failed'
     elif lv < lc:
@@ -32,7 +32,6 @@ def solve(s):
         b = list(zip_longest(vw, cn))
     print(vw)
     print(cn)
-
     lst = []
     for x in b:
         lst.append(x[0])
@@ -41,4 +40,4 @@ def solve(s):
     if lst[-1] == None:
         del lst[-1]
     print(lst)
-    return(''.join(lst))
+    return ''.join(lst)
