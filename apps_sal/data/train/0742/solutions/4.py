@@ -1,11 +1,9 @@
 import numpy as np
-
 t = int(input())
 arr = []
 for i in range(t):
     inp = input()
-    arr.append(list(map(int, inp.split(" "))))
-# print(arr)
+    arr.append(list(map(int, inp.split(' '))))
 
 
 def gen_array(arr1, arr2, mp, rn):
@@ -18,12 +16,12 @@ def gen_array(arr1, arr2, mp, rn):
     if ctz == True:
         for j in range(len(arrg)):
             arrg[j] = (mp + 4 - rn - 2 * (j + 1)) * arr1[j]
-    return(arrg)
+    return arrg
 
 
 def check(rht):
     for i in range(len(rht) - 1):
-        if(rht[i][0] * rht[i + 1][0] <= 0):
+        if rht[i][0] * rht[i + 1][0] <= 0:
             print(0)
             break
     else:
@@ -42,12 +40,8 @@ for i in range(t):
             arr2.append(arr[i][j])
     arr1.reverse()
     arr2.reverse()
-    # print(arr1)
-    # print(arr2)
     rh[i].append(arr1)
     rh[i].append(arr2)
     for j in range(2, len(arr[i])):
         rh[i].append(gen_array(rh[i][j - 1], rh[i][j - 2], arr[i][0], j + 1))
     check(rh[i])
-
-# print(rh)

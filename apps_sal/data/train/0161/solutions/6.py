@@ -1,4 +1,5 @@
 class Solution:
+
     def isValidSerialization(self, preorder):
         """
         :type preorder: str
@@ -10,7 +11,7 @@ class Solution:
         s = []
         for a in arr:
             s.append(a)
-            while len(s) >= 3 and s[-1] == '#' and s[-2] == '#' and s[-3] != '#':
+            while len(s) >= 3 and s[-1] == '#' and (s[-2] == '#') and (s[-3] != '#'):
                 s.pop()
                 s.pop()
                 s.pop()

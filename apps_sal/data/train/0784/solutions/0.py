@@ -2,11 +2,10 @@ import sys
 import os
 import random
 import math
-# nonlocal defs
-n, m, p = list(map(int, input().split()))
+(n, m, p) = list(map(int, input().split()))
 arr = [dict() for _ in range(n)]
 for _ in range(p):
-    i, j = list(map(int, input().split()))
+    (i, j) = list(map(int, input().split()))
     i -= 1
     j -= 1
     if j not in arr[i]:

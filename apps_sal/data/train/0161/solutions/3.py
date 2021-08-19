@@ -1,4 +1,5 @@
 class Solution:
+
     def isValidSerialization(self, preorder):
         """
         :type preorder: str
@@ -13,7 +14,7 @@ class Solution:
             newArr = []
             i = 0
             while i < len(arr):
-                if i < len(arr) - 2 and arr[i].isdigit() and arr[i + 1:i + 3] == ['#', '#']:
+                if i < len(arr) - 2 and arr[i].isdigit() and (arr[i + 1:i + 3] == ['#', '#']):
                     newArr += ['#']
                     i += 3
                 else:

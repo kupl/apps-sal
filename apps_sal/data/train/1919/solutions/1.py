@@ -1,4 +1,5 @@
 class Solution:
+
     def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -7,18 +8,13 @@ class Solution:
         """
         if numCourses <= 1:
             return [0]
-
         if not prerequisites:
             return [i for i in range(numCourses)]
-
-        # create graph first
         graph = [[] for _ in range(numCourses)]
         for pair in prerequisites:
-            x, y = pair
+            (x, y) = pair
             graph[x].append(y)
-
-        # call topo order
-        visited, visiting, topo = set(), set(), []
+        (visited, visiting, topo) = (set(), set(), [])
         for i in range(numCourses):
             if i not in visited:
                 if not self.topoOrder(graph, i, visited, visiting, topo):
