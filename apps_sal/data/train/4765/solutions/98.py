@@ -1,4 +1,5 @@
-class Hero():
+class Hero:
+
     def __init__(self, name='Hero'):
         self.name = name
         self.position = '00'

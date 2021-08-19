@@ -1,5 +1,4 @@
 def repeat_str(repeat, text):
-
     rep = text * repeat
     return rep
 

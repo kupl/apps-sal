@@ -1,5 +1,5 @@
-s = "zero one two three four five six seven eight nine"
-ls = s.split(" ")
+s = 'zero one two three four five six seven eight nine'
+ls = s.split(' ')
 
 
 def numbers_of_letters(n):
@@ -11,4 +11,4 @@ def numbers_of_letters(n):
 
 
 def stringa(n):
-    return "".join([ls[int(i)] for i in str(n)])
+    return ''.join([ls[int(i)] for i in str(n)])

@@ -1,7 +1,7 @@
 def is_int_array(arr):
     if arr == []:
         return True
-    if arr in [None, ""]:
+    if arr in [None, '']:
         return False
     for i in arr:
         if type(i) in [int, float]:

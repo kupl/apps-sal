@@ -1,1 +1,2 @@
-def greet(x): return f"Hello {x.capitalize()}!"
+def greet(x):
+    return f'Hello {x.capitalize()}!'

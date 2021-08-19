@@ -1,5 +1,5 @@
 from functools import reduce
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def solve(s):

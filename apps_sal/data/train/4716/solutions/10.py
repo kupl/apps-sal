@@ -4,8 +4,8 @@ def distribution_of(golds):
     pos = 0
     for _ in range(len(gg)):
         if gg[0] >= gg[-1]:
-            out[pos] += (gg.pop(0))
+            out[pos] += gg.pop(0)
         else:
-            out[pos] += (gg.pop(-1))
+            out[pos] += gg.pop(-1)
         pos = not pos
     return out

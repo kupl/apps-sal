@@ -10,4 +10,4 @@ def has_subpattern(string):
     x = reduce(gcd, c.values())
     if x == 1:
         return ''.join(sorted(string))
-    return ''.join(k * (c[k] // x) for k in sorted(c.keys()))
+    return ''.join((k * (c[k] // x) for k in sorted(c.keys())))

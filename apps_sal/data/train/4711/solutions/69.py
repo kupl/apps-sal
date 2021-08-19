@@ -8,5 +8,5 @@ def zeros(n):
     k = 1
     kMax = round(log(n, 5))
     for i in range(k, kMax + 1):
-        z += n // (5 ** i)
+        z += n // 5 ** i
     return z

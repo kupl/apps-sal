@@ -3,11 +3,11 @@ from itertools import count, islice
 
 
 def isPrime(n):
-    return n > 1 and all(n % i for i in islice(count(2), int(sqrt(n) - 1)))
+    return n > 1 and all((n % i for i in islice(count(2), int(sqrt(n) - 1))))
 
 
 def prime_bef_aft(num):
-    c, d, l = num - 1, num + 1, []
+    (c, d, l) = (num - 1, num + 1, [])
     while len(l) < 1:
         if isPrime(c):
             l.append(c)

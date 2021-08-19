@@ -1,5 +1,5 @@
 def repeat_str(repeat, string):
-    anwser = ""
+    anwser = ''
     for a in range(repeat):
         anwser += string
     print(anwser)

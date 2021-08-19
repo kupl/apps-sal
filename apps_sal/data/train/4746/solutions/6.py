@@ -3,5 +3,5 @@ from operator import xor
 
 
 def fisHex(name):
-    s = set("abcdef")
+    s = set('abcdef')
     return reduce(xor, map(lambda c: int(c, 16), (c for c in name.lower() if c in s)), 0)

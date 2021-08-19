@@ -7,8 +7,8 @@ def digits_product(product):
             return -1
     reduce(res)
     total = 0
-    for i, j in enumerate(res):
-        total += 10**(len(res) - i - 1) * j
+    for (i, j) in enumerate(res):
+        total += 10 ** (len(res) - i - 1) * j
     return total
 
 
@@ -27,7 +27,7 @@ def factorization(n):
 
 
 def is_prime(n):
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return False
     return True

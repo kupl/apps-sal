@@ -3,13 +3,13 @@ ROWS = 6
 
 
 def connect_four_place(columns):
-    board = [["-"] * COLUMNS for row in range(ROWS)]
+    board = [['-'] * COLUMNS for row in range(ROWS)]
     height = [0] * COLUMNS
-    for i, column in enumerate(columns):
+    for (i, column) in enumerate(columns):
         if i % 2 == 0:
-            player = "Y"
+            player = 'Y'
         else:
-            player = "R"
+            player = 'R'
         board[height[column]][column] = player
         height[column] += 1
     return board[::-1]

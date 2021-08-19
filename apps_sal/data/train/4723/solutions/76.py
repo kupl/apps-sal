@@ -1,4 +1,4 @@
 def greet(name):
     name = name.capitalize()
-    text = "Hello " + name + "!"
+    text = 'Hello ' + name + '!'
     return text

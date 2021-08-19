@@ -5,7 +5,6 @@ def build_palindrome(s):
         temp = s[::-1][:i] + s
         if temp == temp[::-1] and len(temp) < len(a):
             a = temp
-
     b = s + s[::-1]
     temp = s
     for i in range(len(s) + 1):

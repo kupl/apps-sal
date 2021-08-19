@@ -4,7 +4,7 @@ def hp(arr):
     elif not arr:
         return (0,)
     xs = list(map(hp, arr))
-    if None not in xs and all(x == xs[0] for x in xs):
+    if None not in xs and all((x == xs[0] for x in xs)):
         return (len(arr),) + xs[0]
 
 

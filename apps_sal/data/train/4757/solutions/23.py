@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, a, b = list(map(int, input().split()))
+    (n, m, a, b) = list(map(int, input().split()))
     if n * a != m * b:
         print('NO')
         continue

@@ -5,7 +5,7 @@ def find_a_b(numbers, c):
     cnt = Counter(numbers)
     for a in numbers:
         try:
-            q, r = divmod(c, a)
+            (q, r) = divmod(c, a)
         except ZeroDivisionError:
             continue
         nums = cnt[q]

@@ -2,4 +2,4 @@ import re
 
 
 def to_acronym(s):
-    return ''.join(re.findall(r'\b(\w)', s)).upper()
+    return ''.join(re.findall('\\b(\\w)', s)).upper()

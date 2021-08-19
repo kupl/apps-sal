@@ -8,6 +8,6 @@ def zeros(n):
     else:
         k_max = math.floor(math.log(n, 5))
         for i in range(k_max):
-            ans = math.floor(n / (5**(i + 1)))
+            ans = math.floor(n / 5 ** (i + 1))
             count = count + ans
         return count

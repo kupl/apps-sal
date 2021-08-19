@@ -9,7 +9,6 @@ def build_palindrome(s):
         temp = s + s[::-1][i:]
         if temp == temp[::-1] and len(temp) < len(b):
             b = temp
-
     if len(a) > len(b):
         return b
     else:

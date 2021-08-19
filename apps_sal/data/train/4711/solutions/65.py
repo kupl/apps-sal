@@ -4,7 +4,6 @@ def zeros(n):
     while True:
         if 5 ** power > n:
             break
-        result += n // (5 ** power)
+        result += n // 5 ** power
         power += 1
-
     return result

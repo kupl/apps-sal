@@ -1,4 +1,4 @@
-from math import*
+from math import *
 
 
 def zeros(n):
@@ -7,4 +7,4 @@ def zeros(n):
     while i < n:
         res += floor(n / i)
         i *= 5
-    return (res)
+    return res

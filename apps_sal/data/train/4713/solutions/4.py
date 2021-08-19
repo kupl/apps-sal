@@ -14,7 +14,7 @@ def late_clock(digits):
             digits.remove(d)
             break
     for d in digits:
-        if (d < 4 and result == '2') or (d < 10 and result != '2'):
+        if d < 4 and result == '2' or (d < 10 and result != '2'):
             result += str(d) + ':'
             digits.remove(d)
             break

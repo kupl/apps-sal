@@ -6,7 +6,7 @@ def zeros(n):
         return 0
     cnt = 0
     div_num = 5
-    while (n / div_num >= 1):
+    while n / div_num >= 1:
         cnt += int(n / div_num)
         div_num *= 5
     return cnt

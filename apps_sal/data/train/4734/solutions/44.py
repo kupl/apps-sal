@@ -3,4 +3,4 @@ def bonus_time(salary, bonus):
         k = str(salary * 10)
     else:
         k = str(salary)
-    return ('$' + k)
+    return '$' + k

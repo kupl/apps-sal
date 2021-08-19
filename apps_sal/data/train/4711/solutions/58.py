@@ -6,5 +6,5 @@ def zeros(n):
         return 0
     y = 0
     for x in range(1, int(log(n, 5) + 1)):
-        y += n // (5**x)
+        y += n // 5 ** x
     return y

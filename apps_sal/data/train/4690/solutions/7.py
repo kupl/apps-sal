@@ -7,5 +7,4 @@ def adfgx_encrypt(plaintext_, square):
 
 
 def adfgx_decrypt(ciphertext, square):
-    return ''.join([square[ADFGX.index(j) + ADFGX.index(i) * 5]
-                    for i, j in zip(ciphertext[:-1:2], ciphertext[1::2])])
+    return ''.join([square[ADFGX.index(j) + ADFGX.index(i) * 5] for (i, j) in zip(ciphertext[:-1:2], ciphertext[1::2])])

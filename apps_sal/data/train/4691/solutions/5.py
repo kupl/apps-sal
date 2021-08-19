@@ -1,6 +1,5 @@
 def solve(s):
-    upper, lower, digit, other = 0, 0, 0, 0
-
+    (upper, lower, digit, other) = (0, 0, 0, 0)
     for c in s:
         if c.isupper():
             upper += 1
@@ -10,5 +9,4 @@ def solve(s):
             digit += 1
         else:
             other += 1
-
     return [upper, lower, digit, other]

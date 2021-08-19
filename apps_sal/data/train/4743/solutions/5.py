@@ -9,8 +9,6 @@ def get_highest_possible_score(a, b, n):
     a = max(0, a)
     b = max(0, b)
     n = max(0, n)
-
-    if(a > b):
+    if a > b:
         return a + n
-
     return b + n

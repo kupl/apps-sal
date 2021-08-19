@@ -1,5 +1,5 @@
 def greet(name):
     name = name.title()
-    greeting = "Hello " + name + "!"
+    greeting = 'Hello ' + name + '!'
     return greeting
     pass

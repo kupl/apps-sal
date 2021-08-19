@@ -2,7 +2,7 @@ lucas_sieve = [2, 1, 3, 4, 7]
 
 
 def lucasnum(n):
-    neg, n = 1 if n >= 0 or n % 2 == 0 else -1, abs(n)
+    (neg, n) = (1 if n >= 0 or n % 2 == 0 else -1, abs(n))
     return neg * lucas_expand(n)
 
 

@@ -2,7 +2,7 @@ import math
 
 
 def same_col_seq(val, k, col):
-    colors = ["red", "yellow", "blue"]
+    colors = ['red', 'yellow', 'blue']
     m = colors.index(col)
     res = list()
     x0 = math.floor((-1 + math.sqrt(1 + 8 * val)) / 2)

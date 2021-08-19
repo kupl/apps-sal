@@ -2,7 +2,7 @@ def is_hollow(x):
     if len(x) < 3:
         return False
     z = 0
-    for i, (a, b) in enumerate(zip(x, x[::-1])):
+    for (i, (a, b)) in enumerate(zip(x, x[::-1])):
         if i > len(x) // 2:
             return z >= 2
         if (a == 0) != (b == 0):

@@ -23,13 +23,11 @@ def min_child(root):
     return min_val
 
 
-comparator_mapper = {
-    gt: max_child,
-    lt: min_child
-}
+comparator_mapper = {gt: max_child, lt: min_child}
 
 
 class T:
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
@@ -39,19 +37,12 @@ class T:
 def is_bst(node):
     if node is None:
         return True
-    if node.left is not None and node.left.value > node.value or node.right is not None and node.right.value < node.value:
+    if node.left is not None and node.left.value > node.value or (node.right is not None and node.right.value < node.value):
         return validate(node, lt, gt)
-
     return validate(node, gt, lt)
 
 
 def validate(root, left_tree_compare, right_tree_compare):
     if root is None:
         return True
-
-    return (left_tree_compare(root.value,
-                              comparator_mapper[left_tree_compare](root.left)) if root.left is not None else True) and (
-        right_tree_compare(root.value, comparator_mapper[right_tree_compare](
-            root.right)) if root.right is not None else True) and validate(
-        root.left, left_tree_compare, right_tree_compare) and validate(root.right, left_tree_compare,
-                                                                       right_tree_compare)
+    return (left_tree_compare(root.value, comparator_mapper[left_tree_compare](root.left)) if root.left is not None else True) and (right_tree_compare(root.value, comparator_mapper[right_tree_compare](root.right)) if root.right is not None else True) and validate(root.left, left_tree_compare, right_tree_compare) and validate(root.right, left_tree_compare, right_tree_compare)

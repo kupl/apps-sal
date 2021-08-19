@@ -9,4 +9,4 @@ def compare(a, b):
 
 
 def pseudo_sort(st):
-    return ' '.join(sorted(re.findall(r'\w+', st), key=cmp_to_key(compare)))
+    return ' '.join(sorted(re.findall('\\w+', st), key=cmp_to_key(compare)))

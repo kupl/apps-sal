@@ -1,1 +1,2 @@
-def alphabetized(s): return "".join(sorted(filter(str.isalpha, s), key=str.lower))
+def alphabetized(s):
+    return ''.join(sorted(filter(str.isalpha, s), key=str.lower))

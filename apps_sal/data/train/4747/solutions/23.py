@@ -1,5 +1,5 @@
 def repeat_str(repeat, string):
-    stri = ""
+    stri = ''
     for i in range(repeat):
         stri = stri + string
     return stri

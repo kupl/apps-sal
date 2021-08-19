@@ -2,10 +2,9 @@ from math import inf
 
 
 def solve():
-    n, m, a, b = map(int, input().split())
+    (n, m, a, b) = map(int, input().split())
     grid = [[0] * m for i in range(n)]
-    row_cnt, col_cnt = [0] * n, [0] * m
-
+    (row_cnt, col_cnt) = ([0] * n, [0] * m)
     for i in range(n):
         for cnt in range(a):
             mini = inf
@@ -17,8 +16,7 @@ def solve():
             grid[i][ind] = 1
             row_cnt[i] += 1
             col_cnt[ind] += 1
-
-    if all(r == a for r in row_cnt) and all(c == b for c in col_cnt):
+    if all((r == a for r in row_cnt)) and all((c == b for c in col_cnt)):
         print('YES')
         for row in grid:
             print(''.join(list(map(str, row))))

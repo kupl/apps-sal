@@ -5,6 +5,6 @@ def human_years_cat_years_dog_years(human_years):
     elif human_years == 2:
         catYears = dogYears = 24
     else:
-        catYears = 24 + (4 * (human_years - 2))
-        dogYears = 24 + (5 * (human_years - 2))
+        catYears = 24 + 4 * (human_years - 2)
+        dogYears = 24 + 5 * (human_years - 2)
     return [human_years, catYears, dogYears]

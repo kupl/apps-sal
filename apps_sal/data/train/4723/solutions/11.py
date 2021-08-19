@@ -1,3 +1,2 @@
 def greet(name):
-
-    return "Hello " + name.title() + "!"
+    return 'Hello ' + name.title() + '!'

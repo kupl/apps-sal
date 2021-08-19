@@ -1,4 +1,3 @@
-
 def repeat_str(repeat, string):
     a = ''
     while repeat != 0:

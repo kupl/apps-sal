@@ -4,4 +4,4 @@ def greet(name):
     name2 = name[0].upper()
     name3 += name2
     name3 += name1
-    return ('Hello ' + str(name3) + '!')
+    return 'Hello ' + str(name3) + '!'

@@ -6,4 +6,4 @@ from fractions import gcd
 def has_subpattern(s):
     c = C(s)
     a = R(gcd, c.values())
-    return "".join(sorted([x * int(c[x] / a) for x in c]))
+    return ''.join(sorted([x * int(c[x] / a) for x in c]))

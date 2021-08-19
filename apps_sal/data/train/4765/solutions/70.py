@@ -1,4 +1,5 @@
 class Hero(object):
+
     def __init__(self, name=None, experience=None, health=None, position=None, damage=None):
         self.name = name or 'Hero'
         self.experience = 0

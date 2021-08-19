@@ -1,4 +1,5 @@
 class T:
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
@@ -12,13 +13,11 @@ def is_bst(node):
             yield from extract(node.left)
             yield node.value
             yield from extract(node.right)
-
     gen = extract(node)
     try:
-        u, v = next(gen), next(gen)
+        (u, v) = (next(gen), next(gen))
     except StopIteration:
         return True
-
     cmp = u < v
     for w in gen:
         if cmp != (v < w):

@@ -1,5 +1,5 @@
 def solve(s):
-    uc, lc, num, sp = 0, 0, 0, 0
+    (uc, lc, num, sp) = (0, 0, 0, 0)
     for ch in s:
         if ch.isupper():
             uc += 1

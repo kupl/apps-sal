@@ -13,9 +13,7 @@ def zeros(n):
     """
     pow_of_5 = 5
     zeros = 0
-
     while n >= pow_of_5:
         zeros += n // pow_of_5
         pow_of_5 *= 5
-
     return zeros

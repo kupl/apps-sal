@@ -7,6 +7,5 @@ def zeros(n):
     z = 0
     kmax = math.floor(math.log(n) / math.log(5))
     for i in range(1, kmax + 1):
-        z += math.floor(n / 5**i)
-
+        z += math.floor(n / 5 ** i)
     return z

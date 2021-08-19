@@ -6,13 +6,13 @@ def fuel_price(litres, price_per_liter):
         discounted = price_per_liter - 0.05
         return round(discounted * litres, 2)
     elif litres >= 4 and litres < 6:
-        discounted = price_per_liter - 0.10
+        discounted = price_per_liter - 0.1
         return round(discounted * litres, 2)
     elif litres >= 6 and litres < 8:
         discounted = price_per_liter - 0.15
         return round(discounted * litres, 2)
     elif litres >= 8 and litres < 10:
-        discounted = price_per_liter - 0.20
+        discounted = price_per_liter - 0.2
         return round(discounted * litres, 2)
     else:
         discounted = price_per_liter - 0.25

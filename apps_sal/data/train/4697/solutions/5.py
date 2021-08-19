@@ -3,7 +3,7 @@ def common(a, b, c):
     b.sort()
     c.sort()
     i = j = k = c1 = 0
-    while i < len(a) and j < len(b) and k < len(c):
+    while i < len(a) and j < len(b) and (k < len(c)):
         if a[i] == b[j] == c[k]:
             c1 += a[i]
             i += 1

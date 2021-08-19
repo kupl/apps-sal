@@ -1,1 +1,2 @@
-def repeat_str(_, __): return __ * _
+def repeat_str(_, __):
+    return __ * _

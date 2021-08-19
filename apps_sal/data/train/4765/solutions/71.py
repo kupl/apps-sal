@@ -4,5 +4,5 @@ class Hero(object):
     position = '00'
     damage = 5
 
-    def __init__(self, name="Hero"):
+    def __init__(self, name='Hero'):
         self.name = name

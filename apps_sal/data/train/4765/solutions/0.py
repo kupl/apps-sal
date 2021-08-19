@@ -1,4 +1,5 @@
 class Hero(object):
+
     def __init__(self, name='Hero'):
         self.name = name
         self.position = '00'

@@ -1,4 +1,4 @@
-li, i, pos, d = ['red', 'yellow', 'blue'], 1, 1, {}
+(li, i, pos, d) = (['red', 'yellow', 'blue'], 1, 1, {})
 while i < 2000:
     d[pos] = li[(pos - 1) % 3]
     i += 1
@@ -6,8 +6,8 @@ while i < 2000:
 
 
 def same_col_seq(after, k, need):
-    req, status = [], 0
-    for i, j in d.items():
+    (req, status) = ([], 0)
+    for (i, j) in d.items():
         if i > after:
             status = 1
         if status:

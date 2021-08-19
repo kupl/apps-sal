@@ -5,14 +5,13 @@ def prime(a):
         return True
     if a % 2 == 0 or a % 3 == 0:
         return False
-    maxDivisor = a**0.5
-    d, i = 5, 2
+    maxDivisor = a ** 0.5
+    (d, i) = (5, 2)
     while d <= maxDivisor:
         if a % d == 0:
             return False
         d += i
         i = 6 - i
-
     return True
 
 

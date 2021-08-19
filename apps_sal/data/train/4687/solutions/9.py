@@ -8,5 +8,4 @@ def decomp(n):
             q *= c
             ct += n // q
         return f'{c}^{ct}' if ct > 1 else str(c)
-
-    return ' * '.join(proc(c, n) for c in primes if n >= c)
+    return ' * '.join((proc(c, n) for c in primes if n >= c))

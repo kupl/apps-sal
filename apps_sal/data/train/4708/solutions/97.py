@@ -8,5 +8,4 @@ def human_years_cat_years_dog_years(human):
     if human >= 3:
         cat += 4 * (human - 2)
         dog += 5 * (human - 2)
-
     return [human, cat, dog]

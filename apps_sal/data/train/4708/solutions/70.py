@@ -9,5 +9,4 @@ def human_years_cat_years_dog_years(human_years):
     else:
         d = 24 + abs(human_years - 2) * 5
         c = 24 + abs(human_years - 2) * 4
-
     return [a, c, d]
