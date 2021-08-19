@@ -9,4 +9,4 @@ while True:
         break
     else:
         l.append(n)
-print((len(l) + 1))
+print(len(l) + 1)

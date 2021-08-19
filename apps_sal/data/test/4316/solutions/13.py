@@ -1,5 +1,4 @@
 from collections import Counter
-
 S = input()
 c = Counter(S)
 ans = 'No'

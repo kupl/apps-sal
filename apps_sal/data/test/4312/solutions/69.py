@@ -1,5 +1,4 @@
-a, b, c, d = map(int, input().split())
-
+(a, b, c, d) = map(int, input().split())
 while True:
     c -= b
     a -= d

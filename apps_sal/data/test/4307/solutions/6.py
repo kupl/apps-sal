@@ -6,7 +6,7 @@ for i in range(1, n + 1, 2):
     for j in range(1, n + 1):
         if i % j == 0:
             li.append(j)
-    if (len(li)) == 8:
+    if len(li) == 8:
         score.append(i)
 long = len(score)
 print(long)

@@ -1,5 +1,5 @@
 a = input()
 if len(set(a)) == 2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -8,12 +8,10 @@ def update(S, n):
 
 
 field = []
-
 for i in range(H):
     a = input()
     if a != '.' * W:
         field.append(a)
-
 for i in range(W):
     t = 0
     for j in range(len(field)):
@@ -23,6 +21,5 @@ for i in range(W):
     if t == 0:
         for j in range(len(field)):
             field[j] = update(field[j], i)
-
 for s in field:
     print(s.replace('*', ''))

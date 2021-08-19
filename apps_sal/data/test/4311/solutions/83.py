@@ -1,6 +1,6 @@
 s = int(input())
 G = []
-while (s not in G):
+while s not in G:
     G.append(s)
     if s % 2 == 0:
         s = int(s // 2)

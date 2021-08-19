@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 
 
 def answer(a: int, b: int, c: int, d: int) -> str:
@@ -8,4 +8,4 @@ def answer(a: int, b: int, c: int, d: int) -> str:
         return 'No'
 
 
-print((answer(a, b, c, d)))
+print(answer(a, b, c, d))

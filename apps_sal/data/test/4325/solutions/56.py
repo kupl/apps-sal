@@ -9,6 +9,4 @@ A = cin()
 N = A[0]
 X = A[1]
 T = A[2]
-
-
-print((math.ceil(N / X) * T))
+print(math.ceil(N / X) * T)

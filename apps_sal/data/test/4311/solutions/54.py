@@ -17,6 +17,4 @@ while True:
         break
     else:
         pass
-
-
 print(i)

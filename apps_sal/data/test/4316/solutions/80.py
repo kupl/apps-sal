@@ -1,14 +1,10 @@
 s = input()
-
 S = []
 for i in range(len(s)):
     S.append(s[i])
-
 B = list(set(S))
-
 cnt1 = 0
 cnt2 = 0
-
 if len(B) != 2:
     print('No')
 else:

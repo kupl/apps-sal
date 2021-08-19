@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 plus = A + B
 minus = A - B
 times = A * B

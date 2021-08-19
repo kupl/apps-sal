@@ -1,7 +1,8 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-A, B, C, D = LI()
+(A, B, C, D) = LI()
 
 
 def main():

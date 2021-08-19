@@ -1,5 +1,4 @@
-N, X, T = map(int, input().split())
-
+(N, X, T) = map(int, input().split())
 a = N // X
 if N % X == 0:
     print(a * T)

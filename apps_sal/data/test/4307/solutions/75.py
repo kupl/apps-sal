@@ -13,7 +13,7 @@ def primefac(n):
             s.append([i, cnt])
     if n != 1:
         s.append([n, 1])
-    return(s)
+    return s
 
 
 n = int(input())

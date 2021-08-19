@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = [str(input()) for _ in range(h)]
 b = []
 for i in range(h):
@@ -13,7 +13,7 @@ for h in range(w):
     if num == len(b):
         c.append(h)
 for k in b:
-    word = ""
+    word = ''
     for l in range(w):
         if l not in c:
             word += k[l]

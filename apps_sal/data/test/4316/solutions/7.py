@@ -14,6 +14,6 @@ if len(lis) == 2:
 else:
     ans = False
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

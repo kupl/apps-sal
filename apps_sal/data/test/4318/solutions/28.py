@@ -7,8 +7,6 @@ for i in range(N):
         if H[j] > H[i]:
             flg = False
             break
-
     if flg:
         ans += 1
-
 print(ans)

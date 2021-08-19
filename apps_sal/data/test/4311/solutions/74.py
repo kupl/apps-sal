@@ -1,7 +1,7 @@
 s = int(input())
 cnt = 1
 S = [s]
-while(1):
+while 1:
     cnt += 1
     if s % 2 == 0:
         s //= 2

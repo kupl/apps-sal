@@ -1,4 +1,4 @@
-integer1, integer2 = map(int, input().split())
+(integer1, integer2) = map(int, input().split())
 if integer1 + integer2 >= integer1 - integer2:
     if integer1 + integer2 >= integer1 * integer2:
         print(integer1 + integer2)

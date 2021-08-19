@@ -8,12 +8,11 @@ if x > y:
 elif x < y:
     x += 1
     ans = x * 100 + x * 10 + x
+elif x > z:
+    ans = x * 100 + x * 10 + x
+elif x < z:
+    x += 1
+    ans = x * 100 + x * 10 + x
 else:
-    if x > z:
-        ans = x * 100 + x * 10 + x
-    elif x < z:
-        x += 1
-        ans = x * 100 + x * 10 + x
-    else:
-        ans = N
+    ans = N
 print(ans)

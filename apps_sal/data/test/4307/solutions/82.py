@@ -1,5 +1,4 @@
 from math import *
-
 N = int(input())
 
 
@@ -10,7 +9,7 @@ def count(n):
         for i in range(1, int(rt) + 1):
             if n % i == 0:
                 result += 1
-        result = (2 * result) - 1
+        result = 2 * result - 1
     else:
         for i in range(1, int(rt) + 1):
             if n % i == 0:
@@ -20,9 +19,7 @@ def count(n):
 
 
 ans = 0
-
 for i in range(1, N + 1):
-    if (i % 2 == 1) and (count(i) == 8):
+    if i % 2 == 1 and count(i) == 8:
         ans += 1
-
 print(ans)

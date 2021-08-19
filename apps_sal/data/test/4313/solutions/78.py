@@ -5,5 +5,4 @@ ans = 0
 for i in range(len(v)):
     if v[i] - c[i] >= 0:
         ans = ans + v[i] - c[i]
-
 print(ans)

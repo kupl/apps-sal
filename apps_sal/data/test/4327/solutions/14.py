@@ -3,11 +3,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, p = Input()
+    (a, p) = Input()
     x = a * 3 + p
     ans = x // 2
     print(ans)

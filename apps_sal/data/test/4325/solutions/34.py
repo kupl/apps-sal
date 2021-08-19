@@ -1,4 +1,4 @@
-n, xi, t = (int(x) for x in input().split())
+(n, xi, t) = (int(x) for x in input().split())
 c = n // xi
 a = n % xi
 if a == 0:

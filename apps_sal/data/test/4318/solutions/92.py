@@ -11,7 +11,7 @@ def view_check(n: int, heights: list) -> int:
 def __starting_point():
     n = int(input())
     heights = list(map(int, input().split()))
-    print((view_check(n, heights)))
+    print(view_check(n, heights))
 
 
 __starting_point()

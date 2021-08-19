@@ -15,5 +15,4 @@ def solve(p):
 for i in range(1, p + 1):
     if solve(i) == True:
         ans += 1
-
 print(ans)

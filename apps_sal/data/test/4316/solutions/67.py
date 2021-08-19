@@ -1,6 +1,6 @@
 s = input()
 l = {}
-ans = "Yes"
+ans = 'Yes'
 for i in s:
     if i not in l.keys():
         l[i] = 1
@@ -8,5 +8,5 @@ for i in s:
         l[i] += 1
 for i in l.values():
     if i != 2:
-        ans = "No"
+        ans = 'No'
 print(ans)

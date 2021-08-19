@@ -1,4 +1,4 @@
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 if C >= B or A >= D:
     print(0)
 elif C >= A:

@@ -7,4 +7,4 @@ for i in range(n):
     if v[i] - c[i] > 0:
         x += v[i]
         y += c[i]
-print((x - y))
+print(x - y)

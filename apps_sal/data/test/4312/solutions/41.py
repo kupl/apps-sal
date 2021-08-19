@@ -1,7 +1,5 @@
-A, B, C, D = map(int, input().split())
-
+(A, B, C, D) = map(int, input().split())
 result = 'Yes'
-
 while A > 0 or C > 0:
     C -= B
     A -= D
@@ -10,5 +8,4 @@ while A > 0 or C > 0:
     elif A <= 0:
         result = 'No'
         break
-
 print(result)

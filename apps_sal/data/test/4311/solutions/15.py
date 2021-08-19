@@ -10,7 +10,7 @@ def myfunc(x):
     return x
 
 
-for i in range(10**6):
+for i in range(10 ** 6):
     l.append(s)
     s = myfunc(s)
     if s in l:

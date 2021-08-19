@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,13 +8,11 @@ MOD = 1000000007
 
 
 def main():
-    A, B = list(map(int, readline().split()))
-
+    (A, B) = list(map(int, readline().split()))
     if B % A == 0:
-        print((A + B))
+        print(A + B)
     else:
-        print((B - A))
-
+        print(B - A)
     return
 
 

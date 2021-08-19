@@ -6,6 +6,6 @@ for i in range(len(s)):
         flg = 1
         break
 if flg:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

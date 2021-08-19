@@ -1,6 +1,5 @@
 def main():
-    A, B, C, D = list(map(int, input().split()))
-
+    (A, B, C, D) = list(map(int, input().split()))
     if D <= A or B <= C:
         ans = 0
     if C <= A and A <= D:

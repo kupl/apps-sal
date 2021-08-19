@@ -1,4 +1,4 @@
-x, k = map(int, input().split())
+(x, k) = map(int, input().split())
 while k != 0:
     if x % 10 == 0:
         x /= 10

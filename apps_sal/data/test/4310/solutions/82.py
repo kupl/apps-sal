@@ -1,5 +1,5 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 d = abs(a - b)
 e = abs(b - c)
 f = abs(c - a)
-print((min(d + e, e + f, f + d)))
+print(min(d + e, e + f, f + d))

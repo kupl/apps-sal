@@ -1,4 +1,4 @@
-N, X, T = map(int, input().split())
+(N, X, T) = map(int, input().split())
 ans = 0
 if N % X == 0:
     num = N // X

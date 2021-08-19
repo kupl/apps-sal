@@ -1,6 +1,5 @@
 n = int(input())
 x = list(map(int, input().split()))
-
 q = 0
 p = 0
 for i in range(n):
@@ -14,5 +13,4 @@ for i in range(n):
     if q > 0:
         p += 1
         q = 0
-
-print((1 + p))
+print(1 + p)

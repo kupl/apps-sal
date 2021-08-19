@@ -5,8 +5,8 @@ for i in range(4):
         d[s[i]] = 1
     else:
         d[s[i]] += 1
-ans = "Yes"
+ans = 'Yes'
 for i in d:
     if d[i] != 2:
-        ans = "No"
+        ans = 'No'
 print(ans)

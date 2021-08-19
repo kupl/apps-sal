@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = []
 data = [0] * w
 for i in range(h):

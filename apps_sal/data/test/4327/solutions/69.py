@@ -1,5 +1,3 @@
-A, P = map(int, input().split())
-
+(A, P) = map(int, input().split())
 P += A * 3
-
 print(P // 2)

@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -12,12 +11,10 @@ def main():
     N = int(readline())
     V = list(map(int, readline().split()))
     C = list(map(int, readline().split()))
-
     ans = 0
-    for v, c in zip(V, C):
+    for (v, c) in zip(V, C):
         if v > c:
             ans += v - c
-
     print(ans)
     return
 

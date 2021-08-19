@@ -2,7 +2,7 @@ from typing import List
 
 
 def answer(n: int, c: List[int], v: List[int]) -> int:
-    return sum(list(j for j in (c[i] - v[i] for i in range(n)) if 0 < j))
+    return sum(list((j for j in (c[i] - v[i] for i in range(n)) if 0 < j)))
 
 
 def main():

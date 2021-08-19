@@ -1,4 +1,5 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
 N = int(input())
@@ -8,7 +9,7 @@ C = LI()
 
 def main():
     ans = 0
-    for v, c in zip(V, C):
+    for (v, c) in zip(V, C):
         if v > c:
             ans += v - c
     print(ans)

@@ -1,8 +1,6 @@
-N, X, T = map(int, input().split())
-
+(N, X, T) = map(int, input().split())
 check = N % X
 kaisu = N // X
-
 if check == 0:
     print(kaisu * T)
 else:

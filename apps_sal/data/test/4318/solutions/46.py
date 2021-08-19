@@ -6,5 +6,4 @@ for i in hi[1:]:
     if hi0 <= i:
         ans.append(i)
         hi0 = max(hi0, i)
-
 print(len(ans))

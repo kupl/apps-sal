@@ -8,6 +8,6 @@ while True:
     else:
         n = 3 * a[i - 1] + 1
     if n in a:
-        print((i + 1))
+        print(i + 1)
         break
     a.append(n)

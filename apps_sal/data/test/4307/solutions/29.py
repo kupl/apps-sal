@@ -3,13 +3,20 @@ from collections import Counter
 from itertools import product
 
 
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
 
 
 def make_divisors(n):
-    lower_div, upper_div = [], []
+    (lower_div, upper_div) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:

@@ -1,6 +1,5 @@
 import math
-a, b, c, d = map(int, input().split())
-
+(a, b, c, d) = map(int, input().split())
 x = math.ceil(a / d)
 z = math.ceil(c / b)
 

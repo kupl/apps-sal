@@ -1,5 +1,4 @@
 s = int(input())
-
 lst = [s]
 prev = s
 for m in range(2, 1000001):

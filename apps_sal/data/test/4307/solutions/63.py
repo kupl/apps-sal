@@ -12,9 +12,8 @@ def divisor(n):
 
 num = []
 n = int(input())
-
 for i in range(1, n + 1):
     if i % 2 != 0:
         if len(divisor(i)) == 8:
             num.append(i)
-print((len(num)))
+print(len(num))

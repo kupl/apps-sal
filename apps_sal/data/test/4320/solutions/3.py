@@ -1,8 +1,7 @@
 tab = [1, 3]
 for i in range(100):
     xx = tab[-1]
-    tab.append(xx + 2**(i + 2))
-
+    tab.append(xx + 2 ** (i + 2))
 t = int(input())
 for rew in range(t):
     n = int(input())

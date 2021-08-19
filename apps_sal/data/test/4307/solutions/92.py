@@ -7,5 +7,4 @@ for i in range(1, n + 1, 2):
             cnt += 1
     if cnt == 8:
         ans += 1
-
 print(ans)

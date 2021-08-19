@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = []
 s1 = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     s.append(a)
     s1.append(a - b)
 x = sum(s)

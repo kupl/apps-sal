@@ -1,19 +1,19 @@
-a, b, c, d = input().split()
+(a, b, c, d) = input().split()
 a = int(a)
 b = int(b)
 c = int(c)
 d = int(d)
 if c < a < d:
     if b > d:
-        print((d - a))
+        print(d - a)
     else:
-        print((b - a))
+        print(b - a)
 if a <= c:
     if b < c:
-        print((0))
+        print(0)
     elif c <= b <= d:
-        print((b - c))
+        print(b - c)
     else:
-        print((d - c))
+        print(d - c)
 if a >= d:
-    print((0))
+    print(0)

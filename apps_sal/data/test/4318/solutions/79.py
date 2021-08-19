@@ -3,11 +3,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def calc(i, h):
-    return all(h[i] >= h[j] for j in range(i))
+    return all((h[i] >= h[j] for j in range(i)))
 
 
 def main():
