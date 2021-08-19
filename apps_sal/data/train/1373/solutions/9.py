@@ -1,4 +1,3 @@
-# cook your dish here
 def sol(arr, n, k):
     m = -1
     for i in range(n):
@@ -25,7 +24,7 @@ def sol(arr, n, k):
 
 test = int(input())
 for _ in range(test):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = list(map(int, input().split()))
     if k == 2:
         mi = sol(arr, n, k)
@@ -42,7 +41,7 @@ for _ in range(test):
         freq[arr[x]] += 1
         if freq[arr[x]] == 1:
             c += 1
-        while(c > k):
+        while c > k:
             freq[arr[l]] -= 1
             if freq[arr[l]] == 0:
                 c -= 1

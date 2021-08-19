@@ -1,7 +1,6 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
-        # time complexity: O(N*logN)
-        # space complexity: O(N)
         dp = [False]
         for i in range(1, n + 1):
             s = False

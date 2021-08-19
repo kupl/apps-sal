@@ -1,40 +1,41 @@
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 
 
 class union_find:
+
     def __init__(self, n):
         self.par = [-1] * n
 
-    def find(self, x):  # xの親を見つける
+    def find(self, x):
         if self.par[x] < 0:
             return x
         else:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
-    def unite(self, x, y):  # 要素xとｙを併合させる
-        x, y = self.find(x), self.find(y)  # xとyの親の検索
-        if x != y:  # 親が異なる場合併合させる
+    def unite(self, x, y):
+        (x, y) = (self.find(x), self.find(y))
+        if x != y:
             if x > y:
-                x, y = y, x  # 小さい方をxとする. これにより要素の値が小さいものを優先して木の根とする.
-            self.par[x] += self.par[y]  # 値を無向木の要素数の和にする.
-            self.par[y] = x  # 枝側は根の位置を格納
+                (x, y) = (y, x)
+            self.par[x] += self.par[y]
+            self.par[y] = x
 
-    def same(self, x, y):  # 要素xと要素yが同じ無向木に所属しているかを判定する
-        return self.find(x) == self.find(y)  # 同じ値を持つか否か
+    def same(self, x, y):
+        return self.find(x) == self.find(y)
 
-    def size(self, x):  # 要素xが所属する無向木の大きさを返す
-        return-self.par[self.find(x)]
+    def size(self, x):
+        return -self.par[self.find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 gragh = [[] for _ in range(n)]
 ans = [-1] * n
 
 
 def dfs(now):
-    for nex, c in gragh[now]:
+    for (nex, c) in gragh[now]:
         if ans[nex] != -1:
             continue
         if ans[now] == c:
@@ -47,7 +48,7 @@ def dfs(now):
 def main():
     tree = union_find(n)
     for i in range(m):
-        u, v, c = map(int, input().split())
+        (u, v, c) = map(int, input().split())
         if not tree.same(u - 1, v - 1):
             tree.unite(u - 1, v - 1)
             gragh[u - 1].append([v - 1, c])
