@@ -1,7 +1,6 @@
-# cook your dish here
 from itertools import permutations
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = [False] * (n + 1)
     for i in a:

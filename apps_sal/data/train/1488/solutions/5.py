@@ -1,7 +1,6 @@
 def cal(a, count, k, poss, ind):
     temp = a.copy()
     if len(poss) == 0:
-        # print(a)
         for i in range(1, len(a)):
             if temp[i] > temp[i - 1]:
                 k -= 1
@@ -20,7 +19,7 @@ def cal(a, count, k, poss, ind):
 t = int(input())
 while t > 0:
     t -= 1
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = [int(x) for x in input().split()]
     poss = set()
     for i in range(1, len(a) + 1):

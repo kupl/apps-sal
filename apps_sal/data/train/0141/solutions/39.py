@@ -1,9 +1,9 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         l = len(people)
-        if (l <= 1):
-            return(1)
-#        people = self.sortPeople(people)
+        if l <= 1:
+            return 1
         people.sort()
         i = 0
         j = l - 1
@@ -19,21 +19,18 @@ class Solution:
                 c += 1
         if i == j:
             c += 1
-        return(c)
+        return c
 
     def sortPeople(self, arr):
-       #     print(arr)
         l = len(arr)
         if l <= 1:
-            return(arr)
+            return arr
         pivot = arr[l - 1]
         larr = []
         rarr = []
-
         for i in range(l - 1):
             if arr[i] >= pivot:
                 rarr.append(arr[i])
             else:
                 larr.append(arr[i])
-       # print(larr + [pivot] + rarr)
-        return(self.sortPeople(larr) + [pivot] + self.sortPeople(rarr))
+        return self.sortPeople(larr) + [pivot] + self.sortPeople(rarr)

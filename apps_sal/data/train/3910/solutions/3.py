@@ -1,15 +1,12 @@
-# supports any number greater than 1000 and also negative number
-
 from collections import defaultdict
-
-d = defaultdict(lambda: 1e2)
+d = defaultdict(lambda: 100.0)
 
 
 def parts(n, li):
     if not n:
         for b in range(2 ** (len(li) - 1)):
             bits = bin(b)[2:].zfill(len(li))
-            sum_ = sum(int(k) * [1, -1][int(l)] for k, l in zip(li, bits))
+            sum_ = sum((int(k) * [1, -1][int(l)] for (k, l) in zip(li, bits)))
             d[sum_] = min(d[sum_], len(bits) - 1)
         return
     for i in range(1, len(n) + 1):

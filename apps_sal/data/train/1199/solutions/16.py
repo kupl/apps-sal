@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    s, n = map(int, input().split())
+    (s, n) = map(int, input().split())
     c = 0
     if s <= n or s == 1:
         if s % 2 == 0 or s == 1:
