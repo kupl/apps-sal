@@ -1,10 +1,11 @@
-def f(): return [*map(int, input().split())]
+def f():
+    return [*map(int, input().split())]
 
 
-n, h = f()
-A, B = [], []
+(n, h) = f()
+(A, B) = ([], [])
 for _ in range(n):
-    a, b = f()
+    (a, b) = f()
     A += [a]
     B += [b]
 m = max(A)

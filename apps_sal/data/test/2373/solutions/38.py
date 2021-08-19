@@ -1,12 +1,10 @@
 N = int(input())
 S = []
-for x, y in zip(map(int, input().split()), range(1, N + 1)):
+for (x, y) in zip(map(int, input().split()), range(1, N + 1)):
     if x == y:
         S.append(y)
-
 S.append('$')
 L = len(S)
-
 l = [S[0]]
 i = 1
 a = 0

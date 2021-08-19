@@ -1,12 +1,9 @@
 def main():
-    N, M = [int(i) for i in input().split()]
+    (N, M) = [int(i) for i in input().split()]
     A = [int(i) for i in input().split()]
-
     A.sort()
-
     bc = [[int(i) for i in input().split()] for _ in range(M)]
     bc.sort(key=lambda x: x[1])
-
     ai = N - 1
     mi = M - 1
     pos = 0
@@ -25,7 +22,6 @@ def main():
             mi -= 1
         if pos >= N:
             break
-
     print(ans)
 
 

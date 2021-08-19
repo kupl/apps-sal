@@ -1,4 +1,4 @@
-n, z, w = map(int, input().split())
+(n, z, w) = map(int, input().split())
 a = list(map(int, input().split()))
 if n == 1:
     ans = abs(a[0] - w)

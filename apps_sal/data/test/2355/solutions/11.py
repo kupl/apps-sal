@@ -7,7 +7,7 @@ for j in range(a):
     n = h[0]
     p = h[1]
     for i in range(2 * n + p):
-        if (end + 1 > n):
+        if end + 1 > n:
             start += 1
             end = start + 1
         else:

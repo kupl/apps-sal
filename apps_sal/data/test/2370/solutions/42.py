@@ -14,10 +14,10 @@ def main():
         cost = np.amin(arr, axis=0)
     f = np.sum(cost < a)
     if f:
-        print((-1))
+        print(-1)
         return
-    filt = np.sum([([cost[k]] + np.transpose([cost[k]])) == cost for k in range(n)], axis=0) == 2
-    print((np.sum(a[filt]) // 2))
+    filt = np.sum([[cost[k]] + np.transpose([cost[k]]) == cost for k in range(n)], axis=0) == 2
+    print(np.sum(a[filt]) // 2)
 
 
 def __starting_point():

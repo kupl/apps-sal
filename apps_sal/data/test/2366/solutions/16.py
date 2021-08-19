@@ -1,8 +1,6 @@
 n = int(input())
 lst = [int(i) for i in input().split()]
-
 visited = {}
-
 for d in lst:
     if d in visited.keys():
         visited[d] += 1

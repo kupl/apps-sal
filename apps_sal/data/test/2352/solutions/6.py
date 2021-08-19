@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 for _ in range(T):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     minx = {}
     maxx = {}
     miny = {}
@@ -49,7 +48,7 @@ for _ in range(T):
         except:
             pass
     if matrix == copy:
-        print("YES")
+        print('YES')
         cnt = -1
         for char in range(ord('z'), ord('a') - 1, -1):
             char = chr(char)
@@ -80,4 +79,4 @@ for _ in range(T):
             except:
                 pass
     else:
-        print("NO")
+        print('NO')

@@ -1,4 +1,5 @@
 class Solution:
+
     def parseBoolExpr(self, expression: str) -> bool:
         if expression == 'f':
             return False
@@ -34,7 +35,6 @@ class Solution:
                     open_count += 1
                 if expression[start] == ')':
                     close_count += 1
-
             return start + 1
         else:
             return start + 1

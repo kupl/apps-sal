@@ -1,8 +1,8 @@
-N, H = map(int, input().split())
-ab = [list(map(int, input().split()))for _ in range(N)]
+(N, H) = map(int, input().split())
+ab = [list(map(int, input().split())) for _ in range(N)]
 ab.sort()
 M = ab[-1][0]
-B = [b for a, b in ab]
+B = [b for (a, b) in ab]
 B.sort()
 B = B[::-1]
 ans = 0

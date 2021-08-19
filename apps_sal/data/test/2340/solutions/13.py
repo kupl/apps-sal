@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    h, n = input().split()
+    (h, n) = input().split()
     h = int(h)
     n = int(n)
     p = [int(j) for j in input().split()] + [0]

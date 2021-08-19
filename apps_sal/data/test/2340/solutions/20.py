@@ -1,8 +1,7 @@
 import sys
-
 q = int(input())
 for _ in range(q):
-    h, n = list(map(int, sys.stdin.readline().split()))
+    (h, n) = list(map(int, sys.stdin.readline().split()))
     p = iter(list(map(int, sys.stdin.readline().split())) + [0])
     cost = 0
     akt = next(p)

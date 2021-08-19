@@ -1,17 +1,14 @@
-N, W = map(int, input().split())
-w, v = [], []
+(N, W) = map(int, input().split())
+(w, v) = ([], [])
 for _ in range(N):
-    wi, vi = map(int, input().split())
+    (wi, vi) = map(int, input().split())
     w.append(wi)
     v.append(vi)
-
 V = [[], [], [], []]
-for wi, vi in zip(w, v):
+for (wi, vi) in zip(w, v):
     V[wi - w[0]].append(vi)
-
 for vv in V:
     vv.sort(reverse=True)
-
 ans = 0
 for i in range(len(V[0]) + 1):
     for j in range(len(V[1]) + 1):

@@ -1,5 +1,4 @@
 N = int(input())
-
 for i in range(N):
     a = list(map(int, input().split()))
     c = 0

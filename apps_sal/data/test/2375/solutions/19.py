@@ -1,8 +1,7 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 if x > y:
-    x, y = y, x
-
+    (x, y) = (y, x)
 if y - x <= 1:
-    print("Brown")
+    print('Brown')
 else:
-    print("Alice")
+    print('Alice')

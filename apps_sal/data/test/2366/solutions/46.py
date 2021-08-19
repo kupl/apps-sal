@@ -5,7 +5,6 @@ C = Counter(A)
 total = 0
 for v in C.values():
     total += v * (v - 1) // 2
-
 for a in A:
     x = C[a] * (C[a] - 1) // 2
     ans = total - x

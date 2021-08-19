@@ -1,6 +1,6 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 a = abs(x - y)
 if a == 0 or a == 1:
-    print("Brown")
+    print('Brown')
 else:
-    print("Alice")
+    print('Alice')

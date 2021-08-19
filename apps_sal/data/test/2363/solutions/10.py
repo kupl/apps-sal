@@ -2,12 +2,12 @@ __author__ = 'markdaniel'
 
 
 def main():
-    num1, num2 = [int(x) for x in input().split(' ')]
+    (num1, num2) = [int(x) for x in input().split(' ')]
     maxval = max(num1, num2)
     minval = min(num1, num2)
     ops = 0
     while maxval > 0 and minval > 0:
-        remainderMultiple = ((maxval - minval) // minval)
+        remainderMultiple = (maxval - minval) // minval
         maxval -= remainderMultiple * minval
         ops += remainderMultiple
         maxval -= minval
@@ -16,7 +16,6 @@ def main():
             temp = maxval
             maxval = minval
             minval = temp
-
     return ops
 
 

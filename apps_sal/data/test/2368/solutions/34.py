@@ -1,16 +1,13 @@
 import sys
 readline = sys.stdin.readline
-
-N, M = list(map(int, readline().split()))
+(N, M) = list(map(int, readline().split()))
 A = list(map(int, readline().split()))
 B = list(map(int, readline().split()))
-
 G = [[] for i in range(N)]
 for i in range(M):
-    c, d = list(map(int, readline().split()))
+    (c, d) = list(map(int, readline().split()))
     G[c - 1].append(d - 1)
     G[d - 1].append(c - 1)
-
 seen = set()
 for i in range(N):
     if i in seen:
@@ -28,7 +25,7 @@ for i in range(N):
         for child in G[v]:
             stack.append(child)
     if a_sum != b_sum:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')

@@ -5,11 +5,11 @@ from heapq import *
 import sys
 input = sys.stdin.readline
 t = int(input())
-while(t):
+while t:
     t -= 1
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     x = n // k
-    if(x >= m):
+    if x >= m:
         print(m)
         continue
     else:

@@ -5,11 +5,10 @@ def main():
     for i in range(n):
         if ps[i] == i + 1:
             if ps[i] == n:
-                ps[i - 1], ps[i] = ps[i], ps[i - 1]
+                (ps[i - 1], ps[i]) = (ps[i], ps[i - 1])
             else:
-                ps[i], ps[i + 1] = ps[i + 1], ps[i]
+                (ps[i], ps[i + 1]) = (ps[i + 1], ps[i])
             ans += 1
-
     print(ans)
 
 

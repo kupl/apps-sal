@@ -1,6 +1,5 @@
-h, w, a, b = list(map(int, input().split()))
-m = 10**9 + 7
-
+(h, w, a, b) = list(map(int, input().split()))
+m = 10 ** 9 + 7
 fac = [1, 1]
 inv = [1, 1]
 finv = [1, 1]
@@ -21,13 +20,10 @@ def nck(n, k):
 row = []
 for i in range(h - a):
     row.append(nck(b + i, i))
-
 ans = 0
 for i in range(len(row) - 1):
     ans += row[i] * nck(w - b - 2 + h - 1 - i, h - 1 - i)
     ans %= m
-
 ans += row[-1] * nck(w - b - 1 + a, a)
 ans %= m
-
 print(ans)

@@ -1,6 +1,6 @@
 def main():
     N = int(input())
-    A = [int(a) - 1 for a in input().split(" ")]
+    A = [int(a) - 1 for a in input().split(' ')]
     int_cnt = [0] * N
     for a in A:
         int_cnt[a] += 1

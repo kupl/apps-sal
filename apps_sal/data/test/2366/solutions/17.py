@@ -12,10 +12,8 @@ def combination(n, r):
 
 def count_list(lst):
     count_lst = [0] * (max(lst) + 1)
-
     for i in lst:
         count_lst[i] += 1
-
     return count_lst
 
 
@@ -27,7 +25,6 @@ def main():
     for i in range(len(lst1)):
         lst2[i] = combination(lst1[i], 2)
     tmp = sum(lst2)
-
     for i in range(n):
         a = a_lst[i]
         print(tmp - (lst1[a] - 1))

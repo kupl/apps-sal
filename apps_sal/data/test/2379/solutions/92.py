@@ -1,7 +1,9 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, k, c = list(map(int, input().split()))
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, k, c) = list(map(int, input().split()))
     s = [True if i == 'o' else False for i in input()]
     L = [0] * k
     R = [0] * k
@@ -19,7 +21,7 @@ def main():
         if s[i]:
             L[now] = i
             if L[now] == R[now]:
-                print((i + 1))
+                print(i + 1)
             i += c
             now += 1
         i += 1

@@ -2,7 +2,7 @@ from fractions import Fraction as F
 
 
 def solve():
-    h, c, t = map(int, input().split())
+    (h, c, t) = map(int, input().split())
     dt = abs(F(h - t))
     ans = 1
 

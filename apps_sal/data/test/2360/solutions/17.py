@@ -7,7 +7,7 @@ for i in range(t):
     l = []
     r = []
     for j in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         if y > mr:
             mr = y
         l.append(x)

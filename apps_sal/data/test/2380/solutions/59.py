@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c = [[] for _ in range(m)]
 for i in range(m):
@@ -9,7 +9,7 @@ ans = sum(a)
 sa = 0
 cnt = 0
 r = c[0][0]
-for i, v in enumerate(a):
+for (i, v) in enumerate(a):
     if r <= i and cnt <= m - 2:
         cnt += 1
         r += c[cnt][0]

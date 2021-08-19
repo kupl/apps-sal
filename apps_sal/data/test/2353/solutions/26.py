@@ -6,14 +6,14 @@ for you in range(t):
     b = int(l[1])
     c = int(l[2])
     d = int(l[3])
-    if(b >= a):
+    if b >= a:
         print(b)
     else:
-        rem = (a - b)
+        rem = a - b
         time = b
-        if(d >= c):
+        if d >= c:
             print(-1)
         else:
             x = math.ceil(rem / (c - d))
-            time += (x * c)
+            time += x * c
             print(time)

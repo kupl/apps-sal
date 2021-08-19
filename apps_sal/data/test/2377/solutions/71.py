@@ -1,10 +1,10 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 mxa = 0
 dmg = 0
 cnt = 0
 di = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     di.append(b)
     if a > mxa:
         mxa = a

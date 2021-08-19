@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     set_ = set()
-    for i in range(1, int(n**0.5) + 10):
+    for i in range(1, int(n ** 0.5) + 10):
         set_.add(n // i)
     li = sorted(list(set_))
     num = li[0]

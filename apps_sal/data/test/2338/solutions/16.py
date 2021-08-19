@@ -15,4 +15,4 @@ for b in bombs:
         get.append('1 ' + str(abs(x[1])) + ' ' + ('U' if x[1] > 0 else 'D'))
         back.append('1 ' + str(abs(x[1])) + ' ' + ('D' if x[1] > 0 else 'U'))
     out.extend(get + ['2'] + back + ['3'])
-sys.stdout.write("\n".join([str(len(out))] + out))
+sys.stdout.write('\n'.join([str(len(out))] + out))

@@ -6,6 +6,6 @@ for i in range(n):
         if i == n - 1:
             ans += 1
         else:
-            p[i], p[i + 1], = p[i + 1], p[i]
+            (p[i], p[i + 1]) = (p[i + 1], p[i])
             ans += 1
 print(ans)

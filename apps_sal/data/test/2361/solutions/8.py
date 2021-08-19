@@ -1,10 +1,8 @@
 import sys
-
 input = sys.stdin.readline
 flush = sys.stdout.flush
-
 for _ in range(int(input())):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     if m >= n // k:
         a = n // k
         m -= a

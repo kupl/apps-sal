@@ -1,20 +1,17 @@
 from sys import stdin
 from itertools import accumulate
 readline = stdin.readline
-
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 vs = [[] for _ in range(4)]
-w, v = list(map(int, input().split()))
+(w, v) = list(map(int, input().split()))
 w1 = w
 vs[0].append(v)
 for _ in range(N - 1):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     vs[w - w1].append(v)
-
 for i in range(4):
     vs[i].sort(reverse=True)
     vs[i] = [0] + list(accumulate(vs[i]))
-
 result = 0
 for i in range(len(vs[0])):
     a = W - w1 * i

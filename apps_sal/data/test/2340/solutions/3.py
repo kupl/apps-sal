@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    h, n = [int(w) for w in input().split()]
+    (h, n) = [int(w) for w in input().split()]
     p = [int(w) for w in input().split()]
     p.append(0)
     r = 0

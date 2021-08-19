@@ -1,10 +1,10 @@
 T = int(input())
 for _ in range(T):
-    h, c, t = list(map(int, input().split()))
+    (h, c, t) = list(map(int, input().split()))
     if h + c >= t * 2:
         print(2)
     else:
-        l, r = 0, 10 ** 9
+        (l, r) = (0, 10 ** 9)
         while r - l > 1:
             m = (l + r) // 2
             if h * (m + 1) + c * m >= t * (2 * m + 1):

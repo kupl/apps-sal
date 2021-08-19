@@ -12,4 +12,4 @@ for i in range(0, tst):
     p.append(0)
     p.reverse()
     print(len(p))
-    print(" ".join(str(x) for x in p))
+    print(' '.join((str(x) for x in p)))

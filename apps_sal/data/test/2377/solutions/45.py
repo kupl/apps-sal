@@ -1,9 +1,9 @@
 from math import ceil
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 a = []
 b = []
 for i in range(n):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     a.append(A)
     b.append(B)
 ma = max(a)

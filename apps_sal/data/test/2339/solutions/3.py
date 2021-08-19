@@ -22,17 +22,17 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
     cur = 0
     r = []
-    while(len(a) != 0):
+    while len(a) != 0:
         ind = 0
         mi = -1000000000000000
         for i in range(len(a)):
-            if(gcd(cur, a[i]) > mi):
+            if gcd(cur, a[i]) > mi:
                 mi = gcd(cur, a[i])
                 ind = i
         r.append(a[ind])

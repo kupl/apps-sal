@@ -10,9 +10,9 @@ def prod(A, k, mod):
 
 
 def solve():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     ans = 1
     if K == N:
         return prod(A, N, mod)
@@ -49,13 +49,13 @@ def solve():
                 d['m1'] = i
                 break
         if d['p2'] == -1 or d['m1'] == -1:
-            flag[d['m2']], flag[d['p1']] = 1, 0
+            (flag[d['m2']], flag[d['p1']]) = (1, 0)
         elif d['m2'] == -1 or d['p1'] == -1:
-            flag[d['p2']], flag[d['m1']] = 1, 0
+            (flag[d['p2']], flag[d['m1']]) = (1, 0)
         elif A[d['p2']] * A[d['p1']] > A[d['m1']] * A[d['m2']]:
-            flag[d['p2']], flag[d['m1']] = 1, 0
+            (flag[d['p2']], flag[d['m1']]) = (1, 0)
         else:
-            flag[d['m2']], flag[d['p1']] = 1, 0
+            (flag[d['m2']], flag[d['p1']]) = (1, 0)
         ans = 1
         for i in range(N):
             if flag[i] == 1:
@@ -65,4 +65,4 @@ def solve():
     return prod(A, K, mod)
 
 
-print((solve()))
+print(solve())

@@ -7,7 +7,6 @@ for i in m:
         p[i - 1] = p[i]
         p[i] = i
         cnt += 1
-
 if p[-1] == n:
     cnt += 1
 print(cnt)

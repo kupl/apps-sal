@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ls = list(map(int, input().split()))
 di = [list(map(int, input().split())) for _ in range(m)]
 fi = []
-for i, j in di:
+for (i, j) in di:
     fi.append([j, i])
 for k in ls:
     fi.append([k, 1])

@@ -1,20 +1,16 @@
 from collections import deque
 import sys
-sys.setrecursionlimit(10**9)
-
+sys.setrecursionlimit(10 ** 9)
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 n = int(input())
 G = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     G[a].append(b)
     G[b].append(a)
-
 cnt = [0] * n
 
 
@@ -28,8 +24,7 @@ def dfs(cur, prev):
 
 
 dfs(0, -1)
-
-power = [0] * (n)
+power = [0] * n
 powe2_n = pow(2, n, mod)
 powe2_n = pow(powe2_n, mod - 2, mod)
 power[n - 1] = powe2_n
@@ -40,17 +35,14 @@ for i in reversed(list(range(n - 1))):
 ans = 0
 que = deque()
 que.append((0, -1))
-
 while que:
-    cur, prev = que.pop()
+    (cur, prev) = que.pop()
     if len(G[cur]) == 1:
         if prev == -1:
             que.append((G[cur][0], cur))
         continue
-
     prob = 1
     prob -= power[n - 2]
-
     for to in G[cur]:
         if to == prev:
             bubun_cnt = n - cnt[cur]
@@ -63,5 +55,4 @@ while que:
     prob %= mod
     ans += power[0] * prob
     ans %= mod
-
 print(ans)

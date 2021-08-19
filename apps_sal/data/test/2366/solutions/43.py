@@ -10,7 +10,6 @@ n = int(input())
 a = list(map(int, input().split()))
 c = collections.Counter(a)
 f = {}
-
 cmb = 0
 for x in c.values():
     f[1] = 0
@@ -20,7 +19,6 @@ for x in c.values():
         if x - 1 not in f:
             f[x - 1] = cmb_factorial(x - 1)
     cmb += f.get(x)
-
 for z in a:
     y = c.get(z)
     ans = cmb

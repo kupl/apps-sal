@@ -1,9 +1,9 @@
-n = (int)(input())
+n = int(input())
 a = input().split()
 dict = {}
 ans = 0
 for i in range(n):
-    a[i] = (int)(a[i])
+    a[i] = int(a[i])
     if not a[i] in dict:
         dict[a[i]] = 1
     else:

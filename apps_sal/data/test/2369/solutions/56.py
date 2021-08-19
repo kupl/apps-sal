@@ -1,10 +1,10 @@
 def main():
-    n, k = list(map(int, input().split()))
-    a = sorted(int(i) for i in input().split())
-    mod = 10**9 + 7
+    (n, k) = list(map(int, input().split()))
+    a = sorted((int(i) for i in input().split()))
+    mod = 10 ** 9 + 7
     comb = [1] * (n - k + 1)
     for i in range(n - k):
-        comb[i + 1] = (comb[i] * (k + i) * pow(i + 1, mod - 2, mod)) % mod
+        comb[i + 1] = comb[i] * (k + i) * pow(i + 1, mod - 2, mod) % mod
     f = 0
     for i in range(n - k + 1):
         f = (f + a[k + i - 1] * comb[i] % mod) % mod

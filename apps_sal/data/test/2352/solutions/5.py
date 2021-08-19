@@ -3,20 +3,20 @@ input = sys.stdin.readline
 
 
 def solve():
-    H, W = map(int, input().split())
+    (H, W) = map(int, input().split())
     G = [[ord(s) - 46 for s in input().strip()] for _ in range(H)]
     Gy = list(map(list, zip(*G)))
     k = 0
     St = [None] * 77
-    for h, G1 in enumerate(G, 1):
+    for (h, G1) in enumerate(G, 1):
         k = max(k, max(G1))
-        for w, g in enumerate(G1, 1):
+        for (w, g) in enumerate(G1, 1):
             if not g:
                 continue
             if St[g] is None:
                 St[g] = (h, w)
             elif type(St[g]) == tuple:
-                h1, w1 = St[g]
+                (h1, w1) = St[g]
                 if h == h1:
                     St[g] = h
                 elif w == w1:
@@ -42,11 +42,11 @@ def solve():
             Gh = G[x - 1]
             p = None
             e = None
-            for ig, g in enumerate(Gh):
+            for (ig, g) in enumerate(Gh):
                 if g == j:
                     p = ig
                     break
-            for ig, g in enumerate(Gh[::-1]):
+            for (ig, g) in enumerate(Gh[::-1]):
                 ig = W - 1 - ig
                 if g == j:
                     e = ig
@@ -59,11 +59,11 @@ def solve():
             Gw = Gy[-x - 1]
             p = None
             e = None
-            for ig, g in enumerate(Gw):
+            for (ig, g) in enumerate(Gw):
                 if g == j:
                     p = ig
                     break
-            for ig, g in enumerate(Gw[::-1]):
+            for (ig, g) in enumerate(Gw[::-1]):
                 ig = H - 1 - ig
                 if g == j:
                     e = ig
@@ -72,7 +72,6 @@ def solve():
                 if Gw[ig] < j:
                     return False
             A.append((p + 1, -x, e + 1, -x))
-
     return A[::-1]
 
 

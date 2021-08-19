@@ -1,7 +1,6 @@
-
 def main():
     with open(0) as f:
-        N, H = list(map(int, f.readline().split()))
+        (N, H) = list(map(int, f.readline().split()))
         ab = list(map(int, f.read().split()))
     max_slash = max(ab[0::2])
     throw = sorted([x for x in ab[1::2] if x > max_slash], reverse=True)

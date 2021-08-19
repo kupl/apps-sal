@@ -6,10 +6,9 @@ s = []
 for i in range(n):
     if p[i] == i + 1:
         c += 1
-    else:
-        if c > 0:
-            s.append(c)
-            c = 0
+    elif c > 0:
+        s.append(c)
+        c = 0
 if c > 0:
     s.append(c)
 ans = 0

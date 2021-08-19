@@ -1,13 +1,11 @@
 N = int(input())
 P = map(int, input().split())
 S = []
-for x, y in zip(P, range(1, N + 1)):
+for (x, y) in zip(P, range(1, N + 1)):
     if x == y:
         S.append(y)
-
 S.append('$')
 L = len(S)
-
 lake = []
 lake.append(S[0])
 i = 1

@@ -1,4 +1,4 @@
-n, _, w = map(int, input().split())
+(n, _, w) = map(int, input().split())
 a = list(map(int, input().split()))
 if n == 1:
     print(abs(a[-1] - w))

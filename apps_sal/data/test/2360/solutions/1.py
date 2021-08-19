@@ -4,7 +4,7 @@ for i in range(t):
     n = int(input())
     st = []
     for i in range(n):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         st.append((l, r, i))
     st = sorted(st, key=lambda x: (x[0], x[2]))
     ans = []

@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-h, w, a, b = map(int, input().split())
+mod = 10 ** 9 + 7
+(h, w, a, b) = map(int, input().split())
 
 
 def comb(a, b):

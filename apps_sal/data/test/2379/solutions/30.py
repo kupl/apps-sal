@@ -1,4 +1,4 @@
-n, k, c = map(int, input().split())
+(n, k, c) = map(int, input().split())
 s = input()
 l = []
 r = []
@@ -10,7 +10,6 @@ while len(l) < k and i < n:
         i += c + 1
     else:
         i += 1
-
 while len(r) < k and j < n:
     if s[-j - 1] == 'o':
         r.append(n - j)

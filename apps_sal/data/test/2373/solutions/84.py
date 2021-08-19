@@ -1,6 +1,5 @@
 N = int(input())
 P = [int(x) for x in input().split()]
-
 ans = 0
 for i in range(N - 1):
     if P[i] == i + 1:

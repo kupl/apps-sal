@@ -1,16 +1,19 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 sys.setrecursionlimit(200000)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 edge = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
-inf = 10**6
+inf = 10 ** 6
 Par = [inf] * n
 Par[0] = -1
 Chk = [0]
@@ -20,7 +23,6 @@ while Chk:
         if Par[next] == inf:
             Par[next] = c
             Chk.append(next)
-
 C = [-1] * n
 
 
@@ -40,13 +42,11 @@ def ch(x):
 
 
 ch(0)
-
 H = [0] * n
 H[0] = 1
 H[1] = pow(2, mod - 2, mod)
 for i in range(2, n):
-    H[i] = (H[i - 1] * H[1]) % mod
-
+    H[i] = H[i - 1] * H[1] % mod
 ans = 0
 for i in range(n):
     if len(edge[i]) == 1:
@@ -62,4 +62,4 @@ for i in range(n):
         for a in A:
             cur -= H[n - 1 - a]
         ans = (ans + cur) % mod
-print((ans * H[1]) % mod)
+print(ans * H[1] % mod)

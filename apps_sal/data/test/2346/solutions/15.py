@@ -6,7 +6,7 @@ m = dict()
 for i in range(n + 1):
     m[i] = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     p.append(x)
     c.append(y)
     if x != -1:
@@ -21,7 +21,6 @@ for i in range(1, n + 1):
                     break
             else:
                 a.append(i)
-
 if len(a) == 0:
     print(-1)
 else:

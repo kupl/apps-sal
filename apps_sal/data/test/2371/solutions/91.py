@@ -1,4 +1,4 @@
-N, Z, W = (int(x) for x in input().split())
+(N, Z, W) = (int(x) for x in input().split())
 a = list(map(int, input().split()))
 if N == 1:
     print(abs(W - a[0]))

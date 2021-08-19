@@ -1,8 +1,7 @@
-n = (int)(input())
+n = int(input())
 a = input().split()
 for i in range(n):
-    a[i] = (int)(a[i])
-
+    a[i] = int(a[i])
 dic = {}
 sum = 0
 for i in range(n):
@@ -11,6 +10,5 @@ for i in range(n):
     else:
         dic[a[i]] += 1
         sum += dic[a[i]] - 1
-
 for i in a:
-    print((sum - dic[i] + 1))
+    print(sum - dic[i] + 1)

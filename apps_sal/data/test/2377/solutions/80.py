@@ -1,4 +1,4 @@
-n, h, *L = map(int, open(x := 0).read().split())
+(n, h, *L) = map(int, open((x := 0)).read().split())
 a = max(L[::2])
 B = sorted([l for l in L[1::2] if l > a])
 for b in B[::-1]:

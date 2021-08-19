@@ -3,12 +3,12 @@ from collections import defaultdict
 
 def main():
     n = int(input())
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     d = defaultdict(lambda: 0)
     d2 = {}
     for i in a:
         d[i] += 1
-    for i, j in d.items():
+    for (i, j) in d.items():
         x = j * (j - 1) // 2
         d2[i] = x
     ans = 0

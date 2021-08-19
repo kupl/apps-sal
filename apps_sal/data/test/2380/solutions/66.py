@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 lsA = list(map(int, input().split()))
 lsM = []
 for i in range(M):
-    B, C = map(int, input().split())
+    (B, C) = map(int, input().split())
     lsM.append([B, C])
 lsA.sort()
 lsM.sort(key=lambda x: -x[1])

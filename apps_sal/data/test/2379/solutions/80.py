@@ -1,4 +1,4 @@
-N, K, C = map(int, input().split())
+(N, K, C) = map(int, input().split())
 S = input()
 day = []
 for i in range(len(S)):
@@ -23,7 +23,6 @@ if len(F) > K:
     while len(F) > K:
         F.pop()
 F.reverse()
-
 for i in range(K):
     if E[i] == F[i]:
         print(E[i])

@@ -1,5 +1,6 @@
 class Factorial:
-    def __init__(self, n, mod=10**9 + 7):
+
+    def __init__(self, n, mod=10 ** 9 + 7):
         self.fac = [0] * (n + 1)
         self.ifac = [0] * (n + 1)
         self.fac[0] = 1
@@ -23,16 +24,15 @@ class Factorial:
             return 1
         if n < r or n < 0:
             return 0
-        return (self.fac[n] * self.ifac[n - r]) % self.mod
+        return self.fac[n] * self.ifac[n - r] % self.mod
 
 
 def resolve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
     mod = 10 ** 9 + 7
     fact = Factorial(n + 1)
-
-    mn, mx = 0, 0
+    (mn, mx) = (0, 0)
     for i in range(k, n + 1):
         mx = (mx + a[i - 1] * fact.comb(i - 1, k - 1)) % mod
         mn = (mn + a[n - i] * fact.comb(i - 1, k - 1)) % mod

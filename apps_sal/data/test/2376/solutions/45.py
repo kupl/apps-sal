@@ -1,8 +1,8 @@
-N, W = map(int, input().split())
+(N, W) = map(int, input().split())
 A = []
-W1, W2, W3, W4 = [], [], [], []
+(W1, W2, W3, W4) = ([], [], [], [])
 for i in range(N):
-    w, v = map(int, input().split())
+    (w, v) = map(int, input().split())
     if i == 0:
         a = w
     A.append((v, w))
@@ -14,11 +14,8 @@ for i in range(N):
         W3.append(v)
     else:
         W4.append(v)
-
-
-W1, W2, W3, W4 = sorted(W1)[::-1], sorted(W2)[::-1], sorted(W3)[::-1], sorted(W4)[::-1]
-
-l1, l2, l3, l4 = len(W1), len(W2), len(W3), len(W4)
+(W1, W2, W3, W4) = (sorted(W1)[::-1], sorted(W2)[::-1], sorted(W3)[::-1], sorted(W4)[::-1])
+(l1, l2, l3, l4) = (len(W1), len(W2), len(W3), len(W4))
 ans = 0
 for i in range(l1 + 1):
     for j in range(l2 + 1):

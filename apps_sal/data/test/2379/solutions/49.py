@@ -10,12 +10,11 @@ def assign(s, n, k, c):
     return res
 
 
-n, k, c = list(map(int, input().split()))
+(n, k, c) = list(map(int, input().split()))
 s = input()
 a = assign(s, n, k, c)
 b = assign(s[::-1], n, k, c)[::-1]
 c = [n - x - 1 for x in b]
-
-for x, y in zip(a, c):
+for (x, y) in zip(a, c):
     if x == y:
-        print((x + 1))
+        print(x + 1)

@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 1
 i = 0
 j = -1

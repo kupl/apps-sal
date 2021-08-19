@@ -1,7 +1,7 @@
-N, H = map(int, input().split())
+(N, H) = map(int, input().split())
 ls = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ls.append([a, b])
 ls.sort()
 ls.sort(key=lambda x: -x[0])

@@ -1,11 +1,10 @@
 from collections import deque
-N, M = map(int, input().strip().split())
+(N, M) = map(int, input().strip().split())
 A = list(map(int, input().strip().split()))
 BC = [list(map(int, input().strip().split())) for _ in range(M)]
 A.sort()
 A = deque(A)
 BC.sort(key=lambda x: x[1], reverse=True)
-
 ans = 0
 fin = False
 for m in range(M):

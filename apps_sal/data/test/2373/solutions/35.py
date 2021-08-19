@@ -7,5 +7,4 @@ while r < n:
         ans += 1
         r += 1
     r += 1
-
 print(ans)

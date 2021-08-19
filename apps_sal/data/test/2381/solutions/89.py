@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-num, k = map(int, input().rstrip().split())
+mod = 10 ** 9 + 7
+(num, k) = map(int, input().rstrip().split())
 mai = list(map(int, input().rstrip().split()))
 main = sorted(mai, key=abs, reverse=True)
 result = 1
@@ -38,7 +38,7 @@ if num == k:
         result *= i
         result %= mod
 elif sorted(main)[len(sorted(main)) - 1] < 0:
-    if (k % 2) == 0:
+    if k % 2 == 0:
         for i in range(k):
             result *= main[i]
             result %= mod
@@ -46,7 +46,6 @@ elif sorted(main)[len(sorted(main)) - 1] < 0:
         for i in range(len(main) - 1, len(main) - 1 - k, -1):
             result *= main[i]
             result %= mod
-
 else:
     count = 0
     for i in range(k):
@@ -54,7 +53,7 @@ else:
             count += 1
         result *= main[i]
         result %= mod
-    if (count % 2) == 1:
+    if count % 2 == 1:
         minplus = findminus_plus(k)
         minminus = findminus_minus(k)
         maxplus = findplus_plus(k)
@@ -62,13 +61,12 @@ else:
         if type(maxplus) == type(''):
             plusplus = -1
             minusminus = minminus * maxminus
+        elif type(maxminus) == type('') or type(minplus) == type(''):
+            minusminus = -1
+            plusplus = 0
         else:
-            if type(maxminus) == type('') or type(minplus) == type(''):
-                minusminus = -1
-                plusplus = 0
-            else:
-                minusminus = minminus * maxminus
-                plusplus = minplus * maxplus
+            minusminus = minminus * maxminus
+            plusplus = minplus * maxplus
         if plusplus > minusminus:
             main.remove(minminus)
             result = 1
@@ -83,5 +81,4 @@ else:
                 result *= main[i]
                 result %= mod
             result *= maxminus
-
 print(result % mod)

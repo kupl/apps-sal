@@ -1,14 +1,14 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def main():
-    MOD = 10**9 + 7
+    MOD = 10 ** 9 + 7
     n = int(input())
     T = [[] for _ in range(n)]
     for _ in range(n - 1):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         a -= 1
         b -= 1
         T[a].append(b)
@@ -27,9 +27,7 @@ def main():
             cnt += dfs(nv)
         dp[v] = cnt
         return cnt
-
     dfs(0)
-
     p = [1] * (n + 1)
     inv = [1] * (n + 1)
     inv_two = pow(2, MOD - 2, MOD)

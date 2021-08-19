@@ -3,7 +3,7 @@ n = len(s)
 l = []
 r = []
 for i in range(n):
-    if s[i] == "(":
+    if s[i] == '(':
         l.append(i + 1)
     else:
         r.append(i + 1)

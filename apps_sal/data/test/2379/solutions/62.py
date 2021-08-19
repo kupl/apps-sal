@@ -1,9 +1,7 @@
-n, k, c = list(map(int, input().split()))
+(n, k, c) = list(map(int, input().split()))
 s = input()
-
-
-cnt0 = [-10**10] * len(s)
-cnt1 = [-10**10] * len(s)
+cnt0 = [-10 ** 10] * len(s)
+cnt1 = [-10 ** 10] * len(s)
 rest0 = c
 rest1 = c
 ct0 = 1
@@ -24,5 +22,5 @@ for i in range(len(s)):
     else:
         rest1 += 1
 for i in range(len(s)):
-    if (cnt0[i] + cnt1[i] == k + 1):
-        print((i + 1))
+    if cnt0[i] + cnt1[i] == k + 1:
+        print(i + 1)

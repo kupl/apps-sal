@@ -1,4 +1,5 @@
-class nCrMod():
+class nCrMod:
+
     def __init__(self, mod):
         self.mod = mod
         self.fac = [1, 1]
@@ -7,12 +8,12 @@ class nCrMod():
 
     def prep(self, n):
         mod = self.mod
-        f, fi = self.fac[-1], self.finv[-1]
+        (f, fi) = (self.fac[-1], self.finv[-1])
         for i in range(len(self.fac), n + 1):
             fn = f * i % mod
             v = -self.inv[mod % i] * (mod // i) % mod
             fin = fi * v % mod
-            f, fi = fn, fin
+            (f, fi) = (fn, fin)
             self.fac.append(f)
             self.finv.append(fi)
             self.inv.append(v)
@@ -24,7 +25,7 @@ class nCrMod():
 
 
 def main():
-    H, W, A, B = list(map(int, input().split()))
+    (H, W, A, B) = list(map(int, input().split()))
     mod = 10 ** 9 + 7
     nCr = nCrMod(mod)
     r = 0
@@ -34,4 +35,4 @@ def main():
     return r
 
 
-print((main()))
+print(main())

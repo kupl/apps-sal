@@ -1,12 +1,13 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, = readln()
+(n,) = readln()
 ans = []
-for x, y in sorted([readln() for _ in range(n)], key=lambda x: abs(x[0]) + abs(x[1])):
+for (x, y) in sorted([readln() for _ in range(n)], key=lambda x: abs(x[0]) + abs(x[1])):
     if x > 0:
         ans.append('1 %d R' % x)
     if x < 0:

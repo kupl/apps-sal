@@ -12,7 +12,7 @@ for i in range(t):
         if ans[i][0] == ans[i + 1][0]:
             mini = min(ans[i + 1][1] - ans[i][1] + 1, mini)
             flag = True
-    if not(flag):
+    if not flag:
         print(-1)
     else:
         print(mini)

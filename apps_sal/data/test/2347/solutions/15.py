@@ -9,13 +9,13 @@ def solve():
     n = len(p)
     m = len(h)
     if n > m:
-        print("NO")
+        print('NO')
         return
     for i in range(m - n + 1):
         if sorted(h[i:i + n]) == p:
-            print("YES")
+            print('YES')
             return
-    print("NO")
+    print('NO')
 
 
 t = int(input())

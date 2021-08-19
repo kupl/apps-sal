@@ -1,9 +1,9 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = [list(map(int, input().split())) for i in range(2)]
 l = [[] for i in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a - 1].append(b - 1)
     l[b - 1].append(a - 1)
 boo = [-1] * n
@@ -26,6 +26,6 @@ for i in range(n):
             flag = 1
             break
 if flag == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

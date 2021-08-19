@@ -1,11 +1,11 @@
 import bisect
 import heapq
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 heapq.heapify(A)
 BC = []
 for i in range(M):
-    B, C = map(int, input().split())
+    (B, C) = map(int, input().split())
     BC.append((B, C))
 BC.sort(key=lambda x: x[1], reverse=True)
 A.sort()
@@ -19,7 +19,6 @@ for i in range(M):
     now += B
     if now > N - 1:
         break
-
 for i in range(N):
     a = A[i]
     d = D[i]

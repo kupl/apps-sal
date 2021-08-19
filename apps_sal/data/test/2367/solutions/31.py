@@ -1,15 +1,13 @@
-H, W, A, B = list(map(int, input().split()))
-mod = 10**9 + 7
-U = 2 * 10**5
-
+(H, W, A, B) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
+U = 2 * 10 ** 5
 factorial = [1 for _ in range(U + 1)]
 for i in range(1, U + 1):
-    factorial[i] = (factorial[i - 1] * i) % mod
-
+    factorial[i] = factorial[i - 1] * i % mod
 inverse = [1 for _ in range(U + 1)]
 inverse[U] = pow(factorial[U], mod - 2, mod)
 for i in range(U, 0, -1):
-    inverse[i - 1] = (inverse[i] * i) % mod
+    inverse[i - 1] = inverse[i] * i % mod
 
 
 def comb(n, k):

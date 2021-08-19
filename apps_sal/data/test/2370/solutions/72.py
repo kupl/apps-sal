@@ -2,7 +2,6 @@ def main():
     N = int(input())
     r = range(N)
     A = [list(map(int, input().split())) for _ in r]
-
     for i in r:
         A[i][i] = float('inf')
     possible = True

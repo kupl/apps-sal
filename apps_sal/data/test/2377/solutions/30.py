@@ -1,8 +1,8 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 A = []
 B = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     A.append(a)
     B.append(b)
 A.sort(reverse=True)
@@ -16,7 +16,7 @@ for i in B:
         break
 if h > 0:
     if h % A[0] == 0:
-        ans += (h // A[0])
+        ans += h // A[0]
     else:
-        ans += (h // A[0]) + 1
+        ans += h // A[0] + 1
 print(ans)

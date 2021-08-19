@@ -1,5 +1,5 @@
 for itr in range(int(input())):
-    h, o = list(map(int, input().split()))
+    (h, o) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a = a[::-1]
     a.pop(-1)

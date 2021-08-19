@@ -1,6 +1,6 @@
 T = int(input())
 for t in range(T):
-    h, n = list(map(int, input().strip().split(' ')))
+    (h, n) = list(map(int, input().strip().split(' ')))
     steps = list(map(int, input().strip().split(' ')))
     steps.append(0)
     cur = n

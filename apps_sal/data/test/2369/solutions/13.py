@@ -1,12 +1,10 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 A.sort(reverse=True)
 kaijou = [1 for _ in range(N + 1)]
 for k in range(1, N):
     kaijou[k + 1] = kaijou[k] * (k + 1) % mod
-
-
 b = mod - 2
 blis = []
 c = 0
@@ -37,13 +35,10 @@ def combination(n, k):
 
 
 ans = 0
-
 for k in range(N - K + 1):
     ans += A[k] * combination(N - k - 1, K - 1)
     ans %= mod
-
 for k in range(N - K + 1):
     ans -= A[-k - 1] * combination(N - k - 1, K - 1)
     ans %= mod
-
 print(ans)

@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 cnt = 0
 mode = 0
 for j in range(n):
@@ -10,5 +9,4 @@ for j in range(n):
             mode = 1
     else:
         mode = 0
-
 print(cnt)

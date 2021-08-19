@@ -6,7 +6,7 @@ input = sys.stdin.readline
 def read():
     N = int(input().strip())
     P = list(map(int, input().strip().split()))
-    return N, P
+    return (N, P)
 
 
 def solve(N, P):
@@ -33,7 +33,7 @@ def solve(N, P):
 
 def __starting_point():
     inputs = read()
-    print((solve(*inputs)))
+    print(solve(*inputs))
 
 
 __starting_point()

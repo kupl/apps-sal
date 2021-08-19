@@ -1,7 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 f = [1]
 for i in range(N):
     f += [f[-1] * (i + 1) % mod]

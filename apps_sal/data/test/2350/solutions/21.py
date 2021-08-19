@@ -9,6 +9,5 @@ def value(x, y):
 
 t = int(input())
 for tests in range(t):
-    x1, y1, x2, y2 = list(map(int, input().split()))
-
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     print(1 + (x2 - x1) * (y2 - y1))

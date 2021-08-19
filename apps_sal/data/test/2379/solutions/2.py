@@ -1,4 +1,4 @@
-n, k, c = map(int, input().split())
+(n, k, c) = map(int, input().split())
 s = list(input())
 i = 0
 l = [0] * k

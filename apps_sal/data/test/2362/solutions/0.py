@@ -1,5 +1,4 @@
 import sys
-
 answer = 1
 z = True
 primes = []
@@ -10,7 +9,6 @@ for i in range(2, 5 * 10 ** 2):
             v = False
     if v == True:
         primes.append(i)
-
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
 if sum(a) == n:
@@ -26,19 +24,15 @@ for i in range(0, n):
                 x = x // p
     if x != 1:
         a[i].append([x, 1])
-
 neighbours = [[] for i in range(0, n)]
 for i in range(0, n - 1):
     line = sys.stdin.readline().strip().split()
     neighbours[int(line[0]) - 1].append(int(line[1]) - 1)
     neighbours[int(line[1]) - 1].append(int(line[0]) - 1)
-
 leaves = []
 for i in range(0, n):
     if len(neighbours[i]) == 1:
         leaves.append(i)
-
-
 while len(leaves) > 1:
     x = leaves.pop()
     y = neighbours[x][0]
@@ -50,8 +44,6 @@ while len(leaves) > 1:
             if p[0] == q[0]:
                 answer = max([answer, p[1] + q[1]])
                 q[1] = max([q[1], p[1] + 1])
-
-
 if z == False:
     print(0)
 else:

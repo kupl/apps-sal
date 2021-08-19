@@ -1,7 +1,7 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 kind = [[] for _ in range(4)]
 for i in range(n):
-    w_, v = map(int, input().split())
+    (w_, v) = map(int, input().split())
     if i == 0:
         stan = w_
     kind[w_ - stan].append(v)

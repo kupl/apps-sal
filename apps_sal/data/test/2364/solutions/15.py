@@ -2,11 +2,11 @@ MOD = 998244353
 
 
 def f(n):
-    if(n == 0):
+    if n == 0:
         return 1
-    if(n == 1):
+    if n == 1:
         return 3
-    return ((n + 2) * pow(2, n - 1, MOD)) % MOD
+    return (n + 2) * pow(2, n - 1, MOD) % MOD
 
 
 n = int(input())

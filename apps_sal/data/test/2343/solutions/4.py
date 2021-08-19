@@ -3,7 +3,7 @@ for i in range(case):
     f = [0] * 32
     g = [0] * 32
     success = False
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     ans = n
     for i in range(1, n):
         f[i] = f[i - 1] * 4 + 1
@@ -24,4 +24,4 @@ for i in range(case):
         if k <= 0:
             success = True
             break
-    print("YES %d" % ans if success else "NO")
+    print('YES %d' % ans if success else 'NO')

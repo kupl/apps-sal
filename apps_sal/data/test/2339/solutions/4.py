@@ -16,7 +16,7 @@ for _ in range(int(input())):
         for x in range(1, mx + 1):
             if table[x] == 0:
                 continue
-            if y == 0 or (gcd(g, x) > gcd(g, y)):
+            if y == 0 or gcd(g, x) > gcd(g, y):
                 y = x
         table[y] -= 1
         res.append(y)

@@ -1,11 +1,9 @@
 import bisect
 import sys
 input = sys.stdin.readline
-
-
 q = int(input())
 for _ in range(q):
-    h, n = map(int, input().split())
+    (h, n) = map(int, input().split())
     p = list(map(int, input().split())) + [0]
     cnt = 1
     ans = 0

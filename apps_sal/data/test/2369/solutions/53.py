@@ -1,10 +1,10 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 fan = [1] * (N + 1)
 for i in range(2, N):
-    fan[i] = fan[i - 1] * (i) % mod
+    fan[i] = fan[i - 1] * i % mod
 ans = 0
 
 

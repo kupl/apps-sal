@@ -2,14 +2,13 @@ from collections import deque
 
 
 def solve(X):
-
     waiting = deque()
     res = [None] * len(X)
     t = 0
     X.append((10000, 10000))
-    for i, (l, r) in enumerate(X):
+    for (i, (l, r)) in enumerate(X):
         while waiting and t < l:
-            j, b = waiting.popleft()
+            (j, b) = waiting.popleft()
             if t <= b:
                 res[j] = t
                 t += 1
@@ -17,7 +16,6 @@ def solve(X):
                 res[j] = 0
         waiting.append((i, r))
         t = l
-
     return res
 
 

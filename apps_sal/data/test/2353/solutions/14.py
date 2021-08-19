@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     cur = b
     if cur < a:
         if d >= c:

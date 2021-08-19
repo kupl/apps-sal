@@ -8,7 +8,7 @@ class Combination:
 
     def __init__(self, N, MOD=10 ** 9 + 7):
         self.MOD = MOD
-        self.fact, self.inv = self._make_factorial_list(N)
+        (self.fact, self.inv) = self._make_factorial_list(N)
 
     def __call__(self, n, k):
         if k < 0 or k > n:
@@ -22,19 +22,17 @@ class Combination:
         inv = [1] * (N + 1)
         MOD = self.MOD
         for i in range(1, N + 1):
-            fact[i] = (fact[i - 1] * i) % MOD
+            fact[i] = fact[i - 1] * i % MOD
         inv[N] = pow(fact[N], MOD - 2, MOD)
         for i in range(N, 0, -1):
-            inv[i - 1] = (inv[i] * i) % MOD
-        return fact, inv
+            inv[i - 1] = inv[i] * i % MOD
+        return (fact, inv)
 
 
 def __starting_point():
-    H, W, A, B = list(map(int, input().split()))
+    (H, W, A, B) = list(map(int, input().split()))
     mod = 10 ** 9 + 7
-
     comb = Combination(2 * 10 ** 5 + 10, mod)
-
     ans = 0
     x = H - A
     y = B + 1
@@ -44,7 +42,6 @@ def __starting_point():
         ans = (ans + path1 * path2) % mod
         x -= 1
         y += 1
-
     print(ans)
 
 

@@ -6,11 +6,11 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, *a = map(int, read().split())
+    (n, *a) = map(int, read().split())
     aa = Counter(a)
     d1 = defaultdict(int)
     d2 = defaultdict(int)
-    for k, v in aa.items():
+    for (k, v) in aa.items():
         d1[k] = v * (v - 1) // 2
         v -= 1
         d2[k] = v * (v - 1) // 2

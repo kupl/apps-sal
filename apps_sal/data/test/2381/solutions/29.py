@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 mod = pow(10, 9) + 7
 neg = 0
@@ -25,8 +25,8 @@ elif k % 2 == 1 and (neg == n or neg + zero == n):
         ans *= -a[-i][0]
         ans %= mod
 else:
-    pos, neg = 0, 0
-    lastpos, lastneg = mod, mod
+    (pos, neg) = (0, 0)
+    (lastpos, lastneg) = (mod, mod)
     for i in range(k):
         ans *= a[i][0]
         ans %= mod
@@ -37,13 +37,13 @@ else:
             neg += 1
             lastneg = a[i][0]
     if neg % 2 == 1:
-        firstpos, firstneg = mod, mod
+        (firstpos, firstneg) = (mod, mod)
         for i in range(k, n):
-            if not firstpos == mod and not firstneg == mod:
+            if not firstpos == mod and (not firstneg == mod):
                 break
             if firstpos == mod and a[i][1]:
                 firstpos = a[i][0]
-            elif firstneg == mod and not a[i][1]:
+            elif firstneg == mod and (not a[i][1]):
                 firstneg = a[i][0]
         if not mod in [lastpos, lastneg, firstpos, firstneg]:
             if firstpos * lastpos >= firstneg * lastneg:

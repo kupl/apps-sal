@@ -1,4 +1,5 @@
 class Solution:
+
     def parseBoolExpr(self, expression: str) -> bool:
         stack = []
         for ch in expression:

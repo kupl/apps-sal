@@ -11,6 +11,5 @@ def nC2(n):
 
 ss = list(map(nC2, s))
 sss = sum(ss)
-
 for i in range(N):
     print(sss - s[A[i]] + 1)

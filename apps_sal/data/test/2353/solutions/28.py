@@ -2,7 +2,7 @@ t = int(input())
 out = ''
 while t > 0:
     t -= 1
-    a, b, c, d = [int(i) for i in input().split(' ')]
+    (a, b, c, d) = [int(i) for i in input().split(' ')]
     left = a - b
     if left <= 0:
         out += f'{b}\n'

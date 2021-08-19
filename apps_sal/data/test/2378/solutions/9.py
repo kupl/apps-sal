@@ -1,16 +1,15 @@
 import sys
 sys.setrecursionlimit(200200)
 input = sys.stdin.readline
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 N = int(input())
 AB = [tuple(map(int, input().split())) for _ in range(N - 1)]
 G = [[] for _ in range(N)]
-for i, (a, b) in enumerate(AB):
+for (i, (a, b)) in enumerate(AB):
     a -= 1
     b -= 1
     G[a].append((b, i))
     G[b].append((a, i))
-
 P = [0] * N
 visited = [False] * N
 visited[0] = True
@@ -18,7 +17,7 @@ visited[0] = True
 
 def dfs(x, i):
     e = 1
-    for v, c in G[x]:
+    for (v, c) in G[x]:
         if not visited[v]:
             visited[v] = True
             e += dfs(v, c)

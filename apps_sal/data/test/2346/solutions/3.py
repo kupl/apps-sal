@@ -2,7 +2,7 @@ a = int(input())
 A = [0] * (a + 2)
 B = [0] * a
 for i in range(a):
-    q, w = map(int, input().split())
+    (q, w) = map(int, input().split())
     A[i] += 1
     A[q - 1] += 1
     if w == 1:

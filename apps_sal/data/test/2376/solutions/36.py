@@ -1,11 +1,11 @@
-n, w_max = list(map(int, input().split()))
-W, V = [], []
+(n, w_max) = list(map(int, input().split()))
+(W, V) = ([], [])
 Diff_zero = []
 Diff_one = []
 Diff_two = []
 Diff_three = []
 for i in range(n):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     W.append(w)
     V.append(v)
     diff = w - W[0]
@@ -17,17 +17,14 @@ for i in range(n):
         Diff_two.append(v)
     elif diff == 3:
         Diff_three.append(v)
-
 Diff_zero = sorted(Diff_zero, reverse=True)
 Diff_one = sorted(Diff_one, reverse=True)
 Diff_two = sorted(Diff_two, reverse=True)
 Diff_three = sorted(Diff_three, reverse=True)
-
 Diff_zero_ruiseki = [0]
 Diff_one_ruiseki = [0]
 Diff_two_ruiseki = [0]
 Diff_three_ruiseki = [0]
-
 for i in range(len(Diff_zero)):
     Diff_zero_ruiseki.append(Diff_zero[i] + Diff_zero_ruiseki[-1])
 for i in range(len(Diff_one)):
@@ -36,10 +33,8 @@ for i in range(len(Diff_two)):
     Diff_two_ruiseki.append(Diff_two[i] + Diff_two_ruiseki[-1])
 for i in range(len(Diff_three)):
     Diff_three_ruiseki.append(Diff_three[i] + Diff_three_ruiseki[-1])
-
 value_max = 0
 w_zero = W[0]
-
 for i in range(n + 1):
     if i > len(Diff_zero):
         continue
@@ -56,8 +51,6 @@ for i in range(n + 1):
                     continue
                 if i + j + k + l > n:
                     continue
-
                 value = Diff_zero_ruiseki[i] + Diff_one_ruiseki[j] + Diff_two_ruiseki[k] + Diff_three_ruiseki[l]
                 value_max = max(value, value_max)
-
 print(value_max)

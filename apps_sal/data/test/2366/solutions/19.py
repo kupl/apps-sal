@@ -11,7 +11,7 @@ a = list(map(int, input().split()))
 c = Counter(a)
 com = 0
 for i in range(1, n + 1):
-    if(c[i] <= 1):
+    if c[i] <= 1:
         continue
     com += combinations_count(c[i], 2)
 for k in range(1, n + 1):

@@ -5,6 +5,6 @@ for _ in range(int(input())):
     while d <= n:
         e = n // d
         res.append(e)
-        d = (n // e) + 1
+        d = n // e + 1
     print(len(res))
     print(*sorted(res))

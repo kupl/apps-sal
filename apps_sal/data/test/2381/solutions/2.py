@@ -1,19 +1,14 @@
 import sys
-
 input = sys.stdin.readline
-
 n_k = list(map(int, input().split()))
 n = n_k[0]
 k = n_k[1]
 a = list(map(int, input().split()))
 a_pos = list([v for v in a if v >= 0])
 a_neg = list([v for v in a if v < 0])
-
 a_pos.sort(reverse=True)
 a_neg.sort()
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 ans = 1
 if n == k:
     for a_i in a:

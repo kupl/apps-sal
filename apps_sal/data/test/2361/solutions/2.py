@@ -10,5 +10,5 @@ def solve(n, m, k):
 
 
 for _ in range(int(input())):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     print(solve(n, m, k))

@@ -4,7 +4,7 @@ mod = 10 ** 9 + 7
 n = int(input())
 edges = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edges[a - 1].append((b - 1, i))
     edges[b - 1].append((a - 1, i))
 l = [0 for i in range(n)]

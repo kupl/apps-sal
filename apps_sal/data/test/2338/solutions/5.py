@@ -6,13 +6,10 @@ def dist(p):
 
 
 n = int(input())
-
 pts = []
 for i in range(n):
     pts.append(tuple(map(int, input().split())))
-
 pts.sort(key=dist)
-
 ops = []
 
 
@@ -32,6 +29,5 @@ for p in pts:
     move(p[0], 0, 'RL')
     move(p[1], 0, 'UD')
     ops.append('3')
-
 sys.stdout.write(str(len(ops)) + '\n')
 sys.stdout.write('\n'.join(ops))

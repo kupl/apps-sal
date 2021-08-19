@@ -1,6 +1,5 @@
-N, Z, W = map(int, input().split())
+(N, Z, W) = map(int, input().split())
 alist = list(map(int, input().split()))
-
 if N == 1:
     print(abs(alist[-1] - W))
 else:

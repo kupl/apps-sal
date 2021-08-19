@@ -1,11 +1,10 @@
 import math
 for _ in range(int(input())):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     need = a - b
-    if (need <= 0):
+    if need <= 0:
         print(b)
+    elif c - d <= 0:
+        print(-1)
     else:
-        if (c - d) <= 0:
-            print(-1)
-        else:
-            print(b + math.ceil((need / (c - d))) * c)
+        print(b + math.ceil(need / (c - d)) * c)

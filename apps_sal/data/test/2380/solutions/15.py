@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 bc = []
@@ -15,4 +15,4 @@ for i in bc:
                 break
     else:
         break
-print((sum(a)))
+print(sum(a))

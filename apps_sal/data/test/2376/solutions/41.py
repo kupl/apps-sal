@@ -1,7 +1,7 @@
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 ls = []
 for i in range(N):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     ls += [[w, v]]
 w1 = ls[0][0]
 for i in range(N):
@@ -11,7 +11,7 @@ M = 3 * N
 dp = [[-1] * (M + 1) for i in range(N + 1)]
 dp[0][0] = 0
 for i in range(N):
-    w, v = ls[i]
+    (w, v) = ls[i]
     for h in range(N, 0, -1):
         for j in range(M, -1, -1):
             if j - w >= 0 and dp[h - 1][j - w] != -1:

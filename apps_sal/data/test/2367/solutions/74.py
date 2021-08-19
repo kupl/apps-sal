@@ -12,8 +12,8 @@ def ncr(n, r):
     return fact[n] * inv[r] * inv[n - r] % mod
 
 
-h, w, a, b = list(map(int, input().split()))
+(h, w, a, b) = list(map(int, input().split()))
 ans = ncr(h + w - 2, h - 1)
 for i in range(min(a, b)):
     ans -= ncr(h - a + b - 1, h - a + i) * ncr(w - b + a - 1, w - b + i)
-print((ans % mod))
+print(ans % mod)

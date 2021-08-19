@@ -8,14 +8,15 @@ def read_ints():
 
 tt = read_int()
 for case_num in range(tt):
-    h, c, t = read_ints()
+    (h, c, t) = read_ints()
     if 2 * t <= h + c:
         print(2)
         continue
     l = 1
-    r = int(1e7)
+    r = int(10000000.0)
 
-    def calc(x): return x * h + (x - 1) * c
+    def calc(x):
+        return x * h + (x - 1) * c
     while l <= r:
         mid = (l + r) // 2
         temp = calc(mid)

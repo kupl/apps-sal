@@ -1,15 +1,12 @@
-H, W, A, B = list(map(int, input().split()))
-
+(H, W, A, B) = list(map(int, input().split()))
 MOD = 1000000007
-
 fac = [1, 1]
 inverse = [0, 1]
 ifac = [1, 1]
-
 for i in range(2, H + W):
-    fac.append((fac[-1] * i) % MOD)
-    inverse.append((-inverse[MOD % i] * (MOD // i)) % MOD)
-    ifac.append((ifac[-1] * inverse[i]) % MOD)
+    fac.append(fac[-1] * i % MOD)
+    inverse.append(-inverse[MOD % i] * (MOD // i) % MOD)
+    ifac.append(ifac[-1] * inverse[i] % MOD)
 
 
 def f(n):
@@ -23,4 +20,4 @@ def sigma(func, frm, to):
     return result
 
 
-print((sigma(f, 0, W - B - 1) % MOD))
+print(sigma(f, 0, W - B - 1) % MOD)

@@ -1,20 +1,18 @@
 def main() -> None:
-    n, k, c = list(map(int, input().split()))
+    (n, k, c) = list(map(int, input().split()))
     s = input()
-
     if k < s.count('o') and c == 0:
         print('')
         return
-
     count = c
-    day_work, day_work_reverse = [], []
-    for i, day in enumerate(s):
+    (day_work, day_work_reverse) = ([], [])
+    for (i, day) in enumerate(s):
         count += 1
         if day == 'o' and c < count:
             day_work.append(i + 1)
             count = 0
     count = c
-    for i, day in enumerate(s[::-1]):
+    for (i, day) in enumerate(s[::-1]):
         count += 1
         if day == 'o' and c < count:
             day_work_reverse.append(n - i)

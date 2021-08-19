@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def dfs(graph, N):
@@ -28,7 +27,6 @@ def dfs(graph, N):
                 score = (score - pow(2, upper, mod) + 1) % mod
             ans = (ans + score) % mod
             Childs[Par[p]].append(N - 1 - upper + 1)
-
     return ans * pow(2, N * (mod - 2), mod) % mod
 
 
@@ -36,10 +34,10 @@ def main():
     N = int(input())
     graph = [[] for _ in range(N)]
     for _ in range(N - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         graph[a - 1].append(b - 1)
         graph[b - 1].append(a - 1)
-    print((dfs(graph, N)))
+    print(dfs(graph, N))
 
 
 def __starting_point():
