@@ -1,11 +1,9 @@
 __author__ = 'kitkat'
 import sys
-
-#sys.stdin = open("in.txt")
 try:
     while True:
-        n, k, x = list(map(int, input().split(" ")))
-        val = [0] + list(map(int, input().split(" ")))
+        (n, k, x) = list(map(int, input().split(' ')))
+        val = [0] + list(map(int, input().split(' ')))
         res = 0
         L = [0 for i in range(200003)]
         R = [0 for i in range(200003)]

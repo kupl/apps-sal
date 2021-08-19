@@ -3,13 +3,19 @@ import math
 import itertools
 from collections import Counter, deque, defaultdict
 from bisect import bisect_left, bisect_right
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
 
 
-n, k = inpl()
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+(n, k) = inpl()
 a = inpl()
 if k != 0:
     b = inpl()
@@ -33,7 +39,7 @@ if k == 0:
     r = [INF]
     dv = [a]
 else:
-    for _, i in enumerate(b):
+    for (_, i) in enumerate(b):
         dv.append(a[pre:i - 1])
         if pre == 0:
             l.append(-INF)
@@ -44,22 +50,21 @@ else:
     dv.append(a[pre:])
     l.append(a[pre - 1])
     r.append(INF)
-# print(dv,l,r)
 res = 0
 for i in range(k + 1):
     li = []
     L = l[i] + 1
     R = r[i] - 1
     ln = len(dv[i])
-    for j, x in enumerate(dv[i]):
+    for (j, x) in enumerate(dv[i]):
         if L + j <= x <= R - ln + j + 1:
             li.append(x - j)
-    dp = [INF] * (len(li))
-    for i, x in enumerate(li):
+    dp = [INF] * len(li)
+    for (i, x) in enumerate(li):
         ind = bisect_right(dp, x)
         dp[ind] = x
     ans = len(li)
-    for i, x in enumerate(dp):
+    for (i, x) in enumerate(dp):
         if x == INF:
             ans = i
             break

@@ -11,8 +11,8 @@ def solve():
     second = input()
     fbuf = []
     sbuf = []
-    fcur = "0"
-    scur = "0"
+    fcur = '0'
+    scur = '0'
     for c in first:
         if fcur[-1] != c:
             fbuf.append(fcur)
@@ -20,7 +20,6 @@ def solve():
         else:
             fcur += c
     fbuf.append(fcur)
-
     for c in second:
         if scur[-1] != c:
             sbuf.append(scur)
@@ -28,26 +27,20 @@ def solve():
         else:
             scur += c
     sbuf.append(scur)
-
-    # print(fbuf, sbuf)
     if len(fbuf) != len(sbuf):
-        print("NO")
+        print('NO')
         return
-
-    for f, s in zip(fbuf, sbuf):
+    for (f, s) in zip(fbuf, sbuf):
         if f[0] != s[0]:
-            print("NO")
+            print('NO')
             return
-
         if len(f) > len(s):
-            print("NO")
+            print('NO')
             return
-
-    print("YES")
+    print('YES')
     return
 
 
 n = getN()
-
 for i in range(n):
     solve()

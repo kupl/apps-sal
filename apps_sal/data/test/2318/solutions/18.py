@@ -3,13 +3,13 @@ for tee in range(n):
     s = input()
     t = input()
     if len(s) > len(t):
-        print("NO")
+        print('NO')
         continue
     if len(s) == len(t):
         if s == t:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
         continue
     arr = []
     i = 0
@@ -19,13 +19,12 @@ for tee in range(n):
         if pre == None:
             pre = s[i]
             cc = 1
+        elif pre == s[i]:
+            cc += 1
         else:
-            if pre == s[i]:
-                cc += 1
-            else:
-                arr.append([pre, cc])
-                pre = s[i]
-                cc = 1
+            arr.append([pre, cc])
+            pre = s[i]
+            cc = 1
         i += 1
     arr.append([pre, cc])
     brr = []
@@ -36,19 +35,16 @@ for tee in range(n):
         if pre == None:
             pre = t[i]
             cc = 1
+        elif pre == t[i]:
+            cc += 1
         else:
-            if pre == t[i]:
-                cc += 1
-            else:
-                brr.append([pre, cc])
-                pre = t[i]
-                cc = 1
+            brr.append([pre, cc])
+            pre = t[i]
+            cc = 1
         i += 1
     brr.append([pre, cc])
-    # print(arr)
-    # print(brr)
     if len(brr) != len(arr):
-        print("NO")
+        print('NO')
     else:
         check = True
         for i in range(len(arr)):
@@ -56,6 +52,6 @@ for tee in range(n):
                 check = False
                 break
         if not check:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

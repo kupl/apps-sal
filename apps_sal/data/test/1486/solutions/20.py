@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces
 567 A. Lineland Mail
@@ -6,7 +5,6 @@ Codeforces
 @author yamaton
 @date 2015-08-05
 """
-
 import itertools
 
 
@@ -24,7 +22,7 @@ def main():
     assert len(xs) == n
     result = solve(xs)
     for out in result:
-        print(' '.join(str(c) for c in out))
+        print(' '.join((str(c) for c in out)))
 
 
 def __starting_point():

@@ -1,7 +1,6 @@
-# coding: utf-8
 import sys
 from heapq import heappush, heappop, heapify
-sys.setrecursionlimit(int(1e7))
+sys.setrecursionlimit(int(10000000.0))
 
 
 def main():

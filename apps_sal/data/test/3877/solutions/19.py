@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict
 
 
@@ -8,8 +7,7 @@ def ri():
 
 pt = defaultdict()
 ln = defaultdict()
-
-n, l, r = ri()
+(n, l, r) = ri()
 
 
 def lenn(n):
@@ -34,7 +32,6 @@ def pn(n):
 
 
 def findval(i, p, n):
-    #    print(i, p, n)
     if p == i:
         return n % 2
     if p > i:
@@ -47,5 +44,4 @@ ans = 0
 p = pn(n)
 for i in range(l, r + 1):
     ans += findval(i, p, n)
-
 print(ans)

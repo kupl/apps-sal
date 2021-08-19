@@ -1,4 +1,3 @@
-# https://codeforces.com/blog/entry/66101?#comment-501153
 MOD = 10 ** 9 + 7
 m = int(input())
 f = [0] * (m + 1)
