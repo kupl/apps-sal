@@ -2,7 +2,6 @@ a = int(input())
 b = int(input())
 c = int(input())
 x = int(input())
-
 cnt = 0
 for an in range(a + 1):
     for bn in range(b + 1):

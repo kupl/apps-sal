@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 l = sorted([int(input()) for i in range(n)])
 x -= sum(l)
 ans = n

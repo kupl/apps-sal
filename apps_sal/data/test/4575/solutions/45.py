@@ -1,5 +1,5 @@
 N = int(input())
-D, X = list(map(int, input().split()))
+(D, X) = list(map(int, input().split()))
 ans = X
 for _ in range(N):
     A = int(input())

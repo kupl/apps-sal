@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
 ans = 0
 b = a.copy()
@@ -17,7 +16,6 @@ for i in range(1, n):
         c[j] += 1
 for i in range(len(b)):
     if c[i] >= 4:
-
         ans = b[i] * b[i]
         break
     elif c[i] >= 2:

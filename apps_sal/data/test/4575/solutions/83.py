@@ -1,7 +1,6 @@
 n = int(input())
-d, x = map(int, input().split())
+(d, x) = map(int, input().split())
 A = [int(input()) for _ in range(n)]
-
 cnt = 0
 for a in A:
     for i in range(d):

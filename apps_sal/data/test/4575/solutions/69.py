@@ -1,5 +1,5 @@
 N = int(input())
-D, X = map(int, input().split())
+(D, X) = map(int, input().split())
 A = [int(input()) for _ in range(N)]
 count = 0
 for a_i in A:

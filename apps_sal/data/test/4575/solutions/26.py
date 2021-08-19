@@ -1,9 +1,6 @@
 N = int(input())
-
-D, X = map(int, input().split())
-
+(D, X) = map(int, input().split())
 choco = 0
-
 for i in range(N):
     A = int(input())
     choco += 1
@@ -12,5 +9,4 @@ for i in range(N):
             choco += 1
         else:
             break
-
 print(choco + X)

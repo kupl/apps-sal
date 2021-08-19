@@ -5,6 +5,6 @@ y = statistics.median(x)
 xs = sorted(x)
 for i in x:
     if i < y:
-        print((xs[n // 2]))
+        print(xs[n // 2])
     else:
-        print((xs[n // 2 - 1]))
+        print(xs[n // 2 - 1])

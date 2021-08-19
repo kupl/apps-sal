@@ -1,2 +1,2 @@
 moji = str(input())
-print(700 + moji.count("o") * 100)
+print(700 + moji.count('o') * 100)

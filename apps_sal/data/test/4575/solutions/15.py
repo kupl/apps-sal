@@ -1,5 +1,5 @@
 n = int(input())
-d, x = map(int, input().split())
+(d, x) = map(int, input().split())
 data = [int(input()) for i in range(n)]
 ans = n
 for i in range(n):

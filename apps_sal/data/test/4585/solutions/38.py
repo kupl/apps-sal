@@ -12,5 +12,4 @@ def piramid(n):
 
 n = int(input())
 index = get_index(n)
-
 print(index + 1)

@@ -1,6 +1,5 @@
 n = int(input())
 a = sorted(map(int, input().split()))
-
 c = [0] * 9
 for num in a:
     if num < 400:
@@ -31,4 +30,4 @@ ma += c[8]
 if mi == 0:
     if c[8] >= 1:
         mi += 1
-print((str(mi) + " " + str(ma)))
+print(str(mi) + ' ' + str(ma))

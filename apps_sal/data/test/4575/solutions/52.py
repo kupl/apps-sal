@@ -1,5 +1,5 @@
 a = int(input())
-b, c = map(int, input().split())
+(b, c) = map(int, input().split())
 s = []
 total = a + c
 for i in range(a):

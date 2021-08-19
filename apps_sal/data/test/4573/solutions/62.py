@@ -1,6 +1,5 @@
 n = int(input())
 x = list(map(int, input().split()))
-
 nums = sorted(x)
 m1 = n // 2 - 1
 m2 = n // 2

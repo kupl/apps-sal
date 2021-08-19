@@ -1,6 +1,5 @@
 with open(0) as f:
-    N, *A = map(int, f.read().split())
-
+    (N, *A) = map(int, f.read().split())
 pair = []
 unpair = set()
 for a in A:

@@ -20,10 +20,8 @@ for i in range(n):
         b[7] += 1
     else:
         b[8] += 1
-
 min = 8 - b[:8].count(0)
 max = min + b[8]
-
 if min == 0:
     min = 1
 print(min, max)

@@ -1,5 +1,4 @@
 s = input()
-
 if s == 'ooo':
     print(1000)
 elif s == 'oox' or s == 'oxo' or s == 'xoo':

@@ -3,7 +3,7 @@ def LI():
 
 
 N = int(input())
-D, X = LI()
+(D, X) = LI()
 ans = X
 for _ in range(N):
     A = int(input())

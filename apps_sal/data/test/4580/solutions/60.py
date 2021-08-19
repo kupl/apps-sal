@@ -27,8 +27,6 @@ def check(a):
 for a in al:
     i = check(a)
     ratel[i] += 1
-
-
 zeroc = 0
 ratec = 0
 for i in range(8):
@@ -36,7 +34,6 @@ for i in range(8):
         zeroc += 1
     else:
         ratec += 1
-
 if ratel[8] == 0:
     print(ratec, ratec)
 elif 1 <= ratel[8] <= 8:
@@ -46,8 +43,7 @@ elif 1 <= ratel[8] <= 8:
         print(ratec, ratec + ratel[8])
     elif ratel[8] >= zeroc:
         print(ratec, ratec + ratel[8])
+elif ratec == 0:
+    print(1, ratel[8])
 else:
-    if ratec == 0:
-        print(1, ratel[8])
-    else:
-        print(ratec, ratec + ratel[8])
+    print(ratec, ratec + ratel[8])

@@ -1,9 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-
-
 a.sort()
-
 count = 0
 
 
@@ -18,19 +15,17 @@ def get_num(a):
             a.append(second)
             break
     if count == 1:
-        return taishou, 0
+        return (taishou, 0)
     elif count == 2 or count == 3:
-        return taishou, 1
+        return (taishou, 1)
     else:
-        return taishou, 2
+        return (taishou, 2)
 
 
 one = 0
 two = 0
-
-
 while a != [] and (one == 0 or two == 0):
-    hen, length = get_num(a)
+    (hen, length) = get_num(a)
     if length == 1:
         if one == 0:
             one = hen
@@ -42,5 +37,4 @@ while a != [] and (one == 0 or two == 0):
             two = hen
         else:
             two = hen
-
-print((one * two))
+print(one * two)

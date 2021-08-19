@@ -1,6 +1,5 @@
 def main():
     x = int(input())
-
     answer = 0
     tmp = 0
     for i in range(10 ** 9):
@@ -8,7 +7,6 @@ def main():
         if tmp >= x:
             answer = i
             break
-
     print(answer)
 
 

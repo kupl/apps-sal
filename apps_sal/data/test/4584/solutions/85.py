@@ -1,8 +1,6 @@
 def __starting_point():
-
     n = int(input())
     A = list(map(int, input().split()))
-
     B = [0] * n
     for a in A:
         B[a - 1] += 1

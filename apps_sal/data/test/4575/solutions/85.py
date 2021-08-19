@@ -1,6 +1,6 @@
 def resolve():
     n = int(input())
-    d, x = map(int, input().split())
+    (d, x) = map(int, input().split())
     al = list()
     ans = 0
     for i in range(n):

@@ -10,7 +10,6 @@ def main():
     n = int(input())
     a_lst = list(map(int, input().split()))
     color_lst = [0] * 8
-
     free = 0
     for i in range(n):
         rate = a_lst[i]
@@ -19,21 +18,17 @@ def main():
             free += 1
         else:
             color_lst[idx] = 1
-
     types = 0
     for i in range(8):
         if color_lst[i] == 1:
             types += 1
-
     if types > 0:
         minimum = types
     else:
         minimum = 1
-
     maximum = types
     max_add = free
     maximum += max_add
-
     print(minimum, maximum)
 
 

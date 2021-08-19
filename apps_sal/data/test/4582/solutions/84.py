@@ -1,5 +1,5 @@
-a, b = input().split()
-if a == b == "H" or a == b == "D":
-    print("H")
+(a, b) = input().split()
+if a == b == 'H' or a == b == 'D':
+    print('H')
 else:
-    print("D")
+    print('D')

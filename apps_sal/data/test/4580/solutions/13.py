@@ -47,7 +47,7 @@ if j != 0:
     x = x + 1
 if k + x > a:
     print(x, a)
-elif (c + d + e + f + g + h + i + j) == 0 and k != 0:
+elif c + d + e + f + g + h + i + j == 0 and k != 0:
     print(1, k)
 else:
     print(x, k + x)

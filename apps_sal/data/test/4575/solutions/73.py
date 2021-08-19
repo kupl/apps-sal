@@ -1,5 +1,5 @@
 n = int(input())
-d, x = map(int, input().split())
+(d, x) = map(int, input().split())
 a = [int(input()) for i in range(n)]
 a_eat = []
 for i in range(n):
@@ -9,5 +9,4 @@ for i in range(n):
         y += 1
         j += a[i]
     a_eat.append(y)
-
 print(sum(a_eat) + x)

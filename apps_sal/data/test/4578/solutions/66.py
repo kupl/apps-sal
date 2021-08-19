@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 m = []
 for _ in range(n):
     m.append(int(input()))
@@ -16,4 +16,4 @@ def main():
 if sum(m) > x:
     main()
 else:
-    print((n + (x - sum(m)) // m[0]))
+    print(n + (x - sum(m)) // m[0])

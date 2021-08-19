@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 count = {}
 rect = {}
 for i in range(N):
@@ -10,7 +9,6 @@ for i in range(N):
         rect[A[i]] = 2
     else:
         count[A[i]] = 1
-
 if len(rect) < 1:
     ans = 0
 else:

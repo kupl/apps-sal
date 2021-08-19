@@ -28,7 +28,6 @@ for i in range(n):
         h = 1
     else:
         ans += 1
-
 x = a1 + b + c + d + e + f + g + h
 if a1 == b == c == d == e == f == g == h == 0:
     print(1, ans)

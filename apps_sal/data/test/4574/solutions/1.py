@@ -10,8 +10,7 @@ while N > 0:
     N -= 1
     if len(ans) >= 2:
         break
-
 if len(ans) < 2:
-    print((0))
+    print(0)
 else:
-    print((ans[0] * ans[1]))
+    print(ans[0] * ans[1])

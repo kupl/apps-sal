@@ -1,11 +1,21 @@
 import sys
-
-
 stdin = sys.stdin
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(stdin.readline().rstrip())
-def nm(): return list(map(int, stdin.readline().split()))
-def nl(): return list(map(int, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+def ni():
+    return int(stdin.readline().rstrip())
+
+
+def nm():
+    return list(map(int, stdin.readline().split()))
+
+
+def nl():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -18,7 +28,7 @@ def main():
         if x < mid:
             print(mid)
         elif x > mid:
-            print((X_s[n // 2 - 1]))
+            print(X_s[n // 2 - 1])
         else:
             print(del_mid)
 

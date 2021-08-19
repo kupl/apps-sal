@@ -6,4 +6,4 @@ for i in a:
 for j in range(n):
     l[j] = int(l[j] / (j + 1))
 for k in l:
-    print(k, end="\n")
+    print(k, end='\n')

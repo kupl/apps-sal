@@ -3,15 +3,14 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
     n = int(input())
-    d, x = Input()
+    (d, x) = Input()
     a = [int(input()) for _ in range(n)]
     ans = n
-
     for a_i in a:
         cnt = 1
         while True:

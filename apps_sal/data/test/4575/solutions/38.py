@@ -1,5 +1,5 @@
 n = int(input())
-d, x = map(int, input().split())
+(d, x) = map(int, input().split())
 li = []
 for i in range(n):
     li.append(int(input()))

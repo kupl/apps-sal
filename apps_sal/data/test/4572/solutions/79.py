@@ -6,7 +6,6 @@ def answer(s: str) -> str:
     if not not_in_s:
         return 'None'
     not_in_s.sort()
-
     return not_in_s[0]
 
 

@@ -21,15 +21,12 @@ def color(n):
 
 N = int(input())
 a = list(map(int, input().split()))
-
 colors = set()
 over = 0
-
 for c in a:
     if color(c):
         colors.add(color(c))
     else:
         over += 1
-
 print(max(1, len(colors)), end=' ')
 print(len(colors) + over)

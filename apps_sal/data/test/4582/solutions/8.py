@@ -1,8 +1,7 @@
-a, b = map(str, input().split())
-if a == "H":
+(a, b) = map(str, input().split())
+if a == 'H':
     print(b)
+elif b == 'H':
+    print('D')
 else:
-    if b == "H":
-        print("D")
-    else:
-        print("H")
+    print('H')

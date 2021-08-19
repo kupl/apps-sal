@@ -8,5 +8,4 @@ for i in range(a + 1):
         for ind in range(c + 1):
             if 500 * i + 100 * j + 50 * ind == x:
                 cnt += 1
-
 print(cnt)

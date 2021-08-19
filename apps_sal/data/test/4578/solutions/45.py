@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 list_m = list()
 all = 0
 for i in range(n):

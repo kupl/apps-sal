@@ -7,9 +7,8 @@ for r in R:
         p += 1
     else:
         X[r // 400] = 1
-
 s = sum(X)
 if s == 0:
-    print((str(1) + " " + str(p)))
+    print(str(1) + ' ' + str(p))
 else:
-    print((str(s) + " " + str(s + p)))
+    print(str(s) + ' ' + str(s + p))

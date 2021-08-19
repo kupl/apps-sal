@@ -1,5 +1,5 @@
 n = int(input())
-d, x = [int(t) for t in input().split()]
+(d, x) = [int(t) for t in input().split()]
 a = []
 for i in range(n):
     a.append(int(input()))

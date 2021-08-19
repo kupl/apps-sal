@@ -2,7 +2,6 @@ A = int(input())
 B = int(input())
 C = int(input())
 X = int(input())
-
 pat = 0
 for a in range(A + 1):
     for b in range(B + 1):

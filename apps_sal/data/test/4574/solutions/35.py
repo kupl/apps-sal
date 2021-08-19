@@ -6,9 +6,7 @@ for i in range(n):
         num_map[a[i]] = 1
     else:
         num_map[a[i]] += 1
-
 keys = sorted(list(num_map.keys()), reverse=True)
-
 two_over = []
 counter = 0
 res = 1
@@ -23,4 +21,4 @@ for i in keys:
         print(res)
         break
 else:
-    print((0))
+    print(0)

@@ -1,5 +1,4 @@
 x = int(input())
-
 ok = x
 ng = -1
 while ok - ng > 1:
@@ -8,5 +7,4 @@ while ok - ng > 1:
         ok = mid
     else:
         ng = mid
-
 print(ok)

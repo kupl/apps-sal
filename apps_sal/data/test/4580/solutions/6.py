@@ -1,9 +1,7 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 color = []
 rainbow = 0
-
 for i in range(N):
     if 1 <= a[i] <= 399:
         color.append('gray')
@@ -24,17 +22,14 @@ for i in range(N):
     else:
         rainbow += 1
         color.append('all')
-
 if len(set(color)) == 1 and rainbow > 0:
     mini = 1
 elif rainbow == 0:
     mini = len(set(color))
 else:
     mini = max(1, len(set(color)) - 1)
-
 if rainbow > 1:
     maxi = len(set(color)) + rainbow - 1
 else:
     maxi = len(set(color))
-
 print(mini, maxi)

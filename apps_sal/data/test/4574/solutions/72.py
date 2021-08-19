@@ -1,7 +1,6 @@
 N = int(input())
 A = [int(x) for x in input().split()]
 A.sort(reverse=True)
-
 s = []
 i = 0
 while i < N - 1:

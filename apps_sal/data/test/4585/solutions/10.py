@@ -7,4 +7,4 @@ def solve():
             return i
 
 
-print((solve()))
+print(solve())

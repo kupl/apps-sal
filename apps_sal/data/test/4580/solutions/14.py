@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 cnt = [0] * 8
 c = 0
 for a in A:
@@ -22,7 +21,6 @@ for a in A:
         cnt[7] += 1
     else:
         c += 1
-
 Min = len([i for i in cnt if i != 0])
 if c == 0:
     print(Min, Min)

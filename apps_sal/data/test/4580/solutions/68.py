@@ -1,7 +1,5 @@
 n = int(input())
-
 a = list(map(int, input().split()))
-
 c = [0] * 9
 for i in a:
     t = i // 400

@@ -1,10 +1,7 @@
 from collections import defaultdict
-
 d = defaultdict(int)
-
 n = int(input())
 a = list(map(int, input().split()))
-
 ans = []
 for i in a:
     d[i] += 1
@@ -13,6 +10,6 @@ for i in a:
         ans.append(i)
 ans.sort(reverse=True)
 if len(ans) >= 2:
-    print((ans[0] * ans[1]))
+    print(ans[0] * ans[1])
 else:
-    print((0))
+    print(0)

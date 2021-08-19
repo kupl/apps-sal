@@ -6,12 +6,12 @@ def calc(n, m):
     for j in range(len(m)):
         edict[m[j]].append(j)
     for k in edict:
-        print((len(edict[k])))
+        print(len(edict[k]))
 
 
 def main():
     n = int(input())
-    employees = list(int(v) for v in input().split())
+    employees = list((int(v) for v in input().split()))
     return calc(n, employees)
 
 

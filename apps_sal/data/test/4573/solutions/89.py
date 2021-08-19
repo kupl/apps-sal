@@ -1,5 +1,4 @@
 from copy import *
-
 N = int(input())
 X = list(map(int, input().split()))
 Y = deepcopy(X)

@@ -1,5 +1,5 @@
 a = int(input())
-b, c = input().split()
+(b, c) = input().split()
 b = int(b)
 c = int(c)
 e = 0

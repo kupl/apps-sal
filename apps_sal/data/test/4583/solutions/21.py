@@ -12,5 +12,5 @@ for i in range(8):
             ans -= N[j + 1]
             msg += '-' + str(N[j + 1])
     if ans == 7:
-        print(msg + "=7")
+        print(msg + '=7')
         break

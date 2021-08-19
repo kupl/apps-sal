@@ -1,12 +1,9 @@
 S = input()
-
-alph = "abcdefghijklmnopqrstuvwxyz"
-
+alph = 'abcdefghijklmnopqrstuvwxyz'
 for i in alph:
     if i in S:
-        alph = alph.replace(i, "")
-
+        alph = alph.replace(i, '')
 if len(alph) == 0:
-    print("None")
+    print('None')
 else:
     print(alph[0])

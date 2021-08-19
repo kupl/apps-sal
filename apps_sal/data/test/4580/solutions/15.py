@@ -1,7 +1,6 @@
 N = int(input())
 a = list(map(int, input().split()))
 ans = [0 for i in range(9)]
-
 for i in range(N):
     temp = a[i] // 400
     if temp > 8:

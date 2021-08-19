@@ -1,13 +1,11 @@
 import collections
-
 N = int(input())
 a = [int(i) for i in input().split()]
 check = []
 dict = collections.Counter(a)
-for a, b in dict.items():
+for (a, b) in dict.items():
     if b >= 2:
         check.append(a)
-
 if len(check) >= 2:
     check.sort()
     if dict[check[-1]] >= 4:

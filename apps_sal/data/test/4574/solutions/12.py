@@ -12,8 +12,8 @@ for i in c:
 b.sort(reverse=True)
 d.sort(reverse=True)
 if b[0] > d[0]:
-    print((b[0] * b[0]))
+    print(b[0] * b[0])
 elif b[0] < d[1]:
-    print((d[0] * d[1]))
+    print(d[0] * d[1])
 else:
-    print((b[0] * d[0]))
+    print(b[0] * d[0])

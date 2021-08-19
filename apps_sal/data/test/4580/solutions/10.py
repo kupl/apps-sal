@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 R = [0] * 9
-
 for a in A:
     if a < 400:
         R[0] += 1
@@ -21,7 +20,6 @@ for a in A:
         R[7] += 1
     else:
         R[8] += 1
-
 if sum(R[:-1]) != 0:
     M = 8 - R[:-1].count(0) + R[-1]
     m = 8 - R[:-1].count(0)

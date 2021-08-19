@@ -1,5 +1,5 @@
 def resolve():
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     ml = list()
     for i in range(n):
         m = int(input())

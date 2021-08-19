@@ -20,8 +20,6 @@ def readChars():
     return input().split()
 
 
-n, m = readInts()
-
-ans = (1900 * m + (n - m) * 100) * 2**m
-
+(n, m) = readInts()
+ans = (1900 * m + (n - m) * 100) * 2 ** m
 print(ans)

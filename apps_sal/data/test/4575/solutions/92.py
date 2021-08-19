@@ -1,5 +1,5 @@
 n = int(input())
-d, x = list(map(int, input().split()))
+(d, x) = list(map(int, input().split()))
 ans = x
 for i in range(n):
     a = int(input())
@@ -7,5 +7,4 @@ for i in range(n):
         ans += int((d - 1) / a) + 1
     else:
         ans += 1
-
 print(ans)

@@ -6,7 +6,7 @@ def main():
     median_low = x_sorted[idx_median - 1]
     median_high = x_sorted[idx_median]
     for xn in x:
-        print((median_high if xn <= median_low else median_low))
+        print(median_high if xn <= median_low else median_low)
 
 
 def __starting_point():

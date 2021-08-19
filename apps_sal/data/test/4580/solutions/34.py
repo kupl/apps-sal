@@ -1,7 +1,6 @@
 def cordtest(AAA):
     jisyo = {'H': 0, 'C': 0, 'G': 0, 'M': 0, 'B': 0, 'Y': 0, 'O': 0, 'R': 0, 'A': 0}
     for i in AAA:
-
         if i <= 399:
             jisyo['H'] += 1
         elif 400 <= i <= 799:
@@ -22,8 +21,7 @@ def cordtest(AAA):
             jisyo['A'] += 1
     maxi = 0
     mini = 0
-    for i, j in jisyo.items():
-
+    for (i, j) in jisyo.items():
         if i != 'A':
             if j > 0:
                 mini += 1
@@ -32,7 +30,6 @@ def cordtest(AAA):
     ans = maxi + mini
     if mini == 0:
         mini = 1
-
     return print(mini, ans)
 
 

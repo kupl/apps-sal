@@ -24,7 +24,6 @@ for i in a:
 for i in range(8):
     if l[i] >= 1:
         cnt += 1
-
 if cnt == 0:
     print(1, l[8])
 else:

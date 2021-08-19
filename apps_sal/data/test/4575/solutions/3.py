@@ -1,5 +1,5 @@
 n = int(input())
-d, x = list(map(int, input().split()))
+(d, x) = list(map(int, input().split()))
 ans = x
 l = []
 for i in range(n):
