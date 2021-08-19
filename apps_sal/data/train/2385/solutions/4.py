@@ -1,15 +1,12 @@
 import sys
-
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 
 
 def go():
-    # n = int(input())
-    n, m = map(int, input().split())
-    c = ''.join(input() for _ in range(n))
-    s = ''.join(input() for _ in range(n))
-
+    (n, m) = map(int, input().split())
+    c = ''.join((input() for _ in range(n)))
+    s = ''.join((input() for _ in range(n)))
     nm = n * m
     done = [False] * nm
     groups = [None] * nm
@@ -26,9 +23,7 @@ def go():
             return pos - 1
         if direct == 'R':
             return pos + 1
-
     cyc_len = {}
-
     for i in range(nm):
         if not done[i]:
             same = {}
@@ -49,25 +44,15 @@ def go():
                 group = cur
                 cyc_len[group] = len(same) - same[cur]
                 pcur = pos
-
-            for ss, pos in same.items():
+            for (ss, pos) in same.items():
                 groups[ss] = group
                 phase[ss] = (pcur - pos) % cyc_len[group]
-
-    blacks = len(set((pp, gg)for cc, pp, gg in zip(c, phase, groups) if cc == '0'))
-    # print('ppp',phase)
-    # print(groups)
-    # print('--',cyc_len)
-
+    blacks = len(set(((pp, gg) for (cc, pp, gg) in zip(c, phase, groups) if cc == '0')))
     return f'{sum(cyc_len.values())} {blacks}'
 
 
-# x,s = map(int,input().split())
 t = int(input())
-# t = 1
 ans = []
 for _ in range(t):
-    # print(go())
     ans.append(str(go()))
-#
 print('\n'.join(ans))

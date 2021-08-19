@@ -1,4 +1,3 @@
-# cook your dish here
 st = 'Aabcdefghijklmnopqrstuvwxyz'
 li = list(st)
 l1 = ['b', 'c']
@@ -11,7 +10,7 @@ for _ in range(t):
     s = input()
     su = 0
     for i in range(len(s)):
-        if s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u':
+        if s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or (s[i] == 'o') or (s[i] == 'u'):
             su += 0
         else:
             if s[i] in l1:

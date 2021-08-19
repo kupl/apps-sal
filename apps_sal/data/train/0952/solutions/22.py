@@ -1,8 +1,7 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     s = input()
-    a = "aeiou"
+    a = 'aeiou'
     cnt = 0
     for i in range(len(s)):
         x = s[i]
