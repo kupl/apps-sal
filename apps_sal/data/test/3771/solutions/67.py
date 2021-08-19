@@ -1,12 +1,18 @@
 from collections import deque
 import sys
+sys.setrecursionlimit(10 ** 7)
 
-sys.setrecursionlimit(10**7)
-def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-def LS2(): return list(sys.stdin.readline().rstrip())
+
+def MI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+def LS2():
+    return list(sys.stdin.readline().rstrip())
 
 
 class Dinic:
+
     def __init__(self, N, inf):
         self.N = N
         self.inf = inf
@@ -32,7 +38,7 @@ class Dinic:
         while deq:
             v = deq.pop()
             lv = self.level[v] + 1
-            for w, cap, _ in self.G[v]:
+            for (w, cap, _) in self.G[v]:
                 if cap > 0 and self.level[w] == -1:
                     self.level[w] = lv
                     deq.appendleft(w)
@@ -41,7 +47,7 @@ class Dinic:
         if v == t:
             return f
         for e in self.iter[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap > 0 and self.level[v] < self.level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d > 0:
@@ -56,17 +62,17 @@ class Dinic:
             self.bfs(s)
             if self.level[t] == -1:
                 return flow
-            *self.iter, = list(map(iter, self.G))
+            (*self.iter,) = list(map(iter, self.G))
             f = self.inf
             while f > 0:
                 f = self.dfs(s, t, self.inf)
                 flow += f
 
 
-H, W = MI()
-inf = 10**5
+(H, W) = MI()
+inf = 10 ** 5
 Di = Dinic(H + W + 2, inf)
-s, t = H + W, H + W + 1
+(s, t) = (H + W, H + W + 1)
 for i in range(H):
     S = LS2()
     for j in range(W):
@@ -79,6 +85,5 @@ for i in range(H):
         elif S[j] == 'o':
             Di.add_edge(i, j + H, 1)
             Di.add_edge(j + H, i, 1)
-
 ans = Di.flow(s, t)
-print((ans if ans < inf else -1))
+print(ans if ans < inf else -1)

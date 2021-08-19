@@ -5,7 +5,8 @@ https://codeforces.com/contest/1012/problem/B
 from sys import stdin, stdout
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, arr=[]):
         self.rank = {}
         self.leader = {}
@@ -14,7 +15,7 @@ class UnionFind():
             self.leader[i] = i
 
     def __repr__(self):
-        return f""" Ranks : {self.rank}, leaders : {self.leader} """
+        return f' Ranks : {self.rank}, leaders : {self.leader} '
 
     def find(self, x):
         leader = self.leader.get(x, x)
@@ -41,12 +42,11 @@ class UnionFind():
         return True
 
 
-n, m, q = tuple(map(int, stdin.readline().split()))
+(n, m, q) = tuple(map(int, stdin.readline().split()))
 uf = UnionFind(range(1, n + m + 1))
 rcs = [tuple(map(int, line.split())) for line in stdin]
 grps = n + m
-for r, c in rcs:
+for (r, c) in rcs:
     if uf.union(r, c + n):
         grps -= 1
-
 stdout.write(str(grps - 1))

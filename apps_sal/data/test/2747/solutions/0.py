@@ -1,4 +1,5 @@
 class Solution:
+
     def searchRange(self, nums, target):
         """
         :type nums: List[int]
@@ -11,7 +12,7 @@ class Solution:
         return [start, self.firstGreaterEqaul(nums, target + 1) - 1]
 
     def firstGreaterEqaul(self, nums, target):
-        lo, hi = 0, len(nums)
+        (lo, hi) = (0, len(nums))
         while lo < hi:
             mid = (hi + lo) // 2
             if nums[mid] < target:

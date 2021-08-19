@@ -5,7 +5,7 @@ def lcm(x, y):
     return x * y // gcd(x, y)
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 lst = []
 kk = k
 i = 2
@@ -30,4 +30,4 @@ for j in lst:
     if ma < j[1]:
         flag = False
         break
-print("Yes") if flag else print("No")
+print('Yes') if flag else print('No')

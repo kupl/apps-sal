@@ -1,12 +1,13 @@
 class Solution:
+
     def searchRange(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        s, e = -1, -1
-        l, u = 0, len(nums)
+        (s, e) = (-1, -1)
+        (l, u) = (0, len(nums))
         if not nums or target > nums[u - 1] or target < nums[l]:
             return [s, e]
         m = (l + u) // 2

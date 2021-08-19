@@ -1,5 +1,5 @@
 def f(x):
-    res = (x // k1) * val
+    res = x // k1 * val
     e = x % k1
     if e <= k:
         res += e
@@ -8,13 +8,13 @@ def f(x):
     return res
 
 
-k, d, t = map(int, input().split())
+(k, d, t) = map(int, input().split())
 c = (k - 1) // d + 1
 k1 = c * d
 rem = -k % d
 val = k + rem / 2
 l = 0
-r = 1e50
+r = 1e+50
 for i in range(500):
     m = (l + r) / 2
     if f(m) >= t:

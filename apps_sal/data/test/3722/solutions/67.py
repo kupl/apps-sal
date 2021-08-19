@@ -17,21 +17,17 @@ def fibonacchi(n, mod):
 
 
 if N == 2 or N == 3:
-    print((1))
-else:
-    if c_AB == 'B':
-        if c_BB == 'B':
-            print((1))
-        else:
-            if c_BA == 'A':
-                print((pow(2, N - 3, MOD)))
-            else:
-                print((fibonacchi(N - 1, MOD)))
+    print(1)
+elif c_AB == 'B':
+    if c_BB == 'B':
+        print(1)
+    elif c_BA == 'A':
+        print(pow(2, N - 3, MOD))
     else:
-        if c_AA == 'A':
-            print((1))
-        else:
-            if c_BA == 'A':
-                print((fibonacchi(N - 1, MOD)))
-            else:
-                print((pow(2, N - 3, MOD)))
+        print(fibonacchi(N - 1, MOD))
+elif c_AA == 'A':
+    print(1)
+elif c_BA == 'A':
+    print(fibonacchi(N - 1, MOD))
+else:
+    print(pow(2, N - 3, MOD))

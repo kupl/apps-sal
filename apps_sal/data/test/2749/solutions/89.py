@@ -1,11 +1,8 @@
 import numpy as np
-
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 N = int(input())
 a = list(map(int, input().split()))
-
 colors = np.array([[0] * W] * H)
-
 i = 0
 j = 0
 flag = True
@@ -25,7 +22,6 @@ for k in range(N):
             j += 1
         else:
             j -= 1
-
 for i in range(H):
     s = list(colors[i])
     for j in range(W):

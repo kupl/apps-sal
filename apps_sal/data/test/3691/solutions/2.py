@@ -1,16 +1,11 @@
-x0, y0, ax, ay, bx, by = list(map(int, input().split()))
-xs, ys, t = list(map(int, input().split()))
-
+(x0, y0, ax, ay, bx, by) = list(map(int, input().split()))
+(xs, ys, t) = list(map(int, input().split()))
 x = [x0]
 y = [y0]
-
-while x[-1] < 1e20:
+while x[-1] < 1e+20:
     x.append(x[-1] * ax + bx)
-
-while y[-1] < 1e20:
+while y[-1] < 1e+20:
     y.append(y[-1] * ay + by)
-
-
 n = min(len(x), len(y))
 
 
@@ -24,5 +19,4 @@ for i in range(n):
         d = min(dist(xs, ys, x[i], y[i]), dist(xs, ys, x[j], y[j])) + dist(x[i], y[i], x[j], y[j])
         if d <= t:
             ans = max(ans, j - i + 1)
-
 print(ans)

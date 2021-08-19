@@ -3,7 +3,7 @@ def gcd(a, b):
     return gcd(b, c) if c else b
 
 
-s, a = 0, int(input())
+(s, a) = (0, int(input()))
 if a < 3:
     print(a)
 else:

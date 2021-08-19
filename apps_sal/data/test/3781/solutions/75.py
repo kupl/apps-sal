@@ -4,7 +4,7 @@ for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     if n % 2:
-        print("Second")
+        print('Second')
         continue
     c = Counter(a)
     check = True
@@ -13,6 +13,6 @@ for _ in range(t):
             check = False
             break
     if check:
-        print("Second")
+        print('Second')
     else:
-        print("First")
+        print('First')

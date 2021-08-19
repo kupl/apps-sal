@@ -25,7 +25,7 @@ def parse(row):
 
 def merge(l1, l2):
     if l1[0] == 4 or l2 == [4]:
-        return "Fail"
+        return 'Fail'
     elif l1[0] == 0:
         return l2
     elif l2[0] == 0:
@@ -38,7 +38,7 @@ def merge(l1, l2):
         if len(new) > 1:
             return new
         else:
-            return "Fail"
+            return 'Fail'
     elif (l1[0] == 2) != (l2[0] == 2):
         if l1[0] == 2:
             newl2 = l1
@@ -47,30 +47,29 @@ def merge(l1, l2):
             newl2 = l2
             newl3 = l1
         if len(newl2) == 1:
-            return "Fail"
+            return 'Fail'
         if newl2[1] in newl3[1:]:
             return newl2
         else:
-            return "Fail"
+            return 'Fail'
     elif l1[0] == 2 and l2[0] == 2:
         if l1 == l2:
             return l1
         else:
             return [2]
-
-    print("Missed a case!", l1, l2)
+    print('Missed a case!', l1, l2)
 
 
 current = [0]
 broken = False
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 for j in range(n):
     newrow = [int(i) for i in input().split()]
     new = parse(newrow)
     current = merge(new, current)
-    if current == "Fail":
-        print("NO")
+    if current == 'Fail':
+        print('NO')
         broken = True
         break
 if not broken:
-    print("YES")
+    print('YES')

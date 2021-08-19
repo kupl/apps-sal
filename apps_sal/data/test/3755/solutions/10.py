@@ -2,8 +2,8 @@ n = int(input())
 a = list(map(int, input().split()))
 mx = max(a)
 a[a.index(mx)] = abs(mx)
-evn = sum(max(0, i) for i in a[::2])
-odd = sum(max(0, i) for i in a[1::2])
+evn = sum((max(0, i) for i in a[::2]))
+odd = sum((max(0, i) for i in a[1::2]))
 if mx < 0:
     print(mx)
 else:

@@ -1,5 +1,5 @@
 l = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
 
 def gi(s):
@@ -21,4 +21,4 @@ def solve():
 
 
 res = solve()
-print("YES" if res else "NO")
+print('YES' if res else 'NO')

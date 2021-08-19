@@ -1,4 +1,5 @@
 class Solution:
+
     def searchRange(self, nums, target):
         """
         :type nums: List[int]
@@ -14,10 +15,9 @@ class Solution:
         return [a, b]
 
     def findLeft(self, nums, target):
-        low, high = 0, len(nums) - 1
+        (low, high) = (0, len(nums) - 1)
         while low < high:
             mid = (low + high) // 2
-
             if nums[mid] >= target:
                 high = mid
             else:
@@ -25,7 +25,7 @@ class Solution:
         return low
 
     def findRight(self, nums, target):
-        low, high = 0, len(nums) - 1
+        (low, high) = (0, len(nums) - 1)
         while low < high:
             mid = (low + high) // 2 + 1
             if nums[mid] > target:

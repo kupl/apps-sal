@@ -1,4 +1,5 @@
 class Solution:
+
     def generateParenthesis(self, n):
         """
         :type n: int
@@ -9,7 +10,7 @@ class Solution:
             lst = list(str)
             bal = 0
             for char in lst:
-                if char == "(":
+                if char == '(':
                     bal += 1
                 else:
                     bal -= 1
@@ -19,7 +20,7 @@ class Solution:
             lst = list(str)
             sum = 0
             for char in lst:
-                if char == "(":
+                if char == '(':
                     sum += 1
             return n - sum
 
@@ -27,23 +28,18 @@ class Solution:
             lst = list(str)
             sum = 0
             for char in lst:
-                if char == ")":
+                if char == ')':
                     sum += 1
             return n - sum
-
-        prev = ["("]
+        prev = ['(']
         length = 1
-
         while length < 2 * n:
             current = []
-
             for item in prev:
                 if left(item) != 0:
-                    current.append(item + "(")
-
+                    current.append(item + '(')
                 if right(item) != 0 and balance(item) > 0:
-                    current.append(item + ")")
+                    current.append(item + ')')
             length += 1
             prev = current
-
         return prev

@@ -19,6 +19,6 @@ def grundy(N, K):
 N = input()
 ans = 0
 for i in range(N):
-    a, k = list(map(int, input().split()))
+    (a, k) = list(map(int, input().split()))
     ans ^= grundy(a, k)
-print("Takahashi" if ans else "Aoki")
+print('Takahashi' if ans else 'Aoki')

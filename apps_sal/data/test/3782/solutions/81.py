@@ -1,6 +1,6 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 l = list(map(int, input().split()))
-ans = 10**10
+ans = 10 ** 10
 for i in range(n):
     x = l[i]
     tmp = []

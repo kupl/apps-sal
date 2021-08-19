@@ -1,11 +1,11 @@
-Q = 10**9 + 7
+Q = 10 ** 9 + 7
 
 
 def calc(N):
-    x, y = 1, 1
+    (x, y) = (1, 1)
     t = 2
     while t < N:
-        x, y = y, (x + y) % Q
+        (x, y) = (y, (x + y) % Q)
         t += 1
     return x
 
@@ -17,19 +17,19 @@ def main():
     CBA = input()
     CBB = input()
     if N == 2:
-        print((1))
+        print(1)
         return
     S = CAA + CAB + CBA + CBB
-    A = "A"
-    B = "B"
-    Power = ["ABAA", "BABA", "BABB", "BBAA"]
-    Fibo = ["ABBA", "BAAA", "BBBA", "BAAB"]
+    A = 'A'
+    B = 'B'
+    Power = ['ABAA', 'BABA', 'BABB', 'BBAA']
+    Fibo = ['ABBA', 'BAAA', 'BBBA', 'BAAB']
     if S in Power:
-        print((pow(2, N - 3, Q)))
+        print(pow(2, N - 3, Q))
     elif S in Fibo:
-        print((calc(N)))
+        print(calc(N))
     else:
-        print((1))
+        print(1)
 
 
 def __starting_point():

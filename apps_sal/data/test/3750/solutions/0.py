@@ -1,5 +1,4 @@
-k, a, b = map(int, input().split())
-
+(k, a, b) = map(int, input().split())
 mx_a = a // k
 mx_b = b // k
 if mx_a == 0 and b % k != 0:

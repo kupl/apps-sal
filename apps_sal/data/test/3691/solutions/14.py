@@ -1,6 +1,5 @@
-
 def __starting_point():
-    x0, y0, ax, ay, bx, by = input().split()
+    (x0, y0, ax, ay, bx, by) = input().split()
     x0 = int(x0)
     y0 = int(y0)
     ax = int(ax)
@@ -15,7 +14,7 @@ def __starting_point():
         x = ax * x + bx
         y = ay * y + by
         a.append((x, y))
-    xs, ys, t = input().split()
+    (xs, ys, t) = input().split()
     xs = int(xs)
     ys = int(ys)
     t = int(t)

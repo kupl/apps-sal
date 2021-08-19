@@ -4,6 +4,7 @@ def main():
     from collections import deque
 
     class Dinic:
+
         def __init__(self, N):
             self.N = N
             self.G = [[] for i in range(N)]
@@ -28,7 +29,7 @@ def main():
             while deq:
                 v = deq.popleft()
                 lv = level[v] + 1
-                for w, cap, _ in G[v]:
+                for (w, cap, _) in G[v]:
                     if cap and level[w] is None:
                         level[w] = lv
                         deq.append(w)
@@ -39,7 +40,7 @@ def main():
                 return f
             level = self.level
             for e in self.it[v]:
-                w, cap, rev = e
+                (w, cap, rev) = e
                 if cap and level[v] < level[w]:
                     d = self.dfs(w, t, min(f, cap))
                     if d:
@@ -53,19 +54,17 @@ def main():
             INF = 10 ** 9 + 7
             G = self.G
             while self.bfs(s, t):
-                *self.it, = list(map(iter, self.G))
+                (*self.it,) = list(map(iter, self.G))
                 f = INF
                 while f:
                     f = self.dfs(s, t, INF)
                     flow += f
             return flow
-
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
     grid = []
     for _ in range(H):
         line = input().rstrip('\n')
         grid.append(line)
-
     dinic = Dinic(H + W + 5)
     for h in range(H):
         for w in range(W):
@@ -73,15 +72,14 @@ def main():
                 dinic.add_edge(h + 1, H + w + 1, 1)
                 dinic.add_edge(H + w + 1, h + 1, 1)
             elif grid[h][w] == 'S':
-                dinic.add_edge(H + W + 1, h + 1, 10**5)
-                dinic.add_edge(H + W + 1, H + w + 1, 10**5)
+                dinic.add_edge(H + W + 1, h + 1, 10 ** 5)
+                dinic.add_edge(H + W + 1, H + w + 1, 10 ** 5)
             elif grid[h][w] == 'T':
-                dinic.add_edge(h + 1, H + W + 2, 10**5)
-                dinic.add_edge(H + w + 1, H + W + 2, 10**5)
-
+                dinic.add_edge(h + 1, H + W + 2, 10 ** 5)
+                dinic.add_edge(H + w + 1, H + W + 2, 10 ** 5)
     ans = dinic.flow(H + W + 1, H + W + 2)
     if ans > 400:
-        print((-1))
+        print(-1)
     else:
         print(ans)
 

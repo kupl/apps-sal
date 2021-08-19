@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum2(self, candidates, target):
         """
         :type candidates: List[int]
@@ -19,7 +20,7 @@ class Solution:
             for index in range(start, len(candidates)):
                 if candidates[index] > target:
                     break
-                if (index > start and candidates[index] == candidates[index - 1]):
+                if index > start and candidates[index] == candidates[index - 1]:
                     continue
                 combin.append(candidates[index])
                 self.dfs(result, combin, index + 1, target - candidates[index], candidates)

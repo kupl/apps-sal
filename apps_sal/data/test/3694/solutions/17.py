@@ -8,7 +8,7 @@ def check(A):
     if CA[0] >= 2:
         return False
     cnt = 0
-    for k, v in list(CA.items()):
+    for (k, v) in list(CA.items()):
         if v > 2:
             return False
         if v == 2 and CA[k - 1] >= 1:

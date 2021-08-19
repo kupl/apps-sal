@@ -16,19 +16,16 @@ class mf_graph:
         assert 0 <= cap
         m = len(self.pos)
         self.pos.append((From, len(self.g[From])))
-        self.g[From].append({"to": To, "rev": len(self.g[To]), "cap": cap})
-        self.g[To].append({"to": From, "rev": len(self.g[From]) - 1, "cap": 0})
+        self.g[From].append({'to': To, 'rev': len(self.g[To]), 'cap': cap})
+        self.g[To].append({'to': From, 'rev': len(self.g[From]) - 1, 'cap': 0})
         return m
 
     def get_edge(self, i):
         m = len(self.pos)
         assert 0 <= i and i < m
         _e = self.g[self.pos[i][0]][self.pos[i][1]]
-        _re = self.g[_e["to"]][_e["rev"]]
-        return {"from": self.pos[i][0],
-                "to": _e["to"],
-                "cap": _e["cap"] + _re["cap"],
-                "flow": _re["cap"]}
+        _re = self.g[_e['to']][_e['rev']]
+        return {'from': self.pos[i][0], 'to': _e['to'], 'cap': _e['cap'] + _re['cap'], 'flow': _re['cap']}
 
     def edges(self):
         m = len(self.pos)
@@ -42,11 +39,11 @@ class mf_graph:
         assert 0 <= i and i < m
         assert 0 <= new_flow and new_flow <= new_cap
         _e = self.g[self.pos[i][0]][self.pos[i][1]]
-        _re = self.g[_e["to"]][_e["rev"]]
-        _e["cap"] = new_cap - new_flow
-        _re["cap"] = new_flow
+        _re = self.g[_e['to']][_e['rev']]
+        _e['cap'] = new_cap - new_flow
+        _re['cap'] = new_flow
 
-    def flow(self, s, t, flow_limit=(2**31) - 1):
+    def flow(self, s, t, flow_limit=2 ** 31 - 1):
         assert 0 <= s and s < self.n
         assert 0 <= t and t < self.n
         level = [0 for i in range(self.n)]
@@ -59,44 +56,44 @@ class mf_graph:
             level[s] = 0
             que = deque([])
             que.append(s)
-            while(len(que) > 0):
+            while len(que) > 0:
                 v = que.popleft()
                 for e in self.g[v]:
-                    if e["cap"] == 0 or level[e["to"]] >= 0:
+                    if e['cap'] == 0 or level[e['to']] >= 0:
                         continue
-                    level[e["to"]] = level[v] + 1
-                    if e["to"] == t:
+                    level[e['to']] = level[v] + 1
+                    if e['to'] == t:
                         return
-                    que.append(e["to"])
+                    que.append(e['to'])
 
         def dfs(func, v, up):
-            if (v == s):
+            if v == s:
                 return up
             res = 0
             level_v = level[v]
             for i in range(Iter[v], len(self.g[v])):
                 e = self.g[v][i]
-                if (level_v <= level[e["to"]] or self.g[e["to"]][e["rev"]]["cap"] == 0):
+                if level_v <= level[e['to']] or self.g[e['to']][e['rev']]['cap'] == 0:
                     continue
-                d = func(func, e["to"], min(up - res, self.g[e["to"]][e["rev"]]["cap"]))
+                d = func(func, e['to'], min(up - res, self.g[e['to']][e['rev']]['cap']))
                 if d <= 0:
                     continue
-                self.g[v][i]["cap"] += d
-                self.g[e["to"]][e["rev"]]["cap"] -= d
+                self.g[v][i]['cap'] += d
+                self.g[e['to']][e['rev']]['cap'] -= d
                 res += d
                 if res == up:
                     break
             return res
         flow = 0
-        while(flow < flow_limit):
+        while flow < flow_limit:
             bfs()
             if level[t] == -1:
                 break
             for i in range(self.n):
                 Iter[i] = 0
-            while(flow < flow_limit):
+            while flow < flow_limit:
                 f = dfs(dfs, t, flow_limit - flow)
-                if not(f):
+                if not f:
                     break
                 flow += f
         return flow
@@ -105,35 +102,35 @@ class mf_graph:
         visited = [False for i in range(self.n)]
         que = deque([])
         que.append(s)
-        while(len(que) > 0):
+        while len(que) > 0:
             p = que.popleft()
             visited[p] = True
             for e in self.g[p]:
-                if e["cap"] and not(visited[e["to"]]):
-                    visited[e["to"]] = True
-                    que.append(e["to"])
+                if e['cap'] and (not visited[e['to']]):
+                    visited[e['to']] = True
+                    que.append(e['to'])
         return visited
 
 
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 a = [list(input()) for i in range(H)]
 G = mf_graph(H + W + 2)
-INF = 10**9
+INF = 10 ** 9
 s = H + W
 t = H + W + 1
 for i in range(H):
     for j in range(W):
-        if a[i][j] == "S":
+        if a[i][j] == 'S':
             G.add_edge(s, i, INF)
             G.add_edge(s, j + H, INF)
-        if a[i][j] == "T":
+        if a[i][j] == 'T':
             G.add_edge(i, t, INF)
             G.add_edge(j + H, t, INF)
-        if a[i][j] != ".":
+        if a[i][j] != '.':
             G.add_edge(i, j + H, 1)
             G.add_edge(j + H, i, 1)
 ans = G.flow(s, t)
 if ans >= INF:
-    print((-1))
+    print(-1)
 else:
     print(ans)

@@ -8,22 +8,17 @@ def function1(n, s):
     maxyincage = min(pokecage[1], 1)
     a = [i for i in range(100001)]
     a[1] = 0
-
     i = 2
-
     while i <= 100000:
         if a[i] != 0:
-
             pokemonj = 0
             for j in range(i, 100001, i):
                 a[j] = 0
                 pokemonj += pokecage[j]
             if pokemonj > maxyincage:
                 maxyincage = pokemonj
-
         i += 1
-
-    return(maxyincage)
+    return maxyincage
 
 
 def main():

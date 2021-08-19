@@ -1,4 +1,4 @@
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 A = list(map(int, input().split()))
 
 
@@ -18,14 +18,13 @@ def find_maximum(y):
             cand_x += Ci[:m - K + 1]
     if len(cand_x) >= Q:
         cand_x.sort()
-        return cand_x[Q - 1], cand_x[0]
+        return (cand_x[Q - 1], cand_x[0])
     else:
-        return 10**18, 0
+        return (10 ** 18, 0)
 
 
-ans = 10**18
+ans = 10 ** 18
 for a in A:
-    x, y = find_maximum(a)
+    (x, y) = find_maximum(a)
     ans = min(ans, x - y)
-
 print(ans)

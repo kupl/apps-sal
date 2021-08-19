@@ -1,5 +1,5 @@
-n, k, q, *a = map(int, open(0).read().split())
-ans = 10**18
+(n, k, q, *a) = map(int, open(0).read().split())
+ans = 10 ** 18
 for y in set(a):
     c = []
     tmp = []

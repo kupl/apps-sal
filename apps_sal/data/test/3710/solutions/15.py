@@ -1,5 +1,5 @@
 from math import gcd
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = 1
 for e in input().split():
     e = int(e)

@@ -9,24 +9,19 @@ def c(p, g, lis):
 
 def __starting_point():
     s = input()
-    gx, gy = list(map(int, input().split()))
-
-    s = s.split("T")
+    (gx, gy) = list(map(int, input().split()))
+    s = s.split('T')
     s = [len(_) for _ in s]
-
     x_move = s[::2]
     y_move = s[1::2]
-
     x = x_move.pop(0)
     y = 0
-
     x_move.sort(reverse=True)
     y_move.sort(reverse=True)
-
     if c(x, gx, x_move) and c(y, gy, y_move):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 __starting_point()

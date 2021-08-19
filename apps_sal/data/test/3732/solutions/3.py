@@ -1,5 +1,5 @@
-x, y, m = list(map(int, input().split()))
-x, y = min(x, y), max(x, y)
+(x, y, m) = list(map(int, input().split()))
+(x, y) = (min(x, y), max(x, y))
 if y >= m:
     print(0)
 elif y <= 0:
@@ -11,6 +11,6 @@ else:
         c += q
         x += q * y
     while y < m:
-        x, y = y, x + y
+        (x, y) = (y, x + y)
         c += 1
     print(c)

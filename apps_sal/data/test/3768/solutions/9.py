@@ -7,10 +7,9 @@ def gcd(a, b):
 
 
 l = []
-t = ["A", "B"]
-x, y = list(map(int, input().split()))
+t = ['A', 'B']
+(x, y) = list(map(int, input().split()))
 g = gcd(x, y)
-
 l[-1] -= 1
 if g == 1:
     if x > y:
@@ -21,7 +20,5 @@ if g == 1:
     for v in range(len(l)):
         s += str(l[v]) + t[(start + v) % 2]
     print(s)
-
-
 else:
     print('Impossible')

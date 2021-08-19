@@ -1,6 +1,6 @@
-n, t, k, d = list(map(int, input().split()))
-cakes = ((d + t) // t) * k
+(n, t, k, d) = list(map(int, input().split()))
+cakes = (d + t) // t * k
 if cakes < n:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,8 +1,7 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 n = int(input())
 a = list(map(int, input().split()))
 ans = [[0 for i in range(w)] for j in range(h)]
-
 v = 0
 d = 0
 df = 0
@@ -12,9 +11,7 @@ for i in range(n):
     while f < a[i]:
         if df == 0:
             ans[v][d] = t
-
         elif df == 1:
-
             ans[v][w - 1 - d] = t
         f += 1
         d += 1

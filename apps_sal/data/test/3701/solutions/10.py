@@ -1,7 +1,6 @@
 from functools import cmp_to_key
-
 s = input()
-s = s.split(" ")
+s = s.split(' ')
 n = int(s[0])
 x = int(s[1])
 y = int(s[2])

@@ -1,24 +1,18 @@
-
 n = int(input())
 a = input().split(' ')
 a = [int(a) for a in a]
 b = [-1 for b in range(0, n)]
-
 now = 0
-
 while now < n:
     start = now
-    while (now < n - 1) and (a[now] < a[now + 1]):
+    while now < n - 1 and a[now] < a[now + 1]:
         now += 1
     while start <= now:
         b[start] = now
         start += 1
-
     now += 1
     start = now
-
 ans = 0
-
 for i in range(0, n):
     if b[i] == n - 1:
         ans = max(ans, b[i] - i + 1)

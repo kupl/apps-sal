@@ -1,6 +1,7 @@
 class Solution:
+
     def parenthesis(self, n):
-        return "(" * n + ")" * n
+        return '(' * n + ')' * n
 
     def generateParenthesis(self, n):
         """
@@ -10,8 +11,7 @@ class Solution:
         if n == 0:
             return []
         elif n == 1:
-            return ["()"]
-
+            return ['()']
         result = []
         for i in range(1, n):
             r1 = self.generateParenthesis(i)
@@ -19,11 +19,9 @@ class Solution:
             for r11 in r1:
                 for r21 in r2:
                     result.append(r11 + r21)
-
         r3 = self.generateParenthesis(n - 1)
         for r31 in r3:
-            result.append("({})".format(r31))
-
+            result.append('({})'.format(r31))
         result.sort()
         rr = []
         last = None
@@ -32,5 +30,4 @@ class Solution:
                 continue
             rr.append(r)
             last = r
-
         return rr

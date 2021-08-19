@@ -1,6 +1,5 @@
 import sys
 from collections import Counter
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -13,15 +12,15 @@ def resolve():
         n = int(input())
         A = list(map(int, input().split()))
         if n % 2:
-            print("Second")
+            print('Second')
         else:
             D = Counter(A)
             for v in list(D.values()):
                 if v % 2:
-                    print("First")
+                    print('First')
                     break
             else:
-                print("Second")
+                print('Second')
 
 
 def __starting_point():

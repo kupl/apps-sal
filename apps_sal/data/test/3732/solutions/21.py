@@ -1,7 +1,7 @@
 def main():
-    a, b, m = list(map(int, input().split()))
+    (a, b, m) = list(map(int, input().split()))
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     if m <= b:
         print(0)
         return
@@ -11,7 +11,7 @@ def main():
     i = max((b - a) // b, 0)
     a += b * i
     while b < m:
-        a, b, i = b, a + b, i + 1
+        (a, b, i) = (b, a + b, i + 1)
     print(i)
 
 

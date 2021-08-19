@@ -10,8 +10,8 @@ for testcase in range(T):
                 flag = 0
                 break
         if flag:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
     else:
-        print("Second")
+        print('Second')

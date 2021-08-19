@@ -24,13 +24,10 @@ def max_flow(s, t, graph):
             return flow
 
 
-H, W = map(int, input().split())
-
+(H, W) = map(int, input().split())
 a = [input() for _ in range(H)]
 a = [[s for s in a[i]] for i in range(H)]
-
 graph = [{} for _ in range(H + W + 2)]
-
 for h in range(H):
     for w in range(W):
         if a[h][w] == 'o':
@@ -46,9 +43,7 @@ for h in range(H):
             graph[H + W + 1][H + w] = 0
             graph[h][H + W + 1] = float('inf')
             graph[H + w][H + W + 1] = float('inf')
-
 ans = max_flow(H + W, H + W + 1, graph)
 if ans == float('inf'):
     ans = -1
-
 print(ans)

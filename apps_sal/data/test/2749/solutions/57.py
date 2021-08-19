@@ -1,5 +1,5 @@
 def resolve():
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
     N = int(input())
     A = list(map(int, input().split()))
     C = [[0 for _ in range(W)] for __ in range(H)]
@@ -18,7 +18,7 @@ def resolve():
                 color += 1
                 cnt = 0
         reverse = not reverse
-    [print(" ".join(map(str, C[i]))) for i in range(H)]
+    [print(' '.join(map(str, C[i]))) for i in range(H)]
 
 
 if '__main__' == __name__:

@@ -1,4 +1,4 @@
-h, w, n, *a = map(int, open(0).read().split())
+(h, w, n, *a) = map(int, open(0).read().split())
 l = []
 for i in range(n):
     l += [i + 1] * a[i]

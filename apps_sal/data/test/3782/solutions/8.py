@@ -1,7 +1,6 @@
 from collections import defaultdict
 import heapq
-
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = list(map(int, input().split()))
 ok = [0] * n
 d = defaultdict(lambda: set())
@@ -24,7 +23,7 @@ for i in range(k - 1, n):
 ans = 1145141919810
 for i in range(n):
     if ok[i]:
-        s, t = [], []
+        (s, t) = ([], [])
         for j in range(n):
             if a[i] > a[j]:
                 s.sort()

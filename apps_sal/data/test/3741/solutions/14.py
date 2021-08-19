@@ -1,8 +1,9 @@
 from collections import deque
-inf = int(1e6)
+inf = int(1000000.0)
 
 
 class Graph:
+
     def __init__(self, n):
         self.n = n
         self.adj = [[] for i in range(n)]
@@ -40,7 +41,6 @@ for num in a:
     for i in range(l):
         if t[l - i - 1] == '1':
             groups[i] += 1
-
 loop = -1
 for cnt in groups:
     if cnt >= 3:

@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 A = list(map(int, input().split())) + [-1]
-ans = float("inf")
+ans = float('inf')
 for a in A:
     L = []
     K = []

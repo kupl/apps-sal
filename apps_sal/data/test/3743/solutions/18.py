@@ -2,11 +2,11 @@ n = int(input())
 
 
 def isPrime(val):
-    if(val < 2):
+    if val < 2:
         return 0
-    n = int(val**0.5) + 1
+    n = int(val ** 0.5) + 1
     for i in range(2, n):
-        if (val % i) == 0:
+        if val % i == 0:
             return 0
     return 1
 
@@ -15,7 +15,7 @@ def titlePaint(n):
     if n < 2 or isPrime(n):
         print(n)
         return 0
-    n1 = int(n**0.5) * 2
+    n1 = int(n ** 0.5) * 2
     dic = dict()
     for i in range(2, n1):
         while n % i == 0:

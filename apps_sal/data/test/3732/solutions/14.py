@@ -1,5 +1,4 @@
 from sys import stdin
-
 __author__ = 'artyom'
 
 
@@ -7,7 +6,7 @@ def read_next_line():
     return list(map(int, stdin.readline().strip().split()))
 
 
-x, y, m = read_next_line()
+(x, y, m) = read_next_line()
 a = [x, y]
 x = min(a)
 y = max(a)

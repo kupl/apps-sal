@@ -22,7 +22,7 @@ if n == 1:
 else:
     m = p(n)
     d = math.log(n, m)
-    if m**r(d) == n:
+    if m ** r(d) == n:
         print(m)
     else:
         print(1)

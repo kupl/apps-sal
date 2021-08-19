@@ -3,11 +3,9 @@ import sys
 import math
 from functools import cmp_to_key
 from itertools import permutations
-
 sys.setrecursionlimit(10 ** 6)
-
 mod = 1000000007
-inf = int(1e18)
+inf = int(1e+18)
 
 
 def solve(n, caa, cab, cba, cbb):
@@ -25,14 +23,14 @@ def solve(n, caa, cab, cba, cbb):
                 if s[i:i + 2] == 'BB':
                     tmp.add(s[:i + 2] + cbb + s[i + 2:])
         s_list = tmp
-    print(("{}\t{}".format(n, len(s_list))))
+    print('{}\t{}'.format(n, len(s_list)))
 
 
 def main():
     n = int(input())
-    caa, cab, cba, cbb = input(), input(), input(), input()
+    (caa, cab, cba, cbb) = (input(), input(), input(), input())
     if n <= 3:
-        print((1))
+        print(1)
         return
     if cab == 'A':
         if caa == 'B':
@@ -41,25 +39,24 @@ def main():
                 pp = 1
                 for i in range(3, n):
                     v = (p + pp) % mod
-                    pp, p = p, v
+                    (pp, p) = (p, v)
                 print(p)
             else:
-                print((pow(2, n - 3, mod)))
+                print(pow(2, n - 3, mod))
         else:
-            print((1))
+            print(1)
+    elif cbb == 'A':
+        if cba == cab:
+            p = 1
+            pp = 1
+            for i in range(3, n):
+                v = (p + pp) % mod
+                (pp, p) = (p, v)
+            print(p)
+        else:
+            print(pow(2, n - 3, mod))
     else:
-        if cbb == 'A':
-            if cba == cab:
-                p = 1
-                pp = 1
-                for i in range(3, n):
-                    v = (p + pp) % mod
-                    pp, p = p, v
-                print(p)
-            else:
-                print((pow(2, n - 3, mod)))
-        else:
-            print((1))
+        print(1)
 
 
 main()

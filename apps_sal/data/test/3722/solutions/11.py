@@ -1,16 +1,16 @@
 mod = 10 ** 9 + 7
 n = int(input())
-a, b, c, d = [input() for i in range(4)]
-l = ["B", "A"]
-if b == "A":
-    b = l[not b == "A"]
-    c = l[not c == "A"]
-    a, d = l[not d == "A"], l[not a == "A"]
+(a, b, c, d) = [input() for i in range(4)]
+l = ['B', 'A']
+if b == 'A':
+    b = l[not b == 'A']
+    c = l[not c == 'A']
+    (a, d) = (l[not d == 'A'], l[not a == 'A'])
 if n < 4:
     print(1)
-elif d == "B":
+elif d == 'B':
     print(1)
-elif c == "A":
+elif c == 'A':
     print(pow(2, n - 3, mod))
 else:
     l = [1, 1]

@@ -6,7 +6,7 @@ def outside(a, b, c):
     return a < b or a > c
 
 
-h, m, s, t1, t2 = list(map(int, input().split()))
+(h, m, s, t1, t2) = list(map(int, input().split()))
 a = h + m / 60 + s / 3600
 b = (m + s / 60) / 5
 c = s / 5

@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = n * m
 if n > m:
-    n, m = m, n
+    (n, m) = (m, n)
 if n == 1:
     a -= min(m % 6, 6 - m % 6)
 elif n == 2:

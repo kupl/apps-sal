@@ -1,8 +1,5 @@
-
-
 def func():
     visited = set()
-
     next_char = ord('a')
     for c in input():
         if c not in visited:
@@ -12,7 +9,6 @@ def func():
             else:
                 visited.add(c)
                 next_char += 1
-
     print('YES')
 
 

@@ -1,32 +1,31 @@
 def gcd(x, y):
-    if(x > y):
-        x, y = y, x
-    if(x == 0):
+    if x > y:
+        (x, y) = (y, x)
+    if x == 0:
         return y
     return gcd(y % x, x)
 
 
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 
 
 def solve(X, Y):
-    if(X > Y):
-        if(Y == 1):
-            print(str(X - 1) + "A", end="")
+    if X > Y:
+        if Y == 1:
+            print(str(X - 1) + 'A', end='')
             return
         else:
-            print(str(X // Y) + "A", end="")
+            print(str(X // Y) + 'A', end='')
             solve(X % Y, Y)
+    elif X == 1:
+        print(str(Y - 1) + 'B', end='')
+        return
     else:
-        if(X == 1):
-            print(str(Y - 1) + "B", end="")
-            return
-        else:
-            print(str(Y // X) + "B", end="")
-            solve(X, Y % X)
+        print(str(Y // X) + 'B', end='')
+        solve(X, Y % X)
 
 
-if(gcd(A, B) == 1):
+if gcd(A, B) == 1:
     solve(A, B)
 else:
-    print("Impossible")
+    print('Impossible')

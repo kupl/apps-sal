@@ -1,10 +1,10 @@
 import sys
 import binascii
 s = sys.stdin.read()
-a = ""
+a = ''
 for i in range(11):
-    a += str(binascii.crc32((s + "  " * i).encode("utf-8")) & 1)
-ans = ""
+    a += str(binascii.crc32((s + '  ' * i).encode('utf-8')) & 1)
+ans = ''
 if a == '01011111010':
     ans = 'Yes'
 if a == '01111111110':

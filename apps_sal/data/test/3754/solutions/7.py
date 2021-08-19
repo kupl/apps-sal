@@ -7,6 +7,6 @@ for i in d:
     ans *= i
     ans %= mod
 for i in range(n, 2 * n - 2):
-    ans *= (s - i)
+    ans *= s - i
     ans %= mod
 print(ans)

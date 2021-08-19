@@ -1,6 +1,6 @@
 n = int(input())
 colour = dict(zip('RGBYW', range(5, 10)))
-cards = list({2 ** colour[c] + 2 ** (ord(v) - ord('1')) for c, v in input().split()})
+cards = list({2 ** colour[c] + 2 ** (ord(v) - ord('1')) for (c, v) in input().split()})
 ans = 10
 n = len(cards)
 if n > 1:

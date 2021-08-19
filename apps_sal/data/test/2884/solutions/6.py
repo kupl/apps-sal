@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum2(self, candidates, target):
         """
         :type candidates: List[int]
@@ -15,8 +16,7 @@ class Solution:
                 combinationSumRecu(self, candidates, target - candidates[start], start + 1, intermediate, result)
                 start += 1
                 intermediate.pop()
-                while start > 0 and start < len(candidates) and candidates[start] == candidates[start - 1]:
+                while start > 0 and start < len(candidates) and (candidates[start] == candidates[start - 1]):
                     start += 1
-
         combinationSumRecu(self, sorted(candidates), target, 0, [], result)
         return result

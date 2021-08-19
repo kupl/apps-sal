@@ -1,9 +1,9 @@
 n = int(input())
-h, m = input().split(':')
+(h, m) = input().split(':')
 ans = 1000
 ans1 = ''
 if n == 12:
-    h1, m1 = '', ''
+    (h1, m1) = ('', '')
     for i in range(1, 13):
         for j in range(0, 60):
             h1 = (2 - len(str(i))) * '0' + str(i)
@@ -22,7 +22,7 @@ if n == 12:
                 ans1 = h1 + ':' + m1
     print(ans1)
 else:
-    h1, m1 = '', ''
+    (h1, m1) = ('', '')
     for i in range(24):
         for j in range(0, 60):
             h1 = (2 - len(str(i))) * '0' + str(i)

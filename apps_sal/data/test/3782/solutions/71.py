@@ -1,17 +1,16 @@
 from heapq import heappush, heappop
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 A = list(map(int, input().split()))
-ans = float("inf")
+ans = float('inf')
 for x in A:
     data = []
     h = []
     for i in range(N):
         if A[i] >= x:
             heappush(h, A[i])
-        else:
-            if h:
-                data.append(h)
-                h = []
+        elif h:
+            data.append(h)
+            h = []
     if h:
         data.append(h)
     lsls = []

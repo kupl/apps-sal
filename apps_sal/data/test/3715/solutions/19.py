@@ -1,5 +1,5 @@
 user = int(input())
-n = list(input().split(" "))
+n = list(input().split(' '))
 l = len(n) - 1
 if int(n[0]) == 3 and int(n[l]) != 3:
     n.reverse()

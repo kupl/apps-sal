@@ -1,11 +1,10 @@
 def main():
     import sys
     input = sys.stdin.buffer.readline
-
     N = int(input())
     win = 0
     for _ in range(N):
-        a, k = list(map(int, input().split()))
+        (a, k) = list(map(int, input().split()))
         while True:
             if a < k:
                 g = 0
@@ -14,7 +13,7 @@ def main():
                 g = a // k
                 break
             else:
-                d = (a // k) + 1
+                d = a // k + 1
                 a -= d * ((a - k * (a // k)) // d)
                 if a < k:
                     g = 0
@@ -24,7 +23,6 @@ def main():
                     break
                 else:
                     a -= d
-
         win ^= g
     if win:
         print('Takahashi')

@@ -1,8 +1,7 @@
 import sys
 input = sys.stdin.readline
-
-fw = "First"
-sw = "Second"
+fw = 'First'
+sw = 'Second'
 t = int(input())
 for i in range(t):
     n = int(input())

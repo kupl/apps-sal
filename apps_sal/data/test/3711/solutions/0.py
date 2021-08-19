@@ -1,5 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
-
+(n, m, k) = [int(x) for x in input().split()]
 if k + 2 > n + m:
     print(-1)
 else:

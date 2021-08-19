@@ -1,18 +1,14 @@
 from collections import Counter
-
-
 T = int(input())
 for _ in range(T):
     N = int(input())
     A = list(map(int, input().split()))
     C = Counter(A)
-
     if N % 2 == 1:
         ans = False
+    elif all((v % 2 == 0 for v in list(C.values()))):
+        ans = False
     else:
-        if all(v % 2 == 0 for v in list(C.values())):
-            ans = False
-        else:
-            ans = True
+        ans = True
     win = 'First' if ans is True else 'Second'
     print(win)

@@ -4,12 +4,10 @@ input = sys.stdin.readline
 
 
 def main():
-    N, K, Q = map(int, input().split())
+    (N, K, Q) = map(int, input().split())
     A = list(map(int, input().split()))
-
     NUM = sorted(list(set(A)))
-
-    ans = 10**10
+    ans = 10 ** 10
     for n in NUM:
         Qs = []
         q = []

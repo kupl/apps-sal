@@ -6,11 +6,9 @@ for i in range(0,len(s)):
         c=c+1
 k=len(s)//11
 print(min(c,k))"""
-
-
 n = int(input())
 N = str(n)
-if(len(N) == 1):
+if len(N) == 1:
     print(n)
 else:
     l = len(N) - 1

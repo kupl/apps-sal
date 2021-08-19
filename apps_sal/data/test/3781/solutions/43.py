@@ -13,11 +13,10 @@ def __starting_point():
         A = list(map(int, input().split()))
         if N % 2:
             print('Second')
+        elif not is_nomal_case(A):
+            print('Second')
         else:
-            if not is_nomal_case(A):
-                print('Second')
-            else:
-                print('First')
+            print('First')
 
 
 __starting_point()

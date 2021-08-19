@@ -1,5 +1,5 @@
 n = int(input())
-sa = "0"
+sa = '0'
 
 
 def comp(k):
@@ -9,9 +9,8 @@ def comp(k):
 
 
 while comp(sa) >= 0:
-    if comp(sa + "9") >= 0:
-        sa += "9"
+    if comp(sa + '9') >= 0:
+        sa += '9'
     else:
         break
-
-print(sum(int(h) for h in (sa + str(comp(sa)))))
+print(sum((int(h) for h in sa + str(comp(sa)))))

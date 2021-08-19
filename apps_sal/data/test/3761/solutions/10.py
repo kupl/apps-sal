@@ -10,21 +10,19 @@ def solve(s, x, y):
             ncx.add(x + move)
             ncx.add(x - move)
         cxy[is_x] = ncx
-
     is_x = 1
     prev = first_t
     cxy = [{first_t}, {0}]
-    for i, c in list(enumerate(s))[first_t + 1:]:
+    for (i, c) in list(enumerate(s))[first_t + 1:]:
         if c == 'T':
             move = i - prev - 1
             update(move)
             is_x ^= 1
             prev = i
     update(len(s) - prev - 1)
-
     return x in cxy[0] and y in cxy[1]
 
 
 s = input()
-x, y = list(map(int, input().split()))
-print(('Yes' if solve(s, x, y) else 'No'))
+(x, y) = list(map(int, input().split()))
+print('Yes' if solve(s, x, y) else 'No')

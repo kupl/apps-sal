@@ -6,10 +6,9 @@ def main():
         if n == max_val + 1:
             max_val += 1
         elif n > max_val:
-            print("NO")
+            print('NO')
             return
-
-    print("YES")
+    print('YES')
 
 
 main()

@@ -3,9 +3,7 @@ import sys
 import re
 import math
 import queue
-
 S = input()
-
 al = 'abcdefghijklmnopqrstuvwxyz'
 
 
@@ -17,7 +15,6 @@ def doit():
         m = re.search(a + '[^' + a + ']' + a, S)
         if m:
             return str(m.start() + 1) + ' ' + str(m.end())
-
     return '-1 -1'
 
 

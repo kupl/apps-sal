@@ -3,7 +3,7 @@ a = sorted(list(map(int, input().split())))
 duplicates = {}
 d = None
 delta = 0
-for i, el in enumerate(a, 1):
+for (i, el) in enumerate(a, 1):
     if el not in duplicates:
         duplicates[el] = 0
     else:

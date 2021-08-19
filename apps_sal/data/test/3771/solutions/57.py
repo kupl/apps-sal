@@ -29,9 +29,9 @@ class MaxFlow:
         return m
 
     def get_edge(self, idx):
-        to, rev, cap = self.graph[self.pos[idx][0]][self.pos[idx][1]]
-        rev_to, rev_rev, rev_cap = self.graph[to][rev]
-        return rev_to, to, cap + rev_cap, rev_cap
+        (to, rev, cap) = self.graph[self.pos[idx][0]][self.pos[idx][1]]
+        (rev_to, rev_rev, rev_cap) = self.graph[to][rev]
+        return (rev_to, to, cap + rev_cap, rev_cap)
 
     def edges(self):
         m = len(self.pos)
@@ -39,7 +39,7 @@ class MaxFlow:
             yield self.get_edge(i)
 
     def change_edge(self, idx, new_cap, new_flow):
-        to, rev, cap = self.graph[self.pos[idx][0]][self.pos[idx][1]]
+        (to, rev, cap) = self.graph[self.pos[idx][0]][self.pos[idx][1]]
         self.graph[self.pos[idx][0]][self.pos[idx][1]][2] = new_cap - new_flow
         self.graph[to][rev][2] = new_flow
 
@@ -49,7 +49,7 @@ class MaxFlow:
         res = 0
         lv = self.level[v]
         for i in range(self.iter[v], len(self.graph[v])):
-            to, rev, cap = self.graph[v][i]
+            (to, rev, cap) = self.graph[v][i]
             if lv <= self.level[to] or self.graph[to][rev][2] == 0:
                 continue
             d = self.dfs(s, to, min(up - res, self.graph[to][rev][2]))
@@ -75,7 +75,7 @@ class MaxFlow:
             queue.append(s)
             while queue:
                 v = queue.popleft()
-                for to, rev, cap in self.graph[v]:
+                for (to, rev, cap) in self.graph[v]:
                     if cap == 0 or self.level[to] >= 0:
                         continue
                     self.level[to] = self.level[v] + 1
@@ -99,21 +99,19 @@ class MaxFlow:
         while queue:
             p = queue.popleft()
             visited[p] = True
-            for to, rev, cap in self.graph[p]:
-                if cap and not visited[to]:
+            for (to, rev, cap) in self.graph[p]:
+                if cap and (not visited[to]):
                     visited[to] = True
                     queue.append(to)
         return visited
 
 
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 a = [list(input().rstrip()) for _ in range(H)]
-
 mf = MaxFlow(H + W + 2)
 start = H + W
 terminal = H + W + 1
-INF = 10**6
-
+INF = 10 ** 6
 for i in range(H):
     for j in range(W):
         if a[i][j] == 'S':
@@ -125,9 +123,8 @@ for i in range(H):
         elif a[i][j] == 'o':
             mf.add_edge(i, H + j, 1)
             mf.add_edge(H + j, i, 1)
-
 ans = mf.max_flow(start, terminal)
 if ans >= INF:
-    print((-1))
+    print(-1)
 else:
     print(ans)

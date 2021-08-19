@@ -1,4 +1,4 @@
-n, x, y = [int(x) for x in input().split()]
+(n, x, y) = [int(x) for x in input().split()]
 l = list(input())
 l = ['1'] + l + ['1']
 num = 0

@@ -1,8 +1,7 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 a = list(map(int, input().split()))
 i = 0
-
 for x in range(H):
     c = []
     for y in range(W):
@@ -10,7 +9,6 @@ for x in range(H):
         a[i] -= 1
         if a[i] == 0:
             i += 1
-
     if x % 2 == 0:
         print(*c)
     else:

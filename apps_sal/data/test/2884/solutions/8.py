@@ -1,4 +1,5 @@
 class Solution:
+
     def find(self, candidates, result, current, target, pos, num, current_num):
         if target == 0:
             temp = current[:]

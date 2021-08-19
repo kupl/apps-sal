@@ -20,7 +20,6 @@ def factorize(x):
 def main():
     n = int(input())
     prime_factors = factorize(n)
-
     if n == 1 or len(prime_factors) > 1:
         print(1)
     elif n > prime_factors[0]:

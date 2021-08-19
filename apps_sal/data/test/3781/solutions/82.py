@@ -12,8 +12,8 @@ for i in range(t):
                 same = False
                 break
         if same:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
     else:
-        print("Second")
+        print('Second')

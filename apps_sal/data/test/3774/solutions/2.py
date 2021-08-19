@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n > m:
-    n, m = m, n
+    (n, m) = (m, n)
 if n == 1:
     print(m // 6 + (m + 1) // 6 + (m + 2) // 6 << 1)
 elif n == 2:

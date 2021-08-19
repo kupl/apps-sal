@@ -18,5 +18,4 @@ for i in a:
     curr['C'] = min(prev['G'], prev['R']) + val(i, 'C')
     curr['R'] = min(prev['C'], prev['G'], prev['R']) + 1
     prev = curr.copy()
-
 print(min(prev.values()))

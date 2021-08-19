@@ -1,20 +1,17 @@
 from collections import defaultdict
 from bisect import bisect_left
-
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = list(map(int, input().split()))
 s = sorted(list(set(a)))
 dic = defaultdict(list)
-for i, j in enumerate(a):
+for (i, j) in enumerate(a):
     dic[j].append(i)
-
-ans = 10**20
+ans = 10 ** 20
 use = [-1, n]
-
 for i in range(len(s)):
     l = []
     for j in range(len(use) - 1):
-        x, y = use[j], use[j + 1]
+        (x, y) = (use[j], use[j + 1])
         if y - x - 1 >= k:
             l2 = []
             for t in range(x + 1, y):

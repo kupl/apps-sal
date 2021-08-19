@@ -1,5 +1,5 @@
 import sys
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 p = [-1] * (n + m)
 r = [0] * (n + m)
 
@@ -12,7 +12,7 @@ def par(i):
 
 
 def merge(a, b):
-    a, b = par(a), par(b)
+    (a, b) = (par(a), par(b))
     if a == b:
         return 0
     if r[a] < r[b]:
@@ -27,6 +27,6 @@ def merge(a, b):
 
 v = n + m
 for l in sys.stdin.read().strip().split('\n') if q else []:
-    a, b = map(int, l.split())
+    (a, b) = map(int, l.split())
     v -= merge(a - 1, b - 1 + n)
 print(v - 1)

@@ -1,24 +1,21 @@
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
-
-x0, y0, ax, ay, bx, by = list(map(int, input().split()))
-xs, ys, t = list(map(int, input().split()))
-
+(x0, y0, ax, ay, bx, by) = list(map(int, input().split()))
+(xs, ys, t) = list(map(int, input().split()))
 p = [(x0, y0)]
 d = [0]
 m = 100
 for i in range(m):
-    x, y = p[-1]
+    (x, y) = p[-1]
     nx = ax * x + bx
     ny = ay * y + by
     nd = abs(nx - x) + abs(ny - y)
     d.append(d[-1] + nd)
     p.append((nx, ny))
-
 ans = 0
 for i in range(m):
-    x, y = p[i]
+    (x, y) = p[i]
     init_d = abs(x - xs) + abs(y - ys)
     if init_d > t:
         continue

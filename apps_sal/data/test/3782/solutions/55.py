@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 A = list(map(int, input().split()))
 ans = float('inf')
 for lb in sorted(A):

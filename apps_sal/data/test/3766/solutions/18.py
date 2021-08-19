@@ -4,24 +4,23 @@ from copy import deepcopy
 
 def powerset(iterable):
     s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
+    return chain.from_iterable((combinations(s, r) for r in range(len(s) + 1)))
 
 
 n = int(input())
 locations = input().split()
 matrixG = [[0] * 5 for i in range(5)]
 for i in locations:
-    if i[0] == "R":
+    if i[0] == 'R':
         matrixG[0][int(i[1]) - 1] += 1
-    elif i[0] == "G":
+    elif i[0] == 'G':
         matrixG[1][int(i[1]) - 1] += 1
-    elif i[0] == "B":
+    elif i[0] == 'B':
         matrixG[2][int(i[1]) - 1] += 1
-    elif i[0] == "Y":
+    elif i[0] == 'Y':
         matrixG[3][int(i[1]) - 1] += 1
-    elif i[0] == "W":
+    elif i[0] == 'W':
         matrixG[4][int(i[1]) - 1] += 1
-
 for i in list(powerset(list(range(10)))):
     matrix = deepcopy(matrixG)
     color = []

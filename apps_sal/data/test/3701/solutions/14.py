@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().strip().split(' ')))
+(n, x, y) = list(map(int, input().strip().split(' ')))
 s = input()
 groups = 0
 if s[0] == '0':

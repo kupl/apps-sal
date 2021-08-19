@@ -1,4 +1,4 @@
-alpha = "abcdefghijklmnopqrstuvwxyz"
+alpha = 'abcdefghijklmnopqrstuvwxyz'
 s = input()
 line = []
 for i in range(len(s)):
@@ -12,11 +12,10 @@ for i in range(len(alpha)):
             if s[i] == element:
                 line[i] = True
                 go = True
-            else:
-                if not go:
-                    yes = False
-                    break
+            elif not go:
+                yes = False
+                break
 if yes:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

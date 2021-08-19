@@ -28,7 +28,7 @@ def pf(n):
         yield (n, 1)
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 k = (k + 1) // 2
 ans = n
 for i in range(k):

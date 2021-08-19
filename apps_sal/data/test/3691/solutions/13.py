@@ -1,10 +1,10 @@
-x0, y0, ax, ay, bx, by = map(int, input().split())
-xs, ys, t = map(int, input().split())
+(x0, y0, ax, ay, bx, by) = map(int, input().split())
+(xs, ys, t) = map(int, input().split())
 X = [(x0, y0)]
 for i in range(100):
-    x, y = X[-1]
-    x, y = ax * x + bx, ay * y + by
-    if x > 10**18 or y >= 10**18:
+    (x, y) = X[-1]
+    (x, y) = (ax * x + bx, ay * y + by)
+    if x > 10 ** 18 or y >= 10 ** 18:
         break
     X.append((x, y))
 

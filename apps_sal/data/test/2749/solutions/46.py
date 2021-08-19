@@ -1,7 +1,6 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 a = list(map(int, input().split()))
-
 ans = [[0] * W for _ in range(H)]
 p = [0, 0]
 for i in range(N):
@@ -13,12 +12,10 @@ for i in range(N):
                 p[1] += 1
             else:
                 p[0] += 1
+        elif p[0] == 0:
+            p[1] += 1
         else:
-            if p[0] == 0:
-                p[1] += 1
-            else:
-                p[0] -= 1
+            p[0] -= 1
         cnt -= 1
-
 for i in range(H):
     print(*ans[i])

@@ -1,7 +1,6 @@
 from collections import deque
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 N = int(input())
-
 A = deque(list(map(int, input().split())))
 nuriwake = 1
 ans = []
@@ -17,4 +16,4 @@ for i in range(H):
         t = reversed(t)
     ans.append(t)
 for a in ans:
-    print((' '.join(map(str, a))))
+    print(' '.join(map(str, a)))

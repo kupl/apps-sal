@@ -1,11 +1,10 @@
 """  if need to find numbers 1...n such that n% (|i-j|>1)>0, can solv as p^k, p is prim num & answr or belw process"""
-
 while True:
     try:
         n = int(input())
-        num, i = [], 2
+        (num, i) = ([], 2)
         if n == 1:
-            print("1")
+            print('1')
             continue
         while i * i <= n:
             if n % i == 0:
@@ -19,6 +18,5 @@ while True:
             print(1)
         else:
             print(num[0])
-
     except EOFError:
         break

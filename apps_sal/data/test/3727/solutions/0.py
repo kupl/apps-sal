@@ -1,7 +1,7 @@
 def solve(a, e):
     if not a[e]:
-        return False, []
-    a = list(a[::])
+        return (False, [])
+    a = list(a[:])
     ans = [e]
     a[e] -= 1
     for i in range(sum(a)):
@@ -14,14 +14,14 @@ def solve(a, e):
             ans.append(v)
             a[v] -= 1
         else:
-            return False, []
-    return True, ans
+            return (False, [])
+    return (True, ans)
 
 
 def main():
     a = list(map(int, input().split()))
     for i in range(4):
-        r, b = solve(a, i)
+        (r, b) = solve(a, i)
         if r:
             print('YES')
             print(*b)

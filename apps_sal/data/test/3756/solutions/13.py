@@ -1,5 +1,5 @@
 import sys
-n, t = list(map(int, sys.stdin.readline().split()))
+(n, t) = list(map(int, sys.stdin.readline().split()))
 x = sys.stdin.readline()
 y = x.find('.')
 for i in range(y + 1, n):

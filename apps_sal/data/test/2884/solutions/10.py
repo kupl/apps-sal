@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum2(self, candidates, target):
         """
         :type candidates: List[int]
@@ -14,7 +15,5 @@ class Solution:
         nextIndex = 0
         while nextIndex < len(candidates) and sortedCandidates[nextIndex] == sortedCandidates[0]:
             nextIndex += 1
-
         resultNo0 = self.combinationSum2(sortedCandidates[nextIndex:], target)
-
         return [[sortedCandidates[0]] + item for item in resultWith0] + resultNo0

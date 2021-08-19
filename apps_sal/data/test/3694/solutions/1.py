@@ -1,9 +1,7 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
 a.sort()
-
 if n == 1:
     if a[0] % 2 == 1:
         v = True
@@ -24,10 +22,9 @@ else:
         if j > 0:
             if a[j - 1] + 1 == a[j]:
                 v = False
-    if (sum(a) - (n * (n - 1)) // 2) % 2 == 0:
+    if (sum(a) - n * (n - 1) // 2) % 2 == 0:
         v = False
-
 if v == True:
-    print("sjfnb")
+    print('sjfnb')
 else:
-    print("cslnb")
+    print('cslnb')

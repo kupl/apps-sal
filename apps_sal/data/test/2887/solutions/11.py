@@ -6,7 +6,7 @@ for i in range(n):
     x = t[i]
     s = 0
     for j in range(i + 1):
-        if(B[j] > x):
+        if B[j] > x:
             B[j] = B[j] - x
             s += x
         else:
@@ -14,4 +14,4 @@ for i in range(n):
             B[j] = 0
     o.append(s)
 for i in o:
-    print(i, end=" ")
+    print(i, end=' ')

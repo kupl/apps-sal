@@ -4,10 +4,9 @@ input = sys.stdin.readline
 
 
 def main():
-    n, I = list(map(int, input().split()))
+    (n, I) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    K = 2**min(20, 8 * I // n)
-
+    K = 2 ** min(20, 8 * I // n)
     a.sort()
     c = []
     pos = 0
@@ -17,7 +16,6 @@ def main():
             r += 1
         c.append(r - pos + 1)
         pos = r + 1
-
     if K > len(c):
         print(0)
     else:
@@ -27,7 +25,6 @@ def main():
             pref[i] += pref[i - 1]
         for i in range(len(c) - 2, -1, -1):
             suff[i] += suff[i + 1]
-
         res = sum(c)
         l = 0
         r = K - 1
@@ -37,7 +34,6 @@ def main():
             res = min(res, s1 + s2)
             l += 1
             r += 1
-
         print(res)
 
 

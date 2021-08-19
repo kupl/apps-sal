@@ -10,6 +10,6 @@ def isThree(z):
 
 
 if isThree(sizes):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

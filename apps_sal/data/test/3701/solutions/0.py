@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 a = input()
 cnt = 0
 prev = '1'

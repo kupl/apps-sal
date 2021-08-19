@@ -1,10 +1,11 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 class Dinic:
+
     def __init__(self, n, edges):
         self.n = n
         self.edges = [[] for _ in range(n)]
@@ -14,7 +15,7 @@ class Dinic:
 
     def graph(self, E):
         edges = self.edges
-        for fr, to, cap in E:
+        for (fr, to, cap) in E:
             edges[fr].append([to, cap, len(edges[to])])
             edges[to].append([fr, 0, len(edges[fr]) - 1])
 
@@ -37,7 +38,7 @@ class Dinic:
         q = deque([source])
         while q:
             fr = q.popleft()
-            for to, cap, _ in edges[fr]:
+            for (to, cap, _) in edges[fr]:
                 if cap > 0 > level[to]:
                     level[to] = level[fr] + 1
                     q.append(to)
@@ -47,7 +48,7 @@ class Dinic:
         if source == sink:
             return flow
         while self.iter[source] < len(self.edges[source]):
-            to, cap, rev = self.edges[source][self.iter[source]]
+            (to, cap, rev) = self.edges[source][self.iter[source]]
             if cap > 0 and self.level[source] < self.level[to]:
                 f = self.dfs(to, sink, min(flow, cap))
                 if f:
@@ -59,7 +60,7 @@ class Dinic:
 
 
 inf = float('inf')
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 Edges = []
 for x in range(h):
     s = list(input())

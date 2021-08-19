@@ -1,6 +1,5 @@
 n = int(input())
 inp = list(map(int, input().split()))
-
 input_parse = []
 dp = []
 for i in inp:
@@ -11,7 +10,6 @@ for i in inp:
         input_parse = [i]
     else:
         input_parse.append(i)
-
 dp.append(input_parse)
 optimum = 0
 if len(dp) != 1:

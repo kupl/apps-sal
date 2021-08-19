@@ -1,5 +1,5 @@
 from collections import deque
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 n = int(input())
 a = list(map(int, input().split()))
 c = 1

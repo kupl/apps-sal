@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 exist = [False] * 16
 zero = [False] * 4
 for i in range(n):

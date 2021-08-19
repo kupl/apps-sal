@@ -4,13 +4,13 @@ from math import gcd
 def main():
     bb = [-1] * int(input())
     aa = [int(s) - 1 for s in input().split()]
-    for b, a in enumerate(aa):
+    for (b, a) in enumerate(aa):
         if bb[a] != -1:
             print(-1)
             return
         bb[a] = b
     cc = set()
-    for a, b in enumerate(bb):
+    for (a, b) in enumerate(bb):
         if b != -1:
             c = 0
             while bb[a] != -1:

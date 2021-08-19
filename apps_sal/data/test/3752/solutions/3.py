@@ -1,4 +1,4 @@
-K, D, T = list(map(int, input().split()))
+(K, D, T) = list(map(int, input().split()))
 ivl = D * ((K + D - 1) // D)
 fp = float(K) / float(ivl)
 sp = 1.0 - fp
@@ -17,4 +17,4 @@ for ii in range(300):
     else:
         b = t
 t = 0.5 * (a + b)
-print("%.10f" % t)
+print('%.10f' % t)

@@ -12,6 +12,6 @@ else:
     if t % (k + (d - ((k - 1) % d + 1)) / 2) <= k:
         dob = t % (k + (d - ((k - 1) % d + 1)) / 2)
     else:
-        dob = k + ((t % (k + (d - ((k - 1) % d + 1)) / 2) - k) * 2)
+        dob = k + (t % (k + (d - ((k - 1) % d + 1)) / 2) - k) * 2
     tay = t // (k + (d - ((k - 1) % d + 1)) / 2) * d * ((k - 1) // d + 1) + dob
 print(tay)

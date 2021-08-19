@@ -1,13 +1,12 @@
 import heapq
-N, K, Q = map(int, input().split())
-*A, = map(int, input().split())
-
-ans = 10**10
+(N, K, Q) = map(int, input().split())
+(*A,) = map(int, input().split())
+ans = 10 ** 10
 A.append(-1)
 for y in A:
     if y == -1:
         break
-    p, q = [], []
+    (p, q) = ([], [])
     for a in A:
         if a >= y:
             heapq.heappush(p, a)

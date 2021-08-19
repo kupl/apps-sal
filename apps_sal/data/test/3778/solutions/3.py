@@ -30,16 +30,15 @@ while i >= 0:
             ts.append([i + 1, i + 1])
             ts.append([i + 1, cl + 1])
             cl = i
+        elif len(col) == 0:
+            poss = False
         else:
-            if len(col) == 0:
-                poss = False
-            else:
-                c = col.pop()
-                r = row.pop()
-                t += 2
-                ts.append([i + 1, i + 1])
-                ts.append([i + 1, c + 1])
-                cl = i
+            c = col.pop()
+            r = row.pop()
+            t += 2
+            ts.append([i + 1, i + 1])
+            ts.append([i + 1, c + 1])
+            cl = i
     i -= 1
 if poss:
     print(t)

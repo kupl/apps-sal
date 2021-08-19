@@ -1,7 +1,7 @@
-x0, y0, ax, ay, bx, by = map(int, input().split())
-xs, ys, t = map(int, input().split())
+(x0, y0, ax, ay, bx, by) = map(int, input().split())
+(xs, ys, t) = map(int, input().split())
 dn = [[x0, y0]]
-while dn[-1][0] <= 1e20 and dn[-1][1] <= 1e20:
+while dn[-1][0] <= 1e+20 and dn[-1][1] <= 1e+20:
     dn.append([dn[-1][0] * ax + bx, dn[-1][1] * ay + by])
 for i in range(len(dn)):
     dn[i][0] -= xs

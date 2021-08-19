@@ -1,6 +1,6 @@
 I = input
 n = int(I())
-*d, = map(int, I().split())
+(*d,) = map(int, I().split())
 a = 1
 m = 998244353
 s = sum(d)

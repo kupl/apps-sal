@@ -1,6 +1,5 @@
 import sys
-
-n, k = sys.stdin.readline().strip().split()
+(n, k) = sys.stdin.readline().strip().split()
 n = int(n)
 k = int(k)
 x = sys.stdin.readline().strip()
@@ -10,9 +9,9 @@ for i in range(0, n):
 v = 0
 w = 0
 for i in range(0, n):
-    if v == 0 and (X[i] > X[i % k]):
+    if v == 0 and X[i] > X[i % k]:
         v = -1
-    elif v == 0 and (X[i] < X[i % k]):
+    elif v == 0 and X[i] < X[i % k]:
         v = 1
 ans = []
 if v == -1:
@@ -25,4 +24,4 @@ if v == -1:
 for i in range(0, n):
     ans.append(str(X[i % k]))
 print(n)
-print("".join(ans))
+print(''.join(ans))

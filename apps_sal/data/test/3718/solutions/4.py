@@ -10,8 +10,7 @@ def solve(arr, n):
 
 n = int(input())
 arr = list(map(int, input().split()))
-
 if solve(arr, n):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

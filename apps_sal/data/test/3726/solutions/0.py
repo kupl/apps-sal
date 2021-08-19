@@ -38,18 +38,18 @@ def match(a):
     l = {}
     c = 0
     matches = 0
-    for i, j in a:
+    for (i, j) in a:
         if i not in l:
             l[i] = c
             c += 1
         if j not in l:
             l[j] = c
             c += 1
-    L = {v: k for k, v in l.items()}
+    L = {v: k for (k, v) in l.items()}
     g = [set() for i in range(len(l) + 2)]
     src = len(l)
     dest = src + 1
-    for i, j in a:
+    for (i, j) in a:
         g[src].add(l[i])
         g[l[i]].add(l[j])
         g[l[j]].add(dest)

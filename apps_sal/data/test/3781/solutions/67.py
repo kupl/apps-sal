@@ -4,8 +4,7 @@ for _ in range(t):
     l = sorted(map(int, input().split()))
     if N % 2:
         print('Second')
+    elif sum(l[::2]) == sum(l[1::2]):
+        print('Second')
     else:
-        if sum(l[::2]) == sum(l[1::2]):
-            print('Second')
-        else:
-            print('First')
+        print('First')

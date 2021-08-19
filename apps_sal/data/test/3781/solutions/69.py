@@ -18,6 +18,6 @@ def f():
 t = int(input())
 for _ in range(t):
     if f():
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

@@ -12,37 +12,60 @@ import random
 import time
 import copy
 import functools
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+eps = 1.0 / 10 ** 15
+mod = 10 ** 9 + 7
 
-sys.setrecursionlimit(10**7)
-inf = 10**20
-eps = 1.0 / 10**15
-mod = 10**9 + 7
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
-def pf(s): return print(s, flush=True)
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def pf(s):
+    return print(s, flush=True)
 
 
 class E:
+
     def __init__(self, dst, cap, rev):
         self.dst = dst
         self.cap = cap
         self.rev = rev
 
     def __repr__(self):
-        return "({}, {}, {})".format(self.dst, self.cap, self.rev)
+        return '({}, {}, {})'.format(self.dst, self.cap, self.rev)
 
     def __str__(self):
-        return "({}, {}, {})".format(self.dst, self.cap, self.rev)
+        return '({}, {}, {})'.format(self.dst, self.cap, self.rev)
 
 
 class Dinic:
+
     def __init__(self, n):
         self.n = n
         self.g = [[] for _ in range(n)]
@@ -96,12 +119,11 @@ class Dinic:
                 return flow
             self.itr = [0] * self.n
             flow += self.dfs(s, t, inf)
-
         return flow
 
 
 def main():
-    h, w = LI()
+    (h, w) = LI()
     a = [S() for _ in range(h)]
     dn = Dinic(h + w + 2)
     s = h + w
@@ -121,7 +143,6 @@ def main():
             elif c == 'T':
                 dn.add_edge(i, t, inf)
                 dn.add_edge(h + j, t, inf)
-
     r = dn.run(s, t)
     if r >= inf:
         return -1

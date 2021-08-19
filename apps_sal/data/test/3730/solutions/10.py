@@ -14,6 +14,6 @@ for i in range(0, n):
         ans = max(ans, pre[i - 1] + 1)
     if i < n - 1:
         ans = max(ans, suf[i + 1] + 1)
-    if i > 0 and i < n - 1 and a[i - 1] <= a[i + 1] - 2:
+    if i > 0 and i < n - 1 and (a[i - 1] <= a[i + 1] - 2):
         ans = max(ans, pre[i - 1] + suf[i + 1] + 1)
 print(ans)

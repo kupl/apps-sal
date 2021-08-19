@@ -8,7 +8,7 @@ def mindiv(n):
         return 2
     if n % 3 == 0:
         return 3
-    div, inc = 5, 2
+    (div, inc) = (5, 2)
     while div < ceil(sqrt(n)) + 1:
         if n % div == 0:
             return div

@@ -1,7 +1,6 @@
-N, K, Q = list(map(int, input().split()))
+(N, K, Q) = list(map(int, input().split()))
 X = list(map(int, input().split()))
-
-r = 10**18
+r = 10 ** 18
 for y in X:
     tmp = []
     tmp2 = []

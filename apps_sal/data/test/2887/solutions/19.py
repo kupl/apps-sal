@@ -10,4 +10,4 @@ for i in range(len(lst)):
         else:
             q += lst1[i]
             lst[j] -= lst1[i]
-    print(q, end=" ")
+    print(q, end=' ')

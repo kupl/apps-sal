@@ -3,9 +3,10 @@ from itertools import combinations
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
-        self.G = [[]for _ in range(N)]
+        self.G = [[] for _ in range(N)]
 
     def add_edge(self, fr, to, cap):
         forward = [to, cap, None]
@@ -27,7 +28,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +39,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +50,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = map(iter, self.G)
+            (*self.it,) = map(iter, self.G)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -60,13 +61,13 @@ class Dinic:
         return flow
 
 
-INF = 10**9 + 7
-t, *a = open(0)
-h, w = map(int, t.split())
+INF = 10 ** 9 + 7
+(t, *a) = open(0)
+(h, w) = map(int, t.split())
 d = Dinic(h + w + 3)
 add = d.add_multi_edge
-for i, s in enumerate(a, 1):
-    for j, t in enumerate(s[:-1], h + 1):
+for (i, s) in enumerate(a, 1):
+    for (j, t) in enumerate(s[:-1], h + 1):
         if t != '.':
             if t == 'S':
                 add(0, i, INF, INF)

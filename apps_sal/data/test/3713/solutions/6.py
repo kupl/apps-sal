@@ -1,5 +1,5 @@
-l, s = int(input()), input()
-x, y = 0, 1
+(l, s) = (int(input()), input())
+(x, y) = (0, 1)
 for i in range(l - 1):
     if s[i] == s[i + 1]:
         x += 1

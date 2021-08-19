@@ -1,5 +1,5 @@
-MOD = int(1e9 + 7)
-n, k = map(int, input().split())
+MOD = int(1000000000.0 + 7)
+(n, k) = map(int, input().split())
 if k < 2:
     p = n - (1 - k)
 else:

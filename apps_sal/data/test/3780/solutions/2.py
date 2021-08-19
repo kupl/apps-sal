@@ -1,9 +1,9 @@
-x, y, a, b = map(int, input().split())
+(x, y, a, b) = map(int, input().split())
 a -= x
 b -= y
-v, t = map(int, input().split())
-vx, vy = map(int, input().split())
-ux, uy = map(int, input().split())
+(v, t) = map(int, input().split())
+(vx, vy) = map(int, input().split())
+(ux, uy) = map(int, input().split())
 
 
 def ok(T):
@@ -11,12 +11,12 @@ def ok(T):
     V = min(t, T)
     X = a - U * ux - V * vx
     Y = b - U * uy - V * vy
-    return X * X + Y * Y <= ((U + V) * v)**2
+    return X * X + Y * Y <= ((U + V) * v) ** 2
 
 
 l = 0
-r = 1e9
-while r - l > 1e-6:
+r = 1000000000.0
+while r - l > 1e-06:
     m = (l + r) / 2
     if ok(m):
         r = m

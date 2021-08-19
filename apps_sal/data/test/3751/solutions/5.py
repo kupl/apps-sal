@@ -1,21 +1,17 @@
 program = input()
-
-to_use = "abcdefghijklmnopqrstuvwxyz"
-used = ""
+to_use = 'abcdefghijklmnopqrstuvwxyz'
+used = ''
 legal = True
-
 for char in program:
     if char in used:
         continue
+    elif char == to_use[0]:
+        used += to_use[0]
+        to_use = to_use[1:]
     else:
-        if char == to_use[0]:
-            used += to_use[0]
-            to_use = to_use[1:]
-        else:
-            legal = False
-            break
-
+        legal = False
+        break
 if legal:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

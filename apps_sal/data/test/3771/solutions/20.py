@@ -2,6 +2,7 @@ import collections
 
 
 class Dinic:
+
     def __init__(self, n):
         self.n = n
         self.g = [[] for i in range(n)]
@@ -52,7 +53,7 @@ class Dinic:
                 break
             self.it = [0] * self.n
             while True:
-                f = self.dfs(s, t, 10**9 + 7)
+                f = self.dfs(s, t, 10 ** 9 + 7)
                 if f > 0:
                     flow += f
                 else:
@@ -60,12 +61,12 @@ class Dinic:
         return flow
 
 
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 A = [input() for i in range(h)]
 dinic = Dinic(h + w + 2)
 start = h + w
 end = h + w + 1
-INF = 10**9 + 7
+INF = 10 ** 9 + 7
 for i in range(h):
     for j in range(w):
         c = A[i][j]

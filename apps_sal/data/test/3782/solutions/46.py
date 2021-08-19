@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 a = list(map(int, input().split()))
 tt = a[:]
 inf = 10 ** 10

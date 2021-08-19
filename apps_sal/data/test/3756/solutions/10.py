@@ -1,7 +1,8 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, t = R()
+(n, t) = R()
 s = list(input())
 r = -1
 l = s.index('.') + 1

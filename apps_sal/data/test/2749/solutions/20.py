@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 n = int(input())
 a = list(map(int, input().split()))
 mat = [[0] * w for i in range(h)]
@@ -12,6 +12,5 @@ for y in range(h):
         a[idx] -= 1
         if a[idx] == 0:
             idx += 1
-
 for y in range(h):
-    print((" ".join(list(map(str, mat[y])))))
+    print(' '.join(list(map(str, mat[y]))))

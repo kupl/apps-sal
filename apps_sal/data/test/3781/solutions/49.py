@@ -1,7 +1,6 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 for _ in range(T):
     N = int(input())
@@ -12,7 +11,7 @@ for _ in range(T):
         cnt = defaultdict(int)
         for x in a:
             cnt[x] += 1
-        for _, c in list(cnt.items()):
+        for (_, c) in list(cnt.items()):
             if c % 2 == 1:
                 print('First')
                 break

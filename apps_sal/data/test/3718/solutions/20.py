@@ -1,6 +1,4 @@
 n = int(input())
-
-
 for i in range(1):
     t = [int(x) for x in input().split()]
 
@@ -22,18 +20,18 @@ def checkyesno():
             if u[i] - u[i + 1] == -1:
                 y += 1
     if y >= 2:
-        result = "YES"
+        result = 'YES'
         print(result)
     else:
-        result = "NO"
+        result = 'NO'
         print(result)
 
 
 if len(t) < 3:
-    result = "NO"
+    result = 'NO'
     print(result)
 elif len(list(set(t))) < 3:
-    result = "NO"
+    result = 'NO'
     print(result)
 else:
     checkyesno()
