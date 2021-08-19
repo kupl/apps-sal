@@ -1,5 +1,7 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
+
         def dfs(i):
             visited[i] = True
             component.append(i)
@@ -8,7 +10,7 @@ class Solution:
                     dfs(j)
         n = len(s)
         adj_list = [[] for _ in range(n)]
-        for i, j in pairs:
+        for (i, j) in pairs:
             adj_list[i].append(j)
             adj_list[j].append(i)
         visited = [False for _ in range(n)]

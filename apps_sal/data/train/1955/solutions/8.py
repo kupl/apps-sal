@@ -3,6 +3,7 @@ from collections import defaultdict
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.makeSet(n)
 
@@ -19,6 +20,7 @@ class DisjointSet:
 
 
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         sa = list(s)
         lens = len(s)
@@ -34,10 +36,9 @@ class Solution:
         for i in range(lens):
             ip = ds.find(i)
             cm[ip].append((i, sa[i]))
-        for _, li in list(cm.items()):
+        for (_, li) in list(cm.items()):
             if li:
                 lsv = sorted(li, key=lambda t: t[1])
                 for i in range(len(li)):
                     sa[li[i][0]] = lsv[i][1]
-
         return ''.join(sa)

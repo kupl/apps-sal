@@ -1,4 +1,5 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
         N = 2 ** 31 - 1
 
@@ -13,8 +14,7 @@ class Solution:
                     dfs(s[i + 1:], path + [s[:i + 1]], res)
                 elif len(path) > 1 and int(s[:i + 1]) == int(path[-1]) + int(path[-2]):
                     dfs(s[i + 1:], path + [s[:i + 1]], res)
-
-        res, ans = [], []
+        (res, ans) = ([], [])
         dfs(S, [], res)
         if not res:
             return []

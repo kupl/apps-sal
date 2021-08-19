@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseBetween(self, head, m, n):
         """
         :type head: ListNode
@@ -27,5 +28,4 @@ class Solution:
             pre.next = last.__next__
             last.next = pre
             first = preFirst.__next__
-
         return dummy.__next__

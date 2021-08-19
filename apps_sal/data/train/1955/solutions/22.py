@@ -1,13 +1,14 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         g = collections.defaultdict(list)
-        for a, b in pairs:
+        for (a, b) in pairs:
             g[a].append(b)
             g[b].append(a)
         n = len(s)
         s = list(s)
         while g:
-            i, j = g.popitem()
+            (i, j) = g.popitem()
             visited = {i}
             visited.update(j)
             chars = collections.Counter()

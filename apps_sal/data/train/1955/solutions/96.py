@@ -1,5 +1,7 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
+
         def dfs(u, cc):
             cc.append(u)
             visited_set.add(u)
@@ -7,12 +9,10 @@ class Solution:
                 for v in graph[u]:
                     if v not in visited_set:
                         dfs(v, cc)
-
         if len(pairs) == 0:
             return s
-
         graph = {}
-        for u, v in pairs:
+        for (u, v) in pairs:
             if u in graph:
                 graph[u].append(v)
             else:
@@ -21,7 +21,6 @@ class Solution:
                 graph[v].append(u)
             else:
                 graph[v] = [u]
-
         result = [c for c in s]
         visited_set = set()
         for u in graph:
@@ -31,6 +30,6 @@ class Solution:
                 cc.sort()
                 auxr = [s[i] for i in cc]
                 auxr.sort()
-                for i, index in enumerate(cc):
+                for (i, index) in enumerate(cc):
                     result[index] = auxr[i]
         return ''.join(result)

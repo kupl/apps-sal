@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         count = 0
         for left in range(n):
             row_sums = [0 for _ in range(m)]

@@ -1,4 +1,5 @@
 class Solution:
+
     def _root(self, U, a):
         while U[a] != a:
             U[a] = U[U[a]]
@@ -15,12 +16,10 @@ class Solution:
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges.sort(key=lambda x: x[0], reverse=True)
-
         ua = [i for i in range(n + 1)]
         ub = [i for i in range(n + 1)]
-        e1, e2, e3 = 0, 0, 0
-
-        for ty, u, v in edges:
+        (e1, e2, e3) = (0, 0, 0)
+        for (ty, u, v) in edges:
             if ty == 3:
                 tmp = self._union(ua, u, v)
                 tmp = self._union(ub, u, v) or tmp
@@ -32,8 +31,7 @@ class Solution:
             elif ty == 1:
                 if self._union(ua, u, v):
                     e1 += 1
-
-        ca, cb = 0, 0
+        (ca, cb) = (0, 0)
         for i in range(1, n + 1):
             if ua[i] == i:
                 ca += 1
@@ -41,5 +39,4 @@ class Solution:
                 cb += 1
             if ca > 1 or cb > 1:
                 return -1
-
         return len(edges) - e1 - e2 - e3

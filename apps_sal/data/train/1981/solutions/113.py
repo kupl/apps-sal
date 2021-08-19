@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         requests.sort(reverse=True)
         cur = []
@@ -12,4 +13,4 @@ class Solution:
         print(height)
         height.sort()
         nums.sort()
-        return sum(n * h for n, h in zip(nums, height)) % (10 ** 9 + 7)
+        return sum((n * h for (n, h) in zip(nums, height))) % (10 ** 9 + 7)

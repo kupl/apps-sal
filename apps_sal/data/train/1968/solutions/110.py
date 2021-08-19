@@ -1,10 +1,12 @@
 class Trie:
+
     def __init__(self):
         self.chi = collections.defaultdict(Trie)
         self.ise = False
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         root = Trie()
         sta = []

@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self):
         self.val = '/'
         self.children = []
@@ -31,14 +32,14 @@ def is_parent(f1, f2):
     f2 = f2.split('/')
     if len(f1) > len(f2):
         return False
-    return all([a == b for a, b in zip(f1, f2)])
+    return all([a == b for (a, b) in zip(f1, f2)])
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder)
         ans = []
-
         fs = TreeNode()
         for f in folder:
             has_parent = fs.isparent(f.split('/'))

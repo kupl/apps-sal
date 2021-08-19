@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         d = defaultdict(list)
         for i in range(len(groupSizes)):

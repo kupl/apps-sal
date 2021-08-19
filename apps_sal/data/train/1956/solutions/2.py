@@ -1,4 +1,5 @@
 class Solution(object):
+
     def __init__(self):
         self.filled = []
 
@@ -19,12 +20,10 @@ class Solution(object):
                     self.filled[-1].append(False)
                     pln[i].append([k for k in range(10)])
                     pln[i][-1].remove(0)
-
         for i in range(9):
             for j in range(9):
                 if board[i][j].isdigit():
                     self.updatePln(pln, int(board[i][j]), i, j)
-
         result = self.loopSolution(pln, board)
         return
 
@@ -41,13 +40,13 @@ class Solution(object):
 
     def loopSolution(self, pln, board):
         while True:
-            row, column, minSize = 10, 10, 10
+            (row, column, minSize) = (10, 10, 10)
             for i in range(9):
                 for j in range(9):
                     if not self.filled[i][j] and len(pln[i][j]) == 0:
                         return False
                     if len(pln[i][j]) > 0 and len(pln[i][j]) < minSize:
-                        row, column = i, j
+                        (row, column) = (i, j)
                         minSize = len(pln[i][j])
             if minSize == 10:
                 return True

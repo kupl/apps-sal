@@ -1,16 +1,16 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        '''
+        """
         def dfs(curr, curr_color):
             color[curr] = curr_color
             for next in graph[curr]:
                 dfs(next, not curr_color)
-        '''
-
+        """
         curr_color = True
         graph = collections.defaultdict(list)
         color = [None] * (N + 1)
-        for u, v in dislikes:
+        for (u, v) in dislikes:
             graph[u].append(v)
             graph[v].append(u)
         for n in range(1, N + 1):

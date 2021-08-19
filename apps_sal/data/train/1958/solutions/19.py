@@ -1,4 +1,5 @@
 class Solution:
+
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         res = []
         d = collections.defaultdict(list)
@@ -7,5 +8,4 @@ class Solution:
             if len(d[groupSizes[i]]) == groupSizes[i]:
                 res.append(d[groupSizes[i]])
                 d[groupSizes[i]] = []
-
         return res

@@ -16,13 +16,14 @@ def bfs_step(queue, colors, graph, queued):
 
 
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         q = queue.SimpleQueue()
         colors = [-1 for i in range(N + 1)]
         graph = [[] for i in range(N + 1)]
         queued = [0 for i in range(N + 1)]
         for edge in dislikes:
-            i, j = edge
+            (i, j) = edge
             graph[i].append(j)
             graph[j].append(i)
         for i in range(N):

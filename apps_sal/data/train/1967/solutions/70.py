@@ -1,4 +1,5 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
         if len(S) < 3:
             return []
@@ -10,13 +11,12 @@ class Solution:
                 split = self.dfs(first, second, S[j:], [first, second])
                 if split:
                     return split
-
         return []
 
     def notvalid(self, s):
         if int(s) != 0 and s[0] == 0:
             return True
-        if int(s) > 2**31 - 1:
+        if int(s) > 2 ** 31 - 1:
             return True
         return False
 

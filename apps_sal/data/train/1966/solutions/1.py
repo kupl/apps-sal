@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, matrix):
-        m, n = len(matrix), len(matrix[0])
+        (m, n) = (len(matrix), len(matrix[0]))
         res = 0
         heights = [0] * (n + 1)
         for x in range(m):

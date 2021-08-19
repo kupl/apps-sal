@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         ea = [set() for _ in range(n)]
         eb = [set() for _ in range(n)]
@@ -6,7 +7,7 @@ class Solution:
         nodea = set()
         nodeb = set()
         nodec = set()
-        na, nb, nc = 0, 0, 0
+        (na, nb, nc) = (0, 0, 0)
         for edge in edges:
             if edge[0] == 1:
                 ea[edge[1] - 1].add(edge[2] - 1)

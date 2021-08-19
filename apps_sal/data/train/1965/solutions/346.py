@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [1] * n
@@ -15,7 +16,7 @@ class UnionFind:
         if px == py:
             return False
         if self.rank[px] > self.rank[py]:
-            px, py = py, px
+            (px, py) = (py, px)
         self.parent[px] = py
         if self.rank[px] == self.rank[py]:
             self.rank[py] += 1
@@ -27,12 +28,13 @@ class UnionFind:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges.sort(key=lambda x: -x[0])
         alice = UnionFind(n)
         bob = UnionFind(n)
         added = 0
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             a -= 1
             b -= 1
             if t == 3:
@@ -41,5 +43,4 @@ class Solution:
                 added += 1 if alice.union(a, b) else 0
             elif t == 2:
                 added += 1 if bob.union(a, b) else 0
-
         return len(edges) - added if alice.united() and bob.united() else -1

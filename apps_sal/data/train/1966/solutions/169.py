@@ -1,15 +1,13 @@
 class Solution:
-    def numSubmat(self, mat: List[List[int]]) -> int:
 
+    def numSubmat(self, mat: List[List[int]]) -> int:
         rows = len(mat)
         cols = len(mat[0])
-
         for r in range(rows):
             for c in range(1, cols):
                 if mat[r][c]:
                     if c > 0:
                         mat[r][c] = mat[r][c - 1] + 1
-
         submatrices = 0
         for r in range(rows):
             for c in range(cols):

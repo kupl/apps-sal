@@ -1,10 +1,9 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-
         graph = {i: [] for i in range(1, N + 1)}
-
         for dislike in dislikes:
-            u, v = dislike
+            (u, v) = dislike
             graph[u].append(v)
             graph[v].append(u)
         visited = collections.defaultdict(int)
@@ -21,7 +20,6 @@ class Solution:
                     if nei not in visited:
                         visited[nei] = ~clr
                         queue.append(nei)
-                    else:
-                        if visited[nei] == clr:
-                            return False
+                    elif visited[nei] == clr:
+                        return False
         return True

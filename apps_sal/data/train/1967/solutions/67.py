@@ -1,5 +1,7 @@
 class Solution:
+
     def splitIntoFibonacci(self, s: str) -> List[int]:
+
         def isTrue(a, b, s):
             if len(str(a) + str(b) + s) != self.n:
                 return []

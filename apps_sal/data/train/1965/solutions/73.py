@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
         def findRoot(node, p):
@@ -22,7 +23,6 @@ class Solution:
                     return False
                 root = findRoot(node, p)
             return len(p) == n
-
         cnt = 0
         p1 = {}
         p2 = {}
@@ -30,11 +30,9 @@ class Solution:
             if edge[0] == 3:
                 cnt += union(edge[1], edge[2], p1)
                 union(edge[1], edge[2], p2)
-
         for edge in edges:
             if edge[0] == 1:
                 cnt += union(edge[1], edge[2], p1)
             if edge[0] == 2:
                 cnt += union(edge[1], edge[2], p2)
-
         return len(edges) - cnt if checkUnited(p1, n) and checkUnited(p2, n) else -1

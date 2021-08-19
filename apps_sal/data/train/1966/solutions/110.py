@@ -2,9 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
-    def numSubmat(self, mat: List[List[int]]) -> int:
 
-        n, m = len(mat), len(mat[0])
+    def numSubmat(self, mat: List[List[int]]) -> int:
+        (n, m) = (len(mat), len(mat[0]))
         cnt = 0
 
         def count(arr):
@@ -19,14 +19,11 @@ class Solution:
                 else:
                     cnt[i] = 0
             return sum(cnt)
-
         ans = 0
-
         for left in range(m):
             c = [1 for i in range(n)]
             for right in range(left, m):
                 for i in range(n):
                     c[i] = c[i] and mat[i][right]
                 ans += count(c)
-
         return ans

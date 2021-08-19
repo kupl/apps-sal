@@ -1,4 +1,5 @@
 class Solution:
+
     def closedIsland(self, grid: List[List[int]]) -> int:
         count = 0
         for i in range(1, len(grid) - 1):
@@ -10,7 +11,7 @@ class Solution:
     def dfs(self, grid, i, j):
         if grid[i][j] == 1:
             return True
-        if i <= 0 or j <= 0 or i >= len(grid) - 1 or j >= len(grid[0]) - 1:
+        if i <= 0 or j <= 0 or i >= len(grid) - 1 or (j >= len(grid[0]) - 1):
             return False
         grid[i][j] = 1
         up = self.dfs(grid, i + 1, j)

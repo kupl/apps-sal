@@ -1,6 +1,6 @@
 class Solution:
-    def removeSubfolders(self, folders: List[str]) -> List[str]:
 
+    def removeSubfolders(self, folders: List[str]) -> List[str]:
         folders.sort()
         first = folders[0]
         res_set = set()
@@ -13,7 +13,6 @@ class Solution:
                 res_set.add(folder)
                 res_set.add(first)
                 first = folder
-
         res = list(res_set)
         res.sort()
         return res

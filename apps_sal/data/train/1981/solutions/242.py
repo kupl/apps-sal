@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         nums.sort(reverse=True)
         ans = 0
@@ -12,7 +13,7 @@ class Solution:
         cnt = cnt[:-1]
         v = sorted(enumerate(cnt), key=operator.itemgetter(1), reverse=True)
         j = 0
-        for _, k in v:
+        for (_, k) in v:
             ans += nums[j] * k
             j += 1
         return ans % MOD

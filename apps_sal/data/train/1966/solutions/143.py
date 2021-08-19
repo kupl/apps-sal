@@ -1,5 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
+
         def pom(tab):
             stack = []
             sums = [0] * len(tab)
@@ -11,9 +13,7 @@ class Solution:
                 else:
                     sums[i] = sums[stack[-1]] + tab[i] * (i - stack[-1])
                 stack.append(i)
-
             return sum(sums)
-
         n_rows = len(mat)
         n_cols = len(mat[0])
         h = [0] * n_cols
@@ -25,5 +25,4 @@ class Solution:
                 else:
                     h[i] = 0
             res += pom(h)
-
         return res

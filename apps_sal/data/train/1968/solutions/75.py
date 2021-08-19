@@ -1,10 +1,12 @@
 class TrieNode:
+
     def __init__(self):
         self.d = {}
         self.w = False
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder)
         root = TrieNode()

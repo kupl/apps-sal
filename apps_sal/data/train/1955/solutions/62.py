@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         parents = [i for i in range(len(s))]
         ranks = [1 for _ in range(len(s))]
@@ -11,7 +12,7 @@ class Solution:
             return x
 
         def union(x, y):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return False
             if ranks[px] > ranks[py]:
@@ -22,7 +23,7 @@ class Solution:
                 parents[py] = px
                 ranks[px] += 1
             return True
-        for a, b in pairs:
+        for (a, b) in pairs:
             union(a, b)
         for i in range(len(parents)):
             components[find(i)].append(s[i])

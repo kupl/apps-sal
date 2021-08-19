@@ -1,13 +1,12 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         m = len(mat)
         n = len(mat[0])
         pre = [[0] * (n + 1) for _ in range(m)]
-
         for row in range(m):
             for col in range(1, n + 1):
                 pre[row][col] = mat[row][col - 1] + pre[row][col - 1]
-
         ans = 0
         for col1 in range(n):
             for col2 in range(col1 + 1, n + 1):

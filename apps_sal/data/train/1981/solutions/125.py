@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         n = len(nums)
         ops = []
         for request in requests:
@@ -17,4 +18,4 @@ class Solution:
                 cur += 1
             counts.append(count)
         counts.sort()
-        return sum([c * num for c, num in zip(counts, nums)]) % mod
+        return sum([c * num for (c, num) in zip(counts, nums)]) % mod

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         highest = sorted(nums, reverse=True)
         pointers = [[0, 0] for _ in range(len(nums))]
@@ -16,8 +17,6 @@ class Solution:
         ans = 0
         freq.sort(reverse=True)
         for i in range(len(freq)):
-
             ans += freq[i] * highest[i]
-
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         return ans % mod

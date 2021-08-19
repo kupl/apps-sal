@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         n = len(grid)
         m = len(grid[0])
@@ -20,13 +21,12 @@ class Solution:
                 return dis
             res = top[3]
             print(i, j, dis, res)
-            for x, y in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:
-                if x >= 0 and y >= 0 and x < n and y < m:
+            for (x, y) in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:
+                if x >= 0 and y >= 0 and (x < n) and (y < m):
                     nk = res - int(grid[x][y] == 1)
                     if nk >= 0:
                         if dist[x][y][0] == -1 or nk > dist[x][y][1]:
                             dist[x][y][0] = dis + 1
                             dist[x][y][1] = nk
                             queue.append([dis + 1, x, y, nk])
-
         return dist[n - 1][m - 1][0]

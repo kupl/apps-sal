@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         if len(dislikes) == 0:
             return True
@@ -10,7 +11,7 @@ class Solution:
         for i in range(1, N + 1):
             ref[i] = []
         for l in dislikes:
-            s, t = l[0], l[1]
+            (s, t) = (l[0], l[1])
             ref[s].append(t)
             ref[t].append(s)
         erase = []

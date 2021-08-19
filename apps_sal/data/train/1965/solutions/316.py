@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def find(self, i):
         if self.root[i] == i:
             return self.root[i]
@@ -21,7 +22,7 @@ class Solution:
         A = 0
         B = 0
         res = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 dA[u - 1].append(v - 1)
             elif t == 2:
@@ -29,14 +30,12 @@ class Solution:
             else:
                 d[u - 1].append(v - 1)
         self.root = [i for i in range(n)]
-
         for u in d:
             for v in d[u]:
                 if self.find(u) == self.find(v):
                     res += 1
                 else:
                     self.union(u, v)
-
         temp = self.root.copy()
         for u in dA:
             for v in dA[u]:
@@ -47,7 +46,6 @@ class Solution:
         if len(set([self.find(i) for i in range(n)])) > 1:
             return -1
         self.root = temp
-
         for u in dB:
             for v in dB[u]:
                 if self.find(u) == self.find(v):

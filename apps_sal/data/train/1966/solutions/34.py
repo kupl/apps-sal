@@ -1,7 +1,7 @@
 class Solution:
-    def numSubmat(self, mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
 
+    def numSubmat(self, mat: List[List[int]]) -> int:
+        (m, n) = (len(mat), len(mat[0]))
         ans = 0
         for left in range(n):
             row_sum = [0 for _ in range(m)]

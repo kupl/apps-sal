@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.sz = [1] * N
@@ -9,11 +10,11 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return False
         if self.sz[xr] < self.sz[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]
         self.sz[yr] = self.sz[xr]
@@ -24,16 +25,13 @@ class DSU:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-
         edges.sort(reverse=True)
-
         bob = DSU(n)
         alice = DSU(n)
-
         res = 0
-
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             a -= 1
             b -= 1
             if t == 3 and (bob.find(a) != bob.find(b) or alice.find(a) != alice.find(b)):
@@ -46,6 +44,6 @@ class Solution:
             else:
                 res += 1
 
-        def is_one(dsu): return len({dsu.find(i) for i in range(n)}) == 1
-
+        def is_one(dsu):
+            return len({dsu.find(i) for i in range(n)}) == 1
         return res if is_one(alice) and is_one(bob) else -1

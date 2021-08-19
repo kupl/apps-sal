@@ -1,5 +1,7 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
+
         def bfs(i):
             stack = []
             color[i] = 0
@@ -13,7 +15,6 @@ class Solution:
                         stack.append(nei)
                         color[nei] = 1 - color[cur]
             return True
-
         dislike_adj = collections.defaultdict(list)
         color = {}
         for d in dislikes:

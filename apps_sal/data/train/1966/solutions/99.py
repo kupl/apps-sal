@@ -1,5 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
+
         def countOneRow(a):
             res = 0
             length = 0
@@ -8,10 +10,8 @@ class Solution:
                     length = 0
                 else:
                     length += 1
-
                 res += length
             return res
-
         M = len(mat)
         N = len(mat[0])
         res = 0

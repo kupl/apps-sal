@@ -1,9 +1,10 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         return solve(n, edges)
 
 
-class UnionFind():
+class UnionFind:
 
     def __init__(self, n):
         self.parents = [i for i in range(n + 1)]
@@ -27,14 +28,14 @@ def solve(n, edges):
     uf1 = UnionFind(n)
     uf2 = UnionFind(n)
     count = 0
-    for t, x, y in edges:
+    for (t, x, y) in edges:
         if t == 3:
             if uf1.find(x) != uf1.find(y):
                 uf1.union(x, y)
                 uf2.union(x, y)
             else:
                 count += 1
-    for t, x, y in edges:
+    for (t, x, y) in edges:
         if t == 1:
             if uf1.find(x) != uf1.find(y):
                 uf1.union(x, y)
@@ -45,7 +46,6 @@ def solve(n, edges):
                 uf2.union(x, y)
             else:
                 count += 1
-
     if uf1.group == 1 and uf2.group == 1:
         return count
     else:

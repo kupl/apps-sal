@@ -1,8 +1,9 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         if not mat or not mat[0]:
             return 0
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         hts = [0] * n
         ans = 0
         for i in range(m):

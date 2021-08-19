@@ -1,5 +1,7 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+
         def find(parent, node):
             if node != parent[node]:
                 parent[node] = find(parent, parent[node])

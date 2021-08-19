@@ -1,8 +1,9 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        A, B, ans, m = list(), list(), 0, len(edges)
-        ta, tb = set(), set()
-        for i, (t, u, v) in enumerate(sorted(edges, reverse=True)):
+        (A, B, ans, m) = (list(), list(), 0, len(edges))
+        (ta, tb) = (set(), set())
+        for (i, (t, u, v)) in enumerate(sorted(edges, reverse=True)):
             if t != 3:
                 if (u, v, 3) in ta or (u, v, 3) in tb:
                     ans += 1
@@ -27,8 +28,8 @@ class Solution:
                 if x != p[x]:
                     p[x] = find(p[x])
                 return p[x]
-            for u, v, i in edges:
-                pu, pv = find(u), find(v)
+            for (u, v, i) in edges:
+                (pu, pv) = (find(u), find(v))
                 if pu != pv:
                     ret.add(i)
                     p[pu] = pv

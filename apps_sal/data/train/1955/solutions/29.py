@@ -1,7 +1,8 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         d = {}
-        for a, b in pairs:
+        for (a, b) in pairs:
             if a not in d:
                 d[a] = []
             if b not in d:
@@ -14,7 +15,6 @@ class Solution:
                 result.append(x)
                 for y in d.pop(x):
                     dfs(y, result)
-
         s = list(s)
         while d:
             x = next(iter(d))
@@ -22,6 +22,6 @@ class Solution:
             dfs(x, result)
             result = sorted(result)
             B = sorted([s[i] for i in result])
-            for i, b in enumerate(B):
+            for (i, b) in enumerate(B):
                 s[result[i]] = b
         return ''.join(s)

@@ -1,4 +1,5 @@
 class Solution:
+
     def helper(self, heights, n):
         stack = []
         res = [0] * n
@@ -14,7 +15,7 @@ class Solution:
         return sum(res)
 
     def numSubmat(self, mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         heights = [[0] * n for _ in range(m)]
         res = 0
         for j in range(n):

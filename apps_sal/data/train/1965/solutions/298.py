@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         amy = UnionFind(n)
         bob = UnionFind(n)
@@ -25,6 +26,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [0] * n

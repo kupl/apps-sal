@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         vals = []
         nums.sort()
@@ -18,4 +19,4 @@ class Solution:
         while vals[index] != 0 and index >= 0:
             total += vals[index] * nums[index]
             index -= 1
-        return total % (10**9 + 7)
+        return total % (10 ** 9 + 7)

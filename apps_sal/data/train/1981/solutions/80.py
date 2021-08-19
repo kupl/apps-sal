@@ -18,5 +18,5 @@ class Solution:
         countNum.sort(reverse=True)
         count = 0
         for i in range(len(nums)):
-            count += (nums[i] * countNum[i]) % (10**9 + 7)
-        return count % (10**9 + 7)
+            count += nums[i] * countNum[i] % (10 ** 9 + 7)
+        return count % (10 ** 9 + 7)

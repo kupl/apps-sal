@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         nums.sort(reverse=True)
         reqs = defaultdict(int)
-        for start, end in requests:
+        for (start, end) in requests:
             reqs[start] += 1
             reqs[end + 1] -= 1
         counts = defaultdict(int)
@@ -17,7 +18,7 @@ class Solution:
         res = 0
         i = 0
         n = len(nums)
-        for h, c in sorted(list(counts.items()), reverse=True):
+        for (h, c) in sorted(list(counts.items()), reverse=True):
             for j in range(c):
                 if i == n:
                     break

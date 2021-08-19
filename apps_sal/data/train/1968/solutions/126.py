@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         s = sorted(folder)
         fs = []
@@ -14,7 +15,7 @@ class Solution:
         y = y.split('/')
         if len(x) >= len(y):
             return False
-        for i, c in enumerate(x):
+        for (i, c) in enumerate(x):
             if c != y[i]:
                 return False
         return True

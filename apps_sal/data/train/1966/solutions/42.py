@@ -1,5 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
+
         def oneDim(mat):
             res = 0
             length = 0
@@ -10,7 +12,6 @@ class Solution:
                     length += 1
                 res += length
             return res
-
         res = 0
         M = len(mat)
         N = len(mat[0])
@@ -20,5 +21,4 @@ class Solution:
                 for i in range(N):
                     h[i] *= mat[bot][i]
                 res += oneDim(h)
-
         return res

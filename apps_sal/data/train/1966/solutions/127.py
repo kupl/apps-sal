@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        M, N = len(mat), len(mat[0])
+        (M, N) = (len(mat), len(mat[0]))
         res = 0
         for top in range(M):
             h = [1 for _ in range(N)]
@@ -11,7 +12,7 @@ class Solution:
         return res
 
     def count1D(self, array):
-        res, length = 0, 0
+        (res, length) = (0, 0)
         for i in range(len(array)):
             if array[i] == 0:
                 length = 0

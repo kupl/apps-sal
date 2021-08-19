@@ -1,5 +1,7 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+
         def find(p, x):
             if p[x] != x:
                 p[x] = find(p, p[x])
@@ -18,8 +20,8 @@ class Solution:
             if e[0] == 3 and find(parent, e[1]) != find(parent, e[2]):
                 merge(parent, e[1], e[2])
                 path += 1
-        a, b = list(parent), list(parent)
-        patha, pathb = 0, 0
+        (a, b) = (list(parent), list(parent))
+        (patha, pathb) = (0, 0)
         for e in edges:
             if e[0] == 1 and find(a, e[1]) != find(a, e[2]):
                 merge(a, e[1], e[2])

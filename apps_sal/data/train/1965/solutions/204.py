@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         parent = list(range(n + 1))
         rank = [0 for _ in range(n + 1)]
@@ -21,25 +22,25 @@ class Solution:
                 parent[id_x] = id_y
             return 1
         res = a = b = 0
-        for t, i, j in edges:
+        for (t, i, j) in edges:
             if t == 3:
                 if union(i, j):
                     a += 1
                     b += 1
                 else:
                     res += 1
-        parent_, rank_ = parent[:], rank[:]
-        for t, i, j in edges:
+        (parent_, rank_) = (parent[:], rank[:])
+        for (t, i, j) in edges:
             if t == 1:
                 if union(i, j):
                     a += 1
                 else:
                     res += 1
-        parent, rank = parent_, rank_
-        for t, i, j in edges:
+        (parent, rank) = (parent_, rank_)
+        for (t, i, j) in edges:
             if t == 2:
                 if union(i, j):
                     b += 1
                 else:
                     res += 1
-        return res if (a == n - 1 and b == n - 1) else -1
+        return res if a == n - 1 and b == n - 1 else -1

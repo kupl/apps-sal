@@ -1,12 +1,13 @@
 class Solution:
+
     def printTree(self, root):
         if not root:
             return [[]]
         from queue import Queue
-        q, depth = Queue(), float('-inf')
+        (q, depth) = (Queue(), float('-inf'))
         q.put((root, 1))
         while not q.empty():
-            node, cur_depth = q.get()
+            (node, cur_depth) = q.get()
             depth = max(depth, cur_depth)
             if node.left:
                 q.put((node.left, cur_depth + 1))
@@ -18,7 +19,7 @@ class Solution:
         res = [[''] * col for _ in range(depth)]
         q.put((root, 0, 0, col - 1))
         while not q.empty():
-            node, depth, lo, hi = q.get()
+            (node, depth, lo, hi) = q.get()
             mid = (lo + hi) // 2
             res[depth][mid] = str(node.val)
             if node.left:

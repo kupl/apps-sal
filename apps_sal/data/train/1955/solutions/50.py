@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         p = list(range(len(s)))
         d = defaultdict(list)
@@ -12,10 +13,10 @@ class Solution:
             return p[x]
 
         def union(x, y):
-            x, y = find(x), find(y)
+            (x, y) = (find(x), find(y))
             p[x] = y
             return p[x]
-        for a, b in pairs:
+        for (a, b) in pairs:
             union(a, b)
         for i in range(len(s)):
             d[find(i)].append(s[i])

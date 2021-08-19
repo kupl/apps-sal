@@ -1,13 +1,14 @@
 class Solution:
+
     def smallestSufficientTeam(self, req_skills, people):
-        n, m = len(req_skills), len(people)
-        key = {v: i for i, v in enumerate(req_skills)}
+        (n, m) = (len(req_skills), len(people))
+        key = {v: i for (i, v) in enumerate(req_skills)}
         dp = {0: []}
-        for i, p in enumerate(people):
+        for (i, p) in enumerate(people):
             his_skill = 0
             for skill in p:
                 his_skill |= 1 << key[skill]
-            for skill_set, need in list(dp.items()):
+            for (skill_set, need) in list(dp.items()):
                 with_him = skill_set | his_skill
                 if with_him == skill_set:
                     continue

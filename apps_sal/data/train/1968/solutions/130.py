@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         result = []
         for f in sorted(folder):

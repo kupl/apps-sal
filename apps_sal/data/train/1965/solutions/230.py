@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.node = list(range(n + 1))
         self.rank = [1] * (n + 1)
@@ -9,7 +10,7 @@ class DSU:
         return self.node[x]
 
     def union(self, x, y):
-        xid, yid = self.find(x), self.find(y)
+        (xid, yid) = (self.find(x), self.find(y))
         if xid == yid:
             return False
         else:
@@ -25,11 +26,12 @@ class DSU:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         alice = []
         bob = []
         both = []
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 alice.append([u, v])
             elif t == 2:
@@ -39,15 +41,15 @@ class Solution:
         adsu = DSU(n)
         bdsu = DSU(n)
         ans = 0
-        for u, v in both:
+        for (u, v) in both:
             T1 = adsu.union(u, v)
             T2 = bdsu.union(u, v)
-            if not T1 and not T2:
+            if not T1 and (not T2):
                 ans += 1
-        for u, v in alice:
+        for (u, v) in alice:
             if not adsu.union(u, v):
                 ans += 1
-        for u, v in bob:
+        for (u, v) in bob:
             if not bdsu.union(u, v):
                 ans += 1
         for i in range(n + 1):

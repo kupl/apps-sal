@@ -1,4 +1,5 @@
 class DisjSet:
+
     def __init__(self, n):
         self.disj_set = [-1] * n
 
@@ -21,17 +22,18 @@ class DisjSet:
 
 
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         n = len(s)
         result = []
         disj = DisjSet(n)
-        for a, b in pairs:
+        for (a, b) in pairs:
             disj.union(a, b)
         g = collections.defaultdict(collections.Counter)
         for i in range(n):
             g[disj.find(i)][s[i]] += 1
         for i in g:
-            g[i] = [[k, v] for k, v in g[i].items()]
+            g[i] = [[k, v] for (k, v) in g[i].items()]
             g[i].sort(reverse=True)
         for i in range(n):
             j = disj.find(i)

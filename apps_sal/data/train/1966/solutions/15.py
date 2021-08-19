@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         res = 0
         for j in range(n):
             for i in range(1, m):
@@ -18,5 +19,4 @@ class Solution:
                         mat[i][j] += minval
                 res += mat[i][j]
         print(mat)
-
         return res

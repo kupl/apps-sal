@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n + 1)]
         self._count = n
@@ -23,12 +24,13 @@ class UnionFind:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n, edges):
         edges.sort(reverse=True)
         alice_uf = UnionFind(n)
         bob_uf = UnionFind(n)
         added_edges = 0
-        for t, s, e in edges:
+        for (t, s, e) in edges:
             if t == 3:
                 alice_connected = alice_uf.connect(s, e)
                 bob_connected = bob_uf.connect(s, e)
@@ -40,7 +42,6 @@ class Solution:
             if t == 1:
                 if alice_uf.connect(s, e):
                     added_edges += 1
-
         if alice_uf.counts() == bob_uf.counts() == 1:
             return len(edges) - added_edges
         return -1

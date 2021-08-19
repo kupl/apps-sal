@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         a = [i for i in range(1, m + 1)]
         x = {}
@@ -10,5 +11,4 @@ class Solution:
             a = [i] + a[:x[i]] + a[x[i] + 1:]
             for j in range(x[i] + 1):
                 x[a[j]] = j
-
         return b

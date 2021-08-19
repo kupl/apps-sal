@@ -1,7 +1,8 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         x = {i: [] for i in range(1, N + 1)}
-        for i, j in dislikes:
+        for (i, j) in dislikes:
             x[i].append(j)
             x[j].append(i)
         colour = [-1] * N

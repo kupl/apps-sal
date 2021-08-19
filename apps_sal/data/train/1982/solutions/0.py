@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         if not dislikes:
             return True
@@ -8,7 +9,7 @@ class Solution:
         group1 = set([1])
         group2 = set()
         counter = 2
-        for i, j in dislikes[1:]:
+        for (i, j) in dislikes[1:]:
             if group[i] and group[j]:
                 if group[i] == group[j]:
                     return False
@@ -28,8 +29,8 @@ class Solution:
                     if group[i] in group2 or -group[i] in group1:
                         return False
                     group1.add(group[i])
-            elif not group[i] and not group[j]:
-                group[i], group[j] = counter, -counter
+            elif not group[i] and (not group[j]):
+                (group[i], group[j]) = (counter, -counter)
                 counter += 1
             elif group[i]:
                 group[j] = -group[i]

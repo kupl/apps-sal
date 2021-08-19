@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         com_conn = [i for i in range(n + 1)]
         size = [1 for i in range(n + 1)]
@@ -17,7 +18,6 @@ class Solution:
                 b_edge.append(i)
         if com_count[0] == 1:
             return removed[0] + len(edges) - coed
-
         aconn = com_conn.copy()
         asize = size.copy()
         acom_count = com_count.copy()
@@ -26,7 +26,6 @@ class Solution:
                 self.union(i[1], i[2], aconn, acom_count, removed, asize)
         if acom_count[0] > 1:
             return -1
-
         bconn = com_conn.copy()
         bsize = size.copy()
         bcom_count = com_count.copy()

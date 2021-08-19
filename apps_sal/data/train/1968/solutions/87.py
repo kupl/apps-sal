@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self):
         self.val = '/'
         self.children = {}
@@ -23,10 +24,10 @@ class TreeNode:
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder)
         ans = []
-
         fs = TreeNode()
         for f in folder:
             has_parent = fs.isparent(f.split('/'))

@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         d = {k: k + 1 for k in range(m)}
         result = []
@@ -12,6 +13,6 @@ class Solution:
         return result
 
     def findPos(self, d, q):
-        for idx, val in list(d.items()):
+        for (idx, val) in list(d.items()):
             if val == q:
                 return idx

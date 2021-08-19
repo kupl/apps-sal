@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         result = []
         perm = [i for i in range(1, m + 1)]
@@ -10,5 +11,4 @@ class Solution:
             tmp.extend(perm[ind + 1:])
             perm = tmp
             print(perm)
-
         return result

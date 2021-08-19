@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        n, m = len(mat), len(mat[0])
+        (n, m) = (len(mat), len(mat[0]))
         heights = [0] * m
         res = 0
         for i in range(0, n):
@@ -11,7 +12,7 @@ class Solution:
                     heights[j] += 1
                 else:
                     heights[j] = 0
-            for index, height in enumerate(heights):
+            for (index, height) in enumerate(heights):
                 while stack and height < heights[stack[-1]]:
                     curr = stack.pop()
                     left = stack[-1] if stack else -1

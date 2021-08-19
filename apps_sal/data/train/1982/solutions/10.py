@@ -14,6 +14,7 @@ def dfs(adjList, teams, node):
 
 
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         if not dislikes:
             return True
@@ -23,7 +24,6 @@ class Solution:
             y = dislike[1]
             adjList[x].append(y)
             adjList[y].append(x)
-
         teams = {}
         for i in range(1, N + 1):
             if i not in teams:

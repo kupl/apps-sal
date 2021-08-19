@@ -1,7 +1,7 @@
 class Solution:
-    def numSubmat(self, mat) -> int:
 
-        m, n = len(mat), len(mat[0])
+    def numSubmat(self, mat) -> int:
+        (m, n) = (len(mat), len(mat[0]))
         consective = [0] * m
         res = 0
         for line in range(n):
@@ -18,10 +18,10 @@ class Solution:
                 stack.append((val, i))
                 for k in range(len(stack)):
                     if k == 0:
-                        a, b = stack[k]
+                        (a, b) = stack[k]
                         res += a * (b + 1)
                     else:
-                        a, b = stack[k - 1]
-                        c, d = stack[k]
+                        (a, b) = stack[k - 1]
+                        (c, d) = stack[k]
                         res += c * (d - b)
         return res

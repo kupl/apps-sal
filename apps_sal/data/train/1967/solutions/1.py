@@ -1,4 +1,5 @@
 class Solution:
+
     def splitIntoFibonacci(self, S):
         for i in range(min(10, len(S))):
             x = S[:i + 1]
@@ -6,7 +7,7 @@ class Solution:
                 break
             a = int(x)
             for j in range(i + 1, min(i + 10, len(S))):
-                y = S[i + 1: j + 1]
+                y = S[i + 1:j + 1]
                 if y != '0' and y.startswith('0'):
                     break
                 b = int(y)
@@ -15,7 +16,7 @@ class Solution:
                 while k < len(S):
                     nxt = fib[-1] + fib[-2]
                     nxtS = str(nxt)
-                    if nxt <= 2**31 - 1 and S[k:].startswith(nxtS):
+                    if nxt <= 2 ** 31 - 1 and S[k:].startswith(nxtS):
                         k += len(nxtS)
                         fib.append(nxt)
                     else:

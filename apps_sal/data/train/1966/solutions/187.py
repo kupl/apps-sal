@@ -1,14 +1,13 @@
 class Solution:
-    def numSubmat(self, mat) -> int:
-        m, n = len(mat), len(mat[0])
-        self.count = 0
 
+    def numSubmat(self, mat) -> int:
+        (m, n) = (len(mat), len(mat[0]))
+        self.count = 0
         for i in range(m):
             for j in range(n):
                 if mat[i][j]:
                     if j > 0:
                         mat[i][j] += mat[i][j - 1]
-
         for i in range(m):
             for j in range(n):
                 if mat[i][j]:

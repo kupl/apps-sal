@@ -1,15 +1,16 @@
 class Solution:
+
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
+
         def convertToNum(people: List[str]) -> int:
             ans = 0
             for skill in people:
-                ans |= 1 << (dic[skill])
+                ans |= 1 << dic[skill]
             return ans
-
-        dic = {v: i for i, v in enumerate(req_skills)}
+        dic = {v: i for (i, v) in enumerate(req_skills)}
         target = (1 << len(req_skills)) - 1
         dp = dict()
-        for i, people_skill in enumerate(people):
+        for (i, people_skill) in enumerate(people):
             skill = convertToNum(people_skill)
             temp = dict()
             temp[skill] = [i]
@@ -21,7 +22,5 @@ class Solution:
                         t.append(i)
                         if new_skill not in list(temp.keys()) or len(temp[new_skill]) > len(t):
                             temp[new_skill] = t
-
             dp.update(temp)
-
         return dp[target]

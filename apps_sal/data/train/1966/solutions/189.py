@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         rows = len(mat)
         cols = len(mat[0])
@@ -7,9 +8,8 @@ class Solution:
             for c in range(cols):
                 if c == 0:
                     dp[r][c] = mat[r][c]
-                else:
-                    if mat[r][c] == 1:
-                        dp[r][c] = dp[r][c - 1] + 1
+                elif mat[r][c] == 1:
+                    dp[r][c] = dp[r][c - 1] + 1
         count = 0
         for r in range(rows):
             for c in range(cols):

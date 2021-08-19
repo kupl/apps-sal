@@ -1,4 +1,5 @@
 class UnionFindSet:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [1] * n
@@ -10,7 +11,7 @@ class UnionFindSet:
         return self.parents[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return False
         if self.ranks[pu] > self.ranks[pv]:
@@ -25,10 +26,11 @@ class UnionFindSet:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        uf1, uf2 = UnionFindSet(n), UnionFindSet(n)
+        (uf1, uf2) = (UnionFindSet(n), UnionFindSet(n))
         ans = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             u -= 1
             v -= 1
             if t != 3:
@@ -39,8 +41,7 @@ class Solution:
             if not uf2.union(u, v):
                 flag = 1
             ans += flag
-
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             u -= 1
             v -= 1
             if t == 1:

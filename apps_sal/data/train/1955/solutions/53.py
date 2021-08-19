@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         p = {}
 
@@ -6,7 +7,6 @@ class Solution:
             if i not in p:
                 return -1
             return i if p[i] == i else getP(p[i])
-
         uf = {}
         index = 0
         for (x, y) in pairs:

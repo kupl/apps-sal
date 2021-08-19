@@ -2,13 +2,14 @@ from functools import lru_cache
 
 
 class Solution:
+
     def closedIsland(self, grid):
         n = len(grid)
         m = len(grid[0])
 
         @lru_cache(None)
         def dfs(x, y):
-            if x == 0 or y == 0 or x == n - 1 or y == m - 1 or grid[x][y] != 0:
+            if x == 0 or y == 0 or x == n - 1 or (y == m - 1) or (grid[x][y] != 0):
                 return grid[x][y] != 0
             t = True
             grid[x][y] = -1

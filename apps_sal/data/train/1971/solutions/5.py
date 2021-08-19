@@ -1,10 +1,11 @@
 class Solution:
+
     def maximalSquare(self, matrix):
         """
         :type matrix: List[List[str]]
         :rtype: int
         """
-        m, n = len(matrix), len(matrix[0]) if matrix else 0
+        (m, n) = (len(matrix), len(matrix[0]) if matrix else 0)
         dp = [0] * n
         best = 0
         for r in range(m):
@@ -15,4 +16,4 @@ class Solution:
                     if ndp[c] > best:
                         best = ndp[c]
             dp = ndp
-        return best**2
+        return best ** 2

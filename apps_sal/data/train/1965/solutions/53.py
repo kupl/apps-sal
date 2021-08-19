@@ -1,4 +1,5 @@
-class UF():
+class UF:
+
     def __init__(self, n):
         self.parent = list(range(n))
 
@@ -18,8 +19,9 @@ class UF():
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        ufA, ufB, ufAB = UF(n), UF(n), UF(n)
+        (ufA, ufB, ufAB) = (UF(n), UF(n), UF(n))
         usefulAB = 0
         for edge in edges:
             t = edge[0]
@@ -33,7 +35,6 @@ class Solution:
                 ufA.union(x - 1, y - 1)
                 ufB.union(x - 1, y - 1)
                 usefulAB += ufAB.union(x - 1, y - 1)
-
         if len([i for i in range(n) if ufA.parent[i] == i]) > 1 or len([i for i in range(n) if ufB.parent[i] == i]) > 1:
             return -1
         return len(edges) - (2 * (n - 1) - usefulAB)

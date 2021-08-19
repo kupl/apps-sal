@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         n = len(mat)
         m = len(mat[0])
@@ -14,5 +15,4 @@ class Solution:
                         width = min(width, mat[k][j])
                         res += width
                         k -= 1
-
         return res

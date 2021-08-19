@@ -1,4 +1,5 @@
 class Solution:
+
     def isIdealPermutation(self, A):
         i = 0
         while i < len(A) - 1:

@@ -1,10 +1,10 @@
 class Solution:
+
     def shoppingOffers(self, price, special, needs):
         a = 0
         n = len(needs)
         for i in range(n):
             a += needs[i] * price[i]
-
         for s in special:
             new_needs = needs.copy()
             check = True
@@ -13,7 +13,6 @@ class Solution:
                 if new_needs[i] < 0:
                     check = False
                     break
-
             if check:
                 a = min(a, s[n] + self.shoppingOffers(price, special, new_needs))
         return a

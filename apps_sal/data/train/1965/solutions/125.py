@@ -11,7 +11,7 @@ class DSU:
         return self.parents[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return False
         if self.ranks[px] > self.ranks[py]:
@@ -26,18 +26,16 @@ class DSU:
 
 
 class Solution:
-    def maxNumEdgesToRemove(self, N: int, edges: List[List[int]]) -> int:
-        uf1, uf2, res = DSU(N), DSU(N), 0
 
-        for t, u, v in edges:
+    def maxNumEdgesToRemove(self, N: int, edges: List[List[int]]) -> int:
+        (uf1, uf2, res) = (DSU(N), DSU(N), 0)
+        for (t, u, v) in edges:
             if t == 3:
                 if not uf1.union(u - 1, v - 1) or not uf2.union(u - 1, v - 1):
                     res += 1
-
-        for t, u, v in edges:
-            if t == 1 and not uf1.union(u - 1, v - 1):
+        for (t, u, v) in edges:
+            if t == 1 and (not uf1.union(u - 1, v - 1)):
                 res += 1
-            elif t == 2 and not uf2.union(u - 1, v - 1):
+            elif t == 2 and (not uf2.union(u - 1, v - 1)):
                 res += 1
-
         return res if uf1.size == N and uf2.size == N else -1

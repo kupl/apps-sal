@@ -1,15 +1,16 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
+
         def dfs(i):
             visited[i] = True
             component.append(i)
             for j in adj_lst[i]:
                 if not visited[j]:
                     dfs(j)
-
         n = len(s)
         adj_lst = [[] for _ in range(n)]
-        for i, j in pairs:
+        for (i, j) in pairs:
             adj_lst[i].append(j)
             adj_lst[j].append(i)
         visited = [False for _ in range(n)]

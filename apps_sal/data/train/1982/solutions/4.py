@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         groups = [0] * (N + 1)
         adj = collections.defaultdict(list)
@@ -16,7 +17,6 @@ class Solution:
                     if not dfs(nei):
                         return False
             return True
-
         for i in range(N):
             if not groups[i]:
                 groups[i] = 1

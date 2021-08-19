@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         f = [0 for i in range(len(nums) + 1)]
-        for i, j in requests:
+        for (i, j) in requests:
             f[i] += 1
             f[j + 1] -= 1
         pf = [f[0]]
@@ -12,4 +13,4 @@ class Solution:
         s = 0
         for i in range(len(nums)):
             s += pf[i] * nums[i]
-        return(s % (10**9 + 7))
+        return s % (10 ** 9 + 7)

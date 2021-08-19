@@ -2,6 +2,7 @@ from collections import OrderedDict
 
 
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         ordered = OrderedDict.fromkeys(list(range(1, m + 1)))
         result = []

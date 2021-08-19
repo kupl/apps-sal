@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, N):
         self.par = [-1] * N
         self.N = N
@@ -16,19 +17,19 @@ class UnionFind:
         if x == y:
             return
         if self.par[x] > self.par[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
 
     def roots(self):
-        return [i for i, x in enumerate(self.par) if x < 0]
+        return [i for (i, x) in enumerate(self.par) if x < 0]
 
     def groupCount(self):
         return len(self.roots())
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         uf = UnionFind(n)
         uf1 = UnionFind(n)

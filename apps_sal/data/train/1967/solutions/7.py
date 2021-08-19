@@ -1,11 +1,10 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
-
         n = len(S)
-
         for i in range(1, min(32, (n - 1) // 2 + 1)):
             for j in range(i + 1, 2 * n // 3 + 1):
-                a, b = int(S[:i]), int(S[i:j])
+                (a, b) = (int(S[:i]), int(S[i:j]))
                 idx = len(str(a + b))
                 tmp = [a, b]
                 l = j

@@ -1,8 +1,9 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         n = len(mat)
         m = len(mat[0])
-        ar = [[0 for j in range(m)]for i in range(n)]
+        ar = [[0 for j in range(m)] for i in range(n)]
         c = 0
         for i in range(n):
             c = 0
@@ -12,7 +13,6 @@ class Solution:
                 else:
                     c = 0
                 ar[i][j] = c
-
         ans = 0
         for i in range(n):
             for j in range(m):
@@ -20,5 +20,4 @@ class Solution:
                 for k in range(i, n):
                     x = min(x, ar[k][j])
                     ans += x
-
         return ans

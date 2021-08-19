@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         if m == 1:
             return [0 for _ in range(len(queries))]

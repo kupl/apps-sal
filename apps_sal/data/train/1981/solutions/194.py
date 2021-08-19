@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         n = len(nums)
         diff = [0 for i in range(n + 1)]
@@ -20,7 +21,7 @@ class Solution:
         for i in range(1, n):
             temp[i] = temp[i - 1] + nums[i]
         for req in requests:
-            if (not req[0]):
+            if not req[0]:
                 ret += temp[req[1]]
             else:
                 ret += temp[req[1]] - temp[req[0] - 1]

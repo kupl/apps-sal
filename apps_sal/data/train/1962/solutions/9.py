@@ -1,4 +1,5 @@
 class Solution:
+
     def dominantIndex(self, nums):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution:
         first = float('-Inf')
         second = float('-Inf')
         index = None
-        for d, num in enumerate(nums):
+        for (d, num) in enumerate(nums):
             if num > first:
                 second = first
                 first = num

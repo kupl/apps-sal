@@ -1,8 +1,9 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         colors = [''] * N
         edges = [[] for _ in range(N)]
-        for p1, p2 in dislikes:
+        for (p1, p2) in dislikes:
             edges[p1 - 1].append(p2 - 1)
             edges[p2 - 1].append(p1 - 1)
 
