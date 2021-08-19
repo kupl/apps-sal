@@ -3,7 +3,7 @@ import math
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a.sort()
@@ -26,7 +26,6 @@ def solve():
                 amax = avg - 1
             else:
                 amin = avg
-        # if a[amin] > b[i]: continue
         res = min(res, bcost[i] + acost[amin] + (amin + 1) * (b[i] - a[amin]))
     for i in range(n):
         bmax = m - 1
@@ -37,12 +36,10 @@ def solve():
                 bmin = avg + 1
             else:
                 bmax = avg
-        # if b[bmin] < a[i]: continue
-        # print(i, bmin, bcost[bmin], acost[i], (m - bmin)*(b[bmin] - a[i]))
         res = min(res, bcost[bmin] + acost[i] + (m - bmin) * (b[bmin] - a[i]))
     return max(res, 0)
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 print(solve())

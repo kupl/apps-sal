@@ -1,7 +1,5 @@
-#! /bin/python
 n = int(input())
 tab = str(input())
-
 d = 1
 tmp = 1
 changes = 1

@@ -1,8 +1,7 @@
 N = int(input())
 H = list(map(int, input().split()))
-
 is_mono_inc = True
-now = min(H)  # 現ステップでこれより大きい必要
+now = min(H)
 for i in range(N):
     if now <= H[i]:
         now = H[i]
@@ -10,7 +9,6 @@ for i in range(N):
         now = H[i] + 1
     else:
         is_mono_inc = False
-
 if is_mono_inc:
     print('Yes')
 else:

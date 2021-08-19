@@ -1,22 +1,19 @@
-# Codeforces 195, div. 2
-# Task A
-
 def solve(x, y):
     t = abs(x) + abs(y)
     if x > 0 and y > 0:
-        return 0, t, t, 0
+        return (0, t, t, 0)
     elif x > 0 and y < 0:
-        return 0, -t, t, 0
+        return (0, -t, t, 0)
     elif x < 0 and y > 0:
-        return -t, 0, 0, t
+        return (-t, 0, 0, t)
     else:
-        return -t, 0, 0, -t
+        return (-t, 0, 0, -t)
 
 
 def test():
     assert solve(10, 5) == (0, 15, 15, 0)
     assert solve(-10, 5) == (-15, 0, 0, 15)
-    print("test passes")
+    print('test passes')
 
 
 tmp = input()

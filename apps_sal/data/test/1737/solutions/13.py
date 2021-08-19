@@ -1,5 +1,5 @@
 def read_pack():
-    name, ver = input().split()
+    (name, ver) = input().split()
     return (name, int(ver))
 
 
@@ -13,11 +13,9 @@ for i in range(n):
     deps[pack] = [read_pack() for _ in range(dep_n)]
     if i != n - 1:
         input()
-
 queue = [(root, 0)]
 taken = {root[0]: (root[1], 0)}
-for pack, level in queue:
-    # pack_deps = sorted(deps[pack], key=lambda x: x[1], reverse=True)
+for (pack, level) in queue:
     for dep in deps[pack]:
         if dep[0] not in taken:
             taken[dep[0]] = (dep[1], level + 1)
@@ -26,10 +24,7 @@ for pack, level in queue:
             index = queue.index(((dep[0], taken[dep[0]][0]), level + 1))
             taken[dep[0]] = (dep[1], level + 1)
             queue[index] = (dep, level + 1)
-
 del taken[root[0]]
-
 print(len(taken))
-
 for d in sorted(taken):
     print(d, taken[d][0])

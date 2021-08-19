@@ -1,36 +1,31 @@
 n = int(input())
-
 d = {}
-
 for x in range(n):
     if x == 0:
-        L, R = map(str, input().split())
+        (L, R) = map(str, input().split())
         R = int(R)
         l = L
         r = R
         if not (l, int(r)) in d:
-            d[(l, int(r))] = []
+            d[l, int(r)] = []
         m = int(input())
         for y in range(m):
-            l1, r1 = map(str, input().split())
-            d[(l, int(r))].append((l1, int(r1)))
+            (l1, r1) = map(str, input().split())
+            d[l, int(r)].append((l1, int(r1)))
         if x != n - 1:
             s = input()
     else:
-        l, r = map(str, input().split())
+        (l, r) = map(str, input().split())
         if not (l, int(r)) in d:
-            d[(l, int(r))] = []
+            d[l, int(r)] = []
         m = int(input())
         for y in range(m):
-            l1, r1 = map(str, input().split())
-            d[(l, int(r))].append((l1, int(r1)))
+            (l1, r1) = map(str, input().split())
+            d[l, int(r)].append((l1, int(r1)))
         if x != n - 1:
             s = input()
-
 lst = []
 array = [L]
-
-# print(d)
 temp1 = [(L, R)]
 temp2 = []
 k1 = 0
@@ -68,7 +63,6 @@ while k1 < len(temp1) or k2 < len(temp2):
         temp2 = []
         k2 = 1
         k1 = 0
-
 print(len(lst))
 lst.sort()
 for (a, b) in lst:

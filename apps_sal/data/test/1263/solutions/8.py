@@ -1,16 +1,39 @@
 from sys import stdin, stdout
-def Pi(x): return stdout.write(str(x) + '\n')
-def Ps(x): return stdout.write(str(x))
-def S(x): return x * (x + 1) // 2
-def I(x): return 1 + (2 * x)
-def R(): return stdin.readline()
-def Ri(x): return list(map(int, x.split()))
-def Rs(x): return list(map(str, x.split()))
-def Rf(x): return list(map(float, x.split()))
 
 
-MaxN = int(1e5) + 10
-# dp,A = []
+def Pi(x):
+    return stdout.write(str(x) + '\n')
+
+
+def Ps(x):
+    return stdout.write(str(x))
+
+
+def S(x):
+    return x * (x + 1) // 2
+
+
+def I(x):
+    return 1 + 2 * x
+
+
+def R():
+    return stdin.readline()
+
+
+def Ri(x):
+    return list(map(int, x.split()))
+
+
+def Rs(x):
+    return list(map(str, x.split()))
+
+
+def Rf(x):
+    return list(map(float, x.split()))
+
+
+MaxN = int(100000.0) + 10
 
 
 def f(i, x, n, k, dp, A, B):
@@ -27,9 +50,8 @@ def f(i, x, n, k, dp, A, B):
 
 
 def main():
-    # t = int(R())
     for x in stdin:
-        n, x = Ri(x)
+        (n, x) = Ri(x)
         A = list(Ri(R()))
         B = list(Ri(R()))
         dp = []
@@ -43,8 +65,6 @@ def main():
 
 def __starting_point():
     main()
-
-# 60 == 360
 
 
 __starting_point()

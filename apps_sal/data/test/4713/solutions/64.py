@@ -1,7 +1,5 @@
-# 31
 N = int(input())
 S = str(input())
-
 ans = 0
 count = 0
 for i in S:
@@ -10,5 +8,4 @@ for i in S:
     elif i == 'D':
         count -= 1
     ans = max(ans, count)
-
 print(ans)
