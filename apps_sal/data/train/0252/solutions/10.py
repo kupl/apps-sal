@@ -1,9 +1,8 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        # dp[i] min taps to water [0, i]
-        # dp[0] = 0
-        dp = [0] + [n + 2] * n  # n+1 is possible value
-        for i, v in enumerate(ranges):
+        dp = [0] + [n + 2] * n
+        for (i, v) in enumerate(ranges):
             left = max(i - v, 0)
             right = min(i + v, n)
             for j in range(left + 1, right + 1):

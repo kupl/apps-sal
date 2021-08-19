@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 def __starting_point():
     n = int(input())
     s = set(map(int, input().split()))
     num_cmds = int(input())
-
     for _i in range(num_cmds):
         cmd = list(input().strip().split(' '))
         if cmd[0] == 'intersection_update':
@@ -19,8 +16,7 @@ def __starting_point():
         elif cmd[0] == 'symmetric_difference_update':
             get_set = set(map(int, input().split(' ')))
             s ^= get_set
-
-    print((sum(s)))
+    print(sum(s))
 
 
 __starting_point()
