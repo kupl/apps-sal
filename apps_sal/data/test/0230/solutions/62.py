@@ -1,6 +1,5 @@
 n = int(input())
-s = input()  # sys.stdin.readlineは最後が改行
-
+s = input()
 right = 0
 ans = 0
 for left in range(n):
@@ -11,5 +10,4 @@ for left in range(n):
         else:
             break
         right += 1
-
 print(ans)

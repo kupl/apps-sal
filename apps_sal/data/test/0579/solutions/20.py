@@ -1,14 +1,13 @@
 from math import inf
 from sys import setrecursionlimit
-
-setrecursionlimit(10**4)
-
-N, K = map(int, input().split())
+setrecursionlimit(10 ** 4)
+(N, K) = map(int, input().split())
 P = [0] + list(map(int, input().split()))
 C = [0] + list(map(int, input().split()))
 
 
 class Graph(list):
+
     def __init__(self, n):
         super().__init__([None] * (n + 1))
         self.directions = P
@@ -29,7 +28,7 @@ class Graph(list):
         if i in self.history:
             return self.addloop(i)
         self.history.add(i)
-        l, p = self.goto(self.directions[i])
+        (l, p) = self.goto(self.directions[i])
         if self[i] == None:
             self[i] = (l, p + 1)
         return self[i]
@@ -47,7 +46,7 @@ class Graph(list):
         return (l, 0)
 
     def maxscore(self):
-        return max(self.score(self.directions[i], K) for i in range(1, len(self)))
+        return max((self.score(self.directions[i], K) for i in range(1, len(self))))
 
     def score(self, i, k):
         if k == 0:
@@ -66,7 +65,7 @@ class Graph(list):
         leftmax = self.leftmax[n]
         rightmax = self.rightmax[n]
         length = len(loop)
-        d, m = divmod(k, length)
+        (d, m) = divmod(k, length)
         if m == 0:
             s = 0
         elif j + m < length:
@@ -85,18 +84,18 @@ class Graph(list):
             return max(0, s, s + loopscore * d) + p
 
     def evalloop(self):
-        b, c, d = [], [], []
+        (b, c, d) = ([], [], [])
         for l in self.loops:
-            bb, cc, dd = [0], [-inf], [-inf]
+            (bb, cc, dd) = ([0], [-inf], [-inf])
             for i in l:
                 bb.append(bb[-1] + self.points[i])
             for v in bb:
                 cc.append(max(cc[-1], v))
             for v in reversed(bb):
                 dd.append(max(dd[-1], v))
-            b.append(bb)                      # [0, l[0], l[0]+l[1], ..., sum(l)]                        (len(bb) == len(l)+1)
-            c.append(cc[1:])                  # [0, max(0, l[0]), max(0, l[0], l[0]+l[1]), ..., max(bb)] (len(cc) == len(l)+1)
-            d.append(list(reversed(dd[1:])))  # [max(bb), ..., max(sum(l)-l[-2]-l[-1], sum(l)-l[-1], sum(l)), max(sum(l)-l[-1], sum(l)), sum(l)] (len(dd) == len(l)+1)
+            b.append(bb)
+            c.append(cc[1:])
+            d.append(list(reversed(dd[1:])))
         self.base = b
         self.leftmax = c
         self.rightmax = d

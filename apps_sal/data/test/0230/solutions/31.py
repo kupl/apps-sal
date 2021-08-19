@@ -1,12 +1,10 @@
 import sys
-#input = sys.stdin.buffer.readline
 
 
 def main():
     N = int(input())
     s = input()
-    a, i, j = 0, 0, 1
-
+    (a, i, j) = (0, 0, 1)
     while j < N:
         if s[i:j] in s[j:]:
             a = max(a, j - i)
@@ -15,7 +13,6 @@ def main():
             i += 1
         if i == j:
             j += 1
-
     print(a)
 
 

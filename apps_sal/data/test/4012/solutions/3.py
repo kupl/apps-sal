@@ -14,7 +14,6 @@ def mints():
 
 
 f = [[] for i in range(20021)]
-
 for i in range(1, 20021):
     for j in range(1, i + 1):
         if j * j > i:
@@ -26,11 +25,10 @@ for i in range(1, 20021):
 
 
 def solve():
-    a, b, c = mints()
-    ans = (int(1e9), 0, 0, 0)
+    (a, b, c) = mints()
+    ans = (int(1000000000.0), 0, 0, 0)
     for C in range(1, 2 * c + 10):
         dc = abs(C - c)
-        #print(C, f[C])
         for B in f[C]:
             db = abs(B - b)
             for A in f[B]:

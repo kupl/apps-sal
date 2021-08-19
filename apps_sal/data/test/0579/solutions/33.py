@@ -1,5 +1,8 @@
 from collections import deque
-def it(): return list(map(int, input().strip().split()))
+
+
+def it():
+    return list(map(int, input().strip().split()))
 
 
 def maximise(L, R, cycle):
@@ -7,7 +10,7 @@ def maximise(L, R, cycle):
     ans = max(cycle)
     queue = deque([0])
     dp = [0] * (2 * L + 1)
-    for i, num in enumerate(cycle + cycle):
+    for (i, num) in enumerate(cycle + cycle):
         j = i + 1
         cur += num
         while queue and j - queue[0] > R:
@@ -24,7 +27,6 @@ def maximise(L, R, cycle):
 def get(K, cycle):
     L = len(cycle)
     T = sum(cycle)
-
     if K > L:
         B = (K - 1) // L
         R = K - B * L
@@ -35,14 +37,11 @@ def get(K, cycle):
 
 
 def solve():
-    # square labelled from 1 to N
-    N, K = it()
+    (N, K) = it()
     P = it()
     C = it()
-
     for i in range(N):
         P[i] -= 1
-
     cycles = []
     seen = [False] * N
     for i in range(N):
@@ -56,8 +55,6 @@ def solve():
                 if curr == first:
                     break
             cycles.append(cycle)
-
-    # print(cycles)
     ans = float('-inf')
     for cycle in cycles:
         ans = max(ans, get(K, cycle))
