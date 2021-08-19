@@ -11,7 +11,7 @@ for _ in range(int(input())):
             adj[i].append(i - 1)
         if i != n - 1:
             adj[i].append(i + 1)
-        if s[i] == "1":
+        if s[i] == '1':
             dist[i] = 0
             q.append(i)
             vis[i] = True
@@ -31,8 +31,6 @@ for _ in range(int(input())):
                 q.append(i)
                 vis[i] = True
                 dist[i] = dist[s] + 1
-
-    # print(dist)
     ans = 0
     for i in dist:
         if i <= d:

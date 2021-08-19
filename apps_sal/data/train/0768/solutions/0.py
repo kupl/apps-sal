@@ -1,12 +1,8 @@
-# cook your dish here
-# cook your dish here
 from collections import defaultdict
 from math import log2
 import sys
-
 sys.setrecursionlimit(10 ** 7)
-
-inf = float("inf")
+inf = float('inf')
 
 
 def find_height(node):
@@ -29,7 +25,6 @@ for i in range(int(input())):
     l = list(map(int, input().split()))
     graph = defaultdict(set)
     for i in range(len(l)):
-
         graph[l[i]].add(i + 2)
     nodes = defaultdict(int)
     find_height(1)
