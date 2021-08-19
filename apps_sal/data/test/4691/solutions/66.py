@@ -4,7 +4,6 @@ D = 0
 E = 0
 F = 0
 S = ''
-
 for i in range(N):
     S = input()
     if S == 'AC':

@@ -1,6 +1,5 @@
-s, c = map(int, input().split())
+(s, c) = map(int, input().split())
 c = c // 2
-
 if s == c:
     print(s)
 elif s > c:

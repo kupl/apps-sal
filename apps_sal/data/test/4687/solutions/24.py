@@ -1,7 +1,8 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 
 
 class Number:
+
     def __init__(self, number, times):
         self.number = number
         self.times = times
@@ -34,9 +35,8 @@ class Number:
 
 number_list = []
 for i in range(n):
-    number, times = [int(i) for i in input().split()]
+    (number, times) = [int(i) for i in input().split()]
     number_list.append(Number(number, times))
-
 number_list.sort()
 
 

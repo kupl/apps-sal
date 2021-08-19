@@ -6,10 +6,10 @@ for i in range(97, 124):
         if j == chr(i):
             cnt += 1
     if cnt % 2 != 0:
-        print("No")
+        print('No')
         break
     else:
         a += 1
         if a == 27:
-            print("Yes")
+            print('Yes')
             break

@@ -13,7 +13,7 @@ for i in range(N):
         TLE += 1
     else:
         RE += 1
-print(('AC x ' + str(AC)))
-print(('WA x ' + str(WA)))
-print(('TLE x ' + str(TLE)))
-print(('RE x ' + str(RE)))
+print('AC x ' + str(AC))
+print('WA x ' + str(WA))
+print('TLE x ' + str(TLE))
+print('RE x ' + str(RE))

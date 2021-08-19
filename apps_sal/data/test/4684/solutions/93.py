@@ -1,7 +1,6 @@
-a, b, c = map(str, input().split())
+(a, b, c) = map(str, input().split())
 num = int(a + b + c)
-
 if num % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n * 2 >= m:
     ans = m // 2
 else:

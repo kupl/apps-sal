@@ -1,5 +1,5 @@
-r, g, b = list(map(int, input().split()))
+(r, g, b) = list(map(int, input().split()))
 if (g * 10 + b) % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

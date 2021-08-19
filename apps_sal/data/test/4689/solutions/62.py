@@ -1,7 +1,6 @@
-K, N = list(map(int, input().split()))
+(K, N) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-ans = 10**18
-
+ans = 10 ** 18
 for i in range(N):
     if i == 0:
         clock_distance = A[N - 1] - A[i]
@@ -13,5 +12,4 @@ for i in range(N):
         clock_distance = K - A[i] + A[i + 1]
         reverse_distance = K - A[i + 1] + A[i]
     ans = min(clock_distance, reverse_distance, ans)
-
 print(ans)

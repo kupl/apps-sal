@@ -1,5 +1,5 @@
 a = list(map(int, input().split()))
 k = int(input())
 a.sort()
-a[2] = a[2] * (2**k)
+a[2] = a[2] * 2 ** k
 print(sum(a))

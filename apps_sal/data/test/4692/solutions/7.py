@@ -1,2 +1,2 @@
 N = int(input())
-print((48 - N))
+print(48 - N)

@@ -6,19 +6,18 @@ def resolve():
     RE = 0
     for i in range(N):
         S = input()
-        if S == "AC":
+        if S == 'AC':
             AC += 1
-        elif S == "WA":
+        elif S == 'WA':
             WA += 1
-        elif S == "TLE":
+        elif S == 'TLE':
             TLE += 1
-        elif S == "RE":
+        elif S == 'RE':
             RE += 1
-
-    print("AC x " + str(AC))
-    print("WA x " + str(WA))
-    print("TLE x " + str(TLE))
-    print("RE x " + str(RE))
+    print('AC x ' + str(AC))
+    print('WA x ' + str(WA))
+    print('TLE x ' + str(TLE))
+    print('RE x ' + str(RE))
 
 
 resolve()

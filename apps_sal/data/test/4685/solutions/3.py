@@ -7,6 +7,6 @@ def ans096(A: int, B: int, C: int, K: int):
     return int_list[0] + int_list[1] + third
 
 
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 K = int(input())
 print(ans096(A, B, C, K))

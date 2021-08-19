@@ -1,8 +1,5 @@
 def ans173(N: int, S: list):
-    return (f"""AC x {(S.count("AC"))}
-WA x {(S.count("WA"))}
-TLE x {(S.count("TLE"))}
-RE x {(S.count("RE"))}""")
+    return f"AC x {S.count('AC')}\nWA x {S.count('WA')}\nTLE x {S.count('TLE')}\nRE x {S.count('RE')}"
 
 
 N = int(input())

@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 S1 = [1, 3, 5, 7, 8, 10, 12]
 S2 = [4, 6, 9, 11]
 ans = False
@@ -11,6 +11,6 @@ for i in range(len(S2)):
         if S2[i] == x and S2[j] == y:
             ans = True
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -3,9 +3,8 @@ T = list(map(int, input().split()))
 M = int(input())
 L = []
 for _ in range(M):
-    p, x = list(map(int, input().split()))
+    (p, x) = list(map(int, input().split()))
     L.append([p, x])
-
 for i in range(M):
     sum_num = 0
     for j in range(N):

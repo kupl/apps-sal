@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 S = set()
 D = dict()
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a in S:
         D[a] += b
     else:

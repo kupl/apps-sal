@@ -13,7 +13,6 @@ for i in range(N):
         C2.append(S)
     elif S == 'RE':
         C3.append(S)
-
 print('AC x ', len(C0))
 print('WA x ', len(C1))
 print('TLE x ', len(C2))

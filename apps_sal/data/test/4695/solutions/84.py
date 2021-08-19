@@ -8,5 +8,5 @@ def check(x, y):
     return False
 
 
-x, y = list(map(int, input().split()))
-print(("Yes" if check(x, y) else "No"))
+(x, y) = list(map(int, input().split()))
+print('Yes' if check(x, y) else 'No')

@@ -1,8 +1,8 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 d = {}
 key = set([])
 for _ in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a in key:
         d[str(a)] += b
     else:

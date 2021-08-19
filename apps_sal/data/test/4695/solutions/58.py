@@ -32,5 +32,5 @@ for GA in [3, 5, 7, 8, 10, 12]:
     UniteParent(1, GA)
 for GB in [6, 9, 11]:
     UniteParent(4, GB)
-X, Y = (int(T) for T in input().split())
+(X, Y) = (int(T) for T in input().split())
 print(['No', 'Yes'][CheckParent(X, Y)])

@@ -6,12 +6,11 @@ def answer(n: int, s: List[str]) -> List[str]:
     judges = ['AC', 'WA', 'TLE', 'RE']
     for i in judges:
         result.append(f'{i} x {s.count(i)}')
-
     return result
 
 
 def main():
-    n, *s = open(0).read().split()
+    (n, *s) = open(0).read().split()
     for i in answer(n, s):
         print(i)
 

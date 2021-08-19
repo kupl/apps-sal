@@ -1,4 +1,4 @@
-if int(input().replace(" ", "")) % 4 == 0:
-    print("YES")
+if int(input().replace(' ', '')) % 4 == 0:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

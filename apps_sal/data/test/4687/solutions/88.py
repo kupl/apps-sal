@@ -1,7 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 d = {}
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in d:
         d[a] = b
     else:

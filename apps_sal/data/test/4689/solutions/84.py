@@ -1,4 +1,4 @@
-K, N = map(int, input().split(' '))
+(K, N) = map(int, input().split(' '))
 A_ls = list(map(int, input().split(' ')))
 rst = -1
 for i in range(N):

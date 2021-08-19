@@ -1,4 +1,4 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 Alst = list(map(int, input().split()))
 zero = Alst[0] + K
 M = 0
@@ -8,9 +8,7 @@ for i in Alst:
     if dis > M:
         M = dis
     now = i
-
 last = zero - now
 if last > M:
     M = last
-
 print(K - M)

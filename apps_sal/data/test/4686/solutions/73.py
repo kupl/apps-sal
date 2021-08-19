@@ -5,10 +5,9 @@ for i in w:
     for k in w:
         if i == k:
             c += 1
-
     if c % 2 != 0:
         f = False
 if not f:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

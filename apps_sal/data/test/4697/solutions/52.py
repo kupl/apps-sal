@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 if m - 2 * n < 0:
     print(m // 2)
 else:

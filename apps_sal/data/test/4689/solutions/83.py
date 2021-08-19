@@ -1,4 +1,4 @@
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 a = list(map(int, input().split()))
 dd = k - a[-1] + a[0]
 d = 0

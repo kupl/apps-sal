@@ -7,10 +7,10 @@ def main():
     M = int(input())
     PX = []
     for i in range(M):
-        P, X = list(map(int, input().split()))
+        (P, X) = list(map(int, input().split()))
         tmp = copy.copy(T)
         tmp[P - 1] = X
-        print((sum(tmp)))
+        print(sum(tmp))
 
 
 def __starting_point():

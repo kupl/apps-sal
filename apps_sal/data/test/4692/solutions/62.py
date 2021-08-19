@@ -1,3 +1,2 @@
 m = int(input())
-
-print((24 - m + 24))
+print(24 - m + 24)

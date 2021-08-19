@@ -1,5 +1,5 @@
-A, B, C, D = list(map(int, input().split()))
+(A, B, C, D) = list(map(int, input().split()))
 if A * B >= C * D:
-    print((A * B))
+    print(A * B)
 else:
-    print((C * D))
+    print(C * D)

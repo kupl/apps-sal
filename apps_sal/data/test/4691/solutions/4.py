@@ -5,4 +5,4 @@ for _ in range(n):
     s = input()
     cnt[judge.index(s)] += 1
 for i in range(4):
-    print(judge[i], "x", cnt[i])
+    print(judge[i], 'x', cnt[i])

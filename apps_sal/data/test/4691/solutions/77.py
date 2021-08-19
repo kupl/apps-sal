@@ -7,12 +7,10 @@ def answer(n: int, s: List[str]) -> List[str]:
     judges = ['AC', 'WA', 'TLE', 'RE']
     aggregate = {i: 0 for i in judges}
     counter = Counter(s)
-
     for i in counter:
         aggregate[i] += counter[i]
     for j in aggregate:
         result.append(f'{j} x {aggregate[j]}')
-
     return result
 
 

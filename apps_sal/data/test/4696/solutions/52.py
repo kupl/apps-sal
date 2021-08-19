@@ -1,7 +1,6 @@
-a, b = map(int, input().split())
-
-flag = (a * b % 2 == 0)
+(a, b) = map(int, input().split())
+flag = a * b % 2 == 0
 if flag:
-    print("Even")
+    print('Even')
 else:
-    print("Odd")
+    print('Odd')

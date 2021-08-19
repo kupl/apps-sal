@@ -1,8 +1,6 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 S = a * b
-
 if S % 2 == 1:
-    print("Odd")
+    print('Odd')
 else:
-    print("Even")
+    print('Even')

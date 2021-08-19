@@ -1,4 +1,4 @@
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 a_list = list(map(int, input().split()))
 longest = 0
 for i in range(n):

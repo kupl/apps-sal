@@ -1,5 +1,4 @@
-s, c = map(int, input().split())
-
+(s, c) = map(int, input().split())
 if 2 * s <= c:
     ans = s
     c = c - 2 * s

@@ -8,8 +8,7 @@ for i in w:
     if cnt % 2 != 0:
         ans = False
         break
-
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,4 +1,4 @@
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 l = list(map(int, input().split()))
 l.sort()
 ans = k - l[n - 1] + l[0]

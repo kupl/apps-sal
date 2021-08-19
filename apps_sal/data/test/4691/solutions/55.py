@@ -1,6 +1,5 @@
 n = int(input())
-ac, wa, tle, re = 0, 0, 0, 0
-
+(ac, wa, tle, re) = (0, 0, 0, 0)
 for i in range(n):
     s = input()
     if s == 'AC':
@@ -11,7 +10,6 @@ for i in range(n):
         tle += 1
     else:
         re += 1
-
 print('AC', 'x', ac)
 print('WA', 'x', wa)
 print('TLE', 'x', tle)

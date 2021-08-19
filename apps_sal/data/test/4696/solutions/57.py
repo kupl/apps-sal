@@ -6,7 +6,7 @@ def solve(a, b):
 
 
 def __starting_point():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     solve(a, b)
 
 

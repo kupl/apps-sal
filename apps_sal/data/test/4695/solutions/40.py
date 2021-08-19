@@ -3,9 +3,7 @@ b = [4, 6, 9, 11]
 c = [2]
 p = 0
 q = 0
-
 s = list(map(int, input().split()))
-
 for i in a:
     if s[0] == i:
         p = 0
@@ -13,7 +11,6 @@ for i in a:
         p = 2
     else:
         p = 1
-
 for i in a:
     if s[1] == i:
         q = 0
@@ -21,7 +18,6 @@ for i in a:
         q = 2
     else:
         q = 1
-
 if p == q:
     print('Yes')
 else:

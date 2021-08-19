@@ -1,5 +1,4 @@
-n, m = [int(i) for i in input().split()]
-
+(n, m) = [int(i) for i in input().split()]
 if 2 * n >= m:
     print(m // 2)
 else:

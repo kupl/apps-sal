@@ -1,7 +1,7 @@
-'''
+"""
 ABC052_a A - Two Rectangles
 https://atcoder.jp/contests/abc052/tasks/abc052_a
-'''
+"""
 
 
 class Solver:
@@ -28,7 +28,7 @@ def input_data():
 
 
 def main():
-    a, b, c, d = input_data()
+    (a, b, c, d) = input_data()
     answer = Solver(a, b, c, d).ans
     print(answer)
 

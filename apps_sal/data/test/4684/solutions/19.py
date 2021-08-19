@@ -1,9 +1,7 @@
-r, g, b = map(str, input().split())
-
+(r, g, b) = map(str, input().split())
 sumstr = r + g + b
 sumint = int(sumstr)
-
 if sumint % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')
