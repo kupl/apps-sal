@@ -1,7 +1,5 @@
 (n, a, b) = list(map(int, input().split()))
-
 lst = list(input())
-
 k = 0
 array = []
 for x in range(n):
@@ -10,12 +8,10 @@ for x in range(n):
         k = 0
     else:
         k += 1
-
 if lst[0] == '*':
     array = array[1:]
 if lst[-1] != '*':
     array.append(k)
-
 s = a + b
 for x in array:
     if max(a, b) == a:
@@ -26,5 +22,4 @@ for x in array:
         p = (x + 1) // 2
         b = max(b - p, 0)
         a = max(a - (x - p), 0)
-
 print(s - (a + b))

@@ -1,10 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 s = input()
 r = []
 w = []
 o = []
-
 for i in range(n):
     if s[i] == 'W':
         w.append(b[i])
@@ -23,7 +22,7 @@ w = w[::-1]
 o = o[::-1]
 s1 = 0
 s2 = 0
-if len(o) != 0 and len(w) != 0 and len(o) + len(w) >= k:
+if len(o) != 0 and len(w) != 0 and (len(o) + len(w) >= k):
     s1 += w[0] + o[0]
     j = 2
     i = 1
@@ -36,7 +35,7 @@ if len(o) != 0 and len(w) != 0 and len(o) + len(w) >= k:
             s1 += o[i]
             i += 1
         j += 1
-if len(o) != 0 and len(r) != 0 and len(o) + len(r) >= k:
+if len(o) != 0 and len(r) != 0 and (len(o) + len(r) >= k):
     s2 += o[0] + r[0]
     j = 2
     i = 1

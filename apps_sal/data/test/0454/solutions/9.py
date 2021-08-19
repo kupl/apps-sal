@@ -15,12 +15,8 @@ def dp(i, j, k):
     elif k < 0 or j < 0 or i < j:
         return 0
     else:
-        return mod(
-            (2 * j + 1) * dp(i - 1, j, k - 2 * j) +
-            (j + 1) * (j + 1) * dp(i - 1, j + 1, k - 2 * j) +
-            dp(i - 1, j - 1, k - 2 * j)
-        )
+        return mod((2 * j + 1) * dp(i - 1, j, k - 2 * j) + (j + 1) * (j + 1) * dp(i - 1, j + 1, k - 2 * j) + dp(i - 1, j - 1, k - 2 * j))
 
 
-n, k = list(map(int, input().split()))
-print((dp(n, 0, k)))
+(n, k) = list(map(int, input().split()))
+print(dp(n, 0, k))

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(input()[::2], 2) for i in range(n)]
 if n & 1:
     print(n)

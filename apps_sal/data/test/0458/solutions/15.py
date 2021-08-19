@@ -2,7 +2,7 @@ def sum_n(x):
     return sum(map(int, list(str(x))))
 
 
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 result = []
 for s in range(1, 82):
     x = b * s ** a + c
@@ -10,4 +10,4 @@ for s in range(1, 82):
         result.append(str(x))
 print(len(result))
 if len(result):
-    print(" ".join(result))
+    print(' '.join(result))

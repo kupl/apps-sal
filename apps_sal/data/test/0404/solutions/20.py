@@ -16,5 +16,5 @@ if a > 1:
         t[len(t) - 1] += 1
 answer = 1
 for i in t:
-    answer *= (i + 1)
+    answer *= i + 1
 print(answer)

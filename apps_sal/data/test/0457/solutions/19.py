@@ -1,4 +1,4 @@
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 primes = []
 i = 2
 while i * i <= x:

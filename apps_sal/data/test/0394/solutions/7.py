@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    a = [0] + list([int(x) for x in input().split(" ")])
+    a = [0] + list([int(x) for x in input().split(' ')])
     d = [a[i + 1] - a[i] for i in range(len(a) - 1)]
     ans = 1
     alist = []
@@ -15,7 +15,7 @@ def main():
             ans += 1
     alist.append(n)
     print(ans)
-    print(" ".join([str(x) for x in alist]))
+    print(' '.join([str(x) for x in alist]))
 
 
 def __starting_point():

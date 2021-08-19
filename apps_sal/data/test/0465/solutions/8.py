@@ -1,5 +1,5 @@
-n, a, b = list(map(int, input().split()))
-z, o = ('01', '10')[a < b]
+(n, a, b) = list(map(int, input().split()))
+(z, o) = ('01', '10')[a < b]
 n *= not (a > 1 < b or 1 < n * a * b < 4)
 l = [[z] * n for _ in range(n)]
 for i in range(n):

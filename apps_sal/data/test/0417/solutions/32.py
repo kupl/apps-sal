@@ -2,12 +2,13 @@ from fractions import gcd
 
 
 def main():
+
     def fmin(m):
         return X * m + D * m * (m - 1) // 2
 
     def fmax(m):
         return X * m + D * m * (2 * N - m - 1) // 2
-    N, X, D = map(int, input().split())
+    (N, X, D) = map(int, input().split())
     if D == 0:
         if X == 0:
             print(1)
@@ -15,7 +16,7 @@ def main():
             print(N + 1)
         return
     if D < 0:
-        X, D = -X, -D
+        (X, D) = (-X, -D)
     if X == 0:
         print(fmax(N) // D + 1)
     else:

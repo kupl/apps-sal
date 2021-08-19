@@ -6,7 +6,7 @@ for i in range(n):
     s = input()
     z.add(s[0])
     for j in range(len(s)):
-        l[b.index(s[j])] += 10**(len(s) - j - 1)
+        l[b.index(s[j])] += 10 ** (len(s) - j - 1)
 s = 0
 h = 0
 j = 1
@@ -18,7 +18,7 @@ for k in range(10):
         if l[i] > ma:
             ma = l[i]
             value = i
-    if(b[value] in z) or h == 1:
+    if b[value] in z or h == 1:
         s += ma * j
         j += 1
     else:

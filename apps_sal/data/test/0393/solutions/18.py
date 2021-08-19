@@ -10,7 +10,7 @@ def fun():
             return 'No'
     for i in range(1, n):
         if ns[i] == '1' and ns[i - 1] == '1':
-            return('No')
+            return 'No'
     if n >= 2:
         if ns[0] == '0' and ns[1] == '0':
             return 'No'
@@ -23,7 +23,7 @@ def fun():
         if c == '1':
             num = 0
         if num > 2:
-            return('No')
+            return 'No'
     if num > 2:
         return 'No'
     return 'Yes'

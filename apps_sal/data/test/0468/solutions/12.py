@@ -18,7 +18,7 @@ def getTransIntList(n):
     return result
 
 
-x, y = getIntList()
+(x, y) = getIntList()
 left = y * math.log(x)
 right = x * math.log(y)
 if left < right:

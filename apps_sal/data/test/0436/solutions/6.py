@@ -1,8 +1,13 @@
-def GI(): return int(input())
+def GI():
+    return int(input())
 
 
-def GIS(): return list(map(int, input().split()))
-def LGIS(): return list(GIS())
+def GIS():
+    return list(map(int, input().split()))
+
+
+def LGIS():
+    return list(GIS())
 
 
 def main():
@@ -11,7 +16,7 @@ def main():
     a = ps[0]
     s = a
     l = [1]
-    for i, p in enumerate(ps[1:], 2):
+    for (i, p) in enumerate(ps[1:], 2):
         if p <= a / 2:
             s += p
             l.append(i)

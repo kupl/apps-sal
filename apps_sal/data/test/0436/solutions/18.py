@@ -11,6 +11,6 @@ for i in range(1, n):
 if 2 * s > t:
     print(len(l))
     for j in l:
-        print(j, end=" ")
+        print(j, end=' ')
 else:
     print(0)

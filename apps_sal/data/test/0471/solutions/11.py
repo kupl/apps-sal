@@ -1,4 +1,4 @@
-n, a = list(map(int, input().split()))
+(n, a) = list(map(int, input().split()))
 ip = list(map(int, input().split()))
 try:
     if a not in ip:

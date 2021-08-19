@@ -1,4 +1,4 @@
-l, r = map(int, input().split())
+(l, r) = map(int, input().split())
 a = 1
 b = 1
 ans = 0
@@ -11,6 +11,6 @@ while True:
             ans += 1
         b = 3 * b
     a = 2 * a
-    if(a > r):
+    if a > r:
         break
 print(ans)

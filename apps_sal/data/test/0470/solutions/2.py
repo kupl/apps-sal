@@ -13,5 +13,4 @@ for x in a:
     v = count(a, x)
     if 2 <= v:
         ans = min(ans, s - min(v, 3) * x)
-
 print(ans)

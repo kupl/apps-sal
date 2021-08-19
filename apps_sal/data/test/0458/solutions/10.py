@@ -1,5 +1,5 @@
 ans = []
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 
 
 def sumDig(x):
@@ -16,6 +16,5 @@ for s in range(1, 90):
     val = b * pow(s, a) + c
     if 0 < val < 10 ** 9 and sumDig(val) == s:
         ans.append(val)
-
 print(len(ans))
 print(' '.join(map(str, sorted(ans))))

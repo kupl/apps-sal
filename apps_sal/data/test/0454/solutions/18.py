@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-MOD = 10**9 + 7
+(N, K) = map(int, input().split())
+MOD = 10 ** 9 + 7
 memo = {}
 
 

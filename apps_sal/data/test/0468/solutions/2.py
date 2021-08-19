@@ -16,11 +16,10 @@ def readlist():
     return list(map(int, input().split()))
 
 
-x, y = readmap()
-
+(x, y) = readmap()
 if y * math.log(x) < x * math.log(y):
-    print("<")
+    print('<')
 elif y * math.log(x) > x * math.log(y):
-    print(">")
+    print('>')
 else:
-    print("=")
+    print('=')

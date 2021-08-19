@@ -1,7 +1,7 @@
 def sumArr(ax):
     sm = 0
     for i in range(len(ax)):
-        sm += (10**i) * ax[i]
+        sm += 10 ** i * ax[i]
     return sm
 
 
@@ -10,7 +10,7 @@ arr = {}
 la = 'abcdefghij'
 for i in la:
     arr.update({i: {'m': [0, 0, 0, 0, 0, 0], 'not0': False, 'sm': 0}})
-while (n > 0):
+while n > 0:
     n -= 1
     x = input()[::-1]
     L = len(x)
@@ -26,12 +26,10 @@ for i in la:
         arrT.append(arr[i]['sm'])
     else:
         arrF.append(arr[i]['sm'])
-
 arrF = sorted(arrF)
 arrT = sorted(arrT)
 arrF = arrF[::-1]
 arrT = arrT[::-1]
-
 iaT = 0
 if len(arrF) > 0:
     iaF = 1
@@ -40,7 +38,7 @@ else:
     iaF = 0
     arrQ = [0]
 for i in range(9):
-    mF, mT = -1, -1
+    (mF, mT) = (-1, -1)
     if iaT < len(arrT):
         mT = arrT[iaT]
     if iaF < len(arrF):
@@ -52,7 +50,6 @@ for i in range(9):
         arrQ.append(mT)
         iaT += 1
 sm = 0
-
 for i in range(len(arrQ)):
     sm += arrQ[i] * i
 print(sm)

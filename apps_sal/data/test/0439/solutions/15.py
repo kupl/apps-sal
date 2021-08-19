@@ -13,4 +13,4 @@ def li():
 n = ii()
 m = ii()
 n = min(n, 32)
-print(m % (2**n))
+print(m % 2 ** n)

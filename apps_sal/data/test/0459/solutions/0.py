@@ -9,65 +9,59 @@ c6 = [1, 2, 17, 19, 5, 6, 7, 8, 14, 16, 11, 12, 13, 4, 15, 3, 10, 18, 9, 20, 21,
 flag = 0
 mark = 0
 for i in range(6):
-    if(l[c1[4 * i]] == l[c1[4 * i + 1]] == l[c1[4 * i + 2]] == l[c1[4 * i + 3]]):
+    if l[c1[4 * i]] == l[c1[4 * i + 1]] == l[c1[4 * i + 2]] == l[c1[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
 mark = 0
 for i in range(6):
-    if(l[c2[4 * i]] == l[c2[4 * i + 1]] == l[c2[4 * i + 2]] == l[c2[4 * i + 3]]):
+    if l[c2[4 * i]] == l[c2[4 * i + 1]] == l[c2[4 * i + 2]] == l[c2[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
 mark = 0
 for i in range(6):
-    if(l[c3[4 * i]] == l[c3[4 * i + 1]] == l[c3[4 * i + 2]] == l[c3[4 * i + 3]]):
+    if l[c3[4 * i]] == l[c3[4 * i + 1]] == l[c3[4 * i + 2]] == l[c3[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
 mark = 0
 for i in range(6):
-    if(l[c4[4 * i]] == l[c4[4 * i + 1]] == l[c4[4 * i + 2]] == l[c4[4 * i + 3]]):
+    if l[c4[4 * i]] == l[c4[4 * i + 1]] == l[c4[4 * i + 2]] == l[c4[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
 mark = 0
 for i in range(6):
-    if(l[c5[4 * i]] == l[c5[4 * i + 1]] == l[c5[4 * i + 2]] == l[c5[4 * i + 3]]):
+    if l[c5[4 * i]] == l[c5[4 * i + 1]] == l[c5[4 * i + 2]] == l[c5[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
 mark = 0
 for i in range(6):
-    if(l[c6[4 * i]] == l[c6[4 * i + 1]] == l[c6[4 * i + 2]] == l[c6[4 * i + 3]]):
+    if l[c6[4 * i]] == l[c6[4 * i + 1]] == l[c6[4 * i + 2]] == l[c6[4 * i + 3]]:
         mark = 1
     else:
         mark = 0
         break
-if(mark):
+if mark:
     flag = 1
-
-if(flag):
-    print("YES")
+if flag:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

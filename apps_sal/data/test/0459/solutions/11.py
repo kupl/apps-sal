@@ -1,8 +1,8 @@
 line = list(map(int, input().split()))
 yes = False
 q = [1, -1]
-if line[4] == line[5] and line[5] == line[6] and line[6] == line[7]:
-    if line[20] == line[21] and line[21] == line[22] and line[22] == line[23]:
+if line[4] == line[5] and line[5] == line[6] and (line[6] == line[7]):
+    if line[20] == line[21] and line[21] == line[22] and (line[22] == line[23]):
         can = True
         c1 = []
         if line[15] != line[13]:
@@ -45,8 +45,8 @@ if line[4] == line[5] and line[5] == line[6] and line[6] == line[7]:
                     c3 += [c1[(q[i] + j) % 4]]
                 if c3 == c2:
                     yes = True
-if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
-    if line[8] == line[9] and line[9] == line[10] and line[10] == line[11]:
+if line[0] == line[1] and line[1] == line[2] and (line[2] == line[3]):
+    if line[8] == line[9] and line[9] == line[10] and (line[10] == line[11]):
         can = True
         c1 = []
         if line[12] != line[13]:
@@ -89,8 +89,8 @@ if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
                     c3 += [c1[(q[i] + j) % 4]]
                 if c3 == c2:
                     yes = True
-if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
-    if line[16] == line[17] and line[17] == line[18] and line[18] == line[19]:
+if line[12] == line[13] and line[13] == line[14] and (line[14] == line[15]):
+    if line[16] == line[17] and line[17] == line[18] and (line[18] == line[19]):
         can = True
         c1 = []
         if line[0] != line[2]:
@@ -134,6 +134,6 @@ if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
                 if c3 == c2:
                     yes = True
 if yes:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

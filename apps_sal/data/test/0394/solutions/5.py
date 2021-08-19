@@ -8,10 +8,9 @@ for k in range(1, n + 1):
     for i in range(n):
         if i < k:
             arr[i] = a[i] - prev
-        else:
-            if arr[i % k] != a[i] - prev:
-                good = False
-                break
+        elif arr[i % k] != a[i] - prev:
+            good = False
+            break
         prev = a[i]
     if good:
         answ.append(k)

@@ -1,13 +1,11 @@
 def solve():
-    N, X, D = list(map(int, input().split()))
-
+    (N, X, D) = list(map(int, input().split()))
     if D == 0:
         if X == 0:
-            print((1))
+            print(1)
         else:
-            print((N + 1))
+            print(N + 1)
         return
-
     LRss = {}
     for k in range(N + 1):
         m = X * k
@@ -18,20 +16,18 @@ def solve():
             LRss[rem] = [(minCoef, maxCoef)]
         else:
             LRss[rem].append((minCoef, maxCoef))
-
     ans = 0
-    for rem, LRs in list(LRss.items()):
+    for (rem, LRs) in list(LRss.items()):
         LRs.sort()
-        LNow, RNow = LRs[0]
-        for L, R in LRs[1:]:
+        (LNow, RNow) = LRs[0]
+        for (L, R) in LRs[1:]:
             if L <= RNow:
                 if R > RNow:
                     RNow = R
             else:
                 ans += RNow - LNow + 1
-                LNow, RNow = L, R
+                (LNow, RNow) = (L, R)
         ans += RNow - LNow + 1
-
     print(ans)
 
 

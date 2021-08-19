@@ -1,7 +1,6 @@
 __author__ = 'Krishna'
-
 team_count = 0
-jun, sen = (int(i) for i in input().split(" "))
+(jun, sen) = (int(i) for i in input().split(' '))
 mini = min(jun, sen)
 maxi = max(jun, sen)
 diff = maxi - mini

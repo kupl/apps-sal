@@ -9,6 +9,6 @@ for i in range(1, n):
         s += l1[i]
 if 2 * s > total:
     print(len(res))
-    print(*res, sep=" ")
+    print(*res, sep=' ')
 else:
     print(0)

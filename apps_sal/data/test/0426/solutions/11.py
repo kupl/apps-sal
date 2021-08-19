@@ -4,12 +4,10 @@ import math
 def main():
     (n, k) = tuple([int(x) for x in input().split()])
     s = input()
-
     if n == 1:
         opt = '0'
     else:
         opt = '1' + '0' * (n - 1)
-
     r = []
     left = k
     for i in range(n):
@@ -18,7 +16,6 @@ def main():
             r.append(opt[i])
         else:
             r.append(s[i])
-
     print(''.join(r))
 
 

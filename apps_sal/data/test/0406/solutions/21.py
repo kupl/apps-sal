@@ -1,4 +1,5 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
 n = int(input())

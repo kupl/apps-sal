@@ -6,14 +6,14 @@ def main():
     sum = 0
     for i in range(1, n + 1):
         x = i
-        while(vis[x] == 0):
+        while vis[x] == 0:
             vis[x] = i
             x = a[x - 1]
         if vis[x] != i:
             continue
         p = x
         cos = c[x - 1]
-        while(p != a[x - 1]):
+        while p != a[x - 1]:
             x = a[x - 1]
             cos = min(c[x - 1], cos)
         sum = sum + cos

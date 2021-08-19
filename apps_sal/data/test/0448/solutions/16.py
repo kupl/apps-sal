@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = list(map(int, input().split()))
 l1 = []
 for i in range(n):
@@ -7,6 +7,6 @@ for i in range(n):
 m = max(l1)
 ind = 0
 for j in range(n):
-    if(l1[j] == m):
+    if l1[j] == m:
         ind = j + 1
 print(ind)

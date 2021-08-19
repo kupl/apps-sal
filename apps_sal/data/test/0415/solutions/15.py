@@ -14,7 +14,7 @@ def main():
             if j > 100 * mul:
                 cur_ans = j // 100
             mul += 1
-        answer = max(answer, cur_ans,)
+        answer = max(answer, cur_ans)
     answer = min(answer, n)
     print(answer)
 

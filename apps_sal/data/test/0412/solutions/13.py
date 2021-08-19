@@ -10,7 +10,6 @@ for i in range(len(a)):
             k *= 2
         else:
             f = False
-
 for i in range(len(a)):
     if a[i] % k == 0:
         n += 1

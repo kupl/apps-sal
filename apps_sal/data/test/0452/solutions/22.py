@@ -2,7 +2,7 @@ from fractions import Fraction
 
 
 def __starting_point():
-    p, q = list(map(int, input().split(' ')))
+    (p, q) = list(map(int, input().split(' ')))
     n = int(input())
     a = list(map(int, input().split(' ')))
 

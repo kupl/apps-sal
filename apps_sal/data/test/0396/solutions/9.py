@@ -1,5 +1,5 @@
 import math
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 ans = 0
 if (l <= 1) & (r >= 1):
     ans = ans + 1

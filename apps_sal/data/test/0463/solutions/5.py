@@ -1,5 +1,5 @@
-n, x = list(map(int, input().split()))
-a = set(int(i) for i in input().split())
+(n, x) = list(map(int, input().split()))
+a = set((int(i) for i in input().split()))
 if len(a) != n:
     ans = 0
 else:

@@ -1,10 +1,8 @@
 import math
-
 instr = input()
 space = instr.find(' ')
 inint = int(instr[:space])
 outint = int(instr[space + 1:])
-
 nowhalf = outint
 counts = 0
 adds = 0

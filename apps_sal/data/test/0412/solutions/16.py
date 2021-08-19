@@ -5,7 +5,7 @@ ans = []
 for i in range(100):
     help = [2 ** i, 0]
     for j in range(n):
-        if data[j] % (2 ** i) == 0:
+        if data[j] % 2 ** i == 0:
             help[1] += 1
     ans.append(help)
 ans.sort()

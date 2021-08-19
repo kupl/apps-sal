@@ -3,7 +3,7 @@ n = int(input())
 n1 = n
 p = 1
 mas = set()
-for i in range(2, ceil(n**.5) + 1):
+for i in range(2, ceil(n ** 0.5) + 1):
     cnt = 0
     while n % i == 0:
         n = n // i

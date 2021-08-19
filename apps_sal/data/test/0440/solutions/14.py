@@ -8,6 +8,4 @@ for i in range(len(a) - 1):
         pass
     else:
         c.append(a[i + 1])
-
-
 print(''.join(c))

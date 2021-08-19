@@ -8,9 +8,9 @@ for i in range(1, n):
     if a >= 2 * l[i]:
         ans.append(i + 1)
         seats += l[i]
-if(seats > total // 2):
+if seats > total // 2:
     print(len(ans))
     for i in ans:
-        print(i, end=" ")
+        print(i, end=' ')
 else:
     print(0)

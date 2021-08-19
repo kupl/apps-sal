@@ -1,5 +1,5 @@
-MOD = 10**9 + 7
-x, n = [int(item) for item in input().split()]
+MOD = 10 ** 9 + 7
+(x, n) = [int(item) for item in input().split()]
 
 
 def prime_factorize(n):
@@ -25,5 +25,4 @@ for f in fac:
         val //= f
     ans *= pow(f, cnt, MOD)
     ans %= MOD
-
 print(ans)

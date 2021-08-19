@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 
 
 def s(x):
@@ -12,15 +12,13 @@ def s(x):
 rightSide = []
 M = 9 * 9 + 1
 for k in range(1, M):
-    rightSide.append(b * k**a + c)
-
+    rightSide.append(b * k ** a + c)
 myList = []
 sol = 0
 for x in rightSide:
-    if(x > 0 and x < int(1e9) and x == b * s(x)**a + c):
+    if x > 0 and x < int(1000000000.0) and (x == b * s(x) ** a + c):
         sol += 1
         myList.append(x)
-
 myList.sort()
 print(sol, end='\n')
 for num in myList:

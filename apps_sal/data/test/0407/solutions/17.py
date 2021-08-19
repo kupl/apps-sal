@@ -15,23 +15,23 @@ for i in range(n):
         find[ord(p[j]) - 97] = True
     verif[ord(p[0]) - 97] = False
 for i in range(10):
-    if(find[i] == True):
+    if find[i] == True:
         u = 0
         for j in range(6):
-            u = u + mat[i][j] * (10**(5 - j))
+            u = u + mat[i][j] * 10 ** (5 - j)
         s.append((u, i, verif[i]))
 s = sorted(s)
 s = s[::-1]
 pos = 0
 for i in range(len(s)):
-    if(verif[s[i][1]] == True):
+    if verif[s[i][1]] == True:
         pos = i
         break
 somme = 0
 k = 1
 r = True
 for i in range(len(s)):
-    if((s[i][2] == True) and (r == True)):
+    if s[i][2] == True and r == True:
         r = False
     else:
         somme = somme + k * s[i][0]

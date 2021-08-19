@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 am = min(a)
@@ -9,7 +9,6 @@ for i in range(n):
         mi = a[i]
 if mi < 10:
     print(mi)
-
 elif am == bm:
     print(am)
 else:

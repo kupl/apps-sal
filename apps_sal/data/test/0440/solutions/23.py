@@ -1,8 +1,6 @@
 n = int(input())
-
 w = ['a', 'e', 'i', 'o', 'u', 'y']
 res = []
-
 for c in input():
     if len(res) == 0:
         res.append(c)
@@ -11,5 +9,4 @@ for c in input():
         if res[-1] in w:
             continue
     res.append(c)
-
 print(''.join(res))

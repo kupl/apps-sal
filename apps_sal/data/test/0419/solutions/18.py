@@ -4,5 +4,4 @@ k = 1
 while k < s:
     ans += 1
     k *= 4
-
 print(ans)

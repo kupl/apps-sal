@@ -1,20 +1,19 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 if y == 0:
-    print("No")
+    print('No')
 elif y == 1:
     if x > 0:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
 elif x == 0:
     if y == 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 elif y == x + 1:
-    print("Yes")
+    print('Yes')
+elif x >= y - 1 and (x - (y - 1)) % 2 == 0:
+    print('Yes')
 else:
-    if x >= (y - 1) and (x - (y - 1)) % 2 == 0:
-        print("Yes")
-    else:
-        print("No")
+    print('No')

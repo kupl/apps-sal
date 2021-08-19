@@ -1,7 +1,7 @@
 a = []
 n = int(input())
 a += (int(i) for i in input().split())
-r, m = 1, 1
+(r, m) = (1, 1)
 while m != 0:
     m2 = m
     m = 0

@@ -18,7 +18,6 @@ for i in range(num):
             store[_in[j]] = pow(10, len(_in) - j - 1)
 x = store
 sorted_x = sorted(x.items(), key=operator.itemgetter(1))
-
 used = False
 cur = 1
 for i in range(len(sorted_x) - 1, -1, -1):

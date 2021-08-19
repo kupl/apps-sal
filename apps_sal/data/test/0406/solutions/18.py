@@ -15,7 +15,6 @@ while len(lst) >= 2:
             k = lst[1]
             lst.pop(0)
             lst.pop(0)
-
     else:
         lst.pop(0)
 print(n)

@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     S = input().strip()
     if n == 1:
         if k == 0:
@@ -7,7 +7,7 @@ def main():
         return 0
     cnt = 0
     ret = ''
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         if cnt == k:
             ret += s
         elif i == 0:

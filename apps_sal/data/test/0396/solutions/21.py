@@ -1,7 +1,7 @@
 ans = 0
 l = 0
 r = 0
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 a = 1
 for i in range(100):
     b = 1

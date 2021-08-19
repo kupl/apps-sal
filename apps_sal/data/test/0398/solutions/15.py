@@ -6,8 +6,7 @@ for i in range(len(a) - 2):
     if a[i] + a[i + 1] > a[i + 2]:
         flag = True
         break
-
-if (flag):
+if flag:
     print('YES')
 else:
     print('NO')

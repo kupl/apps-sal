@@ -1,4 +1,4 @@
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 if y == 0:
     print('No')
 elif y == 1:

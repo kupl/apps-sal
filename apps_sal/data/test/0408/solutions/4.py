@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 ans = 0
 while True:
     if n == m == 1:

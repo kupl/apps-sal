@@ -2,7 +2,7 @@ def r():
     return list(map(int, input().split()))
 
 
-n, k = r()
+(n, k) = r()
 m = 240
 count = 0
 for i in range(1, n + 1):

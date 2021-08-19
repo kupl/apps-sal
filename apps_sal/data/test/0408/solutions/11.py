@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n > m * 2:
         n = m * 2
     elif m > n * 2:

@@ -1,11 +1,10 @@
 import math
-
 N = 2000001
 sq = math.floor(N ** 0.5)
 isprime = [True] * N
 for p in range(2, N):
     if isprime[p]:
-        for i in range(p**2, N, p):
+        for i in range(p ** 2, N, p):
             isprime[i] = False
 
 

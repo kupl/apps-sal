@@ -2,7 +2,6 @@ n = int(input())
 a = list(map(int, input().split()))
 i = 0
 ans = 0
-
 while i < n:
     ans += 1
     i1 = i
@@ -26,6 +25,5 @@ while i < n:
         if nxt <= 0 or (a[i3] != -1 and a[i3] != nxt):
             break
         i3 += 1
-
     i = i3
 print(ans)

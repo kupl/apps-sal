@@ -1,4 +1,4 @@
-b = "aeiouy"
+b = 'aeiouy'
 n = int(input())
 s = input()
 a = [0] * len(s)
@@ -7,4 +7,4 @@ for i in range(1, len(s)):
         a[i] = 1
 for i in range(len(s)):
     if not a[i]:
-        print(s[i], end="")
+        print(s[i], end='')

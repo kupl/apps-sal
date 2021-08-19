@@ -27,7 +27,6 @@ def is_nice(strs):
             break
     if satis == False:
         return -1
-
     for i in range(len(strs)):
         if strs[i] == '?':
             strs[i] = 'A'

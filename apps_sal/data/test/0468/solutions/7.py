@@ -1,5 +1,5 @@
 def solve(x, y):
-    if (x == y):
+    if x == y:
         return '='
     if 2 in [x, y] and 4 in [x, y]:
         return '='
@@ -16,5 +16,5 @@ def solve(x, y):
     return '<'
 
 
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 print(solve(x, y))

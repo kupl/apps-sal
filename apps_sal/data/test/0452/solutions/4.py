@@ -1,4 +1,4 @@
-p, q = tuple(map(int, input().split()))
+(p, q) = tuple(map(int, input().split()))
 n1 = input().split()
 n = int(n1[0])
 a = list(map(int, input().split()))

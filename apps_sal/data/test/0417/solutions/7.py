@@ -1,11 +1,9 @@
-N, X, D = map(int, input().split())
-
+(N, X, D) = map(int, input().split())
 if not D:
     if not X:
         print(1)
     else:
         print(N + 1)
-
 else:
     num_dict = dict()
     ans = 0
@@ -17,8 +15,7 @@ else:
             num_dict[judge_num] = [(left_num, right_num)]
         else:
             num_dict[judge_num].append((left_num, right_num))
-
-    for j, k in num_dict.items():
+    for (j, k) in num_dict.items():
         new_k = sorted(k)
         L = new_k[0][0]
         R = new_k[0][1]
@@ -27,7 +24,6 @@ else:
                 R = l[1]
             elif R < l[0] and R < l[1]:
                 ans += R - L + 1
-                L, R = l[0], l[1]
+                (L, R) = (l[0], l[1])
         ans += R - L + 1
-
     print(ans)

@@ -3,7 +3,7 @@ l = []
 k = 1
 num = 0
 while num <= 100000:
-    num = ((2**k) - 1) * (2**(k - 1))
+    num = (2 ** k - 1) * 2 ** (k - 1)
     if num <= 100000:
         l.append(num)
     k += 1

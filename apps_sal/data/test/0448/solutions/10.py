@@ -1,6 +1,6 @@
 def main():
-    n, m = input().split()
-    n, m = int(n), int(m)
+    (n, m) = input().split()
+    (n, m) = (int(n), int(m))
     a = []
     a = input().split()
     a = list(map(int, a))
@@ -13,7 +13,6 @@ def main():
             a[0] -= m
             a.append(a.pop(0))
             p.append(p.pop(0))
-
     print(p[0] + 1)
 
 

@@ -1,6 +1,6 @@
-le, ch = map(int, input().split())
+(le, ch) = map(int, input().split())
 st = input()
-ca, cb, si, mx = [0] * 4
+(ca, cb, si, mx) = [0] * 4
 for x in st:
     if x == 'a':
         ca += 1

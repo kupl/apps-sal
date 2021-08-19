@@ -16,4 +16,4 @@ else:
     t[k - 1] += n
     print(k)
     for i in t:
-        print(i, end=" ")
+        print(i, end=' ')

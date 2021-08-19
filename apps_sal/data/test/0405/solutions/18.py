@@ -1,5 +1,4 @@
 input()
-
 s = input()
 first = s[0]
 last = s[-1]
@@ -16,5 +15,4 @@ if last == '>':
             answ += 1
         else:
             break
-
 print(answ)

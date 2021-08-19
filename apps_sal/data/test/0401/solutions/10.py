@@ -1,6 +1,6 @@
 input()
-a, b = list(map(int, input().split())), list(map(int, input().split()))
-am, bm = min(a), min(b)
+(a, b) = (list(map(int, input().split())), list(map(int, input().split())))
+(am, bm) = (min(a), min(b))
 m = 10
 for x in a:
     if x in b:

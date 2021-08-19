@@ -7,6 +7,6 @@ f = Fraction(a[0], 1)
 for i in a[1:]:
     f = i + Fraction(1, f)
 if pq == f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

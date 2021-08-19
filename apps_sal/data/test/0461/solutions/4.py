@@ -19,12 +19,11 @@ while n > 0:
         else:
             cur = 'i'
             result += c
+    elif b < c:
+        cur = 'k'
+        result += b
     else:
-        if b < c:
-            cur = 'k'
-            result += b
-        else:
-            cur = 's'
-            result += c
+        cur = 's'
+        result += c
     n -= 1
 print(result)

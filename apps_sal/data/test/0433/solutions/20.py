@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 if b > 0:
     for i in range(abs(b)):
         a += 1

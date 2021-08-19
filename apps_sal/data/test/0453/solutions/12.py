@@ -1,10 +1,7 @@
 import re
-
 s = input()
 l = re.compile('[|]+').findall(s)
-
 diff = len(l[0]) + len(l[1]) - len(l[2])
-
 if diff == 0:
     print(s)
 elif diff == -2:

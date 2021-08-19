@@ -7,7 +7,7 @@ def __starting_point():
     result = 1145141919
     res1 = A * (N - 1)
     res2 = B * (N - 1)
-    if (N >= 2):
+    if N >= 2:
         res3 = min(A, B) + C * (N - 2)
         result = min(result, res3)
     result = min(result, res1, res2)

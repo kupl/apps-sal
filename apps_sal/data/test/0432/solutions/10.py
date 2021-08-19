@@ -1,7 +1,6 @@
 n = int(input())
 c = [0] + [int(j) for j in input().split()]
 a = [0] + [int(j) for j in input().split()]
-
 vis = [0] * (n + 1)
 ans = 0
 for i in range(1, n + 1):

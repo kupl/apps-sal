@@ -1,8 +1,7 @@
 def solve():
     n = int(input())
-    a = [int(c) for c in input().split(" ")]
+    a = [int(c) for c in input().split(' ')]
     total = sum(a)
-
     if n < 2:
         return None
     elif n == 2:
@@ -22,4 +21,4 @@ if not result:
 else:
     print(len(result))
     for num in result:
-        print(num + 1, end=" ")
+        print(num + 1, end=' ')

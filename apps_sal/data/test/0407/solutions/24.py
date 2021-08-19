@@ -7,8 +7,7 @@ for i in range(n):
     if len_line >= 1:
         can_be_zeros[line[0]] = False
     for j in range(len_line):
-        counts[line[j]] += 10**(len_line - j - 1)
-
+        counts[line[j]] += 10 ** (len_line - j - 1)
 sorted_counts = sorted(counts, key=counts.get)[::-1]
 for i in range(10):
     cur = sorted_counts[i]

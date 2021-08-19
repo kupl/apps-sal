@@ -9,5 +9,4 @@ while True:
         s = s[:i] + s[i + 1:]
     else:
         i += 1
-
 print(s)

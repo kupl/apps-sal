@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 s = list(input())
 if len(s) == 1 and k:
     s = '0'
@@ -12,5 +12,4 @@ while k and i < len(s):
         s[i] = '0'
         k -= 1
     i += 1
-
-print(''.join(str(e) for e in s))
+print(''.join((str(e) for e in s)))

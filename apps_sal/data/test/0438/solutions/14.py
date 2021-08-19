@@ -3,9 +3,9 @@ candies = int(input())
 
 def printCandies(touse):
     print(len(result))
-    resultS = ""
+    resultS = ''
     for child in touse:
-        resultS += str(child) + " "
+        resultS += str(child) + ' '
     print(resultS)
 
 
@@ -21,8 +21,6 @@ if candies >= 1 and candies <= 1000:
         printCandies(result)
     else:
         remain = candies - sum(result)
-
         for i in range(remain, 0, -1):
             result[-1 - (i - 1)] += 1
-
         printCandies(result)

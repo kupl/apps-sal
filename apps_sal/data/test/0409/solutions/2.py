@@ -7,10 +7,10 @@ def ok(s, a, b):
 
 def __starting_point():
     s = input().strip()
-    if ok(s, "AB", "BA") or ok(s, "BA", "AB"):
-        print("YES")
+    if ok(s, 'AB', 'BA') or ok(s, 'BA', 'AB'):
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

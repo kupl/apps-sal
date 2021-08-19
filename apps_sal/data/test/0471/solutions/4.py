@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 c = list(map(int, input().split()))
 c.sort()
 if n == 1:

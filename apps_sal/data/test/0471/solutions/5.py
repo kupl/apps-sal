@@ -1,4 +1,4 @@
-n, a = [int(i) for i in input().split()]
+(n, a) = [int(i) for i in input().split()]
 s = [int(i) for i in input().split()]
 s.sort()
 t = len(s) - 1

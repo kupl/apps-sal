@@ -18,7 +18,7 @@ def getTransIntList(n):
     return result
 
 
-n, a, b = getIntList()
+(n, a, b) = getIntList()
 if a > 1 and b > 1:
     print('NO')
 elif a == b == 1 and (n == 2 or n == 3):

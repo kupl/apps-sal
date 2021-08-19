@@ -9,7 +9,6 @@ def solve(a, x):
             return 0
         else:
             occ[k] = True
-
     two = False
     occx = dict()
     for k in a:
@@ -21,15 +20,12 @@ def solve(a, x):
             two = True
         else:
             occx[k & x] = True
-
     return 2 if two else -1
 
 
 def main():
-    n, x = map(int, input().split())
-
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
-
     print(solve(a, x))
 
 

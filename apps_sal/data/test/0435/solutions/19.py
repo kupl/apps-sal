@@ -13,7 +13,6 @@ def solve(k, s, c):
     return m - 1
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-
 print(max(solve(k, s, 'a'), solve(k, s, 'b')))

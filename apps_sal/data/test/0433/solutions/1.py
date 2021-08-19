@@ -2,6 +2,7 @@
 
 
 class StdIO:
+
     def read_int(self):
         return int(self.read_string())
 
@@ -25,8 +26,7 @@ io = StdIO()
 
 
 def main():
-    n, a, b = io.read_ints()
-
+    (n, a, b) = io.read_ints()
     print((a + b - 1) % n + 1)
 
 

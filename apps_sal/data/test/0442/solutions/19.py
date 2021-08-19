@@ -32,7 +32,7 @@ def main():
     if y % 2 == 1 and y >= 5:
         print(1, (y - 3) // 2)
     else:
-        print("NO")
+        print('NO')
 
 
 main()

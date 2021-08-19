@@ -1,7 +1,8 @@
-def read(): return tuple(map(int, input().split()))
+def read():
+    return tuple(map(int, input().split()))
 
 
-n, a, b, c = read()[0], read()[0], read()[0], read()[0]
+(n, a, b, c) = (read()[0], read()[0], read()[0], read()[0])
 n -= 1
 if n == 0:
     print(0)

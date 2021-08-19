@@ -7,19 +7,18 @@ i = 1
 while i < a:
     i += 1
     if not sas:
-        if string[i - 2:i + 1] == "ogo":
+        if string[i - 2:i + 1] == 'ogo':
             first += [i - 2]
             sas = True
             i += 1
+    elif string[i - 1:i + 1] == 'go':
+        i += 1
     else:
-        if string[i - 1:i + 1] == "go":
-            i += 1
-        else:
-            last += [i - 2]
-            sas = False
+        last += [i - 2]
+        sas = False
 if sas:
     last += [a - 1]
-s = ""
+s = ''
 counter = 0
 n = 0
 while counter < len(string):
@@ -27,7 +26,7 @@ while counter < len(string):
         s += string[counter]
         counter += 1
     else:
-        s += "***"
+        s += '***'
         counter = last[n] + 1
         n += 1
 print(s)

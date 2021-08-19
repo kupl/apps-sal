@@ -14,4 +14,4 @@ for i in range(n):
         if i < n - 1:
             res |= s[i + 1] == '1'
         ok &= res
-print("Yes" if ok else "No")
+print('Yes' if ok else 'No')

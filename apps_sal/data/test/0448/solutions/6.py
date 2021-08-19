@@ -1,7 +1,6 @@
 x = input().split()
 n = int(x[0])
 m = int(x[1])
-
 l = input().split()
 ans = 0
 high = 0

@@ -12,9 +12,9 @@ for i in range(n):
         else:
             break
     max_ = max(max_, ctr)
-print(2**max_, end=' ')
+print(2 ** max_, end=' ')
 ctr = 0
-f = 2**max_
+f = 2 ** max_
 for i in range(n):
     if z[i] % f == 0:
         ctr += 1

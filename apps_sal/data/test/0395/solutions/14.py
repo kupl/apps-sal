@@ -1,6 +1,5 @@
 a = list(map(int, input().split()))
 s = sum(a) / 2
-
 b = False
 for i in range(0, 4):
     for j in range(i + 1, 5):

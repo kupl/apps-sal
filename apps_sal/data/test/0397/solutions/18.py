@@ -13,18 +13,17 @@ def getList():
 
 
 def validation(n, k, x):
-    if (x * (x + 1)) // 2 - (n - x) == k:
+    if x * (x + 1) // 2 - (n - x) == k:
         return 0
-    if (x * (x + 1)) // 2 - (n - x) > k:
+    if x * (x + 1) // 2 - (n - x) > k:
         return 1
     return 2
 
 
-n, k = getList()
-
+(n, k) = getList()
 l = 0
 r = 1000000001
-while(True):
+while True:
     mid = (l + r) // 2
     flag = validation(n, k, mid)
     if flag == 0:
@@ -34,5 +33,4 @@ while(True):
         r = mid
     else:
         l = mid
-
 print(n - ans)

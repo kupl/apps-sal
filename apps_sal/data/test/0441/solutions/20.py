@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 b2 = b
 c2 = c
 d2 = input()
@@ -16,20 +16,18 @@ for i in range(len(d)):
                 else:
                     d[i] = 1
                     b -= 1
-            else:
-                if d[i - 1] == 1:
-                    d[i] = 2
-                    c -= 1
-                else:
-                    d[i] = 1
-                    b -= 1
-        else:
-            if b < c:
+            elif d[i - 1] == 1:
                 d[i] = 2
                 c -= 1
             else:
                 d[i] = 1
                 b -= 1
+        elif b < c:
+            d[i] = 2
+            c -= 1
+        else:
+            d[i] = 1
+            b -= 1
 res = 0
 if b >= 0:
     res += b2 - b

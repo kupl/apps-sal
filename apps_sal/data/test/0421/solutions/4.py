@@ -1,7 +1,7 @@
 n = int(input())
 rg = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     rg.append((a, b))
 rg.sort()
 last = rg[0][1]

@@ -7,7 +7,7 @@ for i in range(0, n, 1):
     m = len(x)
     list2.append(x[0])
     for i in range(0, m, 1):
-        list1[ord(x[i]) - 97] += 10**(m - i - 1)
+        list1[ord(x[i]) - 97] += 10 ** (m - i - 1)
 for i in range(0, 10, 1):
     list3 = [list1[i], chr(i + 97)]
     list4.append(list3)

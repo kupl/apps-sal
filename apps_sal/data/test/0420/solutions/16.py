@@ -1,7 +1,8 @@
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, m = readln()
+(n, m) = readln()
 a = [readln() for _ in range(n)]
 ans = n
 while ans % 2 == 0:

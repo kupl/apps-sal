@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 t = 240 - k
 count = 0
 for i in range(1, n + 1):

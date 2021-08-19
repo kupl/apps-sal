@@ -1,7 +1,6 @@
 def main():
     n = input()
     s = input()
-
     a = []
     for x in s:
         if x in 'aeiouy':
@@ -11,7 +10,6 @@ def main():
                 a.append(x)
         else:
             a.append(x)
-
     print(''.join(a))
 
 

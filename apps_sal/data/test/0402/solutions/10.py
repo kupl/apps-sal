@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     t = k
     for i in range(n + 1):
         t += 5 * (i + 1)

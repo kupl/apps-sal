@@ -2,7 +2,7 @@ a = int(input())
 b = []
 total = 0
 for i in range(a):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     b.append([x, y])
 b.sort(key=lambda x: x[1])
 ending = 0

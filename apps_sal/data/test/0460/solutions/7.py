@@ -1,9 +1,9 @@
-p, x, y = list(map(int, input().split()))
+(p, x, y) = list(map(int, input().split()))
 mn = [10 ** 10]
 
 
 def tr(a):
-    i = (a // 50) % 475
+    i = a // 50 % 475
     for j in range(25):
         i = (i * 96 + 42) % 475
         l = 26 + i
@@ -20,7 +20,7 @@ def tr(a):
 
 st = 0
 for i in range(50):
-    if (x) % 50 == (y + i) % 50:
+    if x % 50 == (y + i) % 50:
         st = y + i
         break
 for i in range(st, 5 * 100000, 50):

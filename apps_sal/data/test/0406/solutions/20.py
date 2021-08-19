@@ -1,6 +1,5 @@
 n = int(input())
 sticks = list(map(int, input().split()))
-
 length = [0] * 1000000
 miv = 1000000
 mav = 0
@@ -11,7 +10,6 @@ for i in range(len(sticks)):
         mav = sticks[i] - 1
     if sticks[i] - 1 < miv:
         miv = sticks[i] - 1
-
 length = length[miv:mav + 1]
 for i in range(len(length) - 1, -1, -1):
     if length[i] % 2 == 1:
@@ -20,10 +18,8 @@ for i in range(len(length) - 1, -1, -1):
             length[i - 1] = length[i - 1] + 1
         else:
             length[i] = length[i] - 1
-
 square = []
 for i in range(len(length) - 1, -1, -1):
-
     while length[i] > 0:
         square.append(i + miv + 1)
         length[i] = length[i] - 2

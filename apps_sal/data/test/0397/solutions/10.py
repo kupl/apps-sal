@@ -1,6 +1,6 @@
-N, K = list(map(int, input().split()))
-B = (-2 * N - 3)
-C = (N * N + N - 2 * K)
+(N, K) = list(map(int, input().split()))
+B = -2 * N - 3
+C = N * N + N - 2 * K
 
 
 def sqr(n):

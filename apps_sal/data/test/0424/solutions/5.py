@@ -5,7 +5,7 @@ p[0] = 0
 p[1] = 0
 while a <= x:
     if p[a]:
-        for i in range(a**2, x + 1, a):
+        for i in range(a ** 2, x + 1, a):
             p[i] = 0
     a += 1
 c = []

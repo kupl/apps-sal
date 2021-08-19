@@ -7,6 +7,6 @@ for i in B:
         ans = True
         break
 if ans:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

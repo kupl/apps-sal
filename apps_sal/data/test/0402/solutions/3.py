@@ -1,5 +1,5 @@
 tm = 240
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 tm -= k
 ans = 0
 for i in range(1, n + 1):

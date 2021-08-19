@@ -1,5 +1,5 @@
-r, h = list(map(int, input().split()))
-ans = (h // r) * 2
+(r, h) = list(map(int, input().split()))
+ans = h // r * 2
 h %= r
 if 2 * h < r:
     ans += 1

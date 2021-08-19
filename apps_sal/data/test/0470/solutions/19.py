@@ -11,9 +11,8 @@ ans = summa
 for i in s:
     if s[i] == 1:
         pass
+    elif s[i] == 2:
+        ans = min(ans, summa - i * 2)
     else:
-        if s[i] == 2:
-            ans = min(ans, summa - i * 2)
-        else:
-            ans = min(ans, summa - i * 3)
+        ans = min(ans, summa - i * 3)
 print(ans)

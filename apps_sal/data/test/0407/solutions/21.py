@@ -8,9 +8,9 @@ for i in range(n):
     t = 0
     for x in range(len(l) - 1, -1, -1):
         if l[x] in d:
-            d[l[x]] += 10**t
+            d[l[x]] += 10 ** t
         else:
-            d[l[x]] = 10**t
+            d[l[x]] = 10 ** t
         t += 1
 y = list(d.items())
 l = y[:]

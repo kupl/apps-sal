@@ -1,6 +1,6 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 l = 1
-r = 10**10
+r = 10 ** 10
 while r - l > 1:
     m = (r + l) // 2
     both = m // (c * d)

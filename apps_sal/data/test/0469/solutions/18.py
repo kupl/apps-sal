@@ -1,5 +1,5 @@
-r, h = map(int, input().split())
-k = (h // r) * 2
+(r, h) = map(int, input().split())
+k = h // r * 2
 d = h % r
 if d >= 2 * r / 3 + 1:
     k += 3

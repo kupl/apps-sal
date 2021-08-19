@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 t = (240 - k) // 5
 i = 0
 while i + 1 <= t:

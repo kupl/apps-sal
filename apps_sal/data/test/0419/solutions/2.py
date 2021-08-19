@@ -8,5 +8,4 @@ i = 1
 while i < n:
     i *= 4
     ans += 1
-
 print(ans)

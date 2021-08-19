@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().strip().split()))
+(n, a, b) = list(map(int, input().strip().split()))
 s = input().split('*')
 rslt = 0
 for segment in s:
@@ -12,8 +12,7 @@ for segment in s:
     else:
         x = min(a, less)
         y = min(b, more)
-
-    rslt += (x + y)
+    rslt += x + y
     a -= x
     b -= y
 print(rslt)

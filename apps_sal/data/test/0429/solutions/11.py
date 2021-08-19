@@ -31,18 +31,16 @@ if f == 0:
     print(-1)
 else:
     for j in range(n):
-        if j < (i - 25) or (j > i):
+        if j < i - 25 or j > i:
             if s[j] == '?':
                 print('A', end='')
             else:
                 print(s[j], end='')
-        else:
-            if s[j] == '?':
-                while l[k] != 0:
-                    k = k + 1
-
-                print(chr(k + ord('A')), end='')
+        elif s[j] == '?':
+            while l[k] != 0:
                 k = k + 1
-            else:
-                print(s[j], end='')
+            print(chr(k + ord('A')), end='')
+            k = k + 1
+        else:
+            print(s[j], end='')
 print

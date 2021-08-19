@@ -10,4 +10,4 @@ while n > 0:
         n = 0
     ans.append(str(x))
 print(len(ans))
-print(" ".join(ans))
+print(' '.join(ans))

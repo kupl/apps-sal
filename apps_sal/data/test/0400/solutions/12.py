@@ -1,6 +1,6 @@
 from sys import stdin
 input = stdin.readline
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 skills = 0
 remain = 0
@@ -18,12 +18,9 @@ for i in range(n):
     l[i] = b
 spent = 0
 l.sort()
-
 for i in range(len(l)):
     if spent + l[i] <= k and l[i] != 0:
         skills += 1
         spent += l[i]
-
-
 skills += min(remain, (k - spent) // 10)
 print(skills)

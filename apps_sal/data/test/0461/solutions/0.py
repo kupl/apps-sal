@@ -1,9 +1,9 @@
-'''input
+"""input
 1
 2
 3
 5
-'''
+"""
 n = int(input())
 a = int(input())
 b = int(input())
@@ -25,11 +25,10 @@ for i in range(n - 1):
         else:
             pos = 3
             cur += c
+    elif b < c:
+        pos = 2
+        cur += b
     else:
-        if b < c:
-            pos = 2
-            cur += b
-        else:
-            pos = 3
-            cur += c
+        pos = 3
+        cur += c
 print(cur)

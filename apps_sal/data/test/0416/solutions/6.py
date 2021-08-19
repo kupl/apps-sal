@@ -2,12 +2,11 @@ from sys import stdin
 from functools import lru_cache
 from collections import defaultdict
 infile = stdin
-N, K = map(int, infile.readline().split())
+(N, K) = map(int, infile.readline().split())
 watched = infile.readline().strip()
-
 mem = set()
 mem.add((0, 0, 0))
-for i, letter in enumerate(watched):
+for (i, letter) in enumerate(watched):
     for d in range(K + 1):
         for c in range(K + 1):
             if (i, d, c) in mem:
@@ -18,7 +17,7 @@ for i, letter in enumerate(watched):
 
 
 def good():
-    for i, d, c in mem:
+    for (i, d, c) in mem:
         if i == N and d == K:
             return 'YES'
     return 'NO'

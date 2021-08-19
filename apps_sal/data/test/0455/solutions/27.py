@@ -15,52 +15,51 @@ for i in range(N):
         cnt += 1
 if cnt != N:
     print(-1)
+elif g == 1:
+    W = [''] * N
+    for i in range(N):
+        for j in range(m):
+            if abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] >= 0:
+                W[i] += 'R'
+                XY[i][0] -= 2 ** (m - j - 1)
+            elif abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] < 0:
+                W[i] += 'L'
+                XY[i][0] += 2 ** (m - j - 1)
+            elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] >= 0:
+                W[i] += 'U'
+                XY[i][1] -= 2 ** (m - j - 1)
+            elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] < 0:
+                W[i] += 'D'
+                XY[i][1] += 2 ** (m - j - 1)
+    print(m)
+    for i in range(m):
+        print(2 ** i, end=' ')
+    print()
+    for j in range(N):
+        print(W[j][::-1])
 else:
-    if g == 1:
-        W = [''] * N
-        for i in range(N):
-            for j in range(m):
-                if abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] >= 0:
-                    W[i] += 'R'
-                    XY[i][0] -= 2**(m - j - 1)
-                elif abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] < 0:
-                    W[i] += 'L'
-                    XY[i][0] += 2**(m - j - 1)
-                elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] >= 0:
-                    W[i] += 'U'
-                    XY[i][1] -= 2**(m - j - 1)
-                elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] < 0:
-                    W[i] += 'D'
-                    XY[i][1] += 2**(m - j - 1)
-        print(m)
-        for i in range(m):
-            print(2**i, end=' ')
-        print()
-        for j in range(N):
-            print(W[j][::-1])
-    else:
-        for i in range(N):
-            XY[i][0] += 1
-        W = [''] * N
-        for i in range(N):
-            for j in range(m):
-                if abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] >= 0:
-                    W[i] += 'R'
-                    XY[i][0] -= 2**(m - j - 1)
-                elif abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] < 0:
-                    W[i] += 'L'
-                    XY[i][0] += 2**(m - j - 1)
-                elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] >= 0:
-                    W[i] += 'U'
-                    XY[i][1] -= 2**(m - j - 1)
-                elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] < 0:
-                    W[i] += 'D'
-                    XY[i][1] += 2**(m - j - 1)
-        print(m + 1)
-        print(1, end=' ')
-        for i in range(m):
-            print(2**i, end=' ')
-        print()
-        for j in range(N):
-            W[j] += 'L'
-            print(W[j][::-1])
+    for i in range(N):
+        XY[i][0] += 1
+    W = [''] * N
+    for i in range(N):
+        for j in range(m):
+            if abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] >= 0:
+                W[i] += 'R'
+                XY[i][0] -= 2 ** (m - j - 1)
+            elif abs(XY[i][0]) >= abs(XY[i][1]) and XY[i][0] < 0:
+                W[i] += 'L'
+                XY[i][0] += 2 ** (m - j - 1)
+            elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] >= 0:
+                W[i] += 'U'
+                XY[i][1] -= 2 ** (m - j - 1)
+            elif abs(XY[i][0]) < abs(XY[i][1]) and XY[i][1] < 0:
+                W[i] += 'D'
+                XY[i][1] += 2 ** (m - j - 1)
+    print(m + 1)
+    print(1, end=' ')
+    for i in range(m):
+        print(2 ** i, end=' ')
+    print()
+    for j in range(N):
+        W[j] += 'L'
+        print(W[j][::-1])

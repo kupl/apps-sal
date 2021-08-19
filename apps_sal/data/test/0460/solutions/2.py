@@ -1,10 +1,10 @@
-'''input
+"""input
 329 19913 19900
-'''
+"""
 
 
 def win(s):
-    i = (s // 50) % 475
+    i = s // 50 % 475
     l = []
     for _ in range(25):
         i = (i * 96 + 42) % 475
@@ -12,8 +12,8 @@ def win(s):
     return l
 
 
-p, x, y = list(map(int, input().split()))
-c, x1 = 0, x
+(p, x, y) = list(map(int, input().split()))
+(c, x1) = (0, x)
 while x - 50 >= y:
     x -= 50
 while p not in win(x):

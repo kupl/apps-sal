@@ -1,5 +1,5 @@
 from math import ceil
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 step = 0
 if n >= m:
     step += n - m

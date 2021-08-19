@@ -33,5 +33,4 @@ for i in range(n):
     else:
         resd[ind] = 1
         res += mmin
-
 print(res)

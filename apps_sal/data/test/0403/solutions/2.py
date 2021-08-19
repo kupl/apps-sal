@@ -13,10 +13,10 @@ for i in a:
     ay = min(chislo, y)
     y -= ay
     chislo = chislo - ay
-    if(chislo != 0 and x != 0):
+    if chislo != 0 and x != 0:
         x -= 1
         chislo -= 1
-    if (chislo == 0):
+    if chislo == 0:
         c += 1
     else:
         break

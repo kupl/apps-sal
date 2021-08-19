@@ -1,12 +1,11 @@
 from math import ceil
-
-p, x, y = map(int, input().split())
+(p, x, y) = map(int, input().split())
 h = x
 while h >= y:
     h -= 50
 h += 50
 for i in range(h, 10000000000, 50):
-    u = (i // 50) % 475
+    u = i // 50 % 475
     d = []
     for j in range(25):
         u = (u * 96 + 42) % 475

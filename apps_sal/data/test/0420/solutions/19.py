@@ -1,10 +1,10 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n & 1:
     print(n)
 else:
-    k, t = n // 2, [int(input()[:: 2], 2) for i in range(n)]
+    (k, t) = (n // 2, [int(input()[::2], 2) for i in range(n)])
     while True:
-        if t[: k] != t[k: 2 * k][:: -1]:
+        if t[:k] != t[k:2 * k][::-1]:
             print(2 * k)
             break
         elif k & 1:

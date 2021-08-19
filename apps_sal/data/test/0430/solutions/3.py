@@ -6,7 +6,7 @@ for i in w:
     if h >= ans + i:
         ans += i
     if h == ans:
-        print("YES")
+        print('YES')
         break
 if h != ans:
-    print("NO")
+    print('NO')

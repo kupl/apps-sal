@@ -8,7 +8,6 @@ for i in range(n):
         b[a[i]] = {i}
     else:
         b[a[i]].add(i)
-
 rings = []
 
 
@@ -37,6 +36,5 @@ for i in range(n):
         next_pos = a[next_pos]
     processed_ring(ring)
     rings.append(ring)
-
-res = sum(min(c[i] for i in ring) for ring in rings)
+res = sum((min((c[i] for i in ring)) for ring in rings))
 print(res)

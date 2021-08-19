@@ -1,8 +1,6 @@
-
-
 def __starting_point():
     inp = input()
-    arr = inp.split(" ")
+    arr = inp.split(' ')
     r = int(arr[0])
     h = int(arr[1])
     ans = 2 * (h // r)
@@ -11,7 +9,6 @@ def __starting_point():
         ans += 2
         if 4 * d * d >= 3 * r * r:
             ans += 1
-
     else:
         ans += 1
     print(ans)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ma = a[0] // m + (1 if a[0] % m else 0)
 r = 0
