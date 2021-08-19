@@ -1,11 +1,10 @@
-# cook your dish here
 import bisect
 for _ in range(int(input())):
-    N, Q = list(map(int, input().strip().split(' ')))
+    (N, Q) = list(map(int, input().strip().split(' ')))
     V = list(map(int, input().strip().split(' ')))
     VV = sorted(V)
     for ___ in range(Q):
-        x, y = list(map(int, input().strip().split(' ')))
+        (x, y) = list(map(int, input().strip().split(' ')))
         x -= 1
         y -= 1
         ans1 = abs(V[x] - V[y]) + (y - x)

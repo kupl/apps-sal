@@ -5,7 +5,6 @@ for _ in range(t):
     n = int(input())
     aa = list(map(int, input().split()))
     ss = set()
-
     st = 0
     ind = 1
     pre = [0 for i in range(n)]
@@ -23,7 +22,6 @@ for _ in range(t):
         else:
             pre[i] = ind
     ind = 1
-   # print(pre)
     ss = set()
     suff = [0 for i in range(n)]
     for i in range(n - 1, -1, -1):

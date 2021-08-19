@@ -1,4 +1,5 @@
 class Solution:
+
     def maxChunksToSorted(self, arr):
         """
         :type arr: List[int]
@@ -6,9 +7,8 @@ class Solution:
         """
         m = -1
         ans = 0
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             m = max(num, m)
             if m == i:
                 ans += 1
-                # m = -1
         return ans

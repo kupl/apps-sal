@@ -1,4 +1,5 @@
 class Solution(object):
+
     def radix_sort(self, nums):
         if not nums:
             return []
@@ -8,7 +9,7 @@ class Solution(object):
         buckets = [[] for i in range(10)]
         for i in range(n_rounds):
             for num_str in num_strs:
-                if i < len(num_str):  # get the last ith digit
+                if i < len(num_str):
                     radix = ord(num_str[-i - 1]) - ord('0')
                 else:
                     radix = 0
