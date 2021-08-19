@@ -1,5 +1,3 @@
-
-
 def getAllPrimeFactors(n):
     result = []
     if isinstance(n, int) and n > 0:
@@ -15,8 +13,6 @@ def getAllPrimeFactors(n):
             else:
                 number += 1
     return result
-
-  # your code here
 
 
 def getUniquePrimeFactorsWithCount(n):

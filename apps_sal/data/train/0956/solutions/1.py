@@ -1,4 +1,3 @@
-# cook your dish here
 def func(a, n):
     if n < 3:
         return 0
@@ -12,7 +11,7 @@ def func(a, n):
     for i in range(n):
         u = res_arr[i][0] * res_arr[(i + 1) % l][1]
         v = res_arr[i][1] * res_arr[(i + 1) % l][0]
-        s += (u - v)
+        s += u - v
     return abs(s) / 2
 
 
@@ -20,9 +19,8 @@ def __starting_point():
     n = int(input())
     arr = []
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         arr.append((x, y))
-
     res = func(arr, n)
     print(res)
 

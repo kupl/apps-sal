@@ -1,4 +1,5 @@
-class Union_Find():
+class Union_Find:
+
     def __init__(self, N):
         """0,1,...,n-1を要素として初期化する.
 
@@ -26,17 +27,14 @@ class Union_Find():
         """
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.rank[x] > self.rank[y]:
             self.parents[x] += self.parents[y]
             self.parents[y] = x
         else:
             self.parents[y] += self.parents[x]
             self.parents[x] = y
-
             if self.rank[x] == self.rank[y]:
                 self.rank[y] += 1
 
@@ -66,7 +64,7 @@ class Union_Find():
     def roots(self):
         """族の名前のリスト
         """
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         """族の個数
@@ -79,18 +77,15 @@ class Union_Find():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-# ================================================
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 P = list(map(lambda x: int(x) - 1, input().split()))
-
 U = Union_Find(N)
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     U.union(a - 1, b - 1)
-
 K = 0
 for x in range(N):
     K += U.same(x, P[x])

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Dec 20 23:54:46 2019
 
@@ -15,8 +14,8 @@ n = int(input())
 a = []
 b = []
 for i in range(0, n):
-    a1, b1 = input().split(" ")
-    a1, b1 = int(a1), int(b1)
+    (a1, b1) = input().split(' ')
+    (a1, b1) = (int(a1), int(b1))
     a.append(a1)
     b.append(b1)
 a1 = []
@@ -26,5 +25,4 @@ for i in range(0, n - 1):
     b1.append((b[i] + b[i + 1]) / 2)
 a1.append((a[0] + a[-1]) / 2)
 b1.append((b[0] + b[-1]) / 2)
-
 print(PolyArea(np.array(a1), np.array(b1)))

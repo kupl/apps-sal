@@ -3,15 +3,13 @@ import math
 import collections
 import itertools
 input = sys.stdin.readline
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 P = list(map(int, input().split()))
 bridge = [[] for i in range(N + 1)]
 for _ in range(M):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     bridge[x].append(y)
     bridge[y].append(x)
-#-行き来できる数字の組み合わせを作る-#
 memo = [-1] * (N + 1)
 q = collections.deque([])
 novisit = set(range(1, N + 1))
@@ -26,7 +24,6 @@ while novisit:
             if bri in novisit:
                 q.append(bri)
                 novisit.discard(bri)
-#-memoが同じ数字だったら入れ替え可能-#
 cnt = 0
 for i in range(N):
     if i + 1 == P[i]:

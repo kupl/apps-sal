@@ -1,10 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
     ls[pn[i]] = i
-# print(ls)
-
 par = [i for i in range(n)]
 
 
@@ -27,9 +25,8 @@ def unite(x, y):
 
 
 for _ in range(m):
-    x, y = map(lambda x: int(x) - 1, input().split())
+    (x, y) = map(lambda x: int(x) - 1, input().split())
     unite(ls[x], ls[y])
-
 dic = {}
 for i in range(n):
     a = find(i)
@@ -37,8 +34,6 @@ for i in range(n):
         dic[a].add(ls[i])
     else:
         dic[a] = set([ls[i]])
-# print(dic)
-# print(par)
 ans = 0
 for i in range(n):
     if i in dic[find(i)]:

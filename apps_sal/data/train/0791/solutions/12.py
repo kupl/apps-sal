@@ -1,5 +1,3 @@
-# code
-
 T = eval(input())
 
 
@@ -16,9 +14,8 @@ def is_equal(ar, D):
             return -1
         if last == -1:
             last = ans / count
-        else:
-            if last != ans / count:
-                return -1
+        elif last != ans / count:
+            return -1
     return last
 
 
@@ -35,8 +32,8 @@ def solve(ar, D, equal):
 
 
 for _ in range(T):
-    N, D = list(map(int, input().split(" ")))
-    ar = list(map(int, input().split(" ")))
+    (N, D) = list(map(int, input().split(' ')))
+    ar = list(map(int, input().split(' ')))
     ans = is_equal(ar, D)
     if ans == -1:
         print(-1)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -7,6 +6,7 @@ def input():
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parents = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
@@ -33,23 +33,19 @@ class UnionFind:
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     P = list([int(x) - 1 for x in input().split()])
     XY = [list([int(x) - 1 for x in input().split()]) for _ in range(M)]
-
     value_to_index = [0] * N
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         value_to_index[p] = i
-
     uf = UnionFind(N)
-    for x, y in XY:
+    for (x, y) in XY:
         uf.union(x, y)
-
     ans = 0
     for i in range(N):
         if uf.find(i) == uf.find(value_to_index[i]):
             ans += 1
-
     print(ans)
 
 
