@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         mx = [-1] * len(A)
         mn = [-1] * len(A)
@@ -12,10 +13,7 @@ class Solution:
                 mn[j] = A[j]
             else:
                 mn[j] = min(A[j], mn[j + 1])
-        # print(mx,mn)
         for i in range(len(A) - 1):
-            # print(mx[i],mn[i+1])
             if mx[i] <= mn[i + 1]:
-                # print('yo')
                 return i + 1
         return len(A) - 1

@@ -4,7 +4,7 @@ class Dog:
         self.breed = breed
 
     def bark(self):
-        return "Woof"
+        return 'Woof'
 
 
 class Snoopy(Dog):
@@ -22,10 +22,9 @@ class Scooby(Dog):
         Dog.__init__(self, breed)
 
     def bark(self):
-        pass  # super(Dog, self).bark()
+        pass
 
 
-snoopy = Dog("Beagle")
-snoopy.bark = lambda: "Woof"
-
-scoobydoo = Dog("Great Dane")
+snoopy = Dog('Beagle')
+snoopy.bark = lambda: 'Woof'
+scoobydoo = Dog('Great Dane')

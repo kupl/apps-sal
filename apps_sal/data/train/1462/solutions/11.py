@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 c = 0
 d = 0
@@ -6,20 +5,17 @@ for i in range(t):
     c = 0
     d = 0
     s = input()
-    l = s.split(" ")
-    #l=list(map(str,input().split(" ")))
+    l = s.split(' ')
     for j in range(len(l)):
-        if(l[j].lower() == "berhampore"):
+        if l[j].lower() == 'berhampore':
             c += 1
-        if(l[j].lower() == "serampore"):
+        if l[j].lower() == 'serampore':
             d += 1
-    if(c > 0 and d > 0):
-        print("Both")
+    if c > 0 and d > 0:
+        print('Both')
+    elif c > 0:
+        print('GCETTB')
+    elif d > 0:
+        print('GCETTS')
     else:
-        if(c > 0):
-            print("GCETTB")
-        else:
-            if(d > 0):
-                print("GCETTS")
-            else:
-                print("Others")
+        print('Others')
