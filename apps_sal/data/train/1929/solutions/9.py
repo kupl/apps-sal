@@ -17,4 +17,4 @@ class StreamChecker(object):
             if letter in item:
                 waitlist.append(item[letter])
         self.waitlist = waitlist
-        return any('#' in item for item in self.waitlist)
+        return any(('#' in item for item in self.waitlist))

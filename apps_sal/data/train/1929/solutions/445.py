@@ -1,4 +1,5 @@
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.words = set(words)
         self.letters = ''
@@ -14,7 +15,6 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.letters += letter
         chars = self.letters
-
         temp = self.fragments
         for i in range(len(chars)):
             sec = chars[len(chars) - 1 - i:]
@@ -23,16 +23,4 @@ class StreamChecker:
             temp = temp[sec]
             if sec in self.words:
                 return True
-
-    '''
-    def __init__(self, words: List[str]):
-        self.words = tuple(words)
-        self.letters = ''
-        
-    def query(self, letter: str) -> bool:
-        self.letters +=letter
-        return self.letters.endswith(self.words)        
-    '''
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+    "\n    def __init__(self, words: List[str]):\n        self.words = tuple(words)\n        self.letters = ''\n        \n    def query(self, letter: str) -> bool:\n        self.letters +=letter\n        return self.letters.endswith(self.words)        \n    "

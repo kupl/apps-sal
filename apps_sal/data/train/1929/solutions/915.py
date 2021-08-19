@@ -13,7 +13,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         ptrs = self.ptrs
         ptrs.append(self.root)
-        i, L = 0, len(ptrs)
+        (i, L) = (0, len(ptrs))
         found = False
         while i < L:
             if letter in ptrs[i]:
@@ -26,8 +26,3 @@ class StreamChecker:
                 ptrs.pop()
                 L -= 1
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

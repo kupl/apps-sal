@@ -23,9 +23,4 @@ class StreamChecker:
             if letter in p:
                 p2.append(p[letter])
         self.p = p2
-        return any('#' in p for p in self.p)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('#' in p for p in self.p))

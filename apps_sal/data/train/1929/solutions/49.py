@@ -10,7 +10,7 @@ class StreamChecker:
                 cur = cur[chrs]
             cur['#'] = True
         self.stream = collections.deque()
-        print((self.trie))
+        print(self.trie)
 
     def query(self, letter: str) -> bool:
         temp = collections.deque()
@@ -23,8 +23,3 @@ class StreamChecker:
             if '#' in p:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

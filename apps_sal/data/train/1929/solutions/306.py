@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self, char):
         self.node = char
         self.children = {}
@@ -19,7 +20,6 @@ class StreamChecker:
         self.queried = ''
 
     def exists(self, word):
-        # dc
         curr_node = self.trie
         for char in word:
             if char not in curr_node.children:
@@ -39,18 +39,4 @@ class StreamChecker:
         return False
 
 
-'''
- * (d->c->e, f, l->k)
-
-
-[a,b,c,]
-
-
-1. checking the actual problem
-2. checking the trie
-'''
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+'\n * (d->c->e, f, l->k)\n\n\n[a,b,c,]\n\n\n1. checking the actual problem\n2. checking the trie\n'

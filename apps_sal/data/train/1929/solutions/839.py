@@ -19,7 +19,3 @@ class StreamChecker:
         res = any(['#' in p for p in self.p])
         self.p += [self.trie]
         return res
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

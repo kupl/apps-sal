@@ -1,10 +1,12 @@
 class Node:
+
     def __init__(self):
         self.children = {}
         self.stop = False
 
 
 class Trie:
+
     def __init__(self):
         self.word = Node()
 
@@ -17,22 +19,10 @@ class Trie:
             curr = node
         curr.stop = True
 
-#     def startsWith(self, letter):
-#         curr = self.word
-
-#         for l in letter:
-#             node = curr.children.get(l, None)
-#             if not node:
-#                 return False
-#             curr = node
-#         return True
-
     def search(self, word):
         curr = self.word
-
         for l in word:
             node = curr.children.get(l, None)
-
             if not node:
                 return False
             elif node.stop:
@@ -51,10 +41,4 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.pointer += letter
-
         return self.t.search(self.pointer[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

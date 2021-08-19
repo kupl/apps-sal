@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.children = {}
         self.endSymbol = '*'
@@ -13,8 +14,7 @@ class Trie:
 
 
 class StreamChecker:
-    # O(n * m) Time | O(max(n, m)) Space
-    # n: number of queries | m: length of longest word
+
     def __init__(self, words: List[str]):
         self.trie = Trie()
         for word in words:
@@ -31,7 +31,3 @@ class StreamChecker:
                 return False
             nodes = nodes[char]
         return self.trie.endSymbol in nodes
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

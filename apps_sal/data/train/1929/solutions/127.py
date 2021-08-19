@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.end = False
         self.children = [None] * 26
@@ -25,12 +26,9 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.cand.insert(0, letter)
-
         if len(self.cand) > self.maxlen:
             self.cand.pop()
-
         curr = self.root
-
         for c in self.cand:
             if curr.children[ord(c) - ord('a')] is not None:
                 curr = curr.children[ord(c) - ord('a')]
@@ -38,10 +36,4 @@ class StreamChecker:
                     return True
             else:
                 return False
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

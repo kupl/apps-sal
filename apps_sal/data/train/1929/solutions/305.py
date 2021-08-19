@@ -1,5 +1,5 @@
-
 class Node:
+
     def __init__(self, end=False):
         self.end = end
         self.children = [None] * 26
@@ -30,15 +30,9 @@ class StreamChecker:
                     node.children[slot] = Node()
                 node = node.children[slot]
             node.end = True
-
         for word in words:
             add(self.root, word[::-1])
 
     def query(self, letter: str) -> bool:
         self.letters = letter + self.letters
         return self.root.search(self.letters)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

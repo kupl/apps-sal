@@ -3,14 +3,14 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         self.trie = {}
         for word in words:
-            cur = self.trie  # root
+            cur = self.trie
             for char in word:
                 if char not in cur:
                     cur[char] = {}
                 cur = cur[char]
             cur['#'] = True
         self.stream = deque()
-        print((self.trie))
+        print(self.trie)
 
     def query(self, letter: str) -> bool:
         temp = deque()
@@ -23,8 +23,3 @@ class StreamChecker:
             if '#' in p:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
