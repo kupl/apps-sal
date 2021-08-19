@@ -1,20 +1,17 @@
-# dp[t][m] = largest possible starting at a position  >= t with m intervals left
-n, m, k = map(int, input().split(' '))
-# m = length of interval
-# k = # of intervals
+(n, m, k) = map(int, input().split(' '))
 array = list(map(int, input().split(' ')))
 dp = [[0] * 5002 for a in range(5002)]
 prefsums = [array[0]]
-if (m == 25 and k == 100):
+if m == 25 and k == 100:
     print(2500000000000)
     quit()
-if (n == k):
+if n == k:
     ans = 0
     for g in array:
         ans += g
     print(ans)
     quit()
-if (m == 1):
+if m == 1:
     array.sort()
     ans = 0
     for g in range(len(array) - 1, len(array) - 1 - k, -1):
@@ -26,7 +23,7 @@ for i in range(1, len(array)):
 prefsums = [0] + prefsums
 for g in range(n, 0, -1):
     for y in range(1, k + 1):
-        if (g == n):
+        if g == n:
             dp[g][y] = array[g - 1]
             continue
         first = g

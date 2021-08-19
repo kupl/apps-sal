@@ -7,19 +7,15 @@ def inp(r, s, p, jan):
         return p
 
 
-n, k = map(int, input().split(" "))
-r, s, p = map(int, input().split(" "))
+(n, k) = map(int, input().split(' '))
+(r, s, p) = map(int, input().split(' '))
 t = list(input())
 total = 0
 for i in range(n):
     if i < k:
-        # print(2)
+        total += inp(r, s, p, t[i])
+    elif t[i] != t[i - k]:
         total += inp(r, s, p, t[i])
     else:
-        if t[i] != t[i - k]:
-            # print("OK")
-            total += inp(r, s, p, t[i])
-        else:
-            # print("NG")
-            t[i] = 'x'
+        t[i] = 'x'
 print(total)

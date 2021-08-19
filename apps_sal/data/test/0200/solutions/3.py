@@ -1,15 +1,11 @@
-#! /usr/bin/env python3
-'''
+"""
 ' Title:	
 ' Author:	Cheng-Shih, Wong
 ' Date:		
-'''
-
+"""
 import math
-
-h1, h2 = list(map(int, input().split()))
-a, b = list(map(int, input().split()))
-
+(h1, h2) = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if h1 + a * 8 >= h2:
     print(0)
 elif a <= b:

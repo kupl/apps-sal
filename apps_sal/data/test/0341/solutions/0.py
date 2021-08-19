@@ -1,6 +1,5 @@
-###Prediction and Restriction
-n, k = list(map(int, input().split()))
-r, s, p = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
+(r, s, p) = list(map(int, input().split()))
 t = input()
 win = [False] * n
 
@@ -20,15 +19,12 @@ for i in range(n):
         point = janken(t[i])
         cnt += point
         win[i] = True
-    else:
-        if t[i] != t[i - k]:
-            point = janken(t[i])
-            cnt += point
-            win[i] = True
-        else:
-            if not win[i - k]:
-                point = janken(t[i])
-                cnt += point
-                win[i] = True
-
+    elif t[i] != t[i - k]:
+        point = janken(t[i])
+        cnt += point
+        win[i] = True
+    elif not win[i - k]:
+        point = janken(t[i])
+        cnt += point
+        win[i] = True
 print(cnt)

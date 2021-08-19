@@ -1,5 +1,5 @@
-import heapq  # heapqライブラリのimport
-X, Y, Z, K = map(int, input().split())
+import heapq
+(X, Y, Z, K) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
@@ -13,7 +13,7 @@ for r in range(K):
     a = lst[0][1]
     b = lst[0][2]
     c = lst[0][3]
-    print(lst[0][0] * (-1))
+    print(lst[0][0] * -1)
     heapq.heappop(lst)
     if a < X - 1:
         if [a + 1, b, c] not in check:

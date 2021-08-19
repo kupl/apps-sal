@@ -1,31 +1,27 @@
-#!/usr/bin/env python3
-
 def main():
-    n, k = list(map(int, input().split()))
-    r, s, p = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
+    (r, s, p) = list(map(int, input().split()))
     t = input()
-    c = ""
+    c = ''
     ans = 0
-
     for i in range(n):
-        if t[i] == "r":
+        if t[i] == 'r':
             if i >= k and c[i - k] == 'p':
                 c += 'x'
             else:
-                c += "p"
+                c += 'p'
                 ans += p
-        elif t[i] == "s":
+        elif t[i] == 's':
             if i >= k and c[i - k] == 'r':
                 c += 'x'
             else:
-                c += "r"
+                c += 'r'
                 ans += r
+        elif i >= k and c[i - k] == 's':
+            c += 'x'
         else:
-            if i >= k and c[i - k] == 's':
-                c += 'x'
-            else:
-                c += "s"
-                ans += s
+            c += 's'
+            ans += s
     print(ans)
 
 

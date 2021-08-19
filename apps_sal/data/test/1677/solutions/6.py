@@ -42,15 +42,10 @@ for i in range(len(keys)):
         y = keys[j]
         if x == y:
             continue
-
         i1 = 0
         j1 = 0
-        # print("___")
-        #print(d[x], d[y])
         xi = get_len(d[x], d[y])
-        # print(xi)
         ans = max(ans, xi)
 ans1 = [len(d[e]) for e in d]
 ans = max(ans, max(ans1))
 print(ans)
-# 3 1 3 1 3
