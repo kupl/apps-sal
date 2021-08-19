@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 ipnut = input
@@ -16,7 +19,7 @@ def main(t=1):
             if i == 0:
                 a.append(0)
                 b.append(0)
-            elif i == 1 and not f:
+            elif i == 1 and (not f):
                 a.append(1)
                 b.append(0)
                 f = True

@@ -1,12 +1,9 @@
 from sys import stdin
 import math
-
 rgb = 'RGB'
-
 for query in range(int(stdin.readline())):
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     s = stdin.readline()
-
     ans = math.inf
     for start in range(3):
         dp = [0 for i in range(n + 1)]

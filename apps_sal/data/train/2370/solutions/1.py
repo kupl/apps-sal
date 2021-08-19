@@ -8,7 +8,7 @@ for _ in range(int(input())):
     for end in range(1, 27):
         c = 1
         while c * 2 <= len(d[end]):
-            ll, rr = d[end][c - 1] + 1, d[end][-c] - 1
+            (ll, rr) = (d[end][c - 1] + 1, d[end][-c] - 1)
             dd = [0] * 27
             for p in range(ll, rr + 1):
                 dd[r[p]] += 1

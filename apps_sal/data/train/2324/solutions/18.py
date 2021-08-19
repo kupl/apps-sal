@@ -1,8 +1,7 @@
 n = int(input())
 edges = [[] for _ in range(n)]
-
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     edges[a].append(b)
@@ -28,12 +27,11 @@ def bfs(v):
 
 d1 = bfs(0)
 d2 = bfs(n - 1)
-
 c = 0
 for i in range(n):
     if d1[i] <= d2[i]:
         c += 1
 if 2 * c > n:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

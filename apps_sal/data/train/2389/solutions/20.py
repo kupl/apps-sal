@@ -1,8 +1,7 @@
 import sys
-
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, sys.stdin.readline().split()))
+    (n, k) = list(map(int, sys.stdin.readline().split()))
     s = sys.stdin.readline()
     d = {}
     d['R'] = [0, 0, 0]

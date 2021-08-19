@@ -1,4 +1,5 @@
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
 def lis(arr):
@@ -15,7 +16,7 @@ def lis(arr):
 
 
 for tc in range(int(input())):
-    n, = I()
+    (n,) = I()
     l = I()
     ar = l.copy()
     ar.sort()

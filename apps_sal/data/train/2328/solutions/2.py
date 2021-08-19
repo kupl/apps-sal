@@ -1,17 +1,15 @@
 def subsetsum(array, g):
-
     if g == 0 or g < 1:
         return False
     elif len(array) == 0:
         return False
+    elif array[0] == g:
+        return True
     else:
-        if array[0] == g:
-            return True
-        else:
-            return subsetsum(array[1:], (g - array[0])) or subsetsum(array[1:], g)
+        return subsetsum(array[1:], g - array[0]) or subsetsum(array[1:], g)
 
 
-n, q = [int(i) for i in input().split()]
+(n, q) = [int(i) for i in input().split()]
 w = [int(i) for i in input().split()]
 for qq in range(q):
     x = [i for i in input().split()]
@@ -26,6 +24,6 @@ for qq in range(q):
         l = int(x[1]) - 1
         r = int(x[2])
         if subsetsum(w[l:r], int(x[3])):
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

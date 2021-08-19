@@ -1,26 +1,31 @@
 import sys
 input = sys.stdin.readline
-def rInt(): return int(input())
-def mInt(): return map(int, input().split())
-def rLis(): return list(map(int, input().split()))
+
+
+def rInt():
+    return int(input())
+
+
+def mInt():
+    return map(int, input().split())
+
+
+def rLis():
+    return list(map(int, input().split()))
 
 
 outs = []
-
 t = rInt()
 for _ in range(t):
-    n, k = mInt()
+    (n, k) = mInt()
     s = input()
-
     pref = [0]
     for c in s:
         if c == '1':
             pref.append(pref[-1] + 1)
         else:
             pref.append(pref[-1])
-
     best = pref[-1]
-
     dp = []
     for i in range(n):
         cost = pref[i]
@@ -30,13 +35,9 @@ for _ in range(t):
                 cost = case2
         if s[i] == '0':
             cost += 1
-
         dp.append(cost)
         actual = cost + pref[-1] - pref[i + 1]
         if actual < best:
             best = actual
-
     outs.append(best)
-
-
 print(*outs, sep='\n')

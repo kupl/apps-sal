@@ -1,4 +1,3 @@
-
 def main():
     Q = int(input())
     data = []
@@ -7,10 +6,9 @@ def main():
         S1 = [int(a) for a in list(input())]
         S2 = [int(a) for a in list(input())]
         data.append((N, [S1, S2]))
-
     A = [3, 4, 5, 6]
     B = [1, 2]
-    for N, S in data:
+    for (N, S) in data:
         dp = [[0, 0] for _ in range(N + 1)]
         dp[0][0] = 1
         for n in range(N):
@@ -27,9 +25,9 @@ def main():
                 dp[n + 1][0] = dp[n][0]
                 dp[n + 1][1] = dp[n][1]
         if dp[N][1] == 1:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
 
 
 def __starting_point():

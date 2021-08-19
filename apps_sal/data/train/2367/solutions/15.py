@@ -8,24 +8,21 @@ def count_lens(t):
     for _ in range(n):
         for k in range(n - 1):
             if t[k] > t[k + 1]:
-                t[k], t[k + 1] = t[k + 1], t[k]
+                (t[k], t[k + 1]) = (t[k + 1], t[k])
                 res += 1
-
-    return (res) % 2
+    return res % 2
 
 
 def prog():
     input()
-    a, b = input(), input()
+    (a, b) = (input(), input())
     if sorted(a) != sorted(b):
-        print("NO")
+        print('NO')
         return
-
     if len(set(a)) < len(a):
-        print("YES")
+        print('YES')
         return
-
-    print("YES" if count_lens(a) == count_lens(b) else "NO")
+    print('YES' if count_lens(a) == count_lens(b) else 'NO')
 
 
 t = int(input())

@@ -1,8 +1,12 @@
 from collections import defaultdict
-def inpl(): return [int(i) for i in input().split()]
+
+
+def inpl():
+    return [int(i) for i in input().split()]
 
 
 class BIT:
+
     def __init__(self, n):
         self.size = n
         self.tree = [0] * (n + 1)
@@ -20,10 +24,10 @@ class BIT:
             i += i & -i
 
 
-N, M = inpl()
+(N, M) = inpl()
 H = defaultdict(lambda: [])
 for _ in range(N):
-    l, r = inpl()
+    (l, r) = inpl()
     H[r - l + 1].append(l)
 Q = BIT(M + 1)
 ctr = N

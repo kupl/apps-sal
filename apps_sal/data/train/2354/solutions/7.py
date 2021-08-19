@@ -1,6 +1,5 @@
 t = input()
 n = int(input())
-
 ok = [0, 0]
 for i in range(n):
     w = input()
@@ -10,8 +9,7 @@ for i in range(n):
         ok[0] = 1
     if w[0] == t[1]:
         ok[1] = 1
-
 if ok == [1, 1]:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,5 +1,5 @@
 for q in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if m % 10 == 0:
         print(0)
     elif m % 10 == 5:

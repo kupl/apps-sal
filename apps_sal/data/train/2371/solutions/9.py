@@ -10,9 +10,8 @@ for f in range(int(input())):
         if dec:
             if a[i] < a[i + 1]:
                 dec = False
-        else:
-            if a[i] > a[i + 1]:
-                poss = False
-                i += 1
+        elif a[i] > a[i + 1]:
+            poss = False
+            i += 1
         i -= 1
     print(i + 1)

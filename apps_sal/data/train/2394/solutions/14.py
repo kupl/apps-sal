@@ -1,7 +1,6 @@
 from math import ceil
 import sys
 input = sys.stdin.readline
-
 answer = []
 for kek in range(int(input())):
     n = int(input())

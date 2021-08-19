@@ -21,11 +21,9 @@ def main():
     if not flag:
         print(-1)
         return
-
     edge = []
     for i in range(cnt):
         edge.append((i + 1, i + 2))
-
     extend = 0
     now = cnt + 2
     vertex = 2
@@ -38,9 +36,8 @@ def main():
                 now += 1
             extend = 0
             vertex += 1
-
     if now == N + 1:
-        print('\n'.join(' '.join(map(str, a)) for a in edge))
+        print('\n'.join((' '.join(map(str, a)) for a in edge)))
     else:
         print(-1)
 

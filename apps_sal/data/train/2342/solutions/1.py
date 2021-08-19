@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -12,7 +11,6 @@ for _ in range(t):
         if diff > 0:
             curr += diff
     l[n - 1] -= curr
-
     if min(l) >= 0:
         print('YES')
     else:

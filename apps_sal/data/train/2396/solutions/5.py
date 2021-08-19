@@ -9,10 +9,7 @@ def recursion(s, start, end, height):
             return 1
     else:
         middle = (start + end) // 2
-        return min(
-            recursion(s, middle, end, height + 1) + (end - start) // 2 - s[start:middle].count(alphabet[height]),
-            recursion(s, start, middle, height + 1) + (end - start) // 2 - s[middle:end].count(alphabet[height]),
-        )
+        return min(recursion(s, middle, end, height + 1) + (end - start) // 2 - s[start:middle].count(alphabet[height]), recursion(s, start, middle, height + 1) + (end - start) // 2 - s[middle:end].count(alphabet[height]))
 
 
 def solve():

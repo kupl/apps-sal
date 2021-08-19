@@ -4,7 +4,7 @@ for _ in range(t):
     l = list(map(int, input().split()))
     id = list(zip(l, list(range(n))))
     id.sort()
-    val, pos = zip(*id)
+    (val, pos) = zip(*id)
     best = 1
     i = 1
     count = 1

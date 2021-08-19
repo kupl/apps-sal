@@ -9,7 +9,7 @@ def calc(n):
 
 T = int(input())
 for _ in range(T):
-    d, m = list(map(int, input().split()))
+    (d, m) = list(map(int, input().split()))
     s = 1
     for a in calc(d):
         s = s * (a + 1) % m

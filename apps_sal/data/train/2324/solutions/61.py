@@ -1,10 +1,9 @@
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 G = [set() for _ in range(N + 1)]
 for i in range(N - 1):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     G[A].add(B)
     G[B].add(A)
-
 path = []
 stack = [1]
 vs = set()
@@ -23,9 +22,7 @@ while stack:
             stack += [-v, u]
     else:
         path.pop()
-
 x = path[-(-len(path) // 2)]
-
 stack = [1]
 vs = set()
 while stack:
@@ -40,6 +37,6 @@ while stack:
 x = len(vs) - 1
 y = N - 2 - x
 if x > y:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

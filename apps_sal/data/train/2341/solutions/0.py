@@ -3,9 +3,10 @@ readline = sys.stdin.readline
 
 
 class Segtree:
+
     def __init__(self, A, intv, initialize=True, segf=max):
         self.N = len(A)
-        self.N0 = 2**(self.N - 1).bit_length()
+        self.N0 = 2 ** (self.N - 1).bit_length()
         self.intv = intv
         self.segf = segf
         if initialize:
@@ -23,7 +24,7 @@ class Segtree:
             self.data[k] = self.segf(self.data[2 * k], self.data[2 * k + 1])
 
     def query(self, l, r):
-        L, R = l + self.N0, r + self.N0
+        (L, R) = (l + self.N0, r + self.N0)
         s = self.intv
         while L < R:
             if R & 1:
@@ -37,8 +38,8 @@ class Segtree:
         return s
 
     def binsearch(self, l, r, check, reverse=False):
-        L, R = l + self.N0, r + self.N0
-        SL, SR = [], []
+        (L, R) = (l + self.N0, r + self.N0)
+        (SL, SR) = ([], [])
         while L < R:
             if R & 1:
                 R -= 1
@@ -48,9 +49,8 @@ class Segtree:
                 L += 1
             L >>= 1
             R >>= 1
-
         if reverse:
-            for idx in (SR + SL[::-1]):
+            for idx in SR + SL[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -62,7 +62,7 @@ class Segtree:
                     idx = 2 * idx
             return idx - self.N0
         else:
-            for idx in (SL + SR[::-1]):
+            for idx in SL + SR[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -77,16 +77,15 @@ class Segtree:
 
 Tc = int(readline())
 Ans = [None] * Tc
-
 for qu in range(Tc):
-    N, M, K = list(map(int, readline().split()))
+    (N, M, K) = list(map(int, readline().split()))
     A = list(map(int, readline().split()))
     Ai = A[::-1]
     table = [None] * M
     for i in range(M):
-        j = (M - 1) - i
+        j = M - 1 - i
         table[i] = max(A[i], Ai[j])
-    inf = 10**9 + 7
+    inf = 10 ** 9 + 7
     T = Segtree(table, inf, initialize=True, segf=min)
     ans = min(table)
     K = min(K, M - 1)

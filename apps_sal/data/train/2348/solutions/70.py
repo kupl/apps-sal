@@ -1,7 +1,7 @@
 n = int(input())
 hot = list(map(int, input().split()))
 n_ = n.bit_length()
-db = [[n - 1] * (n)]
+db = [[n - 1] * n]
 L = int(input())
 r = 1
 for i in range(n - 1):
@@ -20,7 +20,7 @@ def query(s, t):
     dt = 0
     for j in range(n_ - 1, 0, -1):
         if db[j][s] < t:
-            dt += 2**j
+            dt += 2 ** j
             s = db[j][s]
     while s < t:
         dt += 1
@@ -30,7 +30,7 @@ def query(s, t):
 
 q = int(input())
 for _ in range(q):
-    s, t = list(map(int, input().split()))
+    (s, t) = list(map(int, input().split()))
     if t < s:
-        s, t = t, s
-    print((query(s - 1, t - 1)))
+        (s, t) = (t, s)
+    print(query(s - 1, t - 1))

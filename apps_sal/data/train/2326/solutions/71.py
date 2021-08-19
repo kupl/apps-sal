@@ -9,7 +9,7 @@ def solve():
     Atype = list(set(A))
     Atype.sort(reverse=True)
     Atype.append(0)
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         if a in nDict:
             nDict[a].append(i)
         else:
@@ -23,8 +23,7 @@ def solve():
         group += len(nDict[cN])
         nextN = Atype[i + 1]
         count[minIndex] += (cN - nextN) * group
-    print("\n".join(map(str, count)))
-
+    print('\n'.join(map(str, count)))
     return 0
 
 

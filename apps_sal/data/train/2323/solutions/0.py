@@ -4,6 +4,7 @@ def main():
     input = sys.stdin.readline
 
     class Bit:
+
         def __init__(self, n):
             self.size = n
             self.size_bit_length = n.bit_length()
@@ -28,15 +29,14 @@ def main():
             if w <= 0:
                 return 0
             x = 0
-            k = 1 << (self.size_bit_length - 1)
+            k = 1 << self.size_bit_length - 1
             while k:
                 if x + k <= self.size and self.tree[x + k] < w:
                     w -= self.tree[x + k]
                     x += k
                 k >>= 1
             return x + 1
-
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     dist = [0] + list(map(int, input().split()))
     for i in range(N - 1):
         dist[i + 1] += dist[i]
@@ -45,15 +45,14 @@ def main():
         BB = list(map(int, input().split()))
         for j in range(M):
             B[j * N + i] = BB[j] * (N + 1) + i + 1
-
     imos = []
     for i in range(N + 1):
         imos.append([0] * (N + 1 - i))
     bit = Bit(N)
     for m in range(M):
         bit.reset()
-        for bi in sorted(B[m * N: (m + 1) * N], reverse=True):
-            b, i = divmod(bi, N + 1)
+        for bi in sorted(B[m * N:(m + 1) * N], reverse=True):
+            (b, i) = divmod(bi, N + 1)
             k = bit.sum(i)
             l = bit.lower_bound(k)
             r = bit.lower_bound(k + 1)
@@ -65,7 +64,6 @@ def main():
             if i != N and r != N + 1:
                 imos[i + 1][r - (i + 1)] += b
             bit.add(i, 1)
-
     for i in range(1, N + 1):
         for j in range(i + 1, N + 1):
             imos[i][j - i] += imos[i][j - 1 - i]

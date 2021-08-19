@@ -3,14 +3,14 @@ from math import sqrt
 
 
 def distf(xyr, i, j):
-    x, y, r = xyr[i]
-    x1, y1, r1 = xyr[j]
-    d = max(0, sqrt((x - x1)**2 + (y - y1)**2) - r - r1)
+    (x, y, r) = xyr[i]
+    (x1, y1, r1) = xyr[j]
+    d = max(0, sqrt((x - x1) ** 2 + (y - y1) ** 2) - r - r1)
     return d
 
 
 def main():
-    xs, ys, xt, yt = list(map(int, input().split()))
+    (xs, ys, xt, yt) = list(map(int, input().split()))
     n = int(input())
     xyr = [list(map(int, input().split())) for _ in range(n)]
     xyr.append([xs, ys, 0])
@@ -27,7 +27,7 @@ def main():
     seen[n] = 0
     mi = set(range(n + 2))
     while mi:
-        d, v = inf, -1
+        (d, v) = (inf, -1)
         for j in mi:
             if d > seen[j]:
                 d = seen[j]
@@ -37,7 +37,7 @@ def main():
             nd = dist[v][nv]
             if seen[nv] > seen[v] + nd:
                 seen[nv] = seen[v] + nd
-    print((seen[n + 1]))
+    print(seen[n + 1])
 
 
 def __starting_point():

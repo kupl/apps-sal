@@ -1,7 +1,7 @@
 def main(n, a):
     ret = [0] * n
     d = {}
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if x in d:
             d[x].append(i)
         else:
@@ -9,7 +9,7 @@ def main(n, a):
     v = sorted(list(d.keys()), reverse=True)
     cnt_idx = 0
     min_idx = n + 1
-    for i, x in enumerate(v):
+    for (i, x) in enumerate(v):
         cnt_idx += len(d[x])
         min_idx = min(min_idx, d[x][0])
         nx = 0

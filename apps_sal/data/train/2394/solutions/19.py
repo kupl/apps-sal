@@ -5,11 +5,11 @@ for you in range(t):
     curr = 0
     ans = 0
     for i in s:
-        if(i == '('):
+        if i == '(':
             curr += 1
         else:
             curr -= 1
-        if(curr < 0):
+        if curr < 0:
             ans += 1
             curr = 0
     print(ans)

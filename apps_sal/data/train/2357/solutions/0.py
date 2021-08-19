@@ -15,11 +15,13 @@ def modinv(a, m):
     return modpow(a, m - 2, m)
 
 
-n, m = [int(_) for _ in input().split(' ')]
+(n, m) = [int(_) for _ in input().split(' ')]
 s = sum([int(_) for _ in input().split(' ')])
-
-M = 1_000_000_007
-def product(x1, x2): return x1 * x2 % M
+M = 1000000007
 
 
-print((reduce(product, list(range(m - s + 1, m + n + 1))) * modinv(reduce(product, list(range(1, s + n + 1))), M) % M))
+def product(x1, x2):
+    return x1 * x2 % M
+
+
+print(reduce(product, list(range(m - s + 1, m + n + 1))) * modinv(reduce(product, list(range(1, s + n + 1))), M) % M)

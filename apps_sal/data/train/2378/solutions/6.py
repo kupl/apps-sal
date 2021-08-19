@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    l, r, u, d = 0, 0, 0, 0
+    (l, r, u, d) = (0, 0, 0, 0)
     s = list(input())
     for i in s:
         if i == 'L':

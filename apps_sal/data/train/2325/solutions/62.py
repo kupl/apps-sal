@@ -1,4 +1,4 @@
-S, T, q, *L = open(0).read().split()
+(S, T, q, *L) = open(0).read().split()
 sa = [0]
 sb = [0]
 ta = [0]
@@ -17,7 +17,7 @@ for c in T:
     else:
         ta.append(ta[-1])
         tb.append(tb[-1] + 1)
-for a, b, c, d in zip(*[iter(map(int, L))] * 4):
+for (a, b, c, d) in zip(*[iter(map(int, L))] * 4):
     nsa = sa[b] - sa[a - 1]
     nsb = sb[b] - sb[a - 1]
     nta = ta[d] - ta[c - 1]

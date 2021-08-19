@@ -5,14 +5,13 @@ for nt in range(int(input())):
     ans = 0
     for i in range(n):
         if len(stack) == 0:
-            if s[i] == ")":
-                s += ")"
+            if s[i] == ')':
+                s += ')'
                 ans += 1
             else:
-                stack.append("(")
+                stack.append('(')
+        elif s[i] == ')':
+            stack.pop()
         else:
-            if s[i] == ")":
-                stack.pop()
-            else:
-                stack.append("(")
+            stack.append('(')
     print(ans)

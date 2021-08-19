@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     q = int(buf)
@@ -8,7 +7,6 @@ def main():
         buf = input()
         s.append(buf)
         n.append(len(s[t]))
-
     ans = []
     for t in range(q):
         c = {'L': 0, 'R': 0, 'U': 0, 'D': 0}

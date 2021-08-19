@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         q = []
         p = max(arr) + k
@@ -6,5 +7,4 @@ class Solution:
             if i not in arr:
                 q.append(i)
         print(q)
-
-        return(q[k - 1])
+        return q[k - 1]

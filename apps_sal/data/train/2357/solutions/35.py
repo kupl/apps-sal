@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-n, m = map(int, input().split())
+mod = 10 ** 9 + 7
+(n, m) = map(int, input().split())
 s = sum(map(int, input().split()))
 a = n + m
 b = s + n

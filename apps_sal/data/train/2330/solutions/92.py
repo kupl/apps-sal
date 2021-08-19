@@ -1,16 +1,15 @@
 import sys
 input = sys.stdin.readline
-
 S = '-' + input().rstrip()
 N = len(S) - 1
 
 
 def solve(S):
     if S[1] == '0':
-        print((-1))
+        print(-1)
         return
     if S[N] == '1':
-        print((-1))
+        print(-1)
         return
     prev = 1
     graph = []
@@ -28,8 +27,7 @@ def solve(S):
 
 
 graph = solve(S)
-
 if graph is None:
-    print((-1))
+    print(-1)
 else:
-    print(('\n'.join(graph)))
+    print('\n'.join(graph))

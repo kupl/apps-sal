@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(a) for a in input().split()]
-
 ans = [0] * N
 num = 0
 B = sorted(A)
@@ -12,6 +11,5 @@ for i in range(N):
         j += 1
     ans[i] = cnt + max(0, (N - j) * (A[i] - num))
     num = max(num, A[i])
-
 for a in ans:
     print(a)

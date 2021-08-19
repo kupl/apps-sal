@@ -25,16 +25,16 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     s = st()
     stack = []
     for i in range(len(s)):
         stack.append(s[i])
-        while(len(stack) != 0 and len(stack) - 1):
+        while len(stack) != 0 and len(stack) - 1:
             x = stack[-1]
             y = stack[-2]
-            if(x == y == 'B' or (x == 'B' and y == 'A')):
+            if x == y == 'B' or (x == 'B' and y == 'A'):
                 stack.pop()
                 stack.pop()
             else:

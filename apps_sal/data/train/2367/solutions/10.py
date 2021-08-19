@@ -11,7 +11,7 @@ def solve():
     int(input())
     s = input()
     t = input()
-    if(sorted(s) != sorted(t)):
+    if sorted(s) != sorted(t):
         print('NO')
         return
     for i in range(26):

@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 b = sorted([(i + 1, a[i]) for i in range(n)], key=lambda x: -x[1])
 ans = [0] * (n + 1)
 m = float('inf')

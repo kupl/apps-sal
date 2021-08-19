@@ -2,6 +2,7 @@ from collections import deque
 
 
 class line:
+
     def __init__(self, k, b):
         self.k = k
         self.b = b
@@ -18,7 +19,6 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ans = 0
-
 hull = deque()
 hull.append(line(b[0], 0))
 for i in range(1, n):
@@ -30,5 +30,4 @@ for i in range(1, n):
     while len(hull) > 1 and check(hull[-2], hull[-1], nl):
         hull.pop()
     hull.append(nl)
-
 print(ans)

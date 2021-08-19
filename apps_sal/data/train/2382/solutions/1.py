@@ -1,18 +1,14 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for tests in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     A = [input().strip() for i in range(n)]
-
     X = A[0]
     flag = 0
-
     for i in range(m):
         for j in range(26):
             Y = X[:i] + chr(97 + j) + X[i + 1:]
-
             for k in range(n):
                 score = 0
                 for l in range(m):

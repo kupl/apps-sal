@@ -1,5 +1,5 @@
 import sys
-alph = "abcdefghijklmnopqrstuvwqyz"
+alph = 'abcdefghijklmnopqrstuvwqyz'
 
 
 def solve(s, i, n):

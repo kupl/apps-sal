@@ -1,15 +1,13 @@
 class Solution:
-    def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
 
+    def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         maxD2 = 0
         pos = [0, 0]
         ori = [[0, 1], [1, 0], [0, -1], [-1, 0]]
         pOri = 0
-
         obsSet = set()
         for i in obstacles:
             obsSet.add(tuple(i))
-
         for i in commands:
             if i == -1:
                 pOri += 1
@@ -28,6 +26,5 @@ class Solution:
                         n += 1
                     else:
                         break
-                maxD2 = max(maxD2, pos[0]**2 + pos[1]**2)
-
-        return(maxD2)
+                maxD2 = max(maxD2, pos[0] ** 2 + pos[1] ** 2)
+        return maxD2

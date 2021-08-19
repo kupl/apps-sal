@@ -25,6 +25,5 @@ for i in range(n):
             else:
                 Ans[j] += a - M[j]
                 D[M[j]] += 1
-
 for a in Ans:
     print(a)

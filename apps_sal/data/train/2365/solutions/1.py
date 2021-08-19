@@ -4,19 +4,19 @@ def __starting_point():
         n = int(input())
         ns = {}
         for _ in range(n - 1):
-            _, *p = list(map(int, input().split()))
+            (_, *p) = list(map(int, input().split()))
             tp = tuple(p)
             for pp in p:
                 ns.setdefault(pp, set()).add(tp)
-        first = [(k, list(v)[0]) for k, v in list(ns.items()) if len(v) == 1]
+        first = [(k, list(v)[0]) for (k, v) in list(ns.items()) if len(v) == 1]
         found = False
         while not found:
-            nns = {k: v.copy() for k, v in list(ns.items())}
+            nns = {k: v.copy() for (k, v) in list(ns.items())}
             min_index = {}
-            cur, cur_tp = first.pop()
+            (cur, cur_tp) = first.pop()
             result = [cur]
             failed = False
-            while len(nns) > 0 and not failed:
+            while len(nns) > 0 and (not failed):
                 nxt = set()
                 for k in cur_tp:
                     mi = n - len(result) - len(cur_tp) + 1
@@ -44,12 +44,12 @@ def __starting_point():
                 if len(nns) == 1:
                     result.append(nns.popitem()[0])
                 else:
-                    a1, a2 = list(nns.keys())
+                    (a1, a2) = list(nns.keys())
                     if min_index[a1] == 1:
                         result.extend((a1, a2))
                     else:
                         result.extend((a2, a1))
-                print(" ".join(map(str, reversed(result))))
+                print(' '.join(map(str, reversed(result))))
 
 
 __starting_point()

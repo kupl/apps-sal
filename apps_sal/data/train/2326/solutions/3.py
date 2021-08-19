@@ -1,11 +1,11 @@
 n = int(input())
 a = list(map(int, input().split()))
 l = [(0, n)]
-for i, A in enumerate(a):
+for (i, A) in enumerate(a):
     l.append((A, i))
 l.sort(reverse=True)
 ans = [0] * n
-mi = float("inf")
+mi = float('inf')
 for i in range(n):
     if mi > l[i][1]:
         mi = l[i][1]

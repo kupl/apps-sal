@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 M = 998244353
 dp = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
 dp[0][0] = 1

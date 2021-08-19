@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
+
         def binary_search(t):
             lo = 0
             hi = len(arr)
@@ -9,7 +11,6 @@ class Solution:
                     return False
                 if arr[mid] == t:
                     return True
-
                 if arr[mid] > t:
                     hi = mid - 1
                 else:

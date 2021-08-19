@@ -9,14 +9,14 @@ for _ in range(q):
     pos = 0
     can = True
     for i in range(n):
-        if(pipe[pos][i] > "2"):
+        if pipe[pos][i] > '2':
             pos ^= 1
-            if(pipe[pos][i] <= "2"):
+            if pipe[pos][i] <= '2':
                 can = False
                 break
     if pos == 0:
         can = False
-    if(can):
-        print("YES")
+    if can:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

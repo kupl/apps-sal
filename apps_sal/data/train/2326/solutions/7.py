@@ -10,4 +10,4 @@ for i in range(n):
     ans[s[i][1]] += dif * (i + 1)
     if s[i + 1][1] > s[i][1]:
         s[i + 1][1] = s[i][1]
-print(*ans, sep="\n")
+print(*ans, sep='\n')

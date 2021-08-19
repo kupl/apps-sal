@@ -6,7 +6,7 @@ def fun(n, a):
     count = 0
     i = 0
     while i < n:
-        if a[i] == "(":
+        if a[i] == '(':
             count += 1
         else:
             count -= 1

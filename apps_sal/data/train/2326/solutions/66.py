@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-l = [(x, i) for i, x in enumerate(a)]
+l = [(x, i) for (i, x) in enumerate(a)]
 l.sort(reverse=True)
 l += [(0, n)]
 g = [0] * n

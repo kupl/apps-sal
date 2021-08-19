@@ -14,11 +14,11 @@ for _ in range(int(input())):
     y = min(cnt[2], cnt[3])
     if x == 0:
         if y == 0:
-            print("0")
+            print('0')
         else:
-            print("2\nDU")
+            print('2\nDU')
     elif y == 0:
-        print("2\nLR")
+        print('2\nLR')
     else:
         print(2 * (x + y))
-        print("L" * x + "D" * y + "R" * x + "U" * y)
+        print('L' * x + 'D' * y + 'R' * x + 'U' * y)

@@ -1,6 +1,6 @@
 t = int(input())
 for test in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     length = 1
     a = [0] * 10
     cur = m % 10

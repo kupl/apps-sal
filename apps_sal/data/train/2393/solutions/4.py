@@ -9,13 +9,13 @@ for t in range(T):
     can = True
     for i in range(n - 1):
         for j in range(n - 1):
-            if arr[i][j] == "1":
-                if arr[i + 1][j] == "0" and arr[i][j + 1] == "0":
+            if arr[i][j] == '1':
+                if arr[i + 1][j] == '0' and arr[i][j + 1] == '0':
                     can = False
                     break
         if not can:
             break
     if can:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

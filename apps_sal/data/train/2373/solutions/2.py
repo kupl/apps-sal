@@ -1,6 +1,5 @@
 def __starting_point():
     n = int(input())
-
     for i in range(n):
         h = list(map(int, input().rstrip().split()))
         N = h[0]

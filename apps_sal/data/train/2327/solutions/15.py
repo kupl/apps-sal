@@ -3,10 +3,11 @@ input = sys.stdin.readline
 
 
 def solve():
+
     def makeBIT(numEle):
         numPow2 = 2 ** (numEle - 1).bit_length()
         data = [0] * (numPow2 + 1)
-        return data, numPow2
+        return (data, numPow2)
 
     def addValue(iA, A):
         iB = iA + 1
@@ -26,15 +27,12 @@ def solve():
         addValue(iTo, A)
         if iFr > 0:
             addValue(iFr - 1, -A)
-
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     LRss = [[] for _ in range(M + 1)]
     for _ in range(N):
-        L, R = list(map(int, input().split()))
+        (L, R) = list(map(int, input().split()))
         LRss[R - L + 1].append((L, R))
-
-    data, numPow2 = makeBIT(M + 1)
-
+    (data, numPow2) = makeBIT(M + 1)
     anss = []
     numOK = N
     for d in range(1, M + 1):
@@ -43,10 +41,9 @@ def solve():
             ans += getValue(i)
         anss.append(ans)
         numOK -= len(LRss[d])
-        for L, R in LRss[d]:
+        for (L, R) in LRss[d]:
             addRangeValue(L, R, 1)
-
-    print(('\n'.join(map(str, anss))))
+    print('\n'.join(map(str, anss)))
 
 
 solve()

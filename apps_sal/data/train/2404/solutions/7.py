@@ -1,7 +1,9 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
+
         def bsearch(arr, val):
-            low, high = 0, len(arr) - 1
+            (low, high) = (0, len(arr) - 1)
             while low <= high:
                 mid = (low + high) // 2
                 if arr[mid] < val:

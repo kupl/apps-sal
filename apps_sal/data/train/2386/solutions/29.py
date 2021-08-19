@@ -5,7 +5,7 @@ for i in range(0, t):
     M = [False] * (n + 1)
     N = []
     for i in range(0, 2 * n):
-        if(not M[L[i]]):
+        if not M[L[i]]:
             N.append(L[i])
             M[L[i]] = True
     print(*N)

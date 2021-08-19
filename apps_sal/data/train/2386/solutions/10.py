@@ -6,7 +6,7 @@ def fun(n, a):
     for i in range(2 * n):
         if ans.count(a[i]) == 0:
             ans.append(a[i])
-    print(*ans, sep=" ")
+    print(*ans, sep=' ')
 
 
 while t:

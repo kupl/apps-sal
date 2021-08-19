@@ -1,7 +1,6 @@
 import heapq
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -24,7 +23,7 @@ for _ in range(t):
                 else:
                     cnt = 1
                     ans = [1]
-                    arr[0], arr[1], arr[2] = arr[2], arr[0], arr[1]
+                    (arr[0], arr[1], arr[2]) = (arr[2], arr[0], arr[1])
                     if arr[0] <= arr[1] <= arr[2]:
                         print(cnt)
                         print(*ans)
@@ -36,7 +35,7 @@ for _ in range(t):
             else:
                 cnt = 1
                 ans = [1]
-                arr[0], arr[1], arr[2] = arr[2], arr[0], arr[1]
+                (arr[0], arr[1], arr[2]) = (arr[2], arr[0], arr[1])
                 if arr[0] <= arr[1] <= arr[2]:
                     print(cnt)
                     print(*ans)
@@ -71,7 +70,7 @@ for _ in range(t):
                                 tmp += 1
                             if arr[tpos + 1] > arr[tpos + 2]:
                                 tmp += 1
-                            arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 2], arr[tpos], arr[tpos + 1]
+                            (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 2], arr[tpos], arr[tpos + 1])
                             if arr[tpos] > arr[tpos + 1]:
                                 tmp -= 1
                             if arr[tpos] > arr[tpos + 2]:
@@ -91,7 +90,7 @@ for _ in range(t):
                                 tmp += 1
                             if arr[tpos + 1] > arr[tpos + 2]:
                                 tmp += 1
-                            arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 1], arr[tpos + 2], arr[tpos]
+                            (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 1], arr[tpos + 2], arr[tpos])
                             if arr[tpos] > arr[tpos + 1]:
                                 tmp -= 1
                             if arr[tpos] > arr[tpos + 2]:
@@ -124,7 +123,7 @@ for _ in range(t):
                             tmp += 1
                         if arr[tpos + 1] > arr[tpos + 2]:
                             tmp += 1
-                        arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 2], arr[tpos], arr[tpos + 1]
+                        (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 2], arr[tpos], arr[tpos + 1])
                         if arr[tpos] > arr[tpos + 1]:
                             tmp -= 1
                         if arr[tpos] > arr[tpos + 2]:
@@ -144,7 +143,7 @@ for _ in range(t):
                             tmp += 1
                         if arr[tpos + 1] > arr[tpos + 2]:
                             tmp += 1
-                        arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 1], arr[tpos + 2], arr[tpos]
+                        (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 1], arr[tpos + 2], arr[tpos])
                         if arr[tpos] > arr[tpos + 1]:
                             tmp -= 1
                         if arr[tpos] > arr[tpos + 2]:
@@ -165,7 +164,7 @@ for _ in range(t):
                 if ttpos == -1:
                     cnt += 1
                     ans.append(n - 2)
-                    arr[n - 3], arr[n - 2], arr[n - 1] = arr[n - 1], arr[n - 3], arr[n - 2]
+                    (arr[n - 3], arr[n - 2], arr[n - 1]) = (arr[n - 1], arr[n - 3], arr[n - 2])
                     if arr[n - 3] <= arr[n - 2] <= arr[n - 1]:
                         print(cnt)
                         print(*ans)
@@ -178,7 +177,7 @@ for _ in range(t):
                     cnt += 2
                     ans.append(ttpos + 1)
                     ans.append(ttpos + 1)
-                    arr[ttpos], arr[ttpos + 1], arr[ttpos + 2] = arr[ttpos + 1], arr[ttpos + 2], arr[ttpos]
+                    (arr[ttpos], arr[ttpos + 1], arr[ttpos + 2]) = (arr[ttpos + 1], arr[ttpos + 2], arr[ttpos])
                     turned += 1
                     q = []
                     for i in range(n):
@@ -195,13 +194,13 @@ for _ in range(t):
                                 cnt += 1
                                 tpos -= 2
                                 ans.append(tpos + 1)
-                                arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 2], arr[tpos], arr[tpos + 1]
+                                (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 2], arr[tpos], arr[tpos + 1])
                             if tpos - pos == 1:
                                 cnt += 2
                                 tpos -= 1
                                 ans.append(tpos + 1)
                                 ans.append(tpos + 1)
-                                arr[tpos], arr[tpos + 1], arr[tpos + 2] = arr[tpos + 1], arr[tpos + 2], arr[tpos]
+                                (arr[tpos], arr[tpos + 1], arr[tpos + 2]) = (arr[tpos + 1], arr[tpos + 2], arr[tpos])
                             pos += 1
                     print(cnt)
                     print(*ans)

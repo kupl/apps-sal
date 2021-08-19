@@ -17,7 +17,7 @@ def main():
             dic[v] = p
             num.append(v)
     min_idx = [n] * len(cnt)
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         if min_idx[dic[v]] > i:
             min_idx[dic[v]] = i
     for i in reversed(range(1, len(cnt))):

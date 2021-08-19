@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         vec = []
         numbers = [x + 1 for x in range(max(arr) + k)]

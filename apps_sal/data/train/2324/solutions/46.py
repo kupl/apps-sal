@@ -1,7 +1,7 @@
-from networkx import*
-(N,), *t = [s.split()for s in open(0)]
+from networkx import *
+((N,), *t) = [s.split() for s in open(0)]
 G = Graph()
-for a, b in t:
+for (a, b) in t:
     G.add_edge(a, b)
 s = shortest_path_length
 x = s(G, '1')

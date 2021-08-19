@@ -1,9 +1,7 @@
 S = input()
 N = len(S)
-
 if S[-1] == '1' or S[0] == '0':
     print(-1)
-
 else:
     for i in range(N - 1):
         if S[i] != S[N - 2 - i]:

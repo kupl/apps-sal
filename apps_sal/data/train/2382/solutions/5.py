@@ -9,11 +9,10 @@ def check(a, b):
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     data = []
     for i in range(n):
         data.append(input())
-
     result = False
     for i in range(m):
         for j in range(0, 26):
@@ -28,6 +27,5 @@ for _ in range(int(input())):
                 break
         if result:
             break
-
     if not result:
-        print("-1")
+        print('-1')

@@ -18,7 +18,7 @@ for i in range(1, len(t) + 1):
         acumt[i][0] = acumt[i - 1][0]
         acumt[i][1] = acumt[i - 1][1] + 1
 for _ in range(q):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     cnt1 = (acums[b][0] - acums[a - 1][0]) * 2 + (acums[b][1] - acums[a - 1][1])
     cnt2 = (acumt[d][0] - acumt[c - 1][0]) * 2 + (acumt[d][1] - acumt[c - 1][1])
     if (cnt1 - cnt2) % 3 == 0:

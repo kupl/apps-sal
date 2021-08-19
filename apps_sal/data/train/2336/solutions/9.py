@@ -1,13 +1,8 @@
 from sys import stdin
-
 n = int(stdin.readline())
-
 p = [int(x) - 1 for x in stdin.readline().split()]
-
 visited = [False for x in range(n)]
-
 loops = []
-
 for x in range(n):
     if not visited[x]:
         visited[x] = True
@@ -19,17 +14,13 @@ for x in range(n):
             l.append(cur)
             cur = p[cur]
         loops.append(len(l) - 1)
-
-
 tot = sum(loops)
-
 if n % 2 == 1:
     if tot % 2 == 1:
         print('Petr')
     else:
         print('Um_nik')
+elif tot % 2 == 0:
+    print('Petr')
 else:
-    if tot % 2 == 0:
-        print('Petr')
-    else:
-        print('Um_nik')
+    print('Um_nik')

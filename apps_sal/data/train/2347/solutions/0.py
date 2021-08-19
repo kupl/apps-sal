@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     l = [''] * k
     works = True

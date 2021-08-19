@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    ans, min1 = 0, float('inf')
+    (ans, min1) = (0, float('inf'))
     for q in range(n - 1, -1, -1):
         if a[q] > min1:
             ans += 1

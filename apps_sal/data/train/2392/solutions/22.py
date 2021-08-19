@@ -1,15 +1,18 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 
 
-t, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(t,) = I()
 while t:
     t -= 1
-    n, m = I()
+    (n, m) = I()
     l = []
     i = 1
-    while (i * m) % 10 not in l:
-        l.append((i * m) % 10)
+    while i * m % 10 not in l:
+        l.append(i * m % 10)
         i += 1
     k = len(l) * m
     ans = sum(l) * (n // k)

@@ -1,4 +1,5 @@
 class Solution:
+
     def firstUniqChar(self, s):
         """
         :type s: str
@@ -10,13 +11,11 @@ class Solution:
             char = s[i]
             if char in repeated:
                 continue
-
             if char in buffer:
-                del(buffer[char])
+                del buffer[char]
                 repeated.add(char)
             else:
                 buffer[char] = i
         if not buffer:
             return -1
-
         return sorted(list(buffer.items()), key=lambda x: x[1])[0][1]

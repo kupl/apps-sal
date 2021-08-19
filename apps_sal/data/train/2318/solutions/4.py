@@ -1,9 +1,10 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, k = f()
+(n, k) = f()
 j = 0
-for i, q in enumerate(f(), 1):
+for (i, q) in enumerate(f(), 1):
     if j * (i - n) * q < k:
         print(i)
     else:

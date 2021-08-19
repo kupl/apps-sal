@@ -1,9 +1,21 @@
 import sys
 mod = 1000000007
-def get_array(): return list(map(int, sys.stdin.readline().split()))
-def get_ints(): return map(int, sys.stdin.readline().split())
-def input(): return sys.stdin.readline()
-def print_array(a): print(" ".join(map(str, a)))
+
+
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def get_ints():
+    return map(int, sys.stdin.readline().split())
+
+
+def input():
+    return sys.stdin.readline()
+
+
+def print_array(a):
+    print(' '.join(map(str, a)))
 
 
 def main():

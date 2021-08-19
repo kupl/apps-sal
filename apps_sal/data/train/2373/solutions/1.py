@@ -2,7 +2,7 @@ from sys import stdin
 input = stdin.readline
 t = int(input())
 for iwuehufiew in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     odc = [[1 + min(l[i], l[n - 1 - i]), k + max(l[i], l[n - 1 - i])] for i in range(n // 2)]
     cyk = [0] * (2 * k + 2)

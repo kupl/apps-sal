@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     l = [int(x) for x in input().split()]
@@ -11,8 +10,8 @@ for _ in range(t):
             continue
         prev = j
         if j >= last_start:
-            print("No")
+            print('No')
             break
         last_start = j
     else:
-        print("Yes")
+        print('Yes')

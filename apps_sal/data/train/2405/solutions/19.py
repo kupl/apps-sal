@@ -1,4 +1,5 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         arrow = [(-1, 0), (0, 1), (1, 0), (0, -1)]
         arrowNow = 1
@@ -16,6 +17,6 @@ class Solution:
                     rowNow = curPoint[0] + arrow[arrowNow][0]
                     colomNow = curPoint[1] + arrow[arrowNow][1]
                     if (rowNow, colomNow) not in setObs:
-                        ans = max(ans, rowNow**2 + colomNow**2)
-                        curPoint[0], curPoint[1] = rowNow, colomNow
+                        ans = max(ans, rowNow ** 2 + colomNow ** 2)
+                        (curPoint[0], curPoint[1]) = (rowNow, colomNow)
         return ans

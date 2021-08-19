@@ -1,12 +1,15 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 T = int(input())
 for _ in range(T):
     N = int(input())
     A = [int(a) - 1 for a in input().split()]
-    D = {a: i for i, a in enumerate(A)}
+    D = {a: i for (i, a) in enumerate(A)}
     X = [0] * N + [1]
     pre = N - 1
     for k in range(N):
@@ -15,7 +18,7 @@ for _ in range(T):
             pre = i
             X[pre] = 1
         else:
-            print("No")
+            print('No')
             break
     else:
-        print("Yes")
+        print('Yes')

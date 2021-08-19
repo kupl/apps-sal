@@ -1,6 +1,5 @@
 S = input()
-
-if S[-1] == "1" or S[0] == "0":
+if S[-1] == '1' or S[0] == '0':
     print(-1)
 else:
     flag = True
@@ -9,14 +8,13 @@ else:
             flag = False
             print(-1)
             break
-
     if flag:
         ans = []
         now = 1
         nxt = 2
         for i in range(len(S) // 2):
             ans.append((now, nxt))
-            if S[i] == "1":
+            if S[i] == '1':
                 now = nxt
                 nxt += 1
             else:

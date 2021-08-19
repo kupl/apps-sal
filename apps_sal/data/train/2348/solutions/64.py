@@ -2,7 +2,6 @@ N = int(input())
 X = list(map(int, input().split()))
 L = int(input())
 Q = int(input())
-
 V = [0] * N
 ib = 0
 for i in range(N):
@@ -21,8 +20,8 @@ for i in range(1, 18):
             break
         dbl[i][j] = dbl[i - 1][ii]
 for i in range(Q):
-    a, b = list(map(int, input().split()))
-    a, b = sorted([a, b])
+    (a, b) = list(map(int, input().split()))
+    (a, b) = sorted([a, b])
     a -= 1
     b -= 1
     ind = a

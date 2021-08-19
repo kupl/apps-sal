@@ -1,7 +1,7 @@
 q = int(input())
 for i in range(q):
     s = str(input())
-    l, r, u, d = 0, 0, 0, 0
+    (l, r, u, d) = (0, 0, 0, 0)
     for t in s:
         if t == 'L':
             l += 1

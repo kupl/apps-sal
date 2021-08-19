@@ -7,6 +7,6 @@ for _ in range(int(input())):
     for i in range(n - 2, -1, -1):
         b[i] = min(b[i + 1], a[i])
     for i in range(n - 1):
-        if(a[i] > b[i]):
+        if a[i] > b[i]:
             ans += 1
     print(ans)

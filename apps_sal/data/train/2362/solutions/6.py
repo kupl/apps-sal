@@ -1,9 +1,9 @@
 for _ in range(int(input())):
     n = int(input())
-    maxx, minx = 100000, -100000
-    maxy, miny = 100000, -100000
+    (maxx, minx) = (100000, -100000)
+    (maxy, miny) = (100000, -100000)
     for _ in range(n):
-        xi, yi, d, r, u, l = tuple(map(int, input().split()))
+        (xi, yi, d, r, u, l) = tuple(map(int, input().split()))
         if d == 0:
             minx = xi if xi > minx else minx
         if r == 0:

@@ -16,6 +16,6 @@ for i in range(n):
         if pas[1] in l_letters:
             ans = True
 if ans:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

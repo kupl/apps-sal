@@ -1,6 +1,9 @@
-n, m = 337, int(input())
+(n, m) = (337, int(input()))
 p = [['N'] * n for i in range(n)]
-def f(i, j): p[i][j] = p[j][i] = 'Y'
+
+
+def f(i, j):
+    p[i][j] = p[j][i] = 'Y'
 
 
 k = 6 + 15 * 5
@@ -11,8 +14,7 @@ for i in range(6, k, 5):
         f(i, j)
     for j in range(i + 1, i + 5):
         f(i, j)
-
-q, d, s = 4 ** 15, 0, k
+(q, d, s) = (4 ** 15, 0, k)
 while q:
     if m >= q:
         t = m // q
@@ -31,7 +33,6 @@ while q:
     k -= 5
     d += 2
     q //= 4
-
 print(s)
 for i in range(s):
-    print(''.join(p[i][: s]))
+    print(''.join(p[i][:s]))

@@ -30,13 +30,11 @@ class BIT:
         self._add(l, -val)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 info = [list(map(int, input().split())) for i in range(n)]
-
 for i in range(n):
-    info[i] = info[i][0], info[i][1], info[i][1] - info[i][0] + 1
+    info[i] = (info[i][0], info[i][1], info[i][1] - info[i][0] + 1)
 info = sorted(info, key=itemgetter(2))
-
 bit = BIT(m + 1)
 l_info = 0
 ans = n
@@ -44,7 +42,7 @@ res = [0] * m
 for d in range(1, m + 1):
     while True:
         if l_info < n and info[l_info][2] < d:
-            l, r, _ = info[l_info]
+            (l, r, _) = info[l_info]
             bit.add(l, r + 1, 1)
             l_info += 1
             ans -= 1
@@ -54,5 +52,4 @@ for d in range(1, m + 1):
     for i in range(0, m + 1, d):
         cnt += bit.get_val(i)
     res[d - 1] = cnt
-
 print('\n'.join(map(str, res)), end='\n')

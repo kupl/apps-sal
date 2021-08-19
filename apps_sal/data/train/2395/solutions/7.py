@@ -15,14 +15,12 @@ for _ in range(int(input())):
         elif c == '0':
             a.append('0')
             b.append('0')
+        elif flag == 0:
+            a.append('1')
+            b.append('0')
+            flag = 1
         else:
-            if flag == 0:
-                a.append('1')
-                b.append('0')
-                flag = 1
-            else:
-                a.append('0')
-                b.append('1')
-
+            a.append('0')
+            b.append('1')
     print(''.join(a))
     print(''.join(b))

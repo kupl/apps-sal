@@ -17,11 +17,11 @@ def slidemax(X, k):
     return ret
 
 
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 A = [0] * W
 s = 0
 for _ in range(N):
-    l, *B = list(map(int, input().split()))
+    (l, *B) = list(map(int, input().split()))
     if l * 2 < W:
         C = slidemax([0] * (l - 1) + B + [0] * (l - 1), l)
         m = max(B + [0])
@@ -31,6 +31,5 @@ for _ in range(N):
             A[-i - 1] += C[-i - 1] - m
     else:
         C = slidemax([0] * (W - l) + B + [0] * (W - l), W - l + 1)
-        A = [a + c for a, c in zip(A, C)]
-
+        A = [a + c for (a, c) in zip(A, C)]
 print(*[a + s for a in A])

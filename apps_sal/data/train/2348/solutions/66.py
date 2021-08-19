@@ -3,11 +3,10 @@ N = int(input())
 xs = list(map(int, input().split()))
 L = int(input())
 Q = int(input())
-qs = [tuple(map(lambda x:int(x) - 1, input().split())) for i in range(Q)]
-
+qs = [tuple(map(lambda x: int(x) - 1, input().split())) for i in range(Q)]
 K = len(bin(N)) - 1
 dp = [[None] * N for i in range(K)]
-for i, x in enumerate(xs):
+for (i, x) in enumerate(xs):
     dp[0][i] = bisect(xs, x + L) - 1
 for k in range(K - 1):
     for i in range(N):
@@ -18,7 +17,7 @@ def enough(fr, to, n):
     now = fr
     bn = bin(n)
     ln = len(bn) - 2
-    for i, c in enumerate(bn[2:]):
+    for (i, c) in enumerate(bn[2:]):
         if c == '0':
             continue
         now = dp[ln - 1 - i][now]
@@ -28,9 +27,9 @@ def enough(fr, to, n):
 
 
 ans = []
-for a, b in qs:
+for (a, b) in qs:
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ok = N
     ng = 0
     while ok - ng > 1:
@@ -40,5 +39,4 @@ for a, b in qs:
         else:
             ng = m
     ans.append(ok)
-
 print(*ans, sep='\n')

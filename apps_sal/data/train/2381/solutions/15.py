@@ -4,7 +4,7 @@ while t:
     ans = 0
     temp = 0
     for i in range(len(s)):
-        if(s[i] == 'L'):
+        if s[i] == 'L':
             temp += 1
         else:
             ans = max(ans, temp + 1)

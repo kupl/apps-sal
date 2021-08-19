@@ -1,13 +1,25 @@
 import sys
-def input(): return sys.stdin.readline()[:-1]
-def N(): return int(input())
-def NM(): return map(int, input().split())
-def L(): return list(NM())
 
 
-n, m = NM()
+def input():
+    return sys.stdin.readline()[:-1]
+
+
+def N():
+    return int(input())
+
+
+def NM():
+    return map(int, input().split())
+
+
+def L():
+    return list(NM())
+
+
+(n, m) = NM()
 a = L()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def comb(n, r):

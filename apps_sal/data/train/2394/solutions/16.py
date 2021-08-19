@@ -3,7 +3,7 @@ def solve():
     s = input()
     n1 = 0
     for i in s:
-        if i == "(":
+        if i == '(':
             n1 += 1
         else:
             n1 -= 1

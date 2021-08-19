@@ -8,7 +8,7 @@ for i in range(t):
     failflag = 0
     for x in range(n):
         for y in range(n):
-            if matrix[x][y] == '1' and x < n - 1 and y < n - 1:
+            if matrix[x][y] == '1' and x < n - 1 and (y < n - 1):
                 if matrix[x + 1][y] == '0' and matrix[x][y + 1] == '0':
                     failflag = 1
     if failflag == 0:

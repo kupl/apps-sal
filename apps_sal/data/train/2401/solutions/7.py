@@ -1,4 +1,5 @@
 class Solution:
+
     def wordPattern(self, pattern, str):
         """
         :type pattern: str
@@ -11,7 +12,7 @@ class Solution:
         string_map = {}
         string_word = []
         string_result = []
-        for index, item in enumerate(pattern):
+        for (index, item) in enumerate(pattern):
             if item not in pattern_map:
                 pattern_word.append(item)
             pattern_map[item] = pattern_map.get(item, []) + [index]

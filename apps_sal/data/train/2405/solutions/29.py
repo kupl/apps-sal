@@ -1,4 +1,5 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         x = y = d = ans = 0
         obs = set(map(tuple, obstacles))
@@ -13,5 +14,5 @@ class Solution:
                     if (x + move[d][0], y + move[d][1]) not in obs:
                         x += move[d][0]
                         y += move[d][1]
-                        ans = max(ans, x**2 + y**2)
+                        ans = max(ans, x ** 2 + y ** 2)
         return ans

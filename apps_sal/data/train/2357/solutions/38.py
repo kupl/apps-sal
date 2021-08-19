@@ -1,6 +1,6 @@
 from numba import njit
-N, M, *A = [int(_) for _ in open(0).read().split()]
-mod = 10**9 + 7
+(N, M, *A) = [int(_) for _ in open(0).read().split()]
+mod = 10 ** 9 + 7
 suma = sum(A)
 x = M + N
 y = N + suma
@@ -34,4 +34,4 @@ def comb(x, y):
     return ret
 
 
-print((comb(M + N, N + suma)))
+print(comb(M + N, N + suma))

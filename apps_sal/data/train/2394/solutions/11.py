@@ -1,4 +1,3 @@
-
 a = int(input())
 for i in range(a):
     r = int(input())
@@ -6,9 +5,9 @@ for i in range(a):
     score = 0
     count = 0
     for i in range(len(s)):
-        if(s[i] == ')'):
+        if s[i] == ')':
             score -= 1
-            if(score < 0):
+            if score < 0:
                 score = 0
                 count += 1
         else:

@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    s = input() + "R"
+    s = input() + 'R'
     mx = -float('inf')
     cur = 0
     while s.find('R', cur) != -1:

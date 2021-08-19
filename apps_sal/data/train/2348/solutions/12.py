@@ -21,9 +21,9 @@ def main():
     for _ in range(16):
         for i in range(n):
             doubling[i].append(doubling[doubling[i][-1]][-1])
-    for a, b in ab:
+    for (a, b) in ab:
         if a > b:
-            a, b = b, a
+            (a, b) = (b, a)
         ans = 0
         j = 16
         while j >= 0:
@@ -31,11 +31,11 @@ def main():
                 j -= 1
             else:
                 a = doubling[a][j]
-                ans += 2**j
+                ans += 2 ** j
         if a == b:
             print(ans)
         else:
-            print((ans + 1))
+            print(ans + 1)
 
 
 main()

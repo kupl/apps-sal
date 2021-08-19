@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         it_arr = []
         i = 1

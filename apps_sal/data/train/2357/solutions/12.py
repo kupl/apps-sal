@@ -1,4 +1,4 @@
-def binomial_coefficient(n, r, mod=10**9 + 7):
+def binomial_coefficient(n, r, mod=10 ** 9 + 7):
     if r < 0 or r > n:
         return 0
     res = 1
@@ -11,7 +11,7 @@ def binomial_coefficient(n, r, mod=10**9 + 7):
 
 
 mod = 10 ** 9 + 7
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = list(map(int, input().split()))
 ans = binomial_coefficient(n + m, sum(A) + n, mod)
 print(ans)

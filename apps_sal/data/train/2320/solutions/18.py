@@ -4,12 +4,22 @@ import math
 import string
 import bisect
 input = sys.stdin.readline
-def L(): return list(map(int, input().split()))
-def Ls(): return list(input().split())
 
 
-def M(): return list(map(int, input().split()))
-def I(): return int(input())
+def L():
+    return list(map(int, input().split()))
+
+
+def Ls():
+    return list(input().split())
+
+
+def M():
+    return list(map(int, input().split()))
+
+
+def I():
+    return int(input())
 
 
 n = I()

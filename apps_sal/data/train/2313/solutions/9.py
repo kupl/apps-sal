@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-dp = [0] * (n)
+dp = [0] * n
 st = [0]
 for i in range(1, n):
     while len(st) > 1 and dp[st[0]] + b[st[0]] * a[i] > dp[st[1]] + b[st[1]] * a[i]:

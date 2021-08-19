@@ -4,7 +4,7 @@ from sys import stdin
 def bsearch(lis, idx, val):
     l = 0
     h = idx
-    while(l <= h):
+    while l <= h:
         mid = (l + h) // 2
         if lis[mid] == val:
             return mid
@@ -35,7 +35,7 @@ def res(arr):
 
 
 k = int(stdin.readline())
-while(k):
+while k:
     stdin.readline()
     res(list(map(int, stdin.readline().split())))
     k -= 1

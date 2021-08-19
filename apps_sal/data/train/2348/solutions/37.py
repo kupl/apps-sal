@@ -1,7 +1,6 @@
 from bisect import bisect_right
 import sys
 input = sys.stdin.readline
-
 N = int(input())
 x = list(map(int, input().split()))
 L = int(input())
@@ -17,14 +16,14 @@ for l in range(1, log + 1):
         doubling[i][l] = doubling[doubling[i][l - 1]][l - 1]
 Q = int(input())
 for _ in range(Q):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = 0
     for l in range(log, -1, -1):
         if doubling[a][l] < b:
             ans += 1 << l
             a = doubling[a][l]
-    print((ans + 1))
+    print(ans + 1)

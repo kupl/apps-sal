@@ -1,7 +1,7 @@
 n = input()
 i = 0
 z = len(n) - 1
-res = ""
+res = ''
 end = 0
 if n[0] == 'f':
     res += 'ftp://'
@@ -15,7 +15,7 @@ while i < z:
             res += n[i]
             i += 1
         else:
-            res += ".ru/"
+            res += '.ru/'
             i += 2
             end = i
             break

@@ -1,21 +1,17 @@
 from operator import itemgetter
 import sys
 input = sys.stdin.readline
-
 MAX_A = 200
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-
     ruiseki = [[0] * MAX_A for i in range(n + 1)]
     for i in range(n):
         for j in range(MAX_A):
             ruiseki[i + 1][j] = ruiseki[i][j]
             if a[i] - 1 == j:
                 ruiseki[i + 1][j] += 1
-
     ans = 0
     for num in set(a):
         l = 0

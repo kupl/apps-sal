@@ -1,7 +1,8 @@
-def inf(): return map(int, input().split())
+def inf():
+    return map(int, input().split())
 
 
-n, = inf()
+(n,) = inf()
 a = list(inf())
 p = sorted([i for i in range(n)], key=lambda x: a[x])
 b = [0] * n

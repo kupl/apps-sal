@@ -1,7 +1,5 @@
 import sys
-
 sys.setrecursionlimit(10 ** 8)
-
 input = sys.stdin.readline
 
 
@@ -13,28 +11,22 @@ def modBinomial(n, k, p):
     k = min(k, n - k)
     numerator = 1
     for i in range(k):
-        numerator = (numerator * (n - i)) % p
-
+        numerator = numerator * (n - i) % p
     denominator = 1
     for i in range(1, k + 1):
-        denominator = (denominator * i) % p
-
-    return (numerator * modInverse(denominator, p)) % p
+        denominator = denominator * i % p
+    return numerator * modInverse(denominator, p) % p
 
 
 def main():
-    N, M = [int(x) for x in input().split()]
+    (N, M) = [int(x) for x in input().split()]
     A = [int(x) for x in input().split()]
-
     MOD = 10 ** 9 + 7
-
     if sum(A) > M:
-        print((0))
+        print(0)
         return
-
     r = sum(A) + N
-
-    print((modBinomial(M + N, r, MOD)))
+    print(modBinomial(M + N, r, MOD))
 
 
 def __starting_point():

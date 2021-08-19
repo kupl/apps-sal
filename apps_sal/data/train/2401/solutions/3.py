@@ -1,4 +1,5 @@
 class Solution(object):
+
     def wordPattern(self, pattern, str):
         """
         :type pattern: str
@@ -11,14 +12,12 @@ class Solution(object):
         if len(wList) != len(pattern):
             good = False
         else:
-            for k, v in enumerate(wList):
+            for (k, v) in enumerate(wList):
                 if v in ptMap:
                     if ptMap[v] != pattern[k]:
                         good = False
+                elif pattern[k] in ptMap.values():
+                    good = False
                 else:
-                    if pattern[k] in ptMap.values():
-                        good = False
-                    else:
-                        ptMap[v] = pattern[k]
-
+                    ptMap[v] = pattern[k]
         return good

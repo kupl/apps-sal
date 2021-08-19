@@ -1,8 +1,9 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         i = 1
         arr1 = []
-        while(len(arr1) <= k):
+        while len(arr1) <= k:
             if i not in arr:
                 arr1.append(i)
                 i = i + 1

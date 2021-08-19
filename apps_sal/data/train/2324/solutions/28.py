@@ -1,7 +1,7 @@
 n = int(input())
 tree = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     tree[a - 1].append(b - 1)
     tree[b - 1].append(a - 1)
 
@@ -23,7 +23,7 @@ def dist(k):
 from_fennec = dist(0)
 from_snuke = dist(n - 1)
 res = 0
-for i, j in zip(from_fennec, from_snuke):
+for (i, j) in zip(from_fennec, from_snuke):
     if i <= j:
         res += 1
     else:

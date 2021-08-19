@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     A = []
     x = 1
     while True:
-        if (m * x) % 10 not in A:
-            A.append((m * x) % 10)
+        if m * x % 10 not in A:
+            A.append(m * x % 10)
         else:
             break
         x += 1

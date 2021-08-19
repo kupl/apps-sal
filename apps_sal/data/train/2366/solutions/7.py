@@ -8,5 +8,5 @@ for i in range(t):
         s_min[i] = min(s_min[i + 1], a[i])
     cnt = 0
     for i in range(n - 1):
-        cnt += (s_min[i + 1] < a[i])
+        cnt += s_min[i + 1] < a[i]
     print(cnt)

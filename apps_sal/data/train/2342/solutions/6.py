@@ -8,16 +8,16 @@ def main():
     up = alst[0]
     down = 0
     for a in alst[1:]:
-        if (up + down) == a:
+        if up + down == a:
             continue
-        elif (up + down) < a:
+        elif up + down < a:
             down = a - up
         else:
             up = a - down
         if up < 0 or down < 0:
-            print("NO")
+            print('NO')
             return
-    print("YES")
+    print('YES')
 
 
 for _ in range(int(input())):

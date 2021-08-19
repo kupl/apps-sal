@@ -7,7 +7,7 @@ else:
     s1 = 'ftp://'
     x = 6
 for i in range(len(s1) - 3, len(s)):
-    if s[i:i + 2] == 'ru' and p and len(s1) != x:
+    if s[i:i + 2] == 'ru' and p and (len(s1) != x):
         s1 += '.'
         p = False
     if s1[-3:] == '.ru':

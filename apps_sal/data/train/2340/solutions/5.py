@@ -1,12 +1,9 @@
 import sys
 input = sys.stdin.readline
-
-
 t = int(input())
 for _ in range(t):
     n = int(input())
     p = list(map(int, input().split()))
-
     cnt = 0
     max_ = 0
     ans = []
@@ -31,6 +28,6 @@ for _ in range(t):
                 break
             dp[j + 1] |= dp[j + 1 - val]
     if dp[-1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

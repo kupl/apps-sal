@@ -1,13 +1,13 @@
 s = list(input())
 n = len(s)
 if s[0] == '0' or s[-1] == '1':
-    print((-1))
+    print(-1)
 else:
     s.pop()
     sr = s.copy()
     sr.reverse()
     if s != sr:
-        print((-1))
+        print(-1)
     else:
         ans = []
         now = 1

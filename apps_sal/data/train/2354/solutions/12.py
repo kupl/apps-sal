@@ -6,10 +6,9 @@ for i in range(n):
 mark = 0
 for i in range(n):
     for j in range(n):
-        if s in (data[i] + data[j]):
+        if s in data[i] + data[j]:
             mark = 1
-
 if mark:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

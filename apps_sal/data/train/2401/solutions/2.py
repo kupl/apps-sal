@@ -1,4 +1,5 @@
 class Solution:
+
     def wordPattern(self, pattern, str):
         """
         :type pattern: str

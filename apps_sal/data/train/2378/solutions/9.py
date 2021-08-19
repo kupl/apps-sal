@@ -8,22 +8,22 @@ for test in range(0, q):
     x = min(L, R)
     y = min(U, D)
     if x == 0 and y == 0:
-        print("0")
+        print('0')
     elif x == 0:
-        print("2")
-        print("UD")
+        print('2')
+        print('UD')
     elif y == 0:
-        print("2")
-        print("LR")
+        print('2')
+        print('LR')
     else:
-        print((str(2 * x + 2 * y)))
-        ans = ""
+        print(str(2 * x + 2 * y))
+        ans = ''
         for i in range(0, y):
-            ans += "U"
+            ans += 'U'
         for i in range(0, x):
-            ans += "R"
+            ans += 'R'
         for i in range(0, y):
-            ans += "D"
+            ans += 'D'
         for i in range(0, x):
-            ans += "L"
+            ans += 'L'
         print(ans)

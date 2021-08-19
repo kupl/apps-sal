@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 mod = 998244353
 dp = [0] * (N + 1)
 dp[0] = 1
@@ -8,4 +8,4 @@ for i in range(1, N + 1):
         if j * 2 <= i:
             dp[j] += dp[2 * j]
         dp[j] %= mod
-print((dp[K]))
+print(dp[K])

@@ -1,11 +1,11 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
     a = input()
     n = len(a)
     inds = [-1]
     for i in range(n):
-        if(a[i] == 'R'):
+        if a[i] == 'R':
             inds.append(i)
     inds.append(n)
     ans = 0

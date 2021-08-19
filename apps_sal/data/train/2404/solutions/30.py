@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         missing_count = 1
         while k != 0:

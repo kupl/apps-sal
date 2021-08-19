@@ -1,16 +1,19 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 T = int(input())
 for _ in range(T):
     n = int(input())
-    minx = -(10**5)
-    maxx = 10**5
-    miny = -(10**5)
-    maxy = 10**5
+    minx = -10 ** 5
+    maxx = 10 ** 5
+    miny = -10 ** 5
+    maxy = 10 ** 5
     for i in range(n):
-        x, y, f1, f2, f3, f4 = list(map(int, input().split()))
+        (x, y, f1, f2, f3, f4) = list(map(int, input().split()))
         if f1 == 0:
             minx = max(minx, x)
         if f2 == 0:

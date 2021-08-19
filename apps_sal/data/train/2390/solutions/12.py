@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def ecount(X):
-    c, ans = 1, []
+    (c, ans) = (1, [])
     for i in range(len(X) - 1):
         if X[i] == X[i + 1]:
             c += 1

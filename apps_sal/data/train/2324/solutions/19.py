@@ -2,7 +2,7 @@ from collections import deque
 N = int(input())
 edge = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
 d = [[-1] * N for _ in range(2)]
@@ -24,6 +24,6 @@ for i in range(N):
     else:
         F += 1
 if F > S:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

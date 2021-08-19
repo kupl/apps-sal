@@ -17,40 +17,38 @@ for test_case in range(q):
         if animal == t[(i + 1) % n]:
             any_adj_same = True
             adj_same_index = i
-
     if all_same:
         print(1)
-        output = ""
+        output = ''
         for i in range(n):
-            output += " 1"
+            output += ' 1'
         output = output[1:]
         print(output)
         continue
-
     if n % 2 == 0:
         print(2)
-        output = ""
+        output = ''
         for i in range(n):
-            output += (" 1" if i % 2 == 0 else " 2")
+            output += ' 1' if i % 2 == 0 else ' 2'
         output = output[1:]
         print(output)
         continue
     if any_adj_same:
         print(2)
-        output = ""
+        output = ''
         for i in range(n):
             if i > adj_same_index:
-                output += (" 2" if i % 2 == 0 else " 1")
+                output += ' 2' if i % 2 == 0 else ' 1'
             else:
-                output += (" 1" if i % 2 == 0 else " 2")
+                output += ' 1' if i % 2 == 0 else ' 2'
         output = output[1:]
         print(output)
         continue
     else:
         print(3)
-        output = ""
+        output = ''
         for i in range(n - 1):
-            output += ("1 " if i % 2 == 0 else "2 ")
-        output += "3"
+            output += '1 ' if i % 2 == 0 else '2 '
+        output += '3'
         print(output)
         continue

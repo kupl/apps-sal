@@ -5,7 +5,7 @@ for _ in range(tc):
     a = b = '1'
     flag = None
     for i in s[1:]:
-        if int(i) % 2 == 0 and not flag:
+        if int(i) % 2 == 0 and (not flag):
             num = int(i) // 2
             a += str(num)
             b += str(num)
@@ -18,4 +18,4 @@ for _ in range(tc):
             else:
                 a += str(0)
                 b += str(i)
-    print(a, b, sep="\n")
+    print(a, b, sep='\n')

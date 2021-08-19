@@ -4,19 +4,18 @@ for _ in range(t):
     s1 = input()
     s2 = input()
     s = [s1, s2]
-    tp1, tp2 = ['1', '2'], ['3', '4', '5', '6']
+    (tp1, tp2) = (['1', '2'], ['3', '4', '5', '6'])
     cur = 0
     for i in range(n):
         if s[cur][i] in tp1:
             continue
+        elif s[1 - cur][i] in tp2:
+            cur = 1 - cur
         else:
-            if s[1 - cur][i] in tp2:
-                cur = 1 - cur
-            else:
-                print("NO")
-                break
+            print('NO')
+            break
     else:
         if cur == 1:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

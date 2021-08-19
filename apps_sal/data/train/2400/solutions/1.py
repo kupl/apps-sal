@@ -22,7 +22,7 @@ for case_num in range(t):
             backup = color.copy()
             color[n - 1] = 2
             i = n - 2
-            while i >= 0 and a[i] != a[i + 1] and color[i] == color[i + 1]:
+            while i >= 0 and a[i] != a[i + 1] and (color[i] == color[i + 1]):
                 color[i] = 3 - color[i + 1]
                 i -= 1
             if color[0] == 1:

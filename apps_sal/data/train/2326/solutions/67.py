@@ -12,8 +12,8 @@ for i in range(n):
         dcnt[a[i]] = dcnt[a[i]] + 1
 b = [[0, 0] for _ in range(len(d) + 1)]
 k = 0
-for i, j in d.items():
-    b[k][0], b[k][1] = i, j
+for (i, j) in d.items():
+    (b[k][0], b[k][1]) = (i, j)
     k += 1
 b.sort(reverse=True)
 ans = [0] * n

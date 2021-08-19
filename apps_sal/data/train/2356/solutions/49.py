@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 mod = 998244353
 dp = [0] * (N + 1)
 dp[0] = 1

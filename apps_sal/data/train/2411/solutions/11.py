@@ -1,11 +1,11 @@
 class Solution:
+
     def thirdMax(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
         R = []
-
         for n in nums:
             if n not in R:
                 if len(R) < 3:
