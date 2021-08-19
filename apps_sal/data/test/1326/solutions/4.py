@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-
-#                 N    N'
-#   | 1  2  3  4  5
-# 1 | 1  2  3  4  5 :  N // 1   1 * N' (N'+1) // 2
-# 2 |    2     4    :  N // 2   2 * N' (N'+1) // 2
-# 3 |       3       :  N // 3   3 * N' (N'+1) // 2
-# 4 |          4    :  N // 4   4 * N' (N'+1) // 2
-# 5 |             5 :  N // 5   5 * N' (N'+1) // 2
-
-
 def solve(N):
     answer = 0
     for i in range(1, N + 1):
@@ -18,7 +7,7 @@ def solve(N):
 
 
 def main():
-    N = int(input())  # type: int
+    N = int(input())
     answer = solve(N)
     print(answer)
 

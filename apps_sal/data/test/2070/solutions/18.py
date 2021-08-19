@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding=utf-8
-
 from collections import Counter
 A = list(map(int, input().split()))
 L = [ord(i) - ord('a') for i in input()]

@@ -1,13 +1,13 @@
 import heapq
 import sys
 input = sys.stdin.readline
-n, m = map(int, input().split())
-INF = 10**18
+(n, m) = map(int, input().split())
+INF = 10 ** 18
 edge = [[] for i in range(n)]
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     edge[x - 1].append(y - 1)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 
 
 def dijkstra_heap(s, g, p):
@@ -16,9 +16,9 @@ def dijkstra_heap(s, g, p):
     used[s][0] = False
     ed_list = []
     for es in edge[s]:
-        heapq.heappush(ed_list, [1, es, 1])  # 回数、向かう頂点、あまり
+        heapq.heappush(ed_list, [1, es, 1])
     while len(ed_list):
-        ken, v, md = heapq.heappop(ed_list)
+        (ken, v, md) = heapq.heappop(ed_list)
         if not used[v][md]:
             continue
         d[v][md] = ken

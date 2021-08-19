@@ -1,14 +1,12 @@
 import heapq
-
 Q = int(input())
 m = L = R = 0
-l, r = [], []
+(l, r) = ([], [])
 n = 0
 b = 0
-
 for i in range(Q):
     query = list(map(int, input().split()))
-    if len(query) == 3:  # 更新クエリ
+    if len(query) == 3:
         b += query[2]
         new = query[1]
         if n == 0:
@@ -17,12 +15,12 @@ for i in range(Q):
             if new <= m:
                 heapq.heappush(l, -new)
                 heapq.heappush(r, m)
-                L, R = new, m
+                (L, R) = (new, m)
                 m = new
             else:
                 heapq.heappush(l, -m)
                 heapq.heappush(r, new)
-                L, R = m, new
+                (L, R) = (m, new)
         elif n == 2:
             if new < m:
                 m = -heapq.heappop(l)
@@ -38,40 +36,39 @@ for i in range(Q):
                     heapq.heappush(r, new)
                     R = new
         else:
-            _l = - heapq.heappop(l)
+            _l = -heapq.heappop(l)
             _r = heapq.heappop(r)
             if n % 2:
                 if new <= _l:
                     heapq.heappush(l, -new)
                     heapq.heappush(r, _r)
                     heapq.heappush(r, m)
-                    m, L, R = _l, L + new, R + m
+                    (m, L, R) = (_l, L + new, R + m)
                 elif new <= m:
                     heapq.heappush(l, -_l)
                     heapq.heappush(r, _r)
                     heapq.heappush(r, m)
-                    m, L, R = new, L + new, R + m
+                    (m, L, R) = (new, L + new, R + m)
                 else:
                     heapq.heappush(l, -_l)
                     heapq.heappush(r, _r)
                     heapq.heappush(r, new)
-                    L, R = L + m, R + new
+                    (L, R) = (L + m, R + new)
+            elif new <= m:
+                heapq.heappush(l, -_l)
+                heapq.heappush(l, -new)
+                heapq.heappush(r, _r)
+                L += new - m
+            elif new <= _r:
+                heapq.heappush(l, -_l)
+                heapq.heappush(l, -m)
+                heapq.heappush(r, _r)
+                m = new
             else:
-                if new <= m:
-                    heapq.heappush(l, -_l)
-                    heapq.heappush(l, -new)
-                    heapq.heappush(r, _r)
-                    L += new - m
-                elif new <= _r:
-                    heapq.heappush(l, -_l)
-                    heapq.heappush(l, -m)
-                    heapq.heappush(r, _r)
-                    m = new
-                else:
-                    heapq.heappush(l, -_l)
-                    heapq.heappush(l, -m)
-                    heapq.heappush(r, new)
-                    m, R = _r, R + new - _r
+                heapq.heappush(l, -_l)
+                heapq.heappush(l, -m)
+                heapq.heappush(r, new)
+                (m, R) = (_r, R + new - _r)
         n += 1
-    else:  # 求値クエリ
+    else:
         print(m, R - L + b)

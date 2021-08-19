@@ -1,18 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-#n = int(input())
-#l = list(map(int, input().split()))
-
-'''
-a=[]
-b=[]
-for i in range():
-    A, B = map(int, input().split())
-    a.append(A)   
-    b.append(B)'''
-
-
+'\na=[]\nb=[]\nfor i in range():\n    A, B = map(int, input().split())\n    a.append(A)   \n    b.append(B)'
 n = int(input())
 ans = 0
 for i in range(1, n + 1):

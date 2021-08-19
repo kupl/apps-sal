@@ -1,4 +1,3 @@
-
 """
 
 https://atcoder.jp/contests/arc109/tasks/arc109_e
@@ -35,7 +34,7 @@ n+2x-1
 """
 
 
-def inverse(a, mod):  # aのmodを法にした逆元を返す
+def inverse(a, mod):
     return pow(a, mod - 2, mod)
 
 
@@ -43,20 +42,15 @@ mod = 998244353
 half = 499122177
 n = int(input())
 inv = inverse(pow(2, n, mod), mod)
-
 cnum = 0
 black = 0
 ans = [0] * n
-
 for s in range(n):
-
     if s * 2 < n:
-
         if s >= 2:
             cnum += 2 * pow(2, 2 * s - 3, mod)
             black += (n + 2 * s - 1) * pow(2, 2 * s - 3, mod)
         ans[s] = ((pow(2, n, mod) - cnum) * n * half + black) * inv % mod
         print(ans[s])
-
     else:
         print(ans[n - 1 - s])

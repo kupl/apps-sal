@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-
 from collections import defaultdict
 
 
 def process_letter(nums):
     d = {}
     for i in range(26):
-        assert(chr(ord('a') + i).islower())
+        assert chr(ord('a') + i).islower()
         d[chr(ord('a') + i)] = nums[i]
     return d
 
@@ -17,7 +15,7 @@ current = 0
 value = defaultdict(int)
 ans = 0
 for c in s:
-    ans += value[(c, current)]
+    ans += value[c, current]
     current += dic[c]
-    value[(c, current)] += 1
+    value[c, current] += 1
 print(ans)

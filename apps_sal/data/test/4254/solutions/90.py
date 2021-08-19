@@ -1,6 +1,4 @@
-# ABC164
-S, W = map(int, input().split())
-# ----------以上入力----------
+(S, W) = map(int, input().split())
 if S <= W:
     print('unsafe')
 else:

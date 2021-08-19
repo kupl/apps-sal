@@ -1,22 +1,18 @@
 import heapq
 Q = int(input())
-
 alist = []
-hq_left, hq_right = [], []
-dummy, a1, b1 = map(int, input().split())
+(hq_left, hq_right) = ([], [])
+(dummy, a1, b1) = map(int, input().split())
 heapq.heappush(hq_left, -a1)
 heapq.heappush(hq_right, a1)
 b = b1
-
 min_arg = -hq_left[0]
 min_diff = 0
-# min_value=b
 for _ in range(Q - 1):
     query = list(map(int, input().split()))
     if len(query) == 3:
-        dummy, ai, bi = query
+        (dummy, ai, bi) = query
         b += bi
-
         max_left = -hq_left[0]
         min_right = hq_right[0]
         if ai < max_left:
