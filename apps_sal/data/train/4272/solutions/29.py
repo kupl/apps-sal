@@ -1,5 +1,5 @@
 def greet(n):
-    if n == "Johnny":
-        return "Hello, my love!"
+    if n == 'Johnny':
+        return 'Hello, my love!'
     else:
-        return f"Hello, {n}!"
+        return f'Hello, {n}!'

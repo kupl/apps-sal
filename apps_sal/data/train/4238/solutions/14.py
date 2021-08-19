@@ -4,6 +4,6 @@ def squares_needed(grains):
     stop = 1
     sum = 1
     while sum < grains:
-        sum = sum + (2**stop)
+        sum = sum + 2 ** stop
         stop += 1
     return stop

@@ -11,4 +11,4 @@ def palindrome(num):
     for i in check:
         if check[i] % 2:
             count += 1
-    return True if count == 0 else True if (count == 1 and len(str(num)) % 2) else False
+    return True if count == 0 else True if count == 1 and len(str(num)) % 2 else False

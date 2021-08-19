@@ -3,7 +3,6 @@ def f(xs, i, changed):
         return
     if i == len(xs):
         return int(''.join(map(str, xs)))
-
     prev = xs[i]
     for x in range(0 if changed else prev, 10):
         xs[i] = x

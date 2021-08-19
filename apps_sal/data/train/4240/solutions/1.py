@@ -5,7 +5,7 @@ consonants += consonants.upper()
 
 
 def tongues(code):
-    result = ""
+    result = ''
     for c in code:
         if c in vowels:
             result += vowels[vowels.index(c) + 3]

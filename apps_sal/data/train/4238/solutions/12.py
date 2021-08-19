@@ -1,5 +1,4 @@
 def squares_needed(grains):
-
     if grains == 0:
         return 0
     c = 1

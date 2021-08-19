@@ -3,4 +3,4 @@ def make_upper_case(s):
     return string1
 
 
-make_upper_case("hello")
+make_upper_case('hello')

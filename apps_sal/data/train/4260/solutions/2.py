@@ -2,7 +2,7 @@ from itertools import chain
 
 
 def mark_spot(n):
-    if not (isinstance(n, int) and n % 2 and n > 0):
+    if not (isinstance(n, int) and n % 2 and (n > 0)):
         return '?'
     result = []
     row_length = n * 2 - 1

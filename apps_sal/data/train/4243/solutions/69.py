@@ -1,3 +1,3 @@
 def find_average(arr):
-    websites = ["codewars"]
+    websites = ['codewars']
     return sum(arr) / len(arr)

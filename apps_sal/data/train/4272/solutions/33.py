@@ -1,5 +1,5 @@
 def greet(name):
-    if name != "Johnny":
+    if name != 'Johnny':
         return f'Hello, {name}!'
-    elif name == "Johnny":
-        return "Hello, my love!"
+    elif name == 'Johnny':
+        return 'Hello, my love!'

@@ -6,7 +6,7 @@ def inrange(a, b, x):
 
 
 def make_upper_case(s):
-    ans = ""
+    ans = ''
     for x in s:
         if inrange(ord('a'), ord('z'), ord(x)):
             x = chr(ord('A') + (ord(x) - ord('a')))

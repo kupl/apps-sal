@@ -1,8 +1,6 @@
 def remove_smallest(numbers):
     print(numbers)
-
     numlist = numbers.copy()
-
     if len(numlist) <= 1:
         return []
     else:
@@ -13,5 +11,4 @@ def remove_smallest(numbers):
                     break
                 else:
                     pass
-
     return numlist

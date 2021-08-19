@@ -9,7 +9,6 @@ def dont_give_me_five(start, end):
 def nums_without_five(n):
     cnt = 0
     fct = 1
-
     while n:
         dig = n % 10
         if dig == 5:
@@ -17,5 +16,4 @@ def nums_without_five(n):
         cnt += (dig - (dig > 5)) * fct
         fct *= 9
         n //= 10
-
     return cnt

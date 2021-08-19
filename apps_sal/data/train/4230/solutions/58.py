@@ -7,4 +7,4 @@ def reverse_letter(s):
     for i in s[::-1]:
         if i in abc:
             result.append(i)
-    return "".join(result)
+    return ''.join(result)

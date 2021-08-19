@@ -1,9 +1,8 @@
 def greet(name):
-
-    if name == "Johnny":
-        return "Hello, my love!"
+    if name == 'Johnny':
+        return 'Hello, my love!'
     else:
-        return "Hello, {name}!".format(name=name)
+        return 'Hello, {name}!'.format(name=name)
 
 
-greet("spoo")
+greet('spoo')

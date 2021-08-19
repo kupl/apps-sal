@@ -8,5 +8,4 @@ def squares_needed(grains):
         count += 1
         grains -= product
         product *= 2
-
     return count

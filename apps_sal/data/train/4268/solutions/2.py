@@ -1,7 +1,6 @@
 import requests
 from bisect import bisect
-
-MAGIC = [int(x) for x in requests.get("https://oeis.org/b144688.txt").text.split()[1::2]]
+MAGIC = [int(x) for x in requests.get('https://oeis.org/b144688.txt').text.split()[1::2]]
 
 
 def next_num(n):

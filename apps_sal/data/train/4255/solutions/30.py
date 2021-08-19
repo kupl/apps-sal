@@ -4,13 +4,12 @@ def make_upper_case(s):
     for i in range(97, 123):
         alphabet[chr(i)] = chr(counter)
         counter = counter + 1
-
-    sum = ""
+    sum = ''
     for i in s:
         for j in alphabet:
             if i == j:
                 sum = sum + alphabet[j]
-                i = ""
+                i = ''
                 break
         sum = sum + i
     return sum

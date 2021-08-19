@@ -1,7 +1,6 @@
 def to12hourtime(time_string):
     hour_str = time_string[0] + time_string[1]
     minute_str = time_string[2] + time_string[3]
-
     if int(hour_str) < 12:
         if int(hour_str) == 0:
             hour_str = 12

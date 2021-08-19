@@ -3,7 +3,7 @@ def difference_of_squares(n):
     sum2 = 1
     i = 1
     while i < n:
-        sum1 += (i + 1)
-        sum2 += (i + 1)**2
+        sum1 += i + 1
+        sum2 += (i + 1) ** 2
         i += 1
-    return sum1**2 - sum2
+    return sum1 ** 2 - sum2

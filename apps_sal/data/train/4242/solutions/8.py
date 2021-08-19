@@ -4,5 +4,5 @@ def direction_in_grid(n, m):
     if n <= m:
         index = (n * 2 - 1) % 4
     else:
-        index = (m * 2) % 4
+        index = m * 2 % 4
     return directionByIndex.get(index)

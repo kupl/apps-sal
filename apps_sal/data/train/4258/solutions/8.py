@@ -5,4 +5,4 @@ def series_sum(n):
     return '%.2f' % sum
 
 
-print((series_sum(0)))
+print(series_sum(0))

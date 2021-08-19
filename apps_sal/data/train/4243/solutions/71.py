@@ -1,1 +1,1 @@
-find_average = __import__("statistics").mean
+find_average = __import__('statistics').mean

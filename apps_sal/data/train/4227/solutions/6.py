@@ -16,7 +16,7 @@ def complexSum(arr):
                     val = 1
                 elif val[0] == '-':
                     if len(val) != 1:
-                        val = -1 * int(val[1::])
+                        val = -1 * int(val[1:])
                     else:
                         val = -1
                 imag_sum += int(val)
@@ -31,11 +31,10 @@ def complexSum(arr):
         fin_string = ''
     elif imag_sum == -1:
         fin_string = '-i'
+    elif imag_sum > 1 and real_sum != 0:
+        fin_string = '+' + str(imag_sum) + 'i'
     else:
-        if imag_sum > 1 and real_sum != 0:
-            fin_string = '+' + str(imag_sum) + 'i'
-        else:
-            fin_string = str(imag_sum) + 'i'
+        fin_string = str(imag_sum) + 'i'
     if real_sum == 0 and imag_sum != 0:
         return fin_string
-    return (str(real_sum) + fin_string) if (real_sum + imag_sum != 0) else '0'
+    return str(real_sum) + fin_string if real_sum + imag_sum != 0 else '0'

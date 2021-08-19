@@ -9,6 +9,5 @@ def series_sum(n):
         for i in range(n - 1):
             nth_value = 1 / (4 + 3 * i)
             sum_ += nth_value
-
     sum_str = str(round(Decimal(sum_), 2))
     return sum_str

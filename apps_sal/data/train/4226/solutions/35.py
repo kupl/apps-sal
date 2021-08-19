@@ -4,7 +4,7 @@ def remove_smallest(numbers):
     if not numbers:
         return numbers
     for item in numbers:
-        if (item == min(numbers) and not added):
+        if item == min(numbers) and (not added):
             added = True
             continue
         else:

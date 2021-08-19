@@ -3,7 +3,7 @@ def squares_needed(grains):
     count = 0
     for i in range(0, 65):
         if g < grains:
-            g = g + 2**i
+            g = g + 2 ** i
             count += 1
         else:
             return count

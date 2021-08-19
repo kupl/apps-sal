@@ -3,7 +3,6 @@ def squares_needed(n):
         return 0
     if n == 1:
         return 1
-
     i = 1
     cont = 1
     sum = 1
@@ -11,5 +10,4 @@ def squares_needed(n):
         i *= 2
         sum += i
         cont += 1
-
     return cont

@@ -17,8 +17,7 @@ def palindrome(num):
         return 'Not valid'
     if num <= 10:
         return 11
+    elif findR(num) - num <= num - findL(num):
+        return findR(num)
     else:
-        if findR(num) - num <= num - findL(num):
-            return findR(num)
-        else:
-            return findL(num)
+        return findL(num)

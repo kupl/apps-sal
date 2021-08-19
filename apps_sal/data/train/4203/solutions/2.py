@@ -1,10 +1,8 @@
 def caffeineBuzz(n):
-
     if n % 12 == 0:
-        return "CoffeeScript"
+        return 'CoffeeScript'
     elif n % 6 == 0:
-        return "JavaScript"
+        return 'JavaScript'
     elif n % 3 == 0:
-        return "Java"
-
-    return "mocha_missing!"
+        return 'Java'
+    return 'mocha_missing!'

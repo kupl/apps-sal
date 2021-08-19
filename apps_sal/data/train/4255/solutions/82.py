@@ -1,6 +1,5 @@
 def make_upper_case(s):
-    answer = ""
+    answer = ''
     for c in s:
         answer += c.upper()
-
     return answer

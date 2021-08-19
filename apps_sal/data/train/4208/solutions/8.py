@@ -1,12 +1,12 @@
 def ipsubnet2list(subnet):
-    netaddr, prefix = subnet.split('/')
+    (netaddr, prefix) = subnet.split('/')
     if not all([0 <= int(x) < 256 for x in netaddr.split('.')]):
         return None
     netaddrbyte = 0
     for x in netaddr.split('.'):
         netaddrbyte = netaddrbyte * 256 + int(x)
     r = []
-    for i in range(2**(32 - int(prefix))):
+    for i in range(2 ** (32 - int(prefix))):
         addr = netaddrbyte + i
         a = []
         for _ in range(4):

@@ -1,7 +1,7 @@
 def remove_smallest(numbers):
     if numbers:
         idx_map = {}
-        for i, number in enumerate(numbers):
+        for (i, number) in enumerate(numbers):
             if number not in list(idx_map.keys()):
                 idx_map[number] = i
         smallest = min(numbers)

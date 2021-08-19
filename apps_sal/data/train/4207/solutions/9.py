@@ -1,1 +1,2 @@
-def sum_cubes(n): return sum([i ** 3 for i in range(n + 1)])
+def sum_cubes(n):
+    return sum([i ** 3 for i in range(n + 1)])

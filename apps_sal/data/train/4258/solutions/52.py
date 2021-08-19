@@ -12,5 +12,5 @@ def series_sum(n):
         final += '0'
     if len(final) > 4:
         if int(final[4]) > 4:
-            final = str(float(final) + .01)
+            final = str(float(final) + 0.01)
     return str(final)[:4]

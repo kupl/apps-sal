@@ -3,5 +3,5 @@ def squares_needed(grains):
         return 0
     else:
         for i in range(1, 65):
-            if grains < 2**i:
+            if grains < 2 ** i:
                 return i

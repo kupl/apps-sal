@@ -4,4 +4,4 @@ def reverse_letter(string):
     for j in range(0, len(arr)):
         if arr[j].isalpha() == True:
             arr2.append(arr[j])
-    return "".join(arr2[::-1])
+    return ''.join(arr2[::-1])

@@ -15,4 +15,4 @@ def cannons_ready(gunners):
         return 'Shiver me timbers!'
 
 
-'''If all answers are 'aye' then Fire! if one or more are 'nay' then Shiver me timbers!'''
+"If all answers are 'aye' then Fire! if one or more are 'nay' then Shiver me timbers!"

@@ -4,6 +4,6 @@ def cannons_ready(gunners):
         if g == 'nay':
             shoot = False
     if shoot:
-        return "Fire!"
+        return 'Fire!'
     else:
-        return "Shiver me timbers!"
+        return 'Shiver me timbers!'

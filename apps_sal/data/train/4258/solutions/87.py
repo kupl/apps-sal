@@ -1,5 +1,4 @@
 def series_sum(n):
-
     if n == 0:
         return '0.00'
     elif n == 1:
@@ -11,7 +10,7 @@ def series_sum(n):
             s += 3
             a.append(1 / s)
         a[-1] = 0
-        a = str((round(sum(a), 2)))
+        a = str(round(sum(a), 2))
         if len(a) == 4:
             return a
         else:

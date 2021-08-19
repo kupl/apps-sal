@@ -2,7 +2,7 @@ def remove_smallest(n):
     if len(n) == 0:
         return []
     c = n.count(min(n))
-    print((n.index(min(n))))
+    print(n.index(min(n)))
     idx = n.index(min(n))
     print(c)
     a = []
