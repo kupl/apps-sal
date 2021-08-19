@@ -1,19 +1,20 @@
 class Solution(object):
+
     def shortestPath(self, grid, k):
         k -= grid[0][0] == 1
         if k < 0:
             return -1
-        n, m = len(grid), len(grid[0])
+        (n, m) = (len(grid), len(grid[0]))
         if k >= m + n - 3:
             return m + n - 2
-        n, m = n - 1, m - 1
-        bfs = [(0, 0, k)]  # i, j, remaining removals
+        (n, m) = (n - 1, m - 1)
+        bfs = [(0, 0, k)]
         seen = set()
         steps = 0
         while bfs:
             nxt = []
-            for i, j, rem in bfs:
-                if(i, j, rem) in seen:
+            for (i, j, rem) in bfs:
+                if (i, j, rem) in seen:
                     continue
                 if i == n and j == m:
                     return steps
