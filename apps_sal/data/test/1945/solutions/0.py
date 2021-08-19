@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 n = int(input())
-
 b_a = {}
 for n_ in range(n):
-    b, a = input().split()
-
+    (b, a) = input().split()
     replaced = False
     for k in b_a:
         if b_a[k] == b:
@@ -14,7 +9,6 @@ for n_ in range(n):
             replaced = True
     if not replaced:
         b_a[b] = a
-
 print(len(b_a))
 for k in b_a:
-    print(k + " " + b_a[k])
+    print(k + ' ' + b_a[k])

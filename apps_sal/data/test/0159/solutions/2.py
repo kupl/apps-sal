@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 from fractions import gcd
-
 try:
     while True:
         n = int(input())
@@ -13,6 +10,5 @@ try:
             result.append(x)
         print(len(result) - len(a))
         print(' '.join(map(str, result)))
-
 except EOFError:
     pass

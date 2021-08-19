@@ -1,14 +1,12 @@
-a = int(input(""))
-# Alex Gu Is fat
+a = int(input(''))
 inputs = []
 for value in range(a):
-    a = input("").split(" ")
+    a = input('').split(' ')
     inputs.append(a)
-# Alex Gu is still fat
 handles = []
 guFat = []
 for value in inputs:
-    string = value[0] + " " + value[1]
+    string = value[0] + ' ' + value[1]
     if value[0] not in handles:
         handles.append(value[1])
         guFat.append(string)
@@ -16,12 +14,10 @@ for value in inputs:
         handles.remove(value[0])
         handles.append(value[1])
         for k in guFat:
-            impor = k.split(" ")
+            impor = k.split(' ')
             if value[0] == impor[1]:
                 guFat.remove(k)
-                guFat.append(impor[0] + " " + value[1])
-
-    # Guess what? Alex Gu is still fat!
+                guFat.append(impor[0] + ' ' + value[1])
 print(len(handles))
 for value in guFat:
     print(value)

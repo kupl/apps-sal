@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def are_same(a, b):
     a = a.lower()
     b = b.lower()
@@ -17,8 +14,7 @@ def main():
     n = int(input())
     for _ in range(n):
         s1 = input()
-
-        if len(s1) == len(s) and all(are_same(x1, x2) for x1, x2 in zip(s, s1)):
+        if len(s1) == len(s) and all((are_same(x1, x2) for (x1, x2) in zip(s, s1))):
             print('No')
             return
     print('Yes')

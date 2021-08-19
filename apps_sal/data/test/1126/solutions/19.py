@@ -1,18 +1,11 @@
-# -*- coding: utf-8 -*-
-
-n, x, m = map(int, input().split())
-
+(n, x, m) = map(int, input().split())
 a_list = [x]
 a = x
 i = 1
-while (i < n and i < m + 1):
-    a = (a * a) % m
+while i < n and i < m + 1:
+    a = a * a % m
     a_list.append(a)
     i += 1
-
-# print(i)
-# print(a_list)
-
 if i == n:
     ans = sum(a_list)
 else:
@@ -26,8 +19,4 @@ else:
     if amari != 0:
         sum3 = sum(a_list[b + 1:b + amari + 1])
     ans = sum1 + sum2 * repeat + sum3
-    # print(blen)
-    # print(amari)
-    #print(sum1, sum2, repeat, sum3)
-
 print(ans)

@@ -1,7 +1,7 @@
 def f(s):
     ans = ''
     for i in s:
-        if i == 'l' or i == 'L' or i == 'i' or i == 'I':
+        if i == 'l' or i == 'L' or i == 'i' or (i == 'I'):
             ans += '1'
         elif 'a' <= i <= 'z':
             ans += i.upper()
@@ -23,4 +23,3 @@ if s in a:
     print('No')
 else:
     print('Yes')
-# print(a)

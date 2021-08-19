@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Sep 30 03:40:29 2020
 
 @author: liang
 """
-
 A = list()
 B = list()
 for i in range(26):
@@ -16,9 +14,8 @@ T = input()
 
 def solve():
     for i in range(len(S)):
-        index = ord(S[i]) - ord("a")
+        index = ord(S[i]) - ord('a')
         A[index].append(i)
-
     for a_lis in A:
         flag = False
         if a_lis:
@@ -27,13 +24,11 @@ def solve():
             if T[t] != tmp:
                 flag = True
         if flag:
-            print("No")
+            print('No')
             return
-
     for i in range(len(T)):
-        index = ord(T[i]) - ord("a")
+        index = ord(T[i]) - ord('a')
         B[index].append(i)
-
     for b_lis in B:
         flag = False
         if b_lis:
@@ -42,11 +37,9 @@ def solve():
             if S[t] != tmp:
                 flag = True
         if flag:
-            print("No")
+            print('No')
             return
-
-    print("Yes")
-    # print(B)
+    print('Yes')
     return
 
 

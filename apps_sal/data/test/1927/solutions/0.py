@@ -1,13 +1,16 @@
-#!usr/bin/env python3
 import sys
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
 mod = 1000000007
 
 
 def solve():
+
     def add(i, x):
         while i < len(bit):
             bit[i] += x
@@ -19,7 +22,7 @@ def solve():
             res += bit[i]
             i -= i & -i
         return res
-    n, m = LI()
+    (n, m) = LI()
     a = LI()
     bit = [0] * (n + m + 2)
     MIN = [i + 1 for i in range(n)]
@@ -45,8 +48,6 @@ def solve():
     for i in range(n):
         print(MIN[i], MAX[i])
     return
-
-# Solve
 
 
 def __starting_point():
