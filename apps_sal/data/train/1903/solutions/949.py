@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points) -> int:
         p_set = [i for i in range(len(points))]
 
@@ -8,7 +9,6 @@ class Solution:
             return i
         if len(points) == 1:
             return 0
-
         edge = {}
         edgelist = []
         res = 0
@@ -23,19 +23,14 @@ class Solution:
                     edge[le] = [(i, j)]
                     edgelist.append(le)
         edgelist.sort()
-        # print(edge)
         (i, j) = edge[edgelist[0]][0]
         res += edgelist[0]
-        # print('add {}-{} length= {}'.format(i, j,edgelist[0]))
         p_set[j] = i
         for key in edgelist:
-            # print('deal ', key)
             for (i, j) in edge[key]:
                 fi = father(i)
                 fj = father(j)
                 if fj != fi:
-                    # print('add {}-{} length= {}'.format(i,j,key))
                     p_set[fj] = fi
-                    # print(p_set)
                     res += key
         return res

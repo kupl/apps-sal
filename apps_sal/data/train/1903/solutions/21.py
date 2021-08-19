@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         e = []
         for i in range(len(points)):
@@ -8,9 +9,6 @@ class Solution:
         def h(x):
             return abs(points[x[0]][0] - points[x[1]][0]) + abs(points[x[0]][1] - points[x[1]][1])
         e.sort(key=lambda x: h(x))
-
-        #print([[points[x], points[y], h((x,y))] for x,y in e])
-
         n = len(points)
         v = set()
         s = 0
@@ -18,12 +16,11 @@ class Solution:
 
         def find(x):
             nonlocal c
-            for i, cc in enumerate(c):
+            for (i, cc) in enumerate(c):
                 if x in cc:
                     return i
-
         for ee in e:
-            x, y = ee
+            (x, y) = ee
             if y not in v and x not in v:
                 c.append([x, y])
                 v.add(x)
@@ -49,5 +46,4 @@ class Solution:
                 del c[yi]
                 if len(v) == n and len(c) == 1:
                     return s
-        # print(v)
         return s

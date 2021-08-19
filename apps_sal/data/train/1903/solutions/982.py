@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n == 1:
@@ -7,17 +8,14 @@ class Solution:
         curr = 0
         dis = [math.inf] * n
         explored = set()
-
         for i in range(n - 1):
-            x0, y0 = points[curr]
+            (x0, y0) = points[curr]
             explored.add(curr)
-            for j, (x, y) in enumerate(points):
+            for (j, (x, y)) in enumerate(points):
                 if j in explored:
                     continue
                 dis[j] = min(dis[j], abs(x - x0) + abs(y - y0))
-
-            delta, curr = min((d, j) for j, d in enumerate(dis))  # curr 后续还会加到explored里面，妙
+            (delta, curr) = min(((d, j) for (j, d) in enumerate(dis)))
             dis[curr] = math.inf
             res += delta
-
         return res

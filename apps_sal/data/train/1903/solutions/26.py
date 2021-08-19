@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n == 1:
@@ -11,7 +12,7 @@ class Solution:
                 heappush(heap, (distance, i, j))
         ans = 0
         while heap:
-            distance, i, j = heappop(heap)
+            (distance, i, j) = heappop(heap)
             if dsu.find(i) != dsu.find(j):
                 ans += distance
                 dsu.union(i, j)
@@ -21,9 +22,7 @@ class Solution:
 class DisjointSetUnion(object):
 
     def __init__(self, size):
-        # initially, each node is an independent component
         self.parent = [i for i in range(size + 1)]
-        # keep the size of each component
         self.size = [1] * (size + 1)
 
     def find(self, x):
@@ -32,19 +31,11 @@ class DisjointSetUnion(object):
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
-
-        # the two nodes share the same set
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return px
-
-        # otherwise, connect the two sets (components)
         if self.size[px] > self.size[py]:
-            # add the node to the union with less members.
-            # keeping px as the index of the smaller component
-            px, py = py, px
-        # add the smaller component to the larger one
+            (px, py) = (py, px)
         self.parent[px] = py
         self.size[py] += self.size[px]
-        # return the final (merged) group
         return py

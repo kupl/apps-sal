@@ -1,6 +1,6 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # MST
         dist = []
         n = len(points)
         for i in range(n):
@@ -26,8 +26,7 @@ class Solution:
                 ps[px] = py
                 return True
         res = 0
-        for d, x, y in dist:
+        for (d, x, y) in dist:
             if union(x, y):
                 res += d
-
         return res
