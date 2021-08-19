@@ -1,5 +1,5 @@
-# 20201007 12:08 选参考答案
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         cache = Counter(A)
         c_list = sorted(list(cache), key=abs)

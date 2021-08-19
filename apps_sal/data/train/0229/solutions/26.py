@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         if not A:
             return True
@@ -15,5 +16,4 @@ class Solution:
                     n -= 1
                     if n == 0:
                         return True
-            # print(x,d,n)
         return False

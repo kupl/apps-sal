@@ -1,4 +1,4 @@
-'''
+"""
 1006. Clumsy Factorial.  Medium
 
 Normally, the factorial of a positive integer n is the product
@@ -37,24 +37,23 @@ Note:
 The answer is guaranteed to fit within a 32-bit integer.
 
 Accepted 11, 010 / 20, 603 submissions.
-'''
+"""
 
 
 class SolutionWhile:
-    '''
+    """
     Runtime: 36 ms, faster than 77.40% of Python3 online submissions for Clumsy Factorial.
     Memory Usage: 14.2 MB, less than 41.24% of Python3 online submissions for Clumsy Factorial.
 
     Runtime: 40 ms, faster than 68.26% in Python3.
     Memory Usage: 12.8 MB, less than 100.00% in Python3.
-    '''
+    """
 
     def clumsy(self, N: int) -> int:
-        '''
+        """
         1006. Clumsy Factorial
-        '''
+        """
         R = N
-        # set_trace()
         N -= 1
         if N:
             R *= N
@@ -79,10 +78,7 @@ class SolutionWhile:
                 break
             R += N
             N -= 1
-
         return R
-
-###############################################################################
 
 
 class Solution:
@@ -90,4 +86,3 @@ class Solution:
 
 
 Solution = SolutionWhile
-# Solution = SolutionMathTricks

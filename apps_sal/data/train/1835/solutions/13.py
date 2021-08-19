@@ -1,8 +1,9 @@
 class Solution:
+
     def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
+
         @functools.lru_cache(maxsize=128, typed=False)
         def check(n, k, s):
-            #   s表示起点
             rtv = []
             if n == 0:
                 return []
@@ -15,9 +16,7 @@ class Solution:
                             rtv.append([i] + r)
                     else:
                         rtv.append([i])
-
             return rtv
-
         rtv = []
         for i in range(1, 10):
             r0 = check(n - 1, k, i)

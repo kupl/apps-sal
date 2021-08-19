@@ -1,13 +1,10 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         n = len(A)
-        #A[2*i+1] = 2*A[2*i]
-        # [-2,-4,2,4]
-        #A[1] == 2*A[0]
-        #A[3] == 2*A[2]
         neg = sorted(list([x for x in A if x < 0]))
         pos = sorted(list([x for x in A if x > 0]), reverse=True)
-        nl, pl = len(neg), len(pos)
+        (nl, pl) = (len(neg), len(pos))
         if nl % 2 or pl % 2:
             return False
         d1 = collections.Counter(neg)
