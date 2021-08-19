@@ -1,12 +1,12 @@
 def __starting_point():
     tests = int(input())
     for _ in range(tests):
-        n, b, m = list(map(int, input().split()))
+        (n, b, m) = list(map(int, input().split()))
         ans = 0
         itr = 1
         k = n
         k1 = n
-        while(k >= 1):
+        while k >= 1:
             if k % 2 == 0:
                 k = k // 2
             else:
@@ -16,8 +16,6 @@ def __starting_point():
             k1 = k
             ans += b
             itr *= 2
-            # print(k)
-
         print(ans - b)
 
 

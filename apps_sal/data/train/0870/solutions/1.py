@@ -1,4 +1,3 @@
-# cook your dish here
 from operator import neg
 from collections import defaultdict, Counter
 from queue import Queue
@@ -13,8 +12,7 @@ from sys import stdin, stdout
 import os
 sys.setrecursionlimit(pow(10, 7))
 input = stdin.readline
-# print=stdout.write
-inf = float("inf")
+inf = float('inf')
 mod = pow(10, 9) + 7
 
 
@@ -40,12 +38,10 @@ def function(l1, index, prev, count):
         return 0
     if count >= 3:
         if index % 2 == prev:
-
             a1 = l1[index] + function(l1, index + 1, prev, count)
             dict[tuple] = a1
             return a1
         else:
-
             dict[tuple] = function(l1, index + 1, prev, count)
             return dict[tuple]
     if prev == None:
@@ -54,7 +50,6 @@ def function(l1, index, prev, count):
         maxa = max(skip, not_skip)
         dict[tuple] = maxa
         return maxa
-
     if index % 2 == prev:
         dict[tuple] = l1[index] + function(l1, index + 1, index % 2, count)
         return dict[tuple]

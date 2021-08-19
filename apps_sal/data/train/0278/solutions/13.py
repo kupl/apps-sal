@@ -1,19 +1,18 @@
 class Solution:
+
     def largestMultipleOfThree(self, digits: List[int]) -> str:
         n = len(digits)
-
         f = [0] * 10
         for x in digits:
             f[x] += 1
-
         M = defaultdict(int)
 
-        def upper(d, m):  # largest 3k + m: 3k + m <= f[d]
+        def upper(d, m):
             if f[d] < m:
                 return 0
             return (f[d] - m) // 3 * 3 + m
 
-        def mx(d, mod):  # largest k: 0 <= k <= f[d] && k * d % 3 = mod
+        def mx(d, mod):
             dm = d % 3
             if dm == 0:
                 return 0 if mod != 0 else f[d]
@@ -21,11 +20,9 @@ class Solution:
                 return upper(d, mod)
             if dm == 2:
                 return upper(d, (3 - mod) % 3)
-
         for i in range(10):
             for j in range(3):
                 M[i, j] = mx(i, j)
-
         X = [0] * 10
         R = [0] * 10
 
@@ -56,15 +53,11 @@ class Solution:
                     findout(i - 1, (mod + j) % 3)
                     X[i] = 0
             findout(i - 1, mod)
-
         findout(9, 0)
         ret = ''
-
         for i in reversed(list(range(10))):
             if R[i] > 0:
                 ret += R[i] * str(i)
-
         if len(ret) > 0 and ret[0] == '0':
             ret = '0'
-
         return ret

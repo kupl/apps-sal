@@ -1,4 +1,4 @@
-'''
+"""
 from random import randint
 
 visited = [-1] * (2 * 10 ** 6 + 1)
@@ -17,23 +17,20 @@ for i in range(t):
             res[cnt] = v
             cnt += 1
         v += 1
-    print("YES\n" + ' '.join(map(str,res)))
-'''
-
+    print("YES
+" + ' '.join(map(str,res)))
+"""
 t = int(input())
 
 
 def check(arr, v, dic):
     for i in arr:
-        # if i+v > 2e6:
-        #    break
         if dic[i + v] == 1:
             return True
     return False
 
 
 dic = [0] * 2000005
-
 for _ in range(t):
     n = int(input())
     arr = list(map(int, input().split()))
@@ -47,26 +44,16 @@ for _ in range(t):
         while check(arr, i, dic):
             i += 1
         brr[cnt] = i
-
         for v in arr:
-            # if i+v>2e6:
-            #    break
             dic[i + v] = 1
             tmp[i + v] = 1
         cnt += 1
-        '''
-        if all(dic[a + i] == 0 for a in arr):
-            for a in arr:
-                dic[a + i] = 1
-                tmp[a + i] = 1
-            brr[cnt] = i
-            cnt += 1
-        '''
+        '\n        if all(dic[a + i] == 0 for a in arr):\n            for a in arr:\n                dic[a + i] = 1\n                tmp[a + i] = 1\n            brr[cnt] = i\n            cnt += 1\n        '
         i += 1
     if flag:
-        print("YES")
-        print(" ".join(map(str, brr)))
+        print('YES')
+        print(' '.join(map(str, brr)))
     else:
-        print("NO")
+        print('NO')
     for k in list(tmp.keys()):
         dic[k] = 0

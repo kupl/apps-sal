@@ -29,7 +29,6 @@ for q in range(int(input())):
             if f > d:
                 l2.append(f)
                 ans[i] = '2'
-
                 if mnl2 == -1:
                     mnl2 = i
             elif f < d:
@@ -38,7 +37,6 @@ for q in range(int(input())):
                 mxl1 = i
             else:
                 same.append(i)
-        # print(d, same, l1, l2, iss(), mxl1, mnl2)
         if not iss():
             continue
         good = True
@@ -52,7 +50,7 @@ for q in range(int(input())):
                 break
         if not good:
             continue
-        sys.stdout.write("".join(ans) + '\n')
+        sys.stdout.write(''.join(ans) + '\n')
         done = True
         break
     if not done:

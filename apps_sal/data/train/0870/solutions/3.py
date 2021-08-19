@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
     n = len(s)
-    o, z, oz, zo, ozo, zoz = 0, 0, 0, n, n, n
+    (o, z, oz, zo, ozo, zoz) = (0, 0, 0, n, n, n)
     for i in s:
         if i == '1':
             zo = min(zo, z)

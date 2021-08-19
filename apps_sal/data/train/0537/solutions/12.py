@@ -1,5 +1,4 @@
-# cook your dish here
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 x = list(map(int, input().split()))[:N]
 count = []
 for i in range(len(x)):

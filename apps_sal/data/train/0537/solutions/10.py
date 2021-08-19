@@ -1,6 +1,5 @@
-# cook your dish here
-N, K = map(int, input().split(" "))
-inputs = list(map(int, input().split(" ")))
+(N, K) = map(int, input().split(' '))
+inputs = list(map(int, input().split(' ')))
 inputs.sort()
 total = 0
 for n in range(N):
