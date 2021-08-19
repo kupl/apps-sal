@@ -7,20 +7,15 @@ Language: Python 3.3.4
 
 
 def main():
-    n, = read()
+    (n,) = read()
     if n % 2:
-        print("black")
+        print('black')
     else:
-        print("white")
-        print("1 2")
-
-# NON-SOLUTION STUFF BELOW
+        print('white')
+        print('1 2')
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -30,13 +25,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

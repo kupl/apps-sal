@@ -1,27 +1,21 @@
 import math
-# helpful:
-# r,g,b=map(int,input().split()
-# arr = [[0 for x in range(columns)] for y in range(rows)]
-
 n = int(input())
 string = input()
-
 arr = [0] * 10
 for i in range(len(string)):
-    if(string[i] == 'L'):
+    if string[i] == 'L':
         index = 0
-        while(arr[index] != 0):
+        while arr[index] != 0:
             index += 1
         arr[index] = 1
-    elif(string[i] == 'R'):
+    elif string[i] == 'R':
         index = 9
-        while(arr[index] != 0):
+        while arr[index] != 0:
             index -= 1
         arr[index] = 1
     else:
         arr[int(string[i])] = 0
-
-printstring = ""
+printstring = ''
 for i in range(10):
     printstring += str(arr[i])
 print(printstring)

@@ -26,44 +26,29 @@ def change_char_at(ch, s, indx):
     s:    string to insert into
     indx: index position where to insert the character
     """
-    # Error handling
     if type(ch) is not str:
-        raise TypeError("first argument must be a string")
+        raise TypeError('first argument must be a string')
     if type(s) is not str or not len(s) > 0:
-        raise TypeError("second argument must be a non-empty string")
-
+        raise TypeError('second argument must be a non-empty string')
     length = len(s) - 1
-    if not(indx >= 0 and indx <= length):
-        msg = "string index out of range; "
-        msg += "attempt to access index at {0}; ".format(indx)
-        msg += "allowable index range 0 to {0}".format(length)
+    if not (indx >= 0 and indx <= length):
+        msg = 'string index out of range; '
+        msg += 'attempt to access index at {0}; '.format(indx)
+        msg += 'allowable index range 0 to {0}'.format(length)
         raise IndexError(msg)
-
-    # Actual function logic
     return s[:indx] + ch + s[indx + 1:]
-    """
-    Another possible implementation:
-
-        ls       = list(s)
-        ls[indx] = ch
-        return ''.join(ls)
-
-    This works well too and is equally good, but might be conspired unpythonic
-    by some compared to the one right above it.
-    """
+    "\n    Another possible implementation:\n\n        ls       = list(s)\n        ls[indx] = ch\n        return ''.join(ls)\n\n    This works well too and is equally good, but might be conspired unpythonic\n    by some compared to the one right above it.\n    "
 
 
 s = input()
 x = 0
 y = 0
 for i in range(0, len(s)):
-
-    if(s[i] == 'y'):
+    if s[i] == 'y':
         y += 1
-    elif(s[i] == 'x'):
+    elif s[i] == 'x':
         x += 1
-if(x - y > 0):
-    print("x" * (x - y))
-
+if x - y > 0:
+    print('x' * (x - y))
 else:
-    print("y" * (y - x))
+    print('y' * (y - x))

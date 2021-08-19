@@ -1,9 +1,5 @@
-#! /usr/bin/python
-
 from fractions import gcd
-
-t, w, b = list(map(int, input().split()))
-
+(t, w, b) = list(map(int, input().split()))
 if w == b:
     print('1/1')
 else:
@@ -11,4 +7,4 @@ else:
     m = min(w, b)
     n = t // wb * m - 1 + min(t % wb + 1, m)
     g = gcd(n, t)
-    print("%d/%d" % (n // g, t // g))
+    print('%d/%d' % (n // g, t // g))
