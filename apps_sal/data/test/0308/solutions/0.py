@@ -1,4 +1,4 @@
-x, y, n, c = 0, 0, 0, 0
+(x, y, n, c) = (0, 0, 0, 0)
 
 
 def suma_impares(m):
@@ -10,7 +10,7 @@ def suma_n(m):
 
 
 def cnt(t):
-    u, d, l, r = x + t, x - t, y - t, y + t
+    (u, d, l, r) = (x + t, x - t, y - t, y + t)
     suma = t ** 2 + (t + 1) ** 2
     if u > n:
         suma -= suma_impares(u - n)
@@ -31,12 +31,10 @@ def cnt(t):
     return suma
 
 
-n, x, y, c = input().split()
-n, x, y, c = int(n), int(x), int(y), int(c)
-# for i in range(10):
-#	print(i, cnt(i))
-ini, fin = 0, int(1e9)
-cont = int(1e9)
+(n, x, y, c) = input().split()
+(n, x, y, c) = (int(n), int(x), int(y), int(c))
+(ini, fin) = (0, int(1000000000.0))
+cont = int(1000000000.0)
 while cont > 0:
     m = ini
     paso = cont // 2

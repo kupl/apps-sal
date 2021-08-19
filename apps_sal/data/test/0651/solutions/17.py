@@ -1,6 +1,5 @@
 import itertools
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 maze = [input() for i in range(n)]
 for i in range(n):
     for j in range(m):
@@ -16,8 +15,8 @@ for p in itertools.permutations([(0, 1), (0, -1), (1, 0), (-1, 0)], r=4):
     y = sy
     x = sx
     for i in s:
-        dy, dx = p[i]
-        if 0 <= y + dy < n and 0 <= x + dx < m and maze[y + dy][x + dx] != '#':
+        (dy, dx) = p[i]
+        if 0 <= y + dy < n and 0 <= x + dx < m and (maze[y + dy][x + dx] != '#'):
             y += dy
             x += dx
         else:
@@ -25,6 +24,5 @@ for p in itertools.permutations([(0, 1), (0, -1), (1, 0), (-1, 0)], r=4):
         if y == ey and x == ex:
             break
     if y == ey and x == ex:
-
         cnt += 1
 print(cnt)

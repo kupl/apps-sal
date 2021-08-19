@@ -1,6 +1,5 @@
-# E
 import numpy as np
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 lists = list(np.arange(1, n + 1))
 list1 = lists[:m]
 list2 = lists[m:]

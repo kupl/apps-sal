@@ -1,6 +1,3 @@
-# This code sucks, you know it and I know it.
-# Move on and call me an idiot later.
-
 def ps(l, i, j):
     if i > j:
         return l[-1] - l[i - 1] + l[j]
@@ -12,8 +9,7 @@ def ps(l, i, j):
 
 n = int(input())
 a = list(map(int, input().split()))
-s, f = map(int, input().split())
-
+(s, f) = map(int, input().split())
 l = [a[0]]
 for i in a[1:]:
     l.append(l[-1] + i)

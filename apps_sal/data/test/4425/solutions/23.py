@@ -1,6 +1,4 @@
-N, K = map(int, input().split())
-
-# 何回2をかけると超えるか。
+(N, K) = map(int, input().split())
 
 
 def func1(i, k):
@@ -9,7 +7,7 @@ def func1(i, k):
     end = False
     if num >= k:
         return 0
-    while(not end):
+    while not end:
         ans += 1
         num *= 2
         if num >= k:
@@ -20,5 +18,5 @@ def func1(i, k):
 
 ans = 0
 for initial_score in range(1, N + 1):
-    ans += (1 / N) * (1 / 2) ** func1(initial_score, K)
+    ans += 1 / N * (1 / 2) ** func1(initial_score, K)
 print(ans)

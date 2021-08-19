@@ -1,6 +1,5 @@
-
 import itertools
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def road(ins):
@@ -41,7 +40,6 @@ def road(ins):
                     return 0
             except:
                 return 0
-    # print(cur)
     if ar[cur[0]][cur[1]] == 'E':
         return 1
     else:
@@ -59,6 +57,5 @@ for x in range(n):
 s = input()
 i = 0
 for x in list(itertools.permutations(['U', 'D', 'L', 'R'])):
-    # print(list(x))
     i += road(list(x))
 print(i)

@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = m
 r = d + 1
 for i in range(m):

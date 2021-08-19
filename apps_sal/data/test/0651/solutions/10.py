@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 grid = []
 sloc = (-1, -1)
 eloc = (-1, -1)
@@ -11,7 +11,6 @@ for y in range(n):
             sloc = (x, y)
         elif l[x] == 'E':
             eloc = (x, y)
-
 pb = []
 for a in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
     for b in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
@@ -19,9 +18,7 @@ for a in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             for d in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
                 if len(set([a, b, c, d])) == 4 and [a, b, c, d] not in pb:
                     pb.append([a, b, c, d])
-
 s = input()
-
 ans = 0
 for mp in pb:
     seen = False
@@ -46,5 +43,4 @@ for mp in pb:
         loc = nloc
     if seen:
         ans += 1
-
 print(ans)

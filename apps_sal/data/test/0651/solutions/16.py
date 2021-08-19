@@ -1,26 +1,12 @@
 import itertools
-
-dirs = (list(itertools.permutations(['r', 'l', 'd', 'u'])))
-
-n, m = list(map(int, input().split()))
+dirs = list(itertools.permutations(['r', 'l', 'd', 'u']))
+(n, m) = list(map(int, input().split()))
 grid = []
 for i in range(n):
     grid.append(input())
-
 path = input()
-
-dx = {
-    'r': 0,
-    'l': 0,
-    'u': -1,
-    'd': 1
-}
-dy = {
-    'r': 1,
-    'l': -1,
-    'u': 0,
-    'd': 0
-}
+dx = {'r': 0, 'l': 0, 'u': -1, 'd': 1}
+dy = {'r': 1, 'l': -1, 'u': 0, 'd': 0}
 
 
 def can_reach(n, m, grid, adir, path, dx, dy):
@@ -33,7 +19,7 @@ def can_reach(n, m, grid, adir, path, dx, dy):
     for i in range(len(path)):
         x += dx[adir[int(path[i])]]
         y += dy[adir[int(path[i])]]
-        if x >= n or y >= m or x < 0 or y < 0 or grid[x][y] == '#':
+        if x >= n or y >= m or x < 0 or (y < 0) or (grid[x][y] == '#'):
             return False
         if grid[x][y] == 'E':
             return True
