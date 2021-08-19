@@ -1,15 +1,20 @@
-# coding: utf-8
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-N, K, C = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(N, K, C) = lr()
 S = sr()
-# 左からと右からでそれぞれ貪欲、重なったところが必須
 left = []
 right = []
 
@@ -33,7 +38,7 @@ right = work(S[::-1])
 right = [N - 1 - x for x in right]
 right.reverse()
 answer = []
-for l, r in zip(left, right):
+for (l, r) in zip(left, right):
     if l == r:
         answer.append(str(l + 1))
-print(('\n'.join(answer)))
+print('\n'.join(answer))

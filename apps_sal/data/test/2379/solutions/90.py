@@ -1,17 +1,11 @@
-#
 import sys
 import math
 import numpy as np
 import itertools
-# いくつか入力
-n, k, c = (int(i) for i in input().split())
-
-# 文字列を一文字ずつのリストに代入 test は['t', 'e', 's', 't']
+(n, k, c) = (int(i) for i in input().split())
 m = list(input())
-
 l = [-1] * n
 r = [-1] * n
-
 a = 0
 b = c
 for i in range(n):
@@ -34,9 +28,7 @@ for i in range(n - 1, -1, -1):
         b += 1
     if a == k:
         break
-
-
 answer = 0
 for i in range(n):
     if l[i] == r[i] and l[i] >= 0:
-        print((l[i] + 1))
+        print(l[i] + 1)

@@ -1,9 +1,7 @@
 def main():
-    N, K, C = map(int, input().split())
+    (N, K, C) = map(int, input().split())
     S = input()
-
-    L = [-1] * K  # 0-ind
-
+    L = [-1] * K
     i = 0
     cur = 0
     while i < N:
@@ -14,9 +12,7 @@ def main():
                 break
             i += C
         i += 1
-
-    R = [-1] * K  # 0-ind
-
+    R = [-1] * K
     i = N - 1
     cur = K - 1
     while i >= 0:
@@ -27,8 +23,7 @@ def main():
                 break
             i -= C
         i -= 1
-
-    ans = (l + 1 for l, r in zip(L, R) if l == r)  # 1-ind
+    ans = (l + 1 for (l, r) in zip(L, R) if l == r)
     print(*ans, sep='\n')
 
 

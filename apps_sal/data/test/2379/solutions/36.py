@@ -1,10 +1,6 @@
-# 解説を参考に作成
-
-
 def solve():
-    N, K, C = list(map(int, input().split()))
+    (N, K, C) = list(map(int, input().split()))
     S = input()
-
     left = []
     rest = 0
     work = 0
@@ -17,7 +13,6 @@ def solve():
             rest -= 1
         if work == K:
             break
-
     right = []
     rest = 0
     work = 0
@@ -31,12 +26,9 @@ def solve():
         if work == K:
             break
     right = list(reversed(right))
-
-    # print(left)
-    # print(right)
     for i in range(len(left)):
         if left[i] == right[i]:
-            print((left[i] + 1))
+            print(left[i] + 1)
 
 
 def __starting_point():

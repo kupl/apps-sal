@@ -2,7 +2,7 @@ import math
 from decimal import *
 T = int(input())
 while T > 0:
-    h, a = list(map(int, input().split()))
+    (h, a) = list(map(int, input().split()))
     x = h * h * h * h - 16 * a * a
     if x < 0:
         print(-1)
@@ -22,5 +22,4 @@ while T > 0:
                 new_list.append(float(item))
             ans.sort()
             print(format(ans[0], '.6f'), format(ans[1], '.6f'), format(ans[2], '.6f'))
-            # print ans[0],ans[1],ans[2]
     T -= 1

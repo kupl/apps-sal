@@ -12,30 +12,35 @@ import random
 import time
 import copy
 import bisect
-#from operator import itemgetter
-#from heapq import heappush, heappop
-#import numpy as np
-#from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
-#from scipy.sparse import csr_matrix
-#from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
 import sys
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
 
 
-A, B, N = na()
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+(A, B, N) = na()
 if N >= B - 1:
     print(math.floor(A * (B - 1) / B) - A * math.floor((B - 1) / B))
 else:
-    print(math.floor(A * (N) / B) - A * math.floor((N) / B))
+    print(math.floor(A * N / B) - A * math.floor(N / B))

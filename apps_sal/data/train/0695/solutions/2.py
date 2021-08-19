@@ -1,4 +1,3 @@
-# cook your dish here
 tc = int(input())
 for j in range(tc):
     ip = list(map(int, input().rstrip().split()))
@@ -7,6 +6,6 @@ for j in range(tc):
     n = ip[2]
     cnt = 0
     for i in range(n + 1):
-        if((x ^ i) < (y ^ i)):
+        if x ^ i < y ^ i:
             cnt += 1
     print(cnt)
