@@ -1,8 +1,7 @@
-# cook your dish here
-c, f = map(int, input().split())
+(c, f) = map(int, input().split())
 dist = [[float('Inf') for _ in range(c)] for _ in range(c)]
 for _ in range(f):
-    u, v, p = map(int, input().split())
+    (u, v, p) = map(int, input().split())
     u -= 1
     v -= 1
     dist[u][v] = p

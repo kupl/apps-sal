@@ -6,12 +6,11 @@ for rwier in range(q):
     d = l.count(2)
     pr = [0] * n
     le = [0] * n
-    pr[0] = (1 if l[n] == 1 else -1)
-    le[0] = (1 if l[n - 1] == 1 else -1)
+    pr[0] = 1 if l[n] == 1 else -1
+    le[0] = 1 if l[n - 1] == 1 else -1
     for i in range(1, n):
         pr[i] = pr[i - 1] + (1 if l[n + i] == 1 else -1)
         le[i] = le[i - 1] + (1 if l[n - i - 1] == 1 else -1)
-    # print(pr,le)
     if j - d < 0:
         for i in range(n):
             pr[i] = -pr[i]
@@ -20,7 +19,6 @@ for rwier in range(q):
     if ab == 0:
         print(0)
     else:
-        #suma = abs
         najwp = [123456789] * (2 * n + 1)
         najwl = [123456789] * (2 * n + 1)
         le = [0] + le

@@ -1,11 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-
-
 from collections import defaultdict
 
 
@@ -17,20 +9,15 @@ class Solution:
             result[cur_level] += cur.val
         if cur.left:
             left_result = self.max_level_sum_rec(cur.left, cur_level + 1)
-            for k, v in left_result.items():
+            for (k, v) in left_result.items():
                 result[k] += v
         if cur.right:
             right_result = self.max_level_sum_rec(cur.right, cur_level + 1)
-            for k, v in right_result.items():
+            for (k, v) in right_result.items():
                 result[k] += v
-
         return result
 
     def maxLevelSum(self, root: TreeNode) -> int:
         result = self.max_level_sum_rec(root, 1)
         print(result)
-        return sorted(
-            result.items(),
-            key=lambda t: (t[1], -t[0]),
-            reverse=True
-        )[0][0]
+        return sorted(result.items(), key=lambda t: (t[1], -t[0]), reverse=True)[0][0]
