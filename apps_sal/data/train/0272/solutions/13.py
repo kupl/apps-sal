@@ -1,4 +1,5 @@
-class Box():
+class Box:
+
     def __init__(self, status, candies, keys, boxes):
         self.status = status
         self.candies = candies
@@ -19,7 +20,6 @@ class Solution:
         mykeys = []
         unopened = []
         candySum = 0
-
         Q = []
         for i in initialBoxes:
             mykeys.extend(keys[i])
@@ -27,20 +27,15 @@ class Solution:
                 Q.append(i)
             else:
                 unopened.append(i)
-
         openboxes(unopened, mykeys, Q)
-
         while Q != []:
             box = Q.pop(0)
             candySum += candies[box]
-
             for b in containedBoxes[box]:
                 mykeys.extend(keys[b])
                 if status[b] == 1:
                     Q.append(b)
                 else:
                     unopened.append(b)
-
             openboxes(unopened, mykeys, Q)
-
         return candySum

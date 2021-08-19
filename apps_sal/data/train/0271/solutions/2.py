@@ -1,4 +1,5 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
@@ -33,5 +34,4 @@ class Solution:
                         break
                     j = j + 1
                 a.insert(0, reached)
-
         return a[0]

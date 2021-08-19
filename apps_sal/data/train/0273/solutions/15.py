@@ -1,4 +1,5 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         layer = collections.deque([(0, 1)])
         visited = set()
@@ -6,7 +7,7 @@ class Solution:
         while len(layer) > 0:
             nxt_layer = collections.deque()
             while len(layer) > 0:
-                p, s = layer.popleft()
+                (p, s) = layer.popleft()
                 if p > target * 2 and s > target * 2:
                     continue
                 if p == target:

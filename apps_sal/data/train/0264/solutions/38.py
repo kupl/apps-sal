@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         max_count = 0
         for i in range(0, len(arr) + 1):

@@ -1,6 +1,7 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
-        i, j = 0, 0
+        (i, j) = (0, 0)
         flag = True
         count = 0
         while i < len(nums):

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums, target):
         d = {0: -1}
         prefix = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         n = len(nums)
         res = 0
@@ -10,5 +11,4 @@ class Solution:
                 res += 1
                 cache = set()
             cache.add(cumsum)
-
         return res

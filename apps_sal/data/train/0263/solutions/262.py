@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -10,7 +11,7 @@ class Solution:
                 for j in range(len(temp)):
                     list_new[i] = list_new[i] + list_old[temp[j]]
             list_old = list_new[0:10]
-        return sum(list_old) % (10**9 + 7)
+        return sum(list_old) % (10 ** 9 + 7)
 
     def map(self, d: int) -> List[int]:
         if d == 0:

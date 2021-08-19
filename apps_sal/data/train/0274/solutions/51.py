@@ -1,11 +1,11 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         from collections import deque
         mnq = deque([])
         mxq = deque([])
         left = 0
-
-        for right, num in enumerate(nums):
+        for (right, num) in enumerate(nums):
             while mxq and mxq[-1] < num:
                 mxq.pop()
             while mnq and mnq[-1] > num:

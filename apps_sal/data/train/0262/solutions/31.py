@@ -1,14 +1,15 @@
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         allwords = words + [result]
         n = max(list(map(len, allwords)))
-        firstc = set(word[0] for word in allwords)
+        firstc = set((word[0] for word in allwords))
 
         def dfs(charidx, wordidx, carry, visited, char2digit):
             if charidx == n:
                 return carry == 0
             if wordidx == len(allwords):
-                tot = sum(char2digit[word[~charidx]] if charidx < len(word) else 0 for word in words) + carry
+                tot = sum((char2digit[word[~charidx]] if charidx < len(word) else 0 for word in words)) + carry
                 if tot % 10 == char2digit[result[~charidx]]:
                     return dfs(charidx + 1, 0, tot // 10, visited, char2digit)
                 return False
@@ -27,5 +28,4 @@ class Solution:
                     del char2digit[c]
                     visited.remove(d)
             return False
-
         return dfs(0, 0, 0, set(), {})

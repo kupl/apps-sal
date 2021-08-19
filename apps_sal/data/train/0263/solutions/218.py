@@ -1,6 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        x0, x1, x2, x3, x4, x5, x6, x7, x8, x9 = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+        (x0, x1, x2, x3, x4, x5, x6, x7, x8, x9) = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
         mod = pow(10, 9) + 7
         for i in range(n - 1):
             t0 = (x4 + x6) % mod
@@ -13,6 +14,5 @@ class Solution:
             t7 = (x2 + x6) % mod
             t8 = (x1 + x3) % mod
             t9 = (x2 + x4) % mod
-            x0, x1, x2, x3, x4, x5, x6, x7, x8, x9 = t0, t1, t2, t3, t4, t5, t6, t7, t8, t9
-
+            (x0, x1, x2, x3, x4, x5, x6, x7, x8, x9) = (t0, t1, t2, t3, t4, t5, t6, t7, t8, t9)
         return (x0 + x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9) % mod

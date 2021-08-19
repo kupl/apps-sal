@@ -1,18 +1,8 @@
-move_map = {
-    0: {4, 6},
-    1: {6, 8},
-    2: {7, 9},
-    3: {4, 8},
-    4: {3, 9, 0},
-    5: {},
-    6: {1, 0, 7},
-    7: {2, 6},
-    8: {1, 3},
-    9: {2, 4}
-}
+move_map = {0: {4, 6}, 1: {6, 8}, 2: {7, 9}, 3: {4, 8}, 4: {3, 9, 0}, 5: {}, 6: {1, 0, 7}, 7: {2, 6}, 8: {1, 3}, 9: {2, 4}}
 
 
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -26,5 +16,4 @@ class Solution:
                     res += old_row[new_key]
                 new_row[key] = res
             old_row = new_row
-
-        return sum(new_row) % (10**9 + 7)
+        return sum(new_row) % (10 ** 9 + 7)

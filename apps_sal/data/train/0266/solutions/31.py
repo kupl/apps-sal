@@ -1,4 +1,5 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         n = len(s)
         lc = [1] * n

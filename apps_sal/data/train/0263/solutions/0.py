@@ -7,6 +7,6 @@ class Solution:
         for i in range(len(self.dp), n):
             new = [0] * 10
             for j in range(10):
-                new[j] = sum(self.dp[-1][k] for k in jump[j]) % MOD
+                new[j] = sum((self.dp[-1][k] for k in jump[j])) % MOD
             self.dp.append(new)
         return sum(self.dp[n - 1]) % MOD

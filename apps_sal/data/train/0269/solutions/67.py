@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         listx = []
         for i in range(0, len(nums)):
@@ -10,5 +11,4 @@ class Solution:
                         return False
                 else:
                     listx.append(i)
-
         return True

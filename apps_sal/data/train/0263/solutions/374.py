@@ -10,13 +10,12 @@ class Solution:
     def dfs(self, start, n):
         if n == 0:
             return 1
-
         if not self.cache.get((start, n)):
             total_numbers = 0
             for i in self.next_move[start]:
                 total_numbers += self.dfs(i, n - 1)
-            self.cache[(start, n)] = total_numbers
-        return self.cache[(start, n)]
+            self.cache[start, n] = total_numbers
+        return self.cache[start, n]
 
     def knightDialer(self, n: int) -> int:
-        return sum([self.dfs(i, n - 1) for i in range(10)]) % (10**9 + 7)
+        return sum([self.dfs(i, n - 1) for i in range(10)]) % (10 ** 9 + 7)

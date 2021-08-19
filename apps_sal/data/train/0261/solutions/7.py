@@ -1,7 +1,8 @@
 class Solution:
+
     def swap(self, A, i, j):
         if A[i] != A[j]:
-            A[i], A[j] = A[j], A[i]
+            (A[i], A[j]) = (A[j], A[i])
 
     def partition(self, A, p, r):
         self.swap(A, r, random.randint(p, r))
@@ -16,7 +17,7 @@ class Solution:
         return j
 
     def findElement(self, A, k):
-        low, high = 0, len(A) - 1
+        (low, high) = (0, len(A) - 1)
         while low < high:
             i = self.partition(A, low, high)
             if i > k:

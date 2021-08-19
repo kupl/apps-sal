@@ -1,13 +1,14 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        if(n == 0):
+        if n == 0:
             return 0
-        if(n == 1):
+        if n == 1:
             return 10
         total = 9
         digit = {}
         for j in range(0, 10):
-            if(j == 5):
+            if j == 5:
                 continue
             digit[j] = 1
         const = 10 ** 9 + 7

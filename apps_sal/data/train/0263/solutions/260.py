@@ -1,7 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         moves = [[] for x in range(10)]
-
         moves[0] = [4, 6]
         moves[1] = [6, 8]
         moves[2] = [7, 9]
@@ -16,17 +16,17 @@ class Solution:
 
         def dialer(start, n):
             if (start, n) in dp:
-                return dp[(start, n)]
+                return dp[start, n]
             if n == 1:
-                dp[(start, n)] = 1
+                dp[start, n] = 1
                 return 1
             xmoves = 0
             for move in moves[start]:
                 xmoves += dialer(move, n - 1)
-            xmoves %= (10**9 + 7)
-            dp[(start, n)] = xmoves
+            xmoves %= 10 ** 9 + 7
+            dp[start, n] = xmoves
             return xmoves
         xmoves = 0
         for i in range(10):
             xmoves += dialer(i, n)
-        return xmoves % (10**9 + 7)
+        return xmoves % (10 ** 9 + 7)

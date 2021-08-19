@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         mod = 1000000007
         if n == 0:
@@ -25,7 +26,6 @@ class Solution:
             for i in range(10):
                 for k in dict[i]:
                     dp[i][j] = (dp[i][j] + dp[k][j - 1]) % mod
-
         for i in range(0, 10):
             sum = (sum + dp[i][n]) % mod
         return sum % mod

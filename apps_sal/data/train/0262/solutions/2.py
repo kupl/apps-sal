@@ -1,7 +1,8 @@
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         words.append(result)
-        M, N = len(words), max(list(map(len, words)))
+        (M, N) = (len(words), max(list(map(len, words))))
         dic = {}
         rem = [None] * 10
         lead = set([w[0] for w in words])
@@ -18,7 +19,7 @@ class Solution:
             if t in dic:
                 return backtrack(i + 1, j, cur + dic[t] * sign)
             else:
-                for k, r in enumerate(rem):
+                for (k, r) in enumerate(rem):
                     if not r and (k or t not in lead):
                         dic[t] = k
                         rem[k] = t
@@ -27,5 +28,4 @@ class Solution:
                         del dic[t]
                         rem[k] = None
             return False
-
         return backtrack(0, 0, 0)

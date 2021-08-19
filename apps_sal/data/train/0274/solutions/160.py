@@ -1,14 +1,13 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums:
             return 0
-
         rlt = 1
         q = collections.deque([nums[0]])
-        max_stack, min_stack = [nums[0]], [nums[0]]
+        (max_stack, min_stack) = ([nums[0]], [nums[0]])
         for i in range(1, len(nums)):
-            while max_stack and (max_stack[0] - nums[i] > limit or
-                                 nums[i] - min_stack[0] > limit):
+            while max_stack and (max_stack[0] - nums[i] > limit or nums[i] - min_stack[0] > limit):
                 head = q.popleft()
                 if head == max_stack[0]:
                     max_stack.pop(0)
@@ -22,5 +21,4 @@ class Solution:
             max_stack.append(nums[i])
             min_stack.append(nums[i])
             rlt = max(rlt, len(q))
-
         return rlt

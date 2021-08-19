@@ -1,4 +1,5 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
@@ -8,4 +9,4 @@ class Solution:
         for i in range(len(nums) - 2, -1, -1):
             if i + nums[i] >= last:
                 last = i
-        return not(last)
+        return not last

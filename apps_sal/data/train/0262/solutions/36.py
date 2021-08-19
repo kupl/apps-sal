@@ -1,4 +1,5 @@
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         n = len(words)
         mapper = {}
@@ -19,12 +20,12 @@ class Solution:
                 if l < 0:
                     if s != 0:
                         return False
-                    if any(mapper[w[0]] == 0 for w in words):
+                    if any((mapper[w[0]] == 0 for w in words)):
                         return False
                     if mapper[result[0]] == 0:
                         return False
                     return True
-                c, s = divmod(s, 10)
+                (c, s) = divmod(s, 10)
                 if mapper[result[l]] >= 0:
                     if mapper[result[l]] == s:
                         return solve(i + 1, 0, c)

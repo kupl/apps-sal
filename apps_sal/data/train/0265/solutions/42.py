@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         run_sum = 0
         count = 0
@@ -13,5 +14,4 @@ class Solution:
                 book_keep = {0: 1}
             else:
                 book_keep[run_sum] = 1
-
         return count

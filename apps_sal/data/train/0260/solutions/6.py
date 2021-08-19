@@ -1,4 +1,5 @@
 class Solution:
+
     def wiggleMaxLength(self, nums):
         """
         :type nums: List[int]
@@ -18,7 +19,7 @@ class Solution:
                     gn[i] = gn[i - 1] + 1
                     trend = 1 if nums[i] > prev else -1
                     continue
-                if (nums[i] > prev and trend == -1) or (nums[i] < prev and trend == 1):
+                if nums[i] > prev and trend == -1 or (nums[i] < prev and trend == 1):
                     gn[i] = gn[i - 1] + 1
                     trend = -trend
                 else:

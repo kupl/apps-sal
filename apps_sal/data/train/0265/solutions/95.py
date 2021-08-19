@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         prefix = [0] * (len(nums) + 1)
         counts = defaultdict(int)

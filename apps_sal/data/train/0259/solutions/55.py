@@ -2,6 +2,7 @@ from math import ceil
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         left = 1
         right = max(nums)
@@ -17,5 +18,4 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid
-
         return left

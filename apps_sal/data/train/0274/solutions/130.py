@@ -2,10 +2,10 @@ from heapq import heappush, heappop
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         i = j = best = 0
-        minHeap, maxHeap = [], []
-
+        (minHeap, maxHeap) = ([], [])
         while i < len(nums) and j < len(nums):
             heappush(minHeap, (nums[j], j))
             heappush(maxHeap, (-nums[j], j))

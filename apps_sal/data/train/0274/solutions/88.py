@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, A, limit):
         maxd = collections.deque()
         mind = collections.deque()

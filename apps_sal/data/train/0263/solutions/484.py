@@ -1,6 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        P = 10**9 + 7
+        P = 10 ** 9 + 7
 
         def wrap(x):
             return x - P if x >= P else x
@@ -20,6 +21,6 @@ class Solution:
                 d2[7] = wrap(d[2] + d[6])
                 d2[8] = wrap(d[1] + d[3])
                 d2[9] = wrap(d[2] + d[4])
-                d, d2 = d2, d
+                (d, d2) = (d2, d)
             s += sum(d)
         return s % (10 ** 9 + 7)

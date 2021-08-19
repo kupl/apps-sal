@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def numSplits(self, s: str) -> int:
         rightS = Counter(s)
         leftS = Counter()
@@ -11,6 +12,5 @@ class Solution:
             rightS[c] -= 1
             if rightS[c] == 0:
                 del rightS[c]
-            count += (len(leftS.keys()) == len(rightS.keys()))
-
+            count += len(leftS.keys()) == len(rightS.keys())
         return count

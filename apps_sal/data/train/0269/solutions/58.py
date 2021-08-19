@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         c = nums.count(1) - 1
         if c < 0:
@@ -9,7 +10,7 @@ class Solution:
         while c:
             fin = nums.index(1, ini + 1, len(nums))
             print(fin)
-            if fin - ini < (k + 1):
+            if fin - ini < k + 1:
                 return False
             c -= 1
             ini = fin

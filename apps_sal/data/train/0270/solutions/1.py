@@ -1,6 +1,7 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
-        m_vals = 3 * (2 ** (n - 1))
+        m_vals = 3 * 2 ** (n - 1)
         if k > m_vals:
             return ''
         k -= 1

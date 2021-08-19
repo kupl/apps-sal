@@ -1,4 +1,5 @@
 class Solution:
+
     def wiggleMaxLength(self, arr):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution:
             if arr[cur] > arr[prev] and wsl[prev] <= 1:
                 wsl[cur] = abs(wsl[prev]) + 1
             elif arr[cur] < arr[prev] and wsl[prev] > 0:
-                wsl[cur] = (abs(wsl[prev]) + 1) * (-1)
+                wsl[cur] = (abs(wsl[prev]) + 1) * -1
             else:
                 wsl[cur] = wsl[prev]
         return abs(wsl[n - 1])

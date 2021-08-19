@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr) -> int:
         maxLen = 0
         arr = sorted(arr, key=lambda x: len(x), reverse=True)
@@ -37,5 +38,4 @@ class Solution:
         for string in self.compatible[currString]:
             if self.uniqueChars(totalString, string):
                 maxLen = max(maxLen, self.findLength(string, totalString + string, len(totalString) + len(string)))
-
         return maxLen

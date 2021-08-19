@@ -3,6 +3,7 @@ def bo(i):
 
 
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         n = len(arr)
         freq = []
@@ -18,7 +19,7 @@ class Solution:
             s = set()
             cnt = 0
             for j in range(n):
-                if i & (1 << j):
+                if i & 1 << j:
                     for k in freq[j]:
                         s.add(k)
                     cnt += len(freq[j])

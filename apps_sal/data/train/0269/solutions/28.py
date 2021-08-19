@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         import numpy as np
         ones = np.nonzero(nums)[0]

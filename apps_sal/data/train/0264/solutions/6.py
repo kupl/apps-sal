@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         arr = [set(x) for x in arr if len(x) == len(set(x))]
         mx = 0
@@ -14,6 +15,5 @@ class Solution:
                 util(i + 1, cur)
                 cur ^= arr[i]
             mx = max(mx, len(cur))
-
         util(0, set())
         return mx

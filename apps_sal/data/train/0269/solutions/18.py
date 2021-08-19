@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         flag = 0
         start = None
@@ -13,5 +14,4 @@ class Solution:
                 start = i
                 if dis <= k:
                     return False
-
         return True

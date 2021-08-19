@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def racecar(self, target: int) -> int:
         q = deque([(0, 1)])
         visited = set([(0, 1)])
@@ -9,7 +10,7 @@ class Solution:
         while q:
             size = len(q)
             for _ in range(size):
-                pos, speed = q.popleft()
+                (pos, speed) = q.popleft()
                 if pos == target:
                     return res
                 if (pos + speed, speed * 2) not in visited:

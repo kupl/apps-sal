@@ -1,6 +1,6 @@
 class Solution:
-    def getHappyString(self, n: int, k: int) -> str:
 
+    def getHappyString(self, n: int, k: int) -> str:
         self.result = ['']
         self.index = 0
 

@@ -19,15 +19,15 @@ class Solution:
         for idx in range(10):
             if idx != 5:
                 agg += self.knightDialerHelper(idx, n - 1)
-        return agg % int(1e9 + 7)
+        return agg % int(1000000000.0 + 7)
 
     def knightDialerHelper(self, start, n):
         if n == 1:
             return len(self.valid_jumps[start])
         if (start, n) in self.cache.keys():
-            return self.cache[(start, n)]
+            return self.cache[start, n]
         numbers = 0
         for k in self.valid_jumps[start]:
             numbers += self.knightDialerHelper(k, n - 1)
-        self.cache[(start, n)] = numbers
+        self.cache[start, n] = numbers
         return numbers

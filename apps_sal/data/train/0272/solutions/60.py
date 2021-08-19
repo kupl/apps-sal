@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         queue = []
         visited = set()
@@ -9,7 +10,6 @@ class Solution:
                 queue.append(box)
             else:
                 closedBoxes.add(box)
-
         res = 0
         while queue:
             cur = queue.pop(0)
@@ -17,7 +17,7 @@ class Solution:
             for box in containedBoxes[cur]:
                 if status[box] == 1:
                     queue.append(box)
-                elif (status[box] == 0 and box in foundedKeys):
+                elif status[box] == 0 and box in foundedKeys:
                     queue.append(box)
                     foundedKeys.remove(box)
                 else:

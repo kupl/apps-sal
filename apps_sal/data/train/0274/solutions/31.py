@@ -1,7 +1,8 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         ans = 0
-        maxq, minq = [], []
+        (maxq, minq) = ([], [])
         i = 0
         for num in nums:
             while maxq and maxq[-1] < num:
@@ -16,5 +17,4 @@ class Solution:
                 if minq[0] == nums[i]:
                     minq.pop(0)
                 i += 1
-
         return len(nums) - i

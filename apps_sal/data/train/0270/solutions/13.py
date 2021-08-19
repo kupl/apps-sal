@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
 
         def dfs(ind, nlen, path, res):
@@ -6,9 +7,8 @@ class Solution:
                 res.append(path)
                 return
             for i in range(3):
-                if len(path) == 0 or (path[-1] != ls[i]):
+                if len(path) == 0 or path[-1] != ls[i]:
                     dfs(ind + 1, nlen, path + ls[i], res)
-
         ls = ['a', 'b', 'c']
         vis = [0] * 3
         res = []

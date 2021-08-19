@@ -2,9 +2,10 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         n = len(nums)
-        small, big = 1, max(nums)
+        (small, big) = (1, max(nums))
         while small < big:
             mid = small + (big - small) // 2
             cur = 0

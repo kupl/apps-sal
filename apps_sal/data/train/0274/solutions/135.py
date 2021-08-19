@@ -2,13 +2,13 @@ import heapq
 
 
 class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
 
+    def longestSubarray(self, nums: List[int], limit: int) -> int:
         minhp = []
         maxhp = []
         i = 0
         ans = 0
-        for j, el in enumerate(nums):
+        for (j, el) in enumerate(nums):
             heapq.heappush(minhp, [el, j])
             heapq.heappush(maxhp, [-el, j])
             while -maxhp[0][0] - minhp[0][0] > limit:

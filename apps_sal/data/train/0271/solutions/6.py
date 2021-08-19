@@ -1,4 +1,5 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
@@ -9,7 +10,7 @@ class Solution:
         res = [False for num in nums]
         res[0] = True
         end = 0
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if res[i] == False:
                 continue
             if i + num >= len(nums):

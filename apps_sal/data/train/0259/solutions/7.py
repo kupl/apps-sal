@@ -1,6 +1,7 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        l, r = 1, max(nums)
+        (l, r) = (1, max(nums))
         while l < r:
             m = (l + r) // 2
             sum_num = 0

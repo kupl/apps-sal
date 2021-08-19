@@ -1,8 +1,8 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         leftCount = collections.Counter()
         rightCount = collections.Counter(s)
-
         res = 0
         for c in s:
             leftCount[c] += 1

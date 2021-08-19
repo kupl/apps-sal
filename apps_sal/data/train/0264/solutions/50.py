@@ -1,9 +1,11 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         if not arr:
             return 0
 
-        def isUnique(s): return len(set(s)) == len(s)
+        def isUnique(s):
+            return len(set(s)) == len(s)
 
         def dfs(arr, res, curr):
             yield curr

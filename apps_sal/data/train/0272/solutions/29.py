@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):
         boxes = set(initialBoxes)
         bfs = [i for i in boxes if status[i]]
@@ -11,4 +12,4 @@ class Solution:
                 if status[j] == 0 and j in boxes:
                     bfs.append(j)
                 status[j] = 1
-        return sum(candies[i] for i in bfs)
+        return sum((candies[i] for i in bfs))

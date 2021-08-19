@@ -1,5 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
+
         @lru_cache(None)
         def dp(i, k):
             if k == 0:

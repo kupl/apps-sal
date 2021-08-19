@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self._maxLength = 0
 
@@ -9,9 +10,7 @@ class Solution:
     def uniqueLengths(self, arr, concat):
         if not self.hasUniqueChars(''.join(concat)):
             return
-
         self._maxLength = max(self._maxLength, len(''.join(concat)))
-
         for i in range(len(arr)):
             concat.append(arr[i])
             self.uniqueLengths(arr[i + 1:], concat)

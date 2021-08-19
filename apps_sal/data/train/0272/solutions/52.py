@@ -1,10 +1,10 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         locked_boxes = set()
         unused_keys = set()
         candy_count = 0
         cur_box = []
-
         for box in initialBoxes:
             if status[box] or box in unused_keys:
                 candy_count += candies[box]
@@ -26,7 +26,6 @@ class Solution:
                     unused_keys.remove(box)
             else:
                 locked_boxes.add(box)
-
         while cur_box:
             box = cur_box.pop()
             candy_count += candies[box]
@@ -45,5 +44,4 @@ class Solution:
                         unused_keys.remove(i)
             if box in unused_keys:
                 unused_keys.remove(box)
-
         return candy_count

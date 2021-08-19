@@ -1,8 +1,9 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         from collections import deque
-        asc, desc = deque(), deque()
-        l, r = 0, 0
+        (asc, desc) = (deque(), deque())
+        (l, r) = (0, 0)
         res = 0
         while r < len(nums):
             while asc and nums[asc[-1]] >= nums[r]:

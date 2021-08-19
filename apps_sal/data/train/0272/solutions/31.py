@@ -1,6 +1,7 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        currkeys, ret, taken = set(), 0, [0] * len(status)
+        (currkeys, ret, taken) = (set(), 0, [0] * len(status))
         q = collections.deque(initialBoxes)
         while q:
             l = len(q)

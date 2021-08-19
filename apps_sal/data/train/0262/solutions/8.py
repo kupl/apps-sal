@@ -1,9 +1,10 @@
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
+
         def backtrack(ch_pos_to_end, num_choices, iter_idx, lhs, rhs):
             if ch_pos_to_end > len(result):
                 return True
-
             mul = pow(10, ch_pos_to_end - 1)
             if iter_idx < len(words):
                 word = words[iter_idx]
@@ -14,9 +15,7 @@ class Solution:
                             if n == 0 and word[idx] == word[0]:
                                 continue
                             num_mappings[word[idx]] = n
-                            if backtrack(ch_pos_to_end, num_choices - {n}, iter_idx + 1,
-                                         lhs + num_mappings[word[idx]] * mul,
-                                         rhs):
+                            if backtrack(ch_pos_to_end, num_choices - {n}, iter_idx + 1, lhs + num_mappings[word[idx]] * mul, rhs):
                                 return True
                             del num_mappings[word[idx]]
                     else:
@@ -42,7 +41,6 @@ class Solution:
                         return False
                     return backtrack(ch_pos_to_end + 1, num_choices, 0, lhs, rhs + added * mul)
             return False
-
         max_len_words = max([len(w) for w in words])
         if max_len_words > len(result):
             return False

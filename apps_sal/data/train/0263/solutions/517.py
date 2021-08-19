@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -29,5 +30,5 @@ class Solution:
             return result
         for i in range(n - 1):
             A = count_next_moves(A)
-        result = (sum(A) % ((10**9) + 7))
+        result = sum(A) % (10 ** 9 + 7)
         return result

@@ -1,4 +1,5 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         dp = [0] * (target + 1)
         for i in range(1, target + 1):

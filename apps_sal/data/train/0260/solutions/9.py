@@ -1,4 +1,5 @@
 class Solution:
+
     def wiggleMaxLength(self, nums):
         """
         :type nums: List[int]
@@ -23,9 +24,8 @@ class Solution:
                     seq[-1] = nums[i]
                 else:
                     seq.append(nums[i])
+            elif nums[i] > seq[-1]:
+                seq[-1] = nums[i]
             else:
-                if nums[i] > seq[-1]:
-                    seq[-1] = nums[i]
-                else:
-                    seq.append(nums[i])
+                seq.append(nums[i])
         return len(seq)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         return self.recursive(arr, '', 0)
 
@@ -10,6 +11,4 @@ class Solution:
                     return 0
                 table[ch] = True
             return len(curr_str)
-
-        return max(self.recursive(arr, curr_str + arr[pick_idx], pick_idx + 1),
-                   self.recursive(arr, curr_str, pick_idx + 1))
+        return max(self.recursive(arr, curr_str + arr[pick_idx], pick_idx + 1), self.recursive(arr, curr_str, pick_idx + 1))

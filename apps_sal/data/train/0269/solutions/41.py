@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         counter = -1
         for num in nums:
@@ -12,5 +13,4 @@ class Solution:
             elif counter != -1:
                 counter += 1
         return True
-
-    0, 1, 0, 1
+    (0, 1, 0, 1)

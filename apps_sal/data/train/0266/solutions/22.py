@@ -1,9 +1,9 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         cnt = 0
         l_set = set()
         d = {c: s.count(c) for c in set(s)}
-
         for c in s:
             l_set.add(c)
             d[c] -= 1

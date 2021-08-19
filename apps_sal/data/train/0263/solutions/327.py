@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         moves = {0: (4, 6), 1: (8, 6), 2: (7, 9), 3: (4, 8), 4: (0, 3, 9), 6: (0, 1, 7), 7: (2, 6), 8: (1, 3), 9: (2, 4)}
 
@@ -14,4 +15,4 @@ class Solution:
                 for i in moves[last_val]:
                     count += dfs(i, length + 1)
             return count
-        return dfs() % ((10**9) + 7)
+        return dfs() % (10 ** 9 + 7)

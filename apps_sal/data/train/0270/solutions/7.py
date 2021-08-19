@@ -1,6 +1,7 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
-        N = 3 << (n - 1)
+        N = 3 << n - 1
         res = ''
         if k > N:
             return res

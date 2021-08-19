@@ -1,7 +1,8 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
-        p = (int)
-        q = (int)
+        p = int
+        q = int
         ll = len(s)
         if ll < 2:
             return 0
@@ -17,7 +18,6 @@ class Solution:
                 break
         if np <= nq:
             return nq - np + 1
-
         ans = 0
         for ii in range(1, ll):
             p = len(set(s[:ii]))
@@ -26,5 +26,4 @@ class Solution:
                 ans += 1
             elif p > q:
                 return ans
-
         return ans

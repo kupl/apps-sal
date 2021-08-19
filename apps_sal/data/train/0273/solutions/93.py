@@ -1,4 +1,5 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         queue = deque([(0, 1)])
         visited = set()
@@ -6,7 +7,7 @@ class Solution:
         step = 0
         while queue:
             for _ in range(len(queue)):
-                pos, speed = queue.popleft()
+                (pos, speed) = queue.popleft()
                 if pos + speed == target:
                     return step + 1
                 if abs(speed * 2) < 2 * target and abs(pos + speed) < 2 * target:

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: list, target: int) -> int:
         sumDict = collections.defaultdict(collections.deque)
         preSum = 0

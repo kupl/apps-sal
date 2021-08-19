@@ -1,8 +1,8 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         if len(nums) == 0:
             return 0
-
         h = {}
         dp = []
         s = nums[0]

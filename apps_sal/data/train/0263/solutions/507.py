@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, N: int) -> int:
         total = 0
         places = {1: [6, 8], 2: [7, 9], 3: [4, 8], 4: [3, 9, 0], 6: [1, 7, 0], 7: [2, 6], 8: [1, 3], 9: [2, 4], 0: [4, 6]}
@@ -18,4 +19,4 @@ class Solution:
         ans = 0
         for d in dp:
             ans += d
-        return (ans - 1) % (10**9 + 7)
+        return (ans - 1) % (10 ** 9 + 7)

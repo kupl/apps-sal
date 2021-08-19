@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         el = [[] for i in range(10)]
         el[0] = [4, 6]
@@ -17,8 +18,8 @@ class Solution:
         for i in range(1, n):
             for j in range(10):
                 for x in el[j]:
-                    a[i][j] = (a[i][j] + a[i - 1][x]) % (10**9 + 7)
+                    a[i][j] = (a[i][j] + a[i - 1][x]) % (10 ** 9 + 7)
         c = 0
         for i in range(10):
             c += a[-1][i]
-        return c % (10**9 + 7)
+        return c % (10 ** 9 + 7)

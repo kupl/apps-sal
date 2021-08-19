@@ -1,5 +1,7 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
+
         def ok(mid):
             ans = 0
             for num in nums:
@@ -7,7 +9,7 @@ class Solution:
                 if ans > threshold:
                     return False
             return True
-        l, r = 1, int(1e6)
+        (l, r) = (1, int(1000000.0))
         while l <= r:
             mid = (l + r) // 2
             if ok(mid):

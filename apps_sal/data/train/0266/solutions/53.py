@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def numSplits(self, s: str) -> int:
         c2nl = Counter('')
         c2nr = Counter(s)

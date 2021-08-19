@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         prefix = list(itertools.accumulate(nums))
 
@@ -9,5 +10,4 @@ class Solution:
                     return 1 + dfs(j + 1)
                 s.add(prefix[j])
             return 0
-
         return dfs(0)

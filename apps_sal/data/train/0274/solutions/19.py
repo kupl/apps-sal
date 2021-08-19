@@ -1,9 +1,9 @@
 class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
 
-        maxq, minq = [], []
+    def longestSubarray(self, nums: List[int], limit: int) -> int:
+        (maxq, minq) = ([], [])
         res = i = 0
-        for j, num in enumerate(nums):
+        for (j, num) in enumerate(nums):
             heappush(maxq, (-num, j))
             heappush(minq, (num, j))
             while -maxq[0][0] - minq[0][0] > limit:

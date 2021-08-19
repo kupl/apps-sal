@@ -1,9 +1,9 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         maxd = collections.deque()
         mind = collections.deque()
-
-        s, e = 0, 0
+        (s, e) = (0, 0)
         res = 0
         while e < len(nums):
             while len(maxd) and nums[e] >= nums[maxd[-1]]:

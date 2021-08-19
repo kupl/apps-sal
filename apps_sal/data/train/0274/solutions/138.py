@@ -2,6 +2,7 @@ from collections import deque
 
 
 class MinQ:
+
     def __init__(self):
         self.Q = collections.deque([])
 
@@ -25,6 +26,7 @@ class MinQ:
 
 
 class MaxQ:
+
     def __init__(self):
         self.Q = collections.deque([])
 
@@ -48,6 +50,7 @@ class MaxQ:
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
         left = 0

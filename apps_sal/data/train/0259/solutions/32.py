@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         l = 0
         r = nums[-1]

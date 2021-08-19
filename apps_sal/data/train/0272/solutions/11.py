@@ -1,6 +1,6 @@
 class Solution:
-    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 
+    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         d = dict()
         arr = []
         key = []
@@ -10,7 +10,6 @@ class Solution:
             d[i] = [status[i], candies[i], keys[i], containedBoxes[i]]
             if status[i] == 1:
                 key[-1] = 1
-
         c = 0
         res = []
         while 1 != -1:

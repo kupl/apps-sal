@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
         count = [0]
         letters = ['a', 'b', 'c']
@@ -20,6 +21,5 @@ class Solution:
                         return output
                     cur_list.pop()
             return ''
-
         output = bt()
         return '' if not output else output
