@@ -4,8 +4,7 @@ try:
         n = int(input())
         s = input()
         d1 = dict(Counter(s))
-
-        u, d, r, l = 0, 0, 0, 0
+        (u, d, r, l) = (0, 0, 0, 0)
         if 'U' in d1:
             u = d1['U']
         else:
@@ -36,11 +35,9 @@ try:
             y = -(d - u)
         elif u > d:
             y = u - d
-        #  print(x,y)
         if x == 0 and y == 0:
             print(n)
             continue
-
         print(n - (abs(x) + abs(y)))
 except:
     pass

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     rt = int(input())
     tr = list(map(int, input().split()))
@@ -19,7 +18,7 @@ for _ in range(int(input())):
             l.append('y')
         else:
             l.append('no')
-    if "no" in l:
-        print("no")
+    if 'no' in l:
+        print('no')
     else:
-        print("yes")
+        print('yes')

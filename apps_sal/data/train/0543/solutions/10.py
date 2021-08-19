@@ -1,7 +1,6 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
-        c, d = 0, 0
+        (c, d) = (0, 0)
         t1 = int(input())
         r1 = list(map(int, input().split()))
         d1 = int(input())
@@ -19,8 +18,8 @@ try:
             if b in r2:
                 d = d + 1
         if c == len(r3) and d == len(r4):
-            print("yes")
+            print('yes')
         else:
-            print("no")
+            print('no')
 except:
     pass

@@ -2,27 +2,20 @@ import string
 
 
 def increment_string(strng):
-
     nums = ''
     righty = []
     here = ''
-
     for i in strng:
         print(i)
-        # all non no in righty
         righty.append(i)
     for i in strng[::-1]:
         if i not in string.digits:
             break
         elif i in string.digits:
-
             print('this is i', i)
-            # all no in num
             here = i + nums
             nums = i + nums
-
     if nums == '':
-
         righty = ''.join(righty)
         return righty + '1'
     print('first', righty)
@@ -32,7 +25,6 @@ def increment_string(strng):
     nums = nums + ok
     print('n', nums)
     print('r', righty)
-
     hmmm = ''.join(righty)
     print('hr', hmmm)
     hmmm = hmmm.replace(here, nums)
