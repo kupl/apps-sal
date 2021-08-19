@@ -1,5 +1,4 @@
 from collections import deque
-
 T = int(input())
 
 
@@ -28,12 +27,11 @@ def bfs(M, i, j):
     answer = 0
     if M[i][j] == 'G':
         answer += 1
-
     while Q:
-        eli, elj = Q.popleft()
+        (eli, elj) = Q.popleft()
         if M[eli][elj] == '#':
             continue
-        for ni, nj in neighbours(M, eli, elj):
+        for (ni, nj) in neighbours(M, eli, elj):
             if M[ni][nj] == '#':
                 continue
             if visited[ni][nj]:
@@ -46,7 +44,7 @@ def bfs(M, i, j):
 
 
 for t in range(T):
-    n, m = [int(_) for _ in input().split()]
+    (n, m) = [int(_) for _ in input().split()]
     M = []
     count_G = 0
     has_B = False
@@ -56,7 +54,6 @@ for t in range(T):
         if 'B' in row:
             has_B = True
         M.append(row)
-
     try:
         if not count_G:
             if M[n - 1][m - 1] == 'B':
@@ -67,7 +64,7 @@ for t in range(T):
             for i in range(len(M)):
                 for j in range(len(M[0])):
                     if M[i][j] == 'B':
-                        for x, y in neighbours(M, i, j):
+                        for (x, y) in neighbours(M, i, j):
                             if M[x][y] == '.':
                                 M[x][y] = '#'
                             elif M[x][y] == 'G':

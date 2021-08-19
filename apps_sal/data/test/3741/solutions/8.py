@@ -1,12 +1,12 @@
+class node:
 
-class node():
     def __init__(self, v, edges):
         self.value = v
         self.edges = edges
 
 
 n = int(input())
-a = [int(i) for i in input().split(" ")]
+a = [int(i) for i in input().split(' ')]
 
 
 def fun(a):
@@ -17,7 +17,6 @@ def fun(a):
         i_edges = set()
         for j in a:
             if value & j > 0:
-                #                 print(i+1)
                 k += 1
                 if k > 2:
                     del i_edges
@@ -26,7 +25,7 @@ def fun(a):
                 i_edges.add(j)
         for j in i_edges:
             if j not in nodes:
-                if (i_edges.difference({j})) != 0:
+                if i_edges.difference({j}) != 0:
                     nodes[j] = node(j, i_edges.difference({j}))
             else:
                 nodes[j].edges = nodes[j].edges.union(i_edges.difference({j}))
@@ -38,7 +37,7 @@ def find_short_path(v1, v2):
     v2 = {v2}
     setic = set()
     set_was = set()
-    while (v1 not in setic):
+    while v1 not in setic:
         del setic
         setic = set()
         for i in v2:
@@ -61,10 +60,8 @@ if type(nodes) == int:
 else:
     mass = []
     while len(nodes.keys()) != 0:
-        # print(type(nodes.keys()))
         i = list(nodes.keys())[0]
         if len(nodes[i].edges) != 0:
-
             first_v = i
             second_v = nodes[first_v].edges.pop()
             nodes[second_v].edges.remove(first_v)
@@ -75,12 +72,10 @@ else:
                 nodes.pop(second_v)
             else:
                 length = find_short_path(first_v, second_v)
-
             if length:
                 mass.append(length + 1)
         else:
             nodes.pop(i)
-
     if len(mass) != 0:
         print(min(mass))
     else:

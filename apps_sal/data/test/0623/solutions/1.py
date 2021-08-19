@@ -1,10 +1,7 @@
-#! /usr/bin/env python3
-
 def main():
-    a, b = map(int, input().split())
-
+    (a, b) = map(int, input().split())
     count = 0
-    while not ((a <= 1 and b <= 1) or a == 0 or b == 0):
+    while not (a <= 1 and b <= 1 or a == 0 or b == 0):
         if a < b:
             a += 1
             b -= 2

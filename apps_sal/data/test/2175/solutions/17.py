@@ -10,7 +10,7 @@ def getf(x):
         x = f[x]
     while y < n and a[y] == 0:
         t = f[y]
-        f[y], y = x, t
+        (f[y], y) = (x, t)
     return x
 
 
@@ -29,7 +29,6 @@ for i in range(m):
             l.append(p)
             x -= a[p]
             a[p] = 0
-            #p = getf(p)
             p = f[p]
         for x in l:
             f[x] = p

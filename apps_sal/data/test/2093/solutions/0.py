@@ -2,6 +2,7 @@ import sys
 
 
 class RangeBit:
+
     def __init__(self, n):
         sz = 1
         while n >= sz:
@@ -12,7 +13,7 @@ class RangeBit:
 
     def sum(self, i):
         assert i > 0
-        add, mul, start = 0, 0, i
+        (add, mul, start) = (0, 0, i)
         while i > 0:
             add += self.dataAdd[i]
             mul += self.dataMul[i]
@@ -34,26 +35,18 @@ class RangeBit:
 
 n = int(input())
 l = list(map(int, sys.stdin.readline().split()))
-
 queries = []
 for i in range(n):
     if min(l[i], n) >= i + 2:
         queries.append((i + 2, min(l[i], n), i + 1))
-
 result = 0
-
 a = sorted(list(zip(list(range(1, n + 1)), l)) + queries, key=lambda x: (-x[-1], len(x)))
 ft = RangeBit(n + 1)
-
 for el in a:
-    # print(el)
-    if len(el) == 2:  # update
-        ind, val = el
+    if len(el) == 2:
+        (ind, val) = el
         ft.add(ind, ind, 1)
-    else:  # query
-        fr, to, val = el
-        # print(fr, to, val)
-        # print(ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0))
+    else:
+        (fr, to, val) = el
         result += ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0)
-
 print(result)

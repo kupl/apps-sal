@@ -1,10 +1,7 @@
 import sys
 import math
-
-# sys.stdin = open("in.txt")
 for _ in range(int(input())):
-    n, m = map(int, input().split())
-
+    (n, m) = map(int, input().split())
     li = list(map(int, input().split()))
     if n == 2 or n > m:
         print(-1)
