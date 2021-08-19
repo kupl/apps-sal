@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         count = collections.Counter(A)
         valuelist = list(count.keys())
@@ -12,7 +13,7 @@ class Solution:
                 if c not in count:
                     continue
                 if a == b == c:
-                    res += count[a] * (count[a] - 1) * (count[a] - 2) // 6  # C x 3
+                    res += count[a] * (count[a] - 1) * (count[a] - 2) // 6
                 elif a == b and b != c:
                     res += count[a] * (count[a] - 1) // 2 * count[c]
                 elif a < b and b < c:

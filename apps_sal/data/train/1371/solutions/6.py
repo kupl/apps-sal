@@ -1,7 +1,5 @@
-# cook your dish here
 for t in range(int(input())):
     ip = list(map(int, input().split()))
-
     k = ip[1]
     array = list(map(int, input().split()))
     wolv = 0

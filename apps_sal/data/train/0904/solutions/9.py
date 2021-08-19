@@ -1,61 +1,56 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     t = 2
     f = []
     flag = 0
-    if(x >= sum(a)):
-        print("NO")
+    if x >= sum(a):
+        print('NO')
         continue
     f.append(max(a[-1], a[0]))
-    while(t <= (n + 1) // 2):
+    while t <= (n + 1) // 2:
         b = a[t - 1:n - t + 1]
         d = max(b[0], b[-1])
         e = min(b[0], b[-1])
         ind = 0
         flag1 = 0
         for i in range(len(f)):
-            if(f[i] < d):
+            if f[i] < d:
                 continue
             else:
                 flag1 = 1
                 ind = i
                 f.insert(ind, d)
-                # a[b.index(d)+t-1]=0
                 break
-        if(flag1 == 0):
+        if flag1 == 0:
             f.append(d)
-            # a[b.index(d) + t - 1] = 0
             ind = len(f)
         flag2 = 0
         for i in range(ind):
-            if(f[i] < e):
+            if f[i] < e:
                 flag2 = 1
                 f.remove(f[i])
                 break
-        if(flag2 == 1):
+        if flag2 == 1:
             flag3 = 0
             for i in range(len(f)):
-                if(f[i] < e):
+                if f[i] < e:
                     continue
                 else:
                     flag3 = 1
                     inde = i
                     f.insert(inde, e)
-                    # a[len(b)-1 + t-1] = 0
                     break
-            if(flag3 == 0):
+            if flag3 == 0:
                 f.append(e)
-                # a[len(b)-1+t-1]=0
                 inde = len(f)
-
         t += 1
-        if(sum(f) >= x):
+        if sum(f) >= x:
             flag = 1
-            print("YES")
+            print('YES')
             break
-    if(flag == 0):
-        if(sum(f) >= x):
-            print("YES")
+    if flag == 0:
+        if sum(f) >= x:
+            print('YES')
         else:
-            print("NO")
+            print('NO')

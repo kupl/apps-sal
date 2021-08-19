@@ -1,13 +1,12 @@
-# cook your dish here
 def find_lcm(num1, num2):
-    if(num1 > num2):
+    if num1 > num2:
         num = num1
         den = num2
     else:
         num = num2
         den = num1
     rem = num % den
-    while(rem != 0):
+    while rem != 0:
         num = den
         den = rem
         rem = num % den
@@ -20,7 +19,7 @@ s = int(input())
 for i in range(s):
     n = int(input())
     n = n * 24
-    li = list(map(int, input().split(" ")))
+    li = list(map(int, input().split(' ')))
     num1 = li[0]
     num2 = li[1]
     lcm = find_lcm(num1, num2)

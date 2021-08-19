@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    N, T = map(int, input().split())
+    (N, T) = map(int, input().split())
     L = list(map(int, input().split()))
     count = 0
     for i in L:

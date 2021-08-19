@@ -1,4 +1,5 @@
 class Solution:
+
     def modifyString(self, s: str) -> str:
         if len(s) == 0:
             return s
@@ -11,6 +12,5 @@ class Solution:
                     if string[i - 1] != chr(j) and string[i + 1] != chr(j):
                         string[i] = chr(j)
                         break
-
         ret = ''.join(string[1:-1])
         return ret
