@@ -1,6 +1,6 @@
 def to_alternating_case(string):
     x = list(string)
-    c = ""
+    c = ''
     for k in x:
         if k == k.upper():
             c += k.lower()
@@ -9,5 +9,3 @@ def to_alternating_case(string):
         else:
             c += k
     return c
-
-    # your code here

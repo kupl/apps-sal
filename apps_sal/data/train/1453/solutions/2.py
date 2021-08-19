@@ -1,6 +1,5 @@
-# cook your dish here
 import collections
-n, q, k = map(int, input().split())
+(n, q, k) = map(int, input().split())
 a = list(map(int, input().split()))
 st = str(input())
 de = collections.deque(a)

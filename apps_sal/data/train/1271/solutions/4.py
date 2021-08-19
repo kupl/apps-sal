@@ -3,11 +3,10 @@ t = int(input())
 for _ in range(t):
     q = int(input())
     s = collections.defaultdict(lambda: -1)
-    e, o = 0, 0
+    (e, o) = (0, 0)
     for __ in range(q):
         x = int(input())
         d = []
-        # print(s)
         dd = list(s)
         if s[x] == -1:
             for i in dd:

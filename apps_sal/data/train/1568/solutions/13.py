@@ -1,4 +1,3 @@
-# cook your dish here
 a = int(input())
 for i in range(a):
     count = 0
@@ -9,6 +8,6 @@ for i in range(a):
     for i in range(len(b)):
         b[i] = int(b[i])
     for i in b:
-        if(i >= w):
+        if i >= w:
             count += 1
     print(count)
