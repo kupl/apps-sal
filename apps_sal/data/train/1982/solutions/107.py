@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = [list() for i in range(N)]
         for dislike in dislikes:
@@ -6,8 +7,6 @@ class Solution:
             y = dislike[1]
             graph[x - 1].append(y - 1)
             graph[y - 1].append(x - 1)
-        # print(graph)
-
         parent = list(range(N))
 
         def find(p):
@@ -21,7 +20,6 @@ class Solution:
             if pr != qr:
                 parent[pr] = qr
             return
-
         for i in range(N):
             if not graph[i]:
                 continue
@@ -34,5 +32,4 @@ class Solution:
                 if z == x:
                     return False
                 union(y, z)
-
         return True
