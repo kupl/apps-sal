@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 arr = [input() for _ in range(n)]
 arr.reverse()
-
 money = 0
 apples = 0
 for line in arr:
@@ -13,5 +10,4 @@ for line in arr:
     else:
         money += apples * 2
         apples = apples * 2
-
 print(money * p // 2)

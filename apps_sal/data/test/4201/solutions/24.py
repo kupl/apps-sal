@@ -1,9 +1,8 @@
 from itertools import product
-h, w, k = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
 grid = []
 for i in range(h):
     grid.append(input())
-
 pattern = list(product((0, 1), repeat=h + w))
 result = 0
 for p in range(len(pattern)):
@@ -17,8 +16,6 @@ for p in range(len(pattern)):
                     now = grid[i][j]
                     if now == '#':
                         cnt += 1
-
     if cnt == k:
         result += 1
-
 print(result)

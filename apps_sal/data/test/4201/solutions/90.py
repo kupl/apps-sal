@@ -6,7 +6,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    h, w, k = list(map(int, input().split()))
+    (h, w, k) = list(map(int, input().split()))
     gg = []
     for _ in range(h):
         row = [1 if c == '#' else 0 for c in list(input())]
@@ -15,10 +15,10 @@ def main():
     col_pro = tuple(product((0, 1), repeat=w))
     rows = []
     for re in row_pro:
-        rows.append([i for i, b in enumerate(re) if b])
+        rows.append([i for (i, b) in enumerate(re) if b])
     cols = []
     for ce in col_pro:
-        cols.append([i for i, b in enumerate(ce) if b])
+        cols.append([i for (i, b) in enumerate(ce) if b])
     pat = tuple(product(rows, cols))
     r = 0
     for pate in pat:
