@@ -1,19 +1,15 @@
-# D - 11
-
 n = int(input())
 a = list(map(int, input().split()))
-MOD = 10**9 + 7
-
-# a//b (MOD p)
+MOD = 10 ** 9 + 7
 
 
 def div_mod(a, b, p):
-    return (a * pow(b, p - 2, p)) % p
+    return a * pow(b, p - 2, p) % p
 
 
 factorial_memo = [1]
 for i in range(1, n + 2):
-    factorial_memo.append((factorial_memo[-1] * i) % MOD)
+    factorial_memo.append(factorial_memo[-1] * i % MOD)
 
 
 def comb_mod(n, r, mod):
@@ -30,7 +26,6 @@ for i in range(n + 1):
         f_idx = indices[a[i]]
         s_idx = i
         break
-
 for k in range(1, n + 2):
     all_pattern = comb_mod(n + 1, k, MOD)
     dup_pattern = comb_mod(f_idx + (n - s_idx), k - 1, MOD)

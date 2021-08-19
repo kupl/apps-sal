@@ -1,7 +1,6 @@
-# abc066d
-mod = 10**9 + 7
-fact = [1] * (10**5 + 2)
-for n in range(1, 10**5 + 2):
+mod = 10 ** 9 + 7
+fact = [1] * (10 ** 5 + 2)
+for n in range(1, 10 ** 5 + 2):
     fact[n] = n * fact[n - 1] % mod
 
 
