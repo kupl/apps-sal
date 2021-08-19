@@ -1,21 +1,14 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-
 from collections import defaultdict
 
 
 class Solution:
+
     def __init__(self):
         self.deepest = -1
         self.m = defaultdict(list)
 
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
         self.dfs(root, 0)
-
         if self.deepest == -1:
             return None
         if len(self.m[self.deepest]) == 1:

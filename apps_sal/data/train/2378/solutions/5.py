@@ -1,13 +1,8 @@
-# ライブラリインポート
 from collections import defaultdict
-
-# 入力受け取り
 
 
 def getlist():
     return list(map(int, input().split()))
-
-# 処理内容
 
 
 def main():
@@ -19,11 +14,11 @@ def main():
         U = 0
         D = 0
         for j in s:
-            if j == "L":
+            if j == 'L':
                 L += 1
-            elif j == "R":
+            elif j == 'R':
                 R += 1
-            elif j == "U":
+            elif j == 'U':
                 U += 1
             else:
                 D += 1
@@ -31,17 +26,17 @@ def main():
         b = min(U, D)
         if a == 0 and b == 0:
             print(0)
-            print("")
+            print('')
         elif a == 0:
             print(2)
-            print("UD")
+            print('UD')
         elif b == 0:
             print(2)
-            print("LR")
+            print('LR')
         else:
             ans = (a + b) * 2
             print(ans)
-            seq = "L" * a + "D" * b + "R" * a + "U" * b
+            seq = 'L' * a + 'D' * b + 'R' * a + 'U' * b
             print(seq)
 
 

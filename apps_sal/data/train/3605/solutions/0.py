@@ -1,5 +1,4 @@
 def diagonal(n, p):
-    # your code
     res = 0
     for base in range(p, max(n, p) + 1):
         value = 1

@@ -1,8 +1,6 @@
 def min_value(digits):
-    # your code heredef codewar (stuff):
     z = ''
-    n = (digits)
-
+    n = digits
     y = []
     for x in n:
         if x in y:
@@ -12,4 +10,4 @@ def min_value(digits):
     for x2 in y:
         z = z + str(x2)
     print(z)
-    return(int(z))
+    return int(z)

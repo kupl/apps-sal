@@ -1,9 +1,9 @@
 import math
 t = eval(input())
 while t > 0:
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     f = []
-    min_x, max_x, min_y, max_y = 1001, -1, 1001, -1
+    (min_x, max_x, min_y, max_y) = (1001, -1, 1001, -1)
     for x in range(n):
         f.append(input().strip())
     for i in range(n):
@@ -17,8 +17,7 @@ while t > 0:
                     min_y = j
                 if max_y < j:
                     max_y = j
-                # print 'min_x=',min_x,'min_y=',min_y,'max_x=',max_x,'max_y='                    ,max_y
-    if max_x == -1 or min_x == 1001 or max_y == -1 or max_y == 1001:
+    if max_x == -1 or min_x == 1001 or max_y == -1 or (max_y == 1001):
         print(0)
     else:
         dx = max_x - min_x
