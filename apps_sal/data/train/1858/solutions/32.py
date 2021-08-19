@@ -1,12 +1,7 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class FindElements:
 
     def __init__(self, root: TreeNode):
+
         def helper(node, v):
             if node is None:
                 return
@@ -18,7 +13,7 @@ class FindElements:
             return
         self.root = root
         helper(root, 0)
-        print((self.root))
+        print(self.root)
         return
 
     def find(self, target: int) -> bool:
@@ -30,9 +25,9 @@ class FindElements:
             l += 1
         node = self.root
         c = 0
-        print((bin(s)))
-        for c in range(1, l)[::-1]:  # 2, 1 for 111
-            k = s & (1 << (c - 1))
+        print(bin(s))
+        for c in range(1, l)[::-1]:
+            k = s & 1 << c - 1
             print(k)
             if k:
                 if node.right:
@@ -40,14 +35,8 @@ class FindElements:
                     print((node.val, s - 1))
                 else:
                     return False
+            elif node.left:
+                node = node.left
             else:
-                if node.left:
-                    node = node.left
-                else:
-                    return False
+                return False
         return node and node.val == s - 1
-
-
-# Your FindElements object will be instantiated and called as such:
-# obj = FindElements(root)
-# param_1 = obj.find(target)
