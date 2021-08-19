@@ -1,8 +1,8 @@
-CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 
 def base(number, base):
-    return sum([num * base**coeff for coeff, num in enumerate(number[::-1])])
+    return sum([num * base ** coeff for (coeff, num) in enumerate(number[::-1])])
 
 
 def bias_checker(n, b, slicer=0):
@@ -32,7 +32,7 @@ def get_polydivisible(n, b):
             num[-1] += 1
             bias_checker(num, b)
     num[-1] -= 1
-    return "".join([CHARS[x] for x in num])
+    return ''.join([CHARS[x] for x in num])
 
 
 def is_polydivisible(s, b):

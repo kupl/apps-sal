@@ -29,21 +29,13 @@ def countOnes(left, right):
     """
     left_binary_digits = count_binary_digits(left)
     right_binary_digits = count_binary_digits(right)
-
     right_binary_sum = sum([int(i) for i in str(bin(right))[2:]])
-
     left_position_in_block = left - calculate_starting_digit(left_binary_digits) + 1
     right_position_in_block = right - calculate_starting_digit(right_binary_digits) + 1
-
     if left_binary_digits == right_binary_digits:
-        number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) \
-            - calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block) \
-            + right_binary_sum
+        number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) - calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block) + right_binary_sum
     else:
-        number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) \
-            + calculate_multiple_blocks(left_binary_digits + 1, right_binary_digits - 1) \
-            + calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block, True) \
-            + right_binary_sum
+        number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) + calculate_multiple_blocks(left_binary_digits + 1, right_binary_digits - 1) + calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block, True) + right_binary_sum
     return number_of_ones
 
 
@@ -84,7 +76,6 @@ def calculate_ones_in_incomplete_block(n_digits, position, front_part=False):
     last_row = all_rows
     result = last_row - position + 1
     middle_row = last_row / 2
-
     for i in range(n_digits - 1):
         if position <= middle_row:
             result += all_rows / 2 - upper_ones
@@ -92,10 +83,9 @@ def calculate_ones_in_incomplete_block(n_digits, position, front_part=False):
             last_row = middle_row
             middle_row -= (temp - middle_row) / 2
         else:
-            result += (last_row - position + 1 + (all_rows - last_row) / 2)
+            result += last_row - position + 1 + (all_rows - last_row) / 2
             upper_ones += (last_row - middle_row) / 2
             middle_row += (last_row - middle_row) / 2
-
     if front_part:
         return all_rows * (1 + 0.5 * (n_digits - 1)) - result
     else:

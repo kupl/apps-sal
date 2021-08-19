@@ -9,8 +9,8 @@ for _ in range(int(input())):
         else:
             g += 1
     if abs(g - b) > 1:
-        print("-1")
-    elif (g - b) > 0:
+        print('-1')
+    elif g - b > 0:
         gl = []
         bl = []
         for i in range(len(s)):
@@ -25,7 +25,7 @@ for _ in range(int(input())):
             else:
                 c += abs(gl[i] - bl[i])
         print(c)
-    elif (b - g) > 0:
+    elif b - g > 0:
         gl = []
         bl = []
         for i in range(len(s)):

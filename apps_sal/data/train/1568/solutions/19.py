@@ -5,6 +5,6 @@ for i in range(T):
     S = S.split()
     cntr = 0
     for j in S:
-        if(int(j) >= (N / 2)):
+        if int(j) >= N / 2:
             cntr += 1
     print(cntr)

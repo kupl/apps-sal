@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     ans = []
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     temp = []
     for k in range(0, n * m):
         myset1 = set()

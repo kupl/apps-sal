@@ -15,7 +15,7 @@ for _ in range(int(input())):
         BG = 'BG' * (n // 2)
         if n & 1:
             BG += 'B'
-        B, G = [], []
+        (B, G) = ([], [])
         for i in range(n):
             if s[i] != BG[i]:
                 if s[i] == 'B':
@@ -30,7 +30,7 @@ for _ in range(int(input())):
         BG = 'GB' * (n // 2)
         if n & 1:
             BG += 'G'
-        B, G = [], []
+        (B, G) = ([], [])
         for i in range(n):
             if s[i] != BG[i]:
                 if s[i] == 'B':
@@ -45,7 +45,7 @@ for _ in range(int(input())):
         BG = 'GB' * (n // 2)
         if n & 1:
             BG += 'G'
-        B, G = [], []
+        (B, G) = ([], [])
         for i in range(n):
             if s[i] != BG[i]:
                 if s[i] == 'B':
@@ -56,11 +56,10 @@ for _ in range(int(input())):
             v1 = len(B)
         else:
             v1 = sum([abs(B[i] - G[i]) for i in range(len(B))])
-
         BG = 'BG' * (n // 2)
         if n & 1:
             BG += 'B'
-        B, G = [], []
+        (B, G) = ([], [])
         for i in range(n):
             if s[i] != BG[i]:
                 if s[i] == 'B':

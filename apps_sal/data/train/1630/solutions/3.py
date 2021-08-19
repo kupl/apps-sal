@@ -10,11 +10,11 @@ def survivor(l):
         return -1
     if len(l) == 2:
         return (l[0] - 1) * (l[1] - 1) - 1
-    m, t, r, w = [True], 0, 0, max(l)
+    (m, t, r, w) = ([True], 0, 0, max(l))
     for i in count(1):
-        m = m[-w:] + [any(m[-n] for n in l if len(m) >= n)]
+        m = m[-w:] + [any((m[-n] for n in l if len(m) >= n))]
         if not m[-1]:
-            t, r = i, 0
+            (t, r) = (i, 0)
         else:
             r += 1
         if r == w:

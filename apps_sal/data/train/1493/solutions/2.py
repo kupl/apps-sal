@@ -6,11 +6,10 @@ def actual_generator(a, N, start):
     elif a == 'G':
         result = ['G', 'B'] * (N // 2)
         result.append('G')
-    else:
-        if start == 'B':
-            result = ['B', 'G'] * (N // 2)
-        elif start == 'G':
-            result = ['G', 'B'] * (N // 2)
+    elif start == 'B':
+        result = ['B', 'G'] * (N // 2)
+    elif start == 'G':
+        result = ['G', 'B'] * (N // 2)
     return result
 
 
@@ -58,7 +57,6 @@ for _ in range(int(input())):
                     defectB.append(i)
                 elif actual[i] != array[i] and actual[i] == 'G':
                     defectG.append(i)
-
         elif countB > countG:
             actual = actual_generator('B', N, 'X')
             defectB = []
@@ -68,7 +66,6 @@ for _ in range(int(input())):
                     defectB.append(i)
                 elif actual[i] != array[i] and actual[i] == 'G':
                     defectG.append(i)
-
         if typ == 0:
             print(len(defectB))
         elif typ == 1:

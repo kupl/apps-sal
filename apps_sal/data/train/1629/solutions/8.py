@@ -12,6 +12,6 @@ def exchange_sort(sequence):
                 for j in range(seven):
                     if a[j] != 7:
                         break
-            a[i], a[j] = a[j], a[i]
+            (a[i], a[j]) = (a[j], a[i])
     r += a[seven + eight:].count(8)
     return r

@@ -1,4 +1,4 @@
-a, b = [int(_) for _ in input().split()]
+(a, b) = [int(_) for _ in input().split()]
 if b == 0:
     print(a)
 else:

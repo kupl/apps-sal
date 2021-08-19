@@ -1,5 +1,4 @@
 from collections import Counter
-
 for t in range(int(input())):
     n = int(input())
     pos = [(i, input().strip().find('1')) for i in range(n)]

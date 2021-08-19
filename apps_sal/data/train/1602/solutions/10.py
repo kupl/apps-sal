@@ -6,7 +6,7 @@ def abc(l):
 
 
 t = int(input())
-while(t != 0):
+while t != 0:
     n = int(input())
     a = int(input())
     l = list(map(int, input().split()))

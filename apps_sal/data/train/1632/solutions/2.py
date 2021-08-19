@@ -1,7 +1,8 @@
 from math import log2
 
 
-def countOnes(left, right): return countUpTo(right) - countUpTo(left - 1)
+def countOnes(left, right):
+    return countUpTo(right) - countUpTo(left - 1)
 
 
 def countUpTo(n):

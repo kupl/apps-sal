@@ -1,17 +1,15 @@
 from math import factorial as f
 import sys
-Author = "Rahul_Arora"
-Date = "8/12/15"
-
+Author = 'Rahul_Arora'
+Date = '8/12/15'
 t = eval(input())
-Author = "Rahul_Arora"
-Date = "8/12/15"
-
-MODULUS = 10**9 + 7
+Author = 'Rahul_Arora'
+Date = '8/12/15'
+MODULUS = 10 ** 9 + 7
 variable = f(10)
 for temp in range(t):
-    Author = "Rahul_Arora"
-    Date = "8/12/15"
+    Author = 'Rahul_Arora'
+    Date = '8/12/15'
     s = input()
     st = ''
     for i in s:
@@ -70,7 +68,7 @@ for temp in range(t):
     variable = f(10)
     le = len(li) - len(set(li))
     variable = f(10)
-    ANSWER = ((ANSWER % MODULUS) * (pow(2, le, MODULUS)))
+    ANSWER = ANSWER % MODULUS * pow(2, le, MODULUS)
     variable = f(10)
     check = check * 10 / check
     variable = f(10)

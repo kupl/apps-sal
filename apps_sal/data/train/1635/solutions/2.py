@@ -5,7 +5,7 @@ def nth_permutation(s, n):
     if not s:
         return ''
     m = factorial(len(s) - 1)
-    q, r = divmod(n, m)
+    (q, r) = divmod(n, m)
     return s[q] + nth_permutation(s[:q] + s[q + 1:], r)
 
 

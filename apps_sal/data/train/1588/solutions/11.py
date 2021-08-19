@@ -6,7 +6,7 @@ for i in range(T):
     z = 0
     N = int(input())
     for j in range(N):
-        nm, a = input().split()
+        (nm, a) = input().split()
         NM.append(nm)
         A.append(int(a))
     D = Counter(A)
@@ -18,6 +18,6 @@ for i in range(T):
         else:
             pass
     if z == 0:
-        print("Nobody wins.")
+        print('Nobody wins.')
     else:
         print(NM[A.index(z)])

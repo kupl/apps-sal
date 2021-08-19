@@ -1,7 +1,6 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = input().split()
-
     while arr and k:
         if arr.pop() == 'H':
             for i in range(len(arr)):
@@ -9,8 +8,6 @@ for _ in range(int(input())):
                     arr[i] = 'T'
                 else:
                     arr[i] = 'H'
-
         k -= 1
-
-    res = sum(i == 'H' for i in arr)
+    res = sum((i == 'H' for i in arr))
     print(res)

@@ -1,22 +1,5 @@
 def to_chinese_numeral(n):
-    numerals = {
-        "-": "负",
-        ".": "点",
-        0: "零",
-        1: "一",
-        2: "二",
-        3: "三",
-        4: "四",
-        5: "五",
-        6: "六",
-        7: "七",
-        8: "八",
-        9: "九",
-        10: "十",
-        100: "百",
-        1000: "千",
-        10000: "万"
-    }
+    numerals = {'-': '负', '.': '点', 0: '零', 1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七', 8: '八', 9: '九', 10: '十', 100: '百', 1000: '千', 10000: '万'}
     lst = []
     counter1 = n
     newstr = ''
@@ -24,7 +7,7 @@ def to_chinese_numeral(n):
     if counter1 == 0:
         return numerals[0]
     if counter1 < 0:
-        lst.append(numerals["-"])
+        lst.append(numerals['-'])
         counter1 *= -1
     read = str(counter1).split('.')
     if len(read[0]) == 5:

@@ -12,4 +12,4 @@ for i in range(t):
     s = []
     for j in range(n):
         s.append(input())
-    print(int((fact(n) / (fact(n - 2))) / 2) + n)
+    print(int(fact(n) / fact(n - 2) / 2) + n)

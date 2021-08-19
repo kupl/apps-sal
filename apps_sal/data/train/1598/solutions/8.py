@@ -4,12 +4,12 @@ for _ in range(int(input())):
     n = int(input())
     d = {}
     for i in range(n):
-        x, y, z = input().split()
+        (x, y, z) = input().split()
         d[int(z)] = [x, y]
     avg = mean(d)
     a = []
     for i in d:
-        if(i < avg):
+        if i < avg:
             a.append(i)
     a.sort()
     for i in a:

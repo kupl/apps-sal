@@ -7,12 +7,12 @@ for each in range(t):
     n2 = n
     result = 1
     base = 3
-    while(n > 0):
-        if(n % 2 == 1):
-            result = (result * base) % c
+    while n > 0:
+        if n % 2 == 1:
+            result = result * base % c
         n = n >> 1
-        base = (base * base) % c
-    if(n2 % 2 == 0):
+        base = base * base % c
+    if n2 % 2 == 0:
         result = result + 3
     else:
         result = result - 3

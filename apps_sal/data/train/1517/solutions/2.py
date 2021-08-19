@@ -1,7 +1,6 @@
 t = int(input())
-
 for i in range(t):
-    value, k = list(map(int, input().split()))
+    (value, k) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     newValue = value

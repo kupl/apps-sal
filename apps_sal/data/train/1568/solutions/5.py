@@ -5,6 +5,6 @@ for i in range(t):
     half = n // 2
     count = 0
     for i in l:
-        if(i >= half):
+        if i >= half:
             count += 1
     print(count)

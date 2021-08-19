@@ -13,7 +13,7 @@ def filtern(q):
     return q
 
 
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 inp = stdin.read().split()
 x = 0
 for _ in range(int(inp[x])):
@@ -26,7 +26,7 @@ for _ in range(int(inp[x])):
         x += 1
         k = int(filtern(inp[x]), 2)
         arr.append(k)
-    d = [[0] * (1025) for _ in range(2)]
+    d = [[0] * 1025 for _ in range(2)]
     d[0][0] = 1
     for i in range(1, n + 1):
         for j in range(1024):

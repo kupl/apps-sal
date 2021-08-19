@@ -10,5 +10,5 @@ def next_bigger(n):
             t.remove(m)
             t.sort()
             s[i:] = [m] + t
-            return int("".join(s))
+            return int(''.join(s))
     return -1

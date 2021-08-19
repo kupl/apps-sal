@@ -2,11 +2,11 @@ import math
 
 
 def decompose_aux(nb, rac):
-    if (nb == 0):
+    if nb == 0:
         return []
     i = rac
     l = None
-    while (i >= int(math.sqrt(nb / 2.0)) + 1):
+    while i >= int(math.sqrt(nb / 2.0)) + 1:
         diff = nb - i * i
         rac = int(math.sqrt(diff))
         l = decompose_aux(diff, rac)

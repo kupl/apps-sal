@@ -28,7 +28,7 @@ def check1(array):
         if i % 3 == 0:
             last[i] += array[i]
         else:
-            last[i] += (array[i] - array[i] % 3)
+            last[i] += array[i] - array[i] % 3
     ans = [str(i) * last[i] for i in range(10)]
     return int(''.join(ans[::-1]))
 
@@ -39,7 +39,7 @@ def check2(array):
         if i % 3 == 0:
             last[i] += array[i]
         else:
-            last[i] += (array[i] - array[i] % 3)
+            last[i] += array[i] - array[i] % 3
             array[i] -= last[i]
     last[8] += min(array[8], array[1])
     last[1] += min(array[8], array[1])

@@ -1,9 +1,12 @@
 from collections import Counter
-def sum_of_squares(n): return 1 if (n**.5).is_integer() else 2 if all(not j & 1 for i, j in Counter(two(n)).items() if i % 4 == 3) else 4 if four(n) else 3
+
+
+def sum_of_squares(n):
+    return 1 if (n ** 0.5).is_integer() else 2 if all((not j & 1 for (i, j) in Counter(two(n)).items() if i % 4 == 3)) else 4 if four(n) else 3
 
 
 def two(n):
-    j, li = 2, []
+    (j, li) = (2, [])
     while j * j <= n:
         if n % j:
             j += 1

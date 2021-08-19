@@ -1,4 +1,4 @@
-d1, v1, d2, v2, p = input().split()
+(d1, v1, d2, v2, p) = input().split()
 d1 = int(d1)
 v1 = int(v1)
 d2 = int(d2)

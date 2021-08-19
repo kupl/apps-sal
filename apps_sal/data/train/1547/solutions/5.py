@@ -1,5 +1,4 @@
-
-d1, v1, d2, v2, vaccine = map(int, input().split())
+(d1, v1, d2, v2, vaccine) = map(int, input().split())
 day = 1
 sum = 0
 while sum < vaccine:

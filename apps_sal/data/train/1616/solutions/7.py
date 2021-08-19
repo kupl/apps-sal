@@ -12,6 +12,6 @@ def parse_int(string):
             lst.append(unit_ts[element])
     myid = lst.index(max(lst))
     result = 0
-    result += reduce(lambda x, y: x * y if y % 100 == 0 else x + y, lst[:myid + 1])if lst[:myid + 1] != [] else 0
-    result += reduce(lambda x, y: x * y if y % 100 == 0 else x + y, lst[myid + 1:])if lst[myid + 1:] != [] else 0
+    result += reduce(lambda x, y: x * y if y % 100 == 0 else x + y, lst[:myid + 1]) if lst[:myid + 1] != [] else 0
+    result += reduce(lambda x, y: x * y if y % 100 == 0 else x + y, lst[myid + 1:]) if lst[myid + 1:] != [] else 0
     return result

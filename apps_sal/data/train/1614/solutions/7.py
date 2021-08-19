@@ -62,21 +62,20 @@ def horizontal_win(matrix):
 
 def who_is_winner(pieces_position_list):
     heigth_list = [5, 5, 5, 5, 5, 5, 5]
-    w, h = 7, 6
+    (w, h) = (7, 6)
     game_board = [[0 for x in range(w)] for y in range(h)]
     move_dict = {}
     letters = list(string.ascii_uppercase)[0:7]
-    for letter, i in enumerate(letters):
+    for (letter, i) in enumerate(letters):
         move_dict[i] = letter
-
-    parsed_moves = [parsed_move.split("_") for parsed_move in pieces_position_list]
+    parsed_moves = [parsed_move.split('_') for parsed_move in pieces_position_list]
     converted_moves = [[move_dict[move[0]], move[1]] for move in parsed_moves]
     for move in converted_moves:
-        x_coordinate, colour = move
+        (x_coordinate, colour) = move
         game_board[heigth_list[x_coordinate]][x_coordinate] = colour[0]
         if heigth_list[x_coordinate] > 0:
             heigth_list[x_coordinate] = heigth_list[x_coordinate] - 1
         if horizontal_win(game_board) or vertical_win(game_board) or diagonal_left_win(game_board) or diagonal_right_win(game_board):
             return colour
     diagonal_left_win(game_board)
-    return "Draw"
+    return 'Draw'

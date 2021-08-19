@@ -5,6 +5,6 @@ for _ in range(int(input())):
     for i in s:
         se.add(i)
         ans += 1
-        if(len(se) == 10):
+        if len(se) == 10:
             break
     print(ans)

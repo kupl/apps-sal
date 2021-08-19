@@ -4,6 +4,6 @@ for i in range(1, T + 1):
     S = input()
     count = 0
     for letter in S:
-        if(letter in J):
+        if letter in J:
             count += 1
     print(count)

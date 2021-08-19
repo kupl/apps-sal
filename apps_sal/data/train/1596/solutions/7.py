@@ -1,8 +1,6 @@
-
 t = int(input())
 for _ in range(t):
-
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if x == y:
         print(0, 0)
     else:

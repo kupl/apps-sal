@@ -9,7 +9,7 @@ for i in range(int(input())):
             for i in range(1, len(l) // 2 + 1):
                 chef = chef + l[i]
             continue
-        for i in range(1, (len(l) // 2) + 1):
+        for i in range(1, len(l) // 2 + 1):
             chef = chef + l[i]
         ans.append(l[len(l) // 2])
     print(chef)

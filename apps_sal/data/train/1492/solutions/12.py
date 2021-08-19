@@ -1,5 +1,5 @@
 def lcs(A, B):
-    a, b = len(A), len(B)
+    (a, b) = (len(A), len(B))
     lst = [[None] * (b + 1) for _ in range(a + 1)]
     for x in range(a + 1):
         for y in range(b + 1):

@@ -14,5 +14,5 @@ for j in range(t):
     s = 0
     for i in range(n):
         for j in a:
-            s += (j * 10**i) * (fac(n - 1))
+            s += j * 10 ** i * fac(n - 1)
     print(s)

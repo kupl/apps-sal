@@ -16,7 +16,6 @@ for i in range(int(input())):
     sum_ = 0
     for j in sorted(layers):
         sum_ += j
-
     sum_ *= fac(len(layers) - 1)
     ans = sum_
     for j in range(len(layers) - 1):

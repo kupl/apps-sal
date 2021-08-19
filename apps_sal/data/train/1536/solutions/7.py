@@ -11,9 +11,8 @@ for _ in range(int(input())):
             a[i - 1] = a[i] - d
             f = True
             break
-
-    if (not f):
-        if (a[n - 1] - a[n - 4]) / 3 == (a[n - 1] - a[n - 2]):
+    if not f:
+        if (a[n - 1] - a[n - 4]) / 3 == a[n - 1] - a[n - 2]:
             d = a[n - 1] - a[n - 2]
             a[n - 3] = a[n - 2] - d
         elif (a[n - 1] - a[n - 4]) / 3 == (a[n - 1] - a[n - 3]) / 2:
@@ -25,6 +24,5 @@ for _ in range(int(input())):
         else:
             d = a[n - 3] - a[n - 4]
             a[n - 1] = a[n - 2] + d
-
-    [print(x, end=" ") for x in a]
+    [print(x, end=' ') for x in a]
     print()

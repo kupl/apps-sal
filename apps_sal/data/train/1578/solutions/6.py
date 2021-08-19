@@ -5,8 +5,6 @@ while t > 0:
     a = input()
     b = list(a)
     for i in b:
-        if (i.isdigit()):
-
+        if i.isdigit():
             sum += int(i)
-
     print(sum)

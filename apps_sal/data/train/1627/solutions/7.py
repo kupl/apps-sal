@@ -1,24 +1,24 @@
-CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 
 def to_dec(s, b):
     n = 0
-    for i, v in enumerate(s[::-1]):
-        n += CHARS.index(v) * b**i
+    for (i, v) in enumerate(s[::-1]):
+        n += CHARS.index(v) * b ** i
     return n
 
 
 def to_base(n, b):
     r = ''
     while n >= b:
-        n, x = divmod(n, b)
+        (n, x) = divmod(n, b)
         r += CHARS[:b][x]
     r += CHARS[:b][n]
     return r[::-1]
 
 
 def is_polydivisible(s, b):
-    return all(not to_dec(s[:i], b) % i for i in range(1, len(s) + 1))
+    return all((not to_dec(s[:i], b) % i for i in range(1, len(s) + 1)))
 
 
 def get_polydivisible(x, b):

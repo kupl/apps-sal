@@ -2,7 +2,7 @@ n = int(input())
 for i in range(n):
     t = int(input())
     sum = 0
-    while(t):
+    while t:
         t1 = t // 100
         sum += t1
         t = t % 100

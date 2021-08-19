@@ -1,12 +1,12 @@
 for t in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     i = 0
     j = 0
     ans = 0
     while i < n and j < n:
-        if s[i] == "M":
-            if s[j] == "I":
+        if s[i] == 'M':
+            if s[j] == 'I':
                 c = 0
                 if i > j:
                     o = s[j:i]
@@ -19,12 +19,11 @@ for t in range(int(input())):
                     ans = ans + 1
                     i = i + 1
                     j = j + 1
+                elif i < j:
+                    i += 1
                 else:
-                    if i < j:
-                        i += 1
-                    else:
-                        j += 1
-            elif s[j] == "X":
+                    j += 1
+            elif s[j] == 'X':
                 j += 1
                 i = j
             else:

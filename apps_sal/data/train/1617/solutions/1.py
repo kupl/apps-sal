@@ -5,10 +5,10 @@ from math import log
 def converter(n, decimals=0, base=pi):
     DIGITS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     representation = []
-    if (n < 0):
+    if n < 0:
         representation.append('-')
         n *= -1
-    if (n == 0):
+    if n == 0:
         decimalCount = 0
     else:
         decimalCount = int(log(n, base))

@@ -1,5 +1,5 @@
 q = input()
-a, s = [], []
+(a, s) = ([], [])
 for i in range(0, len(q)):
     if q[i] == 'Q':
         a.append(i)

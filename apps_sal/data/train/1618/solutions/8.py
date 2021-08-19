@@ -13,8 +13,8 @@ def val(s):
 
 def differentiate(equation, point):
     res = 0
-    for x in findall("[+-]?\d*x(?:\^\d+)?", equation):
+    for x in findall('[+-]?\\d*x(?:\\^\\d+)?', equation):
         i = x.find('x')
-        v, p = val(x[:i]), int(x[i + 2:] or '1')
-        res += v * p * point**(p - 1)
+        (v, p) = (val(x[:i]), int(x[i + 2:] or '1'))
+        res += v * p * point ** (p - 1)
     return res

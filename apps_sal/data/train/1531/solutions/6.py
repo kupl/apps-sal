@@ -2,8 +2,8 @@ N = int(input())
 branch = list(map(int, input().split()))
 t = int(input())
 for i in range(t):
-    x, y = list(map(int, input().split()))
-    if(x == 1):
+    (x, y) = list(map(int, input().split()))
+    if x == 1:
         try:
             branch[x] += branch[x - 1] - y
         except:

@@ -7,12 +7,12 @@ for t in range(int(input())):
         a = l[i]
         for j in range(i, n):
             a |= l[j]
-            if(a in s):
+            if a in s:
                 print('NO')
                 f = 0
                 break
             s.add(a)
-        if(f == 0):
+        if f == 0:
             break
-    if(f):
+    if f:
         print('YES')

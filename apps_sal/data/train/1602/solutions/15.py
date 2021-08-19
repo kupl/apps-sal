@@ -9,13 +9,13 @@ while T:
     temp = 1
     while i < n:
         for j in range(i, min(i + x, n)):
-            if(A[j] <= temp):
+            if A[j] <= temp:
                 flag = False
                 break
         temp += 1
         i += x
-    if(flag):
-        print("Possible")
+    if flag:
+        print('Possible')
     else:
-        print("Impossible")
+        print('Impossible')
     T -= 1

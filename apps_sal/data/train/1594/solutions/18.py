@@ -7,7 +7,7 @@ for i in range(t):
         s = input()
         for k in range(0, n):
             if s[k] == '1':
-                swa = swa + (abs(k - j))
+                swa = swa + abs(k - j)
     while n >= 1:
         suma += n
         n = n - 1

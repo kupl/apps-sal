@@ -2,7 +2,6 @@ from sys import stdin, stdout, maxsize
 from math import sqrt, log, factorial, gcd
 from collections import defaultdict as D
 from bisect import insort
-
 for _ in range(int(input())):
     n = int(input()) - 1
     for i in range(n, -1, -1):

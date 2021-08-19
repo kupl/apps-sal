@@ -5,10 +5,20 @@ import sys
 from io import BytesIO, IOBase
 
 
-def ii(): return int(input())
-def si(): return input()
-def mi(): return list(map(int, input().split()))
-def li(): return list(mi())
+def ii():
+    return int(input())
+
+
+def si():
+    return input()
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(mi())
 
 
 def CountFrequency(arr):
@@ -16,7 +26,7 @@ def CountFrequency(arr):
 
 
 for i in range(1):
-    n, q = mi()
+    (n, q) = mi()
     p = pow(2, n + 1) - 2
     t = 1
     b = pow(2, n)

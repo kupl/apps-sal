@@ -14,12 +14,12 @@ for _ in range(t):
         if len(d[m]) == 1:
             print(n)
         elif len(d[m]) == 2:
-            print(min((d[m][1] - d[m][0]), ((n - d[m][1]) + d[m][0])))
+            print(min(d[m][1] - d[m][0], n - d[m][1] + d[m][0]))
         else:
             k = 100000
             for j in range(len(d[m]) - 1):
-                if (d[m][j + 1] - d[m][j]) < k:
+                if d[m][j + 1] - d[m][j] < k:
                     k = d[m][j + 1] - d[m][j]
                 else:
                     pass
-            print(min(k, ((n - d[m][len(d[m]) - 1]) + d[m][0])))
+            print(min(k, n - d[m][len(d[m]) - 1] + d[m][0]))

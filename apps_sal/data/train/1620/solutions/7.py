@@ -10,5 +10,4 @@ def n_linear(m, n):
                 indices[i] += 1
         arr.append(x + 1)
         count += 1
-
     return arr[-1]

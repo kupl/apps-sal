@@ -1,4 +1,5 @@
 def total_inc_dec(x):
+
     def combination(n, m):
         if m == 0:
             return 1
@@ -18,11 +19,9 @@ def total_inc_dec(x):
             List1 = coefficientList(x - 1)
             List = [2] * x
             for i in range(0, x - 2):
-                List[i + 1] = List1[i] + \
-                    List1[i + 1]
+                List[i + 1] = List1[i] + List1[i + 1]
             List[-1] = List1[-1] + x + 1
             return List
-
     if x == 0:
         return 1
     else:

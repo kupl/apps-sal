@@ -9,7 +9,7 @@ for possiblePrime in range(2, 10000):
         primes.append(possiblePrime)
 plookup = set(primes)
 S = []
-prime = 10**9 + 7
+prime = 10 ** 9 + 7
 for i in range(2, 1000):
     if i in plookup:
         S.append(primes[i - 1])

@@ -27,7 +27,6 @@ for _ in range(int(input())):
         if flag == True:
             max = sum * count
             flag = False
-        else:
-            if sum * count > max:
-                max = sum * count
+        elif sum * count > max:
+            max = sum * count
     print(max)

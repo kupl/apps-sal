@@ -14,5 +14,4 @@ for t in range(int(input().strip())):
         if day >= a:
             isPossible = False
             break
-
-    print("Possible" if isPossible else "Impossible")
+    print('Possible' if isPossible else 'Impossible')

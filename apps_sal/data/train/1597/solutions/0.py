@@ -15,13 +15,13 @@ try:
     t = int(input())
     while t:
         t -= 1
-        a, m = map(int, input().split())
+        (a, m) = map(int, input().split())
         divs = divisors(m)
         ans = []
         for d in divs:
             q = (m // d - 1) / a
             if q % 1 == 0 and q > 0:
-                ans.append((int(d * q)))
+                ans.append(int(d * q))
         ans.sort()
         print(len(ans))
         for i in ans:

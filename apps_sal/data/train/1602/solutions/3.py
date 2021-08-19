@@ -1,6 +1,6 @@
 try:
     t = int(input())
-    while(t > 0):
+    while t > 0:
         t -= 1
         n = int(input())
         x = int(input())
@@ -9,11 +9,11 @@ try:
             print('Impossible')
         else:
             a.sort(reverse=True)
-            i, count, ct = len(a) - 1, 0, 0
+            (i, count, ct) = (len(a) - 1, 0, 0)
             v = 0
-            while(i >= 0):
+            while i >= 0:
                 if a[i] - v == 1:
-                    print("Impossible")
+                    print('Impossible')
                     break
                 ct += 1
                 if ct == x:

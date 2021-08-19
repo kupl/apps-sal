@@ -20,10 +20,9 @@ for i in range(8):
     d.append(c)
     for j in x:
         d[i][abc(j)].append(j)
-
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     ans = 0
     c = d[n - 1][k]

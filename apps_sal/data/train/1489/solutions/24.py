@@ -1,10 +1,10 @@
-s, k = [int(s) for s in input().split(" ")]
+(s, k) = [int(s) for s in input().split(' ')]
 a = str(s)
-ans = ""
+ans = ''
 for ch in a:
     if k > 0:
         if int(ch) < 9:
-            ans += "9"
+            ans += '9'
             k -= 1
         else:
             ans += ch

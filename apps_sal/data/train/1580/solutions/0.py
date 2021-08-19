@@ -3,11 +3,11 @@ t = int(input())
 x = sys.stdin.readlines()
 l = []
 for s in x:
-    s = s.replace(".", "")
-    s = s.replace("'", "")
-    s = s.replace(",", "")
-    s = s.replace(":", "")
-    s = s.replace(";", "")
+    s = s.replace('.', '')
+    s = s.replace("'", '')
+    s = s.replace(',', '')
+    s = s.replace(':', '')
+    s = s.replace(';', '')
     lst = [str(i) for i in s.split()]
     for j in lst:
         l.append(j)
@@ -17,7 +17,7 @@ for y in l:
     m.append(z)
 n = []
 for k in m:
-    if(k in n):
+    if k in n:
         continue
     else:
         n.append(k)

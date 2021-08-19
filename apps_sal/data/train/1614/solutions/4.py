@@ -14,12 +14,11 @@ def who_is_winner(pieces_position_list):
         if p in ''.join(diagonal(rot90(board), +i + j - 5)):
             return True
         return False
-
     id = [0] * 7
     for move in pieces_position_list:
-        i, p = ord(move[0]) - 65, move[2]
+        (i, p) = (ord(move[0]) - 65, move[2])
         j = id[i]
-        board[i][j], id[i] = p, j + 1
+        (board[i][j], id[i]) = (p, j + 1)
         if check(i, j, p * 4):
-            return "Yellow" if p == 'Y' else "Red"
-    return "Draw"
+            return 'Yellow' if p == 'Y' else 'Red'
+    return 'Draw'

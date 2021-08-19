@@ -1,4 +1,5 @@
 def encode(s):
+
     def shift(st, l):
         res = list(s)
         for i in range(l):
@@ -14,7 +15,7 @@ def encode(s):
         out.append(matrix[i][-1])
         if matrix[i] == list(s):
             number = i
-    return ''.join(out), number
+    return (''.join(out), number)
 
 
 def decode(string, number):

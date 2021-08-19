@@ -19,12 +19,12 @@ def recover(p, s, r, q, vec, tot, h):
     d2 = len(r) - len(q)
     for i in range(0, d):
         if p[d - 1 - i] != '0':
-            vec.append(int(p[d - 1 - i: d] + s))
+            vec.append(int(p[d - 1 - i:d] + s))
             tot += 1
         if r[d2 - 1 - i + h] != '0':
-            vec.append(int(r[d2 - 1 - i + h: d2 + h] + q[h:]))
+            vec.append(int(r[d2 - 1 - i + h:d2 + h] + q[h:]))
             tot += 1
-    return tot, vec, len(r) - len(p)
+    return (tot, vec, len(r) - len(p))
 
 
 def morph(m):

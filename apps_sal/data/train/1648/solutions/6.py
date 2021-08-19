@@ -9,7 +9,7 @@ def spinning_rings(inner_max, outer_max):
             jump = i - outer_max
         elif i > o:
             jump = (i - o + 1) // 2
-        elif i == (outer_max + 1 - o):
+        elif i == outer_max + 1 - o:
             jump = i
         else:
             jump = min(i + 1, outer_max + 1 - o)

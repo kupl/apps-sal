@@ -9,9 +9,9 @@ for _ in range(int(input())):
     else:
         print('*')
         for _ in range(2, n):
-            print('*', end="")
+            print('*', end='')
             if a > 0:
-                print(' ' * a, end="")
+                print(' ' * a, end='')
             a += 1
             print('*')
         print('*' * n)

@@ -13,7 +13,6 @@ for _ in range(int(input())):
         d = d2
     else:
         d = (array[3] - array[0]) // 3
-
     for i in range(N - 1):
         if array[i + 1] - array[i] != d:
             if i == 0:

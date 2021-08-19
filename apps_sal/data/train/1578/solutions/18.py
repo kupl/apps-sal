@@ -1,5 +1,4 @@
 n = int(input())
-
 c = 0
 sum = 0
 while n:

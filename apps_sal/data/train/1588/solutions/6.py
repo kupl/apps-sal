@@ -4,7 +4,7 @@ for _ in range(t):
     n = int(input())
     di = {}
     for i in range(n):
-        a, b = input().split()
+        (a, b) = input().split()
         b = int(b)
         di.setdefault(b, [])
         di[b].append(a)

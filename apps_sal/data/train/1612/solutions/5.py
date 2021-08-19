@@ -11,7 +11,7 @@ def is_prime(n):
         return True
     elif n % 2 == 0:
         return False
-    for i in range(3, int(n**0.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if n % i == 0:
             return False
     return True
@@ -46,12 +46,12 @@ def find_spec_prod_part(n, com):
     if is_prime(n):
         return 'It is a prime number'
     r = []
-    while(n % 2 == 0):
+    while n % 2 == 0:
         r.append(2)
         n //= 2
     x = 3
-    while(n > 1 and not is_prime(n)):
-        while(n % x == 0):
+    while n > 1 and (not is_prime(n)):
+        while n % x == 0:
             r.append(x)
             n //= x
         x += 2
@@ -62,14 +62,14 @@ def find_spec_prod_part(n, com):
         m = [None, -1]
         f = gt
     else:
-        m = [None, 10e10]
+        m = [None, 100000000000.0]
         f = lt
     for t in p:
         if len(t) == 1:
             continue
-        a, b = 0, 0
-        for k, v in Counter(t).items():
-            a += k**v
+        (a, b) = (0, 0)
+        for (k, v) in Counter(t).items():
+            a += k ** v
             b += v
         score = a * b
         if f(score, m[1]):

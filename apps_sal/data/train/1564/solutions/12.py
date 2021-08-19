@@ -1,9 +1,9 @@
 import sys
-t = int(input(""))
+t = int(input(''))
 while t:
     l2 = []
     count = 0
-    l = str(input(""))
+    l = str(input(''))
     for i in range(len(l) - 1):
         x = l[i] + l[i + 1]
         if x not in l2:

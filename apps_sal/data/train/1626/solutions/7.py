@@ -3,27 +3,24 @@ import numpy as np
 
 
 def getGreatest(n, d, prefix):
-    rows = 9 * 10**(d - 1)
+    rows = 9 * 10 ** (d - 1)
     triangle = rows * (d + rows * d) // 2
     l = 0
     r = triangle
-
     while l < r:
-        mid = l + ((r - l) >> 1)
+        mid = l + (r - l >> 1)
         triangle = mid * prefix + mid * (d + mid * d) // 2
         prevTriangle = (mid - 1) * prefix + (mid - 1) * (d + (mid - 1) * d) // 2
         nextTriangle = (mid + 1) * prefix + (mid + 1) * (d + (mid + 1) * d) // 2
-
         if triangle >= n:
             if prevTriangle < n:
                 return prevTriangle
             else:
                 r = mid - 1
+        elif nextTriangle >= n:
+            return triangle
         else:
-            if nextTriangle >= n:
-                return triangle
-            else:
-                l = mid
+            l = mid
     return l * prefix + l * (d + l * d) // 2
 
 
@@ -36,7 +33,7 @@ def findDiff(n, x):
     d = round(log10(mult)) + 1
     prefixes = 0
     for z in range(1, d):
-        prefixes += (9 * z * 10**(z - 1))
+        prefixes += 9 * z * 10 ** (z - 1)
     n -= calcSeq(mult - 1)
     return n - getGreatest(n, d, prefixes)
 
@@ -86,9 +83,8 @@ def solve(n):
     if calcSeq(current) < n:
         current += 1
     prev = current - 1
-
     element = findDiff(n, prev)
-    nDigits, nines = 1, 9
+    (nDigits, nines) = (1, 9)
     total = float(nDigits * nines)
     while total < element:
         nDigits += 1
@@ -96,7 +92,6 @@ def solve(n):
         total += nDigits * nines
     total -= nDigits * nines
     element2 = element - total
-    start = 10**(nDigits - 1)
+    start = 10 ** (nDigits - 1)
     number = str(start + ceil(element2 / nDigits) - 1)
-
     return int(number[(int(element2) - 1) % nDigits])

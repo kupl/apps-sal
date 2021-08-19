@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input("").strip().split()))[:n]
+a = list(map(int, input('').strip().split()))[:n]
 s = list()
 li = list()
 k = 0

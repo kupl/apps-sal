@@ -1,6 +1,5 @@
 import sys
-
-L = 10**9 + 7
+L = 10 ** 9 + 7
 
 
 def mat_mult(lst1, lst2, r, c, m):
@@ -10,7 +9,6 @@ def mat_mult(lst1, lst2, r, c, m):
             res[i][j] = 0
             for k in range(c):
                 res[i][j] = (res[i][j] + lst1[i][k] * lst2[k][j]) % L
-
     return res
 
 

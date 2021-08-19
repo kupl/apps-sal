@@ -1,6 +1,6 @@
 def main():
     for i in range(int(input())):
-        n, p = list(map(int, input().split()))
+        (n, p) = list(map(int, input().split()))
         m = n % (n // 2 + 1)
         if m == 0:
             print(p * p * p)

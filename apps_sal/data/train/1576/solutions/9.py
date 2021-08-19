@@ -5,10 +5,10 @@ try:
         lst = []
         for i in range(1, k + 1):
             lst.append(str(i))
-        print("".join(lst))
+        print(''.join(lst))
         for i in range(k - 1):
             lst.append(lst[0])
             lst.pop(0)
-            print("".join(lst))
+            print(''.join(lst))
 except EOFError:
     pass

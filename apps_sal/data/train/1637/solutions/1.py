@@ -14,7 +14,7 @@ def encode(s):
 
 def decode(s, n):
     try:
-        m = [''] * (len(s))
+        m = [''] * len(s)
         for i in range(len(s)):
             for j in range(len(s)):
                 m[j] = s[j] + m[j]

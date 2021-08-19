@@ -5,7 +5,7 @@ def bw(s):
             t.append('0')
         else:
             t.append('1')
-    return int(''.join(str(i) for i in t), 2)
+    return int(''.join((str(i) for i in t)), 2)
 
 
 def pm(s):
@@ -15,7 +15,7 @@ def pm(s):
             t.append('0')
         else:
             t.append('1')
-    return int(''.join(str(i) for i in t), 2)
+    return int(''.join((str(i) for i in t)), 2)
 
 
 def inp(n):

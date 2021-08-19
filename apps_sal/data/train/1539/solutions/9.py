@@ -1,4 +1,4 @@
-t = (int)(input())
+t = int(input())
 while t > 0:
     t -= 1
     c = 0

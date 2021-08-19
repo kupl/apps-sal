@@ -1,12 +1,6 @@
 for i in range(int(input())):
     li = list(map(int, input().split()))
-    '''if a>0 and b>0 and c>0:
-     if a+b>c or b+c>a or a+c>b :
-      print("Yes")
-     else:
-      print("No")
-    else:
-     print("No")'''
+    'if a>0 and b>0 and c>0:\n     if a+b>c or b+c>a or a+c>b :\n      print("Yes")\n     else:\n      print("No")\n    else:\n     print("No")'
     a = max(li)
     b = min(li)
     c = 0
@@ -20,8 +14,8 @@ for i in range(int(input())):
         else:
             c = max(li)
     if b + c >= a - 1:
-        print("Yes")
+        print('Yes')
     elif a == b and a == c:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

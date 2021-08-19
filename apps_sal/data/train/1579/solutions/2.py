@@ -1,9 +1,8 @@
 for _ in range(int(input())):
     n = int(input())
     ar = [int(x) for x in input().split()]
-
     if n > 62:
-        print("NO")
+        print('NO')
     else:
         v = []
         f = 0
@@ -23,8 +22,7 @@ for _ in range(int(input())):
                     v.append(x)
             if f == 1:
                 break
-
         if f == 1:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

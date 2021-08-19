@@ -1,5 +1,5 @@
 def count_subsequences(x, y):
-    m, n = len(y), len(x)
+    (m, n) = (len(y), len(x))
     cache = [[0] * (n + 1) for i in range(m + 1)]
     for i in range(n + 1):
         cache[0][i] = 0

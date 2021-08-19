@@ -1,8 +1,8 @@
 n = int(input())
-arr = list(map(int, input().split(" ")))
+arr = list(map(int, input().split(' ')))
 m = int(input())
 for _ in range(m):
-    branch, ind_from_left = map(int, input().split(" "))
+    (branch, ind_from_left) = map(int, input().split(' '))
     if branch > 1 and ind_from_left != 1:
         arr[branch - 2] += ind_from_left - 1
     if branch < n and ind_from_left != arr[branch - 1]:

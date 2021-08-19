@@ -7,12 +7,12 @@ def bernoulli_number(n):
     if n % 2 == 1:
         return 0
     с = [i for i in zip(range(n + 2), consider())]
-    с = [b for _, b in с]
+    с = [b for (_, b) in с]
     return с[n]
 
 
 def consider():
-    k, t = [], 0
+    (k, t) = ([], 0)
     while True:
         k.append(f(1, t + 1))
         for j in range(t, 0, -1):

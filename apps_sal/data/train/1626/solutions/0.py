@@ -1,4 +1,5 @@
 def solve(n):
+
     def length(n):
         s = 0
         for i in range(20):

@@ -16,9 +16,9 @@ def almost_everywhere_zero(n, k):
         d = digits[i]
         if d == 0:
             continue
-        aez += comb(i, k) * 9**k
+        aez += comb(i, k) * 9 ** k
         k -= 1
         if k < 0:
             break
-        aez += (d - 1) * comb(i, k) * 9**(k)
+        aez += (d - 1) * comb(i, k) * 9 ** k
     return aez

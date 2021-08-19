@@ -1,6 +1,6 @@
 def proper_fractions(n):
     phi = n > 1 and n
-    for p in range(2, int(n ** .5) + 1):
+    for p in range(2, int(n ** 0.5) + 1):
         if not n % p:
             phi -= phi // p
             while not n % p:

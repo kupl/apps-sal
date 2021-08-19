@@ -1,5 +1,5 @@
 def one_square(n):
-    return round(n ** .5) ** 2 == n
+    return round(n ** 0.5) ** 2 == n
 
 
 def two_squares(n):

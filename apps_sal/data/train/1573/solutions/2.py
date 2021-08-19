@@ -2,9 +2,9 @@ T = int(input())
 for _ in range(T):
     n = int(input())
     if n % 2 == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         count = 0
         for _ in range(n):
             count += 1
@@ -16,5 +16,5 @@ for _ in range(T):
                 else:
                     d[count + i - n] = 1
             for i in d:
-                print(i, end="")
+                print(i, end='')
             print()

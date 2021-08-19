@@ -8,5 +8,4 @@ for _ in range(t):
         c += n // l[i]
         n = n % l[i]
         i = i + 1
-
     print(c)

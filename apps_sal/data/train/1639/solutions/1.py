@@ -1,6 +1,6 @@
 def gta(limit, *args):
     args = [str(n).ljust(limit, '.') for n in args]
-    unique, frequency, fact = set(), 0, 1
+    (unique, frequency, fact) = (set(), 0, 1)
     for c in zip(*args):
         for d in c:
             if d == '.' or d in unique:

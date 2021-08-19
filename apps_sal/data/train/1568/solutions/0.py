@@ -4,6 +4,6 @@ for _ in range(t):
     li = list(map(int, input().split()))
     c = 0
     for i in li:
-        if(i >= len(li) / 2):
+        if i >= len(li) / 2:
             c += 1
     print(c)

@@ -1,7 +1,7 @@
-n, k = input().split()
+(n, k) = input().split()
 k = int(k)
 l = len(n)
-ans = ""
+ans = ''
 for i in range(l):
     if k == 0:
         break

@@ -2,7 +2,7 @@ n = int(input())
 arr = list(map(int, input().split()))
 m = int(input())
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     branch = x - 1
     left = y - 1
     right = arr[branch] - y

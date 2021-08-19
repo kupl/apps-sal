@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    num = ""
+    num = ''
     val = 1
     for i in range(n):
         num += str(val)

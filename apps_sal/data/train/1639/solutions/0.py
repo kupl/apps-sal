@@ -44,19 +44,15 @@ def sum_up(limit, items):
     for i in range(1, limit + 1):
         combin = binomial_coeff(len(items), i)
         ratio = len(items) / float(i)
-
         for element in items:
-            total += (element * (combin / ratio))
-
+            total += element * (combin / ratio)
     return total
 
 
 def make_pattern(limit, *args):
-
     seen = set()
     pattern = []
     items = list(map(str, args))
-
     k = 0
     while len(pattern) < limit:
         for i in range(len(items)):
@@ -64,12 +60,10 @@ def make_pattern(limit, *args):
                 v = items[i][k]
             except IndexError:
                 pass
-
             if v not in seen:
                 seen.add(v)
                 pattern.append(int(v))
                 if len(pattern) == limit:
                     break
         k += 1
-
     return pattern

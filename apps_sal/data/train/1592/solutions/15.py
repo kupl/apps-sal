@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    l, l1 = [], []
+    (l, l1) = ([], [])
     l3 = []
     s = 0
     for i in range(n):
@@ -17,7 +17,6 @@ for _ in range(int(input())):
             l3.append(l1[len(l1) - 1][1] - l1[len(l1) - 1][0])
     l4 = l3.copy()
     for i in range(len(l3)):
-
         if i < len(l3) // 2:
             t = l3.index(min(l3))
             s += min(l1[t])

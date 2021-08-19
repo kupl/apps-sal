@@ -5,9 +5,7 @@ for i in range(t):
     inputdata = input()
     a = inputdata.split()
     a = [int(c) for c in a]
-
     for i in a:
-        if (i >= n / 2):
+        if i >= n / 2:
             ct = ct + 1
-
     print(ct)

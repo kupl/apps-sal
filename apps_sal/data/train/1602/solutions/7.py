@@ -5,7 +5,7 @@ try:
         x = int(input())
         l = list(map(int, input().split()))
         if 1 in l:
-            print("Impossible")
+            print('Impossible')
         else:
             l.sort()
             flag = False

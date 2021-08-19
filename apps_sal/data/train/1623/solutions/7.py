@@ -19,10 +19,8 @@ def memoize(f):
 def binom(n, k):
     if k == 0:
         return 1
-
     if 2 * k > n:
         return binom(n, n - k)
-
     return binom(n - 1, k - 1) + binom(n - 1, k)
 
 
@@ -30,13 +28,11 @@ def binom(n, k):
 def B(m):
     if m == 0:
         return Fraction(1)
-
     if m > 2 and m % 2 != 0:
         return Fraction(0)
 
     def b(k):
         return binom(m, k) * B(k) / (m - k + 1)
-
     return -sum(map(b, list(range(m))))
 
 

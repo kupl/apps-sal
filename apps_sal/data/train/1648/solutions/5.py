@@ -7,12 +7,11 @@ def spinning_rings(inner_max, outer_max):
             return int(i)
         elif inner < outer:
             i += inner + 1 if inner_max > outer_max else outer_max - outer + 1
+        elif inner > outer_max:
+            i += inner - outer_max
         else:
-            if inner > outer_max:
-                i += inner - outer_max
+            mid = (inner + outer) / 2
+            if mid % 1 == 0:
+                i += mid - outer
             else:
-                mid = (inner + outer) / 2
-                if mid % 1 == 0:
-                    i += mid - outer
-                else:
-                    i += min(inner, outer_max - outer) + 1
+                i += min(inner, outer_max - outer) + 1

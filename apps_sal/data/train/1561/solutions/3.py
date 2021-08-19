@@ -7,11 +7,11 @@ for i in range(t):
 
 def check(s):
     if s == 1:
-        return "1"
-    m = int(((s - 1) / 2.0) + 0.6)
-    st = ""
+        return '1'
+    m = int((s - 1) / 2.0 + 0.6)
+    st = ''
     for i in range(m, m + s):
-        st = st + "  " + str(i)
+        st = st + '  ' + str(i)
     return st[2:]
 
 

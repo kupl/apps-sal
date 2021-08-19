@@ -2,12 +2,13 @@ from itertools import groupby
 
 
 class Conseq:
+
     def __init__(self):
         self.value = None
         self.key = 0
 
     def __call__(self, value):
-        if self.value is None or (value != self.value + 1):
+        if self.value is None or value != self.value + 1:
             self.key += 1
         self.value = value
         return self.key
@@ -27,4 +28,4 @@ def serial(it):
 
 
 def solution(args):
-    return ','.join(r for _, grp in groupby(args, key=Conseq()) for r in serial(grp))
+    return ','.join((r for (_, grp) in groupby(args, key=Conseq()) for r in serial(grp)))

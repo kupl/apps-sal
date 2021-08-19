@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def sum(x):
@@ -6,8 +6,8 @@ def sum(x):
 
 
 def solve():
-    a, b = list(map(int, input().split()))
-    print((sum(b - 1) * (b * sum(a) + a)) % mod)
+    (a, b) = list(map(int, input().split()))
+    print(sum(b - 1) * (b * sum(a) + a) % mod)
 
 
 solve()

@@ -8,13 +8,13 @@ for _ in range(int(input())):
     la = 0
     r = []
     ls = len(s)
-    for i in (s):
+    for i in s:
         c += 1
         if i == 'B':
             lb += 1
         else:
             la += 1
-    if (la - lb) == 0 or abs(la - lb) == 1:
+    if la - lb == 0 or abs(la - lb) == 1:
         if la < lb:
             for i in range(ls):
                 if i % 2 == 1 and s[i] == 'B':

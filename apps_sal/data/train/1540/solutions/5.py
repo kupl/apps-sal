@@ -5,4 +5,4 @@ for i in range(T):
     if K % N == 0 and K >= N:
         print('YES')
     else:
-        print("NO")
+        print('NO')

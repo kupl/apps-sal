@@ -4,7 +4,7 @@ for t in range(t):
     for i in range(0, n):
         for j in range(0, n):
             if j % 2 == 0:
-                print(1, end="")
+                print(1, end='')
             else:
-                print(0, end="")
+                print(0, end='')
         print()

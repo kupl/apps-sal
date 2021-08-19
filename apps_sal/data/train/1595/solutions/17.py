@@ -5,7 +5,7 @@ def bw(s):
             t.append('0')
         else:
             t.append('1')
-    return int(''.join(str(i) for i in t), 2)
+    return int(''.join((str(i) for i in t)), 2)
 
 
 def pm(s):
@@ -15,7 +15,7 @@ def pm(s):
             t.append('0')
         else:
             t.append('1')
-    return int(''.join(str(i) for i in t), 2)
+    return int(''.join((str(i) for i in t)), 2)
 
 
 def inp(n):
@@ -32,7 +32,7 @@ def f(n, k, s):
     for i in range(1, n + 1):
         for j in range(1024):
             dp[i][j] = dp[i - 1][j] + dp[i - 1][j ^ s[i - 1]]
-    return dp[n][k] % ((10**9) + 7)
+    return dp[n][k] % (10 ** 9 + 7)
 
 
 t = int(input())

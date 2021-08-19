@@ -4,8 +4,7 @@ for _ in range(t):
     for i in range(n):
         if i == n - 1:
             print('*' * (i + 1))
+        elif i == 0:
+            print('*')
         else:
-            if i == 0:
-                print('*')
-            else:
-                print('*' + " " * (i + 1 - 2) + '*')
+            print('*' + ' ' * (i + 1 - 2) + '*')

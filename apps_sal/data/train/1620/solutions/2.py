@@ -3,12 +3,12 @@ from heapq import heappush, heappop
 
 
 def n_linear(m, n):
-    y, h, q = 1, [], {}
+    (y, h, q) = (1, [], {})
     for x in m:
         h.append((y, x))
         q[x] = deque([x * y + 1])
     while n:
-        z, w = heappop(h)
+        (z, w) = heappop(h)
         if y != z:
             y = z
             for x in m:

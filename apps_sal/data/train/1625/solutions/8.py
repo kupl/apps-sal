@@ -9,7 +9,7 @@ def pawn_move_tracker(moves):
         direction = 1 - 2 * turn
         capture = 'x' in move
         if capture:
-            sx, dx, dy = column(move[0]), column(move[2]), int(move[3])
+            (sx, dx, dy) = (column(move[0]), column(move[2]), int(move[3]))
             if (dx, dy) in opponent:
                 opponent.remove((dx, dy))
             else:
@@ -20,7 +20,7 @@ def pawn_move_tracker(moves):
             if (dx, dy) in opponent or (dx, dy - direction) in opponent:
                 return f'{move} is invalid'
         sy = dy - direction
-        if not capture and dy == (4, 5)[turn] and not (sx, sy) in pawns:
+        if not capture and dy == (4, 5)[turn] and (not (sx, sy) in pawns):
             sy -= direction
         if (sx, sy) not in pawns:
             return f'{move} is invalid'
@@ -28,7 +28,8 @@ def pawn_move_tracker(moves):
         pawns.append((dx, dy))
         turn ^= 1
 
-    def char(p): return 'P' if p in white_pawns else 'p' if p in black_pawns else '.'
+    def char(p):
+        return 'P' if p in white_pawns else 'p' if p in black_pawns else '.'
     return [[char((x, y)) for x in range(1, 9)] for y in range(8, 0, -1)]
 
 

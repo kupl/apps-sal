@@ -3,8 +3,8 @@ for i in range(T):
     S = str(input())
     S = S.split()
     for j in S:
-        if j == "not":
-            print("Real Fancy")
+        if j == 'not':
+            print('Real Fancy')
             break
     else:
-        print("regularly fancy")
+        print('regularly fancy')

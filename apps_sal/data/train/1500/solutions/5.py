@@ -9,7 +9,7 @@ for i in range(int(input())):
             balance -= 1
         max_balance = max(max_balance, balance)
     for i in range(max_balance):
-        print("(", end='')
+        print('(', end='')
     for i in range(max_balance):
-        print(")", end='')
+        print(')', end='')
     print()
