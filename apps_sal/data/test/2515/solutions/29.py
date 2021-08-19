@@ -15,7 +15,6 @@ def sieve(n):
 def is_like2017(n):
     for i in range(n + 1):
         if is_primeL[i]:
-            #print(i, (i+1)//2)
             if is_primeL[(i + 1) // 2]:
                 is_likeL[i] = True
 
@@ -24,12 +23,9 @@ n = 100000
 is_primeL = sieve(n)
 is_likeL = [False for _ in range(n + 1)]
 is_like2017(n)
-
-
 cumL = list(accumulate(is_likeL))
 cumL[0] = 0
-
 q = int(input())
 for _ in range(q):
-    l, r = list(map(int, input().split()))
-    print((cumL[r] - cumL[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(cumL[r] - cumL[l - 1])
