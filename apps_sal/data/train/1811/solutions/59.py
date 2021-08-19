@@ -23,15 +23,8 @@ class StockSpanner:
         else:
             self.curSpan = 1 + self.prevSpan
             i = self.n - self.curSpan - 1
-            # if i >= 0:
-            #     cur = priceList[i]
             while i >= 0 and self.priceList[i] <= price:
                 self.curSpan += 1
                 i = self.n - self.curSpan - 1
             self.prevSpan = self.curSpan
             return self.curSpan
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

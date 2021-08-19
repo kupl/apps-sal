@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 from operator import itemgetter
 from heapq import nlargest
 from itertools import repeat
@@ -31,7 +29,7 @@ class bag(dict):
             super(bag, self).__setitem__(elem, n)
 
     def itermultiple(self):
-        for elem, cnt in self.items():
+        for (elem, cnt) in self.items():
             for _ in range(cnt):
                 yield elem
 
@@ -57,11 +55,11 @@ class bag(dict):
 def solve(A):
     C = bag(A)
     MC = C.most_common()
-    e, c = MC.pop(0)
+    (e, c) = MC.pop(0)
     c_max = c
     e_min = e
     for mc in MC:
-        e, c = mc
+        (e, c) = mc
         if c == c_max:
             if e < e_min:
                 e_min = e
@@ -78,8 +76,6 @@ T = int(ifs.readline())
 for t in range(1, T + 1):
     n = int(ifs.readline())
     A = numbers_from_line()
-    v, c = solve(A)
+    (v, c) = solve(A)
     ofs.write('%d %d\n' % (v, c))
-
-
 sys.exit(0)

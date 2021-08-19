@@ -1,4 +1,3 @@
-# cook your dish here
 def check(mid):
     time = 0.0
     for i in range(n):
@@ -12,16 +11,16 @@ def check(mid):
 
 
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     arr.sort()
     low = 0
     high = 10000000000
-    while ((high - low) > 0.000001):
+    while high - low > 1e-06:
         mid = low + (high - low) / 2
         if check(mid):
             ans = mid
             low = mid
         else:
             high = mid
-    print("{0:.6f}".format(ans))
+    print('{0:.6f}'.format(ans))

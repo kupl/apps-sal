@@ -13,13 +13,6 @@ class StockSpanner:
             while price >= self.price[i] and i >= 0:
                 tmp += self.dp[i]
                 i -= self.dp[i]
-
             self.dp.append(tmp)
-
         self.price.append(price)
         return self.dp[-1]
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)
