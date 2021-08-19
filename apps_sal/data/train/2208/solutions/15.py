@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 parent = [i for i in range(n)]
 rank = [1 for i in range(n)]
 
@@ -10,7 +10,7 @@ def find_parent(u):
 
 
 for i in range(k):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     u = find_parent(u - 1)
     v = find_parent(v - 1)
     if u != v:
@@ -19,5 +19,5 @@ for i in range(k):
 sat = 0
 for i in range(n):
     if parent[i] == i:
-        sat += (rank[i] - 1)
+        sat += rank[i] - 1
 print(k - sat)

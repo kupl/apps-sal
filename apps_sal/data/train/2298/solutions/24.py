@@ -7,14 +7,20 @@ import itertools
 import fractions
 import pprint
 from typing import Union
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
 
 
-n, t = inpl()
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+(n, t) = inpl()
 a = inpl()
 m = []
 mi = INF

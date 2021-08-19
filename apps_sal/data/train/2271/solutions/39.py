@@ -3,27 +3,40 @@ import itertools
 import collections
 import sys
 stdin = sys.stdin
-sys.setrecursionlimit(10**6)
-def ni(): return int(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nn(): return list(stdin.readline().split())
-def ns(): return stdin.readline().rstrip()
+sys.setrecursionlimit(10 ** 6)
+
+
+def ni():
+    return int(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nn():
+    return list(stdin.readline().split())
+
+
+def ns():
+    return stdin.readline().rstrip()
 
 
 class UnionFind:
+
     def __init__(self, elems=None):
+
         class KeyDict(dict):
+
             def __missing__(self, key):
                 self[key] = key
                 return key
-
         self.parent = KeyDict()
         self.rank = collections.defaultdict(int)
         self.size_ = collections.defaultdict(lambda: 1)
-
         if elems is not None:
             for elem in elems:
-                _, _, _ = self.parent[elem], self.rank[elem], self.size_[elem]
+                (_, _, _) = (self.parent[elem], self.rank[elem], self.size_[elem])
 
     def find(self, x):
         if self.parent[x] == x:
@@ -50,29 +63,26 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
     def grouper(self):
-        roots = [(x, self.find(x_par)) for x, x_par in self.parent.items()]
+        roots = [(x, self.find(x_par)) for (x, x_par) in self.parent.items()]
         root = operator.itemgetter(1)
-        for _, group in itertools.groupby(sorted(roots, key=root), root):
-            yield [x for x, _ in group]
+        for (_, group) in itertools.groupby(sorted(roots, key=root), root):
+            yield [x for (x, _) in group]
 
     def size(self, x):
         return self.size_[self.find(x)]
 
 
-n, m = na()
+(n, m) = na()
 p = na()
 uf = UnionFind()
 for i in range(m):
-    x, y = na()
+    (x, y) = na()
     uf.unite(x, y)
-
 dp = []
 for i in range(n):
     dp.append(uf.find(i + 1))
-
 ans = 0
 for i in range(n):
     if dp[i] == uf.find(p[i]) or i + 1 == p[i]:
         ans += 1
-
 print(ans)

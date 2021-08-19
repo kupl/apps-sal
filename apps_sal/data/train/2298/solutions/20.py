@@ -1,4 +1,4 @@
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 min_A = 1000000001
 max_diff = 0

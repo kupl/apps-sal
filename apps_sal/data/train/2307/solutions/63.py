@@ -1,7 +1,5 @@
-n, a, b, *x = list(map(int, open(0).read().split()))
-
+(n, a, b, *x) = list(map(int, open(0).read().split()))
 now = x[0]
-
 ans = 0
 for i in range(1, n):
     cost = (x[i] - now) * a

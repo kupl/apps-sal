@@ -3,6 +3,7 @@ def main():
     input = sys.stdin.readline
 
     class TreiNode:
+
         def __init__(self, char_num, depth):
             self.end = False
             self.child = [None] * char_num
@@ -15,6 +16,7 @@ def main():
             return self.child[i]
 
     class Trei:
+
         def __init__(self, char_num):
             self.root = TreiNode(char_num, 0)
             self.char_num = char_num
@@ -37,14 +39,12 @@ def main():
                 return True
             else:
                 return False
-
-    N, L = list(map(int, input().split()))
+    (N, L) = list(map(int, input().split()))
     T = Trei(2)
     for _ in range(N):
         S = input().rstrip('\n')
         S = [int(s) for s in S]
         T.add(S)
-
     g = 0
     st = [T.root]
     while st:

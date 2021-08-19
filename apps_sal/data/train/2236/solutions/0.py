@@ -2,7 +2,8 @@ import sys
 readline = sys.stdin.readline
 
 
-class UF():
+class UF:
+
     def __init__(self, num):
         self.par = [-1] * num
         self.weight = [0] * num
@@ -24,36 +25,33 @@ class UF():
         ry = self.find(y)
         if rx != ry:
             if self.par[rx] > self.par[ry]:
-                rx, ry = ry, rx
+                (rx, ry) = (ry, rx)
             self.par[rx] += self.par[ry]
             self.par[ry] = rx
             self.weight[rx] += self.weight[ry]
         return rx
 
 
-N, K = list(map(int, readline().split()))
+(N, K) = list(map(int, readline().split()))
 S = list(map(int, readline().strip()))
-
 A = [[] for _ in range(N)]
-
 for k in range(K):
     BL = int(readline())
     B = list(map(int, readline().split()))
     for b in B:
         A[b - 1].append(k)
-
 cnt = 0
 T = UF(2 * K)
 used = set()
 Ans = [None] * N
-inf = 10**9 + 7
+inf = 10 ** 9 + 7
 for i in range(N):
     if not len(A[i]):
         Ans[i] = cnt
         continue
     kk = 0
     if len(A[i]) == 2:
-        x, y = A[i]
+        (x, y) = A[i]
         if S[i]:
             rx = T.find(x)
             ry = T.find(y)
@@ -89,26 +87,25 @@ for i in range(N):
                 rz2 = T.union(rx2, ry)
                 sf = min(T.weight[rz], T.weight[rz2])
                 kk = sf - sp
+    elif S[i]:
+        x = A[i][0]
+        rx = T.find(x)
+        rx2 = T.find(x + K)
+        sp = min(T.weight[rx], T.weight[rx2])
+        T.weight[rx] += inf
+        sf = min(T.weight[rx], T.weight[rx2])
+        kk = sf - sp
     else:
-        if S[i]:
-            x = A[i][0]
-            rx = T.find(x)
-            rx2 = T.find(x + K)
-            sp = min(T.weight[rx], T.weight[rx2])
-            T.weight[rx] += inf
-            sf = min(T.weight[rx], T.weight[rx2])
-            kk = sf - sp
-        else:
-            x = A[i][0]
-            rx = T.find(x)
-            rx2 = T.find(x + K)
-            sp = min(T.weight[rx], T.weight[rx2])
-            T.weight[rx2] += inf
-            if x not in used:
-                used.add(x)
-                T.weight[rx] += 1
-            sf = min(T.weight[rx], T.weight[rx2])
-            kk = sf - sp
+        x = A[i][0]
+        rx = T.find(x)
+        rx2 = T.find(x + K)
+        sp = min(T.weight[rx], T.weight[rx2])
+        T.weight[rx2] += inf
+        if x not in used:
+            used.add(x)
+            T.weight[rx] += 1
+        sf = min(T.weight[rx], T.weight[rx2])
+        kk = sf - sp
     Ans[i] = cnt + kk
     cnt = Ans[i]
 print('\n'.join(map(str, Ans)))

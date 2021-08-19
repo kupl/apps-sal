@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    p, q = list(map(int, input().split()))
+    (p, q) = list(map(int, input().split()))
     d = 2
     facs = []
     facsm = []
@@ -24,6 +24,6 @@ for f in range(int(input())):
         while pc % facs[i] == 0:
             x += 1
             pc //= facs[i]
-        mc = min(mc, facs[i]**(x - min(x, facsm[i])))
+        mc = min(mc, facs[i] ** (x - min(x, facsm[i])))
     p //= mc
     print(p)

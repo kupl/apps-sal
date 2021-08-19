@@ -1,5 +1,5 @@
 n = int(input())
-live1, dead1, live2, dead2 = 0, 0, 0, 0
+(live1, dead1, live2, dead2) = (0, 0, 0, 0)
 for i in range(n):
     I = [int(j) for j in input().split()]
     if I[0] == 1:

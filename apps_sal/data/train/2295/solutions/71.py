@@ -4,7 +4,7 @@ n = int(input())
 B = []
 ans = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans += a
     if a > b:
         B.append(b)

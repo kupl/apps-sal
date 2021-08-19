@@ -1,6 +1,6 @@
 (N, T) = map(int, input().split())
 a = list(map(int, input().split()))
-x = 10**9
+x = 10 ** 9
 d = 0
 counter = 0
 for i in a:

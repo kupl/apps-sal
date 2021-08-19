@@ -1,11 +1,9 @@
 from collections import Counter
 import sys
-sys.setrecursionlimit(10**6)
-
+sys.setrecursionlimit(10 ** 6)
 MOD = 998244353
-
-ABC = "abc".index
-*S, = map(ABC, input())
+ABC = 'abc'.index
+(*S,) = map(ABC, input())
 N = len(S)
 
 
@@ -49,11 +47,11 @@ else:
                     for r in range(2):
                         for k in range(3):
                             Q[k][(q + k) % 3][r | (p == k)] += P[p][q][r] % MOD
-            P, Q = Q, P
+            (P, Q) = (Q, P)
         ans = 0
         r = sum(S) % 3
         for i in range(3):
             ans += P[i][r][1]
-        if all(S[i] != S[i + 1] for i in range(N - 1)):
+        if all((S[i] != S[i + 1] for i in range(N - 1))):
             ans += 1
         print(ans % MOD)

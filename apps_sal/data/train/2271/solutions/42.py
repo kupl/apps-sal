@@ -1,10 +1,10 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 pairs = [list(map(int, input().split())) for _ in range(M)]
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n + 1)]
 
@@ -26,10 +26,8 @@ class UnionFind:
 
 
 u = UnionFind(N)
-
-for x, y in pairs:
+for (x, y) in pairs:
     u.union(x, y)
-
 ans = 0
 for j in range(1, N + 1):
     if u.check(p[j - 1], j):

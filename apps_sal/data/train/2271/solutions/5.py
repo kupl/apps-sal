@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 parent = [k for k in range(N)]
 
@@ -16,7 +16,7 @@ def unite(x, y):
 
 
 for _ in range(M):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     unite(x - 1, y - 1)
 ans = 0
 for k in range(N):

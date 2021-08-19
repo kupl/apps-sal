@@ -1,11 +1,8 @@
 def main():
-
-    N, T = list(map(int, input().split()))
+    (N, T) = list(map(int, input().split()))
     A = list(map(int, input().split()))
-
     if N == 1:
         return 0
-
     min_v = A[0]
     max_d = float('-inf')
     for i in range(1, N):
@@ -13,7 +10,6 @@ def main():
             max_d = A[i] - min_v
         if A[i] < min_v:
             min_v = A[i]
-
     d = set()
     d.add(A[0])
     ans = 0
@@ -25,7 +21,7 @@ def main():
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

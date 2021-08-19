@@ -4,7 +4,7 @@ a_chance = 0
 a_remain = []
 b_remain = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if b >= a:
         ans += b
         a_chance += b - a

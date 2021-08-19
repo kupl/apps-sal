@@ -1,7 +1,7 @@
 n = int(input())
 ax = ay = bx = by = 0
 for i in range(n):
-    x, y, z = [int(t) for t in input().split()]
+    (x, y, z) = [int(t) for t in input().split()]
     if x == 1:
         ax += y
         ay += z

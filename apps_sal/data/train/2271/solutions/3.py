@@ -1,14 +1,13 @@
 import sys
 from collections import deque
 readline = sys.stdin.readline
-n, m = map(int, readline().split())
+(n, m) = map(int, readline().split())
 P = list(map(lambda x: int(x) - 1, readline().split()))
 G = [set() for _ in range(n)]
 for i in range(m):
-    x, y = map(lambda x: int(x) - 1, readline().split())
+    (x, y) = map(lambda x: int(x) - 1, readline().split())
     G[x].add(y)
     G[y].add(x)
-
 D = {}
 cnt = 0
 V = [-1] * n

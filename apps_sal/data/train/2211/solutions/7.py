@@ -1,8 +1,8 @@
 a = int(input())
 for i in range(a):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     m = list(map(int, input().split()))
-    ui = 1e10
+    ui = 10000000000.0
     for l in m:
         ans = 0
         if d % l != 0:

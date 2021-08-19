@@ -13,9 +13,9 @@ def merge(x, y):
 
 
 N = int(input())
-A, res = [], 0
+(A, res) = ([], 0)
 for a in map(int, input().split()):
     A.append([-a])
-for a, b in zata(N, A)[1:]:
+for (a, b) in zata(N, A)[1:]:
     res = min(res, a + b)
     print(-res)

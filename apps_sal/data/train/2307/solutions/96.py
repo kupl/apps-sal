@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 X = list(map(int, input().split()))
 dist = [0 for _ in range(N - 1)]
 for i in range(N - 1):

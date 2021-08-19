@@ -6,6 +6,7 @@ def input():
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -23,7 +24,7 @@ class DisjointSet:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,10 +35,10 @@ class DisjointSet:
         return -self.parents[self.find(x)]
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 P = list([int(x) - 1 for x in input().split()])
 ds = DisjointSet(N)
 for _ in range(M):
-    x, y = [int(x) - 1 for x in input().split()]
+    (x, y) = [int(x) - 1 for x in input().split()]
     ds.union(x, y)
-print((sum(ds.same(P[i], i) for i in range(N))))
+print(sum((ds.same(P[i], i) for i in range(N))))

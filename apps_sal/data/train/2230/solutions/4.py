@@ -4,10 +4,10 @@ def main():
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     m = int(input())
-    r, g, bl = [], [], []
+    (r, g, bl) = ([], [], [])
     used = set()
     for i in range(n):
-        c1, c2 = a[i], b[i]
+        (c1, c2) = (a[i], b[i])
         if c1 == 1 or c2 == 1:
             r.append([p[i], i])
         if c1 == 2 or c2 == 2:

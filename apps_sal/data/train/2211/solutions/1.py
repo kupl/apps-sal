@@ -1,6 +1,6 @@
 nc = int(input())
 for cas in range(nc):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = [int(i) for i in input().split()]
     l.sort()
     if l[-1] > x:
@@ -8,8 +8,7 @@ for cas in range(nc):
             print(2)
         else:
             print(1)
+    elif x % l[-1] == 0:
+        print(x // l[-1])
     else:
-        if x % l[-1] == 0:
-            print(x // l[-1])
-        else:
-            print(x // l[-1] + 1)
+        print(x // l[-1] + 1)

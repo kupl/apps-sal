@@ -1,7 +1,7 @@
 n = int(input())
-x, y = zip(*sorted(sorted(map(int, input().split())) for _ in range(n)))
+(x, y) = zip(*sorted((sorted(map(int, input().split())) for _ in range(n))))
 a = x[-1]
-b = d = 2 * 10**9
+b = d = 2 * 10 ** 9
 for i in range(n - 1):
     a = max(a, y[i])
     b = min(b, y[i])

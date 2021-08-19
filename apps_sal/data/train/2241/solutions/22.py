@@ -1,12 +1,10 @@
 import sys
 from itertools import accumulate
 readline = sys.stdin.readline
-MOD = 10**9 + 7
-
-N, C = map(int, readline().split())
+MOD = 10 ** 9 + 7
+(N, C) = map(int, readline().split())
 A = [0] + list(map(int, readline().split()))
 B = [0] + list(map(int, readline().split()))
-
 acsq = []
 lb = max(B) + 1
 for j in range(C + 1):
@@ -18,7 +16,7 @@ for j in range(C + 1):
 dp = [[0] * (C + 1) for _ in range(N + 1)]
 dp[0][0] = 1
 for i in range(1, N + 1):
-    a, b = A[i], B[i]
+    (a, b) = (A[i], B[i])
     for c in range(C + 1):
         res = 0
         for j in range(c + 1):

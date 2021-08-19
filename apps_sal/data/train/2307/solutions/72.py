@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 Y = [X[i + 1] - X[i] for i in range(n - 1)]
 ans = 0

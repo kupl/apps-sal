@@ -3,9 +3,10 @@ readline = sys.stdin.readline
 
 
 class Rollinhash:
+
     def __init__(self, S):
         N = len(S)
-        self.mod = 10**9 + 9
+        self.mod = 10 ** 9 + 9
         self.base = 2009
         self.has = [0] * (N + 1)
         self.power = [1] * (N + 1)
@@ -18,16 +19,14 @@ class Rollinhash:
         return (self.has[j] - self.has[i] * self.power[j - i]) % self.mod
 
 
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 S = list(map(ord, readline().strip()))
 N = len(S)
 if len(set(S)) == 1:
     print(N)
-    print((1))
+    print(1)
 else:
     Rs = Rollinhash(S)
-
     tabler = [True] * (N + 1)
     for d in range(1, 1 + N // 2):
         r = Rs.rh(0, d)
@@ -42,12 +41,11 @@ else:
             if r != Rs.rh(N - (i + 1) * d, N - i * d):
                 break
             tablel[N - (i + 1) * d] = False
-
     if tabler[N]:
-        print((1))
-        print((1))
+        print(1)
+        print(1)
     else:
-        print((2))
+        print(2)
         ans = 0
         for i in range(N + 1):
             if tabler[i] and tablel[i]:

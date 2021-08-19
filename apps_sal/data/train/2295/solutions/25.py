@@ -1,9 +1,9 @@
 N = int(input())
 s = 0
-minus = 10**18
+minus = 10 ** 18
 flag = True
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a > b:
         minus = min(minus, b)
         flag = False

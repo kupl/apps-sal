@@ -1,4 +1,4 @@
-n, _, *a = map(int, open(0).read().split())
+(n, _, *a) = map(int, open(0).read().split())
 m = d = c = 0
 for t in a[::-1]:
     if t > m:

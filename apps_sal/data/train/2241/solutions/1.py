@@ -1,9 +1,9 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ab = list(zip(a, b))
 table = [[0 for i in range(c + 1)] for j in range(401)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for j in range(c + 1):
     if j == 0:
         for i in range(401):
@@ -15,7 +15,7 @@ dp = [[0 for i in range(c + 1)] for j in range(n + 1)]
 for i in range(c + 1):
     dp[0][i] = 1
 for i in range(1, n + 1):
-    a, b = ab[i - 1]
+    (a, b) = ab[i - 1]
     for j in range(a, b + 1):
         for k in range(c + 1):
             dp[i][k] = (dp[i][k] + table[j][k]) % mod

@@ -1,9 +1,10 @@
 import sys
 input = sys.stdin.readline
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
-class Union_Find():
+class Union_Find:
+
     def __init__(self, num):
         self.par = [-1] * (num + 1)
         self.siz = [1] * (num + 1)
@@ -41,10 +42,9 @@ class Union_Find():
 ans = 0
 guest = Union_Find(n)
 for i in range(k):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if guest.same_checker(a, b):
         ans += 1
     else:
         guest.union(a, b)
-
 print(ans)

@@ -3,9 +3,8 @@ aSended = 0
 bSended = 0
 aPing = 0
 bPing = 0
-
 while n > 0:
-    t, x, y = map(int, input().split())
+    (t, x, y) = map(int, input().split())
     if t == 1:
         aSended = aSended + 10
         aPing = aPing + x
@@ -13,13 +12,11 @@ while n > 0:
         bSended = bSended + 10
         bPing = bPing + x
     n = n - 1
-
-if(int(aSended / 2) <= aPing):
-    print("LIVE")
+if int(aSended / 2) <= aPing:
+    print('LIVE')
 else:
-    print("DEAD")
-
-if(int(bSended / 2) <= bPing):
-    print("LIVE")
+    print('DEAD')
+if int(bSended / 2) <= bPing:
+    print('LIVE')
 else:
-    print("DEAD")
+    print('DEAD')

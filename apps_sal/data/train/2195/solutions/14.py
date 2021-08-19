@@ -8,11 +8,8 @@ def count_sort(mass, st):
 
 
 n = int(input())
-
-a = [int(x) for x in input().split(" ")]
-
+a = [int(x) for x in input().split(' ')]
 a.sort()
-
 i = a.count(a[0])
 left = i
 res = n - left
@@ -24,5 +21,4 @@ while i < len(a):
         res += left
         left = 0
     left += count
-
 print(res)

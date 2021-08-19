@@ -12,15 +12,12 @@ def is_obtained(p, t, K):
 
 
 I = input
-
-t, p, A = I(), I(), list(map(int, I().split()))
-L, R = 0, len(A) - 1
-
+(t, p, A) = (I(), I(), list(map(int, I().split())))
+(L, R) = (0, len(A) - 1)
 while L < R:
     x = (L + R + 1) // 2
     if is_obtained(p, t, set(A[:x])):
         L = x
     else:
         R = x - 1
-
 print(L)

@@ -1,25 +1,23 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     from collections import deque
     input = sys.stdin.readline
-
     N = int(input())
     P = list(map(int, input().split()))
     adj = [[] for _ in range(N + 1)]
     adj_directed = [[] for _ in range(N + 1)]
     adj_rev = [[] for _ in range(N + 1)]
     out = [0] * (N + 1)
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         adj_directed[p].append(i + 1)
         adj[p].append(i + 1)
         adj[i + 1].append(p)
         adj_rev[i + 1].append(p)
         out[p] += 1
-
     que = deque()
     que.append(1)
     seen = [-1] * (N + 1)
@@ -34,13 +32,11 @@ def main():
                 seen[u] = seen[v] + 1
                 que.append(u)
                 par[u] = v
-            else:
-                if par[v] != u:
-                    if P[v - 1] == u:
-                        back_from = u
-                        back_to = v
-                        out[u] -= 1
-
+            elif par[v] != u:
+                if P[v - 1] == u:
+                    back_from = u
+                    back_to = v
+                    out[u] -= 1
     G = [-1] * (N + 1)
     for v in range(1, N + 1):
         if out[v] == 0:
@@ -62,11 +58,9 @@ def main():
             out[u] -= 1
             if out[u] == 0:
                 que.append(u)
-
     if G[back_from] != G[back_to]:
-        print("POSSIBLE")
+        print('POSSIBLE')
         return
-
     cycle = set()
     v = back_from
     while v > 0:
@@ -76,7 +70,6 @@ def main():
     while v > 0:
         cycle.add(v)
         v = par[v]
-
     v = back_from
     seen = {v}
     while True:
@@ -86,7 +79,7 @@ def main():
         for i in range(N + 1):
             if i not in M:
                 if G[v] == i:
-                    print("POSSIBLE")
+                    print('POSSIBLE')
                     return
                 G[v] = i
                 break
@@ -99,7 +92,7 @@ def main():
                 break
         if fin:
             break
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')
 
 
 def __starting_point():

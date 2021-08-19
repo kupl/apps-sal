@@ -6,10 +6,10 @@ def main():
         s = input()
         cur = 0
         for c in s:
-            cur ^= (1 << (ord(c) - ord('a')))
+            cur ^= 1 << ord(c) - ord('a')
         ans += d.get(cur, 0)
         for j in range(26):
-            ans += d.get(cur ^ (1 << j), 0)
+            ans += d.get(cur ^ 1 << j, 0)
         t = d.get(cur, 0) + 1
         d[cur] = t
     print(ans)

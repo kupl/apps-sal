@@ -24,7 +24,7 @@ for i in range(n):
             flag = 0
     if ks:
         tp.append('k' * ks)
-    s = "".join(tp)
+    s = ''.join(tp)
     if s not in list(names.keys()):
         names[s] = 1
 print(len(names))

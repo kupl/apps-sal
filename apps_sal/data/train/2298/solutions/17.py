@@ -1,6 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = tuple(map(int, input().split()))
-mini = 10**10
+mini = 10 ** 10
 bnf = 0
 cnt = 1
 for i in range(N):

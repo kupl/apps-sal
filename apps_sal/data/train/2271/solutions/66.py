@@ -1,6 +1,6 @@
 from collections import deque
 from collections import defaultdict
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 c = 0
 for i in range(n):
@@ -12,7 +12,6 @@ vis = [0] * n
 def dfs(x):
     vis[x] = 1
     a.add(x + 1)
-
     di = deque()
     di.append(x)
     while di:
@@ -22,7 +21,6 @@ def dfs(x):
                 vis[j] = 1
                 a.add(j + 1)
                 di.append(j)
-
     for u in d[x]:
         if vis[u] == 0:
             dfs(u)
@@ -30,7 +28,7 @@ def dfs(x):
 
 d = defaultdict(list)
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d[a - 1].append(b - 1)
     d[b - 1].append(a - 1)
 ans = 0

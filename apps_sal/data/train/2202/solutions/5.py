@@ -1,32 +1,31 @@
 import sys
 input = sys.stdin.readline
-
 nn = 18
-bit = [0] * (2**nn + 1)
+bit = [0] * (2 ** nn + 1)
 
 
 def addbit(i, x):
-    while i <= 2**nn:
+    while i <= 2 ** nn:
         bit[i] += x
-        i += i & (-i)
+        i += i & -i
 
 
 def getsum(i):
     ret = 0
     while i != 0:
         ret += bit[i]
-        i -= i & (-i)
+        i -= i & -i
     return ret
 
 
 def searchbit(x):
-    l, sl = 0, 0
-    d = 2**(nn - 1)
+    (l, sl) = (0, 0)
+    d = 2 ** (nn - 1)
     while d:
         m = l + d
         sm = sl + bit[m]
         if sm <= x:
-            l, sl = m, sm
+            (l, sl) = (m, sm)
         d //= 2
     return l + 1
 

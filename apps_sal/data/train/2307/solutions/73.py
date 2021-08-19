@@ -1,5 +1,5 @@
-N, A, B = map(int, input().split())
-*X, = map(int, input().split())
+(N, A, B) = map(int, input().split())
+(*X,) = map(int, input().split())
 i = 1
 ans = 0
 while i < N:

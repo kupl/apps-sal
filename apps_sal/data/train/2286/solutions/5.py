@@ -1,6 +1,5 @@
 def main():
-    K, N = map(int, input().split())
-
+    (K, N) = map(int, input().split())
     if K % 2 == 0:
         ans = [K // 2]
         for i in range(N - 1):

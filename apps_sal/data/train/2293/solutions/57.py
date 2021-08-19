@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 M = 2 ** N
-
 ans = [0] * M
 max_list = [0] * M
 for i in range(1, M):
@@ -27,4 +26,4 @@ for i in range(1, M):
     ans_cand.append(ans[i - 1])
     max_list[i] = max_idx
     ans[i] = max(ans_cand)
-    print((ans[i]))
+    print(ans[i])

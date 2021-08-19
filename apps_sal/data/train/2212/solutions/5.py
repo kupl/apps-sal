@@ -1,6 +1,6 @@
-from sys import*
+from sys import *
 input = stdin.readline
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 for _ in range(q):
     i = int(input())
     while i % 2 == 0:

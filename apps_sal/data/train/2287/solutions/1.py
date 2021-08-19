@@ -1,7 +1,8 @@
 import sys
 
 
-class Tree():
+class Tree:
+
     def __init__(self, n, edge, indexed=1):
         self.n = n
         self.tree = [[] for _ in range(n)]
@@ -28,44 +29,34 @@ class Tree():
                     stack.append(adj)
 
 
-INF = 10**18
-
+INF = 10 ** 18
 input = sys.stdin.readline
-
 N = int(input())
 E = [tuple(map(int, input().split())) for _ in range(N - 1)]
-
 num = [None for _ in range(N)]
-
 K = int(input())
-
 for _ in range(K):
-    v, p = map(int, input().split())
+    (v, p) = map(int, input().split())
     num[v - 1] = p
-
 tree = Tree(N, E)
 tree.setroot(v - 1)
-
 even = []
 odd = []
-
 for i in range(N):
     if num[i] is not None:
         if tree.depth[i] % 2 == 0:
             even.append(num[i] % 2)
         else:
             odd.append(num[i] % 2)
-
 if not ((all(even) or not any(even)) and (all(odd) or not any(odd))):
     print('No')
-
 else:
     I = [[-INF, INF] for _ in range(N)]
     for i in range(N):
         if num[i] is not None:
             I[i] = [num[i], num[i]]
     for node in tree.order[::-1]:
-        lt, rt = I[node]
+        (lt, rt) = I[node]
         for adj in tree.tree[node]:
             lt = max(lt, I[adj][0] - 1)
             rt = min(rt, I[adj][1] + 1)
@@ -73,7 +64,6 @@ else:
             print('No')
             break
         I[node] = [lt, rt]
-
     else:
         stack = [v - 1]
         visited = [0 for _ in range(N)]

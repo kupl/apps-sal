@@ -8,7 +8,7 @@ def main():
     for i in b:
         xor ^= i
     for i in range(n):
-        b[i] = 2**28 - b[i]
+        b[i] = 2 ** 28 - b[i]
     ans = 0
     for loop in range(28, -1, -1):
         j = pow(2, loop)
@@ -33,7 +33,7 @@ def main():
                 else:
                     break
             x += l % 2
-        ans += (x % 2) * j
+        ans += x % 2 * j
     print(ans)
 
 

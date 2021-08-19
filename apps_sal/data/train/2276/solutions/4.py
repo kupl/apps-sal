@@ -1,11 +1,11 @@
 t = int(input())
 for i in range(t):
-    n, m = [int(item) for item in input().split()]
+    (n, m) = [int(item) for item in input().split()]
     mat = []
     col = [[] for _ in range(m)]
     for j in range(n):
         line = [int(item) for item in input().split()]
-        for k, item in enumerate(line):
+        for (k, item) in enumerate(line):
             col[k].append(item)
         mat.append(line)
     colmax = []

@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     diff = y - x
     x = bin(x)[2:]
     y = bin(y)[2:]
@@ -8,9 +8,9 @@ for i in range(q):
     newString = ''
     for j in range(len(x)):
         if x[len(x) - j - 1] == '0':
-            if diff >= 2**j:
+            if diff >= 2 ** j:
                 newString += '1'
-                diff -= 2**j
+                diff -= 2 ** j
             else:
                 newString += '0'
         else:
@@ -19,5 +19,5 @@ for i in range(q):
     tot = 0
     ns = len(newString)
     for i in range(ns):
-        tot += int(newString[ns - i - 1]) * (2**i)
+        tot += int(newString[ns - i - 1]) * 2 ** i
     print(tot)

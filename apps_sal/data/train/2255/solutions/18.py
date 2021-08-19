@@ -9,19 +9,18 @@ odd = {}
 count = 0
 for i in range(n):
     m = preXor[i]
-    if (m == 0):
-        if (i % 2 == 1):
+    if m == 0:
+        if i % 2 == 1:
             count += 1
-    if (i % 2 == 0):
+    if i % 2 == 0:
         if m in even:
             count += even[m]
             even[m] += 1
         else:
             even[m] = 1
+    elif m in odd:
+        count += odd[m]
+        odd[m] += 1
     else:
-        if m in odd:
-            count += odd[m]
-            odd[m] += 1
-        else:
-            odd[m] = 1
+        odd[m] = 1
 print(count)

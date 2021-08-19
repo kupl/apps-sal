@@ -8,5 +8,4 @@ for i in range(n):
         if s == s1:
             break
     e.add(s)
-
 print(len(e))

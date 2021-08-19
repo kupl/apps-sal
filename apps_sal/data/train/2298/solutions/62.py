@@ -1,4 +1,4 @@
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = [0 for k in range(N)]
 B[0] = A[0]

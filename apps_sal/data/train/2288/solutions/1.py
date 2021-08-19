@@ -8,10 +8,10 @@ A = [[(0, 0), (X, X)]]
 min_sup = 0
 max_inf = X
 pre_r = 0
-for i, r in enumerate(rs[1:]):
+for (i, r) in enumerate(rs[1:]):
     d = r - pre_r
     pre_r = r
-    m, M = A[-1][0][0], A[-1][1][0]
+    (m, M) = (A[-1][0][0], A[-1][1][0])
     if i % 2 == 0:
         if m - d >= 0:
             new_m = m - d
@@ -40,22 +40,21 @@ for i, r in enumerate(rs[1:]):
     A.append([(new_m, min_sup), (new_M, max_inf)])
 Q = int(input())
 for q in range(Q):
-    t, a = list(map(int, input().split()))
+    (t, a) = list(map(int, input().split()))
     r_num = bisect(rs, t) - 1
-    m, min_sup = A[r_num][0]
-    M, max_inf = A[r_num][1]
+    (m, min_sup) = A[r_num][0]
+    (M, max_inf) = A[r_num][1]
     r = rs[r_num]
     if r_num % 2 == 0:
         if a <= min_sup:
-            print((max(m - (t - r), 0)))
+            print(max(m - (t - r), 0))
         elif min_sup < a < max_inf:
-            print((max(m + (a - min_sup) - (t - r), 0)))
+            print(max(m + (a - min_sup) - (t - r), 0))
         else:
-            print((max(M - (t - r), 0)))
+            print(max(M - (t - r), 0))
+    elif a <= min_sup:
+        print(min(m + (t - r), X))
+    elif min_sup < a < max_inf:
+        print(min(m + (a - min_sup) + (t - r), X))
     else:
-        if a <= min_sup:
-            print((min(m + (t - r), X)))
-        elif min_sup < a < max_inf:
-            print((min(m + (a - min_sup) + (t - r), X)))
-        else:
-            print((min(M + (t - r), X)))
+        print(min(M + (t - r), X))

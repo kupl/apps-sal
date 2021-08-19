@@ -13,11 +13,11 @@ def reads():
     return [int(x) for x in input().split()]
 
 
-R, C, N = reads()
+(R, C, N) = reads()
 
 
 def edge(x, y):
-    return x == 0 or x == R or y == 0 or y == C
+    return x == 0 or x == R or y == 0 or (y == C)
 
 
 def flat(x, y):
@@ -35,17 +35,15 @@ def flat(x, y):
 
 ps = []
 for i in range(N):
-    x1, y1, x2, y2 = reads()
+    (x1, y1, x2, y2) = reads()
     if edge(x1, y1) and edge(x2, y2):
         ps.append((flat(x1, y1), i))
         ps.append((flat(x2, y2), i))
 ps.sort()
-
 stack = []
-for _, i in ps:
+for (_, i) in ps:
     if len(stack) > 0 and stack[-1] == i:
         stack.pop()
     else:
         stack.append(i)
-
-print("YES" if len(stack) == 0 else "NO")
+print('YES' if len(stack) == 0 else 'NO')

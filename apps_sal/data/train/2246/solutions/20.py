@@ -1,5 +1,5 @@
 import heapq
-n, initial = list(map(int, input().split()))
+(n, initial) = list(map(int, input().split()))
 target = list(map(int, input().split()))
 gain = int(input())
 prices = list(map(int, input().split()))
@@ -10,7 +10,7 @@ for i in range(n):
         print(-1)
         break
 if flag:
-    a = [10**18]
+    a = [10 ** 18]
     heapq.heapify(a)
     maxx = -1
     ans = 0

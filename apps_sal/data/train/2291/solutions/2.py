@@ -1,6 +1,6 @@
-n, *d = map(int, open(0).read().split())
-z = {j: i for i, j in enumerate(d)}
-*s, = sorted(d)
+(n, *d) = map(int, open(0).read().split())
+z = {j: i for (i, j) in enumerate(d)}
+(*s,) = sorted(d)
 P = [-1] * n
 S = {i: 1 for i in d}
 D = {i: 0 for i in d}
@@ -16,7 +16,7 @@ for v in s[n - 1:0:-1]:
     else:
         ok = 0
 if ok and D[s[0]] == s[0]:
-    for i, pi in enumerate(P):
+    for (i, pi) in enumerate(P):
         if pi != -1:
             print(i + 1, pi + 1)
 else:

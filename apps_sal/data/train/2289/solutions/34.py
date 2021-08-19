@@ -1,19 +1,14 @@
 from bisect import bisect_left
-
 CHARACTERs = 'abcdefghijklmnopqrstuvwxyz'
-
 As = input()
 lenA = len(As)
-
 posChars = dict([(ch, [lenA]) for ch in CHARACTERs])
 dp = [0] * lenA + [1, 0]
 for i in reversed(list(range(lenA))):
     posChars[As[i]].append(i)
     dp[i] = min([dp[posChars[ch][-1] + 1] for ch in CHARACTERs]) + 1
-
 for ch in CHARACTERs:
     posChars[ch] = posChars[ch][::-1]
-
 ans = []
 i = 0
 for k in reversed(list(range(dp[0]))):
@@ -23,5 +18,4 @@ for k in reversed(list(range(dp[0]))):
             ans.append(ch)
             i = pos + 1
             break
-
-print((''.join(ans)))
+print(''.join(ans))

@@ -11,6 +11,6 @@ for _ in range(q):
         if cyk[i] != cyk[i - 1] + 1:
             dupa = 0
     if dupa:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

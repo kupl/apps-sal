@@ -1,4 +1,4 @@
-maxn = int(3e5) + 3
+maxn = int(300000.0) + 3
 maxa = (1 << 20) + 3
 nb_element = int(input())
 arr = [int(x) for x in input().split()]

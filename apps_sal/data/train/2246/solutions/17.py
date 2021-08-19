@@ -1,6 +1,6 @@
 import heapq as hp
 import sys
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = list(map(int, input().split()))
 p = int(input())
 arrx = list(map(int, input().split()))

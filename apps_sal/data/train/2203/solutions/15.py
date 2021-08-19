@@ -16,7 +16,7 @@ for i in range(n):
 for i in range(n):
     if s[i] < 0:
         for j in range(1, n + 1):
-            if abs(s[i]) < j and not used[j - 1]:
+            if abs(s[i]) < j and (not used[j - 1]):
                 s[i] = j
                 break
 print(*s)

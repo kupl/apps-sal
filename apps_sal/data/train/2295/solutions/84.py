@@ -1,9 +1,9 @@
 n = int(input())
 t = 0
-m = 1e18
+m = 1e+18
 f = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     t += a
     if a > b:
         m = min(m, b)

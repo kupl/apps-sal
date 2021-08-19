@@ -1,21 +1,38 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
 
 
 def main():
     inf = 10 ** 10
     n = II()
     xy = [LI() for _ in range(n)]
-    xy = [[x, y] if x < y else [y, x] for x, y in xy]
+    xy = [[x, y] if x < y else [y, x] for (x, y) in xy]
     xy.sort()
-    yy = [y for x, y in xy]
+    yy = [y for (x, y) in xy]
     xmin = xy[0][0]
     xmax = xy[-1][0]
     ymax = max(yy)

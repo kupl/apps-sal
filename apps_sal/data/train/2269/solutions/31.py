@@ -2,7 +2,7 @@ def dfs(links, fixed, s):
     q = [(s, 0)]
     cnt = [0, 0]
     while q:
-        v, c = q.pop()
+        (v, c) = q.pop()
         if fixed[v] > -1:
             if fixed[v] != c:
                 return False
@@ -16,7 +16,7 @@ def dfs(links, fixed, s):
 
 def is_bipartite(n, links):
     fixed = [-1] * n
-    l, r = 0, 0
+    (l, r) = (0, 0)
     can = []
     for i in range(n):
         if fixed[i] > -1:
@@ -25,7 +25,6 @@ def is_bipartite(n, links):
         if cnt == False:
             return -1
         can.append(cnt)
-
     can.sort(reverse=True)
     for cnt in can:
         j = 0 if cnt[0] > cnt[1] else 1
@@ -36,12 +35,12 @@ def is_bipartite(n, links):
     return (l * (l - 1) + r * (r - 1)) // 2
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 links = [set(range(n)) - {i} for i in range(n)]
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     links[a].remove(b)
     links[b].remove(a)
-print((is_bipartite(n, links)))
+print(is_bipartite(n, links))

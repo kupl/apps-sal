@@ -1,10 +1,10 @@
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 P = list(map(int, input().split()))
 P.insert(0, 0)
 G = {i: [] for i in range(1, N + 1)}
 for _ in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     G[x].append(y)
     G[y].append(x)
 col = [-1 for _ in range(N + 1)]

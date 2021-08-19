@@ -15,13 +15,11 @@ for i in range(m):
     m1 = 10 ** 10
     m2 = 10 ** 10
     for j in range(3):
-        if len(t[queue[i] - 1][j]) and pointers[queue[i] - 1][j] < len(t[queue[i] - 1][j]) and \
-           t[queue[i] - 1][j][pointers[queue[i] - 1][j]] < m1:
+        if len(t[queue[i] - 1][j]) and pointers[queue[i] - 1][j] < len(t[queue[i] - 1][j]) and (t[queue[i] - 1][j][pointers[queue[i] - 1][j]] < m1):
             m1 = t[queue[i] - 1][j][pointers[queue[i] - 1][j]]
             pos_j = j
     for j in range(3):
-        if len(t[j][queue[i] - 1]) and pointers[j][queue[i] - 1] < len(t[j][queue[i] - 1]) and \
-           t[j][queue[i] - 1][pointers[j][queue[i] - 1]] < m2:
+        if len(t[j][queue[i] - 1]) and pointers[j][queue[i] - 1] < len(t[j][queue[i] - 1]) and (t[j][queue[i] - 1][pointers[j][queue[i] - 1]] < m2):
             m2 = t[j][queue[i] - 1][pointers[j][queue[i] - 1]]
             pos_i = j
     if m1 == 10 ** 10 and m2 == 10 ** 10:

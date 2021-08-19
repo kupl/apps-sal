@@ -1,10 +1,9 @@
-
 t = input()
 p = input()
 a = [i - 1 for i in list(map(int, input().split()))]
 min1 = 0
 max1 = len(t)
-while(max1 - min1) > 1:
+while max1 - min1 > 1:
     med = min1 + (max1 - min1) // 2
     j = 0
     d = list(t)

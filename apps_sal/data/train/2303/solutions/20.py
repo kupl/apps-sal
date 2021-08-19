@@ -1,22 +1,20 @@
 from collections import deque, defaultdict
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
-N, M = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 9)
+(N, M) = list(map(int, input().split()))
 G = defaultdict(list)
 for _ in range(M):
-    p, q, c = list(map(int, input().split()))
-    G[(p - 1, c - 1)].append((p - 1, -1))
-    G[(q - 1, c - 1)].append((q - 1, -1))
-    G[(p - 1, -1)].append((p - 1, c - 1))
-    G[(q - 1, -1)].append((q - 1, c - 1))
-    G[(p - 1, c - 1)].append((q - 1, c - 1))
-    G[(q - 1, c - 1)].append((p - 1, c - 1))
-
-
+    (p, q, c) = list(map(int, input().split()))
+    G[p - 1, c - 1].append((p - 1, -1))
+    G[q - 1, c - 1].append((q - 1, -1))
+    G[p - 1, -1].append((p - 1, c - 1))
+    G[q - 1, -1].append((q - 1, c - 1))
+    G[p - 1, c - 1].append((q - 1, c - 1))
+    G[q - 1, c - 1].append((p - 1, c - 1))
 dist = defaultdict(lambda: -1)
 que = deque([(0, -1)])
-dist[(0, -1)] = 0
+dist[0, -1] = 0
 while que:
     v = que.pop()
     d = dist[v]
@@ -28,4 +26,4 @@ while que:
             else:
                 dist[nv] = d
                 que.append(nv)
-print((dist[(N - 1, -1)]))
+print(dist[N - 1, -1])

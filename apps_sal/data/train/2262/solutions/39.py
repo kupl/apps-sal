@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-R, C, N = map(int, input().split())
+(R, C, N) = map(int, input().split())
 a = []
 
 
@@ -20,19 +20,19 @@ def conv(i, j):
 
 
 for i in range(N):
-    x, y, u, v = map(int, input().split())
-    d, dd = conv(x, y), conv(u, v)
-    if d >= 0 and (dd >= 0):
+    (x, y, u, v) = map(int, input().split())
+    (d, dd) = (conv(x, y), conv(u, v))
+    if d >= 0 and dd >= 0:
         a.append((d, i))
         a.append((dd, i))
 a.sort()
 s = []
-for _, i in a:
+for (_, i) in a:
     if len(s) and s[-1] == i:
         s.pop()
     else:
         s.append(i)
 if len(s):
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

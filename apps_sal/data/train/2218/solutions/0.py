@@ -16,4 +16,4 @@ for i in range(n):
     if final[i] == -1:
         final[i] = max(curr, a[i])
 final = [str(guy) for guy in final]
-print(" ".join(final))
+print(' '.join(final))

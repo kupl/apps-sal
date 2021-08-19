@@ -1,10 +1,8 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     S = input().rstrip('\n')
     N = len(S)
-
     rank = [0] * N
     seen = [0] * 26
     cnt = 0
@@ -19,18 +17,16 @@ def main():
             r += 1
             seen = [0] * 26
             cnt = 0
-
     ans = []
     for i in range(26):
         if not seen[i]:
             ans.append(i + 97)
             break
-
     i0 = 0
     while ord(S[i0]) != ans[0]:
         i0 += 1
         if i0 == N:
-            print((chr(ans[0])))
+            print(chr(ans[0]))
             return
     r = rank[i0]
     seen2 = [0] * 26
@@ -50,17 +46,16 @@ def main():
                 if j == k:
                     r -= 1
                     flg = 1
+        elif j != k:
+            continue
         else:
-            if j != k:
-                continue
-            else:
-                r -= 1
-                flg = 1
+            r -= 1
+            flg = 1
     for k in range(26):
         if not seen2[k]:
             ans.append(k + 97)
             break
-    print((''.join(map(chr, ans))))
+    print(''.join(map(chr, ans)))
 
 
 def __starting_point():

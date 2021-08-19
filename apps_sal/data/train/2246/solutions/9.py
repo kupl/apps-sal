@@ -18,7 +18,7 @@ def solve_workout(n_days, strength, plan, gain, costs):
 
 
 def __starting_point():
-    N, K = tuple(map(int, input().split()))
+    (N, K) = tuple(map(int, input().split()))
     X = list(map(int, input().split()))
     A = int(input())
     C = list(map(int, input().split()))

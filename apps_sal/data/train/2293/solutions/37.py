@@ -6,6 +6,6 @@ for i in range(N):
         if j & 1 << i:
             f[j] = sorted(f[j] + f[j ^ 1 << i], reverse=True)[:2]
 Ans = [sum(f[1])]
-for a, b in f[2:]:
+for (a, b) in f[2:]:
     Ans.append(max(Ans[-1], a + b))
-print(("\n".join(map(str, Ans))))
+print('\n'.join(map(str, Ans)))

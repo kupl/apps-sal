@@ -1,5 +1,5 @@
 from queue import PriorityQueue
-N, K = tuple(map(int, input().split()))
+(N, K) = tuple(map(int, input().split()))
 X = list(map(int, input().split()))
 A = int(input())
 C = list(map(int, input().split()))

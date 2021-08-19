@@ -1,4 +1,4 @@
-r, c, n = list(map(int, input().split()))
+(r, c, n) = list(map(int, input().split()))
 points = []
 xx = [0, r]
 yy = [0, c]
@@ -16,7 +16,7 @@ def add(x, y):
 
 
 for i in range(n):
-    x0, y0, x1, y1 = list(map(int, input().split()))
+    (x0, y0, x1, y1) = list(map(int, input().split()))
     if (x0 in xx or y0 in yy) and (x1 in xx or y1 in yy):
         add(x0, y0)
         add(x1, y1)

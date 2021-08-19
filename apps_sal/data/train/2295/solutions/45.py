@@ -1,10 +1,9 @@
-
 N = int(input())
-res = float("inf")
+res = float('inf')
 S = 0
 cnt = 0
 for _ in range(N):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     S += A
     if A > B:
         res = min(B, res)

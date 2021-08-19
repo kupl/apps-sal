@@ -1,9 +1,6 @@
 from collections import Counter
-
 n = int(input())
-
 mp = Counter({'': 0})
-
 for i in range(n):
     string = input()
     occ = [0] * 26
@@ -16,9 +13,7 @@ for i in range(n):
         while occ[idx] > 0:
             clean.append(chr(idx + ord('a')))
             occ[idx] -= 1
-
     mp[''.join(clean)] += 1
-
 ans = 0
 
 
@@ -35,5 +30,4 @@ for key in mp:
         ans += combs(mp[key])
         for idx in range(len(key)):
             ans += mp[key] * mp[key[0:idx] + key[idx + 1:]]
-
 print(ans)

@@ -1,6 +1,6 @@
 from random import randint
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     A = [list(map(int, input().split())) for _ in range(n)]
     ans = 0
     for _ in range(100):

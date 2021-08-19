@@ -7,7 +7,7 @@ for t in range(int(input())):
         graph[i].append((i + a[i]) % n)
     for v in graph:
         if len(v) != 2:
-            print("NO")
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')

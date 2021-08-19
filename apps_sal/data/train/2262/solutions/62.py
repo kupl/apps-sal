@@ -15,22 +15,22 @@ def f(r, c):
 
 
 input = sys.stdin.readline
-R, C, N = map(int, input().split())
+(R, C, N) = map(int, input().split())
 Q = []
 l = 1
 for i in range(N):
-    r0, c0, r1, c1 = map(int, input().split())
+    (r0, c0, r1, c1) = map(int, input().split())
     if f(r0, c0) != -1 and f(r1, c1) != -1:
-        s, t = f(r0, c0), f(r1, c1)
+        (s, t) = (f(r0, c0), f(r1, c1))
         if s > t:
-            s, t = t, s
+            (s, t) = (t, s)
         Q.append((s, l))
         Q.append((t, -l))
         l += 1
 Q.sort(key=lambda x: x[0])
 flg = True
 R = []
-for _, q in Q:
+for (_, q) in Q:
     if q > 0:
         R.append(q)
     elif q < 0:
@@ -41,4 +41,4 @@ for _, q in Q:
         if -p != q:
             flg = False
             break
-print("YES" if flg else "NO")
+print('YES' if flg else 'NO')

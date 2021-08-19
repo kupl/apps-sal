@@ -6,9 +6,9 @@ for i in range(N):
     C[D] = i + 1
 E = []
 H = [1] * (N + 1)
-DD = sorted([[k, v] for k, v in C.items()], reverse=True)
+DD = sorted([[k, v] for (k, v) in C.items()], reverse=True)
 Adj = [[] for i in range(N)]
-for D, n in DD[:-1]:
+for (D, n) in DD[:-1]:
     try:
         p = C[D - N + 2 * H[n]]
         if n == p:

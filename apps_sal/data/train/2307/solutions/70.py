@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 p = X[0]
 ans = 0

@@ -1,8 +1,8 @@
 N = int(input())
-x, y = 0, 0
-A, B = [], []
+(x, y) = (0, 0)
+(A, B) = ([], [])
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     A.append(x)
     B.append(y)
 x = sum(A)

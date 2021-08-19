@@ -1,6 +1,6 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 A = list(map(int, input().split()))
-x = 10**9
+x = 10 ** 9
 d = 0
 ans = 0
 for a in A:

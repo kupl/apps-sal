@@ -5,13 +5,11 @@ def readints():
 def main():
     n = readints()[0]
     a = sorted(readints())
-
     marker = 0
     for i in range(n):
         if a[i] > a[0]:
             break
         marker += 1
-
     ans = 0
     for i in range(n):
         while marker < n:
@@ -20,7 +18,6 @@ def main():
                 marker += 1
                 break
             marker += 1
-
     print(ans)
 
 

@@ -1,5 +1,5 @@
 n = int(input())
-A, B = map(list, zip(*[map(int, input().split()) for i in range(n)]))
+(A, B) = map(list, zip(*[map(int, input().split()) for i in range(n)]))
 if A == B:
     print(0)
 else:

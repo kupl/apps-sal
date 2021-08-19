@@ -1,16 +1,14 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 edge = [set([]) for i in range(N)]
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a - 1].add(b - 1)
     edge[b - 1].add(a - 1)
-
 cedge = [[] for i in range(N)]
 for i in range(N):
     for j in range(N):
         if j not in edge[i] and j != i:
             cedge[i].append(j)
-
 ans = []
 
 
@@ -23,11 +21,11 @@ def is_bipartgraph():
             black = 0
             white = 0
             while stack:
-                v, c = stack.pop()
+                (v, c) = stack.pop()
                 if not used[v]:
                     color[v] = c
-                    black += (c == 1)
-                    white += (c == -1)
+                    black += c == 1
+                    white += c == -1
                     used[v] = True
                     for nv in cedge[v]:
                         if color[nv] == color[v]:
@@ -40,10 +38,10 @@ def is_bipartgraph():
 
 if is_bipartgraph():
     dp = [[False for i in range(0, N + 1)] for j in range(len(ans))]
-    a, b = ans[0]
-    dp[0][a], dp[0][b] = True, True
+    (a, b) = ans[0]
+    (dp[0][a], dp[0][b]) = (True, True)
     for i in range(1, len(ans)):
-        a, b = ans[i]
+        (a, b) = ans[i]
         for j in range(0, N + 1):
             test = False
             if j >= a:

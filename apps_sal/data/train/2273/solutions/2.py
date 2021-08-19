@@ -12,9 +12,9 @@ for _ in range(t):
     used = [False for _ in range(n)]
     for i in range(n):
         if used[(i + a[i]) % n]:
-            print("NO")
+            print('NO')
             break
         else:
             used[(i + a[i]) % n] = True
     else:
-        print("YES")
+        print('YES')

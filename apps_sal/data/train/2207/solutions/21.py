@@ -6,9 +6,9 @@ def myprint(ca, na):
 
 
 n = int(input())
-na, nb, ca, cb = 0, 0, 0, 0
+(na, nb, ca, cb) = (0, 0, 0, 0)
 while n > 0:
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     if x == 1:
         na += 10
         ca += y

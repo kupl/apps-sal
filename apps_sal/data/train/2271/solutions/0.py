@@ -3,6 +3,7 @@ readline = sys.stdin.readline
 
 
 class UnionFind(object):
+
     def __init__(self, n):
         self._par = list(range(n))
         self.size = [1] * n
@@ -14,11 +15,11 @@ class UnionFind(object):
         return self._par[v]
 
     def unite(self, u, v):
-        u, v = self.root(u), self.root(v)
+        (u, v) = (self.root(u), self.root(v))
         if u == v:
             return False
         if self.size[u] > self.size[v]:
-            u, v = v, u
+            (u, v) = (v, u)
         self.size[v] += self.size[u]
         self._par[u] = v
 
@@ -26,13 +27,12 @@ class UnionFind(object):
         return self.root(u) == self.root(v)
 
 
-n, m = map(int, readline().split())
+(n, m) = map(int, readline().split())
 P = list(map(lambda x: int(x) - 1, readline().split()))
 uf = UnionFind(n)
 for _ in range(m):
-    x, y = map(lambda x: int(x) - 1, readline().split())
+    (x, y) = map(lambda x: int(x) - 1, readline().split())
     uf.unite(x, y)
-
 ans = 0
 for i in range(n):
     if uf.is_connected(i, P[i]):

@@ -9,15 +9,15 @@ def find(x):
     return x
 
 
-def inp(): return list(map(int, input().split()))
+def inp():
+    return list(map(int, input().split()))
 
 
-n, k = inp()
+(n, k) = inp()
 edges = []
 for i in range(k):
-    x, y = inp()
+    (x, y) = inp()
     edges.append([x - 1, y - 1])
-
 p = [i for i in range(n)]
 ans = 0
 for i in edges:

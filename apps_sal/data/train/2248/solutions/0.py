@@ -1,5 +1,5 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
@@ -21,9 +21,8 @@ def main():
         if N != 1:
             ret[N] = 1
         return ret
-
     for _ in range(int(input())):
-        p, q = list(map(int, input().split()))
+        (p, q) = list(map(int, input().split()))
         if p % q != 0:
             print(p)
             continue

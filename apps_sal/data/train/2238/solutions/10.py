@@ -19,5 +19,5 @@ for i in range(64):
     p.append(p[-1] * 2)
 n = int(input())
 for i in range(n):
-    l, r = [int(i) for i in input().split()]
+    (l, r) = [int(i) for i in input().split()]
     print(f(l, r))

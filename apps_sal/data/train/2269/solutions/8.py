@@ -12,36 +12,56 @@ import random
 import time
 import copy
 import functools
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-eps = 1.0 / 10**10
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+eps = 1.0 / 10 ** 10
 mod = 998244353
 dd = [(0, -1), (1, 0), (0, 1), (-1, 0)]
 ddn = [(0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, -1), (-1, 0), (-1, 1)]
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
-def pf(s): return print(s, flush=True)
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def pf(s):
+    return print(s, flush=True)
 
 
 def main():
-    n, m = LI()
+    (n, m) = LI()
     a = [LI_() for _ in range(m)]
     ss = [set() for _ in range(n)]
-    for b, c in a:
+    for (b, c) in a:
         ss[b].add(c)
         ss[c].add(b)
     ts = [set(list(range(n))) - set([_]) for _ in range(n)]
     for i in range(n):
         ts[i] -= ss[i]
-
     d = []
     u = set()
     for i in range(n):
@@ -73,7 +93,7 @@ def main():
         u |= ab
         u |= ac
     r = set([0])
-    for b, c in d:
+    for (b, c) in d:
         t = set()
         for k in r:
             t.add(k + b)

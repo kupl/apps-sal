@@ -1,9 +1,9 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = list(map(int, input().split()))
 g = [[] for i in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
 v = [-1 for i in range(n)]

@@ -1,9 +1,10 @@
-N, M = map(int, input().split())
-*P, = map(int, input().split())
-xy = [list(map(int, input().split()))for _ in range(M)]
+(N, M) = map(int, input().split())
+(*P,) = map(int, input().split())
+xy = [list(map(int, input().split())) for _ in range(M)]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -18,19 +19,16 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
 
 uf = UnionFind(N)
-for x, y in xy:
+for (x, y) in xy:
     uf.union(x - 1, y - 1)
-ans = sum(uf.find(i) == uf.find(P[i] - 1)for i in range(N))
+ans = sum((uf.find(i) == uf.find(P[i] - 1) for i in range(N)))
 print(ans)

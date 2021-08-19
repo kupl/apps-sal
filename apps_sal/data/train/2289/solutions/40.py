@@ -1,10 +1,7 @@
 import bisect
-
 alphabetlist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
 A = input()
 N = len(A)
-
 dic = {moji: [] for moji in alphabetlist}
 dp = [0 for i in range(N)]
 check = set([A[-1]])
@@ -17,15 +14,12 @@ for i in range(N - 2, -1, -1):
         check = set([])
     else:
         dp[i] = dp[i + 1]
-
 for moji in alphabetlist:
     dic[moji].sort()
-
 L = dp[0] + 1
 ans = []
 pos = -1
 flag = 0
-
 for i in range(L - 1):
     if flag == 1:
         break
@@ -42,10 +36,9 @@ for i in range(L - 1):
                 ans.append(moji)
                 flag = 1
                 break
-
 if pos == N:
-    ans.append("a")
-    print("".join(ans))
+    ans.append('a')
+    print(''.join(ans))
 else:
     s = set([])
     for i in range(pos, N):
@@ -54,4 +47,4 @@ else:
         if moji not in s:
             ans.append(moji)
             break
-    print("".join(ans))
+    print(''.join(ans))

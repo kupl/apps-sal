@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,7 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -25,7 +26,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def all_group_members(self):
         return [set(self.members(r)) for r in self.roots()]
@@ -34,18 +35,18 @@ class UnionFind():
         return self.find(x) == self.find(y)
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     P = list([int(x) - 1 for x in input().split()])
     uf = UnionFind(n)
     for _ in range(m):
-        x, y = [int(x) - 1 for x in input().split()]
+        (x, y) = [int(x) - 1 for x in input().split()]
         uf.union(x, y)
     ans = 0
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         if uf.same(i, p):
             ans += 1
     print(ans)

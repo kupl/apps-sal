@@ -4,15 +4,15 @@ input = sys.stdin.readline
 
 
 def dijkstra(G, s):
-    INF = 10**18
+    INF = 10 ** 18
     dist = [INF] * len(G)
     dist[s] = 0
     pq = [(0, s)]
     while pq:
-        d, v = heappop(pq)
+        (d, v) = heappop(pq)
         if d > dist[v]:
             continue
-        for u, weight in G[v]:
+        for (u, weight) in G[v]:
             nd = d + weight
             if dist[u] > nd:
                 dist[u] = nd
@@ -27,8 +27,8 @@ def count_ways(G, dist, s):
     visited[s] = True
     pq = [(0, s)]
     while pq:
-        d, v = heappop(pq)
-        for u, d in G[v]:
+        (d, v) = heappop(pq)
+        for (u, d) in G[v]:
             if dist[v] + d == dist[u]:
                 ways[u] = (ways[u] + ways[v]) % mod
                 if not visited[u]:
@@ -37,14 +37,14 @@ def count_ways(G, dist, s):
     return ways
 
 
-mod = 10**9 + 7
-N, M = list(map(int, input().split()))
-S, T = list(map(int, input().split()))
+mod = 10 ** 9 + 7
+(N, M) = list(map(int, input().split()))
+(S, T) = list(map(int, input().split()))
 S -= 1
 T -= 1
 G = [[] for _ in range(N)]
 for _ in range(M):
-    U, V, D = list(map(int, input().split()))
+    (U, V, D) = list(map(int, input().split()))
     U -= 1
     V -= 1
     G[U].append((V, D))
@@ -54,14 +54,14 @@ distT = dijkstra(G, T)
 wayS = count_ways(G, distS, S)
 wayT = count_ways(G, distT, T)
 shortest = distS[T]
-cnt = wayS[T]**2 % mod
+cnt = wayS[T] ** 2 % mod
 if shortest % 2 == 0:
     for i in range(N):
         if distS[i] == distT[i] == shortest // 2:
-            cnt = (cnt - (wayS[i] * wayT[i])**2) % mod
+            cnt = (cnt - (wayS[i] * wayT[i]) ** 2) % mod
 for i in range(N):
-    for j, d in G[i]:
+    for (j, d) in G[i]:
         if distS[i] + d + distT[j] == shortest:
             if distS[i] < distT[i] and distT[j] < distS[j]:
-                cnt = (cnt - (wayS[i] * wayT[j])**2) % mod
+                cnt = (cnt - (wayS[i] * wayT[j]) ** 2) % mod
 print(cnt)

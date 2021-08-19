@@ -1,12 +1,11 @@
 import sys
 readline = sys.stdin.readline
-
 T = int(readline())
 Ans = [None] * T
-MOD = 10**9 + 7
-mod = 10**9 + 9
+MOD = 10 ** 9 + 7
+mod = 10 ** 9 + 9
 for qu in range(T):
-    N, P = map(int, readline().split())
+    (N, P) = map(int, readline().split())
     A = list(map(int, readline().split()))
     if P == 1:
         if N & 1:
@@ -29,13 +28,10 @@ for qu in range(T):
             continue
         res = (res + pow(P, a, mod)) % mod
         ra = (ra + pow(P, a, MOD)) % MOD
-
         if res == carry and ra == cans:
             carry = 0
             cans = 0
             ra = 0
             res = 0
     Ans[qu] = (cans - ra) % MOD
-
-
 print('\n'.join(map(str, Ans)))

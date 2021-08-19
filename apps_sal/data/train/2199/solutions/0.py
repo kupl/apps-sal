@@ -1,18 +1,14 @@
 import sys
 input = sys.stdin.readline
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 begin = [-1] * n
 end = [-1] * n
 hurt = [-1] * n
-
 adj = [[] for i in range(n)]
 for _ in range(n - 1):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     adj[u - 1].append(v - 1)
     adj[v - 1].append(u - 1)
-
 hurt[0] = 1
 begin[0] = 0
 stack = [0]
@@ -29,7 +25,6 @@ while stack:
     else:
         end[nex] = curr
         stack.pop()
-
 desc = [end[i] - begin[i] - hurt[i] for i in range(n)]
 desc.sort(reverse=True)
 out = 0

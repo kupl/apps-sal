@@ -2,7 +2,7 @@ from collections import defaultdict
 import sys
 input = sys.stdin.readline
 mod = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
@@ -16,13 +16,12 @@ def main():
     S = 0
     m = INF
     for i in range(N):
-        A, B = getlist()
+        (A, B) = getlist()
         S += A
         if A != B:
             jud = 1
         if A > B:
             m = min(m, B)
-
     if jud == 0:
         print(0)
     else:

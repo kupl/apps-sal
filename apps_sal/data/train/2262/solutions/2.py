@@ -4,15 +4,21 @@ import collections
 import heapq
 import itertools
 F = sys.stdin
-def single_input(): return F.readline().strip("\n")
-def line_input(): return F.readline().strip("\n").split()
+
+
+def single_input():
+    return F.readline().strip('\n')
+
+
+def line_input():
+    return F.readline().strip('\n').split()
 
 
 def solve():
-    R, C, N = map(int, line_input())
-    u, l, r, d = [], [], [], []
+    (R, C, N) = map(int, line_input())
+    (u, l, r, d) = ([], [], [], [])
     for i in range(N):
-        x, y, z, w = map(int, line_input())
+        (x, y, z, w) = map(int, line_input())
         if x == 0:
             if z == 0:
                 u.append((y, i))
@@ -69,54 +75,47 @@ def solve():
     r.sort()
     d.sort(reverse=True)
     l.sort(reverse=True)
-
     s = []
     used = set()
     crossed = True
-    for point, n in u:
+    for (point, n) in u:
         if n not in used:
             s.append(n)
             used |= {n}
+        elif s[-1] != n:
+            break
         else:
-            if s[-1] != n:
-                break
-            else:
-                s.pop()
+            s.pop()
     else:
-        for point, n in r:
+        for (point, n) in r:
             if n not in used:
                 s.append(n)
                 used |= {n}
+            elif s[-1] != n:
+                break
             else:
-                if s[-1] != n:
-                    break
-                else:
-                    s.pop()
+                s.pop()
         else:
-            for point, n in d:
+            for (point, n) in d:
                 if n not in used:
                     s.append(n)
                     used |= {n}
+                elif s[-1] != n:
+                    break
                 else:
-                    if s[-1] != n:
-                        break
-                    else:
-                        s.pop()
+                    s.pop()
             else:
-                for point, n in l:
+                for (point, n) in l:
                     if n not in used:
                         s.append(n)
                         used |= {n}
+                    elif s[-1] != n:
+                        break
                     else:
-                        if s[-1] != n:
-                            break
-                        else:
-                            s.pop()
+                        s.pop()
                 else:
                     crossed = False
-
-    print("NO" if crossed else "YES")
-
+    print('NO' if crossed else 'YES')
     return 0
 
 

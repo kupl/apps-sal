@@ -3,22 +3,17 @@
 
 def solve(N, A):
     A.sort()
-
     i = 0
     j = 0
     c = 0
-
     while j < N:
         while j < N and A[j] == A[i]:
             j += 1
-
         if j == N:
             break
-
         c += 1
         i += 1
         j += 1
-
     return c
 
 

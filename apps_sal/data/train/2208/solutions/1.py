@@ -1,25 +1,21 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 X = [[] for i in range(N)]
 for i in range(K):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     X[x - 1].append(y - 1)
     X[y - 1].append(x - 1)
-
-mi = 10**6
+mi = 10 ** 6
 mii = 0
 for i in range(N):
-    if len(X) and (len(X) < mi):
+    if len(X) and len(X) < mi:
         mi = len(X)
         mii = i
-
 Y = [(len(X[i]), i) for i in range(N) if len(X[i])]
 Y = sorted(Y)
 Q = [y[1] for y in Y]
-
 P = [-1] * N
 D = [0] * N
 ans = 0

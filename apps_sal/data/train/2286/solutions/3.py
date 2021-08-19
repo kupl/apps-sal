@@ -1,5 +1,4 @@
-K, N = list(map(int, input().split()))
-
+(K, N) = list(map(int, input().split()))
 if K % 2 == 0:
     ans = [K // 2] + [K] * (N - 1)
 else:
@@ -10,5 +9,4 @@ else:
         else:
             ans[-1] -= 1
             ans += [K] * (N - len(ans))
-
-print((' '.join(map(str, ans))))
+print(' '.join(map(str, ans)))

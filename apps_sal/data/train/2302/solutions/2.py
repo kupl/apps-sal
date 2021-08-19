@@ -1,13 +1,11 @@
-N, D = list(map(int, input().split()))
+(N, D) = list(map(int, input().split()))
 d = list(map(int, input().split()))
 Q = int(input())
 q = list([int(x) - 1 for x in input().split()])
-
 dis = [0 for i in range(N + 1)]
 dis[0] = D
 for i in range(N):
     dis[i + 1] = min(dis[i], abs(dis[i] - d[i]))
-
 dp = [0 for i in range(N + 1)]
 dp[N] = 1
 for i in range(N - 1, -1, -1):
@@ -15,6 +13,5 @@ for i in range(N - 1, -1, -1):
         dp[i] = dp[i + 1]
     else:
         dp[i] = dp[i + 1] + d[i]
-
 for qi in range(Q):
-    print((["NO", "YES"][dis[q[qi]] >= dp[q[qi] + 1]]))
+    print(['NO', 'YES'][dis[q[qi]] >= dp[q[qi] + 1]])

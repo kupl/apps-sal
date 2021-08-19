@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    r, c, n = map(int, input().split())
+    (r, c, n) = map(int, input().split())
     L = []
 
     def trans(x, y):
@@ -17,9 +17,8 @@ def main():
         if y == 0:
             z = 2 * r + 2 * c - x
         return z
-
     for _ in range(n):
-        x1, y1, x2, y2 = map(int, input().split())
+        (x1, y1, x2, y2) = map(int, input().split())
         z1 = trans(x1, y1)
         z2 = trans(x2, y2)
         if z1 is not None and z2 is not None:
@@ -28,16 +27,16 @@ def main():
     L.sort()
     cnt = 0
     D = dict()
-    for z1, z2 in L:
+    for (z1, z2) in L:
         if z1 < z2:
             cnt += 1
             D[z1] = cnt
         else:
             if D[z2] != cnt:
-                print("NO")
+                print('NO')
                 return
             cnt -= 1
-    print("YES")
+    print('YES')
 
 
 def __starting_point():

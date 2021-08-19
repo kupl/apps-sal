@@ -2,6 +2,7 @@ import sys
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.rank = [0] * n
@@ -21,7 +22,7 @@ class UnionFind:
             if self.rank[px] == self.rank[py]:
                 self.rank[px] += 1
             elif self.rank[px] < self.rank[py]:
-                px, py = py, px
+                (px, py) = (py, px)
             self.par[py] = px
             self.size[px] += self.size[py]
 
@@ -30,18 +31,18 @@ class UnionFind:
 
 
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
-n, k = map(int, input().split())
+sys.setrecursionlimit(10 ** 9)
+(n, k) = map(int, input().split())
 uf = UnionFind(n)
 Edges = set()
 for _ in range(k):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     Edges.add((a, b))
-for a, b in Edges:
+for (a, b) in Edges:
     uf.union(a, b)
 P = set()
 for i in range(n):

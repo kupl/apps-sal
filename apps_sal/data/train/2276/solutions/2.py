@@ -8,16 +8,13 @@ def f(lst, num):
 
 t = int(stdin.readline())
 for i in range(t):
-    row, col = tuple(int(x) for x in stdin.readline().split())
-    lst = list([int(x)] for x in stdin.readline().split())
-
+    (row, col) = tuple((int(x) for x in stdin.readline().split()))
+    lst = list(([int(x)] for x in stdin.readline().split()))
     for j in range(row - 1):
-        line = tuple(int(x) for x in stdin.readline().split())
+        line = tuple((int(x) for x in stdin.readline().split()))
         for k in range(len(line)):
             lst[k].append(line[k])
-
     lst.sort(key=lambda x: max(x), reverse=True)
-
     ans = float('-inf')
     for a in range(4):
         for b in range(4):
@@ -39,8 +36,5 @@ for i in range(t):
                         dd = f(lst[3], d)
                     else:
                         dd = (0,) * row
-
-                    ans = max(ans,
-                              sum(max(x[j] for x in (aa, bb, cc, dd))
-                                  for j in range(row)))
+                    ans = max(ans, sum((max((x[j] for x in (aa, bb, cc, dd))) for j in range(row))))
     print(ans)

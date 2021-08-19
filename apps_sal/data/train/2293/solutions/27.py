@@ -7,8 +7,8 @@ for i in range(N):
     j = 0
     while j < lim:
         j |= bit
-        a, b = f[j]
-        c, d = f[j ^ bit]
+        (a, b) = f[j]
+        (c, d) = f[j ^ bit]
         if a < c:
             f[j][0] = c
             f[j][1] = d if d > a else a
@@ -17,9 +17,9 @@ for i in range(N):
         j += 1
 ans = sum(f[1])
 Ans = [ans]
-for a, b in f[2:]:
+for (a, b) in f[2:]:
     s = a + b
     if s > ans:
         ans = s
     Ans.append(ans)
-print(("\n".join(map(str, Ans))))
+print('\n'.join(map(str, Ans)))

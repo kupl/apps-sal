@@ -1,7 +1,5 @@
 n = int(input())
-
 s = set()
-
 for i in range(n):
     cur = input()
     ref = ''
@@ -14,7 +12,7 @@ for i in range(n):
         check = True
         tmp = ''
         for c in range(0, len(ref)):
-            if c != len(ref) - 1 and ref[c] == 'k' and ref[c + 1] == 'h':
+            if c != len(ref) - 1 and ref[c] == 'k' and (ref[c + 1] == 'h'):
                 check = False
             else:
                 tmp = tmp + ref[c]

@@ -4,10 +4,8 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 m = int(input())
 c = list(map(int, input().split()))
-
 t = [[p[i], a[i], b[i], 1] for i in range(n)]
 t = sorted(t, key=lambda x: x[0])
-
 p = [0, 0, 0, 0]
 ans = []
 for i in range(m):

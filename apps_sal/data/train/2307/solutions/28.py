@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 X = [int(x) for x in input().split()]
 ans = 0
 now = X[0]

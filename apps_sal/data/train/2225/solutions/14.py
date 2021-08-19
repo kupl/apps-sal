@@ -10,7 +10,7 @@ def solve(l, ss):
             s = sl.pop()
             ps = s[:-1]
             ss[d + 1].append(ps)
-            if s[-1] == '1' and sl and sl[-1][:-1] == ps:
+            if s[-1] == '1' and sl and (sl[-1][:-1] == ps):
                 sl.pop()
             else:
                 xor ^= d & -d
@@ -18,9 +18,8 @@ def solve(l, ss):
     return xor
 
 
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 ss = defaultdict(list)
 for s in (input() for _ in range(n)):
     ss[l - len(s) + 1].append(s)
-
-print(('Alice' if solve(l, ss) else 'Bob'))
+print('Alice' if solve(l, ss) else 'Bob')

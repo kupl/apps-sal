@@ -1,20 +1,19 @@
 import sys
 input = sys.stdin.readline
-
 x = int(input())
 k = int(input())
-R = [(_r, i % 2) for i, _r in enumerate(map(int, input().split()))]
+R = [(_r, i % 2) for (i, _r) in enumerate(map(int, input().split()))]
 n = int(input())
 TA = [list(map(int, input().split())) for _ in range(n)]
-T, A = zip(*TA)
+(T, A) = zip(*TA)
 L = [None] * n
 b = 0
-for i, t in enumerate(T, 1):
+for (i, t) in enumerate(T, 1):
     R.append((t, -i))
 R.sort()
 dx = 1
-l, r, p, q = 0, x, 0, x
-for _r, i in R:
+(l, r, p, q) = (0, x, 0, x)
+for (_r, i) in R:
     d = _r - b
     b = _r
     if dx == 1:
@@ -30,19 +29,18 @@ for _r, i in R:
             r = 0
             p = 0
             q = 0
+    elif d <= x - q:
+        p += d
+        q += d
+    elif d < x - p:
+        p += d
+        r = l + (x - p)
+        q = x
     else:
-        if d <= x - q:
-            p += d
-            q += d
-        elif d < x - p:
-            p += d
-            r = l + (x - p)
-            q = x
-        else:
-            l = x
-            r = x
-            p = x
-            q = x
+        l = x
+        r = x
+        p = x
+        q = x
     if i >= 0:
         dx = i
     else:
@@ -50,8 +48,8 @@ for _r, i in R:
         if a < l:
             res = p
         elif a <= r:
-            res = (a - l) + p
+            res = a - l + p
         else:
             res = q
         L[-i - 1] = res
-print(*L, sep="\n")
+print(*L, sep='\n')

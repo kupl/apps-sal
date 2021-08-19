@@ -1,6 +1,5 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 A = list(map(int, readline().strip()))
 
@@ -47,7 +46,6 @@ def calc(l, r):
             pre = 0
             cnt = 0
             a2[i] = a2[i - 1]
-
     ra = LX - 1
     rb = LY - 1
     i = ra

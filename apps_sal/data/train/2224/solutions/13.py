@@ -1,7 +1,6 @@
 n = int(input())
 a = input()
 b = input()
-
 if len(set(a)) == 1:
     print(0)
 else:
@@ -12,7 +11,6 @@ else:
             zer += 1
         else:
             ed += 1
-
     sed = szer = 0
     for i in range(n):
         if b[i] == '0':

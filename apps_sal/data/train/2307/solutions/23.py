@@ -1,7 +1,6 @@
 def main():
-    N, A, B = map(int, input().split())
+    (N, A, B) = map(int, input().split())
     X = list(map(int, input().split()))
-
     cost = 0
     for i in range(N - 1):
         distance = abs(X[i] - X[i + 1])

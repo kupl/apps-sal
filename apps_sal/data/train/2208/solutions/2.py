@@ -1,12 +1,11 @@
-n, ne = map(int, input().split())
+(n, ne) = map(int, input().split())
 tr = [[] for __ in range(n)]
 for __ in range(ne):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     u -= 1
     v -= 1
     tr[u].append(v)
     tr[v].append(u)
-
 visited = [0] * n
 r = 0
 for i in range(n):

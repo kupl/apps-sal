@@ -16,16 +16,15 @@ def rollingmax(x, y, r, a):
             y[i - r] = d[0][1] - abs(i - r - a)
 
 
-n, m, d = [int(x) for x in input().split()]
-a, ball, t0 = [int(x) for x in input().split()]
+(n, m, d) = [int(x) for x in input().split()]
+(a, ball, t0) = [int(x) for x in input().split()]
 f = [-abs(i - a) for i in range(1, n + 1)]
 g = [0] * n
 for _ in range(m - 1):
-    a, b, t = [int(x) for x in input().split()]
+    (a, b, t) = [int(x) for x in input().split()]
     ball += b
     r = min(n - 1, (t - t0) * d)
     t0 = t
     rollingmax(f, g, r, a - 1)
-    f, g = g, f
-
+    (f, g) = (g, f)
 print(max(f) + ball)

@@ -1,12 +1,12 @@
 import collections
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 Q = collections.deque()
 A = [0] * n
 B = A[:]
 L = []
 s = n = 0
 for k in range(q):
-    type1, x = list(map(int, input().split()))
+    (type1, x) = list(map(int, input().split()))
     if type1 == 1:
         x -= 1
         Q.append(x)

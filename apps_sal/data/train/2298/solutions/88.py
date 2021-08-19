@@ -14,19 +14,13 @@ def reads():
 
 
 setrecursionlimit(1000000)
-
 (N, T) = reads()
 A = reads()
-
 B = [0] * N
-
 B[0] = A[0]
 for i in range(1, N):
     B[i] = min(B[i - 1], A[i])
-
 C = [max(A[i] - B[i], 0) for i in range(N)]
-
 M = max(C)
-result = sum(c == M for c in C)
-
+result = sum((c == M for c in C))
 print(result)

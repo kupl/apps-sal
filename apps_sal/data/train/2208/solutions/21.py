@@ -10,10 +10,10 @@ def flood_fill(adj_lists, colors, i, color):
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     adj_lists = [[] for _ in range(n)]
     for _ in range(k):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         adj_lists[a].append(b)

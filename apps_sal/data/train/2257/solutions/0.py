@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 T = int(input())
@@ -8,7 +11,7 @@ for _ in range(T):
     A = [ord(a) - 97 for a in input()]
     B = [ord(a) - 97 for a in input()]
     X = [[0] * 20 for _ in range(20)]
-    for a, b in zip(A, B):
+    for (a, b) in zip(A, B):
         X[a][b] = 1
         if a > b:
             print(-1)

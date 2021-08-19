@@ -1,4 +1,5 @@
 def resolve():
+
     def Dijkstra(s, g):
         from collections import deque
         d = {s}
@@ -6,7 +7,7 @@ def resolve():
         for q in edge[s]:
             queue.append((1, q))
         while queue:
-            dist, point = queue.popleft()
+            (dist, point) = queue.popleft()
             if point in d:
                 continue
             d.add(point)
@@ -22,18 +23,18 @@ def resolve():
     import sys
     input = sys.stdin.readline
     from collections import defaultdict
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     edge = defaultdict(set)
     for _ in range(m):
-        p, q, c = list(map(int, input().split()))
-        p, q = p - 1, q - 1
-        edge[(p, c)].add((q, c))
-        edge[(q, c)].add((p, c))
-        edge[(p, c)].add((p, -1))
-        edge[(q, c)].add((q, -1))
-        edge[(p, -1)].add((p, c))
-        edge[(q, -1)].add((q, c))
-    print((Dijkstra((0, -1), (n - 1, -1))))
+        (p, q, c) = list(map(int, input().split()))
+        (p, q) = (p - 1, q - 1)
+        edge[p, c].add((q, c))
+        edge[q, c].add((p, c))
+        edge[p, c].add((p, -1))
+        edge[q, c].add((q, -1))
+        edge[p, -1].add((p, c))
+        edge[q, -1].add((q, c))
+    print(Dijkstra((0, -1), (n - 1, -1)))
 
 
 def __starting_point():

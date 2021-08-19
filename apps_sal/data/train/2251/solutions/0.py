@@ -1,14 +1,13 @@
 import sys
-
-n, m = list(map(int, sys.stdin.readline().strip().split()))
+(n, m) = list(map(int, sys.stdin.readline().strip().split()))
 L = [0 for i in range(0, n)]
 H = [[] for i in range(0, n)]
 for i in range(0, m):
-    x, y = list(map(int, sys.stdin.readline().strip().split()))
+    (x, y) = list(map(int, sys.stdin.readline().strip().split()))
     x = x - 1
     y = y - 1
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     L[y] = L[y] + 1
     H[x].append(y)
 ans = 0

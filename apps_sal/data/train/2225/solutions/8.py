@@ -1,11 +1,13 @@
-class Node():
+class Node:
+
     def __init__(self):
         self.lt = None
         self.rt = None
         self.dep = None
 
 
-class Trie():
+class Trie:
+
     def __init__(self):
         self.root = Node()
         self.root.dep = 0
@@ -25,17 +27,13 @@ class Trie():
                 node = node.rt
 
 
-N, L = map(int, input().split())
-
+(N, L) = map(int, input().split())
 trie = Trie()
-
 for _ in range(N):
     s = input()
     trie.add(s)
-
 subgame = []
 stack = [trie.root]
-
 while stack:
     node = stack.pop()
     if node.lt is None and node.rt is None:
@@ -56,14 +54,12 @@ def grundy(n):
         return 0
     if n % 2 == 1:
         return 1
-    if n == 2**(n.bit_length() - 1):
+    if n == 2 ** (n.bit_length() - 1):
         return n
-    return grundy(n - 2**(n.bit_length() - 1))
+    return grundy(n - 2 ** (n.bit_length() - 1))
 
 
 g = 0
-
 for l in subgame:
     g ^= grundy(l)
-
 print('Alice' if g != 0 else 'Bob')

@@ -1,5 +1,5 @@
 n = int(input())
-pos, tree, ans, sz = list(map(int, input().split())) if n > 1 else [], [], [], []
+(pos, tree, ans, sz) = (list(map(int, input().split())) if n > 1 else [], [], [], [])
 for i in range(n):
     tree.append([])
     ans.append(0.0)
@@ -15,7 +15,8 @@ for i in range(n):
         ans[to] = ans[i] + 1 + (sz[i] - 1 - sz[to]) * 0.5
 
 
-def st(i): return str(i + 1)
+def st(i):
+    return str(i + 1)
 
 
 print(' '.join(list(map(st, ans))))

@@ -20,12 +20,12 @@ def parorder(Edge, p):
             visited.add(vf)
             par[vf] = vn
             ast(vf)
-    return par, order
+    return (par, order)
 
 
 def getcld(p):
     res = [[] for _ in range(len(p))]
-    for i, v in enumerate(p[1:], 1):
+    for (i, v) in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
@@ -49,30 +49,25 @@ def dfs(St):
 N = int(readline())
 Edge = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, readline().split())
+    (a, b) = map(int, readline().split())
     a -= 1
     b -= 1
     Edge[a].append(b)
     Edge[b].append(a)
-
 dist0 = dfs([0])
 fs = dist0.index(max(dist0))
 distfs = dfs([fs])
 en = distfs.index(max(distfs))
 disten = dfs([en])
-
 Dia = distfs[en]
 path = []
 for i in range(N):
     if distfs[i] + disten[i] == Dia:
         path.append(i)
-
 if max(dfs(path)) > 1:
     print(-1)
 else:
-
     path.sort(key=lambda x: distfs[x])
-
     cnt = 1
     hold = 0
     perm1 = [None] * N
@@ -90,7 +85,6 @@ else:
         perm1[idx] = cnt
         idx += 1
         cnt = cnt + hold + 1
-
     cnt = 1
     hold = 0
     perm2 = [None] * N

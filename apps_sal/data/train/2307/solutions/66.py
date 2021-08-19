@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 xs = list(map(int, input().split()))
 s = xs[0]
 rt = 0

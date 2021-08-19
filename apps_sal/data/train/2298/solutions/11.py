@@ -2,7 +2,6 @@ input_lines = input()
 items = input_lines.split()
 N = int(items[0])
 T = int(items[1])
-
 input_lines = input()
 items = input_lines.split()
 As = [int(x) for x in items]
@@ -12,7 +11,7 @@ def my_func(N, T, As):
     buys = T // 2
     counts = 0
     val_earn = 0
-    val_min = 10E10
+    val_min = 100000000000.0
     for val in As:
         if val < val_min:
             val_min = val

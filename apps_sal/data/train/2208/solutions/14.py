@@ -3,14 +3,13 @@ def find(people, N):
     gr = [[] for _ in range(N + 1)]
     count = 0
     for (a, b) in people:
-        a, b = sorted([a, b])
+        (a, b) = sorted([a, b])
         if (a, b) in dic:
             count += 1
         else:
-            dic[(a, b)] = 1
+            dic[a, b] = 1
             gr[a] += [b]
             gr[b] += [a]
-
     checked = [0] * (N + 1)
     parent = [-1] * (N + 1)
     for i in range(1, N + 1):
@@ -34,8 +33,8 @@ def find(people, N):
 
 
 people = []
-n, k = list(map(int, input().strip().split(" ")))
+(n, k) = list(map(int, input().strip().split(' ')))
 for _ in range(k):
-    a, b = list(map(int, input().strip().split(" ")))
+    (a, b) = list(map(int, input().strip().split(' ')))
     people += [(a, b)]
 print(find(people, n))

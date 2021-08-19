@@ -1,18 +1,13 @@
 import sys
 alp = [chr(i) for i in range(97, 97 + 26)]
-
 input = sys.stdin.readline
-
 S = input().rstrip()
 N = len(S)
-
 dp = [[N] * 26 for _ in range(N + 1)]
-
 Best = [-1] * (N + 1)
-
 for i in reversed(range(N)):
     s = S[i]
-    b = 10**14
+    b = 10 ** 14
     for k in range(26):
         if Best[dp[i + 1][k]] < b:
             b = Best[dp[i + 1][k]]
@@ -21,14 +16,12 @@ for i in reversed(range(N)):
         else:
             dp[i][k] = dp[i + 1][k]
     Best[i] = b + 1
-
-b = 10**14
+b = 10 ** 14
 for k in range(26):
     if Best[dp[0][k]] < b:
         b = Best[dp[0][k]]
 L = b + 1
-
-ans = ""
+ans = ''
 ind = -1
 for _ in range(L + 1):
     best = Best[max(dp[ind + 1])]

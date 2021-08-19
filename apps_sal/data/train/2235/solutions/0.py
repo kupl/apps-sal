@@ -3,6 +3,7 @@ import threading
 
 
 def main():
+
     def countchildren(graph, vert, memo, pard=None):
         dumi = 0
         for child in graph[vert]:
@@ -12,13 +13,13 @@ def main():
                 else:
                     memo[child] = countchildren(graph, child, memo, vert)[0]
                 dumi += memo[child] + 1
-        return((dumi, memo))
+        return (dumi, memo)
     n = int(input())
     neigh = []
     for i in range(n):
         neigh.append([])
     for i in range(n - 1):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         neigh[a - 1].append(b - 1)
         neigh[b - 1].append(a - 1)
     same = 1

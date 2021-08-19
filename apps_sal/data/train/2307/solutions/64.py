@@ -5,7 +5,7 @@ import copy
 import itertools
 import math
 import string
-setrecursionlimit(10**9)
+setrecursionlimit(10 ** 9)
 
 
 def input():
@@ -13,14 +13,11 @@ def input():
 
 
 def main():
-
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     x = list(map(int, input().split()))
-
     ans = 0
     for i in range(n - 1):
         ans += min((x[i + 1] - x[i]) * a, b)
-
     print(ans)
 
 

@@ -12,11 +12,11 @@ def f(x, y):
         return x + y
 
 
-r, c, n = map(int, input().split())
+(r, c, n) = map(int, input().split())
 xy = []
 lxy = 0
 for i in range(n):
-    x1, y1, x2, y2 = map(int, input().split())
+    (x1, y1, x2, y2) = map(int, input().split())
     d = []
     if min(x1, y1) == 0 or x1 == r or y1 == c:
         d.append([f(x1, y1), i])
@@ -33,11 +33,10 @@ for i in range(lxy):
     if not q:
         q.append(xy[i][1])
         lq += 1
+    elif q[lq] == xy[i][1]:
+        q.pop()
+        lq -= 1
     else:
-        if q[lq] == xy[i][1]:
-            q.pop()
-            lq -= 1
-        else:
-            q.append(xy[i][1])
-            lq += 1
-print("YES" if not q else "NO")
+        q.append(xy[i][1])
+        lq += 1
+print('YES' if not q else 'NO')
