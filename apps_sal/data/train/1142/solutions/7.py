@@ -1,7 +1,7 @@
 def ff(l, x):
-    if(x == max(l)):
+    if x == max(l):
         return 1
-    elif(x == min(l)):
+    elif x == min(l):
         return len(l)
     else:
         ls = l

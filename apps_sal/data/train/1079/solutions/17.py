@@ -4,7 +4,7 @@ for i in range(n):
     c = 0
     while a:
         r = a % 10
-        if(r == 4):
+        if r == 4:
             c = c + 1
         a = a // 10
     print(c)

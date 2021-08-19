@@ -1,10 +1,8 @@
-
-
 twopow = {}
 for i in range(31):
-    twopow[i] = 2**i
+    twopow[i] = 2 ** i
 for _ in range(int(input())):
-    n, a, b, original_tot = int(input()), list(map(int, input().split())), dict(), 0
+    (n, a, b, original_tot) = (int(input()), list(map(int, input().split())), dict(), 0)
     for i in range(31):
         b[i] = 0
     for i in range(n):
@@ -18,7 +16,6 @@ for _ in range(int(input())):
         p = b[x]
         if p > 0:
             if p > n - p:
-                change += (p - (n - p)) * (twopow[x])
-
+                change += (p - (n - p)) * twopow[x]
     original_tot -= change
     print(original_tot)

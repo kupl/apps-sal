@@ -1,14 +1,14 @@
-'''
+"""
 Name : Jaymeet Mehta
 codechef id :mj_13
 Problem : Avenir Strings
-'''
+"""
 from sys import stdin, stdout
 test = int(stdin.readline())
 for _ in range(test):
     N = int(stdin.readline())
     seq = list(input())
-    fp, fp1, fl, fl1 = 0, 0, 0, 1
+    (fp, fp1, fl, fl1) = (0, 0, 0, 1)
     for i in range(N):
         if fl != int(seq[i]) - 0:
             fp += 1

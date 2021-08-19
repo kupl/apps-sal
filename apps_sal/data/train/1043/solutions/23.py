@@ -1,14 +1,14 @@
-'''
+"""
   Problem : Mahasena
   Author @ Rakesh Kumar
   cpp.rakesh@gmail.com
   Date : 29/01/2021
-'''
+"""
 
 
 def solve():
     for _ in range(int(input())):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         aitihasik_bhasa = list(map(str, input().split()))
         d = {}
         for b in aitihasik_bhasa:

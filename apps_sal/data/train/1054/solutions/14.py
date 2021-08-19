@@ -17,10 +17,9 @@ for _ in range(int(input())):
         else:
             flag = False
             break
-
     if flag:
         if s[start] == '.':
             s[start] = 'a'
-        print(''.join(x for x in s))
+        print(''.join((x for x in s)))
     else:
         print(-1)

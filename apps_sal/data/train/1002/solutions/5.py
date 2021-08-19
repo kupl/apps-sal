@@ -15,21 +15,19 @@ def right(a, pos):
 
 
 for _ in range(int(input())):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     a = list(map(int, input().split()))
     startVal = a[0]
     a.sort()
     f = 1
     startPos = 0
-
-    for i, e in enumerate(a[1:]):
+    for (i, e) in enumerate(a[1:]):
         if e - a[i] > d:
             f = 0
             break
         if e == startVal:
             startPos = i + 1
-
     if f and (left(a, startPos) or right(a, startPos)):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

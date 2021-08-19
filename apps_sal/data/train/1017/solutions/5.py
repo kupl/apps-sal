@@ -5,7 +5,7 @@ for _ in range(int(input())):
     for i in range(len(a)):
         a[i] = a[i] * p
     b = sum(a)
-    if(b > 24 * 5):
-        print("Yes")
+    if b > 24 * 5:
+        print('Yes')
     else:
-        print("No")
+        print('No')

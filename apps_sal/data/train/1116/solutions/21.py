@@ -1,9 +1,8 @@
 from collections import defaultdict
 n = int(input())
-li = list(int(i) for i in input().split())
-
+li = list((int(i) for i in input().split()))
 pre = defaultdict(int)
-ans, cur = 0, 0
+(ans, cur) = (0, 0)
 for i in range(n):
     cur += li[i]
     if cur == 0:

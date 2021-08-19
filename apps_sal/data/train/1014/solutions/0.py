@@ -1,6 +1,9 @@
 from math import log2, ceil
-MOD = int(1e9 + 7)
-def srt(s): return ''.join(sorted(s))
+MOD = int(1000000000.0 + 7)
+
+
+def srt(s):
+    return ''.join(sorted(s))
 
 
 for _ in range(int(input())):

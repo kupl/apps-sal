@@ -3,10 +3,10 @@ for _ in range(int(input())):
     plus = []
     minus = []
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         plus.append(x + y)
         minus.append(x - y)
-    plus.sort(), minus.sort()
+    (plus.sort(), minus.sort())
     m = float('inf')
     for i in range(1, n):
         if plus[i] - plus[i - 1] < m:

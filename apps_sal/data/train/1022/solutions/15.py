@@ -5,7 +5,7 @@ for _ in range(t):
     s = 0
     a = [int(i) for i in input().split()]
     if n % 2 != 0:
-        print("NO")
+        print('NO')
     else:
         k = n // 2
         f = 0
@@ -17,7 +17,7 @@ for _ in range(t):
                 else:
                     f = 0
         if f == 1:
-            print("NO")
+            print('NO')
         else:
             for i in range(k):
                 if a[i] == -1 and a[k + i] == -1:
@@ -27,7 +27,7 @@ for _ in range(t):
                     a[k + i] = a[i]
                 else:
                     a[i] = a[k + i]
-            print("YES")
+            print('YES')
             for i in range(n):
-                print(a[i], end=" ")
-            print("")
+                print(a[i], end=' ')
+            print('')

@@ -1,7 +1,7 @@
 t = int(input())
 i = 0
 while i < t:
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     ai = 1
@@ -13,12 +13,12 @@ while i < t:
             ai += 2
             ae += ai
         else:
-            print("Bob")
+            print('Bob')
             break
         if be <= b:
             bi += 2
             be += bi
         else:
-            print("Limak")
+            print('Limak')
             break
     i += 1

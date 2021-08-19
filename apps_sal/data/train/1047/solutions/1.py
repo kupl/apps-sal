@@ -26,12 +26,12 @@ def solve():
         y = set()
         fl = False
         for i in range(n):
-            l, r = num()
+            (l, r) = num()
             px = l + r
             py = r - l
-            if(px in x):
+            if px in x:
                 fl = True
-            if(py in y):
+            if py in y:
                 fl = True
             x.add(px)
             y.add(py)
@@ -41,7 +41,7 @@ def solve():
         y.sort()
         mnx = 9999999999999
         mny = 9999999999999
-        if(fl):
+        if fl:
             print(0)
         else:
             for i in range(1, len(x)):

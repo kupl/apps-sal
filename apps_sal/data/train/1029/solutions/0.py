@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     completed = list(map(int, input().split()))
     jobs = []
     for i in range(1, n + 1):

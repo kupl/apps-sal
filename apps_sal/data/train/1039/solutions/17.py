@@ -5,7 +5,7 @@ def check(x, y, count):
 
 for i in range(int(input())):
     count = 0
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     diff = x - y
     if diff > 0:
         if diff % 2 == 0:
@@ -19,7 +19,7 @@ for i in range(int(input())):
             count += 1
             check(x, y, count)
     elif diff == 0:
-        print("0")
+        print('0')
     else:
         diff = abs(diff)
         if diff % 2 != 0:

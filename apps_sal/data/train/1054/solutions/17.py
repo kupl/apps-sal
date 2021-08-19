@@ -1,9 +1,9 @@
 for _ in range(int(input())):
     s = input()
-    a, h, t = list(s), 0, len(s) - 1
+    (a, h, t) = (list(s), 0, len(s) - 1)
     flag = 0
     while h <= t:
-        if a[h] != a[t] and (a[h] != "." and a[t] != '.'):
+        if a[h] != a[t] and (a[h] != '.' and a[t] != '.'):
             flag = 1
             break
         elif a[h] == a[t] and a[h] == '.':

@@ -8,7 +8,7 @@ while t > 0:
     i = 0
     b = []
     while i < n:
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         a.append(x + y)
         b.append(x - y)
         i += 1

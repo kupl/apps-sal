@@ -9,4 +9,4 @@ for _ in range(0, t):
         if a[i] < val:
             val = a[i]
             index = i
-    print(math.ceil((n) / val))
+    print(math.ceil(n / val))

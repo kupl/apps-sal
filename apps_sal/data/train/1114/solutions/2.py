@@ -6,4 +6,4 @@ for i in range(t):
     for j in range(len(a)):
         for k in range(j + 1, len(a)):
             l.append(a[j] + a[k])
-    print(l.count(max(l)) / ((n * (n - 1)) / 2))
+    print(l.count(max(l)) / (n * (n - 1) / 2))

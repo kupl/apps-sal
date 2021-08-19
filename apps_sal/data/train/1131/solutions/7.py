@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = [int(x) for x in input().split()]
     d = {}
     for i in arr:

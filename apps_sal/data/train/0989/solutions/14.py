@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    c, p, k = list(map(int, input().split()))
+    (c, p, k) = list(map(int, input().split()))
     a = c + p
     c = a // k
     if c % 2 == 0:
-        print("Chef")
+        print('Chef')
     else:
-        print("Paja")
+        print('Paja')

@@ -1,5 +1,4 @@
 import sys
-
 for _ in range(int(sys.stdin.readline())):
     l = int(sys.stdin.readline())
     a = sys.stdin.readline().split()
@@ -9,10 +8,8 @@ for _ in range(int(sys.stdin.readline())):
     c = []
     if len(t) == len(a):
         print(min(a), 1)
-
     elif len(t) == 1:
         print(a[0], l)
-
     else:
         for j in t:
             c.append(j)
@@ -20,7 +17,6 @@ for _ in range(int(sys.stdin.readline())):
         for i in c:
             num = a.count(i)
             count.append(num)
-
         times = max(count)
         index = count.index(times)
         print(c[index], times)

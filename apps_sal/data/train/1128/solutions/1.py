@@ -1,5 +1,4 @@
 import sys
-
 t = eval(input())
 for j in range(t):
     n = eval(input())
@@ -15,12 +14,12 @@ for j in range(t):
         s2[i] = x
         x -= a[i]
     for i in range(1, n - 1):
-        if(s1[i - 1] == s2[i + 1]):
+        if s1[i - 1] == s2[i + 1]:
             print(i)
             ch = 1
             break
-    if(ch == 0):
-        if(n == 1):
+    if ch == 0:
+        if n == 1:
             print(0)
         else:
             print(-1)

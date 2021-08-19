@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
     ans = 0
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if y > x:
         if (y - x) % 4 == 0:
             ans = 3

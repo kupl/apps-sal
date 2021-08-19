@@ -7,9 +7,9 @@ def main():
             if n % j == 0:
                 count += 1
         if count % 2 == 0:
-            print("NO\n")
+            print('NO\n')
         else:
-            print("YES\n")
+            print('YES\n')
 
 
 main()

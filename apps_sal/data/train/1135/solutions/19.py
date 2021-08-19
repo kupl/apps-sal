@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     list1 = [i for i in range(1, n)]
     list2 = []
     for i in range(1, k + 1):

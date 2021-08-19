@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     n = 1
     m = 2
     k = 0
@@ -14,8 +14,8 @@ for i in range(t):
         b -= m
         m += 2
     if k == l:
-        print("Bob")
+        print('Bob')
     elif k < l:
-        print("Bob")
+        print('Bob')
     elif k > l:
-        print("Limak")
+        print('Limak')

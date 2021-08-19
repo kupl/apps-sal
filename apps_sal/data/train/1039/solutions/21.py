@@ -1,6 +1,6 @@
 n = int(input())
-while(n > 0):
-    a, b = list(map(int, input().split()))
+while n > 0:
+    (a, b) = list(map(int, input().split()))
     if b - a == 0:
         print(0)
     elif b - a > 0:
@@ -10,9 +10,8 @@ while(n > 0):
             print(2)
         else:
             print(3)
+    elif (b - a) % 2:
+        print(2)
     else:
-        if (b - a) % 2:
-            print(2)
-        else:
-            print(1)
+        print(1)
     n -= 1

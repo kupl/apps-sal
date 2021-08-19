@@ -1,10 +1,8 @@
-
-
 def main():
     t = int(input())
     while t:
         t = t - 1
-        n, m = input().split()
+        (n, m) = input().split()
         x = 100 * [0]
         for i in range(int(n)):
             y = input().split()

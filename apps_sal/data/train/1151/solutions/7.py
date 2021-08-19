@@ -19,10 +19,9 @@ for _ in range(int(input())):
                 deltafun(i, visited)
                 ans += 1
         return ans
-
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         edge(a, b)
         edge(b, a)
     print(delta(0))

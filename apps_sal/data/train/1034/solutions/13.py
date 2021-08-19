@@ -11,13 +11,13 @@ def brute(ind, arr, factors):
 
 def factorize(x):
     factors = []
-    for i in range(2, int(x**0.5) + 1):
+    for i in range(2, int(x ** 0.5) + 1):
         if x % i == 0:
             count = 0
             while x % i == 0:
                 count += 1
                 x //= i
-            factors.append(i**count)
+            factors.append(i ** count)
     if x != 1:
         factors.append(x)
     return factors
@@ -25,7 +25,7 @@ def factorize(x):
 
 t = int(input())
 for _ in range(t):
-    k, x = map(int, input().split())
+    (k, x) = map(int, input().split())
     factors = factorize(x)
     if len(factors) <= k:
         print(sum(factors) + k - len(factors))

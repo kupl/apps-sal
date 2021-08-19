@@ -1,7 +1,7 @@
 poss = 0
 imposs = 0
 for _ in range(int(input())):
-    s, n, k, r = list(map(int, input().split()))
+    (s, n, k, r) = list(map(int, input().split()))
     a = [0] * n
     a[0] = k
     for i in range(1, n):
@@ -14,7 +14,6 @@ for _ in range(int(input())):
         y = abs(s - sum(a))
         print('IMPOSSIBLE ' + str(y))
         imposs = imposs + y
-
 if imposs <= poss:
     print('POSSIBLE')
 else:

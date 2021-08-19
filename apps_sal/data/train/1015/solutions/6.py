@@ -1,4 +1,4 @@
-from sys import*
+from sys import *
 input = stdin.readline
 t = int(input())
 for _ in range(t):
@@ -6,6 +6,6 @@ for _ in range(t):
     x = 2
     for i in range(k):
         for j in range(k):
-            print(x, end="")
+            print(x, end='')
             x += 2
         print()

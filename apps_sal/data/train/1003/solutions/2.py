@@ -20,7 +20,7 @@ for a in range(0, t):
     for i in range(0, n):
         sumi = 0
         sumf = 0
-        if not(soint[i][1] in lnew):
+        if not soint[i][1] in lnew:
             lnew += [soint[i][1]]
             for j in range(i, n):
                 if soint[i][1] == soint[j][1]:

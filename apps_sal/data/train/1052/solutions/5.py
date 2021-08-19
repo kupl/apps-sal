@@ -7,7 +7,7 @@ def disum(x):
 
 
 for _ in range(int(input())):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     ans = {}
     souma = [(n, 0)]
     ushijima = 1

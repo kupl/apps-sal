@@ -1,7 +1,7 @@
-t = int(input(""))
+t = int(input(''))
 for _ in range(t):
-    n = int(input(""))
-    l = list(map(int, input("").strip().split()))[:n]
+    n = int(input(''))
+    l = list(map(int, input('').strip().split()))[:n]
     l.sort(reverse=True)
     b1 = b2 = 0
     for i in l:

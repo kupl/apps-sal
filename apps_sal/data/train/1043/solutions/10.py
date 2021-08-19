@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = list(map(str, input().split()))
     li = []
     t = 0

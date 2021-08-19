@@ -46,7 +46,7 @@ while t > 0:
                     if count == total:
                         truth = False
                         break
-            elif j == (m - 1):
+            elif j == m - 1:
                 if ar[i][j - 1] == -1:
                     if b != 0:
                         b = b - 1
@@ -135,96 +135,94 @@ while t > 0:
                         if count == total:
                             truth = False
                             break
-            else:
-                if ar[i][j - 1] == -1:
-                    if l != 0:
-                        l = l - 1
-                        ar[i][j] = -1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif b != 0:
-                        b = b - 1
-                        ar[i][j] = 2
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif r != 0:
-                        r = r - 1
-                        ar[i][j] = 1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif z != 0:
-                        z = z - 1
-                        ar[i][j] = 0
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                elif ar[i][j - 1] == 2:
-                    if r != 0:
-                        r = r - 1
-                        ar[i][j] = 1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif z != 0:
-                        z = z - 1
-                        ar[i][j] = 0
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                elif ar[i][j - 1] == 1:
-                    if r != 0:
-                        r = r - 1
-                        ar[i][j] = 1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif z != 0:
-                        z = z - 1
-                        ar[i][j] = 0
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                elif ar[i][j - 1] == 0:
-                    if l != 0:
-                        l = l - 1
-                        ar[i][j] = -1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif b != 0:
-                        b = b - 1
-                        ar[i][j] = 2
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif r != 0:
-                        r = r - 1
-                        ar[i][j] = 1
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-                    elif z != 0:
-                        z = z - 1
-                        ar[i][j] = 0
-                        count = count + 1
-                        if count == total:
-                            truth = False
-                            break
-
+            elif ar[i][j - 1] == -1:
+                if l != 0:
+                    l = l - 1
+                    ar[i][j] = -1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif b != 0:
+                    b = b - 1
+                    ar[i][j] = 2
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif r != 0:
+                    r = r - 1
+                    ar[i][j] = 1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif z != 0:
+                    z = z - 1
+                    ar[i][j] = 0
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+            elif ar[i][j - 1] == 2:
+                if r != 0:
+                    r = r - 1
+                    ar[i][j] = 1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif z != 0:
+                    z = z - 1
+                    ar[i][j] = 0
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+            elif ar[i][j - 1] == 1:
+                if r != 0:
+                    r = r - 1
+                    ar[i][j] = 1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif z != 0:
+                    z = z - 1
+                    ar[i][j] = 0
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+            elif ar[i][j - 1] == 0:
+                if l != 0:
+                    l = l - 1
+                    ar[i][j] = -1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif b != 0:
+                    b = b - 1
+                    ar[i][j] = 2
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif r != 0:
+                    r = r - 1
+                    ar[i][j] = 1
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
+                elif z != 0:
+                    z = z - 1
+                    ar[i][j] = 0
+                    count = count + 1
+                    if count == total:
+                        truth = False
+                        break
             if truth == False:
                 break
             j = j + 1

@@ -1,8 +1,7 @@
 from math import sqrt, pow
-
 t = int(input())
 while t > 0:
-    h, s = list(map(int, input().split()))
+    (h, s) = list(map(int, input().split()))
     if pow(h, 2) + 4 * s >= 0 and pow(h, 2) - 4 * s >= 0:
         a = (sqrt(pow(h, 2) + 4 * s) + sqrt(pow(h, 2) - 4 * s)) / 2
         b = sqrt(pow(h, 2) + 4 * s) - a
@@ -14,7 +13,7 @@ while t > 0:
             c.sort()
             for i in c:
                 print(i, end=' ')
-            print(" ")
+            print(' ')
         else:
             print(-1, end=' ')
     else:

@@ -4,9 +4,9 @@ import math
 def is_square(integer):
     root = math.sqrt(integer)
     if int(root + 0.5) ** 2 == integer:
-        return "YES"
+        return 'YES'
     else:
-        return "NO"
+        return 'NO'
 
 
 for i in range(eval(input())):

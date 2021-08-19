@@ -5,7 +5,7 @@ from math import factorial
 def nc3(n):
     a = factorial(n)
     b = factorial(n - 3)
-    return ((a) / (b * 6))
+    return a / (b * 6)
 
 
 def rem(s):
@@ -25,10 +25,10 @@ def rem(s):
 
 t = int(input())
 for x in range(t):
-    n, c, k = map(int, input().split())
+    (n, c, k) = map(int, input().split())
     l = {}
     for i in range(n):
-        a, b, e = map(int, input().split())
+        (a, b, e) = map(int, input().split())
         if e in l:
             l[e].append(a)
         else:

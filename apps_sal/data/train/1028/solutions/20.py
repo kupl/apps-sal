@@ -8,6 +8,6 @@ for _ in range(int(input())):
         suma += digit ** order
         temp //= 10
     if num == suma:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

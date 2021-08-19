@@ -13,13 +13,11 @@ for _ in range(t):
                 a[i] = a[i + x] = 1
             else:
                 a[i] = a[i + x]
-        else:
-            if a[i + x] == -1:
-                a[i + x] = a[i]
-            else:
-                if a[i] != a[i + x]:
-                    possible = False
-                    break
+        elif a[i + x] == -1:
+            a[i + x] = a[i]
+        elif a[i] != a[i + x]:
+            possible = False
+            break
     if possible:
         print('YES')
         for x in a:

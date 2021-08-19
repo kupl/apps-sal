@@ -8,14 +8,14 @@ for _ in range(t):
         if int(a[i]) < int(a[i - 1]):
             a[i - 1] = int(a[i - 1]) - 1
             i2 = i - 1
-    if(a[0] != 0 and a[0] != "0"):
+    if a[0] != 0 and a[0] != '0':
         for i in range(i2 + 1):
-            print(a[i], end="")
+            print(a[i], end='')
         for i in range(i2 + 1, len(a)):
-            print(9, end="")
+            print(9, end='')
     else:
         for i in range(1, i2):
-            print(a[i], end="")
+            print(a[i], end='')
         for i in range(i2 + 1, len(a)):
-            print(9, end="")
+            print(9, end='')
     print()

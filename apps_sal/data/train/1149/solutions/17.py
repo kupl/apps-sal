@@ -4,10 +4,10 @@ mod = 10000009
 def solve():
     s = input()
     n = len(s)
-    c, k = 1, 0
-    for i in range(((len(s) - 1) // 2) + 1):
+    (c, k) = (1, 0)
+    for i in range((len(s) - 1) // 2 + 1):
         if s[i] == '?' and s[n - i - 1] == '?':
-            c = (c * 26) % 10000009
+            c = c * 26 % 10000009
         elif s[i] == '?' or s[n - i - 1] == '?':
             pass
         elif s[i] != s[n - i - 1]:

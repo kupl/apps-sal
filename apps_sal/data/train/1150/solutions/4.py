@@ -16,5 +16,5 @@ for t in range(int(input())):
                 sizeSqr = i
                 break
             i += 1
-        n = n - sizeSqr**2
+        n = n - sizeSqr ** 2
     print(sqrs)

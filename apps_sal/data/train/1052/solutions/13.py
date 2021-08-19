@@ -3,13 +3,13 @@ def digitsum(n):
     while n:
         s = s + n % 10
         n = n // 10
-    return(s)
+    return s
 
 
 x = int(input())
 for i in range(x):
-    a, b = input().split()
-    a, b = [int(a), int(b)]
+    (a, b) = input().split()
+    (a, b) = [int(a), int(b)]
     l1 = [(a, 0)]
     l2 = {}
     i = 0

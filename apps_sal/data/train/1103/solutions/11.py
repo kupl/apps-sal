@@ -9,7 +9,7 @@ def forloop(list):
 
 
 t = int(input())
-while(t > 0):
+while t > 0:
     l1 = []
     n = int(input())
     l = list(map(int, input().split()))
@@ -18,7 +18,7 @@ while(t > 0):
     l1 = tuple(l1)
     n1 = forloop(l)
     for i in l1:
-        if(n1 % i == 0):
+        if n1 % i == 0:
             break
     ans = math.sqrt(i)
     print(int(ans))

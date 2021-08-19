@@ -11,7 +11,7 @@ for i in range(t):
                 valid = False
             if a[n - 1 - j] != a[n - 2 - j] - 1:
                 valid = False
-    if(valid):
+    if valid:
         print('yes')
     else:
         print('no')

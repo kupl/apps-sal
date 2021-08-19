@@ -1,7 +1,7 @@
 import math
 t = int(input())
 for _ in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l = list(map(int, input().split()))
     l1 = sorted(l)
     k = 0

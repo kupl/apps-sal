@@ -4,10 +4,10 @@ for u in range(int(input())):
     c = []
     f = 0
     for i in range(3):
-        if(d[i] < l[i]):
+        if d[i] < l[i]:
             f = 1
             break
-    if(f == 1):
+    if f == 1:
         print(-1)
     else:
         s = 0

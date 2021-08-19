@@ -1,12 +1,12 @@
 def factorize(n):
     factors = []
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             cnt = 0
             while n % i == 0:
                 cnt += 1
                 n //= i
-            factors.append(i**cnt)
+            factors.append(i ** cnt)
     if n != 1:
         factors.append(n)
     return factors
@@ -25,7 +25,7 @@ def brute(pos, arr, factors):
 
 t = int(input())
 while t:
-    k, x = map(int, input().split())
+    (k, x) = map(int, input().split())
     factors = factorize(x)
     if len(factors) <= k:
         ans = sum(factors) + k - len(factors)

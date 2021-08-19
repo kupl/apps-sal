@@ -1,5 +1,5 @@
 testcase = int(input())
-while(testcase != 0):
+while testcase != 0:
     testcase -= 1
     n = int(input())
     l = input()

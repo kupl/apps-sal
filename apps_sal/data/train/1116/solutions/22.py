@@ -10,4 +10,4 @@ for y in prefixsums:
         freq[y] += 1
     else:
         freq[y] = 1
-print(sum(v * (v - 1) // 2 for v in freq.values()))
+print(sum((v * (v - 1) // 2 for v in freq.values())))

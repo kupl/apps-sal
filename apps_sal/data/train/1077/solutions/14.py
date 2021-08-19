@@ -12,18 +12,16 @@ while t > 0:
         print('Begin' + ins[idx + 1][4:])
     else:
         print('Begin' + ins[idx + 1][5:])
-
     while idx >= 0:
         if ins[idx + 1].startswith('Left'):
             if ins[idx].startswith('Left'):
                 print('Right' + ins[idx][4:])
             else:
                 print('Right' + ins[idx][5:])
+        elif ins[idx].startswith('Left'):
+            print('Left' + ins[idx][4:])
         else:
-            if ins[idx].startswith('Left'):
-                print('Left' + ins[idx][4:])
-            else:
-                print('Left' + ins[idx][5:])
+            print('Left' + ins[idx][5:])
         idx -= 1
     print('')
     t -= 1

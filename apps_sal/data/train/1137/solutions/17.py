@@ -4,13 +4,12 @@ def func(a):
     j = len(a) - 1
     while i < j:
         if a[i] + a[j] == 2000:
-            return("Accepted")
+            return 'Accepted'
+        elif a[i] + a[j] > 2000:
+            j -= 1
         else:
-            if a[i] + a[j] > 2000:
-                j -= 1
-            else:
-                i += 1
-    return("Rejected")
+            i += 1
+    return 'Rejected'
 
 
 t = int(input())

@@ -1,5 +1,5 @@
 for ii in range(eval(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     import math
     su = 0
@@ -8,9 +8,9 @@ for ii in range(eval(input())):
     k = su
     nextsum = 0
     for iI in range(m, n):
-        nextsum = nextsum + (math.ceil(arr[iI] / 2))
+        nextsum = nextsum + math.ceil(arr[iI] / 2)
     l = nextsum
-    if (k - l) >= 0:
-        print("VICTORY")
+    if k - l >= 0:
+        print('VICTORY')
     else:
-        print("DEFEAT")
+        print('DEFEAT')

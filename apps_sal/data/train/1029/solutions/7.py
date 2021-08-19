@@ -1,8 +1,8 @@
 T = int(input())
 for i in range(T):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     L = list(map(int, input().split()))[:K]
-    A, C, D = [], [], []
+    (A, C, D) = ([], [], [])
     for j in range(1, N + 1):
         if j not in L:
             A.append(j)
@@ -12,8 +12,8 @@ for i in range(T):
         else:
             D.append(A[k])
     for j in C:
-        print(j, end=" ")
+        print(j, end=' ')
     print()
     for k in D:
-        print(k, end=" ")
+        print(k, end=' ')
     print()

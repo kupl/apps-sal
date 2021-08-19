@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(0, T):
-    N, K = [int(N) for N in input().split()]
+    (N, K) = [int(N) for N in input().split()]
     a = input().split()
     b = []
     for j in range(0, K):
@@ -12,5 +12,5 @@ for i in range(0, T):
         if b.__contains__(a[r]):
             print('YES', end=' ')
         else:
-            print("NO", end=" ")
+            print('NO', end=' ')
     print(' ')

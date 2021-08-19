@@ -7,7 +7,7 @@ for _ in range(int(input())):
         for j in range(i, len(x)):
             p = x[i:j + 1]
             q = np.prod(p)
-            if(q >= mn):
+            if q >= mn:
                 mn = q
                 s = i
                 l = j

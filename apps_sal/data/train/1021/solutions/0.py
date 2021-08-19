@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, x):
         self.x = x
         self.next = None
@@ -31,13 +32,13 @@ for t in range(1):
                     i.next = j
                     j.prev = i
                     break
-    f, l = None, None
+    (f, l) = (None, None)
     for i in arr:
         if i.prev == None:
             f = i
         elif i.next == None:
             l = i
     while f != l and l != None:
-        print(f.x, end=" ")
+        print(f.x, end=' ')
         f = f.next
     print(f.x)

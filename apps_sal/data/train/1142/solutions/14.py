@@ -10,6 +10,5 @@ try:
         nums.sort(reverse=True)
         rank = nums.index(t)
         print(rank + 1)
-
 except:
     pass

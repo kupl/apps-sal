@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b = input().split()
+    (a, b) = input().split()
     d = {}
     for i in range(len(a)):
         try:
@@ -10,7 +10,7 @@ for _ in range(t):
     x = list(d.keys())
     x.sort()
     c = -1
-    ans = ""
+    ans = ''
     for i in x:
         if i > b:
             break
@@ -18,5 +18,4 @@ for _ in range(t):
             if j > c:
                 c = j
                 ans += i
-
     print(ans + b * (len(a) - len(ans)))

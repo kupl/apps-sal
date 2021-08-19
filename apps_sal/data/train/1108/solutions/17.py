@@ -9,7 +9,6 @@ for _ in range(0, n):
     s = sum(arr) - ques
     if s < m:
         continue
-    else:
-        if ques <= 10:
-            cnt = cnt + 1
+    elif ques <= 10:
+        cnt = cnt + 1
 print(cnt)

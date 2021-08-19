@@ -1,4 +1,3 @@
-
 def solve():
     N = int(input())
     V = [0] * 10001

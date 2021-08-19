@@ -13,13 +13,11 @@ for _ in range(int(input())):
                     array[p + i] = 1
                 else:
                     array[i] = array[p + i]
-            else:
-                if array[p + i] == -1:
-                    array[p + i] = array[i]
-                else:
-                    if array[i] != array[p + i]:
-                        possible = False
-                        break
+            elif array[p + i] == -1:
+                array[p + i] = array[i]
+            elif array[i] != array[p + i]:
+                possible = False
+                break
         if possible:
             print('YES')
             print(*array)

@@ -1,15 +1,15 @@
 def fun(s):
     su = 0
-    for j, i in enumerate(s):
+    for (j, i) in enumerate(s):
         if i == '1':
-            su += 2**j
+            su += 2 ** j
     return su
 
 
 for i in range(int(input())):
     n = int(input())
     b = list(map(int, input().split()))
-    a = list(str(bin(int(i)))[2:] for i in b)
+    a = list((str(bin(int(i)))[2:] for i in b))
     m = str(bin(max(b))[2:])
     l = len(m)
     s = ''

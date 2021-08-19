@@ -1,18 +1,18 @@
 def mod(a, b, c):
     x = 1
     y = a
-    while(b > 0):
-        if(b % 2 == 1):
-            x = (x * y) % c
-        y = (y * y) % c
+    while b > 0:
+        if b % 2 == 1:
+            x = x * y % c
+        y = y * y % c
         b /= 2
     return x % c
 
 
 t = int(input())
-num = 10**9 + 7
+num = 10 ** 9 + 7
 for i in range(t):
-    n, m, q, k = list(map(int, input().split()))
+    (n, m, q, k) = list(map(int, input().split()))
     if m <= q:
         print(0)
     else:

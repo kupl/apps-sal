@@ -1,6 +1,6 @@
 t = int(input())
 for j in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = list(map(int, input().split()))
     sum = 0
     for i in range(0, n - 1, 2):

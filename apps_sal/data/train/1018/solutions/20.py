@@ -1,5 +1,3 @@
-
-
 a = int(input())
 while a != 0:
     b = int(input())
@@ -9,7 +7,5 @@ while a != 0:
         p = mylist[i] - mylist[i + 1]
         if p < min:
             min = p
-
     print(min)
-
     a -= 1

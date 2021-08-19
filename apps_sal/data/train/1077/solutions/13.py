@@ -1,5 +1,4 @@
 T = int(input())
-
 for _ in range(T):
     N = int(input())
     road = []
@@ -12,13 +11,12 @@ for _ in range(T):
         else:
             road.append(('L', t[4:]))
     for x in range(N):
-        Tprev, temp = road.pop()
+        (Tprev, temp) = road.pop()
         if x == 0:
             print('Begin' + temp)
+        elif prev == 'L':
+            print('Right' + temp)
         else:
-            if prev == 'L':
-                print('Right' + temp)
-            else:
-                print('Left' + temp)
+            print('Left' + temp)
         prev = Tprev
     print()

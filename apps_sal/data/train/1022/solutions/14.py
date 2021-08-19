@@ -1,13 +1,13 @@
 for _ in range(int(input())):
-    n, ans = int(input()), "YES"
+    (n, ans) = (int(input()), 'YES')
     a = list(map(int, input().split()))
     if n & 1:
-        ans = "NO"
+        ans = 'NO'
     else:
         for i in range(n >> 1):
             opp = i + (n >> 1)
-            if a[i] != -1 and a[opp] != -1 and a[i] != a[opp]:
-                ans = "NO"
+            if a[i] != -1 and a[opp] != -1 and (a[i] != a[opp]):
+                ans = 'NO'
                 break
             elif a[i] == -1 and a[opp] != -1:
                 a[i] = a[opp]
@@ -17,5 +17,5 @@ for _ in range(int(input())):
                 a[i] = 1
                 a[opp] = 1
     print(ans)
-    if ans == "YES":
+    if ans == 'YES':
         print(*a)

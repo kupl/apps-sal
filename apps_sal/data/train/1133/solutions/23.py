@@ -11,7 +11,6 @@ def __starting_point():
         sm = sum(lt)
         for x in range(n):
             p = mt.gcd(p, lt[x])
-
         print(p, sm // p)
         T = T - 1
 

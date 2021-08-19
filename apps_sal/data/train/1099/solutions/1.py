@@ -6,7 +6,7 @@ def rating():
         N -= 1
         s = input()
         a[s[:-2]] = s[-1:]
-    for k, v in a.items():
+    for (k, v) in a.items():
         if v == '+':
             ans += 1
         else:

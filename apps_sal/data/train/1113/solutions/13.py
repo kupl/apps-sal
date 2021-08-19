@@ -1,5 +1,4 @@
 import sys
-
 result = []
 n = int(sys.stdin.readline())
 for i in range(0, n):
@@ -14,5 +13,5 @@ for i in range(0, n):
         if c > repeats:
             repeats = c
             number = j
-    result.append(str(number) + " " + str(repeats))
-sys.stdout.write("\n".join(result))
+    result.append(str(number) + ' ' + str(repeats))
+sys.stdout.write('\n'.join(result))

@@ -1,6 +1,6 @@
-val, A, B = 0, 0, 0
+(val, A, B) = (0, 0, 0)
 for a in range(int(input())):
-    c, d = input().split()
+    (c, d) = input().split()
     A += int(c)
     B += int(d)
     b = abs(A - B)

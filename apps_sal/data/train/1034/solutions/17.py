@@ -1,12 +1,12 @@
 def factorize(n):
     factors = []
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             cntr = 0
             while n % i == 0:
                 cntr += 1
                 n //= i
-            factors.append(i**cntr)
+            factors.append(i ** cntr)
     if n != 1:
         factors.append(n)
     return factors
@@ -27,7 +27,7 @@ def recur(arr):
 
 
 for i in range(int(input())):
-    k, x = list(map(int, input().split()))
+    (k, x) = list(map(int, input().split()))
     arr = factorize(x)
     if len(arr) < k:
         print(sum(arr) + k - len(arr))

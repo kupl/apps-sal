@@ -15,19 +15,18 @@ def thegame(pos, cgcd):
         else:
             return 0
     elif (pos, cgcd) in dp:
-        return dp[(pos, cgcd)]
+        return dp[pos, cgcd]
     elif cgcd == 1:
-        p = 2**(n - pos)
-        dp[(pos, cgcd)] = p
+        p = 2 ** (n - pos)
+        dp[pos, cgcd] = p
         return p
     else:
         p = thegame(pos + 1, gcd(cgcd, nums[pos])) + thegame(pos + 1, cgcd)
-        dp[(pos, cgcd)] = p
+        dp[pos, cgcd] = p
         return p
 
 
 t = int(input())
-
 while t > 0:
     n = int(input())
     nums = list(map(int, input().split()))

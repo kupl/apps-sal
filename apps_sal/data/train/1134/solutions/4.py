@@ -1,7 +1,7 @@
 loop = int(input())
 for iiiiiiiii in range(loop):
     no_sol = 0
-    n, m = input().split()
+    (n, m) = input().split()
     m = int(m)
     n = int(n)
     l = input().split()
@@ -11,10 +11,9 @@ for iiiiiiiii in range(loop):
         if i < m:
             no_sol += l[i]
         else:
-            no_sol -= (l[i] / 2)
+            no_sol -= l[i] / 2
             if no_sol < 0:
-                print("DEFEAT")
+                print('DEFEAT')
                 break
-
     if no_sol >= 0:
-        print("VICTORY")
+        print('VICTORY')

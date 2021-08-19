@@ -1,5 +1,5 @@
 for a in range(int(input())):
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     b = []
     for o in range(N):
         b.append(input())
@@ -15,7 +15,7 @@ for a in range(int(input())):
         for h in range(len(c[g])):
             for j in range(len(c)):
                 for k in range(len(c[j])):
-                    if (j > g) or (j == g and k > h):
+                    if j > g or (j == g and k > h):
                         if c[g][h] - c[j][k] >= 0:
                             i.append(c[g][h] - c[j][k] + j - g)
                         else:

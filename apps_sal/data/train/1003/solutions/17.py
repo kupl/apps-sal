@@ -8,18 +8,18 @@ def add(x, y):
 
 a = int(input())
 for u in range(a):
-    m, n = [int(x) for x in input().split(' ')]
+    (m, n) = [int(x) for x in input().split(' ')]
     m_d = {}
     n_d = {}
     for v in range(m):
-        k, j = [int(x) for x in input().split(' ')]
-        if(j in m_d):
+        (k, j) = [int(x) for x in input().split(' ')]
+        if j in m_d:
             m_d[j] += k
         else:
             m_d[j] = k
     for w in range(n):
-        k, j = [int(x) for x in input().split(' ')]
-        if(j in n_d):
+        (k, j) = [int(x) for x in input().split(' ')]
+        if j in n_d:
             n_d[j] += k
         else:
             n_d[j] = k

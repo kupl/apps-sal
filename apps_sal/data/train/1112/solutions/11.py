@@ -4,6 +4,6 @@ for i in range(x):
     p = 1
     for j in range(n):
         for k in range(n - j):
-            print(p, end="")
+            print(p, end='')
             p += 1
         print()

@@ -3,22 +3,22 @@ tl = int(input())
 
 def dsum(n):
     ddsum = 0
-    while(n != 0):
+    while n != 0:
         a = int(n % 10)
         ddsum = ddsum + a
         n = int(n / 10)
     return ddsum
 
 
-while(tl > 0):
-    n, d = map(int, input().split(" "))
+while tl > 0:
+    (n, d) = map(int, input().split(' '))
     i = 0
     dic = dict()
     l = [(n, 0)]
-    while(i < 1000 and len(l) != 0):
+    while i < 1000 and len(l) != 0:
         t = l.pop(0)
-        if(t[0] < 10):
-            if(t[0] not in dic):
+        if t[0] < 10:
+            if t[0] not in dic:
                 dic[t[0]] = t[1]
             else:
                 continue

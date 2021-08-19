@@ -1,6 +1,6 @@
 def m(l, n):
     if n % 2 != 0:
-        print("NO")
+        print('NO')
     else:
         c = 0
         for i in range(n // 2):
@@ -18,16 +18,16 @@ def m(l, n):
                 l[n // 2 + i] = l[i]
                 continue
             else:
-                print("NO")
+                print('NO')
                 c += 1
                 break
         if c == 0:
-            print("YES")
+            print('YES')
             print(*l)
 
 
 t = int(input())
-while(t):
+while t:
     n = int(input())
     l = list(map(int, input().split()))
     m(l, n)

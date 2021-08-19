@@ -7,14 +7,12 @@ def f(p):
         str = sys.stdin.readline()
         t = str.split()
         votes[t[0]] = t[1]
-
     ans = 0
     for per in votes:
-        if votes[per] == "+":
+        if votes[per] == '+':
             ans = ans + 1
         else:
             ans = ans - 1
-
     return ans
 
 

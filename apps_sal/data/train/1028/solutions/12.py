@@ -3,12 +3,12 @@ def arm(n):
     l = len(str(n))
     m = n
     while n != 0:
-        sum += (n % 10)**l
+        sum += (n % 10) ** l
         n //= 10
     if sum == m:
-        return "FEELS GOOD"
+        return 'FEELS GOOD'
     else:
-        return "FEELS BAD"
+        return 'FEELS BAD'
 
 
 t = int(input())

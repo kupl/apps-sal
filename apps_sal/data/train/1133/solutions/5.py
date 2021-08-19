@@ -1,13 +1,13 @@
 def find_gcd(x, y):
-    while(y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 t = int(input())
 for i in range(t):
     n = int(input())
-    if(n == 1):
+    if n == 1:
         cost = 1
         gcd = int(input())
     else:
@@ -18,4 +18,4 @@ for i in range(t):
         for i in range(2, len(number)):
             gcd = find_gcd(gcd, number[i])
         cost = sum(number) // gcd
-    print(str(gcd) + " " + str(cost))
+    print(str(gcd) + ' ' + str(cost))

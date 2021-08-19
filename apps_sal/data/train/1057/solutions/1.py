@@ -1,7 +1,7 @@
 k = int(input())
 for char in range(k):
     num = int(input())
-    if '4' not in (str(num)):
+    if '4' not in str(num):
         x = len(str(num)) + 1
         print('4' * x)
     elif num % 2 == 0:

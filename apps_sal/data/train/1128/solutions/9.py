@@ -1,4 +1,3 @@
-
 l = []
 n = int(input())
 for i in range(0, n):
@@ -12,10 +11,10 @@ for i in range(0, n):
         sumr = sumr + l[j]
     for j in range(0, len(l)):
         sumr = sumr - l[j]
-        if(sumr == suml):
+        if sumr == suml:
             print(j)
             beg = 1
             break
         suml = suml + l[j]
-    if(beg == 0):
+    if beg == 0:
         print(-1)

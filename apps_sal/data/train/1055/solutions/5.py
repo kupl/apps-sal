@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 slices = [int(x) for x in input().split()]
 slices.sort()
 array = [0] * (slices[-1] + 1)

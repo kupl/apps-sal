@@ -1,6 +1,6 @@
 list = []
 for i in range(int(input())):
-    X, Y = map(int, input().split())
+    (X, Y) = map(int, input().split())
     x = Y - X
     op = 0
     if x == 0:

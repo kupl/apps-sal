@@ -7,7 +7,7 @@ def mini(a, b):
 
 t = eval(input())
 while t:
-    m, n, z, l, r, b = list(map(int, input().split()))
+    (m, n, z, l, r, b) = list(map(int, input().split()))
     x = n * m
     y = m * (n + 1)
     A = min(z, x)

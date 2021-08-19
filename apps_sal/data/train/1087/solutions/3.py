@@ -2,7 +2,7 @@ import sys
 
 
 def iter_dfs(G, s):
-    S, Q = set(), []
+    (S, Q) = (set(), [])
     Q.append(s)
     p = Q.pop
     e = Q.extend
@@ -18,13 +18,13 @@ def iter_dfs(G, s):
 
 def main():
     s = sys.stdin.readline
-    n, e = list(map(int, s().split()))
+    (n, e) = list(map(int, s().split()))
     if e != n - 1:
-        print("NO")
+        print('NO')
         return
     G = dict()
     for case in range(e):
-        n1, n2 = list(map(int, s().split()))
+        (n1, n2) = list(map(int, s().split()))
         if n1 not in G:
             G[n1] = [n2]
         else:
@@ -35,9 +35,9 @@ def main():
             G[n2].append(n1)
     tot = len(list(iter_dfs(G, 1)))
     if tot == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

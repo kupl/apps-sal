@@ -7,10 +7,10 @@ for w in range(t):
     k = 0
     for i in range(n):
         right = total - lst[i] - left
-        if(right == left):
+        if right == left:
             print(i)
             k = 1
             break
         left = left + lst[i]
-    if(k == 0):
+    if k == 0:
         print('-1')

@@ -1,4 +1,4 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 c = 0
 for i in range(N):
     T = list(map(int, input().split()))

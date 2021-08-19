@@ -4,9 +4,8 @@ def four():
     for i in n:
         if int(i) == 0:
             continue
-        else:
-            if int(i) == 4:
-                count += 1
+        elif int(i) == 4:
+            count += 1
     print(count)
 
 

@@ -6,13 +6,13 @@ def forloop(list, list1):
     for x in list:
         r *= x
         for i in list1:
-            if(r % i == 0):
+            if r % i == 0:
                 break
     return i
 
 
 t = int(input())
-while(t > 0):
+while t > 0:
     l1 = []
     n = int(input())
     l = list(map(int, input().split()))

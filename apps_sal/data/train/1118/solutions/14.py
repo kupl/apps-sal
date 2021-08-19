@@ -19,10 +19,10 @@ def __starting_point():
         c1 = 0
         c2 = 0
         for i in range(n):
-            if(int(s1[i]) != a1[i]):
+            if int(s1[i]) != a1[i]:
                 c1 += 1
         for i in range(n):
-            if(int(s1[i]) != a2[i]):
+            if int(s1[i]) != a2[i]:
                 c2 += 1
         print(min(c1, c2))
 

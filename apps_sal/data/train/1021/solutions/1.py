@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, x):
         self.x = x
         self.next = None
@@ -37,6 +38,6 @@ for t in range(1):
         elif i.next == None:
             l = i
     while f != l:
-        print(f.x, end=" ")
+        print(f.x, end=' ')
         f = f.next
     print(f.x)

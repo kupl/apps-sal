@@ -1,5 +1,8 @@
 class Graph:
-    def __init__(self, V): self.V = V; self.adj = [[] for i in range(V)]
+
+    def __init__(self, V):
+        self.V = V
+        self.adj = [[] for i in range(V)]
 
     def DFSUtil(self, temp, v, visited):
         visited[v] = True
@@ -9,7 +12,9 @@ class Graph:
                 temp = self.DFSUtil(temp, i, visited)
         return temp
 
-    def addEdge(self, v, w): self.adj[v].append(w); self.adj[w].append(v)
+    def addEdge(self, v, w):
+        self.adj[v].append(w)
+        self.adj[w].append(v)
 
     def connectedComponents(self):
         visited = []
@@ -24,9 +29,9 @@ class Graph:
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     g = Graph(n)
     for i in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         g.addEdge(a, b)
     print(len(g.connectedComponents()))

@@ -10,12 +10,12 @@ for i in range(t):
     d = list()
     for j in ans:
         d = d + j
-    yo = ""
+    yo = ''
     for k in range(len(s)):
         if s[k] in d:
-            yo = yo + "YES" + " "
+            yo = yo + 'YES' + ' '
         else:
-            yo = yo + "NO" + " "
+            yo = yo + 'NO' + ' '
     ans1.append(yo)
 for l in ans1:
     print(l)

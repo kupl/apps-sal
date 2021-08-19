@@ -2,9 +2,9 @@ t = int(input())
 while t > 0:
     t -= 1
     n = int(input())
-    mp, mn = [], []
+    (mp, mn) = ([], [])
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         mp.append(y - x)
         mn.append(y + x)
     dmin = abs(mp[1] - mp[0])

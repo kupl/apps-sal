@@ -10,7 +10,7 @@ for i in range(eval(input())):
         else:
             ind = place.index(pos)
             lef = ind + 1
-            rig = (i - 1) - lef
+            rig = i - 1 - lef
             if rig == 0:
                 place.append(i)
             else:

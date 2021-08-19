@@ -7,20 +7,20 @@ def add(x, y):
 
 
 a = int(input())
-while(a):
-    m, n = [int(x) for x in input().split(' ')]
+while a:
+    (m, n) = [int(x) for x in input().split(' ')]
     m_d = {}
     n_d = {}
-    while(m):
-        k, j = [int(x) for x in input().split(' ')]
-        if(j in m_d):
+    while m:
+        (k, j) = [int(x) for x in input().split(' ')]
+        if j in m_d:
             m_d[j] += k
         else:
             m_d[j] = k
         m -= 1
-    while(n):
-        k, j = [int(x) for x in input().split(' ')]
-        if(j in n_d):
+    while n:
+        (k, j) = [int(x) for x in input().split(' ')]
+        if j in n_d:
             n_d[j] += k
         else:
             n_d[j] = k

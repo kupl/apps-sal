@@ -7,14 +7,14 @@ def mini(a, b):
 
 t = eval(input())
 while t:
-    n, m, z, l, r, b = list(map(int, input().split()))
+    (n, m, z, l, r, b) = list(map(int, input().split()))
     x = n * m
     y = n * (m + 1)
-    if (b <= n) or (m == 1):
+    if b <= n or m == 1:
         print(mini(x, z + l + r + b))
         t -= 1
         continue
-    if (z + l + r + n) >= x:
+    if z + l + r + n >= x:
         print(x)
         t -= 1
         continue

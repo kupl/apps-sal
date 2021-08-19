@@ -7,12 +7,10 @@ def ds(n):
 
 
 t = int(input())
-
 for _ in range(t):
-    n, d = input().split()
+    (n, d) = input().split()
     n = int(n)
     d = int(d)
-
     s = set()
     temp = n
     for i in range(500000):
@@ -24,10 +22,8 @@ for _ in range(t):
                 break
         else:
             temp = ds(temp)
-
     s = sorted(s)
     k = s[0]
-
     q = []
     ans = 0
     q.append((n, 1))
@@ -40,5 +36,4 @@ for _ in range(t):
             break
         q.append((num + d, step + 1))
         q.append((ds(num), step + 1))
-
-    print(str(k) + " " + str(ans))
+    print(str(k) + ' ' + str(ans))

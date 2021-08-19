@@ -1,7 +1,7 @@
 n = int(input())
-l, dictonary = [], []
+(l, dictonary) = ([], [])
 for i in range(n):
-    listSize, numOfDict = map(int, input().split())
+    (listSize, numOfDict) = map(int, input().split())
     listOfelement = list(map(str, input().split()))
     for i in range(numOfDict):
         dictonary += list(map(str, input().split()))
@@ -13,4 +13,4 @@ for i in range(n):
     for out in l:
         print(out, end=' ')
     print()
-    dictonary, l = [], []
+    (dictonary, l) = ([], [])

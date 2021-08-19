@@ -1,7 +1,13 @@
 from sys import stdin, stdout
 from math import gcd
-def nmbr(): return int(stdin.readline())
-def lst(): return list(map(int, stdin.readline().split()))
+
+
+def nmbr():
+    return int(stdin.readline())
+
+
+def lst():
+    return list(map(int, stdin.readline().split()))
 
 
 for _ in range(nmbr()):

@@ -3,7 +3,7 @@ n = int(input())
 for i in range(n):
     p = int(input())
     sum = 1
-    if(p < 9):
+    if p < 9:
         print(d[p])
     else:
         r = str(p)

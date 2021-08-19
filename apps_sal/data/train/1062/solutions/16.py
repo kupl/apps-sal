@@ -13,5 +13,5 @@ for i in range(len(arr) - 2, 0, -1):
 arr.append(arr[0])
 for i in arr:
     for j in i:
-        print(j, end=" ")
-    print("\n")
+        print(j, end=' ')
+    print('\n')

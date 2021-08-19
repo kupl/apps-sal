@@ -3,7 +3,7 @@ for _ in range(int(input())):
     N = len(S)
     c = True
     for i in range(N):
-        if S[i] != '.' and S[i] != S[N - i - 1] and S[N - i - 1] != '.':
+        if S[i] != '.' and S[i] != S[N - i - 1] and (S[N - i - 1] != '.'):
             c = False
             print('-1')
             break

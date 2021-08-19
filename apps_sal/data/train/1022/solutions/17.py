@@ -3,9 +3,9 @@ for z in range(t):
     n = int(input())
     a = [int(x) for x in input().split()]
     flag = 0
-    if n % 2 == 0 and (n // 2) % 2 == 0:
+    if n % 2 == 0 and n // 2 % 2 == 0:
         for i in range(n - 2):
-            if a[i] != -1 and a[i + n // 2] != -1 and a[i + n // 2] != a[i]:
+            if a[i] != -1 and a[i + n // 2] != -1 and (a[i + n // 2] != a[i]):
                 flag = 1
                 break
             elif a[i] != -1 and a[i + n // 2] == -1:
@@ -21,7 +21,7 @@ for z in range(t):
             if i != -1:
                 k = i
         for i in range(n - n // 2):
-            if a[i] != -1 and a[i + n // 2] != -1 and a[i + n // 2] != a[i]:
+            if a[i] != -1 and a[i + n // 2] != -1 and (a[i + n // 2] != a[i]):
                 flag = 1
                 break
             elif a[i] != -1 and a[i + n // 2] == -1:
@@ -32,14 +32,14 @@ for z in range(t):
             elif a[i] == -1 and a[i + n // 2] != -1:
                 a[i] = a[i + n // 2]
     else:
-        print("NO")
+        print('NO')
         continue
     if sum(a) % 2 != 0:
         flag = 1
     if flag == 0:
-        print("YES")
+        print('YES')
         for i in a:
-            print(i, end=" ")
+            print(i, end=' ')
         print()
     else:
-        print("NO")
+        print('NO')

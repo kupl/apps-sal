@@ -1,8 +1,8 @@
 for t in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     if n == k:
-        print("both")
+        print('both')
     else:
         x = 0
         y = 0
@@ -12,10 +12,10 @@ for t in range(int(input())):
             else:
                 y = y + 1
         if k >= y and k >= x:
-            print("both")
+            print('both')
         elif k >= y:
-            print("chef")
+            print('chef')
         elif k >= x:
-            print("brother")
+            print('brother')
         else:
-            print("none")
+            print('none')

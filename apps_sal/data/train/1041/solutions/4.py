@@ -8,7 +8,6 @@ for _ in range(int(input())):
     for i in range(len(l) + 1):
         for j in range(i + 1, len(l) + 1):
             sub = l[i:j]
-
             if len(sub) == 0:
                 continue
             p = numpy.prod(sub)

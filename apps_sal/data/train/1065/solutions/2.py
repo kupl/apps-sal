@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     mat = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     for i in range(n):
         mat.append(list(input()))
     d = [0] * (n + m)

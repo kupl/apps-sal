@@ -2,7 +2,7 @@ val = 0
 A = 0
 B = 0
 for a in range(int(input())):
-    c, d = input().split()
+    (c, d) = input().split()
     A += int(c)
     B += int(d)
     b = abs(A - B)

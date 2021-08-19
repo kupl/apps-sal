@@ -6,10 +6,10 @@ def dfs(u):
 
 
 for _ in range(int(input())):
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     graph = [[] for i in range(N)]
     for i in range(M):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         graph[u].append(v)
         graph[v].append(u)
     ccnum = 0

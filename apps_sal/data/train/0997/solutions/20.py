@@ -1,11 +1,11 @@
 import sys
 for _ in range(int(input())):
-    n, m = sys.stdin.readline().split()
+    (n, m) = sys.stdin.readline().split()
     score = []
     for x in range(int(n)):
         score.append(10)
     for x in range(int(m)):
-        i, j, k = sys.stdin.readline().split()
+        (i, j, k) = sys.stdin.readline().split()
         i = int(i)
         j = int(j)
         k = int(k)

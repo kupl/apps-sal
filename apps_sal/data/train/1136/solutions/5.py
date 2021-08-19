@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ans = 0
     if n % 2 == 0:
         a = n // 2

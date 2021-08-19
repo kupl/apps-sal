@@ -4,7 +4,7 @@ for _ in range(t):
     a = [int(x) for x in input().strip().split()]
     ca = []
     ans = 0
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         if v == 0:
             ans += 0
             ca = [i + 1] + ca

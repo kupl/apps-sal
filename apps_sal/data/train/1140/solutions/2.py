@@ -1,4 +1,4 @@
-'''t=int(input())
+"""t=int(input())
 for _ in range(t):
     l=[0]
     r=[1]
@@ -11,11 +11,11 @@ for _ in range(t):
       r.append(pow(2,p-i)*j+1)
     l.extend(r)
     print(l)
-    print(l[idx])'''
+    print(l[idx])"""
 try:
     t = int(input())
     for _ in range(t):
-        p, idx = map(int, input().split())
+        (p, idx) = map(int, input().split())
         print(int(bin(idx)[2:].zfill(p)[::-1], 2))
 except:
     pass

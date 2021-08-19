@@ -5,6 +5,6 @@ for _ in range(t):
     c = 0
     while n > 0:
         r = int(math.sqrt(n))
-        n = n - (r * r)
+        n = n - r * r
         c = c + 1
     print(c)

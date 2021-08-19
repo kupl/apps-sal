@@ -1,9 +1,9 @@
 t = int(input())
-while(t):
+while t:
     t = t - 1
     n = int(input())
     S = list(map(int, input().split()))
-    max1 = -1 * float("inf")
+    max1 = -1 * float('inf')
     for i in range(len(S)):
         p = 1
         for j in range(i, len(S)):

@@ -6,9 +6,8 @@ for i in range(tc):
     m = [int(i) for i in m]
     sum = 0
     for j in m:
-        sum += j**length
-
+        sum += j ** length
     if sum == n:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

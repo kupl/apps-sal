@@ -5,13 +5,11 @@ from scipy.spatial.distance import pdist
 
 def solve():
     houses = []
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     for i in range(n):
         s = input()
-        tmp = [i for i, x in enumerate(s) if x == '1']
+        tmp = [i for (i, x) in enumerate(s) if x == '1']
         houses = houses + [(i, j) for j in tmp]
-
     counter = defaultdict(int)
     dis = pdist(houses, 'cityblock')
     for i in dis:

@@ -1,6 +1,6 @@
 n = int(input())
 a = []
-size = (2 * n) - 1
+size = 2 * n - 1
 b = [n] * size
 size -= 2
 curr = n - 1

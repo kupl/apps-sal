@@ -5,7 +5,7 @@ for i in range(t):
     o = 0
     e = 0
     for j in a:
-        if(j % 2 == 0):
+        if j % 2 == 0:
             e += 1
         else:
             o += 1

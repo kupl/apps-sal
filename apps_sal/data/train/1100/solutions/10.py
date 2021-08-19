@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    p, q, r = list(map(int, input().split()))
-    a, b, c = list(map(int, input().split()))
+    (p, q, r) = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     l = []
     l.append(a - p)
     l.append(b - q)

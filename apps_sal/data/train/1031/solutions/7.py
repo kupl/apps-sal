@@ -2,7 +2,7 @@ import math
 t = eval(input())
 while t > 0:
     t -= 1
-    h, s = list(map(int, input().split()))
+    (h, s) = list(map(int, input().split()))
     try:
         bplush = math.sqrt(h * h + 4 * s)
         bminush = math.sqrt(h * h - 4 * s)
@@ -14,4 +14,4 @@ while t > 0:
             print(float(i), end=' ')
         print()
     except:
-        print("-1")
+        print('-1')
