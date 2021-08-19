@@ -1,7 +1,7 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 s = {0: 0, 3: 0, 6: 0, 1: 1, 5: 1, 2: 2, 4: 2}
 oo = 0
-aa, bb, cc = a, b, c
+(aa, bb, cc) = (a, b, c)
 if True:
     kk = (a + b + c) // 7
     if min([a // 3, b // 2, c // 2]) == a // 3:
@@ -19,8 +19,7 @@ if True:
         c = c % 2
         a -= nn * 3
         b -= nn * 2
-# print(a,b,c)
-st = (aa + bb + cc) - (a + b + c)
+st = aa + bb + cc - (a + b + c)
 for i in range(7):
     mm = [a, b, c]
     ind = i
@@ -31,5 +30,5 @@ for i in range(7):
             break
         else:
             mm[s[ind]] -= 1
-    oo = max(oo, (a + b + c) - sum(mm))
+    oo = max(oo, a + b + c - sum(mm))
 print(oo + st)

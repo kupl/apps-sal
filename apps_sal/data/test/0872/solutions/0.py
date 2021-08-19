@@ -2,9 +2,14 @@ import math
 from collections import deque, defaultdict
 from sys import stdin, stdout
 input = stdin.readline
-# print = stdout.write
-def listin(): return list(map(int, input().split()))
-def mapin(): return map(int, input().split())
+
+
+def listin():
+    return list(map(int, input().split()))
+
+
+def mapin():
+    return map(int, input().split())
 
 
 n = input()
@@ -16,7 +21,7 @@ for i in a:
         odd += 1
     else:
         even += 1
-if (even == 0 or odd == 0):
+if even == 0 or odd == 0:
     print(*a)
 else:
     a.sort()

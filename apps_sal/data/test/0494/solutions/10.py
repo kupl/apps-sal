@@ -1,5 +1,5 @@
-input_ar = list(map(int, input().rstrip().split(" ")))
-leaders = list(map(int, input().rstrip().split(" ")))
+input_ar = list(map(int, input().rstrip().split(' ')))
+leaders = list(map(int, input().rstrip().split(' ')))
 not_there_set = {i + 1 for i in range(input_ar[0])}
 a_n_done = [False for i in range(input_ar[0])]
 a_n = [0 for i in range(input_ar[0])]
@@ -17,12 +17,9 @@ for i in range(len(leaders) - 1):
     elif a_n[leaders[i] - 1] is not diff:
         possible = False
         break
-
 if not possible:
-    # print(a_n)
     print(-1)
 else:
-    # print('a_n is : {}'.format(a_n))
     for i in range(len(a_n)):
         if a_n[i] is 0:
             if len(not_there_set) <= 0:

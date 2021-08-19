@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from operator import itemgetter
 from fractions import gcd
@@ -11,15 +10,30 @@ from functools import reduce
 from bisect import bisect_right
 sys.setrecursionlimit(200000)
 input = sys.stdin.readline
-def ii(): return int(input())
-def mi(): return map(int, input().rstrip().split())
-def lmi(): return list(map(int, input().rstrip().split()))
-def li(): return list(input().rstrip())
-def debug(x): print("debug: ", x, file=sys.stderr)
-# template
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().rstrip().split())
+
+
+def lmi():
+    return list(map(int, input().rstrip().split()))
+
+
+def li():
+    return list(input().rstrip())
+
+
+def debug(x):
+    print('debug: ', x, file=sys.stderr)
 
 
 class BIT:
+
     def __init__(self, x, d=0):
         if isinstance(x, int):
             self.size = x
@@ -34,32 +48,32 @@ class BIT:
     def build(self, arr):
         if isinstance(arr, list):
             raise TypeError
-        for num, x in enumerate(arr):
+        for (num, x) in enumerate(arr):
             self.add0(num, x)
 
     def sum(self, i):
         s = self.tree[0]
         while i > 0:
             s += self.tree[i]
-            i -= (i & -i)
+            i -= i & -i
         return s
 
     def add(self, i, a):
-        if(i == 0):
+        if i == 0:
             return
-        while (i <= self.size):
+        while i <= self.size:
             self.tree[i] += a
-            i += (i & -i)
+            i += i & -i
 
     def bisect_left(self, w):
         if w <= 0:
             return 0
         x = 0
         r = 1
-        while (r < self.size):
+        while r < self.size:
             r <<= 1
         k = r
-        while (k > 0):
+        while k > 0:
             if x + k <= self.size and self.tree[x + k] < w:
                 w -= self.tree[x + k]
                 x += k
@@ -85,30 +99,25 @@ class BIT:
     def __str__(self):
         return str(self[1:self.size + 1])
 
-# END CUT HERE
-
 
 def main():
-    s, b = mi()
+    (s, b) = mi()
     a = lmi()
     d = []
     g = []
     for i in range(b):
-        _d, _g = mi()
+        (_d, _g) = mi()
         d.append(_d)
         g.append(_g)
     tmp = [(d[i], g[i]) for i in range(b)]
     tmp.sort(key=lambda x: x[0])
     d.sort()
-    # print(tmp)
-    # print(d)
     bit = BIT(b)
     for i in range(b):
         bit.add0(i, tmp[i][1])
     for i in range(s):
         tmp = bisect_right(d, a[i])
-        # print(tmp)
-        print(bit.sum(tmp), end=" ")
+        print(bit.sum(tmp), end=' ')
     print()
 
 

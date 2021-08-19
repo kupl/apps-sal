@@ -31,8 +31,6 @@ def powB(B, L, D, M):
     ans = powB2(B, T[k], D, M) % M
     if L != T[k]:
         ans += nasu(T[k] + 1, 1, L - T[k], D, M) * t % M
-        #ans += powB(1, L - T[k], D, M) * t % M
-        #ans += powA(-T[k], L - T[k], D, M) * t % M
     return ans % M
 
 
@@ -77,14 +75,13 @@ def powmod(a, n, M):
     ans = 1
     while n:
         if n & 1:
-            ans = (ans * a) % M
+            ans = ans * a % M
         a = a * a % M
         n >>= 1
     return ans
 
 
-L, A, B, M = list(map(int, input().split()))
-
+(L, A, B, M) = list(map(int, input().split()))
 N = math.ceil(math.log(A + 1, 10))
 k = pow(10, N)
 D = [[0, 0] for _ in range(20)]
@@ -99,7 +96,7 @@ while L > 0:
 T = [1]
 while T[-1] < 10 ** 19:
     T.append(T[-1] * 2)
-BI = (((B // M) + 1) * M - B) % M
+BI = ((B // M + 1) * M - B) % M
 ans = 0
 for i in range(20):
     l = D[i][1]

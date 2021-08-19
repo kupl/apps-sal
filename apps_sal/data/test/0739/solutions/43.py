@@ -1,8 +1,8 @@
-L, A, B, M = list(map(int, input().split()))
+(L, A, B, M) = list(map(int, input().split()))
 K = 19
 gap = [-1 for k in range(K)]
 for k in range(K):
-    tmp = 10**k - A
+    tmp = 10 ** k - A
     if tmp % B == 0:
         gap[k] = -1 + tmp // B
     else:
@@ -11,7 +11,6 @@ for k in range(K):
     gap[k] = max(-1, gap[k])
 num = [0 for k in range(K)]
 for k in range(1, K):
-    # k-1,k
     num[k] = -gap[k - 1] + gap[k]
 
 
@@ -41,4 +40,4 @@ def matexp(P, n):
 Mat = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 for d in range(1, K):
     Mat = mattime(matexp(matrix(d), num[d]), Mat)
-print(((A * Mat[0][1] + Mat[0][2]) % M))
+print((A * Mat[0][1] + Mat[0][2]) % M)

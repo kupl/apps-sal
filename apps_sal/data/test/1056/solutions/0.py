@@ -28,7 +28,7 @@ def idx_pos(i):
         x = i % 10
     else:
         x = 9 - i % 10
-    return x, y
+    return (x, y)
 
 
 def solve(H):
@@ -42,7 +42,7 @@ def solve(H):
                 e += rem / 6
                 e *= 6 / (6 - rem)
                 break
-            x, y = idx_pos(j)
+            (x, y) = idx_pos(j)
             if H[y][x] != 0:
                 dy = y - H[y][x]
                 k = pos_idx(x, dy)
@@ -53,9 +53,6 @@ def solve(H):
         dp[i] = e
     return dp[99]
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

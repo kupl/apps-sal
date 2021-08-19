@@ -1,4 +1,5 @@
-class SquareMatrix():
+class SquareMatrix:
+
     def __init__(self, n, mod=1000000007):
         self.n = n
         self.mat = [[0 for j in range(n)] for i in range(n)]
@@ -14,13 +15,13 @@ class SquareMatrix():
     @staticmethod
     def modinv(n, mod):
         assert n % mod != 0
-        c0, c1 = n, mod
-        a0, a1 = 1, 0
-        b0, b1 = 0, 1
+        (c0, c1) = (n, mod)
+        (a0, a1) = (1, 0)
+        (b0, b1) = (0, 1)
         while c1:
-            a0, a1 = a1, a0 - c0 // c1 * a1
-            b0, b1 = b1, b0 - c0 // c1 * b1
-            c0, c1 = c1, c0 % c1
+            (a0, a1) = (a1, a0 - c0 // c1 * a1)
+            (b0, b1) = (b1, b0 - c0 // c1 * b1)
+            (c0, c1) = (c1, c0 % c1)
         return a0 % mod
 
     def set(self, arr):
@@ -108,7 +109,7 @@ class SquareMatrix():
                 else:
                     return 0
                 for k in range(self.n):
-                    tmp.mat[j][k], tmp.mat[idx][k] = tmp.mat[idx][k], tmp.mat[j][k]
+                    (tmp.mat[j][k], tmp.mat[idx][k]) = (tmp.mat[idx][k], tmp.mat[j][k])
                 res *= -1
             inv = SquareMatrix.modinv(tmp.mat[j][j], self.mod)
             for i in range(j + 1, self.n):
@@ -128,7 +129,7 @@ class SquareMatrix():
                 res.mat[i][j] = self.mat[j][i]
         return res
 
-    def inverse(self):  # self.determinant() != 0
+    def inverse(self):
         res = SquareMatrix.id(self.n, self.mod)
         tmp = SquareMatrix(self.n, self.mod)
         sgn = 1
@@ -144,8 +145,8 @@ class SquareMatrix():
                 else:
                     return 0
                 for k in range(self.n):
-                    tmp.mat[j][k], tmp.mat[idx][k] = tmp.mat[idx][k], tmp.mat[j][k]
-                    res.mat[j][k], res.mat[idx][k] = res.mat[idx][k], res.mat[j][k]
+                    (tmp.mat[j][k], tmp.mat[idx][k]) = (tmp.mat[idx][k], tmp.mat[j][k])
+                    (res.mat[j][k], res.mat[idx][k]) = (res.mat[idx][k], res.mat[j][k])
             inv = SquareMatrix.modinv(tmp.mat[j][j], self.mod)
             for k in range(self.n):
                 tmp.mat[j][k] *= inv
@@ -167,27 +168,21 @@ class SquareMatrix():
         return self.inverse().operate(vec)
 
 
-L, A, B, M = map(int, input().split())
-
+(L, A, B, M) = map(int, input().split())
 D = [0 for _ in range(18)]
-
 for i in range(18):
     D[i] = (int('9' * (i + 1)) - A) // B + 1
     D[i] = max(D[i], 0)
     D[i] = min(D[i], L)
-
 for i in range(17)[::-1]:
     D[i + 1] -= D[i]
-
 mat = SquareMatrix.id(3, M)
-
 for i in range(18):
     op = SquareMatrix(3, M)
-    op.mat[0][0] = 10**(i + 1)
+    op.mat[0][0] = 10 ** (i + 1)
     op.mat[0][1] = 1
     op.mat[1][1] = 1
     op.mat[1][2] = B
     op.mat[2][2] = 1
     mat = op.power(D[i]).multiply(mat)
-
 print(mat.operate([0, A, 1])[0])

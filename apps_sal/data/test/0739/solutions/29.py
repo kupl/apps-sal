@@ -1,25 +1,22 @@
 from functools import lru_cache
-L, A, B, mod = list(map(int, input().split()))
+(L, A, B, mod) = list(map(int, input().split()))
 
 
-def keta(k):  # k-桁の数の初項、末項、項数を求める
-    if A >= 10**k:
-        return 0, 0, 0
-    begin = 10**(k - 1)
-    end = 10**k
-
+def keta(k):
+    if A >= 10 ** k:
+        return (0, 0, 0)
+    begin = 10 ** (k - 1)
+    end = 10 ** k
     if begin > A + B * (L - 1):
-        return 0, 0, 0
-
+        return (0, 0, 0)
     sh = A + max(-1, (begin - 1 - A) // B) * B + B
     ma = min(A + max(0, (end - 1 - A) // B) * B, A + B * (L - 1))
     kou = (ma - sh) // B + 1
-
-    return sh, ma, kou
+    return (sh, ma, kou)
 
 
 @lru_cache(maxsize=None)
-def f(n, r):  # 1+r+...+r**(n-1)
+def f(n, r):
     if n == 1:
         return 1
     if n % 2 == 0:
@@ -28,7 +25,7 @@ def f(n, r):  # 1+r+...+r**(n-1)
 
 
 @lru_cache(maxsize=None)
-def g(n, r):  # 0+r+2*r**2+...+(n-1)*r**(n-1)
+def g(n, r):
     if n == 1:
         return 0
     if n % 2 == 0:
@@ -39,15 +36,9 @@ def g(n, r):  # 0+r+2*r**2+...+(n-1)*r**(n-1)
 keta_count = 1
 ANS = 0
 for i in range(18, 0, -1):
-    sh, ma, kou = keta(i)
-
+    (sh, ma, kou) = keta(i)
     if kou <= 0:
         continue
-
-    # print(i,sh,ma,kou)
-
-    ANS = (keta_count * (ma * f(kou, 10**i) - B * g(kou, 10**i)) + ANS) % mod
-    # print(ANS)
+    ANS = (keta_count * (ma * f(kou, 10 ** i) - B * g(kou, 10 ** i)) + ANS) % mod
     keta_count = keta_count * pow(10, kou * i, mod)
-
 print(ANS)

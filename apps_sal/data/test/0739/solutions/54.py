@@ -2,8 +2,8 @@ import sys
 sys.setrecursionlimit(100000000)
 
 
-def mult(A, B, mod):  # 行列A, Bの内積を求める。
-    D = [[(A[0][0] * B[0][0]) % mod, 0, 0], [0, 1, 0], [0, 0, 1]]
+def mult(A, B, mod):
+    D = [[A[0][0] * B[0][0] % mod, 0, 0], [0, 1, 0], [0, 0, 1]]
     D[1][0] = (A[1][0] * B[0][0] + A[1][1] * B[1][0]) % mod
     D[2][0] = (A[2][0] * B[0][0] + A[2][1] * B[1][0] + A[2][2] * B[2][0]) % mod
     D[2][1] = (A[2][1] * B[1][1] + A[2][2] * B[2][1]) % mod
@@ -11,7 +11,7 @@ def mult(A, B, mod):  # 行列A, Bの内積を求める。
 
 
 def double(C, mod):
-    D = [[pow(C[0][0], 2, mod), 0, 0], [(C[1][0] * C[0][0] + C[1][0]) % mod, 1, 0], [(C[2][0] * C[0][0] + C[2][1] * C[1][0] + C[2][0]) % mod, (C[2][1] * 2) % mod, 1]]
+    D = [[pow(C[0][0], 2, mod), 0, 0], [(C[1][0] * C[0][0] + C[1][0]) % mod, 1, 0], [(C[2][0] * C[0][0] + C[2][1] * C[1][0] + C[2][0]) % mod, C[2][1] * 2 % mod, 1]]
     return D
 
 
@@ -27,7 +27,7 @@ def Cpow(C, n, mod):
 
 
 def solve():
-    L, a, b, M = map(int, input().split())
+    (L, a, b, M) = map(int, input().split())
     X = 0
     s = a
     nd = -1
