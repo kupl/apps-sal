@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -9,7 +8,7 @@ import itertools
 import bisect
 from scipy.special import comb
 import copy
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def zz():
@@ -29,14 +28,14 @@ def C(line):
 
 
 def check(s):
-    if (s[len(s) // 2:] == s[:len(s) // 2]):
-        print((len(s)))
+    if s[len(s) // 2:] == s[:len(s) // 2]:
+        print(len(s))
         return
 
 
 S = S()
 n = len(S)
-if (n % 2 == 0):
+if n % 2 == 0:
     while S:
         S = S[:-2]
         check(S)

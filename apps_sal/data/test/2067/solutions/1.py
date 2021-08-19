@@ -1,16 +1,13 @@
 def __starting_point():
-    n, m = map(int, input().split())
-    # for i in range(n):
-    # sir = int(input())
+    (n, m) = map(int, input().split())
     sir = [int(input()) for i in range(n)]
-    sir.append(10**9)
+    sir.append(10 ** 9)
     w = []
     b = 0
     mini = 999999
     nrSir = len(sir)
-
     for i in range(m):
-        x, y, z = map(int, input().split())
+        (x, y, z) = map(int, input().split())
         if x == 1:
             w.append(y)
     sir.sort()

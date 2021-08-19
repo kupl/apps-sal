@@ -1,6 +1,6 @@
 import sys
 from collections import defaultdict
-n, m, k = list(map(int, sys.stdin.readline().split()))
+(n, m, k) = list(map(int, sys.stdin.readline().split()))
 a = list(map(int, sys.stdin.readline().split()))
 b = list(map(int, sys.stdin.readline().split()))
 consa = defaultdict(int)
@@ -37,8 +37,6 @@ prev = 0
 for i in arrb:
     consb[i] += prev
     prev = consb[i]
-# print(consa,'consa')
-# print(consb,'consb')
 ans = 0
 vis = defaultdict(int)
 for i in range(1, n + 1):

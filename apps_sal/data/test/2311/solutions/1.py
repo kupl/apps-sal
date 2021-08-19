@@ -6,23 +6,21 @@ def count(A):
         if a:
             cur += 1
             flag = 1
-        else:
-            if flag:
-                flag = 0
-                segs.append(cur)
-                cur = 0
-    if flag and (cur > 0):
+        elif flag:
+            flag = 0
+            segs.append(cur)
+            cur = 0
+    if flag and cur > 0:
         segs.append(cur)
     count = [0] * (len(A) + 1)
     for s in segs:
         for i in range(1, s + 1):
-            count[i] += (s - i + 1)
-    # print(count)
+            count[i] += s - i + 1
     return count
 
 
 def f():
-    n, m, k = [int(s) for s in input().split()]
+    (n, m, k) = [int(s) for s in input().split()]
     A = [int(s) for s in input().split()]
     B = [int(s) for s in input().split()]
     ans = 0

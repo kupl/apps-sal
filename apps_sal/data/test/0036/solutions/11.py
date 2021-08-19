@@ -1,4 +1,3 @@
-# By Tianyi Chen
 n = int(input())
 
 
@@ -6,7 +5,7 @@ def j(i):
     return 3 * i * (i + 1) <= n
 
 
-high = 10**18
+high = 10 ** 18
 low = 0
 while high - low > 5:
     mid = high + low >> 1

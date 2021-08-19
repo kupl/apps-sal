@@ -8,6 +8,3 @@ if l.count(l[0]) != 2 * n:
     print()
 else:
     print(-1)
-
-
-# python3 c.py

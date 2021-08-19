@@ -1,11 +1,7 @@
 import sys
 import math
-
-#f = open('input_0', 'r')
 f = sys.stdin
-
-P, Y = list(map(int, f.readline().split()))
-
+(P, Y) = list(map(int, f.readline().split()))
 is_ok = False
 for t in range(Y, P, -1):
     is_ok = True

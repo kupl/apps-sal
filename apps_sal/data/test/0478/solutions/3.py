@@ -10,12 +10,11 @@ def solve(A):
         while to_loop:
             to_loop = False
             for j in range(len(A)):
-                #print('A: %s, j: %d' % (str(A), j))
-                if A[j] == i and j - 1 >= 0 and A[j - 1] == i - 1:
+                if A[j] == i and j - 1 >= 0 and (A[j - 1] == i - 1):
                     A = A[0:j] + A[j + 1:]
                     to_loop = True
                     break
-                elif A[j] == i and j + 1 < len(A) and A[j + 1] == i - 1:
+                elif A[j] == i and j + 1 < len(A) and (A[j + 1] == i - 1):
                     A = A[0:j] + A[j + 1:]
                     to_loop = True
                     break
