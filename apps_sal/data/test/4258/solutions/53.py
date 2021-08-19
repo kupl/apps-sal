@@ -1,2 +1,2 @@
-a, b, n = map(int, input().split())
+(a, b, n) = map(int, input().split())
 print(b * (n // a))

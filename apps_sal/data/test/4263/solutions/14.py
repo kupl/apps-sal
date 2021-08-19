@@ -1,7 +1,7 @@
 S = input()
 S += '*'
 st = 'ACGT'
-i, n = 0, len(S)
+(i, n) = (0, len(S))
 max_len = 0
 while i < n:
     j = i

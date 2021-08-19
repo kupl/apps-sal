@@ -25,5 +25,4 @@ while l != r:
         r = (l + r) // 2
     else:
         l = (l + r) // 2 + 1
-
 print(l if l > 0 and l <= n else -1)

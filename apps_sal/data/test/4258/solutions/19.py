@@ -1,4 +1,4 @@
-a, b, t = map(int, input().split())
+(a, b, t) = map(int, input().split())
 time = t + 0.5
 num = 0
 cnt = 1

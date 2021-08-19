@@ -1,9 +1,7 @@
 S = input()
-
 lst = ['A', 'C', 'G', 'T']
 count = 0
 top = 0
-
 for i in S:
     if i in lst:
         count += 1

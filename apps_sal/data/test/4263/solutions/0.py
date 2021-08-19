@@ -1,7 +1,5 @@
 a = input()
-
-atcg = ["A", "T", "C", "G"]
-
+atcg = ['A', 'T', 'C', 'G']
 result = []
 res = 0
 for i in a:
@@ -10,5 +8,4 @@ for i in a:
     else:
         res = 0
     result.append(res)
-
 print(max(result))

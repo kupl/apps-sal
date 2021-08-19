@@ -1,5 +1,5 @@
 K = int(input())
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 ans = 0
 i = 1
 while K * i <= 1000:
@@ -8,6 +8,6 @@ while K * i <= 1000:
         break
     i += 1
 if ans == 1:
-    print("OK")
+    print('OK')
 else:
-    print("NG")
+    print('NG')

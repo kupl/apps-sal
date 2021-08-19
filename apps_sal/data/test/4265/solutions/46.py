@@ -1,7 +1,7 @@
 s = input()
 t = input()
 if s == t:
-    print((0))
+    print(0)
 else:
     p = -1
     ans = 0

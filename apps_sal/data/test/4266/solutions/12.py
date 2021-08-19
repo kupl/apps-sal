@@ -1,4 +1,4 @@
-x, k = map(int, input().split())
+(x, k) = map(int, input().split())
 ans1 = [0] * (x - 1)
 ans2 = [0] * (x - 1)
 for i in range(1, x):

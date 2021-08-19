@@ -1,6 +1,6 @@
 def main():
     k = int(input())
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ans = 'NG'
     for i in range(a, b + 1):
         if i % k == 0:
@@ -9,7 +9,7 @@ def main():
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

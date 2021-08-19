@@ -1,5 +1,3 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 num = b // a
-
-print((min(num, c)))
+print(min(num, c))

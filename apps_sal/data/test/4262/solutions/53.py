@@ -26,5 +26,4 @@ def cal_C(list_a):
 N = int(input())
 P = list(map(int, input().split()))
 Q = list(map(int, input().split()))
-
 print(abs(cal_C(P) - cal_C(Q)))

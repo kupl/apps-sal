@@ -1,6 +1,5 @@
 K = int(input())
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 if B // K - A // K >= 1:
     print('OK')
 elif B % K == 0:

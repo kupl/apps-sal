@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort(reverse=True)
 ans = []
@@ -9,7 +9,7 @@ def bin(s):
     cur = s
     tr = 0
     for i in range(n):
-        if (cur == s):
+        if cur == s:
             cur = 0
         tmp[cur].append(l[i])
         cur += 1
@@ -24,7 +24,7 @@ def bin(s):
 
 uk2 = n
 uk1 = 1
-while (uk2 - uk1 > 1):
+while uk2 - uk1 > 1:
     if bin((uk2 + uk1) // 2):
         uk2 = (uk2 + uk1) // 2
     else:

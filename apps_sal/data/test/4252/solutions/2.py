@@ -1,7 +1,5 @@
 l = int(input())
-
 s = input()
-
 count = 0
 res = 0
 for c in s:

@@ -1,4 +1,4 @@
-k, x = map(int, input().split())
+(k, x) = map(int, input().split())
 ans = []
 if x - k + 1 < -1000000:
     for i in range(-1000000, x + k):

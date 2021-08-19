@@ -1,2 +1,2 @@
 a = int(input())
-print(3 * (a**2))
+print(3 * a ** 2)

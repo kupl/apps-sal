@@ -1,5 +1,5 @@
 def main():
-    a, b, t = list(map(int, input().split()))
+    (a, b, t) = list(map(int, input().split()))
     ans = t // a * b
     print(ans)
 

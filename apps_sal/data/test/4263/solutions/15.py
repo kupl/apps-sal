@@ -1,5 +1,5 @@
 s = input()
-tmp, ans = 0, 0
+(tmp, ans) = (0, 0)
 for i in s:
     if i in {'A', 'C', 'G', 'T'}:
         tmp += 1

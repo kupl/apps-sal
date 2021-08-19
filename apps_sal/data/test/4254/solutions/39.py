@@ -1,6 +1,5 @@
-s, w = input().split()
-
+(s, w) = input().split()
 if int(s) <= int(w):
-    print("unsafe")
+    print('unsafe')
 else:
-    print("safe")
+    print('safe')

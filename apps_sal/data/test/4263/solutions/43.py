@@ -1,5 +1,5 @@
 s = input()
-t = ["A", "C", "G", "T"]
+t = ['A', 'C', 'G', 'T']
 cnt = 0
 ans = 0
 for i in range(len(s)):

@@ -11,4 +11,4 @@ def counts(s, t):
     return cnt
 
 
-print((counts(s, t)))
+print(counts(s, t))

@@ -1,13 +1,10 @@
 k = int(input())
-
-a, b = input().split()
-
+(a, b) = input().split()
 ans = 0
 for i in range(int(a), int(b) + 1):
     if i % k == 0:
         ans = 1
-
 if ans == 1:
-    print("OK")
+    print('OK')
 else:
-    print("NG")
+    print('NG')

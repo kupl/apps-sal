@@ -1,4 +1,3 @@
 S = input()
 T = input()
-
-print((sum(i != j for i, j in zip(S, T))))
+print(sum((i != j for (i, j) in zip(S, T))))

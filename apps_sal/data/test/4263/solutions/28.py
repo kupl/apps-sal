@@ -1,4 +1,4 @@
-X = ["A", "C", "G", "T"]
+X = ['A', 'C', 'G', 'T']
 S = input()
 sum = 0
 ans = 0

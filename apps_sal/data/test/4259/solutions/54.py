@@ -1,8 +1,7 @@
 K = int(input())
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 ans = B // K - (A - 1) // K
 if ans > 0:
-    print("OK")
+    print('OK')
 else:
-    print("NG")
+    print('NG')

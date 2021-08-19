@@ -1,7 +1,5 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 if a <= b:
-    print("unsafe")
-
+    print('unsafe')
 else:
-    print("safe")
+    print('safe')

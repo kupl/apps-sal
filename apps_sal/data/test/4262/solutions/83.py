@@ -1,10 +1,10 @@
 import itertools as itr
 N = int(input())
-P = "".join(input().split())
-Q = "".join(input().split())
+P = ''.join(input().split())
+Q = ''.join(input().split())
 base = [str(i) for i in range(1, N + 1)]
 permutations = itr.permutations(base)
-patterns = ["".join(value) for value in permutations]
+patterns = [''.join(value) for value in permutations]
 patterns.sort()
 p_index = patterns.index(P)
 q_index = patterns.index(Q)

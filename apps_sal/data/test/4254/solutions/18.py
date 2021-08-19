@@ -1,9 +1,9 @@
 def __starting_point():
-    s, w = list(map(int, input().split()))
+    (s, w) = list(map(int, input().split()))
     if s > w:
-        print("safe")
+        print('safe')
     else:
-        print("unsafe")
+        print('unsafe')
 
 
 __starting_point()

@@ -1,3 +1,2 @@
 N = int(input())
-
-print(3 * (N**2))
+print(3 * N ** 2)

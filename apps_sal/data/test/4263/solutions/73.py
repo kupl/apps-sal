@@ -1,6 +1,6 @@
 S = input()
 l = len(S)
-ACGT = ["A", "G", "C", "T"]
+ACGT = ['A', 'G', 'C', 'T']
 count = 0
 ans = []
 for i in range(l):

@@ -7,5 +7,4 @@ for i in range(len(s)):
         cnt[j] += 1
     else:
         j += 1
-
 print(max(cnt))

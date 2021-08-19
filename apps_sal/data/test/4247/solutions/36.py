@@ -8,7 +8,6 @@ def answer(n: int, p: Tuple[int]) -> int:
         min_ = min(p[i - 1], p[i + 1])
         if min_ < p[i] < max_:
             count += 1
-
     return count
 
 

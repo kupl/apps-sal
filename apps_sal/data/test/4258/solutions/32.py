@@ -1,3 +1,3 @@
-a, b, k = list(map(int, input().split()))
+(a, b, k) = list(map(int, input().split()))
 n = k // a
-print((b * n))
+print(b * n)

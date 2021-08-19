@@ -1,5 +1,5 @@
 K = int(input())
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 i = 0
 can = False
 while i <= B:
@@ -8,6 +8,6 @@ while i <= B:
         can = True
         break
 if can:
-    print("OK")
+    print('OK')
 else:
-    print("NG")
+    print('NG')

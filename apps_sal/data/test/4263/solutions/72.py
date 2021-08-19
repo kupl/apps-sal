@@ -1,7 +1,6 @@
 n = str(input())
-
 pattern = 'ACGT'
-r, tmp = 0, 0
+(r, tmp) = (0, 0)
 c = False
 for s in n:
     if s in pattern:

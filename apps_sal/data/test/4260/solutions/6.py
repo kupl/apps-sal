@@ -1,2 +1,2 @@
-T, X = map(float, input().split())
+(T, X) = map(float, input().split())
 print(T / X)

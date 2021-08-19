@@ -2,7 +2,6 @@ import itertools
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 q = list(itertools.permutations(range(1, n + 1)))
 ans = 0
 for i in range(len(q)):

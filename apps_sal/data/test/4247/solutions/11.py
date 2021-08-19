@@ -1,5 +1,4 @@
 n = int(input())
-
 pn = list(map(int, input().split()))
 count = 0
 for x in range(1, n - 1):

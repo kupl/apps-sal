@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 a.sort(reverse=True)
 
@@ -13,7 +13,7 @@ def check(d):
 if sum(a) < m:
     print(-1)
 else:
-    l, r = 1, n
+    (l, r) = (1, n)
     mid = l + r >> 1
     while l < r:
         if check(mid):

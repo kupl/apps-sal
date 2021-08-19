@@ -1,8 +1,4 @@
-
-
-A, B, C = map(int, input().split())
-
-
+(A, B, C) = map(int, input().split())
 i = B + C - A
 if i > 0:
     print(i)

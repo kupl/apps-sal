@@ -1,5 +1,5 @@
 n = int(input())
-c, o = 0, 0
+(c, o) = (0, 0)
 for i in input():
     if i == 'x':
         c += 1

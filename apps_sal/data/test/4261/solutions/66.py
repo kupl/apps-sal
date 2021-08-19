@@ -1,5 +1,4 @@
-A, B, C = map(int, input().split())
-
+(A, B, C) = map(int, input().split())
 space1 = A - B
 if space1 > C:
     print(0)
