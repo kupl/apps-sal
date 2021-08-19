@@ -8,4 +8,4 @@ def jumping_number(number):
                 continue
             else:
                 return 'Not!!'
-        return "Jumping!!"
+        return 'Jumping!!'

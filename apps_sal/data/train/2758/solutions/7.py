@@ -1,7 +1,7 @@
 def decode(number):
     foo = str(number).split('98')
     parts = foo[:-1] if foo[-1] == '' else foo
-    output = ""
+    output = ''
     for i in range(len(parts)):
         if i % 2 == 0:
             for x in range(0, len(parts[i]), 3):

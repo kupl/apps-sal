@@ -5,6 +5,6 @@ def calculate_years(principal, interest, tax, desired):
     if desired == principal:
         return 0
     while compounding < desired:
-        compounding = (compounding * interest * (1 - tax) + compounding)
+        compounding = compounding * interest * (1 - tax) + compounding
         count += 1
     return count

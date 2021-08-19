@@ -8,5 +8,4 @@ def missing_alphabets(s):
     for key in alphabet:
         if alphabet[key] < l_count:
             results.append(key * (l_count - alphabet[key]))
-
     return ''.join(results)

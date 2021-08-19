@@ -6,4 +6,4 @@ def jumping_number(number):
             continue
         else:
             jumping = False
-    return "Jumping!!" if jumping else "Not!!"
+    return 'Jumping!!' if jumping else 'Not!!'

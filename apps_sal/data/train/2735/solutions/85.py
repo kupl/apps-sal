@@ -1,6 +1,6 @@
 def jumping_number(number):
     if number < 10:
-        return "Jumping!!"
+        return 'Jumping!!'
     else:
         digits = []
         while number > 0:
@@ -15,6 +15,6 @@ def jumping_number(number):
                 break
             i = i + 1
         if jumping == True:
-            return "Jumping!!"
+            return 'Jumping!!'
         else:
-            return "Not!!"
+            return 'Not!!'

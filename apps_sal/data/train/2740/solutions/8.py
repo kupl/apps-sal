@@ -10,10 +10,10 @@ def wheat_from_chaff(values):
                     negative_index = ii
                     negative_value = values[ii]
                     break
-            if(negative_index == None):
+            if negative_index == None:
                 break
-            elif(negative_index > i):
-                values[i], values[ii] = values[ii], values[i]
+            elif negative_index > i:
+                (values[i], values[ii]) = (values[ii], values[i])
             else:
                 break
     return values

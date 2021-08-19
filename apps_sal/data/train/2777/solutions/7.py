@@ -1,5 +1,5 @@
 def solve(a):
-    sta, exp = '', ''
+    (sta, exp) = ('', '')
     for i in a[::-1]:
         if i.isalnum() or i == '(':
             if i == '(':

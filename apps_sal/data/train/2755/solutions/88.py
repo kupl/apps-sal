@@ -10,5 +10,4 @@ def multiple_of_index(arr):
             continue
         elif m % n == 0:
             n_arr.append(m)
-
     return n_arr

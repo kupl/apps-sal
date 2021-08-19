@@ -3,7 +3,6 @@ def cube_odd(arr):
     for item in arr:
         if str(item).strip('-').isdigit() == False:
             return None
-        else:
-            if item % 2 != 0:
-                cubes.append(item**3)
+        elif item % 2 != 0:
+            cubes.append(item ** 3)
     return sum(cubes)

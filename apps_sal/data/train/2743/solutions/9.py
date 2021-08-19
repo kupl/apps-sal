@@ -7,4 +7,5 @@ def avg(seq):
     return sum / count if count != 0 else 0
 
 
-def sum_average(arr): return __import__('math').floor(sum(avg(i) for i in arr))
+def sum_average(arr):
+    return __import__('math').floor(sum((avg(i) for i in arr)))

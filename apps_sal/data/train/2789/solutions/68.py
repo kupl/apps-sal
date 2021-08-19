@@ -1,5 +1,5 @@
 def bmi(weight, height):
-    bmi = weight / (height**2)
+    bmi = weight / height ** 2
     print(weight, height, bmi)
     if bmi <= 18.5:
         return 'Underweight'

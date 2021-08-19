@@ -8,8 +8,7 @@ def get_grade(s1, s2, s3):
     elif score >= 70 and score < 80:
         grade = 'C'
     elif score >= 60 and score < 70:
-        grade = "D"
+        grade = 'D'
     elif score >= 0 and score < 60:
         grade = 'F'
-
     return grade

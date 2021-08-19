@@ -1,11 +1,11 @@
 def bmi(weight, height):
-    beem = round((weight / height**2), 1)
+    beem = round(weight / height ** 2, 1)
     print(beem)
     if 18.5 >= beem:
-        return "Underweight"
+        return 'Underweight'
     elif 25.0 >= beem > 18.5:
-        return "Normal"
+        return 'Normal'
     elif 30.0 >= beem > 18.5:
-        return "Overweight"
+        return 'Overweight'
     else:
-        return "Obese"
+        return 'Obese'

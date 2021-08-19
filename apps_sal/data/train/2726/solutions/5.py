@@ -4,14 +4,14 @@ import math
 def square_it(digits):
     strdigits = str(digits)
     sq = math.sqrt(len(strdigits))
-    if(round(sq, 0) == sq):
+    if round(sq, 0) == sq:
         arr = []
         sqint = int(sq)
         for a in range(0, sqint):
-            line = ""
+            line = ''
             for b in range(0, sqint):
                 line += strdigits[a * sqint + b]
             arr.append(line)
-        return "\n".join(arr)
+        return '\n'.join(arr)
     else:
-        return "Not a perfect square!"
+        return 'Not a perfect square!'

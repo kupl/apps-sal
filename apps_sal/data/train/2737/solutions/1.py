@@ -1,6 +1,7 @@
 def near_flatten(xs):
+
     def f(xs):
-        if all(not isinstance(x, list) for x in xs):
+        if all((not isinstance(x, list) for x in xs)):
             yield xs
             return
         for x in xs:

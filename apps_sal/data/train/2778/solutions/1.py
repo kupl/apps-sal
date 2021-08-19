@@ -1,5 +1,5 @@
 def faro_cycles(deck_size):
-    arr, count = list(range(deck_size)), 0
+    (arr, count) = (list(range(deck_size)), 0)
     original_arr = arr
     while True:
         arr = arr[0:deck_size:2] + arr[1:deck_size:2]

@@ -2,12 +2,12 @@ def get_grade(s1, s2, s3):
     mean = (s1 + s2 + s3) // 3
     print(mean)
     if mean >= 90:
-        return "A"
+        return 'A'
     elif mean >= 80:
-        return "B"
+        return 'B'
     elif mean >= 70:
-        return "C"
+        return 'C'
     elif mean >= 60:
-        return "D"
+        return 'D'
     else:
-        return "F"
+        return 'F'

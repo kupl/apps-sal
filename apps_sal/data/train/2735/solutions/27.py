@@ -3,5 +3,5 @@ def jumping_number(number):
         if abs(int(str(number)[i + 1]) - int(str(number)[i])) != 1:
             break
     else:
-        return "Jumping!!"
-    return "Not!!"
+        return 'Jumping!!'
+    return 'Not!!'

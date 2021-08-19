@@ -1,1 +1,2 @@
-def spam(n): return "hue" * n
+def spam(n):
+    return 'hue' * n

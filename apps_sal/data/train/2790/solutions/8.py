@@ -6,4 +6,4 @@ def dup(array):
 
 
 def remove_dup(string):
-    return ''.join(single for single, _ in groupby(string))
+    return ''.join((single for (single, _) in groupby(string)))

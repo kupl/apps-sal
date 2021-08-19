@@ -6,11 +6,11 @@ def distance(xxx_todo_changeme, xxx_todo_changeme1):
 
 def peaceful_yard(yard, min_distance):
     cats = []
-    for r, row in enumerate(yard):
-        for c, col in enumerate(row):
+    for (r, row) in enumerate(yard):
+        for (c, col) in enumerate(row):
             if col != '-':
                 current = (r, c)
-                if any(distance(current, cat) < min_distance for cat in cats):
+                if any((distance(current, cat) < min_distance for cat in cats)):
                     return False
                 cats.append(current)
     return True

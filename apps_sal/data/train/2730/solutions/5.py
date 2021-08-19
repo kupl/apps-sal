@@ -9,5 +9,5 @@ def tickets(people, cost=25, bills=[100, 50, 25]):
                 count[bill] -= c
                 change -= c * bill
         if change:
-            return "NO"
-    return "YES"
+            return 'NO'
+    return 'YES'

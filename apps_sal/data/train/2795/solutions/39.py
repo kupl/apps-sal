@@ -1,2 +1,2 @@
 def cockroach_speed(s):
-    return ((s * 100 * 1000) / 60) // 60
+    return s * 100 * 1000 / 60 // 60

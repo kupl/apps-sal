@@ -1,4 +1,4 @@
-NUMBERS = "nil one two three four five six seven eight nine".split()
+NUMBERS = 'nil one two three four five six seven eight nine'.split()
 
 
 def scoreboard(s):

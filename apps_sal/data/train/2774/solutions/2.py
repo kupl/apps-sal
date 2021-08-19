@@ -1,5 +1,5 @@
 def is_balanced(verify, pairs):
-    opened, closed, records, same = [], [], [], []
+    (opened, closed, records, same) = ([], [], [], [])
     for i in range(0, len(pairs), 2):
         opened.append(pairs[i])
         closed.append(pairs[i + 1])

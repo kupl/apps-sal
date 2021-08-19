@@ -1,1 +1,2 @@
-def cockroach_speed(s): return s * 100_000 // 3_600
+def cockroach_speed(s):
+    return s * 100000 // 3600

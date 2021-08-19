@@ -3,18 +3,17 @@ from operator import add, mul, floordiv as fdiv, pow
 
 def poohbear(s):
 
-    def updateMem(func, v): mem[p] = func(mem.get(p, 0), v) % 256
-
-    braces, stack = {}, []
-    for i, c in enumerate(s):
+    def updateMem(func, v):
+        mem[p] = func(mem.get(p, 0), v) % 256
+    (braces, stack) = ({}, [])
+    for (i, c) in enumerate(s):
         if c == 'W':
             stack.append(i)
         if c == 'E':
             braces[i] = stack[-1]
             braces[stack.pop()] = i
-
-    mem, copy, output = {}, 0, []
-    p, i = 0, 0
+    (mem, copy, output) = ({}, 0, [])
+    (p, i) = (0, 0)
     while i < len(s):
         cmd = s[i]
         if cmd == '>':
@@ -48,7 +47,7 @@ def poohbear(s):
         elif cmd == 'Q':
             updateMem(pow, 2)
         elif cmd == 'U':
-            updateMem(lambda a, b: int(pow(a, b)), .5)
+            updateMem(lambda a, b: int(pow(a, b)), 0.5)
         elif cmd == 'A':
             updateMem(add, copy)
         elif cmd == 'B':
@@ -58,5 +57,4 @@ def poohbear(s):
         elif cmd == 'D':
             updateMem(fdiv, copy)
         i += 1
-
     return ''.join(output)

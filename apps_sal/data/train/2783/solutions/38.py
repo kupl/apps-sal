@@ -1,4 +1,5 @@
-def mean(nums): return sum(nums) / (len(nums) + .0)
+def mean(nums):
+    return sum(nums) / (len(nums) + 0.0)
 
 
 def get_grade(s1, s2, s3):
@@ -12,4 +13,4 @@ def get_grade(s1, s2, s3):
     elif m >= 60:
         return 'D'
     else:
-        return "F"
+        return 'F'

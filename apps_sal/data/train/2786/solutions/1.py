@@ -1,7 +1,5 @@
 from datetime import datetime
-
-WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday',
-            'Friday', 'Saturday', 'Sunday')
+WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 
 
 def day(date):

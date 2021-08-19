@@ -4,5 +4,4 @@ def fib_rabbits(n, b):
         cur = obj['IP']
         obj['IP'] = b * obj['AP']
         obj['AP'] += cur
-
     return obj['AP']

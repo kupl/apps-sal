@@ -6,6 +6,5 @@ def jumping_number(number):
                 s = int(i)
                 continue
             else:
-                return "Not!!"
-
-    return "Jumping!!"
+                return 'Not!!'
+    return 'Jumping!!'

@@ -9,5 +9,4 @@ def cube_odd(arr):
     for x in cubed:
         if x % 2 != 0:
             new_arr.append(x)
-
     return sum(new_arr)

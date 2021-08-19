@@ -5,5 +5,4 @@ def multiple_of_index(arr):
         if i % x == 0:
             new.append(i)
         x += 1
-
     return new

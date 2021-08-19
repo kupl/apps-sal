@@ -8,5 +8,4 @@ def solution(digits):
             i += 1
     else:
         i += 1
-
     return x

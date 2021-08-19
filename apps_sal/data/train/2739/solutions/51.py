@@ -4,5 +4,5 @@ def cube_odd(arr):
         if not isinstance(i, int) or isinstance(i, bool):
             return None
         elif i % 2 != 0:
-            res += i**3
+            res += i ** 3
     return res

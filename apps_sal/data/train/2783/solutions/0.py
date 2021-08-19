@@ -8,4 +8,4 @@ def get_grade(s1, s2, s3):
         return 'C'
     elif 60 <= m < 70:
         return 'D'
-    return "F"
+    return 'F'

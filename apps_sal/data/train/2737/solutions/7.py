@@ -1,5 +1,5 @@
 import re
-r = re.compile(r'(?<=\[)\[|(?<=\])\]')
+r = re.compile('(?<=\\[)\\[|(?<=\\])\\]')
 
 
 def near_flatten(nested):

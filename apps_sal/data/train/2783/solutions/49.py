@@ -1,14 +1,14 @@
 def get_grade(s1, s2, s3):
     mean_grade = (s1 + s2 + s3) / 3
-    grade = ""
+    grade = ''
     if mean_grade >= 0 and mean_grade < 60:
-        grade = "F"
+        grade = 'F'
     if mean_grade >= 60 and mean_grade < 70:
-        grade = "D"
+        grade = 'D'
     if mean_grade >= 70 and mean_grade < 80:
-        grade = "C"
+        grade = 'C'
     if mean_grade >= 80 and mean_grade < 90:
-        grade = "B"
+        grade = 'B'
     if mean_grade >= 90 and mean_grade <= 100:
-        grade = "A"
+        grade = 'A'
     return grade

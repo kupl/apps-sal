@@ -8,4 +8,4 @@ def average_string(s):
         c = int(c / len(s))
         return l[c]
     except:
-        return "n/a"
+        return 'n/a'

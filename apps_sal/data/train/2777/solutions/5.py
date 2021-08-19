@@ -1,5 +1,5 @@
 def solve(st):
-    tempstr = ""
+    tempstr = ''
     for i in reversed(st):
         if i.isalpha():
             tempstr += i

@@ -1,1 +1,2 @@
-def find_jane(n): return ~-n >> 1
+def find_jane(n):
+    return ~-n >> 1

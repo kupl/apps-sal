@@ -7,5 +7,5 @@ def blocks(s):
     res = []
     while cnt:
         res.append(''.join(cnt.keys()))
-        cnt = {k: v - 1 for k, v in cnt.items() if v > 1}
+        cnt = {k: v - 1 for (k, v) in cnt.items() if v > 1}
     return '-'.join(res)

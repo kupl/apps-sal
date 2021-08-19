@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def is_matched(read):
-    parse = re.findall(r'[0-9]+[A-Z]', read[0])
+    parse = re.findall('[0-9]+[A-Z]', read[0])
     cigar = {}
     for i in parse:
         if cigar.get(i[-1]) == None:

@@ -3,4 +3,4 @@ def solution(digits):
     for x in range(0, len(digits) - 1):
         if int(digits[x:x + 5]) > int(num):
             num = digits[x:x + 5]
-    return(int(num))
+    return int(num)

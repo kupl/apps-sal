@@ -3,5 +3,4 @@ def jumping_number(number):
     for i in range(len(number) - 1):
         if not abs(number[i] - number[i + 1]) == 1:
             return 'Not!!'
-
     return 'Jumping!!'

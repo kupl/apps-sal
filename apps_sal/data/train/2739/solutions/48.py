@@ -5,5 +5,5 @@ def cube_odd(arr):
             return None
             break
         elif i % 2 != 0:
-            x += i**3
+            x += i ** 3
     return x

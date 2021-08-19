@@ -1,13 +1,11 @@
 def kebabize(string):
-    result = ""
-
+    result = ''
     for c in string:
         if c.isupper():
-            if result is not "":
-                result += "-{}".format(c.lower())
+            if result is not '':
+                result += '-{}'.format(c.lower())
             else:
                 result += c.lower()
         if c.islower():
             result += c
-
     return result

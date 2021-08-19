@@ -3,5 +3,5 @@ def fib_rabbits(n, b):
         return n
     ans = [0, 1]
     for i in range(2, n + 1):
-        ans[0], ans[1] = ans[-1] * b, sum(ans)
+        (ans[0], ans[1]) = (ans[-1] * b, sum(ans))
     return ans[-1]

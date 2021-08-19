@@ -4,5 +4,5 @@ def cube_odd(arr):
         if type(a) != int:
             return None
         if a % 2 != 0:
-            r += a**3
+            r += a ** 3
     return r

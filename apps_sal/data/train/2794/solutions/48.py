@@ -1,6 +1,5 @@
 def calculate_age(year_of_birth, current_year):
     age = abs(year_of_birth - current_year)
-
     if year_of_birth < current_year:
         if age == 1:
             return 'You are {} year old.'.format(current_year - year_of_birth)

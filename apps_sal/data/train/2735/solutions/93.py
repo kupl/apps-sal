@@ -5,6 +5,6 @@ def jumping_number(number):
         minus = numbers[i] - numbers[i + 1]
         plus = numbers[i + 1] - numbers[i]
         if minus != 1 and plus != 1:
-            return "Not!!"
+            return 'Not!!'
         i += 1
-    return "Jumping!!"
+    return 'Jumping!!'

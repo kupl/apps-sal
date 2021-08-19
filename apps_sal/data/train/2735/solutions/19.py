@@ -4,6 +4,5 @@ def jumping_number(number):
         if abs(numbers[a - 1] - numbers[a]) == 1:
             continue
         else:
-            return "Not!!"
-
-    return "Jumping!!"
+            return 'Not!!'
+    return 'Jumping!!'

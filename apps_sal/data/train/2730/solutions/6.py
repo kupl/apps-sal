@@ -8,7 +8,7 @@ def tickets(people):
         elif bill == 50:
             bill50 += 1
             if bill25 == 0:
-                return "NO"
+                return 'NO'
             bill25 -= 1
         elif bill == 100:
             bill100 += 1
@@ -18,5 +18,5 @@ def tickets(people):
             elif bill25 >= 3:
                 bill25 = bill25 - 3
             else:
-                return "NO"
-    return "YES"
+                return 'NO'
+    return 'YES'

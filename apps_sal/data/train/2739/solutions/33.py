@@ -3,6 +3,6 @@ def cube_odd(arr):
     for x in arr:
         if type(x) != int:
             return None
-        elif x**3 % 2 == 1:
-            s += x**3
+        elif x ** 3 % 2 == 1:
+            s += x ** 3
     return s

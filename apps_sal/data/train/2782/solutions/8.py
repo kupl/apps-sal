@@ -6,8 +6,7 @@ def calc(expr):
             s.append(float(arg))
         except:
             try:
-                s.append(eval(f"{s.pop(-2)} {arg} {s.pop(-1)}"))
+                s.append(eval(f'{s.pop(-2)} {arg} {s.pop(-1)}'))
             except:
                 pass
-
     return s[-1]

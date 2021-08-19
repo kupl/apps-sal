@@ -3,7 +3,8 @@ from operator import mul
 from functools import reduce
 
 
-def lcm(a, b=1): return a * b // gcd(a, b)
+def lcm(a, b=1):
+    return a * b // gcd(a, b)
 
 
 def parameter(n):
