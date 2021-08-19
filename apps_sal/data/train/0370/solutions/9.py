@@ -1,4 +1,5 @@
 class UF(object):
+
     def uf(self, n):
         self.uf = [i for i in range(n)]
         self.size = [1] * n
@@ -15,48 +16,29 @@ class UF(object):
             return
         self.uf[xx] = yy
         self.size[yy] += self.size[xx]
-        # self.size[xx] = 0
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def primefactors(n):
-            # 暴力求取因子
             out = set()
-            # 第一步是提取2且n变成奇数
             while n % 2 == 0:
                 out.add(2)
                 n //= 2
-            # 第二步是从3开始遍历奇数
             for i in range(3, int(math.sqrt(n)) + 1, 2):
                 while n % i == 0:
                     out.add(i)
                     n //= i
-            # 第三步关照额外corner情况
             if n > 2:
                 out.add(n)
             return out
-        '''
-        idx_lookup = {A[i]: i for i in range(len(A))} 
+        '\n        idx_lookup = {A[i]: i for i in range(len(A))} \n        uf = UF()\n        uf.uf(len(A))\n        primeAndItsMultiples = collections.defaultdict(list)\n        for i in A:\n            factors = primefactors(i)\n            for f in factors:\n                primeAndItsMultiples[f].append(i)\n        for idx, multiples in primeAndItsMultiples.items():\n            if multiples:\n                root = multiples[0] # use the first multiple as their root\n                for node in multiples[1:]:\n                    uf.union(idx_lookup[node], idx_lookup[root]) # connect node with root             \n        return max(uf.size)\n        '
         uf = UF()
         uf.uf(len(A))
-        primeAndItsMultiples = collections.defaultdict(list)
-        for i in A:
-            factors = primefactors(i)
-            for f in factors:
-                primeAndItsMultiples[f].append(i)
-        for idx, multiples in primeAndItsMultiples.items():
-            if multiples:
-                root = multiples[0] # use the first multiple as their root
-                for node in multiples[1:]:
-                    uf.union(idx_lookup[node], idx_lookup[root]) # connect node with root             
-        return max(uf.size)
-        '''
-        uf = UF()
-        uf.uf(len(A))
-
         prime = {}
-        for i, v in enumerate(A):
+        for (i, v) in enumerate(A):
             factors = primefactors(v)
             for p in factors:
                 if p in prime:

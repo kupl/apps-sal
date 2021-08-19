@@ -1,4 +1,3 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
     b = list(map(int, str(input()).split(' ')))
@@ -14,7 +13,7 @@ for _ in range(test):
             li2.append(li2[len(li2) - 1] + 1)
         else:
             li2.append(li2[len(li2) - 1] - 1)
-    if (max(li1) - min(li1) + 1) <= b[1] and (max(li2) - min(li2) + 1) <= b[0]:
+    if max(li1) - min(li1) + 1 <= b[1] and max(li2) - min(li2) + 1 <= b[0]:
         print('safe')
     else:
         print('unsafe')

@@ -1,9 +1,8 @@
 def compare(s1, s2):
-    # your code here
     if s1 == None:
-        s1 = ""
+        s1 = ''
     if s2 == None:
-        s2 = ""
+        s2 = ''
     s1 = s1.upper()
     s2 = s2.upper()
     c1 = 0
@@ -13,7 +12,6 @@ def compare(s1, s2):
             c1 = 0
             break
         c1 += ord(i)
-
     for i in s2:
         if not i.isalpha():
             c2 = 0

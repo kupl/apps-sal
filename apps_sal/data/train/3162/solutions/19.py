@@ -5,8 +5,6 @@ def compare(s1, s2):
     sum2 = ord_sum(clean2)
     return sum1 == sum2
 
-# check for empty conditions
-
 
 def clean(s):
     clean = s

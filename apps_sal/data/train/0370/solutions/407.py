@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         parent = [-1] * 100001
 
@@ -16,7 +17,6 @@ class Solution:
             p_y = find(y)
             if p_x != p_y:
                 parent[p_y] = p_x
-
         for item in A:
             for i in range(2, int(sqrt(item)) + 1):
                 if item % i == 0:
@@ -26,6 +26,4 @@ class Solution:
         for i in A:
             p = find(i)
             cache[p] += 1
-        # print(parent)
-        # print(cache)
         return max(cache.values())

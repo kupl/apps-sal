@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def pfactorization(a):
             N = a
             if a >= 2 and a % 2 == 0:
@@ -7,7 +9,7 @@ class Solution:
                 Gn[N].append(2)
                 while a % 2 == 0:
                     a //= 2
-            for d in range(3, math.floor(a**(1 / 2)) + 1, 2):
+            for d in range(3, math.floor(a ** (1 / 2)) + 1, 2):
                 if a % d == 0:
                     Gn[N].append(d)
                     Gp[d].append(N)
@@ -32,6 +34,6 @@ class Solution:
         Gp = collections.defaultdict(list)
         Gn = collections.defaultdict(list)
         for a in A:
-            pfactorization(a)  # build our graphs
-        seenPrimes, seenNodes = set(), set()
+            pfactorization(a)
+        (seenPrimes, seenNodes) = (set(), set())
         return max([dfs(a) for a in A])

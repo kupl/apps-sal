@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     s = input().split()
@@ -19,13 +18,13 @@ for i in range(t):
                     x = x - 1
                 elif st[k] == 'D':
                     x = x + 1
-                if x >= 0 and x < n and y >= 0 and y < m:
+                if x >= 0 and x < n and (y >= 0) and (y < m):
                     ll = 0
                 else:
                     break
-            if x >= 0 and x < n and y >= 0 and y < m:
+            if x >= 0 and x < n and (y >= 0) and (y < m):
                 f = 1
     if f == 1:
-        print("safe")
+        print('safe')
     else:
-        print("unsafe")
+        print('unsafe')

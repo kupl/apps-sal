@@ -7,19 +7,14 @@ class DisjointSetUnion(object):
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
-
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return px
-
-        # connect the two sets (components)
         if self.size[px] > self.size[py]:
-            # add the node to the union with less members
-            # keeping px as the index of the smaller component
-            px, py = py, px
+            (px, py) = (py, px)
         self.parent[px] = py
         self.size[py] += self.size[px]
         return py
@@ -36,14 +31,12 @@ class Solution:
                 num = num // factor
             else:
                 factor += 1
-
         prime_factors.append(num)
         return prime_factors
 
     def largestComponentSize(self, A: List[int]) -> int:
         dsu = DisjointSetUnion(max(A))
         num_factor_map = {}
-
         for num in A:
             prime_factors = list(set(self.primeDecompose(num)))
             num_factor_map[num] = prime_factors[0]
@@ -55,5 +48,4 @@ class Solution:
             group_id = dsu.find(num_factor_map[num])
             group_count[group_id] += 1
             max_size = max(max_size, group_count[group_id])
-
         return max_size

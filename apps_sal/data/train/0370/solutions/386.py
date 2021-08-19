@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         if n < 2:
@@ -8,8 +9,6 @@ class Solution:
             A.remove(1)
         if len(A) == 0:
             return 1
-        # A=list(A)
-        # A.sort()
 
         def list_primes(m):
             p = [True] * (m + 1)
@@ -43,21 +42,13 @@ class Solution:
                     f += 1
             prime_factors.append(x)
             return prime_factors
-        # print(prime_decompose(60))
-        # print(prime_decompose(5120))
-        # return 0
-
         prime_list = list_primes(max(A))
         prime_set = set(prime_list)
-        # print(prime_list)
-        #d={x:find_prime_factors(x,prime_list,prime_set) for x in A}
         d = {x: list(set(prime_decompose(x))) for x in A}
-        #print([len(d[x]) for x in A])
         all_factors = set()
         for x in A:
             for f in d[x]:
                 all_factors.add(f)
-        # print(all_factors)
         find_dict = {f: f for f in all_factors}
         sink_size = {f: 1 for f in all_factors}
 
@@ -87,17 +78,12 @@ class Solution:
             for f in hyperedge:
                 find_dict[find(f)] = sink
                 find(f)
-
         for x in A:
             union_hyperedge(d[x])
-        #print('Union done.')
         sinks = set()
         for f in all_factors:
             sinks.add(find(f))
-
         count = {sink: 0 for sink in sinks}
-
         for x in A:
             count[find(d[x][0])] += 1
-
         return max(count.values())

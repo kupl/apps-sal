@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.p = [i for i in range(n)]
         self.s = [1] * n
@@ -10,7 +11,9 @@ class UF:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def add_prime(i, j, primes):
             if i not in primes:
                 primes[i] = [j]
@@ -19,7 +22,7 @@ class Solution:
         n = len(A)
         g = UF(n)
         primes = {}
-        for j, k in enumerate(A):
+        for (j, k) in enumerate(A):
             i = 2
             while i * i <= k:
                 if k % i == 0:
@@ -29,14 +32,11 @@ class Solution:
                 i += 1
             if k > 1:
                 add_prime(k, j, primes)
-        # print(primes)
         for l in primes.values():
-            j, r = l[0], g.find(l[0])
+            (j, r) = (l[0], g.find(l[0]))
             for i in l[1:]:
                 nd = g.find(i)
                 if nd != r:
                     g.p[nd] = r
                     g.s[r] += g.s[nd]
-        # print(g.p)
-        # print(g.s)
         return max(g.s)
