@@ -10,9 +10,8 @@ testcases = []
 no_testcases = int(input())
 for i in range(no_testcases):
     testcases.append(int(input()))
-
 for testcase in testcases:
     if check_polygon(testcase):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

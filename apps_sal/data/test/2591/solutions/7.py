@@ -1,7 +1,6 @@
 import math
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -16,11 +15,10 @@ for i in range(t):
     for i in range(n):
         if flag == True:
             ans.append(arr[cur])
-            cur -= (i + 1)
+            cur -= i + 1
             flag = False
         else:
             ans.append(arr[cur])
-            cur += (i + 1)
+            cur += i + 1
             flag = True
-
     print(*ans)

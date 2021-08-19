@@ -1,9 +1,8 @@
 T = int(input())
-
 for _ in range(T):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
-    p, q = 0, 0
+    (p, q) = (0, 0)
     for i in a:
         if i % 2 == 0:
             p += 1

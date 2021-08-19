@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 for _ in range(T):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     l.sort(reverse=True)
     best = 0

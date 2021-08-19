@@ -1,11 +1,9 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
-
 for t in range(T):
-    x1, y1, z1 = [int(_) for _ in input().split()]
-    x2, y2, z2 = [int(_) for _ in input().split()]
+    (x1, y1, z1) = [int(_) for _ in input().split()]
+    (x2, y2, z2) = [int(_) for _ in input().split()]
     pos_ass = min(z1, y2)
     z1 -= pos_ass
     y2 -= pos_ass

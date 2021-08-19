@@ -1,8 +1,8 @@
 from collections import deque
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 G = [[] for _ in range(N + 1)]
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     G[a].append(b)
     G[b].append(a)
 q = deque([1])
@@ -16,5 +16,5 @@ while q:
             closed[u] = True
             q.append(u)
             Ans[u] = v
-print("Yes")
-print(("\n".join(map(str, Ans[2:]))))
+print('Yes')
+print('\n'.join(map(str, Ans[2:])))

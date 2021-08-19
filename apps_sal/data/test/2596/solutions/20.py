@@ -1,7 +1,7 @@
-n, pos, maxx, que = list(map(int, input().split()))
+(n, pos, maxx, que) = list(map(int, input().split()))
 initial = [1] * n
 for x in range(que):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a == 1:
         lam = b
         if pos < lam:

@@ -25,7 +25,6 @@ def intersection2(a1, b1, c1, d1, a2, b2, c2, d2):
         return None
     if b2 > d1 or a2 > c1:
         return None
-
     a = max(a1, a2)
     b = max(b1, b2)
     c = min(c1, c2)
@@ -42,16 +41,16 @@ def solve(n, m, W, B):
     if I:
         whites -= black_count2(*I)
     blacks = n * m - whites
-    return whites, blacks
+    return (whites, blacks)
 
 
 def main():
     t = int(input())
     for _ in range(t):
-        n, m = list(map(int, input().split()))
-        W = list(int(i) for i in input().split())
-        B = list(int(i) for i in input().split())
-        w, b = solve(n, m, W, B)
+        (n, m) = list(map(int, input().split()))
+        W = list((int(i) for i in input().split()))
+        B = list((int(i) for i in input().split()))
+        (w, b) = solve(n, m, W, B)
         print(w, b)
 
 

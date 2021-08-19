@@ -1,4 +1,4 @@
-l, r, x, y, k = list(map(int, input().split()))
+(l, r, x, y, k) = list(map(int, input().split()))
 
 
 def samt(n):
@@ -9,8 +9,7 @@ def samt(n):
     return 0
 
 
-av, ox = x, y
-
+(av, ox) = (x, y)
 while av < ox + 1:
     n = (av + ox) // 2
     s = samt(n)
@@ -20,13 +19,11 @@ while av < ox + 1:
         ox = n - 1
     else:
         break
-
 found = False
 for n in range(av, ox + 1):
     if samt(n) == 0:
         found = True
-
 if found:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

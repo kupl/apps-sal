@@ -6,11 +6,11 @@ for rwere in range(q):
     seg = []
     pts = []
     for i in range(n):
-        pocz, kon = map(int, input().split())
+        (pocz, kon) = map(int, input().split())
         seg.append([2 * pocz, 2 * kon])
         pts.append(2 * kon + 1)
-    p, k = map(list, zip(*seg))
-    pts += (p + k)
+    (p, k) = map(list, zip(*seg))
+    pts += p + k
     pts.sort()
     ind = -1
     while True:
@@ -49,7 +49,7 @@ for rwere in range(q):
                 przyn[j] = label
             label += 1
             cur = kon + 1
-    final = [(przyn[i] if cov[i] == 1 else (-1 if cov[i] == 0 else 0)) for i in range(val)]
+    final = [przyn[i] if cov[i] == 1 else -1 if cov[i] == 0 else 0 for i in range(val)]
     baza = final.count(-1) + 1
     final = [-1] + final + [-1]
     val += 2

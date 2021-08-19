@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 f_inf = float('inf')
 mod = 10 ** 9 + 7
@@ -7,10 +6,9 @@ mod = 10 ** 9 + 7
 
 def resolve():
     s = input()
-
     n = len(s) // 2
-    p = s.count("p")
-    print((n - p))
+    p = s.count('p')
+    print(n - p)
 
 
 def __starting_point():

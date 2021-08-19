@@ -12,7 +12,6 @@ def do(s, t):
         return -1
 
 
-for i, s in enumerate(S):
+for (i, s) in enumerate(S):
     ans += do(s, hand[i % 2])
-
 print(ans)

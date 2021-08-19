@@ -1,5 +1,5 @@
 import numpy as np
-H, W = map(int, input().split(' '))
+(H, W) = map(int, input().split(' '))
 maze = [list(input()) for i in range(H)]
 maze = (np.array(maze) == '.') * 1
 L = np.zeros((H, W), dtype=int)

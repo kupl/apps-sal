@@ -1,6 +1,6 @@
 q = int(input())
 for query in range(q):
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     s = input()
     pod = []
     count = 1
@@ -15,7 +15,7 @@ for query in range(q):
     for i in range(len(pod)):
         if i % 2 == 0:
             if i == 0 or i == len(pod) - 1:
-                wyn -= (b * pod[i] - a)
+                wyn -= b * pod[i] - a
             else:
                 wyn -= max(0, b * (pod[i] - 1) - 2 * a)
     if len(pod) == 1:

@@ -4,7 +4,7 @@ n = int(input())
 def ans(x, y, a, b, k):
     if ch(x, y, a, b, len(v)) < k:
         return -1
-    l, r = -1, len(v)
+    (l, r) = (-1, len(v))
     while l + 1 != r:
         m = (l + r) // 2
         if ch(x, y, a, b, m) >= k:
@@ -15,10 +15,10 @@ def ans(x, y, a, b, k):
 
 
 def nok(a, b):
-    s, d = a, b
+    (s, d) = (a, b)
     while b:
-        a, b = b, a % b
-    return (s * d) // a
+        (a, b) = (b, a % b)
+    return s * d // a
 
 
 def ch(x, y, a, b, m):
@@ -35,7 +35,7 @@ def ch(x, y, a, b, m):
 for _ in range(n):
     input()
     v = sorted(list([int(x) // 100 for x in input().split()]), key=lambda x: -x)
-    x, a = [int(x) for x in input().split()]
-    y, b = [int(x) for x in input().split()]
+    (x, a) = [int(x) for x in input().split()]
+    (y, b) = [int(x) for x in input().split()]
     k = int(input())
     print(ans(x, y, a, b, k))

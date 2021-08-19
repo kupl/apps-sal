@@ -1,7 +1,9 @@
-
 from sys import stdin
 input = stdin.buffer.readline
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 mat = []
@@ -17,17 +19,18 @@ def sumDiag(mat):
     for i in range(n):
         s = 0
         for j in range(0, n - i):
-            s += mat[j][(j + i)]
+            s += mat[j][j + i]
         diag_sum.append(s)
         if i != 0:
             s = 0
             for j in range(0, n - i):
-                s += mat[j + i][(j)]
+                s += mat[j + i][j]
             diag_sum2.append(s)
     return diag_sum2[::-1] + diag_sum
 
 
 def antiDiag(mat):
+
     def mirror(mat):
         for i in range(len(mat)):
             for j in range(len(mat[0]) // 2):
@@ -61,6 +64,5 @@ for i in range(n):
         elif (i + j) % 2 == 1 and m2 < ret(i, j):
             m2 = ret(i, j)
             best2 = (i + 1, j + 1)
-
 print(m1 + m2)
-print(" ".join(map(str, [best1[0], best1[1], best2[0], best2[1]])))
+print(' '.join(map(str, [best1[0], best1[1], best2[0], best2[1]])))

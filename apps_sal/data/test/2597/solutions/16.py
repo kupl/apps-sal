@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, = list(map(int, sys.stdin.readline().split()))
+    (n,) = list(map(int, sys.stdin.readline().split()))
     a = list(map(int, sys.stdin.readline().split()))
     a.sort(reverse=True)
     res = 1
@@ -13,6 +13,6 @@ def solve():
     print(res)
 
 
-k, = list(map(int, sys.stdin.readline().split()))
+(k,) = list(map(int, sys.stdin.readline().split()))
 for _ in range(k):
     solve()

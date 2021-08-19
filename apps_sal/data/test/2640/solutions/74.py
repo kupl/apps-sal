@@ -1,10 +1,10 @@
 import numpy as np
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 l = np.zeros((H, W), dtype=int)
 r = np.zeros((H, W), dtype=int)
 d = np.zeros((H, W), dtype=int)
 u = np.zeros((H, W), dtype=int)
-s = np.array([list(input()) for _ in range(H)]) == "."
+s = np.array([list(input()) for _ in range(H)]) == '.'
 for i in range(H):
     u[i] = (u[i - 1] + 1) * s[i]
     d[-i - 1] = (d[-i] + 1) * s[-i - 1]

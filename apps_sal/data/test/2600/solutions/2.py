@@ -1,5 +1,5 @@
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [list(map(int, input().split())) for _ in range(n)]
     dc = [[0, 0] for _ in range(0 + 0, n - 1 + m - 1 + 1)]
     for i in range(n):

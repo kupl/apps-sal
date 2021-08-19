@@ -7,13 +7,13 @@ for _ in range(int(input())):
     Min = Sorted[0]
     flag = 0
     for i in range(N):
-        if(List[i] != Sorted[i]):
-            if(gcd(List[i], Min) == Min):
+        if List[i] != Sorted[i]:
+            if gcd(List[i], Min) == Min:
                 continue
             else:
                 flag = 1
                 break
-    if(flag):
-        print("NO")
+    if flag:
+        print('NO')
     else:
-        print("YES")
+        print('YES')

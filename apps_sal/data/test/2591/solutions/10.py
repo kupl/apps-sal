@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     As = list(map(int, input().split()))
@@ -15,4 +14,4 @@ for _ in range(t):
         res.append(As[left])
         right -= 1
         left += 1
-    print(" ".join(map(str, res[::-1])))
+    print(' '.join(map(str, res[::-1])))

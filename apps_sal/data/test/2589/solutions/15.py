@@ -1,5 +1,5 @@
 for testcase in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     arr = list(map(int, input().split()))
     start = 0
     for i in arr:

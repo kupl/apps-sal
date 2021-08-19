@@ -1,13 +1,13 @@
 from collections import deque
-n, m = map(int, input().split())
-dis = [n + 2] * (n)
+(n, m) = map(int, input().split())
+dis = [n + 2] * n
 dis[0] = 0
 near = [[] for _ in range(n)]
-mark = [-1] * (n)
+mark = [-1] * n
 mark[0] = 0
 que = deque()
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     near[a].append(b)

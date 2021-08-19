@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     alst = [list(map(int, input().split())) for _ in range(n)]
     blst = [[0 for _ in range(m)] for _ in range(n)]
     for i in range(n):

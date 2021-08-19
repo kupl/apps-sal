@@ -4,9 +4,8 @@ import heapq
 
 
 def solution():
-    n, xVal = [int(x) for x in input().strip().split()]
+    (n, xVal) = [int(x) for x in input().strip().split()]
     a = [int(x) for x in input().strip().split()]
-
     curSum = sum(a)
     heapq.heapify(a)
     while a and curSum / len(a) < xVal:

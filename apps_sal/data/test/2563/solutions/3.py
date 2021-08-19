@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 T = int(input())
@@ -25,4 +28,4 @@ for _ in range(T):
             B.append(O.pop())
         else:
             B.append(E.pop())
-    print("".join(map(str, B)))
+    print(''.join(map(str, B)))

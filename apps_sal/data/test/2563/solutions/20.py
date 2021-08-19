@@ -2,7 +2,7 @@ from collections import deque
 t = int(input())
 for i in range(t):
     n = list(map(int, input()))
-    chet, nechet = deque(), deque()
+    (chet, nechet) = (deque(), deque())
     for el in n:
         if el % 2 == 0:
             chet.append(el)

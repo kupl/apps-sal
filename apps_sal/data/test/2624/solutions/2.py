@@ -1,15 +1,15 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 a = list(map(int, input().split()))
 swaps = [0] * q
 for i in range(q):
     b = input().split()
     b[1] = int(b[1])
-    out = 1 if (b[0] == "<" and b[1] <= 0) or (b[0] == ">" and b[1] >= 0) else 0
-    split = b[1] + 0.5 if b[0] == ">" else b[1] - 0.5
+    out = 1 if b[0] == '<' and b[1] <= 0 or (b[0] == '>' and b[1] >= 0) else 0
+    split = b[1] + 0.5 if b[0] == '>' else b[1] - 0.5
     sign = 1 if split > 0 else -1
     split = abs(split)
     swaps[i] = (split, sign, out)
-sml = 10**5 + 0.5
+sml = 10 ** 5 + 0.5
 zeros = 0
 for i in range(q):
     sml = min(swaps[i][0], sml)
@@ -38,4 +38,4 @@ def func(k):
         return arr[abs(k)] * abs(k)
 
 
-print(" ".join([str(func(guy)) for guy in a]))
+print(' '.join([str(func(guy)) for guy in a]))

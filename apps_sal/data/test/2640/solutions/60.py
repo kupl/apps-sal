@@ -1,15 +1,12 @@
 import numpy as np
-
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 S = [list(str(input())) for _ in range(H)]
 S = np.array(S)
 S = (S == '.') * 1
-
 R = np.zeros((H, W), dtype=int)
 L = np.zeros((H, W), dtype=int)
 U = np.zeros((H, W), dtype=int)
 D = np.zeros((H, W), dtype=int)
-
 for i in range(W):
     if i == 0:
         L[:, 0] = S[:, 0]
@@ -24,5 +21,4 @@ for i in range(H):
     else:
         U[i] = U[i - 1] * S[i] + S[i]
         D[H - i - 1] = D[H - i] * S[H - i - 1] + S[H - i - 1]
-
 print(np.max(R + L + U + D) - 3)

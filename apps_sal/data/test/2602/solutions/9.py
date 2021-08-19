@@ -1,9 +1,9 @@
 for nt in range(int(input())):
-    a, b, n, m = map(int, input().split())
+    (a, b, n, m) = map(int, input().split())
     if n + m > a + b:
-        print("No")
+        print('No')
         continue
     if m > min(a, b):
-        print("No")
+        print('No')
         continue
-    print("Yes")
+    print('Yes')

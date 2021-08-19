@@ -1,4 +1,5 @@
 class Solution:
+
     def generateMatrix(self, n):
         """
         :type n: int
@@ -8,7 +9,7 @@ class Solution:
             return []
         res = [[0] * n for _ in range(n)]
         record = set()
-        rupper, rdown, cleft, cright, val = 0, n - 1, 0, n - 1, 1
+        (rupper, rdown, cleft, cright, val) = (0, n - 1, 0, n - 1, 1)
         while rupper < rdown and cleft < cright:
             for col in range(cleft, cright):
                 res[rupper][col] = val

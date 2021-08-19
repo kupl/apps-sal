@@ -1,8 +1,9 @@
 class Solution:
+
     def nodeSum(self, L, U):
         ans = [0] * len(U)
-        for i, v in enumerate(U):
-            ans[i] = (v + min(L[i], L[i + 1]))
+        for (i, v) in enumerate(U):
+            ans[i] = v + min(L[i], L[i + 1])
         return ans
 
     def minimumTotal(self, triangle):

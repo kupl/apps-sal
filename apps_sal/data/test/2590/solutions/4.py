@@ -1,5 +1,5 @@
 for tc in range(int(input())):
-    n, w = list(map(int, input().split()))
+    (n, w) = list(map(int, input().split()))
     ls = list(map(int, input().split()))
     ls.sort(reverse=True)
     sm = 0

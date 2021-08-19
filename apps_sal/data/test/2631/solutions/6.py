@@ -1,4 +1,5 @@
 class Solution:
+
     def canFinish(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -9,10 +10,9 @@ class Solution:
         degree = [0 for i in range(numCourses)]
         q = []
         counter = 0
-        for c, p in prerequisites:
+        for (c, p) in prerequisites:
             course_map[c].append(p)
             degree[p] += 1
-
         for i in range(numCourses):
             if degree[i] == 0:
                 q.append(i)
@@ -24,5 +24,4 @@ class Solution:
                 if degree[p] == 0:
                     q.append(p)
                     counter += 1
-
         return counter == numCourses

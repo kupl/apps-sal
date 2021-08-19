@@ -7,8 +7,8 @@ while t > 0:
         if l[i] >= l[i - 1]:
             f = 1
             break
-    if (f == 0):
-        print("NO")
+    if f == 0:
+        print('NO')
     else:
-        print("YES")
+        print('YES')
     t -= 1

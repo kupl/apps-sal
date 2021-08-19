@@ -12,7 +12,7 @@ def solve_1(n):
         if n % 2 == 1:
             cnt += 1
         n = n // 2
-    return 2**cnt
+    return 2 ** cnt
 
 
 t = int(input())

@@ -1,5 +1,5 @@
-n, N, MOD, ans = int(input()), int(1e6 + 5), int(1e9 + 7), 0
-cnt, pw, f = [0] * int(N), [1] * (n + 1), [0] * int(N)
+(n, N, MOD, ans) = (int(input()), int(1000000.0 + 5), int(1000000000.0 + 7), 0)
+(cnt, pw, f) = ([0] * int(N), [1] * (n + 1), [0] * int(N))
 for i in range(n):
     pw[i + 1] = pw[i] * 2 % MOD
 for i in input().split():

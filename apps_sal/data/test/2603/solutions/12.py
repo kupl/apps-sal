@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     t = t - 1
     n = int(input())
     a = input().split()
@@ -11,11 +11,11 @@ while(t > 0):
     q = 0
     mi = b[0]
     for i in range(0, n):
-        if(b[i] % mi != 0):
-            if(a[i] != b[i]):
+        if b[i] % mi != 0:
+            if a[i] != b[i]:
                 q = 1
                 break
-    if(q == 0):
-        print("YES")
+    if q == 0:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

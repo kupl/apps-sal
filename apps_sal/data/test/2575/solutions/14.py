@@ -2,7 +2,7 @@ p = int(input())
 while p:
     n = int(input())
     if 360 % (180 - n) == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     p -= 1

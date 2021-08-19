@@ -9,10 +9,9 @@ for s in S:
             cp += 1
         else:
             cg += 1
+    elif cp + 1 <= cg:
+        cp += 1
     else:
-        if cp + 1 <= cg:
-            cp += 1
-        else:
-            point -= 1
-            cg += 1
+        point -= 1
+        cg += 1
 print(point)

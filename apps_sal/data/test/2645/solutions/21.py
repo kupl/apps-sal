@@ -1,9 +1,7 @@
 s = input()
-
 p = 0
 g = 0
 res = 0
-
 for i in range(len(s)):
     if s[i] == 'g':
         if p < g:
@@ -11,11 +9,9 @@ for i in range(len(s)):
             res += 1
         else:
             g += 1
+    elif p < g:
+        p += 1
     else:
-        if p < g:
-            p += 1
-        else:
-            g += 1
-            res -= 1
-
+        g += 1
+        res -= 1
 print(res)

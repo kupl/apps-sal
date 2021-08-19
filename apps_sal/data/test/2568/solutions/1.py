@@ -8,7 +8,7 @@ for _ in range(int(input())):
         else:
             cur -= 1
         pref.append(cur)
-    res, mn = 0, 0
+    (res, mn) = (0, 0)
     for i in range(len(pref)):
         if pref[i] < mn:
             mn = pref[i]

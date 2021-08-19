@@ -1,18 +1,11 @@
 class Solution:
+
     def calculateMinimumHP(self, dungeon):
         """
         :type dungeon: List[List[int]]
         :rtype: int
         """
-        '''
-         逆回，当是小于等于0时，是相反数+1.   dp为到当前i,j只要需要的点数， 最小为1，保证 活着
-         
-         r,  c   r   ,c+1
-         r+1,c   r+1,c+1
-         
-         r,c处至少的点数 - r,c处惩罚点数  是  其下面和右面最少需要的点数，  也就是第33行
-         
-         '''
+        '\n         逆回，当是小于等于0时，是相反数+1.   dp为到当前i,j只要需要的点数， 最小为1，保证 活着\n         \n         r,  c   r   ,c+1\n         r+1,c   r+1,c+1\n         \n         r,c处至少的点数 - r,c处惩罚点数  是  其下面和右面最少需要的点数，  也就是第33行\n         \n         '
         row = len(dungeon)
         col = len(dungeon[0])
         dp = [[0 for c in range(col)] for r in range(row)]

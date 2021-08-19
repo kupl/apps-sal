@@ -1,9 +1,9 @@
 def main():
     import numpy as np
-    k, q = map(int, input().split())
+    (k, q) = map(int, input().split())
     d = np.array(list(map(int, input().split())))
     for i in range(q):
-        n, x, m = map(int, input().split())
+        (n, x, m) = map(int, input().split())
         x %= m
         d_mod = d % m
         zero_d = k - np.count_nonzero(d_mod)

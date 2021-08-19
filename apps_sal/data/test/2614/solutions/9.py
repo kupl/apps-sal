@@ -7,7 +7,6 @@ for _ in range(int(input())):
     num = mostc[0][0]
     numcount = mostc[0][1]
     ans = -1
-
     for num in count:
         if count[num] == numcount:
             count[num] = 0

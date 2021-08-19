@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     l = list(map(int, input().split()))
@@ -16,4 +15,4 @@ for _ in range(t):
             l2.append(l[e])
             e -= 1
         c = not c
-    print(" ".join(map(str, l2[::-1])))
+    print(' '.join(map(str, l2[::-1])))

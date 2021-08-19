@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,8 +9,7 @@ MOD = 1000000007
 
 def main():
     S = readline().strip()
-
-    g, p = 0, 0
+    (g, p) = (0, 0)
     ans = 0
     for c in S:
         if g > p:
@@ -22,7 +20,6 @@ def main():
             g += 1
             if c == 'p':
                 ans -= 1
-
     print(ans)
     return
 

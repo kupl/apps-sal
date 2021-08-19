@@ -1,5 +1,5 @@
 for ahfiuyh in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort(reverse=True)
     s = 0

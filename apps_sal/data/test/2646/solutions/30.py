@@ -1,5 +1,5 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[] for i in range(n)]
 for i in range(m):
     a = list(map(int, input().split()))
@@ -16,8 +16,8 @@ while len(x) > 0:
             ans[i] = a
             l[i] = False
 if l.count(True) == 0:
-    print("Yes")
+    print('Yes')
     for i in range(1, n):
         print(ans[i])
 else:
-    print("No")
+    print('No')

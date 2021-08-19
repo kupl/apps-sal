@@ -1,4 +1,5 @@
-def II(): return int(input())
+def II():
+    return int(input())
 
 
 n = II()

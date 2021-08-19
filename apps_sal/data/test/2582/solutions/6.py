@@ -12,13 +12,11 @@ def Count_Segment(a, n):
             while j >= 0 and a[j] < curr:
                 upto[a[j]] = curr
                 j -= 1
-
             j = i + 1
             while j < n and a[j] < curr:
                 if upto[curr - a[j]] == curr:
                     ans += 1
                 j += 1
-
     return ans
 
 

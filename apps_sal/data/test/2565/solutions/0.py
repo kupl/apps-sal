@@ -1,7 +1,6 @@
 for _ in range(int(input())):
-    a, b, c = list(map(int, input().split()))
-    x, y, z = list(map(int, input().split()))
-
+    (a, b, c) = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     temp = min(c, y)
     ans = 2 * temp
     c -= temp
@@ -12,7 +11,6 @@ for _ in range(int(input())):
     temp = min(c, x)
     c -= temp
     x -= temp
-
     temp = min(a, z)
     a -= temp
     z -= temp

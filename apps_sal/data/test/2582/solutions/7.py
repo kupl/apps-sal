@@ -4,7 +4,7 @@ dc = {a[i]: i for i in range(n)}
 stack = []
 mxr = [n] * (n + 1)
 mxl = [-1] * (n + 1)
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     if i == 0:
         stack.append(x)
         continue
@@ -13,7 +13,7 @@ for i, x in enumerate(a):
         mxr[y] = i
     stack.append(x)
 stack = []
-for i, x in enumerate(a[::-1]):
+for (i, x) in enumerate(a[::-1]):
     i = n - 1 - i
     if i == n - 1:
         stack.append(x)

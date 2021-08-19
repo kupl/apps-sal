@@ -22,5 +22,5 @@ for i in ' ' * int(input()):
             mxcount += 1
         else:
             count += i
-    ans = mxcount + (count // (mx - 1)) - 1
+    ans = mxcount + count // (mx - 1) - 1
     print(ans)

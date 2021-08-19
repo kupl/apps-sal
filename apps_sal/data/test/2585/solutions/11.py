@@ -1,5 +1,4 @@
 t = int(input())
-
 for T in range(t):
     n = int(input())
     if n % 2 == 0:

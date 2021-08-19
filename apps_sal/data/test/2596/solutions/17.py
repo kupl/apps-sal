@@ -1,9 +1,8 @@
-n, k, m, t = input().split()
-n, k, m, t = int(n), int(k), int(m), int(t)
-
+(n, k, m, t) = input().split()
+(n, k, m, t) = (int(n), int(k), int(m), int(t))
 for i in range(t):
-    what, pos = input().split()
-    what, pos = int(what), int(pos)
+    (what, pos) = input().split()
+    (what, pos) = (int(what), int(pos))
     if what == 0:
         if pos >= k:
             n = pos
@@ -14,5 +13,5 @@ for i in range(t):
         n += 1
         if pos <= k:
             k += 1
-    print(n, end=" ")
+    print(n, end=' ')
     print(k)

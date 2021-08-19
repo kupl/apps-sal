@@ -4,12 +4,12 @@ for _ in range(int(input())):
     for i in range(n):
         if a[i] != 1:
             if i % 2:
-                print("Second")
+                print('Second')
             else:
-                print("First")
+                print('First')
             break
     else:
         if n % 2:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')

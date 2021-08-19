@@ -9,6 +9,6 @@ for _ in range(int(input())):
         if l[i] != newList[i]:
             div = gcd(div, l[i])
     if div % m == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

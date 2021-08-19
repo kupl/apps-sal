@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     chars = sorted([c for c in s])
     if chars[k - 1] > chars[0]:

@@ -1,5 +1,5 @@
 def solve():
-    n, k, z = map(int, input().split())
+    (n, k, z) = map(int, input().split())
     lst = list(map(int, input().split()))
     maxsum = 0
     for zz in range(z + 1):

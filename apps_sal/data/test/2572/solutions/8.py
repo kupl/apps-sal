@@ -15,13 +15,13 @@ for you in range(t):
             num1 = l[i][j]
             lp.append(num1)
             num2 = l[n - i - 1][j]
-            if(n - 1 - i != i):
+            if n - 1 - i != i:
                 lp.append(num2)
             num3 = l[i][m - 1 - j]
-            if(m - 1 - j != j):
+            if m - 1 - j != j:
                 lp.append(num3)
             num4 = l[n - 1 - i][m - 1 - j]
-            if(n - 1 - i != i and m - 1 - j != j):
+            if n - 1 - i != i and m - 1 - j != j:
                 lp.append(num4)
             lp.sort()
             z = len(lp)

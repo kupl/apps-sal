@@ -4,5 +4,5 @@ def get():
 
 n = int(input())
 for i in range(n):
-    a, b = get()
+    (a, b) = get()
     print(9 * (a - 1) + b)

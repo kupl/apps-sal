@@ -1,11 +1,11 @@
-N, M = map(int, input().split())
-V = [[]for i in range(N)]
+(N, M) = map(int, input().split())
+V = [[] for i in range(N)]
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     V[a - 1].append(b - 1)
     V[b - 1].append(a - 1)
 print('Yes')
-p, q = 0, [0]
+(p, q) = (0, [0])
 seen = [0] * N
 d = [0] * N
 while len(q) != p:

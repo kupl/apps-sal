@@ -1,4 +1,5 @@
 class Solution:
+
     def maximalRectangle(self, matrix):
         """
         :type matrix: List[List[str]]
@@ -10,7 +11,6 @@ class Solution:
         n = len(matrix[0])
         ans = 0
         heights = [0] * (n + 1)
-
         for i in range(m):
             for j in range(n):
                 heights[j] = heights[j] + 1 if matrix[i][j] == '1' else 0

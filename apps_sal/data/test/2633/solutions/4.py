@@ -1,4 +1,5 @@
 class Solution:
+
     def calculateMinimumHP(self, dungeon):
         if not dungeon or not dungeon[0]:
             return 1
@@ -16,7 +17,4 @@ class Solution:
         if dp[0][0] <= 0:
             return 1
         return dp[0][0]
-        """
-         :type dungeon: List[List[int]]
-         :rtype: int
-         """
+        '\n         :type dungeon: List[List[int]]\n         :rtype: int\n         '

@@ -2,11 +2,10 @@ t = int(input())
 buf = []
 INF = 10 ** 18
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     base = n - k * (k + 1) // 2
     ans = INF
     l = k + 1
-
     if base >= 0 and base % l == 0:
         ini = base // l
         if ini <= 9 - k:
@@ -19,7 +18,6 @@ for _ in range(t):
                 tmp -= d
                 tmps += str(d)
             ans = min(ans, int(tmps[::-1]))
-
     for d in range(1, 16):
         for i in range(1, l):
             new_base = base + d * 9 * i
@@ -41,10 +39,7 @@ for _ in range(t):
                 tmp -= d
                 tmps += str(d)
             ans = min(ans, int(tmps[::-1]))
-
     if ans == INF:
         ans = -1
-
     buf.append(ans)
-
 print('\n'.join(map(str, buf)))

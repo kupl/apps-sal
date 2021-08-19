@@ -1,4 +1,5 @@
 class Solution:
+
     def canFinish(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -7,16 +8,13 @@ class Solution:
         """
         edges = {i: [] for i in range(numCourses)}
         degree = [0 for i in range(numCourses)]
-
-        for k, v in prerequisites:
+        for (k, v) in prerequisites:
             edges[v].append(k)
             degree[k] += 1
-
         q = []
         for i in range(numCourses):
             if degree[i] == 0:
                 q.append(i)
-
         count = 0
         while q:
             node = q.pop()

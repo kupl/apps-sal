@@ -1,14 +1,14 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = []
 h = []
-mod = 10**9
+mod = 10 ** 9
 mod += 7
 for i in range(n):
-    s = (input())
+    s = input()
     s = s.lower()
     hw = 0
     for i in range(m):
-        hw += ord(s[i]) * (10**(m - i))
+        hw += ord(s[i]) * 10 ** (m - i)
     h.append(hw % mod)
 h1 = [[] for i in range(n - m + 1)]
 for i in range(m):
@@ -17,14 +17,14 @@ for i in range(m):
     s = s.lower()
     aux = []
     for i in range(m):
-        hw += ord(s[i]) * (10**(m - i))
+        hw += ord(s[i]) * 10 ** (m - i)
     hw %= mod
     h1[0].append(hw)
     yy = 1
     for i in range(m, n):
-        hw -= (ord(s[i - m]) * (10**(m)))
+        hw -= ord(s[i - m]) * 10 ** m
         hw *= 10
-        hw += (ord(s[i]) * (10))
+        hw += ord(s[i]) * 10
         hw %= mod
         h1[yy].append(hw)
         yy += 1
@@ -41,7 +41,6 @@ for i in range(len(h1)):
                 y += 1
         else:
             x += 1
-
         if y == m:
             break
     if y == m:

@@ -19,4 +19,4 @@ for _ in range(t):
         else:
             print(od[op], end='')
             op += 1
-    print("")
+    print('')

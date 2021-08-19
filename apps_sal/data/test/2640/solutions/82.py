@@ -2,8 +2,10 @@ import numpy as np
 
 
 def main():
-    def printl(l): return [print(x) for x in l]
-    H, W = list(map(int, input().split()))
+
+    def printl(l):
+        return [print(x) for x in l]
+    (H, W) = list(map(int, input().split()))
     A = np.array([[1 if i == '.' else 0 for i in input()] for _ in range(H)])
     L = np.zeros((H, W), dtype=np.int)
     R = np.zeros((H, W), dtype=np.int)

@@ -3,11 +3,14 @@ import itertools as it
 import math as mt
 import bisect as bi
 import collections as cc
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 for tc in range(int(input())):
-    n, x = I()
+    (n, x) = I()
     a = I()
     b = I()
     a.sort()
@@ -17,9 +20,9 @@ for tc in range(int(input())):
         if a[i] + b[i] > x:
             tf = 0
     if tf:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     try:
         input()
     except:

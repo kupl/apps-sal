@@ -1,5 +1,4 @@
 from math import *
-
 for zz in range(int(input())):
     n = int(input())
     a = [int(i) for i in input().split()]
@@ -10,5 +9,4 @@ for zz in range(int(input())):
             if a[i - 1] < a[j - 1]:
                 dp[i] = max(dp[i], dp[j] + 1)
             j += i
-
     print(max(dp))

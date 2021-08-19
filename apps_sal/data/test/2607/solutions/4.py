@@ -24,4 +24,4 @@ for iTest in range(t):
             if l not in ns:
                 s[i] = l
                 break
-    print("".join(s))
+    print(''.join(s))

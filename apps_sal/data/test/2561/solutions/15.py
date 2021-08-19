@@ -6,4 +6,4 @@ for i in range(t):
         if a % 2 == 1:
             s += 1
         a = a // 2
-    print(2**s)
+    print(2 ** s)

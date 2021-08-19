@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     s = list(map(int, input().strip().split()))
-
     result = [1] * len(s)
     for i in range(len(s)):
         indeks = i + 1

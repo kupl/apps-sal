@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 prices = list(map(int, input().split()))
 st = list(map(int, input().split()))
 for i in range(k):

@@ -1,7 +1,7 @@
 import math
 t = int(input())
 for i in range(t):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     evencount = 0
     oddcount = 0
@@ -17,10 +17,9 @@ for i in range(t):
             print('Yes')
         else:
             print('No')
+    elif x < n:
+        print('Yes')
+    elif oddcount % 2 == 1:
+        print('Yes')
     else:
-        if x < n:
-            print('Yes')
-        elif oddcount % 2 == 1:
-            print('Yes')
-        else:
-            print('No')
+        print('No')

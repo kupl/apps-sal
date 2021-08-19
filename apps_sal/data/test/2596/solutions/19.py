@@ -1,8 +1,8 @@
-n, k, m, t = map(int, input().split())
+(n, k, m, t) = map(int, input().split())
 pos = k
 l = n
 for tt in range(t):
-    ty, val = map(int, input().split())
+    (ty, val) = map(int, input().split())
     if ty == 0:
         if val < pos:
             pos = pos - val

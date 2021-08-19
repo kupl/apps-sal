@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ones = [0] * ((n + m) // 2)
     for i in range(n):
         line = list(map(int, input().split()))

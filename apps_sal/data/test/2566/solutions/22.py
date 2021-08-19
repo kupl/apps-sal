@@ -14,6 +14,5 @@ for _ in range(int(input())):
             s += a1[j]
             if s == y:
                 ml = min(ml, j - i + 1)
-
     ans = 7 * x + ml
     print(ans)

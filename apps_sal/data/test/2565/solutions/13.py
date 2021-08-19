@@ -1,8 +1,7 @@
 t = int(input())
-
 for i in range(t):
-    x1, y1, z1 = list(map(int, input().split()))
-    x2, y2, z2 = list(map(int, input().split()))
+    (x1, y1, z1) = list(map(int, input().split()))
+    (x2, y2, z2) = list(map(int, input().split()))
     ans = 0
     a = min(z1, y2)
     z1 -= a

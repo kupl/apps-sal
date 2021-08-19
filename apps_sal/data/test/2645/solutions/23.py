@@ -9,4 +9,4 @@ def judge(mygp, yourgp):
 
 s = [x for x in input()]
 t = [['g', 'p'][x % 2] for x in range(len(s))]
-print(sum([judge(a, b) for a, b in zip(t, s)]))
+print(sum([judge(a, b) for (a, b) in zip(t, s)]))

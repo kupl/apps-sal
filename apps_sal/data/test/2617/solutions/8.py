@@ -1,8 +1,7 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
-    b, m = 1, 1
+    (b, m) = (1, 1)
     res = []
     while True:
         if 2 * b + m >= n:
@@ -14,4 +13,4 @@ for _ in range(t):
         m += b
     d = len(res)
     print(d)
-    print(" ".join(str(a) for a in res))
+    print(' '.join((str(a) for a in res)))

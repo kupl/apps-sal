@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     h = list(map(int, input().split()))
     b = False
     for i in range(n - 1):
@@ -9,6 +9,6 @@ for _ in range(t):
             b = True
             break
     if b:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

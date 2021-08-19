@@ -1,4 +1,5 @@
 class Solution:
+
     def grayCode(self, n):
         """
         :type n: int
@@ -6,9 +7,7 @@ class Solution:
         """
         if n == 0:
             return [0]
-
         q = [0, -1]
-
         for i in range(n):
             tag = 0
             while q[0] != -1:
@@ -18,7 +17,5 @@ class Solution:
                 tag = 1 - tag
             q.pop(0)
             q.append(-1)
-
         q.pop(-1)
-
         return q

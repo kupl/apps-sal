@@ -10,5 +10,5 @@ for nt in range(int(input())):
         group[x] += 1
     ans = 0
     for i in group:
-        ans += ((i) * (i - 1)) // 2
+        ans += i * (i - 1) // 2
     print(ans)

@@ -9,7 +9,7 @@ def solve():
         else:
             cur += 1
         if min_val > cur:
-            res += (i + 1)
+            res += i + 1
             min_val = cur
     print(res + len(s))
 

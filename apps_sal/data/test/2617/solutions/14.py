@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     n = int(input())
     dig = 0
-    while 2**dig - 1 < n:
+    while 2 ** dig - 1 < n:
         dig += 1
     print(dig - 1)
     D = dig - 1

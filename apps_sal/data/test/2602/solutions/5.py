@@ -1,13 +1,16 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 t = int(input())
 for _ in range(t):
-    a, b, n, m = map(int, input().split())
+    (a, b, n, m) = map(int, input().split())
     if a + b < n + m:
-        print("No")
+        print('No')
     elif m > min(a, b):
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

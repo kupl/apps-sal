@@ -13,8 +13,7 @@ for t in range(tests):
             print('Second')
         else:
             print('First')
+    elif count_one % 2 == 1:
+        print('First')
     else:
-        if count_one % 2 == 1:
-            print('First')
-        else:
-            print('Second')
+        print('Second')

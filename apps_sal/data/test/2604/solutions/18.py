@@ -8,7 +8,7 @@ for i in range(n):
     x = l[0]
     y = l[1]
     rd = l[2]
-    ds = (((abs(x)**2) + (abs(y)**2))**0.5)
+    ds = (abs(x) ** 2 + abs(y) ** 2) ** 0.5
     if ds - rd >= r - d and ds + rd <= r:
         ans += 1
 print(ans)

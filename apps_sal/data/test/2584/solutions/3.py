@@ -25,10 +25,9 @@ def solve(n, p, k, goods):
 
 
 for _ in range(T):
-    n, p, k = list(map(int, input().split()))
+    (n, p, k) = list(map(int, input().split()))
     goods = list(map(int, input().split()))
     goods.sort()
-
     ans = solve(n, p, k, goods)
     if goods[0] <= p and n >= 2:
         ans = max(ans, solve(n - 1, p - goods[0], k, goods[1:]) + 1)

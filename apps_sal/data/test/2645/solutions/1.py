@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,9 +9,7 @@ MOD = 1000000007
 
 def main():
     S = readline().strip()
-
     ans = len(S) // 2 - S.count('p')
-
     print(ans)
     return
 

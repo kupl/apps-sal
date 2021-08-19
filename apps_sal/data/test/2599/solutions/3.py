@@ -17,7 +17,7 @@ def subsolve(n, k, x):
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     u = k * (k + 1) // 2
     if n < u:
         print(-1)
@@ -41,7 +41,7 @@ def solve():
         tj = 10 ** j
         for i in range(10):
             w = subsolve(n, k, (x + (i - first) * tl) * tj)
-            if ans == -1 or w != -1 and w < ans:
+            if ans == -1 or (w != -1 and w < ans):
                 ans = w
     print(ans)
 

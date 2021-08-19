@@ -1,5 +1,5 @@
-l, r, x, y, k = map(int, input().split())
-low_ex, high_ex = x * k, y * k
+(l, r, x, y, k) = map(int, input().split())
+(low_ex, high_ex) = (x * k, y * k)
 if high_ex < l or low_ex > r:
     print('NO')
 else:
@@ -9,7 +9,7 @@ else:
     b = low // k
     ok = 0
     while a <= up:
-        if x <= b and b <= y and l <= a and a <= r:
+        if x <= b and b <= y and (l <= a) and (a <= r):
             ok = 1
         a += k
         b += 1

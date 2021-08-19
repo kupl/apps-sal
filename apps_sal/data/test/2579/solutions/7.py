@@ -3,7 +3,7 @@ def chop():
 
 
 f = False
-l, r, x, y, k = chop()
+(l, r, x, y, k) = chop()
 for i in range(x, y + 1):
     if i * k in range(l, r + 1):
         f = True

@@ -3,10 +3,10 @@ def main():
     a = [int(s) for s in input().split()]
     b = sorted(a)
     am = min(a)
-    for i, e in enumerate(a):
+    for (i, e) in enumerate(a):
         if e % am != 0 and b[i] != e:
-            return "NO"
-    return "YES"
+            return 'NO'
+    return 'YES'
 
 
 tests = int(input())

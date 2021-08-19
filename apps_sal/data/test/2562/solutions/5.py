@@ -7,7 +7,7 @@ for i in input().split(' '):
     num[i] += 1
 f = [0 for i in range(mx + 1)]
 p = [0 for i in range(mx + 1)]
-mod = 1e9 + 7
+mod = 1000000000.0 + 7
 p[0] = 1
 for i in range(1, mx + 1):
     p[i] = 2 * p[i - 1] % mod

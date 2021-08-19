@@ -3,8 +3,8 @@ for _ in range(int(input())):
     n = int(input())
     p2 = list(map(int, input().split()))
     p = sorted(p2, reverse=True)
-    x, a = list(map(int, input().split()))
-    y, b = list(map(int, input().split()))
+    (x, a) = list(map(int, input().split()))
+    (y, b) = list(map(int, input().split()))
     k = int(input())
     l = -1
     r = n + 1

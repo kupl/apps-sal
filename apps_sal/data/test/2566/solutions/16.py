@@ -5,7 +5,7 @@ for i in range(t):
     i = 1
     need = {}
     happy = sun = 0
-    answer = 10**100
+    answer = 10 ** 100
     for item in week:
         if item == 1:
             happy += 1
@@ -22,7 +22,7 @@ for i in range(t):
     i = happy
     for item in week:
         if item == 1:
-            counter = 8 - need[happy - i + 1] + ((k - i) // happy) * 7 + need[(k - i) % happy]
+            counter = 8 - need[happy - i + 1] + (k - i) // happy * 7 + need[(k - i) % happy]
             if (k - i) % happy == 0:
                 counter -= sun
             answer = min(answer, counter)

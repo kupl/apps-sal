@@ -22,7 +22,7 @@ def solve():
             else:
                 print('FastestFinger')
             return
-        if n == (n & -n):
+        if n == n & -n:
             print('FastestFinger')
         else:
             print('Ashishgup')

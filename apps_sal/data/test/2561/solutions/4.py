@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -16,9 +15,9 @@ def count_bits(x):
 
 
 def main():
-    t, = list(map(int, input().split(' ')))
+    (t,) = list(map(int, input().split(' ')))
     for _ in range(t):
-        a, = list(map(int, input().split(' ')))
+        (a,) = list(map(int, input().split(' ')))
         c = count_bits(a)
         ans = 1 << c
         print(ans)

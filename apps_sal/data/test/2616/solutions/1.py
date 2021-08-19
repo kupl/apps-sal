@@ -6,9 +6,9 @@ for nt in range(int(input())):
     x = a.count(1)
     if x == n:
         if n % 2:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')
         continue
     for i in range(n):
         if a[i] == 1:
@@ -21,6 +21,6 @@ for nt in range(int(input())):
     else:
         ans = 1
     if ans == 1:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

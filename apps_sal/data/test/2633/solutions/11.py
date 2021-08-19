@@ -1,4 +1,5 @@
 class Solution:
+
     def calculateMinimumHP(self, dungeon):
         """
         :type dungeon: List[List[int]]
@@ -17,8 +18,7 @@ class Solution:
                 elif j == n - 1:
                     ans = max(1, helper(i + 1, j) - dungeon[i + 1][j])
                 else:
-                    ans = min(max(1, helper(i, j + 1) - dungeon[i][j + 1]),
-                              max(1, helper(i + 1, j) - dungeon[i + 1][j]))
-                memo[(i, j)] = ans
-            return memo[(i, j)]
+                    ans = min(max(1, helper(i, j + 1) - dungeon[i][j + 1]), max(1, helper(i + 1, j) - dungeon[i + 1][j]))
+                memo[i, j] = ans
+            return memo[i, j]
         return max(1, helper(0, 0) - dungeon[0][0])

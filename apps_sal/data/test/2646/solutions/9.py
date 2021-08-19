@@ -5,20 +5,31 @@ import itertools
 import math
 import string
 import sys
-def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-def S(): return sys.stdin.readline().rstrip()
-def LS(): return list(sys.stdin.readline().rstrip().split())
+
+
+def I():
+    return int(sys.stdin.readline().rstrip())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+def S():
+    return sys.stdin.readline().rstrip()
+
+
+def LS():
+    return list(sys.stdin.readline().rstrip().split())
 
 
 def main():
-    n, m = LI()
+    (n, m) = LI()
     route = [None] + [[] for _ in range(n)]
     for _ in range(m):
-        a, b = LI()
+        (a, b) = LI()
         route[a].append(b)
         route[b].append(a)
-
     explored = {1}
     queue = collections.deque([1])
     ans = [None for _ in range(n + 1)]
@@ -29,8 +40,8 @@ def main():
                 ans[nbh] = nxt
                 queue.append(nbh)
                 explored.add(nbh)
-    print("Yes")
-    print(*ans[2:], sep="\n")
+    print('Yes')
+    print(*ans[2:], sep='\n')
 
 
 main()

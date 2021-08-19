@@ -1,10 +1,10 @@
 import sys
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 A = list(map(int, input().split()))
-Sign = [0] * (3 + 10**5)
+Sign = [0] * (3 + 10 ** 5)
 SX = [tuple(sys.stdin.readline().split()) for _ in range(Q)]
-mini = 3 + 10**5
-Sign = [0] * (3 + 10**5)
+mini = 3 + 10 ** 5
+Sign = [0] * (3 + 10 ** 5)
 keep = 1
 for (s, x) in SX[::-1]:
     x = int(x)
@@ -17,7 +17,7 @@ for (s, x) in SX[::-1]:
         mini = ax
     keep *= (2 * (s == '>') - 1) * (2 * (0 < x) - 1)
 Ans = [None] * N
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     s = Sign[abs(a)]
     if s == 0:
         s = (2 * (a > 0) - 1) * keep

@@ -13,30 +13,30 @@ def deli(x):
             ncd += 1
     if x != 1:
         ncd += 1
-    return cd, ncd
+    return (cd, ncd)
 
 
 def solvetest():
     n = int(input())
-    c, nc = deli(n)
+    (c, nc) = deli(n)
     if n == 1:
-        print("FastestFinger")
+        print('FastestFinger')
         return
     if n == 2:
-        print("Ashishgup")
+        print('Ashishgup')
         return
     if nc >= 2:
-        print("Ashishgup")
+        print('Ashishgup')
         return
     if nc == 0:
-        print("FastestFinger")
+        print('FastestFinger')
         return
     if c >= 2:
-        print("Ashishgup")
+        print('Ashishgup')
     elif c == 1:
-        print("FastestFinger")
+        print('FastestFinger')
     else:
-        print("Ashishgup")
+        print('Ashishgup')
 
 
 for i in range(int(input())):

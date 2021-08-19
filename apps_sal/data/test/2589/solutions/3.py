@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     m = sum(arr) % x
     if m != 0:
@@ -19,7 +19,6 @@ for _ in range(int(input())):
         ri = i
         if rs % x != 0:
             break
-
     if n - min(n - ri, li) == 0:
         print(-1)
     else:

@@ -1,7 +1,8 @@
 import sys
 
 
-class UF():
+class UF:
+
     def __init__(self, num):
         self.par = [-1] * num
         self.size = [1] * num
@@ -31,7 +32,7 @@ class UF():
 
 
 def solve():
-    N, M = map(int, sys.stdin.readline().split())
+    (N, M) = map(int, sys.stdin.readline().split())
     G = UF(N)
     for _ in range(M):
         L = list(map(int, sys.stdin.readline().split()))

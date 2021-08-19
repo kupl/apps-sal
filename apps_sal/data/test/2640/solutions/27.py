@@ -1,5 +1,5 @@
 import numpy as np
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 HL = list(range(H))
 WL = list(range(W))
 Gd = np.array([list(input()) for _ in HL])
@@ -8,7 +8,6 @@ L = np.zeros((H, W), dtype=np.int64)
 R = np.zeros((H, W), dtype=np.int64)
 U = np.zeros((H, W), dtype=np.int64)
 D = np.zeros((H, W), dtype=np.int64)
-
 for w in WL:
     R[:, w] = (R[:, w - 1] + 1) * Gd[:, w]
     L[:, -w - 1] = (L[:, -w] + 1) * Gd[:, -w - 1]

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ans = n // 2 * m
     if n % 2 == 1:
         ans += m // 2

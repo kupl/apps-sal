@@ -18,9 +18,9 @@ for _ in range(t):
             score -= 1
         else:
             score += 1
-        if (-1 * score - 1) >= 0:
-            if grid[(-1 * score) - 1] == 0:
-                grid[(-1 * score) - 1] = (i + 1)
+        if -1 * score - 1 >= 0:
+            if grid[-1 * score - 1] == 0:
+                grid[-1 * score - 1] = i + 1
     for i in range(-1 * maxmin, n):
         grid[i] = 0
     grid[n] = n

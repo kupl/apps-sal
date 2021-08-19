@@ -1,9 +1,9 @@
 from sys import stdin
 t = int(stdin.readline().strip())
 for Ta in range(t):
-    n, a, b = list(map(int, stdin.readline().strip().split()))
+    (n, a, b) = list(map(int, stdin.readline().strip().split()))
     s = stdin.readline().strip()
-    dp = [[10**15, 10**15] for i in range(n)]
+    dp = [[10 ** 15, 10 ** 15] for i in range(n)]
     dp[0][0] = a + b
     dp[0][1] = b + 2 * a
     for i in range(1, n):

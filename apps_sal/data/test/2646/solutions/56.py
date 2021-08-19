@@ -19,20 +19,18 @@ input = sys.stdin.readline
 
 
 def main():
-    N, M = map(int, input().split())
-
+    (N, M) = map(int, input().split())
     graph = [[] for _ in range(N)]
     for i in range(M):
-        A, B = map(lambda n: int(n) - 1, input().split())
+        (A, B) = map(lambda n: int(n) - 1, input().split())
         graph[A].append(B)
         graph[B].append(A)
-
     visited = bfs(graph, N, 0)[1:]
     if all(visited):
-        print("Yes")
-        print(*visited, sep="\n")
+        print('Yes')
+        print(*visited, sep='\n')
     else:
-        print("No")
+        print('No')
 
 
 main()

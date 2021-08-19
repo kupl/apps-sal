@@ -1,4 +1,4 @@
 t = int(input())
 for i in range(t):
     p = int(input())
-    print(2**bin(p).count('1'))
+    print(2 ** bin(p).count('1'))

@@ -1,11 +1,12 @@
 class Solution:
+
     def generateMatrix(self, n):
         """
         :type n: int
         :rtype: List[List[int]]
         """
         matrix = [[0 for i in range(n)] for i in range(n)]
-        start, end = 0, n - 1
+        (start, end) = (0, n - 1)
         count = 1
         for j in range(int(n / 2)):
             for i in range(start, end + 1):

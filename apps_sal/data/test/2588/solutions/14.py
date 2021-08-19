@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     s = input()
     arr = []
-    c = "0"
+    c = '0'
     k = 0
     for i in range(n):
         if s[i] == c:

@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, p, k = [int(x) for x in input().split()]
+    (n, p, k) = [int(x) for x in input().split()]
     alist = [int(x) for x in input().split()]
     alist.sort()
     blist = [alist[0], alist[1]]

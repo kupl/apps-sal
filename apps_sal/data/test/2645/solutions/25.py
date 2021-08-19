@@ -9,11 +9,9 @@ for i in range(n):
             charge -= 1
         else:
             charge += 1
+    elif charge > 0:
+        charge -= 1
     else:
-        if charge > 0:
-            charge -= 1
-        else:
-            score -= 1
-            charge += 1
-
+        score -= 1
+        charge += 1
 print(score)

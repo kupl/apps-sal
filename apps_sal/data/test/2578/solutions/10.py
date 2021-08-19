@@ -2,6 +2,7 @@ import sys
 
 
 class Node:
+
     def __init__(self, val):
         self.parent = self
         self.size = 1
@@ -9,7 +10,7 @@ class Node:
 
 
 def union(x, y):
-    xRoot, yRoot = find(x), find(y)
+    (xRoot, yRoot) = (find(x), find(y))
     if xRoot == yRoot:
         return
     if xRoot.rank > yRoot.rank:
@@ -30,10 +31,9 @@ def find(x):
     return x
 
 
-n, m = [int(item) for item in sys.stdin.readline().strip().split()]
+(n, m) = [int(item) for item in sys.stdin.readline().strip().split()]
 node = [Node(x) for x in range(n + 1)]
-groups = [[int(item) for item in sys.stdin.readline().strip().split()]
-          for _ in range(m)]
+groups = [[int(item) for item in sys.stdin.readline().strip().split()] for _ in range(m)]
 for g in range(m):
     group = groups[g]
     k = group[0]
@@ -41,8 +41,5 @@ for g in range(m):
         continue
     for i in range(2, k + 1):
         union(node[group[i]], node[group[i - 1]])
-
-
 ans = [find(node[x]).size for x in range(1, n + 1)]
-
-sys.stdout.write(' '.join(str(x) for x in ans) + '\n')
+sys.stdout.write(' '.join((str(x) for x in ans)) + '\n')

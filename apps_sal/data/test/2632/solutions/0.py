@@ -1,10 +1,11 @@
 class Solution:
+
     def minPathSum(self, grid):
         """
         :type grid: List[List[int]]
         :rtype: int
         """
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         dp = [0] + [float('inf')] * (n - 1)
         for i in range(m):
             dp[0] = dp[0] + grid[i][0]

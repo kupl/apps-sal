@@ -2,7 +2,7 @@ t = int(input())
 while t:
     t -= 1
     arr = list(map(int, input().split()))
-    a, b, c = sorted(arr, reverse=True)
+    (a, b, c) = sorted(arr, reverse=True)
     ans = 0
     if a:
         ans += 1

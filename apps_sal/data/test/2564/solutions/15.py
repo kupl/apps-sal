@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a, b, n = list(map(int, input().split()))
+    (a, b, n) = list(map(int, input().split()))
     t = 0
     while a <= n and b <= n:
         if a <= b:

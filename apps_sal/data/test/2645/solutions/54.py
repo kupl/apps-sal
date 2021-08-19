@@ -3,4 +3,4 @@ s = input()
 c = Counter(s)
 g = c['g']
 p = c['p']
-print(((g - p) // 2))
+print((g - p) // 2)

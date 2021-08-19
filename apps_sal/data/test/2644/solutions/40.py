@@ -3,7 +3,7 @@ import sys
 
 def main(N, P):
     I = [-1] * N
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         I[p] = i
     p = 0
     s = 0
@@ -33,10 +33,10 @@ def main(N, P):
 def __starting_point():
     input = sys.stdin.readline
     N = int(input())
-    *P, = [int(x) - 1 for x in input().split()]
+    (*P,) = [int(x) - 1 for x in input().split()]
     ans = main(N, P)
     if ans is None:
-        print((-1))
+        print(-1)
     else:
         for a in ans:
             print(a)

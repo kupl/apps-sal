@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(n)]
     k = [0] * (n + m - 1)
     c = [0] * (n + m - 1)

@@ -5,12 +5,12 @@ for _ in range(int(input())):
     b = a[:]
     b.sort()
     if b == a:
-        print("YES")
+        print('YES')
     else:
         for i in range(n):
             if a[i] != b[i]:
                 if a[i] % mi:
-                    print("NO")
+                    print('NO')
                     break
         else:
-            print("YES")
+            print('YES')

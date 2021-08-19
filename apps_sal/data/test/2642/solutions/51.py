@@ -1,12 +1,12 @@
 from collections import Counter
 import math
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 N = int(input())
 li = []
 zcnt = 0
-az, bz = 0, 0
+(az, bz) = (0, 0)
 for i in range(N):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     if A == 0 and B == 0:
         zcnt += 1
         continue
@@ -26,12 +26,12 @@ for i in range(N):
 c = Counter(li)
 dic = {}
 ans = (pow(2, az, MOD) + pow(2, bz, MOD) - 1 + MOD) % MOD
-for a, b in c.keys():
+for (a, b) in c.keys():
     if (a, b) in dic:
         continue
-    l, r = (-b, a), (b, -a)
+    (l, r) = ((-b, a), (b, -a))
     s = c.get(l, 0) + c.get(r, 0)
-    dic[l], dic[r] = 1, 1
-    res = (pow(2, c[(a, b)], MOD) + pow(2, s, MOD) - 1 + MOD) % MOD
-    ans = (ans * res) % MOD
+    (dic[l], dic[r]) = (1, 1)
+    res = (pow(2, c[a, b], MOD) + pow(2, s, MOD) - 1 + MOD) % MOD
+    ans = ans * res % MOD
 print((ans - 1 + zcnt) % MOD)

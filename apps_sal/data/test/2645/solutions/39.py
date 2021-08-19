@@ -2,8 +2,8 @@ s = input()
 g = 0
 p = 0
 for i in s:
-    if i == "g":
+    if i == 'g':
         g += 1
     else:
         p += 1
-print(((g - p) // 2))
+print((g - p) // 2)

@@ -17,7 +17,7 @@ while now < N:
             flg = False
             break
         P[X[now]] = True
-        A[X[now]], A[X[now] + 1] = A[X[now] + 1], A[X[now]]
+        (A[X[now]], A[X[now] + 1]) = (A[X[now] + 1], A[X[now]])
         X[A[X[now] + 1]] += 1
     else:
         now += 1

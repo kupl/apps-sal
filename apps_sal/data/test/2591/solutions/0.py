@@ -5,7 +5,7 @@ for yguagwu in range(t):
     b = []
     for i in range(n):
         if i % 2 == 0:
-            b.append(a[(-i // 2 - 1)])
+            b.append(a[-i // 2 - 1])
         else:
             b.append(a[i // 2])
     print(*b[::-1])
