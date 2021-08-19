@@ -7,15 +7,12 @@ ans = 0
 for i in range(n - 1):
     if len(let) == 1:
         flag = 1
-    t, s = map(str, input().split())
-    #print(t, s)
+    (t, s) = map(str, input().split())
     if t == '!':
         now = set(list(s))
         if flag == 1:
             ans += 1
         let = let.intersection(now)
-        # print(now)
-        # print(let)
     if t == '?':
         if flag == 1:
             ans += 1

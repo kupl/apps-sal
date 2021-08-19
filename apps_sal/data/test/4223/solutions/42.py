@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 def main():
     _ = int(input())
     S = input()
-
     ans = 0
-    res = ""
+    res = ''
     for s in S:
         if res == s:
             continue

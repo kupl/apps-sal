@@ -1,19 +1,24 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
 
 
-n, k = list(map(int, input().split()))
-M = 10**9 + 7
-# 約数列挙
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
+
+
+(n, k) = list(map(int, input().split()))
+M = 10 ** 9 + 7
 
 
 def fs(n):
     s = set()
-    for i in range(1, int(n**0.5) + 2):
+    for i in range(1, int(n ** 0.5) + 2):
         if n % i == 0:
             s.add(i)
             s.add(n // i)

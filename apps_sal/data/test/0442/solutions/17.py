@@ -20,8 +20,7 @@ def main():
             x += 1
             q = r - 1 - x - x * x
     if q <= 0:
-        print("NO")
-#    return output
+        print('NO')
 
 
 def __starting_point():

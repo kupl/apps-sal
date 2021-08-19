@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 try:
     while True:
-        n, m = list(map(int, input().split()))
+        (n, m) = list(map(int, input().split()))
         d = [[] for i in range(m)]
         for i in range(n):
-            name, region, score = input().split()
+            (name, region, score) = input().split()
             region = int(region) - 1
             score = int(score)
             d[region].append((score, name))
@@ -16,6 +14,5 @@ try:
                 print('?')
             else:
                 print(ls[0][1], ls[1][1])
-
 except EOFError:
     pass

@@ -6,7 +6,6 @@ Problem 596 A
 @author yamaton
 @date 2015-11-15
 """
-
 import itertools as it
 import functools
 import operator
@@ -26,22 +25,17 @@ def solve(pairs, n):
         else:
             return abs(a - c) * abs(b - d)
     elif n >= 3:
-        xmin = min(x for (x, _) in pairs)
-        xmax = max(x for (x, _) in pairs)
-        ymin = min(y for (_, y) in pairs)
-        ymax = max(y for (_, y) in pairs)
+        xmin = min((x for (x, _) in pairs))
+        xmax = max((x for (x, _) in pairs))
+        ymin = min((y for (_, y) in pairs))
+        ymax = max((y for (_, y) in pairs))
         return (xmax - xmin) * (ymax - ymin)
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():
     n = int(input())
-    pairs = [tuple(int(_c) for _c in input().strip().split()) for _ in range(n)]
+    pairs = [tuple((int(_c) for _c in input().strip().split())) for _ in range(n)]
     assert len(pairs[0]) == 2
-
     result = solve(pairs, n)
     print(result)
 
