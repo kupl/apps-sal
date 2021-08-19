@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -8,7 +7,6 @@ def dig(a):
     while i > 0:
         c = c + 1
         i = i // 10
-
     return c
 
 
@@ -25,6 +23,6 @@ for i in range(t):
     a = int(input())
     b = dig(a)
     if int(sums(a, b)) == a:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

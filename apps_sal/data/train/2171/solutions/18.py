@@ -1,4 +1,4 @@
-'''input
+"""input
 10
 2 1
 3 1
@@ -11,8 +11,7 @@
 10 5
 1 0 1 1 0 1 0 1 0 1
 1 0 1 0 0 1 1 1 0 1
-'''
-
+"""
 from sys import stdin, setrecursionlimit
 from collections import defaultdict
 setrecursionlimit(1500000)
@@ -37,7 +36,6 @@ def dfs(graph, visited, ans, original, goal, change, node, dfs_stack):
     while len(dfs_stack) > 0:
         node = dfs_stack.pop()
         visited[node] = True
-
         value = flip_me(original, change[node], node - 1)
         add = 0
         if goal[node - 1] == value:
@@ -45,7 +43,6 @@ def dfs(graph, visited, ans, original, goal, change, node, dfs_stack):
         else:
             add = 1
             ans[node] = True
-
         flag = 0
         for i in graph[node]:
             if visited[i] == False:
@@ -53,11 +50,9 @@ def dfs(graph, visited, ans, original, goal, change, node, dfs_stack):
                 for j in graph[i]:
                     if visited[j] == False:
                         change[j] += change[node] + add
-
                 dfs_stack.append(node)
                 dfs_stack.append(i)
                 break
-
         if flag == 0:
             pass
 
@@ -74,17 +69,14 @@ def calculate(graph, original, goal, n):
     return ans
 
 
-# main starts
 n = int(stdin.readline().strip())
 graph = defaultdict(list)
 for i in range(1, n + 1):
     graph[i]
-
 for _ in range(n - 1):
-    u, v = list(map(int, stdin.readline().split()))
+    (u, v) = list(map(int, stdin.readline().split()))
     graph[u].append(v)
     graph[v].append(u)
-
 original = list(map(int, stdin.readline().split()))
 goal = list(map(int, stdin.readline().split()))
 count = [0]

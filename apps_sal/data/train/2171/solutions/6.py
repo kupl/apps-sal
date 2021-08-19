@@ -1,5 +1,3 @@
-# 429A
-
 __author__ = 'artyom'
 
 
@@ -12,27 +10,14 @@ def read_int_ary():
 
 
 n = read_int()
-
 g = [[] for x in range(n + 1)]
 for i in range(n - 1):
-    u, v = read_int_ary()
+    (u, v) = read_int_ary()
     g[u].append(v)
     g[v].append(u)
-
 init = [0] + list(read_int_ary())
 goal = [0] + list(read_int_ary())
 s = []
-
-
-# def solve(graph, level, state, node, parent=-1):
-# t = level % 2
-# st = list(state)
-# if init[node] ^ st[t] == goal[node]:
-#     s.append(node)
-#     st[t] = 1 - st[t]
-#   for child in graph[node]:
-#     if child != parent:
-#       solve(graph, level + 1, st, child, node)
 
 
 def solve(graph, start):

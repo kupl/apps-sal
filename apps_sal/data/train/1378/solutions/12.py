@@ -1,5 +1,4 @@
-# cook your dish here
-a, n, k = list(map(int, input().split()))
+(a, n, k) = list(map(int, input().split()))
 L = [0] * k
 for i in range(k):
     L[i] = a % (n + 1)

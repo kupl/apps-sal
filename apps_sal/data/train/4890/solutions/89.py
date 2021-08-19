@@ -1,5 +1,4 @@
 def find_difference(a, b):
-    # Your code here!
     aa = a[0]
     ab = a[1]
     ac = a[2]

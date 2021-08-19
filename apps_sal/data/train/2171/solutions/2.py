@@ -1,14 +1,14 @@
 import sys
-def read(t=int): return list(map(t, sys.stdin.readline().split()))
-# import resource, sys
-# resource.setrlimit(resource.RLIMIT_STACK, (2**20,-1))
-# sys.setrecursionlimit(10**5+5)
 
 
-N, = read()
+def read(t=int):
+    return list(map(t, sys.stdin.readline().split()))
+
+
+(N,) = read()
 tree = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = read()
+    (a, b) = read()
     tree[a - 1].append(b - 1)
     tree[b - 1].append(a - 1)
 labels = read()
@@ -34,8 +34,6 @@ stack = [(0, -1, 0, 0, 0)]
 while stack:
     for item in dfs(*stack.pop()):
         stack.append(item)
-# dfs(0, -1, 0, 0, 0)
-
 print(len(res))
 for x in res:
     print(x + 1)

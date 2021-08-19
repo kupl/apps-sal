@@ -11,16 +11,14 @@ def isPrime(nm):
 U = list()
 num = 2
 for i in range(1000 + 1):
-    while(not isPrime(num)):
+    while not isPrime(num):
         num += 1
     U.append(num)
     num += 1
-# print(U)
 S = list()
 for i in range(1, len(U)):
     if isPrime(i + 1):
         S.append(U[i])
-# print(S)
 t = int(input())
 for i in range(t):
     sum = 0

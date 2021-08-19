@@ -1,4 +1,3 @@
-# cook your dish her
 for _ in range(int(input())):
     num = int(input())
     s = 0
@@ -7,8 +6,7 @@ for _ in range(int(input())):
         digit = temp % 10
         s += digit ** len(str(num))
         temp //= 10
-
     if num == s:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

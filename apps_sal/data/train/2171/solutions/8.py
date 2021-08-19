@@ -1,5 +1,3 @@
-# 429A
-
 __author__ = 'artyom'
 
 
@@ -12,13 +10,11 @@ def read_int_ary():
 
 
 n = read_int()
-
 g = [[] for x in range(n + 1)]
 for i in range(n - 1):
-    u, v = read_int_ary()
+    (u, v) = read_int_ary()
     g[u].append(v)
     g[v].append(u)
-
 init = [0] + list(read_int_ary())
 goal = [0] + list(read_int_ary())
 s = []
@@ -27,7 +23,7 @@ s = []
 def solve(graph, start):
     stack = [(start, -1, 0, [1, 1])]
     while stack:
-        node, parent, sign, st = stack.pop(-1)
+        (node, parent, sign, st) = stack.pop(-1)
         if init[node] ^ st[sign] == goal[node]:
             s.append(node)
             st = list(st)
