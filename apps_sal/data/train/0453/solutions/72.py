@@ -1,14 +1,12 @@
 class Solution:
-    def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        # dp[i][c][k]: i means the ith house, c means the cth color, k means k neighbor groups
-        dp = [[[math.inf for _ in range(n)] for _ in range(target + 1)] for _ in range(m)]
 
+    def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+        dp = [[[math.inf for _ in range(n)] for _ in range(target + 1)] for _ in range(m)]
         for c in range(1, n + 1):
             if houses[0] == c:
                 dp[0][1][c - 1] = 0
             elif not houses[0]:
                 dp[0][1][c - 1] = cost[0][c - 1]
-
         for i in range(1, m):
             for k in range(1, min(target, i + 1) + 1):
                 for c in range(1, n + 1):

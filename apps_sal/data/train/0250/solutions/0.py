@@ -3,6 +3,7 @@ from heapq import heappop, heappush
 
 
 class Solution:
+
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         N = len(quality)
         heap_quality = []
@@ -16,6 +17,6 @@ class Solution:
         for i in range(K, N):
             heappush(heap_quality, -quality[workers[i]])
             sum_quality += quality[workers[i]]
-            sum_quality += heappop(heap_quality)  # negative quality value
+            sum_quality += heappop(heap_quality)
             ans = min(ans, sum_quality * (wage[workers[i]] / quality[workers[i]]))
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def onTrack(self, neighbours, visited, m, target):
         return neighbours <= target and neighbours + m - visited >= target
 
@@ -11,7 +12,6 @@ class Solution:
         else:
             for color in range(1, n + 1):
                 dp[color] = {1: cost[0][color - 1]}
-        # Start iteration
         for each in range(1, m):
             new = {}
             if houses[each] != 0:

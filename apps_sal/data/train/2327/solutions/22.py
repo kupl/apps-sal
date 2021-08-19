@@ -1,15 +1,15 @@
 import sys
 input = sys.stdin.readline
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = []
 for i in range(N):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     a.append((l, r))
 a.sort(key=lambda x: x[0] - x[1])
-# print(a)
 
 
 class BIT:
+
     def __init__(self, n):
         self.n = n
         self.data = [0] * (n + 1)
@@ -38,7 +38,7 @@ class BIT:
         y = 0
         for i in range(self.n.bit_length(), -1, -1):
             k = x + (1 << i)
-            if k <= self.n and (y + self.data[k] < s):
+            if k <= self.n and y + self.data[k] < s:
                 y += self.data[k]
                 x += 1 << i
         return x + 1

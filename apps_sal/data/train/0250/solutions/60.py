@@ -1,14 +1,12 @@
 class Solution:
+
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         from fractions import Fraction
-        workers = sorted((Fraction(w, q), q, w) for q, w in zip(quality, wage))
-        # print(workers)
+        workers = sorted(((Fraction(w, q), q, w) for (q, w) in zip(quality, wage)))
         min_val = float('Inf')
-        # print(min_val)
-
         pool = []
         sum_q = 0
-        for r, q, w in workers:
+        for (r, q, w) in workers:
             heapq.heappush(pool, -q)
             sum_q += q
             if len(pool) > K:

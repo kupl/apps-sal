@@ -1,4 +1,3 @@
-# cook your dish here
 l1 = int(input())
 for i in range(l1):
     x = int(input())
