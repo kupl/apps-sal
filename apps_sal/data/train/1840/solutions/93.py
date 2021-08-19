@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def longestZigZag(self, root: TreeNode) -> int:
         nodes = self.bfs(root)
         self.dp = {node: [False, False] for node in nodes}
@@ -30,7 +25,6 @@ class Solution:
             return c
         if self.dp[node][p] != False:
             return self.dp[node][p]
-
         if p == 0:
             self.dp[node][p] = self.recur(p ^ 1, node.left, c + 1)
             return self.dp[node][p]
