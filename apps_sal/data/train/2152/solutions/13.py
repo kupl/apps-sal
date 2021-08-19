@@ -16,13 +16,12 @@ while current * current <= total:
     current = current + 1
 if total > 1:
     factors.append(total)
-
 ans = sum(a) * n * n
 for i in factors:
-    total, moves = 0, 0
+    (total, moves) = (0, 0)
     for j in a:
         total += j
-        moves += min(total % i, i - (total % i))
+        moves += min(total % i, i - total % i)
     ans = min(ans, moves)
 if len(factors) == 0:
     ans = -1

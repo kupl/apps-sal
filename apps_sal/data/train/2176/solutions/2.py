@@ -29,19 +29,17 @@ for i in range(n):
                 heapq.heappush(bottom, -a[i][1])
         elif (len(top) == 0 or a[i][1] < top[0]) and (len(bottom) == 0 or a[i][1] > -bottom[0]):
             last_n += 1
+    elif len(top) > 0 and a[i][1] == top[0]:
+        heapq.heappop(top)
+    elif len(bottom) > 0 and a[i][1] == -bottom[0]:
+        heapq.heappop(bottom)
     else:
-        if len(top) > 0 and a[i][1] == top[0]:
-            heapq.heappop(top)
-        elif len(bottom) > 0 and a[i][1] == -bottom[0]:
-            heapq.heappop(bottom)
-        else:
-            if len(top) > 0 and a[i][1] > top[0] or len(bottom) > 0 and a[i][1] < -bottom[0]:
-                invalid = True
-                break
-            buysell_n += 1
-
+        if len(top) > 0 and a[i][1] > top[0] or (len(bottom) > 0 and a[i][1] < -bottom[0]):
+            invalid = True
+            break
+        buysell_n += 1
 if invalid:
     ans = 0
 else:
-    ans = (pow(2, buysell_n, MOD) * (last_n + 1)) % MOD
+    ans = pow(2, buysell_n, MOD) * (last_n + 1) % MOD
 print(ans)

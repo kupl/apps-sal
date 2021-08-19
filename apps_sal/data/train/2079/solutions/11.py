@@ -4,7 +4,7 @@ s = {}
 o = []
 for i in range(q):
     r = list(map(int, input().split()))
-    a, b = r[1], r[2]
+    (a, b) = (r[1], r[2])
     if r[0] == 2:
         o.append(0)
     while a != b:

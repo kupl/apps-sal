@@ -14,13 +14,11 @@ def mints():
 
 
 def solve():
-    MOD = int(1e9 + 7)
+    MOD = int(1000000000.0 + 7)
     was = set()
     s = list(map(int, minp()))
     n = len(s)
-
-    first, last = None, None
-
+    (first, last) = (None, None)
     for i in range(n):
         v = s[i]
         if v == 1:
@@ -29,7 +27,6 @@ def solve():
     if first is None:
         print(n)
         return
-
     dp = [0] * n
     dp[first] = 1
     st = []
@@ -59,7 +56,7 @@ def solve():
             st.append(c + 1)
             stv.append(add)
         i = j
-    print((r * (first + 1) * (n - last)) % MOD)
+    print(r * (first + 1) * (n - last) % MOD)
 
 
 solve()

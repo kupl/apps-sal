@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
-    x, y = ax + bx + cx, ay + by + cy
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
+    (x, y) = (ax + bx + cx, ay + by + cy)
     if x > 0:
         x = x - x // 3 - 1
     else:

@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, k, p = 0, 0, defaultdict(int)
+(n, k, p) = (0, 0, defaultdict(int))
 input()
 for i in map(int, input().split()):
     p[i] += 1

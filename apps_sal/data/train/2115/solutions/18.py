@@ -26,7 +26,7 @@ def number(D, d, length, tem):
         return num
 
 
-n, d = [int(i) for i in input().split()]
+(n, d) = [int(i) for i in input().split()]
 numbers = [int(i) for i in input().split()]
 D = deque(numbers)
 leng = len(D)

@@ -1,5 +1,5 @@
 from bisect import bisect
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 b = sorted(map(int, input().split()))
 g = sorted(map(int, input().split()))
 if g[0] > b[-1]:

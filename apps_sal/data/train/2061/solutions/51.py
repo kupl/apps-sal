@@ -1,8 +1,8 @@
 T = int(input())
 for _ in range(T):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
-    xdis = (ax + bx + cx) - 1
-    ydis = (ay + by + cy) - 1
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
+    xdis = ax + bx + cx - 1
+    ydis = ay + by + cy - 1
     if xdis % 3 == 0:
         xneed = abs(xdis) * 2 // 3
     if xdis % 3 == 1:

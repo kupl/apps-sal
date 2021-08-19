@@ -1,6 +1,5 @@
 MAXN = 200100
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 lpos = [-1] * MAXN
 for i in range(n):
@@ -19,5 +18,4 @@ while i < n:
             cnts[a[i]] = 1
         i += 1
     need += i - start - max(cnts.values())
-
 print(need)

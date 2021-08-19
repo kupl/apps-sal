@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 for _ in range(k):
     a = list(map(int, input().split()))[1:] + [0]
     if a[0] != 1:

@@ -6,7 +6,7 @@ def lca(u, v, w):
     res = 0
     while u != v:
         if u < v:
-            v, u = u, v
+            (v, u) = (u, v)
         d[u] = d.get(u, 0) + w
         res += d[u]
         u = u // 2

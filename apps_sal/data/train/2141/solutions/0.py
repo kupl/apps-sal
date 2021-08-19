@@ -20,12 +20,12 @@ def parorder(Edge, p):
             visited.add(vf)
             par[vf] = vn
             ast(vf)
-    return par, order
+    return (par, order)
 
 
 def getcld(p):
     res = [[] for _ in range(len(p))]
-    for i, v in enumerate(p[1:], 1):
+    for (i, v) in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
@@ -35,7 +35,7 @@ root = None
 Edge = [[] for _ in range(N)]
 Cr = [None] * N
 for a in range(N):
-    b, c = list(map(int, readline().split()))
+    (b, c) = list(map(int, readline().split()))
     b -= 1
     if b == -1:
         root = a
@@ -43,16 +43,12 @@ for a in range(N):
         Edge[a].append(b)
         Edge[b].append(a)
     Cr[a] = c
-
-P, L = parorder(Edge, root)
-
+(P, L) = parorder(Edge, root)
 dp = [0] * N
-
 for l in L[:0:-1]:
     p = P[l]
     dp[p] += 1 + dp[l]
-
-if any(d < c for d, c in zip(dp, Cr)):
+if any((d < c for (d, c) in zip(dp, Cr))):
     print('NO')
 else:
     print('YES')

@@ -2,7 +2,7 @@ from itertools import permutations
 
 
 def main():
-    n, k = map(int, input().strip().split())
+    (n, k) = map(int, input().strip().split())
     a = b = k // 2 + 1
     delta = (k & 1) * 2 - 1
     res = []

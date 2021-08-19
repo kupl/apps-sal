@@ -1,8 +1,8 @@
 def main():
-    n, l, r, Ql, Qr = list(map(int, input().split()))
+    (n, l, r, Ql, Qr) = list(map(int, input().split()))
     ww = list(map(int, input().split()))
     work = sum(ww) * r + (n - 1) * Qr
-    res, penalty = [work], Qr * 2
+    (res, penalty) = ([work], Qr * 2)
     l -= r
     for w in ww[:(n - 1) // 2]:
         work += l * w - penalty

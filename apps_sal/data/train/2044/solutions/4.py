@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 n -= 1
 val = n // k
 div = n % k
@@ -16,7 +16,7 @@ for a in range(k):
         i += 1
     i += 1
 j = i - 1
-while(div):
+while div:
     print(j, i)
     i += 1
     j -= val

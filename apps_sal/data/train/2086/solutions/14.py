@@ -1,5 +1,5 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t_deq = deque(list(map(int, input().split())))
 t_quer = [int(input()) for x in range(m)]
 a = max(t_deq)

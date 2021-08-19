@@ -17,7 +17,7 @@ def union_sets(a, b):
     b = find_set(b)
     if a != b:
         if size[b] > size[a]:
-            a, b = b, a
+            (a, b) = (b, a)
         parent[b] = a
         size[a] += size[b]
         anses[a] += anses[b]
@@ -36,9 +36,9 @@ for j in range(len(B) - 1, 0, -1):
     j = B[j] - 1
     make_set(j)
     per = anses[j]
-    if (j + 1) in parent:
+    if j + 1 in parent:
         per = union_sets(j, j + 1)
-    if (j - 1) in parent:
+    if j - 1 in parent:
         per = union_sets(j, j - 1)
     ans = max(ans, per)
     answer.append(ans)

@@ -1,5 +1,5 @@
 def recursive_dfs(graph, start, path=[]):
-    '''recursive depth first search from start'''
+    """recursive depth first search from start"""
     path = path + [start]
     for node in graph[start]:
         if not node in path:
@@ -17,7 +17,7 @@ vertices = []
 each = {}
 adj = {}
 num0 = 0
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 for i in range(a):
     x = list(map(int, input().split(' ')))
     adj[i] = []
@@ -27,12 +27,10 @@ for i in range(a):
         x = x[1:]
         each[i] = x
         vertices.append(i)
-
         for j in vertices:
             if connected(each[j], each[i]):
                 adj[j].append(i)
                 adj[i].append(j)
-
 marked = [False] * a
 num = 0
 for i in vertices:
@@ -40,7 +38,6 @@ for i in vertices:
         for j in recursive_dfs(adj, i):
             marked[j] = True
         num += 1
-
 if num == 0:
     print(num0)
 else:

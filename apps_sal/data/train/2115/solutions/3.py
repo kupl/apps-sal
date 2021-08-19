@@ -1,4 +1,4 @@
-n, d = (int(x) for x in input().split())
+(n, d) = (int(x) for x in input().split())
 x = [int(x) for x in input().split()]
 l = 0
 r = 0

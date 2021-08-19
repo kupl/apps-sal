@@ -1,5 +1,4 @@
 s = input()
-
 a = 0
 l = len(s)
 for i in range(l):
@@ -12,7 +11,7 @@ for i in range(l):
         if m + k < 0:
             break
         if k > m:
-            m, k = k, m
+            (m, k) = (k, m)
         if m == k:
             a = a + 1
 print(a)

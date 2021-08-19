@@ -1,6 +1,6 @@
 import sys
 readline = sys.stdin.readline
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 S = readline().strip().split('1')
 if len(S) == 1:
     print(len(S[0]))

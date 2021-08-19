@@ -1,18 +1,18 @@
 def main():
-    n, a, b, t = list(map(int, input().split()))
+    (n, a, b, t) = list(map(int, input().split()))
     a1 = a + 1
     b += a1
-    l, res = [b if c == "w" else a1 for c in input()], []
+    (l, res) = ([b if c == 'w' else a1 for c in input()], [])
     l[0] = x = l[0] - a
     if t <= x:
         print(int(t == x))
         return
     f = res.append
-    for dr in 0, 1:
+    for dr in (0, 1):
         if dr:
             l[1:] = l[-1:-n:-1]
         tot = t
-        for hi, x in enumerate(l):
+        for (hi, x) in enumerate(l):
             tot -= x
             if tot < 0:
                 break

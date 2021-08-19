@@ -1,6 +1,6 @@
-n, l, r, Ql, Qr = map(int, input().split())
-s, v = [0] * (n + 1), 2 * 10 ** 9
-for i, wi in enumerate(map(int, input().split())):
+(n, l, r, Ql, Qr) = map(int, input().split())
+(s, v) = ([0] * (n + 1), 2 * 10 ** 9)
+for (i, wi) in enumerate(map(int, input().split())):
     s[i + 1] = s[i] + wi
 for lc in range(0, n + 1):
     rc = n - lc

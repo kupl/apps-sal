@@ -13,7 +13,7 @@ for i in range(2, m + 1):
         continue
     c = 0
     for j in range(m):
-        wg = (j // i) * i + i // 2
+        wg = j // i * i + i // 2
         if j != wg:
             preans += abs(b[wg] - b[j])
     ans = min(ans, preans)

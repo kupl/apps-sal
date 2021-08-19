@@ -2,13 +2,13 @@ X = [[(0, 0, 1), (1, 0, 1), (0, 1, 2), (1, 0, 2), (1, 1, 2), (0, 0, 3), (0, 1, 3
 A = [[(0, 0, 0)], [(0, 0, 1), (1, 0, 1), (0, 1, 2), (1, 0, 2), (1, 1, 2), (0, 0, 3), (0, 1, 3)], [(0, 0, 2), (-1, 0, 3), (-1, 1, 3), (-1, 0, 0), (1, 1, 3), (1, 0, 0), (-1, 1, 3), (-1, 1, 0), (-1, 0, 0), (0, 1, 1), (1, 0, 3), (1, -1, 0), (0, -1, 0), (1, -1, 1), (1, 1, 3), (1, 0, 0), (0, 1, 0), (1, 1, 1), (0, -1, 0), (0, -1, 1), (1, -1, 1), (0, 0, 2), (0, 1, 0), (1, 1, 1)]]
 T = int(input())
 for _ in range(T):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
     sx = ax + bx + cx
     sy = ay + by + cy
-    sx3, sy3 = sx % 3, sy % 3
+    (sx3, sy3) = (sx % 3, sy % 3)
     tp = [0, 3, 1, 2][(sx3 - 1) * 2 + (sy3 - 1)]
-    x, y = (sx + 1) // 3, (sy + 1) // 3
-    x0, y0, tp0 = 0, 0, 0
+    (x, y) = ((sx + 1) // 3, (sy + 1) // 3)
+    (x0, y0, tp0) = (0, 0, 0)
     if (x, y, tp) == (x0, y0, tp0):
         print(0)
         continue
@@ -17,19 +17,18 @@ for _ in range(T):
         continue
     B = [[(x, y, tp)], [], []]
     for i in range(2):
-        for x, y, tp in B[i]:
-            for dx, dy, ntp in X[tp]:
+        for (x, y, tp) in B[i]:
+            for (dx, dy, ntp) in X[tp]:
                 B[i + 1].append((x + dx, y + dy, ntp))
-
     mi = 10 ** 30
     for i in range(3):
-        for x1, y1, t1 in A[i]:
+        for (x1, y1, t1) in A[i]:
             for j in range(3):
-                for x2, y2, t2 in B[j]:
+                for (x2, y2, t2) in B[j]:
                     if t1 == t2:
                         d = max(abs(x1 - x2), abs(y1 - y2)) * 2 + i + j
                         p = (x1 - x2) * (y1 - y2)
-                        if (p >= 0 and (t1 % 2)) or (p <= 0 and (t1 % 2 == 0)):
+                        if p >= 0 and t1 % 2 or (p <= 0 and t1 % 2 == 0):
                             if d < mi:
                                 mi = d
     print(mi)

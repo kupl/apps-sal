@@ -12,9 +12,7 @@ def expmod(a, n, m):
         return temp * temp % m
 
 
-n, p, k = list(map(int, input().split()))
-
-
+(n, p, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 holes = {}
 res = 0
@@ -25,5 +23,4 @@ for i in range(0, n):
         holes[temp] += 1
     else:
         holes[temp] = 1
-
 print(int(res))

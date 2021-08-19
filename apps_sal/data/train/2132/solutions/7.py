@@ -11,19 +11,19 @@ def factorial(n, j):
     return j
 
 
-l1 = [0] * (200009)
+l1 = [0] * 200009
 y = factorial(200008, l1)
 inf = 998244353
 n = int(input())
-l = [0] * (200009)
+l = [0] * 200009
 x = 1
 for i in range(n - 1):
-    u, v = input().split()
-    u, v = [int(u), int(v)]
+    (u, v) = input().split()
+    (u, v) = [int(u), int(v)]
     l[u] += 1
     l[v] += 1
 for i in range(len(l)):
     if l[i] > 0:
         x *= y[l[i]]
         x %= inf
-print((n * x) % inf)
+print(n * x % inf)

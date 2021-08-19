@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 n = int(input())
 xs = list(map(int, input().split()))
 count = 0

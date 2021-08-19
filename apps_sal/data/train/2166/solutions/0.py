@@ -1,8 +1,9 @@
-def f(): return list(map(int, input().split()))[1:]
+def f():
+    return list(map(int, input().split()))[1:]
 
 
 n = int(input())
-s, p, q = [], [], []
+(s, p, q) = ([], [], [])
 for x in [0, 1]:
     r = f()
     s.append(r)
@@ -11,7 +12,7 @@ for x in [0, 1]:
     p.append(t)
     q.append((x, 0))
 while q:
-    x, i = q.pop()
+    (x, i) = q.pop()
     y = 1 - x
     for d in s[y]:
         j = (i - d) % n

@@ -1,5 +1,4 @@
 3
-
 names = input().split()
 n = int(input())
 for i in range(n):
@@ -9,5 +8,4 @@ for i in range(n):
         names[0] = sep[1]
     if names[1] == sep[0]:
         names[1] = sep[1]
-
 print(' '.join(names))

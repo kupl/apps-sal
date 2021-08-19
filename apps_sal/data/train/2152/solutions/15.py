@@ -19,7 +19,6 @@ def prime_factors(n):
             i += 1
     if n > 1:
         factors.append(n)
-
     return factors
 
 
@@ -28,8 +27,7 @@ def f(xs):
     s = cumsum[-1]
     if s == 1:
         return -1
-
-    return min(calc_cost(cumsum, f) for f in prime_factors(s))
+    return min((calc_cost(cumsum, f) for f in prime_factors(s)))
 
 
 def pp(input):
@@ -38,42 +36,13 @@ def pp(input):
     print(f(xs))
 
 
-if "paalto" in os.getcwd():
+if 'paalto' in os.getcwd():
     from string_source import string_source
-
-    pp(
-        string_source(
-            """10
-3 3 3 5 6 9 3 1 7 3"""
-        )
-    )
-
-    pp(
-        string_source(
-            """5
-    3 10 2 1 5"""
-        )
-    )
-
-    s1 = string_source(
-        """3
-4 8 5"""
-    )
+    pp(string_source('10\n3 3 3 5 6 9 3 1 7 3'))
+    pp(string_source('5\n    3 10 2 1 5'))
+    s1 = string_source('3\n4 8 5')
     pp(s1)
-
-    pp(
-        string_source(
-            """4
-0 5 15 10"""
-        )
-    )
-
-    pp(
-        string_source(
-            """1
-1"""
-        )
-    )
-
+    pp(string_source('4\n0 5 15 10'))
+    pp(string_source('1\n1'))
 else:
     pp(sys.stdin.readline)

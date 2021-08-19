@@ -6,7 +6,7 @@ visited = [False] * (n + 1)
 cnt = 0
 while cnt < n:
     for i in range(1, n + 1):
-        if ll[i][0] == 0 and not visited[i]:
+        if ll[i][0] == 0 and (not visited[i]):
             head = i
             visited[head] = True
             cnt += 1

@@ -1,6 +1,6 @@
 n = int(input())
 prizes = [1 for i in range(n)]
-for j in range(int(n**(1 / 2))):
+for j in range(int(n ** (1 / 2))):
     if prizes[j] == 1:
         for i in range(2 * j + 2, n, j + 2):
             prizes[i] = 2

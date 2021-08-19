@@ -9,6 +9,6 @@ ans = 1
 acum = 0
 for i in range(s):
     x = int(input())
-    ans = (ans * dp[acum + x - 1][x - 1]) % MOD
+    ans = ans * dp[acum + x - 1][x - 1] % MOD
     acum += x
 print(ans)

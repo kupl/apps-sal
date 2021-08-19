@@ -1,5 +1,5 @@
 def cows(lst):
-    k1, k2 = 0, 0
+    (k1, k2) = (0, 0)
     for i in range(len(lst)):
         if lst[i] == 1:
             k1 += 1

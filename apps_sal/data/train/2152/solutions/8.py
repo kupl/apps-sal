@@ -7,8 +7,7 @@ def f(n):
 def cal(a, k):
     ans = 0
     cur = 0
-
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if x == 0:
             ans += min(cur, k - cur)
         else:
@@ -22,7 +21,6 @@ def uoc(x):
     while i * i <= x:
         if x % i == 0:
             arr.append(i)
-
             if i * i != x:
                 arr.append(x // i)
         i += 1
@@ -32,22 +30,19 @@ def uoc(x):
 n = int(input())
 a = list(map(int, input().split()))
 min_ = float('inf')
-
 for u in uoc(sum(a)):
     cur = 0
     l = None
     s = 0
-
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if x == 1:
             cur += 1
             if l == None:
                 l = i
             if cur == u:
                 s += cal(a[l:i + 1], u)
-                cur, l = 0, None
+                (cur, l) = (0, None)
     min_ = min(min_, s)
-
 if min_ < float('inf'):
     print(min_)
 else:

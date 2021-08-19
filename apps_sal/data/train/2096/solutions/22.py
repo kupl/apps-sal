@@ -1,13 +1,11 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 sorted_a = sorted(a)
 d = {}
 for i in range(len(a)):
     d[sorted_a[i]] = i
 for i in range(len(a)):
     a[i] = d[a[i]]
-
 res = []
 done = [False] * n
 for i in a:
@@ -21,7 +19,6 @@ for i in a:
         done[next_item] = True
         next_item = a[next_item]
     res.append(curr_subseq)
-
 print(len(res))
 for i in res:
     curr = [str(j + 1) for j in list(i)]

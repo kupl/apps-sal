@@ -3,7 +3,7 @@ def main():
     l = [0] * 1000020
     for w in map(int, input().split()):
         l[w] += 1
-    for w, x in enumerate(l):
+    for (w, x) in enumerate(l):
         if x:
             l[w] = x & 1
             while x:

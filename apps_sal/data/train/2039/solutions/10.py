@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(i) for i in input().split()]
 L = -1
 R = m
@@ -15,11 +15,10 @@ while L < R - 1:
             else:
                 isok = False
                 break
+        elif el + mid - m >= last:
+            continue
         else:
-            if el + mid - m >= last:
-                continue
-            else:
-                last = el
+            last = el
     if isok:
         R = mid
     else:

@@ -7,7 +7,7 @@ def solve(n, k, A):
         print('No')
         return
     target = sum(A) // k
-    ans, elems, sm = [], 0, 0
+    (ans, elems, sm) = ([], 0, 0)
     for num in A:
         sm += num
         elems += 1
@@ -16,11 +16,11 @@ def solve(n, k, A):
             return
         if sm == target:
             ans.append(elems)
-            elems, sm = 0, 0
+            (elems, sm) = (0, 0)
     print('Yes')
     print(' '.join(map(str, ans)))
 
 
-n, k = read()
+(n, k) = read()
 A = read()
 solve(n, k, A)

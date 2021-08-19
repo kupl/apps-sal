@@ -10,13 +10,11 @@ def prepare(n, MOD):
     for m in range(n, 1, -1):
         inv = inv * m % MOD
         invs[m - 1] = inv
-
-    return factorials, invs
+    return (factorials, invs)
 
 
 def solve(n, a, b, c, d, MOD):
-    facts, invs = prepare(n, MOD)
-
+    (facts, invs) = prepare(n, MOD)
     pre = {}
     for i in range(a, b + 1):
         iv = invs[i]
@@ -24,7 +22,6 @@ def solve(n, a, b, c, d, MOD):
             if i * k > n:
                 break
             pre[i, k] = pow(iv, k, MOD) * invs[k] % MOD
-
     dp = [0] * (n + 1)
     dp[n] = 1
     for i in range(a, b + 1):
@@ -39,6 +36,6 @@ def solve(n, a, b, c, d, MOD):
     return dp[0] * facts[n] % MOD
 
 
-n, a, b, c, d = list(map(int, input().split()))
+(n, a, b, c, d) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-print((solve(n, a, b, c, d, MOD)))
+print(solve(n, a, b, c, d, MOD))

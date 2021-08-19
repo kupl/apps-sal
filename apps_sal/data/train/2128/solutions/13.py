@@ -1,9 +1,7 @@
 n = input()
 a = list(map(int, input().split(' ')))
-
 n0 = a.count(0)
 n1 = a.count(1)
-
 res = list()
 if n0 < n1:
     n1_cnt = 0
@@ -19,5 +17,4 @@ else:
             n0_cnt += 1
         else:
             res.append(n0_cnt)
-
 print(sum(res))

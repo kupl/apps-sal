@@ -8,7 +8,6 @@ for i in a:
 for i in b:
     if i == '1':
         cob += 1
-
 if coa + (coa & 1) >= cob:
     print('YES')
 else:

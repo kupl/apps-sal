@@ -1,5 +1,5 @@
 def __starting_point():
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
     i = n // 2

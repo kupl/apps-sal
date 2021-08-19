@@ -1,5 +1,5 @@
 n = int(input())
-l = [0] * (10**6 + 100)
+l = [0] * (10 ** 6 + 100)
 for i in map(int, input().split()):
     l[i] += 1
 cur = ans = 0

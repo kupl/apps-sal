@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         ref = a * b
         s = int(ref ** 0.5)
         ans = 2 * s - 1

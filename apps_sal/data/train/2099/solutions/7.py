@@ -1,12 +1,10 @@
 maxn = 100000 + 10
 ans = [0 for i in range(maxn)]
 vis = [0 for i in range(maxn)]
-
 s = input()
 arr = s.split()
 n = int(arr[0])
 k = int(arr[1])
-
 ans[0] = 1
 cnt = k
 for i in range(1, k + 1):

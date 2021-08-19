@@ -1,9 +1,9 @@
-n, c, d = list(map(int, input().split()))
+(n, c, d) = list(map(int, input().split()))
 a = []
 inf = 10 ** 10
 for i in range(n):
     a.append(input().split())
-    a[i][0], a[i][1] = int(a[i][0]), int(a[i][1])
+    (a[i][0], a[i][1]) = (int(a[i][0]), int(a[i][1]))
 
 
 def tr(r, s, have):
@@ -31,7 +31,7 @@ ans = 0
 cmx = 0
 dmx = 0
 for i in range(n):
-    if a[i][2] == "C" and a[i][1] <= c:
+    if a[i][2] == 'C' and a[i][1] <= c:
         cmx = max(cmx, a[i][0])
     elif a[i][1] <= d:
         dmx = max(dmx, a[i][0])
@@ -39,16 +39,16 @@ if cmx > 0 and dmx > 0:
     ans = max(ans, cmx + dmx)
 dm = []
 for i in range(len(a)):
-    if a[i][2] == "C":
+    if a[i][2] == 'C':
         dm.append((a[i][1], a[i][0]))
 dm.sort()
-ans = max(ans, tr(dm, "C", c))
+ans = max(ans, tr(dm, 'C', c))
 dm = []
 for i in range(len(a)):
-    if a[i][2] == "D":
+    if a[i][2] == 'D':
         dm.append((a[i][1], a[i][0]))
 dm.sort()
-ans = max(ans, tr(dm, "D", d))
+ans = max(ans, tr(dm, 'D', d))
 if ans == -inf:
     print(0)
 else:

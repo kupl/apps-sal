@@ -1,10 +1,10 @@
 def main():
-    l, base, res, le, tot = [0] * 200001, [0] * 200001, [], 1, 0
+    (l, base, res, le, tot) = ([0] * 200001, [0] * 200001, [], 1, 0)
     for _ in range(int(input())):
         s = input()
         c = s[0]
         if c == '1':
-            a, x = list(map(int, s[2:].split()))
+            (a, x) = list(map(int, s[2:].split()))
             base[a] += x
             tot += a * x
         elif c == '2':

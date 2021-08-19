@@ -1,28 +1,28 @@
 def read_data():
     n = int(input())
     hs = list(map(int, input().split()))
-    return n, hs
+    return (n, hs)
 
 
 def solve(n, hs):
     left = get_left_index(n, hs)
     right = get_right_index(n, hs)
     vals = [[] for i in range(n)]
-    for h, l, r in zip(hs, left, right):
+    for (h, l, r) in zip(hs, left, right):
         vals[r - l - 2].append(h)
     min_hs = []
-    min_h = - float('inf')
+    min_h = -float('inf')
     for val in vals[::-1]:
         for v in val:
             min_h = max(min_h, v)
         min_hs.append(min_h)
-    print(* min_hs[::-1])
+    print(*min_hs[::-1])
 
 
 def get_left_index(n, hs):
     left = []
     stack = []
-    for i, h in enumerate(hs):
+    for (i, h) in enumerate(hs):
         while stack and hs[stack[-1]] >= h:
             del stack[-1]
         if stack:
@@ -42,5 +42,5 @@ def get_right_index(n, hs):
     return right
 
 
-n, hs = read_data()
+(n, hs) = read_data()
 solve(n, hs)

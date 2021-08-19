@@ -3,7 +3,7 @@ def prime(n):
     t = [1] * (n + 1)
     for i in range(3, m):
         if t[i]:
-            t[i * i:: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
+            t[i * i::2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
     return [2] + [i for i in range(3, n + 1, 2) if t[i]]
 
 
@@ -25,12 +25,12 @@ def g(n):
 
 
 def f(n):
-    a, b = n, n + 1
+    (a, b) = (n, n + 1)
     while g(a):
         a -= 1
     while g(b):
         b += 1
-    p, q = (b - 2) * a + 2 * (n - b + 1), 2 * a * b
+    (p, q) = ((b - 2) * a + 2 * (n - b + 1), 2 * a * b)
     d = gcd(p, q)
     print(str(p // d) + '/' + str(q // d))
 

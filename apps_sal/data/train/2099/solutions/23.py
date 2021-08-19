@@ -1,4 +1,4 @@
-n, k = map(int, input().split(' '))
+(n, k) = map(int, input().split(' '))
 o = n - k
 print(1, end=' ')
 for i in range(2, o + 1):

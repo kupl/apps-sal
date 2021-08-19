@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 for i in range(k):
     x = input().split(' ')
     if x[1] == '1':

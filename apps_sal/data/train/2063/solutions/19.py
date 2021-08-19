@@ -1,7 +1,5 @@
 3.4
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 arr = [[] for i in range(n)]
 used = [0 for i in range(n)]
 ans = 0
@@ -11,7 +9,7 @@ def dfs(vertex):
     used[vertex] = 1
     langs = arr[vertex]
     for lang in langs:
-        for ind, next_vertex in enumerate(arr):
+        for (ind, next_vertex) in enumerate(arr):
             if lang in next_vertex and used[ind] == 0:
                 dfs(ind)
 

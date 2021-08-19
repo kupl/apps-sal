@@ -1,7 +1,7 @@
 n = int(input())
 ans = ''
 while n > 0:
-    p, q, b = map(int, input().split(' '))
+    (p, q, b) = map(int, input().split(' '))
     for i in range(6):
         b = b * b % q
     if b * p % q == 0:

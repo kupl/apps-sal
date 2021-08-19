@@ -3,14 +3,12 @@ airp = input()
 dep = []
 arr = []
 for i in range(n):
-    t = input().split("->")
+    t = input().split('->')
     dep.append(t[0])
     arr.append(t[1])
-
 if n % 2 == 1:
-    print("contest")
+    print('contest')
+elif dep.count(airp) == arr.count(airp):
+    print('home')
 else:
-    if dep.count(airp) == arr.count(airp):
-        print("home")
-    else:
-        print("contest")
+    print('contest')

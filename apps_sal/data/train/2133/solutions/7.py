@@ -8,7 +8,7 @@ for i in range(n):
 for i in range(7):
     for j in range(n):
         arr_ans.append(arr_slot[j][i])
-    ans = arr_ans.count("1")
+    ans = arr_ans.count('1')
     if ans > ans1:
         ans1 = ans
         ans = 0

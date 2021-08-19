@@ -1,11 +1,14 @@
 import sys
 from math import floor
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def sub(ax, ay, bx, by, cx, cy):
-    mx, my = (ax + bx + cx) / 3, (ay + by + cy) / 3
-    mx, my = floor(mx * 2), floor(my * 2)
+    (mx, my) = ((ax + bx + cx) / 3, (ay + by + cy) / 3)
+    (mx, my) = (floor(mx * 2), floor(my * 2))
     k = max(abs(mx), abs(my))
     if k == 0:
         return 0
@@ -17,12 +20,9 @@ def sub(ax, ay, bx, by, cx, cy):
 def main():
     T = int(input())
     ans_list = []
-    """
-    L字の重心を考えることで、L字を点として扱える。
-    特に各マスを2x2に4等分することで、点の移動方法も明確に視覚化できる。
-    """
+    '\n    L字の重心を考えることで、L字を点として扱える。\n    特に各マスを2x2に4等分することで、点の移動方法も明確に視覚化できる。\n    '
     for _ in range(T):
-        ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+        (ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
         ans_list.append(sub(ax, ay, bx, by, cx, cy))
     for ans in ans_list:
         print(ans)

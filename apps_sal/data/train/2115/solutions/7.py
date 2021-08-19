@@ -1,4 +1,4 @@
-n, d = [int(i) for i in input().split()]
+(n, d) = [int(i) for i in input().split()]
 q = list(map(int, input().split()))
 s = 0
 if n < 3:

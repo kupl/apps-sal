@@ -1,8 +1,8 @@
-N = int(1e5 + 3)
+N = int(100000.0 + 3)
 n = int(input())
-adj = list([] for i in range(N))
+adj = list(([] for i in range(N)))
 for _ in range(n - 1):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     adj[u].append(v)
     adj[v].append(u)
 a = [0] + list(map(int, input().split()))

@@ -7,7 +7,7 @@ m = -1
 for i in reversed(d[1:]):
     i -= 1
     q[i][2] = a[i]
-    l, r = i, i
+    (l, r) = (i, i)
     if i < n - 1 and q[i + 1][2] != -1:
         r = q[i + 1][1]
         q[r][2] += a[i]

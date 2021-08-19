@@ -1,7 +1,7 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 ar = list(map(int, input().split()))
 ar.sort()
-z = (n // 2)
+z = n // 2
 q = 0
 if ar[z] < s:
     for i in range(z, n):

@@ -3,8 +3,7 @@ import sys
 
 
 def __starting_point():
-
-    n, k = list(map(int, sys.stdin.readline().split()))
+    (n, k) = list(map(int, sys.stdin.readline().split()))
     l = []
     i = 1
     j = k + 1
@@ -16,7 +15,6 @@ def __starting_point():
             j -= 1
     for i in range(k + 2, n + 1):
         l.append(str(i))
-
     print(' '.join(l))
 
 

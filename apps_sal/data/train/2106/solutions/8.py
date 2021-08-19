@@ -1,6 +1,6 @@
 n = int(input())
 c = [list(map(int, input().split())) for _ in range(n)]
-a, b = 0, 0
+(a, b) = (0, 0)
 d = []
 for i in range(n):
     if len(c[i]) % 2:

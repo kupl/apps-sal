@@ -1,13 +1,9 @@
-n, l, r, ql, qr = list(map(int, input().split()))
-
+(n, l, r, ql, qr) = list(map(int, input().split()))
 w = list(map(int, input().split()))
-
 answ = 0
 first = 0
 last = sum(w)
-
 answ = last * r + (len(w) - 1) * qr
-
 for i in range(n):
     first += w[i]
     last -= w[i]
@@ -17,5 +13,4 @@ for i in range(n):
     elif i + 1 < n - i - 1:
         tmp += qr * (n - 2 * i - 3)
     answ = min(answ, tmp)
-
 print(answ)

@@ -1,9 +1,7 @@
 from collections import deque
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = deque(list(map(int, input().split())))
-
 max_v = max(arr)
-
 ans = []
 while arr[0] != max_v:
     a = arr.popleft()
@@ -15,7 +13,6 @@ while arr[0] != max_v:
         arr.appendleft(b)
         arr.append(a)
     ans.append((a, b))
-
 for i in range(m):
     q = int(input())
     q -= 1

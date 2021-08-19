@@ -8,7 +8,7 @@ def mset(s):
     for k in range(0, 10):
         for pi in range(0, 2 ** k):
             cs = p[pi]
-            cs = (k - len(cs)) * "0" + cs
+            cs = (k - len(cs)) * '0' + cs
             if cs in s:
                 ss.add(cs)
     return ss
@@ -18,13 +18,13 @@ def q(s):
     for k in range(0, 10):
         for pi in range(0, 2 ** k):
             cs = p[pi]
-            cs = (k - len(cs)) * "0" + cs
+            cs = (k - len(cs)) * '0' + cs
             if not cs in s:
                 return k - 1
 
 
 s = [[v[:9], v[-9:], mset(v)] for v in [input() for i in range(n)]]
-for qa, qb in [[int(v) - 1 for v in input().split()] for i in range(int(input()))]:
+for (qa, qb) in [[int(v) - 1 for v in input().split()] for i in range(int(input()))]:
     v = [s[qa][0], s[qb][1], mset(s[qa][1] + s[qb][0]) | s[qa][2] | s[qb][2]]
     if len(v[0]) < 9:
         v[0] = (v[0] + s[qb][0])[:9]

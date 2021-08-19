@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 u = 0
 for i in range(k):
     a = list(map(int, input().split()))[1:] + [0]

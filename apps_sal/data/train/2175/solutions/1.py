@@ -1,5 +1,4 @@
 m = int(input())
-
 b = []
 k = []
 for i in range(m):
@@ -8,10 +7,9 @@ for i in range(m):
     for j in range(len(b)):
         v = b[j]
         d = k[j]
-        if (x ^ v) < x:
+        if x ^ v < x:
             x ^= v
             c ^= d
-
     if x != 0:
         print(0)
         c ^= 2 ** i

@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 for _ in range(int(input())):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
-    x = (ax + bx + cx)
-    y = (ay + by + cy)
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
+    x = ax + bx + cx
+    y = ay + by + cy
     if x == 1 and y == 1:
         print(0)
         continue

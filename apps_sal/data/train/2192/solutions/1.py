@@ -1,7 +1,6 @@
 import sys
 N = 1 << 20
 ar = [0] * N
-
 dp = [0] * N
 n = int(input())
 for i in range(0, n):

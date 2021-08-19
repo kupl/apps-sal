@@ -1,7 +1,7 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = sorted(map(int, input().split()))
-    lo, hi = l[0], l[-1]
+    (lo, hi) = (l[0], l[-1])
     while lo < hi - 1:
         mid = (lo + hi) // 2
         t = k
@@ -16,7 +16,7 @@ def main():
         else:
             lo = mid
     m1 = lo
-    lo, hi = l[0], l[-1]
+    (lo, hi) = (l[0], l[-1])
     l.reverse()
     while lo < hi - 1:
         mid = (lo + hi) // 2

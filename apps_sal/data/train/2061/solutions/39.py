@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    ax, ay, bx, by, cx, cy = map(int, input().split())
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
     mnx = min(ax, bx, cx)
     mny = min(ay, by, cy)
     tp = ((ax, ay), (bx, by), (cx, cy))

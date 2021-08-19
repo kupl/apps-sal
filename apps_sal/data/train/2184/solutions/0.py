@@ -1,10 +1,10 @@
-n, _q = map(int, input().split())
+(n, _q) = map(int, input().split())
 mni = [-1] * 200001
 mxi = [-1] * 200001
 cnt = [0] * 200001
 nd = 0
 a = list(map(int, input().split()))
-for i, v in enumerate(a):
+for (i, v) in enumerate(a):
     if mni[v] == -1:
         mni[v] = i
         nd += 1
@@ -13,7 +13,7 @@ for i, v in enumerate(a):
 r = 0
 z = 0
 currmax = 0
-for i, v in enumerate(a):
+for (i, v) in enumerate(a):
     if i == mni[v]:
         z += 1
     if i == mxi[v]:

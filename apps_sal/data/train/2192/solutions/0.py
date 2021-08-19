@@ -4,7 +4,7 @@ MAX_N = max(pos_blast, key=lambda x: x[0])[0] + 2
 power = [0 for _ in range(MAX_N)]
 tower = [False for _ in range(MAX_N)]
 can_destroy = [0 for _ in range(MAX_N)]
-for pos, blast in pos_blast:
+for (pos, blast) in pos_blast:
     pos += 1
     tower[pos] = True
     power[pos] = blast

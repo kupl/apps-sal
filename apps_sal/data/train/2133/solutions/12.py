@@ -5,4 +5,4 @@ for i in range(n):
     l = list(s)
     for j in range(len(l)):
         count[j] += int(l[j])
-print((max(count)))
+print(max(count))

@@ -13,13 +13,12 @@ for i in range(0, len(s) - 1):
                 cur += 2
                 subQ -= 1
                 addQ += 1
+        elif cur > 0:
+            subQ += 1
+            cur -= 1
         else:
-            if cur > 0:
-                subQ += 1
-                cur -= 1
-            else:
-                addQ += 1
-                cur += 1
+            addQ += 1
+            cur += 1
         if cur < 0:
             break
         if cur == 0:

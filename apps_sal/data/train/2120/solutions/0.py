@@ -1,6 +1,6 @@
 n = int(input())
-a, b = [0] * (n + 2), [0] * (n + 2)
-s, l = 0, 1
+(a, b) = ([0] * (n + 2), [0] * (n + 2))
+(s, l) = (0, 1)
 p = [0] * n
 for i in range(n):
     t = list(map(int, input().split()))

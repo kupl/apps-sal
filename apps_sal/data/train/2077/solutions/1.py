@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, n):
         self._fa = list(range(n))
 
@@ -21,23 +22,21 @@ class DisjointSet:
 
 
 def solve(n, a, b, xs):
-    h = {x: i for i, x in enumerate(xs)}
+    h = {x: i for (i, x) in enumerate(xs)}
     if a == b:
-        if all(a - x in h for x in xs):
+        if all((a - x in h for x in xs)):
             return [0] * n
         return False
     g1 = n
     g2 = n + 1
     ds = DisjointSet(n + 2)
-
-    for i, x in enumerate(xs):
+    for (i, x) in enumerate(xs):
         for t in (a, b):
             if t - x in h:
                 ds.union(i, h[t - x])
-
-    for i, x in enumerate(xs):
-        b1 = (a - x) in h
-        b2 = (b - x) in h
+    for (i, x) in enumerate(xs):
+        b1 = a - x in h
+        b2 = b - x in h
         if b1 + b2 == 0:
             return False
         if b1 + b2 == 1:
@@ -48,7 +47,7 @@ def solve(n, a, b, xs):
             if ds.get_father(g1) == ds.get_father(g2):
                 return False
     group = [None] * n
-    for i, x in enumerate(xs):
+    for (i, x) in enumerate(xs):
         f = ds.get_father(i)
         if f < n:
             return False
@@ -56,7 +55,7 @@ def solve(n, a, b, xs):
     return group
 
 
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 xs = list(map(int, input().split()))
 group = solve(n, a, b, xs)
 if isinstance(group, list):

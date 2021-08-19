@@ -9,7 +9,7 @@ res = [0] * n
 for i in range(n):
     l = [int(x) for x in input().split()]
     if l[0] == 1:
-        a, x = l[1:]
+        (a, x) = l[1:]
         add[a - 1] += x
         sum += a * x
     elif l[0] == 2:
@@ -24,4 +24,4 @@ for i in range(n):
         add[ptr - 1] += add[ptr]
         add[ptr] = 0
     res[i] = sum / ptr
-print('\n'.join(str(x) for x in res))
+print('\n'.join((str(x) for x in res)))

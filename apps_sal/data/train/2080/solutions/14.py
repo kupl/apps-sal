@@ -1,4 +1,5 @@
 class CodeforcesTask261ASolution:
+
     def __init__(self):
         self.result = ''
         self.discounts = []
@@ -7,9 +8,9 @@ class CodeforcesTask261ASolution:
 
     def read_input(self):
         input()
-        self.discounts = [int(x) for x in input().split(" ")]
+        self.discounts = [int(x) for x in input().split(' ')]
         self.items_count = int(input())
-        self.prices = [int(x) for x in input().split(" ")]
+        self.prices = [int(x) for x in input().split(' ')]
 
     def process_task(self):
         self.discounts.sort()

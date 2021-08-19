@@ -12,13 +12,12 @@ def prime(a):
 
 prime_lst = []
 n = int(input())
-
 if n < 3:
     print(1)
 else:
     print(2)
 for i in range(2, n + 2):
     if prime(i):
-        print(1, end=" ")
+        print(1, end=' ')
     else:
-        print(2, end=" ")
+        print(2, end=' ')

@@ -2,7 +2,7 @@ t = int(input())
 T = str.maketrans('0123456789', '0101010101')
 d = {}
 for _ in ' ' * t:
-    a, b = input().split()
+    (a, b) = input().split()
     b = int(b.translate(T))
     if a == '?':
         print(d.get(b, 0))

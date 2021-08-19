@@ -1,6 +1,6 @@
 from math import floor
 Q = int(input())
-E = 10**(-10)
+E = 10 ** (-10)
 
 
 def f(x):
@@ -11,15 +11,14 @@ def f(x):
 
 
 for i in range(Q):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     n = a * b
-    if f(n**(1 / 2)) < a and f(n**(1 / 2)) < b:
-        if f(n**(1 / 2)) * (f(n**(1 / 2)) + 1) < n:
-            print((2 * f(n**(1 / 2))))
+    if f(n ** (1 / 2)) < a and f(n ** (1 / 2)) < b:
+        if f(n ** (1 / 2)) * (f(n ** (1 / 2)) + 1) < n:
+            print(2 * f(n ** (1 / 2)))
         else:
-            print((2 * f(n**(1 / 2)) - 1))
+            print(2 * f(n ** (1 / 2)) - 1)
+    elif f(n ** (1 / 2)) * (f(n ** (1 / 2)) + 1) < n:
+        print(2 * f(n ** (1 / 2)) - 1)
     else:
-        if f(n**(1 / 2)) * (f(n**(1 / 2)) + 1) < n:
-            print((2 * f(n**(1 / 2)) - 1))
-        else:
-            print((2 * f(n**(1 / 2)) - 2))
+        print(2 * f(n ** (1 / 2)) - 2)

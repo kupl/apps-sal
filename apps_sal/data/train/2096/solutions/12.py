@@ -1,16 +1,34 @@
 MOD = 1000000007
-def ii(): return int(input())
-def si(): return input()
-def dgl(): return list(map(int, input()))
-def f(): return map(int, input().split())
-def il(): return list(map(int, input().split()))
-def ls(): return list(input())
+
+
+def ii():
+    return int(input())
+
+
+def si():
+    return input()
+
+
+def dgl():
+    return list(map(int, input()))
+
+
+def f():
+    return map(int, input().split())
+
+
+def il():
+    return list(map(int, input().split()))
+
+
+def ls():
+    return list(input())
 
 
 n = ii()
 l = il()
 l2 = sorted(l)
-sd = dict((l2[i], i) for i in range(n))
+sd = dict(((l2[i], i) for i in range(n)))
 ans = []
 lvis = set()
 for i in range(n):

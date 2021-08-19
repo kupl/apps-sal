@@ -1,4 +1,5 @@
 def main():
+
     def f(x):
         l = []
         while x != clusters[x]:
@@ -7,13 +8,12 @@ def main():
         for y in l:
             clusters[y] = x
         return x
-
-    n, aa = int(input()), [0, *list(map(int, input().split())), 0]
-    l, clusters, mx = list(map(int, input().split())), [0] * (n + 2), 0
+    (n, aa) = (int(input()), [0, *list(map(int, input().split())), 0])
+    (l, clusters, mx) = (list(map(int, input().split())), [0] * (n + 2), 0)
     for i in range(n - 1, -1, -1):
         a = clusters[a] = l[i]
         l[i] = mx
-        for i in a - 1, a + 1:
+        for i in (a - 1, a + 1):
             if clusters[i]:
                 j = f(i)
                 aa[a] += aa[j]

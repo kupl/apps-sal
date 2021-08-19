@@ -1,5 +1,5 @@
-n, edges_num = list(map(int, input().split()))
-edges = set(tuple(map(int, input().split())) for _ in range(edges_num))
+(n, edges_num) = list(map(int, input().split()))
+edges = set((tuple(map(int, input().split())) for _ in range(edges_num)))
 nodes = set(range(1, n + 1))
 comps = 0
 comp_q = []

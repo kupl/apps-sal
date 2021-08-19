@@ -1,5 +1,5 @@
 def cows(n, lst):
-    zeros, result = 0, 0
+    (zeros, result) = (0, 0)
     for i in range(n - 1, -1, -1):
         if lst[i] == 0:
             zeros += 1

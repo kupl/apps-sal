@@ -3,7 +3,7 @@ import math
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = 1
     b = n
     res = []
@@ -18,8 +18,7 @@ def main():
         res += list(range(b, a - 1, -1))
     else:
         res += list(range(a, b + 1))
-
-    print(" ".join(map(str, res)))
+    print(' '.join(map(str, res)))
 
 
 def __starting_point():

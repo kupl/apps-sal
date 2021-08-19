@@ -1,15 +1,13 @@
 from math import hypot
-
-n, h = list(map(int, input().split()))
-
-square = (0.5 * h)
+(n, h) = list(map(int, input().split()))
+square = 0.5 * h
 one = square / n
 hyp = hypot(0.5, h)
 
 
 def get_square(d):
     up = (1 - d) * 0.5
-    return 2 * ((up * h * d) + (0.5 - up) * h * d / 2)
+    return 2 * (up * h * d + (0.5 - up) * h * d / 2)
 
 
 rez = []
@@ -23,7 +21,6 @@ for i in range(n - 1):
             right = mid
         else:
             left = mid
-
     _prev = left
     rez.append(h - left * h)
 print(*reversed(rez))

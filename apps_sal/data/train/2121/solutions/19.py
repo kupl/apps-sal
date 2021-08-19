@@ -1,5 +1,4 @@
 import sys
-
 n = int(input())
 a = [int(i) for i in sys.stdin]
 a.sort()

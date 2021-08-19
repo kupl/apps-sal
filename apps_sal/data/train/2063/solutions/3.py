@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 q = [[] for i in range(n + 1)]
-r, s = [0] * (m + 1), 0
+(r, s) = ([0] * (m + 1), 0)
 for i in range(1, n + 1):
     t = list(map(int, input().split()))
     if t[0]:
@@ -24,4 +24,4 @@ for i in range(1, n + 1):
             q[i] = t
     else:
         s += 1
-print(s + max(sum(len(i) > 0 for i in q) - 1, 0))
+print(s + max(sum((len(i) > 0 for i in q)) - 1, 0))

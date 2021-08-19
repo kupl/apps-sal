@@ -11,5 +11,4 @@ def count(a):
 n = int(input())
 p = list(map(int, input().split()))
 num = count(p)
-
 print(num * 2 - num % 2)

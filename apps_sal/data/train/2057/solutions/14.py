@@ -1,4 +1,4 @@
-b_cnt, res = 0, 0
+(b_cnt, res) = (0, 0)
 mod = 10 ** 9 + 7
 for c in input()[::-1]:
     if c == 'b':

@@ -1,14 +1,11 @@
 import sys
 readline = sys.stdin.readline
-
-N, Q = list(map(int, readline().split()))
+(N, Q) = list(map(int, readline().split()))
 state = [[False] * (N + 2) for _ in range(2)]
-
 cnt = 0
-
 Ans = [None] * Q
 for qu in range(Q):
-    r, c = list(map(int, readline().split()))
+    (r, c) = list(map(int, readline().split()))
     r -= 1
     c -= 1
     state[r][c] = not state[r][c]

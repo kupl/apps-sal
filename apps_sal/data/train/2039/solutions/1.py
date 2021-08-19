@@ -1,11 +1,11 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 
 
 def chk(k):
     ret = 0
     for i in range(N):
-        a, b = A[i], (A[i] + k) % M
+        (a, b) = (A[i], (A[i] + k) % M)
         if a <= b < ret:
             return 0
         if ret <= a <= b or b < ret <= a:
@@ -21,5 +21,4 @@ while r - l > 1:
         r = m
     else:
         l = m
-
 print(r)

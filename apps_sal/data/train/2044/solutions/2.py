@@ -1,4 +1,4 @@
-n, k = [int(s) for s in input().split()]
+(n, k) = [int(s) for s in input().split()]
 s = n - k
 t = 0
 if (s - 1) % k == 1:

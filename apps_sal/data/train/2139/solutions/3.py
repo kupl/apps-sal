@@ -1,6 +1,5 @@
 import sys
 readline = sys.stdin.readline
-
 MOD = 998244353
 
 
@@ -12,10 +11,10 @@ def make_fac(limit):
     faci[-1] = pow(fac[-1], MOD - 2, MOD)
     for i in range(limit - 2, 0, -1):
         faci[i] = faci[i + 1] * (i + 1) % MOD
-    return fac, faci
+    return (fac, faci)
 
 
-fac, faci = make_fac(341398)
+(fac, faci) = make_fac(341398)
 
 
 def comb(a, b):
@@ -26,6 +25,5 @@ def comb(a, b):
 
 N = int(readline())
 A = list(map(int, readline().split()))
-
 A.sort()
 print((sum(A[N:]) - sum(A[:N])) % MOD * comb(2 * N, N) % MOD)

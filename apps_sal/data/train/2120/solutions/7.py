@@ -3,7 +3,6 @@ n = int(input())
 d = [0] * 200200
 a = [0]
 s = 0
-
 ans = []
 for i in range(n):
     x = tuple(map(int, input().split()))
@@ -19,5 +18,4 @@ for i in range(n):
         d[cc - 1] += d[cc]
         d[cc] = 0
     ans.append(str(s / len(a)))
-
 print('\n'.join(ans))

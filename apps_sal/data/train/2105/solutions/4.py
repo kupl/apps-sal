@@ -16,7 +16,6 @@ else:
                 return False
             j += 1
         return True
-
     for i in range(2, n + 2):
         if prime(i):
             ans.append('1')

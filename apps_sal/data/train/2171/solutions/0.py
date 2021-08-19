@@ -10,8 +10,7 @@ def dfs(tree, root, priv_root, cur_lvl, priv_lvl, diff, pick_list):
         if cur_lvl ^ diff[root]:
             cur_lvl ^= 1
             pick_list.append(str(root))
-        stack += [(vertex, root, priv_lvl, cur_lvl)
-                  for vertex in tree[root] if vertex != priv_root]
+        stack += [(vertex, root, priv_lvl, cur_lvl) for vertex in tree[root] if vertex != priv_root]
 
 
 def main():
@@ -25,9 +24,7 @@ def main():
     goal = [0] + list(map(int, input().split()))
     diff = [i ^ j for (i, j) in zip(init, goal)]
     pick_list = list()
-
     dfs(tree, 1, 0, 0, 0, diff, pick_list)
-
     num = len(pick_list)
     print(num)
     if num:
@@ -35,7 +32,7 @@ def main():
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

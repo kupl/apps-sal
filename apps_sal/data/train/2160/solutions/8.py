@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 p = sum(L)
 if p % k == 0:

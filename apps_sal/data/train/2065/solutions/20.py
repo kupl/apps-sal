@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-n, k = I()
+(n, k) = I()
 r = k - 1
 y = 0
 for _ in range(k):

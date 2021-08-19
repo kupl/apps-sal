@@ -2,7 +2,7 @@ n = int(input())
 edges = [[int(x) for x in input().split()] for i in range(n - 1)]
 edges = sorted(edges)
 use_count = [0] + [int(input()) for i in range(n)]
-lo, hi = 0, 10000
+(lo, hi) = (0, 10000)
 
 
 def getpar(par, u):
@@ -30,8 +30,8 @@ def solve(fp):
     total_use = sum(use_count)
     for i in range(n + 1):
         p = getpar(par, i)
-        if(p == i):
-            if(total_use - use[p] < sz[p]):
+        if p == i:
+            if total_use - use[p] < sz[p]:
                 return False
     return True
 

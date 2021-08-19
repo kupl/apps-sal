@@ -6,7 +6,6 @@ for v in map(int, input().split()):
     while len(stk) and stk[-1][0] < v and stk[-1][1]:
         last = max(last, stk[-1][1])
         del stk[-1]
-
     if not len(stk) or stk[-1][0] < v:
         stk.append((v, 0))
     else:

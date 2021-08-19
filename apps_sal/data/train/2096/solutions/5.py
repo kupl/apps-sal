@@ -12,7 +12,6 @@ for i in range(n):
             d.append(j + 1)
             j = a[j][1]
         b.append(d)
-
 print(len(b))
 for i in b:
     print(len(i), *i)

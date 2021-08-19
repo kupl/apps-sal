@@ -4,10 +4,10 @@ from collections import defaultdict, deque
 def bfs(graph, inicio, destino, parent):
     parent.clear()
     queue = deque()
-    queue.append([inicio, float("Inf")])
+    queue.append([inicio, float('Inf')])
     parent[inicio] = -2
-    while (len(queue)):
-        current, flow = queue.popleft()
+    while len(queue):
+        (current, flow) = queue.popleft()
         for i in graph[current]:
             if parent[i] == -1 and graph[current][i] > 0:
                 parent[i] = current
@@ -36,7 +36,7 @@ def maxflow(graph, inicio, destino):
     return flow
 
 
-n, m, x = [int(i) for i in input().split()]
+(n, m, x) = [int(i) for i in input().split()]
 graph = defaultdict(lambda: defaultdict(lambda: 0))
 for _ in range(m):
     t = [int(i) for i in input().split()]
@@ -55,10 +55,9 @@ def check(k):
 
 lo = 1 / x
 hi = check(1)
-
 for _ in range(70):
     mid = round((hi + lo) / 2, 8)
-    if hi - lo <= 0.0000001:
+    if hi - lo <= 1e-07:
         break
     if check(mid) >= x:
         lo = round(mid, 7)

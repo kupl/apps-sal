@@ -13,7 +13,6 @@ for i in range(n):
             p.append(str(k + 1))
             k = a[k][1]
         d.append(p)
-
 print(len(d))
 for i in d:
-    print(str(len(i)) + " " + " ".join(i))
+    print(str(len(i)) + ' ' + ' '.join(i))

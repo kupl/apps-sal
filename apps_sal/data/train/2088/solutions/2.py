@@ -1,9 +1,9 @@
 def main():
-    n, l = int(input()), list(map(int, input().split()))
+    (n, l) = (int(input()), list(map(int, input().split())))
     dp = [[0] * n for _ in range(n + 1)]
     for le in range(1, n + 1):
-        for lo, hi in zip(list(range(n)), list(range(le - 1, n))):
-            row, c = dp[lo], l[lo]
+        for (lo, hi) in zip(list(range(n)), list(range(le - 1, n))):
+            (row, c) = (dp[lo], l[lo])
             if le == 1:
                 row[hi] = 1
             else:

@@ -1,5 +1,5 @@
 n = list(map(int, input().split(' ')))
-a, b = n[0], n[1]
+(a, b) = (n[0], n[1])
 if b >= a - b - 1:
     if a - b == 1:
         print(2)

@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = list(map(int, input().split()))
-l, r = 0, m - 1
+(l, r) = (0, m - 1)
 while l < r:
     mid = (l + r) // 2
     p = 0

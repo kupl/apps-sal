@@ -1,6 +1,5 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a.sort()
 ans = abs(a[n // 2] - s)
 a[n // 2] = s

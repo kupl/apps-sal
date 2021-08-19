@@ -1,14 +1,12 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     input = sys.stdin.readline
-
     N = int(input())
     A = list(map(int, input().split()))
-
     S = sum(A)
     if S == 1:
         print(-1)
@@ -21,13 +19,12 @@ def main():
     if len(div_list) > 2:
         if div_list[-1] == div_list[-2]:
             div_list.pop()
-
-    ans_best = 10**10
+    ans_best = 10 ** 10
     for D in div_list:
         ans = 0
         cnt = 0
         i_list = []
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             if a == 1:
                 i_list.append(i)
                 cnt += 1

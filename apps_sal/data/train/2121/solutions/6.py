@@ -1,7 +1,7 @@
 from sys import stdin, stdout
 import math
 n = int(input())
-a = sorted(list(int(stdin.readline()) for i in range(n)))
+a = sorted(list((int(stdin.readline()) for i in range(n))))
 mid = math.floor((n - 1) / 2)
 c = 0
 i = n - 1

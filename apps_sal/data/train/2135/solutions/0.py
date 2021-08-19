@@ -1,21 +1,7 @@
 from time import time
-
-
-opposite = {
-    'N': 'S',
-    'S': 'N',
-    'E': 'W',
-    'W': 'E'
-}
+opposite = {'N': 'S', 'S': 'N', 'E': 'W', 'W': 'E'}
 otr = str.maketrans(opposite)
-
-bits = {
-    'N': 0,
-    'S': 1,
-    'E': 2,
-    'W': 3,
-}
-
+bits = {'N': 0, 'S': 1, 'E': 2, 'W': 3}
 Q = 4294967291
 
 

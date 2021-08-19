@@ -1,5 +1,4 @@
 import sys
-
 MAX = 100005
 arr = MAX * [0]
 pre = MAX * [0]
@@ -18,7 +17,6 @@ def find(x):
 
 
 def unite(x, y):
-
     dx = find(x)
     dy = find(y)
     if dx == dy:
@@ -33,8 +31,6 @@ arr.insert(0, 0)
 sun = arr
 pre = [i for i in range(n + 1)]
 ix = [int(i) for i in input().split()]
-
-
 for i in range(n - 1, -1, -1):
     x = ix[i]
     ans[i] = mx
@@ -44,6 +40,5 @@ for i in range(n - 1, -1, -1):
     if x != n and vis[x + 1]:
         unite(x, x + 1)
     mx = max(mx, sun[find(x)])
-
 for i in range(n):
     print(ans[i])

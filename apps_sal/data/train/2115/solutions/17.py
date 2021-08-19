@@ -1,4 +1,4 @@
-n, d = input().split(' ')
+(n, d) = input().split(' ')
 n = int(n)
 d = int(d)
 queue = [int(i) for i in input().split()]

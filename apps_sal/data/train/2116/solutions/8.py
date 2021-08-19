@@ -1,14 +1,15 @@
 from collections import defaultdict
 
 
-class DenseSubsequence():
+class DenseSubsequence:
+
     def __init__(self, m, s):
         self.m = m
         self.s = s
         self.chars = sorted(set(s))
 
     def get_min_sequence(self, ch, mask):
-        lv, lch, i = -1, -1, 0
+        (lv, lch, i) = (-1, -1, 0)
         is_possible = True
         seq = []
         while i < len(self.s):
@@ -16,7 +17,6 @@ class DenseSubsequence():
                 lv = i
             elif self.s[i] == ch:
                 lch = i
-
             if i - lv == self.m:
                 if lch > lv:
                     seq.append(lch)
@@ -26,21 +26,18 @@ class DenseSubsequence():
                     break
             i += 1
         if not is_possible:
-            return False, []
+            return (False, [])
         else:
-            return True, seq
+            return (True, seq)
 
     def get_sequence(self):
         char_map = defaultdict(list)
         for i in range(len(self.s)):
             char_map[self.s[i]].append(i)
-
         mask = [0] * len(self.s)
-
         res = ''
-
         for ch in self.chars:
-            is_possible, seq = self.get_min_sequence(ch, mask)
+            (is_possible, seq) = self.get_min_sequence(ch, mask)
             if is_possible:
                 res = res + ''.join([ch] * len(seq))
                 break

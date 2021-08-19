@@ -8,7 +8,7 @@ def main():
     for i in range(n):
         if s[i] == '0':
             zero[i] = zero[i - 1] + 1 if i else 1
-    nxt, dp = [0] * (n + 2), [0] * (n + 2)
+    (nxt, dp) = ([0] * (n + 2), [0] * (n + 2))
     for i in range(n + 1):
         nxt[i] = n
     for i in range(n - 1, -1, -1):

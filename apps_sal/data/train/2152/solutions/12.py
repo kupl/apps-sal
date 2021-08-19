@@ -22,7 +22,7 @@ def __main__():
     if sa == 1:
         print(-1)
         return
-    res = 2**64
+    res = 2 ** 64
     for d in simple_div(sa):
         tmp = 0
         m = 0

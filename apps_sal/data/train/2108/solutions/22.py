@@ -1,8 +1,8 @@
-a, b = input().split()
+(a, b) = input().split()
 N = int(input())
 print(a, b)
 for n in range(N):
-    c, d = input().split()
+    (c, d) = input().split()
     if c == a:
         a = d
     elif c == b:

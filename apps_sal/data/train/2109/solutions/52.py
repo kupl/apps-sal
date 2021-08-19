@@ -1,7 +1,7 @@
 from math import sqrt
 q = int(input())
 for _ in range(q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     t = a * b
     s = int(sqrt(t))
     an = 2 * s - 2

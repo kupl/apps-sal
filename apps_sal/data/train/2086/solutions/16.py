@@ -1,6 +1,6 @@
 from collections import deque
-n, q = map(int, input().split())
-a = deque(int(i) for i in input().split())
+(n, q) = map(int, input().split())
+a = deque((int(i) for i in input().split()))
 Mmax = max(a)
 ans = {}
 index = 0

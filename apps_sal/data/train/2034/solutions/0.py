@@ -1,11 +1,10 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 x = []
 y = []
 for i in range(n):
-    xi, yi = map(int, input().split())
+    (xi, yi) = map(int, input().split())
     x.append(xi)
     y.append(yi)
 min_x = min(x)

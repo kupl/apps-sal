@@ -10,7 +10,7 @@ def direction(inp):
 
 
 for i in range(T):
-    x1, y1, x2, y2, x3, y3 = map(int, input().split())
+    (x1, y1, x2, y2, x3, y3) = map(int, input().split())
     x = [x1, x2, x3]
     y = [y1, y2, y3]
     dst = [min(x) * 2 + direction(x), min(y) * 2 + direction(y)]

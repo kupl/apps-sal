@@ -6,11 +6,11 @@ def pair(fc, tc):
     maxb = 0
     ans = 0
     for f in fc:
-        p, b = f
+        (p, b) = f
         maxpp = tc - p
         ii = bisect_left(bf, (maxpp + 1, 0)) - 1
         if ii >= 0:
-            pp, bb = bf[ii]
+            (pp, bb) = bf[ii]
             ans = max(ans, bb + b)
         if b > maxb:
             bf.append(f)
@@ -18,12 +18,12 @@ def pair(fc, tc):
     return ans
 
 
-n, c, d = map(int, input().split())
+(n, c, d) = map(int, input().split())
 arr1 = []
 arr2 = []
 for i in range(n):
-    b, k, t = input().split()
-    b, k = int(b), int(k)
+    (b, k, t) = input().split()
+    (b, k) = (int(b), int(k))
     if t == 'C' and k <= c:
         arr1.append((k, b))
     if t == 'D' and k <= d:

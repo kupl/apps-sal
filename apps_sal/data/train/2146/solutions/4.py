@@ -1,4 +1,4 @@
-n, d, m = list(map(int, input().split()))
+(n, d, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 p = []
 q = []

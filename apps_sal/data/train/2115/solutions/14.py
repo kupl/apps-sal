@@ -12,7 +12,7 @@ def findIndex(x, L, R, T):
     return R
 
 
-n, d = [int(i) for i in input().split()]
+(n, d) = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
 ans = 0
 for R in range(2, n)[::-1]:

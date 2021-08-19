@@ -4,7 +4,7 @@ w = {}
 def up(a, b, d):
     while a != b:
         if a < b:
-            a, b = b, a
+            (a, b) = (b, a)
         if a not in w:
             w[a] = 0
         w[a] += d
@@ -15,7 +15,7 @@ def get(a, b):
     res = 0
     while a != b:
         if a < b:
-            a, b = b, a
+            (a, b) = (b, a)
         if a in w:
             res += w[a]
         a = a // 2

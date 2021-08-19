@@ -14,5 +14,5 @@ while i <= n - m:
     d = max(d, s[k])
     u[k] = 0
     i = k + 1
-t += [q for q, v in zip(s, u) if q < d and v]
+t += [q for (q, v) in zip(s, u) if q < d and v]
 print(''.join(sorted(t)))

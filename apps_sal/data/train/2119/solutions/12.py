@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 valid = [False for i in range(n)]
 parent = [0] * n
 size = [0] * n
@@ -30,7 +29,6 @@ def union(a, b):
 
 
 ans = [0]
-
 for i in range(n - 1, 0, -1):
     k = p[i] - 1
     valid[k] = True
@@ -40,10 +38,8 @@ for i in range(n - 1, 0, -1):
         union(k, k - 1)
     if k < n - 1 and valid[k + 1]:
         union(k, k + 1)
-
     t = stat[find(k)]
     m = max(ans[-1], t)
     ans.append(m)
-
 while len(ans) > 0:
     print(ans.pop())

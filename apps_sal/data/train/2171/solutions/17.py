@@ -1,7 +1,7 @@
 n = int(input())
 L = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     L[a - 1].append(b - 1)
     L[b - 1].append(a - 1)
 l = list(map(int, input().split()))
@@ -19,7 +19,6 @@ while q:
         ans.append(e[0] + 1)
         e[1] = 1 - e[1]
     for x in L[e[0]]:
-
         if was[x] == 0:
             q.append([x, e[2], e[1]])
     del q[0]

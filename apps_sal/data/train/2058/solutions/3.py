@@ -1,9 +1,8 @@
 from heapq import *
-
 n = int(input())
-turn = [99**9]
+turn = [99 ** 9]
 opty = 0
-for i, a in enumerate(map(int, input().split())):
+for (i, a) in enumerate(map(int, input().split())):
     a -= i
     optx = -turn[0]
     if optx <= a:

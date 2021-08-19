@@ -1,6 +1,6 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 x = list(map(int, input().split()))
-j, v = 0, 0
+(j, v) = (0, 0)
 for i in range(n - 2):
     while j < n - 1 and x[j + 1] - x[i] <= d:
         j += 1

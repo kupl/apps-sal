@@ -1,7 +1,7 @@
 import math
 Q = int(input())
 for i in range(Q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a == b:
         print(2 * (a - 1))
     else:

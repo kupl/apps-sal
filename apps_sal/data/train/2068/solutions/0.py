@@ -37,7 +37,7 @@ def topological_sort_tree(E, r):
 
 def getcld(p):
     res = [[] for _ in range(len(p))]
-    for i, v in enumerate(p[1:], 1):
+    for (i, v) in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
@@ -48,7 +48,7 @@ Edge = [[] for _ in range(N)]
 Cost = Counter()
 geta = N + 1
 for _ in range(N - 1):
-    a, b, c = list(map(int, readline().split()))
+    (a, b, c) = list(map(int, readline().split()))
     a -= 1
     b -= 1
     Edge[a].append(b)
@@ -58,8 +58,6 @@ for _ in range(N - 1):
 P = getpar(Edge, 0)
 L = topological_sort_tree(Edge, 0)
 C = getcld(P)
-
-
 dp = [0] * N
 candi = [[0, 0] for _ in range(N)]
 ans = 0
@@ -70,11 +68,9 @@ for l in L[::-1][:-1]:
     if k > 0:
         dp[p] = max(dp[p], k)
         candi[p].append(k)
-
     res = max(candi[l])
     candi[l].remove(res)
     ans = max(ans, We[l] + res + max(candi[l]))
-
 res = max(candi[0])
 candi[0].remove(res)
 ans = max(ans, We[0] + res + max(candi[0]))

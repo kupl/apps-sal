@@ -1,6 +1,5 @@
 import sys
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 for _ in range(int(input())):
     x = int(input())
     s = list(map(int, input()))
@@ -13,5 +12,4 @@ for _ in range(int(input())):
                 s += s[i:r]
             else:
                 break
-
     print(ans)

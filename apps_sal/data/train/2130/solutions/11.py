@@ -1,11 +1,7 @@
 k = int(input())
-
 h = []
-
 for i in range(k):
     h.append(int(input()))
-
-
 ffs = [1]
 
 
@@ -28,15 +24,12 @@ def cc(k, n):
 def solve(h):
     if len(h) == 1:
         return 1
-
     hh = h[:-1]
     hh_len = sum(hh)
-
     return solve(hh) * cc(h[-1] - 1, hh_len + 1)
 
 
 r = 1
 for i in range(len(h)):
     r *= cc(h[i] - 1, sum(h[:i]) + 1)
-
 print(r % 1000000007)

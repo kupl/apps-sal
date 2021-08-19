@@ -1,13 +1,33 @@
 import sys
-
 sys.setrecursionlimit(10 ** 5)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def solve():
@@ -20,7 +40,6 @@ def solve():
             pre.append(a)
     pos.sort(reverse=True)
     pre.sort(reverse=True)
-
     cs = [0]
     for a in pre:
         cs.append(cs[-1] + a)
@@ -29,16 +48,14 @@ def solve():
     for a in pos:
         cs.append(cs[-1] + a)
     pos = cs
-
     ans = 0
     for i in range(len(pre)):
         j = min((n - i - 1) // (d + 1) + 1, len(pos) - 1)
         cur = pre[i] + pos[j]
         ans = max(ans, cur)
-
     print(ans)
 
 
-n, d, m = MI()
+(n, d, m) = MI()
 aa = MI()
 solve()

@@ -11,4 +11,4 @@ def solve(*args):
 
 t = int(input())
 for i in range(t):
-    print((solve(*list(map(int, input().split())))))
+    print(solve(*list(map(int, input().split()))))

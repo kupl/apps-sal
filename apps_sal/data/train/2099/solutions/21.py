@@ -1,7 +1,6 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 c = []
-d, e = 1, b + 1
-
+(d, e) = (1, b + 1)
 while e > d:
     c += [d, e]
     e -= 1

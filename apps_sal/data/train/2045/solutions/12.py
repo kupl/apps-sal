@@ -1,9 +1,9 @@
 def ans():
-    n, m = list(map(int, input().split()))
-    res, alive = [0] * n, [(i + 1) for i in range(n + 2)]
+    (n, m) = list(map(int, input().split()))
+    (res, alive) = ([0] * n, [i + 1 for i in range(n + 2)])
     from sys import stdin
     for _ in range(m):
-        l, r, x = list(map(int, stdin.readline().split()))
+        (l, r, x) = list(map(int, stdin.readline().split()))
         i = l
         while i <= r:
             if res[i - 1] == 0 and i != x:

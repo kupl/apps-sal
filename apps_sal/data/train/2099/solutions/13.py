@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = list(range(1, n + 1))
 if k > 1:
     j = 0

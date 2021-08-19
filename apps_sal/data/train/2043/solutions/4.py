@@ -8,7 +8,7 @@ q = 0
 p = 0
 n = int(input())
 for i in range(n):
-    x1, x2 = list(map(int, input().split()))
+    (x1, x2) = list(map(int, input().split()))
     l.append(x1)
     r.append(x2)
     if x1 == 0:
@@ -29,8 +29,6 @@ for i3 in range(n + 1):
 for i3 in range(1, n):
     l2[a[i3]] = a[i3 - 1]
 del l2[0]
-
-
 for i3 in range(n + 1):
     r2.append(0)
 for i3 in range(0, n - 1):

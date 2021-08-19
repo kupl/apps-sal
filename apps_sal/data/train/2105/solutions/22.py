@@ -22,4 +22,4 @@ elif n == 2:
     print(1, 1)
 else:
     print(2)
-    print(" ".join(str(num) for num in ans))
+    print(' '.join((str(num) for num in ans)))

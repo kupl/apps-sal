@@ -1,9 +1,9 @@
-cost, res = {}, []
+(cost, res) = ({}, [])
 t = int(input())
 for i in range(t):
     arr = list(map(int, input().split()))
     if len(arr) == 4:
-        _, u, v, w = arr
+        (_, u, v, w) = arr
         while u != v:
             if u > v:
                 cost[u] = cost.get(u, 0) + w
@@ -12,7 +12,7 @@ for i in range(t):
                 cost[v] = cost.get(v, 0) + w
                 v //= 2
     else:
-        _, u, v = arr
+        (_, u, v) = arr
         curr_res = 0
         while u != v:
             if u > v:

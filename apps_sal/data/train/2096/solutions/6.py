@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-a = [i[0] for i in sorted(enumerate(a), key=lambda x:x[1])]
+a = [i[0] for i in sorted(enumerate(a), key=lambda x: x[1])]
 checker = [0 for i in range(n)]
 ans_set = []
 for i in range(n):
@@ -15,7 +15,7 @@ for i in range(n):
         ans_set.append(tmp)
 print(len(ans_set))
 for tmp in ans_set:
-    print(len(tmp), end=" ")
+    print(len(tmp), end=' ')
     for j in tmp:
-        print(j + 1, end=" ")
+        print(j + 1, end=' ')
     print()
