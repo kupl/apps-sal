@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     @staticmethod
     def numFactors(num, A_set):
         factors = set()
@@ -18,12 +19,10 @@ class Solution:
         if root in results:
             return results[root]
         factors = Solution.numFactors(root, A_set)
-        # tree can only have depth 1 with the root node alone
         if len(factors) == 0:
             results[root] = 1
             return 1
-        # tree can have depth greater than 1
-        n = 1  # depth 1
+        n = 1
         while len(factors) > 0:
             factor = factors.pop()
             remainder = root // factor

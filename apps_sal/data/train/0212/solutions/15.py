@@ -3,7 +3,6 @@ import typing as t
 
 
 class Solution:
-
     BASE = 10 ** 9 + 7
 
     def divisor_pairs(self, idx: int) -> List[t.Tuple[int, int]]:
@@ -21,14 +20,14 @@ class Solution:
 
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         self.A = sorted(A)
-        self.A_idx = {a: idx for idx, a in enumerate(self.A)}
-        return sum(self.count_binary_trees(idx) for idx in range(len(A))) % self.BASE
+        self.A_idx = {a: idx for (idx, a) in enumerate(self.A)}
+        return sum((self.count_binary_trees(idx) for idx in range(len(A)))) % self.BASE
 
     @ft.lru_cache(None)
     def count_binary_trees(self, idx: int) -> int:
         num = self.A[idx]
-        ans = 1  # root only
-        for left_idx, right_idx in self.divisor_pairs(idx):
+        ans = 1
+        for (left_idx, right_idx) in self.divisor_pairs(idx):
             left_cnt = self.count_binary_trees(left_idx)
             right_cnt = self.count_binary_trees(right_idx)
             if left_idx == right_idx:

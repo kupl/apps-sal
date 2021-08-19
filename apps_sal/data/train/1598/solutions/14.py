@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
     for i in range(t):
@@ -12,7 +11,7 @@ try:
         avg //= n
         a.sort(key=lambda a: a[2])
         for x in a:
-            if int(x[2]) <= (avg):
+            if int(x[2]) <= avg:
                 print(' '.join(map(str, x)))
 except EOFError:
     pass

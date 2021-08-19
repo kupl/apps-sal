@@ -2,12 +2,11 @@ from operator import itemgetter
 t = int(input())
 for _ in range(t):
     n = int(input())
-    # d=defaultdict(list)
     l = []
     d = {}
     sum1 = 0
     for i in range(n):
-        name, p_mobile, marks = map(str, input().split())
+        (name, p_mobile, marks) = map(str, input().split())
         d['name'] = name
         d['p_mobile'] = p_mobile
         d['marks'] = int(marks)

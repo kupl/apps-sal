@@ -1,4 +1,3 @@
-# Help the teacher
 for _ in range(int(input())):
     n = int(input())
     list1 = []
@@ -10,7 +9,7 @@ for _ in range(int(input())):
     avg = sums / n
     ans = []
     for i in list1:
-        if(avg > int(i[2])):
+        if avg > int(i[2]):
             ans.append(i)
     ans.sort(key=lambda ans: int(ans[2]))
     for i in ans:
