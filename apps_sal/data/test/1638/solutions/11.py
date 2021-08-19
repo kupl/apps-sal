@@ -15,7 +15,6 @@ while i < n:
         arr.append(min(a[j], pmin))
         pmin = min(pmin, min(a[j], pmin))
         j -= 1
-
     arr = arr[::-1]
     arr.append(a[i])
     j = i + 1
@@ -26,9 +25,7 @@ while i < n:
         pmin = min(pmin, min(a[j], pmin))
         j += 1
     if v > val:
-
         val = max(val, v)
         dict = arr
     i += 1
 print(*dict)
-# print(dict.values())

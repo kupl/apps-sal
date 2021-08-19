@@ -1,10 +1,14 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-def inpl(): return list(map(int, input().split()))
+
+
+def inpl():
+    return list(map(int, input().split()))
 
 
 class UnionFind:
+
     def __init__(self, N=None):
         if N is None or N < 1:
             self.parent = defaultdict(lambda: -1)
@@ -24,7 +28,7 @@ class UnionFind:
         rn = self.root(n)
         if rm != rn:
             if -self.parent[rm] < -self.parent[rn]:
-                rm, rn = rn, rm
+                (rm, rn) = (rn, rm)
             self.parent[rm] += self.parent[rn]
             self.parent[rn] = rm
 
@@ -37,19 +41,17 @@ class UnionFind:
     def groups(self):
         if isinstance(self.parent, list):
             return list(map(lambda x: x < 0, self.parent)).count(True)
-        else:  # self.parent: defaultdict
+        else:
             return list(map(lambda x: x < 0, self.parent.values())).count(True)
 
 
 N = int(input())
 uf = UnionFind()
 for _ in range(N):
-    x, y = inpl()
+    (x, y) = inpl()
     uf.merge(2 * x, 2 * y + 1)
-
 nxny = defaultdict(lambda: [0, 0])
 for k in uf.parent.keys():
     nxny[uf.root(k)][k % 2] += 1
-
-ans = sum([nx * ny for nx, ny in nxny.values()]) - N
+ans = sum([nx * ny for (nx, ny) in nxny.values()]) - N
 print(ans)

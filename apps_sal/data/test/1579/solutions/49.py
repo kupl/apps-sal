@@ -8,8 +8,8 @@ class UnionFindTree:
     """
 
     def __init__(self, n):
-        self.par = list(range(n))  # parent
-        self.rank = [0] * n  # depth of tree
+        self.par = list(range(n))
+        self.rank = [0] * n
 
     def find(self, x):
         if self.par[x] == x:
@@ -19,7 +19,7 @@ class UnionFindTree:
             return self.par[x]
 
     def unite(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return
         if self.rank[x] < self.rank[y]:
@@ -36,13 +36,12 @@ class UnionFindTree:
 N = int(input())
 M = 10 ** 5
 uft = UnionFindTree(N + 2 * M)
-
 for i in range(N):
-    x, y = list(map(int, input().split()))
-    x, y = x - 1, y - 1
+    (x, y) = list(map(int, input().split()))
+    (x, y) = (x - 1, y - 1)
     uft.unite(i, x + N)
     uft.unite(i, y + N + M)
-x_dict, y_dict = dict(), dict()
+(x_dict, y_dict) = (dict(), dict())
 for x in range(N, M + N):
     par_x = uft.find(x)
     x_dict[par_x] = x_dict.get(par_x, 0) + 1

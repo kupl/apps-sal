@@ -6,14 +6,15 @@ NXY = [int(_) for _ in read().split()]
 N = NXY[0]
 X = NXY[1::2]
 Y = NXY[2::2]
-xi = {x: i for i, x in enumerate(set(X))}
-yj = {y: j for j, y in enumerate(set(Y))}
+xi = {x: i for (i, x) in enumerate(set(X))}
+yj = {y: j for (j, y) in enumerate(set(Y))}
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, size):
         self.dat = list(range(size))
-        self.SIZE = [1] * size  # 0-indexed
+        self.SIZE = [1] * size
 
     def find(self, x):
         dat = self.dat
@@ -34,8 +35,8 @@ class UnionFind():
         SIZE = self.SIZE
         dat = self.dat
         if not is_same(x, y):
-            X, Y = find(x), find(y)
-            SX, SY = SIZE[X], SIZE[Y]
+            (X, Y) = (find(x), find(y))
+            (SX, SY) = (SIZE[X], SIZE[Y])
             if SX > SY:
                 m = dat[X] = Y
             else:
@@ -61,7 +62,7 @@ ufx = UnionFind(len(xi))
 ufy = UnionFind(len(yj))
 sxy = collections.defaultdict(set)
 syx = collections.defaultdict(set)
-for x, y in zip(X, Y):
+for (x, y) in zip(X, Y):
     i = xi[x]
     j = yj[y]
     sxy[i].add(j)
@@ -78,8 +79,8 @@ for sx in list(syx.values()):
 ufx.scan_uf()
 ufy.scan_uf()
 ans = 0
-for x, vx in enumerate(ufx.SIZE):
+for (x, vx) in enumerate(ufx.SIZE):
     if vx:
         vy = ufy.size(sxy2[x].pop())
         ans += vx * vy
-print((ans - N))
+print(ans - N)

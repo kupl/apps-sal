@@ -1,6 +1,9 @@
 import sys
-sys.setrecursionlimit(10**6)
-def input(): return sys.stdin.readline().strip()
+sys.setrecursionlimit(10 ** 6)
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def main():
@@ -12,19 +15,16 @@ def main():
 
     完全二部グラフになるのは背理法からすぐわかる。なので解法は(¥Sum_{i:component}X_i Y_i) - N
     """
-
     N = int(input())
-    V = 10 ** 5 + 1  # padding for y
+    V = 10 ** 5 + 1
     repn = [[] for _ in range(V * 2)]
     for _ in range(N):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         repn[x].append(V + y)
         repn[V + y].append(x)
-
     visited = [0] * (V * 2)
     count = [0, 0]
 
-    # dfsでその都度連結成分を求める
     def dfs(v):
         if visited[v]:
             return
@@ -32,7 +32,6 @@ def main():
         count[v // V] += 1
         for u in repn[v]:
             dfs(u)
-
     ans = 0
     for i in range(V * 2):
         if visited[i]:
@@ -40,7 +39,7 @@ def main():
         count[:] = [0, 0]
         dfs(i)
         ans += count[0] * count[1]
-    print((ans - N))
+    print(ans - N)
 
 
 def __starting_point():

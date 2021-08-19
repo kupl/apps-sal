@@ -1,9 +1,5 @@
-# import sys
-# sys.setrecursionlimit(20000)
-
-
 N = int(input())
-COR = [tuple((list(map(int, input().split())))) for _ in range(N)]
+COR = [tuple(list(map(int, input().split()))) for _ in range(N)]
 
 
 class Group:
@@ -24,7 +20,7 @@ def grouping(group, x, xcor, ycor):
     for y in xcor[x][0]:
         if (x, y) not in group.xy:
             group.n += 1
-            group.xy[(x, y)] = None
+            group.xy[x, y] = None
         if ycor[y][1]:
             continue
         ycor[y][1] = True
@@ -32,7 +28,7 @@ def grouping(group, x, xcor, ycor):
         for x_ in ycor[y][0]:
             if (x_, y) not in group.xy:
                 group.n += 1
-                group.xy[(x_, y)] = None
+                group.xy[x_, y] = None
             if xcor[x_][1]:
                 continue
             xcor[x_][1] = True
@@ -41,10 +37,10 @@ def grouping(group, x, xcor, ycor):
 
 
 if N <= 2:
-    print((0))
+    print(0)
 else:
-    xcor, ycor = {}, {}
-    for xi, yi in COR:
+    (xcor, ycor) = ({}, {})
+    for (xi, yi) in COR:
         if xi in xcor:
             xcor[xi][0].append(yi)
         else:
@@ -54,7 +50,7 @@ else:
         else:
             ycor[yi] = [[xi], False]
     group_list = []
-    for i, v in list(xcor.items()):
+    for (i, v) in list(xcor.items()):
         if v[1]:
             continue
         group = Group()

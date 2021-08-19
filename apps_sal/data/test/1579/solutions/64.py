@@ -6,8 +6,6 @@ from functools import cmp_to_key
 import heapq
 sys.setrecursionlimit(100000)
 
-# input functions for me
-
 
 def rsa(sep=''):
     if sep == '':
@@ -27,13 +25,20 @@ def ria(sep=''):
     return list(rip(sep))
 
 
-def ri(): return int(input())
-def rd(): return float(input())
-def rs(): return input()
-##
+def ri():
+    return int(input())
+
+
+def rd():
+    return float(input())
+
+
+def rs():
+    return input()
 
 
 class union_find:
+
     def __init__(self, n):
         self.N = n
         self._parent = [i for i in range(self.N)]
@@ -52,10 +57,10 @@ class union_find:
     def unite(self, a, b):
         a = self.parent(a)
         b = self.parent(b)
-        if(a == b):
+        if a == b:
             return False
         if self._mem[a] > self._mem[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         self._parent[a] = b
         self._mem[b] += self._mem[a]
         self.compo -= 1
@@ -68,7 +73,7 @@ class union_find:
         return self._mem[self.parent(a)]
 
     def dump(self):
-        print((self._parent))
+        print(self._parent)
 
 
 def main():
@@ -76,8 +81,7 @@ def main():
     X = [0] * N
     Y = [0] * N
     for i in range(N):
-        X[i], Y[i] = rip()
-
+        (X[i], Y[i]) = rip()
     uf = union_find(N)
     di = dict()
     for i in range(N):
@@ -89,18 +93,15 @@ def main():
         if not Y[i] in di:
             di[Y[i]] = i
         uf.unite(i, di[Y[i]])
-
     hx = [set() for i in range(N)]
     hy = [set() for i in range(N)]
     for i in range(N):
         hx[uf.parent(i)].add(X[i])
         hy[uf.parent(i)].add(Y[i])
-
     tot = 0
     for i in range(N):
         tot += len(hx[i]) * len(hy[i])
-
-    print((tot - N))
+    print(tot - N)
 
 
 def __starting_point():
