@@ -11,7 +11,6 @@ class Solution:
             visited.add(current)
             if arr[current] == 0:
                 return True
-            # check the neighbors
             for n in graph.get(current, []):
                 stack.append(n)
         return False
@@ -28,5 +27,5 @@ class Solution:
 
 
 if False:
-    print((Solution().canReach([4, 2, 3, 0, 3, 1, 2], 0)))  # true
-    print((Solution().canReach([3, 0, 2, 1, 2], 2)))  # false
+    print(Solution().canReach([4, 2, 3, 0, 3, 1, 2], 0))
+    print(Solution().canReach([3, 0, 2, 1, 2], 2))

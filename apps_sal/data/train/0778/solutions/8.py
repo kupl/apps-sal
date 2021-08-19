@@ -1,13 +1,10 @@
-
-
-for _ in range(int(input())):  # test_cases
+for _ in range(int(input())):
     n = input()
-    a = n[::-1]  # reverse and store
+    a = n[::-1]
     k = 0
-    for i in a:  # loop through to remove zeroes at the beginning
-        if i == '0':  # delete the character from the string
+    for i in a:
+        if i == '0':
             k += 1
-        else:  # exit as soon as a non zero number is found :)
+        else:
             break
-
     print(a[k:])

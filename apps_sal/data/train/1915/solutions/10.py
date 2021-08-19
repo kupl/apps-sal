@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         n = len(target)
         m = len(stamp)
@@ -6,7 +7,7 @@ class Solution:
         t = list(target)
         total = 0
 
-        def match(ind):  # to match pattens in target
+        def match(ind):
             l = 0
             size = 0
             while l <= m - 1 and ind + l <= n - 1:

@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         ns = len(stamp)
         stamp_patterns = []
@@ -7,13 +8,10 @@ class Solution:
                 curr = '*' * i + stamp[i:i + window_size] + '*' * (ns - window_size - i)
                 stamp_patterns.append(curr)
         stamp_patterns.reverse()
-
         res = []
         nt = len(target)
-
         while target != '*' * nt:
             old_target = target
-            # greedy, keep replace current target string with possible pattern
             for pattern in stamp_patterns:
                 inx = target.find(pattern)
                 if inx != -1:
@@ -21,5 +19,4 @@ class Solution:
                     res.append(inx)
             if old_target == target:
                 return []
-
         return reversed(res)
