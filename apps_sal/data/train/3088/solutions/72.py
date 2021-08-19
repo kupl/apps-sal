@@ -3,6 +3,6 @@ def nba_extrap(ppg, mpg):
     if mpg == 0:
         return 0
     else:
-        ppm = ppg / mpg  # points per minute
+        ppm = ppg / mpg
         res = ppm * total_min
         return round(res, 1)

@@ -2,17 +2,17 @@ from collections import deque
 from math import log2, floor
 
 
-def split_tree(a):  # return head, left subtree, right subtree
+def split_tree(a):
     top_position = 0
     number_of_elements = len(a)
     number_of_layers = floor(log2(number_of_elements)) + 1
     top_size = 2 ** (number_of_layers - 1) - 1
     lowest_level_count = number_of_elements - top_size
-    if lowest_level_count >= 2 ** (number_of_layers - 2):  # left part of lowest level is full
-        top_position = int(2**(number_of_layers - 1)) - 1
-    else:  # right part of lowest level is empty
-        top_position = - (top_size - 1) // 2 - 1
-    return a[top_position], a[:top_position], a[top_position + 1:]
+    if lowest_level_count >= 2 ** (number_of_layers - 2):
+        top_position = int(2 ** (number_of_layers - 1)) - 1
+    else:
+        top_position = -(top_size - 1) // 2 - 1
+    return (a[top_position], a[:top_position], a[top_position + 1:])
 
 
 def complete_binary_tree(a):
