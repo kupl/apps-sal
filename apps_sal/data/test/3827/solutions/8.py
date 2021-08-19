@@ -1,10 +1,8 @@
 s = input()
-
 a = 0
 b = 0
 c = 0
-
-if (''.join(sorted(s)) == s):
+if ''.join(sorted(s)) == s:
     for i in s:
         if i == 'a':
             a += 1
@@ -12,11 +10,9 @@ if (''.join(sorted(s)) == s):
             b += 1
         elif i == 'c':
             c += 1
-    # print(a,b,c)
     if a > 0 and b > 0 and (c == a or c == b):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
 else:
-    print("NO")
+    print('NO')

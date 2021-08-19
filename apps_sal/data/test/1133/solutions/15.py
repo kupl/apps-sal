@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from collections import defaultdict
 from itertools import combinations
 
@@ -22,14 +20,14 @@ def main():
             if c2 is not None:
                 a = ord(c1) - 97
                 b = ord(c2) - 97
-                d[(min(a, b), max(a, b))] += len(s)
+                d[min(a, b), max(a, b)] += len(s)
             else:
                 a = ord(c1) - 97
                 for j in range(26):
-                    d[(min(a, j), max(a, j))] += len(s)
+                    d[min(a, j), max(a, j)] += len(s)
     result = 0
-    for a, b in combinations(list(range(26)), 2):
-        result = max(result, d[(a, b)])
+    for (a, b) in combinations(list(range(26)), 2):
+        result = max(result, d[a, b])
     print(result)
 
 
