@@ -13,15 +13,14 @@ def f(n):
 
 
 for tc in range(t):
-    n, s = list(map(int, input().strip().split()))
+    (n, s) = list(map(int, input().strip().split()))
     if f(n) <= s:
         print(0)
         continue
     b = 1
-    ans = int(1e20)
+    ans = int(1e+20)
     while b <= n * 10:
         rn = n // b * b + b
-        # print(rn, f(rn))
         if f(rn) <= s:
             ans = min(ans, rn - n)
         b *= 10

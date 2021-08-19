@@ -1,12 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-# count = 0
-# list a[i]が偶数かどうかをチェック。ループはとりあえず省略する
-
 exist_odd = False
-# in_if = 0
 in_for = 0
-# in_while = 0
 while exist_odd == False:
     for i in range(n):
         if a[i] % 2 != 0:
@@ -16,7 +11,5 @@ while exist_odd == False:
             break
         else:
             a[i] = a[i] / 2
-        # in_if += 1
-        # print(in_if)
     in_for += 1
 print(in_for)
