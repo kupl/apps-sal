@@ -1,17 +1,15 @@
 import heapq as hq
-N, H = map(int, input().split())
+(N, H) = map(int, input().split())
 slash = 0
 Throw = []
 for _ in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     slash = max(slash, a)
     if b > a:
         Throw.append(b)
-# slash=斬撃最大ダメージ、投げてslash超のダメージが出るならばその剣をダメージが大きい順に投げる
 Throw = [-th for th in Throw if th > slash]
 hq.heapify(Throw)
-
-dmg, cnt = 0, 0
+(dmg, cnt) = (0, 0)
 while len(Throw) != 0:
     if dmg >= H:
         break

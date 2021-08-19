@@ -5,13 +5,13 @@ def Pow(base, n):
     res = 1
     while n:
         if n & 1:
-            res = (res * base) % MOD
-        base = (base * base) % MOD
+            res = res * base % MOD
+        base = base * base % MOD
         n >>= 1
     return res
 
 
-n, a, b, k = list(map(int, input().split()))
+(n, a, b, k) = list(map(int, input().split()))
 ans = 0
 num = (n + 1) // k
 _a = Pow(a, MOD - 2)
@@ -25,7 +25,6 @@ if q == 1:
             ans = (ans - res) % MOD
         res = res * b % MOD * _a % MOD
 else:
-    # rat = (1-Pow(q, num))%MOD*Pow((1-q)%MOD, MOD-2)%MOD
     rat = (Pow(q, num) - 1) % MOD * Pow((q - 1) % MOD, MOD - 2) % MOD
     cur = Pow(a, n) * rat % MOD
     for i in input():

@@ -1,15 +1,13 @@
-n, H = list(map(int, input().split()))
+(n, H) = list(map(int, input().split()))
 a = []
 b = []
 for i in range(n):
-    ai, bi = list(map(int, input().split()))
+    (ai, bi) = list(map(int, input().split()))
     a.append(ai)
     b.append(bi)
-
 ans = 0
 amax = max(a)
 b.sort(reverse=True)
-# print(amax, b)
 i = 0
 while H > 0:
     if i < n:
@@ -27,5 +25,4 @@ while H > 0:
         if H % amax != 0:
             ans += 1
         break
-
 print(ans)

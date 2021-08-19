@@ -1,6 +1,5 @@
-MOD = 10**9 + 9
-
-n, a, b, k = list(map(int, input().split()))
+MOD = 10 ** 9 + 9
+(n, a, b, k) = list(map(int, input().split()))
 s = input()
 
 
@@ -13,8 +12,6 @@ def pow(a, n, m=MOD):
         a = a * a % m
         n >>= 1
     return ret
-# def inv(a,p=MOD):
-#    return pow(a,p-2,p);
 
 
 def inv(a, m=MOD):
@@ -23,12 +20,11 @@ def inv(a, m=MOD):
     return 1
 
 
-ia, d = inv(a), (n + 1) // k
-ans, ci0, q = 0, pow(a, n), pow(ia * b, k)
+(ia, d) = (inv(a), (n + 1) // k)
+(ans, ci0, q) = (0, pow(a, n), pow(ia * b, k))
 Q = d
 if q != 1:
     Q = (pow(q, d) - 1) * inv(q - 1) % MOD
-
 for i in range(k):
     sign = 1
     if s[i] == '-':

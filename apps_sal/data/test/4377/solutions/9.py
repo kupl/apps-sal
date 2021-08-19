@@ -1,10 +1,3 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 from collections import Counter
 
 
@@ -18,7 +11,6 @@ def __starting_point():
     x = d - a
     y = d - b
     z = d - c
-
     print(x, y, z)
 
 
