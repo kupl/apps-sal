@@ -9,21 +9,19 @@ for i in range(n):
         KeyError
         dict1[arr[i]] = 1
 ans = 0
-# print(dict1)
 for i in range(n):
     flag = 0
     for j in range(ceil(log2(arr[i])), 32):
         try:
-            if(pow(2, j) == 2 * arr[i]):
-                if(dict1[pow(2, j) - arr[i]] > 1):
+            if pow(2, j) == 2 * arr[i]:
+                if dict1[pow(2, j) - arr[i]] > 1:
                     flag = 1
                     break
-            elif(dict1[pow(2, j) - arr[i]] > 0):
+            elif dict1[pow(2, j) - arr[i]] > 0:
                 flag = 1
                 break
         except:
             KeyError
-    if(flag == 0):
-        # print(arr[i])
+    if flag == 0:
         ans += 1
 print(ans)

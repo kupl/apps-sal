@@ -8,7 +8,7 @@ def solve(x, y, p, q):
     INF = L + 10 ** 10
     R = INF
     while R - L > 1:
-        M = (L + R) >> 1
+        M = L + R >> 1
         cur = q * M
         curp = p * M
         curz = cur - curp
@@ -17,16 +17,16 @@ def solve(x, y, p, q):
             R = M
         else:
             L = M
-        #print(L, R)
     if R == INF:
         return -1
     return R * q - y
 
 
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 t = int(input())
 for i in range(t):
-    x, y, p, q = read()
+    (x, y, p, q) = read()
     print(solve(x, y, p, q))

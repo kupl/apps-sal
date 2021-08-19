@@ -1,7 +1,6 @@
-
 q = int(input())
 N = [int(input()) for i in range(q)]
-t = [3**i for i in range(10)]
+t = [3 ** i for i in range(10)]
 
 
 def d(x):
@@ -12,9 +11,7 @@ def d(x):
             ans += m
         m *= 3
         x //= 2
-    return(ans)
-
-# print(d(2))
+    return ans
 
 
 for i in range(q):

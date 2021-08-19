@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     a = list(map(int, input().split()))
     ans = 10000
     for j in range(n - d + 1):
@@ -14,6 +14,5 @@ for i in range(t):
             else:
                 tmp.append(a[i])
                 kol_d += 1
-        # print(tmp)
         ans = min(len(tmp), ans)
     print(ans)
