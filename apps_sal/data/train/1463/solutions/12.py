@@ -1,6 +1,4 @@
-# cook your dish here
 for _ in range(int(input())):
-
     n = int(input())
     if n <= 3:
         print(1)
@@ -8,7 +6,6 @@ for _ in range(int(input())):
         for i in range(n):
             ans.append(i + 1)
         print(n, *ans)
-
     else:
         print(n // 2)
         if n % 2 == 0:

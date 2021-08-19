@@ -6,5 +6,3 @@ def better_than_average(cp, mp):
         return True
     else:
         return False
-
-    # Your code here

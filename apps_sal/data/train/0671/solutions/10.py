@@ -1,9 +1,8 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     l = list(map(int, input().split()))
-    l1, l2 = [], []
+    (l1, l2) = ([], [])
     for i in range(len(l)):
         if l[i] == 0:
             l1.append(p[i])
@@ -13,7 +12,6 @@ for _ in range(int(input())):
         l1.sort()
         l2.sort()
         s += l1[0] + l2[0]
-        # print(s)
         if s <= 100:
             print('yes')
         else:

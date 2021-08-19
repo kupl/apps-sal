@@ -1,5 +1,3 @@
-# cook your dish here
-
 t = int(input())
 while t:
     A = input()
@@ -17,9 +15,6 @@ while t:
             mp0 += 1
         else:
             mp1 += 1
-    # if A==B:
-        #   con = True
-        #  op = 0
     if mp0 + p0 == len(A) or mp1 + p1 == len(A):
         con = False
     elif mp1 + p0 >= mp0 + p0:

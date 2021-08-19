@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def __init__(self):
         self.max_diff = -1
 
@@ -20,6 +15,5 @@ class Solution:
                     self.max_diff = abs(root.val - ans)
             ancestors.append(root.val)
             return ancestors
-
         max_diff_calc(root)
         return self.max_diff

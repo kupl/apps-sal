@@ -10,4 +10,3 @@ def count_positives_sum_negatives(arr):
         else:
             pass
     return [i, j]
-    # your code here

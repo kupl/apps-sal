@@ -10,11 +10,9 @@ for i in range(N):
         A[i][ord(S[i]) - ord('a') + 1] += 1
     except:
         pass
-# for i in A:
-#     print(i)
 while Q > 0:
     Q -= 1
-    X, Y = [int(x) for x in input().split()]
+    (X, Y) = [int(x) for x in input().split()]
     ans = 0
     X -= 1
     Y -= 1
@@ -26,6 +24,6 @@ while Q > 0:
                 val = A[Y][i]
         except:
             pass
-        if (val) > 0:
+        if val > 0:
             ans += 1
     print(ans)
