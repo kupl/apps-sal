@@ -1,8 +1,7 @@
 def bool_to_word(boolean):
-    # TODO
-    sum = ""
-    if(boolean == True):
-        sum = "Yes"
+    sum = ''
+    if boolean == True:
+        sum = 'Yes'
     else:
-        sum = "No"
+        sum = 'No'
     return sum

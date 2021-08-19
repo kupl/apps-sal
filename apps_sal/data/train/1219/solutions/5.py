@@ -1,7 +1,6 @@
-# cook your dish here
-p = (int)(1e9 + 7)
+p = int(1000000000.0 + 7)
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     if n % 2 != 0:
         n = (n - 1) // 2
     else:

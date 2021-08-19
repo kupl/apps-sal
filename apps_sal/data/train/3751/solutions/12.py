@@ -1,8 +1,8 @@
 def bool_to_word(boolean):
-    if boolean == True:  # condition applied to equate with True
+    if boolean == True:
         return 'Yes'
     else:
         return 'No'
 
 
-bool_to_word(True)  # Call the function by passing boolean
+bool_to_word(True)

@@ -1,7 +1,6 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 ans = [0 for _ in range(n + 1)]
 ans[0] = 1
@@ -17,6 +16,5 @@ for i in range(n - 1):
             x -= 1
         last = x - 1
     target = n - i - 2
-    #print(last, target)
     ans[i + 1] = last - target + 1
 print(*ans)
