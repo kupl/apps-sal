@@ -1,5 +1,4 @@
-# coding: utf-8
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 ans = ['1']
 for i in range(k):
     if i % 2 == 0:

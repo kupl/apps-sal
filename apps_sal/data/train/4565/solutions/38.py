@@ -1,4 +1,2 @@
-
 def replace_dots(s):
-    return s.replace(".", "-")
-    # Flez
+    return s.replace('.', '-')

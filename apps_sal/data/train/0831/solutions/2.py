@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     l = list(map(int, input().split()))
     for i in range(n):
         l[i] = l[i] % p

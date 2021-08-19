@@ -1,5 +1,4 @@
 def two_decimal_places(n):
-    #raise NotImplementedError("TODO: two_decimal_places")
     res = str(n).split('.')
     cc = 0
     cc += int(res[0]) * 100

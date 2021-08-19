@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     l = [int(i) for i in input().split()]
     pre = [0] * (n + 1)
     for i in range(1, n + 1):
@@ -10,7 +10,6 @@ for _ in range(int(input())):
     for i in range(n):
         for j in range(i, n):
             curr = (pre[j + 1] - pre[i] + p) % p
-            # print(curr)
             if curr > maxi:
                 maxi = curr
                 cmaxi = 1

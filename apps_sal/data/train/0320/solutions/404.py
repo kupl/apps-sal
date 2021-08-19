@@ -1,10 +1,10 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         odd = 0
         flag = True
         while len(nums) > 0:
-            # print(nums)
             temp = []
             if flag:
                 for x in nums:
@@ -22,9 +22,3 @@ class Solution:
                 flag = True
             nums = temp
         return res
-
-# [1,5]
-# [2,2]
-# [4,2,5]
-# [3,2,2,4]
-# [2,4,8,16]
