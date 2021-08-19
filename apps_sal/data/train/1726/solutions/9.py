@@ -10,16 +10,8 @@ def path_finder(maze):
             return False
         elif grid[x][y] == 'V':
             return False
-
         grid[x][y] = 'V'
-
-        if ((x < n - 1 and search(x + 1, y))
-            or (y > 0 and search(x, y - 1))
-            or (x > 0 and search(x - 1, y))
-                or (y < n - 1 and search(x, y + 1))):
-
+        if x < n - 1 and search(x + 1, y) or (y > 0 and search(x, y - 1)) or (x > 0 and search(x - 1, y)) or (y < n - 1 and search(x, y + 1)):
             return True
-
         return False
-
     return search(0, 0)

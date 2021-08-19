@@ -1,4 +1,5 @@
 class DynamicConnectivity(object):
+
     def __init__(self, n):
         self.__map = list(range(0, n))
 

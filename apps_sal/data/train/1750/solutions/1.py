@@ -1,5 +1,5 @@
 def mystery(n):
-    return n ^ (n >> 1)
+    return n ^ n >> 1
 
 
 def mystery_inv(n):
@@ -11,4 +11,4 @@ def mystery_inv(n):
 
 
 def name_of_mystery():
-    return "Gray code"
+    return 'Gray code'

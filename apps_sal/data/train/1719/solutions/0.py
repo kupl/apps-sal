@@ -6,7 +6,7 @@ def zeroes(base, number):
             base /= p
             e += 1
         if e:
-            f, m = 0, number
+            (f, m) = (0, number)
             while m:
                 m /= p
                 f += m

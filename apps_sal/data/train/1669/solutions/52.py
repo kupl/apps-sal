@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         handCounter = Counter()
         for number in hand:
@@ -14,5 +15,4 @@ class Solution:
                 handCounter[i] -= 1
                 if handCounter[i] == 0:
                     del handCounter[i]
-
         return True

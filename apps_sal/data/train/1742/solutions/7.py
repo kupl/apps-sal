@@ -1,5 +1,5 @@
 def combos(n):
-    combinatorialations, answer, seen = map(lambda x: [x], list(range(1, n + 1))), [], set()
+    (combinatorialations, answer, seen) = (map(lambda x: [x], list(range(1, n + 1))), [], set())
     while len(combinatorialations):
         acombo = combinatorialations.pop()
         thesum = sum(acombo)

@@ -1,6 +1,12 @@
 from math import sqrt
-def f(x): return sqrt(abs(x))
-def g(x): return x**3 * 5
+
+
+def f(x):
+    return sqrt(abs(x))
+
+
+def g(x):
+    return x ** 3 * 5
 
 
 arr = []
@@ -10,6 +16,6 @@ arr.reverse()
 for e in arr:
     r = f(e) + g(e)
     if 400 < r:
-        print("f(%d) = " % (e) + "MAGNA NIMIS!")
+        print('f(%d) = ' % e + 'MAGNA NIMIS!')
         continue
-    print("f(%d) = %.2f" % (e, r))
+    print('f(%d) = %.2f' % (e, r))

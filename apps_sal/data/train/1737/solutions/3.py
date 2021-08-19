@@ -3,7 +3,7 @@ def runoff(voters):
         return None
     votes = count_votes(voters)
     possible_winner = get_winner(votes)
-    if votes[possible_winner] > (len(voters) / 2):
+    if votes[possible_winner] > len(voters) / 2:
         return possible_winner
     else:
         losers = get_losers(votes)

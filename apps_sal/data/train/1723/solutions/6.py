@@ -57,14 +57,15 @@ class Quad(Segment):
 
     def point_at(self, t):
         p = self.points
-        return reduce(add, [mul(p[0], (1 - t)**2), mul(p[1], t * 2 * (1 - t)), mul(p[2], t**2)])
+        return reduce(add, [mul(p[0], (1 - t) ** 2), mul(p[1], t * 2 * (1 - t)), mul(p[2], t ** 2)])
 
     def sub_segment(self, t):
-        a, b = add(mul(self.points[0], 1 - t), mul(self.points[1], t))
+        (a, b) = add(mul(self.points[0], 1 - t), mul(self.points[1], t))
         return Quad(self.c[0], self.c[1], a, b, self.point_at(t)[0], self.point_at(t)[1])
 
 
 class Cubic(Segment):
+
     def __init__(self, *c):
         self.c = c
         self.points = [(c[i], c[i + 1]) for i in range(0, len(c) - 1, 2)]
@@ -75,10 +76,10 @@ class Cubic(Segment):
 
     def point_at(self, t):
         p = self.points
-        return reduce(add, [mul(p[0], (1 - t)**3), mul(p[1], 3 * t * (1 - t)**2), mul(p[2], 3 * t**2 * (1 - t)), mul(p[3], t**3)])
+        return reduce(add, [mul(p[0], (1 - t) ** 3), mul(p[1], 3 * t * (1 - t) ** 2), mul(p[2], 3 * t ** 2 * (1 - t)), mul(p[3], t ** 3)])
 
     def sub_segment(self, t):
         p = self.points
-        a, b = add(mul(p[0], 1 - t), mul(p[1], t))
-        c, d = reduce(add, [mul(p[0], (1 - t)**2), mul(p[1], t * 2 * (1 - t)), mul(p[2], t**2)])
+        (a, b) = add(mul(p[0], 1 - t), mul(p[1], t))
+        (c, d) = reduce(add, [mul(p[0], (1 - t) ** 2), mul(p[1], t * 2 * (1 - t)), mul(p[2], t ** 2)])
         return Cubic(self.c[0], self.c[1], a, b, c, d, self.point_at(t)[0], self.point_at(t)[1])

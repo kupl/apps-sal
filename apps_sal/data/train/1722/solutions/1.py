@@ -1,4 +1,5 @@
 class Machine:
+
     def __init__(self):
         self.action_for_cmd = {}
         self._actions = ACTIONS()

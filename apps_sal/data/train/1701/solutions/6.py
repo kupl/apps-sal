@@ -9,8 +9,9 @@ class Machine(object):
     def execute(self, instr):
         i = instr
         if i[0] == 'p':
+
             def doa(a):
-                for k, l in a:
+                for (k, l) in a:
                     self.cpu.write_stack(l)
 
             def dob(a):
@@ -33,12 +34,13 @@ class Machine(object):
             elif inst[0] == 'poprr':
                 dob(['a', 'b', 'c', 'd'])
         elif i.startswith('mov'):
-            inst = i.replace(",", '').split()
+            inst = i.replace(',', '').split()
             self.cpu.write_reg(inst[2], self.cpu.read_reg(inst[1]) if inst[1].isalpha() else int(inst[1]))
         else:
+
             def do(inst, op, a, b, l):
-                reg, val = 'a' if l == 2 else inst[2], self.cpu.read_reg(inst[1]) if inst[1].isalpha() else int(inst[1])
-                s = self.cpu.read_reg('a') if inst[0][-1] == 'a' else (self.cpu.pop_stack() if a else (0 if op == '+' else 1))
+                (reg, val) = ('a' if l == 2 else inst[2], self.cpu.read_reg(inst[1]) if inst[1].isalpha() else int(inst[1]))
+                s = self.cpu.read_reg('a') if inst[0][-1] == 'a' else self.cpu.pop_stack() if a else 0 if op == '+' else 1
                 s = reduce(lambda x, y: eval('x {} y'.format(op)), [s] + [self.cpu.stack.pop() for _ in range(val - b)])
                 self.cpu.write_reg(reg, s)
             inst = i.replace(',', '').split()

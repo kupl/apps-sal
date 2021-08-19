@@ -1,6 +1,5 @@
 import sys
 import math
-
 for nraw in sys.stdin.read().strip().split('\n')[::-1]:
     n = int(nraw)
     res = n ** 3 * 5 + math.sqrt(abs(n))

@@ -1,10 +1,10 @@
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
         post = [0] * (n + 1)
         for i in range(n - 1, -1, -1):
             post[i] = post[i + 1] + piles[i]
-
         dp = [[-1] * 200 for _ in range(101)]
 
         def solve(i, m):

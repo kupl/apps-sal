@@ -1,7 +1,6 @@
 s = []
 for i in range(11):
     s.append(int(input()))
-
 for i in range(11):
     x = s.pop()
     a = abs(x) ** 0.5

@@ -15,7 +15,7 @@ class Family:
         if first not in self.members or second not in self.members:
             return None
         kids = self.members[first].children[:]
-        parents, step = [first], 0
+        (parents, step) = ([first], 0)
         while kids:
             parents_size = len(parents)
             for kid in kids:
@@ -32,7 +32,7 @@ class Family:
 
     def get_parent_sex(self, name):
         kids = self.members.get(name, Person()).children[:]
-        parents, kid_step = [name], 0
+        (parents, kid_step) = ([name], 0)
         while kids:
             parents_size = len(parents)
             for kid in kids:
@@ -105,8 +105,7 @@ class Family:
         sp_sex = self.get_parent_sex(parent_name) if parent.sex is None else parent.sex
         if fp_sex == sp_sex and fp_sex is not None:
             return False
-        if (fp_sex is None and sp_sex is None and
-                child.parents and parent_name in self.members):
+        if fp_sex is None and sp_sex is None and child.parents and (parent_name in self.members):
             gap = self.get_parents_gap(child.parents[0], parent_name)
             if gap is not None and gap % 2:
                 return False

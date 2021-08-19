@@ -1,4 +1,5 @@
 class Solution(object):
+
     def isNStraightHand(self, hand, W):
         if len(hand) % W != 0:
             return False
@@ -14,5 +15,4 @@ class Solution(object):
                     del count[k]
                 else:
                     count[k] = v - num
-
         return True

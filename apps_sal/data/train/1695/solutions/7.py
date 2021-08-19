@@ -1,11 +1,9 @@
-
 import math
 from decimal import Decimal
 import sys
 
 
 def rek(a, b, n):
-
     if a == n and b == n:
         return 1
     if a == n:
@@ -17,6 +15,6 @@ def rek(a, b, n):
 
 print(2000)
 for i in range(1, 1001):
-    print(str(i) + " 1 " + str(i) + " 2")
+    print(str(i) + ' 1 ' + str(i) + ' 2')
 for i in range(1, 1001):
-    print(str(1001 - i) + " 1 " + str(1001 - i) + " 2")
+    print(str(1001 - i) + ' 1 ' + str(1001 - i) + ' 2')

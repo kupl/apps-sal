@@ -1,10 +1,10 @@
 import sys
 import random
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 print(2, 1, n, 1, m)
 sys.stdout.flush()
 sum = int(input())
-sum /= (n * m)
+sum /= n * m
 print(3)
 sys.stdout.flush()
 if sum - 5 < 1:

@@ -6,7 +6,7 @@ def f(t) -> float:
 
 
 a = [float(input()) for _ in range(11)]
-for i, t in reversed(list(enumerate(a))):
+for (i, t) in reversed(list(enumerate(a))):
     y = f(t)
     if y > 400:
         print('f(%.0f) =' % t, 'MAGNA NIMIS!')

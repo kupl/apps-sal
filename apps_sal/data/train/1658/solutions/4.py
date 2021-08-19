@@ -3,7 +3,7 @@ from fractions import Fraction
 
 
 def expand(x, digit):
-    n, d = 1, factorial(0)
+    (n, d) = (1, factorial(0))
     i = 1
     x = Fraction(x).limit_denominator(10000)
     x1 = x.numerator
@@ -12,7 +12,7 @@ def expand(x, digit):
         b = factorial(i)
         if len(str(n)) < digit:
             n = pow(x1, i) * d + n * b * pow(x2, i)
-            d *= (b * pow(x2, i))
+            d *= b * pow(x2, i)
             c = gcd(n, d)
             n //= c
             d //= c

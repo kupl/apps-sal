@@ -12,7 +12,7 @@ def knight(p1, p2):
             for k in range(8):
                 for i in moves:
                     new = [j + i[0], k + i[1]]
-                    if new[0] in range(8) and new[1] in range(8) and new != p1 and board[k][j] != 0:
+                    if new[0] in range(8) and new[1] in range(8) and (new != p1) and (board[k][j] != 0):
                         if board[new[1]][new[0]] == 0:
                             board[new[1]][new[0]] = board[k][j] + 1
                         else:

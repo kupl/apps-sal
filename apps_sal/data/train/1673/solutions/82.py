@@ -1,4 +1,5 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         n = len(arr)
         dp = [[None for i in range(n)] for i in range(n)]

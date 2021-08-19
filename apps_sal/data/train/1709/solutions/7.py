@@ -1,8 +1,7 @@
-
 def factors(n):
     gaps = [1, 2, 2, 4, 2, 4, 2, 4, 6, 2, 6]
-    length, cycle = 11, 3
-    f, fs, nxt = 2, [], 0
+    (length, cycle) = (11, 3)
+    (f, fs, nxt) = (2, [], 0)
     while f * f <= n:
         while n % f == 0:
             fs.append(f)
@@ -19,11 +18,10 @@ def factors(n):
 def sum_for_list(lst):
     d = {}
     fList = []
-
     for i in lst:
         f = factors(abs(i))
         f = list(set(f))
-        if(i < 0):
+        if i < 0:
             print((i, f))
         for n in f:
             if n in d:
@@ -33,5 +31,4 @@ def sum_for_list(lst):
     r = []
     for i in sorted(d):
         r.append([int(i), sum(d[i])])
-
     return r

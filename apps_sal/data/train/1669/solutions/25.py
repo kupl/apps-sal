@@ -1,9 +1,9 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
         freq = Counter(hand)
-
         while freq:
             m = min(freq)
             for i in range(m, m + W):

@@ -7,7 +7,7 @@ def solve(bag, width, height, items):
     if not items:
         return bag
     item = items[0]
-    item_width, item_height = len(item[0]), len(item)
+    (item_width, item_height) = (len(item[0]), len(item))
     for px in range(width - item_width + 1):
         for py in range(height - item_height + 1):
             new_bag = place(bag, item, item_width, item_height, px, py)

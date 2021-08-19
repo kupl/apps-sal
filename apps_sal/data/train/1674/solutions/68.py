@@ -1,5 +1,7 @@
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
+
         @lru_cache(None)
         def dp(idx, M, people):
             if idx >= len(piles):

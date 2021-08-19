@@ -17,6 +17,5 @@ def least_bribes(bribes):
             return 0
         if i + 1 == j:
             return bribes[i]
-        return min(max(f(i, k), f(k + 1, j)) + bribes[k] for k in xrange(i, j))
-
+        return min((max(f(i, k), f(k + 1, j)) + bribes[k] for k in xrange(i, j)))
     return f(0, len(bribes))

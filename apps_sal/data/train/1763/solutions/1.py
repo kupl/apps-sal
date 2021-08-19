@@ -10,7 +10,7 @@ def n_choose_k(n, k):
         k = n - k
     ans = 1
     for i in range(k):
-        ans = (ans * (n - i) // (i + 1))
+        ans = ans * (n - i) // (i + 1)
     return ans
 
 

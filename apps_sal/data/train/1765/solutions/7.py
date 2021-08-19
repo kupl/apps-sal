@@ -12,4 +12,5 @@ def partition_helper(sum, largest_number):
     return partition_helper(sum, largest_number - 1) + partition_helper(sum - largest_number, largest_number)
 
 
-def partitions(n): return partition_helper(n, n)
+def partitions(n):
+    return partition_helper(n, n)

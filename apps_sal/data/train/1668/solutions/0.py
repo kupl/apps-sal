@@ -7,7 +7,7 @@ def next_smaller(n):
         return -1
     while s[j] >= s[i - 1]:
         j -= 1
-    s[i - 1], s[j] = s[j], s[i - 1]
+    (s[i - 1], s[j]) = (s[j], s[i - 1])
     s[i:] = reversed(s[i:])
     if s[0] == '0':
         return -1

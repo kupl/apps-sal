@@ -1,15 +1,14 @@
 import re
-
-ADDSUB, MULDIV = '+-', '*$'
+(ADDSUB, MULDIV) = ('+-', '*$')
 
 
 def calculate(expression):
-    return "400: Bad request" if re.search(r'[^+*$\d.-]', expression) else parseAndEval(expression, ADDSUB)
+    return '400: Bad request' if re.search('[^+*$\\d.-]', expression) else parseAndEval(expression, ADDSUB)
 
 
 def parseAndEval(expression, ops):
     v = 0
-    for op, part in re.findall(r'([{0}])?([^{0}]+)'.format(ops), expression):
+    for (op, part) in re.findall('([{0}])?([^{0}]+)'.format(ops), expression):
         if not op:
             v = float(part) if ops == MULDIV else parseAndEval(part, MULDIV)
         elif op == '*':

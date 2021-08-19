@@ -1,10 +1,11 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         m = len(arr)
         print(m)
         if m == 1:
             return min(arr[0])
-        dp = [[0 for x in range(m)]for x in range(m)]
+        dp = [[0 for x in range(m)] for x in range(m)]
         for i in range(m):
             for j in range(m):
                 if i == 0:

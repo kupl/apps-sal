@@ -11,7 +11,7 @@ def valid(a):
             if sorted(''.join(day)) != players:
                 return False
             for group in day:
-                count += (pair[0] in group and pair[1] in group)
+                count += pair[0] in group and pair[1] in group
                 if len(group) != group_size:
                     return False
         if count > 1:

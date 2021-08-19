@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         maps = Counter(hand)
         while maps:
@@ -10,5 +11,4 @@ class Solution:
                 maps[i] -= count
                 if maps[i] == 0:
                     maps.pop(i)
-
         return True

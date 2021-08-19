@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         dp = [[float('inf')] + i + [float('inf')] for i in arr]
         for i in range(1, len(dp)):

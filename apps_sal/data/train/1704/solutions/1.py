@@ -15,10 +15,10 @@ class PokerHand(object):
 
     def __init__(self, hand):
         self.hand = [Card(card) for card in hand.split()]
-        self.rank_counts = Counter(card.rank for card in self.hand)
+        self.rank_counts = Counter((card.rank for card in self.hand))
 
     def compare_with(self, other):
-        return "Win" if self.score > other.score else "Loss" if self.score < other.score else "Tie"
+        return 'Win' if self.score > other.score else 'Loss' if self.score < other.score else 'Tie'
 
     @property
     def score(self):
@@ -27,10 +27,11 @@ class PokerHand(object):
             return len({card.suit for card in self.hand}) == 1
 
         def is_straight():
+
             def is_sequential(arr):
-                return all(a + 1 == b for a, b in zip(arr, arr[1:]))
-            arr = sorted(card.rank for card in self.hand)
-            return is_sequential(arr) or (is_sequential(arr[:4]) and arr[0] == 2 and arr[-1] == 14)
+                return all((a + 1 == b for (a, b) in zip(arr, arr[1:])))
+            arr = sorted((card.rank for card in self.hand))
+            return is_sequential(arr) or (is_sequential(arr[:4]) and arr[0] == 2 and (arr[-1] == 14))
 
         def is_straight_flush():
             return is_flush() and is_straight()
@@ -45,8 +46,7 @@ class PokerHand(object):
             return list(self.rank_counts.values()).count(2) == 2
 
         def get_by_count(n):
-            return tuple(rank for rank, count in sorted(list(self.rank_counts.items()), key=lambda x: (x[1], -x[0])) if count == n)
-
+            return tuple((rank for (rank, count) in sorted(list(self.rank_counts.items()), key=lambda x: (x[1], -x[0])) if count == n))
         if is_straight_flush():
             return (9, get_by_count(1))
         elif is_n_of_kind(4):

@@ -1,7 +1,7 @@
 def shortestPath(topology, startPoint, endPoint):
-    stack, shortest, paths = [(1, [startPoint])], float("inf"), []
+    (stack, shortest, paths) = ([(1, [startPoint])], float('inf'), [])
     while stack:
-        acc, path = stack.pop()
+        (acc, path) = stack.pop()
         point = path[-1]
         if point == endPoint:
             if acc <= shortest:
@@ -12,4 +12,4 @@ def shortestPath(topology, startPoint, endPoint):
         for p in points:
             if p not in path:
                 stack.append((acc + points[p] + 1, path + [p]))
-    return sorted([path for val, path in paths if val == shortest])
+    return sorted([path for (val, path) in paths if val == shortest])

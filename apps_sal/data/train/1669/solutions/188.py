@@ -1,7 +1,7 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         count = collections.Counter(hand)
-
         while count:
             n = min(count.keys())
             n_count = count[n]
@@ -12,5 +12,4 @@ class Solution:
                 if count[x] == 0:
                     count.pop(x)
             count.pop(n)
-
         return True

@@ -24,7 +24,7 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     print(*[1] * n)

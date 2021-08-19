@@ -14,4 +14,4 @@ def solve(e):
         d[n] = t = e.drop(n)
         if not t:
             floormax = n
-    return min([k for k, v in d.items() if v])
+    return min([k for (k, v) in d.items() if v])

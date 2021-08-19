@@ -4,4 +4,4 @@ for _ in range(int(input())):
     a = []
     for i in l:
         a.append(i)
-    print("".join(a))
+    print(''.join(a))

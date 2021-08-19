@@ -1,5 +1,4 @@
 from re import findall
-
 dirs = {0: (1, 0), 1: (0, 1), 2: (-1, 0), 3: (0, -1)}
 
 
@@ -13,22 +12,20 @@ def find_sub(tokens):
 
 
 def execute(code):
-    tokens = findall('(\(|[FRL)]|[0-9]+)', code)
+    tokens = findall('(\\(|[FRL)]|[0-9]+)', code)
 
     def opt(flat):
         while '0' in flat:
             index = flat.index('0')
             del flat[index - 1:index + 1]
         return flat
-
     while '(' in tokens:
-        start, end = find_sub(tokens)
+        (start, end) = find_sub(tokens)
         sub = tokens[start + 1:end]
         del tokens[start + 1:end + 1]
         tokens[start] = opt(sub)
     tokens = opt(tokens)
-
-    path, loc, dire = [(0, 0)], (0, 0), 0
+    (path, loc, dire) = ([(0, 0)], (0, 0), 0)
 
     def perform(op):
         nonlocal path, loc, dire
@@ -50,18 +47,13 @@ def execute(code):
             else:
                 perform(i)
                 last = i
-
     perform_list(tokens)
-
-    minx = min(i[0] for i in path)
-    maxx = max(i[0] for i in path)
-    miny = min(i[1] for i in path)
-    maxy = max(i[1] for i in path)
-
-    w, h = (maxx - minx + 1), (maxy - miny + 1)
+    minx = min((i[0] for i in path))
+    maxx = max((i[0] for i in path))
+    miny = min((i[1] for i in path))
+    maxy = max((i[1] for i in path))
+    (w, h) = (maxx - minx + 1, maxy - miny + 1)
     map = [[' ' for _ in range(w)] for _ in range(h)]
-
     for i in path:
         map[i[1] - miny][i[0] - minx] = '*'
-
-    return '\r\n'.join(''.join(i) for i in map)
+    return '\r\n'.join((''.join(i) for i in map))

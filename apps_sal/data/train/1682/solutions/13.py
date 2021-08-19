@@ -16,4 +16,4 @@ for i in range(len(res)):
             temp = res[j]
             res[j] = res[i]
             res[i] = temp
-print("{}:{}-{}".format(res[-1][2], res[-1][0], res[-1][1]))
+print('{}:{}-{}'.format(res[-1][2], res[-1][0], res[-1][1]))

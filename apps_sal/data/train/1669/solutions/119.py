@@ -2,6 +2,7 @@ from collections import OrderedDict
 
 
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if W == 1:
             return True

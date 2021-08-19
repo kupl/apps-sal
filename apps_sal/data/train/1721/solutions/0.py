@@ -2,6 +2,7 @@ def create_number_class(alphabet):
     n = len(alphabet)
 
     class Number(object):
+
         def __init__(self, s):
             if isinstance(s, str):
                 v = 0
@@ -33,5 +34,4 @@ def create_number_class(alphabet):
 
         def convert_to(self, cls):
             return cls(self.value)
-
     return Number

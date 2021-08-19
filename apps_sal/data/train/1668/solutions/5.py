@@ -12,12 +12,10 @@ def next_smaller(n):
                     break
             if winner == 0 and i == 1:
                 return -1
-
             nums = nums[:i - 1]
             nums.append(winner)
             nums.extend(seen)
             return int(''.join(map(str, nums)))
         else:
             seen.append(nums[i])
-
     return -1

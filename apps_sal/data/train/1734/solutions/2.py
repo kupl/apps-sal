@@ -12,4 +12,4 @@ class User:
             self.rank += 1 + (self.rank == -1)
             self.progress -= 100
         if self.rank >= 8:
-            self.rank, self.progress = 8, 0
+            (self.rank, self.progress) = (8, 0)

@@ -3,7 +3,6 @@ def valid(a):
     day_length = len(a[0])
     group_size = len(a[0][0])
     golfers = {g for p in a[0] for g in p}
-
     for day in a:
         if len(day) != day_length:
             return False
@@ -15,9 +14,8 @@ def valid(a):
                     return False
                 if player not in d:
                     d[player] = set(group)
+                elif len(d[player] & set(group)) > 1:
+                    return False
                 else:
-                    if len(d[player] & set(group)) > 1:
-                        return False
-                    else:
-                        d[player].add(group)
+                    d[player].add(group)
     return True

@@ -2,12 +2,14 @@ import collections
 
 
 class Tower:
+
     def __init__(self):
         indicesOfAlienPath = []
         shots = 0
 
 
 class GameStats:
+
     def __init__(self):
         alienPath = collections.deque()
         towers = []
@@ -90,7 +92,7 @@ def GetCoordinate(orig, dir):
 
 def IsOnPath(grid, c):
     n = len(grid)
-    return c[1] < n and c[0] < n and c[1] >= 0 and c[0] >= 0 and (grid[c[1]][c[0]] == '1' or grid[c[1]][c[0]] == '0')
+    return c[1] < n and c[0] < n and (c[1] >= 0) and (c[0] >= 0) and (grid[c[1]][c[0]] == '1' or grid[c[1]][c[0]] == '0')
 
 
 def CreateTowers(grid, turrets, alienPathCoords):
@@ -137,7 +139,7 @@ def PrepareRound(game):
 def KillAliens(alienPath, towers):
     activeTowers = FilterInactiveTowers(alienPath, towers.copy())
     while CanShootAgain(activeTowers):
-        alienPath, activeTowers = ShootWithTowers(alienPath, activeTowers)
+        (alienPath, activeTowers) = ShootWithTowers(alienPath, activeTowers)
         activeTowers = FilterInactiveTowers(alienPath, activeTowers)
     return alienPath
 
@@ -149,9 +151,9 @@ def CanShootAgain(towers):
 def ShootWithTowers(alienPath, towers):
     towersShot = []
     for t in towers:
-        alienPath, t = ShootAliensInFormostPosition(alienPath, t)
+        (alienPath, t) = ShootAliensInFormostPosition(alienPath, t)
         towersShot.append(t)
-    return alienPath, towersShot
+    return (alienPath, towersShot)
 
 
 def ShootAliensInFormostPosition(alienPath, tower):
@@ -159,8 +161,8 @@ def ShootAliensInFormostPosition(alienPath, tower):
         if alienPath[idx] > 0:
             shots = tower[1] - 1
             alienPath[idx] = alienPath[idx] - 1
-            return alienPath, (tower[0], shots)
-    return alienPath, tower
+            return (alienPath, (tower[0], shots))
+    return (alienPath, tower)
 
 
 def FilterInactiveTowers(alienPath, towers):

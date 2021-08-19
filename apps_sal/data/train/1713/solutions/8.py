@@ -6,7 +6,7 @@ def count_calls(func, *args, **kwargs):
     tracer = Tracer()
     sys.settrace(tracer.my_tracer)
     rv = func(*args, **kwargs)
-    return tracer.count, rv
+    return (tracer.count, rv)
 
 
 class Tracer:

@@ -1,8 +1,8 @@
 class PokerHand(object):
-    FACE_VALUE = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "T": 10, "J": 11, "Q": 12, "K": 13, "A": 14}
+    FACE_VALUE = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 
     def __init__(self, hand):
-        self.suits = {"S": 0, "H": 0, "D": 0, "C": 0}
+        self.suits = {'S': 0, 'H': 0, 'D': 0, 'C': 0}
         self.values = {}
         self.flush = False
         for card in hand.split():
@@ -18,7 +18,7 @@ class PokerHand(object):
     def high_low(self):
         high_low = []
         for i in range(1, 5):
-            high_low += sorted([k for k, v in self.values.items() if v == i])
+            high_low += sorted([k for (k, v) in self.values.items() if v == i])
         return high_low[::-1]
 
     def look_for_straight(self):
@@ -44,7 +44,7 @@ class PokerHand(object):
     def compare_with(self, other):
         for i in range(len(self.rank_high_low)):
             if self.rank_high_low[i] > other.rank_high_low[i]:
-                return "Win"
+                return 'Win'
             if self.rank_high_low[i] < other.rank_high_low[i]:
-                return "Loss"
-        return "Tie"
+                return 'Loss'
+        return 'Tie'

@@ -1,7 +1,6 @@
 from functools import partial, reduce
 from operator import add, sub, mul, floordiv, and_, or_, xor
-OPERATIONS = {'add': add, 'sub': sub, 'mul': mul, 'div': floordiv,
-              'and': and_, 'or': or_, 'xor': xor}
+OPERATIONS = {'add': add, 'sub': sub, 'mul': mul, 'div': floordiv, 'and': and_, 'or': or_, 'xor': xor}
 
 
 class Machine(object):
@@ -52,7 +51,7 @@ class Machine(object):
         return int(value) if value.isdigit() else self.read(value)
 
     def execute(self, instr):
-        cmd, _, args = instr.partition(' ')
+        (cmd, _, args) = instr.partition(' ')
         args = args.split(', ') if args else []
         if args and cmd != 'pop':
             args[0] = self.get(args[0])

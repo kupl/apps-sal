@@ -1,5 +1,4 @@
 f = {}
-
 f[-40] = '-319993.68'
 f[-41] = '-344598.60'
 f[-42] = '-370433.52'
@@ -66,7 +65,6 @@ f[7] = 'MAGNA NIMIS!'
 f[6] = 'MAGNA NIMIS!'
 f[5] = 'MAGNA NIMIS!'
 f[4] = '322.00'
-
 a = []
 for i in range(11):
     a += [int(input())]

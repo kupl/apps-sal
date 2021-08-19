@@ -1,7 +1,8 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         inf = 2000000000
-        m, n = len(arr), len(arr[0])
+        (m, n) = (len(arr), len(arr[0]))
         res = [[inf] * n for _ in range(m)]
         res[0] = arr[0]
         for i in range(1, m):

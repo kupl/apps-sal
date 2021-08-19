@@ -1,5 +1,4 @@
 from math import sqrt
-
 a = []
 for i in range(11):
     a.append(int(input()))
@@ -10,6 +9,6 @@ for i in range(10, -1, -1):
     result = aresult + bresult
     print('f(' + str(x) + ') = ', sep='', end='')
     if result >= 400:
-        print("MAGNA NIMIS!")
+        print('MAGNA NIMIS!')
     else:
         print('%.2f' % result)

@@ -13,7 +13,6 @@ def solve(emulator):
             for x in range(1, drops + 1):
                 max_floor += height(eggs - 1, drops - x) + 1
             return max_floor
-
     while num_drops and num_eggs:
         temp = height(num_eggs - 1, num_drops - 1) + 1
         if not emulator.drop(floor + temp):
@@ -22,5 +21,4 @@ def solve(emulator):
         else:
             num_eggs -= 1
             num_drops -= 1
-
     return floor + 1

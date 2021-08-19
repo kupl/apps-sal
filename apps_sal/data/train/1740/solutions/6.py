@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class family:
+
     def __init__(self):
         self.males = set()
         self.females = set()
@@ -76,9 +77,9 @@ class family:
             if len(new_parents & (self.males | self.females)) == 0:
                 new_parents = list(new_parents)
                 for (try_father, try_mother) in [new_parents, new_parents[::-1]]:
-                    safe_males_copy, safe_females_copy = self.males.copy(), self.females.copy()
+                    (safe_males_copy, safe_females_copy) = (self.males.copy(), self.females.copy())
                     conflict_assign_gender = not self.male(try_father) or not self.female(try_mother)
-                    self.males, self.females = safe_males_copy, safe_females_copy
+                    (self.males, self.females) = (safe_males_copy, safe_females_copy)
                     if conflict_assign_gender:
                         return False
         return True

@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def get_minset(self, l):
         left = []
         right = []

@@ -1,4 +1,3 @@
-
 import sys
 
 
@@ -11,4 +10,4 @@ def count_calls(f, *args, **kwargs):
             total += 1
     sys.settrace(count)
     ret = f(*args, **kwargs)
-    return total - 1, ret
+    return (total - 1, ret)

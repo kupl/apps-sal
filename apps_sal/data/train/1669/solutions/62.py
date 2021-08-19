@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         c = Counter(hand)
         while c:

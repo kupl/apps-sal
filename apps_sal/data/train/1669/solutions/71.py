@@ -2,12 +2,13 @@ from collections import Counter
 
 
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        '''
+        """
         O(n log n): sort the hand, every time we see dont have a consecutive value
                  or hit length W, we start a new group
 
-        '''
+        """
         counter = Counter(hand)
         count = W
         while counter:

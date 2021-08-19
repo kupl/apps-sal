@@ -10,9 +10,7 @@ def count_calls(func, *args, **kwargs):
         if event != 'call':
             return
         calls += 1
-
     sys.settrace(trace_counter)
     rv = func(*args, **kwargs)
     sys.settrace(None)
-
-    return calls - 1, rv
+    return (calls - 1, rv)

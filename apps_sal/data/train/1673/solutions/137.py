@@ -1,12 +1,12 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         n = len(arr)
 
         def getTwo(a):
-            pos = {v: k for k, v in enumerate(a)}
-            f, s = sorted(a)[:2]
+            pos = {v: k for (k, v) in enumerate(a)}
+            (f, s) = sorted(a)[:2]
             return ([f, pos[f]], [s, pos[s]])
-
         for i in range(1, n):
             pre = getTwo(arr[i - 1])
             for j in range(n):

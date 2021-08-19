@@ -3,6 +3,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         cumsum = np.cumsum(piles[::-1])
 

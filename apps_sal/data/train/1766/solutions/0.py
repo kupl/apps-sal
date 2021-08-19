@@ -5,7 +5,7 @@ def b(n):
     while n:
         r.append(n % 2)
         n = (n - n % 2) / -2
-    return ''.join(str(c) for c in r[::-1])
+    return ''.join((str(c) for c in r[::-1]))
 
 
 def d(n):

@@ -9,16 +9,13 @@ for _ in range(test):
             points[temp[0]].append(temp[1])
         else:
             points[temp[0]] = [temp[1]]
-
     for i in points:
         points[i].sort(reverse=True)
-
     x1 = -1
     y1 = -1
-    distance = 0.00
+    distance = 0.0
     xpoints = list(points.keys())
     xpoints.sort()
-
     for i in xpoints:
         ypoints = points[i]
         for j in ypoints:
@@ -27,8 +24,7 @@ for _ in range(test):
                 y1 = j
                 continue
             else:
-                distance += ((x1 - i)**2 + (y1 - j)**2)**0.5
+                distance += ((x1 - i) ** 2 + (y1 - j) ** 2) ** 0.5
                 x1 = i
                 y1 = j
-
-    print("%.2f" % (distance))
+    print('%.2f' % distance)

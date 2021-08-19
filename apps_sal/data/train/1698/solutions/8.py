@@ -2,7 +2,6 @@ def dbl_linear(n):
     x = 1
     ys = []
     zs = []
-
     for i in range(n):
         ys.append(2 * x + 1)
         zs.append(3 * x + 1)
@@ -13,5 +12,4 @@ def dbl_linear(n):
             ys.pop(0)
         if x == minz:
             zs.pop(0)
-
     return x

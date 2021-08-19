@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Machine:
+
     def __init__(self):
         self.translate = defaultdict(int)
         self.last_cmd = None

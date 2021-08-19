@@ -1,6 +1,6 @@
 def calculate(exp):
     import re
-    s = [float(i) for i in re.findall(r'[.\d]+', exp)]
+    s = [float(i) for i in re.findall('[.\\d]+', exp)]
     ops = exp
     for i in range(10):
         ops = ops.replace(str(i), '')
@@ -8,7 +8,7 @@ def calculate(exp):
     p = list(ops)
     for i in ['+', '-', '*', '$']:
         ops = ops.replace(i, '')
-    if (ops != '') or (len(p) >= len(s)):
+    if ops != '' or len(p) >= len(s):
         return '400: Bad request'
     for i in range(len(p)):
         if p[i] == '$':

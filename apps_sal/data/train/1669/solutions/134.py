@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) == 0:
             return False
@@ -10,7 +11,6 @@ class Solution:
                 count[n] = 1
             else:
                 count[n] += 1
-
         total = sum(count.values())
         for n in sorted(hand):
             if total == 0:

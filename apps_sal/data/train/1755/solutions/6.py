@@ -1,9 +1,8 @@
-
 def splitlist(lst):
     dicto = {}
 
     def spliteer(lst, sum1=0, sum2=0, ls1=[], ls2=[], i=0):
-        key = f"{sum1}{i}"
+        key = f'{sum1}{i}'
         if key in dicto:
             return dicto[key]
         if i >= len(lst):

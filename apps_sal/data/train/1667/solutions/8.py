@@ -11,22 +11,22 @@ def unflatten(flat_array, depth):
 def oneunflatten(flat_array, bLeft):
     if bLeft:
         arr = flat_array[:]
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             if isinstance(v, int):
                 if v % (len(arr) - i) > 2:
-                    arr[i], arr[i + 1:i + v % (len(arr) - i)] = arr[i:i + v % (len(arr) - i)], []
+                    (arr[i], arr[i + 1:i + v % (len(arr) - i)]) = (arr[i:i + v % (len(arr) - i)], [])
             else:
                 arr[i] = oneunflatten(v, bLeft)
         return arr
     else:
         arr = flat_array[::-1]
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             if isinstance(v, int):
                 if v % (len(arr) - i) > 2:
-                    arr[i], arr[i + 1:i + v % (len(arr) - i)] = arr[i:i + v % (len(arr) - i)], []
+                    (arr[i], arr[i + 1:i + v % (len(arr) - i)]) = (arr[i:i + v % (len(arr) - i)], [])
             else:
                 arr[i] = oneunflatten(v, bLeft)
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             if isinstance(v, int):
                 pass
             else:

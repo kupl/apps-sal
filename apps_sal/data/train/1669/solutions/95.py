@@ -2,10 +2,11 @@ from collections import Counter
 
 
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        '''
+        """
         O(n)
-        '''
+        """
         counter = Counter(hand)
         count = W
         while counter:

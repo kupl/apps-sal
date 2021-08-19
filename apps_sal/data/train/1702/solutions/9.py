@@ -13,15 +13,12 @@ class Sudoku(object):
         rows = self.grid
         cols = zip(*rows)
         square_size = int(self.size ** 0.5)
-        squares = [sum((rows[y + i][x:x + square_size]
-                        for i in range(square_size)), [])
-                   for y in range(0, self.size, square_size)
-                   for x in range(0, self.size, square_size)]
+        squares = [sum((rows[y + i][x:x + square_size] for i in range(square_size)), []) for y in range(0, self.size, square_size) for x in range(0, self.size, square_size)]
         return chain(rows, cols, squares)
 
     def valid_data_types(self):
         """Check data types"""
-        return all(type(num) == int for num in chain(*self.grid))
+        return all((type(num) == int for num in chain(*self.grid)))
 
     def zone_is_valid(self, zone):
         """Check if a zone contain every numbers"""
@@ -31,4 +28,4 @@ class Sudoku(object):
         """Is the sudoku solved"""
         if not self.valid_data_types():
             return False
-        return all(self.zone_is_valid(zone) for zone in self)
+        return all((self.zone_is_valid(zone) for zone in self))

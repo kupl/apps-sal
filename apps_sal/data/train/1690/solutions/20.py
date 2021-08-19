@@ -8,7 +8,7 @@ def dfs(graph, i):
             dfs(graph, j)
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = []
 for i in range(n):
     arr.append(list(map(int, input().split()))[1:])

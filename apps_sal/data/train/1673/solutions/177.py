@@ -1,6 +1,7 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
-        while(len(arr) >= 2):
+        while len(arr) >= 2:
             row = arr.pop()
             for i in range(len(row)):
                 r = row[:i] + row[i + 1:]

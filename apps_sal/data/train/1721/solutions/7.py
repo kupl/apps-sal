@@ -2,6 +2,7 @@ import copy
 
 
 class NumClass:
+
     def __init__(self, alphabet):
         self.base = len(alphabet)
         self.alphabet = alphabet
@@ -27,6 +28,7 @@ class NumClass:
 
 
 def create_number_class(alphabet):
+
     def __init__(self, value=None):
         NumClass.__init__(self, alphabet)
         if value != None:
@@ -58,7 +60,5 @@ def create_number_class(alphabet):
         ret = convert_type()
         ret.set_value_int(self.int_value)
         return ret
-
-    newclass = type('NumClass' + str(len(alphabet)), (NumClass, ),
-                    {"__init__": __init__, "__add__": __add__, "__sub__": __sub__, "__mul__": __mul__, "__floordiv__": __floordiv__, "convert_to": convert_to})
+    newclass = type('NumClass' + str(len(alphabet)), (NumClass,), {'__init__': __init__, '__add__': __add__, '__sub__': __sub__, '__mul__': __mul__, '__floordiv__': __floordiv__, 'convert_to': convert_to})
     return newclass

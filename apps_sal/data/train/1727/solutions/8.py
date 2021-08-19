@@ -8,7 +8,7 @@ def check_valid(letter_locations, board, word):
         for j in range(-1, 2):
             if i == 0 and j == 0:
                 continue
-            if y + i < 0 or x + j < 0 or y + i >= len(board) or x + j >= len(board[0]):
+            if y + i < 0 or x + j < 0 or y + i >= len(board) or (x + j >= len(board[0])):
                 continue
             if board[y + i][x + j] == next_char and (x + j, y + i) not in letter_locations:
                 letter_locations.append((x + j, y + i))
@@ -19,10 +19,10 @@ def check_valid(letter_locations, board, word):
 
 def find_word(board, word):
     valid = False
-    if word == "":
+    if word == '':
         return True
-    for y, row in enumerate(board):
-        for x, letter in enumerate(row):
+    for (y, row) in enumerate(board):
+        for (x, letter) in enumerate(row):
             if letter == word[0]:
                 valid = valid or check_valid([(x, y)], board, word)
     return valid

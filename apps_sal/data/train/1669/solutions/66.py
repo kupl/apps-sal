@@ -1,14 +1,11 @@
 class Solution:
-    def isNStraightHand(self, hand: List[int], W: int) -> bool:
 
+    def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-
         counter = Counter(hand)
-
         while counter:
             start = min(counter)
-
             for n in range(start, start + W):
                 if n in counter:
                     counter[n] -= 1

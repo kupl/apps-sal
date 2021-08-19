@@ -2,7 +2,7 @@ def create_number_class(alphabet):
     jinwei = len(alphabet)
 
     def str2dec(string: str) -> int:
-        dec, base = 0, 1
+        (dec, base) = (0, 1)
         for dig in reversed(string):
             dec += base * alphabet.index(dig)
             base *= jinwei
@@ -17,6 +17,7 @@ def create_number_class(alphabet):
                 return string[::-1]
 
     class number:
+
         def __init__(self, str_or_dec):
             if isinstance(str_or_dec, str):
                 self.str = str_or_dec

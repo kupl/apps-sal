@@ -1,10 +1,9 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-
-        counter, smallest = self.counter(hand)
-
+        (counter, smallest) = self.counter(hand)
         for _ in range(len(hand) // W):
             if smallest is None:
                 smallest = min(counter)
@@ -35,4 +34,4 @@ class Solution:
                 counter[el] = 1
                 if smallest is None or el < smallest:
                     smallest = el
-        return counter, smallest
+        return (counter, smallest)

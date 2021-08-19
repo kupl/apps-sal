@@ -23,7 +23,7 @@ def find_bounds(n):
         high_prod += x * find(x)
         if high_prod > n:
             ratio = (n - low_prod) / (high_prod - low_prod)
-            return ratio, high, low
+            return (ratio, high, low)
 
 
 @memoize
@@ -34,6 +34,5 @@ def find(n):
         return 1
     if n == 2:
         return 2
-
-    ratio, high, low = find_bounds(n)
+    (ratio, high, low) = find_bounds(n)
     return low + math.ceil((high - low) * ratio)

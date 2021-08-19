@@ -1,12 +1,11 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         n = len(arr)
         if n == 1:
             return arr[0][0]
-
-        MAX_V = int(1e9)
+        MAX_V = int(1000000000.0)
         min_v = [0] * n
-
         for i in range(n):
             row = arr[i]
             new_min_v = [MAX_V] * n

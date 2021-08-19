@@ -16,14 +16,15 @@ def knights_tour(start, size):
         which constitutes a valid tour of the board; visiting
         each position exactly once.
     """
+
     def next_moves(pos):
         eight_moves = ((pos[0] + i, pos[1] + j) for (i, j) in ((-2, -1), (-2, 1), (-1, -2), (-1, 2), (2, -1), (2, 1), (1, -2), (1, 2)))
-        return [(r, c) for (r, c) in eight_moves if 0 <= r and r < size and 0 <= c and c < size and board[r][c]]
+        return [(r, c) for (r, c) in eight_moves if 0 <= r and r < size and (0 <= c) and (c < size) and board[r][c]]
 
     def solve(pos):
         if len(moves) == size * size:
             return moves
-        for r, c in sorted(next_moves(pos), key=lambda m: len(next_moves(m))):
+        for (r, c) in sorted(next_moves(pos), key=lambda m: len(next_moves(m))):
             board[r][c] = False
             moves.append((r, c))
             try:
@@ -32,9 +33,7 @@ def knights_tour(start, size):
                 board[r][c] = True
                 moves.pop()
         raise ValueError('Not possible')
-
     board = [[True] * size for _ in xrange(size)]
     board[start[0]][start[1]] = False
     moves = [start]
-
     return solve(start)

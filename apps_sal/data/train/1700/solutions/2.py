@@ -1,4 +1,5 @@
 class DynamicConnectivity:
+
     def __init__(self, n):
         self.roots = {}
         self.sizes = {}
@@ -13,11 +14,11 @@ class DynamicConnectivity:
         return x
 
     def union(self, a, b):
-        a, b = self.find_root(a), self.find_root(b)
+        (a, b) = (self.find_root(a), self.find_root(b))
         if a == b:
             return
         if self.sizes[a] < self.sizes[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         self.roots[b] = a
         self.sizes[a] += self.sizes[b]
 

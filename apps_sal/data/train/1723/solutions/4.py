@@ -18,6 +18,7 @@ class Segment(metaclass=ABCMeta):
 
 
 class Coordinate(object):
+
     def __init__(self, x, y):
         self._x = x
         self._y = y
@@ -43,10 +44,10 @@ class Coordinate(object):
         return Coordinate(self.x + other.x, self.y + other.y)
 
     def __repr__(self):
-        return "Coordinate(" + str(self.x) + ", " + str(self.y) + ")"
+        return 'Coordinate(' + str(self.x) + ', ' + str(self.y) + ')'
 
     def __str__(self):
-        return "<" + str(self.x) + ", " + str(self.y) + ">"
+        return '<' + str(self.x) + ', ' + str(self.y) + '>'
 
     def __hash__(self):
         return hash((self.x, self.y))
@@ -65,7 +66,7 @@ class Line(Segment):
 
     def point_at(self, t):
         pt = (1 - t) * self._P0 + t * self._P1
-        return pt.x, pt.y
+        return (pt.x, pt.y)
 
     def sub_segment(self, t):
         return Line(self._P0.x, self._P0.y, *self.point_at(t))
@@ -84,14 +85,12 @@ class Quad(Segment):
         return self._control_points
 
     def point_at(self, t):
-        pt = (1 - t)**2 * self._P0 + 2 * (1 - t) * t * self._P1 + \
-            t**2 * self._P2
-        return pt.x, pt.y
+        pt = (1 - t) ** 2 * self._P0 + 2 * (1 - t) * t * self._P1 + t ** 2 * self._P2
+        return (pt.x, pt.y)
 
     def sub_segment(self, t):
         sub_line = Line(self._P0.x, self._P0.y, self._P1.x, self._P1.y)
-        return Quad(self._P0.x, self._P0.y, *sub_line.point_at(t),
-                    *self.point_at(t))
+        return Quad(self._P0.x, self._P0.y, *sub_line.point_at(t), *self.point_at(t))
 
 
 class Cubic(Segment):
@@ -108,13 +107,10 @@ class Cubic(Segment):
         return self._control_points
 
     def point_at(self, t):
-        pt = (1 - t)**3 * self._P0 + 3 * (1 - t)**2 * t * self._P1 + \
-            3 * (1 - t) * t**2 * self._P2 + t**3 * self._P3
-        return pt.x, pt.y
+        pt = (1 - t) ** 3 * self._P0 + 3 * (1 - t) ** 2 * t * self._P1 + 3 * (1 - t) * t ** 2 * self._P2 + t ** 3 * self._P3
+        return (pt.x, pt.y)
 
     def sub_segment(self, t):
         sub_line = Line(self._P0.x, self._P0.y, self._P1.x, self._P1.y)
-        sub_quad = Quad(self._P0.x, self._P0.y, self._P1.x, self._P1.y,
-                        self._P2.x, self._P2.y)
-        return Cubic(self._P0.x, self._P0.y, *sub_line.point_at(t),
-                     *sub_quad.point_at(t), *self.point_at(t))
+        sub_quad = Quad(self._P0.x, self._P0.y, self._P1.x, self._P1.y, self._P2.x, self._P2.y)
+        return Cubic(self._P0.x, self._P0.y, *sub_line.point_at(t), *sub_quad.point_at(t), *self.point_at(t))

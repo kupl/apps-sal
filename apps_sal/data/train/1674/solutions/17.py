@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
         dp = [[-1 for _ in range(n + 1)] for _ in range(n + 1)]
@@ -15,9 +16,7 @@ class Solution:
             for x in range(1, 2 * M + 1):
                 if st + x > n:
                     continue
-
-                tmp = max(tmp, sum(piles[st: st + x]) - helper(st + x, max(M, x)))
-
+                tmp = max(tmp, sum(piles[st:st + x]) - helper(st + x, max(M, x)))
             dp[M][st] = tmp
             return tmp
         return int((helper(0, 1) + s) / 2)

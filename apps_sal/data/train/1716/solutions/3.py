@@ -27,7 +27,7 @@ def evaluate0(num, sym):
         res = eval(expr)
     except:
         res = 0
-    return res, expr
+    return (res, expr)
 
 
 def evaluate1(num, sym):
@@ -36,7 +36,7 @@ def evaluate1(num, sym):
         res = eval(expr)
     except:
         res = 0
-    return res, expr
+    return (res, expr)
 
 
 def evaluate2(num, sym):
@@ -45,50 +45,43 @@ def evaluate2(num, sym):
         res = eval(expr)
     except:
         res = 0
-    return res, expr
+    return (res, expr)
 
 
 def evaluate3(num, sym):
-    expr = num[0] + sym[0] + '(' + num[1] + sym[1] + '(' + num[2] + sym[2] + num[3] + "))"
+    expr = num[0] + sym[0] + '(' + num[1] + sym[1] + '(' + num[2] + sym[2] + num[3] + '))'
     try:
         res = eval(expr)
     except:
         res = 0
-    return res, expr
+    return (res, expr)
 
 
 def evaluate4(num, sym):
-    expr = "((" + num[0] + sym[0] + num[1] + ')' + sym[1] + num[2] + ')' + sym[2] + num[3]
+    expr = '((' + num[0] + sym[0] + num[1] + ')' + sym[1] + num[2] + ')' + sym[2] + num[3]
     try:
         res = eval(expr)
     except:
         res = 0
-    return res, expr
+    return (res, expr)
 
 
 def equal_to_24(a, b, c, d):
-
     for num in index_numbers(str(a), str(b), str(c), str(d)):
         for sym in index_symbols():
-
-            val, text = evaluate0(num, sym)
+            (val, text) = evaluate0(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate1(num, sym)
+            (val, text) = evaluate1(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate2(num, sym)
+            (val, text) = evaluate2(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate3(num, sym)
+            (val, text) = evaluate3(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate4(num, sym)
+            (val, text) = evaluate4(num, sym)
             if val == 24:
                 return text
-
     return "It's not possible!"

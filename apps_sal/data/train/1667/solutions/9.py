@@ -1,5 +1,5 @@
 def uf_f(arr):
-    a, i = [], 0
+    (a, i) = ([], 0)
     while i < len(arr):
         if isinstance(arr[i], list):
             a.append(uf_f(arr[i]))
@@ -10,13 +10,13 @@ def uf_f(arr):
                 a.append(arr[i])
                 i += 1
             else:
-                a.append(arr[i: i + r])
+                a.append(arr[i:i + r])
                 i += r
     return a
 
 
 def uf_r(arr):
-    a, i = [], len(arr) - 1
+    (a, i) = ([], len(arr) - 1)
     while i >= 0:
         if isinstance(arr[i], list):
             a.insert(0, uf_r(arr[i]))
@@ -27,7 +27,7 @@ def uf_r(arr):
                 a.insert(0, arr[i])
                 i -= 1
             else:
-                a.insert(0, arr[i - r + 1: i + 1])
+                a.insert(0, arr[i - r + 1:i + 1])
                 i -= r
     return a
 

@@ -9,14 +9,13 @@ class Positions(Enum):
 
 
 class PuzzlePiece:
+
     def __init__(self, tup):
-        self.values = {Positions.UPPER_LEFT: tup[0][0], Positions.UPPER_RIGTHT: tup[0][1],
-                       Positions.BOTTOM_LEFT: tup[1][0], Positions.BOTTOM_RIGTHT: tup[1][1]}
+        self.values = {Positions.UPPER_LEFT: tup[0][0], Positions.UPPER_RIGTHT: tup[0][1], Positions.BOTTOM_LEFT: tup[1][0], Positions.BOTTOM_RIGTHT: tup[1][1]}
         self.id = tup[2]
         self.corner = None
-        values_lst = [value for position, value in list(self.values.items())]
-        corners_positions_with_values = {Positions.UPPER_LEFT: Positions.BOTTOM_RIGTHT, Positions.UPPER_RIGTHT: Positions.BOTTOM_LEFT,
-                                         Positions.BOTTOM_LEFT: Positions.UPPER_RIGTHT, Positions.BOTTOM_RIGTHT: Positions.UPPER_LEFT}
+        values_lst = [value for (position, value) in list(self.values.items())]
+        corners_positions_with_values = {Positions.UPPER_LEFT: Positions.BOTTOM_RIGTHT, Positions.UPPER_RIGTHT: Positions.BOTTOM_LEFT, Positions.BOTTOM_LEFT: Positions.UPPER_RIGTHT, Positions.BOTTOM_RIGTHT: Positions.UPPER_LEFT}
         if 3 == values_lst.count(None):
             for position in corners_positions_with_values:
                 if self.values[position] is not None:
@@ -24,6 +23,7 @@ class PuzzlePiece:
 
 
 class Puzzle:
+
     def __init__(self, pieces):
         self.cornaners = dict()
         self.piece_map = dict()
@@ -31,11 +31,10 @@ class Puzzle:
             piece = PuzzlePiece(piece)
             if piece.corner is not None:
                 self.cornaners[piece.corner] = piece
-            for position, value in list(piece.values.items()):
+            for (position, value) in list(piece.values.items()):
                 if value is not None:
                     if value not in self.piece_map:
-                        self.piece_map[value] = {Positions.UPPER_LEFT: None, Positions.UPPER_RIGTHT: None,
-                                                 Positions.BOTTOM_LEFT: None, Positions.BOTTOM_RIGTHT: None}
+                        self.piece_map[value] = {Positions.UPPER_LEFT: None, Positions.UPPER_RIGTHT: None, Positions.BOTTOM_LEFT: None, Positions.BOTTOM_RIGTHT: None}
                     self.piece_map[value][position] = piece
 
     def solve(self):
@@ -50,7 +49,7 @@ class Puzzle:
                 res[-1].append(self.piece_map[res[-1][-1].values[Positions.UPPER_RIGTHT]][Positions.UPPER_LEFT])
             else:
                 break
-        res = [tuple(piece.id for piece in row) for row in res]
+        res = [tuple((piece.id for piece in row)) for row in res]
         return res
 
 

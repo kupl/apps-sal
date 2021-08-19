@@ -1,4 +1,5 @@
 class Machine:
+
     def __init__(self):
         self.cmd = dict()
         self._actions = [lambda x: x + 1, lambda x: 0, lambda x: x / 2, lambda x: x * 100, lambda x: x % 2]

@@ -15,7 +15,7 @@ def optimal_latch(ar, x):
     for building in ar:
         if building[1] + building[2] < x:
             continue
-        x_max = x + int(sqrt((building[0] - 20)**2 - (building[0] - 50)**2))
+        x_max = x + int(sqrt((building[0] - 20) ** 2 - (building[0] - 50) ** 2))
         if x_max < building[2]:
             continue
         if 2 * x_max - x > ar[-1][1] + ar[-1][2]:

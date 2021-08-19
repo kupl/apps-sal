@@ -1,4 +1,5 @@
 class Turret:
+
     def __init__(self, tid, r, c, size, info):
         self.tid = tid
         self.attack = info[1]
@@ -8,14 +9,15 @@ class Turret:
             for dc in range(-atkRange, atkRange + 1):
                 if dr == 0 and dc == 0:
                     continue
-                ra, ca = r + dr, c + dc
-                if not(0 <= ra < size and 0 <= ca < size):
+                (ra, ca) = (r + dr, c + dc)
+                if not (0 <= ra < size and 0 <= ca < size):
                     continue
                 if dr * dr + dc * dc <= atkRange * atkRange:
                     self.targets.add((ra, ca))
 
 
 class Alien:
+
     def __init__(self, pathIdx, pos, hp):
         self.pathIdx = pathIdx
         self.pos = pos
@@ -28,26 +30,26 @@ def tower_defense(grid, _turrets, _wave):
     lWave = len(_wave)
     wave = _wave[:]
     ones = set()
-    turrets, aliens = [], []
-    for r, row in enumerate(grid):
-        for c, square in enumerate(row):
-            if square == "1":
+    (turrets, aliens) = ([], [])
+    for (r, row) in enumerate(grid):
+        for (c, square) in enumerate(row):
+            if square == '1':
                 ones.add((r, c))
             elif square.isalpha():
                 turrets.append(Turret(square, r, c, size, _turrets[square]))
-            elif square == "0":
+            elif square == '0':
                 start = (r, c)
     for turret in turrets:
         turret.targets = turret.targets & (ones | {start})
     turrets.sort(key=lambda t: t.tid)
     path = [start]
-    r, c = start
+    (r, c) = start
     while ones:
-        for r1, c1 in ones:
+        for (r1, c1) in ones:
             if abs(r1 - r) + abs(c1 - c) == 1:
                 path.append((r1, c1))
                 ones.discard((r1, c1))
-                r, c = r1, c1
+                (r, c) = (r1, c1)
                 break
     lPath = len(path)
     time = -1

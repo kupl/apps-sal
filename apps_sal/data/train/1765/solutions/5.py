@@ -7,4 +7,4 @@ def partitions(n, start=1):
         return 1
     elif n < 0:
         return 0
-    return sum(partitions(n - i, i) for i in range(start, n + 1))
+    return sum((partitions(n - i, i) for i in range(start, n + 1)))

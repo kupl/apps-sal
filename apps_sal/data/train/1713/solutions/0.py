@@ -3,7 +3,6 @@ import sys
 
 def count_calls(func, *args, **kwargs):
     """Count calls in function func"""
-
     calls = [-1]
 
     def tracer(frame, event, arg):
@@ -11,7 +10,5 @@ def count_calls(func, *args, **kwargs):
             calls[0] += 1
         return tracer
     sys.settrace(tracer)
-
     rv = func(*args, **kwargs)
-
-    return calls[0], rv
+    return (calls[0], rv)

@@ -1,9 +1,10 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         total = 0
         for row in range(len(arr) - 1):
-            row1_min, row2_min = min(arr[row]), min(arr[row + 1])
-            i1, i2 = arr[row].index(row1_min), arr[row + 1].index(row2_min)
+            (row1_min, row2_min) = (min(arr[row]), min(arr[row + 1]))
+            (i1, i2) = (arr[row].index(row1_min), arr[row + 1].index(row2_min))
             if i1 != i2:
                 total += row1_min
             else:

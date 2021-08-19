@@ -11,9 +11,9 @@ def factorize(n):
 
 
 def zeroes(base, number):
-    f, l = factorize(base), []
+    (f, l) = (factorize(base), [])
     for factor in f:
-        ans, n = 0, number
+        (ans, n) = (0, number)
         while n >= factor:
             ans += n // factor
             n = n // factor

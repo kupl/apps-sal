@@ -7,11 +7,11 @@ def biggest_triang_int(points, ce, ra):
         for j in range(i + 1, le):
             for k in range(j + 1, le):
                 po = [points[i], points[j], points[k]]
-                if distance(po[0], ce) <= ra and distance(po[1], ce) <= ra and distance(po[2], ce) <= ra:
+                if distance(po[0], ce) <= ra and distance(po[1], ce) <= ra and (distance(po[2], ce) <= ra):
                     count += 1
                     ae = areatriangle(po[0], po[1], po[2])
                     if ae >= max:
-                        if abs(ae - max) > 1e-5:
+                        if abs(ae - max) > 1e-05:
                             max = ae
                             r = [po]
                         else:
@@ -33,10 +33,10 @@ def areatriangle(xxx_todo_changeme, xxx_todo_changeme1, xxx_todo_changeme2):
 
 def heron(a, b, c):
     s = (a + b + c) / 2
-    return (s * (s - a) * (s - b) * (s - c))**0.5
+    return (s * (s - a) * (s - b) * (s - c)) ** 0.5
 
 
 def distance(xxx_todo_changeme3, xxx_todo_changeme4):
     (x1, y1, z1) = xxx_todo_changeme3
     (x2, y2, z2) = xxx_todo_changeme4
-    return ((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)**.5
+    return ((x1 - x2) ** 2 + (y1 - y2) ** 2 + (z1 - z2) ** 2) ** 0.5

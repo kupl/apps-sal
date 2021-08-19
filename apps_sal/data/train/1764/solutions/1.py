@@ -4,7 +4,6 @@ def solve(emulator):
         if eggs == 0 or drops == 0:
             return 0
         return max_height(eggs - 1, drops - 1) + 1 + max_height(eggs, drops - 1)
-
     low = 1
     high = max_height(emulator.eggs, emulator.drops)
     while low <= high:

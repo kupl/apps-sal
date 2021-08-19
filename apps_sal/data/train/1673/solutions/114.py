@@ -1,6 +1,6 @@
 class Solution:
-    def minFallingPathSum(self, arr: List[List[int]]) -> int:
 
+    def minFallingPathSum(self, arr: List[List[int]]) -> int:
         rows = len(arr)
         columns = len(arr[0])
         for i in range(1, rows):

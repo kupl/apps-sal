@@ -1,5 +1,6 @@
 def create_number_class(alphabet):
-    class Number():
+
+    class Number:
         alph = alphabet
 
         def __init__(self, numb):
@@ -10,7 +11,7 @@ def create_number_class(alphabet):
 
         def conv(n):
             base = len(Number.alph)
-            r, m = 0, 1
+            (r, m) = (0, 1)
             for i in range(1, len(n) + 1):
                 r += m * Number.alph.index(n[-i])
                 m *= base
@@ -44,5 +45,4 @@ def create_number_class(alphabet):
 
         def __str__(self):
             return Number.vnoc(self.value)
-
     return Number

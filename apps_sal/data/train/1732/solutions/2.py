@@ -26,7 +26,7 @@ class Fraction:
         if isinstance(obj, int):
             return Fraction(obj, 1)
         elif isinstance(obj, float):
-            i, j = str(obj).split('.')
+            (i, j) = str(obj).split('.')
             return Fraction(int(j) + int(i) * 10 ** len(j), 10 ** len(j))
         else:
             raise ValueError('Only int or float.')
@@ -34,7 +34,7 @@ class Fraction:
     @staticmethod
     def _gcd(x, y):
         while y:
-            x, y = y, x % y
+            (x, y) = (y, x % y)
         return x
 
     def _lcm(self, x, y):
@@ -42,12 +42,12 @@ class Fraction:
 
     def __add__(self, other):
         lcm = self._lcm(self.denominator, other.denominator)
-        numerator = (self.numerator * (lcm // self.denominator)) + (other.numerator * (lcm // other.denominator))
+        numerator = self.numerator * (lcm // self.denominator) + other.numerator * (lcm // other.denominator)
         return Fraction(numerator, lcm)
 
     def __sub__(self, other):
         lcm = self._lcm(self.denominator, other.denominator)
-        numerator = (self.numerator * (lcm // self.denominator)) - (other.numerator * (lcm // other.denominator))
+        numerator = self.numerator * (lcm // self.denominator) - other.numerator * (lcm // other.denominator)
         return Fraction(numerator, lcm)
 
     def __mul__(self, other):
@@ -64,7 +64,6 @@ class Fraction:
 
 
 class LinearEquation:
-
     PATTERN = '[+-]?([0-9]+[a-zA-Z]*|[a-zA-Z]+)([+-]([0-9]+[a-zA-Z]*|[a-zA-Z]+))*'
 
     def __init__(self, eq):
@@ -83,7 +82,7 @@ class LinearEquation:
         tokens = re.findall('[+-]?(?:[0-9]+[a-zA-Z]*|[a-zA-Z]+)', string)
         values = dict()
         for token in tokens:
-            value, var = re.findall('^([+-]?[0-9]*)([a-zA-Z]*)$', token)[0]
+            (value, var) = re.findall('^([+-]?[0-9]*)([a-zA-Z]*)$', token)[0]
             if not value or value == '+':
                 value = Fraction(1, 1)
             elif value == '-':
@@ -97,9 +96,9 @@ class LinearEquation:
         return values
 
     def parse(self):
-        left_side, right_side = self.eq.split('=')
+        (left_side, right_side) = self.eq.split('=')
         values = self._tokenize(left_side)
-        for var, value in list(self._tokenize(right_side).items()):
+        for (var, value) in list(self._tokenize(right_side).items()):
             value *= Fraction(-1, 1)
             if var in list(values.keys()):
                 values[var] += value
@@ -120,9 +119,9 @@ class LinearEquationSystem:
             raise ValueError('Wrong arguments.')
 
     def _validate(self):
-        if not isinstance(self.m, list) and not isinstance(self.x, list) and not isinstance(self.b, list):
+        if not isinstance(self.m, list) and (not isinstance(self.x, list)) and (not isinstance(self.b, list)):
             return False
-        if not (len(self.m) == len(self.b)):
+        if not len(self.m) == len(self.b):
             return False
         for eq in self.m:
             if not isinstance(eq, list) and len(eq) == len(self.x):
@@ -138,13 +137,13 @@ class LinearEquationSystem:
                 for j in range(i + 1, len(m)):
                     multiplier = m[j][i] / m[i][i]
                     for k in range(i, len(m[0])):
-                        m[j][k] -= (multiplier * m[i][k])
+                        m[j][k] -= multiplier * m[i][k]
             else:
                 reduce = True
                 for j in range(i + 1, len(m)):
                     if m[j][i]:
                         reduce = False
-                        m[i], m[j] = m[j], m[i]
+                        (m[i], m[j]) = (m[j], m[i])
                         break
                 if reduce:
                     rank -= 1
@@ -152,41 +151,35 @@ class LinearEquationSystem:
                     for j in range(i + 1, len(m)):
                         multiplier = m[j][i] / m[i][i]
                         for k in range(i, len(m[0])):
-                            m[j][k] -= (multiplier * m[i][k])
-        return rank, m
+                            m[j][k] -= multiplier * m[i][k]
+        return (rank, m)
 
     def solve(self):
         m = copy.deepcopy(self.m)
-        m_rank, _ = self._rank(m)
+        (m_rank, _) = self._rank(m)
         m_b = copy.deepcopy(self.m)
-        for i, row in enumerate(m_b):
+        for (i, row) in enumerate(m_b):
             row.append(self.b[i])
-        m_b_rank, m_b = self._rank(m_b)
-
+        (m_b_rank, m_b) = self._rank(m_b)
         if m_rank == m_b_rank and m_rank == len(self.x):
             solutions = dict()
             b = list()
-
             for row in m_b:
                 b.append(Fraction(-1, 1) * row[-1])
                 del row[-1]
             while len(m_b) > len(m_b[0]):
                 del m_b[-1]
-
             for i in range(len(m_b))[::-1]:
                 multiplier = None
                 for j in range(len(m_b[i])):
                     if j == i:
                         multiplier = Fraction(1, 1) / m_b[i][i]
                     elif m_b[i][j]:
-                        b[i] -= (m_b[i][j] * solutions[self.x[j]])
+                        b[i] -= m_b[i][j] * solutions[self.x[j]]
                 solutions[self.x[i]] = b[i] * multiplier
-
             for var in solutions:
                 solutions[var] = solutions[var].to_float()
-
             return solutions
-
         else:
             return None
 
@@ -197,7 +190,7 @@ def solve(*eqs):
     variables = set()
     coefficient_matrix = list()
     b = list()
-    for i, eq in enumerate(eqs):
+    for (i, eq) in enumerate(eqs):
         values_list.append(LinearEquation(eq).parse())
         for var in list(values_list[i].keys()):
             variables.add(var)
@@ -211,5 +204,5 @@ def solve(*eqs):
                 coefficient_matrix[i].append(values_list[i][var])
             else:
                 coefficient_matrix[i].append(Fraction(0, 1))
-    system = LinearEquationSystem(m=coefficient_matrix, x=variables[1::], b=b)
+    system = LinearEquationSystem(m=coefficient_matrix, x=variables[1:], b=b)
     return system.solve()

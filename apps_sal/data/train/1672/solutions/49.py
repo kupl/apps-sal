@@ -6,7 +6,7 @@ def f(t):
 
 
 a = [int(input()) for _ in range(11)]
-for i, t in reversed(list(enumerate(a))):
+for (i, t) in reversed(list(enumerate(a))):
     y = f(t)
     if y > 400:
         print('f(', t, ') = MAGNA NIMIS!', sep='')

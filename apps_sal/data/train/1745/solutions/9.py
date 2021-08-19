@@ -1,6 +1,6 @@
 def calculate(expression):
     print(expression)
-    expression = "".join([" {} ".format(num) if num in "+-*$" else num for num in expression]).split()
+    expression = ''.join([' {} '.format(num) if num in '+-*$' else num for num in expression]).split()
     while '$' in expression:
         try:
             for num in expression:

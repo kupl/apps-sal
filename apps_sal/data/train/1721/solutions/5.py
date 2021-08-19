@@ -1,9 +1,10 @@
 def create_number_class(alphabet):
-    class C():
+
+    class C:
         alph = alphabet
 
         def __init__(self, num):
-            self.n = sum(C.alph.find(num[i]) * len(C.alph)**(len(num) - i - 1) for i in range(len(num)))
+            self.n = sum((C.alph.find(num[i]) * len(C.alph) ** (len(num) - i - 1) for i in range(len(num))))
 
         def __str__(self):
             return to_str(self.n, C.alph)
