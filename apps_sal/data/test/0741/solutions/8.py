@@ -18,10 +18,8 @@ def readlist():
     return list(map(int, input().split()))
 
 
-# B
-N, M = readmap()
+(N, M) = readmap()
 A = [0] + readlist() + [M]
-
 on_time = []
 off_time = []
 for i in range(1, N + 2):
@@ -29,7 +27,6 @@ for i in range(1, N + 2):
         on_time.append(A[i] - A[i - 1])
     else:
         off_time.append(A[i] - A[i - 1])
-
 sum_on_time = sum(on_time)
 max_on_time = sum_on_time
 if N % 2 == 1:
@@ -39,13 +36,10 @@ if N % 2 == 1:
             x = A[i - 1] + 1
             max_on_time = max(max_on_time, sum_on_time + A[i] - x)
         sum_on_time = sum_on_time + (A[i] - A[i - 1]) - (A[i - 1] - A[i - 2])
-
         if A[i - 1] - A[i - 2] > 1:
             x = A[i - 1] - 1
             max_on_time = max(max_on_time, sum_on_time + x - A[i - 2])
-
         i -= 2
-
     print(max_on_time)
 else:
     i = N
@@ -55,11 +49,8 @@ else:
             x = A[i - 1] + 1
             max_on_time = max(max_on_time, sum_on_time + A[i] - x)
         sum_on_time = sum_on_time + (A[i] - A[i - 1]) - (A[i - 1] - A[i - 2])
-
         if A[i - 1] - A[i - 2] > 1:
             x = A[i - 1] - 1
             max_on_time = max(max_on_time, sum_on_time + x - A[i - 2])
-
         i -= 2
-
     print(max_on_time)

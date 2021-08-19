@@ -1,5 +1,4 @@
-# map(int, input().split())
 rw = int(input())
 for wewq in range(rw):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     print(a + b + c - 1)

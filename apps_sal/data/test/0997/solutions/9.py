@@ -2,20 +2,17 @@ import math
 from decimal import *
 import sys
 from fractions import Fraction
-
-
 s = input()
 l = len(s)
-s2 = ""
+s2 = ''
 for i in range(0, l):
     if s[i] == ';' or s[i] == ',':
-        s2 += "# #"
+        s2 += '# #'
     else:
         s2 += s[i]
 sl = s2.split()
 l = len(sl)
-
-N = "0123456789"
+N = '0123456789'
 a = []
 b = []
 for i in range(0, l):
@@ -23,12 +20,11 @@ for i in range(0, l):
     l2 = len(w)
     num = 1
     if l2 != 0:
-        if w[l2 - 1] == "#":
+        if w[l2 - 1] == '#':
             w = w[:-1]
             l2 = len(w)
-
     if l2 != 0:
-        if w[0] == "#":
+        if w[0] == '#':
             w = w[1:]
             l2 = len(w)
     if l2 == 0:
@@ -44,21 +40,19 @@ for i in range(0, l):
         b.append(w)
 la = len(a)
 lb = len(b)
-
-sa = "\""
-sb = "\""
+sa = '"'
+sb = '"'
 if la == 0:
-    sa = "-"
+    sa = '-'
 else:
     for i in range(0, la - 1):
-        sa += a[i] + ","
-    sa += a[la - 1] + "\""
+        sa += a[i] + ','
+    sa += a[la - 1] + '"'
 print(sa)
-
 if lb == 0:
-    sb = "-"
+    sb = '-'
 else:
     for i in range(0, lb - 1):
-        sb += b[i] + ","
-    sb += b[lb - 1] + "\""
+        sb += b[i] + ','
+    sb += b[lb - 1] + '"'
 print(sb)
