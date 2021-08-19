@@ -1,10 +1,11 @@
 class Solution:
+
     def maxProduct(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        max_val = -float("inf")
+        max_val = -float('inf')
         product = 1
         for num in nums:
             product *= num

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         self.customers = customers
         self.boardingCost = boardingCost
@@ -30,7 +31,6 @@ class Solution:
                 temp_highest = element
                 a = y
             y += 1
-
         if temp_highest < 0:
             return -1
         else:

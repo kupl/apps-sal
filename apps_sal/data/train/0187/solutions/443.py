@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         netProfit = 0
         maxNet = 0

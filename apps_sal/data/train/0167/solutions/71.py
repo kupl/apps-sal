@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         dp = [[0] * (N + 1) for _ in range(K + 1)]
         for i in range(1, N + 1):
@@ -10,5 +11,4 @@ class Solution:
                 while s < j and dp[i][j - s] > dp[i - 1][s - 1]:
                     s += 1
                 dp[i][j] = min(dp[i][j], max(dp[i][j - s], dp[i - 1][s - 1]) + 1)
-
         return dp[K][N]

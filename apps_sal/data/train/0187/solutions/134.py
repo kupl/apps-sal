@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         rotate = left = 0
         ans = -1

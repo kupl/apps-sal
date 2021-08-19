@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         q = 0
         outs = []
@@ -21,8 +22,7 @@ class Solution:
             if m < outs[-1]:
                 m = outs[-1]
                 res = rots
-
-        while(q > 4):
+        while q > 4:
             q -= 4
             outs.append(outs[-1] + (boarded * boardingCost - runningCost))
             rots += 1

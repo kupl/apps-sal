@@ -1,4 +1,5 @@
 class Solution:
+
     def integerBreak(self, n):
         """
         :type n: int
@@ -12,6 +13,6 @@ class Solution:
             if n % 3 == 0:
                 return 3 ** int(n / 3)
             if n % 3 != 0 and (n - 2) % 3 == 0:
-                return (3 ** int((n - 2) / 3)) * 2
+                return 3 ** int((n - 2) / 3) * 2
             else:
-                return (3 ** int((n - 2) / 3)) * 4
+                return 3 ** int((n - 2) / 3) * 4

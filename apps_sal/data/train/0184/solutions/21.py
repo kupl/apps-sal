@@ -1,4 +1,5 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         d = {}
         f = {}
@@ -29,7 +30,7 @@ class Solution:
         l = 0
         print(d)
         for i in list(d.keys()):
-            for j, v in enumerate(d[i]):
+            for (j, v) in enumerate(d[i]):
                 if v > 0:
                     l = max(l, v)
                     if j + 2 < len(d[i]) and d[i][j + 1] == -1:
@@ -37,8 +38,6 @@ class Solution:
                             l = max(l, d[i][j + 2] + d[i][j] + 1)
                         else:
                             l = max(l, d[i][j + 2] + d[i][j])
-
-                    else:
-                        if d[i][j] < f[i]:
-                            l = max(l, d[i][j] + 1)
+                    elif d[i][j] < f[i]:
+                        l = max(l, d[i][j] + 1)
         return l

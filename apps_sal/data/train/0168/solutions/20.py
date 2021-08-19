@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         d = {}
         for i in range(len(s)):

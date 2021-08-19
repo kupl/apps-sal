@@ -8,13 +8,13 @@ def cmp(s, t):
 
 
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
         best = {}
         for i in range(len(cost) - 1, -1, -1):
             digit = i + 1
             if cost[i] not in best:
                 best[cost[i]] = digit
-
         keys = sorted(list(best.keys()), key=lambda x: best[x], reverse=True)
 
         @lru_cache(None)
@@ -32,5 +32,4 @@ class Solution:
                     if b == '0' or cmp(b, cur):
                         b = cur
             return b
-
         return f(target, 0)

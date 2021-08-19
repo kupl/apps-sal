@@ -2,6 +2,7 @@ from math import ceil
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         r = 0
         boarded = 0
@@ -18,7 +19,7 @@ class Solution:
                 maxR = r
         r += ceil(customers[-1] / 4)
         boarded += customers[-1]
-        if customers[-1] % 4 > 0 and (customers[-1] % 4) * boardingCost - runningCost <= 0:
+        if customers[-1] % 4 > 0 and customers[-1] % 4 * boardingCost - runningCost <= 0:
             r -= 1
             boarded -= customers[-1] % 4
         profit = boarded * boardingCost - r * runningCost

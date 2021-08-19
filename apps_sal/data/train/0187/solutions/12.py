@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingcost: int, runningcost: int) -> int:
         prof = []
         curc = 0

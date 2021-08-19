@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         wait = 0
         answer = 0
@@ -10,10 +11,10 @@ class Solution:
             wait += entry
             current -= runningCost
             if wait >= 4:
-                current += (4 * boardingCost)
+                current += 4 * boardingCost
                 wait -= 4
             else:
-                current += (wait * boardingCost)
+                current += wait * boardingCost
                 wait = 0
             if current > answer:
                 result = counter
@@ -22,10 +23,10 @@ class Solution:
             counter += 1
             current -= runningCost
             if wait >= 4:
-                current += (4 * boardingCost)
+                current += 4 * boardingCost
                 wait -= 4
             else:
-                current += (wait * boardingCost)
+                current += wait * boardingCost
                 wait = 0
             if current > answer:
                 result = counter

@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
 
@@ -10,8 +11,8 @@ class Solution:
             if n <= 1:
                 return n
             if (k, n) in memo:
-                return memo[(k, n)]
-            l, r = 1, n + 1
+                return memo[k, n]
+            (l, r) = (1, n + 1)
             while l < r:
                 mid = l + (r - l) // 2
                 broken = dp(k - 1, mid - 1)
@@ -20,7 +21,6 @@ class Solution:
                     r = mid
                 else:
                     l = mid + 1
-            memo[(k, n)] = 1 + dp(k - 1, l - 1)
-            return memo[(k, n)]
-
+            memo[k, n] = 1 + dp(k - 1, l - 1)
+            return memo[k, n]
         return dp(K, N)

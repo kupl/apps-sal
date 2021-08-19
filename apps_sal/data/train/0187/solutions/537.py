@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         wt = 0
         profit = 0
@@ -17,9 +18,8 @@ class Solution:
                 profit += boardingCost * take - runningCost
                 wt -= take
                 gondola = gondola[1:] + [take]
-            else:
-                if sum(gondola) == 0:
-                    profit -= runningCost
+            elif sum(gondola) == 0:
+                profit -= runningCost
             if profit > bp:
                 bp = profit
                 ret = cr

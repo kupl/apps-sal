@@ -1,4 +1,5 @@
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         count = 1
         prev = s[0]
@@ -16,7 +17,7 @@ class Solution:
         def opt(i, k):
             if i >= len(counts):
                 return 0
-            l, c = counts[i]
+            (l, c) = counts[i]
             best = 1 + (len(str(c)) if c > 1 else 0) + opt(i + 1, k)
             if k >= c:
                 best = min(best, opt(i + 1, k - c))

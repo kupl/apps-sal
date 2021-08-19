@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         c = []
         idx = 0
@@ -25,15 +26,15 @@ class Solution:
                 return 4
             return 3
         if len(s) >= 100 and len(c) == 1:
-            return rl((c[0]))
+            return rl(c[0])
 
         @lru_cache(None)
         def dfs(i, r, prev=None, d=False):
             if i == len(c):
                 return 0
             out = dfs(i + 1, r, c[i]) + rl(c[i])
-            if r >= c[i][1] and not d:
-                if i + 1 < len(c) and prev and prev[0] == c[i + 1][0]:
+            if r >= c[i][1] and (not d):
+                if i + 1 < len(c) and prev and (prev[0] == c[i + 1][0]):
                     c[i + 1] = (c[i + 1][0], c[i + 1][1] + prev[1])
                     out = min(out, dfs(i + 1, r - c[i][1], prev, True) - rl(prev))
                     c[i + 1] = (c[i + 1][0], c[i + 1][1] - prev[1])
@@ -44,5 +45,4 @@ class Solution:
             if c[i][1] >= 2 and r - c[i][1] + 1 >= 0:
                 out = min(out, dfs(i + 1, r - c[i][1] + 1, (c[i][0], 1)) + 1)
             return out
-
         return dfs(0, k)

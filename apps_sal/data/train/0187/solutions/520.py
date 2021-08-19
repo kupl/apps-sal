@@ -1,10 +1,10 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         r = -1
         maxV = 0
         pre = 0
         profit = 0
-
         i = 0
         while True:
             curr = 0

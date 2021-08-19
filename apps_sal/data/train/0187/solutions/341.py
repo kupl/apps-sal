@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         sm = 0
         cus = 0
@@ -12,7 +13,7 @@ class Solution:
                 c += 1
             board = min(4, cus)
             cus -= board
-            sm += (boardingCost * board) - runningCost
+            sm += boardingCost * board - runningCost
             w += 1
             if mx < sm:
                 ret = w

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         res = -1
         maximum = 0
@@ -7,7 +8,6 @@ class Solution:
         wheel = deque([0] * 4)
         onBoard = 0
         count = 0
-
         for i in range(len(customers)):
             waiting += customers[i]
             new = min(4, waiting)
@@ -21,7 +21,6 @@ class Solution:
                 maximum = profit
                 res = count
             lastProfit = profit
-
         while waiting:
             new = min(4, waiting)
             waiting -= new
@@ -34,5 +33,4 @@ class Solution:
                 maximum = profit
                 res = count
             lastProfit = profit
-
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         if sum(arr) % k != 0:
             return False
@@ -9,7 +10,7 @@ class Solution:
             else:
                 mod[num % k] += 1
         print(mod)
-        for k, v in mod.items():
+        for (k, v) in mod.items():
             if k * v != 0:
                 return False
         return True

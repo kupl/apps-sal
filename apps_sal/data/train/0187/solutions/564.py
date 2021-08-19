@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ans = -1
         maxp = 0
@@ -14,12 +15,12 @@ class Solution:
                 maxp = curr
                 ans = c
         if track >= 4:
-            curr += (track - track % 4) * boardingCost - (track // 4) * runningCost
+            curr += (track - track % 4) * boardingCost - track // 4 * runningCost
             c += track // 4
             if curr > maxp:
                 maxp = curr
                 ans = c
-        curr += (track % 4) * boardingCost - runningCost
+        curr += track % 4 * boardingCost - runningCost
         c += 1
         if curr > maxp:
             maxp = curr

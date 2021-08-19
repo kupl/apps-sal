@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         dic = collections.defaultdict(int)
         for i in range(len(arr)):

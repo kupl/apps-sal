@@ -1,6 +1,7 @@
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
-        st, n = 0, len(s)
+        (st, n) = (0, len(s))
         seg = []
         for i in range(1, n):
             if s[i] != s[i - 1]:
@@ -32,7 +33,7 @@ class Solution:
                             dp[i][ki] = min(dp[i][ki], solve(j + 1, ki - ps - kj))
                         else:
                             break
-                ps += (seg[j][1] if seg[j][0] != seg[i][0] else 0)
-                curr += (seg[j][1] if seg[j][0] == seg[i][0] else 0)
+                ps += seg[j][1] if seg[j][0] != seg[i][0] else 0
+                curr += seg[j][1] if seg[j][0] == seg[i][0] else 0
             return dp[i][ki]
         return solve(0, k)

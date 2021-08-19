@@ -1,12 +1,12 @@
 class Solution:
+
     def trap(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
-
         length = len(height)
-        if(length == 0):
+        if length == 0:
             return 0
         maxLeft = [0] * length
         maxRight = [0] * length

@@ -1,8 +1,9 @@
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
-        if all(x >= 0 for x in nums1) and all(y <= 0 for y in nums2):
+        if all((x >= 0 for x in nums1)) and all((y <= 0 for y in nums2)):
             return min(nums1) * max(nums2)
-        if all(x <= 0 for x in nums1) and all(y >= 0 for y in nums2):
+        if all((x <= 0 for x in nums1)) and all((y >= 0 for y in nums2)):
             return max(nums1) * min(nums2)
         accu_max = [0] * (len(nums2) + 1)
         for i in range(len(nums1)):

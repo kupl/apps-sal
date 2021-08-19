@@ -1,4 +1,5 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
         cache = {}
 
@@ -24,5 +25,4 @@ class Solution:
             if len(a) < len(b):
                 return b
             return max(a, b)
-
         return helper(target)

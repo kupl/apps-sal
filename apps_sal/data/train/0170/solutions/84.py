@@ -2,8 +2,9 @@ import bisect
 
 
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
-        start, end = 0, len(arr) - 1
+        (start, end) = (0, len(arr) - 1)
         while start < len(arr) - 1:
             if arr[start] > arr[start + 1]:
                 break

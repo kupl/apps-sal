@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting = 0
         rnd = 0
@@ -14,8 +15,6 @@ class Solution:
             cost += runningCost
             profit.append(income - cost)
             rnd += 1
-
         if max(profit) > 0:
             return profit.index(max(profit)) + 1
-
         return -1

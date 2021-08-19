@@ -1,4 +1,5 @@
 class Solution(object):
+
     def superEggDrop(self, K, N):
         dp = [[float('inf')] * (N + 1) for _ in range(K + 1)]
         for i in range(1, K + 1):
@@ -6,7 +7,6 @@ class Solution(object):
             dp[i][1] = 1
         for j in range(1, N + 1):
             dp[1][j] = j
-
         for i in range(2, K + 1):
             k = 1
             for j in range(2, N + 1):

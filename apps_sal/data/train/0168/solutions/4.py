@@ -7,14 +7,10 @@ class Solution:
         d = defaultdict(int)
         if len(s) < k:
             return False
-
         for char in s:
             d[char] += 1
-
         odd = 0
         for key in d:
             if d[key] % 2 != 0:
-
                 odd += 1
-
         return odd <= k

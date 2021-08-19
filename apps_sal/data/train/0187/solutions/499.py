@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         res = -1
         max_income = 0
@@ -18,7 +19,6 @@ class Solution:
             if cur_income > max_income:
                 max_income = cur_income
                 res = cnt
-
         if full_income > 0:
             cnt += cur_customer // 4
             cur_customer %= 4

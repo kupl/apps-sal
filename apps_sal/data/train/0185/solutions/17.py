@@ -1,5 +1,7 @@
 class Solution:
+
     def hasAllCodes(self, s: str, k: int) -> bool:
+
         def binary_code_of_length_k(k):
             if k == 1:
                 return ['0', '1']

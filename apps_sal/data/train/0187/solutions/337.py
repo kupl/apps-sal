@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         wait = 0
@@ -8,7 +9,7 @@ class Solution:
         for num in customers:
             cur_num = min(4, num + wait)
             total += cur_num
-            wait = (num + wait - cur_num)
+            wait = num + wait - cur_num
             rotated += 1
             cur_profit = boardingCost * total - rotated * runningCost
             if cur_profit > profit:

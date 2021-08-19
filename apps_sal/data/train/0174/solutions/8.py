@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         maxlen = 0
         pathlen = {0: 0}

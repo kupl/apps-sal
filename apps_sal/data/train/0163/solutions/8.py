@@ -1,6 +1,7 @@
 class Solution:
+
     def isSubsequence(self, s, t):
-        if s == "":
+        if s == '':
             return True
         s_num = 0
         temp = s[s_num]

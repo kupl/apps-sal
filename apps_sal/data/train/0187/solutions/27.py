@@ -1,7 +1,7 @@
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
-        profit, Customers, waiting, rotation, R = 0, 0, 0, -1, 0
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
+        (profit, Customers, waiting, rotation, R) = (0, 0, 0, -1, 0)
         size = len(customers)
         for i in range(size):
             waiting += customers[i]
@@ -28,5 +28,4 @@ class Solution:
             if price > profit:
                 profit = price
                 rotation = R
-
         return rotation

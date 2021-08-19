@@ -1,11 +1,12 @@
 class Solution:
+
     def minOperationsMaxProfit(self, c: List[int], b: int, r: int) -> int:
         cnt = 0
         p = 0
         m = 0
         mi = -1
         ind = 0
-        for i, cc in enumerate(c):
+        for (i, cc) in enumerate(c):
             cnt += cc
             p += min(4, cnt) * b - r
             if p > m:

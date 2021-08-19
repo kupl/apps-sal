@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, arr: List[int], b: int, r: int) -> int:
         best = [0, -1]
         cur = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDiff(self, num: int) -> int:
         a = []
         s = str(num)

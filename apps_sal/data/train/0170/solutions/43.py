@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         right = []
         left = []
@@ -15,12 +16,12 @@ class Solution:
         l = [i for i in left]
         r = [i for i in right]
         val = 0
-        while l and r and l[-1] > r[-1]:
+        while l and r and (l[-1] > r[-1]):
             l.pop()
             val += 1
         out = val
         val = 0
-        while right and left and right[-1] < left[-1]:
+        while right and left and (right[-1] < left[-1]):
             right.pop()
             val += 1
         out = min(out, val)

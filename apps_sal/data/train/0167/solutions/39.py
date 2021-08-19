@@ -1,4 +1,5 @@
 class Solution(object):
+
     def superEggDrop(self, K, N):
         dp = range(N + 1)
         for i in range(2, K + 1):

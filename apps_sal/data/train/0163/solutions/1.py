@@ -1,4 +1,5 @@
 class Solution:
+
     def isSubsequence(self, s, t):
         """
         :type s: str
@@ -8,7 +9,7 @@ class Solution:
         i = 0
         if not s:
             return True
-        m, n = len(t), len(s)
+        (m, n) = (len(t), len(s))
         for ch in t:
             if ch == s[i]:
                 if i == n - 1:

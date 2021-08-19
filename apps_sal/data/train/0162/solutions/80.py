@@ -1,4 +1,5 @@
 class Solution:
+
     def lcs(self, s1, s2, m, n):
         if m == 0 or n == 0:
             return 0

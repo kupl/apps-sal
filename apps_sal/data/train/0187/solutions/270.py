@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, c: List[int], b: int, r: int) -> int:
         ans = [0]
         i = 0

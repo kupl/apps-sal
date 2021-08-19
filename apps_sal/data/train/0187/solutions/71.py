@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = []
         profits = 0
@@ -6,8 +7,8 @@ class Solution:
         for i in range(len(customers)):
             waiting += customers[i]
             if waiting <= 4:
-                profit.append(profits + (waiting * boardingCost) - runningCost)
-                profits += (waiting * boardingCost) - runningCost
+                profit.append(profits + waiting * boardingCost - runningCost)
+                profits += waiting * boardingCost - runningCost
                 waiting = 0
             else:
                 profit.append(profits + 4 * boardingCost - runningCost)
@@ -17,10 +18,10 @@ class Solution:
             profit.append(profits + 4 * boardingCost - runningCost)
             profits += 4 * boardingCost - runningCost
             waiting = waiting - 4
-        profit.append(profits + (waiting * boardingCost) - runningCost)
-        profits += (waiting * boardingCost) - runningCost
+        profit.append(profits + waiting * boardingCost - runningCost)
+        profits += waiting * boardingCost - runningCost
         x = max(profit)
         if x < 0:
-            return(-1)
+            return -1
         else:
-            return(profit.index(x) + 1)
+            return profit.index(x) + 1

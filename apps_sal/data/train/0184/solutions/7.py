@@ -1,12 +1,13 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         text_cnt = collections.Counter(text)
         d = collections.Counter()
-        l, r = 0, 0
+        (l, r) = (0, 0)
         maxcnt = 0
         res = 0
         N = len(text)
-        for r, ch in enumerate(text):
+        for (r, ch) in enumerate(text):
             d[ch] += 1
             maxcnt = max(maxcnt, d[ch])
             while r - l + 1 > maxcnt + 1:

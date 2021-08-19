@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         n = len(arr)
         if n % 2:
@@ -10,7 +11,6 @@ class Solution:
             if d[k // 2] % 2:
                 return 0
             del d[k // 2]
-
         sd = sorted(d.items(), key=lambda x: x[0])
         if sd[0][0] == 0:
             if sd[0][1] % 2:

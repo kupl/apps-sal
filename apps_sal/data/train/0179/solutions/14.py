@@ -1,4 +1,5 @@
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         memo = {}
 
@@ -8,7 +9,6 @@ class Solution:
             key = (i, run_ch, run_length, remain_dels)
             if key in memo:
                 return memo[key]
-
             del_costs = float('inf')
             if remain_dels > 0:
                 del_costs = f(i + 1, run_ch, run_length, remain_dels - 1)

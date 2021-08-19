@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting_customers = cur_profit = max_profit = rounds = 0
         max_profit_round = -1

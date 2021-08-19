@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         left = 0
         required = 0
@@ -7,7 +8,7 @@ class Solution:
             left += cus
             left -= min(left, 4)
         maxRot = required + ceil(left / 4)
-        mP, mR = 0, -1
+        (mP, mR) = (0, -1)
         rotCnt = 0
         c = 0
         profit = 0

@@ -1,6 +1,7 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
-        '''dp = [0]
+        """dp = [0]
         for i in range(1,target+1):
             result = 0
             for j,c in enumerate(cost):
@@ -10,7 +11,7 @@ class Solution:
                     continue
                 result = max(result,10*dp[i-c]+j+1)
             dp.append(result)
-        return str(dp[-1])'''
+        return str(dp[-1])"""
         cache = {}
 
         def helper(remaining):
@@ -35,5 +36,4 @@ class Solution:
             if len(a) < len(b):
                 return b
             return max(a, b)
-
         return helper(target)

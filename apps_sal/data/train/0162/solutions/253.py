@@ -1,6 +1,7 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        width, depth = len(text1), len(text2)
+        (width, depth) = (len(text1), len(text2))
         dp = [[0 for _ in range(width)] for _ in range(depth)]
         for i in range(depth):
             for j in range(width):
@@ -14,7 +15,7 @@ class Solution:
                     left = 0
                 else:
                     left = dp[i][j - 1]
-                if (text2[i] == text1[j]):
+                if text2[i] == text1[j]:
                     if i == 0 or j == 0:
                         dp[i][j] = 1
                     else:

@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers, boardingCost: int, runningCost: int) -> int:
-        rt, rp = -1, 0
+        (rt, rp) = (-1, 0)
         N = len(customers)
-        i, wpp, tpp = 0, 0, 0
+        (i, wpp, tpp) = (0, 0, 0)
         time = 1
         while i < N or wpp > 0:
             if i < N:

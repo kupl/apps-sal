@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, A, BC, RC):
         ans = profit = t = 0
         maxprofit = 0
@@ -16,5 +17,4 @@ class Solution:
             if profit > maxprofit:
                 maxprofit = profit
                 ans = t
-
         return -1 if maxprofit <= 0 else ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
 
         def memo(f):
@@ -10,10 +11,10 @@ class Solution:
                 return dic[args]
             return f_alt
 
-        def key(s): return (len(s), s)
-
+        def key(s):
+            return (len(s), s)
         cands = {}
-        for i, c in enumerate(cost):
+        for (i, c) in enumerate(cost):
             cands[c] = i + 1
 
         @memo
@@ -26,5 +27,4 @@ class Solution:
                     if f(tar - c) != None:
                         ans = max(ans, 10 * f(tar - c) + cands[c])
                 return ans or None
-
         return str(f(target) or 0)

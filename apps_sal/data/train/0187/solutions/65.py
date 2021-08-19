@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         preprofit = 0
@@ -16,7 +17,7 @@ class Solution:
             if cuscount > 3:
                 roundcus += 4
                 preprofit = profit
-                profit = (roundcus * boardingCost) - (j * runningCost)
+                profit = roundcus * boardingCost - j * runningCost
                 if preprofit >= profit:
                     break
                 j += 1
@@ -27,16 +28,15 @@ class Solution:
             else:
                 roundcus += cuscount
                 preprofit = profit
-                profit = (roundcus * boardingCost) - (j * runningCost)
+                profit = roundcus * boardingCost - j * runningCost
                 if preprofit >= profit:
                     break
-
                 cuscount = 0
                 j += 1
                 if i < len(customers):
                     cuscount += customers[i]
                     i += 1
         if profit < 0:
-            return (-1)
+            return -1
         else:
-            return (j - 1)
+            return j - 1

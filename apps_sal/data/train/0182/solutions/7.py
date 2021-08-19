@@ -1,10 +1,11 @@
 class Solution:
+
     def trap(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
-        left, right = 0, len(height) - 1
+        (left, right) = (0, len(height) - 1)
         result = 0
         while left < right:
             mh = min(height[left], height[right])
@@ -18,5 +19,4 @@ class Solution:
                 while height[right] <= mh and left < right:
                     result = result + mh - height[right]
                     right = right - 1
-
         return result

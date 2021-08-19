@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         total_customers = 0
         max_profit = 0
@@ -17,7 +18,7 @@ class Solution:
             profit = total_customers * boardingCost - (i + 1) * runningCost
             if profit > max_profit:
                 max_profit = profit
-                no_rotation = (i + 1)
+                no_rotation = i + 1
             i += 1
         if no_rotation == 0:
             return -1

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         best_profit = 0
         best_turn = -1
@@ -26,7 +27,6 @@ class Solution:
             if cur_profit > best_profit:
                 best_profit = cur_profit
                 best_turn = turn
-
         if best_turn < 0:
             return best_turn
         else:

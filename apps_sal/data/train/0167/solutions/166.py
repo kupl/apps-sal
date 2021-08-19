@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K, N):
         dp = dict()
 
@@ -8,8 +9,7 @@ class Solution:
             if n == 0:
                 return 0
             if (k, n) in dp:
-                return dp[(k, n)]
-
+                return dp[k, n]
             res = float('INF')
             l = 1
             r = n + 1
@@ -24,10 +24,8 @@ class Solution:
                     l = m + 1
                 else:
                     break
-
-            dp[(k, n)] = res
+            dp[k, n] = res
             return res
-
         import sys
         sys.setrecursionlimit(3000)
         res = recursive(K, N)

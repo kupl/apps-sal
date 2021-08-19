@@ -17,13 +17,11 @@ class Solution:
         if i < 0:
             return None
         if (i, acc_p) in self._prod_cache:
-            return self._prod_cache[(i, acc_p)]
+            return self._prod_cache[i, acc_p]
         val = nums[i]
         if i > 0:
-            max_p = max(self.get_max_prod(nums, i - 1, acc_p * val),
-                        acc_p * val)
+            max_p = max(self.get_max_prod(nums, i - 1, acc_p * val), acc_p * val)
         else:
             max_p = acc_p * val
-
-        self._prod_cache[(i, acc_p)] = max_p
+        self._prod_cache[i, acc_p] = max_p
         return max_p

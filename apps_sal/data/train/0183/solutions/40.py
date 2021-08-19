@@ -15,5 +15,6 @@ def max_dot_product(A, B):
 
 
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         return max_dot_product(nums1, nums2)

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, s1: str, s2: str) -> int:
         if s1 == '' or s2 == '':
             return 0
@@ -13,5 +14,4 @@ class Solution:
                     dp[i][j] = 1 if s1[i] == s2[j] else dp[i - 1][j]
                 else:
                     dp[i][j] = max([dp[i - 1][j - 1] + 1 if s1[i] == s2[j] else 0, dp[i - 1][j], dp[i][j - 1]])
-
         return dp[-1][-1]

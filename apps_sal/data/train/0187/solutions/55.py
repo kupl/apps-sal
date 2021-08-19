@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         maxCost = currCost = 0
         maxRound = -1
@@ -8,18 +9,18 @@ class Solution:
         for c in customers:
             waiting += c
             currRound += 1
-            currBoard = (waiting if waiting < 4 else 4)
+            currBoard = waiting if waiting < 4 else 4
             boarded += currBoard
-            currCost = (boarded * boardingCost) - (currRound * runningCost)
+            currCost = boarded * boardingCost - currRound * runningCost
             waiting -= currBoard
             if currCost > maxCost:
                 maxCost = currCost
                 maxRound = currRound
         while waiting > 0:
             currRound += 1
-            currBoard = (waiting if waiting < 4 else 4)
+            currBoard = waiting if waiting < 4 else 4
             boarded += currBoard
-            currCost = (boarded * boardingCost) - (currRound * runningCost)
+            currCost = boarded * boardingCost - currRound * runningCost
             waiting -= currBoard
             if currCost > maxCost:
                 maxCost = currCost

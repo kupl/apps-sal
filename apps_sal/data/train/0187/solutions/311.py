@@ -1,7 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, cust: List[int], bc: int, rc: int) -> int:
         cust.reverse()
-        wait, profit, t, max_p, ans = 0, 0, 0, float('-inf'), 0
+        (wait, profit, t, max_p, ans) = (0, 0, 0, float('-inf'), 0)
         while cust or wait:
             if cust:
                 wait += cust.pop()

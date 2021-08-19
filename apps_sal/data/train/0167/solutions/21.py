@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         mem = [[None for _ in range(N)] for _ in range(K - 1)]
 
@@ -6,7 +7,7 @@ class Solution:
             if n <= 1 or k == 1:
                 return n
             if mem[k - 2][n - 1] is None:
-                l, r = 1, n
+                (l, r) = (1, n)
                 while l + 1 < r:
                     i = (l + r) // 2
                     if dp(k - 1, i - 1, mem) < dp(k, n - i, mem):

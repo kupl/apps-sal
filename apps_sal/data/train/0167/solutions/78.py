@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         cache = {}
 
@@ -6,7 +7,7 @@ class Solution:
             if egg == 1 or floor <= 1:
                 return floor
             if (egg, floor) in cache:
-                return cache[(egg, floor)]
+                return cache[egg, floor]
             minAttempts = float('inf')
             l = 1
             h = floor
@@ -20,6 +21,6 @@ class Solution:
                 else:
                     h = mid - 1
                 minAttempts = min(minAttempts, attempts)
-            cache[(egg, floor)] = minAttempts
+            cache[egg, floor] = minAttempts
             return minAttempts
         return drop(K, N)

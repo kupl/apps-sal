@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         memo = [[0 for _ in range(K + 1)] for _ in range(N + 1)]
         for m in range(1, N + 1):

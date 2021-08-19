@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], bc: int, rc: int) -> int:
-        li = [0, ]
+        li = [0]
         wait = 0
         for i in customers:
             i += wait

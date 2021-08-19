@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         n = len(customers)
         i = 0
@@ -18,7 +19,6 @@ class Solution:
                 num_waiting = 0
             elif curr == 0:
                 num_waiting = 0
-
             if boardingCost * taken - runningCost * (i + 1) > max_profit:
                 max_profit = boardingCost * taken - runningCost * (i + 1)
                 ans = i + 1

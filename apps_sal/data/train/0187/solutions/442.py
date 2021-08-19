@@ -1,19 +1,19 @@
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting = 0
         onBoard = []
         profit = 0
         maxProfit = 0
         ans = 0
-        for i, customer in enumerate(customers):
+        for (i, customer) in enumerate(customers):
             waiting += customer
             if waiting >= 4:
-                profit += (4 * boardingCost - runningCost)
+                profit += 4 * boardingCost - runningCost
                 waiting -= 4
                 onBoard.append(4)
             else:
-                profit += (waiting * boardingCost - runningCost)
+                profit += waiting * boardingCost - runningCost
                 onBoard.append(waiting)
                 waiting = 0
             freeRound = 3
@@ -25,15 +25,14 @@ class Solution:
             if stopNowProfit > maxProfit:
                 maxProfit = stopNowProfit
                 ans = i + 1
-
         while waiting > 0:
             i += 1
             if waiting >= 4:
-                profit += (4 * boardingCost - runningCost)
+                profit += 4 * boardingCost - runningCost
                 waiting -= 4
                 onBoard.append(4)
             else:
-                profit += (waiting * boardingCost - runningCost)
+                profit += waiting * boardingCost - runningCost
                 onBoard.append(waiting)
                 waiting = 0
             freeRound = 3

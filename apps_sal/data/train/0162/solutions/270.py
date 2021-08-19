@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         text1 = list(text1)
         text2 = list(text2)

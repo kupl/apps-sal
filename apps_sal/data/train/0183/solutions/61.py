@@ -1,9 +1,9 @@
-
 import sys
 from typing import List
 
 
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         result = -sys.maxsize
         len1 = len(nums1)

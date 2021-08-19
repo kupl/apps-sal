@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDiff(self, num: int) -> int:
         return self.findMax(num) - self.findMin(num)
 
@@ -23,7 +24,6 @@ class Solution:
         org = None
         rep = None
         new_s = ''
-
         for i in range(len(s)):
             if s[i] == '0':
                 new_s += s[i]
@@ -35,14 +35,12 @@ class Solution:
                     org = s[0]
                     rep = '1'
                     new_s += rep
+            elif org is None and s[i] != '1':
+                org = s[i]
+                rep = '0'
+                new_s += rep
+            elif s[i] == org:
+                new_s += rep
             else:
-                if org is None and s[i] != '1':
-                    org = s[i]
-                    rep = '0'
-                    new_s += rep
-                elif s[i] == org:
-                    new_s += rep
-                else:
-                    new_s += s[i]
-
+                new_s += s[i]
         return int(new_s)

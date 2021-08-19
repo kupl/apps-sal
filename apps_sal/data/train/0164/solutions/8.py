@@ -1,4 +1,5 @@
 class Solution:
+
     def minInteger(self, num: str, k: int) -> str:
         if k <= 0:
             return num

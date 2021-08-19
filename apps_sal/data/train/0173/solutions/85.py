@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         d = collections.Counter()
         for e in arr:
@@ -10,7 +11,6 @@ class Solution:
                 continue
             if d[e] != d[k - e]:
                 return False
-            else:
-                if e == k // 2 and k % 2 == 0 and d[e] % 2 != 0:
-                    return False
+            elif e == k // 2 and k % 2 == 0 and (d[e] % 2 != 0):
+                return False
         return True

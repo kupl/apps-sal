@@ -1,4 +1,5 @@
 class Solution:
+
     def minFlips(self, a: int, b: int, c: int) -> int:
         stra = '{0:b}'.format(a)
         strb = '{0:b}'.format(b)
@@ -12,8 +13,8 @@ class Solution:
         boolC = [s == '1' for s in strc]
         x = 0
         for i in range(n):
-            A, B, C = boolA[i], boolB[i], boolC[i]
-            if not ((A or B) == C):
+            (A, B, C) = (boolA[i], boolB[i], boolC[i])
+            if not (A or B) == C:
                 if A and B:
                     x += 2
                 else:

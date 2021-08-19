@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if boardingCost * 4 < runningCost:
             return -1
@@ -18,7 +19,6 @@ class Solution:
             if cur > curM:
                 curM = cur
                 res = i + 1
-
         if remind * boardingCost - runningCost <= 0:
             return res
         res = len(customers)
@@ -26,8 +26,7 @@ class Solution:
             remind -= min(4, remind)
             res += 1
         return res
-
         total = sum(customers)
-        if (total % 4) * boardingCost <= runningCost:
+        if total % 4 * boardingCost <= runningCost:
             return total // 4
         return total // 4 + 1

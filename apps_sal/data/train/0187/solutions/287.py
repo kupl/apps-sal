@@ -1,7 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        i, queue = 0, 0
-        total_profit, max_profit = 0, -1
+        (i, queue) = (0, 0)
+        (total_profit, max_profit) = (0, -1)
         result = -1
         while i < len(customers) or queue > 0:
             queue += 0 if i >= len(customers) else customers[i]

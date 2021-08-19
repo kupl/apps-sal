@@ -1,8 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
         if 4 * boardingCost - runningCost <= 0:
             return -1
-
         n = len(customers)
         wait = 0
         now_profit = 0
@@ -15,7 +15,7 @@ class Solution:
             if now_profit > max_profit:
                 max_profit = now_profit
                 res = i + 1
-        res += (wait // 4)
+        res += wait // 4
         if boardingCost * (wait % 4) - runningCost > 0:
             res += 1
         return res

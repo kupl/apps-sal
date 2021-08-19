@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         d = {}
         for i in range(len(s)):
@@ -6,7 +7,6 @@ class Solution:
                 d[s[i]] += 1
             else:
                 d[s[i]] = 1
-
         odds = 0
         for v in d.values():
             if v % 2 == 1:

@@ -1,9 +1,10 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if boardingCost * 4 < runningCost:
             return -1
         remain = 0
-        for i, v in enumerate(customers):
+        for (i, v) in enumerate(customers):
             if remain + v > 4:
                 customers[i] = 4
                 remain = remain + v - 4

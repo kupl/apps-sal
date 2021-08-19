@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         dp = [[0 for i in range(K + 1)] for j in range(N + 1)]
         for m in range(1, N + 1):

@@ -1,10 +1,12 @@
 class Solution:
+
     def findLongestWord(self, s, d):
         """
         :type s: str
         :type d: List[str]
         :rtype: str
         """
+
         def find(a, b):
             p = 0
             for c in b:
@@ -12,7 +14,6 @@ class Solution:
                 if p == 0:
                     return False
             return True
-
         ans = ''
         for word in d:
             if find(s, word):

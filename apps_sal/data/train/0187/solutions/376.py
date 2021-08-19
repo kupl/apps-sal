@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         highest = waiting = profit = time = i = 0
         highest_time = -1
@@ -13,5 +14,4 @@ class Solution:
             if profit > highest:
                 highest_time = time
             highest = max(profit, highest)
-
         return -1 if highest <= 0 else highest_time

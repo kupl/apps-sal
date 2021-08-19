@@ -1,10 +1,10 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         """
         :type input: str
         :rtype: int
         """
-
         dir = []
         tab = 0
         curr = []
@@ -33,5 +33,4 @@ class Solution:
                 tab += 1
             else:
                 temp += c
-
         return op

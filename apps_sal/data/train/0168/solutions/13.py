@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         r_map = dict()
         if k > len(s):

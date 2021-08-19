@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution:
         tails = [0 for i in range(len(nums))]
         size = 0
         for x in nums:
-            i, j = 0, size
+            (i, j) = (0, size)
             while i != j:
                 m = (i + j) // 2
                 if tails[m] < x:

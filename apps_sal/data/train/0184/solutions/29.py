@@ -1,9 +1,10 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
-        lst, lookup = list(), dict()
+        (lst, lookup) = (list(), dict())
         ptr = 0
         while ptr < len(text):
-            curr, count = text[ptr], 0
+            (curr, count) = (text[ptr], 0)
             while ptr < len(text) and curr == text[ptr]:
                 count += 1
                 ptr += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def isSubsequence(self, s, t):
         if len(s) == 0:
             return True
@@ -8,8 +9,4 @@ class Solution:
             return False
         else:
             return self.isSubsequence(s[1:], t[t.index(s[0]) + 1:])
-        """
-         :type s: str
-         :type t: str
-         :rtype: bool
-         """
+        '\n         :type s: str\n         :type t: str\n         :rtype: bool\n         '

@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
+
         @lru_cache(None)
         def dp(k, n):
             if k == 0:
@@ -13,7 +15,7 @@ class Solution:
                 return n
             if k > log(n, 2):
                 return 1 + int(log(n, 2))
-            l, r = 1, n + 1
+            (l, r) = (1, n + 1)
             while l < r:
                 m = l + (r - l) // 2
                 if dp(k - 1, m - 1) < dp(k, n - m):

@@ -1,8 +1,7 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-
-        r, maxProfit, accProfit, accCustomers, = -1, 0, 0, 0
-
+        (r, maxProfit, accProfit, accCustomers) = (-1, 0, 0, 0)
         i = 0
         while True:
             curr = 0

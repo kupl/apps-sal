@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ccnt = 0
         output = []
@@ -18,7 +19,7 @@ class Solution:
         output.append(ccnt * boardingCost - runningCost)
         maxv = totp = 0
         res = -1
-        for n, i in enumerate(output):
+        for (n, i) in enumerate(output):
             totp += i
             if totp > maxv:
                 maxv = totp

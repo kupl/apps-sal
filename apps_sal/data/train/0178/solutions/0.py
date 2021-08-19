@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -9,7 +10,7 @@ class Solution:
         res = [nums[0]]
 
         def binarySearch(l, target):
-            left, right = 0, len(l) - 1
+            (left, right) = (0, len(l) - 1)
             while left < right:
                 mid = (left + right) // 2
                 if l[mid] >= target:
