@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-n, p, q, r = map_input()
+(n, p, q, r) = map_input()
 a = [p, q, r]
 b = list_input()
 ans = 0

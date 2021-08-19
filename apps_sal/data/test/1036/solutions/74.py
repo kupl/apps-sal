@@ -1,14 +1,14 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-q = ""
+q = ''
 
 
 def a_win(a, b):
-    if a == "S" and b == "P":
+    if a == 'S' and b == 'P':
         return True
-    elif a == "P" and b == "R":
+    elif a == 'P' and b == 'R':
         return True
-    elif a == "R" and b == "S":
+    elif a == 'R' and b == 'S':
         return True
     elif a == b:
         return True
@@ -25,5 +25,5 @@ for _ in range(k):
         else:
             q += s[i + 1]
     s = q
-    q = ""
+    q = ''
 print(s[0])

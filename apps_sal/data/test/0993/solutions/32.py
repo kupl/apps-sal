@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 AA = []
 a_dict = {}
@@ -20,7 +20,7 @@ def comb(n):
     return n * (n - 1) // 2
 
 
-for k, v in list(a_dict.items()):
+for (k, v) in list(a_dict.items()):
     if v >= 2:
         ans += comb(v)
 print(ans)

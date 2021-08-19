@@ -1,4 +1,4 @@
-n, m = map(int, input().split(" "))
+(n, m) = map(int, input().split(' '))
 
 
 def divisor(n):
@@ -31,10 +31,8 @@ def prime_factorize(n):
 
 
 s = set(divisor(n)).intersection(set(divisor(m)))
-
 ans = 1
 for ss in s:
     if len(prime_factorize(ss)) == 1:
         ans += 1
-
 print(ans)

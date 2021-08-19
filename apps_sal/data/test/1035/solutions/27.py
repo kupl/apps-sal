@@ -1,8 +1,8 @@
-
 from math import gcd
 
 
 def resolve():
+
     def prime_factorize(n):
         if 2 <= n < 4:
             return [n]
@@ -15,14 +15,11 @@ def resolve():
             i += 1
         if n != 1:
             res.append(n)
-
         return set(res)
-
-    a, b = list(map(int, input().split()))
-
+    (a, b) = list(map(int, input().split()))
     g = gcd(a, b)
     ans = prime_factorize(g)
-    print((len(ans) + 1))
+    print(len(ans) + 1)
 
 
 def __starting_point():

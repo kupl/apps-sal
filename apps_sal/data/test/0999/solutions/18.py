@@ -1,5 +1,5 @@
 n = int(input())
-smin = 10**9
+smin = 10 ** 9
 smax = 0
 for i in range(n):
     (l, r) = (int(i) for i in input().split())
@@ -7,10 +7,8 @@ for i in range(n):
         smin = r
     if l > smax:
         smax = l
-
-
 m = int(input())
-pmin = 10**9
+pmin = 10 ** 9
 pmax = 0
 for i in range(m):
     (l, r) = (int(i) for i in input().split())
@@ -18,6 +16,4 @@ for i in range(m):
         pmin = r
     if l > pmax:
         pmax = l
-
-
 print(max(smax - pmin, pmax - smin, 0))

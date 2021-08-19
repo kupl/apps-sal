@@ -1,8 +1,11 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-n, p = map(int, input().split())
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(n, p) = map(int, input().split())
 A = sorted([int(i) for i in input().split()])
 A = [A[i] - int(i) for i in range(n)]
 AA = [A[-1]]

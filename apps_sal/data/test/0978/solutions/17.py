@@ -1,4 +1,3 @@
-
 def collecting(k):
     n = [k * 2] * 9
     for t in range(4):

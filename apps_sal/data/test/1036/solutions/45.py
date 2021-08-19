@@ -1,12 +1,12 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = list(input())
-hand = ["R", "P", "S"]
+hand = ['R', 'P', 'S']
 for i in range(N):
     S[i] = hand.index(S[i])
 
 
 def judge(A, B):
-    A, B = min(A, B), max(A, B)
+    (A, B) = (min(A, B), max(A, B))
     if A == 0 and B == 2:
         return A
     else:
@@ -14,7 +14,6 @@ def judge(A, B):
 
 
 cnt = K
-
 while cnt:
     S += S
     T = []

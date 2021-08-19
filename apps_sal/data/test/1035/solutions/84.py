@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     gcd = math.gcd(a, b)
     ans = [1]
     while gcd % 2 == 0:
@@ -17,7 +17,7 @@ def main():
             f += 2
     if gcd != 1:
         ans.append(gcd)
-    print((len(set(ans))))
+    print(len(set(ans)))
 
 
 def __starting_point():

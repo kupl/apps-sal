@@ -1,4 +1,4 @@
-k, p = list(map(int, input().split()))
+(k, p) = list(map(int, input().split()))
 
 
 def cd(n):
@@ -21,6 +21,6 @@ def rev(n):
 
 ans = 0
 for i in range(1, k + 1):
-    ans += i * 10**cd(i) + rev(i)
+    ans += i * 10 ** cd(i) + rev(i)
     ans %= p
 print(ans)

@@ -11,7 +11,7 @@ ok = True
 for i in range(10):
     if x[i] > 2 * k:
         ok = False
-if (ok):
-    print("YES")
+if ok:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

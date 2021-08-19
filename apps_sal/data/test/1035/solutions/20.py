@@ -1,6 +1,5 @@
-
 import math
-url = "https://atcoder.jp//contests/abc142/tasks/abc142_d"
+url = 'https://atcoder.jp//contests/abc142/tasks/abc142_d'
 
 
 def prime_factorize(n):
@@ -21,10 +20,10 @@ def prime_factorize(n):
 
 
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     abgcd = math.gcd(a, b)
     s = set(prime_factorize(abgcd))
-    print((len(s) + 1))
+    print(len(s) + 1)
 
 
 def __starting_point():

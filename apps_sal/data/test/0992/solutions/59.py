@@ -6,7 +6,6 @@ from typing import List
 @numba.jit
 def solver(N: int, S: int, A: np.array) -> int:
     dp = np.zeros((N + 1, S + 1), dtype=np.int64)
-
     dp[0, 0] = 1
     MOD = 998244353
     for i in range(N):
@@ -20,9 +19,8 @@ def solver(N: int, S: int, A: np.array) -> int:
 
 
 def main():
-    N, S = [int(x) for x in input().split()]
+    (N, S) = [int(x) for x in input().split()]
     A = [int(x) for x in input().split()]
-
     ans = solver(N, S, np.array(A))
     print(ans)
 

@@ -5,7 +5,7 @@ def divisors(x):
     l = [[], []]
     for i in range(1, int(math.sqrt(x)) + 1):
         if x % i == 0:
-            if i**2 != x:
+            if i ** 2 != x:
                 l[0].append(i)
                 l[1].append(x // i)
             else:
@@ -20,7 +20,7 @@ def primenumber(x):
     return True
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 cnt = 0
 for i in divisors(math.gcd(a, b)):
     if i == 1:

@@ -23,7 +23,7 @@ def solve(n, m, a):
         b[i + 1] = (a[i] + b[i]) % m
     c = collections.Counter(b[1:])
     total = 0
-    for k, v in list(c.items()):
+    for (k, v) in list(c.items()):
         if k != 0:
             v -= 1
         if v == 0:
@@ -33,9 +33,9 @@ def solve(n, m, a):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list([int(x) % m for x in input().split()])
-    print((solve(n, m, a)))
+    print(solve(n, m, a))
 
 
 def __starting_point():
@@ -43,28 +43,28 @@ def __starting_point():
 
 
 class Test(unittest.TestCase):
+
     def get_a(self, a, m):
         return list([int(x) % m for x in a.split()])
 
     def test1(self):
         n = 3
         m = 2
-        a = self.get_a("4 1 5", m)
+        a = self.get_a('4 1 5', m)
         expected = 3
         self.assertEqual(solve(n, m, a), expected)
 
     def test2(self):
         n = 13
         m = 17
-        a = self.get_a("29 7 5 7 9 51 7 13 8 55 42 9 81", m)
+        a = self.get_a('29 7 5 7 9 51 7 13 8 55 42 9 81', m)
         expected = 6
         self.assertEqual(solve(n, m, a), expected)
 
     def test3(self):
         n = 10
         m = 400000000
-        a = self.get_a(
-            "1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000", m)
+        a = self.get_a('1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000', m)
         expected = 25
         self.assertEqual(solve(n, m, a), expected)
 

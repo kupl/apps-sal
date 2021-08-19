@@ -1,6 +1,6 @@
 import sys
 n = int(sys.stdin.readline())
-employees = list(map(int, sys.stdin.readline().split(" ")))
+employees = list(map(int, sys.stdin.readline().split(' ')))
 days = []
 curr = 0
 count = 0
@@ -25,10 +25,9 @@ while curr < n:
             count = 0
             seenToday = set()
     curr += 1
-
 if len(days) == 0 or len(inside) > 0:
     print(-1)
 else:
     print(len(days))
     for n in days:
-        print(n, end=" ")
+        print(n, end=' ')

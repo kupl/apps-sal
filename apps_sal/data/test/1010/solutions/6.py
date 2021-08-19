@@ -1,5 +1,5 @@
 n = int(input())
-isnut = [(int(x) == 1) for x in input().split()]
+isnut = [int(x) == 1 for x in input().split()]
 ans = 1
 stack = 1
 hasnut = False

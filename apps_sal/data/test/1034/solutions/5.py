@@ -1,21 +1,17 @@
 import heapq
-
-x, y, z, k = list(map(int, input().split()))
+(x, y, z, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 a.sort(reverse=True)
 b.sort(reverse=True)
 c.sort(reverse=True)
-
 hq = [[-a[0] - b[0] - c[0], 0, 0, 0]]
 heapq.heapify(hq)
 visited = {(0, 0, 0)}
-
 for i in range(k):
-    ii, ia, ib, ic = heapq.heappop(hq)
-    print((-ii))
+    (ii, ia, ib, ic) = heapq.heappop(hq)
+    print(-ii)
     na = min(ia + 1, x - 1)
     nb = min(ib + 1, y - 1)
     nc = min(ic + 1, z - 1)

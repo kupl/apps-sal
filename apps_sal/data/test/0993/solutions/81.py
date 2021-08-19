@@ -1,5 +1,5 @@
 from collections import Counter
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c = Counter()
 sum_val = 0

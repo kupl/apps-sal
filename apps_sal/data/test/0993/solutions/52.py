@@ -5,9 +5,9 @@ input = sys.stdin.readline
 
 
 def read():
-    N, M = list(map(int, input().strip().split()))
+    (N, M) = list(map(int, input().strip().split()))
     A = list(map(int, input().strip().split()))
-    return N, M, A
+    return (N, M, A)
 
 
 def solve(N, M, A):
@@ -29,7 +29,7 @@ def solve(N, M, A):
 
 def __starting_point():
     inputs = read()
-    print((solve(*inputs)))
+    print(solve(*inputs))
 
 
 __starting_point()

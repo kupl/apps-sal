@@ -2,7 +2,7 @@ import math
 
 
 def test():
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     ans = math.inf
     for i in range(len(a)):
@@ -20,6 +20,5 @@ def print2d(a):
 
 
 t = int(input())
-
 for i in range(t):
     test()

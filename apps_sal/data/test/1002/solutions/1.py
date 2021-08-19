@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 t = list(map(int, input().split()))
 T = sum(t) + 10 * (n - 1)
 if T > d:

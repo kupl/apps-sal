@@ -1,5 +1,4 @@
 import re
-
 s = input()
 s = re.split(',|;', s)
 a = []
@@ -15,14 +14,14 @@ for i in s:
 if len(a) == 0:
     print('-')
 else:
-    print("\"{}".format(a[0]), end='')
+    print('"{}'.format(a[0]), end='')
     for i in a[1:]:
         print(',{}'.format(i), end='')
     print('"')
 if len(b) == 0:
     print('-')
 else:
-    print("\"{}".format(b[0]), end='')
+    print('"{}'.format(b[0]), end='')
     for i in b[1:]:
         print(',{}'.format(i), end='')
     print('"')

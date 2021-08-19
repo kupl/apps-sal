@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split(" "))
+    (n, m) = map(int, input().split(' '))
     d = 0
     while True:
         d += 1

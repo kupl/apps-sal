@@ -9,15 +9,12 @@ def solve(n, p, x, a):
     return res_ptn != 0
 
 
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = list(map(int, input().split()))
-
-
 a = sorted(a)
 ans = []
 for x in range(1, 2000 + 2):
     if solve(n, p, x, a):
         ans.append(x)
-
 print(len(ans))
 print(*ans)

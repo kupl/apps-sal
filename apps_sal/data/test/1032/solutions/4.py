@@ -59,14 +59,14 @@ def bnpr(a, p, left):
 
 
 def solve():
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     lst = list(map(int, input().split()))
     lst.sort()
     ll = bnpleft(lst)
     rr = bnpr(lst, p, ll)
     print(rr - ll)
     for i in range(ll + 1, rr + 1):
-        print(i, end=" ")
+        print(i, end=' ')
 
 
 for i in range(1):

@@ -1,5 +1,5 @@
 def resolve():
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     mod = 998244353
     modinv = pow(2, mod - 2, mod)
@@ -9,7 +9,7 @@ def resolve():
         for j in range(s - i, -1, -1):
             dp[j + i] += dp[j] * modinv
             dp[j + i] %= mod
-    print((dp[-1]))
+    print(dp[-1])
 
 
 def __starting_point():

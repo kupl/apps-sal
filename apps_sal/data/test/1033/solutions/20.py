@@ -7,13 +7,13 @@ def f(N, H, n):
         n -= H
         n -= 1
         total += H
-        q, r = n // 2, n % 2
+        (q, r) = (n // 2, n % 2)
         total += (q * (q + 1) // 2 + q * H) * 2
         total += r * (H + q + 1)
     return total >= N
 
 
-n, H = map(int, input().split())
+(n, H) = map(int, input().split())
 l = 0
 r = n
 while l < r:

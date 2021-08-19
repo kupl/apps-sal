@@ -21,5 +21,5 @@ for i in range(14):
     b[i] = q
     for j in range(r):
         b[(i + 1 + j) % 14] += 1
-    ans = max(ans, sum(x for x in b if x % 2 == 0))
+    ans = max(ans, sum((x for x in b if x % 2 == 0)))
 print(ans)

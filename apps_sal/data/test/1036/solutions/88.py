@@ -1,7 +1,6 @@
 def main():
-    text_len, k = [int(x) for x in input().split()]
+    (text_len, k) = [int(x) for x in input().split()]
     text = input()
-
     text *= 2
     for _ in range(k):
         new_text = ''
@@ -23,7 +22,7 @@ def janken(a, b):
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

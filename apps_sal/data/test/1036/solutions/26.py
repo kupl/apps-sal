@@ -9,7 +9,7 @@ def rps(x, y):
         return x
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 S = s + s
 for i in range(k):

@@ -1,4 +1,4 @@
-k, p = map(int, input().split())
+(k, p) = map(int, input().split())
 
 
 def zcy(n):
@@ -9,5 +9,4 @@ def zcy(n):
 ans = 0
 for i in range(1, k + 1):
     ans = (ans + zcy(i)) % p
-
 print(ans)

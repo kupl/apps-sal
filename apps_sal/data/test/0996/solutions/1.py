@@ -32,11 +32,10 @@ def func(i, j, t):
             if j < m - 1:
                 if A[i][j + 1][t - 1] == '0' and A[i][j + 1][t] == '1':
                     return True
-
     return False
 
 
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 A = [0] * n
 for i in range(n):
     A[i] = [0] * m
@@ -48,7 +47,6 @@ for i in range(n):
         for t in range(k):
             A[i][j][t] = per[t]
     if i != n - 1:
-
         per = input()
 answer = 0
 for i in range(n):
@@ -57,5 +55,4 @@ for i in range(n):
             if A[i][j][t] == '1':
                 if func(i, j, t):
                     answer += 1
-
 print(answer)

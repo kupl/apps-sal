@@ -1,10 +1,7 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split())) + [-1]
-
 cost = 0
 lib = []
-
 for i in range(n):
     if a[i] in lib:
         continue
@@ -13,7 +10,7 @@ for i in range(n):
         cost += 1
     else:
         far = 0
-        for ind, j in enumerate(lib):
+        for (ind, j) in enumerate(lib):
             o = i + 1
             while o < n + 1 and a[o] != j:
                 o += 1
@@ -25,5 +22,4 @@ for i in range(n):
                     break
         lib[maxindex] = a[i]
         cost += 1
-
 print(cost)

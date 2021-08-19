@@ -1,14 +1,14 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 d = []
 h = []
 s = 0
 amax = 0
 for i in range(m):
-    p, q = [int(x) for x in input().split()]
+    (p, q) = [int(x) for x in input().split()]
     d.append(p)
     h.append(q)
 for i in range(m - 1):
-    if abs((h[i + 1] - h[i])) / (d[i + 1] - d[i]) > 1:
+    if abs(h[i + 1] - h[i]) / (d[i + 1] - d[i]) > 1:
         print('IMPOSSIBLE')
         s += 1
         break

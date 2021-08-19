@@ -13,13 +13,12 @@ while l + 1 < r:
     mx = 0
     if m < h:
         mx = sum(1, m)
+    elif m % 2 == h % 2:
+        hm = (h + m) // 2
+        mx = sum(h, hm) + sum(1, hm - 1)
     else:
-        if m % 2 == h % 2:
-            hm = (h + m) // 2
-            mx = sum(h, hm) + sum(1, hm - 1)
-        else:
-            hm = (h + m) // 2
-            mx = sum(h, hm) + sum(1, hm)
+        hm = (h + m) // 2
+        mx = sum(h, hm) + sum(1, hm)
     if mx >= n:
         r = m
     else:

@@ -1,7 +1,7 @@
 def good(i, j):
     x = i // 2
     y = j // 2
-    return (3 - x) + (y == 1)
+    return 3 - x + (y == 1)
 
 
 b = [0] * 6
@@ -14,7 +14,7 @@ mj = 0
 for i in range(6):
     for j in range(6):
         if b[i][j] == '.':
-            if (good(i, j) > mx):
+            if good(i, j) > mx:
                 mx = good(i, j)
                 mi = i
                 mj = j

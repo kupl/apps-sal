@@ -1,8 +1,8 @@
 from sys import stdin
 n = int(stdin.readline().strip())
 s = list(map(int, stdin.readline().strip().split()))
-en = [0 for i in range(10**6 + 7)]
-vis = [0 for i in range(10**6 + 7)]
+en = [0 for i in range(10 ** 6 + 7)]
+vis = [0 for i in range(10 ** 6 + 7)]
 ans = [0]
 flag = True
 cnt = 0
@@ -22,13 +22,11 @@ for i in range(n):
     if en[s[i]] < 0 or en[s[i]] > 1 or vis[s[i]] > 1:
         flag = False
         break
-
     if i > 0 and cnt == 0:
         ans.append(0)
         for j in v:
             vis[j] = 0
         v = []
-
 if flag == False or ans[-1] != 0:
     print(-1)
 else:

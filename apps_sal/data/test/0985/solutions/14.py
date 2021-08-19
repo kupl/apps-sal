@@ -3,7 +3,7 @@ B = 1000
 d = [0] * 2222
 D = [0] * 2222
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     d[x - y + B] += 1
     D[x + y] += 1
 s = 0

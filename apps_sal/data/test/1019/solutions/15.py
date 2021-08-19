@@ -1,5 +1,4 @@
 from math import gcd
-
 n = int(input())
 curr_opt_a = 1
 for a in range(n - 1, 0, -1):

@@ -4,4 +4,4 @@ for i in range(4):
     for j in input():
         p[j] += 1
 p['.'] = 0
-print('YNEOS'[max(p.values()) > 2 * k:: 2])
+print('YNEOS'[max(p.values()) > 2 * k::2])

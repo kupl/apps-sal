@@ -1,4 +1,4 @@
-n, p, k = list(map(int, input().split()))
+(n, p, k) = list(map(int, input().split()))
 li = []
 if p - k > 1:
     li += ['<<']

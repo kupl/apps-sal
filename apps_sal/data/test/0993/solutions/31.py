@@ -1,10 +1,7 @@
 from collections import defaultdict
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
-"""
-aの連続列がMの倍数であればいい
-dp[j] := jの倍数になる総数.
-"""
+'\naの連続列がMの倍数であればいい\ndp[j] := jの倍数になる総数.\n'
 dp = defaultdict(lambda: 0)
 dp[0] = 1
 tmp = 0

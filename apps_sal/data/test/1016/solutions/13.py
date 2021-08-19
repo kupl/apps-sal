@@ -17,15 +17,14 @@ def union(a, b):
         rank[a] += 1
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 rank = [0 for i in range(n)]
 p = []
 for i in range(n):
     p.append(i)
-
 ans = 1
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if find(a - 1) != find(b - 1):
         union(a - 1, b - 1)
         ans *= 2

@@ -7,7 +7,7 @@ v -= t * k[1]
 num = [k[0]] * t
 for i in range(t):
     if v + k[1] > min(a):
-        num[i] = list(q for q in m if q[1] <= v + k[1])[-1][0]
+        num[i] = list((q for q in m if q[1] <= v + k[1]))[-1][0]
         v -= a[num[i] - 1] - k[1]
     else:
         break

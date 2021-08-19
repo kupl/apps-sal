@@ -1,5 +1,5 @@
 import numpy as np
-n, s, *a = map(int, open(0).read().split())
+(n, s, *a) = map(int, open(0).read().split())
 mod = 998244353
 d = np.zeros(s + 1, dtype=np.int64)
 d[0] = 1

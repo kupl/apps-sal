@@ -27,8 +27,7 @@ if dif1 > dif2:
         print(dif1)
     else:
         print('0')
+elif dif2 > 0:
+    print(dif2)
 else:
-    if dif2 > 0:
-        print(dif2)
-    else:
-        print('0')
+    print('0')

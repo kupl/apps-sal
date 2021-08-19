@@ -12,16 +12,14 @@ def iterative_dfs(graph, start, path=[]):
     return path
 
 
-nodes, edges = list(map(int, input().split(' ')))
+(nodes, edges) = list(map(int, input().split(' ')))
 graph = {}
 for i in range(nodes):
     graph[i] = []
-
 for i in range(edges):
-    a, b = list(map(int, input().split(' ')))
+    (a, b) = list(map(int, input().split(' ')))
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
-
 marked = [False] * nodes
 num = 0
 for i in range(nodes):
@@ -29,4 +27,4 @@ for i in range(nodes):
         for j in iterative_dfs(graph, i):
             marked[j] = True
         num += 1
-print(2**(nodes - num))
+print(2 ** (nodes - num))

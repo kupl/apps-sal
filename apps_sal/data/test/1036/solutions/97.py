@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = [i for i in input()]
 
 
@@ -13,11 +13,10 @@ def jk(a, b):
             return b
         else:
             return a
+    elif b == 'R':
+        return b
     else:
-        if b == 'R':
-            return b
-        else:
-            return a
+        return a
 
 
 while k:

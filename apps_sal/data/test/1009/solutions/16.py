@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 x = list(map(int, input().split(' ')))
 
 
@@ -27,5 +27,4 @@ while lo < hi:
         lo = mid + 1
     else:
         hi = mid
-
 print(lo)

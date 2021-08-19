@@ -13,18 +13,17 @@ for i in range(n):
             break
         else:
             la.add(e)
+    elif e in la:
+        la.remove(e)
+        pl.add(e)
+        if len(la) == 0:
+            la = set()
+            pl = set()
+            rep.append(i + 1 - las)
+            las = i + 1
     else:
-        if e in la:
-            la.remove(e)
-            pl.add(e)
-            if len(la) == 0:
-                la = set()
-                pl = set()
-                rep.append(i + 1 - las)
-                las = i + 1
-        else:
-            bon = False
-            break
+        bon = False
+        break
 if len(la) == 0 and len(pl) == 0 and bon:
     print(len(rep))
     for i in rep:

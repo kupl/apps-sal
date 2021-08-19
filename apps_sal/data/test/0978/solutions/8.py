@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-k, = readln()
+(k,) = readln()
 cnt = {}
 for c in list(''.join([input() for _ in range(4)])):
     if c != '.':

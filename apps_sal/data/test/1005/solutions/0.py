@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     a = list(map(int, input().split()))
     ans = d
     for day in range(n - d + 1):

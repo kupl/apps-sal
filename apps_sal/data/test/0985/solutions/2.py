@@ -2,7 +2,7 @@ N = int(input())
 glav = [0] * 2016
 pob = [0] * 2016
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     glav[x - y] += 1
     pob[x + y] += 1
 s = 0

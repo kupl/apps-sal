@@ -8,7 +8,7 @@ if v // a[i] == 0:
     print(-1)
 else:
     length = v // a[i]
-    b = (v // a[i]) * a[i]
+    b = v // a[i] * a[i]
     ans = []
     while v >= b:
         j = 8

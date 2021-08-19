@@ -1,5 +1,5 @@
 def main():
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     rez = d
     for i in range(n - d + 1):

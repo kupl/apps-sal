@@ -1,4 +1,4 @@
-N, S = list(map(int, input().split()))
+(N, S) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
@@ -15,4 +15,4 @@ def f(N, S, A):
     return dp[S]
 
 
-print((f(N, S, A)))
+print(f(N, S, A))

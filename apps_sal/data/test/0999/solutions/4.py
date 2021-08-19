@@ -7,7 +7,7 @@ b = []
 for i in range(m):
     b.append(list(map(int, input().split())))
 a.sort()
-b1 = b[::]
+b1 = b[:]
 b.sort()
 b1.sort(key=lambda x: x[1])
 ans = 0

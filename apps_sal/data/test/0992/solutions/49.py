@@ -2,7 +2,7 @@ import numpy as np
 
 
 def main():
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     a = [int(i) for i in input().split()]
     mod = 998244353
     dp = np.zeros((n + 1, s + 1), dtype=int)

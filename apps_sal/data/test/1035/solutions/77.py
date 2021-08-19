@@ -1,6 +1,5 @@
 import math
-
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 x = math.gcd(a, b)
 s = [1]
 for i in range(2, int(math.sqrt(x) + 1)):

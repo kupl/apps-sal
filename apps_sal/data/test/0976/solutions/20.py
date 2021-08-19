@@ -1,5 +1,5 @@
-n, x = input().split()
-n, x = int(n), int(x)
+(n, x) = input().split()
+(n, x) = (int(n), int(x))
 lis = []
 for i in range(n):
     lis.append(input().split())

@@ -1,5 +1,5 @@
 import heapq
-x, y, z, k = map(int, input().split())
+(x, y, z, k) = map(int, input().split())
 alist = sorted(list(map(int, input().split())), reverse=True)
 blist = sorted(list(map(int, input().split())), reverse=True)
 clist = sorted(list(map(int, input().split())), reverse=True)

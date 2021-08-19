@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 mmax = (n - m) * (n - m + 1) // 2
 mmin = 0
 k = n // m

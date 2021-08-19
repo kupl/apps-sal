@@ -1,18 +1,13 @@
 __author__ = 'zhan'
-
 n = int(input())
 first = sorted([int(i) for i in input().split()])
-
 m = int(input())
 second = sorted([int(i) for i in input().split()])
-
 a = pa = 3 * n
 b = pb = 3 * m
 d = a - b
-
 i = 0
 j = 0
-
 while i < n and j < m:
     t = min(first[i], second[j])
     while i < n and first[i] <= t:
@@ -25,9 +20,7 @@ while i < n and j < m:
         a = pa
         b = pb
         d = pa - pb
-
 if 2 * n - 2 * m > d:
     a = 2 * n
     b = 2 * m
-
-print(str(a) + ":" + str(b))
+print(str(a) + ':' + str(b))

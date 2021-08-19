@@ -1,7 +1,7 @@
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 x = math.gcd(a, b)
-bun = [0] * (int(math.sqrt(x) + 1))
+bun = [0] * int(math.sqrt(x) + 1)
 bun[1] = 1
 for i in range(2, len(bun)):
     while x % i == 0:

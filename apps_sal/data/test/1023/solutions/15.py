@@ -1,8 +1,6 @@
-n, m, ta, tb, k = list(map(int, input().split()))
-
+(n, m, ta, tb, k) = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
-
 res = -1
 j = 0
 if k < len(A):

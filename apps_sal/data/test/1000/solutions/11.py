@@ -9,5 +9,5 @@ def solve(n, v):
     return cost
 
 
-n, v = list(map(int, input().split()))
+(n, v) = list(map(int, input().split()))
 print(solve(n, v))

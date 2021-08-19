@@ -1,4 +1,4 @@
-n, p, k = map(int, input().split())
+(n, p, k) = map(int, input().split())
 a = []
 for i in range(p - k, p + k + 1):
     a.append(i)
@@ -7,11 +7,11 @@ while a[0] < 1:
 while a[len(a) - 1] > n:
     a.pop()
 if a[0] != 1:
-    print("<<", end=" ")
+    print('<<', end=' ')
 for i in a:
     v = i
     if v == p:
         v = '(' + str(v) + ')'
-    print(v, end=" ")
+    print(v, end=' ')
 if a[len(a) - 1] != n:
-    print(">>")
+    print('>>')

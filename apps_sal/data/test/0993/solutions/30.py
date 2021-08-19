@@ -7,7 +7,7 @@ def input():
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     S = [0] * N
     S[0] = A[0] % M
@@ -17,7 +17,7 @@ def main():
     C[0] += 1
     ans = 0
     for e in C:
-        ans += (C[e] * (C[e] - 1)) // 2
+        ans += C[e] * (C[e] - 1) // 2
     print(ans)
 
 

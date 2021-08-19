@@ -1,12 +1,12 @@
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 gcd = math.gcd(a, b)
 
 
 def fctr1(n):
     f = []
     c = 0
-    r = int(n**0.5)
+    r = int(n ** 0.5)
     for i in range(2, r + 2):
         while n % i == 0:
             c += 1

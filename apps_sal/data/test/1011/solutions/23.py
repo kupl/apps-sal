@@ -10,11 +10,9 @@ def main():
     n = int(input())
     t1 = [int(_) for _ in input().split()]
     t1 = sorted(t1)
-
     m = int(input())
     t2 = [int(_) for _ in input().split()]
     t2 = sorted(t2)
-
     a = x = 3 * n
     b = y = 3 * m
     advantage = a - b
@@ -39,12 +37,10 @@ def main():
         else:
             y -= 1
             j += 1
-
-        if (x - y) > advantage:
+        if x - y > advantage:
             a = x
             b = y
             advantage = a - b
-
     print('%d:%d' % (a, b))
 
 

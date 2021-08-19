@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-ans, q1, naw, q2 = [], -1, {}, 0
+(ans, q1, naw, q2) = ([], -1, {}, 0)
 for q in range(len(a)):
     if a[q] < 0 and -a[q] not in naw:
         print(-1)

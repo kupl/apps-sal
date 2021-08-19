@@ -8,9 +8,8 @@ for i in range(n):
         isone = True
         ans *= cur
         cur = 1
-    else:
-        if isone:
-            cur += 1
+    elif isone:
+        cur += 1
 if isone:
     print(ans)
 else:

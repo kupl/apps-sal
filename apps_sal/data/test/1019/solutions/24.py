@@ -2,8 +2,6 @@ from sys import stdout
 from random import randint
 from math import *
 import re
-
-
 n = int(input())
 mx = 0
 mx = mxb = 0
@@ -14,5 +12,4 @@ for a in range(1, (n + 1) // 2):
         mx = a / b
         mxa = a
         mxb = b
-
 print(mxa, mxb)

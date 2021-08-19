@@ -12,7 +12,7 @@ def solve(k, a):
     for i in range(1, len(a)):
         if a[i] != a[i - 1]:
             q2.append([i, a[i - 1] - a[i]])
-    i1, i2 = 0, 0
+    (i1, i2) = (0, 0)
     while k >= min(q1[i1][0], q2[i2][0]) and ans > 0:
         if q1[i1][0] <= q2[i2][0]:
             ansd = min(q1[i1][1], k // q1[i1][0])
@@ -30,7 +30,7 @@ def solve(k, a):
 
 
 def main():
-    _, k = [int(i) for i in input().split()]
+    (_, k) = [int(i) for i in input().split()]
     a = [int(i) for i in input().split()]
     print(solve(k, a))
 

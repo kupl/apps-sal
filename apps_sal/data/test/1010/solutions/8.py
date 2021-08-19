@@ -7,5 +7,4 @@ for i in range(n):
         if last != -1:
             ans *= i - last
         last = i
-
 print(ans if last != -1 else 0)

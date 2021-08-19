@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 z = [0] * 81
-kz, ans = 0, 0
+(kz, ans) = (0, 0)
 for i in range(n):
     if z[a[i]]:
         continue

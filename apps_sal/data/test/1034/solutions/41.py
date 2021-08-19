@@ -1,18 +1,13 @@
 import heapq
-
-x, y, z, k = map(int, input().split())
+(x, y, z, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 a.sort(reverse=True)
 b.sort(reverse=True)
 c.sort(reverse=True)
-
 li = [(-(a[0] + b[0] + c[0]), 0, 0, 0)]
-
 heapq.heapify(li)
-
 for i in range(k):
     ans = heapq.heappop(li)
     print(-ans[0])

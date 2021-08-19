@@ -1,5 +1,5 @@
 from collections import Counter
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 l = list(map(int, input().split()))
 mem = [0] * N
 

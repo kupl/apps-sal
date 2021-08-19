@@ -1,4 +1,4 @@
-X, Y, Z, K = map(int, input().split())
+(X, Y, Z, K) = map(int, input().split())
 A = sorted(map(int, input().split()), reverse=True)
 B = sorted(map(int, input().split()), reverse=True)
 C = sorted(map(int, input().split()), reverse=True)

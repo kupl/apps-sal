@@ -1,9 +1,8 @@
 import numpy as np
 import sys
 input = sys.stdin.readline
-
 MOD = 998244353
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 A = list(map(int, input().split()))
 ans = 0
 dp = np.zeros(s + 1, dtype=np.int64)

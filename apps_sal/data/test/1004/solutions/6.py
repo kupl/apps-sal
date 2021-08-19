@@ -14,12 +14,11 @@ for i in a:
         else:
             f = False
             break
+    elif i in soot or i in usoot:
+        f = False
+        break
     else:
-        if i in soot or i in usoot:
-            f = False
-            break
-        else:
-            soot.add(i)
+        soot.add(i)
     if len(soot) == 0:
         usoot = set()
         ans.append(c)
@@ -29,6 +28,6 @@ if len(soot) != 0:
 if f:
     print(len(ans))
     for i in ans:
-        print(i, end=" ")
+        print(i, end=' ')
 else:
     print(-1)

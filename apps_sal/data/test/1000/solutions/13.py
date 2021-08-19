@@ -1,4 +1,4 @@
-citys, cap = map(int, input().split())
+(citys, cap) = map(int, input().split())
 if citys - 1 <= cap:
     print(citys - 1)
 else:

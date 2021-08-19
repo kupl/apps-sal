@@ -1,5 +1,5 @@
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     i = 0
     while n != 0:
         i += 1

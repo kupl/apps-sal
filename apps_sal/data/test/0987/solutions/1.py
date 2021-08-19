@@ -1,9 +1,7 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-N, M = map(int, input().split())
-
-
+(N, M) = map(int, input().split())
 parent = [i for i in range(N)]
 rank = [0] * N
 
@@ -25,7 +23,6 @@ def unite(x, y):
     y = find(y)
     if x == y:
         return
-
     if rank[x] > rank[y]:
         parent[y] = x
     else:
@@ -36,24 +33,19 @@ def unite(x, y):
 
 P = list(map(int, input().split()))
 for i in range(M):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     unite(a, b)
-
-
 d = defaultdict(list)
 cnt = defaultdict(int)
 for i in range(N):
     d[find(i)].append(P[i])
-
 for i in range(N):
     if find(i) == i:
         d[i] = sorted(d[i], reverse=True)
-
 ans = []
 for i in range(N):
     k = find(i)
     ans.append(d[k][cnt[k]])
     cnt[k] += 1
-
 print(' '.join(map(str, ans)))

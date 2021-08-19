@@ -1,5 +1,5 @@
 a = [[3, 3, 4, 4, 3, 3], [3, 3, 4, 4, 3, 3], [2, 2, 3, 3, 2, 2], [2, 2, 3, 3, 2, 2], [1, 1, 2, 2, 1, 1], [1, 1, 2, 2, 1, 1]]
-b = ["".join(input().split('-')) for i in range(6)]
+b = [''.join(input().split('-')) for i in range(6)]
 ans = []
 for i in range(6):
     for j in range(6):

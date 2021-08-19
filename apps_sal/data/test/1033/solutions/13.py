@@ -12,16 +12,13 @@ def f(l, h):
     return s
 
 
-n, H = list(map(int, input().split()))
-
+(n, H) = list(map(int, input().split()))
 l = 0
 r = n + 1
-
 while r - l > 1:
     md = (l + r) // 2
     if f(md, H) >= n:
         r = md
     else:
         l = md
-
 print(r)

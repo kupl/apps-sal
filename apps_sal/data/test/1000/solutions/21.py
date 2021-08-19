@@ -1,8 +1,7 @@
-n, v = input().split()
+(n, v) = input().split()
 n = int(n)
 v = int(v)
-
-if (n <= v):
+if n <= v:
     print(n - 1)
 else:
     summ = v

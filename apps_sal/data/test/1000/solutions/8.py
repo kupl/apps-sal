@@ -18,13 +18,10 @@ def lm():
     return list(map(int, input().split()))
 
 
-n, v = mi()
-
+(n, v) = mi()
 dist = n - 1
-
 if v >= dist:
     print(dist)
-
 else:
     off = dist - v
     prices = [i + 2 for i in range(off)]

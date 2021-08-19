@@ -15,8 +15,8 @@ def biggest_winner(matrix, p, maxi):
     return maxi
 
 
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 matrix = sorted(list(map(int, input().split())))
 res = [i for i in range(smallest_winner(matrix, 1, 1), biggest_winner(matrix, p, matrix[-1]))]
 print(len(res))
-print(" ".join(map(str, res)))
+print(' '.join(map(str, res)))

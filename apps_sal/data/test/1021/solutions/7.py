@@ -8,6 +8,6 @@ def get(l):
     return res
 
 
-n, a, b = int(input()), [int(_) for _ in input().split()], [int(_) for _ in input().split()]
-ma, mb = get(a), get(b)
-print("Yes" if ma == mb and a[0] == b[0] and a[-1] == b[-1] else "No")
+(n, a, b) = (int(input()), [int(_) for _ in input().split()], [int(_) for _ in input().split()])
+(ma, mb) = (get(a), get(b))
+print('Yes' if ma == mb and a[0] == b[0] and (a[-1] == b[-1]) else 'No')

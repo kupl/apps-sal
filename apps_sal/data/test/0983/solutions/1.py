@@ -1,4 +1,4 @@
-n, p, q, r = [int(i) for i in input().split()]
+(n, p, q, r) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 mx1 = [0] * n
 mx1[0] = p * a[0]

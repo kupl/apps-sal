@@ -3,7 +3,7 @@ def read_nums():
 
 
 def main():
-    n, v = read_nums()
+    (n, v) = read_nums()
     res = 0
     cur_tank = 0
     for c in range(1, n + 1):

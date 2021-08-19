@@ -7,7 +7,7 @@ def lr(a):
                 r[i] += 1
             if a[i] > a[j]:
                 l[j] += 1
-    return l, r
+    return (l, r)
 
 
 n = int(input())
@@ -18,9 +18,9 @@ for i in range(n):
     for j in range(n):
         if l[j] + r[j] == i:
             a[j] = n - i
-l1, r1 = lr(a)
+(l1, r1) = lr(a)
 if l1 != l or r1 != r:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     print(' '.join([str(i) for i in a]))

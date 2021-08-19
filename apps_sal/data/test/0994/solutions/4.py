@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = []
 for i in range(m):
     l.append(list(map(int, input().split())))
@@ -8,7 +8,7 @@ for i in range(m - 1):
         ans = 'IMPOSSIBLE'
         break
     if l[i][1] > l[i + 1][1]:
-        ans = max(ans, l[i][1] + ((l[i + 1][0] - l[i][0]) - (l[i][1] - l[i + 1][1])) // 2)
+        ans = max(ans, l[i][1] + (l[i + 1][0] - l[i][0] - (l[i][1] - l[i + 1][1])) // 2)
     else:
-        ans = max(ans, l[i + 1][1] + ((l[i + 1][0] - l[i][0]) - (l[i + 1][1] - l[i][1])) // 2)
+        ans = max(ans, l[i + 1][1] + (l[i + 1][0] - l[i][0] - (l[i + 1][1] - l[i][1])) // 2)
 print(ans)

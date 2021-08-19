@@ -1,21 +1,36 @@
 import sys
 import math
 from collections import deque
-
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-def input(): return sys.stdin.readline().strip()
-def NI(): return int(input())
-def NMI(): return map(int, input().split())
-def NLI(): return list(NMI())
-def SI(): return input()
 
 
-def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
+def input():
+    return sys.stdin.readline().strip()
+
+
+def NI():
+    return int(input())
+
+
+def NMI():
+    return map(int, input().split())
+
+
+def NLI():
+    return list(NMI())
+
+
+def SI():
+    return input()
+
+
+def make_grid(h, w, num):
+    return [[int(num)] * w for _ in range(h)]
 
 
 def main():
-    X, Y, Z, K = NMI()
+    (X, Y, Z, K) = NMI()
     A = NLI()
     B = NLI()
     C = NLI()

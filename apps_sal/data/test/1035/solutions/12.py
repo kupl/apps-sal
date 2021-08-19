@@ -4,7 +4,7 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 n = gcd(a, b)
 primes = []
 MAX = 10 ** 6 + 10

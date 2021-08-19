@@ -1,5 +1,5 @@
 import heapq as hq
-x, y, z, k = map(int, input().split())
+(x, y, z, k) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))

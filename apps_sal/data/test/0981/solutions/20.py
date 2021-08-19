@@ -4,7 +4,6 @@ mcDigit = 0
 for i in range(9):
     if ai[i] <= ai[mcDigit]:
         mcDigit = i
-
 di = [x - mcDigit for x in ai]
 resLen = n // ai[mcDigit]
 res = [mcDigit] * resLen
@@ -14,18 +13,17 @@ for i in range(resLen):
         break
     d = 8
     while d > mcDigit:
-        if remain >= (ai[d] - ai[mcDigit]):
+        if remain >= ai[d] - ai[mcDigit]:
             res[i] = d
-            remain -= (ai[d] - ai[mcDigit])
+            remain -= ai[d] - ai[mcDigit]
             break
         d -= 1
     if d == mcDigit:
         break
-
-out = ""
+out = ''
 for i in res:
     out = out + str(i + 1)
 if resLen == 0:
-    print("-1")
+    print('-1')
 else:
     print(out)

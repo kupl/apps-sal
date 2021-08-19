@@ -8,5 +8,4 @@ def solve(n):
 
 
 n = int(input())
-
 print(solve(n))

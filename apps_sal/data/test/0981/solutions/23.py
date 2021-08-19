@@ -1,11 +1,11 @@
 v = int(input())
 a = list(map(int, input().split()))
-m, j = a[0], 0
-for i, x in enumerate(a, 1):
+(m, j) = (a[0], 0)
+for (i, x) in enumerate(a, 1):
     if x <= m:
-        m, j = x, i
+        (m, j) = (x, i)
 x = int(v / m)
-if(x == 0):
+if x == 0:
     print(-1)
 else:
     while x:
@@ -13,7 +13,7 @@ else:
         i = 9
         while i:
             i -= 1
-            if ((v >= a[i]) & (int((v - a[i]) / m) == x)):
+            if (v >= a[i]) & (int((v - a[i]) / m) == x):
                 v -= a[i]
                 print(i + 1, end='')
                 break

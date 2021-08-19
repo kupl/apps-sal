@@ -1,5 +1,5 @@
 from copy import copy
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
 if n % 2 != 0:
     s.extend(s)
@@ -8,7 +8,7 @@ for i in range(k):
     for i in range(len(s) // 2):
         if s[i * 2] == s[i * 2 + 1]:
             t[i] = s[i * 2]
-        elif s[i * 2] == "R" and s[i * 2 + 1] == "P" or s[i * 2] == "P" and s[i * 2 + 1] == "S" or s[i * 2] == "S" and s[i * 2 + 1] == "R":
+        elif s[i * 2] == 'R' and s[i * 2 + 1] == 'P' or (s[i * 2] == 'P' and s[i * 2 + 1] == 'S') or (s[i * 2] == 'S' and s[i * 2 + 1] == 'R'):
             t[i] = s[i * 2 + 1]
         else:
             t[i] = s[i * 2]

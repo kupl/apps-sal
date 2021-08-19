@@ -12,5 +12,5 @@ b = 0
 for i in range(1, n // 2 + 1):
     if nod(n - i, i) == 1:
         m = max(m, nod(n - i, i))
-        a, b = i, n - i
+        (a, b) = (i, n - i)
 print(a, b)

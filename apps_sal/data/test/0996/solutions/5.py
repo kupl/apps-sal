@@ -1,5 +1,5 @@
 def safe(pos):
-    return pos[0] >= 0 and pos[0] < n and pos[1] >= 0 and pos[1] < m and pos[2] >= 0 and pos[2] < p
+    return pos[0] >= 0 and pos[0] < n and (pos[1] >= 0) and (pos[1] < m) and (pos[2] >= 0) and (pos[2] < p)
 
 
 def CPU_status(pos, number):
@@ -14,7 +14,7 @@ def critical(x, y, z):
             parent[i] -= 1
             if CPU_status(parent, '1'):
                 for j in range(3):
-                    child, alt = current.copy(), parent.copy()
+                    (child, alt) = (current.copy(), parent.copy())
                     child[j] += 1
                     alt[j] += 1
                     if CPU_status(child, '1') and (CPU_status(alt, '0') or j == i):
@@ -22,8 +22,8 @@ def critical(x, y, z):
     return 0
 
 
-n, m, p = map(int, input().split())
-super_computer, crit = ([], 0)
+(n, m, p) = map(int, input().split())
+(super_computer, crit) = ([], 0)
 for i in range(n):
     super_computer.append([input() for _ in range(m)])
     if i != n - 1:

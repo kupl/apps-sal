@@ -1,10 +1,10 @@
 __author__ = 'Данила'
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = []
 for i in range(m):
-    d, h = map(int, input().split())
+    (d, h) = map(int, input().split())
     l.append((d, h))
-k = - 1
+k = -1
 flag = True
 for i in range(m - 1):
     b = l[i + 1][1]
@@ -22,7 +22,6 @@ for i in range(m - 1):
                 k = k1
     else:
         flag = False
-
 b = l[0][0] - 1 + l[0][1]
 a = l[-1][1] + n - l[-1][0]
 if flag:

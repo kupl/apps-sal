@@ -1,6 +1,6 @@
 import numpy as np
-n, s = map(int, input().split())
-a = [int(j)for j in input().split()]
+(n, s) = map(int, input().split())
+a = [int(j) for j in input().split()]
 dp = [0] * (3000 + 1)
 dp[0] = 1
 pre = np.array(dp)

@@ -9,10 +9,10 @@ def win(a, b):
     return w
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 dp = [[c for c in input()]]
 for i in range(k):
     dp.append([*dp[i]])
     for j in range(n):
-        dp[i + 1][j] = win(dp[i][(j * 2) % n], dp[i][(j * 2 + 1) % n])
-print((dp[k][0]))
+        dp[i + 1][j] = win(dp[i][j * 2 % n], dp[i][(j * 2 + 1) % n])
+print(dp[k][0])

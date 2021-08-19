@@ -1,11 +1,10 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(input()[::-1]) * 2
-
-ptn, win = 'PRPP_RSRR_SPSS', 'PRS'
+(ptn, win) = ('PRPP_RSRR_SPSS', 'PRS')
 for _ in range(k):
     tmp = []
     while s:
         hand = ptn.index(s.pop() + s.pop())
         tmp.append(win[hand // 5])
     s = tmp[::-1] * 2
-print((s.pop()))
+print(s.pop())

@@ -1,11 +1,11 @@
-
-def ints(): return [int(x) for x in input().split()]
+def ints():
+    return [int(x) for x in input().split()]
 
 
 def solve(arr):
-    p, inside, entered = [], set(), set()
+    (p, inside, entered) = ([], set(), set())
     for x in arr:
-        if (x < 0 and -x not in inside) or (x > 0 and x in entered):
+        if x < 0 and -x not in inside or (x > 0 and x in entered):
             return []
         elif x < 0:
             inside.remove(-x)
@@ -23,7 +23,7 @@ def solve(arr):
 def main():
     while 1:
         try:
-            n, = ints()
+            (n,) = ints()
         except EOFError:
             break
         ans = solve(ints())

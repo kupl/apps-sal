@@ -1,4 +1,4 @@
-n, v = map(int, input().split())
+(n, v) = map(int, input().split())
 b = 0
 ans = 0
 sss = 0

@@ -1,7 +1,5 @@
 3
-
 n = int(input())
-
 attack = 0
 dict_a = dict()
 dict_b = dict()
@@ -18,5 +16,4 @@ for i in range(n):
         dict_b[b] += 1
     else:
         dict_b[b] = 1
-
 print(str(attack))

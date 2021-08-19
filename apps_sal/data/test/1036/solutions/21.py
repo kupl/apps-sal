@@ -1,7 +1,6 @@
-
-R = "R"
-S = "S"
-P = "P"
+R = 'R'
+S = 'S'
+P = 'P'
 
 
 def winner(a, b):
@@ -16,7 +15,7 @@ def winner(a, b):
 
 
 win = {}
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 s = s + s
 for _ in range(k):

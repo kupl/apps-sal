@@ -9,7 +9,7 @@ def pf(n: int) -> List[Tuple[int, int]]:
             break
         e = 0
         if n % p == 0:
-            while(n % p == 0):
+            while n % p == 0:
                 n //= p
                 e += 1
             r.append((p, e))
@@ -18,9 +18,9 @@ def pf(n: int) -> List[Tuple[int, int]]:
     return r
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 apf = pf(a)
 bpf = pf(b)
-aps = {p for p, e in apf}
-bps = {p for p, e in bpf}
+aps = {p for (p, e) in apf}
+bps = {p for (p, e) in bpf}
 print(len(aps & bps) + 1)

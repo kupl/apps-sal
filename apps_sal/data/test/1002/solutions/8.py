@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 t = list(map(int, input().split()))
 sum = 0
 for ti in t:

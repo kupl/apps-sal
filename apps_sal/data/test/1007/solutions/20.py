@@ -7,7 +7,7 @@ while i < 100002:
     s += 1
     i += 1
     s = str(s)
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = 0
 i = 0
 while i < n:

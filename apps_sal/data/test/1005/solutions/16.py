@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     mass = [int(i) - 1 for i in input().split()]
     arr = [0 for z in range(k)]
     kol = 0

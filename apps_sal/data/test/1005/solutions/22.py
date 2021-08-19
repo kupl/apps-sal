@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = dict()
     for i in range(n):
@@ -10,7 +10,6 @@ for i in range(t):
         if b[a[i]] == 0:
             count += 1
         b[a[i]] += 1
-
     ans = count
     for i in range(n - d):
         if b[a[i]] == 1:

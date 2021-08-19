@@ -4,16 +4,16 @@ import numpy as np
 def RPS(s1, s2):
     if s1 == s2:
         return s1
-    elif set([s1, s2]) == set(["R", "P"]):
-        return "P"
-    elif set([s1, s2]) == set(["P", "S"]):
-        return "S"
-    elif set([s1, s2]) == set(["S", "R"]):
-        return "R"
+    elif set([s1, s2]) == set(['R', 'P']):
+        return 'P'
+    elif set([s1, s2]) == set(['P', 'S']):
+        return 'S'
+    elif set([s1, s2]) == set(['S', 'R']):
+        return 'R'
 
 
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     s = str(input())
     dp = [[0] * N for _ in range(K + 1)]
     for i in range(N):

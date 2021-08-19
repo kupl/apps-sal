@@ -8,21 +8,21 @@ for i in range(n):
 for i in range(n):
     tot = 0
     for j in range(i - 1, -1, -1):
-        if(check[j] > check[i]):
+        if check[j] > check[i]:
             tot += 1
-    if(tot != le[i]):
+    if tot != le[i]:
         notp = True
         break
-if(notp == False):
+if notp == False:
     for i in range(n):
         tot = 0
         for j in range(i + 1, n):
-            if(check[j] > check[i]):
+            if check[j] > check[i]:
                 tot += 1
-        if(tot != ri[i]):
+        if tot != ri[i]:
             notp = True
             break
-if(notp):
+if notp:
     print('NO')
 else:
     print('YES')

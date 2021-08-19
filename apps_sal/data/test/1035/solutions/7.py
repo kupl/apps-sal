@@ -1,4 +1,4 @@
-A, B = [int(x) for x in input().split()]
+(A, B) = [int(x) for x in input().split()]
 
 
 def prime_factorization(n):
@@ -17,7 +17,6 @@ def prime_factorization(n):
 
 Aprimes = prime_factorization(A)
 Bprimes = set(prime_factorization(B))
-
 ans = 1
 ansset = set()
 for a in Aprimes:
@@ -26,5 +25,4 @@ for a in Aprimes:
     if a in Bprimes:
         ansset.add(a)
         ans += 1
-
 print(ans)

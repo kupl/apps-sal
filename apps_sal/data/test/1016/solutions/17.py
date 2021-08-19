@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = list(range(n + 1))
 s = [{i} for i in p]
 for i in range(m):
-    x, y = map(int, input().split())
-    x, y = p[x], p[y]
+    (x, y) = map(int, input().split())
+    (x, y) = (p[x], p[y])
     if x != y:
         if len(s[x]) < len(s[y]):
             for k in s[x]:

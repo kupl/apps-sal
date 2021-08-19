@@ -6,7 +6,7 @@ s = input()
 a = s.split(' ')
 for i in range(c[0]):
     a[i] = int(a[i])
-    a[i] = [(c[1]) * a[i], (c[2]) * a[i], (c[3]) * a[i]]
+    a[i] = [c[1] * a[i], c[2] * a[i], c[3] * a[i]]
 dp = [[0, 0, 0] for i in range(c[0])]
 m1 = -1000000000000000001
 m2 = -2000000000000000001
