@@ -7,18 +7,14 @@ import itertools
 from collections import deque, Counter
 from operator import mul
 import copy
-# ! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import heapq
 m = 2 * 10 ** 5
 mod = 998244353
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 ans = 0
 A = [0] * (m + 5)
 A_inv = [0] * (m + 5)
 inv = [0] * (m + 5)
-
 A[0] = A[1] = 1
 A_inv[0] = A_inv[1] = 1
 inv[1] = 1
@@ -33,5 +29,5 @@ def cmb(n, k, mod):
 
 
 for i in range(K + 1):
-    ans = (ans + (cmb(N - 1, i, mod) * M % mod) * (pow(M - 1, N - 1 - i, mod)) % mod) % mod
+    ans = (ans + cmb(N - 1, i, mod) * M % mod * pow(M - 1, N - 1 - i, mod) % mod) % mod
 print(ans)

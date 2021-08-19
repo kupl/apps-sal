@@ -1,16 +1,12 @@
-
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 MOD = 998244353
-
 fact = [0] * (N + 1)
 inv = [0] * (N + 1)
-
 fact[0] = fact[1] = 1
 inv[1] = 1
-
 for i in range(2, N + 1):
     fact[i] = fact[i - 1] * i % MOD
-    inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD  # //で良いのかな?
+    inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
 
 
 def main():

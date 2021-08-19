@@ -1,6 +1,6 @@
 class Combination:
-    def __init__(self, n_max, mod=10**9 + 7):
-        # O(n_max + log(mod))
+
+    def __init__(self, n_max, mod=10 ** 9 + 7):
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -17,13 +17,8 @@ class Combination:
     def __call__(self, n, r):
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
-# 同じ色が隣り合う確率...1/M
-# 隣り合う箇所...N-1
-# ちょうどn箇所隣り合う確率...(N-1)Cn * (1/M)^n * ((M-1)/M)^(N-1-n)
-# 全パターン...M^N
 
-
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 mod = 998244353
 comb = Combination(202020, mod)
 ans = 0

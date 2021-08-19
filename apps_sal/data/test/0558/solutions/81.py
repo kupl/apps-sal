@@ -1,49 +1,41 @@
 import sys
-
-# import re
 import math
 import collections
-# import decimal
 import bisect
 import itertools
 import fractions
-# import functools
 import copy
 import heapq
 import decimal
-# import statistics
 import queue
-# import numpy as np
-
-# sys.setrecursionlimit(10000001)
 INF = 10 ** 16
-# MOD = 10 ** 9 + 7
 MOD = 998244353
 
 
-def ni(): return int(sys.stdin.readline())
-def ns(): return list(map(int, sys.stdin.readline().split()))
-def na(): return list(map(int, sys.stdin.readline().split()))
+def ni():
+    return int(sys.stdin.readline())
 
 
-# ===CODE===
+def ns():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na():
+    return list(map(int, sys.stdin.readline().split()))
+
 
 class ModCombination:
-    # https://atcoder.jp/contests/abc167/submissions/13058694
-    # https://ikatakos.com/pot/programming_algorithm/number_theory/mod_combination
 
     def __init__(self, maxN, MOD):
         self._maxN = maxN
         self._MOD = MOD
         self.facts = [1]
         self.invs = [1] * (self._maxN + 1)
-
         fact = 1
         for i in range(1, self._maxN + 1):
             fact *= i
             fact %= self._MOD
             self.facts.append(fact)
-
         inv = pow(fact, self._MOD - 2, self._MOD)
         self.invs[self._maxN] = inv
         for i in range(self._maxN, 1, -1):
@@ -56,13 +48,9 @@ class ModCombination:
 
 
 def main():
-
-    n, m, k = ns()
-
+    (n, m, k) = ns()
     mc = ModCombination(n, MOD)
-
     result = 0
-
     for ki in range(k + 1):
         ans = 1
         ans *= m % MOD
@@ -72,7 +60,6 @@ def main():
         ans %= MOD
         result += ans
         result %= MOD
-
     print(result)
 
 

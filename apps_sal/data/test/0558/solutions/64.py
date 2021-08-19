@@ -1,45 +1,41 @@
 import sys
-
-# import re
 import math
 import collections
-# import decimal
 import bisect
 import itertools
 import fractions
-# import functools
 import copy
 import heapq
 import decimal
-# import statistics
 import queue
 import numpy as np
-
 sys.setrecursionlimit(10000001)
 INF = 10 ** 16
-# MOD = 10 ** 9 + 7
 MOD = 998244353
 
 
-def ni(): return int(sys.stdin.readline())
-def ns(): return list(map(int, sys.stdin.readline().split()))
-def na(): return list(map(int, sys.stdin.readline().split()))
+def ni():
+    return int(sys.stdin.readline())
 
 
-# ===CODE===
+def ns():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 def main():
+
     def fast_pow(num, kata, mod):
         if kata == 0:
             return 1
-
         res = 1
         while kata > 0:
             if kata & 1 == 1:
                 res = res * num % mod
             num = num * num % mod
-
             kata >>= 1
         return res
 
@@ -57,14 +53,10 @@ def main():
             inv *= m
             inv %= MOD
             invs[m - 1] = inv
-        return factorials, invs
-
-    n, m, k = ns()
-
-    p, i = prepare(n, MOD)
-
+        return (factorials, invs)
+    (n, m, k) = ns()
+    (p, i) = prepare(n, MOD)
     result = 0
-
     for ki in range(k + 1):
         ans = 1
         ans *= m % MOD
@@ -72,10 +64,8 @@ def main():
         ans %= MOD
         ans *= p[n - 1] * i[ki] * i[n - 1 - ki]
         ans %= MOD
-
         result += ans
         result %= MOD
-
     print(result)
 
 

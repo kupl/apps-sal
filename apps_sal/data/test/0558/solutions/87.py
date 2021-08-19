@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -16,7 +15,8 @@ import queue
 import decimal
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -42,9 +42,8 @@ class Scanner():
         return [Scanner.int() for i in range(n)]
 
 
-# MOD = int(1e09) + 7
 MOD = 998244353
-INF = int(1e15)
+INF = int(1000000000000000.0)
 
 
 def solve():
@@ -59,8 +58,7 @@ def solve():
         fac[i] = fac[i - 1] * i % MOD
         inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
         finv[i] = finv[i - 1] * inv[i] % MOD
-
-    N, M, K = Scanner.map_int()
+    (N, M, K) = Scanner.map_int()
     ans = 0
     for k in range(K + 1):
         tmp = M * pow(M - 1, N - 1 - k, MOD)
@@ -74,12 +72,6 @@ def solve():
 
 
 def main():
-    # sys.setrecursionlimit(1000000)
-    # sys.stdin = open("sample.txt")
-    # T = Scanner.int()
-    # for _ in range(T):
-    #     solve()
-    # print('YNeos'[not solve()::2])
     solve()
 
 
