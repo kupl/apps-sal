@@ -1,5 +1,3 @@
-# your code goes here
-# your code goes here
 test_cases = int(input())
 for i in range(0, test_cases):
     num_digits = int(input())
@@ -39,15 +37,14 @@ for i in range(0, test_cases):
             else:
                 print(-1)
                 flag = 0
+        elif len(que2) > 0:
+            digits.remove(que2[len(que2) - 1])
+        elif len(que1) > 1:
+            digits.remove(que1[len(que1) - 1])
+            digits.remove(que1[len(que1) - 2])
         else:
-            if len(que2) > 0:
-                digits.remove(que2[len(que2) - 1])
-            elif len(que1) > 1:
-                digits.remove(que1[len(que1) - 1])
-                digits.remove(que1[len(que1) - 2])
-            else:
-                print(-1)
-                flag = 0
+            print(-1)
+            flag = 0
         if flag == 1:
             number = 0
             for num in digits:

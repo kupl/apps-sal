@@ -1,6 +1,6 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
+
         class mat(object):
             game = []
             limit = []
@@ -14,9 +14,9 @@ try:
             mat.ans += 1
             mat.limit.append(m)
             for i in range(1, mat.arr[m] + 1):
-                if m - i > 0 and n < mat.num - 1 and not(m - i in mat.limit):
+                if m - i > 0 and n < mat.num - 1 and (not m - i in mat.limit):
                     passes(n + 1, m - i)
-                if m + i < mat.num and n < mat.num - 1 and not(m + i in mat.limit):
+                if m + i < mat.num and n < mat.num - 1 and (not m + i in mat.limit):
                     passes(n + 1, m + i)
             mat.limit.pop()
         mat.num = int(input())
@@ -24,6 +24,5 @@ try:
         mat.arr = list(map(int, input().split()))
         passes(0, 0)
         print(mat.ans)
-
 except:
     pass

@@ -1,14 +1,11 @@
-# cook your dish here
-n, m, w, b, *l = list(map(int, input().split()))
+(n, m, w, b, *l) = list(map(int, input().split()))
 mat = [[0 for _ in range(m)] for _ in range(n)]
 for i in range(w):
-    y, x = l[2 * i], l[2 * i + 1]
+    (y, x) = (l[2 * i], l[2 * i + 1])
     mat[y - 1][x - 1] = 1
-
 for i in range(w, w + b):
-    y, x = l[2 * i], l[2 * i + 1]
+    (y, x) = (l[2 * i], l[2 * i + 1])
     mat[y - 1][x - 1] = 2
-
 temp = [[0 for _ in range(m)] for _ in range(n)]
 ans = 0
 for j in range(n):
@@ -26,4 +23,3 @@ for j in range(n):
             ans += blk - i + 1
             temp[j][i] = blk - i + 1
 print(ans)
-# print(temp)

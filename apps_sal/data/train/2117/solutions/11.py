@@ -1,7 +1,6 @@
-# for _ in range(int(input())):
 n = int(input())
 arr = list(map(int, input().split()))
-left, right = [-1] * n, [n] * n
+(left, right) = ([-1] * n, [n] * n)
 ans = [0] * n
 st = [0]
 for i in range(1, n):
@@ -23,4 +22,4 @@ ans[0] = max(arr)
 ans[-1] = min(arr)
 for i in range(n - 2, 0, -1):
     ans[i] = max(ans[i], ans[i + 1])
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

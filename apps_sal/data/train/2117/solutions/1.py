@@ -2,7 +2,8 @@ import math
 import random
 
 
-class AVLTree():
+class AVLTree:
+
     def __init__(self, x):
         self.left = None
         self.rght = None
@@ -20,7 +21,6 @@ def getHeight(root):
     if root == None:
         return 0
     return root.height
-    # return max(getHeight(root.left), getHeight(root.rght))+1
 
 
 def insert(root, x):
@@ -35,7 +35,6 @@ def insert(root, x):
     hl = getHeight(root.left)
     hr = getHeight(root.rght)
     root.height = max(hl, hr) + 1
-
     if hr - hl > 1:
         assert hr - hl == 2
         hrr = getHeight(root.rght.rght)
@@ -125,8 +124,7 @@ def testAVL():
     l = [x for x in range(100)]
     for i in range(100):
         ni = random.randint(0, 99)
-        l[i], l[ni] = l[ni], l[i]
-
+        (l[i], l[ni]) = (l[ni], l[i])
     tree = None
     for v in l:
         tree = insert(tree, v)
@@ -134,7 +132,8 @@ def testAVL():
     assert checkHeight(tree) == True
 
 
-class HeapObj():
+class HeapObj:
+
     def __init__(self, v, n):
         self.val = v
         self.hpidx = n
@@ -148,7 +147,7 @@ def shiftup(n, r, hp):
                 j += 1
             if hp[j].val <= hp[r].val:
                 return
-            hp[r], hp[j] = hp[j], hp[r]
+            (hp[r], hp[j]) = (hp[j], hp[r])
             hp[r].hpidx = r
             hp[j].hpidx = j
         if r == 0:
@@ -165,7 +164,7 @@ def shiftdown(n, r, hp):
             j += 1
         if hp[j].val <= hp[r].val:
             return
-        hp[r], hp[j] = hp[j], hp[r]
+        (hp[r], hp[j]) = (hp[j], hp[r])
         hp[r].hpidx = r
         hp[j].hpidx = j
         r = j
@@ -180,7 +179,7 @@ def testHeap():
     res = []
     while hp:
         res.append(hp[0].val)
-        hp[0], hp[-1] = hp[-1], hp[0]
+        (hp[0], hp[-1]) = (hp[-1], hp[0])
         hp[0].hpidx = 0
         hp.pop()
         shiftdown(len(hp), 0, hp)
@@ -190,43 +189,37 @@ def testHeap():
 def calc(n, a):
     ia = [x for x in enumerate(a)]
     ia.sort(key=lambda tp: tp[1])
-    # print('ia={ia}'.format(ia=ia))
     tree = None
     tree = insert(tree, -1)
     tree = insert(tree, n)
-
     hpobj = HeapObj(n, 0)
     hp = [hpobj]
     itv2hpobj = {(0, n - 1): hpobj}
     ret = []
     nxt = n
-    for idx, val in ia:
-        # Get interval
+    for (idx, val) in ia:
         interval_end = findUpperBound(tree, idx) - 1
         interval_bgn = findLowerBound(tree, idx) + 1
         itv = (interval_bgn, interval_end)
         assert itv in itv2hpobj
         tree = insert(tree, idx)
-        # Delete this interval from heap
         itv2hpobj[itv].val = 2 * n
         hpidx = itv2hpobj[itv].hpidx
         shiftup(len(hp), hpidx, hp)
-        hp[0], hp[-1] = hp[-1], hp[0]
+        (hp[0], hp[-1]) = (hp[-1], hp[0])
         hp[0].hpidx = 0
         hp.pop()
         del itv2hpobj[itv]
         shiftdown(len(hp), 0, hp)
-
-        # Add new interval(s) to heap
         if idx > interval_bgn:
             new_obj = HeapObj(idx - interval_bgn, len(hp))
             hp.append(new_obj)
-            itv2hpobj[(interval_bgn, idx - 1)] = new_obj
+            itv2hpobj[interval_bgn, idx - 1] = new_obj
             shiftup(len(hp), len(hp) - 1, hp)
         if idx < interval_end:
             new_obj = HeapObj(interval_end - idx, len(hp))
             hp.append(new_obj)
-            itv2hpobj[(idx + 1, interval_end)] = new_obj
+            itv2hpobj[idx + 1, interval_end] = new_obj
             shiftup(len(hp), len(hp) - 1, hp)
         NA = 0
         if len(hp) > 0:
@@ -278,7 +271,7 @@ def calc2(n, a):
     ans = [None for _ in range(n)]
     bst_intvs = [None for _ in range(n)]
     stk = [(-1, -2)]
-    for idx, v in enumerate(a + [-1]):
+    for (idx, v) in enumerate(a + [-1]):
         while v <= stk[-1][1]:
             bst_intvs[stk[-1][0]] = idx - stk[-2][0] - 2
             stk.pop()
@@ -287,7 +280,6 @@ def calc2(n, a):
         iv = bst_intvs[i]
         if ans[iv] == None or ans[iv] < a[i]:
             ans[iv] = a[i]
-    # print('preans={0}'.format(ans))
     for i in range(n - 2, -1, -1):
         if ans[i] == None or ans[i] < ans[i + 1]:
             ans[i] = ans[i + 1]
@@ -306,9 +298,7 @@ def serious():
 
 
 def main():
-    # duipai_n(1000000)
     serious()
-    # testHeap()
 
 
 def __starting_point():

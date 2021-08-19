@@ -1,13 +1,16 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
-#dt = {k:v for k,v in sorted(x.items(), key=lambda i: i[1])}
-def ipnl(n): return [int(input()) for _ in range(n)]
+def ipnl(n):
+    return [int(input()) for _ in range(n)]
 
 
-def inp(): return int(input())
-def ip(): return [int(w) for w in input().split()]
+def inp():
+    return int(input())
 
 
-n, m, w, b, *g = ip()
+def ip():
+    return [int(w) for w in input().split()]
+
+
+(n, m, w, b, *g) = ip()
 dt = {i: [] for i in range(1, n + 1)}
 for i in range(0, 2 * w, 2):
     dt[g[i]].append([g[i + 1], 'W'])
@@ -24,7 +27,7 @@ for i in range(1, n + 1):
         t[-1][1] = 'B'
     prev = 1
     for j in range(len(t)):
-        ind, cell = t[j]
+        (ind, cell) = t[j]
         no = ind - prev
         if cell == 'B':
             l = 2

@@ -1,7 +1,6 @@
-# cook your dish here
 for i in range(int(input())):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     if a + b + c == 180:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
