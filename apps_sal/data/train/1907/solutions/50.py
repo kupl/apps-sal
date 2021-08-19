@@ -1,11 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution1:
+
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         p = deque([original])
         q = deque([cloned])
@@ -27,15 +21,16 @@ class Solution1:
 
 
 class Solution:
+
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
+
         def preorder(root: TreeNode):
             yield root
             if root.left:
                 yield from preorder(root.left)
             if root.right:
                 yield from preorder(root.right)
-
-        for p, q in zip(preorder(original), preorder(cloned)):
+        for (p, q) in zip(preorder(original), preorder(cloned)):
             if p == target:
                 return q
         return None

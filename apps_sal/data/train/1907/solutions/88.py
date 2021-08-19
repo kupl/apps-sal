@@ -1,85 +1,79 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
+
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        '''Q=[]
+        """Q=[]
         Q.append(original)
-        Q.append(\"LVL\")
+        Q.append("LVL")
         level=1
         pos=1
         my_dict={}
         while len(Q)>1:
             current=Q.pop(0)
-            if current==\"NO\":
-                Q.append(\"NO\")
-                Q.append(\"NO\")
+            if current=="NO":
+                Q.append("NO")
+                Q.append("NO")
                 pos+=2
                 continue
             if current==target:
                 my_dict[level]=pos
                 break
-            if current==\"LVL\":
+            if current=="LVL":
                 level+=1
                 pos=0
-                Q.append(\"LVL\")
+                Q.append("LVL")
                 continue
 
             if current.left!=None:
                 Q.append(current.left)
                 pos+=1
             else:
-                Q.append(\"NO\")
+                Q.append("NO")
                 pos+=1
 
             if current.right!=None:
                 Q.append(current.right)
                 pos+=1
             else:
-                Q.append(\"NO\")
+                Q.append("NO")
                 pos+=1
         print(my_dict)
 
         Q=[]
         Q.append(cloned)
-        Q.append(\"LVL\")
+        Q.append("LVL")
         level=1
         pos=1
         while len(Q)>1:
             current=Q.pop(0)
-            if current==\"NO\":
-                Q.append(\"NO\")
-                Q.append(\"NO\")
+            if current=="NO":
+                Q.append("NO")
+                Q.append("NO")
                 pos+=2
                 continue
             if level in my_dict and pos==my_dict[level]:
 
                 return current
-            if current==\"LVL\":
+            if current=="LVL":
                 level+=1
                 pos=0
-                Q.append(\"LVL\")
+                Q.append("LVL")
                 continue
 
             if current.left!=None:
                 Q.append(current.left)
                 pos+=1
             else:
-                Q.append(\"NO\")
+                Q.append("NO")
                 pos+=1
 
             if current.right!=None:
                 Q.append(current.right)
                 pos+=1
             else:
-                Q.append(\"NO\")
+                Q.append("NO")
                 pos+=1
 
-           '''
+           """
         Q1 = []
         Q2 = []
         Q1.append(original)
