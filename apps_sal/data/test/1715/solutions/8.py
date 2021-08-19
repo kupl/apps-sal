@@ -1,10 +1,8 @@
 import bisect
-
-A, B, Q = map(int, input().split())
+(A, B, Q) = map(int, input().split())
 INF = float('inf')
 s = [-INF] + [int(input()) for i in range(A)] + [INF]
 t = [-INF] + [int(input()) for i in range(B)] + [INF]
-
 for i in range(Q):
     x = int(input())
     b = bisect.bisect_right(s, x)

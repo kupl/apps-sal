@@ -1,12 +1,10 @@
 n = int(input())
-
 coordinates = []
 heights = []
 for i in range(n):
-    x, h = map(int, input().split())
+    (x, h) = map(int, input().split())
     coordinates.append(x)
     heights.append(h)
-
 if n == 1:
     answer = 1
 else:

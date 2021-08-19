@@ -1,22 +1,19 @@
 n = int(input())
-
 d = {}
-
 for x in range(n):
-    l, r = list(map(str, input().split()))
+    (l, r) = list(map(str, input().split()))
     r = int(r)
     if x == 0:
         L = l
         R = r
     if not (l, r) in d:
-        d[(l, r)] = []
+        d[l, r] = []
     m = int(input())
     for y in range(m):
-        l1, r1 = list(map(str, input().split()))
-        d[(l, r)].append((l1, int(r1)))
+        (l1, r1) = list(map(str, input().split()))
+        d[l, r].append((l1, int(r1)))
     if x != n - 1:
         s = input()
-
 lst = []
 array = [L]
 temp1 = [(L, R)]
@@ -56,7 +53,6 @@ while k1 < len(temp1) or k2 < len(temp2):
         temp2 = []
         k2 = 1
         k1 = 0
-
 lst.sort()
 print(len(lst))
 for (a, b) in lst:

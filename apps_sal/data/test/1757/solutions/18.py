@@ -22,7 +22,7 @@ def problem():
         f1 = c
     name = ''
     for i in range(n):
-        if (i + 1) in f:
+        if i + 1 in f:
             name += 'O'
         else:
             name += 'o'

@@ -1,18 +1,13 @@
 from bisect import bisect, bisect_left
-
-A, B, Q = map(int, input().split())
-S, T, X = [0] * (A + 2), [0] * (B + 2), [0] * Q
-
-INF = 10**10
-S[0], T[0] = -INF, -INF
-S[-1], T[-1] = 2 * INF, 2 * INF
-
+(A, B, Q) = map(int, input().split())
+(S, T, X) = ([0] * (A + 2), [0] * (B + 2), [0] * Q)
+INF = 10 ** 10
+(S[0], T[0]) = (-INF, -INF)
+(S[-1], T[-1]) = (2 * INF, 2 * INF)
 for i in range(A):
     S[i + 1] = int(input())
-
 for i in range(B):
     T[i + 1] = int(input())
-
 for i in range(Q):
     X[i] = int(input())
 

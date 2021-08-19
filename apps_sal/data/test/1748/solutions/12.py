@@ -1,10 +1,8 @@
 from sys import stdin, stdout
 import heapq
-
 n = int(input())
 v = list(map(int, input().split()))
 t = list(map(int, input().split()))
-
 heap = []
 sum = 0
 for i in range(n):

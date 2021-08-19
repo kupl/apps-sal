@@ -1,9 +1,8 @@
 import bisect
-A, B, Q = map(int, input().split())
+(A, B, Q) = map(int, input().split())
 INF = float('inf')
 S = [-INF] + [int(input()) for _ in range(A)] + [INF]
 T = [-INF] + [int(input()) for _ in range(B)] + [INF]
-
 ans = []
 for q in range(Q):
     x = int(input())
@@ -16,4 +15,4 @@ for q in range(Q):
             d2 = abs(x - t) + abs(s - t)
             d = min(d, d1, d2)
     ans.append(d)
-print(*ans, sep="\n")
+print(*ans, sep='\n')

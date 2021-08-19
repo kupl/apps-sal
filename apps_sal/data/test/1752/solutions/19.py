@@ -10,7 +10,6 @@ for i in range(n):
         q.append(a[i])
 q.reverse()
 ans = p + q
-
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')
 print()

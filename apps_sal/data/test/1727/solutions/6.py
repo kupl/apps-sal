@@ -15,5 +15,4 @@ else:
         elif ar[i][0] + ar[i][1] < ar[i + 1][0]:
             sum1 += 1
             r = max(r, ar[i][0] + ar[i][1])
-
     print(sum1 + 2)

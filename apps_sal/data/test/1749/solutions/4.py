@@ -1,4 +1,4 @@
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 f = True
@@ -19,6 +19,6 @@ for i in range(len(a1)):
     if a1[i] != b1[i]:
         f = False
 if f:
-    print("TRUTH")
+    print('TRUTH')
 else:
-    print("LIE")
+    print('LIE')

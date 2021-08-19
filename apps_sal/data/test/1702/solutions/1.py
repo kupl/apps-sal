@@ -9,7 +9,7 @@ for k in range(31 * n + 1):
     for i in range(5):
         tot = n + k
         cur = solved[i]
-        cur += k * (a[0][i] > -1 and a[1][i] > -1 and a[0][i] > a[1][i])
+        cur += k * (a[0][i] > -1 and a[1][i] > -1 and (a[0][i] > a[1][i]))
         score[i] = 500
         while score[i] < 3000 and 2 * cur <= tot:
             cur *= 2
@@ -22,4 +22,4 @@ for k in range(31 * n + 1):
         print(k)
         break
 else:
-    print("-1")
+    print('-1')

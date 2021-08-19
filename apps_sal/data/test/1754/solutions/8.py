@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 sila = list(map(int, input().split()))
 uch = list(map(lambda x: int(x) - 1, input().split()))
 maxses = [0 for i in range(m)]

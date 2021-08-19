@@ -43,7 +43,7 @@ for c in exist:
         for j in range(m):
             if key:
                 break
-            if mapp[i][j] == c and not out[i][j] and dfs(i, j, vis, out, mapp):
+            if mapp[i][j] == c and (not out[i][j]) and dfs(i, j, vis, out, mapp):
                 key = 1
                 break
 if key:

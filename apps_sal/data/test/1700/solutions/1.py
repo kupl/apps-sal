@@ -2,7 +2,7 @@ N = int(input())
 S = input()
 T = [0] * N
 L = 0
-for i, s in enumerate(S):
+for (i, s) in enumerate(S):
     if s == '(':
         L += 1
         T[i] = L

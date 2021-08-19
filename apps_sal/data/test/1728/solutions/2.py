@@ -1,13 +1,11 @@
 import sys
 sys.setrecursionlimit(1000000)
 read = sys.stdin.readline
-
 n = int(read())
 parent = [1] + list(map(int, read().split()))
 color = list(map(int, read().split()))
 underVertex = [[] for _ in range(n + 1)]
-
-for i, p in enumerate(parent):
+for (i, p) in enumerate(parent):
     if i + 1 != p:
         underVertex[p] += [i + 1]
 

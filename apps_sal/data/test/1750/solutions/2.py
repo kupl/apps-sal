@@ -1,10 +1,9 @@
 import sys
 sys.setrecursionlimit(200000)
-
 n = int(input())
 g = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
 s = max([len(p) for p in g]) + 1
@@ -34,4 +33,4 @@ else:
         c = c + 1 if c < s else 1
         if j < n - 1:
             i = g[i][0] if not r[g[i][0]] else g[i][1]
-print(" ".join(map(str, r)))
+print(' '.join(map(str, r)))

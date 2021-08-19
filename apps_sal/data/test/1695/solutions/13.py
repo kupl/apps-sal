@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = [{'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0} for i in range(m)]
 for i in range(n):
     s = input()

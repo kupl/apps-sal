@@ -16,6 +16,6 @@ for i in range(N[2], N[0]):
 if a != b:
     flag = False
 if flag == True:
-    print("TRUTH")
+    print('TRUTH')
 else:
-    print("LIE")
+    print('LIE')

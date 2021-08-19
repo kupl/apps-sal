@@ -1,5 +1,5 @@
 our_list_1 = list(map(str, input()))
-our_list_3 = (list(map(str, input())))
+our_list_3 = list(map(str, input()))
 our_list_2 = list(set(our_list_3))
 output = 0
 for i in range(len(our_list_2)):

@@ -9,5 +9,4 @@ for c in s:
     else:
         d ^= 1
         l.append(d)
-
-print("".join([str(i) for i in l]))
+print(''.join([str(i) for i in l]))

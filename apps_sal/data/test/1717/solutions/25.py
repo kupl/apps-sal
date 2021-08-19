@@ -9,5 +9,5 @@ def gcd(a, b):
 
 ans = 1
 for i in range(2, n + 1):
-    ans = (ans * i) // gcd(ans, i)
-print((ans + 1))
+    ans = ans * i // gcd(ans, i)
+print(ans + 1)

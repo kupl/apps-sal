@@ -8,7 +8,7 @@ else:
     m1 = 0
     v0 = 0
     v1 = 0
-    for i, j in zip(s0, s1):
+    for (i, j) in zip(s0, s1):
         if i != j:
             v0 += 1 if i == '1' else -1
             v1 += 1 if j == '1' else -1

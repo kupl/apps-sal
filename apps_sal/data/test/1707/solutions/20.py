@@ -6,7 +6,7 @@ def count(X, Y):
     res = 0
     r = 0
     r2 = 0
-    Y = [-10**10] + Y + [10**10]
+    Y = [-10 ** 10] + Y + [10 ** 10]
     for l in range(len(X)):
         xl = X[l]
         for _ in range(len(Y)):

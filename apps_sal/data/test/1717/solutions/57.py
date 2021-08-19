@@ -17,4 +17,4 @@ def lcml(a):
 
 
 n = int(input())
-print((lcml(list(range(2, n + 1))) + 1))
+print(lcml(list(range(2, n + 1))) + 1)

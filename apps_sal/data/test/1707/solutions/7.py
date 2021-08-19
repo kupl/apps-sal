@@ -8,7 +8,7 @@ wsk2 = 1
 licz = 0
 while True:
     if a[wsk1] * 2 < a[wsk2]:
-        wyn += (wsk2 - wsk1 - 1)
+        wyn += wsk2 - wsk1 - 1
         wsk1 += 1
     else:
         wsk2 += 1

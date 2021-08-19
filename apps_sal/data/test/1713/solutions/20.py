@@ -11,7 +11,7 @@ def solve(n, s, t, p):
 
 
 def __starting_point():
-    n, s, t = list(map(int, input().split()))
+    (n, s, t) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     res = solve(n, s, t, p)
     print(res)

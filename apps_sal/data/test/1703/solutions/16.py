@@ -12,15 +12,14 @@ for test in range(t):
         plus = 0
         minus = 0
         for char in string:
-            if char == "(":
+            if char == '(':
                 plus += 1
                 arr.append(1)
+            elif arr[-1] == 1:
+                plus -= 1
+                arr.pop()
             else:
-                if arr[-1] == 1:
-                    plus -= 1
-                    arr.pop()
-                else:
-                    minus += 1
+                minus += 1
         if plus and minus:
             continue
         elif plus:
@@ -31,4 +30,4 @@ for test in range(t):
             zero += 1
     for i in range(300001):
         ans += openB[i] * closeB[i]
-    print(ans + (zero * zero))
+    print(ans + zero * zero)

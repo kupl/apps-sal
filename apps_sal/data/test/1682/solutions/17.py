@@ -1,12 +1,9 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 c = []
-
 for i in range(n):
     c.append([b[i] - a[i], a[i], b[i]])
-
-
 c = sorted(c, key=lambda x: -x[0])
 m = 0
 for i in range(n):

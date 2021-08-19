@@ -5,7 +5,6 @@ def findGcd(data):
     g = data[0]
     for i in range(len(data) - 1):
         g = gcd(g, data[i + 1])
-
     return g
 
 

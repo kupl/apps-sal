@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     l = [c for _ in range(n) for c in input()]
     neigh = []
     for y in range(n):
@@ -23,8 +23,7 @@ def main():
             elif field[v] == 1:
                 raise OverflowError
         field[t] = 2
-
-    for i, flag in enumerate(field):
+    for (i, flag) in enumerate(field):
         if not flag:
             try:
                 dfs(i)
@@ -36,7 +35,6 @@ def main():
 
 def __starting_point():
     import sys
-
     sys.setrecursionlimit(10000)
     main()
 

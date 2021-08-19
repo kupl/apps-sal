@@ -1,5 +1,4 @@
 s = input()
-
 n = 0
 l = [0]
 for c in s:
@@ -8,8 +7,7 @@ for c in s:
         l.pop()
     else:
         l.append(c)
-
 if n % 2 == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

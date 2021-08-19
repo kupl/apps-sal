@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 students = list(map(int, input().split()))
 schools = list(map(int, input().split()))
 v = list(map(int, input().split()))

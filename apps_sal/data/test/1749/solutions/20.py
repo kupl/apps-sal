@@ -1,14 +1,12 @@
 import sys
 from collections import defaultdict
-
 N = []
 N1 = []
 M = defaultdict(int)
 M1 = defaultdict(int)
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 N = list(map(int, input().split()))
 N1 = list(map(int, input().split()))
-
 Pass = True
 for i in range(l - 1):
     if N[i] != N1[i]:
@@ -28,6 +26,6 @@ if Pass is True:
             Pass = False
             break
 if Pass:
-    print("TRUTH")
+    print('TRUTH')
 else:
-    print("LIE")
+    print('LIE')

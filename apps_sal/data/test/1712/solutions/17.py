@@ -1,12 +1,10 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 a = list()
 for i in range(n):
     a.append(int(input()))
-
 hits = 0
 cx = 1
 cy = 1
-
 r = list()
 while hits < x + y:
     if cx / x < cy / y:
@@ -23,6 +21,5 @@ while hits < x + y:
         hits += 2
         r.append('Both')
         r.append('Both')
-
 for m in a:
     print(r[(m - 1) % (x + y)])

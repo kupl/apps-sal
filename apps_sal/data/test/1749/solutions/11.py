@@ -3,15 +3,15 @@ ai = list(map(int, input().split(' ')))
 bi = list(map(int, input().split(' ')))
 flag = True
 for i in range(n[1] - 1):
-    if(ai[i] != bi[i]):
+    if ai[i] != bi[i]:
         flag = False
-        print("LIE")
+        print('LIE')
         break
-if(flag):
+if flag:
     for i in range(n[0] - n[2]):
-        if(ai[n[2] + i] != bi[n[2] + i]):
+        if ai[n[2] + i] != bi[n[2] + i]:
             flag = False
-            print("LIE")
+            print('LIE')
             break
-if (flag == True):
+if flag == True:
     print('TRUTH')

@@ -11,10 +11,8 @@ arr = [int(x) for x in input().split()]
 dig_count = [0 for _ in range(11)]
 for i in arr:
     dig_count[dig_cnt(i)] += 1
-
 ans = 0
 mod = 998244353
-
 for x in range(n):
     gv = str(arr[x])
     list_dig = []
@@ -30,18 +28,18 @@ for x in range(n):
     for i in range(digs):
         if dig_count[i] == 0:
             continue
-        num1, num2 = "", ""
+        (num1, num2) = ('', '')
         p = 0
         while p < i:
             num1 += list_dig[p]
-            num1 += "0"
+            num1 += '0'
             p += 1
         while p < digs:
             num1 += list_dig[p]
             p += 1
         p = 0
         while p < i:
-            num2 += "0"
+            num2 += '0'
             num2 += list_dig[p]
             p += 1
         while p < digs:
@@ -50,25 +48,23 @@ for x in range(n):
         num1 = num1[::-1]
         num2 = num2[::-1]
         ans += (int(num1) + int(num2)) * dig_count[i]
-
     for i in range(digs + 1, 11):
         if dig_count[i] == 0:
             continue
-        num1, num2 = "", ""
+        (num1, num2) = ('', '')
         p = 0
         while p < digs:
             num1 += list_dig[p]
-            num1 += "0"
+            num1 += '0'
             p += 1
-        num1 += "0"
+        num1 += '0'
         p = 0
         while p < digs:
-            num2 += "0"
+            num2 += '0'
             num2 += list_dig[p]
             p += 1
-        num2 += "0"
+        num2 += '0'
         num1 = num1[::-1]
         num2 = num2[::-1]
         ans += (int(num1) + int(num2)) * dig_count[i]
-
 print(ans % mod)

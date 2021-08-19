@@ -1,11 +1,11 @@
-n, b = map(int, input().split())
+(n, b) = map(int, input().split())
 l = [tuple(map(int, input().split())) for i in range(n)]
 ch = [0]
 ans = []
 bd = [0] * (n + 1)
 po = ma = 0
 for i in range(n):
-    t, d = l[i]
+    (t, d) = l[i]
     bd[i] = bd[i - 1]
     ch += [max(ma, t) + d]
     while ch[po] <= t:

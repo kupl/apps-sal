@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 c = list(map(int, input().split()))
-mc = sorted(((y, x) for x, y in enumerate(c)), reverse=True)
+mc = sorted(((y, x) for (x, y) in enumerate(c)), reverse=True)
 for _ in range(m):
-    t, d = map(int, input().split())
+    (t, d) = map(int, input().split())
     t -= 1
     if a[t] >= d:
         print(c[t] * d)
@@ -16,7 +16,7 @@ for _ in range(m):
             if not mc:
                 print(0)
                 break
-            cost, index = mc[-1]
+            (cost, index) = mc[-1]
             if a[index] >= d:
                 x += cost * d
                 a[index] -= d

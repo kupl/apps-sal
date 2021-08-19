@@ -1,5 +1,4 @@
 n = int(input())
-
 ans = ['o' for _ in range(n)]
 fib = [0, 1]
 while fib[-1] < n:

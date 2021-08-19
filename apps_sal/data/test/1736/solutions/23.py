@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 d = 0
 f = 1

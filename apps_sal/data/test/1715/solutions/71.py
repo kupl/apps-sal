@@ -1,13 +1,13 @@
 from bisect import bisect_left, bisect
-a, b, q = map(int, input().split())
-jin = [-10**16]
+(a, b, q) = map(int, input().split())
+jin = [-10 ** 16]
 for i in range(a):
     jin.append(int(input()))
-jin.append(10**16)
-tera = [-10**20]
+jin.append(10 ** 16)
+tera = [-10 ** 20]
 for i in range(b):
     tera.append(int(input()))
-tera.append(10**20)
+tera.append(10 ** 20)
 for i in range(q):
     x = int(input())
     j = bisect(jin, x)

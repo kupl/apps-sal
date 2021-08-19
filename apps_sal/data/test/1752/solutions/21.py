@@ -1,9 +1,7 @@
 import sys
-sys.setrecursionlimit(10**5)
-
+sys.setrecursionlimit(10 ** 5)
 N = int(input())
-*A, = map(int, input().split())
-
+(*A,) = map(int, input().split())
 A.sort()
 memo = [[-1] * (N + 1) for i in range(N + 1)]
 nxt = [[0] * (N + 1) for i in range(N + 1)]

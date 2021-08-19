@@ -7,17 +7,17 @@ def main():
     res = {}
     start = None
     for i in range(n):
-        project, version = input().split()
+        (project, version) = input().split()
         version = int(version)
         if i == 0:
-            start = project, version
+            start = (project, version)
         k = int(input())
         if project not in d:
             d[project] = {}
         if version not in d[project]:
             d[project][version] = []
         for j in range(k):
-            p, v = input().split()
+            (p, v) = input().split()
             v = int(v)
             d[project][version].append((p, v))
         if i != n - 1:
@@ -28,7 +28,7 @@ def main():
     while not q.empty():
         append = {}
         for i in range(k):
-            s_p, s_v = q.get()
+            (s_p, s_v) = q.get()
             for (p, v) in d[s_p][s_v]:
                 if p == start[0]:
                     continue
@@ -40,12 +40,10 @@ def main():
         for p in append:
             res[p] = append[p]
             q.put((p, append[p]))
-
     ans = []
     for p in res:
         v = res[p]
         ans.append((p, v))
-
     ans = sorted(ans, key=lambda z: z[0])
     print(len(ans))
     for (p, v) in ans:

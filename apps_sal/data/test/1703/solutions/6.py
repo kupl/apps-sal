@@ -59,6 +59,6 @@ for currS in s:
         if d >= 0:
             rightTypes[d] = rightTypes.get(d, 0) + 1
 result = 0
-for d, l in leftTypes.items():
+for (d, l) in leftTypes.items():
     result += l * rightTypes.get(d, 0)
 print(result)

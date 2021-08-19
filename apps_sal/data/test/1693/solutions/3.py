@@ -1,11 +1,8 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-
-
 n = int(input())
 a = list(map(int, input().split()))
-
 q = deque([])
 ans = [0] * n
 tmp_ans = 0
@@ -22,15 +19,13 @@ for i in range(n):
             q.append((a[i], l_ind))
             break
         else:
-            height, l = q.pop()
+            (height, l) = q.pop()
             if not q:
                 tmp_ans -= height * (l + 1)
             else:
                 tmp_ans -= height * (l - q[-1][1])
             ind = l
     ans[i] = tmp_ans
-
-
 b = a[::-1]
 q = deque([])
 ans2 = [0] * n
@@ -48,15 +43,13 @@ for i in range(n):
             q.append((b[i], l_ind))
             break
         else:
-            height, l = q.pop()
+            (height, l) = q.pop()
             if not q:
                 tmp_ans -= height * (l + 1)
             else:
                 tmp_ans -= height * (l - q[-1][1])
             ind = l
     ans2[i] = tmp_ans
-
-
 max_ans = 0
 ind = -1
 for i in range(n):
@@ -64,14 +57,11 @@ for i in range(n):
     if max_ans < tmp:
         max_ans = tmp
         ind = i
-
 i = ind
 ans = [0] * n
-
 tmp = a[i]
 l = i
 r = i
-
 max_height = a[i]
 ans[i] = a[i]
 for j in range(0, l)[::-1]:
@@ -81,7 +71,6 @@ for j in range(0, l)[::-1]:
         tmp += a[j]
         max_height = a[j]
     ans[j] = max_height
-
 max_height = a[i]
 for j in range(r + 1, n):
     if a[j] >= max_height:

@@ -1,7 +1,6 @@
 import sys
 readline = sys.stdin.readline
-
-N, X = list(map(int, readline().split()))
+(N, X) = list(map(int, readline().split()))
 D = list(map(int, readline().split()))
 AD = D + D + [0]
 S = [d * (d + 1) // 2 for d in D]
@@ -9,9 +8,7 @@ S = S + S + [0]
 for i in range(1, 2 * N):
     AD[i] += AD[i - 1]
     S[i] += S[i - 1]
-
 D = D + D + [0]
-
 ans = 0
 for r in range(N, 2 * N):
     ng = -1

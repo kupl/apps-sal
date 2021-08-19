@@ -7,7 +7,7 @@ for i in range(n):
     if canSit:
         continue
     else:
-        a, b, c, d, e = config[i]
+        (a, b, c, d, e) = config[i]
         if a == 'O' and b == 'O':
             canSit = True
             ans = (i, 1, 2)
@@ -17,9 +17,9 @@ for i in range(n):
         else:
             continue
 if not canSit:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     config[ans[0]][ans[1] - 1] = '+'
     config[ans[0]][ans[2] - 1] = '+'
     for row in config:

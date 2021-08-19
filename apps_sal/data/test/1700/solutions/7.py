@@ -1,6 +1,6 @@
 n = int(input())
 a = input()
-stack, ans = [], []
+(stack, ans) = ([], [])
 for q in range(len(a)):
     if a[q] == ')':
         ans.append(stack.pop())

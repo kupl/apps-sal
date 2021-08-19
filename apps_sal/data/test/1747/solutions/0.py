@@ -1,5 +1,5 @@
 import sys
-n, m = list(map(int, sys.stdin.readline().split()))
+(n, m) = list(map(int, sys.stdin.readline().split()))
 vis = [0] * 1000005
 num = list(map(int, sys.stdin.readline().split()))
 flag = 0
@@ -9,7 +9,7 @@ for i in range(n):
         flag = 1
         break
 if flag == 0:
-    print("{0} {1}".format(1, n))
+    print('{0} {1}'.format(1, n))
 else:
     l = 0
     r = 0

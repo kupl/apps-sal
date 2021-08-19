@@ -14,13 +14,13 @@ def mints():
     return map(int, minp().split())
 
 
-n, m = mints()
+(n, m) = mints()
 a = []
 p = [None] * n
 for i in range(n):
     p[i] = []
 for i in range(m):
-    x, y = mints()
+    (x, y) = mints()
     p[x - 1].append((i + 1, x))
     p[y - 1].append((i + 1, y))
 for i in range(n):

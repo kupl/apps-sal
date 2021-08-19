@@ -1,4 +1,4 @@
 import math
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = input()
-print((math.ceil((N - 1) / (K - 1))))
+print(math.ceil((N - 1) / (K - 1)))

@@ -1,8 +1,6 @@
 n = int(input())
 A = input()
-
 stack = []
-
 for i in A:
     if i == '(':
         if len(stack) == 0 or stack[-1] == 1:

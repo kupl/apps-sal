@@ -1,7 +1,6 @@
 import sys
 sys.setrecursionlimit(10000)
 n = int(input())
-
 vs = {}
 for c in range(2, n + 1):
     p = int(input())

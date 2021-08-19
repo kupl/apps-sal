@@ -1,5 +1,4 @@
 s = input()
-
 left = ['*']
 cnt = 0
 for ch in s:
@@ -8,5 +7,4 @@ for ch in s:
         cnt += 1
     else:
         left.append(ch)
-
 print(['No', 'Yes'][cnt % 2])

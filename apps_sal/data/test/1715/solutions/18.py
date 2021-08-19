@@ -1,11 +1,9 @@
 from bisect import bisect_left
-A, B, Q = list(map(int, input().split()))
+(A, B, Q) = list(map(int, input().split()))
 s = [int(input()) for _ in range(A)]
 t = [int(input()) for _ in range(B)]
-
 s.sort()
 t.sort()
-
 for k in range(Q):
     x = int(input())
     ans = []
@@ -23,4 +21,4 @@ for k in range(Q):
             for j in [-1, 0]:
                 if 0 <= ms + j <= A - 1:
                     ans.append(abs(t[mt + i] - x) + abs(s[ms + j] - t[mt + i]))
-    print((min(ans)))
+    print(min(ans))

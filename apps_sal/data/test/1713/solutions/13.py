@@ -1,4 +1,4 @@
-n, s, t = list(map(int, input().split()))
+(n, s, t) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 if s == t:
     print(0)

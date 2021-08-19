@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 l = list(map(int, input().split()))
 ma = j = k = kt = 0
 for i in range(n):

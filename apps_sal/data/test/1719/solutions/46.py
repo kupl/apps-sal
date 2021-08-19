@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 N = int(input())
 memo = [{} for _ in range(N + 1)]
 
@@ -7,8 +7,8 @@ def ok(last4):
     for i in range(4):
         t = list(last4)
         if i > 0:
-            t[i - 1], t[i] = t[i], t[i - 1]
-        if "".join(t).count("AGC") > 0:
+            (t[i - 1], t[i]) = (t[i], t[i - 1])
+        if ''.join(t).count('AGC') > 0:
             return False
     return True
 
@@ -19,11 +19,11 @@ def dfs(cur, last3):
     if cur == N:
         return 1
     ret = 0
-    for c in "AGCT":
+    for c in 'AGCT':
         if ok(last3 + c):
             ret = (ret + dfs(cur + 1, last3[1:] + c)) % MOD
     memo[cur][last3] = ret
     return ret
 
 
-print(dfs(0, "TTT"))
+print(dfs(0, 'TTT'))

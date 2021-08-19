@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, = readln()
+(n,) = readln()
 a = readln()
 s = [0] * (n + 1)
 sm = [0] * (n + 1)

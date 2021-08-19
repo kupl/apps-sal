@@ -3,12 +3,10 @@ from collections import defaultdict
 import math
 import sys
 import os
-
 graph = defaultdict(list)
 
 
 def solution(n, flo, bee):
-
     cleverBrute = [0] * (n + 1)
     visited = [0] * (n + 1)
     q = []
@@ -18,11 +16,10 @@ def solution(n, flo, bee):
             q.append([elem, elem])
         else:
             cutNode = elem
-
     visited[flo] = 1
     while q:
         temp = q.pop()
-        currentFrom, currentTo = temp[0], temp[1]
+        (currentFrom, currentTo) = (temp[0], temp[1])
         visited[currentFrom] = 1
         cleverBrute[currentTo] += 1
         for elem in graph[currentFrom]:
@@ -31,36 +28,23 @@ def solution(n, flo, bee):
                     q.append([elem, currentTo])
                 else:
                     cutNode = currentTo
-
-    "print(cleverBrute)"
-    "print(sum(cleverBrute),cleverBrute[cutNode])"
+    'print(cleverBrute)'
+    'print(sum(cleverBrute),cleverBrute[cutNode])'
     return (sum(cleverBrute) + 1 - cleverBrute[cutNode]) * (n - (sum(cleverBrute) + 1))
 
 
 def main():
-
-    n, x, y = map(int, input().strip().split())
+    (n, x, y) = map(int, input().strip().split())
     for _ in range(n - 1):
-        u, v = map(int, input().strip().split())
+        (u, v) = map(int, input().strip().split())
         graph[u].append(v)
         graph[v].append(u)
-
-    print(n * (n - 1) - (solution(n, x, y)))
+    print(n * (n - 1) - solution(n, x, y))
 
 
 def __starting_point():
     main()
 
 
-"""
-
-3 1 3
-1 2
-2 3
-
-3 1 3
-1 2
-1 3
-
-"""
+'\n\n3 1 3\n1 2\n2 3\n\n3 1 3\n1 2\n1 3\n\n'
 __starting_point()

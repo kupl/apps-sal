@@ -5,7 +5,7 @@ fib = [0 for i in range(1005)]
 fib[1] = 1
 for i in range(20):
     try:
-        a, b = b, a + b
+        (a, b) = (b, a + b)
         fib[b] = 1
     except:
         break

@@ -1,10 +1,9 @@
-'''
+"""
 Created on Sep 28, 2014
 
 @author: Ismael
-'''
-
-n, k = list(map(int, input().split()))
+"""
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort()
 s = 0

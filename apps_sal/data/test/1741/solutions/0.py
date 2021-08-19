@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -21,10 +22,10 @@ def get(x0, a, n):
 
 def main():
     n = int(input())
-    pos, neg = False, False
+    (pos, neg) = (False, False)
     a = []
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         t = Point(x, y)
         if t.y > 0:
             pos = True
@@ -36,7 +37,7 @@ def main():
     if neg:
         for i in range(n):
             a[i].y = -a[i].y
-    L, R = -1e8, 1e8
+    (L, R) = (-100000000.0, 100000000.0)
     for i in range(120):
         x1 = L + (R - L) / 3
         x2 = R - (R - L) / 3

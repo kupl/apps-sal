@@ -2,29 +2,43 @@ import sys
 import math
 from collections import deque
 import bisect
-
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-def input(): return sys.stdin.readline().strip()
-def NI(): return int(input())
-def NMI(): return map(int, input().split())
-def NLI(): return list(NMI())
-def SI(): return input()
 
 
-def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
+def input():
+    return sys.stdin.readline().strip()
+
+
+def NI():
+    return int(input())
+
+
+def NMI():
+    return map(int, input().split())
+
+
+def NLI():
+    return list(NMI())
+
+
+def SI():
+    return input()
+
+
+def make_grid(h, w, num):
+    return [[int(num)] * w for _ in range(h)]
 
 
 def main():
-    A, B, Q = NMI()
-    S = [-float("inf")] + [NI() for _ in range(A)] + [float("inf")]
-    T = [-float("inf")] + [NI() for _ in range(B)] + [float("inf")]
+    (A, B, Q) = NMI()
+    S = [-float('inf')] + [NI() for _ in range(A)] + [float('inf')]
+    T = [-float('inf')] + [NI() for _ in range(B)] + [float('inf')]
     Q = [NI() for _ in range(Q)]
-
     for q in Q:
         s_idx = bisect.bisect_left(S, q)
         t_idx = bisect.bisect_left(T, q)
-        sl, sr, tl, tr = S[s_idx - 1], S[s_idx], T[t_idx - 1], T[t_idx]
+        (sl, sr, tl, tr) = (S[s_idx - 1], S[s_idx], T[t_idx - 1], T[t_idx])
         LL = max(abs(q - sl), abs(q - tl))
         RR = max(abs(q - sr), abs(q - tr))
         LR = abs(q - sl) * 2 + abs(q - tr)

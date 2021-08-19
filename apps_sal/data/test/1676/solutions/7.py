@@ -1,6 +1,5 @@
 from collections import deque
-
-n, b = [int(x) for x in input().split()]
+(n, b) = [int(x) for x in input().split()]
 d = deque()
 ans = [0] * n
 now = 0

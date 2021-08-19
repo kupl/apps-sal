@@ -1,4 +1,4 @@
-d = (input().split(' '))
+d = input().split(' ')
 n = int(d[0])
 sayfa = int(d[1])
 i = 0

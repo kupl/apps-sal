@@ -1,8 +1,7 @@
 import bisect
-INF = 10**100
-
-A, B, Q, *stx, = open(0).read().split()
-A, B, Q = map(int, [A, B, Q])
+INF = 10 ** 100
+(A, B, Q, *stx) = open(0).read().split()
+(A, B, Q) = map(int, [A, B, Q])
 slist = [-INF] + [int(stx[i]) for i in range(A)] + [INF]
 tlist = [-INF] + [int(stx[i]) for i in range(A, A + B)] + [INF]
 xlist = [int(stx[i]) for i in range(A + B, A + B + Q)]

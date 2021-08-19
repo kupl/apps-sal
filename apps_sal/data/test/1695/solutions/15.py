@@ -1,7 +1,5 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 a = [[0 for j in range(5)] for i in range(m)]
-
 for i in range(n):
     s = input()
     for j in range(m):

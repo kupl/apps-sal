@@ -12,21 +12,42 @@ import random
 import time
 import copy
 import functools
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-eps = 1.0 / 10**10
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+eps = 1.0 / 10 ** 10
 mod = 998244353
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
-def pf(s): return print(s, flush=True)
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def pf(s):
+    return print(s, flush=True)
 
 
 def main():
@@ -60,13 +81,11 @@ def main():
             d[-lk] += 1
         if rk > 0:
             d[rk] += 1
-
     r = d[0] ** 2
     for k in list(d.keys()):
         if k <= 0:
             continue
         r += d[k] * d[-k]
-
     return r
 
 

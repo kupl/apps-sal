@@ -1,19 +1,20 @@
-def inpl(): return list(map(int, input().split()))
+def inpl():
+    return list(map(int, input().split()))
 
 
-N, M = inpl()
+(N, M) = inpl()
 A = inpl()
 C = inpl()
 Dishnum = sum(A)
-ACi = [[c, i, a] for i, (a, c) in enumerate(zip(A, C), 1)]
+ACi = [[c, i, a] for (i, (a, c)) in enumerate(zip(A, C), 1)]
 ACi.sort()
 Orig = dict()
-for i, (_, j, _) in enumerate(ACi):
+for (i, (_, j, _)) in enumerate(ACi):
     Orig[j] = i
 ctr = 0
 for _ in range(M):
     ans = 0
-    t, d = inpl()
+    (t, d) = inpl()
     t = Orig[t]
     Dishnum -= d
     if Dishnum < 0:

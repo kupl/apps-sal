@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = {q: [] for q in range(1, n + 1)}
 for q in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a[min(x, y)].append(max(y, x))
 a = {q: sorted(a[q]) for q in range(1, n + 1)}
 answer = [[] for q in range(1, n + 1)]

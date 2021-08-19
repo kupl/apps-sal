@@ -12,9 +12,9 @@ def main():
                 yes = False
                 break
     if yes:
-        print("TRUTH")
+        print('TRUTH')
     else:
-        print("LIE")
+        print('LIE')
     return
 
 

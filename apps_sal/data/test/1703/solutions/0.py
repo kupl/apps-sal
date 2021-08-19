@@ -1,7 +1,5 @@
 from collections import defaultdict
 n = int(input())
-
-
 first = defaultdict(int)
 second = defaultdict(int)
 for _ in range(n):
@@ -18,9 +16,7 @@ for _ in range(n):
         first[count] += 1
     if count == min_count:
         second[count] += 1
-
 res = 0
-for k, v in list(first.items()):
+for (k, v) in list(first.items()):
     res += v * second[-k]
-
 print(res)

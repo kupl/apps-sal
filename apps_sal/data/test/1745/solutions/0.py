@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [[int(c == '.') for c in input()] for i in range(n)]
 
 
@@ -16,8 +16,8 @@ def calc(a):
     n = len(a)
     m = len(a[0])
     alive = a[0][:]
-    alive[0], alive[m - 1] = 0, 0
-    ans_l, ans_r, ans_u = 0, 0, 0
+    (alive[0], alive[m - 1]) = (0, 0)
+    (ans_l, ans_r, ans_u) = (0, 0, 0)
     ans_bs = [0] * m
     for i in range(1, n - 1):
         s = 0
@@ -47,20 +47,20 @@ def calc(a):
         if a[i][0]:
             ans_l += s
     ans_u //= 2
-    ans_b = sum(a[n - 1][i] * (ans_bs[i] + alive[i]) for i in range(1, m - 1))
-    return ans_l, ans_r, ans_u, ans_b
+    ans_b = sum((a[n - 1][i] * (ans_bs[i] + alive[i]) for i in range(1, m - 1)))
+    return (ans_l, ans_r, ans_u, ans_b)
 
 
 ans = 0
-ans_l, ans_r, ans_u, ans_b = calc(a)
+(ans_l, ans_r, ans_u, ans_b) = calc(a)
 ans += ans_l + ans_r + ans_u + ans_b
 a = rotate(a)
-ans_l, _, ans_u, ans_b = calc(a)
+(ans_l, _, ans_u, ans_b) = calc(a)
 ans += ans_l + ans_u + ans_b
 a = rotate(a)
-ans_l, _, ans_u, _ = calc(a)
+(ans_l, _, ans_u, _) = calc(a)
 ans += ans_l + ans_u
 a = rotate(a)
-_, _, ans_u, _ = calc(a)
+(_, _, ans_u, _) = calc(a)
 ans += ans_u
 print(ans)

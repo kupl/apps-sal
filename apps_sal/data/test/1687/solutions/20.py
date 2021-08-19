@@ -1,5 +1,8 @@
 from sys import stdin
-def read(): return list(map(int, stdin.readline().split()))
+
+
+def read():
+    return list(map(int, stdin.readline().split()))
 
 
 read()
@@ -9,5 +12,4 @@ for y in a:
     if y % x != 0:
         x = -1
         break
-
 print(x)

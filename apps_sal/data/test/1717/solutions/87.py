@@ -1,4 +1,3 @@
-
 import numpy as np
 N = int(input())
 x = 1

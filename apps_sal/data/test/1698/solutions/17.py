@@ -1,7 +1,8 @@
-def input_to_list(): return [int(i) for i in input().split()]
+def input_to_list():
+    return [int(i) for i in input().split()]
 
 
-n, k = input_to_list()
+(n, k) = input_to_list()
 values = input_to_list()
 values.sort()
 n -= 1

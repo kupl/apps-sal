@@ -1,7 +1,6 @@
 from collections import defaultdict
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
-
 A_dict = defaultdict(int)
 for i in A:
     A_dict[i] += 1
@@ -17,11 +16,9 @@ def bitCount(x):
 
 
 mask = []
-for i in range(2**15):
+for i in range(2 ** 15):
     if bitCount(i) == k:
         mask.append(i)
-
-
 ans = 0
 for i in A_dict:
     for j in mask:

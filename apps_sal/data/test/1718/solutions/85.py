@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 arr = list(map(int, input().split()))
-
 cnt = 0
 correction_value = 0
 for i in range(0, N, K - 1):

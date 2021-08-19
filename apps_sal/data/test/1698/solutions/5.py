@@ -1,4 +1,4 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 f = [int(x) - 1 for x in input().split()]
 f.sort()
 assert len(f) == n

@@ -2,6 +2,7 @@ import collections
 
 
 class TaskMgr:
+
     def __init__(self, n, b):
         self.b = b
         self.lock_until = 1
@@ -27,7 +28,7 @@ class TaskMgr:
         if now < lock:
             return
         now = min(lock, now)
-        i, t, d = self.q.popleft()
+        (i, t, d) = self.q.popleft()
         t = max(t, now)
         end = t + d
         self.lock_until = end
@@ -35,15 +36,15 @@ class TaskMgr:
 
 
 def __starting_point():
-    n, b = [int(x) for x in input().split()]
+    (n, b) = [int(x) for x in input().split()]
     mgr = TaskMgr(n, b)
     for i in range(n):
-        t, d = [int(x) for x in input().split()]
+        (t, d) = [int(x) for x in input().split()]
         mgr.tick(t)
         mgr.add(i, t, d)
     while not mgr.empty():
         mgr.tick()
-    print(' '.join(str(x) for x in mgr.end))
+    print(' '.join((str(x) for x in mgr.end)))
 
 
 __starting_point()

@@ -1,13 +1,12 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 ss = [(i, c[i]) for i in range(n)]
 ss = sorted(ss, key=lambda x: (x[1], x[0]))
 p = 0
 ans1 = []
 for _ in range(m):
-    t, d = list(map(int, input().split()))
+    (t, d) = list(map(int, input().split()))
     t -= 1
     ans = 0
     c1 = min(d, a[t])

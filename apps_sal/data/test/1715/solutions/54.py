@@ -1,5 +1,5 @@
 import bisect
-a, b, q = map(int, input().split())
+(a, b, q) = map(int, input().split())
 s = [int(input()) for _ in range(a)]
 t = [int(input()) for _ in range(b)]
 x = [int(input()) for _ in range(q)]

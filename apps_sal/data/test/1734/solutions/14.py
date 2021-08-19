@@ -1,7 +1,6 @@
 n = int(input())
 a = []
 d = {}
-
 for _ in range(n):
     s = input()
     g = set()
@@ -17,7 +16,6 @@ for _ in range(n):
             else:
                 d[st] = 1
     a.append(s)
-
 for s in a:
     ans = s
     for i in range(len(s)):

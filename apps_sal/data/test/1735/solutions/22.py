@@ -12,6 +12,6 @@ for i in range(1, len(s)):
             d.append(x)
             d.append(s[i])
 if count % 2 == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

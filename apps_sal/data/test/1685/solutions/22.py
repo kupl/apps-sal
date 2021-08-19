@@ -2,12 +2,11 @@ def maxx(n):
     return n & -n
 
 
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 root = n // 2 + 1
 while q > 0:
     x = int(input())
     s = input()
-
     for i in s:
         if i == 'U' and x != root:
             p = x + maxx(x)

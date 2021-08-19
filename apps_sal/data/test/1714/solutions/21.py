@@ -1,6 +1,4 @@
-
-n, k = list(map(int, input().strip().split()))
-
+(n, k) = list(map(int, input().strip().split()))
 if k != 0:
     ans = [1 + k, 1]
 else:
@@ -13,5 +11,4 @@ while i < 2 * n:
         continue
     ans.append(z)
     i += 1
-
 print(*ans)

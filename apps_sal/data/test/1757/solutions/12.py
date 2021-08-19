@@ -1,11 +1,10 @@
 def main():
     n = int(input())
-    name = ["o"] * n
-    b, c = 1, 1
+    name = ['o'] * n
+    (b, c) = (1, 1)
     while c <= n:
         name[c - 1] = 'O'
-        b, c = c, b + c
-
+        (b, c) = (c, b + c)
     print(''.join(name))
 
 

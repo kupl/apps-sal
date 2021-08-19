@@ -1,12 +1,10 @@
-n, m, s, f = [int(x) for x in input().split()]
+(n, m, s, f) = [int(x) for x in input().split()]
 now = 1
 d = 1 if f > s else -1
 step = 'R' if d == 1 else 'L'
-
-ret = ""
-
+ret = ''
 for _ in range(m):
-    t, l, r = [int(x) for x in input().split()]
+    (t, l, r) = [int(x) for x in input().split()]
     if t > now:
         flag = False
         while t > now:
@@ -26,9 +24,7 @@ for _ in range(m):
     if s == f:
         break
     now += 1
-
 while s != f:
     s += d
     ret += step
-
 print(ret)

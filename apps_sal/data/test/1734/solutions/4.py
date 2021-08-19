@@ -1,5 +1,5 @@
 def podstroki(s):
-    return sorted(set(s[i: i1] for i in range(9) for i1 in range(i + 1, 10)), key=len)
+    return sorted(set((s[i:i1] for i in range(9) for i1 in range(i + 1, 10))), key=len)
 
 
 res = {}
@@ -10,7 +10,6 @@ for s in spisok:
             res[podstr] += 1
         else:
             res[podstr] = 1
-
 for s in spisok:
     for podstr in s:
         if res[podstr] == 1:

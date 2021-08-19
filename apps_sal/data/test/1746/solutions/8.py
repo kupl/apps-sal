@@ -6,14 +6,12 @@ for i in range(1, n):
     p = p - 1
     parent[i] = p
     children[p].append(i)
-
 leaf = {}
 for i in range(n):
     if len(children[i]) == 0:
         leaf[i] = True
     else:
         leaf[i] = False
-
 for i in range(n):
     if leaf[i]:
         continue
@@ -22,7 +20,6 @@ for i in range(n):
         if leaf[j]:
             c = c + 1
     if c < 3:
-        print("No")
+        print('No')
         quit()
-
-print("Yes")
+print('Yes')

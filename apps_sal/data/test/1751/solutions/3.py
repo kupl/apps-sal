@@ -7,8 +7,7 @@ def rl():
 
 
 MOD = 1000000007
-
-n, = rl()
+(n,) = rl()
 r = 0
 i1f = 1
 for i in range(2, n + 1):

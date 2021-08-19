@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for i in range(m):
     k = int(input())
     d = k & -k

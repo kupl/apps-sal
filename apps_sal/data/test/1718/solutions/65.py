@@ -1,5 +1,5 @@
 import math
-N, K = input().split()
+(N, K) = input().split()
 N = int(N)
 K = int(K)
 if N == K:

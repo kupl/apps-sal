@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 times = list(map(int, input().split())) + [0]
 for i in range(1, n):
     times[i] += times[i - 1]

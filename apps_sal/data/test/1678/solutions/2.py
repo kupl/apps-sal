@@ -2,6 +2,7 @@ from itertools import accumulate, chain
 
 
 class Fenwick:
+
     def __init__(self, n):
         self.tree = [0] * (n + 1)
 
@@ -9,14 +10,14 @@ class Fenwick:
         i += 1
         while i < len(self.tree):
             self.tree[i] += 1
-            i += (i & -i)
+            i += i & -i
 
     def get(self, i):
         i += 1
         total = 0
         while i > 0:
             total += self.tree[i]
-            i -= (i & -i)
+            i -= i & -i
         return total
 
 
@@ -25,11 +26,10 @@ def solution(n, a, t):
     T = [[s, s - t] for s in S]
     T = list(set(chain(*T)))
     T.sort()
-    T = {v: i for i, v in enumerate(T)}
-
+    T = {v: i for (i, v) in enumerate(T)}
     fenwick = Fenwick(len(T))
     total = 0
-    for i, v in enumerate(S):
+    for (i, v) in enumerate(S):
         diff = v - t
         total += i - fenwick.get(T[diff])
         if v < t:
@@ -38,9 +38,10 @@ def solution(n, a, t):
     return total
 
 
-def f(): return [int(c) for c in input().split()]
+def f():
+    return [int(c) for c in input().split()]
 
 
-n, t = f()
+(n, t) = f()
 a = f()
 print(solution(n, a, t))

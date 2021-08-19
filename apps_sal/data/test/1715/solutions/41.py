@@ -1,6 +1,5 @@
 import bisect
-
-a, b, q = map(int, input().split())
+(a, b, q) = map(int, input().split())
 s = []
 t = []
 for i in range(a):
@@ -9,9 +8,7 @@ for i in range(b):
     t.append(int(input()))
 for _ in range(q):
     x = int(input())
-
     ans = [0, 0, 0]
-
     i = bisect.bisect_left(s, x)
     if i == 0:
         sl = 100000000000

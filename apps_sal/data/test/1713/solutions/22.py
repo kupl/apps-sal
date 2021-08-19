@@ -1,6 +1,6 @@
 string = input()
 numbers = list(map(int, string.split()))
-s, t = numbers[1], numbers[2]
+(s, t) = (numbers[1], numbers[2])
 string = input()
 glasses = list(map(int, string.split()))
 temp = s

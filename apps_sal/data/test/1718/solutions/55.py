@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 ans = 0
 if N <= K:
@@ -6,8 +6,7 @@ if N <= K:
 else:
     x = K
     ans = 1
-    while(x < N):
+    while x < N:
         ans += 1
-        x += (K - 1)
-
+        x += K - 1
 print(ans)

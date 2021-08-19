@@ -8,6 +8,6 @@ for i in range(len(s)):
     else:
         a.append(s[i])
 if d % 2 == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

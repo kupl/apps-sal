@@ -1,9 +1,8 @@
-n, size = map(int, input().split())
+(n, size) = map(int, input().split())
 queue = []
-head, tail = 0, 0
-
+(head, tail) = (0, 0)
 for i in range(n):
-    time, during = map(int, input().split())
+    (time, during) = map(int, input().split())
     while head != tail and time >= queue[head]:
         head += 1
     if tail - head - 1 < size:

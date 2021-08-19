@@ -1,7 +1,7 @@
 n = int(input())
 b = list(map(int, input().split()))
 dp = [[1] * n for i in range(n)]
-d, k = {}, 0
+(d, k) = ({}, 0)
 for i in range(n):
     if b[i] not in d:
         d[b[i]] = k

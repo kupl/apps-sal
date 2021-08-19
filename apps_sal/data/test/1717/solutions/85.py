@@ -10,4 +10,4 @@ n = int(n)
 ll = 2
 for i in range(3, n + 1):
     ll = lcm(ll, i)
-print((ll + 1))
+print(ll + 1)

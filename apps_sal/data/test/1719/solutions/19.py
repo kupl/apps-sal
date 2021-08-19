@@ -1,15 +1,8 @@
 import sys
 sys.setrecursionlimit(10000000)
-"""
-違反文字列
-AGC -> AGときたらCはNG
-GAC -> GAときたらCはNG
-ACG -> ACときたらGはNG
-AQGC-> A*GときたらCはNG
-AGQC-> AG*ときたらCはNG
-"""
+'\n違反文字列\nAGC -> AGときたらCはNG\nGAC -> GAときたらCはNG\nACG -> ACときたらGはNG\nAQGC-> A*GときたらCはNG\nAGQC-> AG*ときたらCはNG\n'
 n = int(input())
-p = 10**9 + 7
+p = 10 ** 9 + 7
 ok = ['A', 'G', 'C', 'T']
 ng = ['AGC', 'GAC', 'ACG']
 memo = [{} for i in range(n + 1)]
@@ -18,7 +11,7 @@ memo = [{} for i in range(n + 1)]
 def check(text):
     if text[1:] in ng:
         return 0
-    if (text[:2] == 'AG' and text[3] == 'C') or (text[0] == 'A' and text[2:] == 'GC'):
+    if text[:2] == 'AG' and text[3] == 'C' or (text[0] == 'A' and text[2:] == 'GC'):
         return 0
     return 1
 

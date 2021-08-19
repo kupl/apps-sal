@@ -23,7 +23,7 @@ def getlevel(num):
 
 
 def solve():
-    n, q = list(map(int, input().rstrip().split()))
+    (n, q) = list(map(int, input().rstrip().split()))
     powers = powersOfTwo()
     maxlevel = log2(n + 1) - 1
     for _ in range(q):

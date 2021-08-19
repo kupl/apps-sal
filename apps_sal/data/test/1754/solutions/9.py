@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 sh = list(map(int, input().split()))
 izb = list(map(int, input().split()))

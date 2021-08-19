@@ -2,7 +2,6 @@ s1 = input().split()
 length = int(s1[0])
 max_k = int(s1[1])
 s2 = input()
-
 arr = s2.split()
 start = 0
 end = 0
@@ -29,6 +28,4 @@ for i in range(length):
         start = s
         max_l = l
         end = i
-
-
 print(start + 1, end + 1)

@@ -7,9 +7,7 @@ for i in range(2, N + 1):
     a.append(ele)
     ele = 0
 b = a
-
 lcm = b[0]
 for i in b[1:]:
     lcm = lcm * i // gcd(lcm, i)
-
 print(lcm + 1)

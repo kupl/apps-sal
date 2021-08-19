@@ -8,6 +8,6 @@ for i in s:
         x.pop()
         x.pop()
 if ans % 2 == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

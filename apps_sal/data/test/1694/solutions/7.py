@@ -1,9 +1,8 @@
-n, m, s, f = list(map(int, input().split()))
-
-ans, p = '', 1
+(n, m, s, f) = list(map(int, input().split()))
+(ans, p) = ('', 1)
 if s < f:
     for i in range(m):
-        t, l, r = list(map(int, input().split()))
+        (t, l, r) = list(map(int, input().split()))
         if t > p:
             if t - p < f - s:
                 ans += 'R' * (t - p)
@@ -22,7 +21,7 @@ if s < f:
             ans += 'X'
 else:
     for i in range(m):
-        t, l, r = list(map(int, input().split()))
+        (t, l, r) = list(map(int, input().split()))
         if t > p:
             if t - p < s - f:
                 ans += 'L' * (t - p)

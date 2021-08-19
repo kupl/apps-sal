@@ -1,6 +1,5 @@
 import bisect
-
-a, b, q = map(int, input().split())
+(a, b, q) = map(int, input().split())
 s = []
 for i in range(a):
     s.append(int(input()))
@@ -9,12 +8,11 @@ t = []
 for i in range(b):
     t.append(int(input()))
 t.sort()
-
 for i in range(q):
     x = int(input())
     temp_s = bisect.bisect(s, x)
     temp_t = bisect.bisect(t, x)
-    temp = float("inf")
+    temp = float('inf')
     if temp_s == 0:
         num = (s[0],)
     elif temp_s == a:

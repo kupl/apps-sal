@@ -10,4 +10,4 @@ for i in range(len(children)):
         right.append(children[i])
 left.extend(reversed(right))
 for i in left:
-    print(i, end=" ")
+    print(i, end=' ')

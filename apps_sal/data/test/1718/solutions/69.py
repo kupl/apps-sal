@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
 index = A.index(1)
 ans = index // (k - 1) + (n - index - 1) // (k - 1)

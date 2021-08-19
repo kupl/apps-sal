@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 f = list(map(int, input().split()))
 f.sort(reverse=True)
 ans = 0

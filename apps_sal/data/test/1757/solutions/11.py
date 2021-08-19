@@ -8,10 +8,10 @@ d.add(1)
 for i in range(2, 1001):
     a[i] = a[i - 1] + a[i - 2]
     d.add(a[i])
-s = ""
+s = ''
 for i in range(1, n + 1):
     if i in d:
-        s += "O"
+        s += 'O'
     else:
-        s += "o"
+        s += 'o'
 print(s)

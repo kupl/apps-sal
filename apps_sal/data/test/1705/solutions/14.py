@@ -1,7 +1,7 @@
-'''input
+"""input
 4
 1 0 0 1
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -10,7 +10,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -24,13 +24,11 @@ n = ri(1)
 a = ri()
 one = 0
 two = 0
-
 for i in a:
     if i == 0:
         one += 1
     else:
         two += 1
-
 idx = -1
 for i in range(n):
     if a[i] == 0:

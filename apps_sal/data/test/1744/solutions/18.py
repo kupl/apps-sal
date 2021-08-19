@@ -1,5 +1,5 @@
 arr = list(map(int, input().split()))
-n, m = arr[0], arr[1]
+(n, m) = (arr[0], arr[1])
 s = str(input())
 a = [int(i) for i in s.split()]
 answers = []
@@ -38,5 +38,4 @@ for elem in a:
             max_val = elem
     answers.append(str(ans))
     k += 1
-
 print(' '.join(answers))

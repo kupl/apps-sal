@@ -17,24 +17,14 @@ def longest(n, k, a):
         if ans_r - ans_l < r - l:
             ans_r = r
             ans_l = l
-    return str(ans_l + 1) + " " + str(ans_r + 1)
+    return str(ans_l + 1) + ' ' + str(ans_r + 1)
 
 
 line_1 = list(map(int, input().split()))
 n = line_1[0]
 k = line_1[1]
 line_2 = list(map(int, input().split()))
-
 print(longest(n, k, line_2))
-"""
-5 5
-1 2 3 4 5
-"""
-"""
-9 3
-6 5 1 2 3 2 1 4 5
-"""
-"""
-3 1
-1 2 3
-"""
+'\n5 5\n1 2 3 4 5\n'
+'\n9 3\n6 5 1 2 3 2 1 4 5\n'
+'\n3 1\n1 2 3\n'

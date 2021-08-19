@@ -1,6 +1,5 @@
 import sys
 sys.setrecursionlimit(4100000)
-
 N = int(input())
 mod = 10 ** 9 + 7
 L = [{} for i in range(101)]
@@ -11,10 +10,10 @@ def check(txt):
         return False
     List = list(txt)
     for i in range(3):
-        List[i], List[i + 1] = List[i + 1], List[i]
+        (List[i], List[i + 1]) = (List[i + 1], List[i])
         if 'AGC' in ''.join(List):
             return False
-        List[i], List[i + 1] = List[i + 1], List[i]
+        (List[i], List[i + 1]) = (List[i + 1], List[i])
     return True
 
 

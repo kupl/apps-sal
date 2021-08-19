@@ -10,7 +10,7 @@ for i in range(2, N + 1):
             count += 1
         arr[j] = max(arr[j], count)
 ans = 1
-for j, v in enumerate(arr):
+for (j, v) in enumerate(arr):
     if v != 0:
         ans *= pow(j, v)
 ans += 1

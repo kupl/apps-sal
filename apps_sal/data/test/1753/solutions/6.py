@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 harmonies = []
 for i in range(m):
     harmonies.append(list(map(int, input().split())))

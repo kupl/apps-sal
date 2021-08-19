@@ -6,7 +6,7 @@ def lmi():
 
 
 def main():
-    N, K = lmi()
+    (N, K) = lmi()
     A = lmi()
     one_idx = A.index(1)
     L = one_idx

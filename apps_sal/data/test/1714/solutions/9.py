@@ -1,6 +1,5 @@
-
 def main():
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     for i in range(n):
         if k > 0:
             print(2 * i + 1, 2 * i + 2, end=' ')

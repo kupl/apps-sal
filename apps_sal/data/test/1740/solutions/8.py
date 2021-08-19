@@ -5,10 +5,7 @@
 3 1
 4 5
 """
-
 n = int(input())
-
-
 d = dict()
 point = dict()
 l = []
@@ -30,11 +27,11 @@ for pair in l:
         point[pair[1]] = pair[0]
         point[pair[0]] = pair[0]
         d[pair[0]] = [pair[0], pair[1]]
-    elif p0 and not p1:
+    elif p0 and (not p1):
         pp = get_point(pair[0])
         d[pp] += [pair[1]]
         point[pair[1]] = pp
-    elif p1 and not p0:
+    elif p1 and (not p0):
         pp = get_point(pair[1])
         d[pp] += [pair[0]]
         point[pair[0]] = pp
@@ -43,5 +40,4 @@ for pair in l:
         pp0 = get_point(pair[0])
         d[pp0] += d[pp1]
         point[pp1] = pp0
-
 print(' '.join(map(str, d[get_point(1)])))

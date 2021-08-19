@@ -1,5 +1,5 @@
 class UnionFind(object):
-    __slots__ = ["nodes"]
+    __slots__ = ['nodes']
 
     def __init__(self, n: int) -> None:
         self.nodes = [-1] * n
@@ -12,10 +12,9 @@ class UnionFind(object):
             return self.nodes[x]
 
     def unite(self, x: int, y: int) -> None:
-        root_x, root_y = self.get_root(x), self.get_root(y)
+        (root_x, root_y) = (self.get_root(x), self.get_root(y))
         if root_x != root_y:
-            bigroot, smallroot = \
-                (root_x, root_y) if self.nodes[root_x] < self.nodes[root_y] else (root_y, root_x)
+            (bigroot, smallroot) = (root_x, root_y) if self.nodes[root_x] < self.nodes[root_y] else (root_y, root_x)
             self.nodes[bigroot] += self.nodes[smallroot]
             self.nodes[smallroot] = bigroot
 
@@ -25,11 +24,10 @@ def __starting_point():
     n = int(input())
     queries = [tuple(map(int, l.split())) for l in sys.stdin]
     uf = UnionFind(n + 1)
-    get_root, unite = uf.get_root, uf.unite
+    (get_root, unite) = (uf.get_root, uf.unite)
     groups = {}
-
-    for x, y in queries:
-        x_root, y_root = get_root(x), get_root(y)
+    for (x, y) in queries:
+        (x_root, y_root) = (get_root(x), get_root(y))
         if x_root not in groups:
             groups[x_root] = [x]
         if y_root not in groups:
@@ -39,7 +37,6 @@ def __starting_point():
             groups[x_root].extend(groups[y_root])
         else:
             groups[y_root].extend(groups[x_root])
-
     print(*groups[get_root(1)])
 
 

@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 peps = list(map(int, input().split()))
 schs = list(map(int, input().split()))
 want = list(map(int, input().split()))
@@ -7,6 +7,6 @@ for i in range(n):
     ls[schs[i] - 1].append([peps[i], i])
 ans = k
 for sch in ls:
-    if (max(sch)[1] + 1) in want:
+    if max(sch)[1] + 1 in want:
         ans -= 1
 print(ans)

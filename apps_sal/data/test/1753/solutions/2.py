@@ -1,9 +1,7 @@
 s = input().split()
 n = int(s[0])
 m = int(s[1])
-
 col = []
-
 for i in range(n):
     col.append([i])
 t = n + 1

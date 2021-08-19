@@ -1,4 +1,4 @@
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 line = [tuple(map(int, input().split())) for i in range(M)]
 query = [tuple(map(int, input().split())) for i in range(Q)]
 dp = [[0 for i in range(N + 1)] for i in range(N + 1)]
@@ -10,5 +10,5 @@ for i in range(N):
 for i in range(N):
     for j in range(N):
         dp[i + 1][j + 1] += dp[i][j + 1]
-for p, q in query:
+for (p, q) in query:
     print(dp[q][q] - dp[q][p - 1] - dp[p - 1][q] + dp[p - 1][p - 1])

@@ -1,5 +1,5 @@
 import math
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 min_a = min(A)
 c = A.count(min_a)

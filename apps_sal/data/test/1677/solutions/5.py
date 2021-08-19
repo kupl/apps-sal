@@ -1,4 +1,5 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -9,4 +10,4 @@ for i in range(n):
     for j in range(i):
         dp[i][j] = max(dp[i][j], dp[j][p] + 1)
         p = j if arr[j] == arr[i] else p
-print(max(max(dp[i]) for i in range(n)) + 1)
+print(max((max(dp[i]) for i in range(n))) + 1)

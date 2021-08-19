@@ -11,10 +11,9 @@ def search(i, prefix):
         return 1
     elif prefix in dp[i]:
         return dp[i][prefix]
-
     ret = 0
     for c in 'ACGT':
-        if prefix[0] == 'A' and (prefix[1] == 'G' or prefix[2] == 'G') and c == 'C':
+        if prefix[0] == 'A' and (prefix[1] == 'G' or prefix[2] == 'G') and (c == 'C'):
             continue
         ret += search(i + 1, prefix[1:] + c)
     dp[i][prefix] = ret % mod

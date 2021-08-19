@@ -9,7 +9,6 @@ for i in range(n - 1):
     par[mps[i]] = par.get(mps[i], [])
     par[mps[i]].append(st)
     st += 1
-
 queue = [1]
 vis = [0] * (n + 1)
 ans = 1
@@ -22,5 +21,4 @@ while len(queue):
             vis[i] = 1
             if col[i - 1] != col[s - 1]:
                 ans += 1
-
 print(ans)

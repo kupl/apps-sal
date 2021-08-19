@@ -1,12 +1,10 @@
-
 import sys
 import threading
 from collections import defaultdict
-
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 adj = defaultdict(list)
 for _ in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     adj[a].append(b)
     adj[b].append(a)
 
@@ -29,8 +27,8 @@ def main():
 
 
 def __starting_point():
-    sys.setrecursionlimit(10**6)
-    threading.stack_size(10**8)
+    sys.setrecursionlimit(10 ** 6)
+    threading.stack_size(10 ** 8)
     t = threading.Thread(target=main)
     t.start()
     t.join()

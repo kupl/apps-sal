@@ -15,7 +15,6 @@ def spruce():
         if len(leafs) < 3:
             is_spruce = False
             break
-
     if is_spruce:
         print('Yes')
     else:

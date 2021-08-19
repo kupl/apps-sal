@@ -7,8 +7,8 @@ for x in arr:
     ans = gcd(ans, x)
 flag = False
 for x in arr:
-    flag |= (x == ans)
-if(flag):
+    flag |= x == ans
+if flag:
     print(ans)
 else:
     print(-1)

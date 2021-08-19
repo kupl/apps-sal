@@ -1,5 +1,5 @@
 def main():
-    n, t = map(int, input().split())
+    (n, t) = map(int, input().split())
     l = list(map(int, input().split()))
     start = stop = 0
     res = []

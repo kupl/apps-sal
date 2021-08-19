@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 c = list(map(int, input().split()))
@@ -11,7 +11,6 @@ for i in range(n):
 for i in range(m):
     lst[i].sort()
     lst[i] = lst[i][-1::-1]
-
     cnt = 0
     for j in range(1, len(lst[i])):
         if lst[i][j][1] + 1 in c:

@@ -1,12 +1,10 @@
 from collections import defaultdict
-
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 edges = [tuple(map(int, input().split())) for _ in range(n - 1)]
 chk = [False] * (n + 1)
 cnt = [1] * (n + 1)
 adj = defaultdict(list)
-
-for u, v in edges:
+for (u, v) in edges:
     adj[u].append(v)
     adj[v].append(u)
 
@@ -27,7 +25,6 @@ def dfs(y, x, adj):
                 order.append(v)
         if order:
             stack_order.append((u, order))
-
     while stack_order:
         u = stack_order.pop()
         for v in u[1]:
@@ -41,5 +38,4 @@ for i in adj[y]:
     if chk[i]:
         res = cnt[y] - cnt[i]
         break
-
-print(n * (n - 1) - (res * cnt[x]))
+print(n * (n - 1) - res * cnt[x])

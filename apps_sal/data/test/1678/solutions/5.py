@@ -1,10 +1,8 @@
 from bisect import bisect_left
-
 sum = [0] * 200005
 srt = []
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 tree = [0] * 200005
 
 
@@ -17,7 +15,6 @@ def get(x):
 
 
 def update(x):
-
     while x <= 200002:
         tree[x] += 1
         x += x & -x
@@ -29,25 +26,16 @@ for i in range(n):
     else:
         sum[i] = a[i]
     srt.append(sum[i])
-
 if 0 not in srt:
     srt.append(0)
-
 srt.sort()
-
 ans = 0
 update(bisect_left(srt, 0) + 1)
-
-
 for i in range(n):
     l = min(len(srt) - 1, bisect_left(srt, sum[i] - t))
-
     if srt[l] <= sum[i] - t:
         l = l + 1
-
     cnt = get(l)
     ans += i + 1 - cnt
-
     update(bisect_left(srt, sum[i]) + 1)
-
 print(ans)

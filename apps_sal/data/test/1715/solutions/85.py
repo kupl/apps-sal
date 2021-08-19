@@ -1,8 +1,7 @@
 import bisect
-A, B, Q = map(int, input().split())
-s = list(int(input()) for _ in range(A))
-t = list(int(input()) for _ in range(B))
-
+(A, B, Q) = map(int, input().split())
+s = list((int(input()) for _ in range(A)))
+t = list((int(input()) for _ in range(B)))
 for i in range(Q):
     ans = 10 ** 19
     x = int(input())
@@ -20,7 +19,6 @@ for i in range(Q):
             ktmp = min(ktmp, abs(s[stmp1 - j] - t[ttmp1]))
         total = abs(x - s[stmp1 - j]) + ktmp
         ans = min(ans, total)
-
     ttmp1 = bisect.bisect_left(t, x)
     for j in range(2):
         if ttmp1 == 0 and j == 1:

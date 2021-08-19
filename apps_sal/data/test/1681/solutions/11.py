@@ -1,4 +1,4 @@
-n, m = input(), input()
+(n, m) = (input(), input())
 ms = set(m)
 ans = 0
 for k in ms:

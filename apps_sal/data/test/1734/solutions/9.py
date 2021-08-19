@@ -16,7 +16,6 @@ for i in range(n):
             else:
                 m[k] = 1
     a.append(s)
-
 for s in a:
     ans = s
     for i in range(len(s)):

@@ -1,11 +1,11 @@
-n, b = list(map(int, input().split()))
+(n, b) = list(map(int, input().split()))
 tasks = []
 next_task = 0
 time = 0
 finish = [-1] * n
 for i in range(n):
-    t, d = list(map(int, input().split()))
-    while tasks and next_task < len(tasks) and time <= t:
+    (t, d) = list(map(int, input().split()))
+    while tasks and next_task < len(tasks) and (time <= t):
         time += tasks[next_task][1]
         finish[tasks[next_task][0]] = time
         next_task += 1
