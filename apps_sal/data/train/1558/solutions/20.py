@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     count = 0
     for i in range(0, r * c):
         ans = list()
@@ -11,5 +10,4 @@ for _ in range(int(input())):
             a = x % c
             b = x // c
             ans.append((a, b))
-
-        print(len(set(ans)), end=" ")
+        print(len(set(ans)), end=' ')

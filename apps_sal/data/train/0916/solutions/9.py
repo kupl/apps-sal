@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(a, b):
     if a == 0:
         return b
@@ -6,8 +5,7 @@ def gcd(a, b):
 
 
 T = int(input())
-while(T):
+while T:
     l = [int(k) for k in input().split()]
-    print(int((l[0] * l[1]) / gcd(l[0], l[1])))
-
+    print(int(l[0] * l[1] / gcd(l[0], l[1])))
     T -= 1

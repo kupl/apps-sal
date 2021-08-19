@@ -1,7 +1,5 @@
-#! python3
-
 import re
-dnaRegex = re.compile(r'T')
+dnaRegex = re.compile('T')
 
 
 def dna_to_rna(dna):

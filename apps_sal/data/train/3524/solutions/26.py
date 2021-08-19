@@ -1,9 +1,5 @@
 def dna_to_rna(dna):
-    # if dna="":
-    #    print('No entry value!')
-
     dna = dna.upper()
-
     if 'T' in dna:
         dnaList = list(dna)
         while 'T' in dnaList:
@@ -11,5 +7,4 @@ def dna_to_rna(dna):
         rna = ''.join(dnaList)
     else:
         rna = dna
-
     return rna

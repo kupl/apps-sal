@@ -1,4 +1,5 @@
 class Solution:
+
     def check(self, target, p1, s1, p2, s2):
         if p1 == target and p2 == target:
             return True
@@ -20,15 +21,13 @@ class Solution:
         counter = 0
         ln = len(arr)
         i = ln - 1
-        # print(arr)
         while i >= 0:
-            p2, s2 = arr[i]
+            (p2, s2) = arr[i]
             counter += 1
             j = i - 1
             while j >= 0:
-                p1, s1 = arr[j]
+                (p1, s1) = arr[j]
                 if not self.check(target, p1, s1, p2, s2):
-                    # print('not checked:', target, (p1, s1), (p2, s2))
                     break
                 j -= 1
             i = j

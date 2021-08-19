@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 l = []
 for i in range(0, t):
@@ -15,7 +14,6 @@ for i in range(0, t):
     for j in range(1, m + 1):
         for h in range(1, n + 1):
             f2.append((h, j))
-
     for k in range(0, n * m):
         if k == 0:
             print(n * m, end=' ')
@@ -24,13 +22,10 @@ for i in range(0, t):
             z = []
             e = 0
             while e * (k + 1) < n * m:
-
                 y.append(f1[e * (k + 1)])
                 z.append(f2[e * (k + 1)])
                 e = e + 1
-
             for x in z:
                 if x not in y:
                     y.append(x)
-
             print(len(y), end=' ')

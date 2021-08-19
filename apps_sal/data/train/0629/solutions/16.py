@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    r, g, b, m = list(map(int, input().split()))
+    (r, g, b, m) = list(map(int, input().split()))
     r = list(map(int, input().split()))
     g = list(map(int, input().split()))
     b = list(map(int, input().split()))
