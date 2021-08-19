@@ -1,7 +1,5 @@
 from math import ceil
-
-L = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-     "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+L = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
 
 
 def wallpaper(l, w, h):

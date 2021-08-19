@@ -25,7 +25,7 @@ def poss_edg_func(vert, edges):
 
 def make_spanning_tree(edges, t):
     temp = filtering(edges)
-    edg, vert = temp[0], temp[1]
+    (edg, vert) = (temp[0], temp[1])
     path = [eval(t)(edg, key=lambda x: x[1])]
     while len(path) != len(vert) - 1:
         used_vert = set([char for v in path for char in v[0]])

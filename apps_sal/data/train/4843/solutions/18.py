@@ -10,5 +10,4 @@ def choose_best_sum(t, k, ls):
         elif s < t:
             if t - closest > t - s:
                 closest = s
-
     return closest if closest else None

@@ -1,5 +1,5 @@
 def double_char(s):
-    lisp = ""
+    lisp = ''
     for char in s:
         lisp = lisp + char + char
     return lisp

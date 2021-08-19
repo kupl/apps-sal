@@ -1,5 +1,5 @@
 def double_char(s):
-    aç = ""
+    aç = ''
     for a in s:
         aç += a * 2
     return aç

@@ -1,4 +1,5 @@
 class Cat:
+
     def __init__(self, name='Chonky'):
         self.name = name
 

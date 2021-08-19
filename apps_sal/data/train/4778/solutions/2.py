@@ -9,5 +9,5 @@ def most_money(students):
         elif s.fives * 5 + s.tens * 10 + s.twenties * 20 == BillGatesKid.fives * 5 + BillGatesKid.tens * 10 + BillGatesKid.twenties * 20:
             NumOfStudents -= 1
             if NumOfStudents == 0:
-                return "all"
+                return 'all'
     return BillGatesKid.name

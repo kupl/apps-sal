@@ -1,8 +1,8 @@
 def inversa(s):
     large = 0
-    sInversa = ""
+    sInversa = ''
     index = -1
-    sLittle = ""
+    sLittle = ''
     for quantity in s:
         large += 1
     while large >= 1:
@@ -18,7 +18,7 @@ def inversa(s):
 
 
 def is_palindrome(s):
-    sPalindrome = ""
+    sPalindrome = ''
     compare = inversa(s)
     for lettersPalindrome in s:
         if 65 <= ord(lettersPalindrome) <= 90:

@@ -1,4 +1,5 @@
-class FileMaster():
+class FileMaster:
+
     def __init__(self, filepath):
         self.arr = filepath.split('/')
 

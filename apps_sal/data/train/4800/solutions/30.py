@@ -6,10 +6,4 @@ def hotpo(n):
     return counter
 
 
-'''
-if(number is even) number = number / 2
-if(number is odd) number = 3*number + 1
-make a function hotpo that takes a positive n as input
-and returns the number of times you need to perform this algorithm to get n = 1.
-
-'''
+'\nif(number is even) number = number / 2\nif(number is odd) number = 3*number + 1\nmake a function hotpo that takes a positive n as input\nand returns the number of times you need to perform this algorithm to get n = 1.\n\n'

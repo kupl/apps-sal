@@ -8,4 +8,4 @@ def solution(a, b):
         res.append(a)
         res.append(b)
         res.append(a)
-    return "".join(res)
+    return ''.join(res)

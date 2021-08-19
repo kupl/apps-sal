@@ -1,5 +1,5 @@
 def solution(a, b):
-    string = ""
+    string = ''
     if len(a) > len(b):
         string += b
         string += a

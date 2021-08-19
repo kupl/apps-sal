@@ -4,11 +4,10 @@ def solution(a, b):
         c.extend(b)
         c.extend(a)
         c.extend(b)
-        return (''.join(c))
+        return ''.join(c)
     if len(b) > len(a):
         c.extend(a)
         c.extend(b)
         c.extend(a)
-        return (''.join(c))
-
+        return ''.join(c)
     pass

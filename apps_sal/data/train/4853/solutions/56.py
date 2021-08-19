@@ -4,4 +4,4 @@ def double_char(s):
     for letter in l:
         res.append(letter)
         res.append(letter)
-    return "".join(res)
+    return ''.join(res)

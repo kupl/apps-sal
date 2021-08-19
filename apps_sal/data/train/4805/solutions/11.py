@@ -1,1 +1,2 @@
-def check(s, e): return e in s
+def check(s, e):
+    return e in s

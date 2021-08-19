@@ -1,5 +1,5 @@
 def diffs(bird1, bird2):
-    return sum(c1 != c2 for c1, c2 in zip(bird1, bird2))
+    return sum((c1 != c2 for (c1, c2) in zip(bird1, bird2)))
 
 
 def child(bird1, bird2):

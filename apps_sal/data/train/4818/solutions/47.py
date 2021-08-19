@@ -4,5 +4,5 @@ def solution(a, b):
     elif len(b) > len(a):
         result = a + b + a
     else:
-        result = ""
+        result = ''
     return result

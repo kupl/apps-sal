@@ -9,9 +9,8 @@ def longest_comb(arr, command):
         for l in lst:
             if not l:
                 u.append([a])
-            else:
-                if cond(l[-1], a):
-                    u.append(l + [a])
+            elif cond(l[-1], a):
+                u.append(l + [a])
             u.append(l)
         lst = u
     m_len = max(len(max(lst, key=len)), 3)

@@ -6,7 +6,7 @@ def new_avg(arr, average):
     for a in arr:
         nums_sum += a
         total_nums += 1
-    donation = ceil((average * (total_nums + 1)) - nums_sum)
+    donation = ceil(average * (total_nums + 1) - nums_sum)
     if donation > 0:
         return donation
     raise ValueError

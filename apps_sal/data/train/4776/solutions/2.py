@@ -1,8 +1,12 @@
-S, C = [1, 1], [0, 0]
+(S, C) = ([1, 1], [0, 0])
 
 
-def length_sup_u_k(n, k): return update(n) or sum(v >= k for v in S[:n])
-def comp(n): return update(n) or C[n - 1]
+def length_sup_u_k(n, k):
+    return update(n) or sum((v >= k for v in S[:n]))
+
+
+def comp(n):
+    return update(n) or C[n - 1]
 
 
 def update(n):

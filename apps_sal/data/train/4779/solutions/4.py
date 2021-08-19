@@ -8,7 +8,7 @@ def how_to_find_them(right_triangle):
     if not c:
         right_triangle['c'] = hypot(a, b)
     elif not b:
-        right_triangle['b'] = sqrt(c**2 - a**2)
+        right_triangle['b'] = sqrt(c ** 2 - a ** 2)
     else:
-        right_triangle['a'] = sqrt(c**2 - b**2)
+        right_triangle['a'] = sqrt(c ** 2 - b ** 2)
     return right_triangle

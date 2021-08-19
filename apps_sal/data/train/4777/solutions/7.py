@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def check(s, t):
-    return not s or any(check(s[d:], t - {d}) for d in range(max(map(len, t)) + 1) if s[:d] in t)
+    return not s or any((check(s[d:], t - {d}) for d in range(max(map(len, t)) + 1) if s[:d] in t))
 
 
 def mystery_range(s, n):

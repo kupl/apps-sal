@@ -7,7 +7,6 @@ def parse_float(string):
             except ValueError:
                 return None
         return arr
-
     try:
         return float(string)
     except ValueError:

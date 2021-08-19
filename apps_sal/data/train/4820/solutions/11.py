@@ -4,4 +4,4 @@ class Cat(Animal):
         self.cat_name = name
 
     def speak(self):
-        return f"{self.cat_name} meows."
+        return f'{self.cat_name} meows.'

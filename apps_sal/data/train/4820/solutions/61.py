@@ -1,8 +1,8 @@
 class Cat(Animal):
-    s = ""
+    s = ''
 
     def __init__(self, s):
         self.s = s
 
     def speak(self):
-        return self.s + " meows."
+        return self.s + ' meows.'

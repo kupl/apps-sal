@@ -5,7 +5,7 @@ def my_very_own_split(string, delimiter=None):
     if delimiter == '':
         raise ValueError('empty delimiter')
     if delimiter == None:
-        delimiter = '\s+'
+        delimiter = '\\s+'
     else:
         delimiter = re.escape(delimiter)
     pos = 0

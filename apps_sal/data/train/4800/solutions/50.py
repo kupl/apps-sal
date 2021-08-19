@@ -6,6 +6,6 @@ def hotpo(n):
         if n % 2 == 0:
             n = n / 2
         else:
-            n = (3 * n) + 1
+            n = 3 * n + 1
         x += 1
     return x

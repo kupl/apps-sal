@@ -5,6 +5,6 @@ def choose_best_sum(t, k, ls):
     if len(ls) > 0:
         combs = [sum(i) for i in list(it.combinations(ls, k)) if sum(i) <= t]
     try:
-        return(max(combs))
+        return max(combs)
     except:
-        return(None)
+        return None

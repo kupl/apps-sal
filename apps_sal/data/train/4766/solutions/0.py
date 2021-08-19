@@ -1,7 +1,7 @@
 def n_closestPairs_tonum(upper_lim, k):
-    square_lim = int((2 * upper_lim) ** .5) + 1
+    square_lim = int((2 * upper_lim) ** 0.5) + 1
     squares = [n * n for n in range(1, square_lim)]
-    p, s = [], set(squares)
+    (p, s) = ([], set(squares))
     for m in range(upper_lim - 1, 1, -1):
         for b in squares:
             if b >= m:

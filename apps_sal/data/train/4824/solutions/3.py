@@ -6,4 +6,4 @@ def get_min_max(seq):
             max = a
         if a < min:
             min = a
-    return min, max
+    return (min, max)

@@ -1,4 +1,5 @@
 class Cat(Animal):
+
     def __init__(self, meows):
         self.meows = meows
 

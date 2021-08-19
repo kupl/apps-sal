@@ -8,6 +8,6 @@ def count_find_num(primesL, limit):
         return []
     r = set(s)
     while len(s) > 0:
-        s = set(chain.from_iterable([p * n for p in primesL if p * n <= limit] for n in s))
+        s = set(chain.from_iterable(([p * n for p in primesL if p * n <= limit] for n in s)))
         r |= s
     return [len(r), max(r)]

@@ -1,1 +1,2 @@
-def spread(func, args): return func(*args)
+def spread(func, args):
+    return func(*args)

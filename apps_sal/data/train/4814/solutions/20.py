@@ -13,7 +13,7 @@ def is_palindrome(s):
     elif len(s) % 2 == 1:
         half2 = int(len(s) / 2)
         word_part_3 = s_low[:half2]
-        word_part_4 = s_low[(half2 + 1):][::-1]
+        word_part_4 = s_low[half2 + 1:][::-1]
         if word_part_3 == word_part_4:
             return True
         else:

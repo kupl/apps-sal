@@ -4,11 +4,11 @@ def is_palindrome(s):
     r = n - 1
     res = True
     s = s.lower()
-    if(n == 0 or n == 1):
+    if n == 0 or n == 1:
         return res
     else:
-        while(l < r):
-            if(s[l] != s[r]):
+        while l < r:
+            if s[l] != s[r]:
                 res = False
                 break
             l += 1

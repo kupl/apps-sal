@@ -10,5 +10,5 @@ def solution(a, b):
         c.append(b)
         c.append(a)
         c.append(b)
-    c = "".join(c)
+    c = ''.join(c)
     return c

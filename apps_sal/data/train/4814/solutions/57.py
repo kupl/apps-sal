@@ -1,7 +1,5 @@
 def is_palindrome(s):
-
-    l, r = 0, len(s) - 1
-
+    (l, r) = (0, len(s) - 1)
     while l < r:
         if s[l].lower() != s[r].lower():
             return False

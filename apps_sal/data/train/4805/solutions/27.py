@@ -5,4 +5,4 @@ def check(wordlist, elem):
         return False
 
 
-print(check(["when's", "the", "next", "Katathon?", 9, 7], "Kaathon?"))
+print(check(["when's", 'the', 'next', 'Katathon?', 9, 7], 'Kaathon?'))

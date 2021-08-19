@@ -1,9 +1,11 @@
 def longest_comb(arr, sign):
-    def comb(p): return [[(p, arr[p]), (p + j + 1, i)] for j, i in enumerate(arr[p + 1:]) if [arr[p] > i, arr[p] < i]['<' in sign]]
+
+    def comb(p):
+        return [[(p, arr[p]), (p + j + 1, i)] for (j, i) in enumerate(arr[p + 1:]) if [arr[p] > i, arr[p] < i]['<' in sign]]
     m = []
-    for i, j in enumerate(arr):
+    for (i, j) in enumerate(arr):
         r = comb(i)
-        for k, l in enumerate(r):
+        for (k, l) in enumerate(r):
             inner = comb(l[-1][0])
             if inner:
                 r[k].append(inner.pop()[-1])

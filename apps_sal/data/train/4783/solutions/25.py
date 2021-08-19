@@ -4,7 +4,7 @@ def convert_to_celsius(temperature):
 
 def weather_info(celsius):
     celsius = (celsius - 32) * (5 / 9)
-    if (celsius < 0):
-        return f"{celsius} is freezing temperature"
+    if celsius < 0:
+        return f'{celsius} is freezing temperature'
     else:
-        return f"{celsius} is above freezing temperature"
+        return f'{celsius} is above freezing temperature'

@@ -3,6 +3,7 @@ def compose(*func):
 
 
 class C:
+
     def __init__(self, func):
         self.func = list(func)[::-1]
 

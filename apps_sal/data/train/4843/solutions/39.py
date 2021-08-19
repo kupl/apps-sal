@@ -10,5 +10,4 @@ def choose_best_sum(t: int, k: int, ls: list) -> int:
         if combi_sum <= t and combi_sum > best_sum:
             best_set = combination
             best_sum = combi_sum
-
     return None if best_sum == 0 else best_sum

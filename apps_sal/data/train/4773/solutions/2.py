@@ -5,7 +5,7 @@ from collections import deque
 def count_find_num(primesL, limit):
     q = deque()
     q.append(reduce(lambda x, y: x * y, primesL))
-    Max, Count = 0, 0
+    (Max, Count) = (0, 0)
     while len(q) != 0:
         if q[0] <= limit:
             Count += 1

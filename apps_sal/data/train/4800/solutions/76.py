@@ -5,5 +5,4 @@ def hotpo(n):
             break
         n = n // 2 if not n % 2 else n * 3 + 1
         times += 1
-
     return times

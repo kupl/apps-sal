@@ -1,7 +1,6 @@
 from re import compile as reCompile
-
-SENTENCE = reCompile(r'[.!?]')
-SYLLABLE = reCompile(r'(?i)[aeiou]+')
+SENTENCE = reCompile('[.!?]')
+SYLLABLE = reCompile('(?i)[aeiou]+')
 
 
 def count(string, pattern):

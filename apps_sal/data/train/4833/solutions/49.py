@@ -1,7 +1,7 @@
 def replace_exclamation(s):
-    new = ""
+    new = ''
     for i in s:
-        if i.lower() not in "aeiou":
+        if i.lower() not in 'aeiou':
             new += i
         else:
             new += '!'

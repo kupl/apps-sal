@@ -1,5 +1,5 @@
-
 class User(object):
+
     def __init__(self, name, balance, checking_account):
         self.name = name
         self.balance = balance
@@ -9,16 +9,15 @@ class User(object):
         if amount > self.balance:
             raise ValueError
         self.balance -= amount
-        return "{} has {}.".format(self.name, self.balance)
+        return '{} has {}.'.format(self.name, self.balance)
 
     def check(self, other, amount):
         if amount > other.balance or not other.checking_account:
             raise ValueError
         other.balance -= amount
         self.balance += amount
-        return ("{} has {} and {} has {}."
-                .format(self.name, self.balance, other.name, other.balance))
+        return '{} has {} and {} has {}.'.format(self.name, self.balance, other.name, other.balance)
 
     def add_cash(self, amount):
         self.balance += amount
-        return "{} has {}.".format(self.name, self.balance)
+        return '{} has {}.'.format(self.name, self.balance)

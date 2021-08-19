@@ -1,7 +1,5 @@
 def double_char(s):
-    derp = ""
-
+    derp = ''
     for letters in s:
         derp += letters + letters
-
     return derp

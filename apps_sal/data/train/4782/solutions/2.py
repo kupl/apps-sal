@@ -2,6 +2,7 @@ import operator
 
 
 class Placeholder:
+
     def __init__(self, op=None, left=None, right=None):
         self.op = op
         self.left = left
@@ -9,10 +10,10 @@ class Placeholder:
 
     def eval(self, args):
         if self.op:
-            x, args = self.left.eval(args) if isinstance(self.left, Placeholder) else (self.left, args)
-            y, args = self.right.eval(args) if isinstance(self.right, Placeholder) else (self.right, args)
-            return self.op(x, y), args
-        return args[0], args[1:]
+            (x, args) = self.left.eval(args) if isinstance(self.left, Placeholder) else (self.left, args)
+            (y, args) = self.right.eval(args) if isinstance(self.right, Placeholder) else (self.right, args)
+            return (self.op(x, y), args)
+        return (args[0], args[1:])
 
     def __call__(self, *args):
         return self.eval(args)[0]

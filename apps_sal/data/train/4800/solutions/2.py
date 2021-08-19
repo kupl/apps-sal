@@ -1,4 +1,5 @@
 def hotpo(n):
+
     def even_odd(m):
         return [3 * m + 1, m / 2][m % 2 == 0]
     c = 0

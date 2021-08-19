@@ -5,4 +5,4 @@ def longest_comb(a, cmd):
 
 
 def comb(a, op):
-    return [[e] for e in a] + [[v] + c for i, v in enumerate(a) for c in comb([e for e in a[i:] if op(v, e)], op)]
+    return [[e] for e in a] + [[v] + c for (i, v) in enumerate(a) for c in comb([e for e in a[i:] if op(v, e)], op)]

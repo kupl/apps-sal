@@ -1,6 +1,6 @@
 def interpreter(tape):
-    stack, output = [0], ''
-    i, n = 0, len(tape)
+    (stack, output) = ([0], '')
+    (i, n) = (0, len(tape))
     while i < n:
         cmd = tape[i]
         if cmd == '^':

@@ -5,4 +5,4 @@ def parse_float(string):
         return None
 
 
-parse_float("string")
+parse_float('string')

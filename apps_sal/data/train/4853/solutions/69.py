@@ -1,5 +1,5 @@
 def double_char(s):
-    word = ""
+    word = ''
     for char in s:
         char = char * 2
         word += char

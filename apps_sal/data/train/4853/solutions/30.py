@@ -1,6 +1,6 @@
 def double_char(s):
-    z = ""
+    z = ''
     for i in range(len(s)):
-        z += (s[i])
-        z += (s[i])
+        z += s[i]
+        z += s[i]
     return z

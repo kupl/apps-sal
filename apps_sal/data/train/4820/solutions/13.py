@@ -1,5 +1,6 @@
 class Animal:
-    def __init__(self, name, voice="meows"):
+
+    def __init__(self, name, voice='meows'):
         if name == 'noise':
             self.voice = 'makes a noise'
         else:
@@ -7,7 +8,7 @@ class Animal:
         self.name = name
 
     def speak(self):
-        return f"{self.name} {self.voice}."
+        return f'{self.name} {self.voice}.'
 
 
 class Cat(Animal):

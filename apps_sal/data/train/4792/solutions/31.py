@@ -4,4 +4,4 @@ def parse_float(string):
         if True:
             return float(string)
     except:
-        return (None)
+        return None

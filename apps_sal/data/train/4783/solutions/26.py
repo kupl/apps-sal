@@ -2,9 +2,8 @@ def weather_info(temp):
     c = convert_to_celsius(temp)
     result = f'{c} is above freezing temperature'
     result2 = f'{c} is freezing temperature'
-    if (c > 0):
+    if c > 0:
         return result
-
     else:
         return result2
 

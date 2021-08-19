@@ -10,7 +10,7 @@ def backwardsPrime(start, stop):
 def isPrime(input):
     if input % 2 == 0:
         return False
-    for x in range(3, int(input**0.5) + 1, 2):
+    for x in range(3, int(input ** 0.5) + 1, 2):
         if input % x == 0:
             return False
     else:
@@ -18,10 +18,10 @@ def isPrime(input):
 
 
 def isReversePrime(input):
-    tempstr = ""
+    tempstr = ''
     iptemp = str(input)
-    i = (len(iptemp) - 1)
-    while(i >= 0):
+    i = len(iptemp) - 1
+    while i >= 0:
         tempstr += iptemp[i]
         i = i - 1
     temp = 0

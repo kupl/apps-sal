@@ -1,23 +1,32 @@
 def relations(f, p):
-    def same(a, b): return a(p[0], f) == b(p[1], f)
+
+    def same(a, b):
+        return a(p[0], f) == b(p[1], f)
     if same(ID, P):
-        return "Daughter"
+        return 'Daughter'
     elif same(P, ID):
-        return "Mother"
+        return 'Mother'
     elif same(GP, ID):
-        return "Grandmother"
+        return 'Grandmother'
     elif same(ID, GP):
-        return "Granddaughter"
+        return 'Granddaughter'
     elif same(P, P):
-        return "Sister"
+        return 'Sister'
     elif same(P, GP):
-        return "Niece"
+        return 'Niece'
     elif same(GP, P):
-        return "Aunt"
+        return 'Aunt'
     elif same(GP, GP):
-        return "Cousin"
+        return 'Cousin'
 
 
-def ID(child, _): return child
-def P(child, f): return next((p for p, c in f if c == child), None)
-def GP(child, f): return P(P(child, f), f)
+def ID(child, _):
+    return child
+
+
+def P(child, f):
+    return next((p for (p, c) in f if c == child), None)
+
+
+def GP(child, f):
+    return P(P(child, f), f)

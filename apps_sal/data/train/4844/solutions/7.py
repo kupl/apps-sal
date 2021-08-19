@@ -4,9 +4,8 @@ def get_password(grid, directions):
     pwd = ''
     for ele in grid:
         if 'x' in ele:
-            row_index, column_index = grid.index(ele), ele.index('x')
+            (row_index, column_index) = (grid.index(ele), ele.index('x'))
             break
-
     for direction in directions:
         if 't' in direction:
             column_index += axis[direction]

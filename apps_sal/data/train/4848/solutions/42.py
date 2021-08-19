@@ -5,5 +5,4 @@ def char_freq(message):
             char[i] += 1
         else:
             char[i] = 1
-
     return char

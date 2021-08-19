@@ -1,5 +1,5 @@
 def mastermind(game):
-    colors = ["Red", "Blue", "Green", "Orange", "Purple", "Yellow"]
+    colors = ['Red', 'Blue', 'Green', 'Orange', 'Purple', 'Yellow']
     my_choice = [random.choice(colors), random.choice(colors), random.choice(colors), random.choice(colors)]
     answer = game.check(my_choice)
     if answer == ['Black', 'Black', 'Black', 'Black']:

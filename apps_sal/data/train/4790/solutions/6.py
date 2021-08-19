@@ -7,7 +7,7 @@ def clean_mean(sample, cutoff):
         a = len(sample)
         total = sum(sample)
         mean = total / len(sample)
-        new_list = [(i - mean)**2 for i in sample]
+        new_list = [(i - mean) ** 2 for i in sample]
         total_new_list = sum(new_list)
         sd = math.sqrt(total_new_list / len(sample))
         sample = [i for i in sample if i < cutoff * sd + mean and i > mean - cutoff * sd]

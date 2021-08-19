@@ -6,7 +6,7 @@ def longest_comb(arr, command):
     if arr == sorted(arr, reverse=reverse) and len(arr) == len(set(arr)):
         return arr
     n = len(arr) - 1
-    while(n > 2):
+    while n > 2:
         r = []
         for c in combinations(range(0, len(arr)), n):
             a = [arr[i] for i in c]

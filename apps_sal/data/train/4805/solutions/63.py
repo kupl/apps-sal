@@ -6,7 +6,6 @@ def check(seq, element):
             flag.append(1)
         else:
             flag.append(0)
-
     if sum(flag) > 0:
         return True
     else:
