@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     sum = 0
     y1 = y
     while y1 <= x:

@@ -1,19 +1,10 @@
-''' PROBLEM A  '''
-
-
-'''   PROBLEM B   '''
-
-
-'''   PROBLEM C   '''
-
-
-'''   PROBLEM D    '''
-
-
+""" PROBLEM A  """
+'   PROBLEM B   '
+'   PROBLEM C   '
+'   PROBLEM D    '
 n = int(input())
 for i in range(0, n):
     p = input().rstrip().split(' ')
-    # print(int(p[0]) * int(p[1]))
     A = int(p[0])
     B = int(p[1])
     C = A // B
@@ -21,7 +12,7 @@ for i in range(0, n):
     if C <= 10:
         M = 1
         ans = 0
-        while(C):
+        while C:
             W = list(str(B * M))
             M += 1
             ans += int(W[len(W) - 1])
