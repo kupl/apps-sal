@@ -1,13 +1,11 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         degree_cache = {}
 
         def find_degree(n, degree=0):
             if n == 1:
                 return degree
-            # if n in degree_cache:
-            #     return degree_cache[n]
-
             if n % 2 == 0:
                 degree = find_degree(n // 2, degree + 1)
             else:

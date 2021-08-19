@@ -1,9 +1,8 @@
 def cookie(x):
-    # Good Luck
     if type(x) == type('x'):
-        name = "Zach"
+        name = 'Zach'
     elif type(x) == type(42) or type(x) == type(3.14):
-        name = "Monica"
+        name = 'Monica'
     else:
-        name = "the dog"
-    return "Who ate the last cookie? It was %s!" % name
+        name = 'the dog'
+    return 'Who ate the last cookie? It was %s!' % name

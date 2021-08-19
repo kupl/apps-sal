@@ -1,4 +1,3 @@
-# https://www.codechef.com/problems/BIT2B
 import math
 import bisect
 t = int(input())
@@ -15,10 +14,8 @@ while t != 0:
     for i in range(1, n):
         a_start_time[i] = sum_candies / rate
         sum_candies += candies[i]
-
     for i in range(n - 2, -1, -1):
         b_start_time[i] = b_start_time[i + 1] + candies[i + 1]
-
     a_count = 0
     b_count = 0
     if n == 1:
@@ -28,9 +25,9 @@ while t != 0:
         print(1, 1)
         continue
     for i in range(n):
-        if(a_start_time[i] < b_start_time[i]):
+        if a_start_time[i] < b_start_time[i]:
             a_count += 1
-        elif(b_start_time[i] == a_start_time[i]):
-            if(a_count >= n - a_count - 1):
+        elif b_start_time[i] == a_start_time[i]:
+            if a_count >= n - a_count - 1:
                 a_count += 1
     print(a_count, n - a_count)

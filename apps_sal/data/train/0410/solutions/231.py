@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         memo = {}
         q = []
@@ -15,14 +16,10 @@ class Solution:
                     else:
                         cal = 3 * num + 1
                     memo[num] = cal
-
                 num = memo[num]
                 count += 1
-
             heapq.heappush(q, (count, tmp))
-
         while k > 0:
             item = heapq.heappop(q)
-            # print(item)
             k -= 1
         return item[1]

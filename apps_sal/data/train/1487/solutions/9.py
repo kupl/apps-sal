@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -15,7 +14,7 @@ for _ in range(t):
             if t1 < t2:
                 c1 += 1
             elif t1 == t2:
-                if i >= (n - i) - 1:
+                if i >= n - i - 1:
                     c1 += 1
                 break
             else:

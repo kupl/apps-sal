@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -9,7 +8,7 @@ for _ in range(t):
         continue
     else:
         sum1 = sum(a)
-        lim = x * (int((sum1 / (x + 1))))
+        lim = x * int(sum1 / (x + 1))
         sumt = 0
         f = -1
         c1 = 0
@@ -18,15 +17,13 @@ for _ in range(t):
             sumt += a[f]
             c1 += 1
         c1 = c1 - 1
-        # print(f,c1)
         for i in range(f, n - 1):
             t1 = sum(a[:i]) / x
             t2 = sum(a[i + 1:])
-            # print(c1,i,t1,t2)
             if t1 < t2:
                 c1 += 1
             elif t1 == t2:
-                if i >= (n - i) - 1:
+                if i >= n - i - 1:
                     c1 += 1
                 break
             else:

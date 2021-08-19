@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         count = 0
         answers = []
@@ -16,11 +17,5 @@ class Solution:
                     number = 3 * number + 1
                     count = count + 1
             memo[original] = count
-
         sort_memo = sorted(list(memo.items()), key=lambda x: x[1], reverse=False)
         return sort_memo[k - 1][0]
-
-
-# create a range from lo to hi
-# while k does not equal 1 do the formula
-# each tiomke add 1 to count

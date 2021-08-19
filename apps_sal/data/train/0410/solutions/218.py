@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.cache = {1: 0, 2: 1, 3: 7, 4: 2, 5: 5, 6: 8, 7: 16, 8: 3}
 
@@ -26,7 +27,6 @@ class Solution:
         else:
             n = n // 8 * 27 + 26
             steps = 6
-        # if n in self.cache.keys():
         if n <= 8:
             return self.cache[n] + steps
         else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
 
         def getPowerValue(num):
@@ -10,7 +11,5 @@ class Solution:
                     num = 3 * num + 1
                 num_steps += 1
             return num_steps
-
         powervalues = sorted([(i, getPowerValue(i)) for i in range(lo, hi + 1)], key=lambda x: x[1])
-        # print(powervalues)
         return powervalues[k - 1][0]
