@@ -1,11 +1,9 @@
-# cook your dish here
 n = int(input())
 edges = []
 for i in range(n - 1):
-    a, b, c = map(int, input().strip().split())
+    (a, b, c) = map(int, input().strip().split())
     edges.append((c, a - 1, b - 1))
 edges.sort()
-
 parent = [-1] * n
 
 
@@ -21,7 +19,7 @@ def find(n):
 total = 0
 num = 0
 den = 0
-for c, a, b in edges:
+for (c, a, b) in edges:
     a = find(a)
     b = find(b)
     assert a != b
@@ -34,5 +32,4 @@ for c, a, b in edges:
     else:
         parent[a] += parent[b]
         parent[b] = a
-
-print("%.11f" % (total - num / den))
+print('%.11f' % (total - num / den))

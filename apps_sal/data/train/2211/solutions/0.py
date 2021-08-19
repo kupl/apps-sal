@@ -1,12 +1,13 @@
-
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
-def mii(): return list(map(int, input().split()))
+
+
+def mii():
+    return list(map(int, input().split()))
 
 
 for _ in range(int(input())):
-    n, x = mii()
+    (n, x) = mii()
     has = 0
     a = 0
     for i in mii():
