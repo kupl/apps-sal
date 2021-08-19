@@ -1,7 +1,8 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        dp = [len(arr) + 1] * len(arr)  # min valid subarray length for arr[:i + 1]
-        table = {0: -1}  # key: prefix sum, value: latest index
+        dp = [len(arr) + 1] * len(arr)
+        table = {0: -1}
         s = 0
         min_sum = len(arr) + 1
         for i in range(len(arr)):
@@ -13,9 +14,7 @@ class Solution:
                 dp[i] = min(dp[i], length)
                 if length <= i:
                     min_sum = min(min_sum, length + dp[i - length])
-
             table[s] = i
-
         if min_sum == len(arr) + 1:
             return -1
         else:

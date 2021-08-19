@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         if not arr:
             return 0
@@ -7,7 +8,7 @@ class Solution:
         presum = 0
         indexes = {0: -1}
         res = float('inf')
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             presum += a
             if i > 0:
                 dp[i] = dp[i - 1]
@@ -17,8 +18,5 @@ class Solution:
                 if dp[idx] != float('inf'):
                     res = min(res, l + dp[idx])
                 dp[i] = min(dp[i], l)
-
             indexes[presum] = i
-        # print(indexes)
-        # print(dp)
         return res if res < float('inf') else -1

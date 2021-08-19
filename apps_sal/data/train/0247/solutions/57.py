@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         length = len(arr)
         cumulative = [0] * length
@@ -8,47 +9,30 @@ class Solution:
         for i in range(length):
             s = s + arr[i]
             cumulative[i] = s
-
-            sr += arr[(length - 1) - i]
+            sr += arr[length - 1 - i]
             reverse_cumulative[i] = sr
-
         d = {0: -1}
         dr = {0: -1}
-
         forward_vals = [math.inf] * length
         backward_vals = [math.inf] * length
         best1 = math.inf
         best2 = math.inf
         i = 0
-
         while i < length:
             d[cumulative[i]] = i
-
             dr[reverse_cumulative[i]] = i
-
-            if (cumulative[i] - target) in d:
-                #    print(\"found\",cumulative[i]-target,\"!\")
+            if cumulative[i] - target in d:
                 l = i - d[cumulative[i] - target]
                 best1 = min(best1, l)
-
             forward_vals[i] = best1
-
-            #   print(\"the subarray with sum=target is\",(start+1,i))
-            if (reverse_cumulative[i] - target) in dr:
+            if reverse_cumulative[i] - target in dr:
                 l = i - dr[reverse_cumulative[i] - target]
                 best2 = min(best2, l)
-
             backward_vals[i] = best2
-
             i += 1
-       # print(cumulative,reverse_cumulative)
-        # print(d,dr)
-        # print(forward_vals,backward_vals)
         best1 = math.inf
         for i in range(len(forward_vals) - 1):
-            best1 = min(best1, forward_vals[i] + backward_vals[(length - 2) - i])
-
+            best1 = min(best1, forward_vals[i] + backward_vals[length - 2 - i])
         if best1 == math.inf:
             return -1
         return best1
-        # print(d)

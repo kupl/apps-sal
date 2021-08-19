@@ -1,9 +1,8 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # prefix[i] is the min len of subarray with sum in arr[:i]
-        # suffix[i] is the min len of subarray with sum in arr[i:]
-        prefix, suffix = [float('inf')] * len(arr), [float('inf')] * len(arr)
-        curSum, l = 0, 0
+        (prefix, suffix) = ([float('inf')] * len(arr), [float('inf')] * len(arr))
+        (curSum, l) = (0, 0)
         for r in range(1, len(arr)):
             prefix[r] = prefix[r - 1]
             curSum += arr[r - 1]
@@ -12,7 +11,7 @@ class Solution:
                     prefix[r] = min(prefix[r], r - l)
                 curSum -= arr[l]
                 l += 1
-        curSum, r = 0, len(arr)
+        (curSum, r) = (0, len(arr))
         for l in range(len(arr) - 1, 0, -1):
             if l < len(arr) - 1:
                 suffix[l] = suffix[l + 1]
@@ -22,7 +21,6 @@ class Solution:
                     suffix[l] = min(suffix[l], r - l)
                 curSum -= arr[r - 1]
                 r -= 1
-
         res = len(arr) + 1
         for i in range(1, len(arr) - 1):
             res = min(res, prefix[i] + suffix[i])
