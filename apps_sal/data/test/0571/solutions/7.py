@@ -14,7 +14,7 @@ def findbal(a, th=0):
     return b
 
 
-can = s[0] != ')' and s[-1] != '(' and (n % 2) == 0
+can = s[0] != ')' and s[-1] != '(' and (n % 2 == 0)
 if can:
     s[0] = '('
     s[-1] = ')'
@@ -29,8 +29,7 @@ if can:
             s[i] = '(' if q > 0 else ')'
             q -= 1
     can = findbal(s[:-1], 1) == 1
-
 if can:
-    print("".join(s))
+    print(''.join(s))
 else:
-    print(":(")
+    print(':(')

@@ -9,5 +9,4 @@ def solve(date1, date2):
 
 date1 = input()
 date2 = input()
-
 solve(date1.split(':'), date2.split(':'))

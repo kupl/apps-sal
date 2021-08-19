@@ -1,6 +1,6 @@
 def main():
     from operator import eq
-    n, l, k = int(input()), [], 0
+    (n, l, k) = (int(input()), [], 0)
     if n < 2:
         print(6)
         return

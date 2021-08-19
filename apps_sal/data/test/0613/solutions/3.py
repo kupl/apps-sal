@@ -1,5 +1,5 @@
 def main():
-    t, a, b = list(map(int, input().split()))
+    (t, a, b) = list(map(int, input().split()))
     if t == 1:
         if a == 1:
             return 'inf' if b == 1 else 0
@@ -17,9 +17,9 @@ def main():
     if a == b:
         return 1
     if t < a < b:
-        l, x = [], b
+        (l, x) = ([], b)
         while x:
-            x, y = divmod(x, a)
+            (x, y) = divmod(x, a)
             l.append(y)
         x = 0
         for c in reversed(l):

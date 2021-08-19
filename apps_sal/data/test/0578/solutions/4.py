@@ -1,5 +1,5 @@
-p, q = input().split('e')
-a, b = p.split('.')
+(p, q) = input().split('e')
+(a, b) = p.split('.')
 b += '0' * 150
 d = int(q)
 a = (a + b[:d]).lstrip('0')

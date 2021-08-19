@@ -1,5 +1,4 @@
 y = int(input())
-
 d = 1
 
 
@@ -11,17 +10,14 @@ def is_v(year):
 
 
 v = is_v(y)
-
 while True:
     y += 1
     if is_v(y):
         d += 2
     else:
         d += 1
-
     if d > 7:
         d -= 7
-
     if d == 1 and is_v(y) == v:
         print(y)
         break

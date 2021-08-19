@@ -1,7 +1,5 @@
 import math
-
-l, r = [int(x)for x in input().split(' ')]
-
+(l, r) = [int(x) for x in input().split(' ')]
 if r - l < 2:
     print(-1)
     quit()
@@ -9,7 +7,7 @@ if r - l < 2:
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -19,5 +17,4 @@ for a in range(l, r + 1):
             if gcd(a, c) != 1 and gcd(b, c) == 1:
                 print(a, b, c)
                 quit()
-
 print(-1)

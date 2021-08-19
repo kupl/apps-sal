@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-ans = "Second"
+ans = 'Second'
 for i in a:
     if i % 2 != 0:
-        ans = "First"
+        ans = 'First'
         break
 print(ans)

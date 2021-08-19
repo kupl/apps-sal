@@ -1,5 +1,6 @@
-class Combination():
-    def __init__(self, n, mod=10**9 + 7):
+class Combination:
+
+    def __init__(self, n, mod=10 ** 9 + 7):
         self.mod = mod
         self.fac = [1] * (n + 1)
         for i in range(1, n + 1):
@@ -25,8 +26,10 @@ class Combination():
 
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, m, k = map(int, input().split())
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, m, k) = map(int, input().split())
     mod = 998244353
     c = Combination(n, mod)
     ans = 0

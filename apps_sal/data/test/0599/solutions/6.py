@@ -1,6 +1,6 @@
 def f(s):
     at = -1
-    for i, v in enumerate(s):
+    for (i, v) in enumerate(s):
         if v == '@':
             at = i
             continue

@@ -14,5 +14,5 @@ for i in range(n):
         for k in range(i, j + 1):
             ctx += L[k][1]
             cty += L[k][2]
-        ansL.append((ctx**2 + cty**2)**0.5)
+        ansL.append((ctx ** 2 + cty ** 2) ** 0.5)
 print(max(ansL))

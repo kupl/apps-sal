@@ -12,15 +12,12 @@ def solve(arr, n):
 
 
 n = int(input())
-
 chars = []
 while len(chars) < n:
     s = input()
     chars.append(list(s))
-
 L = sum(chars, [])
 amount = set(sum(chars, []))
-
 if len(amount) == 2 and L.count(L[0]) == n * 2 - 1:
     print(solve(chars, n))
 else:

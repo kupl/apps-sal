@@ -1,4 +1,4 @@
-r, g, b = map(int, input().split())
+(r, g, b) = map(int, input().split())
 ans = 0
 if 0 in [r, g, b]:
     ans = r // 3 + g // 3 + b // 3

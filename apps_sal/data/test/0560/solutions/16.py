@@ -16,5 +16,4 @@ for i in range(c):
         if a[j][i] == 'S':
             col -= 1
             break
-
 print(row * c + col * r - col * row)

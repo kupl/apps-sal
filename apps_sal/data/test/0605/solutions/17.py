@@ -1,14 +1,13 @@
-
 def point(p, t):
     return max(3 * p / 10, p - p / 250 * t)
 
 
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 mi = point(a, c)
 va = point(b, d)
 if mi > va:
-    print("Misha")
+    print('Misha')
 elif va > mi:
-    print("Vasya")
+    print('Vasya')
 else:
-    print("Tie")
+    print('Tie')

@@ -3,11 +3,11 @@ s = [int(i) for i in input().split()]
 t = 0
 for i in s:
     if i - t < 0:
-        print("NO")
+        print('NO')
         break
     t = (i - t) % 2
 else:
     if t:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

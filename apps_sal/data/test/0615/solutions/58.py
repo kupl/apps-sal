@@ -9,7 +9,6 @@ def main():
     F[0] = A[0]
     for b in range(1, n):
         F[b] = F[b - 1] + A[b]
-
     res = [0] * 4
     data = [10 ** 18] * 2
     ex = [0] * 4

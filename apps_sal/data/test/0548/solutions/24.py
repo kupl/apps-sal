@@ -10,10 +10,9 @@ for i in seq:
     else:
         even += 1
         tot += i
-if(tot % 2):
-    print("First")
+if tot % 2:
+    print('First')
+elif odd:
+    print('First')
 else:
-    if(odd):
-        print("First")
-    else:
-        print("Second")
+    print('Second')

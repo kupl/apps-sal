@@ -7,6 +7,6 @@ for i in range(len(a)):
     if a[i] > 3:
         cnt += 1
     else:
-        ans += (cnt // 3)
+        ans += cnt // 3
         cnt = 0
 print(ans)

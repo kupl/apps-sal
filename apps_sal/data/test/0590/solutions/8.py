@@ -6,12 +6,10 @@ cnt = [0 for _ in range(n + 1)]
 must = [False for _ in range(n + 1)]
 for x in arr:
     cnt[x] += 1
-
 que = []
 for i in range(1, n + 1):
     if cnt[i] == 0:
         que.append(i)
-
 cur = 0
 for i in range(n):
     x = arr[i]
@@ -22,8 +20,6 @@ for i in range(n):
             cur += 1
         else:
             must[x] = True
-
-
 print(cur)
 for x in arr:
     print(x, end=' ')

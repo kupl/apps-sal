@@ -1,11 +1,11 @@
 for t in range(int(input())):
-    p, f = list(map(int, input().split()))
-    cs, cw = list(map(int, input().split()))
-    s, w = list(map(int, input().split()))
+    (p, f) = list(map(int, input().split()))
+    (cs, cw) = list(map(int, input().split()))
+    (s, w) = list(map(int, input().split()))
     res = 0
     if s > w:
-        s, w = w, s
-        cs, cw = cw, cs
+        (s, w) = (w, s)
+        (cs, cw) = (cw, cs)
     for ns1 in range(cs + 1):
         if ns1 * s > p:
             continue

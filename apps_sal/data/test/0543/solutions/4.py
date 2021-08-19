@@ -4,7 +4,7 @@ __author__ = 'Think'
 def f(k):
     if k == 0:
         return 0
-    elif (k % 2) == 1:
+    elif k % 2 == 1:
         return 1
     else:
         return 2
@@ -21,8 +21,8 @@ for i in teams:
             break
         else:
             i -= 1
-    coupon = ((i % 2) == 1)
-if (not coupon) and working:
-    print("YES")
+    coupon = i % 2 == 1
+if not coupon and working:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

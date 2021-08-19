@@ -12,17 +12,13 @@ def tot_days(year):
 
 
 year = int(input())
-
 first_day = 0
 tot = tot_days(year)
-
 days = first_day
 cyear = year
-
 while True:
     days = (days + tot_days(cyear)) % 7
     cyear += 1
-
     if first_day == days and tot == tot_days(cyear):
         print(cyear)
         break

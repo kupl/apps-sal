@@ -5,11 +5,11 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     d = {}
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         d.setdefault(x, []).append(i)
     s = []
     c = {}
-    for k, v in list(d.items()):
+    for (k, v) in list(d.items()):
         s.extend(v)
         c[k] = len(v)
     s.sort()
@@ -18,7 +18,7 @@ def main():
     ans = 0
     for i in s:
         v = a[i]
-        if (c[v] == 1 or ava[0] > v) and not v in killed:
+        if (c[v] == 1 or ava[0] > v) and (not v in killed):
             killed.add(v)
         else:
             a[i] = ava.popleft()

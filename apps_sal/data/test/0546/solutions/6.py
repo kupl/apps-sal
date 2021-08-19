@@ -27,12 +27,12 @@ for i in range(n):
             if not check(mask[j], s[j]):
                 accept = 0
         if not accept:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')
     else:
         if len(mask) - 1 > len(s):
-            print("NO")
+            print('NO')
             continue
         for j in range(len(mask)):
             if mask[j] != '*':
@@ -55,12 +55,12 @@ for i in range(n):
         if not accept:
             print('NO')
             continue
-        if (len(s) + 1 == len(mask)):
+        if len(s) + 1 == len(mask):
             print('YES')
             continue
         for j in range(l, r + 1):
             for k in range(len(good)):
-                if (good[k] == s[j]):
+                if good[k] == s[j]:
                     accept = 0
         if not accept:
             print('NO')

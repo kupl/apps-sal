@@ -2,7 +2,7 @@ import sys
 n = int(sys.stdin.readline().replace('\n', ''))
 a = [int(x) for x in sys.stdin.readline().replace('\n', '').split(' ')]
 ok = True
-for day, teams in enumerate(a):
+for (day, teams) in enumerate(a):
     if teams < 0:
         sys.stdout.write('NO')
         ok = False

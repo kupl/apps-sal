@@ -17,11 +17,10 @@ for i in range(n):
             c[a[i]] -= 1
             a[i] = d[j]
             j += 1
+        elif b[a[i]] != 0:
+            c[a[i]] -= 1
+            a[i] = d[j]
+            j += 1
         else:
-            if b[a[i]] != 0:
-                c[a[i]] -= 1
-                a[i] = d[j]
-                j += 1
-            else:
-                b[a[i]] += 1
+            b[a[i]] += 1
 print(*a)

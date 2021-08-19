@@ -1,10 +1,10 @@
 def solve():
-    p, f = map(int, input().split())
-    cnts, cntw = map(int, input().split())
-    s, w = map(int, input().split())
+    (p, f) = map(int, input().split())
+    (cnts, cntw) = map(int, input().split())
+    (s, w) = map(int, input().split())
     if s > w:
-        s, w = w, s
-        cnts, cntw = cntw, cnts
+        (s, w) = (w, s)
+        (cnts, cntw) = (cntw, cnts)
     mans = 0
     for i in range(cnts + 1):
         ans = 0

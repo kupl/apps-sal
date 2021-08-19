@@ -2,7 +2,7 @@ from itertools import accumulate
 N = int(input())
 A = list(map(int, input().split()))
 P = list(accumulate(A))
-l, right = 0, 2
+(l, right) = (0, 2)
 diff = float('inf')
 for c in range(1, N - 1):
     p = P[l]

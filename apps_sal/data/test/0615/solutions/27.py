@@ -1,10 +1,8 @@
 from itertools import accumulate
 n = int(input())
 a = list(map(int, input().split()))
-
 ac = list(accumulate(a))
-
-ans = float("inf")
+ans = float('inf')
 l = 0
 r = 1
 for i in range(1, n - 2):

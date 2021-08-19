@@ -1,10 +1,8 @@
 n = int(input())
-l = [int(i) for i in input().split(" ")]
-
+l = [int(i) for i in input().split(' ')]
 one = l.count(1)
 two = n - one
 result = 0
-
 if two >= one:
     result = one
 else:

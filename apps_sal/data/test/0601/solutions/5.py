@@ -1,13 +1,12 @@
 t = int(input())
 for i in range(t):
-    c0, c1 = map(int, input().split())
-    ma, mb = map(int, input().split())
-    wa, wb = map(int, input().split())
-
+    (c0, c1) = map(int, input().split())
+    (ma, mb) = map(int, input().split())
+    (wa, wb) = map(int, input().split())
     ans = 0
     if wa > wb:
-        wa, wb = wb, wa
-        ma, mb = mb, ma
+        (wa, wb) = (wb, wa)
+        (ma, mb) = (mb, ma)
     for i in range(ma + 1):
         c0a = min(i, c0 // wa)
         c1a = min(ma - i, c1 // wa)

@@ -1,10 +1,10 @@
-n, k = [int(a) for a in input().split()]
+(n, k) = [int(a) for a in input().split()]
 p = []
 for i in range(n):
     p.append(input())
 real = input()
 l = len(real)
-cmin, cmax = 0, 0
+(cmin, cmax) = (0, 0)
 for s in p:
     if len(s) <= l:
         cmax = cmax + 1

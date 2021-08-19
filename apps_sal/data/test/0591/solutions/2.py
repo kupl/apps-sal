@@ -1,5 +1,5 @@
 fc = open('input.txt', 'r')
-n, k = [int(x) for x in fc.readline().strip().split()]
+(n, k) = [int(x) for x in fc.readline().strip().split()]
 line = fc.readline().strip().split()
 b = [(int(line[i]), i + 1) for i in range(len(line))]
 b.sort()

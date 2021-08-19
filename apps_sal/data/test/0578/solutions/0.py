@@ -15,7 +15,7 @@ a = list(a)
 for i in range(n):
     if pos == len(a) - 1:
         a.append('0')
-    a[pos], a[pos + 1] = a[pos + 1], a[pos]
+    (a[pos], a[pos + 1]) = (a[pos + 1], a[pos])
     pos += 1
 if a[-1] == '.':
     a.pop()

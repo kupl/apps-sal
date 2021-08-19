@@ -1,6 +1,4 @@
-l, r, k = list(map(int, input().split()))
-
-
+(l, r, k) = list(map(int, input().split()))
 t = 1
 rez = []
 for i in range(80):

@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 P = list(map(int, input().split()))
 flag = 0
 M = P[0]

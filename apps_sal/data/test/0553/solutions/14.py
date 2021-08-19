@@ -1,12 +1,12 @@
 def main():
-    n, l, k = int(input()), [], 0
+    (n, l, k) = (int(input()), [], 0)
     if n < 2:
         print(6)
         return
     for _ in range(n):
         a = input()
         for b in l:
-            x = sum(u == v for u, v in zip(a, b))
+            x = sum((u == v for (u, v) in zip(a, b)))
             if k < x:
                 k = x
                 if k > 4:

@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 ans = 0
 off = 0
 
@@ -22,7 +22,7 @@ def maxx():
 
 
 for i in range(m):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     off += a
     if b < 0:
         ans += b * minn()

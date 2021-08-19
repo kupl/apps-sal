@@ -1,4 +1,4 @@
-l, r, k = map(int, input().split())
+(l, r, k) = map(int, input().split())
 cur = 1
 while cur < l:
     cur *= k

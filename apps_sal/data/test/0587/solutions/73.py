@@ -2,15 +2,15 @@ import heapq
 from operator import itemgetter
 import sys
 input = sys.stdin.readline
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 TD = sorted([list(map(int, input().split())) for _ in range(n)], reverse=True, key=itemgetter(1))
 L = [[] for _ in range(n + 1)]
 P = []
 a = 0
 cnt = 0
-F = [-float("inf")] * (n + 1)
+F = [-float('inf')] * (n + 1)
 B = 0
-for t, d in TD[:k]:
+for (t, d) in TD[:k]:
     if B >> t & 1:
         heapq.heappush(P, d)
     else:
@@ -25,7 +25,7 @@ for i in range(a, n):
         k += 1
     if k == n:
         break
-    t, d = TD[k]
+    (t, d) = TD[k]
     B |= 1 << t
     F[i + 1] = F[i] - heapq.heappop(P) + d
 ans = 0

@@ -8,14 +8,14 @@ for i in range(len(s)):
             ans *= 9
         else:
             ans *= 10
-    elif (s[i] >= 'A') and (s[i] <= 'Z'):
-        if abc[(ord(s[i]) - ord('A'))] == 0:
+    elif s[i] >= 'A' and s[i] <= 'Z':
+        if abc[ord(s[i]) - ord('A')] == 0:
             if i == 0:
-                abc[(ord(s[i]) - ord('A'))] = 1
+                abc[ord(s[i]) - ord('A')] = 1
                 ans *= 9
                 cnt1 += 1
             else:
-                abc[(ord(s[i]) - ord('A'))] = 1
-                ans *= (10 - cnt1)
+                abc[ord(s[i]) - ord('A')] = 1
+                ans *= 10 - cnt1
                 cnt1 += 1
 print(ans)

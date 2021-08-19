@@ -1,7 +1,6 @@
 import sys
 from itertools import accumulate
-
-n, *a = map(int, sys.stdin.read().split())
+(n, *a) = map(int, sys.stdin.read().split())
 
 
 def main():
@@ -17,25 +16,22 @@ def main():
         r -= a[c]
         while left < c - 1:
             nex = a[left + 1]
-            if abs((q - nex) - (p + nex)) <= abs(q - p):
+            if abs(q - nex - (p + nex)) <= abs(q - p):
                 q -= nex
                 p += nex
                 left += 1
             else:
                 break
-
         while right < n - 2:
             nex = a[right + 1]
-            if abs((s - nex) - (r + nex)) <= abs(s - r):
+            if abs(s - nex - (r + nex)) <= abs(s - r):
                 s -= nex
                 r += nex
                 right += 1
             else:
                 break
-
         res = sorted([p, q, r, s])
         ans = min(ans, res[-1] - res[0])
-
     return ans
 
 

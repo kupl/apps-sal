@@ -1,5 +1,6 @@
-class Factorial():
-    def __init__(self, mod=10**9 + 7):
+class Factorial:
+
+    def __init__(self, mod=10 ** 9 + 7):
         self.mod = mod
         self._factorial = [1]
         self._size = 1
@@ -10,7 +11,7 @@ class Factorial():
         return self.fact(n)
 
     def fact(self, n):
-        ''' n! % mod '''
+        """ n! % mod """
         if n >= self.mod:
             return 0
         self._make(n)
@@ -25,7 +26,7 @@ class Factorial():
             self._size = n + 1
 
     def fact_inv(self, n):
-        ''' n!^-1 % mod '''
+        """ n!^-1 % mod """
         if n >= self.mod:
             raise ValueError('Modinv is not exist! arg={}'.format(n))
         if self._size_inv < n + 1:
@@ -47,34 +48,34 @@ class Factorial():
 
     @staticmethod
     def xgcd(a, b):
-        '''
+        """
         Return (gcd(a, b), x, y) such that a*x + b*y = gcd(a, b)
-        '''
-        x0, x1, y0, y1 = 0, 1, 1, 0
+        """
+        (x0, x1, y0, y1) = (0, 1, 1, 0)
         while a != 0:
-            (q, a), b = divmod(b, a), a
-            y0, y1 = y1, y0 - q * y1
-            x0, x1 = x1, x0 - q * x1
-        return b, x0, y0
+            ((q, a), b) = (divmod(b, a), a)
+            (y0, y1) = (y1, y0 - q * y1)
+            (x0, x1) = (x1, x0 - q * x1)
+        return (b, x0, y0)
 
     def modinv(self, n):
-        g, x, _ = self.xgcd(n, self.mod)
+        (g, x, _) = self.xgcd(n, self.mod)
         if g != 1:
             raise ValueError('Modinv is not exist! arg={}'.format(n))
         return x % self.mod
 
     def comb(self, n, r):
-        ''' nCr % mod '''
+        """ nCr % mod """
         if r > n:
             return 0
         t = self(n) * self.fact_inv(n - r) % self.mod
         return t * self.fact_inv(r) % self.mod
 
     def comb_(self, n, r):
-        '''
+        """
         nCr % mod
         when r is not large and n is too large
-        '''
+        """
         c = 1
         for i in range(1, r + 1):
             c *= (n - i + 1) * self.fact_inv(i)
@@ -82,18 +83,18 @@ class Factorial():
         return c
 
     def comb_with_repetition(self, n, r):
-        ''' nHr % mod '''
+        """ nHr % mod """
         t = self(n + r - 1) * self.fact_inv(n - 1) % self.mod
         return t * self.fact_inv(r) % self.mod
 
     def perm(self, n, r):
-        ''' nPr % mod '''
+        """ nPr % mod """
         if r > n:
             return 0
         return self(n) * self.fact_inv(n - r) % self.mod
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 mod = 998244353
 f = Factorial(mod)
 f._make_inv(n - 1)

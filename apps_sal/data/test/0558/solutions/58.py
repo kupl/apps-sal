@@ -1,7 +1,6 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 mod = 998244353
 MAX = 510000
-
 fac = [0] * MAX
 facinv = [0] * MAX
 inv = [0] * MAX
@@ -9,11 +8,11 @@ inv = [0] * MAX
 
 def modinv(a, mod):
     b = mod
-    x, u = 1, 0
+    (x, u) = (1, 0)
     while b:
         q = a // b
-        a, b = b, a - q * b
-        x, u = u, x - q * u
+        (a, b) = (b, a - q * b)
+        (x, u) = (u, x - q * u)
     x %= mod
     return x
 

@@ -14,6 +14,6 @@ for i in range(n):
         else:
             days[i + 1] -= 1
 if works:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

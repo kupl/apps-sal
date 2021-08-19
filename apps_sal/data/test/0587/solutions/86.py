@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     sushi = [list(map(int, input().split())) for _ in range(n)]
     sushi.sort(key=lambda x: x[1], reverse=True)
     ans = 0

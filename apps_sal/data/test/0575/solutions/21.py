@@ -10,12 +10,10 @@ def quadrant(x, y, rx, ry):
 
 
 n = int(input())
-
-qx, qy = list(map(int, input().split()))
-kx, ky = list(map(int, input().split()))
-cx, cy = list(map(int, input().split()))
-
+(qx, qy) = list(map(int, input().split()))
+(kx, ky) = list(map(int, input().split()))
+(cx, cy) = list(map(int, input().split()))
 if quadrant(kx, ky, qx, qy) == quadrant(cx, cy, qx, qy):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

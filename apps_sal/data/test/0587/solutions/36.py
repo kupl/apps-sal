@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 tds = []
 for i in range(n):
-    t, d = map(int, input().split())
+    (t, d) = map(int, input().split())
     tds.append((d, t))
 tds.sort(reverse=True)
 cnt = k
@@ -22,10 +22,9 @@ for i in range(n):
             hand.append(tds[i][0])
         cnt -= 1
         res += tds[i][0]
-    else:
-        if not tds[i][1] in rs and not tds[i][1] in hs:
-            rs[tds[i][1]] = 1
-            subs.append(tds[i][0])
+    elif not tds[i][1] in rs and (not tds[i][1] in hs):
+        rs[tds[i][1]] = 1
+        subs.append(tds[i][0])
     if not tds[i][1] in v_t:
         v_t[tds[i][1]] = 1
 subs.sort()

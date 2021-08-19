@@ -1,16 +1,13 @@
 from sys import stdin
-N, M, K = [int(x) for x in stdin.readline().rstrip().split()]
+(N, M, K) = [int(x) for x in stdin.readline().rstrip().split()]
 mod = 998244353
-maxn = 2 * 10**5 + 1
-
+maxn = 2 * 10 ** 5 + 1
 fac = [0 for _ in range(maxn)]
 finv = [0 for _ in range(maxn)]
 inv = [0 for _ in range(maxn)]
-
 fac[0] = fac[1] = 1
 finv[0] = finv[1] = 1
 inv[1] = 1
-
 for i in range(2, maxn):
     fac[i] = fac[i - 1] * i % mod
     inv[i] = mod - inv[mod % i] * (mod // i) % mod
@@ -33,5 +30,4 @@ for i in range(0, K + 1):
     tmp *= combinations(N - 1, i)
     tmp %= mod
     ans += tmp
-
 print(ans % mod)

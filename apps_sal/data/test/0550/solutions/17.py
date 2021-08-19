@@ -9,7 +9,7 @@ for i in range(n):
             ac = a[j].capitalize()
             sc = s[j].capitalize()
             if ac != sc:
-                if ac in ('0', 'O') and sc in ('0', 'O') or ac in ('1', 'I', 'L') and sc in ('1', 'I', 'L'):
+                if ac in ('0', 'O') and sc in ('0', 'O') or (ac in ('1', 'I', 'L') and sc in ('1', 'I', 'L')):
                     similar = True
                 else:
                     similar = False

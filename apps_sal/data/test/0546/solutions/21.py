@@ -15,7 +15,7 @@ for p in range(int(input())):
         ans = False
     else:
         for i in range(n):
-            if a[i] == s[i] or a[i] in good and s[i] == '?':
+            if a[i] == s[i] or (a[i] in good and s[i] == '?'):
                 None
             else:
                 ans = False

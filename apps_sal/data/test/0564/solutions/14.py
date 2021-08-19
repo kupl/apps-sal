@@ -1,4 +1,4 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 krush = list(map(int, input().split()))
 chasha = 0
 res = 'YES'

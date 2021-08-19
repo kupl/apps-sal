@@ -25,14 +25,12 @@ def main():
                         if k != k2:
                             oka = False
                             break
-
             if oka and okp:
-                print("Yes")
+                print('Yes')
                 return
-        s[1], s[0] = s[0], s[1]
-        x[1], x[0] = x[0], x[1]
-
-    print("No")
+        (s[1], s[0]) = (s[0], s[1])
+        (x[1], x[0]) = (x[0], x[1])
+    print('No')
 
 
 main()

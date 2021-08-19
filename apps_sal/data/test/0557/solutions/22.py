@@ -1,9 +1,7 @@
-n, m = [int(x) for x in input().split()]
-
+(n, m) = [int(x) for x in input().split()]
 tps = []
 for _ in range(n):
     tps.append(tuple([int(x) for x in input().split()]))
-
 parts = [False for _ in range(m)]
 for tp in tps:
     for i in range(tp[0], tp[1]):

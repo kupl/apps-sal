@@ -1,5 +1,5 @@
 def test(sq, n):
-    a, b = sq[0][0], sq[0][1]
+    (a, b) = (sq[0][0], sq[0][1])
     if a == b:
         return False
     else:
@@ -13,5 +13,4 @@ n = int(input())
 sq = []
 for i in range(n):
     sq.append(input())
-
-print("YES" if test(sq, n) else "NO")
+print('YES' if test(sq, n) else 'NO')

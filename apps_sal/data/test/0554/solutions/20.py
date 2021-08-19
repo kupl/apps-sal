@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = [0] + list(map(int, input().split()))
 brr = [list(map(int, input().split())) for i in range(m)]
 pref = [0] * (n + 1)

@@ -1,6 +1,5 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 mod = 998244353
-
 factorial = [1 for i in range(N + 1)]
 for i in range(1, N + 1):
     if i == 1:
@@ -10,7 +9,7 @@ for i in range(1, N + 1):
 
 
 def comb(n, k):
-    return (factorial[n] * pow(factorial[n - k] * factorial[k], -1, mod)) % mod
+    return factorial[n] * pow(factorial[n - k] * factorial[k], -1, mod) % mod
 
 
 def count(n, m, k):

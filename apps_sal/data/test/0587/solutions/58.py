@@ -3,10 +3,10 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     S = []
     for _ in range(N):
-        t, d = map(int, input().split())
+        (t, d) = map(int, input().split())
         S.append((d, t))
     S.sort(reverse=True)
     upperKCount = 0
@@ -19,12 +19,11 @@ def solve():
             appeared |= {S[i][1]}
     maxPoint += upperKCount ** 2
     appeared = set()
-
     typeMax = []
     typeNum = 0
     typeLower = []
     others = 0
-    for d, t in S:
+    for (d, t) in S:
         if t in appeared:
             typeLower.append(d)
             others += 1

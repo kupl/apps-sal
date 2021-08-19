@@ -1,12 +1,14 @@
 import sys
-def readln(): return tuple(map(int, input().split()))
+
+
+def readln():
+    return tuple(map(int, input().split()))
 
 
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
-
-n, k = readln()
-lst = [(v, i + 1) for i, v in enumerate(readln())]
+(n, k) = readln()
+lst = [(v, i + 1) for (i, v) in enumerate(readln())]
 lst.sort()
 lst.reverse()
 print(lst[k - 1][0])

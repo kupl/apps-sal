@@ -20,16 +20,14 @@ def readlist():
     return list(map(int, input().split()))
 
 
-n, m = readmap()
+(n, m) = readmap()
 X = []
 D = []
 for _ in range(m):
-    x, d = readmap()
+    (x, d) = readmap()
     X.append(x)
     D.append(d)
-
 summ = n * sum(X)
-
 for i in range(m):
     d = D[i]
     if d < 0:
@@ -39,5 +37,4 @@ for i in range(m):
             summ += d * (n // 2) * (n // 2)
     else:
         summ += d * (n - 1) * n // 2
-
 print(summ / n)

@@ -5,7 +5,7 @@ changes = defaultdict(set)
 changes['a'].add('b')
 changes['z'].add('y')
 for i in range(1, 25):
-    o1, o2 = a[i - 1], a[i + 1]
+    (o1, o2) = (a[i - 1], a[i + 1])
     changes[a[i]].add(o1)
     changes[a[i]].add(o2)
 for _ in range(t):

@@ -1,5 +1,4 @@
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 s = 0
 cnt = 1
 while True:
@@ -13,5 +12,4 @@ while True:
         b -= cnt
     cnt += 1
     s = 1 - s
-
-print(["Vladik", "Valera"][s])
+print(['Vladik', 'Valera'][s])

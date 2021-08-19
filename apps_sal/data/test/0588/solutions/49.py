@@ -1,5 +1,4 @@
 import numpy as np
-
 n = int(input())
 
 
@@ -8,17 +7,14 @@ def div2(x, y):
         return (1, y / x)
     elif x < 0:
         return (-1, y / x)
+    elif y > 0:
+        return (-1, -float('inf'))
     else:
-        if y > 0:
-            return (-1, -float("inf"))
-        else:
-            return (1, -float("inf"))
+        return (1, -float('inf'))
 
 
 L = [list(map(int, input().split())) for i in range(n)]
-
 L.sort(key=lambda x: div2(x[0], x[1]))
-
 m = 0
 for i in range(n):
     for j in range(i, n):
@@ -31,6 +27,5 @@ for i in range(n):
             else:
                 x1 += L[k][0]
                 y1 += L[k][1]
-        m = max(m, x0**2 + y0**2, x1**2 + y1**2)
-
+        m = max(m, x0 ** 2 + y0 ** 2, x1 ** 2 + y1 ** 2)
 print('{:.12f}'.format(np.sqrt(m)))

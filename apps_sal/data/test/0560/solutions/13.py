@@ -1,4 +1,4 @@
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 a = [input() for i in range(r)]
 t1 = set()
 t2 = set()

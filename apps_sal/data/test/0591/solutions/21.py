@@ -1,6 +1,5 @@
 import sys
 from math import *
-
 f = open('input.txt', 'r')
 out = open('output.txt', 'w')
 
@@ -17,7 +16,7 @@ def mints():
     return map(int, minp().split())
 
 
-n, k = mints()
+(n, k) = mints()
 a = []
 j = 0
 for i in mints():

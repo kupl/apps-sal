@@ -6,7 +6,6 @@ for i in a:
         c[0] += 1
     else:
         c[1] += 1
-
 if c[1] < c[0]:
     print(c[1] + (c[0] - c[1]) // 3)
 else:

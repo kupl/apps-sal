@@ -4,7 +4,7 @@ import sys
 def distance(s, t):
     ans = 0
     for (x, y) in zip(s, t):
-        ans += (x != y)
+        ans += x != y
     return ans
 
 

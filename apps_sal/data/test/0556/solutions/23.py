@@ -1,4 +1,4 @@
-l, r, k = [int(x) for x in input().split()]
+(l, r, k) = [int(x) for x in input().split()]
 ans = False
 x = 1
 while x <= r:

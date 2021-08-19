@@ -1,13 +1,11 @@
 t = int(input())
-
 for _ in range(t):
-    p, f = [int(x) for x in input().split()]
-    cs, cw = [int(x) for x in input().split()]
-    s, w = [int(x) for x in input().split()]
+    (p, f) = [int(x) for x in input().split()]
+    (cs, cw) = [int(x) for x in input().split()]
+    (s, w) = [int(x) for x in input().split()]
     if s > w:
-        s, w = w, s
-        cs, cw = cw, cs
-
+        (s, w) = (w, s)
+        (cs, cw) = (cw, cs)
     best = 0
     for i in range(cs + 1):
         if s * i <= p:

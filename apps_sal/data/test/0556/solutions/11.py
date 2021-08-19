@@ -1,5 +1,5 @@
-l, r, k = map(int, input().split())
-i, f = 1, False
+(l, r, k) = map(int, input().split())
+(i, f) = (1, False)
 while i <= r:
     if i >= l:
         f = True

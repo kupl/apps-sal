@@ -8,4 +8,4 @@ def main(n, m):
     return (m - 1, n)
 
 
-print("{} {}".format(*main(*list(map(int, input().split(' '))))))
+print('{} {}'.format(*main(*list(map(int, input().split(' '))))))

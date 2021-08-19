@@ -1,8 +1,11 @@
 F = open('input.txt', 'r')
-def I(): return list(map(int, F.readline().split()))
 
 
-n, k = I()
+def I():
+    return list(map(int, F.readline().split()))
+
+
+(n, k) = I()
 a = I()
 m = sorted(range(1, n + 1), key=lambda x: a[x - 1])[-k:]
 W = open('output.txt', 'w')

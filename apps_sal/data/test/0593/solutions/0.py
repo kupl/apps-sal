@@ -1,4 +1,4 @@
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 winners = [0] * n
 for i in range(m):
     a = [int(x) for x in input().split()]

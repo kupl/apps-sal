@@ -10,20 +10,19 @@ for i in k:
     if _in:
         if i == ')':
             _in = 0
-        if ((i == '_' or i == ')') and (p != '_' and p != '(')):
+        if (i == '_' or i == ')') and (p != '_' and p != '('):
             ans2 += 1
         p = i
     else:
-        if (i == '('):
-            if (p != '_' and p != ')'):
+        if i == '(':
+            if p != '_' and p != ')':
                 ans1 = max(ans1, cnt1)
             cnt1 = 0
             _in = 1
-        elif (i == '_' and p != '_' and p != ')'):
+        elif i == '_' and p != '_' and (p != ')'):
             ans1 = max(ans1, cnt1)
             cnt1 = 0
-        elif (i != '_'):
+        elif i != '_':
             cnt1 += 1
         p = i
-
 print(ans1, ans2)

@@ -4,7 +4,7 @@ t1 = -1
 t2 = -1
 ff = True
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     t[i] = (a, b)
 t.sort()
 for i in range(n):
@@ -19,6 +19,6 @@ for i in range(n):
         ff = False
         break
 if ff:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

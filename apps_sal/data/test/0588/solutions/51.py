@@ -7,8 +7,8 @@ ans = 0
 for i in range(n):
     x = y = 0
     for j in range(n):
-        nx, ny = l[i + j]
+        (nx, ny) = l[i + j]
         x += nx
         y += ny
-        ans = max(ans, (x**2 + y**2)**0.5)
+        ans = max(ans, (x ** 2 + y ** 2) ** 0.5)
 print(ans)

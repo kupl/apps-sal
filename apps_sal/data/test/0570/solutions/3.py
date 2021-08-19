@@ -1,13 +1,13 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 cur = 1
 while a >= 0 and b >= 0:
     if a < cur:
-        print("Vladik")
+        print('Vladik')
         break
     a -= cur
     cur += 1
     if b < cur:
-        print("Valera")
+        print('Valera')
         break
     b -= cur
     cur += 1

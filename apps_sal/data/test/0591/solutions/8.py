@@ -14,14 +14,14 @@ def main():
         d.append(h[-i])
     d.sort()
     e = str(d[0][0])
-    c.write('{0}\n' .format(e))
+    c.write('{0}\n'.format(e))
     f = []
     for i in range(len(d)):
         f.append(d[i][1])
     f.sort()
     for i in range(len(f)):
         g = str(f[i])
-        c.write(g + " ")
+        c.write(g + ' ')
 
 
 main()

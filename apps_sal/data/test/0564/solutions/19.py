@@ -1,8 +1,5 @@
-n, s = tuple(map(int, str.split(input())))
+(n, s) = tuple(map(int, str.split(input())))
 if sum(sorted(map(int, str.split(input())))[:-1]) <= s:
-
-    print("YES")
-
+    print('YES')
 else:
-
-    print("NO")
+    print('NO')

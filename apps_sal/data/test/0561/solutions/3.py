@@ -1,6 +1,5 @@
 n = int(input())
 t = list(map(int, input().split()))
-
 if n == 1:
     q = '-1'
 else:

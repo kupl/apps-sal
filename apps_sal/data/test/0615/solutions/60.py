@@ -5,7 +5,7 @@ A = list(map(int, input().split()))
 S = [A[0]]
 for i in range(n - 1):
     S.append(S[-1] + A[i + 1])
-ans = 10**15
+ans = 10 ** 15
 A1 = deque([A[0]])
 A2 = deque(A[1:n])
 for i in range(2, n - 1):

@@ -8,7 +8,7 @@ for ch in input():
             res *= 10
         else:
             res *= 9
-    elif (ch in codes) and (ch not in seen):
+    elif ch in codes and ch not in seen:
         if not started:
             res *= len(codes) - len(seen) - 1
         else:

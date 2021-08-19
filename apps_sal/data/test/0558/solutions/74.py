@@ -6,7 +6,6 @@ def mod_pow(a, n, mod):
     :param mod: 法
     :return: a^n (mod m)
     """
-
     result = 1
     a_n = a
     while n > 0:
@@ -34,16 +33,10 @@ class ModCombination:
         self.facts = [1, 1]
         self.inverses = [None, 1]
         self.fact_inverses = [1, 1]
-
         for i in range(2, self.n_max + 1):
             self.facts.append(self.facts[i - 1] * i % self.mod)
-            self.inverses.append(
-                self.mod - self.inverses[self.mod % i]
-                * (self.mod // i) % self.mod
-            )
-            self.fact_inverses.append(
-                self.fact_inverses[i - 1] * self.inverses[i] % self.mod
-            )
+            self.inverses.append(self.mod - self.inverses[self.mod % i] * (self.mod // i) % self.mod)
+            self.fact_inverses.append(self.fact_inverses[i - 1] * self.inverses[i] % self.mod)
 
     def mod_combination(self, n, k):
         """
@@ -52,24 +45,19 @@ class ModCombination:
         :param k: k
         :return: nCk (mod m)
         """
-
         if k == 0:
             return 1
         if n == 0:
             return 0
-
         denominator = self.fact_inverses[k] * self.fact_inverses[n - k] % self.mod
         return self.facts[n] * denominator % self.mod
 
 
 MOD = 998244353
-
-N, M, K = list(map(int, input().split(' ')))
-
+(N, M, K) = list(map(int, input().split(' ')))
 ans = 0
 comb = ModCombination(mod=MOD, n_max=N)
 for k in range(0, K + 1):
-    ans += (M * comb.mod_combination(N - 1, k)) % MOD * mod_pow(M - 1, N - 1 - k, MOD)
+    ans += M * comb.mod_combination(N - 1, k) % MOD * mod_pow(M - 1, N - 1 - k, MOD)
     ans %= MOD
-
 print(ans)

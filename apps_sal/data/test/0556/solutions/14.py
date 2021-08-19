@@ -1,4 +1,4 @@
-l, r, k = list(map(int, input().split()))
+(l, r, k) = list(map(int, input().split()))
 a = list()
 x = 1
 while x <= r:

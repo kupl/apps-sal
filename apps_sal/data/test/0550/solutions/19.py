@@ -7,12 +7,10 @@ def change(s):
 
 
 log = change(input())
-
 num = int(input())
 logins = []
 for i in range(0, num):
     logins.append(change(input()))
-
 if log in logins:
     print('No')
 else:

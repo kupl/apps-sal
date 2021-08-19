@@ -3,10 +3,9 @@ def check(k, aas, bs, a_rem, b_rem):
         return False
     a_lo = k - b_rem
     a_hi = a_rem
-
     rems = set()
     rems.add(0)
-    for a, b in zip(aas, bs):
+    for (a, b) in zip(aas, bs):
         if a + b < k:
             continue
         for i in range(max(0, k - b), min(a, k) + 1):
@@ -19,13 +18,13 @@ def check(k, aas, bs, a_rem, b_rem):
     return False
 
 
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 aas = []
 bs = []
 a_total = 0
 b_total = 0
 for i in range(n):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     aas.append(a)
     bs.append(b)
     a_total += a

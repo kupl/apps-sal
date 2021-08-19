@@ -1,15 +1,13 @@
 import math
 N = int(input())
 n = 1000
-
 x = [None] * N
 y = [None] * N
 for i in range(N):
-    x[i], y[i] = list(map(int, input().split()))
-
+    (x[i], y[i]) = list(map(int, input().split()))
 ans = 0
 for i in range(n):
-    theta = (2 * math.pi / n) * i
+    theta = 2 * math.pi / n * i
     c = math.cos(theta)
     s = math.sin(theta)
     tmp_x = 0
@@ -18,7 +16,6 @@ for i in range(n):
         if x[j] * c + y[j] * s > 0:
             tmp_x += x[j]
             tmp_y += y[j]
-    if tmp_x**2 + tmp_y**2 > ans**2:
-        ans = math.sqrt(tmp_x**2 + tmp_y**2)
-
+    if tmp_x ** 2 + tmp_y ** 2 > ans ** 2:
+        ans = math.sqrt(tmp_x ** 2 + tmp_y ** 2)
 print(ans)

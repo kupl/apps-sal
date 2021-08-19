@@ -31,8 +31,8 @@ for i in range(n):
         print('NO')
         continue
     qlp = q[:len(lp)]
-    qrp = q[(len(q) - len(rp)):]
-    star = q[len(lp):(len(q) - len(rp))]
+    qrp = q[len(q) - len(rp):]
+    star = q[len(lp):len(q) - len(rp)]
     if check(lp, qlp) and check(rp, qrp) and checks(star):
         print('YES')
     else:

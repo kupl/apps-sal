@@ -15,6 +15,6 @@ for i in range(1, n):
     if s[p1] != s1 or s[p2] != s1:
         ans = 'NO'
     for j in range(n):
-        if j != p1 and j != p2 and s[j] != s2:
+        if j != p1 and j != p2 and (s[j] != s2):
             ans = 'NO'
 print(ans)

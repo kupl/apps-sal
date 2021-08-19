@@ -7,8 +7,8 @@ for i in s:
     u %= 2
     t += u
 if u:
-    print("First")
+    print('First')
 elif not t:
-    print("Second")
+    print('Second')
 else:
-    print("First")
+    print('First')

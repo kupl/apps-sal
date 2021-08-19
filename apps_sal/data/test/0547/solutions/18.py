@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 ar = [0] * 101
 for i in range(n):
     ar[len(input())] += 1

@@ -1,4 +1,4 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 fac = [1]
 mod = 998244353
 for i in range(1, N + 1):

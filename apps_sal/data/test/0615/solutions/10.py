@@ -4,8 +4,6 @@ F = [int()] * n
 F[0] = A[0]
 for b in range(1, n):
     F[b] = F[b - 1] + A[b]
-
-
 res = [0] * 4
 data = [10 ** 18] * 2
 ex = [0] * 4
@@ -39,5 +37,4 @@ for i in range(1, n - 2):
         else:
             bl[1] = False
     ans = min(ans, max(ex) - min(ex))
-
 print(ans)

@@ -22,7 +22,7 @@ else:
         if li[i] - li[i - 1] < d:
             d = li[i] - li[i - 1]
     for i in range(1, n):
-        if (li[i] - li[i - 1]) != d:
+        if li[i] - li[i - 1] != d:
             if li[i] - li[i - 1] == 2 * d:
                 flag += 1
                 ind = i

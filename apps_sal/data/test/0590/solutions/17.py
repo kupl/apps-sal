@@ -6,6 +6,7 @@ def readints():
 
 
 class Solver:
+
     def main(self):
         n = readints()[0]
         a = readints()
@@ -21,7 +22,6 @@ class Solver:
                     c[a[i]] -= 1
                     a[i] = to_be_added[changes]
                     changes += 1
-
         print(changes)
         print(' '.join(map(str, a)))
 

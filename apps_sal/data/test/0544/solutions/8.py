@@ -11,7 +11,7 @@ def solve(s):
     r = len(s) - 1
     while l < r:
         d = abs(ord(s[l]) - ord(s[r]))
-        if not(d == 0 or d == 2):
+        if not (d == 0 or d == 2):
             return False
         l += 1
         r -= 1

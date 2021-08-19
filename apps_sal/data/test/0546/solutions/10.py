@@ -6,7 +6,7 @@ for j in range(len(s)):
         pos = j
         break
 n = int(input())
-hasStar = ('*' in s)
+hasStar = '*' in s
 for i in range(n):
     t = input()
     if len(t) < len(s) - 1:
@@ -14,16 +14,15 @@ for i in range(n):
         continue
     if hasStar:
         flag = True
-        if len(t) <= (pos + 1) - 2:
+        if len(t) <= pos + 1 - 2:
             print('NO')
             continue
-        if len(t) == (pos + 1) - 1:
-            if len(s) >= (pos + 1) + 1:
+        if len(t) == pos + 1 - 1:
+            if len(s) >= pos + 1 + 1:
                 print('NO')
                 continue
-
         for j in range(pos):
-            if (t[j] not in good and s[j] == '?') or (s[j] != '?' and s[j] != t[j]):
+            if t[j] not in good and s[j] == '?' or (s[j] != '?' and s[j] != t[j]):
                 flag = False
                 break
         if not flag:
@@ -33,7 +32,7 @@ for i in range(n):
         r0 = len(t) - (len(s) - pos - 1)
         r = r0
         for j in range(pos + 1, len(s)):
-            if (t[r] not in good and s[j] == '?') or (s[j] != '?' and s[j] != t[r]):
+            if t[r] not in good and s[j] == '?' or (s[j] != '?' and s[j] != t[r]):
                 flag = False
                 break
             r += 1
@@ -54,7 +53,7 @@ for i in range(n):
             continue
         flag = True
         for j in range(len(t)):
-            if (t[j] not in good and s[j] == '?') or (s[j] != '?' and s[j] != t[j]):
+            if t[j] not in good and s[j] == '?' or (s[j] != '?' and s[j] != t[j]):
                 flag = False
                 break
         if not flag:

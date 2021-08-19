@@ -4,7 +4,7 @@ flag = True
 for i in range(n):
     pr.append(tuple(map(int, input().split())))
 pr.sort()
-tel1, tel2 = -1, -1
+(tel1, tel2) = (-1, -1)
 flag = True
 for i in range(n):
     if tel1 < pr[i][0]:
@@ -15,6 +15,6 @@ for i in range(n):
         flag = False
         break
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

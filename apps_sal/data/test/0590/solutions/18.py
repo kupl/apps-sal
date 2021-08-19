@@ -21,4 +21,4 @@ for v in a:
             cnt[v] -= 1
     else:
         res.append(v)
-print(" ".join(list(map(str, res))))
+print(' '.join(list(map(str, res))))

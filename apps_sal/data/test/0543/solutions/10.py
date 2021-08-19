@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-for i, j in enumerate(a):
+for (i, j) in enumerate(a):
     if j % 2:
         if i + 1 < n:
             if a[i + 1] == 0:

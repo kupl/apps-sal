@@ -2,10 +2,9 @@ import numpy as np
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     p = [int(i) - 1 for i in input().split()]
     c = [int(i) for i in input().split()]
-
     seen = set()
     loop_list = []
     for start in range(n):
@@ -18,7 +17,6 @@ def main():
         seen.add(v)
         if loop:
             loop_list.append(np.array(loop))
-
     ans = min(c)
     for loop in loop_list:
         loop_len = len(loop)

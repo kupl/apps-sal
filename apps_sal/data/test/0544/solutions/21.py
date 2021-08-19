@@ -8,6 +8,6 @@ for i in range(t):
         if abs(ord(s[i]) - ord(s[n - i - 1])) not in k:
             flag = 1
     if flag == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

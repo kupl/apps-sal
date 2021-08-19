@@ -1,8 +1,6 @@
 import numpy as np
-
 N = int(input())
 XY = np.array([list(map(int, input().split())) for _ in [0] * N])
-
 ans = 0
 for m in range(100):
     th = 2 * np.pi * m / 100

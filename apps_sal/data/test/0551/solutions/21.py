@@ -1,6 +1,6 @@
 def coef(a, b):
-    ax, ay = a
-    bx, by = b
+    (ax, ay) = a
+    (bx, by) = b
     return (by - ay) / (bx - ax)
 
 
@@ -35,14 +35,14 @@ def allpointsfit(linea, lineb, pointset):
         return False
     if same(linea, lineb):
         return False
-    fit = len(linea) == 1 or len(lineb) == 1 or (coefl(linea) == coefl(lineb))
+    fit = len(linea) == 1 or len(lineb) == 1 or coefl(linea) == coefl(lineb)
     return fit
 
 
 n = int(input())
 a = [int(x) for x in input().split()]
-ans = (len(set(a)) == 2)
-points = [(idx + 1, val) for idx, val in enumerate(a)]
+ans = len(set(a)) == 2
+points = [(idx + 1, val) for (idx, val) in enumerate(a)]
 ans = ans or allpointsfit([points[0], points[1]], [points[2]], points[3:])
 ans = ans or allpointsfit([points[1], points[2]], [points[0]], points[3:])
 ans = ans or allpointsfit([points[0], points[2]], [points[1]], points[3:])

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 for i in range(244):
@@ -13,7 +13,7 @@ for i in range(244):
     for bb in b:
         if bb > i:
             c3 += 1
-    if(c1 == n and c2 > 0 and c3 == m):
+    if c1 == n and c2 > 0 and (c3 == m):
         print(i)
         break
 else:

@@ -1,4 +1,4 @@
-r, g, b = sorted(map(int, input().split()))
+(r, g, b) = sorted(map(int, input().split()))
 left = 0
 right = b + 1
 while right - left > 1:

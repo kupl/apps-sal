@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-td = [list(map(int, input().split()))[::-1]for _ in range(n)]
+(n, k) = map(int, input().split())
+td = [list(map(int, input().split()))[::-1] for _ in range(n)]
 td.sort(reverse=1)
 s = set()
 ss = set()
@@ -8,7 +8,7 @@ b = []
 c = []
 for i in range(n):
     if i < k:
-        d, t = td[i]
+        (d, t) = td[i]
         if t in s:
             b.append(d)
         else:
@@ -16,7 +16,7 @@ for i in range(n):
             s.add(t)
             ss.add(t)
     else:
-        d, t = td[i]
+        (d, t) = td[i]
         if t not in ss:
             c.append(d)
             ss.add(t)

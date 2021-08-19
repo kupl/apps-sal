@@ -1,9 +1,9 @@
-l, r, k = map(int, input().split())
+(l, r, k) = map(int, input().split())
 st = 1
 fl = False
-while (st <= r):
-    if (st >= l and st <= r):
-        print(st, end=" ")
+while st <= r:
+    if st >= l and st <= r:
+        print(st, end=' ')
         fl = True
         st *= k
     else:

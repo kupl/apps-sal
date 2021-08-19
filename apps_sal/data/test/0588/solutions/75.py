@@ -11,12 +11,12 @@ def main():
     ans = 0
     for k in range(1, n + 1):
         for i in range(n):
-            x_sum, y_sum = 0, 0
+            (x_sum, y_sum) = (0, 0)
             for j in range(i, i + k):
                 p = j % n
                 x_sum += engines[p][0]
                 y_sum += engines[p][1]
-            tmp = x_sum**2 + y_sum**2
+            tmp = x_sum ** 2 + y_sum ** 2
             if ans < tmp:
                 ans = tmp
     print(sqrt(ans))

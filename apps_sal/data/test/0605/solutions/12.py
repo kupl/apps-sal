@@ -9,8 +9,8 @@ def m(a, b):
 for i in range(len(s)):
     s[i] = int(s[i])
 if m(s[0], s[2]) > m(s[1], s[3]):
-    print("Misha")
+    print('Misha')
 elif m(s[0], s[2]) < m(s[1], s[3]):
-    print("Vasya")
+    print('Vasya')
 else:
-    print("Tie")
+    print('Tie')

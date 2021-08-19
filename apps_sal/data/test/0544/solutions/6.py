@@ -9,7 +9,7 @@ for _ in range(int(input())):
     for i in range(n // 2):
         c1 = ord(a[i])
         c2 = ord(a[n - 1 - i])
-        if c1 - 1 == c2 - 1 or c1 - 1 == c2 + 1 or c1 + 1 == c2 - 1 or c1 + 1 == c2 + 1:
+        if c1 - 1 == c2 - 1 or c1 - 1 == c2 + 1 or c1 + 1 == c2 - 1 or (c1 + 1 == c2 + 1):
             flag = 0
         else:
             flag = 1

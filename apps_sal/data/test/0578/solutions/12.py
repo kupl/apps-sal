@@ -23,4 +23,4 @@ for i in range(0, len(line1)):
         break
 if line1[-1] == '.':
     line1.pop()
-print(''.join(y for y in line1))
+print(''.join((y for y in line1)))

@@ -4,7 +4,6 @@ MOD = 998244353
 fac = np.zeros(MAX)
 finv = np.zeros(MAX)
 inv = np.zeros(MAX)
-
 fac[0] = fac[1] = 1
 finv[0] = finv[1] = 1
 inv[1] = 1
@@ -19,7 +18,7 @@ def COM(N, K):
 
 
 def resolve():
-    N, M, K = map(int, input().split())
+    (N, M, K) = map(int, input().split())
     ans = 0
     for i in range(K + 1):
         ans_k = M * COM(N - 1, i)

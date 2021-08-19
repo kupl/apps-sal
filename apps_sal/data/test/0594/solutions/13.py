@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, m = R()
+(n, m) = R()
 a = R()
 b = R()
 v = max(2 * min(a), max(a))

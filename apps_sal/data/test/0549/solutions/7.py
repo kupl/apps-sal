@@ -1,8 +1,8 @@
 def dl(n):
     ret = 0
     i = 1
-    while (i * i <= n):
-        if (n % i == 0):
+    while i * i <= n:
+        if n % i == 0:
             ret = i
         i += 1
     return ret

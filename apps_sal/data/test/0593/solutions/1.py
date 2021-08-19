@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 votes = [0] * n
 for i in range(m):
     row = list(map(int, input().split()))

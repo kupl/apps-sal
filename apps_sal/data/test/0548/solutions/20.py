@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 if sum(a) % 2 == 1:
-    print("First")
+    print('First')
 else:
     ch = 0
     nch = 0
@@ -11,6 +11,6 @@ else:
         else:
             nch += 1
     if nch != 0:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

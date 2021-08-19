@@ -16,34 +16,30 @@ def test(begin, r, b):
                 else:
                     bl -= 1
                     pt += 1
+            elif bl > 0:
+                bl -= 1
+                last = 'b'
             else:
-                if bl > 0:
-                    bl -= 1
-                    last = 'b'
-                else:
-                    rl -= 1
-                    pt += 1
+                rl -= 1
+                pt += 1
+        elif last == 'b':
+            if bl > 0:
+                bl -= 1
+                pt += 1
+            else:
+                rl -= 1
+                last = 'c'
+        elif rl > 0:
+            rl -= 1
+            pt += 1
         else:
-            if last == 'b':
-                if bl > 0:
-                    bl -= 1
-                    pt += 1
-                else:
-                    rl -= 1
-                    last = 'c'
-            else:
-                if rl > 0:
-                    rl -= 1
-                    pt += 1
-                else:
-                    bl -= 1
-                    last = 'b'
+            bl -= 1
+            last = 'b'
     return pt
 
 
 inp = input().split(' ')
 r = int(inp[0])
 b = int(inp[1])
-
 best = max(test('b', r, b), test('r', r, b))
 print(best, r + b - best - 1)

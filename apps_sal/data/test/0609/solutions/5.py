@@ -6,24 +6,22 @@ def main():
     diag = 'A'
     other = 'A'
     for i in range(n):
-        for j, ch in enumerate(input()):
+        for (j, ch) in enumerate(input()):
             if diag == 'A':
                 diag = ch
             elif other == 'A':
                 other = ch
-            else:
-                if i == j or i == (n - 1 - j):
-                    if ch != diag:
-                        print("NO")
-                        return
-                else:
-                    if ch != other:
-                        print("NO")
-                        return
+            elif i == j or i == n - 1 - j:
+                if ch != diag:
+                    print('NO')
+                    return
+            elif ch != other:
+                print('NO')
+                return
     if diag == other:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def __starting_point():

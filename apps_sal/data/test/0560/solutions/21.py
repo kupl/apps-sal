@@ -17,14 +17,12 @@ def main(r, c, seq):
             elif item == 1:
                 temp = 0
                 break
-
         answer += temp
-
     return answer
 
 
 def init():
-    r, c = list(map(int, input().split()))
+    (r, c) = list(map(int, input().split()))
     seq = []
     for i in range(r):
         temp = []
@@ -34,7 +32,6 @@ def init():
             else:
                 temp += [0]
         seq.append(temp)
-
     print(main(r, c, seq))
 
 

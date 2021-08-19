@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 mod = 998244353
 ma = [1]
 for i in range(1, k + 1):

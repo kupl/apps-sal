@@ -1,11 +1,11 @@
 t = int(input())
 for _ in range(t):
-    p, f = map(int, input().split())
-    cs, cw = map(int, input().split())
-    s, w = map(int, input().split())
+    (p, f) = map(int, input().split())
+    (cs, cw) = map(int, input().split())
+    (s, w) = map(int, input().split())
     if s > w:
-        cs, cw = cw, cs
-        s, w = w, s
+        (cs, cw) = (cw, cs)
+        (s, w) = (w, s)
     if p // s + f // s <= cs:
         print(p // s + f // s)
     else:

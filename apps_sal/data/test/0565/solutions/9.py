@@ -1,4 +1,4 @@
-y, b, r = map(int, input().split())
+(y, b, r) = map(int, input().split())
 res = 6
 y -= 1
 b -= 2

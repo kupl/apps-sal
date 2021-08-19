@@ -2,10 +2,8 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-
-'''
-y, b, r = mi()
+'\n\n'
+(y, b, r) = mi()
 if b >= r:
     b = r - 1
 else:
