@@ -1,8 +1,9 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        start, window_sum, result = 0, 0, float('inf')
+        (start, window_sum, result) = (0, 0, float('inf'))
         pre_min = len(arr) * [float('inf')]
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             window_sum += num
             while window_sum > target:
                 window_sum -= arr[start]

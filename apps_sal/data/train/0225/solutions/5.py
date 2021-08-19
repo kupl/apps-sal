@@ -1,10 +1,10 @@
 class Solution:
+
     def pushDominoes(self, dominoes: str) -> str:
         n = len(dominoes)
         balance = [0] * len(dominoes)
-
         b = 0
-        for index, c in enumerate(dominoes):
+        for (index, c) in enumerate(dominoes):
             if c == 'R':
                 b = n
             elif c == 'L':
@@ -12,9 +12,8 @@ class Solution:
             else:
                 b = max(b - 1, 0)
             balance[index] += b
-
         b = 0
-        for index, c in enumerate(reversed(dominoes)):
+        for (index, c) in enumerate(reversed(dominoes)):
             index = -index - 1
             if c == 'R':
                 b = 0
@@ -23,7 +22,6 @@ class Solution:
             else:
                 b = max(b - 1, 0)
             balance[index] -= b
-
         result = ['.'] * len(dominoes)
         for i in range(len(dominoes)):
             if dominoes[i] == 'R' or dominoes[i] == 'L':

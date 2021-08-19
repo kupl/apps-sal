@@ -1,7 +1,8 @@
-INF = int(1e9)
+INF = int(1000000000.0)
 
 
 class Solution:
+
     def shortest_subarrays(self, a, target):
         cum = [0]
         for x in a:
@@ -21,7 +22,6 @@ class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         forward = self.shortest_subarrays(arr, target)
         backward = self.shortest_subarrays(reversed(arr), target)
-
         ret = INF
         for i in range(1, len(arr) - 1 + 1):
             ret = min(ret, forward[i] + backward[len(arr) - i])

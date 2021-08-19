@@ -1,24 +1,22 @@
-
-
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        n, m = len(grid), len(grid[0])
+        (n, m) = (len(grid), len(grid[0]))
         root = {(i, j): (i, j) for i in range(n) for j in range(m)}
 
         def find(x):
-            i, j = x
+            (i, j) = x
             if root[i, j] == x:
                 return x
             root[i, j] = find(root[i, j])
             return root[i, j]
 
         def union(a, b):
-            ra, rb = find(a), find(b)
+            (ra, rb) = (find(a), find(b))
             if ra != rb:
                 root[rb] = ra
                 return False
             return True
-
         for i in range(n):
             for j in range(m):
                 val = grid[i][j]

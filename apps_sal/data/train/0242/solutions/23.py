@@ -2,11 +2,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
-        counter, freq = defaultdict(int), defaultdict(int)
+        (counter, freq) = (defaultdict(int), defaultdict(int))
         max_f = 0
         ans = 0
-        for idx, num in enumerate(nums):
+        for (idx, num) in enumerate(nums):
             counter[num] += 1
             freq[counter[num] - 1] -= 1
             freq[counter[num]] += 1

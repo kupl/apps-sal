@@ -1,9 +1,9 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         L = len(A)
         if L <= 2:
             return 0
-
         res = dict()
         for j in range(1, L):
             res[A[0], A[j]] = 2

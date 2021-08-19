@@ -1,6 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        left, right = 1, max(piles)
+        (left, right) = (1, max(piles))
         while left < right:
             mid = left + (right - left) // 2
             if self.__getEatHours(piles, mid) <= H:

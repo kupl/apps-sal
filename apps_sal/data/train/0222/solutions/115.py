@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         two_sum = {}

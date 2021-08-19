@@ -1,7 +1,8 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         size = len(A)
-        l, r, total, cnt = [0] * 4
+        (l, r, total, cnt) = [0] * 4
         if S == 0:
             l = 1
             for x in A:
@@ -17,7 +18,7 @@ class Solution:
         if r == size and total < S:
             return 0
         while r < size:
-            cnt1, cnt2 = 1, 1
+            (cnt1, cnt2) = (1, 1)
             while l < r and A[l] == 0:
                 l += 1
                 cnt1 += 1

@@ -1,6 +1,6 @@
 class Solution:
-    def minEatingSpeed(self, piles: List[int], H: int) -> int:
 
+    def minEatingSpeed(self, piles: List[int], H: int) -> int:
         l = 1
         r = max(piles)
 
@@ -11,7 +11,6 @@ class Solution:
                 if hr > H:
                     return False
             return True
-
         while l < r:
             mid = l + (r - l) // 2
             if findTime(mid):

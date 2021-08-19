@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         return self.atMost(A, S) - self.atMost(A, S - 1)
 
@@ -6,7 +7,7 @@ class Solution:
         res = 0
         i = 0
         pre_sum = 0
-        for j, val in enumerate(A):
+        for (j, val) in enumerate(A):
             pre_sum += val
             while pre_sum > S and i <= j:
                 print(pre_sum, i)

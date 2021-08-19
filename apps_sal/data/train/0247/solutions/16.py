@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         prefix = {0: -1}
         best_sofar_arr = [math.inf]
@@ -6,10 +7,10 @@ class Solution:
         curr_best = math.inf
         ans = math.inf
         new_ans = math.inf
-        for i, curr in enumerate(itertools.accumulate(arr)):
+        for (i, curr) in enumerate(itertools.accumulate(arr)):
             prefix[curr] = i
             if curr - target in prefix:
-                curr_best = (i - prefix[curr - target])
+                curr_best = i - prefix[curr - target]
                 best_sofar = min(best_sofar, curr_best)
                 best_sofar_arr.append(best_sofar)
                 if i > 0:

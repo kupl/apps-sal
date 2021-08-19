@@ -1,4 +1,5 @@
 class Solution:
+
     def sums(self, n):
         return int((n - 2) * (n - 1) / 2)
 
@@ -25,4 +26,4 @@ class Solution:
                 diff = A[i + 1] - A[i]
                 cnt = 2
                 i += 1
-        return sum(self.sums(x) for x in res)
+        return sum((self.sums(x) for x in res))

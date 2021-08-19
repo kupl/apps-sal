@@ -2,15 +2,14 @@ from collections import deque
 
 
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         substited_indexes = deque()
         start = 0
         best = 0
-
         index = 0
         while index < len(A):
             num = A[index]
-
             if num == 0:
                 if K > 0:
                     K -= 1
@@ -24,8 +23,6 @@ class Solution:
                     start += 1
                     K += 1
                     continue
-
             index += 1
             best = max(best, index - start)
-
         return best

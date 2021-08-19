@@ -1,4 +1,5 @@
 class Solution:
+
     def countNumbersWithUniqueDigits(self, n):
         """
         :type n: int
@@ -9,7 +10,6 @@ class Solution:
             all_count = 9 * 10 ** (i - 1)
             invalid = 9
             for j in range(1, i):
-                invalid *= (10 - j)
-            answer -= (all_count - invalid)
-
+                invalid *= 10 - j
+            answer -= all_count - invalid
         return answer

@@ -1,5 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def count_hours(k):
             hours = 0
             if k == 1:
@@ -11,7 +13,6 @@ class Solution:
             return hours
         least = 1
         most = max(piles)
-
         while least <= most:
             mid = (most + least) // 2
             num_hours = count_hours(mid)

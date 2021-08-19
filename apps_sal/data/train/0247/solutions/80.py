@@ -1,9 +1,9 @@
 class Solution:
-    def minSumOfLengths(self, arr, target):
-        i, window, result = 0, 0, float('inf')
-        premin = [float('inf')] * len(arr)
 
-        for j, num in enumerate(arr):
+    def minSumOfLengths(self, arr, target):
+        (i, window, result) = (0, 0, float('inf'))
+        premin = [float('inf')] * len(arr)
+        for (j, num) in enumerate(arr):
             window += num
             while window > target:
                 window -= arr[i]
@@ -14,5 +14,4 @@ class Solution:
                 premin[j] = min(curr, premin[j - 1])
             else:
                 premin[j] = premin[j - 1]
-
         return result if result < float('inf') else -1

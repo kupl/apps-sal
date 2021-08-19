@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         cnt = collections.Counter(A)
         for k in sorted(cnt, key=abs):
@@ -9,5 +10,4 @@ class Solution:
             if b < a:
                 return False
             cnt[2 * k] -= a
-
         return True

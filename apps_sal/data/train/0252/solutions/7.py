@@ -1,4 +1,5 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         dp = [0] + [n + 2] * n
         for i in range(len(ranges)):

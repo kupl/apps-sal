@@ -1,19 +1,16 @@
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
         freqs = defaultdict(int)
         freqfreq = defaultdict(int)
-
         rec = 0
-
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             freqs[n] += 1
             freqfreq[freqs[n]] += 1
-
             if freqs[n] != 1:
                 freqfreq[freqs[n] - 1] -= 1
                 if freqfreq[freqs[n] - 1] == 0:
                     del freqfreq[freqs[n] - 1]
-
             if len(freqfreq) < 3:
                 if len(freqfreq) == 1 and len(freqs) == 1:
                     rec = i + 1

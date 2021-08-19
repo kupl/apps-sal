@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n_arr = len(arr)
         if n_arr == 0:
@@ -35,10 +36,8 @@ class Solution:
                     j = i
                     curr_sum = array[i]
             return minlen_array
-
         prefix = get_minlen_ending_before(arr)
-        postfix = (get_minlen_ending_before(arr[::-1] + [0])[1:])[::-1]
-
+        postfix = get_minlen_ending_before(arr[::-1] + [0])[1:][::-1]
         min_sum = float('inf')
         for i in range(n_arr):
             min_sum = min(min_sum, prefix[i] + postfix[i])

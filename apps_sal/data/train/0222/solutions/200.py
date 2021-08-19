@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         Aset = set(A)
@@ -8,6 +9,6 @@ class Solution:
             for j in range(i):
                 diff = A[i] - A[j]
                 if diff < A[j] and diff in Aset:
-                    dp[(A[j], A[i])] = dp.get((diff, A[j]), 2) + 1
-                    ans = max(ans, dp[(A[j], A[i])])
+                    dp[A[j], A[i]] = dp.get((diff, A[j]), 2) + 1
+                    ans = max(ans, dp[A[j], A[i]])
         return ans

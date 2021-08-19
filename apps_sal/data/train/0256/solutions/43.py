@@ -1,4 +1,5 @@
 class Solution:
+
     def hours(self, piles, k):
         cnt = 0
         for p in piles:
@@ -13,10 +14,10 @@ class Solution:
             return 1 + piles[0] // H
         l = 0
         r = max(piles)
-        while(l <= r):
+        while l <= r:
             mid = (l + r) // 2
             hrs = self.hours(piles, mid)
-            if (hrs <= H):
+            if hrs <= H:
                 ans = mid
                 r = mid - 1
             else:

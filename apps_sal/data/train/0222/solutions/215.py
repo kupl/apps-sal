@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         m = {}
         for i in range(len(A)):

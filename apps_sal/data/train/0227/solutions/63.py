@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         count_1 = 0
         zero_inx = []
@@ -15,7 +16,7 @@ class Solution:
                 elif K == 0:
                     res = max(res, count_1)
                     first_0 = zero_inx.pop(0)
-                    count_1 -= (first_0 - zero_before - 1)
+                    count_1 -= first_0 - zero_before - 1
                     zero_before = first_0
         res = max(res, count_1)
         return res

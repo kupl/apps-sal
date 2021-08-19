@@ -1,8 +1,8 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         if not A or S < 0:
             return 0
-
         map = Counter()
         map[0] = 1
         sum = 0

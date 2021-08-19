@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, n: int) -> int:
         if n == 1:
             return 1

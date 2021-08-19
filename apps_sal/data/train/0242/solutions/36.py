@@ -1,11 +1,11 @@
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
         count = collections.Counter()
         n = len(nums)
         freq = collections.Counter()
         res = 0
-
-        for i, a in enumerate(nums, 1):
+        for (i, a) in enumerate(nums, 1):
             if count[a] in freq:
                 freq[count[a]] -= 1
             freq[count[a] + 1] += 1

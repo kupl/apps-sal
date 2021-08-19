@@ -2,9 +2,10 @@ from functools import reduce
 
 
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
         A = [ord(c) - ord('a') for c in S]
-        mod = 2**63 - 1
+        mod = 2 ** 63 - 1
 
         def isDuplicate(len_s):
             p = pow(31, len_s, mod)
@@ -19,8 +20,7 @@ class Solution:
                             return j
                 seen[cur].append(j)
             return 0
-
-        l, r = 1, len(S) - 1
+        (l, r) = (1, len(S) - 1)
         ans = ''
         while l <= r:
             mid = l + (r - l) // 2

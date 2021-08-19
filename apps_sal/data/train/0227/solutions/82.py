@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         hash_count = dict()
         hash_count[1] = 0
@@ -9,7 +10,7 @@ class Solution:
             if A[end] == 1:
                 hash_count[A[end]] += 1
             max_count = max(max_count, hash_count[1])
-            if max_count + K < (end - start + 1):
+            if max_count + K < end - start + 1:
                 if A[start] == 1 and hash_count.get(1):
                     hash_count[1] -= 1
                 start += 1

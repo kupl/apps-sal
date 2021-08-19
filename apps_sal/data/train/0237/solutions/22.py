@@ -1,5 +1,7 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
+
         def atMost(S):
             if S < 0:
                 return 0

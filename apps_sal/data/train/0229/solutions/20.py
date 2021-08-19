@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def canReorderDoubled(self, a: List[int]) -> bool:
         count = collections.Counter(a)
         for elem in sorted(a, key=abs):

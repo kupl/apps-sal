@@ -1,8 +1,8 @@
 class Solution:
+
     def longestOnes(self, A: List[int], k: int) -> int:
         res = 0
         i = j = 0
-
         move = 1
         while i < len(A) and j < len(A):
             if move == 1:
@@ -18,5 +18,4 @@ class Solution:
                     k += 1
                     move = 1
                 i += 1
-
         return max(res, j - i)

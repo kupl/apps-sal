@@ -1,8 +1,9 @@
 class Solution:
+
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         cands = set()
         blacklist = set()
-        for f, b in zip(fronts, backs):
+        for (f, b) in zip(fronts, backs):
             if f == b:
                 blacklist.add(f)
                 cands.discard(f)

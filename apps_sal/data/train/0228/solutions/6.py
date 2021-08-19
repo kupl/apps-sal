@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         vowels = set('aeiou')
         init = len([x for x in s[:k] if x in vowels])

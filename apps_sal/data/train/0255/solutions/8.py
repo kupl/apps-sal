@@ -1,4 +1,5 @@
 class Solution:
+
     def jump(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if nums is None or len(nums) <= 1:
             return 0
-
         start = currEnd = nextEnd = jump = 0
         while currEnd - start + 1 > 0:
             jump += 1

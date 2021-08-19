@@ -1,9 +1,9 @@
 class Solution:
-    def longestOnes(self, A: List[int], K: int) -> int:
 
+    def longestOnes(self, A: List[int], K: int) -> int:
         i = 0
         res = 0
-        for j, a in enumerate(A):
+        for (j, a) in enumerate(A):
             if a == 0:
                 K -= 1
             while K < 0:

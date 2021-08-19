@@ -1,6 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        s, e = 1, max(piles)
+        (s, e) = (1, max(piles))
         minK = float('inf')
         while s <= e:
             m = (s + e) // 2

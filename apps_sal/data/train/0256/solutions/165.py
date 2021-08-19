@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
 
         def eatingPossible(cap, piles, H):
@@ -10,11 +11,9 @@ class Solution:
                 if h > H:
                     return False
             return True
-
         piles.sort()
         left = 1
         right = max(piles)
-
         while left < right:
             mid = left + (right - left) // 2
             if eatingPossible(mid, piles, H):

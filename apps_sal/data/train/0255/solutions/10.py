@@ -1,4 +1,5 @@
 class Solution:
+
     def jump(self, nums):
         """
         :type nums: List[int]
@@ -15,5 +16,5 @@ class Solution:
                 nexthi = max(nexthi, i + nums[i])
                 if nexthi >= L - 1:
                     return jumps
-            lo, hi = hi + 1, nexthi
+            (lo, hi) = (hi + 1, nexthi)
         return jumps

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         max_val = 0
         tmp = 0

@@ -2,12 +2,12 @@ from collections import Counter
 
 
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
         dic = Counter(nums)
         dicdic = Counter(list(dic.values()))
         if len(nums) == 2:
             return 2
-
         while True:
             if len(dicdic) == 1 and (min(dicdic) == 1 or min(dicdic.values()) == 1):
                 return len(nums)
@@ -24,5 +24,4 @@ class Solution:
             else:
                 dic[cleanup] = dic[cleanup] - 1
             dicdic = Counter(list(dic.values()))
-
         return

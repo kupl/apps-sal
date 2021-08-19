@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         n = len(piles)
         if not n:
@@ -22,8 +23,7 @@ class Solution:
                 if k >= num:
                     res += 1
                     continue
-                res += (num // k)
-                res += 1 if (num % k) else 0
+                res += num // k
+                res += 1 if num % k else 0
             return res
-
         return binary_search(1, max(piles))

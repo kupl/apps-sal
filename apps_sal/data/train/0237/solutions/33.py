@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         A = [0] + list(itertools.accumulate(A))
         hm = Counter()

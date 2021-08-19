@@ -1,4 +1,5 @@
 class Solution:
+
     def pushDominoes(self, dominoes: str) -> str:
         n = len(dominoes)
         force = [0] * n
@@ -19,4 +20,4 @@ class Solution:
             else:
                 f = max(f - 1, 0)
             force[i] -= f
-        return ''.join('.' if f == 0 else 'R' if f > 0 else 'L' for f in force)
+        return ''.join(('.' if f == 0 else 'R' if f > 0 else 'L' for f in force))

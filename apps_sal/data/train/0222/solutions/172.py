@@ -1,10 +1,12 @@
 class Solution:
+
     def lenLongestFibSubseq(self, x: List[int]) -> int:
+
         def func(a, b):
             if (a, b) in dp:
                 return dp[a, b]
             ans = 1
-            if (a + b) in f:
+            if a + b in f:
                 ans = 1 + func(b, a + b)
             dp[a, b] = ans
             return ans

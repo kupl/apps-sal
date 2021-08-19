@@ -1,4 +1,5 @@
 class Solution:
+
     def numSquarefulPerms(self, A: List[int]) -> int:
         count = {}
         for i in A:
@@ -20,5 +21,4 @@ class Solution:
                         ans += dfs(y, todo - 1)
             count[x] += 1
             return ans
-
-        return sum(dfs(x, len(A) - 1) for x in count)
+        return sum((dfs(x, len(A) - 1) for x in count))

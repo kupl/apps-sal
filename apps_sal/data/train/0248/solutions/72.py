@@ -1,6 +1,7 @@
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         dsu = DUS()
         for i in range(m):
             for j in range(n):
@@ -8,7 +9,6 @@ class Solution:
                     continue
                 if j != 0 and grid[i][j] == grid[i][j - 1]:
                     dsu.union((i, j), (i, j - 1))
-
                 if i != 0 and grid[i][j] == grid[i - 1][j]:
                     if dsu.find((i, j)) == dsu.find((i - 1, j)):
                         return True
@@ -17,6 +17,7 @@ class Solution:
 
 
 class DUS:
+
     def __init__(self):
         self.father = {}
 

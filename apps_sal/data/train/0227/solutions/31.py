@@ -1,6 +1,7 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
-        left, right = 0, 0
+        (left, right) = (0, 0)
         max_window = 0
         zero_positions = []
         num_violations = 0

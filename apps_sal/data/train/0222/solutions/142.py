@@ -1,8 +1,8 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         dp = []
-
-        for i, x in enumerate(A):
+        for (i, x) in enumerate(A):
             nd = collections.defaultdict(lambda: 1)
             dp.append(nd)
             for j in range(i):

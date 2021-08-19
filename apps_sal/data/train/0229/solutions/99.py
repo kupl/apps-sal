@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         count_a = Counter(A)
         A.sort(key=lambda x: abs(x))

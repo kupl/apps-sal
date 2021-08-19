@@ -1,7 +1,7 @@
 class Solution:
-    def longestOnes(self, A: List[int], K: int) -> int:
-        i, j, n = 0, 0, len(A)
 
+    def longestOnes(self, A: List[int], K: int) -> int:
+        (i, j, n) = (0, 0, len(A))
         for x in A:
             j += 1
             if x == 0:

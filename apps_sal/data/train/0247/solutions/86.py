@@ -1,12 +1,11 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
         dp = [float('inf')] * n
-        sums, res = 0, float('inf')
-
+        (sums, res) = (0, float('inf'))
         sum_record = {0: -1}
-
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             sums += num
             dp[i] = dp[i - 1]
             if sums - target in sum_record:

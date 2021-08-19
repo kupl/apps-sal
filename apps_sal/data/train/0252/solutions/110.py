@@ -1,4 +1,5 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         dp = [n + 2] * (n + 1)
         dp[0] = 0

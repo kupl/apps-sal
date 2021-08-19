@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         counter = collections.Counter(A)
         counter = dict(sorted(counter.items(), key=lambda x: abs(x[0])))

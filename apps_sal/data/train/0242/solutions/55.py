@@ -1,7 +1,8 @@
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
-        cnt, freq, maxF, res = collections.defaultdict(int), collections.defaultdict(int), 0, 0
-        for i, num in enumerate(nums):
+        (cnt, freq, maxF, res) = (collections.defaultdict(int), collections.defaultdict(int), 0, 0)
+        for (i, num) in enumerate(nums):
             cnt[num] += 1
             freq[cnt[num] - 1] -= 1
             freq[cnt[num]] += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         zcount = 0
         pos = []
@@ -20,6 +21,5 @@ class Solution:
                     return False
                 count[x] -= 1
                 count[2 * x] -= 1
-
             return True
         return verifypos(pos) and verifypos(neg)

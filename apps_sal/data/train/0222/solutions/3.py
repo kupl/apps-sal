@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, array: List[int]) -> int:
         if len(array) < 3:
             return len(array)

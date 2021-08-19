@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         A = []
         for i in range(N):
@@ -11,6 +12,5 @@ class Solution:
                 A.append('+')
             else:
                 A.append('-')
-
         A.pop()
         return eval(''.join(A))

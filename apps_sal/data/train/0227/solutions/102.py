@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, arr: List[int], k: int) -> int:
         hashmap = dict()
         max_len = length = start_index = 0
@@ -10,5 +11,4 @@ class Solution:
                 hashmap[arr[start_index]] -= 1
                 start_index += 1
             max_len = max(max_len, sum(hashmap.values()))
-
         return max_len

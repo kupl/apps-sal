@@ -1,9 +1,9 @@
 class Solution:
-    def numSubarraysWithSum(self, A: List[int], S: int) -> int:
-        '''
-        Subarray sum = k problem
-        '''
 
+    def numSubarraysWithSum(self, A: List[int], S: int) -> int:
+        """
+        Subarray sum = k problem
+        """
         cur = 0
         res = 0
         dp = collections.defaultdict(int)
@@ -14,5 +14,4 @@ class Solution:
             if diff in dp:
                 res += dp[diff]
             dp[cur] += 1
-
         return res

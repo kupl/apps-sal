@@ -14,7 +14,6 @@ class Solution:
             else:
                 self.count[i] = 1
             self.graph[i] = []
-
         for i in self.count:
             for j in self.count:
                 r = int(np.sqrt(i + j))

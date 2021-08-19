@@ -1,10 +1,9 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         i = 0
         j = 0
-
         numZeros = 0
-
         bestSize = 0
         while j < len(A):
             if A[j] == 1:

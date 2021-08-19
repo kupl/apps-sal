@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         dic = collections.defaultdict(int)
         for i in range(len(A)):

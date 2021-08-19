@@ -1,4 +1,5 @@
 class Solution:
+
     def frequencySort(self, s):
         """
         :type s: str
@@ -10,8 +11,7 @@ class Solution:
                 counter[c] += 1
             else:
                 counter[c] = 1
-
-        res = ""
+        res = ''
         while counter:
             m = max(counter, key=counter.get)
             res += m * counter[m]

@@ -1,4 +1,5 @@
 class Solution:
+
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         res_map = {}
         for idx in range(len(fronts)):

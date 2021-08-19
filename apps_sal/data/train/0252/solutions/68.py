@@ -2,11 +2,12 @@ import bisect
 
 
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         uc = 0
         taps = []
         taps_r = []
-        for idx, r in enumerate(ranges):
+        for (idx, r) in enumerate(ranges):
             if r > 0:
                 tap = (idx - r if idx - r > 0 else 0, idx + r)
                 tapr = (idx + r, idx - r if idx - r > 0 else 0)

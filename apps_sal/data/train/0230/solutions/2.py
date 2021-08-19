@@ -1,4 +1,5 @@
 class Solution(object):
+
     def removeKdigits(self, num, k):
         """
         :type num: str
@@ -6,10 +7,10 @@ class Solution(object):
         :rtype: str
         """
         if k == len(num):
-            return "0"
+            return '0'
         stack = []
         cnt = 0
-        for i, ch in enumerate(num):
+        for (i, ch) in enumerate(num):
             if cnt == k:
                 for j in range(i, len(num)):
                     stack.append(num[j])
@@ -17,7 +18,7 @@ class Solution(object):
             if not stack or ch >= stack[-1]:
                 stack.append(ch)
             else:
-                while stack and ch < stack[-1] and cnt < k:
+                while stack and ch < stack[-1] and (cnt < k):
                     stack.pop()
                     cnt += 1
                 stack.append(ch)
@@ -28,5 +29,5 @@ class Solution(object):
         while i < len(stack) and stack[i] == '0':
             i += 1
         if i == len(stack):
-            return "0"
+            return '0'
         return ''.join(stack[i:])

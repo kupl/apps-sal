@@ -1,8 +1,8 @@
 class Solution:
+
     def numSubarraysWithSum(self, nums: List[int], k: int) -> int:
         if not nums:
             return 0
-
         counter = collections.defaultdict(int)
         counter[0] = 1
         cumsum = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         n = len(A)
 
@@ -13,5 +14,4 @@ class Solution:
                     li += 1
                 subarr_ct += ri - li + 1
             return subarr_ct
-
         return num_subar_at_most(S) - num_subar_at_most(S - 1)

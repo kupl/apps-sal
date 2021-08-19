@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         counter = collections.Counter({0: 1})
         s = 0

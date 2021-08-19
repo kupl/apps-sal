@@ -8,7 +8,7 @@ class Solution:
         self.grid = []
 
     def isValid(self, i, j):
-        return i >= 0 and i < len(self.grid) and j >= 0 and j < len(self.grid[i])
+        return i >= 0 and i < len(self.grid) and (j >= 0) and (j < len(self.grid[i]))
 
     def hasCycle(self, l):
         seen = set()
@@ -22,13 +22,11 @@ class Solution:
                     cur = node[1]
                     fr = node[0]
                     if cur in seen:
-
                         return True
                     seen.add(cur)
                     for x in around:
                         test = (cur[0] + x[0], cur[1] + x[1])
-                        if self.isValid(test[0], test[1]) and test in l and not test == fr:
-
+                        if self.isValid(test[0], test[1]) and test in l and (not test == fr):
                             todo.append([cur, test])
         return False
 

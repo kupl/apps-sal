@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         max_k = 0
         for value in piles:
@@ -25,5 +26,4 @@ class Solution:
 
         def binary_search_iter(low, high):
             pass
-
         return binary_search(1, max_k)

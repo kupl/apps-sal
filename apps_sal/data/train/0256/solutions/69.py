@@ -1,6 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        right = 10**9
+        right = 10 ** 9
         left = 1
         piles.sort()
         while left + 1 < right:

@@ -6,15 +6,10 @@ class Solution:
         nodes = [(i, j)]
         visited = set()
         while len(nodes):
-            i, j = nodes.pop()
+            (i, j) = nodes.pop()
             visited.add((i, j))
-            pi, pj = parents[i, j]
-            for ci, cj in [
-                (i + 1, j),
-                (i - 1, j),
-                (i, j + 1),
-                (i, j - 1),
-            ]:
+            (pi, pj) = parents[i, j]
+            for (ci, cj) in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:
                 in_range = 0 <= ci < len(grid) and 0 <= cj < len(grid[ci])
                 is_same_key = in_range and grid[ci][cj] == key
                 if ci == pi and cj == pj:
@@ -27,7 +22,6 @@ class Solution:
         return False
 
     def containsCycle(self, grid: List[List[str]]) -> bool:
-
         parents = {}
         for i in range(len(grid)):
             for j in range(len(grid[i])):

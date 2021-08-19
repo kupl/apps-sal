@@ -1,4 +1,5 @@
 class Solution:
+
     def frequencySort(self, s):
         """
         :type s: str
@@ -8,9 +9,9 @@ class Solution:
         for c in s:
             mapping[c] = mapping[c] + 1 if c in mapping else 1
         bucket = [[] for _ in range(len(s) + 1)]
-        for c, freq in mapping.items():
+        for (c, freq) in mapping.items():
             bucket[freq].append(c)
-        res = ""
+        res = ''
         for i in range(len(s), -1, -1):
             for c in bucket[i]:
                 for _ in range(i):

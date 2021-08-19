@@ -1,7 +1,8 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         result = 0
-        left, right, count = 0, 0, 0
+        (left, right, count) = (0, 0, 0)
         for right in range(len(A)):
             S -= A[right]
             if A[right] == 1:

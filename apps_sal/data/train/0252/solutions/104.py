@@ -1,7 +1,8 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         dp = [n for _ in range(n + 1)]
-        for index, ranged in enumerate(ranges):
+        for (index, ranged) in enumerate(ranges):
             start = max(0, index - ranged)
             end = min(n, index + ranged)
             if start == 0:

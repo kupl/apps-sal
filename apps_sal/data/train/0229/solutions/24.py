@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         a = np.array(sorted(A))
         non_pos_idxs = np.where(a >= 0)[0]
@@ -13,7 +14,6 @@ class Solution:
         a = a[non_pos_idx:]
         if len(b) % 2 != 0:
             return False
-
         if not self.check_doubled(a):
             return False
         if not self.check_doubled(b):

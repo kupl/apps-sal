@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, array: List[int], hour: int) -> int:
         if len(array) == hour:
             return max(array)
@@ -11,11 +12,10 @@ class Solution:
             for i in range(len(array)):
                 if array[i] <= mid:
                     h -= 1
+                elif array[i] % mid == 0:
+                    h -= array[i] // mid
                 else:
-                    if array[i] % mid == 0:
-                        h -= array[i] // mid
-                    else:
-                        h -= (array[i] // mid) + 1
+                    h -= array[i] // mid + 1
             if h >= 0:
                 ans = min(ans, mid)
                 high = mid - 1

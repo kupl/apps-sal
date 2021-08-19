@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         ans = self.multiplyDivide(N)
         N -= 3

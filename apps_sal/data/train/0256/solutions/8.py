@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         end = max(piles)
         start = 1
@@ -11,7 +12,6 @@ class Solution:
                 end = mid
             else:
                 start = mid
-
         if self.possible(start, piles, H):
             return start
         if self.possible(end, piles, H):

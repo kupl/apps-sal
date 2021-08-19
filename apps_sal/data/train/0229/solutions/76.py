@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         A.sort()
         seen = Counter()
@@ -11,7 +12,6 @@ class Solution:
                 seen[elem] -= 1
             else:
                 seen[num] += 1
-
         if sum(seen.values()):
             return False
         return True

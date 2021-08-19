@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A, S):
         return self.numSubarraysAtMostSum(A, S) - self.numSubarraysAtMostSum(A, S - 1)
 

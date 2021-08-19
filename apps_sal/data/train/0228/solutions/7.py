@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         ans = 0
         dic = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}

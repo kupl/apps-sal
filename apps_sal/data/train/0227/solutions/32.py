@@ -1,6 +1,6 @@
 class Solution:
-    def longestOnes(self, A: List[int], K: int) -> int:
 
+    def longestOnes(self, A: List[int], K: int) -> int:
         z_count = 0
         l = 0
         result = 0
@@ -13,5 +13,4 @@ class Solution:
                 if not A[l]:
                     z_count -= 1
                 l += 1
-
         return result

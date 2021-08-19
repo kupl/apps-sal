@@ -1,5 +1,7 @@
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
+
         def search(m, MOD):
             h = 0
             for i in range(m):
@@ -12,12 +14,11 @@ class Solution:
                     return pos
                 s.add(h)
             return -1
-
         n = len(S)
         nums = [ord(c) - ord('a') for c in S]
-        l, r = 1, n
+        (l, r) = (1, n)
         pos = -1
-        MOD = 2**63 - 1
+        MOD = 2 ** 63 - 1
         while l <= r:
             m = (l + r) // 2
             cur = search(m, MOD)
@@ -26,4 +27,4 @@ class Solution:
                 pos = cur
             else:
                 r = m - 1
-        return S[pos: pos + l - 1]
+        return S[pos:pos + l - 1]

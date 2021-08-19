@@ -1,4 +1,5 @@
 class Solution:
+
     def regionsBySlashes(self, grid: List[str]) -> int:
         nrow = len(grid)
         ncol = len(grid[0])
@@ -30,7 +31,6 @@ class Solution:
                         dfs(r - 1, c)
                     if c > 0 and newgrid[r][c - 1] == 0:
                         dfs(r, c - 1)
-
             for r1 in range(len(newgrid)):
                 for c1 in range(len(newgrid[0])):
                     if newgrid[r1][c1] == 0:
@@ -38,6 +38,5 @@ class Solution:
                         count += 1
                     else:
                         pass
-            return(count)
-
-        return(countIsland(newgrid))
+            return count
+        return countIsland(newgrid)

@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         if len(A) % 2 == 1:
             return False
@@ -18,12 +19,9 @@ class Solution:
                 return False
             if c[2 * num] < c[num]:
                 return False
-
             c[2 * num] -= c[num]
             if c[2 * num] == 0:
                 done.add(2 * num)
-
             c[num] = 0
             done.add(num)
-
         return True

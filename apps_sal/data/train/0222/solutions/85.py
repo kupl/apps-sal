@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         from collections import defaultdict
         used_tuples = set()
@@ -17,7 +18,5 @@ class Solution:
                     old_s = s
                     s = l
                     l = s + old_s
-
                 max_len = max(max_len, curr_len)
-
         return max_len + 2 if max_len > 0 else 0

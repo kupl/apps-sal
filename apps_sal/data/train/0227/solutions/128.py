@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         q = deque()
         cnt = 0

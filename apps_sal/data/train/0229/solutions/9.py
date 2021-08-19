@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         cache = dict()
         for a in A:
@@ -15,7 +16,7 @@ class Solution:
                 if curr in cache:
                     if cache[curr] == 0:
                         cache.pop(curr)
-                    elif (2 * curr not in cache) or cache[2 * curr] < cache[curr]:
+                    elif 2 * curr not in cache or cache[2 * curr] < cache[curr]:
                         return False
                     else:
                         cache[2 * curr] -= cache[curr]
@@ -23,7 +24,7 @@ class Solution:
                 if -curr in cache:
                     if cache[-curr] == 0:
                         cache.pop(-curr)
-                    elif (-2 * curr not in cache) or cache[-2 * curr] < cache[-curr]:
+                    elif -2 * curr not in cache or cache[-2 * curr] < cache[-curr]:
                         return False
                     else:
                         cache[-2 * curr] -= cache[-curr]

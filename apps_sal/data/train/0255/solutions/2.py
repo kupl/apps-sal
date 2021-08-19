@@ -1,4 +1,5 @@
 class Solution:
+
     def jump(self, nums):
         """
         :type nums: List[int]
@@ -8,8 +9,7 @@ class Solution:
             return 0
         if len(nums) == 1:
             return 0
-        step, far, maxV = 0, 0, 0
-
+        (step, far, maxV) = (0, 0, 0)
         for i in range(len(nums)):
             if i + nums[i] > maxV and i + nums[i] >= len(nums) - 1:
                 return step + 1

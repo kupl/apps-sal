@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles, H):
         import math
         left = 1
@@ -9,7 +10,6 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid
-
         return left
 
     def f(self, piles, K):

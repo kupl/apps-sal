@@ -14,7 +14,6 @@ class Solution:
             else:
                 self.count[i] = 1
             self.graph[i] = []
-
         for i in self.count:
             for j in self.count:
                 r = int(np.sqrt(i + j))
@@ -22,8 +21,8 @@ class Solution:
                     self.graph[i].append(j)
         ans = 0
         L = len(A)
-        print((self.count))
-        print((self.graph))
+        print(self.count)
+        print(self.graph)
         for i in self.graph:
             ans += self.dfs(i, L - 1)
         return ans

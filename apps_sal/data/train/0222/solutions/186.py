@@ -3,6 +3,7 @@ from bisect import bisect_left
 
 
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
 
@@ -13,7 +14,6 @@ class Solution:
             if i < n and A[i] == prevsum:
                 return 1 + fib(p2, A[i], i + 1)
             return 0
-
         res = 0
         for i in range(n - 2):
             for j in range(i + 1, n - 1):

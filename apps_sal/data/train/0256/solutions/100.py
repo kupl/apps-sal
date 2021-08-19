@@ -1,9 +1,11 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def can_finish(k):
             h = 0
             for p in piles:
-                d, r = divmod(p, k)
+                (d, r) = divmod(p, k)
                 if r:
                     d += 1
                 h += d

@@ -1,6 +1,6 @@
 class Solution:
-    def minSumOfLengths(self, arr: List[int], target: int) -> int:
 
+    def minSumOfLengths(self, arr: List[int], target: int) -> int:
         l = 0
         currentSum = 0
         res = -1

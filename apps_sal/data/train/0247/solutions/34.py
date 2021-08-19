@@ -1,6 +1,6 @@
 class Solution:
-    def minSumOfLengths(self, arr: List[int], target: int) -> int:
 
+    def minSumOfLengths(self, arr: List[int], target: int) -> int:
         min_range = None
         left = self.get_list(arr, target)
         right = list(reversed(self.get_list(list(reversed(arr)), target)))
@@ -13,14 +13,11 @@ class Solution:
                     min_length = left[i] + right[i + 1]
                 else:
                     min_length = min(left[i] + right[i + 1], min_length)
-
         return -1 if not min_length else min_length
 
     def get_list(self, arr, target):
-
         prefix_d = dict()
         prefix_d[0] = -1
-
         min_range_list = []
         current_min = -1
         current = 0
@@ -33,9 +30,6 @@ class Solution:
                     current_min = dis
                 else:
                     current_min = min(current_min, dis)
-
             min_range_list.append(current_min)
-
             prefix_d[current] = i
-
         return min_range_list

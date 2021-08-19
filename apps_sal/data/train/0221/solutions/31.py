@@ -1,13 +1,11 @@
 class Solution:
+
     def search(self, L: int, a: int, modulus: int, n: int, nums: List[int]) -> str:
         h = 0
         for i in range(L):
             h = (h * a + nums[i]) % modulus
-
         seen = {h}
-
         aL = pow(a, L, modulus)
-
         for start in range(1, n - L + 1):
             h = (h * a - nums[start - 1] * aL + nums[start + L - 1]) % modulus
             if h in seen:
@@ -20,7 +18,7 @@ class Solution:
         nums = [ord(S[i]) - ord('a') for i in range(n)]
         a = 26
         modulus = 2 ** 32
-        left, right = 1, n
+        (left, right) = (1, n)
         while left <= right:
             L = left + (right - left) // 2
             if self.search(L, a, modulus, n, nums) != -1:
@@ -28,4 +26,4 @@ class Solution:
             else:
                 right = L - 1
         start = self.search(left - 1, a, modulus, n, nums)
-        return S[start: start + left - 1]
+        return S[start:start + left - 1]

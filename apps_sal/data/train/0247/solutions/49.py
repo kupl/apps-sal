@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         record = collections.defaultdict()
         record[0] = 0
@@ -13,7 +14,6 @@ class Solution:
             record[tmp_sum] = i + 1
             if i > 0:
                 dp[i] = min(dp[i], dp[i - 1])
-
         record.clear()
         tmp_sum = 0
         record[0] = len(arr)
@@ -22,5 +22,4 @@ class Solution:
             if tmp_sum - target in record:
                 res = min(res, dp[i - 1] + record[tmp_sum - target] - i)
             record[tmp_sum] = i
-
         return res if res < float('Inf') else -1

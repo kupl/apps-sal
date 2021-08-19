@@ -1,4 +1,5 @@
 class Solution:
+
     def get_result(self, sl, d):
         for k in sl:
             if d[k] == 0:

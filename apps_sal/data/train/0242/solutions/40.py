@@ -2,10 +2,11 @@ from collections import Counter
 
 
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
-        counts, freq = Counter(), Counter()
-        ans, maxF = 0, 0
-        for i, num in enumerate(nums):
+        (counts, freq) = (Counter(), Counter())
+        (ans, maxF) = (0, 0)
+        for (i, num) in enumerate(nums):
             counts[num] += 1
             freq[counts[num] - 1] -= 1
             freq[counts[num]] += 1

@@ -2,7 +2,9 @@ from math import ceil
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def doesViolate(mid):
             requiredHour = 0
             for i in range(0, len(piles)):
@@ -16,8 +18,7 @@ class Solution:
                 return False
         low = 1
         high = max(piles)
-
-        while (low < high):
+        while low < high:
             mid = (low + high) // 2
             if doesViolate(mid) == True:
                 low = mid + 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, arr: List[int], k: int) -> int:
         start_index = 0
         longest_ones = 0
@@ -6,7 +7,7 @@ class Solution:
         for end_index in range(len(arr)):
             if arr[end_index] == 1:
                 longest_ones += 1
-            if longest_ones + k <= (end_index - start_index):
+            if longest_ones + k <= end_index - start_index:
                 if arr[start_index] == 1:
                     longest_ones -= 1
                 start_index += 1

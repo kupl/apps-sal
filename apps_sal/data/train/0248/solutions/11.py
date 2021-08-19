@@ -1,7 +1,7 @@
 class UnionFind:
+
     def __init__(self, row_size, col_size):
-        self.roots = [[(i, j) for j in range(col_size)]
-                      for i in range(row_size)]
+        self.roots = [[(i, j) for j in range(col_size)] for i in range(row_size)]
 
     def get_rank(self, node):
         return -node[0] * len(self.roots[0]) - node[1]
@@ -22,13 +22,14 @@ class UnionFind:
 
 
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        row_size, col_size = len(grid), len(grid[0])
+        (row_size, col_size) = (len(grid), len(grid[0]))
         uf = UnionFind(row_size, col_size)
         for i in range(row_size):
             for j in range(col_size):
                 for (x, y) in [(i - 1, j), (i, j - 1)]:
-                    if x >= 0 and y >= 0 and grid[x][y] == grid[i][j]:
+                    if x >= 0 and y >= 0 and (grid[x][y] == grid[i][j]):
                         if uf.find((i, j)) == uf.find((x, y)):
                             return True
                         uf.union((i, j), (x, y))

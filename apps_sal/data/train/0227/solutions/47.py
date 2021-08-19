@@ -1,8 +1,8 @@
 class Solution:
-    def longestOnes(self, A: List[int], K: int) -> int:
-        st, ed = 0, 0
-        ans = 0
 
+    def longestOnes(self, A: List[int], K: int) -> int:
+        (st, ed) = (0, 0)
+        ans = 0
         longest = 0
         k = 0
         while ed < len(A):
@@ -14,9 +14,7 @@ class Solution:
                     longest += 1
                 else:
                     break
-
                 ed += 1
-
             ans = max(longest, ans)
             while st <= ed and st < len(A):
                 longest -= 1
@@ -24,7 +22,5 @@ class Solution:
                     k -= 1
                     st += 1
                     break
-
                 st += 1
-
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
         prefix_sum = list(accumulate(arr))
@@ -15,10 +16,8 @@ class Solution:
                 l_1[i] = min(x, l_1[i - 1] if i > 0 else n + 1)
                 dict_x[prefix_sum[i]] = i
             return l_1
-
         l = helper(prefix_sum, n, target)
         r = helper(suffix_sum, n, target)[::-1]
-
         ans = sys.maxsize
         for i in range(n - 1):
             ans = min(ans, l[i] + r[i + 1])

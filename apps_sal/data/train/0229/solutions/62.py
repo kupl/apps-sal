@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         neg = collections.Counter()
         pos = collections.Counter()
@@ -10,7 +11,6 @@ class Solution:
                 pos[n] += 1
             else:
                 neg[n] += 1
-
         for n in sorted(neg, reverse=True):
             if neg[n * 2] < neg[n]:
                 return False

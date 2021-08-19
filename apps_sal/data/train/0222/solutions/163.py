@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         A_set = set(A)
@@ -12,11 +13,10 @@ class Solution:
             res = 3
         else:
             return 0
-
         while res_set:
             length = len(res_set)
             while length:
-                x, y = res_set.pop(0)
+                (x, y) = res_set.pop(0)
                 if x + y in A_set:
                     res_set.append((y, x + y))
                 length -= 1

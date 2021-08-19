@@ -1,8 +1,8 @@
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
         A = [ord(c) for c in S]
-        mod = 2**63 - 1
-
+        mod = 2 ** 63 - 1
         lo = 0
         hi = len(S)
         res = 0
@@ -21,7 +21,6 @@ class Solution:
                     return i - sz + 1
                 seen.add(val)
             return -1
-
         while lo < hi:
             mid = (lo + hi) // 2
             pos = test(mid)
@@ -30,5 +29,4 @@ class Solution:
             else:
                 res = pos
                 lo = mid + 1
-
         return S[res:res + lo - 1]

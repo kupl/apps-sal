@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         setA = set(A)
         answer = 0
@@ -14,12 +15,10 @@ class Solution:
                 sum_ = curr1 + curr2
                 l = 2 if sum_ in setA else 0
                 while sum_ in setA and sum_ <= max_:
-                    curr1, curr2 = curr2, sum_
+                    (curr1, curr2) = (curr2, sum_)
                     sum_ = curr1 + curr2
                     visited.add((curr1, curr2))
                     l += 1
-
                 answer = max(answer, l)
                 curr1 = A[i]
-
         return answer

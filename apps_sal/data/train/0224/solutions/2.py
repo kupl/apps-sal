@@ -1,4 +1,5 @@
 class Solution:
+
     def numDistinct(self, s, t):
         """
         :type s: str
