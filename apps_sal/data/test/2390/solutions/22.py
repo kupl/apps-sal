@@ -1,8 +1,8 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 x = [0] * n
 v = [0] * n
 for i in range(n):
-    x[i], v[i] = map(int, input().split())
+    (x[i], v[i]) = map(int, input().split())
 x1 = [0] + x
 v1 = [0] + v
 x2 = [0] + list(map(lambda a: c - a, x[::-1]))
@@ -25,9 +25,6 @@ def f(l, x, v):
 
 f(lst1, x1, v1)
 f(lst2, x2, v2)
-# print(lst1)
-# print(lst2)
-
 ans = 0
 for i in range(n + 1):
     ans = max(ans, lst1[i][0] + lst2[n - i][0] - min(lst1[i][1], lst2[n - i][1]))

@@ -1,22 +1,31 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 stdin = sys.stdin
 
 
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(stdin.readline().rstrip())
-def nm(): return map(int, stdin.readline().split())
-def nl(): return list(map(int, stdin.readline().split()))
+def ns():
+    return stdin.readline().rstrip()
+
+
+def ni():
+    return int(stdin.readline().rstrip())
+
+
+def nm():
+    return map(int, stdin.readline().split())
+
+
+def nl():
+    return list(map(int, stdin.readline().split()))
 
 
 n = ni()
 color = nl()
 g = [list() for _ in range(n)]
 for _ in range(n - 1):
-    a, b = nm()
+    (a, b) = nm()
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
-
 size = [1] * n
 par = [-1] * n
 h = [list() for _ in range(n + 1)]
@@ -36,14 +45,12 @@ def dfs(v, p):
 
 
 dfs(0, -1)
-# print(size)
 for v in range(n):
     if idx[v] < len(g[v]) and g[v][idx[v]] == par[v]:
         idx[v] += 1
 acc = [0] * (n + 10)
 ans = [n * (n + 1) // 2] * (n + 1)
 for col in range(1, n + 1):
-    # print(h[col])
     acc[-1] = 0
     p = [-1]
     for v in h[col]:
@@ -58,11 +65,9 @@ for col in range(1, n + 1):
                 idx[v] += 1
             ans[col] -= q * (q + 1) // 2
             acc[v] = 0
-            # print(v, q)
             p.append(v)
         else:
             p.append(v)
     q = n - acc[-1]
-    # print(-1, q)
     ans[col] -= q * (q + 1) // 2
 print(*ans[1:], sep='\n')

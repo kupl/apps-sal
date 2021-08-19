@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
 from functools import reduce
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def cmb(n, r, m):
+
     def mul(a, b):
         return a * b % m
-
     r = min(n - r, r)
     if r == 0:
         return 1
@@ -16,5 +14,5 @@ def cmb(n, r, m):
     return over * pow(under, m - 2, m)
 
 
-n, a, b = list(map(int, input().split()))
-print(((pow(2, n, mod) - 1 - cmb(n, a, mod) - cmb(n, b, mod)) % mod))
+(n, a, b) = list(map(int, input().split()))
+print((pow(2, n, mod) - 1 - cmb(n, a, mod) - cmb(n, b, mod)) % mod)

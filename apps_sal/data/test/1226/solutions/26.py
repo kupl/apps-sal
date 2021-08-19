@@ -1,6 +1,6 @@
 def main():
-    n, a, b = list(map(int, input().split()))
-    mod = 10 ** 9 + 7  # 素数
+    (n, a, b) = list(map(int, input().split()))
+    mod = 10 ** 9 + 7
 
     def modpow(x, n, mod):
         res = 1
@@ -12,21 +12,18 @@ def main():
         return res
 
     def cmb(n, r, mod):
-        # 分子(n*(n-1)*...*(n-r+1))
         nume = 1
         for i in range(n - r + 1, n + 1):
             nume = nume * i % mod
-        # 分母（1*2*...*r）
         deno = 1
         for j in range(1, r + 1):
             deno = deno * j % mod
         d = modpow(deno, mod - 2, mod)
         return nume * d % mod
-
     all_cmb = pow(2, n, mod) - 1
     bad_a = cmb(n, a, mod)
     bad_b = cmb(n, b, mod)
-    print(((all_cmb - bad_a - bad_b) % mod))
+    print((all_cmb - bad_a - bad_b) % mod)
 
 
 def __starting_point():

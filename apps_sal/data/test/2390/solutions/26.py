@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -27,10 +26,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 
@@ -67,26 +64,24 @@ class SegTree:
 
 
 def resolve():
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     XY = [list(map(int, input().split())) for _ in range(n)]
     R1 = [0]
     prev = 0
-    for x, y in XY:
+    for (x, y) in XY:
         R1.append(R1[-1] + y - (x - prev))
         prev = x
     R2 = [0]
     prev = 0
-    for x, y in XY[::-1]:
-        R2.append(R2[-1] + y - ((c - x) - prev))
-        prev = (c - x)
-
+    for (x, y) in XY[::-1]:
+        R2.append(R2[-1] + y - (c - x - prev))
+        prev = c - x
     res = max(max(R1), max(R2))
     seg1 = SegTree(R2, lambda x, y: max(x, y), 0)
     for i in range(1, n + 1):
         point1 = R1[i] - XY[i - 1][0]
         point2 = seg1.query(0, n + 1 - i)
         res = max(res, point1 + point2)
-
     seg2 = SegTree(R1, lambda x, y: max(x, y), 0)
     for i in range(1, n + 1):
         point1 = R2[i] - (c - XY[-i][0])
