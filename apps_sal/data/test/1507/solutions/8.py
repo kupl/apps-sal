@@ -8,9 +8,8 @@ from sys import stdin, stdout
 
 
 def main():
-    n, k = [int(_) for _ in stdin.readline().strip().split()]
+    (n, k) = [int(_) for _ in stdin.readline().strip().split()]
     s = stdin.readline().strip()
-
     last = dict()
     for i in range(26):
         c = chr(ord('A') + i)
@@ -18,23 +17,19 @@ def main():
             if s[j] == c:
                 last[c] = j
                 break
-
     guardAssigned = dict()
     for i in range(26):
         c = chr(ord('A') + i)
         guardAssigned[c] = False
-
     totalGuard = 0
     maxGuard = 0
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if not guardAssigned[c]:
             guardAssigned[c] = True
             totalGuard += 1
             maxGuard = max(maxGuard, totalGuard)
         if i == last[c]:
             totalGuard -= 1
-
-    #print('maxgurad:', maxGuard)
     if maxGuard > k:
         stdout.write('YES\n')
     else:

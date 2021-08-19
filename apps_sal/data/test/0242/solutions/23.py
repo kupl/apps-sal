@@ -10,12 +10,10 @@ def zrs(n):
 
 
 def bins(n):
-    a, b = 1, n * 5 + 1
+    (a, b) = (1, n * 5 + 1)
     while a < b:
         mid = (a + b) // 2
         guess = zrs(mid)
-        #print (guess)
-        # print(a,b)
         if guess < n:
             a = mid + 1
         elif guess > n:
@@ -27,7 +25,6 @@ def bins(n):
 
 x = bins(n)
 x = x - x % 5
-
 if x == 0:
     print('0')
 else:

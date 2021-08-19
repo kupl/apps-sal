@@ -1,14 +1,10 @@
-'''input
+"""input
 4 4
 abcd
-'''
-# its just a simulation
+"""
 from sys import stdin, setrecursionlimit
 import heapq
-
-
-# main starts
-n, p = list(map(int, stdin.readline().split()))
+(n, p) = list(map(int, stdin.readline().split()))
 string = list(stdin.readline().strip())
 i = n - 1
 
@@ -19,13 +15,11 @@ def check_pallindrome(string, index):
             return True
         else:
             return False
-
     elif index > 0:
         if string[index - 1] != string[index]:
             return True
         else:
             return False
-
     else:
         return True
 
@@ -42,14 +36,12 @@ def get_next(string, index, p):
 
 
 while True:
-    # print(string)
     if i == n:
         print(''.join(string))
         break
     if i == -1:
-        print("NO")
+        print('NO')
         break
-
     if get_next(string, i, p):
         i += 1
     else:

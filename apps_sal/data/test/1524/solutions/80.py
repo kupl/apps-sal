@@ -1,11 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(S):
     import math
     N = len(S)
@@ -25,7 +17,7 @@ def solve(S):
             ans[N - (i + 1)] += math.ceil(L / 2)
             ans[N - (i + 1) - 1] += math.floor(L / 2)
             L = 0
-    print((' '.join([str(i) for i in ans])))
+    print(' '.join([str(i) for i in ans]))
 
 
 def __starting_point():

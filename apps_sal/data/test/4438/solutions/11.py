@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-
 import sys
 import traceback
 
 
 class Input(object):
+
     def __init__(self):
         self.fh = sys.stdin
 
@@ -34,7 +33,6 @@ def calculate_finish_cost(dp_reach, points):
     if len(points) == 1:
         return dp_reach
     round_cost = get_dist(points[0], points[-1])
-    # dp_finish = min(2 * round_cost + (dp[p1] - dist)). omit 2 * round_cost for now.
     dp_finish = dp_reach[:]
     min_diff = dp_reach[0]
     for i in range(1, len(points)):
@@ -51,8 +49,8 @@ def calculate_finish_cost(dp_reach, points):
 def calculate_reach_cost(dp_finish, from_points, to_points):
     """calculate from dp_finish of current level to the dp_reach of the next level."""
     assert len(dp_finish) == len(from_points)
-    from_k = [y / max(x, 0.5) for x, y in from_points]
-    to_k = [y / max(x, 0.5) for x, y in to_points]
+    from_k = [y / max(x, 0.5) for (x, y) in from_points]
+    to_k = [y / max(x, 0.5) for (x, y) in to_points]
     dp_reach = []
     from_index = 0
     for i in range(len(to_points)):
@@ -67,7 +65,6 @@ def calculate_reach_cost(dp_finish, from_points, to_points):
 
 
 def get_min_dist(points):
-    # 1. split points into levels, sort points in each level in x increase, y decrease order.
     level_dict = {}
     for point in points:
         level = max(point[0], point[1])
@@ -79,9 +76,6 @@ def get_min_dist(points):
     for level in sorted(level_dict.keys()):
         p = level_dict[level]
         level_points.append(sorted(p, key=lambda x: x[0] - x[1]))
-
-    # 2. calculate the min cost to reach a level at a point.
-    #    calculate the min cost to finish a level at a point.
     dp_reach = []
     for p in level_points[0]:
         dp_reach.append(p[0] + p[1])
@@ -91,8 +85,6 @@ def get_min_dist(points):
         to_points = level_points[i + 1]
         dp_reach = calculate_reach_cost(dp_finish, from_points, to_points)
         dp_finish = calculate_finish_cost(dp_reach, to_points)
-
-    # 3. the result is to finish at any points at the last level.
     return min(dp_finish)
 
 
@@ -106,7 +98,7 @@ def main():
             n = nums[0]
             points = []
             for _ in range(n):
-                x, y = input.next_line_ints()
+                (x, y) = input.next_line_ints()
                 points.append((x, y))
         except:
             print('read input failed')
@@ -115,7 +107,7 @@ def main():
         except:
             traceback.print_exc(file=sys.stdout)
             print('get_min_dist failed')
-        print("{}".format(min_dist))
+        print('{}'.format(min_dist))
 
 
 main()

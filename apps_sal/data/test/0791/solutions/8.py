@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     n = input()
     s = list(map(int, input()))
@@ -16,7 +14,7 @@ def main():
             c = 0
     res = 0
     for i in range(len(t)):
-        res += (t[i] != s[i])
+        res += t[i] != s[i]
     print(res)
 
 

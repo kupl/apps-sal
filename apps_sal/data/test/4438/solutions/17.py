@@ -12,10 +12,9 @@ def dist(a, b):
 n = int(minp())
 a = [None] * n
 for i in range(n):
-    x, y = list(map(int, minp().split()))
+    (x, y) = list(map(int, minp().split()))
     a[i] = (max(x, y), x, -y)
 a.sort()
-# print(a)
 d0 = 0
 d1 = 0
 p0 = (0, 0, 0)

@@ -3,11 +3,11 @@ from math import ceil, floor
 
 
 def main():
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     cf = {}
     pf = {}
     for i in range(n):
-        pers1, pers2 = [int(i) for i in input().split()]
+        (pers1, pers2) = [int(i) for i in input().split()]
         if cf.get(pers1) == None:
             cf[pers1] = set()
             pf[pers1] = set()
@@ -27,7 +27,7 @@ def main():
                 for pers3 in cf[pers1]:
                     if pers2 in cf[pers3]:
                         m += 1
-                y = (100 * m / len(cf[pers1]))
+                y = 100 * m / len(cf[pers1])
                 if y >= k:
                     pf[pers1].add(pers2)
     persons = sorted(persons)
@@ -42,11 +42,7 @@ def main():
 
 
 def __starting_point():
-    ##sys.stdin = open("in.txt",'r')
-    ##sys.stdout = open("out.txt",'w')
     main()
 
 
-    # sys.stdin.close()
-    # sys.stdout.close()
 __starting_point()

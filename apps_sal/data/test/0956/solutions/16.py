@@ -1,11 +1,9 @@
 from collections import defaultdict
 import sys
-#sys.stdin = open('inp.txt', 'r')
-
-m, k = map(int, input().split())
-a, a2 = defaultdict(list), defaultdict(list)
+(m, k) = map(int, input().split())
+(a, a2) = (defaultdict(list), defaultdict(list))
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a[x].append(y)
     a[y].append(x)
 for x in a:
@@ -23,4 +21,4 @@ for x in a:
         ans += [[x, []]]
 ans.sort()
 for x in ans:
-    print(str(x[0]) + ':', len(x[1]), ' '.join(str(z) for z in (y for y in x[1])))
+    print(str(x[0]) + ':', len(x[1]), ' '.join((str(z) for z in (y for y in x[1]))))
