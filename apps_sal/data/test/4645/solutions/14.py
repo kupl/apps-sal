@@ -21,5 +21,4 @@ for _ in range(t):
                 ans += [cur, cur + 2, cur + 4, cur + 1, cur + 3, cur + 5]
             else:
                 ans += [cur, cur + 3, cur + 1, cur + 5, cur + 2, cur + 4, cur + 6]
-
         print(*ans)

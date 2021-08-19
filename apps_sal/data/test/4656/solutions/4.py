@@ -7,7 +7,7 @@ def gcd(a, b):
 
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     m = [0] * 26
     for a in s:
@@ -15,7 +15,7 @@ for _ in range(t):
     t = max(m)
     x = t * k
     while True:
-        b = x // (gcd(x, k))
+        b = x // gcd(x, k)
         count = 0
         for a in m:
             count += a // b

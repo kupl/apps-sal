@@ -7,11 +7,11 @@ for x in range(n):
     l2 = l1[::-1]
     bo = 0
     for i in range(t):
-        if(r[i:i + t] == l1):
+        if r[i:i + t] == l1:
             bo = 1
-        if(r[i:i + t] == l2):
+        if r[i:i + t] == l2:
             bo = 1
-    if(bo == 1):
-        print("YES")
+    if bo == 1:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

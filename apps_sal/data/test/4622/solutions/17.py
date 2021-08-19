@@ -1,11 +1,9 @@
 n = int(input())
 a = list(map(int, input().split()))
 a = sorted(a)
-ans = "YES"
-
+ans = 'YES'
 for i in range(n - 1):
     if a[i] == a[i + 1]:
-        ans = "NO"
+        ans = 'NO'
         break
-
 print(ans)

@@ -1,10 +1,10 @@
 def iroha():
-    A, B, C = map(int, input().split())
+    (A, B, C) = map(int, input().split())
     S = A + B + C
     if S == 17:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

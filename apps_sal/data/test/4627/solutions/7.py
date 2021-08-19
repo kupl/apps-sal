@@ -1,5 +1,4 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
     A = [int(_) for _ in input().split()]
@@ -12,8 +11,7 @@ for t in range(T):
             v += 1
     if len(even) % 2 == 0 and len(odd) % 2 == 0:
         print('YES')
+    elif v > 0:
+        print('YES')
     else:
-        if v > 0:
-            print('YES')
-        else:
-            print('NO')
+        print('NO')

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = 1
     r = 2
     cnt = 1

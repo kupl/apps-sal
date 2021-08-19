@@ -1,4 +1,5 @@
 class Solution:
+
     def generate(self, numRows):
         """
         :type numRows: int
@@ -13,7 +14,7 @@ class Solution:
         if numRows == 2:
             return result
         for row in range(2, numRows):
-            l, r = 0, 1
+            (l, r) = (0, 1)
             tmp = [1]
             while r < len(result[row - 1]):
                 tmp.append(result[row - 1][l] + result[row - 1][r])

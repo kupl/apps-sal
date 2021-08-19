@@ -1,6 +1,6 @@
 o = input()
 e = input()
-d = ""
+d = ''
 if len(o) == len(e):
     for i in range(len(o)):
         d += o[i]

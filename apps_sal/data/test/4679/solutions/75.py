@@ -1,4 +1,4 @@
-a, b, c = [str(input()) for i in range(3)]
+(a, b, c) = [str(input()) for i in range(3)]
 current = 'a'
 while True:
     try:

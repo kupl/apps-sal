@@ -16,13 +16,12 @@ for i in range(q):
     x = s.index(1)
     y = 1
     for i in range(n):
-
         if s[x] != y:
             t1 = False
             break
         x = (x - 1) % n
         y += 1
     if t or t1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

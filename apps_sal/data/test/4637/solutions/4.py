@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, k = read_ints()
+    (n, k) = read_ints()
     a = list(read_ints())
     b = list(read_ints())
     a.sort()

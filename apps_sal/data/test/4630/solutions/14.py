@@ -8,18 +8,17 @@ for _ in range(t):
     exp = [False] * (n + 1)
     ans = {}
     for i in range(1, n + 1, 1):
-        if(not exp[i]):
+        if not exp[i]:
             a = [i]
             c = 1
             t = i
-            while(d[t] != i):
+            while d[t] != i:
                 t = d[t]
                 exp[t] = True
                 c = c + 1
                 a.append(t)
             for f in a:
                 ans[f] = c
-
     for i in range(1, n + 1, 1):
         print(ans[i], end=' ')
     print('')

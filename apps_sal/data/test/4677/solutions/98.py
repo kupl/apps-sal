@@ -1,8 +1,7 @@
-
 opperations = list(input())
 display_stack = []
 for opperation in opperations:
-    if opperation == "B":
+    if opperation == 'B':
         if display_stack:
             display_stack.pop()
     else:

@@ -4,24 +4,23 @@ c = input()
 next = a[0]
 a = a[1:]
 while True:
-    if next == "a":
-        if a == "":
-            print("A")
+    if next == 'a':
+        if a == '':
+            print('A')
             break
         else:
             next = a[0]
             a = a[1:]
-    elif next == "b":
-        if b == "":
-            print("B")
+    elif next == 'b':
+        if b == '':
+            print('B')
             break
         else:
             next = b[0]
             b = b[1:]
+    elif c == '':
+        print('C')
+        break
     else:
-        if c == "":
-            print("C")
-            break
-        else:
-            next = c[0]
-            c = c[1:]
+        next = c[0]
+        c = c[1:]

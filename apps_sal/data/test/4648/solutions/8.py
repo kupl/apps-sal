@@ -12,10 +12,9 @@ for _ in range(int(input())):
             i += 1
     if n != 1:
         print(-1)
+    elif kek[2] > kek[3]:
+        print(-1)
     else:
-        if kek[2] > kek[3]:
-            print(-1)
-        else:
-            ans = kek[3]
-            ans += kek[3] - kek[2]
-            print(ans)
+        ans = kek[3]
+        ans += kek[3] - kek[2]
+        print(ans)

@@ -5,9 +5,8 @@ def main():
     sas = deque(list(input()))
     sbs = deque(list(input()))
     scs = deque(list(input()))
-
-    deques = {"A": sas, "B": sbs, "C": scs}
-    player = "A"
+    deques = {'A': sas, 'B': sbs, 'C': scs}
+    player = 'A'
     while True:
         if len(deques[player]) == 0:
             ans = player

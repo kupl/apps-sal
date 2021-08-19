@@ -3,19 +3,19 @@ b = list(input())
 c = list(input())
 
 
-def check(x="a"):
+def check(x='a'):
     try:
-        if x == "a":
+        if x == 'a':
             x = a.pop(0)
             check(x)
-        elif x == "b":
+        elif x == 'b':
             x = b.pop(0)
             check(x)
-        elif x == "c":
+        elif x == 'c':
             x = c.pop(0)
             check(x)
     except IndexError:
-        print((x.upper()))
+        print(x.upper())
 
 
 check()

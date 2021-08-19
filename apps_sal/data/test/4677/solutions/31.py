@@ -1,10 +1,10 @@
 n = input()
-a = ""
+a = ''
 for i in n:
-    if i == "0":
+    if i == '0':
         a += i
-    elif i == "1":
+    elif i == '1':
         a += i
-    elif i == "B":
+    elif i == 'B':
         a = a[:-1]
 print(a)

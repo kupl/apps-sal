@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 a = [0] + [int(i) for i in input().split()]
 b = [0] + [int(i) for i in input().split()]
 p = [0] * n

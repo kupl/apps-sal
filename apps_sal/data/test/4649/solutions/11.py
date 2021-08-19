@@ -2,6 +2,7 @@ import math
 
 
 class Read:
+
     @staticmethod
     def int():
         return int(input())
@@ -16,11 +17,9 @@ class Read:
 
 
 def solve():
-    n, k = Read.list_int()
+    (n, k) = Read.list_int()
     s = input()
-
     sf = 'RGB' * (k + 2)
-
     max_s = 0
     for i in range(n - k + 1):
         for j in range(3):
@@ -30,7 +29,6 @@ def solve():
                     count += 1
             if count > max_s:
                 max_s = count
-
     print(k - max_s)
 
 

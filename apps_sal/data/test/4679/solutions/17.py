@@ -16,5 +16,5 @@ def check(n):
             print('C')
 
 
-a, b, c = [[*input()][::-1] for _ in range(3)]
+(a, b, c) = [[*input()][::-1] for _ in range(3)]
 check(a.pop())

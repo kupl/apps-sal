@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(d) for d in input().split()]
-
 S = []
 X = 0
 for i in range(N):
@@ -9,5 +8,4 @@ for i in range(N):
     else:
         pass
     S.append(X - A[i])
-
 print(sum(S))

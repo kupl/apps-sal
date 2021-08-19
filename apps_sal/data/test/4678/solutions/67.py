@@ -1,7 +1,6 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
     dp = [0] * N
     for i in range(1, N):
         h = A[i - 1] - A[i]
@@ -10,8 +9,7 @@ def main():
             dp[i] = dp[i - 1] + h
         else:
             dp[i] = dp[i - 1]
-
-    print((dp[-1]))
+    print(dp[-1])
     return
 
 

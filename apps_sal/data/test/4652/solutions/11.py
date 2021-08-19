@@ -6,14 +6,13 @@ for _ in range(t):
     f = 0
     f2 = 0
     for i in range(n):
-        if(c[i] == 1):
+        if c[i] == 1:
             idx = i
             break
-
     for i in range(n):
-        if(c[(idx + i) % n] != i + 1):
+        if c[(idx + i) % n] != i + 1:
             f = 1
-        if(c[idx - i] != i + 1):
+        if c[idx - i] != i + 1:
             f2 = 1
     if f == 1 and f2 == 1:
         print('NO')

@@ -1,9 +1,8 @@
 i = input()
-ans = ""
+ans = ''
 for s in i:
-    if s != "B":
+    if s != 'B':
         ans += s
     else:
         ans = ans[:-1]
-
 print(ans)

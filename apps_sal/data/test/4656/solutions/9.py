@@ -7,7 +7,7 @@ def gcd(a, b):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     if s[0] * n == s:
         print(n)

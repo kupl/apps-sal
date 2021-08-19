@@ -3,7 +3,7 @@ a = deque(reversed(input()))
 b = deque(reversed(input()))
 c = deque(reversed(input()))
 ne = a.pop()
-while(True):
+while True:
     if ne == 'a':
         if not a:
             break

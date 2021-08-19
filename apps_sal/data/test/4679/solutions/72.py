@@ -5,7 +5,7 @@ st = 'a'
 a = 0
 b = 0
 c = 0
-while a < len(sa) and b < len(sb) and c < len(sc):
+while a < len(sa) and b < len(sb) and (c < len(sc)):
     if st == 'a':
         st = sa[a]
         a += 1

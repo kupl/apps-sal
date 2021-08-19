@@ -8,5 +8,4 @@ for i in range(len(str)):
             continue
     else:
         buf += str[i]
-
 print(buf)

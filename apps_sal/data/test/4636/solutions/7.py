@@ -18,7 +18,6 @@ for i in range(t):
         if c <= x or l > r:
             break
         x = c
-
         p += 1
         c = 0
         while c <= x and l <= r:
@@ -28,5 +27,4 @@ for i in range(t):
         if c <= x or l > r:
             break
         x = c
-
     print(p, a, b)

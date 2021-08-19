@@ -3,7 +3,6 @@ def answer(o: str, e: str) -> str:
     e += ' '
     for i in range(len(o)):
         result += o[i] + e[i]
-
     return result.strip()
 
 

@@ -7,16 +7,15 @@ for i in range(100000):
     if len(s[n]) == 0:
         break
     tmp = s[n].pop(0)
-    if tmp == "a":
+    if tmp == 'a':
         n = 0
-    elif tmp == "b":
+    elif tmp == 'b':
         n = 1
     else:
         n = 2
-
 if n == 0:
-    print("A")
+    print('A')
 elif n == 1:
-    print("B")
+    print('B')
 else:
-    print("C")
+    print('C')

@@ -29,16 +29,15 @@ def solve():
                     if key == None:
                         key = k
                         val = count_[k]
-                    else:
-                        if count_[k] < val:
-                            key = k
-                            val = count_[k]
+                    elif count_[k] < val:
+                        key = k
+                        val = count_[k]
             if key == None:
                 return False
             for i in cyclic_group:
                 ans[i] = key
                 count_[key] -= 1
-        return "".join(ans)
+        return ''.join(ans)
     for i in range(len(S), -1, -1):
         foo = necklace_size(i)
         if foo:

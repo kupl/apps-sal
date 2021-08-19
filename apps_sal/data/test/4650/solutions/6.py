@@ -34,5 +34,4 @@ for _ in range(int(input())):
         s += (b - c) // 3
     else:
         s += (c - b) // 3
-
     print(s)

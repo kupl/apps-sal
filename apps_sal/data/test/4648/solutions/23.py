@@ -13,11 +13,10 @@ def fun(n):
         three += 1
     if n != 1:
         print(-1)
+    elif two > three:
+        print(-1)
     else:
-        if two > three:
-            print(-1)
-        else:
-            print(2 * three - two)
+        print(2 * three - two)
 
 
 while t:

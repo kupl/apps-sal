@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 trees = set(list(map(int, input().split())))
 vis = set(trees)
 res = []

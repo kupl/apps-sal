@@ -1,9 +1,7 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
     A = [int(_) for _ in input().split()]
-
     L = 0
     R = N - 1
     turn = 0
@@ -11,7 +9,6 @@ for t in range(T):
     alice = 0
     bob = 0
     moves = 0
-
     while L <= R:
         eaten = 0
         while eaten <= previous and L <= R:
@@ -26,5 +23,4 @@ for t in range(T):
         previous = eaten
         turn = 1 - turn
         moves += 1
-
     print(moves, alice, bob)

@@ -5,7 +5,6 @@ def f(a, l):
         if a[i] < m:
             m = a[i]
             mi = i
-
     for i in range(mi, l, -1):
         a[i] = a[i - 1]
     a[l] = m

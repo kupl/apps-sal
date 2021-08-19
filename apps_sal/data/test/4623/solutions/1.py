@@ -5,10 +5,10 @@ for _ in range(t):
     a.sort()
     ga = 0
     for i in range(1, 2 * n + 1):
-        j, k = 0, n - 1
+        (j, k) = (0, n - 1)
         flag = True
         ans = 0
-        while(j < k):
+        while j < k:
             if a[j] + a[k] > i:
                 k -= 1
             elif a[j] + a[k] < i:

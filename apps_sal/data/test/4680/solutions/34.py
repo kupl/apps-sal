@@ -1,6 +1,6 @@
 a = list(map(int, input().split()))
 a.sort()
 if a == [5, 5, 7]:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

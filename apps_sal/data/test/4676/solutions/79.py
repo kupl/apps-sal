@@ -1,7 +1,6 @@
 import math
 a = input()
 b = input()
-
 n = ''
 for i in range(len(a) + len(b)):
     if i % 2 == 0:

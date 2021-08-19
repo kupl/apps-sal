@@ -1,6 +1,6 @@
 from bisect import bisect_left as lower_bound, bisect_right as upper_bound
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     x = sorted(map(int, input().split()))
     input()
     mxr = [0] * n
@@ -14,10 +14,4 @@ for _ in range(int(input())):
         cf = upper_bound(x, x[i] + k) - i
         ans = max(ans, res + cf)
     print(ans)
-
-'''
-1
-7 1
-1 5 2 3 1 5 4
-
-'''
+'\n1\n7 1\n1 5 2 3 1 5 4\n\n'

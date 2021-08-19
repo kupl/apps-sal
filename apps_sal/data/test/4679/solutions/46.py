@@ -1,5 +1,5 @@
 s = [input() for i in range(3)]
-turn = ["a", "b", "c"]
+turn = ['a', 'b', 'c']
 t = 0
 while s[t]:
     tt = turn.index(s[t][0])

@@ -2,7 +2,8 @@ import sys
 import math
 
 
-def input(): return sys.stdin.readline().rstrip()
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def gcd(n, f):
@@ -19,7 +20,7 @@ def division_with_remainder_up(pp, ppp):
 
 
 for i in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     n -= 2
     if n <= 0:
         print(1)

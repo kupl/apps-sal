@@ -9,5 +9,4 @@ while True:
         break
     S[turn] = hand[1:]
     turn = hand[0]
-
 print(turn.upper())

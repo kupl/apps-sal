@@ -6,17 +6,15 @@ for i in range(y):
     arr = list(map(int, input().split()))
     a = 0
     visited = [0] * n
-
     for j in range(n):
         for k in range(n - 1, 0, -1):
-            if(visited[k - 1] == 0 and arr[k - 1] > arr[k]):
+            if visited[k - 1] == 0 and arr[k - 1] > arr[k]:
                 visited[k - 1] = 1
                 temp = arr[k - 1]
                 arr[k - 1] = arr[k]
                 arr[k] = temp
-
-    s = ""
+    s = ''
     for j in arr:
-        s = s + str(j) + " "
+        s = s + str(j) + ' '
     s = s[:-1]
     print(s)

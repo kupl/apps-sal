@@ -4,5 +4,5 @@ sum = 0
 maxi = x[0]
 for i in x:
     maxi = max(maxi, i)
-    sum += (maxi - i)
+    sum += maxi - i
 print(sum)

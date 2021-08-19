@@ -5,7 +5,6 @@ for i in range(len(s)):
         ans += '0'
     elif s[i] == '1':
         ans += '1'
-    else:
-        if ans != '':
-            ans = ans[:-1]
+    elif ans != '':
+        ans = ans[:-1]
 print(ans)

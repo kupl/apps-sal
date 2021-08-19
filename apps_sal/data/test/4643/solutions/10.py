@@ -3,7 +3,7 @@ import time
 
 def busy_wait(dt):
     current_time = time.time()
-    while (time.time() < current_time + dt):
+    while time.time() < current_time + dt:
         pass
 
 

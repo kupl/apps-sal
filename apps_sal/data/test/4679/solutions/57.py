@@ -1,9 +1,9 @@
 a = input()
 b = input()
 c = input()
-a += "A"
-b += "B"
-c += "C"
+a += 'A'
+b += 'B'
+c += 'C'
 n = a
 while True:
     if len(n) > 1:
@@ -14,9 +14,9 @@ while True:
             b = b[1:]
         else:
             c = c[1:]
-        if k == "a":
+        if k == 'a':
             n = a
-        elif k == "b":
+        elif k == 'b':
             n = b
         else:
             n = c

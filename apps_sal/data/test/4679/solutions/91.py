@@ -1,7 +1,6 @@
 a = list(input())
 b = list(input())
 c = list(input())
-
 D = {'a': a, 'b': b, 'c': c}
 curr = 'a'
 while True:
@@ -9,4 +8,4 @@ while True:
     if tmp == []:
         break
     curr = tmp.pop(0)
-print((curr.upper()))
+print(curr.upper())

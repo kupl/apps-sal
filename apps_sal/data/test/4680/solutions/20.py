@@ -1,6 +1,5 @@
 import collections
 import sys
-
 m = collections.defaultdict(int)
 line = input()
 for d in line.split():

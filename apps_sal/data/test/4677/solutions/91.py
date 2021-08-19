@@ -6,4 +6,4 @@ for e in s:
             st.pop()
     else:
         st.append(int(e))
-print((''.join(map(str, st))))
+print(''.join(map(str, st)))

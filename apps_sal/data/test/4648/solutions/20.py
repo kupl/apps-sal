@@ -2,7 +2,7 @@ for i in range(int(input())):
     n = int(input())
     times = 0
     canDo = True
-    while (n != 1):
+    while n != 1:
         if n % 6 == 0:
             n = n // 6
         elif n % 3 == 0:
@@ -14,4 +14,4 @@ for i in range(int(input())):
     if canDo:
         print(times)
     else:
-        print("-1")
+        print('-1')

@@ -1,10 +1,10 @@
 S = [input() for _ in range(3)]
 next = 0
-temp = ""
-win = ""
+temp = ''
+win = ''
 while True:
     if len(S[next]) == 0:
-        win = ["A", "B", "C"][next]
+        win = ['A', 'B', 'C'][next]
         break
     temp = S[next][0]
     S[next] = S[next][1:]

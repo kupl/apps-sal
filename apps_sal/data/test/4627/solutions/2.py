@@ -20,8 +20,8 @@ for zzz in range(r1(int)):
             co += 1
         else:
             ce += 1
-    if (co % 2 == 0) and (ce % 2 == 0):
-        print("YES")
+    if co % 2 == 0 and ce % 2 == 0:
+        print('YES')
     else:
         a.sort()
         ha = False
@@ -30,6 +30,6 @@ for zzz in range(r1(int)):
                 ha = True
                 break
         if ha:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

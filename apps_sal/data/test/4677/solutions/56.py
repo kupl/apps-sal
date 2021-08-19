@@ -5,9 +5,8 @@ for i in range(len(s)):
         l.append('0')
     elif s[i] == '1':
         l.append('1')
+    elif l == []:
+        continue
     else:
-        if l == []:
-            continue
-        else:
-            del l[-1]
-print((''.join(l)))
+        del l[-1]
+print(''.join(l))

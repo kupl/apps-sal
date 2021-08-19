@@ -10,4 +10,4 @@ else:
     for i in range(len(o)):
         l.append(o[i])
         l.append(e[i])
-print("".join(l))
+print(''.join(l))

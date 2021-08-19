@@ -1,4 +1,4 @@
-'''input
+"""input
 5
 4
 1 2 3 4
@@ -11,7 +11,7 @@
 5
 3 2 1 5 4
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -21,7 +21,7 @@ from random import randint as rd
 from bisect import bisect_left as bl
 from heapq import heappush as hpush
 from heapq import heappop as hpop
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -35,7 +35,6 @@ for _ in range(ri(1)):
     n = ri(1)
     a = ri()
     idx = a.index(1)
-
     check1 = 1
     check2 = 1
     for i in range(n):
@@ -50,8 +49,7 @@ for _ in range(ri(1)):
             pass
         else:
             check2 = 0
-
     if check1 == 1 or check2 == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

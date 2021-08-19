@@ -1,8 +1,8 @@
 def givestringsk(k):
-    t = ["R", "G", "B"]
+    t = ['R', 'G', 'B']
     ans = []
     for i in range(3):
-        temp = ""
+        temp = ''
         for j in range(i, i + k):
             temp += t[j % 3]
         ans.append(temp)
@@ -18,7 +18,7 @@ def countdifferences(a, b):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     temp = givestringsk(k)
     ans = 10000000000000

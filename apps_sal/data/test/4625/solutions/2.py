@@ -2,7 +2,7 @@ from sys import stdin
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     s = input()
     ml = list(map(int, input().split()))
     ml.append(n)

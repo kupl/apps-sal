@@ -1,7 +1,7 @@
 o = input()
 e = input()
-e += " "
-ans = ""
+e += ' '
+ans = ''
 for i in range(len(o)):
     ans += o[i]
     ans += e[i]

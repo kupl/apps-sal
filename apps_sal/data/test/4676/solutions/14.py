@@ -1,6 +1,6 @@
 O = input()
 E = input()
-ans = ""
+ans = ''
 for i in range(len(O)):
     ans += O[i]
     if i < len(E):

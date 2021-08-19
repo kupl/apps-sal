@@ -1,7 +1,6 @@
 n = int(input())
 l0 = 2
 l1 = 1
-
 if n == 1:
     print(l1)
 else:

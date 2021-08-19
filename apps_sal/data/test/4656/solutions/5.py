@@ -1,7 +1,7 @@
 import math
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     slist = []
     for i in range(n):

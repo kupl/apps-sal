@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 l = list(map(int, input().split()))
 sum_l = sum(l)

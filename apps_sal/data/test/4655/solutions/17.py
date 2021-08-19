@@ -2,6 +2,7 @@ import math
 
 
 class Read:
+
     @staticmethod
     def int():
         return int(input())
@@ -16,7 +17,7 @@ class Read:
 
 
 def solve():
-    a, b, c = Read.list_int()
+    (a, b, c) = Read.list_int()
     print((a + b + c) // 2)
 
 

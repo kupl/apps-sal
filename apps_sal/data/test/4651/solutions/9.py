@@ -26,7 +26,7 @@ def solve():
         if z[0] < a[i]:
             j = z[1] - 1
             while j >= i:
-                a[j], a[j + 1] = a[j + 1], a[j]
+                (a[j], a[j + 1]) = (a[j + 1], a[j])
                 b[j] = False
                 j -= 1
     print(*a)

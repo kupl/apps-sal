@@ -2,11 +2,9 @@ def main():
     SA = list(input())
     SB = list(input())
     SC = list(input())
-
     SA.reverse()
     SB.reverse()
     SC.reverse()
-
     turn = 'a'
     for i in range(400):
         if turn == 'a':

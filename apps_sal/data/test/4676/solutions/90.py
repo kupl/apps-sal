@@ -1,6 +1,6 @@
 o = input()
 e = input()
-s = ""
+s = ''
 for i in range(len(e)):
     s += o[i]
     s += e[i]

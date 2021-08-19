@@ -6,8 +6,7 @@ def input():
     return sys.stdin.readline().strip()
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 trees = set(map(int, input().split()))
 occ = set(trees)
 newadd = set()
@@ -16,13 +15,12 @@ for x in trees:
         newadd.add((x + 1, 1))
     if x - 1 not in occ:
         newadd.add((x - 1, 1))
-
 anspos = []
 ans = 0
 while m > 0:
     newnewadd = set()
     while m > 0 and len(newadd) > 0:
-        x, diff = newadd.pop()
+        (x, diff) = newadd.pop()
         if x in occ:
             continue
         occ.add(x)

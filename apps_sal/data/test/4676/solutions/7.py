@@ -10,4 +10,4 @@ for i in range(len(a)):
     x.append(b[i])
 if f:
     x.pop()
-print("".join(x))
+print(''.join(x))

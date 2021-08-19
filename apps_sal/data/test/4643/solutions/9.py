@@ -1,6 +1,5 @@
 import sys
 import time
-
 for line in sys.stdin:
     for i in range(20000000):
         j = i

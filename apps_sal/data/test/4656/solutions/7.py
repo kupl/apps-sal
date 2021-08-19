@@ -29,7 +29,7 @@ def find(cnt, k, h):
 
 
 def solve():
-    n, k = mints()
+    (n, k) = mints()
     cnt = [0] * 26
     for i in minp():
         cnt[ord(i) - ord('a')] += 1

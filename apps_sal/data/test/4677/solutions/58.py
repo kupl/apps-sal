@@ -5,5 +5,4 @@ for i in n:
         str = str + i
     if i == 'B':
         str = str[:-1]
-
 print(str)

@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, = map(int, input().split())
+    (n,) = map(int, input().split())
     x = n
     s = 0
     while x != 1 and x % 3 == 0:

@@ -3,21 +3,20 @@ b = list(input())
 c = list(input())
 next = a.pop(0)
 while True:
-    if next == "a":
+    if next == 'a':
         if a == []:
-            print("A")
+            print('A')
             break
         else:
             next = a.pop(0)
-    elif next == "b":
+    elif next == 'b':
         if b == []:
-            print("B")
+            print('B')
             break
         else:
             next = b.pop(0)
+    elif c == []:
+        print('C')
+        break
     else:
-        if c == []:
-            print("C")
-            break
-        else:
-            next = c.pop(0)
+        next = c.pop(0)

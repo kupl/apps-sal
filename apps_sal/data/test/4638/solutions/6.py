@@ -1,7 +1,6 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 dp = [[0] * 2 for i in range(n)]
 dp[0][1] = c
 for i in range(n - 1):

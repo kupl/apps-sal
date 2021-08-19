@@ -31,15 +31,15 @@ def findSum(n, s):
 
 t = II()
 for q in range(t):
-    n, s = MI()
+    (n, s) = MI()
     n = str(n)
     ans = 0
     ind = findSum(n, s)
     while ind != -1:
         f = n[:ind]
-        if f == "":
-            f = "0"
-        se = "0" + "0" * (len(n) - ind - 1)
+        if f == '':
+            f = '0'
+        se = '0' + '0' * (len(n) - ind - 1)
         f = str(int(f) + 1) + se
         ans += int(f) - int(n)
         n = f

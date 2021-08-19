@@ -1,7 +1,6 @@
 import numbers
-
-r1, i1 = map(float, input().split())
-r2, i2 = map(float, input().split())
+(r1, i1) = map(float, input().split())
+(r2, i2) = map(float, input().split())
 c1 = complex(r1, i1)
 c2 = complex(r2, i2)
 
@@ -9,7 +8,6 @@ c2 = complex(r2, i2)
 def printer(c):
     real = c.real
     imag = c.imag
-
     sign = '+' if imag >= 0 else '-'
     print('{:.2f}{}{:.2f}i'.format(real, sign, abs(imag)))
 

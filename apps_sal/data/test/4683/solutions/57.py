@@ -8,5 +8,5 @@ for i in range(N):
     rsum[-(i + 1)] = rsum[-i] + A[-i]
 for i in range(N):
     ans += A[i] * rsum[i]
-ans %= (10 ** 9 + 7)
+ans %= 10 ** 9 + 7
 print(ans)

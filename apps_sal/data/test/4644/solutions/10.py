@@ -7,10 +7,10 @@ for _ in range(t):
         if i % 2 != 0:
             o += 1
     if o == 0:
-        print("NO")
+        print('NO')
     elif o == n and n % 2 == 0:
-        print("NO")
+        print('NO')
     elif o == n and n % 2 == 1:
-        print("YES")
+        print('YES')
     else:
-        print("YES")
+        print('YES')

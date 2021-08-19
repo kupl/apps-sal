@@ -1,6 +1,6 @@
 from sys import stdin
 input = stdin.readline
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 przyst = [0] * x
 l = []
 best = 0

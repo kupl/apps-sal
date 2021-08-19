@@ -1,7 +1,6 @@
 code_A = ord('A')
 code_a = ord('a')
 A = [input() for _ in range(3)]
-
 nxt = A[0][0]
 A[0] = A[0][1:]
 while True:
@@ -11,5 +10,4 @@ while True:
         break
     nxt = A[now][0]
     A[now] = A[now][1:]
-
 print(ans)

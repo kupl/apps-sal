@@ -8,8 +8,8 @@ elif len(s) < len(t):
 else:
     x = 0
 for i in range(l):
-    print(s[i], end="")
-    print(t[i], end="")
+    print(s[i], end='')
+    print(t[i], end='')
 if x == 1:
     print(s[-1])
 elif x == 2:

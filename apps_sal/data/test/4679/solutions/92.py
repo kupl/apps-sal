@@ -1,7 +1,6 @@
 SA = input()
 SB = input()
 SC = input()
-
 indexA = 0
 indexB = 0
 indexC = 0

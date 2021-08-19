@@ -1,7 +1,7 @@
 s = input()
-res = ""
+res = ''
 for i in s:
-    if i != "B":
+    if i != 'B':
         res += i
     else:
         res = res[:len(res) - 1]

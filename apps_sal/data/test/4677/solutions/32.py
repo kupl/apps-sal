@@ -1,7 +1,6 @@
 s = list(input())
 x = len(s)
 a = []
-
 for i in range(x):
     if s[i] == '0':
         a.append('0')

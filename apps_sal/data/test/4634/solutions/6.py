@@ -25,13 +25,13 @@ def ma():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
-    while(len(a) and a[-1] == 0):
+    while len(a) and a[-1] == 0:
         a.pop()
     a = a[::-1]
-    while(len(a) and a[-1] == 0):
+    while len(a) and a[-1] == 0:
         a.pop()
     print(a.count(0))

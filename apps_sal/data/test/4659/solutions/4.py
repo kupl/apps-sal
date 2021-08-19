@@ -1,4 +1,5 @@
 class Solution:
+
     def generate(self, numRows):
         """
         :type numRows: int

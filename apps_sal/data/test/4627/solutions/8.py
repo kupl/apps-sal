@@ -6,8 +6,6 @@ for _ in range(0,T):
     s=[int(x) for x in input().split()]
     for i in range(0,len(s)):
         a,b=map(int,input().split())"""
-
-
 T = int(input())
 for _ in range(0, T):
     N = int(input())
@@ -17,17 +15,16 @@ for _ in range(0, T):
     pos = [0] * 102
     for i in range(0, len(s)):
         pos[s[i]] = 1
-        if(s[i] % 2 == 0):
+        if s[i] % 2 == 0:
             c0 += 1
         else:
             c1 += 1
-
-    if(c0 % 2 == 0):
+    if c0 % 2 == 0:
         print('YES')
     else:
         temp = 'NO'
         for i in range(0, len(pos) - 1):
-            if(pos[i] == 1 and pos[i + 1] == 1):
+            if pos[i] == 1 and pos[i + 1] == 1:
                 temp = 'YES'
                 break
         print(temp)

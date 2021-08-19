@@ -1,6 +1,5 @@
 o = input()
 e = input()
-
 n = len(o) + len(e)
 s = ['' for _ in range(n)]
 for i in range(n):
@@ -9,5 +8,4 @@ for i in range(n):
         s[i] = o[j]
     else:
         s[i] = e[j]
-
-print((''.join(s)))
+print(''.join(s))

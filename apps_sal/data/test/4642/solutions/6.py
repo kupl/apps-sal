@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x, y = map(int, input().split())
+    (n, x, y) = map(int, input().split())
     mi = 1000000000
     an = []
     for d in range(1, y - x + 1):

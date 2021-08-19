@@ -1,10 +1,10 @@
 from sys import stdin, stdout
 input = stdin.readline
 for _ in range(int(input())):
-    x = 10**5
-    n, k = list(map(int, input().split()))
+    x = 10 ** 5
+    (n, k) = list(map(int, input().split()))
     s = input()
-    ans = 10**9
+    ans = 10 ** 9
     for i in range(n - k + 1):
         x = s[i:i + k]
         m = 0

@@ -1,6 +1,5 @@
 o = input()
 e = input()
-
 p = ''
 for i in range(len(e)):
     p += o[i] + e[i]

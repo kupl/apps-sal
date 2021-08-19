@@ -1,6 +1,4 @@
-
 q = int(input())
-
 for i in range(q):
     n = int(input())
     p = list(map(int, input().split()))
@@ -13,6 +11,6 @@ for i in range(q):
             f = 1
             break
     if f == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

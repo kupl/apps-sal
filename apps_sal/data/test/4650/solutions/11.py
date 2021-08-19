@@ -2,7 +2,7 @@ q = int(input())
 for _ in range(q):
     n = int(input())
     u = list(map(int, input().split()))
-    a0, a1, a2 = [0, 0, 0]
+    (a0, a1, a2) = [0, 0, 0]
     for i in range(n):
         if u[i] % 3 == 0:
             a0 += 1

@@ -10,23 +10,21 @@ for _ in range(t):
             if it[i][0] < it[j][0] and it[i][1] > it[j][1]:
                 st = 0
     if st == 0:
-        print("NO")
+        print('NO')
     else:
         it.sort()
         x = 0
         y = 0
-
-        print("YES")
+        print('YES')
         for i in range(n):
             if it[i][0] == x:
-                print("U" * (it[i][1] - y), end="")
+                print('U' * (it[i][1] - y), end='')
                 y = it[i][1]
             elif it[i][1] == y:
-                print("R" * (it[i][0] - x), end="")
+                print('R' * (it[i][0] - x), end='')
                 x = it[i][0]
             else:
-
-                print("R" * (it[i][0] - x), end="")
-                print("U" * (it[i][1] - y), end="")
-                x, y = it[i]
+                print('R' * (it[i][0] - x), end='')
+                print('U' * (it[i][1] - y), end='')
+                (x, y) = it[i]
         print()

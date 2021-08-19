@@ -2,7 +2,7 @@ a = input()
 b = input()
 c = len(a)
 d = len(b)
-x = ""
+x = ''
 if c <= d:
     for i in range(c):
         x = x + a[i]

@@ -1,5 +1,5 @@
 s = [input() for i in range(3)]
-t = ["a", "b", "c"]
+t = ['a', 'b', 'c']
 cur = 0
 while len(s[cur]) > 0:
     next = s[cur][0]

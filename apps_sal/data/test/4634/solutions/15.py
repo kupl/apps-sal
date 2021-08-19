@@ -3,7 +3,6 @@ import sys
 
 
 def testcase():
-
     n = int(input())
     arr = list(map(int, input().split()))
     i = 0

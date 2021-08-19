@@ -1,7 +1,7 @@
 o = list(input())
 e = list(input())
 s = []
-t = ""
+t = ''
 if len(o + e) % 2 == 0:
     for i in range(int(len(o + e) / 2)):
         s.append(o[i] + e[i])
@@ -11,5 +11,4 @@ else:
         s.append(o[i] + e[i])
     t = t.join(s)
     t = t + o[int(len(o + e) / 2)]
-
 print(t)

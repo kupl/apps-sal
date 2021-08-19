@@ -1,7 +1,5 @@
 N = int(input())
-
 lucas_list = []
-
 for i in range(N + 1):
     if i == 0:
         lucas_list.append(2)

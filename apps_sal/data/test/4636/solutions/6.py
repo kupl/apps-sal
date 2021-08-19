@@ -8,14 +8,14 @@ for _ in range(int(input())):
     r = n - 1
     p = 0
     q = 0
-    while(l <= r):
+    while l <= r:
         if q % 2 == 0:
             su = 0
             for i in range(l, r + 1):
                 l += 1
                 su += li[i]
                 a += li[i]
-                if (su > p):
+                if su > p:
                     p = su
                     break
         else:
@@ -24,7 +24,7 @@ for _ in range(int(input())):
                 r -= 1
                 su += li[i]
                 b += li[i]
-                if (su > p):
+                if su > p:
                     p = su
                     break
         q += 1

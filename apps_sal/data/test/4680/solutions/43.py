@@ -1,6 +1,6 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 abclist = [a, b, c]
 if abclist.count(5) == 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

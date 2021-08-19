@@ -1,5 +1,4 @@
 s = {'a': input(), 'b': input(), 'c': input()}
-
 now = 'a'
 while s[now] != '':
     next = s[now][0]

@@ -1,7 +1,6 @@
 A = input()
 B = input()
 C = input()
-
 turn = 'a'
 while True:
     num_card_A = len(A)
@@ -25,5 +24,4 @@ while True:
             break
         turn = C[0]
         C = C[1:]
-
 print(winner)

@@ -7,6 +7,6 @@ for i in n:
     elif i == 7:
         N7 += 1
 if N5 == 2 and N7 == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

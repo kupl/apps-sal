@@ -12,4 +12,4 @@ def lucas(n):
 
 
 N = int(input())
-print((lucas(N)))
+print(lucas(N))

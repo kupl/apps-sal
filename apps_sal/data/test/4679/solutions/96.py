@@ -1,4 +1,4 @@
-A, B, C = (list(input()) for T in range(0, 3))
+(A, B, C) = (list(input()) for T in range(0, 3))
 Next = A.pop(0)
 while True:
     if Next == 'a':

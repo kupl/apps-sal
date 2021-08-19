@@ -9,8 +9,7 @@ for _ in range(int(input())):
             fl = True
     if not fl:
         print(0)
+    elif bad[0] != bad[1]:
+        print(-1)
     else:
-        if bad[0] != bad[1]:
-            print(-1)
-        else:
-            print(bad[0])
+        print(bad[0])

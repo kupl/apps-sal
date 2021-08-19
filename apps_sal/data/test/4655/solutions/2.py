@@ -1,4 +1,5 @@
-def ll(): return list(map(int, input().split()))
+def ll():
+    return list(map(int, input().split()))
 
 
 testcases = 1

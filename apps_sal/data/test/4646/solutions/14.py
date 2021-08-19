@@ -5,7 +5,7 @@ for _ in range(int(input())):
     o = 0
     for i in range(n):
         if i % 2 != a[i] % 2:
-            if (i % 2):
+            if i % 2:
                 e += 1
             else:
                 o += 1

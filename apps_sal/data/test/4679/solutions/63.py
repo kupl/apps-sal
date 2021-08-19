@@ -11,5 +11,4 @@ while s[i] != '':
     s[i] = s[i][1:]
     i = j
 ans = 'ABC'
-
 print(ans[i])
