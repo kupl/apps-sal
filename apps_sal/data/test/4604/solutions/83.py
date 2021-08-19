@@ -1,7 +1,7 @@
 N = int(input())
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 A = [int(x) for x in input().split()]
-flag = 1  # その並び順がありえるなら1、そうでないなら0
+flag = 1
 set1 = set()
 set2 = set()
 if N % 2 == 1:
@@ -36,7 +36,7 @@ else:
     if len(set1) != 0 or len(set2) != 0:
         flag = 0
 if flag == 0:
-    print((0))
+    print(0)
 else:
     ans = 1
     div2 = N // 2

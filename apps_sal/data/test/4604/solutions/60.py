@@ -1,24 +1,22 @@
 N = int(input())
-*A, = sorted(map(int, input().split()))
+(*A,) = sorted(map(int, input().split()))
 
 
-def f(): return 2**(N // 2) % (10**9 + 7)
+def f():
+    return 2 ** (N // 2) % (10 ** 9 + 7)
 
 
 a = True
 if N % 2 == 0:
     for i in range(1, N, 2):
         if A[i - 1] != i or A[i] != i:
-            # print(i,A[i-1],A[i])
             a = False
             break
+elif A[0] != 0:
+    a = False
 else:
-    if A[0] != 0:
-        a = False
-    else:
-        for i in range(2, N, 2):
-            if A[i - 1] != i or A[i] != i:
-                # print(i,A[i-1],A[i])
-                a = False
-                break
+    for i in range(2, N, 2):
+        if A[i - 1] != i or A[i] != i:
+            a = False
+            break
 print(f() if a else 0)

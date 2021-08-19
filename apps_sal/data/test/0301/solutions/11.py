@@ -18,9 +18,8 @@ def rlinput():
 
 
 def main():
-    # q = rlinput() rinput() iinput() input()
     q = [0] * 100
-    u, v = rlinput()
+    (u, v) = rlinput()
     if u <= v:
         if v == 0:
             print(0)
@@ -33,14 +32,12 @@ def main():
             print(-1)
             return 0
         fl = True
-
         for i in range(70):
-            if (v - u) & (1 << i):
+            if v - u & 1 << i:
                 q[i - 1] += 1
-                if u & (1 << (i - 1)):
+                if u & 1 << i - 1:
                     fl = False
         w = [u, 0]
-
         if fl:
             for i in range(70):
                 if q[i]:
@@ -52,10 +49,8 @@ def main():
                 if q[i]:
                     w[1] += 1 << i
                     w[2] += 1 << i
-
         print(len(w))
         print(*w)
-
     else:
         print(-1)
 

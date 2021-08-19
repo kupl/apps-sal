@@ -1,13 +1,9 @@
 import sys
-
 input = sys.stdin.readline
-# fin = open('input.txt', 'r')
-# input = fin.readline
 
 
 def solve():
-    u, v = list(map(int, input().split()))
-
+    (u, v) = list(map(int, input().split()))
     if u == 0:
         if v == 0:
             print(0)
@@ -18,16 +14,13 @@ def solve():
         print(2)
         print(v // 2, v // 2)
         return
-
     if u > v:
         print(-1)
         return
-
     if u == v:
         print(1)
         print(u)
         return
-
     if u < v:
         if (v - u) % 2 == 1:
             print(-1)

@@ -1,4 +1,4 @@
-n, m, s, e = list(map(int, input().split()))
+(n, m, s, e) = list(map(int, input().split()))
 s -= 1
 e -= 1
 md = []
@@ -7,18 +7,14 @@ for i in range(n):
     md.append([-1, -1])
     g.append([])
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     g[u - 1].append(v - 1)
     g[v - 1].append(u - 1)
-
-# bfs
 md[s][0] = 0
 d = 0
 st = [s]
 c = 1
-# print('s')
 while c < n:
-    # print(c)
     d += 1
     st2 = []
     for node in st:
@@ -26,18 +22,13 @@ while c < n:
             if md[p][0] == -1:
                 st2.append(p)
                 md[p][0] = d
-
     c += len(st2)
     st = st2[:]
-
-# bfs
 md[e][1] = 0
 d = 0
 st = [e]
 c = 1
-# print('s')
 while c < n:
-    # print(c)
     d += 1
     st2 = []
     for node in st:
@@ -45,10 +36,8 @@ while c < n:
             if md[p][1] == -1:
                 st2.append(p)
                 md[p][1] = d
-
     c += len(st2)
     st = st2[:]
-# print(md)
 dis = md[e][0]
 t = 0
 for i in range(n):

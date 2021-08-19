@@ -16,16 +16,12 @@ class DisjointSets:
     def find(self, node):
         curnode = node
         parent = self.parent
-
         while parent[curnode] != curnode:
             curnode = parent[curnode]
-
         root = curnode
         curnode = node
-
         while parent[curnode] != root:
             parent[curnode] = root
-
         return root
 
     def union(self, node, other):
@@ -34,11 +30,9 @@ class DisjointSets:
         if self.rank[node] > self.rank[other]:
             self.parent[other] = node
             self.ls[node].extend(self.ls[other])
-
         elif self.rank[other] > self.rank[node]:
             self.parent[node] = other
             self.ls[other].extend(self.ls[node])
-
         else:
             self.parent[other] = node
             self.ls[node] += self.ls[other]
@@ -46,13 +40,10 @@ class DisjointSets:
 
 
 n = int(input())
-
 ds = DisjointSets(n)
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ds.union(a, b)
-# print(ds.rank)
-# print(ds.parent)
 ans = ds.ls[ds.find(1)]
 for a in ans:
-    print(a, end=" ")
+    print(a, end=' ')

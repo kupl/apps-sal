@@ -3,6 +3,7 @@ import heapq
 
 
 class Node(object):
+
     def __init__(self, name):
         self.name = name
         self.minDistance = sys.maxsize
@@ -10,10 +11,11 @@ class Node(object):
         self.baap = None
 
     def __lt__(self, other):
-        return(self.minDistance < other.minDistance)
+        return self.minDistance < other.minDistance
 
 
 class Path(object):
+
     def __init__(self, start, end, weight):
         self.start = start
         self.end = end
@@ -21,6 +23,7 @@ class Path(object):
 
 
 class Dijkstra(object):
+
     def __init__(self, nodelist, start):
         self.nodelist = nodelist
         self.start = start
@@ -45,11 +48,10 @@ class Dijkstra(object):
         for i in self.nodelist:
             arr.append(i.minDistance)
         return arr
-# Dj till here
 
 
-n, m, s, t = list(map(int, input().split(' ')))
-n, m = int(n), int(m)
+(n, m, s, t) = list(map(int, input().split(' ')))
+(n, m) = (int(n), int(m))
 nodelist = []
 for i in range(1, n + 1):
     nodelist.append(Node(str(i)))
@@ -60,24 +62,23 @@ for i in range(n):
         temp.append(-1)
     pathdd.append(temp)
 for i in range(m):
-    st, en = input().split(' ')
+    (st, en) = input().split(' ')
     pathdd[int(st) - 1][int(en) - 1] = 1
     pathdd[int(en) - 1][int(st) - 1] = 1
     nodelist[int(st) - 1].paths.append(Path(st, en, 1))
     nodelist[int(en) - 1].paths.append(Path(en, st, 1))
 dij = Dijkstra(nodelist, s)
 dij.calculateShortestPath()
-dn1 = dij.disp()  # minimum Distance of all nodes from source node
+dn1 = dij.disp()
 mindis = dn1[t - 1]
 for i in nodelist:
-    i.minDistance = sys.maxsize  # Reinitializing all distance to infinity
+    i.minDistance = sys.maxsize
 dij = Dijkstra(nodelist, t)
 dij.calculateShortestPath()
-dn2 = dij.disp()  # minimum distance of all nodes from target node
-# print(dn1,"\n",dn2);
+dn2 = dij.disp()
 ctr = 0
 for u in range(len(nodelist) - 1):
     for v in range(u + 1, len(nodelist)):
-        if dn1[u] + 1 + dn2[v] >= mindis and dn1[v] + dn2[u] + 1 >= mindis and pathdd[u][v] == -1:
+        if dn1[u] + 1 + dn2[v] >= mindis and dn1[v] + dn2[u] + 1 >= mindis and (pathdd[u][v] == -1):
             ctr += 1
 print(ctr)

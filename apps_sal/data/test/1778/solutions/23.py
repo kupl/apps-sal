@@ -1,4 +1,3 @@
-
 def mi():
     return map(int, input().split())
 
@@ -6,12 +5,10 @@ def mi():
 n = int(input())
 a = list(mi())
 b = list(mi())
-
 a.sort(reverse=True)
 b.sort(reverse=True)
-
-i, j = 0, 0
-sa, sb = 0, 0
+(i, j) = (0, 0)
+(sa, sb) = (0, 0)
 for k in range(2 * n):
     if k & 1:
         if j == n:
@@ -29,7 +26,6 @@ for k in range(2 * n):
             sb += b[j]
             b[j] = 0
             j += 1
-
     else:
         if i == n:
             b[j] = 0
@@ -46,6 +42,4 @@ for k in range(2 * n):
             sa += a[i]
             a[i] = 0
             i += 1
-# sa+=sum(a)
-# sb+=sum(b)
 print(sa - sb)

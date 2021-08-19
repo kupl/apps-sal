@@ -14,36 +14,13 @@ for i in range(2 * n):
             arra.pop()
         else:
             arrb.pop()
+    elif len(arrb) == 0:
+        arra.pop()
+    elif len(arra) == 0 or arrb[-1] >= arra[-1]:
+        b += arrb[-1]
+        arrb.pop()
     else:
-        if len(arrb) == 0:
-            arra.pop()
-        elif len(arra) == 0 or arrb[-1] >= arra[-1]:
-            b += arrb[-1]
-            arrb.pop()
-        else:
-            arra.pop()
+        arra.pop()
 print(a - b)
-'''
-n = int(input())
-if n == 1 or n == 2:
-    print('No')
-else: #if n % 2 == 1:
-    print('Yes')
-    print((n + 1) // 2, end = ' ')
-    for i in range(1, n + 1, 2):
-        print(i, end = ' ')
-    print()
-    print(n // 2, end = ' ')
-    for i in range(2, n + 1, 2):
-        print(i, end = ' ')
-'''
-'''
-n, k = map(int, input().split())
-s = input()
-d = [0 for _ in range(k)]
-for i in s:
-    d[ord(i) - ord('A')] += 1
-#al = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-#for i in 
-print(min(d) * k)
-'''
+"\nn = int(input())\nif n == 1 or n == 2:\n    print('No')\nelse: #if n % 2 == 1:\n    print('Yes')\n    print((n + 1) // 2, end = ' ')\n    for i in range(1, n + 1, 2):\n        print(i, end = ' ')\n    print()\n    print(n // 2, end = ' ')\n    for i in range(2, n + 1, 2):\n        print(i, end = ' ')\n"
+'\nn, k = map(int, input().split())\ns = input()\nd = [0 for _ in range(k)]\nfor i in s:\n    d[ord(i) - ord(\'A\')] += 1\n#al = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"\n#for i in \nprint(min(d) * k)\n'
