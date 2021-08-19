@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     h = list(map(int, input().split()))
-
     result = True
     for i in range(n - 1):
         if h[i + 1] - h[i] > k + m:
@@ -16,10 +14,9 @@ for _ in range(t):
             if m < 0:
                 result = False
                 break
-        else:  # ==
+        else:
             pass
-
     if result:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

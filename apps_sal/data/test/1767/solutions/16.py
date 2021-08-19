@@ -1,12 +1,7 @@
 3
-
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
-# n = 5
-# a = [1,2,4,3,2]
-# b = [2,3,3,12,1]
 
 
 def f(x, l, r):
@@ -24,7 +19,5 @@ for i in range(n):
     sum_a |= a[i]
     sum_b |= b[i]
     t[i] = sum_a + sum_b
-
     max_sum = max(max_sum, t[i])
-
 print(max_sum)

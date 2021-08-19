@@ -1,11 +1,8 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 a = [int(item) for item in input().split()]
 a.sort()
-
 ans = [-1] * n
 num = 0
 if n % 2 == 1:

@@ -1,5 +1,3 @@
-#! /usr/bin/env python3
-
 def main(n, m):
     if n < m:
         return -1
@@ -9,7 +7,6 @@ def main(n, m):
     return temp if temp % m == 0 else -1
 
 
-n, m = input().split(' ')
-n, m = int(n), int(m)
-
+(n, m) = input().split(' ')
+(n, m) = (int(n), int(m))
 print(main(n, m))

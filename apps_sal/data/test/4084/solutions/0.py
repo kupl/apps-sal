@@ -1,12 +1,11 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
 
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     a_count = 0
-    d, r = divmod(n, a + b)
+    (d, r) = divmod(n, a + b)
     a_count += a * d
     if r > a:
         a_count += a

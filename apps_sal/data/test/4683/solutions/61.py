@@ -1,23 +1,28 @@
 import sys
-#import time
 from collections import deque, Counter, defaultdict
-#from fractions import gcd
 import bisect
 import heapq
-#import math
 import itertools
 import numpy as np
 input = sys.stdin.readline
-sys.setrecursionlimit(10**8)
-inf = 10**18
+sys.setrecursionlimit(10 ** 8)
+inf = 10 ** 18
 MOD = 1000000007
-def ri(): return int(input())
-def rs(): return input().strip()
-def rl(): return list(map(int, input().split()))
+
+
+def ri():
+    return int(input())
+
+
+def rs():
+    return input().strip()
+
+
+def rl():
+    return list(map(int, input().split()))
 
 
 mod = 998244353
-
 n = ri()
 a = rl()
 cs = 0
