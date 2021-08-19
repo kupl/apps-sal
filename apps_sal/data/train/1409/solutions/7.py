@@ -1,18 +1,15 @@
-# cook your dish here
 def gcd(x, y):
     while y:
-        x, y = y, x % y
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
-    return (x * y) // (gcd(x, y))
+    return x * y // gcd(x, y)
 
 
-abc = "abcdefghijklmnopqrstuvwxyz"
-
-pi = 3.141592653589793238
-
+abc = 'abcdefghijklmnopqrstuvwxyz'
+pi = 3.141592653589793
 t = int(input())
 for _ in range(t):
     n = int(input())

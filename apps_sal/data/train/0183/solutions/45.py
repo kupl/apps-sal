@@ -1,7 +1,7 @@
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
-        # TC: O(MN), SC: O(MN), refr. longest common sequence, Q1035
-        m, n = len(nums1), len(nums2)
+        (m, n) = (len(nums1), len(nums2))
         dp = [[0] * n for _ in range(m)]
         for i in range(m):
             for j in range(n):

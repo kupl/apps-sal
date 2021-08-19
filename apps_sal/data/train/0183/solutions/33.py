@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         n = len(nums1)
         m = len(nums2)
@@ -12,5 +13,4 @@ class Solution:
             for j in range(1, m):
                 prod = nums1[i] * nums2[j]
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1] + (prod if prod > 0 else 0), prod)
-        # print(dp)
         return dp[n - 1][m - 1]

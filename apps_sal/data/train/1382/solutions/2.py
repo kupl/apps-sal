@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 k = n + 1
 total = 0

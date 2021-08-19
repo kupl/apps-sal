@@ -1,5 +1,4 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     b = bin(n)
-    print(b.count("1"))
+    print(b.count('1'))

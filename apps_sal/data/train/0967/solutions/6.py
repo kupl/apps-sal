@@ -1,10 +1,9 @@
 def solve(l, i, n, m):
-    # print(i,m)
-    if(m == 0):
+    if m == 0:
         return 1
-    elif(i >= n):
+    elif i >= n:
         return 0
-    elif(m < 0):
+    elif m < 0:
         return 0
     else:
         return solve(l, i + 1, n, m - l[i]) + solve(l, i + 1, n, m)
