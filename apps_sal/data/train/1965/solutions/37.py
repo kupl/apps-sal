@@ -1,13 +1,11 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # think it in another way as to construct minimum spanning trees for Alice and Bob
-        # if there are then all the rest of the edges can be removed
-        # prioritize type 3 edges
         edges.sort(key=lambda edge: -edge[0])
         ds_alice = DisjointSets(n)
         ds_bob = DisjointSets(n)
         edges_added = 0
-        for e_type, u, v in edges:
+        for (e_type, u, v) in edges:
             if e_type == 3:
                 edges_added += int(ds_alice.union(u - 1, v - 1) | ds_bob.union(u - 1, v - 1))
             elif e_type == 2:
@@ -18,6 +16,7 @@ class Solution:
 
 
 class DisjointSets:
+
     def __init__(self, n: int) -> None:
         self.parent = [x for x in range(n)]
         self.set_size = n

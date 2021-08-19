@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val):
         self.val = val
         self.parent = self
@@ -7,6 +8,7 @@ class Node:
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.sets = {x: Node(x) for x in range(1, n + 1)}
         self.disjointSet = {x: self.sets[x] for x in range(1, n + 1)}
@@ -56,7 +58,7 @@ class Solution:
         type2 = 0
         type3 = 0
         for edge in edges:
-            etype, a, b = edge
+            (etype, a, b) = edge
             if etype == 1:
                 alice.union(a, b)
                 type1 += 1
@@ -68,14 +70,9 @@ class Solution:
                 bob.union(a, b)
                 both.union(a, b)
                 type3 += 1
-        # print(alice.disjointSet)
-        # print(bob.disjointSet)
-        # print(both.disjointSet)
-        # print(len(bob.disjointSet))
-
         if len(alice.disjointSet) != 1 or len(bob.disjointSet) != 1:
             return -1
         tmp = 0
-        for key, val in list(both.disjointSet.items()):
+        for (key, val) in list(both.disjointSet.items()):
             tmp += val.size - 1
         return type3 - tmp + type1 - (len(both.disjointSet) - 1) + type2 - (len(both.disjointSet) - 1)

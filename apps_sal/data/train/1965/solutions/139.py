@@ -1,10 +1,11 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         A = [i + 1 for i in range(n)]
         B = [i + 1 for i in range(n)]
         cA = n
         cB = n
-        edges.sort(reverse=True, key=lambda x: (x[0]))
+        edges.sort(reverse=True, key=lambda x: x[0])
         i = 0
         m = len(edges)
         ans = 0
@@ -14,11 +15,7 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 A[l1 - 1] = -l2
-                # print(l1,l2)
-                # print(A)
                 B[l1 - 1] = -l2
                 cA -= 1
                 cB -= 1
@@ -32,8 +29,6 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 B[l1 - 1] = -l2
                 cB -= 1
             if cB == 1:
@@ -52,14 +47,11 @@ class Solution:
             if l1 == l2:
                 ans += 1
             else:
-                # mi=min(l1,l2)
-                # ma=max(l1,l2)
                 A[l1 - 1] = -l2
                 cA -= 1
             if cA == 1:
                 return m - j - 1 + ans
             j += 1
-
         return -1
 
 
@@ -68,4 +60,4 @@ def find(ll, x):
         return ll[x - 1]
     else:
         ll[x - 1] = -find(ll, -ll[x - 1])
-        return(-ll[x - 1])
+        return -ll[x - 1]

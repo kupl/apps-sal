@@ -1,4 +1,5 @@
 class Dsu:
+
     def __init__(self, n):
         self.roots = list(range(n + 1))
         self.cnts = [1] * (n + 1)
@@ -27,24 +28,21 @@ class Dsu:
 class Solution:
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
         dsu_alice = Dsu(n)
         dsu_bob = Dsu(n)
         rm = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 3:
                 dsu_alice.union(u, v)
                 if not dsu_bob.union(u, v):
                     rm += 1
-
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 if not dsu_alice.union(u, v):
                     rm += 1
             elif t == 2:
                 if not dsu_bob.union(u, v):
                     rm += 1
-
         if dsu_alice.cnts[dsu_alice.find(1)] != n or dsu_bob.cnts[dsu_bob.find(1)] != n:
             return -1
         return rm

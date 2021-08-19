@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.p = {}
         self.group = n
@@ -6,7 +7,7 @@ class UnionFind:
             self.p[i] = i
 
     def unite(self, a, b):
-        pa, pb = self.find(a), self.find(b)
+        (pa, pb) = (self.find(a), self.find(b))
         if pa != pb:
             self.p[pa] = pb
             self.group -= 1
@@ -23,15 +24,13 @@ class UnionFind:
 
 
 class Solution:
-    # copied https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/discuss/831506/Textbook-Union-Find-Data-Structure-Code-with-Explanation-and-comments
 
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges = sorted(edges, reverse=True)
-
         edgesAdded = 0
-        bob, alice = UnionFind(n), UnionFind(n)
+        (bob, alice) = (UnionFind(n), UnionFind(n))
         for edge in edges:
-            tp, one, two = edge[0], edge[1], edge[2]
+            (tp, one, two) = (edge[0], edge[1], edge[2])
             if tp == 3:
                 bu = bob.unite(one, two)
                 au = alice.unite(one, two)
@@ -40,5 +39,4 @@ class Solution:
                 edgesAdded += bob.unite(one, two)
             else:
                 edgesAdded += alice.unite(one, two)
-
         return len(edges) - edgesAdded if bob.united() and alice.united() else -1
