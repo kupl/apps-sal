@@ -2,6 +2,7 @@ from heapq import heappush, heappop
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.group = list(range(n))
         self.size = [0] * n
@@ -25,23 +26,19 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # minuim spining tree
         weights = []
         for i in range(len(points) - 1):
             for j in range(i + 1, len(points)):
                 weight = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heappush(weights, (weight, i, j))
-
-        # print(weights)
         uf = UnionFind(len(points))
         res = 0
-
         while weights:
-            min_edge, i, j = heappop(weights)
+            (min_edge, i, j) = heappop(weights)
             if uf.find(i) == uf.find(j):
                 continue
             uf.union(i, j)
             res += min_edge
-
         return res

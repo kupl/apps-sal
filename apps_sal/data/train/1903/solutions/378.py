@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         cc = [i for i in range(len(points))]
@@ -19,14 +20,11 @@ class Solution:
             if rx != ry:
                 cc[rx] = ry
             return rx != ry
-
         cct = len(points)
         cost = 0
-        # print('foo')
-        for x, i, j in edges:
+        for (x, i, j) in edges:
             if join(i, j):
                 cost += x
-                # print(x)
                 cct -= 1
                 if cct == 1:
                     break

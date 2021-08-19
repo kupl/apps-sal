@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         distance = []
         n = len(points)
@@ -8,10 +9,8 @@ class Solution:
                 point_2 = points[j]
                 dist = abs(point_1[0] - point_2[0]) + abs(point_1[1] - point_2[1])
                 distance.append((dist, tuple(point_1), tuple(point_2)))
-
         distance = sorted(distance, key=lambda x: x[0])
         points = [tuple(p) for p in points]
-        # print(points)
         union_find = UnionFind(points=points)
         ans = 0
         for dist_pair in distance:
@@ -19,11 +18,11 @@ class Solution:
                 continue
             union_find.union(dist_pair[1], dist_pair[2])
             ans += dist_pair[0]
-
         return ans
 
 
 class UnionFind:
+
     def __init__(self, points):
         self.father = {p: p for p in points}
 
