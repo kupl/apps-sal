@@ -1,6 +1,6 @@
 for i in range(int(input())):
     n = int(input())
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     s = input()
     res = [''] * n
     w = 0
@@ -29,7 +29,7 @@ for i in range(int(input())):
                 res[j] = 'S'
                 c -= 1
     if w >= (n + 1) // 2:
-        print("YES")
+        print('YES')
         print(''.join(res))
     else:
-        print("NO")
+        print('NO')

@@ -5,7 +5,6 @@ ok = [False] * len(x)
 for i in range(len(x)):
     if x[i] in a:
         ok[i] = True
-
 for i in range(len(x) - 1):
     if x[i:i + 2] in a:
         ok[i] = True

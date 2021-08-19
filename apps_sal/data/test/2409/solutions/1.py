@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, k, l = list(map(int, input().split()))
+    (n, k, l) = list(map(int, input().split()))
     dd = list(map(int, input().split()))
     t = 0
     curld = 0
     di = False
-    for d in [-(2**30), *dd]:
+    for d in [-2 ** 30, *dd]:
         if d > l:
             break
         ld = l - d

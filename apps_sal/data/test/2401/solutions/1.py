@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, r = list(map(int, input().split()))
+    (n, r) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     if r == 1:
         s = sum(l) % n

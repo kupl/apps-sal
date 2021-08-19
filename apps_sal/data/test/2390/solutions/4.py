@@ -1,5 +1,5 @@
 from itertools import accumulate
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 wv = [[0, 0]] + [list(map(int, input().split())) for i in range(n)] + [[c, 0]]
 n += 2
 ansls = []
@@ -8,12 +8,12 @@ ls2 = [0] * n
 ls3 = [0] * n
 ls4 = [0] * n
 for i in range(1, n):
-    w, v = wv[i]
+    (w, v) = wv[i]
     w -= wv[i - 1][0]
     ls1[i] = v - w * 2
     ls2[i] = v - w
 for i in range(n - 2, -1, -1):
-    w, v = wv[i]
+    (w, v) = wv[i]
     w -= wv[i + 1][0]
     ls3[n - i - 1] = v + w * 2
     ls4[n - i - 1] = v + w

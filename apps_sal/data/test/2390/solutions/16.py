@@ -1,19 +1,19 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 xv = []
 for _ in range(n):
-    x, v = map(int, input().split())
+    (x, v) = map(int, input().split())
     xv.append((x, v))
 r1 = [0]
 r2 = [0]
 px = 0
-for x, v in xv:
+for (x, v) in xv:
     r1.append(r1[-1] + v - (x - px))
     r2.append(r2[-1] + v - 2 * (x - px))
     px = x
 l1 = [0]
 l2 = [0]
 px = 0
-for x, v in reversed(xv):
+for (x, v) in reversed(xv):
     x = c - x
     l1.append(l1[-1] + v - (x - px))
     l2.append(l2[-1] + v - 2 * (x - px))

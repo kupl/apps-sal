@@ -25,21 +25,40 @@ def getdict(n):
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
-        if (n % i == 0):
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 r.append(i)
             else:
                 r.extend([i, n // i])
     return r
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def wr(arr): return '\n'.join(map(str, arr))
-def revn(n): return int(str(n)[::-1])
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def wr(arr):
+    return '\n'.join(map(str, arr))
+
+
+def revn(n):
+    return int(str(n)[::-1])
 
 
 def prime(n):

@@ -2,25 +2,15 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-3
-4
-1 2 3 4
-3
-7 4 -1
-3
-5 -5 5
-'''
+'\n3\n4\n1 2 3 4\n3\n7 4 -1\n3\n5 -5 5\n'
 
 
 def maxSubArraySum(a, size):
     max_so_far = a[0]
     curr_max = a[0]
-
     for i in range(1, size):
         curr_max = max(a[i], curr_max + a[i])
         max_so_far = max(max_so_far, curr_max)
-
     return max_so_far
 
 

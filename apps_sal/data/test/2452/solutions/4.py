@@ -6,7 +6,7 @@ from heapq import *
 from bisect import *
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 
 
 def lis():
@@ -26,7 +26,7 @@ def st1():
 
 
 t = inp()
-while(t):
+while t:
     t -= 1
     n = inp()
     for i in range(1, n + 1):

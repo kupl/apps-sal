@@ -14,39 +14,38 @@ if n % 2 == 0:
     for i in range(1, n + 1, 2):
         if i + 3 > n:
             continue
-        tmp = (acum1[i] - acum1[0]) + (acum2[n] - acum2[i + 2])
+        tmp = acum1[i] - acum1[0] + (acum2[n] - acum2[i + 2])
         ans = max(ans, tmp)
 else:
     ans = max(acum1[n - 2] - acum1[0], acum2[n - 1] - acum2[1], acum1[n] - acum1[2])
     for i in range(1, n + 1, 2):
         if i + 3 > n - 1:
             continue
-        tmp = (acum1[i] - acum1[0]) + (acum2[n - 1] - acum2[i + 2])
+        tmp = acum1[i] - acum1[0] + (acum2[n - 1] - acum2[i + 2])
         ans = max(ans, tmp)
     for i in range(2, n + 1, 2):
         if i + 3 > n:
             continue
-        tmp = (acum2[i] - acum2[1]) + (acum1[n] - acum1[i + 2])
+        tmp = acum2[i] - acum2[1] + (acum1[n] - acum1[i + 2])
         ans = max(ans, tmp)
     for i in range(1, n + 1, 2):
         if i + 4 > n:
             continue
-        tmp = (acum1[i] - acum1[0]) + (acum1[n] - acum1[i + 3])
+        tmp = acum1[i] - acum1[0] + (acum1[n] - acum1[i + 3])
         ans = max(ans, tmp)
-    acummax = [-10**18]
+    acummax = [-10 ** 18]
     for i in range(1, n + 1):
         if i + 2 > n:
-            acummax.append(-10**18)
+            acummax.append(-10 ** 18)
+        elif i % 2 == 0:
+            acummax.append(acum2[i] + acum1[n] - acum1[i + 2])
         else:
-            if i % 2 == 0:
-                acummax.append(acum2[i] + acum1[n] - acum1[i + 2])
-            else:
-                acummax.append(-10**18)
+            acummax.append(-10 ** 18)
     for i in range(n - 1, -1, -1):
         acummax[i] = max(acummax[i], acummax[i + 1])
     for i in range(1, n + 1, 2):
         if i + 6 > n:
             continue
-        tmp = (acum1[i] - acum1[0] - acum2[i + 2]) + acummax[i + 3]
+        tmp = acum1[i] - acum1[0] - acum2[i + 2] + acummax[i + 3]
         ans = max(ans, tmp)
 print(ans)

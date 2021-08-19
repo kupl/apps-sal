@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = [int(i) for i in input().split()]
-    for i, e in enumerate(a):
+    for (i, e) in enumerate(a):
         if e % 2 == 0:
             print(1)
             print(i + 1)

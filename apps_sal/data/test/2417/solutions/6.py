@@ -8,11 +8,10 @@ for i in range(n):
     t = l[i]
     if f == n:
         break
-    if not(t in d):
+    if not t in d:
         while l2[c] != t and c < n:
             k = l2[c]
-
-            if not(k in d):
+            if not k in d:
                 d[k] = 1
                 f += 1
             c += 1

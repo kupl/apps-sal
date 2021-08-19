@@ -2,11 +2,9 @@ import sys
 
 
 def main():
-    N, *S = map(int, open(0).read().split())
+    (N, *S) = map(int, open(0).read().split())
     S = sorted(S)
-
     g = [S.pop(-1)]
-
     for _ in range(N):
         tmp = []
         lg = len(g)

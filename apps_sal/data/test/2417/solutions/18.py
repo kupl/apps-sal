@@ -8,7 +8,6 @@ for i in range(n):
 for i in range(n):
     b[i] = a_dict[b[i]]
 b.reverse()
-
 ans = 0
 mini = n
 for i in range(n):
@@ -16,5 +15,4 @@ for i in range(n):
         mini = b[i]
     else:
         ans += 1
-
 print(ans)

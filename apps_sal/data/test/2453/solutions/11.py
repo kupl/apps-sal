@@ -16,16 +16,16 @@ def li():
 n = ii()
 a1 = [tuple(mi()) for i in range(n)]
 a = []
-for l, r in a1:
+for (l, r) in a1:
     a.append((l, 0))
     a.append((r, 1))
 c = Counter(a)
-b = [(k[0], k[1], v) for k, v in c.items()]
+b = [(k[0], k[1], v) for (k, v) in c.items()]
 b.sort()
 ans = [0] * (n + 1)
 p = -1
 cnt = 0
-for x, y, z in b:
+for (x, y, z) in b:
     if y == 0:
         ans[cnt] += x - p - 1
         cnt += z

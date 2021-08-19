@@ -18,7 +18,6 @@ def solve(N, A, B):
     for b in B:
         T[b] = i
         i += 1
-
     last_pos = -1
     ans = 0
     for a in A:
@@ -27,7 +26,6 @@ def solve(N, A, B):
             last_pos = t
         else:
             ans += 1
-
     return ans
 
 

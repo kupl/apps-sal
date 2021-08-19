@@ -9,12 +9,10 @@ def input():
 n = int(input())
 e = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = [int(i) - 1 for i in input().split()]
+    (a, b) = [int(i) - 1 for i in input().split()]
     e[a].append(b)
     e[b].append(a)
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 kkai = [1]
 for i in range(1, 2 * 10 ** 5):
     kkai.append(kkai[-1] * i % mod)
@@ -83,7 +81,6 @@ def dfs3(i=0, r=-1):
         s *= pow(n - child[i], mod - 2, mod)
         s %= mod
         b[i] = s
-
     for j in e[i]:
         if j == r:
             continue
@@ -91,4 +88,4 @@ def dfs3(i=0, r=-1):
 
 
 dfs3()
-print(("\n".join(map(str, b))))
+print('\n'.join(map(str, b)))

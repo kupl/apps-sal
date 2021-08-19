@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
-    print(1 + (n // 2))
+    print(1 + n // 2)

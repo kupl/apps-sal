@@ -1,9 +1,9 @@
 from itertools import accumulate
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 xs = []
 vs = []
 for _ in range(N):
-    x, v = map(int, input().split())
+    (x, v) = map(int, input().split())
     xs.append(x)
     vs.append(v)
 vacc = [0] + list(accumulate(vs, lambda x, y: x + y))
@@ -21,6 +21,6 @@ xs = [0] + xs
 ans = 0
 for i in range(N + 1):
     l = lacc[i]
-    r, d = racc[i]
+    (r, d) = racc[i]
     ans = max(ans, l + r - xs[i], l + r - d, l, r)
 print(ans)

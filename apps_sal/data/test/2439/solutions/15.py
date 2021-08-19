@@ -1,13 +1,11 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for tests in range(t):
     n = int(input())
     A = list(map(int, input().split()))
-
     if sum(A) == 0:
-        print("NO")
+        print('NO')
     elif sum(A) > 0:
         B = []
         C = []
@@ -19,9 +17,8 @@ for tests in range(t):
                 C.append(a)
             else:
                 Z.append(a)
-
-        print("YES")
-        print(*(B + Z + C))
+        print('YES')
+        print(*B + Z + C)
     else:
         B = []
         C = []
@@ -33,6 +30,5 @@ for tests in range(t):
                 C.append(a)
             else:
                 Z.append(a)
-
-        print("YES")
-        print(*(C + Z + B))
+        print('YES')
+        print(*C + Z + B)

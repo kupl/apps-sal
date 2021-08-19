@@ -4,7 +4,7 @@ for nt in range(t):
     ln = list(map(int, input().split()))
     m = int(input())
     lm = list(map(int, input().split()))
-    lne, lno, lme, lmo = 0, 0, 0, 0
+    (lne, lno, lme, lmo) = (0, 0, 0, 0)
     for i in ln:
         if i % 2 == 0:
             lne += 1

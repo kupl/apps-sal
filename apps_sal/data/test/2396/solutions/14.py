@@ -4,10 +4,10 @@ arr = []
 cc = {}
 for i in range(n):
     line = input()
-    ab, c = line.split('/')
+    (ab, c) = line.split('/')
     ab = ab[1:-1]
-    a, b = ab.split('+')
-    a, b, c = [int(x) for x in (a, b, c)]
+    (a, b) = ab.split('+')
+    (a, b, c) = [int(x) for x in (a, b, c)]
     p = (a + b) / c
     arr.append(p)
     if p not in cc:
@@ -16,5 +16,5 @@ for i in range(n):
         cc[p] += 1
 for i in range(n):
     if i > 0:
-        print(' ', end="")
-    print(cc[arr[i]], end="")
+        print(' ', end='')
+    print(cc[arr[i]], end='')

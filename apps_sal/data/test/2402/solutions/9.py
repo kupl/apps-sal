@@ -1,6 +1,6 @@
 t = int(input())
 for case_num in range(t):
-    n, x, y = list(map(int, input().split(' ')))
+    (n, x, y) = list(map(int, input().split(' ')))
     best = 1
     if x + y > n:
         best = min(x + y - n + 1, n)

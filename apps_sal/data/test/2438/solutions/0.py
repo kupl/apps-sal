@@ -18,7 +18,7 @@ if k == 0 or k == 1:
 else:
     dis += tab[1]
     dis += tab[-2]
-    dis -= (k - 1)
+    dis -= k - 1
     for i in range(1, k - 1):
         dis += tab[i - 1]
         dis += tab[i + 1]

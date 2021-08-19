@@ -1,15 +1,13 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    n, m, x, y = list(map(int, input().split()))
+    (n, m, x, y) = list(map(int, input().split()))
     if y > 2 * x:
         y = 2 * x
     out = 0
     for i in range(n):
         line = input().strip()
-
         curr = 0
         for c in line:
             if c == '.':

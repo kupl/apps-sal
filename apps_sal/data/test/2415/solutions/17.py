@@ -13,7 +13,7 @@ def helper(target):
                 if len(e) + idx == len(target):
                     print('YES')
                     return
-                dp += idx + len(e),
+                dp += (idx + len(e),)
                 met.add(idx + len(e))
     print('NO')
 

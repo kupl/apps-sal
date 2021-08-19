@@ -1,5 +1,4 @@
 3
-
 q = int(input())
 for i in range(q):
     a = int(input())

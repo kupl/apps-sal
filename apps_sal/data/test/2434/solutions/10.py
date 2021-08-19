@@ -5,11 +5,11 @@ input = sys.stdin.readline
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     if n % m:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 for _ in range(int(input())):

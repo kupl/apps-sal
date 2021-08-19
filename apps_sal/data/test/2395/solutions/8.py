@@ -1,5 +1,4 @@
 from math import *
-
 for zz in range(int(input())):
     t = [int(i) for i in input()]
     n = len(t)
@@ -8,4 +7,4 @@ for zz in range(int(input())):
     elif sum(t) == n:
         print(*[1] * n, sep='')
     else:
-        print(*[0, 1] * (n), sep='')
+        print(*[0, 1] * n, sep='')

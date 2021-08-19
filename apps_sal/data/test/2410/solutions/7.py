@@ -10,7 +10,7 @@ for z in range(test):
         if summ <= 0:
             happy = False
             break
-    if (not happy):
+    if not happy:
         print('NO')
         continue
     else:
@@ -23,4 +23,4 @@ for z in range(test):
         if not happy:
             print('NO')
             continue
-    print("YES")
+    print('YES')

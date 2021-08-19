@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 A = tuple(map(int, input().split()))
 B = tuple(map(int, input().split()))
@@ -15,7 +14,7 @@ def z_algo(S):
     N = len(S)
     A = [0] * N
     A[0] = N
-    i, j = 1, 0
+    (i, j) = (1, 0)
     while i < N:
         while i + j < N and S[j] == S[i + j]:
             j += 1
@@ -33,7 +32,7 @@ def z_algo(S):
 
 
 P = z_algo(C)
-for i, p in enumerate(P[n:n + n]):
+for (i, p) in enumerate(P[n:n + n]):
     if p >= n:
         x = A[i] ^ B[0]
         print(i, x)

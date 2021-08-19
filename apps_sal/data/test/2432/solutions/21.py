@@ -1,7 +1,7 @@
 N = int(input())
 b = []
 for i in range(6):
-    N, r = divmod(N, 2)
+    (N, r) = divmod(N, 2)
     b.append(r)
 ans = 0
 if b[0]:

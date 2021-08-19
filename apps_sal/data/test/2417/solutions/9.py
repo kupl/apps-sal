@@ -21,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 mm = 1000000007
@@ -37,17 +37,16 @@ tset = set()
 
 
 def go(ind, x):
-    if (ind == 19):
+    if ind == 19:
         tset.add(x)
         return
-
-    if (x in tset):
+    if x in tset:
         return
     go(ind + 1, x)
     i = 0
     for xx in fact_powers[ind]:
         p = x * xx
-        if (p > 1e18):
+        if p > 1e+18:
             break
         go(ind + 1, p)
 
@@ -62,12 +61,12 @@ def solve():
         j = 0
         s = set()
         cc = 0
-        while(i < n and j < n):
-            if(a[i] == b[j]):
+        while i < n and j < n:
+            if a[i] == b[j]:
                 i += 1
                 j += 1
             else:
-                if(a[i] in s):
+                if a[i] in s:
                     i += 1
                     continue
                 s.add(b[j])

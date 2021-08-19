@@ -20,6 +20,6 @@ for re in range(q):
             odp = 0
             break
     if odp:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

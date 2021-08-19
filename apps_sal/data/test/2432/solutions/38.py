@@ -1,4 +1,4 @@
-'''
+"""
 2 = 2^1
 24 = 2^3*3^1
 50 = 2^1*5^2
@@ -21,12 +21,10 @@ and they lived happily ever after
 
 35 = 100011
 50 = 110010
-'''
-
+"""
 replacement = [4, 1, 3, 2, 0, 5] + list(range(6, 64))
 n = list('{:064b}'.format(int(input())))
 n.reverse()
-
 ans = list(n)
 for i in range(64):
     ans[i] = n[replacement[i]]

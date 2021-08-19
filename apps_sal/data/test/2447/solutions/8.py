@@ -20,10 +20,9 @@ for _ in range(int(input())):
     n = len(t)
     ans = n
     for i in range(0, n):
-        if (i > 0):
+        if i > 0:
             ss -= t[i - 1]
             ps += t[i - 1]
         res = min(i - ps + ss, ps + n - i - ss)
         ans = min(res, ans)
-
     print(ans)

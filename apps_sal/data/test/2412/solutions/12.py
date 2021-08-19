@@ -5,9 +5,9 @@ def solve():
         if s[i] == '8':
             break
     if i <= n - 11:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():

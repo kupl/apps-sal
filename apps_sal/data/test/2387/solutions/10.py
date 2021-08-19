@@ -4,13 +4,11 @@ import cython
 def main():
     import sys
     readline = sys.stdin.readline
-
     N: cython.longlong
     N = int(readline())
     S = [readline().strip() for i in range(N)]
-
     D = []
-    L, R = [], []
+    (L, R) = ([], [])
     for s in S:
         l: cython.longlong = 0
         r: cython.longlong = 0
@@ -30,34 +28,28 @@ def main():
             L.append(l)
         else:
             D.append((l, r))
-
     L: cython.longlong
     R: cython.longlong
     L = sum(L)
     R = sum(R)
-
     inc = []
     dec = []
-    for l, r in D:
+    for (l, r) in D:
         if l > r:
             inc.append((l, r))
         else:
             dec.append((l, r))
-
     inc.sort(key=lambda x: x[1])
     dec.sort(key=lambda x: -x[1])
-
     D = inc + dec
-
     l: cython.longlong
     r: cython.longlong
-    for _, (l, r) in enumerate(D):
+    for (_, (l, r)) in enumerate(D):
         L -= r
         if L < 0:
             print('No')
             return
         L += l
-
     if L == R:
         print('Yes')
     else:

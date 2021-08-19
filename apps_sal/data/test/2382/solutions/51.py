@@ -2,7 +2,6 @@ n = int(input())
 s = list(map(int, input().split()))
 rest = sorted(s)
 parent = [rest.pop()]
-
 for _ in range(n):
     next_parent = []
     next_rest = []
@@ -19,8 +18,7 @@ for _ in range(n):
     parent.sort()
     rest += next_rest
     rest.sort()
-
-if len(parent) == 2**n:
+if len(parent) == 2 ** n:
     print('Yes')
 else:
     print('No')

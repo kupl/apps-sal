@@ -1,7 +1,8 @@
 def main():
     import sys
 
-    def input(): return sys.stdin.readline().rstrip()
+    def input():
+        return sys.stdin.readline().rstrip()
 
     def stoidx(s):
         if s == 'AB':
@@ -25,8 +26,7 @@ def main():
             s[x[0]] += 1
             s[x[1]] -= 1
             ans.append(abc[x[0]])
-
-    n, *s = list(map(int, input().split()))
+    (n, *s) = list(map(int, input().split()))
     sl = []
     for _ in range(n):
         sl.append(stoidx(input()))
@@ -35,21 +35,18 @@ def main():
     if sum(s) == 0:
         print('No')
         return
-
     elif sum(s) == 1:
         for x in sl:
             if s[x[0]] == 0 and s[x[1]] == 0:
                 print('No')
                 return
             add_answer(x)
-
     else:
-        for i, x in enumerate(sl):
+        for (i, x) in enumerate(sl):
             if s[x[0]] == 0 and s[x[1]] == 0:
                 print('No')
                 return
-
-            if i < n - 1 and s[x[0]] == 1 and s[x[1]] == 1:
+            if i < n - 1 and s[x[0]] == 1 and (s[x[1]] == 1):
                 nx = sl[i + 1]
                 if x != nx and sum(s) == 2:
                     if x[0] in nx:

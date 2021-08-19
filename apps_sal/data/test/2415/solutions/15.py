@@ -1,122 +1,5 @@
-prvky = """Ac
-Ag
-Al
-Am
-Ar
-As
-At
-Au
-B
-Ba
-Be
-Bh
-Bi
-Bk
-Br
-C
-Ca
-Cd
-Ce
-Cf
-Cl
-Cm
-Cn
-Co
-Cr
-Cs
-Cu
-Db
-Ds
-Dy
-Er
-Es
-Eu
-F
-Fe
-Fl
-Fm
-Fr
-Ga
-Gd
-Ge
-H
-He
-Hf
-Hg
-Ho
-Hs
-I
-In
-Ir
-K
-Kr
-La
-Li
-Lr
-Lu
-Lv
-Md
-Mg
-Mn
-Mo
-Mt
-N
-Na
-Nb
-Nd
-Ne
-Ni
-No
-Np
-O
-Os
-P
-Pa
-Pb
-Pd
-Pm
-Po
-Pr
-Pt
-Pu
-Ra
-Rb
-Re
-Rf
-Rg
-Rh
-Rn
-Ru
-S
-Sb
-Sc
-Se
-Sg
-Si
-Sm
-Sn
-Sr
-Ta
-Tb
-Tc
-Te
-Th
-Ti
-Tl
-Tm
-U
-Mc
-Lv
-Ts
-Og
-V
-W
-Xe
-Y
-Yb
-Zn
-Zr""".split("\n")
-d = {i: [] for i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+prvky = 'Ac\nAg\nAl\nAm\nAr\nAs\nAt\nAu\nB\nBa\nBe\nBh\nBi\nBk\nBr\nC\nCa\nCd\nCe\nCf\nCl\nCm\nCn\nCo\nCr\nCs\nCu\nDb\nDs\nDy\nEr\nEs\nEu\nF\nFe\nFl\nFm\nFr\nGa\nGd\nGe\nH\nHe\nHf\nHg\nHo\nHs\nI\nIn\nIr\nK\nKr\nLa\nLi\nLr\nLu\nLv\nMd\nMg\nMn\nMo\nMt\nN\nNa\nNb\nNd\nNe\nNi\nNo\nNp\nO\nOs\nP\nPa\nPb\nPd\nPm\nPo\nPr\nPt\nPu\nRa\nRb\nRe\nRf\nRg\nRh\nRn\nRu\nS\nSb\nSc\nSe\nSg\nSi\nSm\nSn\nSr\nTa\nTb\nTc\nTe\nTh\nTi\nTl\nTm\nU\nMc\nLv\nTs\nOg\nV\nW\nXe\nY\nYb\nZn\nZr'.split('\n')
+d = {i: [] for i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
 for i in prvky:
     d[i[0]].append(i)
 mem = {}
@@ -126,7 +9,7 @@ def f(string):
     if string in mem:
         return mem[string]
     if not string:
-        return ""
+        return ''
     for i in d[string[0]]:
         if string.startswith(i.upper()):
             res = f(string[len(i):])
@@ -139,6 +22,6 @@ def f(string):
 s = input()
 r = f(s)
 if r == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

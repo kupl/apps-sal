@@ -1,6 +1,6 @@
 def check():
     N = int(input())
-    plus, minus = [], []
+    (plus, minus) = ([], [])
     for i in range(N):
         S = input()
         now = 0
@@ -18,11 +18,11 @@ def check():
     plus.sort(reverse=True)
     minus.sort(reverse=True)
     now = 0
-    for a, b in plus:
+    for (a, b) in plus:
         if now + a < 0:
             return 'No'
         now += b
-    for a, b in minus:
+    for (a, b) in minus:
         if now + b - a < 0:
             return 'No'
         now += b

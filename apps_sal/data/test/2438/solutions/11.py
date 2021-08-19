@@ -9,38 +9,36 @@ for i in range(n):
     if i != 0:
         acumA[i] += acumA[i - 1]
         acumB[i] += acumB[i - 1]
-    if s[i] == "A":
+    if s[i] == 'A':
         acumA[i] += 1
         dictA[acumA[i]] = i
-
-    if s[i] == "B":
+    if s[i] == 'B':
         acumB[i] += 1
         dictB[acumB[i]] = i
 ans = 0
 for i in range(n - 1):
-    if s[i] == "A":
-        if(dictA[acumA[i] + 1] == -1):
+    if s[i] == 'A':
+        if dictA[acumA[i] + 1] == -1:
             continue
         x = dictB[acumB[i] + 1]
-        if(x == -1):
+        if x == -1:
             x = n
-        ans += (x - i - 1)
+        ans += x - i - 1
         x = dictB[acumB[i] + 1]
-        if(x == -1):
+        if x == -1:
             continue
         x = max(dictB[acumB[i] + 1], dictA[acumA[i] + 1] - 1)
-
-        ans += (n - x - 1)
+        ans += n - x - 1
     else:
-        if(dictB[acumB[i] + 1] == -1):
+        if dictB[acumB[i] + 1] == -1:
             continue
         x = dictA[acumA[i] + 1]
-        if(x == -1):
+        if x == -1:
             x = n
-        ans += (x - i - 1)
+        ans += x - i - 1
         x = dictA[acumA[i] + 1]
-        if(x == -1):
+        if x == -1:
             continue
         x = max(dictA[acumA[i] + 1], dictB[acumB[i] + 1] - 1)
-        ans += (n - x - 1)
+        ans += n - x - 1
 print(ans)

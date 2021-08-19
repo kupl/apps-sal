@@ -3,8 +3,6 @@ import os
 import math
 import array
 3
-
-
 DEBUG = 'DEBUG' in os.environ
 
 
@@ -30,14 +28,13 @@ def solve(N, R, X):
         i += 1
         c += 1
         off += R
-
     return c
 
 
 def main():
     Q = int(inp())
     for _ in range(Q):
-        N, R = [int(e) for e in inp().split()]
+        (N, R) = [int(e) for e in inp().split()]
         X = [int(e) for e in inp().split()]
         print(solve(N, R, X))
 

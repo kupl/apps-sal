@@ -1,7 +1,7 @@
 def main():
     import sys
     from collections import deque
-    sys.setrecursionlimit(10**6)
+    sys.setrecursionlimit(10 ** 6)
     input = sys.stdin.readline
     N = int(input())
     pq = deque([])
@@ -13,7 +13,6 @@ def main():
         for ss in [1 if ss == '(' else -1 for ss in s]:
             dst += ss
             mini = min(dst, mini)
-
         if dst >= 0:
             pq.append((mini, dst))
         elif dst < 0:
@@ -21,12 +20,12 @@ def main():
     pq = sorted(pq, reverse=True)
     mq = sorted(mq)
     p = 0
-    for mini, dst in pq:
+    for (mini, dst) in pq:
         if p + mini < 0:
             print('No')
             return
         p += dst
-    for minimini, mini, dst in mq:
+    for (minimini, mini, dst) in mq:
         if p + mini < 0:
             print('No')
             return

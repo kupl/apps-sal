@@ -12,14 +12,12 @@ def find_largest_non_trivial_divisor(n):
 num_tests = int(input())
 for _ in range(num_tests):
     n = int(input())
-
     larg_bit_pos = 0
     x = n
     while x > 1:
         x //= 2
         larg_bit_pos += 1
-
-    best0 = 2**(larg_bit_pos + 1) - 1
+    best0 = 2 ** (larg_bit_pos + 1) - 1
     if n != best0:
         print(best0)
     else:

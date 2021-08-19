@@ -1,7 +1,7 @@
 def check(x, y, z, i, ops):
-    if x == 1 and y == 1 and z == 0 and i < len(ops) - 1:
-        return (ops[i], ops[i + 1]) in [("AB", "AC"), ("BC", "AB"), ("AC", "AB")]
-    return (x <= y)
+    if x == 1 and y == 1 and (z == 0) and (i < len(ops) - 1):
+        return (ops[i], ops[i + 1]) in [('AB', 'AC'), ('BC', 'AB'), ('AC', 'AB')]
+    return x <= y
 
 
 A = 0
@@ -13,13 +13,12 @@ abc = nabc[1:]
 ops = []
 for i in range(n):
     ops.append(input())
-
 result = []
 for i in range(n):
     op = ops[i]
-    if op == "AB":
+    if op == 'AB':
         (s, t, u) = (A, B, C)
-    elif op == "BC":
+    elif op == 'BC':
         (s, t, u) = (B, C, A)
     else:
         (s, t, u) = (A, C, B)
@@ -32,14 +31,14 @@ for i in range(n):
         abc[s] -= 1
         abc[t] += 1
     if abc[s] < 0 or abc[t] < 0:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')
     for r in result:
         if r == A:
-            print("A")
+            print('A')
         if r == B:
-            print("B")
+            print('B')
         if r == C:
-            print("C")
+            print('C')

@@ -1,5 +1,5 @@
 for gfhua in range(int(input())):
-    n, m, x, y = list(map(int, input().split()))
+    (n, m, x, y) = list(map(int, input().split()))
     if y > x * 2:
         y = x * 2
     ans = 0
@@ -7,7 +7,7 @@ for gfhua in range(int(input())):
         s = input()
         l = 0
         for j in s:
-            if j == ".":
+            if j == '.':
                 l += 1
             else:
                 ans += l // 2 * y + l % 2 * x

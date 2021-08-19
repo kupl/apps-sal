@@ -1,24 +1,19 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
-U = 2 * 10**5
-MOD = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+U = 2 * 10 ** 5
+MOD = 10 ** 9 + 7
 fact = [1] * (U + 1)
 fact_inv = [1] * (U + 1)
-
 for i in range(1, U + 1):
-    fact[i] = (fact[i - 1] * i) % MOD
+    fact[i] = fact[i - 1] * i % MOD
 fact_inv[U] = pow(fact[U], MOD - 2, MOD)
-
 for i in range(U, 0, -1):
-    fact_inv[i - 1] = (fact_inv[i] * i) % MOD
-
+    fact_inv[i - 1] = fact_inv[i] * i % MOD
 n = int(input())
 T = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     T[a].append(b)

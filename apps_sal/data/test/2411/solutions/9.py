@@ -2,12 +2,12 @@ n = int(input())
 T = []
 P = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     T.append([x, y])
 for i in range(n):
     for j in range(i + 1, n):
-        x1, y1 = T[i]
-        x2, y2 = T[j]
+        (x1, y1) = T[i]
+        (x2, y2) = T[j]
         a = y2 - y1
         b = x1 - x2
         c = -(a * x1 + b * y1)
@@ -27,7 +27,7 @@ for i in range(len(P) - 1):
         newp.append(P[i + 1])
 P = newp
 sos = dict()
-for a, b, c in P:
+for (a, b, c) in P:
     if b != 0 and a != 0:
         z = a / b
     elif a == 0:

@@ -2,7 +2,6 @@ import math
 import numpy as np
 import sys
 input = sys.stdin.readline
-
 mod = 1000000007
 
 
@@ -14,7 +13,6 @@ def main():
     b = int(np.median(A))
     for i in range(n):
         A[i] = abs(A[i] - b)
-
     print(int(np.sum(A)))
 
 

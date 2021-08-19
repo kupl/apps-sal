@@ -24,8 +24,8 @@ while S:
         S.pop()
         L.append(popX(L[-1]))
     if L[-1] > N:
-        print("No")
+        print('No')
         break
     addX()
 else:
-    print("Yes")
+    print('Yes')

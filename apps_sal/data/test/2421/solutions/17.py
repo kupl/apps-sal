@@ -20,8 +20,8 @@ def func_3(x, c6, c3):
 
 
 def main():
-    y, x = map(int, input().split())
-    c1, c2, c3, c4, c5, c6 = map(int, input().split())
+    (y, x) = map(int, input().split())
+    (c1, c2, c3, c4, c5, c6) = map(int, input().split())
     lu = (1, 0)
     ru = (1, 1)
     rd = (-1, 0)
@@ -40,22 +40,5 @@ def __starting_point():
         main()
 
 
-"""
-123
-1232
-123232
-23232123232
-d(abc)e
-ad(abc)e
-Ad(abc)eC
-dabe
-adbeb
-ebdadbeb
-bebdadbeb
-acccc
-accccc
-caccccc
-ccccacaccccc
-cccccacaccccc
-"""
+'\n123\n1232\n123232\n23232123232\nd(abc)e\nad(abc)e\nAd(abc)eC\ndabe\nadbeb\nebdadbeb\nbebdadbeb\nacccc\naccccc\ncaccccc\nccccacaccccc\ncccccacaccccc\n'
 __starting_point()

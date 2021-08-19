@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, x, y = map(int, input().split())
+    (n, x, y) = map(int, input().split())
     s = x + y
     mx = min(s - 1, n)
     if s <= n:

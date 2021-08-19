@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    x, y, x1, y1, x2, y2 = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
+    (x, y, x1, y1, x2, y2) = map(int, input().split())
     if x != x1 or x != x2:
         temp = min(a, b)
         a -= temp
@@ -23,6 +23,6 @@ for _ in range(int(input())):
         if y + d > y2:
             flag = 1
     if flag:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

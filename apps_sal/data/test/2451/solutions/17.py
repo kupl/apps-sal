@@ -1,8 +1,8 @@
-n, h, a, b, k = list(map(int, input().split()))
+(n, h, a, b, k) = list(map(int, input().split()))
 for i in range(k):
-    ta, fa, tb, fb = list(map(int, input().split()))
+    (ta, fa, tb, fb) = list(map(int, input().split()))
     s = abs(ta - tb)
-    if ((fa < a) or (fa > b)) and (ta != tb):
+    if (fa < a or fa > b) and ta != tb:
         s += min(abs(fa - a), abs(fa - b))
         if abs(fa - a) < abs(fa - b):
             e = a

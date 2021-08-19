@@ -1,15 +1,14 @@
 import sys
 import math
 from pprint import pprint
-
 n = int(input())
 p = [list(map(int, input().split())) for i in range(n)]
 p.sort()
 s = {}
 for i in range(n):
-    x1, y1 = p[i]
+    (x1, y1) = p[i]
     for j in range(i + 1, n):
-        x2, y2 = p[j]
+        (x2, y2) = p[j]
         slope = 0
         cons = 0
         if x1 - x2 == 0:
@@ -27,7 +26,6 @@ for i in range(n):
             s[slope] = {cons: 1}
 ans = 0
 cnt = 0
-
 for x in s:
     ans += cnt * len(s[x])
     cnt += len(s[x])

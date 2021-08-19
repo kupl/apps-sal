@@ -1,5 +1,3 @@
-
-
 def f():
     s = input()
     ans = [0] * len(s)

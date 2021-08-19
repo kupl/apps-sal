@@ -3,8 +3,8 @@ for i in range(int(input())):
     s = input()
     if '8' in s:
         if n - s.index('8') >= 11:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

@@ -9,5 +9,5 @@ for i in range(6):
     else:
         T = T // 2
         bit.append(1)
-        s += 2**arr.index(i)
+        s += 2 ** arr.index(i)
 print(s)

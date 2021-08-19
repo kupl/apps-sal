@@ -7,9 +7,9 @@ def main():
     alst = list(map(int, input().split()))
     total = sum(alst)
     if total == 0:
-        print("NO")
+        print('NO')
         return
-    print("YES")
+    print('YES')
     alst.sort()
     if total > 0:
         print(*alst[::-1])

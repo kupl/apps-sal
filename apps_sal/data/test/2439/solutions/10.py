@@ -8,14 +8,14 @@ def A():
         n = int(input())
         a = list(map(int, input().split()))
         if sum(a) == 0:
-            print("NO")
+            print('NO')
         elif sum(a) > 0:
             a.sort(reverse=True)
-            print("YES")
+            print('YES')
             print(*a)
         else:
             a.sort()
-            print("YES")
+            print('YES')
             print(*a)
 
 

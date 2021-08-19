@@ -1,10 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 arr = []
 for i in range(n):
     arr.append(a[i] - (i + 1))
-
 sorted_arr = sorted(arr)
 if n % 2 == 1:
     val = sorted_arr[n // 2]

@@ -24,11 +24,11 @@ def get(a, x):
     r = 0
     while x >= 0:
         r += a[x]
-        x = (x & (x + 1)) - 1
+        x = (x & x + 1) - 1
     return r
 
 
-n, k, a, b, q = mints()
+(n, k, a, b, q) = mints()
 h1 = [0] * n
 h2 = [0] * n
 z = [0] * n

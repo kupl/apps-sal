@@ -9,8 +9,8 @@ for i in range(n):
 
 
 def KMP(S, W):
-    ls, lw = len(S), len(W)
-    m, i = 0, 0
+    (ls, lw) = (len(S), len(W))
+    (m, i) = (0, 0)
     T = _KMP_table(W)
     res = list()
     while m + i < ls:
@@ -33,7 +33,7 @@ def _KMP_table(W):
     lw = len(W)
     T = [0] * lw
     T[0] = -1
-    i, j = 2, 0
+    (i, j) = (2, 0)
     while i < lw:
         if W[i - 1] == W[j]:
             T[i] = j + 1

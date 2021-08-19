@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    b, p, f = map(int, input().split())
-    h, c = map(int, input().split())
+    (b, p, f) = map(int, input().split())
+    (h, c) = map(int, input().split())
     n = b // 2
     res = 0
     for i in range(min(n, p) + 1):

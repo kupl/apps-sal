@@ -2,20 +2,16 @@ from bisect import bisect
 from itertools import accumulate
 from functools import reduce
 from sys import setrecursionlimit
-
 setrecursionlimit(10000000)
-
 MOD = 998244353
 
 
 def solve(robots):
     N = len(robots)
     robots.sort()
-
     parent = [None] * (N + 1)
-
     stack = [(float('inf'), 0)]
-    for i, (x, d) in enumerate(robots, start=1):
+    for (i, (x, d)) in enumerate(robots, start=1):
         d += x
         while stack[-1][0] <= x:
             stack.pop()
@@ -23,7 +19,6 @@ def solve(robots):
         while stack[-1][0] <= d:
             stack.pop()
         stack.append((d, i))
-
     dp = [1] * (N + 1)
     for i in reversed(range(1, N + 1)):
         p = parent[i]

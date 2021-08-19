@@ -5,7 +5,6 @@ def solve_f(n, s_list):
     length = len(s_list_s)
     resolved = [0] * length
     resolved[-1] = 1
-
     for i in range(n):
         parents = [s_list_s[k] for k in range(length) if resolved[k]]
         for j in range(length - 1, -1, -1):
@@ -15,16 +14,15 @@ def solve_f(n, s_list):
             if len(parents) == 0:
                 break
         if len(parents) > 0:
-            res = "No"
+            res = 'No'
             break
-
     return res
 
 
 def main():
     n = int(input())
     s_list = list(map(int, input().split()))
-    print((solve_f(n, s_list)))
+    print(solve_f(n, s_list))
 
 
 def __starting_point():

@@ -2,7 +2,7 @@ from collections import defaultdict
 n = int(input())
 A = list(map(int, input().split()))
 m = n // 2
-INF = 10**18
+INF = 10 ** 18
 dp = [defaultdict(lambda: -INF) for _ in range(n + 1)]
 for i in range(1, n + 1):
     for j in range(i // 2 - 1, (i + 1) // 2 + 1):

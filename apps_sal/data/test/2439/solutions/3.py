@@ -1,9 +1,7 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
     A = [int(_) for _ in input().split()]
-
     s = sum(A)
     if s == 0:
         print('NO')

@@ -5,7 +5,7 @@ for _ in range(t):
     n = int(input())
     it = list(map(int, input().split()))
     su = 0
-    ma = -float("inf")
+    ma = -float('inf')
     for i in range(n - 1):
         su += it[i]
         ma = max(ma, su)
@@ -16,6 +16,6 @@ for _ in range(t):
         ma = max(ma, su)
         su = max(su, 0)
     if sum(it) > ma:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

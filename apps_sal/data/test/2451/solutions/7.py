@@ -1,6 +1,6 @@
-n, h, a, b, k = list(map(int, input(). split()))
+(n, h, a, b, k) = list(map(int, input().split()))
 for i in range(k):
-    t1, f1, t2, f2 = list(map(int, input(). split()))
+    (t1, f1, t2, f2) = list(map(int, input().split()))
     if t1 == t2:
         print(abs(f1 - f2))
         continue

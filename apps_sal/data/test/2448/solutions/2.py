@@ -1,9 +1,8 @@
 from math import gcd
-
 t = int(input())
 for q in range(t):
     nn = int(input())
-    k, b, n = list(map(int, input().split()))
+    (k, b, n) = list(map(int, input().split()))
     s = input()
     w = 0
     aaa = [0] * nn

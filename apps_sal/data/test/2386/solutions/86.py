@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 N = int(input())
 A = [0] + list(map(int, input().split()))
 lst = []

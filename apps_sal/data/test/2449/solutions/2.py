@@ -1,6 +1,5 @@
 from collections import defaultdict as di
-MOD = int(1e9 + 7)
-
+MOD = int(1000000000.0 + 7)
 bells = di(int)
 bells[0, 0] = 1
 K = 1000
@@ -14,9 +13,8 @@ def bellman(n):
     return bells[n - 1, n - 1]
 
 
-m, n = [int(x) for x in input().split()]
+(m, n) = [int(x) for x in input().split()]
 Tlist = []
-
 for _ in range(n):
     Tlist.append(input())
 numbs = []
@@ -25,7 +23,6 @@ for i in range(m):
     for j in range(n):
         numb.append(Tlist[j][i])
     numbs.append(int(''.join(numb), 2))
-
 eqsize = di(lambda: 0)
 for numb in numbs:
     eqsize[numb] += 1

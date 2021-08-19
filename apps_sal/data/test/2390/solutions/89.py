@@ -6,12 +6,12 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 a = 0
 x = [0] * N
 v = [0] * N
 for i in range(N):
-    x[i], v[i] = map(int, input().split())
+    (x[i], v[i]) = map(int, input().split())
 h = [0]
 s = t = sum(v)
 for i in range(N - 1, -1, -1):

@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, m, x, y = read_ints()
+    (n, m, x, y) = read_ints()
     a = []
     cost = 0
     for i in range(n):

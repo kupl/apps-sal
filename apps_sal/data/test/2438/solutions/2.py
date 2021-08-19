@@ -15,12 +15,10 @@ for c in s:
     else:
         l.append(1)
     cc = c
-
-ans = (n * (n - 1)) // 2
+ans = n * (n - 1) // 2
 for i in range(len(l)):
     if i > 0:
         ans -= l[i] - 1
     if i < len(l) - 1:
         ans -= l[i]
-
 print(ans)

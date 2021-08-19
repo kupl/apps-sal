@@ -3,22 +3,18 @@
 
 def solve(N, A):
     cnt = [0] * (N + 1)
-
     evd = {}
     xs = []
-    for a, b in A:
+    for (a, b) in A:
         if a not in evd:
             evd[a] = [0, 0]
             xs.append(a)
         if b not in evd:
             evd[b] = [0, 0]
             xs.append(b)
-
         evd[a][0] += 1
         evd[b][1] += 1
-
     xs.sort()
-
     px = xs[0] - 1
     pop = 0
     for x in xs:
@@ -27,7 +23,6 @@ def solve(N, A):
         pop -= evd[x][1]
         pop += evd[x][0]
         px = x
-
     return cnt[1:]
 
 

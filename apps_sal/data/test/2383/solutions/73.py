@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 if not 1 in A:
     print(-1)
 else:

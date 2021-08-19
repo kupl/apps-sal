@@ -14,7 +14,7 @@ def r3(t):
 
 
 for _ in range(int(input())):
-    n, m, x, y = r2(int)
+    (n, m, x, y) = r2(int)
     ans = 0
     cnt = 0
     for i in range(n):
@@ -27,12 +27,10 @@ for _ in range(int(input())):
                 elif cnt == 2:
                     ans += y
                     cnt = 0
-            else:
-                if cnt == 1:
-                    ans += x
-                    cnt = 0
+            elif cnt == 1:
+                ans += x
+                cnt = 0
         if cnt == 1:
             ans += x
         cnt = 0
-
     print(ans)

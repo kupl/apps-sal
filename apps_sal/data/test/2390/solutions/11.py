@@ -1,8 +1,8 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 x = []
 v = []
 for i in range(n):
-    xi, vi = list(map(int, input().split()))
+    (xi, vi) = list(map(int, input().split()))
     x.append(xi)
     v.append(vi)
 l1 = [0]

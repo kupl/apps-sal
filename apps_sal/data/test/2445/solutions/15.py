@@ -23,11 +23,9 @@ def lm():
 
 def solve():
     n = nn()
-
     print((n + 2) // 2)
 
 
 q = nn()
-
 for _ in range(q):
     solve()

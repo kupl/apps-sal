@@ -28,7 +28,7 @@ def canArrangeBranket(brankets):
         if up >= 0:
             left_brankets.append((minup, up))
         else:
-            right_brankets.append((minup - up, - up))
+            right_brankets.append((minup - up, -up))
     if totup != 0:
         return False
     return checkNonnegative(left_brankets) and checkNonnegative(right_brankets)
@@ -38,8 +38,7 @@ branketList = []
 for i in range(N):
     l = input()
     branketList.append(l)
-
 if canArrangeBranket(branketList):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

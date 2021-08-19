@@ -1,6 +1,5 @@
 n = int(input())
 ai = list(map(int, input().split()))
-
 tmp = 1
 ans = 0
 for i in range(n):
@@ -8,8 +7,6 @@ for i in range(n):
         tmp += 1
     else:
         ans += 1
-
 if tmp == 1:
     ans = -1
-
 print(ans)

@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     s = input()
     x = len(s)
-    f1, f2, fl3 = False, False, False
+    (f1, f2, fl3) = (False, False, False)
     j = 0
     cnt = 0
     res = []

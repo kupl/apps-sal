@@ -3,16 +3,15 @@ n = int(input())
 l1 = []
 d2 = {}
 for i in range(0, n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     for item in l1:
         if x == item[0]:
             if 'inf' not in d2:
                 d2['inf'] = [x]
-
             elif x not in d2['inf']:
                 d2['inf'].append(x)
         else:
-            slope = Fraction((y - item[1]), (x - item[0]))
+            slope = Fraction(y - item[1], x - item[0])
             c = Fraction(y, 1) - slope * Fraction(x, 1)
             if slope not in d2:
                 d2[slope] = [c]

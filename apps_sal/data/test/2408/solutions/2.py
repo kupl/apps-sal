@@ -5,11 +5,11 @@ class Pt:
 
     def __init__(self, *args):
         if len(args) == 0:
-            self.x, self.y = 0, 0
+            (self.x, self.y) = (0, 0)
         elif len(args) == 1:
-            self.x, self.y = list(map(int, args[0].split()))
+            (self.x, self.y) = list(map(int, args[0].split()))
         else:
-            self.x, self.y = args[0], args[1]
+            (self.x, self.y) = (args[0], args[1])
 
     def __str__(self):
         return str(self.x) + ' ' + str(self.y)
@@ -46,18 +46,18 @@ class Pt:
         a = self.y - other.y
         b = other.x - self.x
         c = self.cross(other)
-        return a, b, c
+        return (a, b, c)
 
 
 class Straight:
 
     def __init__(self, *args):
         if len(args) == 1:
-            self.a, self.b, self.c = list(map(int, args[0].split()))
+            (self.a, self.b, self.c) = list(map(int, args[0].split()))
         elif len(args) == 2:
-            self.a, self.b, self.c = Pt.get_straight(*args)
+            (self.a, self.b, self.c) = Pt.get_straight(*args)
         elif len(args) == 3:
-            self.a, self.b, self.c = args
+            (self.a, self.b, self.c) = args
 
     def __str__(self):
         return ' '.join(map(str, [self.a, self.b, self.c]))
@@ -67,10 +67,10 @@ class Straight:
             return self.a * other.b == other.a * self.b and self.c * other.b == other.c * self.b
         val1 = math.sqrt(self.a ** 2 + self.b ** 2)
         val2 = math.sqrt(other.a ** 2 + other.b ** 2)
-        a1, c1 = self.a / val1, self.c / val1
-        a2, c2 = other.a / val2, other.c / val2
+        (a1, c1) = (self.a / val1, self.c / val1)
+        (a2, c2) = (other.a / val2, other.c / val2)
         if (a1 < 0) != (a2 < 0):
-            a1, a2, c1, c2 = a1, -a2, c1, -c2
+            (a1, a2, c1, c2) = (a1, -a2, c1, -c2)
         return a1 == a2 and c1 == c2
 
     def perpendicular(self, point: Pt):

@@ -34,12 +34,10 @@ def nextStringArray():
 
 
 IO()
-
-'''code starts here'''
-
+'code starts here'
 t = int(input())
 for _ in range(t):
-    n, k, l = [int(x) for x in input().split()]
+    (n, k, l) = [int(x) for x in input().split()]
     a = list(map(int, input().split()))
     flag = 0
     count = -1
@@ -64,6 +62,6 @@ for _ in range(t):
         else:
             count = -1
     if flag == 1:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

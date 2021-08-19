@@ -17,9 +17,9 @@ for i in range(q):
         continue
     y = 0
     for j in range(30):
-        xx = 2**j
+        xx = 2 ** j
         if xx & x:
             y = j
     y += 1
-    ans = 2**y - 1
+    ans = 2 ** y - 1
     print(ans)

@@ -2,7 +2,7 @@ n = int(input())
 ls = set()
 pts = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     pts.append([x, y])
 for i in range(n):
     for j in range(i + 1, n):

@@ -1,9 +1,9 @@
 for _ in range(int(input())):
-    b, p, f = map(int, input().split())
-    h, c = map(int, input().split())
+    (b, p, f) = map(int, input().split())
+    (h, c) = map(int, input().split())
     if h < c:
-        h, c = c, h
-        p, f = f, p
+        (h, c) = (c, h)
+        (p, f) = (f, p)
     ham = min(p, b // 2)
     ans = ham * h
     b -= 2 * ham

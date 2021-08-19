@@ -25,13 +25,10 @@ def main():
         print((A[0] + S) // 2)
     else:
         print((A[0] + S + 1) // 2)
-
     Q = int(input())
     for i in range(Q):
-        L, R, X = list(map(int, input().split()))
-
-        L, R = L - 1, R - 1
-
+        (L, R, X) = list(map(int, input().split()))
+        (L, R) = (L - 1, R - 1)
         if L > 0:
             temp = B[L - 1]
             B[L - 1] += X
@@ -42,7 +39,6 @@ def main():
             temp = B[R]
             B[R] -= X
             S = S - max(0, temp) + max(0, B[R])
-
         if (A[0] + S) % 2 == 0:
             print((A[0] + S) // 2)
         else:

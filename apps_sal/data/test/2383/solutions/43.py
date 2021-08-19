@@ -1,6 +1,5 @@
 n = int(input())
 a_l = list(map(int, input().split()))
-
 ans = 0
 i = 0
 j = 0

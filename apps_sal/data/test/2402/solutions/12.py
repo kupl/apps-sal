@@ -1,10 +1,8 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     for _ in range(int(input())):
-        N, x, y = list(map(int, input().split()))
-
+        (N, x, y) = list(map(int, input().split()))
         worst = min(x + y - 1, N)
         if x + y + 1 - N <= 1:
             best = 1

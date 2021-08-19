@@ -15,14 +15,12 @@ for i in range(n):
         b += s[i]
         i = i + 1
     c = s[i + 2:]
-
-    a, b, c = int(a), int(b), int(c)
+    (a, b, c) = (int(a), int(b), int(c))
     res = (a + b) / c
     if res in dicti:
         dicti[res] += 1
     else:
         dicti[res] = 1
     L.append(res)
-
 for i in range(len(L)):
     print(dicti[L[i]], end=' ')

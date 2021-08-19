@@ -1,7 +1,7 @@
 gans = []
 for _ in range(int(input())):
-    y, x = list(map(int, input().split()))
-    c2, c3, c4, c5, c6, c1 = list(map(int, input().split()))
+    (y, x) = list(map(int, input().split()))
+    (c2, c3, c4, c5, c6, c1) = list(map(int, input().split()))
     for i in range(6):
         c1 = min(c1, c6 + c2)
         c2 = min(c2, c1 + c3)
@@ -28,9 +28,9 @@ for _ in range(int(input())):
         continue
     if x * y > 0:
         if x > 0:
-            a, b, c = c1, c2, c3
+            (a, b, c) = (c1, c2, c3)
         else:
-            a, b, c = c4, c5, c6
+            (a, b, c) = (c4, c5, c6)
             x = -x
             y = -y
         ans = min(x, y) * b

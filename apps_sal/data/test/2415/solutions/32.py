@@ -3,7 +3,7 @@ x = ['H', 'HE', 'LI', 'BE', 'B', 'C', 'N', 'O', 'F', 'NE', 'NA', 'MG', 'AL', 'SI
 
 def do(s):
     if len(s) == 0:
-        print("YES")
+        print('YES')
         return
     if len(s) > 1:
         try:
@@ -20,4 +20,4 @@ def do(s):
 
 s = input()
 do(s)
-print("NO")
+print('NO')

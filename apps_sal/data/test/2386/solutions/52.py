@@ -6,10 +6,10 @@ input = sys.stdin.readline
 def read():
     N = int(input().strip())
     A = list(map(int, input().strip().split()))
-    return N, A
+    return (N, A)
 
 
-def solve(N, A, EPS=1e-3):
+def solve(N, A, EPS=0.001):
     D = [A[i] - i - 1 for i in range(N)]
     D.sort()
     if N == 1:
@@ -24,7 +24,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print(("%s" % str(outputs)))
+        print('%s' % str(outputs))
 
 
 __starting_point()

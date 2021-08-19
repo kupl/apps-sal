@@ -1,10 +1,9 @@
 from queue import Queue
 for _ in range(int(input())):
-    n, x, m = list(map(int, input().split()))
-
+    (n, x, m) = list(map(int, input().split()))
     ans = [x, x]
     for i in range(m):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         if ans[1] < l or ans[0] > r:
             continue
         else:

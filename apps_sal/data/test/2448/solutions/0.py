@@ -1,39 +1,36 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     s = input()
-
-    t = ["X"] * n
+    t = ['X'] * n
     wins = 0
-    for i, en in enumerate(s):
-        if en == "R" and b:
+    for (i, en) in enumerate(s):
+        if en == 'R' and b:
             b -= 1
-            t[i] = "P"
+            t[i] = 'P'
             wins += 1
-        elif en == "P" and c:
+        elif en == 'P' and c:
             c -= 1
-            t[i] = "S"
+            t[i] = 'S'
             wins += 1
-        elif en == "S" and a:
+        elif en == 'S' and a:
             a -= 1
-            t[i] = "R"
+            t[i] = 'R'
             wins += 1
-
     if wins < n / 2:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
-        for i, my in enumerate(t):
-            if my == "X":
+        print('YES')
+        for (i, my) in enumerate(t):
+            if my == 'X':
                 if a:
                     a -= 1
-                    t[i] = "R"
+                    t[i] = 'R'
                 elif b:
                     b -= 1
-                    t[i] = "P"
+                    t[i] = 'P'
                 elif c:
                     c -= 1
-                    t[i] = "S"
-        print("".join(t))
+                    t[i] = 'S'
+        print(''.join(t))

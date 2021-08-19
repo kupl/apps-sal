@@ -12,8 +12,8 @@ for _ in range(t):
         if q == 'w':
             if x[i - 1] == 't' and x[i + 1] == 'o':
                 poz.append(i + 1)
-        if i > 1 and i < d - 2 and q == 'o':
-            if x[i - 2] == 't' and x[i + 2] == 'e' and x[i - 1] == 'w' and x[i + 1] == 'n':
+        if i > 1 and i < d - 2 and (q == 'o'):
+            if x[i - 2] == 't' and x[i + 2] == 'e' and (x[i - 1] == 'w') and (x[i + 1] == 'n'):
                 poz[-1] = i + 1
                 i += 1
         i += 1

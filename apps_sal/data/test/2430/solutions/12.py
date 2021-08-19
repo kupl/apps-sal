@@ -1,4 +1,4 @@
-cur, val = 0, -1
+(cur, val) = (0, -1)
 for i in range(int(input())):
     h = int(input())
     val += abs(cur - h) + 2

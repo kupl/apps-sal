@@ -1,7 +1,7 @@
 n = int(input())
 for i in range(n):
-    b, c, d = list(map(int, input().split()))
-    e, f = list(map(int, input().split()))
+    (b, c, d) = list(map(int, input().split()))
+    (e, f) = list(map(int, input().split()))
     ans = 0
     if f > e:
         ans += min(b // 2, d) * f

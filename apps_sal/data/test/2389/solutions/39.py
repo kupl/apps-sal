@@ -3,7 +3,7 @@ def solve(A, B, C, S):
     abc = [A, B, C]
     path = []
     for si in range(N - 1):
-        i, j = S[si]
+        (i, j) = S[si]
         if abc[i] == abc[j] == 0:
             print('No')
             return
@@ -17,19 +17,17 @@ def solve(A, B, C, S):
             abc[j] += 1
             abc[i] -= 1
             continue
-
-        i2, j2 = S[si + 1]
-        if not (abc[j] - 1 == 0 and abc[3 - i - j] == 0 and {i2, j2} == {3 - i - j, j}):
+        (i2, j2) = S[si + 1]
+        if not (abc[j] - 1 == 0 and abc[3 - i - j] == 0 and ({i2, j2} == {3 - i - j, j})):
             path.append('ABC'[i])
             abc[i] += 1
             abc[j] -= 1
             continue
-        if not (abc[i] - 1 == 0 and abc[3 - i - j] == 0 and {i2, j2} == {3 - i - j, i}):
+        if not (abc[i] - 1 == 0 and abc[3 - i - j] == 0 and ({i2, j2} == {3 - i - j, i})):
             path.append('ABC'[j])
             abc[j] += 1
             abc[i] -= 1
             continue
-
         if abc[i] <= abc[j]:
             path.append('ABC'[i])
             abc[i] += 1
@@ -38,8 +36,7 @@ def solve(A, B, C, S):
             path.append('ABC'[j])
             abc[j] += 1
             abc[i] -= 1
-
-    i, j = S[N - 1]
+    (i, j) = S[N - 1]
     if abc[i] == abc[j] == 0:
         print('No')
         return
@@ -47,13 +44,12 @@ def solve(A, B, C, S):
         path.append('ABC'[i])
     else:
         path.append('ABC'[j])
-
     print('Yes')
     for c in path:
         print(c)
 
 
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 S = []
 for _ in range(N):
     s = input()

@@ -1,4 +1,5 @@
 class KMP:
+
     def __init__(self, P):
         self.P = P
         self.N = len(P)

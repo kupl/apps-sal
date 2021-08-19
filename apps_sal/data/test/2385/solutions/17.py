@@ -1,15 +1,13 @@
 import sys
 sys.setrecursionlimit(1234567890)
-
-n, *L = map(int, open(0).read().split())
+(n, *L) = map(int, open(0).read().split())
 mod = 10 ** 9 + 7
 con = [[] for _ in range(n + 1)]
 sz = [1] * (n + 1)
 par = [0] * (n + 1)
-
-for s, t in zip(*[iter(L)] * 2):
-    con[s] += t,
-    con[t] += s,
+for (s, t) in zip(*[iter(L)] * 2):
+    con[s] += (t,)
+    con[t] += (s,)
 
 
 def prepare(m, mod=10 ** 9 + 7):
@@ -20,10 +18,10 @@ def prepare(m, mod=10 ** 9 + 7):
     inv[-1] = pow(fac[-1], mod - 2, mod)
     for i in range(m - 1, -1, -1):
         inv[i] = inv[i + 1] * (i + 1) % mod
-    return fac, inv
+    return (fac, inv)
 
 
-fac, inv = prepare(n)
+(fac, inv) = prepare(n)
 
 
 def dfs1(cur, pre):
@@ -53,5 +51,4 @@ dp1 = [1] * (n + 1)
 dfs1(1, 0)
 dp2 = [1] * (n + 1)
 dfs2(1, 0)
-
-print(*dp2[1:], sep="\n")
+print(*dp2[1:], sep='\n')

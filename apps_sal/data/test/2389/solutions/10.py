@@ -1,5 +1,5 @@
-N, A, B, C = list(map(int, input().split()))
-d = {"A": A, "B": B, "C": C}
+(N, A, B, C) = list(map(int, input().split()))
+d = {'A': A, 'B': B, 'C': C}
 l = [input() for _ in range(N)]
 v = A + B + C
 
@@ -10,7 +10,7 @@ def solve():
         return []
     elif v == 1:
         for i in l:
-            a, b = i
+            (a, b) = i
             if d[a] == 0 and d[b] == 0:
                 return []
             elif d[a] > d[b]:
@@ -22,12 +22,12 @@ def solve():
                 d[b] -= 1
                 res.append(a)
     else:
-        a, b = l[0]
+        (a, b) = l[0]
         if d[a] == 0 and d[b] == 0:
             return []
         else:
-            for i, j in enumerate(l):
-                a, b = j
+            for (i, j) in enumerate(l):
+                (a, b) = j
                 if d[a] > d[b]:
                     d[a] -= 1
                     d[b] += 1
@@ -53,8 +53,8 @@ def solve():
 
 r = solve()
 if r:
-    print("Yes")
+    print('Yes')
     for i in r:
         print(i)
 else:
-    print("No")
+    print('No')

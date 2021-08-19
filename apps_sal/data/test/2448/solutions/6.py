@@ -1,8 +1,8 @@
-from math import*
+from math import *
 q = int(input())
 for t in range(q):
     n = int(input())
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     s = input()
     ans = ['0'] * n
     an = 0
@@ -19,8 +19,8 @@ for t in range(q):
             ans[i] = 'R'
             a -= 1
             an += 1
-    if an >= ((n + 1) // 2):
-        print("YES")
+    if an >= (n + 1) // 2:
+        print('YES')
         for i in range(len(ans)):
             if ans[i] == '0':
                 if a > 0:
@@ -36,4 +36,4 @@ for t in range(q):
             print(ans[i], end='')
         print()
     else:
-        print("NO")
+        print('NO')

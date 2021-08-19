@@ -2,9 +2,9 @@ def solve():
     n = int(input())
     lst = list(map(int, input().split()))
     if sum(lst) == 0:
-        print("NO")
+        print('NO')
         return 0
-    print("YES")
+    print('YES')
     if sum(lst) > 0:
         lst.sort(reverse=True)
     else:

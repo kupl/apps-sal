@@ -1,7 +1,6 @@
 for t in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-
     a1 = 200
     a2 = 200
     for i in range(200, -1, -1):

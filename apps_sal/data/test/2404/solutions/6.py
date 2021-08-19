@@ -17,7 +17,6 @@ def main():
         if N != 1:
             ret[N] = 1
         return ret
-
     N = int(input())
     prime = PrimeDecomposition(N)
     ans = []

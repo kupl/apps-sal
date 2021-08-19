@@ -1,8 +1,5 @@
-
 import sys
-
 n = int(sys.stdin.readline())
-
 sum = 0
 for a7 in range(1, n - 11):
     if (n - a7) % 2 == 1:
@@ -13,5 +10,4 @@ for a7 in range(1, n - 11):
     res %= 1000000007
     sum += res
     sum %= 1000000007
-
 print(str(sum))

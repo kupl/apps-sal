@@ -7,7 +7,7 @@ for _ in range(T):
     s = input()
     one = [0]
     zero = [0]
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c == '0':
             zero.append(zero[-1] + 1)
             one.append(one[-1])

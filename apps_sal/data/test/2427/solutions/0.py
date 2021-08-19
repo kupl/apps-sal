@@ -8,7 +8,6 @@ def solve(a):
                 seen.add((i, j))
             if c >= 2 * a[i]:
                 break
-
     for i in range(len(a) - 1, -1, -1):
         c = 0
         for j in range(i - 2, -1, -1):

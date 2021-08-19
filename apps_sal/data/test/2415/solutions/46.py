@@ -11,4 +11,4 @@ def dfs(s):
 
 
 s = input()
-print("YES" if dfs(s) else "NO")
+print('YES' if dfs(s) else 'NO')

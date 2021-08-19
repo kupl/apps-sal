@@ -3,9 +3,9 @@ from sys import stdout as cout
 
 
 def main():
-    n, h, a, b, k = list(map(int, cin.readline().split()))
+    (n, h, a, b, k) = list(map(int, cin.readline().split()))
     for i in range(k):
-        ta, fa, tb, fb = list(map(int, cin.readline().split()))
+        (ta, fa, tb, fb) = list(map(int, cin.readline().split()))
         if ta == tb:
             print(abs(fa - fb))
         else:

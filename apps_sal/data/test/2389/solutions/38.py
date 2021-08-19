@@ -1,11 +1,8 @@
 import sys
 sys.setrecursionlimit(10 ** 5 + 10)
-
-N, A, B, C = [int(i) for i in input().split()]
-
+(N, A, B, C) = [int(i) for i in input().split()]
 ans = list()
 l = list()
-
 for n in range(N):
     l.append(input())
 
@@ -13,7 +10,6 @@ for n in range(N):
 def dfs(i, a, b, c):
     if i == N:
         return True
-
     ss = l[i]
     if ss == 'AB':
         if a == 0 and b == 0:
@@ -46,7 +42,6 @@ def dfs(i, a, b, c):
 
 
 dfs(0, A, B, C)
-
 if len(ans) > 0:
     print('Yes')
     for x in reversed(ans):

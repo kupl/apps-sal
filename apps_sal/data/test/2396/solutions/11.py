@@ -19,4 +19,4 @@ for i in x:
 for i in x:
     d[i] += 1
 for i in x:
-    print(d[i], end=" ")
+    print(d[i], end=' ')

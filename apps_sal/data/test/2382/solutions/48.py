@@ -2,13 +2,13 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     a.sort(reverse=True)
-    visited = [False] * (2**n)
+    visited = [False] * 2 ** n
     visited[0] = 0
     now = [a[0]]
     for i in range(n):
         new = []
         now2 = 0
-        for j, i in enumerate(a):
+        for (j, i) in enumerate(a):
             if visited[j]:
                 continue
             if now[now2] > i:
@@ -20,10 +20,9 @@ def main():
                     now.sort(reverse=True)
                     break
         else:
-            print("No")
+            print('No')
             return
-
-    print("Yes")
+    print('Yes')
 
 
 main()

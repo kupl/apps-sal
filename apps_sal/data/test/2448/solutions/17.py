@@ -1,6 +1,6 @@
 for testcase in range(int(input())):
     n = int(input())
-    ra, pa, sa = list(map(int, input().split()))
+    (ra, pa, sa) = list(map(int, input().split()))
     beat = {'R': 'P', 'P': 'S', 'S': 'R'}
     a_beat = {'R': pa, 'P': sa, 'S': ra}
     a_sec = []

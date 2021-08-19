@@ -9,7 +9,7 @@ def main():
         else:
             cnt += 1
     if cnt == 1:
-        print((-1))
+        print(-1)
         return
     print(breakcount)
 

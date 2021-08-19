@@ -4,9 +4,9 @@ input = reader.__next__
 
 
 def solve():
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     x1 = min(x - 1, max(0, n - y - 1))
     y1 = min(y - 1, max(0, n - x - 1))
     x_left = x - 1 - x1

@@ -1,9 +1,6 @@
-
 N = int(input())
 l = list(map(int, input().split()))
-
 flag_ary = [0] * (N + 1)
-
 counter = 0
 cur = 1
 for i in l:
@@ -11,6 +8,6 @@ for i in l:
         counter += 1
         cur += 1
 if counter == 0:
-    print((-1))
+    print(-1)
 else:
-    print((N - counter))
+    print(N - counter)

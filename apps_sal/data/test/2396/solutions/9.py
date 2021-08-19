@@ -9,7 +9,7 @@ for ni in range(0, n):
     p2 = st.index(')')
     b = int(st[:p2])
     c = int(st[p2 + 2:])
-    v = ((a + b) / c)
+    v = (a + b) / c
     if v in ct:
         ct[v] += 1
     else:
@@ -18,4 +18,4 @@ for ni in range(0, n):
 st = []
 for cti in ctx:
     st.append(str(ct[cti]))
-print(" ".join(st))
+print(' '.join(st))

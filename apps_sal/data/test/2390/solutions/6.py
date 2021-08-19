@@ -1,5 +1,5 @@
 def main():
-    n, c = map(int, input().split())
+    (n, c) = map(int, input().split())
     sushi = [None] * n
     for i in range(n):
         sushi[i] = list(map(int, input().split()))

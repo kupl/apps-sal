@@ -7,11 +7,11 @@ def main():
     dp = [0] * (n + 1)
     dp[n] = 1
     for i in range(n - 1, -1, -1):
-        a0, b0 = ab[i]
+        (a0, b0) = ab[i]
         dist = a0 + b0
         now = i
         while now < n - 1:
-            a1, b1 = ab[now + 1]
+            (a1, b1) = ab[now + 1]
             if a1 < dist:
                 now = next_a[now + 1]
             else:

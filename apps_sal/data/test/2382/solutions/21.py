@@ -4,12 +4,9 @@ from collections import deque
 def solve():
     N = int(input())
     Ss = list(map(int, input().split()))
-
     Ss.sort(reverse=True)
-
     Qs = [deque() for _ in range(N + 1)]
-    Qs[0].append(10**10)
-
+    Qs[0].append(10 ** 10)
     for S in Ss:
         for day in range(N + 1):
             if not Qs[day]:
@@ -21,7 +18,6 @@ def solve():
                 break
         else:
             return False
-
     return True
 
 

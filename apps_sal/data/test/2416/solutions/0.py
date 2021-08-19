@@ -4,7 +4,7 @@ def solve(n, arr):
         xor_sum ^= arr[i]
     if n % 2 == 0:
         if xor_sum:
-            print("NO")
+            print('NO')
             return
         else:
             n -= 1
@@ -12,8 +12,7 @@ def solve(n, arr):
         print(1)
         print(1, 2, 3)
         return
-
-    print("YES")
+    print('YES')
     print(n - 2)
     for i in range(1, n - 1, 2):
         print(i, i + 1, i + 2)

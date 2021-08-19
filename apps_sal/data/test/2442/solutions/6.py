@@ -10,10 +10,9 @@ for _ in range(int(input())):
             break
         if one:
             res += 1
+        elif freq[i] > 1:
+            res += 2
         else:
-            if freq[i] > 1:
-                res += 2
-            else:
-                one = True
-                res += 1
+            one = True
+            res += 1
     print(res)

@@ -22,16 +22,15 @@ def solve():
             inc_chunks.append((depth, level))
         else:
             dec_chunks.append((depth - level, -level))
-
     inc_chunks.sort(reverse=True)
     dec_chunks.sort(reverse=True)
     inc_level = 0
-    for depth, level in inc_chunks:
+    for (depth, level) in inc_chunks:
         if inc_level + depth < 0:
             return 'No'
         inc_level += level
     dec_level = 0
-    for depth, level in dec_chunks:
+    for (depth, level) in dec_chunks:
         if dec_level + depth < 0:
             return 'No'
         dec_level += level
@@ -40,4 +39,4 @@ def solve():
     return 'Yes'
 
 
-print((solve()))
+print(solve())

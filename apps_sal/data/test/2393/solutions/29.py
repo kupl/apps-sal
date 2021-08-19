@@ -30,18 +30,17 @@ for i in range(0, t):
     length = len(a)
     if length == 0:
         print(0)
-        print("")
+        print('')
     else:
         if a[0][2] == 1:
             if not (a[0][0] - 1 >= 0 and s[a[0][0] - 1] == 'o'):
                 ans.append(a[0][0] + 1)
             else:
                 ans.append(a[0][0] + 2)
+        elif not (a[0][1] + 1 < n and s[a[0][1] + 1] == 'o'):
+            ans.append(a[0][1] + 1)
         else:
-            if not (a[0][1] + 1 < n and s[a[0][1] + 1] == 'o'):
-                ans.append(a[0][1] + 1)
-            else:
-                ans.append(a[0][1])
+            ans.append(a[0][1])
         for j in range(1, length):
             if a[j][2] == 1:
                 if a[j][0] != a[j - 1][1]:
@@ -49,10 +48,9 @@ for i in range(0, t):
                         ans.append(a[j][0] + 1)
                     else:
                         ans.append(a[j][0] + 2)
+            elif not (a[j][1] + 1 < n and s[a[j][1] + 1] == 'o'):
+                ans.append(a[j][1] + 1)
             else:
-                if not (a[j][1] + 1 < n and s[a[j][1] + 1] == 'o'):
-                    ans.append(a[j][1] + 1)
-                else:
-                    ans.append(a[j][1])
+                ans.append(a[j][1])
         print(len(ans))
         print(*ans)

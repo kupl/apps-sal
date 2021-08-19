@@ -1,7 +1,7 @@
 n = int(input())
 graph = [[] for i in range(n)]
 for i in range(n - 1):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     graph[x - 1].append(y)
     graph[y - 1].append(x)
 c = 0

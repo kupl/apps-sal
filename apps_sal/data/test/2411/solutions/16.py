@@ -1,9 +1,7 @@
 from collections import defaultdict
 import math
-
 n = int(input().lstrip())
 numbers = []
-
 for _ in range(n):
     numbers.append(list(map(int, input().lstrip().split())))
 
@@ -19,8 +17,8 @@ total = 0
 res = 0
 for i in range(n):
     for j in range(i + 1, n):
-        x1, y1 = numbers[i]
-        x2, y2 = numbers[j]
+        (x1, y1) = numbers[i]
+        (x2, y2) = numbers[j]
         a = y1 - y2
         b = x1 - x2
         d = gcd(a, b)

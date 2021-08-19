@@ -1,7 +1,7 @@
-n, c = map(int, input().split())
-l, L, m, M, C, a, x, v = [0], [0], [0], [0], 0, 0, [], []
+(n, c) = map(int, input().split())
+(l, L, m, M, C, a, x, v) = ([0], [0], [0], [0], 0, 0, [], [])
 for i in range(n):
-    X, V = map(int, input().split())
+    (X, V) = map(int, input().split())
     x.append(X)
     v.append(V)
 for i in range(n):

@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
 d = []
@@ -17,9 +16,9 @@ for i in range(1, n):
 Q = int(sys.stdin.readline().strip())
 for q in range(0, Q + 1):
     if q > 0:
-        l, r, x = list(map(int, sys.stdin.readline().strip().split()))
+        (l, r, x) = list(map(int, sys.stdin.readline().strip().split()))
     else:
-        l, r, x = 1, 1, 0
+        (l, r, x) = (1, 1, 0)
     if x != 0 and l > 1:
         if x >= 0 and d[l - 2] >= 0:
             b = b + x
