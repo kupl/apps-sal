@@ -2,18 +2,18 @@ from functools import lru_cache
 
 
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
-        # time complexity: O(K*N*logN)
-        # space complexity: O(K*N)
+
         @lru_cache(None)
-        def dp(k, n):  # k eggs, n floors
+        def dp(k, n):
             if k == 0:
                 return 0
             if k == 1:
                 return n
             if n <= 1:
                 return n
-            l, r = 1, n + 1
+            (l, r) = (1, n + 1)
             while l < r:
                 m = l + (r - l) // 2
                 if dp(k - 1, m - 1) >= dp(k, n - m):
@@ -21,5 +21,4 @@ class Solution:
                 else:
                     l = m + 1
             return 1 + max(dp(k - 1, l - 1), dp(k, n - l))
-
         return dp(K, N)

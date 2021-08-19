@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         dict_soln = {}
         return self.dp(K, N, dict_soln)
@@ -11,9 +12,7 @@ class Solution:
         if k == 1:
             return n
         if (k, n) in dict_soln:
-            return dict_soln[(k, n)]
-        # test at x (x = 1, ..., n)
-        # dp(k, n) = min_{x = 1, ..., n} max(dp(k, n - x), dp(k - 1, x - 1)) + 1
+            return dict_soln[k, n]
         left = 1
         right = n
         while True:
@@ -25,11 +24,11 @@ class Solution:
                 tmpl = max(tmp1, tmp2)
                 tmpr = max(tmp3, tmp4)
                 if tmpl < tmpr:
-                    dict_soln[(k, n)] = tmpl + 1
-                    return dict_soln[(k, n)]
+                    dict_soln[k, n] = tmpl + 1
+                    return dict_soln[k, n]
                 else:
-                    dict_soln[(k, n)] = tmpr + 1
-                    return dict_soln[(k, n)]
+                    dict_soln[k, n] = tmpr + 1
+                    return dict_soln[k, n]
             xmid = (left + right) // 2
             tmp1 = self.dp(k - 1, xmid - 1, dict_soln)
             tmp2 = self.dp(k, n - xmid, dict_soln)
@@ -38,5 +37,5 @@ class Solution:
             elif tmp1 < tmp2:
                 left = xmid
             else:
-                dict_soln[(k, n)] = tmp1 + 1
-                return dict_soln[(k, n)]
+                dict_soln[k, n] = tmp1 + 1
+                return dict_soln[k, n]
