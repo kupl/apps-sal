@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     s1 = input().split()
@@ -9,6 +8,6 @@ for i in range(t):
             if i == j:
                 c += 1
     if c >= 2:
-        print("similar")
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')

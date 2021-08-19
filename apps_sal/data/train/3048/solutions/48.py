@@ -1,5 +1,4 @@
 def alternateCase(string):
-    # your code here
     res = ''
     for char in string:
         if char.lower() == char:

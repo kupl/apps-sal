@@ -1,4 +1,5 @@
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         item_list = []
         order_dict = {}
@@ -10,25 +11,18 @@ class Solution:
             if int(table) not in order_dict:
                 order_dict[int(table)] = []
             order_dict[int(table)].append(item)
-
         item_list.sort()
         item_list.insert(0, 'Table')
-        # print(item_list)
         order_dict = dict(sorted(order_dict.items()))
-        # print(order_dict)
-
         sol = []
         sol.append(item_list)
-        for table_name, table_orders in list(order_dict.items()):
+        for (table_name, table_orders) in list(order_dict.items()):
             table_sol = ['0' for i in range(len(item_list))]
             table_sol[0] = table_name
-            # print(table_orders)
             for order in table_orders:
                 ind = item_list.index(order)
-                # print(ind)
                 table_sol[ind] = str(int(table_sol[ind]) + 1)
             sol.append(table_sol)
-
         for i in range(1, len(sol)):
             sol[i][0] = str(sol[i][0])
         return sol

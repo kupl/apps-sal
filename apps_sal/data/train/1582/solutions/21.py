@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s = list(str(input()))
 i = 0

@@ -1,21 +1,5 @@
 from collections import Counter, defaultdict, deque
-#alph = 'abcdefghijklmnopqrstuvwxyz'
-#from math import factorial as fact
 import math
-
-#nl = '\n'
-#import sys
-# input=sys.stdin.readline
-# print=sys.stdout.write
-
-#tt = int(input())
-# total=0
-#n = int(input())
-#n,m,k = [int(x) for x in input().split()]
-#n = int(input())
-
-#l,r = [int(x) for x in input().split()]
-
 n = int(input())
 arr = [int(x) for x in input().split()]
 d = {}

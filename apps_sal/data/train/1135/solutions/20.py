@@ -1,7 +1,6 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         ans = [0] * n
         for i in range(k):
             ans[i] = i + 1
@@ -10,6 +9,5 @@ try:
         for j in range(k + 1, n - 1):
             ans[j] = j + 1
         print(*ans)
-
 except:
     pass

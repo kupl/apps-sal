@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 i = 0
 while i < t:
@@ -13,7 +12,7 @@ while i < t:
             c += 1
         j += 1
     if c >= 2:
-        print("similar")
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')
     i += 1
