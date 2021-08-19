@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 count = 0
-i = (n)
+i = n
 while i < len(s):
     if s[i - 1] == s[i - 2] == s[i - 3]:
         count += 1

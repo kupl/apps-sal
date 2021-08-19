@@ -1,11 +1,12 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
 s = [list(readln()) for _ in range(3)]
-for x in range(1, 10**5 + 1):
+for x in range(1, 10 ** 5 + 1):
     ss = x + s[0][1] + s[0][2]
     y = ss - s[1][0] - s[1][2]
     z = ss - s[2][0] - s[2][1]

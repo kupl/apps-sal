@@ -3,7 +3,6 @@ letters = 'qwertyuiopasdfghjklzxcvbnm'
 words = []
 for i in range(n):
     words += [input()]
-
 maxL = 0
 for i in range(25):
     for j in range(i + 1, 26):

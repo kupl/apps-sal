@@ -2,7 +2,7 @@ def distribution(available, wish):
     double_keys = ['S,M', 'M,L', 'L,XL', 'XL,XXL', 'XXL,XXXL']
     double = {key: [] for key in double_keys}
     people = [''] * len(wish)
-    for i, w in enumerate(wish):
+    for (i, w) in enumerate(wish):
         if w.count(',') == 0:
             if available[w] > 0:
                 available[w] -= 1
@@ -11,7 +11,6 @@ def distribution(available, wish):
                 return ['NO']
         else:
             double[w].append(i)
-
     for key in double_keys:
         for p in double[key]:
             lack = True
@@ -27,7 +26,7 @@ def distribution(available, wish):
 
 
 def stock():
-    return {size: amount for size, amount in zip(['S', 'M', 'L', 'XL', 'XXL', 'XXXL'], map(int, input().split()))}
+    return {size: amount for (size, amount) in zip(['S', 'M', 'L', 'XL', 'XXL', 'XXXL'], map(int, input().split()))}
 
 
 def request():
@@ -77,8 +76,7 @@ def compare():
         print(0)
         print('Нарушен формат вывода')
         return
-
-    if usr != ans[0] or ans[0] == 'YES' and not check(s.copy(), l):
+    if usr != ans[0] or (ans[0] == 'YES' and (not check(s.copy(), l))):
         print(0)
         print('Failed. T-shirts:', s, '. Request:', ';'.join(r), '. Your solution:', usr, ' - ', ';'.join(l))
     else:

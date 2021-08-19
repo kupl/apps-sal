@@ -1,4 +1,4 @@
-n, h, k = map(int, input().split())
+(n, h, k) = map(int, input().split())
 a = list(map(int, input().split()))
 h1 = 0
 ans = 0
@@ -12,6 +12,6 @@ while i < n:
         h1 = 0
     ans += h1 // k
     h1 %= k
-if (h1 != 0):
+if h1 != 0:
     ans += 1
 print(ans)

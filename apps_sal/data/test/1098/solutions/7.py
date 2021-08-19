@@ -15,7 +15,6 @@ else:
         if col1 > col2:
             if mx < col2 + 60 * 24 - col1 - 1:
                 mx = col2 + 60 * 24 - col1 - 1
-        else:
-            if mx < col2 - col1 - 1:
-                mx = col2 - col1 - 1
-    print((mx // 60) // 10, (mx // 60) % 10, ':', (mx % 60) // 10, (mx % 60) % 10, sep='')
+        elif mx < col2 - col1 - 1:
+            mx = col2 - col1 - 1
+    print(mx // 60 // 10, mx // 60 % 10, ':', mx % 60 // 10, mx % 60 % 10, sep='')

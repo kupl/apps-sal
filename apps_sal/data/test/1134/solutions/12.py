@@ -8,4 +8,4 @@ for j in range(k):
 for z in range(k - 1, 0, -1):
     list1[z - 1] = max(list1[z - 1], list1[z] - 1)
 list2 = zip(list1, o)
-print(sum(x - f - 1 for x, f in list2))
+print(sum((x - f - 1 for (x, f) in list2)))

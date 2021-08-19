@@ -3,10 +3,10 @@ def read_ints():
 
 
 def main():
-    n, m = read_ints()
+    (n, m) = read_ints()
     field = [list(input()) for _ in range(n)]
     heights = [sum([1 if field[j][i] == '*' else 0 for j in range(n)]) for i in range(m)]
-    INF = 1**10
+    INF = 1 ** 10
     max_up = 0
     max_down = 0
     for i in range(m - 1):

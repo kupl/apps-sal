@@ -6,7 +6,6 @@ def solve():
     totalSolvingTime = 0
     for s in times:
         totalSolvingTime += int(s)
-
     strInput = input()
     m = int(strInput)
     for i in range(m):

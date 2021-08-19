@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
-
 mp = [[] for i in range(64)]
 
 
@@ -12,9 +11,7 @@ def getmp(a, b, t):
 for i in range(4):
     for j in range(4):
         mp[(i | j) + (i & j) * 4 + i * 16].append(j)
-
 var = [0]
-
 while len(var) > 0 and len(var) < n:
     vv = var[-1]
     i = len(var) - 1
@@ -31,7 +28,6 @@ while len(var) > 0 and len(var) < n:
                     p.append(t)
                     appd = False
                     break
-
         if len(var) == 1:
             if var[0] == 3:
                 var = []
@@ -39,7 +35,6 @@ while len(var) > 0 and len(var) < n:
                 var[0] += 1
     else:
         var.append(p[0])
-
 if len(var) > 0:
     print('YES')
     print(' '.join(map(str, var)))

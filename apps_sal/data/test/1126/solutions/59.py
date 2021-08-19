@@ -1,8 +1,8 @@
-n, x, m = map(int, input().split())
+(n, x, m) = map(int, input().split())
 id = [-1] * (m + 1)
 s = []
 c = 0
-while(id[x] == -1):
+while id[x] == -1:
     id[x] = c
     c += 1
     s.append(x)
@@ -19,7 +19,7 @@ else:
     sum = 0
     for i in range(d):
         sum += s[id[x] + i]
-    ans += (n // d) * sum
+    ans += n // d * sum
     n = n % d
     for i in range(n):
         ans += s[id[x] + i]

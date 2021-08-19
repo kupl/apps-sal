@@ -1,17 +1,10 @@
 def solve():
     S = input()
-
-    P = {
-        '>': '<',
-        ']': '[',
-        ')': '(',
-        '}': '{',
-    }
-
+    P = {'>': '<', ']': '[', ')': '(', '}': '{'}
     stack = []
     n = 0
     ans = 0
-    for i, c in enumerate(S):
+    for (i, c) in enumerate(S):
         if c in '<[{(':
             n += 1
             stack.append(c)
@@ -23,11 +16,9 @@ def solve():
             x = stack.pop()
             if x != P[c]:
                 ans += 1
-
     if n != 0:
         print('Impossible')
         return
-
     print(ans)
 
 

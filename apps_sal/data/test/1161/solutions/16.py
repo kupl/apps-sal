@@ -1,16 +1,7 @@
 word = input()
-
-BRACKETS = [
-    ('<', '>'),
-    ('{', '}'),
-    ('[', ']'),
-    ('(', ')'),
-]
-
+BRACKETS = [('<', '>'), ('{', '}'), ('[', ']'), ('(', ')')]
 OPENING = [b[0] for b in BRACKETS]
-
 MATCH = dict(BRACKETS)
-
 IMPOSSIBLE = 'Impossible'
 
 

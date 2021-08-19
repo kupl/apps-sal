@@ -1,4 +1,5 @@
-def R(): return list(map(int, input().strip().split()))
+def R():
+    return list(map(int, input().strip().split()))
 
 
 n = int(input())

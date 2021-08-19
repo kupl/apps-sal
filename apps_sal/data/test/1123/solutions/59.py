@@ -1,5 +1,5 @@
-MOD = 10**9 + 7
-n, k = map(int, input().split())
+MOD = 10 ** 9 + 7
+(n, k) = map(int, input().split())
 mp = [0] * (k + 1)
 for i in range(k, 0, -1):
     mp[i] = pow(k // i, n, MOD)

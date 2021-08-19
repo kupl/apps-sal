@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [0 for i in range(101)]
 for i in a:

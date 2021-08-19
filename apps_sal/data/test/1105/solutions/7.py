@@ -14,9 +14,7 @@ for i in range(n):
         break
     else:
         all[k] = x
-
-
 if ans:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -14,5 +14,4 @@ for i in A:
         continue
     Amin = min(Amin, math.gcd(Amin, i))
 ans = min(ans, math.gcd(Amin, ans))
-
 print(ans)

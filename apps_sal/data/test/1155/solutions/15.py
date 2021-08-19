@@ -11,10 +11,10 @@ def gss():
 
 
 def problem():
-    n, m = gis()
+    (n, m) = gis()
     maxi = 100
     for i in range(n):
-        a, b = gis()
+        (a, b) = gis()
         maxi = min(maxi, a / b)
     print(maxi * m)
 

@@ -8,4 +8,4 @@ def gcd(*numbers):
 
 n = int(input())
 aa = list(map(int, input().split()))
-print((gcd(*aa)))
+print(gcd(*aa))

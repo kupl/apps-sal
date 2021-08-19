@@ -4,7 +4,6 @@ import sys
 def main():
     sys.stdin.readline()
     badges = map(int, sys.stdin.readline().split())
-
     price = 0
     existing_badges = set()
     for b in sorted(badges):
@@ -12,7 +11,6 @@ def main():
             price += 1
             b += 1
         existing_badges.add(b)
-
     print(price)
 
 

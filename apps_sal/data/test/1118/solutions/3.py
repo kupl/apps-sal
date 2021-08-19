@@ -1,4 +1,5 @@
-def inpl(): return list(map(int, input().split()))
+def inpl():
+    return list(map(int, input().split()))
 
 
 N = int(input())
@@ -7,7 +8,6 @@ B = [0]
 for a in A:
     if B[-1] != a:
         B.append(a)
-
 B = B[1:]
 k = len(B)
 dp = [0] * ((k * k + k) // 2)

@@ -10,7 +10,7 @@ def solve(n: int, a: List[int]) -> int:
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    print((solve(n, a)))
+    print(solve(n, a))
 
 
 def __starting_point():

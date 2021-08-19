@@ -3,7 +3,7 @@ p = []
 flag = True
 q = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     p.append((x, y))
 q.append(max(p[0][0], p[0][1]))
 for i in range(1, n):
@@ -17,6 +17,6 @@ for i in range(1, n):
         flag = False
         break
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-i, j = 0, 0
+(i, j) = (0, 0)
 s = 0
 s1 = 0
 s2 = 0

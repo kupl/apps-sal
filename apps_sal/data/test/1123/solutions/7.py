@@ -13,7 +13,7 @@ def pow(a, n, mod):
 
 def main():
     MOD = 10 ** 9 + 7
-    N, K = list(map(int, input().split(' ')))
+    (N, K) = list(map(int, input().split(' ')))
     n_gcds = [0 for _ in range(K + 1)]
     for g in range(K, 0, -1):
         v = pow(K // g, N, MOD)
@@ -24,7 +24,7 @@ def main():
             v %= MOD
         n_gcds[g] = v
     ans = 0
-    for g, n in enumerate(n_gcds):
+    for (g, n) in enumerate(n_gcds):
         ans += g * n
         ans %= MOD
     print(ans)

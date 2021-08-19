@@ -1,4 +1,4 @@
-a, m = list(map(int, input().split()))
+(a, m) = list(map(int, input().split()))
 s = set()
 while True:
     a %= m

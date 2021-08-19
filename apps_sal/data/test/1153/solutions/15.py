@@ -2,7 +2,7 @@ def read():
     return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 x = read()
 y = read()
 i = 0

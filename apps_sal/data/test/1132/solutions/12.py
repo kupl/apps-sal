@@ -1,10 +1,10 @@
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n not in (m, m + 1):
         return 3
     l = [0] * (n + 1)
     for _ in range(m):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         l[x] += 1
         l[y] += 1
     c2 = l.count(2)
@@ -20,7 +20,7 @@ def solve():
 
 
 def main():
-    print(("bus", "ring", "star", "unknown")[solve()], "topology")
+    print(('bus', 'ring', 'star', 'unknown')[solve()], 'topology')
 
 
 def __starting_point():

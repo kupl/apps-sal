@@ -1,5 +1,5 @@
 MOD = 10 ** 9 + 7
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 d = [0] * (K + 1)
 for i in range(1, K + 1):
     d[i] = pow(K // i, N, MOD)

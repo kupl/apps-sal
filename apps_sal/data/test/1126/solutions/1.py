@@ -1,9 +1,9 @@
-n, x, m = map(int, input().split())
+(n, x, m) = map(int, input().split())
 used = [0] * m
 used[x] = 1
 l = [x]
 while True:
-    x = x**2 % m
+    x = x ** 2 % m
     if used[x] == 1:
         break
     else:

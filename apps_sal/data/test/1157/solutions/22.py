@@ -1,12 +1,9 @@
 import sys
 sin = sys.stdin
-
 sin.readline()
 arr = sin.readline().split()
 arr = [int(i) for i in arr]
-
 lp = ln = ep = en = 0
-
 for i in arr:
     newNeg = 0
     newPos = 0
@@ -20,5 +17,4 @@ for i in arr:
     ln += en
     ep = newPos
     en = newNeg
-
 print(ln + en, lp + ep)

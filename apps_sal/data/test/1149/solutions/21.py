@@ -1,6 +1,6 @@
 n = int(input())
-num = [int(x) for x in input().split(" ")]
-num1 = [int(x) for x in input().split(" ")]
+num = [int(x) for x in input().split(' ')]
+num1 = [int(x) for x in input().split(' ')]
 num.pop(0)
 num1.pop(0)
 list1 = num1 + num

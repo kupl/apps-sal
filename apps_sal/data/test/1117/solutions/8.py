@@ -23,15 +23,14 @@ n = read()
 W = []
 H = []
 for _ in range(n):
-    w, h = readmap()
+    (w, h) = readmap()
     W.append(w)
     H.append(h)
-
 height = max(W[0], H[0])
 for i in range(1, n):
-    w, h = W[i], H[i]
+    (w, h) = (W[i], H[i])
     if w > height and h > height:
-        print("NO")
+        print('NO')
         quit()
     elif w > height:
         height = h
@@ -39,5 +38,4 @@ for i in range(1, n):
         height = w
     else:
         height = max(h, w)
-
-print("YES")
+print('YES')

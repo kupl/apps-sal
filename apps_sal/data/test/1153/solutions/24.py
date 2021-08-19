@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 ns = [int(x) for x in input().split()]
 ms = [int(x) for x in input().split()]
 n_summs = []

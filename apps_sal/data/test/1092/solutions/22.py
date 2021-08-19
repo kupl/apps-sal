@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 l1 = []
@@ -7,7 +7,7 @@ for i in range(m - 1):
     l1.append(l[i + 1] - l[i] - 1)
 f1 = [1] * 1001
 f2 = [1] * 1001
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 a = 1
 b = 1
 for i in range(1, 1001):

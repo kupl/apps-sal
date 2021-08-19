@@ -7,5 +7,4 @@ for i in range(1, n):
     if a[i] <= a[i - 1]:
         res += a[i - 1] + 1 - a[i]
         a[i] = a[i - 1] + 1
-
 print(res)

@@ -1,8 +1,6 @@
 import sys
 readline = sys.stdin.readline
-
-n, m = map(int, readline().split())
-
+(n, m) = map(int, readline().split())
 l = 1
 r = n
 used = set()

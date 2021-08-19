@@ -7,7 +7,6 @@ def main():
             print(i + 1)
             return
         s.add(arr[i])
-
     print(-1)
 
 

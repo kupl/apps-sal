@@ -7,7 +7,6 @@ def main():
     for _ in range(t):
         N = int(input())
         S = input().strip()
-
         if N % 2 == 1:
             ans = 2
             for i in range(0, N, 2):

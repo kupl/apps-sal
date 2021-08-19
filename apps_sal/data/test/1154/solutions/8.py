@@ -1,4 +1,4 @@
-n, h, k = list(map(int, input().split()))
+(n, h, k) = list(map(int, input().split()))
 a = [int(x) for x in input().split()]
 moulin = 0
 ans = 0

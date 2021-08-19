@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-m = 10**9 + 7
+(n, k) = map(int, input().split())
+m = 10 ** 9 + 7
 l = [0] * (k + 1)
 a = 0
 for i in range(k, 0, -1):

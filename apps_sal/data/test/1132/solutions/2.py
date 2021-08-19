@@ -1,10 +1,11 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, m = R()
+(n, m) = R()
 c = [0] * n
 for i in range(m):
-    x, y = R()
+    (x, y) = R()
     c[x - 1] += 1
     c[y - 1] += 1
 c1 = c2 = 0
@@ -14,10 +15,10 @@ for i in range(n):
     elif c[i] == 2:
         c2 += 1
 if c2 == n:
-    print("ring topology")
+    print('ring topology')
 elif c1 == 2 and c2 == n - 2:
-    print("bus topology")
+    print('bus topology')
 elif c1 == n - 1:
-    print("star topology")
+    print('star topology')
 else:
-    print("unknown topology")
+    print('unknown topology')

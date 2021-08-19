@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-n, x, m = list(map(int, input().split()))
+(n, x, m) = list(map(int, input().split()))
 
 
 def culc(xx, mod):
@@ -24,12 +23,9 @@ while True:
     warps.append(A)
     indices[A] = count
     dic[A] += 1
-
 tail = warps[:tail_len]
 circle = warps[tail_len:]
-
 times = (n - tail_len) // circle_len
 remainder = (n - tail_len) % circle_len
-
 ans = sum(tail) + times * sum(circle) + sum(circle[:remainder])
 print(ans)

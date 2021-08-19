@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mod = 1000000007
 cnt = [0] * (k + 1)
 for i in range(1, k + 1)[::-1]:

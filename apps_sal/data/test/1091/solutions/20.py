@@ -1,4 +1,3 @@
-
 a = int(input())
 max_n = 0
 max_1 = 0
@@ -18,4 +17,4 @@ for i in dp:
         max_2 = max_n
         k = i + 1
         max_n = max(b[i], max_n)
-print(str(k) + " " + str(max(max_1, max_2)))
+print(str(k) + ' ' + str(max(max_1, max_2)))

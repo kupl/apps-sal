@@ -11,7 +11,6 @@ i = 0
 while not isp(len(e)):
     e.append([i + 1, (i + n // 2) % n + 1])
     i += 1
-
 print(len(e))
 for ed in e:
     print(*sorted(ed))

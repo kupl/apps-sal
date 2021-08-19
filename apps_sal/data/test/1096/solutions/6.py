@@ -1,4 +1,4 @@
-c, r = list(input())
+(c, r) = list(input())
 c = ord(c) - ord('a')
 r = ord(r) - ord('1')
 if c in (0, 7) and r in (0, 7):

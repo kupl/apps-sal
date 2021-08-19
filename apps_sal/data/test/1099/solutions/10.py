@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 n = int(input())
 graph = defaultdict(list)

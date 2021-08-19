@@ -1,9 +1,8 @@
-M, N = 1000000007, 2000
+(M, N) = (1000000007, 2000)
 f = [1] * N
 for i in range(1, N):
     f[i] = f[i - 1] * i % M
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ar = sorted(map(int, input().split()))
 br = []
 for i in range(1, m):

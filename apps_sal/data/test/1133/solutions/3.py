@@ -7,7 +7,7 @@ for i1 in range(25):
     for i2 in range(i1 + 1, 26):
         cs = {ascii_lowercase[i1], ascii_lowercase[i2]}
         cw = [word for word in words if set(word) <= cs]
-        cl = sum(len(word) for word in cw)
+        cl = sum((len(word) for word in cw))
         if cl > best:
             best = cl
 print(best)

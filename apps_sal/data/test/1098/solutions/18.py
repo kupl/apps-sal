@@ -3,7 +3,6 @@ times = []
 for _ in range(n):
     time = str(input())
     times.append((int(time[:2]), int(time[3:])))
-
 times.sort()
 
 
@@ -22,12 +21,7 @@ def pad(a):
 longest = 0
 for i in range(1, n):
     longest = max(longest, to_minutes(times[i]) - to_minutes(times[i - 1]))
-
 longest = max(longest, 60 * 24 + to_minutes(times[0]) - to_minutes(times[n - 1]))
-
 longest -= 1
-
-hours, minutes = to_hours(longest)
-
-
+(hours, minutes) = to_hours(longest)
 print(pad(hours), ':', pad(minutes), sep='')

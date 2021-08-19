@@ -1,5 +1,4 @@
-N, M = (int(_) for _ in input().split())
-
+(N, M) = (int(_) for _ in input().split())
 if N % 2 == 0:
     s = (N - 1) // 4 + 1
     ret = []
@@ -9,9 +8,7 @@ if N % 2 == 0:
         ret.append((i, N - i - 1))
 else:
     ret = []
-    for i in range(1, (N // 2) + 1):
+    for i in range(1, N // 2 + 1):
         ret.append((i, N - i))
-
-
-for r0, r1 in ret[:M]:
+for (r0, r1) in ret[:M]:
     print((r0, r1))

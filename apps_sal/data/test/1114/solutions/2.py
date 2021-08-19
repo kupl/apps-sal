@@ -1,6 +1,5 @@
 import collections
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 fs = list(map(int, input().split()))
 bs = list(map(int, input().split()))
 
@@ -25,7 +24,7 @@ def is_possible(n, m, fs, bs):
 
 def solve2(n, m, fs, bs):
     finv = collections.defaultdict(set)
-    for i, f in enumerate(fs):
+    for (i, f) in enumerate(fs):
         finv[f].add(i)
     As = []
     for b in bs:

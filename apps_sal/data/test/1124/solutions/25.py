@@ -1,11 +1,11 @@
 def gcd(x, y):
     while x:
-        x, y = y % x, x
+        (x, y) = (y % x, x)
     return y
 
 
 input()
-*a, = map(int, input().split())
+(*a,) = map(int, input().split())
 while len(a) > 1:
     x = a.pop()
     y = a.pop()

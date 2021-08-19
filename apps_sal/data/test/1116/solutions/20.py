@@ -1,7 +1,6 @@
 t = int(input())
-
 for i in range(t):
-    r, b, k = list(map(int, input().split()))
+    (r, b, k) = list(map(int, input().split()))
     if r > b:
         temp = r
         r = b
@@ -13,6 +12,6 @@ for i in range(t):
     if c > 0 and r % c > 0:
         a += 1
     if a >= k:
-        print("REBEL")
+        print('REBEL')
     else:
-        print("OBEY")
+        print('OBEY')

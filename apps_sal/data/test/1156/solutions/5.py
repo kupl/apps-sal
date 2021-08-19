@@ -2,13 +2,13 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, list(input())))
 current = 0
-l = 10**9 * (-1)
-r = 10**9
+l = 10 ** 9 * -1
+r = 10 ** 9
 for i in range(n):
-    if(b[i] != current):
+    if b[i] != current:
         current = b[i]
-        if(b[i] == 0):
+        if b[i] == 0:
             r = min(r, min(a[i - 4:i + 1]) - 1)
         else:
             l = max(l, max(a[i - 4:i + 1]) + 1)
-print(l, r, end=" ")
+print(l, r, end=' ')

@@ -1,8 +1,8 @@
-n, a = list(map(int, input().split()))
+(n, a) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 res = c[a - 1]
 for i in range(1, max(n - a + 1, a)):
-    l, r = a - 1 - i, a - 1 + i
+    (l, r) = (a - 1 - i, a - 1 + i)
     if l >= 0 and r < n:
         if c[l] and c[r]:
             res += 2

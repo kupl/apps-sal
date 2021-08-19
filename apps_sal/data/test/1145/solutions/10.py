@@ -14,11 +14,11 @@ ans = 0
 for j in arr:
     if curr < j:
         m = d[j]
-        ans += (m * (m - 1)) // 2
+        ans += m * (m - 1) // 2
         curr = j + m - 1
     else:
         m = d[j]
         pay = curr + 1 - j
-        ans += pay * m + (m * (m - 1)) // 2
+        ans += pay * m + m * (m - 1) // 2
         curr = curr + m
 print(ans)

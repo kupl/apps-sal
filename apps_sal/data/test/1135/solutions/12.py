@@ -1,9 +1,7 @@
 n = input()
 n = int(n.strip())
-
 niz = input()
 niz = niz.strip()
-
 resitev = niz[-1]
 for k in range(len(niz) - 2, -1, -1):
     dol = len(resitev)

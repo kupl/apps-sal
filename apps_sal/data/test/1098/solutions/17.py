@@ -9,13 +9,13 @@ def mem(kek):
 def lol(kek):
     h = str(kek // 60)
     m = str(kek % 60)
-    ans = ""
-    if (len(h) < 2):
-        ans += "0"
+    ans = ''
+    if len(h) < 2:
+        ans += '0'
     ans += h
-    ans += ":"
-    if (len(m) < 2):
-        ans += "0"
+    ans += ':'
+    if len(m) < 2:
+        ans += '0'
     ans += m
     return ans
 
@@ -26,7 +26,6 @@ for i in range(n):
     a.append(mem(st))
     a.append(mem(st) + delt)
     a.append(mem(st) + 2 * delt)
-
 a = sorted(a)
 ans = 0
 for i in range(1, len(a)):

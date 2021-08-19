@@ -3,12 +3,11 @@ if False:
     inp = open('B.txt', 'r')
 else:
     inp = sys.stdin
-
 n = int(inp.readline())
 liters = list(map(int, inp.readline().split()))
 before = 0
 after = 0
-low = 10**9 + 10
+low = 10 ** 9 + 10
 maxBetween = 0
 between = 0
 for i in range(n):

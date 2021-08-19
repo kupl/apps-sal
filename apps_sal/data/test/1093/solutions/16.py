@@ -12,7 +12,6 @@ for i in range(m):
         if a[j][i] == '*':
             b.append(n - j)
             break
-
 for i in range(len(b) - 1):
     if b[i] <= b[i + 1]:
         up.append(b[i + 1] - b[i])

@@ -1,6 +1,5 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 mini = min(l)
 for i in range(n):
     l[i] -= mini
@@ -14,5 +13,4 @@ for i in range(2 * n):
             maxi = tmp
     else:
         tmp = 0
-
 print(res + maxi)

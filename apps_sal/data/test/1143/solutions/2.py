@@ -1,10 +1,9 @@
-fin = open("input.txt", "r")
-fout = open("output.txt", "w")
+fin = open('input.txt', 'r')
+fout = open('output.txt', 'w')
 day = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 table = []
 for i in range(int(fin.readline())):
     table.append([int(i) for i in fin.readline().split()])
-
 ans = [0] * 500
 for it in table:
     days = sum(day[0:it[0]]) + it[1] + 100

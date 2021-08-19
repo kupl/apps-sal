@@ -2,7 +2,8 @@ import sys
 from collections import defaultdict
 
 
-def rl(): return sys.stdin.readline().strip()
+def rl():
+    return sys.stdin.readline().strip()
 
 
 def BFS(s, nbrs):

@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = M // 2
 b = M - a
 c = 1

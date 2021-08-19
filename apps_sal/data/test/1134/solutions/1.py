@@ -1,7 +1,7 @@
 def read_data():
     n = int(input().strip())
     a = list(map(int, list(input().strip().split())))
-    return n, a
+    return (n, a)
 
 
 def solve():
@@ -11,8 +11,8 @@ def solve():
         under[i] = max(a[i] + 1, a[i + 1], under[i + 1] - 1)
     for i in range(1, n):
         under[i] = max(under[i], under[i - 1])
-    return sum(under[i] - 1 - a[i] for i in range(n))
+    return sum((under[i] - 1 - a[i] for i in range(n)))
 
 
-n, a = read_data()
+(n, a) = read_data()
 print(solve())

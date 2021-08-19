@@ -1,4 +1,4 @@
-n, x, m = map(int, input().split())
+(n, x, m) = map(int, input().split())
 mod = [-1] * m
 start = 0
 last = 0
@@ -7,7 +7,7 @@ mod[x] = 0
 for i in range(1, m):
     if i >= n:
         break
-    a_new = a[-1]**2 % m
+    a_new = a[-1] ** 2 % m
     if mod[a_new] == -1:
         mod[a_new] = i
     else:
@@ -15,7 +15,6 @@ for i in range(1, m):
         last = i
         break
     a.append(a_new)
-
 loop_num = 0
 remain = 0
 if last - start:
@@ -25,5 +24,4 @@ if last - start:
     out += sum(a[start:start + remain])
 else:
     out = sum(a)
-
 print(out)

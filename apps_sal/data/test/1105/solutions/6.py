@@ -7,12 +7,10 @@ for i in range(0, n):
     if zap[1] in uch:
         if zap[0] == uch[zap[1]] + 1:
             uch[zap[1]] = zap[0]
-        else:
-            if zap[0] > uch[zap[1]] + 1:
-                res = 'NO'
-    else:
-        if zap[0] == 0:
-            uch[zap[1]] = zap[0]
-        else:
+        elif zap[0] > uch[zap[1]] + 1:
             res = 'NO'
+    elif zap[0] == 0:
+        uch[zap[1]] = zap[0]
+    else:
+        res = 'NO'
 print(res)

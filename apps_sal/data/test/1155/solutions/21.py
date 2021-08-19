@@ -7,5 +7,4 @@ for i in range(n):
     x = int(s[0]) / int(s[1])
     if x < p:
         p = x
-
 print(m * p)

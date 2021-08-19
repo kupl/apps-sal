@@ -1,6 +1,5 @@
 N = int(input())
 words = [input() for i in range(N)]
-
 abc = 'abcdefghijklmnopqrstuvwxyz'
 
 
@@ -10,7 +9,6 @@ def countf(a, b):
     for w in words:
         if w.strip(c) is '':
             s += len(w)
-
     return s
 
 
@@ -19,7 +17,5 @@ for a in abc:
     for b in abc:
         if a == b:
             continue
-
         m = max(countf(a, b), m)
-
 print(m)

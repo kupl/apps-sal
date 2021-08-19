@@ -4,7 +4,7 @@ w = input().strip().split()
 p = int(s[0])
 q = int(w[0])
 if p + q < n:
-    print("Oh, my keyboard!")
+    print('Oh, my keyboard!')
 else:
     d = {}
     for i in s[1:]:
@@ -17,6 +17,6 @@ else:
             d[int(i)] = 1
             ack += 1
     if ack < n:
-        print("Oh, my keyboard!")
+        print('Oh, my keyboard!')
     else:
-        print("I become the guy.")
+        print('I become the guy.')

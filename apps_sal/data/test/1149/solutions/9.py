@@ -1,4 +1,4 @@
-arr = [False] * (int(input()))
+arr = [False] * int(input())
 for j in range(2):
     for i in list(map(int, input().split()))[1:]:
         arr[i - 1] = True

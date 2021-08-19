@@ -5,11 +5,10 @@ L = list(map(int, input().split()))
 
 def gcd(A, B):
     if A < B:
-        A, B = B, A
-
+        (A, B) = (B, A)
     while B:
-        A, B = B, A % B
+        (A, B) = (B, A % B)
     return A
 
 
-print((reduce(gcd, L)))
+print(reduce(gcd, L))

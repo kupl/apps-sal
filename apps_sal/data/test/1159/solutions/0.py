@@ -19,7 +19,6 @@ while not pr(x):
     x += 1
     u += 1
     v += 1
-
 print(x)
 for g in e:
     print(g[0] + 1, g[1] + 1)

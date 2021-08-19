@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [0] * m
 for i in range(n):
     b = list(input().rstrip())
     for j in range(m):
-        if (b[j] == '*'):
+        if b[j] == '*':
             a[j] = max(a[j], n - i)
 ma = 0
 mi = 0

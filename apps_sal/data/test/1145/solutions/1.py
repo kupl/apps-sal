@@ -1,7 +1,5 @@
-
 import math
 import sys
-
 n = int(input())
 c = list(map(int, input().split()))
 c.sort()

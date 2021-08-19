@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, k = read()
+(n, k) = read()
 m = n // k
 a = list(read())
 result = 0

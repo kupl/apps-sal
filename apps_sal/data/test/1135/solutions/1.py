@@ -4,9 +4,9 @@ f = bool(n % 2)
 rt = []
 lt = []
 for i in s:
-    if (f):
+    if f:
         rt.append(i)
     else:
         lt.append(i)
     f = not f
-print("".join(lt[::-1]) + "".join(rt))
+print(''.join(lt[::-1]) + ''.join(rt))

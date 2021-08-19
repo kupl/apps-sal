@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 f = list(map(int, input().split()))
 b = list(map(int, input().split()))
 s1 = set(f)

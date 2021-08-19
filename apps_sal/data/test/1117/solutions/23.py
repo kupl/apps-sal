@@ -1,5 +1,5 @@
 number = int(input())
-rem = 10**9 + 1
+rem = 10 ** 9 + 1
 state = True
 for i in range(number):
     numList = list(map(int, input().split()))
@@ -13,6 +13,6 @@ for i in range(number):
         state = False
         break
 if state:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

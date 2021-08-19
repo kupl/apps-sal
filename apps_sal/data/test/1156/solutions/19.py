@@ -2,8 +2,7 @@ def main():
     n = int(input())
     a = [int(x) for x in input().split()]
     b = input()
-
-    re = int(1e9)
+    re = int(1000000000.0)
     le = -re
     x = True
     for i in range(n):
@@ -12,9 +11,8 @@ def main():
                 if x:
                     if le <= j:
                         le = j + 1
-                else:
-                    if re >= j:
-                        re = j - 1
+                elif re >= j:
+                    re = j - 1
             x = not x
     print(le, re)
 

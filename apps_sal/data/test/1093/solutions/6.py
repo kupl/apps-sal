@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 pole = []
 for i in range(n):
     s = input()

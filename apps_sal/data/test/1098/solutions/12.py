@@ -8,6 +8,6 @@ tmp = [1440 + x for x in alarms]
 alarms += tmp
 ans = 0
 for i in range(1, len(alarms)):
-    if (i > 0):
+    if i > 0:
         ans = max(ans, alarms[i] - alarms[i - 1] - 1)
-print("%02d:%02d" % (ans // 60, ans % 60))
+print('%02d:%02d' % (ans // 60, ans % 60))

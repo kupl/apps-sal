@@ -10,18 +10,15 @@ def isprime(x):
 
 
 n = int(input())
-
 edges = []
 for x in range(n):
     edges.append((x, (x + 1) % n))
-
 m = n
 i = 0
 while not isprime(m):
     edges.append((i, n - 2 - i))
     i += 1
     m += 1
-
 print(m)
-for u, v in edges:
+for (u, v) in edges:
     print(u + 1, v + 1)

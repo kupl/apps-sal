@@ -10,7 +10,7 @@ def nummin(f):
             c = 1
         elif n == m:
             c += 1
-    return m, c
+    return (m, c)
 
 
 def nummax(f):
@@ -22,24 +22,18 @@ def nummax(f):
             c = 1
         elif n == m:
             c += 1
-    return m, c
+    return (m, c)
 
 
 numflowers = int(input())
-
 flowers = list(map(int, input().split()))
-
-minvalue, mincount = nummin(flowers)
-
-maxvalue, maxcount = nummax(flowers)
-
+(minvalue, mincount) = nummin(flowers)
+(maxvalue, maxcount) = nummax(flowers)
 diff = maxvalue - minvalue
-
 perms = 0
 if minvalue == maxvalue:
     for i in range(1, mincount):
         perms += i
 else:
     perms = mincount * maxcount
-
-print("{} {}".format(diff, perms))
+print('{} {}'.format(diff, perms))

@@ -1,8 +1,6 @@
 input()
-
 m = -1
-
-for i, a in enumerate(map(int, input().split())):
+for (i, a) in enumerate(map(int, input().split())):
     if a > m + 1:
         print(i + 1)
         break

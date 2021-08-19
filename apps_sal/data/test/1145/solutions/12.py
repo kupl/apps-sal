@@ -16,7 +16,6 @@ for i in range(1, m + 1):
         while count[i] != 1:
             if ans[ind] > i:
                 s += ans[ind] - i
-
                 count[i] -= 1
             ind += 1
 print(s)

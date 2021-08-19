@@ -12,14 +12,14 @@ def gcd(a, b):
 
 t = int(input())
 for kkk in range(t):
-    a, b, k = map(int, input().split())
+    (a, b, k) = map(int, input().split())
     if a == b:
         print('OBEY')
     else:
         g = gcd(a, b)
         a //= g
         b //= g
-        a, b = max(a, b), min(a, b)
+        (a, b) = (max(a, b), min(a, b))
         kk = (a - 1) // b + (1 if (a - 1) % b != 0 else 0)
         if kk >= k:
             print('REBEL')

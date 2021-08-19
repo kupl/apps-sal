@@ -9,6 +9,6 @@ l = int(re[0])
 for s in range(0, l):
     sete.add(int(re[s + 1]))
 if len(sete) == a:
-    print("I become the guy.")
+    print('I become the guy.')
 else:
-    print("Oh, my keyboard!")
+    print('Oh, my keyboard!')

@@ -15,22 +15,19 @@ mini = -1
 for i in range(len(cnt)):
     if cnt[i] > mini:
         mini = cnt[i]
-
 ans = 0
 for i in range(1, n + 1):
     minicur = -1
     k = 0
-    k1 = 2**(n - i)
-    for j in range(2**i):
+    k1 = 2 ** (n - i)
+    for j in range(2 ** i):
         minicur = -1
         for l in range(k, k1):
             if cnt[l] > minicur:
                 minicur = cnt[l]
         for l in range(k, k1):
-            cnt[l] += (mini - minicur)
+            cnt[l] += mini - minicur
         ans += mini - minicur
-        k += 2**(n - i)
-        k1 += 2**(n - i)
-
-
+        k += 2 ** (n - i)
+        k1 += 2 ** (n - i)
 print(ans)

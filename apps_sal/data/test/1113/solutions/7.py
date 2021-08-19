@@ -8,5 +8,4 @@ for i in range(len(a)):
         break
     if a[i] > max_el:
         max_el = a[i]
-
 print(er)

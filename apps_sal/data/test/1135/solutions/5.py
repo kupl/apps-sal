@@ -10,4 +10,4 @@ for i in s:
     else:
         ans.insert(len(ans) // 2, i)
         f = True
-print(''.join(str(i) for i in ans))
+print(''.join((str(i) for i in ans)))

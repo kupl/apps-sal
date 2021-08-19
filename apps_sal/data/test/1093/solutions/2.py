@@ -1,4 +1,4 @@
-n, k = (int(z) for z in input().split())
+(n, k) = (int(z) for z in input().split())
 h = [0] * k
 for i in range(n):
     s = input()

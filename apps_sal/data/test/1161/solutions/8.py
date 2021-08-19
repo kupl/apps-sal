@@ -1,7 +1,7 @@
-BRACKETS = "{ }, [ ], < >, ( )"
+BRACKETS = '{ }, [ ], < >, ( )'
 openers = dict()
 closers = dict()
-for opener, closer in [x.split() for x in BRACKETS.split(",")]:
+for (opener, closer) in [x.split() for x in BRACKETS.split(',')]:
     openers[opener] = closer
     closers[closer] = opener
 stack = list()
@@ -19,6 +19,6 @@ for char in input():
         stack.pop()
 impossible |= len(stack) > 0
 if impossible:
-    print("Impossible")
+    print('Impossible')
 else:
     print(res)

@@ -1,10 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = set()
 for i in range(n):
-    x, *l = list(map(int, input().split()))
+    (x, *l) = list(map(int, input().split()))
     for y in l:
         s.add(y)
 if len(s) == m:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

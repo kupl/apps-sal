@@ -1,7 +1,5 @@
 3
-
 s = input()
-
 if len(s) % 2 != 0:
     print(-1)
 else:

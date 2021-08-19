@@ -6,7 +6,7 @@ for p in x:
 z = int(input())
 flag = 0
 for mrinal in range(z):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a <= total_time and b >= total_time:
         flag = total_time
         break

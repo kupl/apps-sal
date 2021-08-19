@@ -1,11 +1,10 @@
 n = int(input())
-numbers = input().split(" ")
+numbers = input().split(' ')
 mi = 10000000007
 for i in range(len(numbers)):
     mi = min(mi, int(numbers[i]))
 for i in range(len(numbers)):
     numbers[i] = int(numbers[i]) - mi
-
 ret = 0
 length = 0
 j = 0

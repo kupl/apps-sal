@@ -1,5 +1,4 @@
-n, m = [int(_) for _ in input().split()]
-
+(n, m) = [int(_) for _ in input().split()]
 n = 2 * m + 1
 if m % 2 == 0:
     for i in range(m // 2):

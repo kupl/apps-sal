@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 data = []
 used = [False for i in range(m)]
 for i in range(n):
@@ -7,6 +7,6 @@ for i in range(n):
     for elem in help:
         used[elem - 1] = True
 if False in used:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

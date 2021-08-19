@@ -1,6 +1,4 @@
 import sys
-
-
 n = int(sys.stdin.readline().strip())
 P = []
 i = 2
@@ -16,7 +14,6 @@ while v == True:
             v = False
             e = i
     i = i + 1
-
 E = [[1, n]]
 for i in range(0, n - 1):
     E.append([i + 1, i + 2])
@@ -26,7 +23,6 @@ while e > m:
     E.append([i + 1, i + 1 + n // 2])
     m = m + 1
     i = i + 1
-
 print(len(E))
 for i in range(0, len(E)):
-    print(str(E[i][0]) + " " + str(E[i][1]))
+    print(str(E[i][0]) + ' ' + str(E[i][1]))

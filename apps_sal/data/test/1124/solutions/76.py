@@ -12,5 +12,4 @@ def gcd_list(numbers):
 
 n = int(input())
 a = list(map(int, input().split()))
-
 print(gcd_list(a))

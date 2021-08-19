@@ -15,7 +15,7 @@ def calc(points, start, stop, step):
 
 calc1 = calc(points, 0, n, 1)
 calc2 = calc(points, n - 1, -1, -1)
-mini, minv = -1, float('inf')
+(mini, minv) = (-1, float('inf'))
 for i in range(n):
     if calc1[i] + calc2[i] < minv:
         minv = calc1[i] + calc2[i]

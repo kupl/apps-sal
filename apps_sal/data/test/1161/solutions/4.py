@@ -1,6 +1,6 @@
 s = input()
-open = '<', '(', '[', '{'
-close = '>', ')', ']', '}'
+open = ('<', '(', '[', '{')
+close = ('>', ')', ']', '}')
 resp = {close[i]: open[i] for i in (0, 1, 2, 3)}
 cnt = 0
 st = []

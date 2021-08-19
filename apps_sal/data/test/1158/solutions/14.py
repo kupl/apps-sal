@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 c = [0] * 200
 a = list(map(int, input().split()))
 for i in range(n):
@@ -9,5 +9,5 @@ if max(c) % m != 0:
     x += m
 for i in range(len(c)):
     if c[i] != 0:
-        summ += (x - c[i])
+        summ += x - c[i]
 print(summ)

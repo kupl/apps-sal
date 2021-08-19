@@ -1,9 +1,9 @@
-n, x, m = map(int, input().split())
-l, k, i, j = [-1] * m, [], 0, -1
+(n, x, m) = map(int, input().split())
+(l, k, i, j) = ([-1] * m, [], 0, -1)
 while j < 0:
     l[x] = i
     k += [x]
-    x = x**2 % m
+    x = x ** 2 % m
     i += 1
     j = l[x]
 n -= i

@@ -14,17 +14,13 @@ def solve(a, n):
             neg[i] += neg[i - 1]
     totalNeg = 0
     totalPos = 0
-
     for i in range(n):
         totalNeg += neg[i]
         totalPos += pos[i]
-
-    return totalNeg, totalPos
+    return (totalNeg, totalPos)
 
 
 n = int(input())
 a = list(map(int, input().split()))
-
-l, r = solve(a, n)
-
+(l, r) = solve(a, n)
 print(str(l) + ' ' + str(r))

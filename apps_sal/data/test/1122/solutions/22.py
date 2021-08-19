@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-a, b = n, 1
+(n, m) = list(map(int, input().split()))
+(a, b) = (n, 1)
 V = [False for d in range(1, n + 1)]
 for i in range(m):
     d = min(a - b, n - (a - b))

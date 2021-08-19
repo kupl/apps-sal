@@ -3,9 +3,8 @@ import math
 
 
 def main():
-    n, t, k = map(int, sys.stdin.readline().split())
+    (n, t, k) = map(int, sys.stdin.readline().split())
     a = list(map(int, sys.stdin.readline().split()))
-
     g = [[] for i in range(t + 1)]
     g[0].append([1, -1, 0])
     c = 1
@@ -14,7 +13,6 @@ def main():
             c += 1
             g[i + 1].append([c, 0, 0])
             g[i][0][2] += 1
-
     l = 0
     for i in range(1, t + 1):
         for j in range(len(g[i])):
@@ -23,7 +21,6 @@ def main():
     if l < k:
         print(-1)
         return
-
     i = 0
     j = 0
     m = 1
@@ -48,7 +45,6 @@ def main():
         l -= 1
         i += 1
         j += 1
-
     if l != k:
         print(-1)
         return

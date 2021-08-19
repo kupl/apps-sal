@@ -1,4 +1,4 @@
-n, a = list(map(int, input().split()))
+(n, a) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 a -= 1
 if s[a] == 1:
@@ -16,6 +16,6 @@ for i in range(n):
         c += 1
     if c == 2:
         ans += 2
-    elif (c == 1 and p1 < 0) or (c == 1 and p2 >= n):
+    elif c == 1 and p1 < 0 or (c == 1 and p2 >= n):
         ans += 1
 print(ans)

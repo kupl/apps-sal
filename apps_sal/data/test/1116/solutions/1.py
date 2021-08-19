@@ -6,11 +6,11 @@ def gcd(a, b):
 
 n = int(input())
 for i in range(n):
-    r, b, k = list(map(int, input().split()))
+    (r, b, k) = list(map(int, input().split()))
     if b > r:
-        r, b = b, r
-    r, b = r // gcd(r, b), b // gcd(r, b)
+        (r, b) = (b, r)
+    (r, b) = (r // gcd(r, b), b // gcd(r, b))
     if (r + b - 2) // b >= k:
-        print("REBEL")
+        print('REBEL')
     else:
-        print("OBEY")
+        print('OBEY')

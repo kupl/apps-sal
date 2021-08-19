@@ -6,7 +6,7 @@ n = 0
 for x in s2:
     if dic[x] < 0:
         if n == 0:
-            print("Impossible")
+            print('Impossible')
             quit()
         if dic[stack[n - 1]] + dic[x] != 0:
             count += 1
@@ -16,6 +16,6 @@ for x in s2:
         stack.append(x)
         n = n + 1
 if n != 0:
-    print("Impossible")
+    print('Impossible')
 else:
     print(count)

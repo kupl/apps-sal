@@ -4,10 +4,8 @@ Needs = [0, 0, 0, 0, 0]
 T = [0 for i in range(10)]
 Pers = []
 IsFound = True
-
 if sum(TShirts) < NPers:
     IsFound = False
-
 for i in range(NPers):
     s = input().split(',')
     Pers.append(0)
@@ -23,7 +21,6 @@ for i in range(NPers):
         Pers[-1] += 16
     if 'XXXL' in s:
         Pers[-1] += 32
-
 for i in Pers:
     if i == 1:
         TShirts[0] -= 1
@@ -37,24 +34,20 @@ for i in Pers:
         TShirts[4] -= 1
     elif i == 32:
         TShirts[5] -= 1
-
 for i in TShirts:
     if i < 0 and IsFound:
         IsFound = False
-
 for i in Pers:
-    if (i & 1 != 0) and (i & 2 != 0):
+    if i & 1 != 0 and i & 2 != 0:
         Needs[0] += 1
-    elif (i & 2 != 0) and (i & 4 != 0):
+    elif i & 2 != 0 and i & 4 != 0:
         Needs[1] += 1
-    elif (i & 4 != 0) and (i & 8 != 0):
+    elif i & 4 != 0 and i & 8 != 0:
         Needs[2] += 1
-    elif (i & 8 != 0) and (i & 16 != 0):
+    elif i & 8 != 0 and i & 16 != 0:
         Needs[3] += 1
-    elif (i & 16 != 0) and (i & 32 != 0):
+    elif i & 16 != 0 and i & 32 != 0:
         Needs[4] += 1
-
-
 for i in range(5):
     while Needs[i] > 0 and TShirts[i] > 0:
         Needs[i] -= 1
@@ -64,13 +57,10 @@ for i in range(5):
         Needs[i] -= 1
         TShirts[i + 1] -= 1
         T[2 * i + 1] += 1
-
 if sum(Needs) > 0:
     IsFound = False
-
 if IsFound:
     print('YES')
-
     for i in range(len(Pers)):
         if T[0] > 0 and Pers[i] == 3:
             Pers[i] -= Pers[i] - 1
@@ -106,7 +96,6 @@ if IsFound:
         elif T[9] > 0 and Pers[i] == 48:
             Pers[i] -= Pers[i] - 32
             T[9] -= 1
-
     for i in Pers:
         if i & 1:
             print('S')

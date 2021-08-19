@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = {}
 for x in a:

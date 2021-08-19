@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 t = list(map(int, input().split()))
 cnt = [0 for i in range(101)]
 crime = [0 for i in range(101)]

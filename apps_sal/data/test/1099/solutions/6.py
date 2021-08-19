@@ -1,12 +1,15 @@
 import collections as cc
 import sys
-def I(): return list(map(int, input().split()))
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n,) = I()
 g = cc.defaultdict(list)
 for i in range(n - 1):
-    x, y = I()
+    (x, y) = I()
     g[x].append(y)
     g[y].append(x)
 col = [-1] * (n + 1)

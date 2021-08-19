@@ -5,7 +5,7 @@ summ = sum(array)
 summ2 = 0
 differences = [0] * n
 for i in range(n):
-    differences[i] = (summ - (summ2 + array[i])) - summ2
+    differences[i] = summ - (summ2 + array[i]) - summ2
     summ2 += array[i]
 dist = [0] * n
 for i in range(n):

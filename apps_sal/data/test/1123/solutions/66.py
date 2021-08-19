@@ -1,5 +1,5 @@
-N, K = list(map(int, input().split()))
-mod = 10**9 + 7
+(N, K) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 cnt = [0] * (K + 1)
 ans = 0
 for g in range(K, 0, -1):

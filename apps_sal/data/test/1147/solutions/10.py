@@ -1,8 +1,11 @@
 from bisect import bisect_left
-def R(): return list(map(int, input().split()))
 
 
-n, x, k = R()
+def R():
+    return list(map(int, input().split()))
+
+
+(n, x, k) = R()
 a = sorted(R())
 s = 0
 for u in a:

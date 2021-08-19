@@ -1,8 +1,7 @@
 def main():
     n = int(input())
-    p, *pi = list(map(int, input().split()))
-    q, *qi = list(map(int, input().split()))
-
+    (p, *pi) = list(map(int, input().split()))
+    (q, *qi) = list(map(int, input().split()))
     s = set(pi)
     s.update(qi)
     if len(s) != n:

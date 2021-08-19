@@ -1,5 +1,5 @@
 input()
-f, b = [list(map(int, input().split())) for _ in range(2)]
+(f, b) = [list(map(int, input().split())) for _ in range(2)]
 d = {}
 z = []
 for i in range(len(f)):
@@ -18,7 +18,7 @@ if ans != 0:
                 break
 if ans == 2:
     print('Possible')
-    print(' '.join(str(d[i]) for i in b))
+    print(' '.join((str(d[i]) for i in b)))
 elif ans == 1:
     print('Ambiguity')
 else:

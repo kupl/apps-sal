@@ -18,8 +18,7 @@ for _ in range(t):
             print(1)
         else:
             print(2)
+    elif 0 in B:
+        print(2)
     else:
-        if 0 in B:
-            print(2)
-        else:
-            print(1)
+        print(1)

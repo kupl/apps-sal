@@ -1,8 +1,6 @@
 n = int(input())
-
 lst1 = [int(x) for x in input().split()]
 lst2 = [int(x) for x in input().split()]
-
 F = False
 for x in range(4):
     ans = [-1] * n
@@ -16,13 +14,11 @@ for x in range(4):
                 break
         if not f:
             break
-
     if f:
         F = True
         break
-
 if F:
-    print("YES")
+    print('YES')
     print(*ans)
 else:
-    print("NO")
+    print('NO')

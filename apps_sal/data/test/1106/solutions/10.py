@@ -1,5 +1,5 @@
 3
-n = 2**(int(input()) + 1) - 1
+n = 2 ** (int(input()) + 1) - 1
 d = input().split(' ')
 for i in range(len(d)):
     d[i] = int(d[i])

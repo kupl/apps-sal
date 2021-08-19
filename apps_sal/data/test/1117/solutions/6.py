@@ -3,7 +3,7 @@ import os
 
 
 def turnTheRectangles(rects):
-    last = 10**10
+    last = 10 ** 10
     for rect in rects:
         a = max(rect[0], rect[1])
         b = min(rect[0], rect[1])
@@ -20,7 +20,7 @@ def main():
     n = int(input())
     rects = []
     for i in range(n):
-        w, h = (int(x) for x in input().split())
+        (w, h) = (int(x) for x in input().split())
         rects.append([w, h])
     print(turnTheRectangles(rects))
 

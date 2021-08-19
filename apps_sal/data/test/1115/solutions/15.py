@@ -4,7 +4,6 @@ m = int(input())
 period = []
 for _ in range(m):
     period.append([int(i) for i in input().split()])
-
 total = sum(A)
 time = -1
 for p in period:

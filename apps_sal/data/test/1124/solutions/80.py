@@ -1,8 +1,6 @@
 from math import gcd
-
 n = int(input())
 A = list(map(int, input().split()))
-
 A = list(set(A))
 n = len(A)
 ans = A[0]

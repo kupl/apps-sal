@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n % 2 == 1:
     for i in range(m):
         print((n - i - 1, i + 1))

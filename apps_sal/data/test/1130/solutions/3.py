@@ -15,15 +15,12 @@ def min_sub_array(day, k):
     return output
 
 
-N, M, K = list(map(int, input().split()))
-
-day = [i for i, val in enumerate(input()) if val == '1']
+(N, M, K) = list(map(int, input().split()))
+day = [i for (i, val) in enumerate(input()) if val == '1']
 best = min_sub_array(day, K)
-
 for _ in range(N - 1):
-    day = [i for i, val in enumerate(input()) if val == '1']
+    day = [i for (i, val) in enumerate(input()) if val == '1']
     new_day_best = min_sub_array(day, K)
-
     new_best = [float('inf')] * (K + 1)
     for i in range(K + 1):
         for j in range(i + 1):

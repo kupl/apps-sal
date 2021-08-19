@@ -1,5 +1,4 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 a = 1
 b = N
 for i in range(M, 0, -1):

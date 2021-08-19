@@ -1,5 +1,4 @@
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 for i in range(1, M + 1):
     if i % 2 == 1:
         j = (i - 1) // 2
