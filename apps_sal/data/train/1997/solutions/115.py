@@ -1,7 +1,7 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         l = intervals[:]
-
         for i in range(len(intervals)):
             flag = 0
             for j in range(len(intervals)):

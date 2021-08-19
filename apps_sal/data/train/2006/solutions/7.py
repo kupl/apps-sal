@@ -9,9 +9,9 @@ b = list(map(int, input().split()))
 c = m = 0
 for x in b:
     c = gcd(c, x)
-    if(x > m):
+    if x > m:
         m = x
-if (m // c - a) & 1:
-    print("Alice")
+if m // c - a & 1:
+    print('Alice')
 else:
-    print("Bob")
+    print('Bob')

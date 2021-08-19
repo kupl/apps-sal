@@ -1,10 +1,11 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
         prefix = {0: -1}
         curr = 0
         length = 1
-        powers = [(1 << j) for j in range(10)]
-        for i, c in enumerate(s):
+        powers = [1 << j for j in range(10)]
+        for (i, c) in enumerate(s):
             curr ^= 1 << int(c)
             if curr == 0:
                 length = i + 1

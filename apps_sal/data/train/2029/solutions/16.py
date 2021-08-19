@@ -1,4 +1,4 @@
-'''
+"""
 def sdvig():
     tmp=A[2*n-1]
     for i in range(2*n-3,0,-2):
@@ -34,7 +34,7 @@ for kek in range(100):
     else:
         print('NO')
         quit()
-'''
+"""
 
 
 def sdvig():
@@ -51,7 +51,7 @@ def sdvig():
 n = int(input())
 A = [int(i) for i in range(1, 2 * n + 1)]
 tArr = []
-if(n % 2):
+if n % 2:
     sdvig()
     print('YES')
     for i in A:

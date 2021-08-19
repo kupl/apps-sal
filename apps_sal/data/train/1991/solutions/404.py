@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = dict()
 
@@ -7,7 +8,6 @@ class Solution:
                 return 0
             if k == 0:
                 return int(n == finish)
-
             key = (n, k)
             if key not in memo:
                 memo[key] = int(n == finish)
@@ -15,5 +15,4 @@ class Solution:
                     if nei != n:
                         memo[key] += backtrack(nei, k - abs(locations[n] - locations[nei])) % 1000000007
             return memo[key]
-
         return backtrack(start, fuel) % 1000000007

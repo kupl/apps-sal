@@ -1,7 +1,8 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         new_g = {i: [] for i in range(len(graph))}
-        for i, n in enumerate(graph):
+        for (i, n) in enumerate(graph):
             new_g[i].append(n)
 
         def dfs(n):

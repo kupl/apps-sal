@@ -1,5 +1,5 @@
-
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         lookup = {}
 
@@ -18,5 +18,4 @@ class Solution:
                         ret += count(i, fuel - abs(locations[i] - locations[curr]), lookup)
                 lookup[key] = ret % 1000000007
                 return lookup[key]
-
         return count(start, fuel, lookup)

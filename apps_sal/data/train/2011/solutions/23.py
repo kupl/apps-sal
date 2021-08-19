@@ -23,7 +23,6 @@ for x in range(n - 9 * digit_count(n), n + 1):
     if x + digit_sum(x) == n:
         x_list.append(x)
         x_count += 1
-
 print(x_count)
 for x in x_list:
     print(x)

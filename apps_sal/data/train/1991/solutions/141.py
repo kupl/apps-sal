@@ -1,10 +1,11 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        '''n = len(locations)
+        """n = len(locations)
         dp = [[0] * (fuel + 1) for _ in range(n)]
         ds = locations[start]
         de = locations[finish]
-        locations.sort()'''
+        locations.sort()"""
         mod = 10 ** 9 + 7
         n = len(locations)
 

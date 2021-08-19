@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations, start: int, finish: int, fuel: int) -> int:
         KMAX = 10 ** 9 + 7
         N = len(locations)

@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         flags = [0] * len(graph)
 
@@ -14,9 +15,8 @@ class Solution:
                     return False
             flags[node] = 1
             return True
-
         visited = set()
         for i in range(len(graph)):
             if not flags[i]:
                 dfs(i, visited)
-        return [i for i, flag in enumerate(flags) if flag == 1]
+        return [i for (i, flag) in enumerate(flags) if flag == 1]

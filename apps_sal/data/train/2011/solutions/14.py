@@ -9,7 +9,7 @@ for i in range(min(10000, n)):
     for j in range(len(x)):
         z += int(x[j])
     x = int(x)
-    if (x + z) == n:
+    if x + z == n:
         t += 1
         fty += [x]
     x -= 1

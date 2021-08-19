@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         exists = [True] * len(intervals)
         for i in range(len(intervals) - 1):

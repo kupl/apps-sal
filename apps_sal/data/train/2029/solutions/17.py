@@ -2,11 +2,11 @@ n = int(input())
 s = ''
 i = 2 * n - 1
 sm = 0
-if (n) % 2 == 0:
-    print("NO")
+if n % 2 == 0:
+    print('NO')
 elif n == 1:
-    print("YES")
-    print("1 2")
+    print('YES')
+    print('1 2')
 else:
     a = []
     while i > 2:
@@ -23,5 +23,5 @@ else:
     for i in range(len(a)):
         s += str(a[i])
         s += ' '
-    print("YES")
+    print('YES')
     print(s)

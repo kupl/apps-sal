@@ -1,6 +1,6 @@
 s = input()
 n = len(s)
-sml = (n * (n + 1)) // 2
+sml = n * (n + 1) // 2
 for i in range(8):
     sml -= max(n - i, 0)
 good3 = set()

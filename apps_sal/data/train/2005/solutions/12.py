@@ -1,10 +1,8 @@
 import bisect
-
 s = input()
 n = len(s)
 ans = 0
 ptn = [[0] * (n + 1) for i in range(4)]
-
 for i in range(1, 5):
     for j in range(n):
         if j + 2 * i >= n:
@@ -13,7 +11,6 @@ for i in range(1, 5):
             ptn[i - 1][j + 1] = 1
     for j in range(n):
         ptn[i - 1][j + 1] += ptn[i - 1][j]
-
 ans = 0
 for l in range(n):
     tmp_ans = 1000000

@@ -4,10 +4,10 @@ from math import *
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     h = list(map(int, input().split()))
     p = list(map(int, input().split()))
-    ss, ll = 0, int(2.1e10)
+    (ss, ll) = (0, int(21000000000.0))
     while ss < ll:
         avg = (ss + ll) // 2
         works = True

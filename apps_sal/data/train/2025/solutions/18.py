@@ -15,6 +15,5 @@ for i in primes(n):
     while k <= n:
         res.append(str(k))
         k *= i
-
 print(len(res))
 print(' '.join(res))

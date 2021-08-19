@@ -1,6 +1,5 @@
 import math
 import itertools
-
 n = int(input())
 primes = [2]
 primes_degrees = []
@@ -17,7 +16,6 @@ for i in range(3, n + 1):
             break
     else:
         primes.append(i)
-
 if n == 1:
     print(0)
 else:

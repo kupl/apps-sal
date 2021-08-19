@@ -15,7 +15,6 @@ def reorder(lst, start, end):
         for i in range(start, end + 1):
             lst[i] = lst[start]
         return (end - start) // 2
-
     mid = (start + end) // 2
     for i in range(start, mid + 1):
         lst[i] = lst[start]
@@ -24,7 +23,7 @@ def reorder(lst, start, end):
     return (end - start + 1) // 2 - 1
 
 
-i, ans = 0, 0
+(i, ans) = (0, 0)
 while i < N - 1:
     if seq[i] != seq[i + 1]:
         end = end_lst(i)
@@ -32,6 +31,5 @@ while i < N - 1:
         i = end
     else:
         i += 1
-
 print(ans)
-print(" ".join(seq))
+print(' '.join(seq))

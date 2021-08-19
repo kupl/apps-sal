@@ -1,13 +1,13 @@
 class Solution:
+
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
         self.red = {}
         self.blue = {}
-        for u, v in red_edges:
+        for (u, v) in red_edges:
             if u not in self.red:
                 self.red[u] = []
             self.red[u].append(v)
-
-        for u, v in blue_edges:
+        for (u, v) in blue_edges:
             if u not in self.blue:
                 self.blue[u] = []
             self.blue[u].append(v)
@@ -22,10 +22,10 @@ class Solution:
             while len(q) > 0:
                 n += 1
                 nxt = []
-                for u, c in q:
-                    visited[(u, c)] = True
+                for (u, c) in q:
+                    visited[u, c] = True
                 while len(q) > 0:
-                    u, c = q.pop()
+                    (u, c) = q.pop()
                     if c == 0:
                         if u in color[1]:
                             for v in color[1][u]:
@@ -43,9 +43,7 @@ class Solution:
                                     else:
                                         nxt.append((v, 0))
                 q = nxt
-
             return -1
-
         result = []
         for i in range(n):
             d = visit(i)

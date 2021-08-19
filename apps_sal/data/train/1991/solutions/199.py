@@ -1,7 +1,8 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 class Solution:
+
     def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(A)
 
@@ -16,5 +17,4 @@ class Solution:
                 res += dfs(j, k - abs(A[i] - A[j]))
                 res %= MOD
             return res
-
         return dfs(start, fuel)

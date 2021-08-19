@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 m = math.ceil(math.sqrt(n))
 ans = []

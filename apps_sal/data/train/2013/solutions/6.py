@@ -6,14 +6,14 @@ def findNot(string, char):
 
 
 s = input()
-beg = findNot(s, "a")
+beg = findNot(s, 'a')
 res = s[0:beg]
 for i in range(beg, len(s)):
-    if i != beg and s[i] == "a":
+    if i != beg and s[i] == 'a':
         res += s[i:]
         break
-    if s[i] == "a":
-        res += "z"
+    if s[i] == 'a':
+        res += 'z'
     else:
         res += chr(ord(s[i]) - 1)
 print(res)

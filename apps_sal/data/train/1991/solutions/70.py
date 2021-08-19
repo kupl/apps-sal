@@ -3,12 +3,11 @@ import bisect
 
 
 class Solution:
-    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        mod = 10**9 + 7
 
+    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+        mod = 10 ** 9 + 7
         start_pos = locations[start]
         finish_pos = locations[finish]
-
         locations.sort()
         i = bisect.bisect_left(locations, start_pos)
         j = bisect.bisect_left(locations, finish_pos)
@@ -35,5 +34,4 @@ class Solution:
                 res %= mod
                 r += 1
             return res % mod
-
         return ways(i, j, fuel)

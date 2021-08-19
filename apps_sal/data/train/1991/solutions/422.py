@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @functools.lru_cache(maxsize=None)
         def recurse(locations, start, finish, fuel):
             output = 0
@@ -11,4 +13,4 @@ class Solution:
                 if i != start:
                     output += recurse(locations, i, finish, fuel - abs(locations[i] - locations[start]))
             return output
-        return recurse(tuple(locations), start, finish, fuel) % (10**9 + 7)
+        return recurse(tuple(locations), start, finish, fuel) % (10 ** 9 + 7)

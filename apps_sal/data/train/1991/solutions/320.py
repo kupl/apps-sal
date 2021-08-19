@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
 
@@ -12,6 +13,6 @@ class Solution:
                     if i != j and f >= d:
                         ans += dp(j, f - d, memo)
                         ans %= MOD
-                memo[(i, f)] = ans
-            return memo[(i, f)]
+                memo[i, f] = ans
+            return memo[i, f]
         return dp(start, fuel, {})

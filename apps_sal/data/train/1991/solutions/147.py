@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         def dist(i, j):
             return abs(locations[i] - locations[j])
 

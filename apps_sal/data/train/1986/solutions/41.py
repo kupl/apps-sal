@@ -1,9 +1,11 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
+
         def dfs(i):
             if len(p) == 1 << n:
                 a = p[0] ^ p[1]
-                return a and a & (a - 1) == 0
+                return a and a & a - 1 == 0
             j = 1
             for _ in range(n):
                 k = i ^ j
@@ -16,7 +18,6 @@ class Solution:
                     p.pop()
                 j <<= 1
             return False
-
         visited = {start}
         p = [start]
         dfs(start)

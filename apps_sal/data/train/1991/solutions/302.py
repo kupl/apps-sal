@@ -1,4 +1,5 @@
 class Solution:
+
     def solve(self, curr_loc, fuel):
         if fuel < 0:
             return 0

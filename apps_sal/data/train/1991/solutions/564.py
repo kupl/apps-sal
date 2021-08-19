@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         start = locations[start]
         finish = locations[finish]
@@ -18,4 +19,4 @@ class Solution:
             print((start, fuel, summ))
             return summ
         self.finish = finish
-        return helper(start, fuel) % (10**9 + 7)
+        return helper(start, fuel) % (10 ** 9 + 7)

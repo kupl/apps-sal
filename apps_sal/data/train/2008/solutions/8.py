@@ -1,7 +1,6 @@
 from sys import stdin
 n = int(stdin.readline().strip())
 s = list(map(int, stdin.readline().strip().split()))
-
 l = 0
 flag = True
 x = 0
@@ -20,11 +19,10 @@ for i in range(1, n):
                 y += 1
                 s[yy] = s[yy + 1]
                 yy -= 1
-                if(yy <= j):
+                if yy <= j:
                     break
             x = max(x, y)
         flag = True
-
 if True:
     if True:
         if not flag:
@@ -34,10 +32,9 @@ if True:
             for j in range(l + 1, r):
                 s[j] = s[j - 1]
                 y += 1
-
                 s[yy] = s[yy + 1]
                 yy -= 1
-                if(yy <= j):
+                if yy <= j:
                     break
             x = max(x, y)
 print(x)

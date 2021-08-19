@@ -1,7 +1,8 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         dp = [[-1] * (fuel + 1) for _ in range(n)]
 
         def dfs(s, remain):
@@ -17,5 +18,4 @@ class Solution:
                     res += dfs(i, remain - abs(locations[i] - locations[s]))
             dp[s][remain] = res
             return res
-
         return dfs(start, fuel) % mod

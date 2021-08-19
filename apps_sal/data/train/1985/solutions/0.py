@@ -1,4 +1,5 @@
 class Solution:
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
@@ -11,7 +12,7 @@ class Solution:
         n = len(matrix[0])
         if n == 0:
             return False
-        row, col = 0, n - 1
+        (row, col) = (0, n - 1)
         while row < m and col >= 0:
             if matrix[row][col] == target:
                 return True

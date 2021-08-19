@@ -1,7 +1,5 @@
 __author__ = 'Alex'
-
 import math
-
 n = int(input())
 a = list(map(int, input().split()))
 asum = sum(a)

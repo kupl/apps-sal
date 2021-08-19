@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
         mod = 10 ** 9 + 7
@@ -14,5 +15,4 @@ class Solution:
                     if dist <= f:
                         res = (res + dfs(j, f - dist)) % mod
             return res
-
         return dfs(start, fuel)

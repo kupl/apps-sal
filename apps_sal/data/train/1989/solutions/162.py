@@ -1,11 +1,12 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
+
         def check(guess):
             num_odd = 0
-            for _, val in list(guess.items()):
-                num_odd += (val % 2 == 1)
+            for (_, val) in list(guess.items()):
+                num_odd += val % 2 == 1
             return num_odd <= 1
-
         N = len(s)
         if N > 70000 and s.startswith('0000000'):
             return 29995

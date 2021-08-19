@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         neighbors = defaultdict(list)
         for i in range(len(locations)):
@@ -17,4 +18,4 @@ class Solution:
             for (neighbor, cost) in neighbors[location]:
                 sum += helper(neighbor, fuel_remaining - cost)
             return sum
-        return helper(start, fuel) % ((10 ** 9) + 7)
+        return helper(start, fuel) % (10 ** 9 + 7)

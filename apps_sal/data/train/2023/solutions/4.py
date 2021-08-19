@@ -12,7 +12,6 @@ def li():
 
 n = ii()
 m = int(n ** 0.5)
-
 a = [0] * n
 c = 0
 for i in range(10 ** 7):

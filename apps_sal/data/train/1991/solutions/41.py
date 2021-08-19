@@ -1,6 +1,7 @@
 class Solution:
+
     def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
-        n, mod = len(A), 10 ** 9 + 7
+        (n, mod) = (len(A), 10 ** 9 + 7)
 
         @functools.lru_cache(None)
         def dfs(i, f):

@@ -1,4 +1,5 @@
 class Solution(object):
+
     def eventualSafeNodes(self, graph):
         N = len(graph)
         T = set([n for n in range(N) if not graph[n]])

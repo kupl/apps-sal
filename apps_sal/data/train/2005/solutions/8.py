@@ -1,4 +1,3 @@
-
 def get_arr(v):
     ans = []
     while v != 0:
@@ -18,10 +17,7 @@ def check_arr(arr):
 
 
 s = input()
-
-
-ans = (len(s) * (len(s) + 1)) // 2
-
+ans = len(s) * (len(s) + 1) // 2
 for i in range(len(s)):
     for j in range(i + 1, min(i + 10, len(s) + 1)):
         if not check_arr(s[i:j]):

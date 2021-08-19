@@ -1,9 +1,10 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
-        m, state = defaultdict(int), [0] * 10
+        (m, state) = (defaultdict(int), [0] * 10)
         m[tuple(state)] = -1
         ans = 0
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             k = int(c)
             state[k] = 1 - state[k]
             tstate = tuple(state)

@@ -1,12 +1,13 @@
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-n, d = f()
+(n, d) = f()
 r = range(n)
 a = [0] + f() + [0]
 p = [f() for i in r]
-s = [1e9] * n
-q, s[0] = 1, 0
+s = [1000000000.0] * n
+(q, s[0]) = (1, 0)
 while q:
     q = 0
     for i in r:
@@ -14,5 +15,5 @@ while q:
             if i != j:
                 t = s[i] + (abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])) * d - a[j]
                 if t < s[j]:
-                    q, s[j] = 1, t
+                    (q, s[j]) = (1, t)
 print(s[-1])

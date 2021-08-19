@@ -1,11 +1,11 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
         left_most_masks = {0: -1}
         valid_masks = {1 << i for i in range(10)} | {0}
         ans = 0
         cur_mask = 0
-
-        for idx, x in enumerate(list(s)):
+        for (idx, x) in enumerate(list(s)):
             cur_mask = cur_mask ^ 1 << int(x)
             for valid_mask in valid_masks:
                 left_mask = valid_mask ^ cur_mask

@@ -1,11 +1,10 @@
-
 class Solution:
     d = {}
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.loc = sorted(locations)
         self.numloc = len(locations)
-        self.num = 10**9 + 7
+        self.num = 10 ** 9 + 7
         Solution.d = {}
         newstart = self.loc.index(locations[start])
         newfinish = self.loc.index(locations[finish])
@@ -20,12 +19,11 @@ class Solution:
         if fuel < 0 or fuel < abs(self.loc[finish] - self.loc[start]):
             return 0
         if (start, fuel) in Solution.d:
-            return Solution.d[(start, fuel)]
+            return Solution.d[start, fuel]
         minfuel = abs(self.loc[finish] - self.loc[start])
         if fuel <= minfuel + 1:
-            Solution.d[(start, fuel)] = 2 ** (abs(finish - start) - 1)
-            return Solution.d[(start, fuel)]
-
+            Solution.d[start, fuel] = 2 ** (abs(finish - start) - 1)
+            return Solution.d[start, fuel]
         ways = 0
         for i in range(self.numloc):
             if i != start:
@@ -36,5 +34,5 @@ class Solution:
         if start != finish:
             ways += 1
         ways %= self.num
-        Solution.d[(start, fuel)] = ways
+        Solution.d[start, fuel] = ways
         return ways

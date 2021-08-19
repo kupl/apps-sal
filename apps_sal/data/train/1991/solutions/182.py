@@ -14,13 +14,11 @@ class Solution:
             res = 1
         else:
             res = 0
-
         n = len(locations)
         for i in range(n):
             if i == start:
                 continue
             else:
                 res = res + self.dfs(i, finish, fuel - abs(locations[i] - locations[start]), dp, locations)
-        dp[start][fuel] = res % (1000_000_000 + 7)
-
+        dp[start][fuel] = res % (1000000000 + 7)
         return dp[start][fuel]

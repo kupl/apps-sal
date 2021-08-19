@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
         m = [[0 for i in range(n)] for j in range(n)]
@@ -7,7 +8,7 @@ class Solution:
                 cost = abs(locations[i] - locations[j])
                 m[i][j] = cost
                 m[j][i] = cost
-        mod = int(1e9 + 7)
+        mod = int(1000000000.0 + 7)
         memo = [[-1 for i in range(n)] for j in range(fuel + 1)]
 
         def DFS(start, finish, f):

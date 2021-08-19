@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @lru_cache(None)
         def step(loc, fuel_left):
             ans = int(loc == locations[finish])
@@ -8,5 +10,4 @@ class Solution:
                 if dest != loc and new_fuel >= 0:
                     ans = (ans + step(dest, new_fuel)) % (10 ** 9 + 7)
             return ans
-
         return step(locations[start], fuel)

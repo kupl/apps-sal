@@ -1,13 +1,12 @@
 from collections import defaultdict
 from collections import deque
 from functools import reduce
-n, x, y = [int(x) for x in input().split()]
+(n, x, y) = [int(x) for x in input().split()]
 E = defaultdict(set)
 for i in range(n - 1):
-    u, v = [int(x) for x in input().split()]
+    (u, v) = [int(x) for x in input().split()]
     E[u].add(v)
     E[v].add(u)
-
 if x > y:
     for v in E:
         if len(E[v]) == n - 1:

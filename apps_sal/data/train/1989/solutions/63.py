@@ -1,4 +1,5 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
         d = collections.defaultdict(int)
         d[0] = -1

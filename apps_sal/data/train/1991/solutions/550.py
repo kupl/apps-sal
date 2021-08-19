@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         seen = {}
 
@@ -17,6 +18,6 @@ class Solution:
             for next_n in range(len(locations)):
                 if next_n != n:
                     ans += dfs(next_n, f - cost(n, next_n))
-            seen['{}_{}'.format(n, f)] = ans % (10**9 + 7)
-            return ans % (10**9 + 7)
+            seen['{}_{}'.format(n, f)] = ans % (10 ** 9 + 7)
+            return ans % (10 ** 9 + 7)
         return dfs(start, fuel)

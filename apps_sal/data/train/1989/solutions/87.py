@@ -1,9 +1,10 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
         mx = 0
         table = {frozenset(): -1}
-        acs, cs = set(), set()
-        for i, c in enumerate(s):
+        (acs, cs) = (set(), set())
+        for (i, c) in enumerate(s):
             acs.add(c)
             if c in cs:
                 cs.remove(c)

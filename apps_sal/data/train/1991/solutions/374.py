@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutesUtil(self, locations, currentLocation, target, fuelLeft, dp):
         if fuelLeft < 0:
             return 0
@@ -11,7 +12,7 @@ class Solution:
         for i in range(len(locations)):
             if i != currentLocation:
                 result += self.countRoutesUtil(locations, i, target, fuelLeft - abs(locations[i] - locations[currentLocation]), dp)
-                result %= (10 ** 9 + 7)
+                result %= 10 ** 9 + 7
         dp[key] = result % (10 ** 9 + 7)
         return dp[key]
 

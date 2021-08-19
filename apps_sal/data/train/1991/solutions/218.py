@@ -1,7 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
-
         cache = {}
 
         def process(start, fuel):
@@ -15,7 +15,6 @@ class Solution:
                     for i in range(n):
                         if i != start and abs(locations[i] - locations[start]) <= fuel:
                             ans += process(i, fuel - abs(locations[i] - locations[start]))
-                cache[(start, fuel)] = ans % (10 ** 9 + 7)
-            return cache[(start, fuel)]
-
+                cache[start, fuel] = ans % (10 ** 9 + 7)
+            return cache[start, fuel]
         return process(start, fuel)

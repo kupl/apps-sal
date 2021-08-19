@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         record = [[0] * (fuel + 1) for i in range(len(locations))]
         record[start][0] = 1

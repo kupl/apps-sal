@@ -1,10 +1,11 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         result = []
         indegree = [len(edge) for edge in graph]
         neighbors = collections.defaultdict(list)
-        for i, edge in enumerate(graph):
+        for (i, edge) in enumerate(graph):
             for j in edge:
                 neighbors[j].append(i)
         queue = []

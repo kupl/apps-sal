@@ -1,7 +1,6 @@
 sa = input()
 lo = []
 if '0' in sa:
-
     for char in sa:
         lo.append(char)
     for element in lo:

@@ -1,7 +1,7 @@
 class ProductOfNumbers:
 
     def __init__(self):
-        self.products = [1, ]
+        self.products = [1]
         self.max_k = 0
         self.step = 0
 

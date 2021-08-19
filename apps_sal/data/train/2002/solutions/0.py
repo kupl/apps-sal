@@ -2,7 +2,7 @@ str = input()
 l = len(str)
 a = [0] * (2 * l)
 pos = [[] for i in range(26)]
-for i, c in enumerate(str):
+for (i, c) in enumerate(str):
     t = ord(c) - ord('a')
     a[i] = t
     a[i + l] = t

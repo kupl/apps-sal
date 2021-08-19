@@ -1,8 +1,8 @@
+def R():
+    return map(int, input().split())
 
-def R(): return map(int, input().split())
 
-
-n, d = R()
+(n, d) = R()
 a = [0] + list(R()) + [0]
 x = []
 y = []
@@ -14,7 +14,7 @@ def distance(x1, y1, x2, y2):
 
 
 for i in range(n):
-    xi, yi = R()
+    (xi, yi) = R()
     x += [xi]
     y += [yi]
 b = [INF] * n

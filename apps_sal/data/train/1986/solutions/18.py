@@ -1,10 +1,9 @@
 class Solution:
+
     def circularPermutation(self, n, start):
         start = bin(start)[2:]
-
         while len(start) != n:
             start = '0' + start
-
         nums = [start]
         for i in range(n):
             tmp = []

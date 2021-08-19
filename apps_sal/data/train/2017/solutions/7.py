@@ -1,8 +1,7 @@
 n = int(input())
-line = input().split(" ")
+line = input().split(' ')
 for i in range(len(line)):
     line[i] = int(line[i])
-
 ans = 0
 while len(line) != 0:
     if line[0] == line[1]:
@@ -13,5 +12,4 @@ while len(line) != 0:
         idx = line.index(first)
         ans += idx
         line.pop(idx)
-
 print(ans)

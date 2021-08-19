@@ -21,6 +21,5 @@ for i in range(2, n + 1):
         while j <= n:
             ans.append(j)
             j *= i
-
 print(len(ans))
 print(' '.join(map(str, ans)))

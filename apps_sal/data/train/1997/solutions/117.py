@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         len_interval = len(intervals)
         if len_interval == 1:
@@ -12,9 +13,7 @@ class Solution:
                     break
         return count
 
-    def isOverlapping(self,
-                      interval_1: List[int],
-                      interval_2: List[int]) -> bool:
+    def isOverlapping(self, interval_1: List[int], interval_2: List[int]) -> bool:
         if interval_2[0] <= interval_1[0] and interval_1[1] <= interval_2[1]:
             return True
         else:

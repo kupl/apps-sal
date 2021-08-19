@@ -5,7 +5,7 @@ def summ(n):
     return s
 
 
-n, count, a = int(input()), 0, []
+(n, count, a) = (int(input()), 0, [])
 for i in range(max(1, n - 81), n):
     if summ(i) + i == n:
         count += 1

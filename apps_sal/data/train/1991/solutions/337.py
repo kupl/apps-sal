@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, loct: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(loct)
 

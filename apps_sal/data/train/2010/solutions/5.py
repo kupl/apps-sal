@@ -1,9 +1,8 @@
-
 import sys
 try:
     while True:
         n = int(input())
-        height = list(map(int, input().split(" ")))
+        height = list(map(int, input().split(' ')))
         L = [0 for i in range(100001)]
         R = [0 for i in range(100001)]
         for i in range(n):

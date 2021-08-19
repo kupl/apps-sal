@@ -1,8 +1,8 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         covered = set()
         p1 = 0
-
         while p1 < len(intervals):
             if p1 in covered:
                 p1 += 1
@@ -15,5 +15,4 @@ class Solution:
                     covered.add(p1)
                 p2 += 1
             p1 += 1
-
         return len(intervals) - len(covered)

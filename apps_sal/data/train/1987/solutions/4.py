@@ -1,4 +1,5 @@
 class Solution:
+
     def pourWater(self, heights, V, K):
         """
         :type heights: List[int]
@@ -6,12 +7,10 @@ class Solution:
         :type K: int
         :rtype: List[int]
         """
-
         for i in range(V):
             if not self.fallLeft(K, heights):
                 if not self.fallRight(K, heights):
                     heights[K] += 1
-
         return heights
 
     def fallLeft(self, K, heights):

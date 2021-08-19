@@ -1,8 +1,8 @@
 n = int(input())
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     sum = 2 * n + 1
     arr = [0] * 2 * n
     arr[0] = 1
@@ -18,4 +18,4 @@ else:
             arr[i] = k
             arr[2 * n - 1 - i] = sum - k
     for x in arr:
-        print(x, end=" ")
+        print(x, end=' ')

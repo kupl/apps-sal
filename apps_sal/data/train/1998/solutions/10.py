@@ -1,8 +1,8 @@
 class Solution:
+
     def __init__(self):
         self.win = [[1, 2, 3], [4, 5, 0]]
-        self.lose = [[[1, 2, 3], [5, 4, 0]], [[2, 1, 3], [4, 5, 0]], [[1, 3, 2], [4, 5, 0]],
-                     [[3, 0, 1], [4, 2, 5]], [[4, 2, 3], [1, 5, 0]], [[1, 5, 3], [4, 2, 0]]]
+        self.lose = [[[1, 2, 3], [5, 4, 0]], [[2, 1, 3], [4, 5, 0]], [[1, 3, 2], [4, 5, 0]], [[3, 0, 1], [4, 2, 5]], [[4, 2, 3], [1, 5, 0]], [[1, 5, 3], [4, 2, 0]]]
 
     def slidingPuzzle(self, board):
         """
@@ -24,7 +24,7 @@ class Solution:
                         path.append(z)
                         t.append(z)
             for y in t:
-                if (y == self.win):
+                if y == self.win:
                     return s
                 else:
                     for z in self.lose:
@@ -75,6 +75,6 @@ class Solution:
         return r
 
     def find(self, bd):
-        for i, x in enumerate(bd):
+        for (i, x) in enumerate(bd):
             if 0 in x:
                 return (i, x.index(0))

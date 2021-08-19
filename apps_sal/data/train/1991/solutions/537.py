@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, L: List[int], S: int, F: int, FU: int) -> int:
+
         @lru_cache(None)
         def dp(i, cur_fuel):
             if cur_fuel == 0:
@@ -14,5 +16,5 @@ class Solution:
                 if consumption <= cur_fuel:
                     total += dp(k, cur_fuel - consumption)
             return total
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         return dp(S, FU) % MOD

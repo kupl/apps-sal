@@ -1,6 +1,6 @@
 class Solution:
-    def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
 
+    def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         out_degree = collections.defaultdict(int)
         in_nodes = collections.defaultdict(list)

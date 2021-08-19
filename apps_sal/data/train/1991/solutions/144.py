@@ -1,6 +1,6 @@
 class Solution:
-    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
+    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = {}
 
         def dfs(u, fuel):
@@ -14,5 +14,4 @@ class Solution:
             ans %= 1000000007
             memo[u, fuel] = ans
             return ans
-
         return dfs(start, fuel)

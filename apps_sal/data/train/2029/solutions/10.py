@@ -1,9 +1,9 @@
 n = int(input())
 ans = [0 for a in range(n)]
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     l = []
     r = []
     for i in range(0, n - 1, 2):

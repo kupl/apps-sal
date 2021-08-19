@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         res = []
         visited = collections.defaultdict(int)

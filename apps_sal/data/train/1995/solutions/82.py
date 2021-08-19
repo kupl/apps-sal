@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         ma = float('-inf')
         trips = sorted(trips, key=lambda v: v[1])

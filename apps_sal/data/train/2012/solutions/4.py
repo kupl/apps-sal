@@ -19,13 +19,10 @@ def calculate(n):
             continue
         if i > 0 and checkit(result, i):
             continue
-
         expected = n - i
-
         for v in numbers:
             if v - 1 == i and expected != v:
                 continue
-
             if v == expected:
                 result[v - 1] = v
                 numbers.remove(v)
@@ -41,7 +38,6 @@ def calculate(n):
                 numbers.remove(v)
                 numbers.remove(expected)
                 break
-
     return result
 
 
@@ -49,7 +45,6 @@ def calculate_v2(n):
     result = [0] * n
     first_sum = n + 2
     second_sum = n
-
     nf = n
     i = 0
     while nf > first_sum // 2:
@@ -57,16 +52,13 @@ def calculate_v2(n):
         result[i + 1] = nf
         nf -= 2
         i += 2
-
     if n % 2 == 1:
         result[i] = i + 1
-
     i = n - 1
     while i > n // 2:
         result[i] = i
         result[i - 1] = second_sum - i
         i -= 2
-
     return result
 
 
@@ -76,7 +68,7 @@ def main():
     if not checkit(result):
         print(-1)
     else:
-        print(" ".join([str(v) for v in result]))
+        print(' '.join([str(v) for v in result]))
 
 
 def __starting_point():

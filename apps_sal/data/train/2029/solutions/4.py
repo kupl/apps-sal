@@ -2,7 +2,6 @@ def find(n):
     ans = [0] * (2 * n)
     if n % 2 == 0:
         return []
-
     temp = 0
     for i in range(1, n + 1):
         left = 2 * i - 1
@@ -20,7 +19,7 @@ def find(n):
 n = int(input())
 ans = find(n)
 if ans == []:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     print(*ans)

@@ -1,8 +1,8 @@
-'''
+"""
 Created on
 
 @author: linhz
-'''
+"""
 import sys
 usedNum = 0
 n = int(input())
@@ -26,7 +26,7 @@ else:
         b -= 2
     if j == i:
         p[i] = a
-    ans = ""
+    ans = ''
     for i in range(1, n + 1):
-        ans += str(p[i]) + " "
+        ans += str(p[i]) + ' '
     print(ans)

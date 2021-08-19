@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     @lru_cache(None)
     def solve(self, curr, fuel):
         if fuel < 0:

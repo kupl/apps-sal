@@ -1,6 +1,6 @@
 from sys import stdin
 input = stdin.readline
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = list(map(int, input().split()))
 x = sum(l)
 if x < n:

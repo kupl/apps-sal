@@ -1,4 +1,5 @@
 class Solution:
+
     def slidingPuzzle(self, board):
         """
         :type board: List[List[int]]
@@ -17,11 +18,11 @@ class Solution:
                     for y in range(3):
                         if b[x][y]:
                             continue
-                        for dx, dy in zip((1, 0, -1, 0), (0, 1, 0, -1)):
-                            nx, ny = x + dx, y + dy
+                        for (dx, dy) in zip((1, 0, -1, 0), (0, 1, 0, -1)):
+                            (nx, ny) = (x + dx, y + dy)
                             if 0 <= nx < 2 and 0 <= ny < 3:
                                 nb = list(map(list, b))
-                                nb[x][y], nb[nx][ny] = nb[nx][ny], nb[x][y]
+                                (nb[x][y], nb[nx][ny]) = (nb[nx][ny], nb[x][y])
                                 nb = tuple(map(tuple, nb))
                                 if nb not in memo:
                                     memo.add(nb)

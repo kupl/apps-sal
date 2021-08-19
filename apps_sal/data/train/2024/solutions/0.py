@@ -2,8 +2,7 @@ n = input()
 read = input()
 p = []
 for x in read.split():
-    p.append((float)(x))
-
+    p.append(float(x))
 v = 0.0
 l = 0.0
 for item in p:

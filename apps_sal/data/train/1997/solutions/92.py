@@ -5,9 +5,9 @@ class Solution:
 
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         count = 0
-        for i, i1 in enumerate(intervals):
+        for (i, i1) in enumerate(intervals):
             is_covered = False
-            for j, i2 in enumerate(intervals):
+            for (j, i2) in enumerate(intervals):
                 if i == j:
                     continue
                 else:

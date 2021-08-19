@@ -1,5 +1,5 @@
 s = input()
-table = "abcdefghijklmnopqrstuvwxyz"
+table = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def nextchar(x):
@@ -7,7 +7,7 @@ def nextchar(x):
     return table[index - 1]
 
 
-ans, start = "", 0
+(ans, start) = ('', 0)
 for i in range(len(s)):
     if s[i] != 'a':
         ans += nextchar(s[i])
@@ -18,5 +18,5 @@ for i in range(len(s)):
         break
     ans += s[i]
 if str(s).count('a') == len(s):
-    ans = str(s)[0:len(s) - 1] + "z"
+    ans = str(s)[0:len(s) - 1] + 'z'
 print(ans)

@@ -1,6 +1,6 @@
 n = int(input())
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
     ans = []
     for i in range(2 * n):
@@ -10,6 +10,6 @@ else:
         ans[i] = current if i % 2 == 0 else current + 1
         ans[n + i] = current + 1 if i % 2 == 0 else current
         current += 2
-    print("YES")
+    print('YES')
     for i in range(2 * n):
-        print("{} ".format(ans[i]), end='')
+        print('{} '.format(ans[i]), end='')

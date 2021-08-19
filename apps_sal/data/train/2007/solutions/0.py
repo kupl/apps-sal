@@ -4,10 +4,10 @@ from math import *
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     h = list(map(int, input().split()))
     p = list(map(int, input().split()))
-    ss, ll = 0, int(2.2e10)
+    (ss, ll) = (0, int(22000000000.0))
     while ss < ll:
         avg = (ss + ll) // 2
         works = True
@@ -37,5 +37,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

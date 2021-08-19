@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
 
@@ -11,4 +12,4 @@ class Solution:
                 if i != ind and abs(locations[i] - locations[ind]) <= f:
                     ret += helper(i, f - abs(locations[i] - locations[ind]))
             return ret
-        return helper(start, fuel) % (10**9 + 7)
+        return helper(start, fuel) % (10 ** 9 + 7)

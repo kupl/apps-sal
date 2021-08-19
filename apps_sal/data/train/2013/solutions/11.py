@@ -17,8 +17,6 @@ for i in range(L - 1):
             s[i] = change(s[i])
             i = i + 1
         break
-
 if not flag:
     s[L - 1] = change(s[L - 1])
-
 print(''.join(s))

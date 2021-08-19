@@ -1,6 +1,6 @@
 s = input()
-a, b = [], []
-for i, j in zip(s, range(1, len(s) + 1)):
+(a, b) = ([], [])
+for (i, j) in zip(s, range(1, len(s) + 1)):
     if i == 'r':
         a.append(str(j))
     else:

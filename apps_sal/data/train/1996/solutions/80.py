@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         ans = []
         N = len(graph)
@@ -11,7 +12,6 @@ class Solution:
                 in_cnt[end] += 1
                 if end in ready:
                     ready.remove(end)
-
         while len(ready) > 0:
             rm = ready.pop()
             ans.append(rm)

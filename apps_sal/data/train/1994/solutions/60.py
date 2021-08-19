@@ -1,4 +1,5 @@
 class Solution:
+
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         tail = head
         components = 0

@@ -1,11 +1,11 @@
 class Solution:
+
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
         radj = [set() for i in range(n)]
         badj = [set() for i in range(n)]
-
-        for x, y in red_edges:
+        for (x, y) in red_edges:
             radj[x].add(y)
-        for x, y in blue_edges:
+        for (x, y) in blue_edges:
             badj[x].add(y)
 
         def bfs(target):
@@ -14,7 +14,7 @@ class Solution:
             from collections import deque
             que = deque([(0, -1, 0)])
             while len(que) > 0:
-                n, c, r = que.popleft()
+                (n, c, r) = que.popleft()
                 if c == -1:
                     if target in radj[n] or target in badj[n]:
                         return r + 1

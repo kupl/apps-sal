@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
         @lru_cache(None)
@@ -17,7 +18,6 @@ class Solution:
                     ret -= 1
                 ret %= MOD
             return ret
-
         A = locations
         n = len(A)
         MOD = 10 ** 9 + 7

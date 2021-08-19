@@ -1,10 +1,10 @@
 class Solution:
+
     def countRoutes(self, locations, start, finish, fuel):
         MOD = 10 ** 9 + 7
         N = len(locations)
         dp = [[0] * (fuel + 1) for _ in range(N)]
         dp[finish] = [1] * (fuel + 1)
-
         for f in range(1, fuel + 1):
             for u in range(N):
                 for v in range(N):
