@@ -9,6 +9,6 @@ def longest_palindrome(s):
         while tst[i + 1 + p[i]] == tst[i - 1 - p[i]]:
             p[i] += 1
         if i + p[i] > r:
-            c, r = i, i + p[i]
-    mx, ctri = max((n, -i) for i, n in enumerate(p))
+            (c, r) = (i, i + p[i])
+    (mx, ctri) = max(((n, -i) for (i, n) in enumerate(p)))
     return s[(-ctri - mx) // 2:(-ctri + mx) // 2]

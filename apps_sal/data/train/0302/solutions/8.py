@@ -1,4 +1,5 @@
 class Solution:
+
     def validSquare(self, A, B, C, D):
         """
         A B   A D   A C
@@ -43,40 +44,32 @@ class Solution:
         :type p4: List[int]
         :rtype: bool
         """
+
         def sub(p2, p1):
             return [p2[0] - p1[0], p2[1] - p1[1]]
-
-#         def add(p1, p2):
-#             return [p1[0]+p2[0], p1[1]+p2[1]]
-
         if sub(A, B) == [0, 0]:
             return False
-
         if sub(B, A) == sub(D, C) and sub(C, A) == sub(D, B):
-            print((1))
+            print(1)
             diff1 = sub(B, A)
             diff2 = sub(A, C)
             print((diff1, diff2))
             if diff1 == [-diff2[1], diff2[0]] or diff1 == [diff2[1], -diff2[0]]:
                 return True
-
         elif sub(D, A) == sub(C, B) and sub(B, A) == sub(C, D):
-            print((2))
+            print(2)
             diff1 = sub(D, A)
             diff2 = sub(A, B)
             print((diff1, diff2))
             if diff1 == [-diff2[1], diff2[0]] or diff1 == [diff2[1], -diff2[0]]:
                 return True
-
         elif sub(C, A) == sub(B, D) and sub(D, A) == sub(B, C):
-            print((3))
+            print(3)
             diff1 = sub(C, A)
             diff2 = sub(A, D)
-            print((diff1, diff2))  # [-1, -1] [1, -1]
+            print((diff1, diff2))
             if diff1 == [-diff2[1], diff2[0]] or diff1 == [diff2[1], -diff2[0]]:
                 return True
-
         else:
-            print((0))
-
+            print(0)
         return False

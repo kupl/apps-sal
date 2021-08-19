@@ -1,7 +1,5 @@
-# cook your dish here
 def solve(n, lst):
     d = dict()
-
     p1 = []
     p2 = []
     for i in lst:

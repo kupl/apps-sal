@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
 
@@ -16,13 +15,12 @@ def Divisors(n):
 
 
 for _ in range(int(input())):
-    a, m = list(map(int, input().split()))
+    (a, m) = list(map(int, input().split()))
     div = Divisors(m)
-    # print(div)
     ans = set()
     for i in div:
-        if ((m // i) - 1) % a == 0:
-            ans.add((((m // i) - 1) // a) * i)
+        if (m // i - 1) % a == 0:
+            ans.add((m // i - 1) // a * i)
     ans = list(ans)[1:]
     ans.sort()
     print(len(ans))

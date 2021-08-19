@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         mapProfit = dict()
         for i in range(len(difficulty)):
@@ -13,14 +14,12 @@ class Solution:
                 l.append(mapProfit[i])
             else:
                 l.append(0)
-
         maxFromBegin = 0
         for i in range(len(l)):
             if l[i] < maxFromBegin:
                 l[i] = maxFromBegin
             else:
                 maxFromBegin = l[i]
-        # print(l)
         res = 0
         for work in worker:
             if work > maxDiff:
