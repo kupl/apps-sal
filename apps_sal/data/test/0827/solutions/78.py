@@ -14,15 +14,15 @@ s_ans1 = ''.join(ans1)
 s_ans2 = ''.join(ans2)
 s_ans3 = ''.join(ans3)
 if T == '1':
-    print((pow(10, 10) * 2))
+    print(pow(10, 10) * 2)
 elif T == '11':
-    print((pow(10, 10)))
+    print(pow(10, 10))
 elif T == '0':
-    print((pow(10, 10)))
+    print(pow(10, 10))
 elif s_ans1 == T or s_ans2 == T or s_ans3 == T:
     if T[-1] == '0':
-        print((pow(10, 10) - T.count('0') + 1))
+        print(pow(10, 10) - T.count('0') + 1)
     else:
-        print((pow(10, 10) - T.count('0')))
+        print(pow(10, 10) - T.count('0'))
 else:
-    print((0))
+    print(0)

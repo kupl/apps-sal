@@ -62,4 +62,4 @@ class Bisect(BisectBase):
 n = int(input())
 b = Bisect(n + 2, True)
 m = b.bisect_right(2 * (n + 1)) - 1
-print((n + 1 - m))
+print(n + 1 - m)

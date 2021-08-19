@@ -3,7 +3,7 @@ from fractions import gcd
 
 
 def main():
-    limit, res = int(input()), 0
+    (limit, res) = (int(input()), 0)
     for m in range(2, int(sqrt(limit)) + 1):
         mm = m * m
         for n in range(1 + (m & 1), m, 2):

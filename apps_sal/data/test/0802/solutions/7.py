@@ -23,7 +23,6 @@ def pro():
             else:
                 d[s[l]] -= 1
             l += 1
-
     print(m)
 
 

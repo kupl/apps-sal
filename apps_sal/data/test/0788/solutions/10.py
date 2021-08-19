@@ -1,8 +1,8 @@
 s = input()
 pos = 1
 answer = 0
-while (pos < len(s)):
-    if (s[pos] == '1'):
+while pos < len(s):
+    if s[pos] == '1':
         answer += 10
         pos += 2
     else:

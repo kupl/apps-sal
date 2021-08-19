@@ -6,16 +6,14 @@ arrusb = []
 arrpc2 = []
 for k in range(n):
     (price, mtype) = tuple(input().split())
-    if mtype == "USB":
+    if mtype == 'USB':
         arrusb.append(int(price))
     else:
         arrpc2.append(int(price))
-
 arrusb.sort()
 arrpc2.sort()
 bcounter = 0
 pcounter = 0
-
 for i in range(n):
     if bcounter == len(arrusb):
         if p > 0:
@@ -28,7 +26,6 @@ for i in range(n):
             equiped += 1
         pcounter += 1
         continue
-
     if pcounter == len(arrpc2):
         if u > 0:
             fullPrice += arrusb[bcounter]
@@ -40,7 +37,6 @@ for i in range(n):
             equiped += 1
         bcounter += 1
         continue
-
     if arrusb[bcounter] < arrpc2[pcounter]:
         if u > 0:
             fullPrice += arrusb[bcounter]
@@ -61,5 +57,4 @@ for i in range(n):
             b -= 1
             equiped += 1
         pcounter += 1
-
 print(str(equiped) + ' ' + str(fullPrice))

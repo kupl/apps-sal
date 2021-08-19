@@ -1,7 +1,7 @@
 s = input()
 n = int(input())
 if len(s) < n:
-    print("impossible")
+    print('impossible')
 else:
     letters = set()
     for x in s:

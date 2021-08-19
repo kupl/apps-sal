@@ -1,13 +1,11 @@
 from collections import OrderedDict
 count = int(input())
 line = input()
-
-uniq = "".join(OrderedDict.fromkeys(line).keys())
-
+uniq = ''.join(OrderedDict.fromkeys(line).keys())
 if count > len(uniq):
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     if count == len(uniq):
         while len(line) != 0:
             first_uniq = 0

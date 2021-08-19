@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 M = max(a) + 1
 cnt = [0 for _ in range(M)]

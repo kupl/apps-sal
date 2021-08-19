@@ -3,12 +3,11 @@ def fi(n):
         return x
     elif n == 2:
         return x + min(x, y)
+    elif n % 2 == 1:
+        return min(fi(n - 1), fi(n + 1)) + x
     else:
-        if n % 2 == 1:
-            return min(fi(n - 1), fi(n + 1)) + x
-        else:
-            return fi(n // 2) + min(y, x * (n // 2))
+        return fi(n // 2) + min(y, x * (n // 2))
 
 
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 print(fi(n))

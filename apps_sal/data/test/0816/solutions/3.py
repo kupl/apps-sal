@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 A = list(map(int, input().split()))
 d = dict()
 for j in range(n):
@@ -12,7 +12,6 @@ for j in range(n):
     if A[j] != per:
         if per in d:
             ans += d[per]
-    else:
-        if per in d:
-            ans += d[per] - 1
+    elif per in d:
+        ans += d[per] - 1
 print(ans // 2)

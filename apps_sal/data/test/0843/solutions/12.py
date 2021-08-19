@@ -13,6 +13,6 @@ for i in range(0, n):
     if WAS:
         break
 if WAS:
-    print("FINITE")
+    print('FINITE')
 else:
-    print("INFINITE")
+    print('INFINITE')

@@ -5,13 +5,12 @@ def main():
     visited = {0}
     i = 0
     while 0 <= i < n:
-        di, li = d[i], l[i]
+        (di, li) = (d[i], l[i])
         i = i + li if di == '>' else i - li
         if i in visited:
             print('INFINITE')
             return
         visited.add(i)
-
     print('FINITE')
 
 

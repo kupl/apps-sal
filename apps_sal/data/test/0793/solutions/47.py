@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = list(map(int, input().split()))
 t = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [1] * (m + 1)
 for i in range(n):
     ndp = [0] * (m + 1)

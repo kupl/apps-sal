@@ -1,4 +1,4 @@
-f, i, t = [int(x) for x in input().split()]
+(f, i, t) = [int(x) for x in input().split()]
 s = [0] * i
 for kitten in range(f):
     l = input()

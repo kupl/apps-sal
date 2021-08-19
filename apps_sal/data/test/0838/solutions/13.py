@@ -1,8 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = [0] * n
 for i in range(n):
     A[i] = list(map(int, input().split()))
-
 res = 0
 for i in range(n):
     sum1 = sum(A[i])

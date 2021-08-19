@@ -25,8 +25,6 @@ def counter(n):
 cnt = 0
 numbers = prime_decomposition(N)
 set_number = set(numbers)
-
 for i in set_number:
     cnt += counter(numbers.count(i))
-
 print(cnt)

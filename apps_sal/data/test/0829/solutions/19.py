@@ -1,16 +1,12 @@
 N = int(input())
-
 s = input()
-
 ones = 0
 zeros = 0
-
 for letter in s:
     if letter == '1':
         ones += 1
     else:
         zeros += 1
-
 if ones != zeros:
     print(1)
     print(s)

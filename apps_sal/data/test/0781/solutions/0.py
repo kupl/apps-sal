@@ -9,4 +9,4 @@ def go():
     return True
 
 
-print("YES" if go() else "NO")
+print('YES' if go() else 'NO')

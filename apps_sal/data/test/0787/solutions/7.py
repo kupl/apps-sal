@@ -1,5 +1,8 @@
 import sys
-def r(): return list(map(int, input().split()))
+
+
+def r():
+    return list(map(int, input().split()))
 
 
 n = int(input())

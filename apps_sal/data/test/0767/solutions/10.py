@@ -1,5 +1,5 @@
 from bisect import bisect_left
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 x.sort()
 now = temp = n // 2

@@ -6,4 +6,4 @@ for i in range(8):
             if s[j] == s[j + 1]:
                 yes = False
                 break
-print("YES" if yes else "NO")
+print('YES' if yes else 'NO')

@@ -1,6 +1,6 @@
 import numpy as np
-N, M = map(int, input().split())
-MOD = 10**9 + 7
+(N, M) = map(int, input().split())
+MOD = 10 ** 9 + 7
 s = np.array([int(c) for c in input().split()], dtype=np.int32)
 t = np.array([int(c) for c in input().split()], dtype=np.int32)
 dp = np.zeros((N + 1, M + 1), np.int64)

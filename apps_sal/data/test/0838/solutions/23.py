@@ -5,7 +5,7 @@ def count(n, k):
     return factorial(n) // (factorial(k) * factorial(n - k))
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 table = []
 for i in range(n):
     table.append(list(map(int, input().split())))

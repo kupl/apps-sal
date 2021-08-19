@@ -29,14 +29,10 @@ def prime_factorize(n):
 
 INF = inf
 MOD = 1000000007
-
 n = int(input())
-
 tmp = 0
 res = 0
-
 cnt = Counter(prime_factorize(n))
 for i in list(cnt.values()):
     res += floor((-1 + sqrt(1 + 8 * i)) / 2)
-
 print(res)

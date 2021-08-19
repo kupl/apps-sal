@@ -1,4 +1,4 @@
-N, C = list(map(int, input().split()))
+(N, C) = list(map(int, input().split()))
 Nums = list(map(int, input().split()))
 Max = 0
 for i in range(N - 1):

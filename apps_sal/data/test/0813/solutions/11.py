@@ -1,8 +1,12 @@
-def R(): return list(map(int, input().split()))
-def G(): return map(int, input().split())
+def R():
+    return list(map(int, input().split()))
 
 
-n, a, b = G()
+def G():
+    return map(int, input().split())
+
+
+(n, a, b) = G()
 A = R()
 B = R()
 result = [-1 for i in range(n + 1)]

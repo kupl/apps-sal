@@ -1,6 +1,5 @@
 from math import factorial as fct
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def c(n, k):
@@ -16,15 +15,13 @@ def check(val, a, b):
     return True
 
 
-a, b, n = list(map(int, input().split()))
+(a, b, n) = list(map(int, input().split()))
 f = [1]
 for i in range(1, n + 1):
     f.append(f[-1] * i % MOD)
 ans = 0
-
 for i in range(n + 1):
     if check(i * a + (n - i) * b, a, b):
         ans += pow(f[i] * f[n - i], MOD - 2, MOD)
         ans %= MOD
-
-print((ans * f[n]) % MOD)
+print(ans * f[n] % MOD)

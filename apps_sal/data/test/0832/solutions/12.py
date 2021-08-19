@@ -1,9 +1,8 @@
 n = int(input())
 home = []
 visit = []
-
 for i in range(0, n):
-    h, v = [int(string) for string in input().split()]
+    (h, v) = [int(string) for string in input().split()]
     home.append(h)
     visit.append(v)
 res = 0

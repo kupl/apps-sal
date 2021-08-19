@@ -1,4 +1,4 @@
-v1, v2, v3, v4 = list(map(int, input().split()))
+(v1, v2, v3, v4) = list(map(int, input().split()))
 
 
 def main():

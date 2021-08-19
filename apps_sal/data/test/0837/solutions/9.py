@@ -13,7 +13,7 @@ def f(dp, x, y, n):
     return ans
 
 
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 dp = [-1 for i in range(n + 10)]
 dp[1] = x
 print(f(dp, x, y, n))

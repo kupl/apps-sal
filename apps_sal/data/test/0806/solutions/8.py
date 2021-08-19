@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-prime = 10**9 + 7
+prime = 10 ** 9 + 7
 
 
 def unitMatrix(size):
@@ -25,18 +25,16 @@ def matrixMult(pre, post):
 def matrixExp(base, power):
     if power == 0:
         return unitMatrix(len(base))
+    elif power % 2 == 0:
+        half = matrixExp(base, power / 2)
+        return matrixMult(half, half)
     else:
-        if power % 2 == 0:
-            half = matrixExp(base, power / 2)
-            return matrixMult(half, half)
-        else:
-            half = matrixExp(base, (power - 1) / 2)
-            return matrixMult(matrixMult(half, half), base)
+        half = matrixExp(base, (power - 1) / 2)
+        return matrixMult(matrixMult(half, half), base)
 
 
 def main():
-    n, l, r = [int(i) for i in stdin.readline().split()]
-
+    (n, l, r) = [int(i) for i in stdin.readline().split()]
     vals = [[1], [0], [0]]
     mods = [(r - l + 1) // 3, (r - l + 1) // 3, (r - l + 1) // 3]
     remainder = (r - l + 1) % 3
@@ -44,7 +42,6 @@ def main():
         mods[l % 3] += 1
     if remainder == 2:
         mods[(l + 1) % 3] += 1
-
     transforms = [[mods[0], mods[2], mods[1]], [mods[1], mods[0], mods[2]], [mods[2], mods[1], mods[0]]]
     power = matrixExp(transforms, n)
     out = matrixMult(power, vals)

@@ -1,8 +1,7 @@
-n, s = int(input()), input()
+(n, s) = (int(input()), input())
 dis = len(set(s))
 mp = {}
-l, r, m, cnt = 0, 0, 99999999, 0
-
+(l, r, m, cnt) = (0, 0, 99999999, 0)
 for c in s:
     if c not in mp:
         mp[c] = 0

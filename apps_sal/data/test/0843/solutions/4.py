@@ -1,6 +1,5 @@
 n = int(input())
 instructions = list(zip(input(), [int(i) for i in input().split()]))
-
 used = set()
 pos = 0
 while True:
@@ -11,8 +10,7 @@ while True:
         print('INFINITE')
         break
     used.add(pos)
-
-    direct, length = instructions[pos]
+    (direct, length) = instructions[pos]
     if direct == '>':
         pos += length
     else:

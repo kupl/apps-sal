@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 otv = [2] * 101
 s1 = list(map(int, input().split()))
 s2 = list(map(int, input().split()))

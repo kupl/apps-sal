@@ -12,7 +12,7 @@ def main(n, s):
         h[i] = 0
     l = 0
     r = n
-    while (l + 1 < r):
+    while l + 1 < r:
         m = (l + r) // 2
         f = False
         for i in h:

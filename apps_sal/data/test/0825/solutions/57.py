@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 N = int(input())
 
 
@@ -22,12 +21,12 @@ def factorize(N):
 def to_cnt(n):
     i = 0
     while n >= i + 1:
-        n -= (i + 1)
+        n -= i + 1
         i += 1
     return i
 
 
 ans = 0
-for _, n in factorize(N).items():
+for (_, n) in factorize(N).items():
     ans += to_cnt(n)
 print(ans)

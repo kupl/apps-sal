@@ -1,15 +1,15 @@
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 c0 = (r // 3 * 3 - l // 3 * 3) // 3 + 1
 c1 = (r // 3 * 3 - l // 3 * 3) // 3
 c2 = (r // 3 * 3 - l // 3 * 3) // 3
-if(l % 3 == 1):
+if l % 3 == 1:
     c0 -= 1
-elif(l % 3 == 2):
+elif l % 3 == 2:
     c0 -= 1
     c1 -= 1
-if(r % 3 == 1):
+if r % 3 == 1:
     c1 += 1
-elif(r % 3 == 2):
+elif r % 3 == 2:
     c2 += 1
     c1 += 1
 cnt0 = [c0]

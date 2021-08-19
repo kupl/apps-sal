@@ -9,10 +9,9 @@ def is_number(s):
 x = input()
 ret = 1
 for s in x:
-    if(is_number(s)):
-        if(s == '0'):
+    if is_number(s):
+        if s == '0':
             ret = ret + 9
         else:
             ret = ret + int(s)
-
 print(ret)

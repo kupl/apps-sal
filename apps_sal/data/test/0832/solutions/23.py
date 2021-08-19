@@ -10,5 +10,4 @@ for element in homes:
     for element2 in aways:
         if element == element2:
             sa2 += 1
-
 print(sa2)

@@ -4,12 +4,11 @@ def __starting_point():
     s = set(list(s))
     k = int(input())
     if l < k:
-        print("impossible")
+        print('impossible')
+    elif k - len(s) > 0:
+        print(k - len(s))
     else:
-        if (k - len(s)) > 0:
-            print(k - len(s))
-        else:
-            print(0)
+        print(0)
 
 
 __starting_point()

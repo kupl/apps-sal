@@ -1,5 +1,5 @@
 from itertools import permutations
-matrix, ans = [list(map(int, input().split())) + [0] for x in range(5)] + [[0] * 6], 0
+(matrix, ans) = ([list(map(int, input().split())) + [0] for x in range(5)] + [[0] * 6], 0)
 for perm in permutations(list(range(5))):
     x = list(perm) + [5]
     temp = 0

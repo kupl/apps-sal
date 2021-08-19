@@ -1,5 +1,5 @@
 def sol():
-    rows, cols = map(int, input().split())
+    (rows, cols) = map(int, input().split())
     tab = [list(map(int, input().split())) for _ in range(rows)]
     res = rows * cols
     for row in range(rows):

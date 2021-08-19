@@ -1,16 +1,16 @@
 n = int(input())
-c, d = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
 min_ = 0
 max_ = 0
 flag = True
 if d == 1:
     min_ = 1900
-    max_ = float("+Inf")
+    max_ = float('+Inf')
 else:
-    min_ = float("-Inf")
+    min_ = float('-Inf')
     max_ = 1899
 for i in range(n - 1):
-    c1, d = list(map(int, input().split()))
+    (c1, d) = list(map(int, input().split()))
     if d == 1:
         min_ = max(min_ + c, 1900)
         max_ += c
@@ -22,9 +22,9 @@ for i in range(n - 1):
     c = c1
 min_ += c
 max_ += c
-if not(flag):
-    print("Impossible")
-elif max_ == float("+Inf"):
-    print("Infinity")
+if not flag:
+    print('Impossible')
+elif max_ == float('+Inf'):
+    print('Infinity')
 else:
     print(max_)

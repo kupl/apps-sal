@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 l = 0
-r = int(1e10)
+r = int(10000000000.0)
 while r - l > 1:
     mid = (r + l) // 2
     fail = False

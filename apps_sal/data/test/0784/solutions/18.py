@@ -1,4 +1,4 @@
-q, w = map(int, input().split())
+(q, w) = map(int, input().split())
 a = []
 while w > q:
     if w % 10 == 1:
@@ -11,7 +11,7 @@ while w > q:
         w //= 2
 a.append(w)
 if w == q:
-    print("YES")
+    print('YES')
     print(len(a))
     for i in a[::-1]:
         print(i, end=' ')

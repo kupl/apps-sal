@@ -1,4 +1,5 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 s = input()

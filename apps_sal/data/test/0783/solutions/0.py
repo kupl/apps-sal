@@ -5,5 +5,4 @@ m = 0
 for i in range(n - 1, -1, -1):
     b[i] = max(0, m - a[i] + 1)
     m = max(m, a[i])
-
 print(*b)

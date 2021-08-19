@@ -1,4 +1,4 @@
-N, Z = list(map(int, input().split()))
+(N, Z) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 X.sort()
 
@@ -21,6 +21,6 @@ def compute(x1, x2):
 if N % 2 == 0:
     print(compute(X[0:N // 2], X[N // 2:]))
 else:
-    v1 = compute(X[0: N // 2], X[N // 2:])
-    v2 = compute(X[0: N // 2 + 1], X[N // 2 + 1:])
+    v1 = compute(X[0:N // 2], X[N // 2:])
+    v2 = compute(X[0:N // 2 + 1], X[N // 2 + 1:])
     print(max(v1, v2))

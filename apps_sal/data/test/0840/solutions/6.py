@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, k = read()
+(n, k) = read()
 a = list(read())
 b = list(read())
 c = [0] * n
@@ -23,7 +24,7 @@ def f(x):
     return True
 
 
-L, R = 0, 10 ** 10
+(L, R) = (0, 10 ** 10)
 while R - L > 1:
     M = (L + R) // 2
     if f(M):

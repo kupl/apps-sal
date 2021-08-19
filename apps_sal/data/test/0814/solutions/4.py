@@ -6,7 +6,7 @@ for thing in Line_1:
 Line_2.sort()
 string = ''
 for x in range(len(Line_2) - 1):
-    string += (str(Line_2[x]))
+    string += str(Line_2[x])
     string += ' '
 string += str(Line_2[-1])
 print(string)

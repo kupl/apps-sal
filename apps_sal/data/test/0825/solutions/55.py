@@ -21,7 +21,7 @@ def fac(n):
 
 l = fac(n)
 if n == 1:
-    print((0))
+    print(0)
 else:
     ans = 0
     for i in range(len(l)):

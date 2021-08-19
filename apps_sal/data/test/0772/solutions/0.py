@@ -18,6 +18,5 @@ for i in range(3):
         add(i + 1, j, a[i][j])
         add(i, j + 1, a[i][j])
         add(i, j - 1, a[i][j])
-
 for i in range(3):
     print(''.join(map(str, [[0, 1][b[i][j] % 2] for j in range(3)])))

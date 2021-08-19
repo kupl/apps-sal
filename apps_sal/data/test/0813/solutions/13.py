@@ -1,10 +1,12 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, a, b = R()
+(n, a, b) = R()
 
 
-def T(): return list(map(int, input().split()))
+def T():
+    return list(map(int, input().split()))
 
 
 A = T()

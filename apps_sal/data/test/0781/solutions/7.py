@@ -1,10 +1,9 @@
 case = True
-
 for i in range(8):
     s = input()
-    if(s != "WBWBWBWB" and s != "BWBWBWBW"):
+    if s != 'WBWBWBWB' and s != 'BWBWBWBW':
         case = False
-if(case):
-    print("YES")
+if case:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

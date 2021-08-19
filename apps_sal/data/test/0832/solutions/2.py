@@ -4,7 +4,7 @@ n = int(inp.readline())
 H = []
 A = []
 for i in range(n):
-    h, a = inp.readline().split()
+    (h, a) = inp.readline().split()
     H.append(h)
     A.append(a)
 ans = 0

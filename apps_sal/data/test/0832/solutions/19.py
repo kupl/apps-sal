@@ -7,5 +7,4 @@ for i in a:
     for j in a:
         if i[0] == j[1]:
             t += 1
-
 print(t)

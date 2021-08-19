@@ -1,7 +1,7 @@
 s = input()
 n = int(input())
 if n > len(s):
-    print("impossible")
+    print('impossible')
 else:
     was = [False] * 26
     for i in s:

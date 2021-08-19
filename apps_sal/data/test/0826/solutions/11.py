@@ -6,7 +6,7 @@ def is_ok(arg):
 
 
 def meguru_bisect(ng, ok):
-    while (abs(ok - ng) > 1):
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if is_ok(mid):
             ok = mid

@@ -1,7 +1,7 @@
 def main():
     n = input()
     n = int(n)
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     a = list(a)
     if 0 in a:
         if len(a) == a.count(0):
@@ -10,8 +10,8 @@ def main():
         pass
     pass
     a = list(map(str, a))
-    a = "".join(a)
-    a = a.split("0")
+    a = ''.join(a)
+    a = a.split('0')
     s = 0
     for x in a:
         s += len(x)

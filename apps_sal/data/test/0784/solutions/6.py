@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = []
 f = True
 while b >= a:
@@ -12,8 +12,8 @@ while b >= a:
             f = False
         break
 if ans[-1] != a:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     print(len(ans))
     print(*ans[::-1])

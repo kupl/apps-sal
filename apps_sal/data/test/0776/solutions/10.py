@@ -1,7 +1,7 @@
-a, b, c = list(map(int, input().split()))
-n, u0, u1 = int(input()), [], []
+(a, b, c) = list(map(int, input().split()))
+(n, u0, u1) = (int(input()), [], [])
 for i in range(n):
-    e0, e1 = input().split()
+    (e0, e1) = input().split()
     if e1 == 'USB':
         u0.append(int(e0))
     else:

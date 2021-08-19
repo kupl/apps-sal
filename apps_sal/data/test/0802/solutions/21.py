@@ -6,7 +6,7 @@ for i in range(N):
 Pokemon = len(S) - S.count(0)
 L = 0
 R = N
-while(R - L > 1):
+while R - L > 1:
     M = (R + L) // 2
     l = 0
     r = 0
@@ -20,7 +20,7 @@ while(R - L > 1):
         r += 1
     if count == Pokemon:
         is_ok = True
-    while r < N and not is_ok:
+    while r < N and (not is_ok):
         if S[A[l]] == 1:
             count -= 1
         S[A[l]] -= 1

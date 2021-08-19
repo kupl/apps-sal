@@ -9,7 +9,7 @@ def possible(x):
 
 
 left = 0
-right = 10**10
+right = 10 ** 10
 while right - left > 1:
     middle = (right + left) // 2
     if possible(middle):

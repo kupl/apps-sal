@@ -1,6 +1,5 @@
 n = int(input())
 hs = list(map(int, input().split()))
-
 maxx = 0
 ans = []
 for h in reversed(hs):
@@ -9,5 +8,4 @@ for h in reversed(hs):
     else:
         ans.append(maxx - h + 1)
     maxx = max(maxx, h)
-
 print(' '.join(map(str, reversed(ans))))

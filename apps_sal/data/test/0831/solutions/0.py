@@ -1,4 +1,5 @@
 class Edge:
+
     def __init__(self, to, cost, capacity, next_edge):
         self.to = to
         self.cost = cost
@@ -9,6 +10,7 @@ class Edge:
 
 
 class MinCostMaxFlow:
+
     def __init__(self, max_node):
         self.null = Edge(0, 0, 0, None)
         self.max_node = max_node + 3
@@ -25,7 +27,7 @@ class MinCostMaxFlow:
         self.edge_head[end_node] = Edge(start_node, -cost, 0, self.edge_head[end_node])
         self.edge_head[start_node].pair = self.edge_head[end_node]
         self.edge_head[end_node].pair = self.edge_head[start_node]
-        if start_node != self.source and start_node != self.sink and end_node != self.source and end_node != self.sink:
+        if start_node != self.source and start_node != self.sink and (end_node != self.source) and (end_node != self.sink):
             self.arc_list.append(self.edge_head[end_node])
 
     def NumArcs(self):
@@ -68,7 +70,7 @@ class MinCostMaxFlow:
         flow = total_flow
         edge = self.edge_head[node_id]
         while id(edge) != id(self.null):
-            if edge.capacity > 0 and edge.cost == 0 and not self.visited[edge.to]:
+            if edge.capacity > 0 and edge.cost == 0 and (not self.visited[edge.to]):
                 delta = self.aug(edge.to, min(flow, edge.capacity))
                 edge.capacity -= delta
                 edge.pair.capacity += delta
@@ -85,7 +87,7 @@ class MinCostMaxFlow:
                 continue
             edge = self.edge_head[node_id]
             while id(edge) != id(self.null):
-                if edge.capacity > 0 and not self.visited[edge.to] and edge.cost < min_cost:
+                if edge.capacity > 0 and (not self.visited[edge.to]) and (edge.cost < min_cost):
                     min_cost = edge.cost
                 edge = edge.next_edge
         if min_cost == 1 << 63:
@@ -126,7 +128,7 @@ def main():
         if num[i] > 0:
             mcmf.AddArcWithCapacityAndUnitCost(i, sink, num[i], 0)
     for i in range(1, n + 1):
-        s, used = input().split(' ')
+        (s, used) = input().split(' ')
         mcmf.AddArcWithCapacityAndUnitCost(source, 26 + i, int(used), 0)
         num = [0] * 29
         for j in range(0, len(s)):
@@ -138,7 +140,7 @@ def main():
     mcmf.SetNodeSupply(sink, -(1 << 63))
     mcmf.Solve()
     if mcmf.OptimalFlow() != length:
-        print("-1")
+        print('-1')
     else:
         print(mcmf.OptimalCost())
 

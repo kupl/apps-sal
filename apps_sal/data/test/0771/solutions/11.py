@@ -1,7 +1,6 @@
 l1 = [int(i) for i in input().split()]
 l2 = [int(i) for i in input().split()]
 c = [0 for i in range(l1[2])]
-
 for i in l2:
     c[i % l1[2]] += 1
 a = []
@@ -19,6 +18,6 @@ if I >= 0:
             a.append(str(l2[i]))
             j += 1
         i += 1
-    print(" ".join(a))
+    print(' '.join(a))
 else:
     print('No')

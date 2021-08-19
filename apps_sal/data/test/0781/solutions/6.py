@@ -5,8 +5,7 @@ for i in range(8):
         if t.count('BW') != 4:
             ans = 'NO'
             break
-    else:
-        if t.count('WB') != 4:
-            ans = 'NO'
-            break
+    elif t.count('WB') != 4:
+        ans = 'NO'
+        break
 print(ans)

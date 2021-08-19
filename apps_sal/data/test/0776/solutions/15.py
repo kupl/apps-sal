@@ -1,13 +1,11 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 m = int(input())
 d = {'USB': [], 'PS/2': []}
 for _ in range(m):
-    v, t = input().split()
+    (v, t) = input().split()
     d[t].append(int(v))
-
 d['PS/2'].sort()
 d['USB'].sort()
-
 eq = cst = f1 = f2 = 0
 nusb = len(d['USB'])
 nps2 = len(d['PS/2'])
@@ -32,12 +30,10 @@ while c > 0 and (f1 < nusb or f2 < nps2):
         cst += d['USB'][f1]
         f1 += 1
         continue
-
     if d['PS/2'][f2] < d['USB'][f1]:
         cst += d['PS/2'][f2]
         f2 += 1
     else:
         cst += d['USB'][f1]
         f1 += 1
-
 print(eq, cst)

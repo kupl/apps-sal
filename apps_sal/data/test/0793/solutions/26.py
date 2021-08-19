@@ -3,10 +3,10 @@ from collections import defaultdict
 
 def solve():
     ans = 0
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     s = defaultdict(lambda: -1)
     t = defaultdict(lambda: -1)
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     S = list(map(int, input().split()))
     T = list(map(int, input().split()))
     dp = [[0] * (M + 1) for _ in range(N + 1)]

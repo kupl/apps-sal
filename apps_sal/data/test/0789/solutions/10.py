@@ -1,7 +1,6 @@
 a = list(str(input()))
 a = [int(x) for x in a]
 n = len(a)
-
 ans = 0
 for i in range(n):
     digs = n - i
@@ -10,5 +9,4 @@ for i in range(n):
         continue
     else:
         ans += 2 ** (digs - 1)
-
 print(ans)

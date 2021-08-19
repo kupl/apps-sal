@@ -9,4 +9,4 @@ for i in d:
     for j in range(i):
         res[j] += 1
 res.reverse()
-print(" ".join([str(i) for i in res]))
+print(' '.join([str(i) for i in res]))

@@ -2,7 +2,7 @@ a = input()
 k = int(input())
 l = [0] * 26
 if len(a) < k or k > 26:
-    print("impossible")
+    print('impossible')
 else:
     for i in a:
         l[ord(i) - ord('a')] = 1

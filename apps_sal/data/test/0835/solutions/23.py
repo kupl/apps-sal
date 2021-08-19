@@ -1,17 +1,15 @@
 recipe = input()
 rb = rs = rc = 0
-nb, ns, nc = list(map(int, input().split()))
-pb, ps, pc = list(map(int, input().split()))
+(nb, ns, nc) = list(map(int, input().split()))
+(pb, ps, pc) = list(map(int, input().split()))
 r = int(input())
-
 for ch in recipe:
-    if ch == "B":
+    if ch == 'B':
         rb += 1
-    elif ch == "S":
+    elif ch == 'S':
         rs += 1
     else:
         rc += 1
-
 a = 0
 b = 10 ** 12 + 1000
 
@@ -28,5 +26,4 @@ while a <= b:
         a = m + 1
     else:
         b = m - 1
-
 print(res)

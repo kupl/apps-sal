@@ -2,7 +2,7 @@ F = []
 
 
 def gen(T, X):
-    if(len(X) == 5):
+    if len(X) == 5:
         F.append(list(X))
         return
     for item in T:
@@ -24,7 +24,7 @@ for item in F:
     t = 0
     for i in range(5):
         for j in range(i, 5, 2):
-            if(j == 4):
+            if j == 4:
                 continue
             t += G[X[j]][X[j + 1]]
             t += G[X[j + 1]][X[j]]

@@ -1,7 +1,7 @@
 N = int(input())
 div = 2
 dic = {}
-while div**2 <= N:
+while div ** 2 <= N:
     if N % div == 0:
         count = 0
         while N % div == 0:

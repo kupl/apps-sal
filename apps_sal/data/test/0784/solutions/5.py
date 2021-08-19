@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = [b]
 while b > a:
     if b % 10 == 1:

@@ -17,7 +17,7 @@ N = int(input())
 ps = factor(N)
 sq = [i * (i + 1) // 2 for i in range(100)]
 ans = 0
-for k, v in list(Counter(ps).items()):
+for (k, v) in list(Counter(ps).items()):
     for i in range(99):
         if sq[i] <= v < sq[i + 1]:
             ans += i

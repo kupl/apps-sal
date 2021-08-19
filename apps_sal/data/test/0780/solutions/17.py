@@ -27,7 +27,6 @@ for x in range(10):
         if flg == False:
             print(-1, end=' ')
             continue
-
         tb = tab(x, y)
         ans = 0
         for t in range(10):

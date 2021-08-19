@@ -16,7 +16,6 @@ u = input()
 d = input()
 cnt = 2
 isvalid = True
-
 isvalid = checkvalid(u, d + d)
 while cnt <= 7:
     cnt += 1

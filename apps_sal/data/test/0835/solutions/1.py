@@ -1,4 +1,3 @@
-
 def bin(a, b, c, n, m, k, pn, pm, pk, r):
     [L, R] = [0, (r + n + m + k) * 100]
     while R - L > 1:

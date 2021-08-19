@@ -1,5 +1,5 @@
 n = int(input())
-ok = 10**20
+ok = 10 ** 20
 ng = 0
 while ok - ng > 1:
     m = (ok + ng) // 2

@@ -21,7 +21,7 @@ def prime_factorize(n):
 n = int(input())
 c = Counter(prime_factorize(n))
 cnt = 0
-for k, v in list(c.items()):
+for (k, v) in list(c.items()):
     if v == 1:
         cnt += 1
     else:
@@ -30,5 +30,4 @@ for k, v in list(c.items()):
             v -= v0
             cnt += 1
             v0 += 1
-
 print(cnt)

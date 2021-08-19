@@ -1,9 +1,9 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 m = int(input())
 usb = []
 ps = []
 for i in range(m):
-    val, name = input().split()
+    (val, name) = input().split()
     if name == 'USB':
         usb.append(int(val))
     else:

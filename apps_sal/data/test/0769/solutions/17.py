@@ -1,5 +1,5 @@
-a, b, c = map(int, input().split())
-a *= 10**100000
+(a, b, c) = map(int, input().split())
+a *= 10 ** 100000
 a //= b
 a = str(a)
 while len(a) != 100000:

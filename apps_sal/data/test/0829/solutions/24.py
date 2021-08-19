@@ -3,11 +3,11 @@ s = input()
 z = 0
 nz = 0
 for i in s:
-    if(i == '0'):
+    if i == '0':
         z += 1
     else:
         nz += 1
-if(z != nz):
+if z != nz:
     print(1)
     print(s)
 else:

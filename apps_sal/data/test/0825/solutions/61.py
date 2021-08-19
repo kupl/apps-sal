@@ -7,18 +7,17 @@ def main():
     wi = 2
     cnt = 0
     d = defaultdict(lambda: 0)
-    fi = int(sqrt(1e12) + 1)
+    fi = int(sqrt(1000000000000.0) + 1)
     for i in range(2, fi):
         while n % i == 0:
             d[i] += 1
             n //= i
     if n != 1:
         d[n] = 1
-
     for val in d.values():
         x = val
         wi = 1
-        while(x >= wi):
+        while x >= wi:
             x -= wi
             wi += 1
             cnt += 1

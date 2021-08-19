@@ -1,5 +1,4 @@
 (x, y) = list(map(int, input().split()))
-
 if y >= x and y < -x:
     print(-4 * x - 1)
 elif y > x and y >= -x:

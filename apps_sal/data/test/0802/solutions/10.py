@@ -26,7 +26,6 @@ def main():
         if d[s[i]] == 0:
             del d[s[i]]
         i += 1
-
     print(res)
 
 

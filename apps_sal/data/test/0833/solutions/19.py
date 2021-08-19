@@ -1,10 +1,11 @@
 def main():
 
-    def R(): return map(int, input().split())
-    n, v = R()
+    def R():
+        return map(int, input().split())
+    (n, v) = R()
     mlist = [0] * 3003
     for i in range(n):
-        a, b = R()
+        (a, b) = R()
         mlist[a] += b
     mlist2 = mlist[:]
     ans = 0

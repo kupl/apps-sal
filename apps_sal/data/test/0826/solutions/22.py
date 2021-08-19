@@ -8,7 +8,6 @@ def f(k):
 def bi_re():
     l = 0
     r = N + 1
-
     while l <= r:
         m = (l + r) // 2
         if f(m) > N + 1:
@@ -17,9 +16,8 @@ def bi_re():
             l = m + 1
         else:
             return m
-
     return r
 
 
 k = bi_re()
-print((N - k + 1))
+print(N - k + 1)

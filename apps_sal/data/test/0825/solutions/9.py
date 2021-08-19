@@ -19,7 +19,6 @@ def prime_factorize(n):
 
 
 n = int(input())
-
 l = prime_factorize(n)
 c = Counter(l)
 v = c.values()

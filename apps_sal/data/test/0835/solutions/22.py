@@ -6,11 +6,11 @@ def f(x):
 
 
 s = list(input())
-tb, ts, tc = s.count('B'), s.count('S'), s.count('C')
-nb, ns, nc = list(map(int, input().split()))
-pb, ps, pc = list(map(int, input().split()))
+(tb, ts, tc) = (s.count('B'), s.count('S'), s.count('C'))
+(nb, ns, nc) = list(map(int, input().split()))
+(pb, ps, pc) = list(map(int, input().split()))
 rs = int(input())
-l, r = 0, 10**14
+(l, r) = (0, 10 ** 14)
 while l < r:
     m = (l + r) // 2
     if f(m):

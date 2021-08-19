@@ -1,4 +1,4 @@
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 if k == 1:
     print(min(a))

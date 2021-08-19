@@ -13,6 +13,6 @@ while 0 <= current_cell < line_length:
         else:
             current_cell -= distances[current_cell]
 if 0 <= current_cell < line_length:
-    print("INFINITE")
+    print('INFINITE')
 else:
-    print("FINITE")
+    print('FINITE')

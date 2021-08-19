@@ -1,8 +1,7 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
-
-x, y = 0, max(B) + k + 1
+(x, y) = (0, max(B) + k + 1)
 z = (x + y) // 2
 while z != x:
     credit = 0

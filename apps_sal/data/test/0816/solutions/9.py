@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 d = dict()
@@ -22,10 +22,8 @@ def search(num):
 for i in range(len(a)):
     k = a[i] ^ x
     tr = search(k)
-    if tr > -1 and tr < len(a) and a[tr] == k:
+    if tr > -1 and tr < len(a) and (a[tr] == k):
         res += d[a[tr]]
         if a[i] == k:
             res -= 1
-
-
 print(res // 2)

@@ -7,5 +7,5 @@ for i in n:
         s = s + '0'
 ans = 0
 for i in range(len(n) - 1):
-    ans += 2**(i + 1)
+    ans += 2 ** (i + 1)
 print(ans + int(s, 2) + 1)

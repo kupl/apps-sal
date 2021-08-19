@@ -1,7 +1,7 @@
 s = input()
 if '.' not in s:
     s = s + '.'
-p, q = s.strip('0').split('.')
+(p, q) = s.strip('0').split('.')
 if not p:
     t = q.strip('0')
     e = len(t) - len(q) - 1

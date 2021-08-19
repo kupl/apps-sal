@@ -1,4 +1,4 @@
-n, m, t = map(int, input().split())
+(n, m, t) = map(int, input().split())
 a = []
 for kitten in range(n):
     a.append(input())

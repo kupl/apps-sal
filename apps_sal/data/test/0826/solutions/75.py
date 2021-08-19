@@ -1,5 +1,5 @@
 n = int(input())
-right = 10**18 + 1
+right = 10 ** 18 + 1
 left = -1
 while right - left > 1:
     mid = (right + left) // 2
@@ -7,5 +7,4 @@ while right - left > 1:
         right = mid
     else:
         left = mid
-
 print(n - left + 1)

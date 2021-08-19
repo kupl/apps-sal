@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 a = [0] + list(map(int, input().split()))
 b = [0] * (n + 2)
 b[n] = a[n]

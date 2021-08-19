@@ -6,7 +6,7 @@ def f(l, r, x):
     return ceil((r - x) / 3) - ceil((l - 1 - x) / 3)
 
 
-n, l, r = map(int, input().split())
+(n, l, r) = map(int, input().split())
 m1 = f(l, r, 0)
 m2 = f(l, r, 1)
 m0 = f(l, r, 2)

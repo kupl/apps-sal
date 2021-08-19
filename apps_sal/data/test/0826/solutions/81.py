@@ -3,7 +3,6 @@ def solve(n):
 
 
 N = int(input())
-
 left = 0
 right = N + 1
 while abs(right - left) > 1:
@@ -12,5 +11,4 @@ while abs(right - left) > 1:
         left = mid
     else:
         right = mid
-
 print(N - left + 1)

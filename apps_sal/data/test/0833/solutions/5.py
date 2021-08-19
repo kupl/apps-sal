@@ -1,4 +1,4 @@
-n, v = map(int, input().split())
+(n, v) = map(int, input().split())
 w = []
 q = [v for i in range(3003)]
 for i in range(n):

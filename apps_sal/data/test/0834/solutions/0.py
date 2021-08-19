@@ -5,8 +5,8 @@ for i in range(n):
 
 
 def gcd(a, b):
-    while (a != 0 and b != 0):
-        a, b = b, a % b
+    while a != 0 and b != 0:
+        (a, b) = (b, a % b)
     return a + b
 
 
@@ -16,11 +16,10 @@ def lcm(a, b):
 
 ans = 1
 minn = 0
-
 for i in range(n):
     vis = [False] * n
     cur = i
-    st, pr = 0, 0
+    (st, pr) = (0, 0)
     while not vis[cur]:
         vis[cur] = True
         cur = f[cur]
@@ -32,5 +31,4 @@ for i in range(n):
         cur = f[cur]
     minn = max(minn, pr)
     ans = lcm(ans, st - pr)
-
-print(((max(0, minn - 1)) // ans + 1) * ans)
+print((max(0, minn - 1) // ans + 1) * ans)

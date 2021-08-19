@@ -1,7 +1,8 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, s = f()
+(n, s) = f()
 c = [0] * n
 t = list(f())
 for i in t:
@@ -11,7 +12,7 @@ c[k] -= 1
 d = c[0]
 c += [d]
 d += k > 0
-i, j = 1, n
+(i, j) = (1, n)
 while i < j:
     if c[i]:
         i += 1

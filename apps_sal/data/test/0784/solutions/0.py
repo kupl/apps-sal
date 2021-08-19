@@ -1,5 +1,4 @@
 3
-
 prev = dict()
 
 
@@ -14,13 +13,12 @@ def dfs(a, b):
         dfs(10 * a + 1, b)
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 dfs(a, b)
-
 if b not in prev:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     path = []
     while b != a:
         path.append(b)

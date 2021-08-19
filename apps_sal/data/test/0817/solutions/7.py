@@ -26,7 +26,6 @@ def main(s):
 
 
 s = input()
-sres, nres = main(s)
-
+(sres, nres) = main(s)
 for i in range(len(s) - 1, -1, -1):
     print(nres[i], sres[i])

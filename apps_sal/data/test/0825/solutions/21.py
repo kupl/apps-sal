@@ -1,5 +1,5 @@
-a, n = 0, int(input())
-for i in range(2, 10**6):
+(a, n) = (0, int(input()))
+for i in range(2, 10 ** 6):
     x = j = 0
     while n % i < 1:
         n //= i

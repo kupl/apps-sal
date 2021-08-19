@@ -8,13 +8,10 @@ def factorization(n):
                 cnt += 1
                 temp //= i
             arr.append([i, cnt])
-
     if temp != 1:
         arr.append([temp, 1])
-
     if arr == []:
         arr.append([n, 1])
-
     return arr
 
 
@@ -22,7 +19,7 @@ def abc169d_div_game():
     n = int(input())
     arr = factorization(n)
     cnt = 0
-    for p, e in arr:
+    for (p, e) in arr:
         if p == 1:
             continue
         for i in range(1, e + 1):

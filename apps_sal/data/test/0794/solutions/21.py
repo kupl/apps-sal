@@ -1,7 +1,10 @@
 import sys
 from math import *
 from fractions import gcd
-def readints(): return list(map(int, input().strip('\n').split()))
+
+
+def readints():
+    return list(map(int, input().strip('\n').split()))
 
 
 n = int(input())

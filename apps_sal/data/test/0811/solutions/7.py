@@ -1,5 +1,5 @@
 def __starting_point():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans = a
     while a // b > 0:
         ans += a // b

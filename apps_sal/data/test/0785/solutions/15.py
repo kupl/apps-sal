@@ -1,16 +1,14 @@
-
 import sys
-
 try:
     while True:
-        n, a, b = list(map(int, input().split(" ")))
+        (n, a, b) = list(map(int, input().split(' ')))
         flag = False
         if a > b:
             flag = True
-            a, b = b, a
+            (a, b) = (b, a)
         if 6 * n <= a * b:
             print(a * b)
-            res = str(a) + " " + str(b)
+            res = str(a) + ' ' + str(b)
             print(res)
             continue
         res = 1 << 60
@@ -30,11 +28,9 @@ try:
                 ans2 = tmp
             i += 1
         if flag:
-            ans1, ans2 = ans2, ans1
+            (ans1, ans2) = (ans2, ans1)
         print(res)
-        ans = str(ans1) + " " + str(ans2)
+        ans = str(ans1) + ' ' + str(ans2)
         print(ans)
-
-
 except EOFError:
     pass

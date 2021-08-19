@@ -1,11 +1,12 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, v = R()
+(n, v) = R()
 M = 3005
 x = [0] * M
 for i in range(n):
-    a, b = R()
+    (a, b) = R()
     x[a - 1] += b
 y = [0] * M
 s = 0

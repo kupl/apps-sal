@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 d = dict()
 a = [int(x) for x in input().split()]
 for i in a:

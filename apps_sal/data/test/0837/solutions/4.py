@@ -1,4 +1,5 @@
 def main():
+
     def f(t):
         u = cache.get(t)
         if u is None:
@@ -10,8 +11,7 @@ def main():
                     u = f(t // 2) + y
             cache[t] = u
         return u
-
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     cache = {1: x}
     print(f(n))
 

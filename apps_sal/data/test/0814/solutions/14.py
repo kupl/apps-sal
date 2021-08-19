@@ -19,5 +19,5 @@ for i in range(1, n + 1):
             box[-i][j] = 0
 ans = ''
 for collumn in box:
-    ans += str((sum(collumn))) + ' '
+    ans += str(sum(collumn)) + ' '
 print(ans[:-1])

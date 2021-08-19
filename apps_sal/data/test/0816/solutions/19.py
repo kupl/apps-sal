@@ -1,6 +1,6 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-if (x == 0):
+if x == 0:
     ans = 0
     s = dict()
     for elem in a:
@@ -19,6 +19,6 @@ else:
         else:
             s[elem] = 1
     for key in list(s.keys()):
-        if (key ^ x) in s:
+        if key ^ x in s:
             ans += s[key] * s[key ^ x]
 print(ans // 2)

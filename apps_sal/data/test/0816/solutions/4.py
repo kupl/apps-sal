@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 dict = {}
 for v in arr:
@@ -6,11 +6,10 @@ for v in arr:
         dict[v] += 1
     else:
         dict[v] = 1
-
 if x:
     res = 0
     for v in list(dict.keys()):
-        if (v ^ x) in dict and (v ^ x) > v:
+        if v ^ x in dict and v ^ x > v:
             res += dict[v] * dict[v ^ x]
     print(res)
 else:

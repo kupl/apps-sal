@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = [[0 for i in range(m)] for i in range(n)]
 for i in range(n):
     arr[i] = list(map(int, input().split()))
@@ -11,8 +11,8 @@ for i in range(n):
             c1 += 1
         else:
             c0 += 1
-    ans += max(0, 2 ** (c1) - c1 - 1)
-    ans += max(0, 2 ** (c0) - c0 - 1)
+    ans += max(0, 2 ** c1 - c1 - 1)
+    ans += max(0, 2 ** c0 - c0 - 1)
 for i in range(m):
     c0 = 0
     c1 = 0
@@ -21,6 +21,6 @@ for i in range(m):
             c1 += 1
         else:
             c0 += 1
-    ans += max(0, 2 ** (c1) - c1 - 1)
-    ans += max(0, 2 ** (c0) - c0 - 1)
+    ans += max(0, 2 ** c1 - c1 - 1)
+    ans += max(0, 2 ** c0 - c0 - 1)
 print(ans)
