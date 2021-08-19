@@ -1,5 +1,5 @@
 class Cat(Animal):
-    # your code here
+
     def __init__(self, name):
         Animal.__init__(self, name)
 
@@ -8,6 +8,7 @@ class Cat(Animal):
 
 
 class Animal:
+
     def __init__(self, name):
         self.name = name
 

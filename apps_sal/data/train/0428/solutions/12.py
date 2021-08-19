@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         m = len(grid)
         n = len(grid[0])
@@ -9,14 +10,14 @@ class Solution:
             if grid[i][j] in ['.', '@']:
                 res.append((i, j, keys))
             elif grid[i][j].islower():
-                if grid[i][j] in keys_list:  # already picked key, treat as empty cell
+                if grid[i][j] in keys_list:
                     res.append((i, j, keys))
-                else:  # pick up new key
+                else:
                     keys_list.append(grid[i][j])
                     new_keys = ''.join(keys_list)
                     res.append((i, j, new_keys))
             elif grid[i][j].isupper():
-                if grid[i][j].lower() in keys_list:  # treat lock as empty cell if have the key
+                if grid[i][j].lower() in keys_list:
                     res.append((i, j, keys))
             return res
 
@@ -41,16 +42,15 @@ class Solution:
             return nexts
 
         def get_start_and_keys():
-            x, y, keys = -1, -1, 0
+            (x, y, keys) = (-1, -1, 0)
             for i in range(m):
                 for j in range(n):
                     if grid[i][j] == '@':
-                        x, y = i, j
+                        (x, y) = (i, j)
                     elif grid[i][j].islower():
                         keys += 1
-            return x, y, keys
-
-        i0, j0, total_keys = get_start_and_keys()
+            return (x, y, keys)
+        (i0, j0, total_keys) = get_start_and_keys()
         q = deque()
         start_point = (i0, j0, '')
         q.append(start_point)

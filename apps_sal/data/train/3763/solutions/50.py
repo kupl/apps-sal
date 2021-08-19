@@ -11,6 +11,5 @@ def calculator(x, y, op):
         return x * y
     elif op == '/':
         return x / y
-#     elif op =='&':
     else:
         return 'unknown value'

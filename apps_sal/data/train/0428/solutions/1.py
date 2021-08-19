@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestPathAllKeys(self, grid) -> int:
         from collections import deque
         import copy
@@ -25,12 +26,12 @@ class Solution:
         steps = 0
         while len(curr_level) > 0:
             for i in range(len(curr_level)):
-                ori_keys, x, y = curr_level.popleft()
+                (ori_keys, x, y) = curr_level.popleft()
                 for d in dirs:
                     keys = ori_keys
                     new_x = x + d[0]
                     new_y = y + d[1]
-                    if new_x < 0 or new_x >= rows or new_y < 0 or new_y >= cols:
+                    if new_x < 0 or new_x >= rows or new_y < 0 or (new_y >= cols):
                         continue
                     ch = grid[new_x][new_y]
                     if ch == '#':
@@ -38,10 +39,10 @@ class Solution:
                     ascii_minus_lower = ord(ch) - ord('a')
                     ascii_minus_upper = ord(ch) - ord('A')
                     if 0 <= ascii_minus_lower <= 5:
-                        keys |= (1 << ascii_minus_lower)
-                        if keys == ((1 << num_keys) - 1):
+                        keys |= 1 << ascii_minus_lower
+                        if keys == (1 << num_keys) - 1:
                             return steps + 1
-                    if 0 <= ascii_minus_upper <= 5 and (((keys >> ascii_minus_upper) & 1) == 0):
+                    if 0 <= ascii_minus_upper <= 5 and keys >> ascii_minus_upper & 1 == 0:
                         continue
                     if (keys, new_x, new_y) not in visited:
                         visited.add((keys, new_x, new_y))
