@@ -1,6 +1,4 @@
-# cook your dish here
 def solve():
-
     n = int(input())
     k = list(map(int, input().split()))
     h = list(map(int, input().split()))

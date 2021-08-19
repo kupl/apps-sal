@@ -4,4 +4,3 @@ def anagrams(word, words):
         if sorted(word) == sorted(elem):
             lst.append(elem)
     return lst
-    # your code here

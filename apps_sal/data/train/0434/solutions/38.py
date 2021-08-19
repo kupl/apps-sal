@@ -1,8 +1,6 @@
-# 1493. Longest Subarray of 1's After Deleting One Element
-
 def get_longest(nums):
     arr = [1 - x for x in nums]
-    l, r = 0, 0
+    (l, r) = (0, 0)
     count = 0
     max_length = 0
     while l < len(arr):
@@ -14,7 +12,6 @@ def get_longest(nums):
             step = 'l'
         else:
             step = 'r'
-
         if step == 'l':
             count -= arr[l]
             l += 1
@@ -22,10 +19,10 @@ def get_longest(nums):
             count += arr[r]
             r += 1
             max_length = max(max_length, r - l)
-
     return max(0, max_length - 1)
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         return get_longest(nums)

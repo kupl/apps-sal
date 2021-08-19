@@ -1,33 +1,10 @@
 class Solution:
+
     def makesquare(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
-#         if sum(nums) % 4 != 0 or len(nums) < 4 or max(nums) > sum(nums) / 4 :
-#             return False
-
-#         nums.sort(reverse=True)
-
-#         if nums[0] < sum(nums) / 4 and nums[0]  + nums[-1] >  sum(nums):
-#             return False
-
-#         def dfs(nums, pos, target):
-#             if pos == len(nums):
-#                 return True
-
-#             for i in range(4):
-#                 if target[i] >= nums[pos]:
-#                     target[i] -= nums[pos]
-#                     if dfs(nums, pos + 1, target):
-#                         return True
-#                     target[i] += nums[pos]
-
-
-#             return False
-
-#         return dfs(nums, 0,  [sum(nums) / 4] * 4)
-
         total = sum(nums)
         if total % 4 != 0 or len(nums) < 4:
             return False

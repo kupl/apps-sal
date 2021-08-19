@@ -1,6 +1,6 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
-        # here k = 1
         w_start = 0
         d = {}
         max_len = 0
@@ -11,7 +11,7 @@ class Solution:
                 d[c] = 0
             d[c] += 1
             if str(0) in d:
-                while(d[str(0)] > 1):
+                while d[str(0)] > 1:
                     t = str(nums[w_start])
                     d[t] -= 1
                     w_start += 1
