@@ -2,7 +2,7 @@ def editarr(x, y, arr):
     l = len(arr)
     if abs(x) >= abs(y):
         for i in range(l):
-            arr[i][0], arr[i][1] = arr[i][1], arr[i][0]
+            (arr[i][0], arr[i][1]) = (arr[i][1], arr[i][0])
     if x < 0:
         for i in range(l):
             arr[i][0] *= -1
@@ -12,12 +12,12 @@ def editarr(x, y, arr):
 
 
 k = int(input())
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 ans = []
 tx = abs(x)
 ty = abs(y)
 if tx >= ty:
-    tx, ty = ty, tx
+    (tx, ty) = (ty, tx)
 if k % 2 == 0 and (tx + ty) % 2 != 0:
     print(-1)
 else:
@@ -52,7 +52,7 @@ else:
         else:
             flag = False
         for i in range(td // k):
-            if flag == False and (ty - ans[-1][1]) % 2 == 0 and (ty - ans[-1][1]) <= 2 * k:
+            if flag == False and (ty - ans[-1][1]) % 2 == 0 and (ty - ans[-1][1] <= 2 * k):
                 break
             ans.append([tx, ans[-1][1] + k])
         if ans[-1][1] != ty:
@@ -62,5 +62,5 @@ else:
         ans.pop(0)
     editarr(x, y, ans)
     print(len(ans))
-    for a, b in ans:
+    for (a, b) in ans:
         print(a, b)

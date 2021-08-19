@@ -1,7 +1,7 @@
 arr = [0] * 8
 for i in range(8):
     arr[i] = input()
-wr, wc, br, bc = [[], [], [], []]
+(wr, wc, br, bc) = [[], [], [], []]
 for i in range(8):
     for j in range(8):
         if arr[i][j] == 'B':

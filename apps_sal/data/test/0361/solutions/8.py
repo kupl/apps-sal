@@ -7,7 +7,6 @@ for i in range(min(len(l), len(l1))):
         c += 1
     else:
         break
-
 l = l[::-1]
 l1 = l1[::-1]
 for i in range(min(len(l), len(l1))):
@@ -18,4 +17,4 @@ for i in range(min(len(l), len(l1))):
 if c + d >= len(l1):
     print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 m1 = []
 m2 = []
 for i in range(n):
@@ -15,9 +15,9 @@ flag = True
 for i in range(n + m - 1):
     d1[i].sort()
     d2[i].sort()
-    if d1[i][::] != d2[i][::]:
+    if d1[i][:] != d2[i][:]:
         flag = False
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

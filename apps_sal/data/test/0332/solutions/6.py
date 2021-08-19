@@ -1,9 +1,7 @@
-n, m, *_ = list(map(int, input().split()))
-
+(n, m, *_) = list(map(int, input().split()))
 b1 = []
 for i in range(n):
     b1.append(input().split())
-
 b2 = []
 for i in range(n):
     b2.append(input().split())

@@ -1,15 +1,10 @@
-n, m = [int(x) for x in input().split()]
-
+(n, m) = [int(x) for x in input().split()]
 A = []
-
 B = []
-
 for _ in range(n):
     A.append([int(x) for x in input().split()])
-
 for _ in range(n):
     B.append([int(x) for x in input().split()])
-
 AD = []
 BD = []
 for s in range(2, m + n + 1):
@@ -24,9 +19,7 @@ for s in range(2, m + n + 1):
     bt.sort()
     AD.append(at)
     BD.append(bt)
-
 if AD == BD:
     print('YES')
-
 else:
     print('NO')

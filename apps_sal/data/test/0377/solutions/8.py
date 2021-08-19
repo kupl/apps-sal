@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 if b > a / 2:
     print(a - b)
 elif b < 1:

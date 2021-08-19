@@ -1,7 +1,6 @@
 m = int(input())
 c = list(map(int, input().split()))
-x, y = list(map(int, input().split()))
-
+(x, y) = list(map(int, input().split()))
 for i in range(m):
     sb = sum(c[:-i - 1])
     si = sum(c[-i - 1:])

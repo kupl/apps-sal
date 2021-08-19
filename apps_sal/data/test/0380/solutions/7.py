@@ -3,8 +3,7 @@ y = [0 for i in range(3)]
 mark = [False, False, False]
 mark1 = [False, False, False]
 for i in range(3):
-    x[i], y[i] = list(map(int, input().split()))
-
+    (x[i], y[i]) = list(map(int, input().split()))
 xp = []
 yp = []
 for i in range(3):
@@ -35,7 +34,6 @@ elif len(xp) == 1:
             print(2)
         else:
             print(3)
-
 elif len(yp) == 1:
     if not mark1[0]:
         if x[0] >= max(x[1], x[2]) or x[0] <= min(x[1], x[2]):

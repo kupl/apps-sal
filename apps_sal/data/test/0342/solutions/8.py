@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 ans = 0
 ans += 2 * z + 2 * min(y, x)
 f = min(y, x)

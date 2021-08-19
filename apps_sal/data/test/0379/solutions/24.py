@@ -9,7 +9,6 @@ def codeforces(piece):
             continue
         if num != row_number:
             return 'NO'
-
     col_number = 0
     cols = [[row[i] for row in piece] for i in range(len(piece[0]))]
     for col in cols:
@@ -21,15 +20,13 @@ def codeforces(piece):
             continue
         if num != col_number:
             return 'NO'
-
     return 'YES'
 
 
-rows, _ = input().split()
+(rows, _) = input().split()
 rows = int(rows)
 piece = []
 for _ in range(rows):
     line = input()
     piece.append(line)
-
 print(codeforces(piece))

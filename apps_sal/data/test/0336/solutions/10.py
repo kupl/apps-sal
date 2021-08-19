@@ -1,4 +1,4 @@
-n, a, b, c, d = map(int, input().split())
+(n, a, b, c, d) = map(int, input().split())
 ans = 0
 for e in range(1, n + 1):
     min1 = a + b + e + 1

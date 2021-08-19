@@ -9,8 +9,8 @@ for i in range(8):
         elif i in x:
             b += x[i]
 if a == b:
-    print("Draw")
+    print('Draw')
 elif a < b:
-    print("White")
+    print('White')
 else:
-    print("Black")
+    print('Black')

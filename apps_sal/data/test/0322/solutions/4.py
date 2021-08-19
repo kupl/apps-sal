@@ -2,7 +2,7 @@ n = int(input())
 pos = 0
 neg = 0
 for i in range(n):
-    x, y = [int(i) for i in input().split(" ")]
+    (x, y) = [int(i) for i in input().split(' ')]
     if x < 0:
         neg += 1
     else:

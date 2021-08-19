@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 t = list(input())
-rsp = {"r": p, "s": r, "p": s}
+rsp = {'r': p, 's': r, 'p': s}
 sumt = 0
 chk = [1] * n
 for i in range(len(t)):
@@ -13,5 +13,5 @@ ans = sumt
 for i in range(len(chk)):
     if chk[i] != 1:
         chg = chk[i] // 2
-        ans -= (rsp[t[i]]) * chg
+        ans -= rsp[t[i]] * chg
 print(ans)

@@ -9,6 +9,6 @@ for i in range(len(s) - 1):
 if s[-1] not in vowels and s[-1] != 'n':
     val = False
 if val:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

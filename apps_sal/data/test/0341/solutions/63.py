@@ -1,24 +1,23 @@
-n, k = list(map(int, input().split()))
-r, s, p = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
+(r, s, p) = list(map(int, input().split()))
 T = input()
 record = [False for _ in range(n)]
 ans = 0
 
 
 def win(t):
-    if t == "r":
+    if t == 'r':
         return p
-    elif t == "s":
+    elif t == 's':
         return r
     else:
         return s
 
 
-for i, t in enumerate(T):
+for (i, t) in enumerate(T):
     if i < k:
         ans += win(t)
         record[i] = t
-
     else:
         f = record[i - k]
         if f:

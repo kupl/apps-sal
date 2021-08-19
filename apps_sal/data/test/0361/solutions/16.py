@@ -1,5 +1,5 @@
 def main(s):
-    key = "CODEFORCES"
+    key = 'CODEFORCES'
     for i in range(11):
         s1 = key[0:i]
         s2 = key[i:10]

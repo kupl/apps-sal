@@ -10,4 +10,4 @@ for x in s:
         prev = 'cons'
 if prev == 'cons':
     ans = 0
-print("YES" if ans else "NO")
+print('YES' if ans else 'NO')

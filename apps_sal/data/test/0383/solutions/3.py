@@ -1,7 +1,7 @@
 import random
 import sys
 Q = 10 ** 9 + 7
-n, k, d = map(int, input().split())
+(n, k, d) = map(int, input().split())
 dp = [0] * 105
 dp1 = [0] * 105
 dp[0] = 1

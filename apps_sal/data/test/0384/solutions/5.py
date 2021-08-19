@@ -12,9 +12,8 @@ for i in z:
             ctr = 1
         else:
             ctr += 1
-    else:
-        if prev == 'B':
-            ans.append(ctr)
+    elif prev == 'B':
+        ans.append(ctr)
     prev = i
 print(len(ans))
 print(*ans)

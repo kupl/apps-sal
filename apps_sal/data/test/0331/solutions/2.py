@@ -1,5 +1,4 @@
-n, m, k = list(map(int, input().split()))
-
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = []
 for i in range(len(a)):

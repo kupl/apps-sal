@@ -16,35 +16,33 @@ def main():
     def write(*args, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in args) + end)
+        stdout.write(sep.join((str(a) for a in args)) + end)
 
     def write_array(array, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in array) + end)
-
-    n, m = read_int_array()
-    minm, maxm = [], []
+        stdout.write(sep.join((str(a) for a in array)) + end)
+    (n, m) = read_int_array()
+    (minm, maxm) = ([], [])
     for _ in range(n):
         minm.append(read_int_array())
     for _ in range(n):
         maxm.append(read_int_array())
-
     for r in range(n):
         for c in range(m):
             minx = min(minm[r][c], maxm[r][c])
             maxx = max(minm[r][c], maxm[r][c])
             if r:
                 if minx <= minm[r - 1][c] or maxx <= maxm[r - 1][c]:
-                    write("Impossible")
+                    write('Impossible')
                     return
             if c:
                 if minx <= minm[r][c - 1] or maxx <= maxm[r][c - 1]:
-                    write("Impossible")
+                    write('Impossible')
                     return
             minm[r][c] = minx
             maxm[r][c] = maxx
-    write("Possible")
+    write('Possible')
 
 
 main()

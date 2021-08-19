@@ -1,5 +1,5 @@
 def rle(a):
-    ll, l = [], 1
+    (ll, l) = ([], 1)
     for i in range(len(a) - 1):
         if a[i] == a[i + 1]:
             l += 1
@@ -10,32 +10,32 @@ def rle(a):
     return ll
 
 
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 t = input()
 ans = 0
 w = []
 for i in range(k):
     j = i
-    b = ""
+    b = ''
     while j < n:
         b += t[j]
         j += k
     w.append(b)
 for i in t:
-    if i == "r":
+    if i == 'r':
         ans += p
-    elif i == "s":
+    elif i == 's':
         ans += r
     else:
         ans += s
 for x in w:
     st = rle(x)
-    for i, j in st:
-        if j == "r":
-            ans -= (i // 2) * p
-        elif j == "s":
-            ans -= (i // 2) * r
+    for (i, j) in st:
+        if j == 'r':
+            ans -= i // 2 * p
+        elif j == 's':
+            ans -= i // 2 * r
         else:
-            ans -= (i // 2) * s
+            ans -= i // 2 * s
 print(ans)

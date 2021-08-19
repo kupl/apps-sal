@@ -6,6 +6,6 @@ n = int(input())
 ma = -1
 while n:
     n -= 1
-    a, b = mi()
+    (a, b) = mi()
     ma = max(ma, a + b)
 print(ma)

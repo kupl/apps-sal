@@ -1,16 +1,12 @@
 key = ''
-
 ok = []
 odd = []
 x = list(input())
 d = {}
-
 for i in 'abcdefghijklmnopqrstuvwxyz':
     d[i] = 0
-
 for i in x:
     d[i] += 1
-
 for i in 'abcdefghijklmnopqrstuvwxyz':
     if d[i] % 2 == 1:
         odd.append(i)
@@ -22,9 +18,7 @@ for i in range(len(odd[m:])):
 for i in 'abcdefghijklmnopqrstuvwxyz':
     if d[i] % 2 == 1:
         key = i
-
 s = ''
 for i in 'abcdefghijklmnopqrstuvwxyz':
-    s += (i * (d[i] // 2))
-
+    s += i * (d[i] // 2)
 print(s + key + s[::-1])

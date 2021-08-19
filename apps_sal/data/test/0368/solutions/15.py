@@ -25,8 +25,8 @@ for i in range(8):
         if j == 'P':
             b = b + 1
 if w < b:
-    print("White")
+    print('White')
 elif w > b:
-    print("Black")
+    print('Black')
 else:
-    print("Draw")
+    print('Draw')

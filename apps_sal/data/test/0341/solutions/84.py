@@ -1,11 +1,10 @@
 def main():
-    N, K = list(map(int, input().split()))
-    R, S, P = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
+    (R, S, P) = list(map(int, input().split()))
     T = input()
-
     ans = 0
     U = []
-    for i, t in enumerate(T):
+    for (i, t) in enumerate(T):
         if t == 'r':
             if i - K >= 0:
                 if U[i - K] == 'p':

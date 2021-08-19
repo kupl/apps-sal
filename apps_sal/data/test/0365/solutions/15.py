@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 su = sum(a)
 if x == su and len(a) == 1:

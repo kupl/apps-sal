@@ -1,8 +1,8 @@
-ps = [tuple(int(x) for x in input().split()) for _ in range(3)]
+ps = [tuple((int(x) for x in input().split())) for _ in range(3)]
 ps.sort()
-xa, ya = ps[0]
-xb, yb = ps[1]
-xc, yc = ps[2]
+(xa, ya) = ps[0]
+(xb, yb) = ps[1]
+(xc, yc) = ps[2]
 if xa == xb:
     if xc == xa:
         print(1)
@@ -20,8 +20,7 @@ elif ya < yb:
         print(2)
     else:
         print(3)
+elif yb == yc or (xb == xc and yc <= ya):
+    print(2)
 else:
-    if yb == yc or (xb == xc and yc <= ya):
-        print(2)
-    else:
-        print(3)
+    print(3)

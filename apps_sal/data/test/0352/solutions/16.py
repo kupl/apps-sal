@@ -1,7 +1,7 @@
 n = int(input())
-m_1, mx_1 = list(map(int, input().split()))
-m_2, mx_2 = list(map(int, input().split()))
-m_3, mx_3 = list(map(int, input().split()))
+(m_1, mx_1) = list(map(int, input().split()))
+(m_2, mx_2) = list(map(int, input().split()))
+(m_3, mx_3) = list(map(int, input().split()))
 ans = [m_1, m_2, m_3]
 s = sum(ans)
 if s == n:

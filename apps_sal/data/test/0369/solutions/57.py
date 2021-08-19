@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = input().rstrip()
     ans = []
     x = n
@@ -18,10 +18,10 @@ def main():
                 break
     if f:
         for v in reversed(ans):
-            print(v, end=" ")
-        print("")
+            print(v, end=' ')
+        print('')
     else:
-        print("-1")
+        print('-1')
 
 
 def __starting_point():

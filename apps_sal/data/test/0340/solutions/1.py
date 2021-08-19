@@ -1,5 +1,4 @@
 n = int(input())
-
 if n == 1:
     print('1 0')
 else:
@@ -18,19 +17,16 @@ else:
             d += 2
     if n > 1:
         decomp += [(n, 1)]
-
     tar = 1
     maxExp = 0
     for e in decomp:
         tar *= e[0]
         maxExp = max(maxExp, e[1])
-
     divCnt = 0
     curExp = 1
     while curExp < maxExp:
         divCnt += 1
         curExp *= 2
-
     mulRequired = False
     for e in decomp:
         if e[1] != curExp:
@@ -38,5 +34,4 @@ else:
             break
     if mulRequired:
         divCnt += 1
-
     print('%s %s' % (tar, divCnt))

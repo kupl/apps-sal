@@ -1,10 +1,10 @@
 import itertools
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = []
 for i in range(n):
     arr.append([])
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     arr[a].append(b)
@@ -34,6 +34,5 @@ for i in range(len(permuts)):
                         ams[j] += 1
             c += max(ams)
             break
-
     ans = max(ans, c)
 print(ans)

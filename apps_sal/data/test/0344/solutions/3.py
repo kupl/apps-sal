@@ -16,6 +16,6 @@ for el in s:
 if state == 1:
     ok = False
 if ok:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

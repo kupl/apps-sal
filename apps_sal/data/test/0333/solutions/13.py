@@ -1,7 +1,6 @@
 def __starting_point():
     a = input().strip()
     b = input().strip()
-
     if a == b:
         print(-1)
     else:

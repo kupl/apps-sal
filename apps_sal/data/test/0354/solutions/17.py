@@ -6,7 +6,7 @@ if len(s1) != len(s2):
 else:
     ok = True
     for i in range(len(s1)):
-        if (s1[i] in gl and s2[i] not in gl) or (s1[i] not in gl and s2[i] in gl):
+        if s1[i] in gl and s2[i] not in gl or (s1[i] not in gl and s2[i] in gl):
             ok = False
     if ok:
         print('Yes')

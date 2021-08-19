@@ -9,7 +9,8 @@ def brute_exact(n, k):
     if not combinations:
         return 0
 
-    def xor_conv(ar): return functools.reduce(lambda x, y: x ^ y, ar)
+    def xor_conv(ar):
+        return functools.reduce(lambda x, y: x ^ y, ar)
     return max([xor_conv(combination) for combination in combinations])
 
 
@@ -20,12 +21,11 @@ def brute_atleast(n, k):
 def solve(n, k):
     if k == 1:
         return n
-
-    return 2**(n.bit_length()) - 1
+    return 2 ** n.bit_length() - 1
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     print(solve(n, k))
 
 

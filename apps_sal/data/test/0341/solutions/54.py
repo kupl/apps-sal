@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,12 +8,10 @@ MOD = 1000000007
 
 
 def main():
-    N, K = list(map(int, readline().split()))
+    (N, K) = list(map(int, readline().split()))
     point = list(map(int, readline().split()))
     T = readline().strip()
-
     T = list(map(int, T.translate(str.maketrans('rsp', '012'))))
-
     ans = 0
     for i in range(K):
         M = (N - i + K - 1) // K
@@ -25,7 +22,6 @@ def main():
                 if (k + 1) % 3 == T[i + j * K]:
                     dp[j + 1][k] += point[k]
         ans += max(dp[M])
-
     print(ans)
     return
 

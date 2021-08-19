@@ -1,9 +1,7 @@
 from fractions import gcd
-a, b = [int(x) for x in input().split()]
-c, d = [int(x) for x in input().split()]
-
+(a, b) = [int(x) for x in input().split()]
+(c, d) = [int(x) for x in input().split()]
 g = gcd(a, c)
-
 if abs(b - d) % g != 0:
     print(-1)
 else:

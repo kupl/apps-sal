@@ -1,9 +1,7 @@
-N, K = [int(_) for _ in input().split()]
-R, S, P = [int(_) for _ in input().split()]
+(N, K) = [int(_) for _ in input().split()]
+(R, S, P) = [int(_) for _ in input().split()]
 T = input()
-
-s = {"r": P, "s": R, "p": S}
-
+s = {'r': P, 's': R, 'p': S}
 score = []
 for i in range(N):
     if i < K:
@@ -13,5 +11,4 @@ for i in range(N):
         score.append(0)
     else:
         score.append(s[T[i]])
-
-print((sum(score)))
+print(sum(score))

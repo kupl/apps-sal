@@ -1,5 +1,4 @@
 s = [input().strip() for i in range(8)]
-
 d1 = []
 d2 = []
 
@@ -22,9 +21,7 @@ for i in range(8):
             d1.append(8 - i - 1)
         elif s[i][j] == 'W' and check(i, j):
             d2.append(i)
-
-
 if min(d1) < min(d2):
-    print("B")
+    print('B')
 else:
-    print("A")
+    print('A')

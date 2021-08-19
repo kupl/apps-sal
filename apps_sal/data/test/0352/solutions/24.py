@@ -1,7 +1,7 @@
 n = int(input())
-min1, max1 = map(int, input().split())
-min2, max2 = map(int, input().split())
-min3, max3 = map(int, input().split())
+(min1, max1) = map(int, input().split())
+(min2, max2) = map(int, input().split())
+(min3, max3) = map(int, input().split())
 ans1 = min1
 ans2 = min2
 ans3 = min3

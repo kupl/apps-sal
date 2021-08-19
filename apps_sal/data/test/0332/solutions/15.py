@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-n, m = (int(t) for t in input().split(' '))
+(n, m) = (int(t) for t in input().split(' '))
 m1 = [[int(t) for t in input().split(' ')] for _ in range(n)]
 m2 = [[int(t) for t in input().split(' ')] for _ in range(n)]
 

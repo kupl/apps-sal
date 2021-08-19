@@ -1,5 +1,6 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, x = R()
-print('YES'if sum(R()) + n - 1 == x else'NO')
+(n, x) = R()
+print('YES' if sum(R()) + n - 1 == x else 'NO')

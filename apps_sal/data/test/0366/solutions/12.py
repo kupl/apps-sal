@@ -16,7 +16,7 @@ def nu():
     return int(input())
 
 
-n, s = num()
+(n, s) = num()
 cc = 0
 for i in range(n, 0, -1):
     cc += s // i

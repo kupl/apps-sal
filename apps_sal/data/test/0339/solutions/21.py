@@ -7,9 +7,9 @@ if k == 1:
     print((n - 1) * a)
 else:
     while n != 1:
-        res += (n % k) * a
-        if b > (n // k) * (k - 1) * a:
-            res += (n // k) * (k - 1) * a
+        res += n % k * a
+        if b > n // k * (k - 1) * a:
+            res += n // k * (k - 1) * a
         else:
             res += b
         n //= k

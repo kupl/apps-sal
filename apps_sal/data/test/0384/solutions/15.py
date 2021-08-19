@@ -4,9 +4,8 @@ s = input()
 ans = ''
 ans_n = 0
 for i in range(n):
-    if s[i] == "B":
+    if s[i] == 'B':
         c += 1
-
     else:
         if c != 0:
             ans += str(c) + ' '
@@ -15,6 +14,5 @@ for i in range(n):
 if c != 0:
     ans += str(c) + ' '
     ans_n += 1
-
 print(ans_n)
 print(ans)

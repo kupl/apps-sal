@@ -1,6 +1,6 @@
-w, h = list(map(int, input().split()))
-w1, h1 = list(map(int, input().split()))
-w2, h2 = list(map(int, input().split()))
+(w, h) = list(map(int, input().split()))
+(w1, h1) = list(map(int, input().split()))
+(w2, h2) = list(map(int, input().split()))
 for i in range(h, -1, -1):
     w += i
     if i == h1:

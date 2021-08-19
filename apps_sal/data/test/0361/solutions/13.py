@@ -2,8 +2,7 @@ import sys
 
 
 def solve(word):
-    banner = "CODEFORCES"
-
+    banner = 'CODEFORCES'
     for c in word:
         if c == banner[0]:
             banner = banner[1:]
@@ -11,7 +10,6 @@ def solve(word):
                 return True
         else:
             break
-
     for c in word[::-1]:
         if c == banner[-1]:
             banner = banner[:-1]
@@ -24,6 +22,6 @@ def solve(word):
 
 word = sys.stdin.read().strip()
 if solve(word) == True:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

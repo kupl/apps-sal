@@ -1,10 +1,8 @@
 n = int(input())
-min1, max1 = list(map(int, input().split(' ')))
-min2, max2 = list(map(int, input().split(' ')))
-min3, max3 = list(map(int, input().split(' ')))
-
+(min1, max1) = list(map(int, input().split(' ')))
+(min2, max2) = list(map(int, input().split(' ')))
+(min3, max3) = list(map(int, input().split(' ')))
 n1 = min(n - (min2 + min3), max1)
 n2 = min(n - (n1 + min3), max2)
 n3 = min(n - (n1 + n2), max3)
-
 print('{} {} {}'.format(n1, n2, n3))

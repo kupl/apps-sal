@@ -1,4 +1,4 @@
-n, m = (int(i) for i in input().split())
+(n, m) = (int(i) for i in input().split())
 L1 = [[int(j) for j in input().split()] for i in range(n)]
 L2 = [[int(j) for j in input().split()] for i in range(n)]
 for i in range(n):
@@ -7,7 +7,6 @@ for i in range(n):
             buf = L1[i][j]
             L1[i][j] = L2[i][j]
             L2[i][j] = buf
-
 t = 1
 for i in range(n):
     for j in range(m):

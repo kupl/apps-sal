@@ -1,11 +1,9 @@
-
 n = int(input())
 k = int(input())
 a = int(input())
 b = int(input())
 x = n
 c = 0
-
 if k == 1:
     print(a * (n - 1))
 elif k > x:
@@ -14,15 +12,15 @@ else:
     while x >= k:
         if x % k == 0:
             temp = x / k
-            if b < (x - (temp)) * a:
+            if b < (x - temp) * a:
                 c += b
                 x = temp
             else:
-                c += a * (x - (temp))
+                c += a * (x - temp)
                 x = temp
         else:
             t = x % k
-            c += (a * t)
+            c += a * t
             x = x - t
     if x == 1:
         print(int(c))

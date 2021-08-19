@@ -4,9 +4,8 @@ def factor(n):
         for q in range(2, m + 1):
             if m % q == 0:
                 return q
-            if q > m**(1 / 2):
+            if q > m ** (1 / 2):
                 return m
-
     factors = {}
     while True:
         factor_naw = factor_n(n)
@@ -26,7 +25,7 @@ else:
     if s == 1:
         print(n, 0)
     else:
-        q1, q2 = 1, 0
+        (q1, q2) = (1, 0)
         while q1 < s:
             q1 *= 2
             q2 += 1
@@ -34,4 +33,4 @@ else:
         for q in a:
             answer *= q
         p = set(a.values())
-        print(answer, q2 + 1 if len(set(a.values())) != 1 or 2**q2 != s else q2)
+        print(answer, q2 + 1 if len(set(a.values())) != 1 or 2 ** q2 != s else q2)

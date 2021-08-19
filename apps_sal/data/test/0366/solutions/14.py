@@ -1,5 +1,4 @@
-n, s = list(map(int, input().split()))
-
+(n, s) = list(map(int, input().split()))
 big = s // n
 r = s - big * n
 if r > 0:

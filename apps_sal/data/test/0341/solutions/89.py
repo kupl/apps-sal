@@ -1,6 +1,6 @@
 from collections import deque
-N, K = map(int, input().split())
-R, S, P = map(int, input().split())
+(N, K) = map(int, input().split())
+(R, S, P) = map(int, input().split())
 Tlist = input()
 Answer = 0
 

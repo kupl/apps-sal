@@ -1,4 +1,4 @@
-ns = ["Danil", "Olya", "Slava", "Ann", "Nikita"]
+ns = ['Danil', 'Olya', 'Slava', 'Ann', 'Nikita']
 s = input()
 res = 0
 for i in ns:

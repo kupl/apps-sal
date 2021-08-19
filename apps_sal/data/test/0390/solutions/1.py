@@ -1,11 +1,11 @@
 def __starting_point():
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     prices = [a, b]
     colors = list(map(int, input().split()))
     result = 0
     for i in range(n // 2):
         j = n - 1 - i
-        if colors[i] != colors[j] and colors[i] != 2 and colors[j] != 2:
+        if colors[i] != colors[j] and colors[i] != 2 and (colors[j] != 2):
             print(-1)
             return
         if colors[i] == colors[j] == 2:

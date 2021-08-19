@@ -20,11 +20,11 @@ def solve(p, y):
     x = y
     while x > p:
         pr = getPrimes(x)
-        if all(v > p for v in pr):
+        if all((v > p for v in pr)):
             return x
         x -= 1
     return -1
 
 
-p, y = list(map(int, input().split()))
+(p, y) = list(map(int, input().split()))
 print(solve(p, y))

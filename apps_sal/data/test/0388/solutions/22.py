@@ -15,28 +15,21 @@ def random_str(rango, pos):
 
 
 def print_array(array):
-    result = ""
+    result = ''
     for string in array:
-        result += string + " "
-
+        result += string + ' '
     print(result)
 
 
-n, k = map(int, input().strip().split(" "))
-
-strings = input().strip().split(" ")
+(n, k) = map(int, input().strip().split(' '))
+strings = input().strip().split(' ')
 soldiers = [-1] * n
-
 for i in range(n):
     soldiers[i] = random_str(soldiers, i)
-
 pos = 0
 for string in strings:
-
-    if string == "NO":
+    if string == 'NO':
         aux = soldiers[pos]
         soldiers[pos + k - 1] = aux
-
     pos += 1
-
 print_array(soldiers)

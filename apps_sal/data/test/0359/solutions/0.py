@@ -1,4 +1,4 @@
-a, h, w = (int(x) for x in input().split())
+(a, h, w) = (int(x) for x in input().split())
 if h == w:
     if a < h:
         n = w // a
@@ -11,11 +11,11 @@ if h == w:
 else:
     for i in range(100):
         if h > w:
-            w, h = h, w
+            (w, h) = (h, w)
         if w > h + a * 2:
             w = w - h - a
     if h > w:
-        w, h = h, w
+        (w, h) = (h, w)
     m = h // a
     s = (w - h) // a
     r = 0
@@ -25,7 +25,7 @@ else:
             w1 = w - x
             a1 = a + x
             q = w1 % a1
-            if q < 0.00000001 or a1 - q < 0.0000001:
+            if q < 1e-08 or a1 - q < 1e-07:
                 r = 1
                 break
         if r == 0:
@@ -38,7 +38,7 @@ else:
             w1 = w - x
             a1 = a + x
             q = w1 % a1
-            if q < 0.00000001:
+            if q < 1e-08:
                 r = 1
                 break
         if r == 0:

@@ -1,7 +1,7 @@
 from math import gcd
-a, b = map(int, input().split())
-g, ans = gcd(a, b), 0
-a, b = a // g, b // g
+(a, b) = map(int, input().split())
+(g, ans) = (gcd(a, b), 0)
+(a, b) = (a // g, b // g)
 while a % 2 == 0:
     a //= 2
     ans += 1

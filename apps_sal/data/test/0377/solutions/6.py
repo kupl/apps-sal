@@ -16,14 +16,13 @@ def main():
     def write(*args, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in args) + end)
+        stdout.write(sep.join((str(a) for a in args)) + end)
 
     def write_array(array, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in array) + end)
-
-    n, m = read_int_array()
+        stdout.write(sep.join((str(a) for a in array)) + end)
+    (n, m) = read_int_array()
     if m < 2:
         write(1)
         return

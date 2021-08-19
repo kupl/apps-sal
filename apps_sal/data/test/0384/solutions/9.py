@@ -1,4 +1,4 @@
-n, s = int(input()), input()
+(n, s) = (int(input()), input())
 cnt = [0]
 for c in s:
     if c == 'B':

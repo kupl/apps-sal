@@ -10,9 +10,9 @@ def li():
     return list(mi())
 
 
-w, h = mi()
-u1, d1 = mi()
-u2, d2 = mi()
+(w, h) = mi()
+(u1, d1) = mi()
+(u2, d2) = mi()
 c = w
 for i in range(h, -1, -1):
     c += i

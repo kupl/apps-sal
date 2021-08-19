@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 names = []
 
 
@@ -12,7 +12,6 @@ def getNext(a):
 a = list(input().split())
 for i in range(len(a)):
     a[i] = 1 if a[i] == 'YES' else 0
-
 tmp = 'Aa'
 names.append(tmp)
 if a[0]:
@@ -24,7 +23,6 @@ else:
     for i in range(k - 2):
         tmp = getNext(tmp)
         names.append(getNext(tmp))
-
 for i in range(k, n):
     if a[i - k + 1]:
         tmp = getNext(tmp)

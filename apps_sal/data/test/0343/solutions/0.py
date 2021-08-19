@@ -1,14 +1,14 @@
 def read_data():
-    n, k, p, x, y = map(int, input().split())
+    (n, k, p, x, y) = map(int, input().split())
     As = list(map(int, input().split()))
-    return n, k, p, x, y, As
+    return (n, k, p, x, y, As)
 
 
 def solve(n, k, p, x, y, As):
-    '''median (As + Bs) >= y
+    """median (As + Bs) >= y
     sum(As + Bs) <= x
     1 <= Bi <= p
-    '''
+    """
     middle = n // 2
     As.sort(reverse=True)
     sumA = sum(As)
@@ -28,7 +28,7 @@ def solve(n, k, p, x, y, As):
 
 
 def __starting_point():
-    n, k, p, x, y, As = read_data()
+    (n, k, p, x, y, As) = read_data()
     seq = solve(n, k, p, x, y, As)
     print(' '.join(seq))
 

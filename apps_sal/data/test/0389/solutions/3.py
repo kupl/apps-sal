@@ -1,6 +1,6 @@
 import math
 import fractions
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 a2 = 0
 a3 = 0
 a5 = 0

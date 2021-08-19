@@ -1,7 +1,5 @@
 from sys import stdin, stdout
-
-n, k = list(map(int, stdin.readline().rstrip().split()))
-
+(n, k) = list(map(int, stdin.readline().rstrip().split()))
 if k == 1:
     print(n)
 else:

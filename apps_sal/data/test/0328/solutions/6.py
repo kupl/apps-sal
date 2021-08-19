@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -19,7 +17,7 @@ def main():
     N = int(inp())
     ans = 0
     for _ in range(N):
-        x, y = [int(e) for e in inp().split()]
+        (x, y) = [int(e) for e in inp().split()]
         ans = max(ans, x + y)
     print(ans)
 

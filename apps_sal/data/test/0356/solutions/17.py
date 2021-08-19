@@ -1,19 +1,16 @@
-'''input
+"""input
 2
 1 2
 2
 1 2
-'''
-
+"""
 import math
 from collections import defaultdict as dd
 import heapq
-
 n = int(input())
-a = [int(i) for i in input().split(" ")]
+a = [int(i) for i in input().split(' ')]
 m = int(input())
-b = [int(i) for i in input().split(" ")]
-
+b = [int(i) for i in input().split(' ')]
 x = [a[0]]
 y = [b[0]]
 if sum(a) != sum(b):

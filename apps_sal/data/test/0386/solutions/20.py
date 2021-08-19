@@ -2,7 +2,7 @@ n = int(input())
 mn = -2000000000
 mx = 2000000000
 for i in range(n):
-    znak, m, ans = list(map(str, input().split()))
+    (znak, m, ans) = list(map(str, input().split()))
     if znak == '>':
         if ans == 'Y':
             mn = max(mn, int(m) + 1)
@@ -24,6 +24,6 @@ for i in range(n):
         else:
             mn = max(mn, int(m) + 1)
 if mx < mn:
-    print("Impossible")
+    print('Impossible')
 else:
     print((mx + mn) // 2)

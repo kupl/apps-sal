@@ -11,11 +11,8 @@ def out(value):
 
 if A[0] == B[0] and B[0] == C[0]:
     out(1)
-
 if A[1] == B[1] and B[1] == C[1]:
     out(1)
-
-
 X = A
 Y = B
 Z = C
@@ -27,5 +24,4 @@ for p in itertools.permutations([X, Y, Z]):
         out(2)
     if A[1] == B[1] and (C[0] <= min(A[0], B[0]) or C[0] >= max(A[0], B[0])):
         out(2)
-
 out(3)

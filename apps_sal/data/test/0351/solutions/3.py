@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a.sort()
 curr = 0
 ans = 0
@@ -11,5 +10,4 @@ while curr < len(a):
     else:
         ans += 1
         k *= 2
-
 print(ans)

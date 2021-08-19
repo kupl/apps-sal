@@ -1,5 +1,4 @@
-a, b, ab = [int(x) for x in input().split()]
-
+(a, b, ab) = [int(x) for x in input().split()]
 if a > b:
     print(2 * ab + 2 * b + 1)
 elif a == b:

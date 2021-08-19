@@ -7,6 +7,6 @@ for i in range(len(t) - 1):
     if t[i] not in L and t[i + 1] not in M:
         b = False
 if b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

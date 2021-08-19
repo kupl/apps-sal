@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = list(input())
-
 s.reverse()
 ng = False
 c = 0
@@ -14,7 +13,7 @@ while ng == False and c < n:
         elif i == 1:
             ng = True
 if ng:
-    print((-1))
+    print(-1)
 else:
     ans.reverse()
-    print((' '.join(ans)))
+    print(' '.join(ans))

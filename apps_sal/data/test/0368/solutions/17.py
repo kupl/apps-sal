@@ -3,17 +3,17 @@ def black(a):
     for i in a:
         i = list(i)
         for ii in i:
-            if ii == "r":
+            if ii == 'r':
                 m += 5
-            if ii == "q":
+            if ii == 'q':
                 m += 9
-            if ii == "b":
+            if ii == 'b':
                 m += 3
-            if ii == "n":
+            if ii == 'n':
                 m += 3
-            if ii == "p":
+            if ii == 'p':
                 m += 1
-            if ii == "k":
+            if ii == 'k':
                 m += 0
     return m
 
@@ -23,17 +23,17 @@ def white(a):
     for i in a:
         i = list(i)
         for ii in i:
-            if ii == "R":
+            if ii == 'R':
                 m += 5
-            if ii == "Q":
+            if ii == 'Q':
                 m += 9
-            if ii == "B":
+            if ii == 'B':
                 m += 3
-            if ii == "N":
+            if ii == 'N':
                 m += 3
-            if ii == "P":
+            if ii == 'P':
                 m += 1
-            if ii == "K":
+            if ii == 'K':
                 m += 0
     return m
 
@@ -45,8 +45,8 @@ while i < 8:
     b.append(a)
     i += 1
 if white(b) > black(b):
-    print("White")
+    print('White')
 if black(b) > white(b):
-    print("Black")
+    print('Black')
 if black(b) == white(b):
-    print("Draw")
+    print('Draw')

@@ -1,5 +1,5 @@
 def main():
-    n, k, p, x, y = list(map(int, input().split()))
+    (n, k, p, x, y) = list(map(int, input().split()))
     L = list(map(int, input().split()))
     [L.append(y) for _ in range(n - k)]
     cnt = 0
@@ -14,7 +14,7 @@ def main():
     if sum(L) > x or cnt < m:
         print(-1)
     else:
-        print(" ".join(map(str, L[k:])))
+        print(' '.join(map(str, L[k:])))
 
 
 def __starting_point():

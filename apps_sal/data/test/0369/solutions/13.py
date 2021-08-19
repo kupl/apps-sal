@@ -1,14 +1,16 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     S = input()
 
     def isOK(index):
-        return S[index] == "0"
-
+        return S[index] == '0'
     ans = []
     now = N
     while now:
@@ -16,12 +18,11 @@ def main():
             if step == 0:
                 print(-1)
                 return
-
             if isOK(now - step):
                 ans.append(step)
                 now -= step
                 break
-    print(*ans[::-1], sep=" ")
+    print(*ans[::-1], sep=' ')
 
 
 def __starting_point():

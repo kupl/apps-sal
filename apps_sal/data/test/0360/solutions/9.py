@@ -14,7 +14,7 @@ def dist(a, b=(0, 0)):
 
 
 def s_dist(a, b=(0, 0)):
-    return (sqr(a[0] - b[0]) + sqr(a[1] - b[1]))
+    return sqr(a[0] - b[0]) + sqr(a[1] - b[1])
 
 
 def dist3(a, b=(0, 0, 0)):
@@ -22,11 +22,11 @@ def dist3(a, b=(0, 0, 0)):
 
 
 def s_dist3(a, b=(0, 0, 0)):
-    return (sqr(a[0] - b[0]) + sqr(a[1] - b[1]) + sqr(a[2] - b[2]))
+    return sqr(a[0] - b[0]) + sqr(a[1] - b[1]) + sqr(a[2] - b[2])
 
 
 def trans(p, al):
-    return (p[0] * cos(al) + p[1] * sin(al), - p[0] * sin(al) + p[1] * cos(al))
+    return (p[0] * cos(al) + p[1] * sin(al), -p[0] * sin(al) + p[1] * cos(al))
 
 
 def get_angle(a, b, c):
@@ -81,16 +81,12 @@ def shift(what, wth):
 
 n = int(stdin.readline())
 chal = []
-
 for i in range(n):
-    l, r = map(int, stdin.readline().split())
+    (l, r) = map(int, stdin.readline().split())
     chal.append((l, r))
-
 k = int(stdin.readline())
 ans = 0
-
 for p in chal:
     if p[1] >= k:
         ans += 1
-
 stdout.write(str(ans))

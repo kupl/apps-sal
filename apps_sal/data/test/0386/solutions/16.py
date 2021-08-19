@@ -1,6 +1,6 @@
 n = int(input())
-l = -2 * 10**9
-r = 2 * 10**9
+l = -2 * 10 ** 9
+r = 2 * 10 ** 9
 for i in range(n):
     s = input().split()
     x = int(s[1])

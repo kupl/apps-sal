@@ -11,12 +11,12 @@ def reachable(es, source):
 
 
 def BellmanFord(V: int, es: list, source=0):
-    INF = float("inf")
+    INF = float('inf')
     D = [INF] * V
     D[source] = 0
     for _ in range(V):
         upd = False
-        for f, t, c in es:
+        for (f, t, c) in es:
             tmp = D[f] + c
             if D[t] > tmp:
                 D[t] = tmp
@@ -28,16 +28,16 @@ def BellmanFord(V: int, es: list, source=0):
 
 
 def main():
-    N, M, P, *L = map(int, open(0).read().split())
+    (N, M, P, *L) = map(int, open(0).read().split())
     fwd = [[] for _ in range(N)]
     bwd = [[] for _ in range(N)]
     tmp = []
-    for a, b, c in zip(*[iter(L)] * 3):
+    for (a, b, c) in zip(*[iter(L)] * 3):
         fwd[a - 1].append(b - 1)
         bwd[b - 1].append(a - 1)
         tmp += [(a - 1, b - 1, P - c)]
     judge = reachable(fwd, 0) & reachable(bwd, N - 1)
-    ans = BellmanFord(N, [(a, b, c) for a, b, c in tmp if a in judge and b in judge])
+    ans = BellmanFord(N, [(a, b, c) for (a, b, c) in tmp if a in judge and b in judge])
     if ans == None:
         print(-1)
     else:

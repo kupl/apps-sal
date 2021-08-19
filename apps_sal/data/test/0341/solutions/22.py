@@ -1,8 +1,8 @@
-N, K = map(int, input().split())
-R, S, P = map(int, input().split())
+(N, K) = map(int, input().split())
+(R, S, P) = map(int, input().split())
 T = input() + '*' * K
 h = [''] * N
-f, n = '', ''
+(f, n) = ('', '')
 ans = 0
 for i in range(N):
     if K <= i:

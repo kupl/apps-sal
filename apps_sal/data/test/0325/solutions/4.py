@@ -19,7 +19,7 @@ def bellmanFord(edges):
     coins[0] = 0
     for _ in range(N):
         f = True
-        for u, v, c in edges:
+        for (u, v, c) in edges:
             if coins[u] + c < coins[v]:
                 coins[v] = coins[u] + c
                 f = False
@@ -28,12 +28,12 @@ def bellmanFord(edges):
     return -1
 
 
-N, M, P = map(int, input().split())
+(N, M, P) = map(int, input().split())
 A = [[] for _ in range(N)]
 A_rev = [[] for _ in range(N)]
 E = [tuple()] * M
 for i in range(M):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     a -= 1
     b -= 1
     c = P - c

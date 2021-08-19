@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 d = {'r': p, 's': r, 'p': s}
 t = input()
 ans = 0

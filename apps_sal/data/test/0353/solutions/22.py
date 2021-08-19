@@ -1,22 +1,20 @@
 def main():
     n = int(input())
-
     a = [int(s) for s in input().split()]
-
     if a[-1] == 15:
-        print("DOWN")
+        print('DOWN')
         return
     if a[-1] == 0:
-        print("UP")
+        print('UP')
         return
     if n == 1:
         print(-1)
         return
     if a[-2] < a[-1]:
-        print("UP")
+        print('UP')
         return
     else:
-        print("DOWN")
+        print('DOWN')
         return
 
 

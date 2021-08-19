@@ -31,7 +31,6 @@ for i in range(n):
         if a[i][j] == '<' and a[i][j + 2] == 'N':
             if k < int(a[i][j + 1]):
                 k = int(a[i][j + 1])
-
 for i in range(n):
     for j in range(1):
         if a[i][j] == '>=' and a[i][j + 2] == 'Y':

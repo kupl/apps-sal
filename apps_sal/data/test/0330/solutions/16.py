@@ -1,7 +1,7 @@
 def main():
-    p, y = list(map(int, input().split()))
+    (p, y) = list(map(int, input().split()))
     i = 0
-    while i < (10**5) * 5:
+    while i < 10 ** 5 * 5:
         if y <= p:
             break
         i += 1

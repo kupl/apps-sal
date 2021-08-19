@@ -9,8 +9,8 @@ def check_prime(n):
 
 t = int(input())
 for tnum in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a != b + 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES" if check_prime(a + b) else "NO")
+        print('YES' if check_prime(a + b) else 'NO')

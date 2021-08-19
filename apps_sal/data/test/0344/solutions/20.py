@@ -3,7 +3,7 @@ import os
 
 
 def isVowel(x):
-    return x == 'a' or x == 'e' or x == 'i' or x == 'o' or x == 'u'
+    return x == 'a' or x == 'e' or x == 'i' or (x == 'o') or (x == 'u')
 
 
 def romaji(str):
@@ -12,15 +12,11 @@ def romaji(str):
         if last is None:
             last = c
             continue
-
-        if not isVowel(last) and last != 'n' and not isVowel(c):
+        if not isVowel(last) and last != 'n' and (not isVowel(c)):
             return 'NO'
-
         last = c
-
     if not isVowel(last) and last != 'n':
         return 'NO'
-
     return 'YES'
 
 

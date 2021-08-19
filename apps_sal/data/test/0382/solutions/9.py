@@ -1,4 +1,4 @@
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 s = input()
 t = input()
 arr = [0] * n
@@ -8,7 +8,7 @@ for i in range(n - m + 1):
     if i:
         arr[i] += arr[i - 1]
 for i in range(q):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     l -= 1
     r -= 1
     L = l - 1

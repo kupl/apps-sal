@@ -1,7 +1,6 @@
-N, K = list(map(int, input().split()))
-R, S, P = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
+(R, S, P) = list(map(int, input().split()))
 T = input()
-
 ans = 0
 for i in range(0, K):
     rsp_K = T[i::K]
@@ -25,5 +24,4 @@ for i in range(0, K):
                 rsp_before = 'p'
             else:
                 rsp_before = ''
-
 print(ans)

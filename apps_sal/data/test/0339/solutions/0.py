@@ -13,9 +13,7 @@ n = read_int()
 k = read_int()
 a = read_int()
 b = read_int()
-
 cost = 0
-
 if k == 1:
     cost = (n - 1) * a
 else:
@@ -27,10 +25,9 @@ else:
                 cost += (n - n // k) * a
             n = n // k
         else:
-            cost += (n % k) * a
+            cost += n % k * a
             n -= n % k
             if n == 0:
                 n += 1
                 cost -= a
-
 print(cost)

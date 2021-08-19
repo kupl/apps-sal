@@ -34,7 +34,6 @@ for j in range(i + 1, n):
     w2.append(t[j])
     w3.append(t[j])
     w4.append(s[j])
-
 res = set()
 for ww in (w1, w2, w3, w4):
     www = ''.join(ww)

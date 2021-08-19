@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mat1 = [[0 for i in range(m)] for j in range(n)]
 mat2 = [[0 for i in range(m)] for j in range(n)]
 for i in range(n):
@@ -21,4 +21,4 @@ flag = 0
 for i in range(n + m - 1):
     if l1[i] != l2[i]:
         flag = 1
-print(flag * "NO" + (1 - flag) * "YES")
+print(flag * 'NO' + (1 - flag) * 'YES')

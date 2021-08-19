@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 t = input()
 ans = 0
 for i in range(k):

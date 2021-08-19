@@ -1,5 +1,4 @@
 __author__ = 'Krishna'
-
 values = {'q': 9, 'r': 5, 'b': 3, 'n': 3, 'p': 1, 'k': 0}
 whiteStrength = 0
 blackStrength = 0
@@ -10,8 +9,8 @@ for i in range(8):
         elif ord('A') <= ord(piece) <= ord('Z'):
             whiteStrength += values.get(piece.lower())
 if whiteStrength > blackStrength:
-    print("White")
+    print('White')
 elif whiteStrength == blackStrength:
-    print("Draw")
+    print('Draw')
 else:
-    print("Black")
+    print('Black')

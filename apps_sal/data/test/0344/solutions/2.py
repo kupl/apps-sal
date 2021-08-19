@@ -9,6 +9,6 @@ for i in range(len(s)):
             elif s[i + 1] not in vow:
                 ans = False
 if ans == True:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

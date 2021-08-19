@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(n)]
 b = [list(map(int, input().split())) for _ in range(n)]
-l1, l2 = [[] for i in range(n + m)], [[] for i in range(n + m)]
+(l1, l2) = ([[] for i in range(n + m)], [[] for i in range(n + m)])
 for i in range(n):
     for j in range(m):
         l1[i + j].append(a[i][j])

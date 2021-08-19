@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 m -= 1
 line = list(map(int, input().split()))
 answer = n

@@ -6,18 +6,14 @@ w += 5 * board.count('R')
 w += 3 * board.count('N')
 w += 3 * board.count('B')
 w += board.count('P')
-
 b += 9 * board.count('q')
 b += 5 * board.count('r')
 b += 3 * board.count('n')
 b += 3 * board.count('b')
 b += board.count('p')
-
 if w > b:
-    print("White")
-
+    print('White')
 elif w == b:
-    print("Draw")
-
+    print('Draw')
 else:
-    print("Black")
+    print('Black')

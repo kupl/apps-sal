@@ -5,11 +5,11 @@ def main():
             if c.isalpha():
                 bw[c.isupper()] += {'Q': 9, 'R': 5, 'B': 3, 'N': 3, 'P': 1, 'K': 0}[c.upper()]
     if bw[0] < bw[1]:
-        print("White")
+        print('White')
     elif bw[0] > bw[1]:
-        print("Black")
+        print('Black')
     else:
-        print("Draw")
+        print('Draw')
 
 
 def __starting_point():

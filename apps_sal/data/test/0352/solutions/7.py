@@ -1,7 +1,7 @@
 n = int(input())
-a1, b1 = [int(x) for x in input().split()]
-a2, b2 = [int(x) for x in input().split()]
-a3, b3 = [int(x) for x in input().split()]
+(a1, b1) = [int(x) for x in input().split()]
+(a2, b2) = [int(x) for x in input().split()]
+(a3, b3) = [int(x) for x in input().split()]
 ans = [a1, a2, a3]
 n -= a1 + a2 + a3
 if n >= b1 - a1:

@@ -1,4 +1,4 @@
-'''input
+"""input
 3 3
 1 2 3
 4 5 6
@@ -6,7 +6,7 @@
 1 4 7
 2 5 6
 3 8 9
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -15,7 +15,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -25,8 +25,7 @@ def ri(flag=0):
         return int(sys.stdin.readline())
 
 
-n, m = ri()
-
+(n, m) = ri()
 mat = []
 mat1 = []
 for i in range(n):
@@ -37,22 +36,19 @@ one = dd(list)
 for i in range(n):
     for j in range(m):
         one[i + j].append(mat[i][j])
-
 two = dd(list)
 for i in range(n):
     for j in range(m):
         two[i + j].append(mat1[i][j])
-
 for i in one:
     one[i].sort()
 for i in two:
     two[i].sort()
-
 f = 1
 for i in one:
     if one[i] != two[i]:
         f = 0
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -9,6 +9,6 @@ for i in range(len(a)):
         else:
             isit = 0
 if isit:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

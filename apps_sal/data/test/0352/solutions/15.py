@@ -1,7 +1,7 @@
 n = int(input())
-min1, max1 = map(int, input().split())
-min2, max2 = map(int, input().split())
-min3, max3 = map(int, input().split())
+(min1, max1) = map(int, input().split())
+(min2, max2) = map(int, input().split())
+(min3, max3) = map(int, input().split())
 if max1 + max2 + max3 == n:
     print(str(max1), str(max2), str(max3))
     quit()

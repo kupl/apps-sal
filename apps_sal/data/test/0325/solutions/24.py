@@ -3,7 +3,7 @@ def bellman_ford(s, n, G):
     d[s] = 0
     for i in range(n):
         update = False
-        for x, y, z in G:
+        for (x, y, z) in G:
             if d[y] > d[x] + z:
                 d[y] = d[x] + z
                 update = True
@@ -15,18 +15,18 @@ def bellman_ford(s, n, G):
 
 
 def main():
-    n, m, p = map(int, input().split())
+    (n, m, p) = map(int, input().split())
     G = []
     U = [[] for _ in range(n)]
     V = [[] for _ in range(n)]
     dic = {}
     for _ in range(m):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         if (a - 1, b - 1) in dic:
-            if dic[(a - 1, b - 1)] > -c + p:
-                dic[(a - 1, b - 1)] = -c + p
+            if dic[a - 1, b - 1] > -c + p:
+                dic[a - 1, b - 1] = -c + p
         else:
-            dic[(a - 1, b - 1)] = -c + p
+            dic[a - 1, b - 1] = -c + p
     for v in dic.keys():
         G.append([v[0], v[1], dic[v]])
         U[v[1]].append(v[0])

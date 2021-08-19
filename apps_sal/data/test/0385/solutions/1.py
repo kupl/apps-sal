@@ -1,8 +1,8 @@
 def main():
-    n, m, p = list(map(int, input().split()))
-    xlat, l, s, ll, lr = [0] * n, [], input(), list(range(-1, n)), list(range(1, n + 2))
+    (n, m, p) = list(map(int, input().split()))
+    (xlat, l, s, ll, lr) = ([0] * n, [], input(), list(range(-1, n)), list(range(1, n + 2)))
     p -= 1
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c == '(':
             l.append(i)
         else:
@@ -15,7 +15,7 @@ def main():
                 p = xlat[p]
             q = ll[xlat[p]]
             p = lr[p]
-            ll[p], lr[q] = q, p
+            (ll[p], lr[q]) = (q, p)
             if p == n:
                 p = ll[p]
         else:

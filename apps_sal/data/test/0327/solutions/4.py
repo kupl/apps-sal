@@ -1,5 +1,4 @@
-n, k = [int(v) for v in input().split()]
-
+(n, k) = [int(v) for v in input().split()]
 if k == 1:
     print(n)
 else:
@@ -8,4 +7,4 @@ else:
     while nn:
         nn //= 2
         p += 1
-    print(2**p - 1)
+    print(2 ** p - 1)

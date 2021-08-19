@@ -15,7 +15,6 @@ for i in range(n - 1, -1, -1):
         continue
     maxi = 0
     for x in g[i]:
-
         b[i] += b[x]
         if a[x] < 0:
             a[i] += a[x]
@@ -27,7 +26,6 @@ for i in range(n - 1, -1, -1):
     now[i] = maxi
     if a[i] < 0:
         continue
-    now[i] += (a[i] + b[i] - 1) // (b[i])
+    now[i] += (a[i] + b[i] - 1) // b[i]
     a[i] -= (a[i] + b[i] - 1) // b[i] * b[i]
-
 print(now[0])

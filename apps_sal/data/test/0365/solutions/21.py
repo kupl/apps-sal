@@ -1,6 +1,6 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 s = sum(list(map(int, input().split())))
 if s + n - 1 == x:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

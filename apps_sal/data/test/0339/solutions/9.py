@@ -12,6 +12,6 @@ else:
         c += y * a
         x -= y
         c += min(b, a * (x - x // k))
-        x = (x // k)
+        x = x // k
     c += a * (x - 1)
 print(c)

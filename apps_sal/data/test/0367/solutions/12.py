@@ -3,7 +3,6 @@ import sys
 
 
 def __starting_point():
-
     s = input()
     h = set()
     res = []
@@ -14,14 +13,14 @@ def __starting_point():
         else:
             h |= {x}
     odd = sorted(list(h))
-    for i in range(0, (len(odd)) // 2):
+    for i in range(0, len(odd) // 2):
         res.append(odd[i])
     if len(odd) % 2 == 1:
         mid = odd[len(odd) // 2]
     else:
-        mid = ""
+        mid = ''
     res.sort()
-    ans = "".join(res) + mid + "".join(res[::-1])
+    ans = ''.join(res) + mid + ''.join(res[::-1])
     print(ans)
 
 

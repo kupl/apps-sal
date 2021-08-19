@@ -2,20 +2,20 @@ from collections import deque
 
 
 def calc(t, r, s, p):
-    if t == "r":
+    if t == 'r':
         return p
-    elif t == "s":
+    elif t == 's':
         return r
     else:
         return s
 
 
-n, k = list(map(int, input().split()))
-r, s, p = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
+(r, s, p) = list(map(int, input().split()))
 T = input()
 d = deque()
 ans = 0
-for i, t in enumerate(T):
+for (i, t) in enumerate(T):
     if i < k:
         ans += calc(t, r, s, p)
         d.append(t)
