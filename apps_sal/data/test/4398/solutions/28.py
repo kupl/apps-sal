@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 def main():
     _ = int(input())
-    S, T = input().split()
-
+    (S, T) = input().split()
     ans = ''
-    for s, t in zip(S, T):
+    for (s, t) in zip(S, T):
         ans += s + t
     print(ans)
 

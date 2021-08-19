@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from functools import reduce
 from operator import mul
 
@@ -8,8 +7,8 @@ def get_value(function):
 
 
 @get_value
-def primes(size=10**6):
-    sieve = [True for _ in (list(range(size)))]
+def primes(size=10 ** 6):
+    sieve = [True for _ in list(range(size))]
     sieve[0] = False
     sieve[1] = False
     prime = 2
@@ -20,7 +19,7 @@ def primes(size=10**6):
             prime = sieve.index(True, prime + 1)
         except ValueError:
             break
-    return [number for number, is_prime in enumerate(sieve) if is_prime]
+    return [number for (number, is_prime) in enumerate(sieve) if is_prime]
 
 
 def factorized(number):
@@ -28,7 +27,7 @@ def factorized(number):
         return [1]
     factors = []
     for prime in primes:
-        if prime**2 > number:
+        if prime ** 2 > number:
             break
         while number % prime == 0:
             factors += [prime]

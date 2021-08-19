@@ -1,5 +1,5 @@
-a, b = [int(x) for x in input().split()]
-c, d = [int(x) for x in input().split()]
+(a, b) = [int(x) for x in input().split()]
+(c, d) = [int(x) for x in input().split()]
 
 
 def isCrossing(square1, square2):
@@ -26,16 +26,14 @@ def isCrossing(square1, square2):
 
 def binSearch(left, right, a, b, c, d):
     m = (left + right) / 2
-    eps = 10 ** -10
+    eps = 10 ** (-10)
     while abs(m - left) > eps and abs(right - m) > eps:
-        if isCrossing(([a - m, b - m], [a - m, b + m], [a + m, b + m], [a + m, b - m]),
-                      ([c - m, d - m], [c - m, d + m], [c + m, d + m], [c + m, d - m])):
+        if isCrossing(([a - m, b - m], [a - m, b + m], [a + m, b + m], [a + m, b - m]), ([c - m, d - m], [c - m, d + m], [c + m, d + m], [c + m, d - m])):
             right = m
         else:
             left = m
         m = (left + right) / 2
-        #print(left, m, right)
     return m
 
 
-print(binSearch(10**-10, 2 * 10**9, a, b, c, d))
+print(binSearch(10 ** (-10), 2 * 10 ** 9, a, b, c, d))

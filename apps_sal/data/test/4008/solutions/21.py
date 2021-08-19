@@ -1,7 +1,5 @@
-# import math
-# import sys
-n, k = [int(x) for x in input().strip().split(" ")]
-a = [int(x) for x in input().strip().split(" ")]
+(n, k) = [int(x) for x in input().strip().split(' ')]
+a = [int(x) for x in input().strip().split(' ')]
 d = {}
 c = {}
 flag = False
@@ -17,16 +15,15 @@ for i in range(n):
     if c[a[i]] > k:
         flag = True
         break
-
 if flag:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     cur = 0
     for j in d:
         for i in d[j]:
-            b[i] = (cur % k) + 1
+            b[i] = cur % k + 1
             cur += 1
     for i in range(n):
-        print(b[i], end=" ")
+        print(b[i], end=' ')
     print()

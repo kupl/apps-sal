@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -6,13 +5,12 @@ input = sys.stdin.readline
 def main():
     a = int(input())
     b = int(input())
-
     if a == b:
-        print("EQUAL")
+        print('EQUAL')
     elif a > b:
-        print("GREATER")
+        print('GREATER')
     else:
-        print("LESS")
+        print('LESS')
 
 
 def __starting_point():

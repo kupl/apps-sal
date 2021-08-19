@@ -1,6 +1,3 @@
-# A
-# A = list(map(int, input().split()))
-
 N = int(input())
 A = list(map(int, input().split()))
 SUM = 0
