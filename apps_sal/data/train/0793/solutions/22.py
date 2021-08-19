@@ -1,7 +1,5 @@
-# cook your dish here
 import math
-
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 
 
 def gcd(l):
@@ -11,6 +9,6 @@ def gcd(l):
     return m
 
 
-l = list(int(i) for i in input().split())
+l = list((int(i) for i in input().split()))
 l1 = list([abs(x - r) for x in l])
 print(gcd(l1))

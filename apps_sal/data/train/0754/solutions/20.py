@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 ls = []
 for _ in range(n):
@@ -8,9 +7,9 @@ for ele in ls:
     ele = list(ele)
     flag = 0
     for i in ele:
-        if(int(i) % 2 == 0):
-            print("1")
+        if int(i) % 2 == 0:
+            print('1')
             flag = 1
             break
-    if(flag == 0):
-        print("0")
+    if flag == 0:
+        print('0')

@@ -1,18 +1,21 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
-#dt = {k:v for k,v in sorted(x.items(), key=lambda i: i[1])}
-def ipnl(n): return [int(input()) for _ in range(n)]
+def ipnl(n):
+    return [int(input()) for _ in range(n)]
 
 
-def inp(): return int(input())
-def ip(): return [int(w) for w in input().split()]
+def inp():
+    return int(input())
+
+
+def ip():
+    return [int(w) for w in input().split()]
 
 
 for _ in range(inp()):
     n = inp()
     sco = [0] * n
-    x, y = [], []
+    (x, y) = ([], [])
     for i in range(n):
-        a, b = ip()
+        (a, b) = ip()
         x.append([a, i])
         y.append([b, i])
     x.sort(reverse=True, key=lambda i: i[0])

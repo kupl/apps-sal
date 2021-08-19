@@ -1,12 +1,11 @@
-# cook your dish here
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 h = list(map(int, input().split()))
 d = [abs(r - h[0])]
 
 
 def hcf(x, y):
-    while(y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
