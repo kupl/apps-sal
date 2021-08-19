@@ -1,4 +1,3 @@
-# エラトステネスの篩
 def make_prime_table(n):
     sieve = list(range(n + 1))
     sieve[0] = -1
@@ -25,18 +24,12 @@ def prime_factorize(n):
 
 
 N = int(input())
-
 prime_table = make_prime_table(N)
 d = {}
 for i in range(2, N + 1):
-    for p, c in prime_factorize(i):
+    for (p, c) in prime_factorize(i):
         d.setdefault(p, 0)
         d[p] += c
-
-# 75 = 5 * 5 * 3
-#    = 15 * 5
-#    = 25 * 3
-#    = 75
 n74 = 0
 n24 = 0
 n14 = 0
@@ -53,14 +46,9 @@ for k in d:
         n4 += 1
     if d[k] >= 2:
         n2 += 1
-
 result = 0
-# x ^ 4 * y ^ 4 * z ^ 2 の約数の個数は75個
 result += n4 * (n4 - 1) // 2 * (n2 - 2)
-# x ^ 14 * y ^ 4 の約数の個数は75個
 result += n14 * (n4 - 1)
-# x ^ 24 * y ^ 2 の約数の個数は75個
 result += n24 * (n2 - 1)
-# x ^ 74 の約数の個数は75個
 result += n74
 print(result)

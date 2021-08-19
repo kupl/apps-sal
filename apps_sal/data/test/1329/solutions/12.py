@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
 import collections
-
 n = int(input())
-
-# dp == [[0]*n for _ in range(75]
 
 
 def prime_factorize(n):
@@ -27,18 +23,15 @@ count = 0
 div = {}
 for i in range(2, n + 1):
     c = collections.Counter(prime_factorize(i))
-    for key, value in list(c.items()):
+    for (key, value) in list(c.items()):
         if key in div:
             div[key] += value
         else:
             div[key] = 1
-# print(div)
 
 
 def num(m):
     return len(list([x for x in list(div.values()) if x + 1 >= m]))
 
 
-# print(num(75))
-print((num(75) + num(25) * (num(3) - 1) + num(15) *
-      (num(5)-1) + num(5)*(num(5)-1)*(num(3)-2)//2))
+print(num(75) + num(25) * (num(3) - 1) + num(15) * (num(5) - 1) + num(5) * (num(5) - 1) * (num(3) - 2) // 2)

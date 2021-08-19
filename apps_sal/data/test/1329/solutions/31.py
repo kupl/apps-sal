@@ -16,7 +16,7 @@ def prime_set(N):
     return primes
 
 
-def prime_factorization(n):  # 素因数分解
+def prime_factorization(n):
     res = []
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
@@ -34,10 +34,8 @@ N = int(input())
 primes = {p: 0 for p in prime_set(100)}
 for i in range(2, N + 1):
     pf = prime_factorization(i)
-    for p, f in pf:
+    for (p, f) in pf:
         primes[p] += f
-
-
 n2 = n4 = n14 = n24 = n74 = 0
 for v in primes.values():
     if v >= 74:
@@ -50,7 +48,6 @@ for v in primes.values():
         n4 += 1
     if v >= 2:
         n2 += 1
-
 ans = 0
 if n74:
     ans += n74
@@ -60,5 +57,4 @@ if n14:
     ans += n14 * (n4 - 1)
 if n4 >= 2 and n2:
     ans += n4 * (n4 - 1) // 2 * (n2 - 2)
-
 print(ans)

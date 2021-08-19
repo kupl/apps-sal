@@ -1,6 +1,9 @@
 from collections import defaultdict
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 n = int(input())
@@ -46,7 +49,6 @@ for i in d:
         cnt_24.append(i)
 ans = 0
 ans += len(cnt_74)
-
 for i in cnt_2:
     for j in cnt_24:
         if i != j:
@@ -60,7 +62,6 @@ for i in cnt_2:
         for k in range(j + 1, len(cnt_4)):
             j_ = cnt_4[j]
             k_ = cnt_4[k]
-            if i != j_ and j_ != k_ and k_ != i:
+            if i != j_ and j_ != k_ and (k_ != i):
                 ans += 1
 print(ans)
-# print(d)

@@ -22,7 +22,6 @@ def solve():
     for key in primes:
         P.append(primes[key])
     pn = len(P)
-
     for i in range(pn):
         if P[i] >= 74:
             ans += 1
@@ -38,12 +37,9 @@ def solve():
             for j in range(i + 1, pn):
                 if P[j] >= 4:
                     for k in range(pn):
-                        if P[k] >= 2 and k != i and k != j:
+                        if P[k] >= 2 and k != i and (k != j):
                             ans += 1
     print(ans)
-    # print(primes)
-    # print(P)
-
     return 0
 
 

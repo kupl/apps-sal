@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 def is_leap(y):
-    return bool(not y % 400 or (not y & 0x3 and y % 100))
+    return bool(not y % 400 or (not y & 3 and y % 100))
 
 
 try:
@@ -20,6 +18,5 @@ try:
             if not m and prev_leap == initial_leap:
                 print(y)
                 break
-
 except EOFError:
     pass

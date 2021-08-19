@@ -2,11 +2,10 @@ from collections import defaultdict
 n = int(input())
 
 
-# 素因数分解
 def factorization(n):
     arr = []
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -20,11 +19,7 @@ def factorization(n):
     return arr
 
 
-# factorization(24)
-## [[2, 3], [3, 1]]
-# 24 = 2^3 * 3^1
 d = defaultdict(int)
-
 for i in range(1, n + 1):
     x = factorization(i)
     for xi in x:
@@ -54,5 +49,5 @@ for k in d:
 ans = di[74]
 ans += max(0, di[24] * (di[2] - 1))
 ans += max(0, di[14] * (di[4] - 1))
-ans += max(0, (di[4] * (di[4] - 1)) // 2 * (di[2] - 2))
-print((max(ans, 0)))
+ans += max(0, di[4] * (di[4] - 1) // 2 * (di[2] - 2))
+print(max(ans, 0))

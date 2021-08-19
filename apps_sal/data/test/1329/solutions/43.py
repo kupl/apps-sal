@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
 from bisect import bisect_right
 from itertools import accumulate
-
-sys.setrecursionlimit(10**6)
-INF = 10**12
-m = 10**9 + 7
+sys.setrecursionlimit(10 ** 6)
+INF = 10 ** 12
+m = 10 ** 9 + 7
 
 
 def cal_divisors(N):
@@ -29,7 +27,7 @@ def prime_factorize(N):
         prime_list.append(2)
         N //= 2
     f = 3
-    while f**2 <= N:
+    while f ** 2 <= N:
         if N % f == 0:
             prime_list.append(f)
             N //= f
@@ -46,22 +44,12 @@ def main():
     for i in range(1, N + 1):
         divisors.extend(prime_factorize(i))
     l = Counter(divisors)
-    # print(l)
-    # 約数を75個持つ X = a^p * b^q とした時、(p,q) = (0,74), (2,24), (4,14) しかない
     ans = 0
     nums = list(l.values())
-    # 74より大きい素因数の数だけ(1)のパターン
     ans += len([*[x for x in nums if x >= 74]])
-
-    # 14,4のパターン
     ans += len([*[x for x in nums if x >= 14]]) * (len([*[x for x in nums if x >= 4]]) - 1)
-
-    # 24,2のパターン
     ans += len([*[x for x in nums if x >= 24]]) * (len([*[x for x in nums if x >= 2]]) - 1)
-
-    # 4,4,2のパターン
     ans += len([*[x for x in nums if x >= 4]]) * (len([*[x for x in nums if x >= 4]]) - 1) * (len([*[x for x in nums if x >= 2]]) - 2) // 2
-
     print(ans)
 
 

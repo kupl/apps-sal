@@ -1,10 +1,4 @@
-
-# 75 = 5 * 5 * 3
-# 3 * 5 * 5, 3 * 25, 5 * 15, 75
-
-
 n = int(input())
-
 div = [0] * (n + 1)
 for i in range(2, n + 1):
     j = 2
@@ -15,9 +9,8 @@ for i in range(2, n + 1):
         j += 1
     if i != 1:
         div[i] += 1
-
 i3 = i5 = i15 = i25 = i75 = 0
-for _, v in enumerate(div):
+for (_, v) in enumerate(div):
     if v >= 74:
         i75 += 1
     if v >= 24:

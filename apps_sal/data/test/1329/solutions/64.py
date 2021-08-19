@@ -2,11 +2,7 @@ import collections
 
 
 class Prime:
-    # https://qiita.com/daikw/items/f48d6ac374255763463d
-    seed_primes = [
-        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67,
-        71, 73, 79, 83, 89, 97
-    ]
+    seed_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
     def is_prime(self, n):
         """
@@ -20,7 +16,6 @@ class Prime:
         is_prime_common = self.is_prime_common(n)
         if is_prime_common is not None:
             return is_prime_common
-
         if n < 2000000:
             return self.is_prime_brute_force(n)
         else:
@@ -60,28 +55,21 @@ class Prime:
         :param n:
         :return: boolean
         """
-
         d = n - 1
         while d & 1 == 0:
             d >>= 1
-
-        # use one of these lines / upper is more efficient.
         witnesses = self.get_witnesses(n)
-        # witnesses = [random.randint(1, n - 1) for _ in range(100)]
-
         for w in witnesses:
             y = pow(w, d, n)
-
-            while d != n - 1 and y != 1 and y != n - 1:
-                y = (y * y) % n
+            while d != n - 1 and y != 1 and (y != n - 1):
+                y = y * y % n
                 d <<= 1
-
             if y != n - 1 and d & 1 == 0:
                 return False
-
         return True
 
     def get_witnesses(self, num):
+
         def _get_range(num):
             if num < 2047:
                 return 1
@@ -100,7 +88,6 @@ class Prime:
             if num < 3825123056546413051:
                 return 9
             return 12
-
         return self.seed_primes[:_get_range(num)]
 
     def gcd(self, a, b):
@@ -109,7 +96,7 @@ class Prime:
         if b == 0:
             return a
         while b:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
 
     @staticmethod
@@ -139,15 +126,13 @@ class Prime:
         """
         if self.is_prime(n):
             return n
-
-        x, y, d = 2, 2, 1
+        (x, y, d) = (2, 2, 1)
         count = 0
         while d == 1:
             count += 1
             x = self.f(x, n, seed)
             y = self.f(self.f(y, n, seed), n, seed)
             d = self.gcd(abs(x - y), n)
-
         if d == n:
             return self.find_factor(n, seed + 1)
         return self.find_factor(d)
@@ -157,15 +142,11 @@ class Prime:
         if self.is_prime(n):
             primes[n] = 1
             return primes
-
         while n > 1:
             factor = self.find_factor(n)
-
             primes.setdefault(factor, 0)
             primes[factor] += 1
-
             n //= factor
-
         return primes
 
 
@@ -173,17 +154,14 @@ N = int(input())
 c = collections.defaultdict(int)
 for i in range(1, N + 1):
     factors = Prime().find_factors(i)
-    for k, v in list(factors.items()):
+    for (k, v) in list(factors.items()):
         c[k] += v
 d = list(c.values())
-# 3*5*5=3*25=5*15=75
-# a^b*c^dの約数は(b+1)*(d+1)個
-n75 = sum(i >= 74 for i in d)
-n25 = sum(i >= 24 for i in d)
-n15 = sum(i >= 14 for i in d)
-n5 = sum(i >= 4 for i in d)
-n3 = sum(i >= 2 for i in d)
-
+n75 = sum((i >= 74 for i in d))
+n25 = sum((i >= 24 for i in d))
+n15 = sum((i >= 14 for i in d))
+n5 = sum((i >= 4 for i in d))
+n3 = sum((i >= 2 for i in d))
 ans = n5 * (n5 - 1) * (n3 - 2) // 2
 ans += n25 * (n3 - 1)
 ans += n15 * (n5 - 1)
