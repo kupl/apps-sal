@@ -1,7 +1,7 @@
 def find_maximum(numbers):
     max_ = numbers[0]
     index = 0
-    for count, num in enumerate(numbers):
+    for (count, num) in enumerate(numbers):
         if num > max_:
             max_ = num
             index = count
@@ -9,7 +9,6 @@ def find_maximum(numbers):
 
 
 def sum_two_smallest_numbers(numbers):
-    # your code here
     top2 = [numbers[0], numbers[1]]
     max_index = find_maximum(top2)
     for num in numbers[2:]:

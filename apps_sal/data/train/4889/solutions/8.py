@@ -1,9 +1,7 @@
 def max_hexagon_beam(n: int, ll: tuple):
-    # n = 5
-    # l1 = [4,3,8,7,5,1]
     l1 = list(ll)
-    tn = (n * ((2 * n) - 1)) + (((2 * n) - n - 1)**2)
-    mid = (2 * n - 1)
+    tn = n * (2 * n - 1) + (2 * n - n - 1) ** 2
+    mid = 2 * n - 1
     nest = [0 for i in range(mid)]
     for i in range(0, n):
         nest[n - i - 1] = mid - i
@@ -31,4 +29,4 @@ def max_hexagon_beam(n: int, ll: tuple):
             sm2[j] += a2[i][j]
     for i in range(0, mid):
         sm0[i] = sum(a0[i])
-    return (max(sm0 + sm1 + sm2))
+    return max(sm0 + sm1 + sm2)
