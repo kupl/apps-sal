@@ -1,8 +1,8 @@
-n, l, a = map(int, input().split())
+(n, l, a) = map(int, input().split())
 prev = 0
 num = []
 for i in range(n):
-    t, x = map(int, input().split())
+    (t, x) = map(int, input().split())
     num.append(t - prev)
     prev = t + x
 num.append(l - prev)

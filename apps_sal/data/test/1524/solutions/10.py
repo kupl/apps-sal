@@ -3,8 +3,8 @@ r_cnt = 0
 l_cnt = 0
 flg = False
 ans = [0 for _ in range(len(string))]
-for i, s in enumerate(string):
-    if s == "R":
+for (i, s) in enumerate(string):
+    if s == 'R':
         if flg:
             ans[pos - 1] += l_cnt // 2
             ans[pos] += (l_cnt + 1) // 2
@@ -21,5 +21,4 @@ for i, s in enumerate(string):
         l_cnt += 1
 ans[pos - 1] += l_cnt // 2
 ans[pos] += (l_cnt + 1) // 2
-
 print(*ans)

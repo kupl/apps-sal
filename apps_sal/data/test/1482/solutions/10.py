@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-n, k = I()
+(n, k) = I()
 a = list(I())
 b = list(range(1, n * k + 1))
 for i in a:

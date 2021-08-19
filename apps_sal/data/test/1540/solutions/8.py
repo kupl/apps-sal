@@ -1,14 +1,15 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, m, k = R()
+(n, m, k) = R()
 chat = []
 for i in range(n):
     chat.append(list(R()))
 man = [0] * n
 room = [0] * m
 for i in range(k):
-    a, b = R()
+    (a, b) = R()
     man[a - 1] += 1
     room[b - 1] += 1
 for i in range(n):

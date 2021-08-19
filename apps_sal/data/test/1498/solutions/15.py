@@ -1,8 +1,8 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 servers = [i for i in range(1, n + 1)]
-res, used = [], {}
+(res, used) = ([], {})
 for i in range(q):
-    t, s, d = list(map(int, input().split()))
+    (t, s, d) = list(map(int, input().split()))
     finish = t + d
     for i in list(used.keys()):
         if t >= i:

@@ -1,6 +1,5 @@
 import sys
 from itertools import product
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,8 +9,7 @@ MOD = 1000000007
 
 
 def main():
-    H, W, K = list(map(int, readline().split()))
-
+    (H, W, K) = list(map(int, readline().split()))
     A = product((0, 1), repeat=W - 1)
     B = []
     for bars in A:
@@ -22,12 +20,10 @@ def main():
                 break
         if ok:
             B.append(bars)
-
     dp = [0] * W
     dp[0] = 1
-
     for _ in range(H):
-        dp, dp_prev = [0] * W, dp
+        (dp, dp_prev) = ([0] * W, dp)
         for bars in B:
             for i in range(W):
                 if i > 0 and bars[i - 1]:
@@ -36,9 +32,7 @@ def main():
                     dp[i + 1] = (dp[i + 1] + dp_prev[i]) % MOD
                 else:
                     dp[i] = (dp[i] + dp_prev[i]) % MOD
-
-    print((dp[K - 1]))
-
+    print(dp[K - 1])
     return
 
 

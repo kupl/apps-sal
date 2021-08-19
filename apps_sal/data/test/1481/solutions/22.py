@@ -1,6 +1,5 @@
 def prepare(n):
     table = [[0] * n for _ in range(n)]
-
     for i in range(n):
         line = input()
         for j in range(n):
@@ -23,7 +22,6 @@ def prepare(n):
 
 def __starting_point():
     n = int(input())
-
     print(prepare(n))
 
 

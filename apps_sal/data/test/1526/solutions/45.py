@@ -1,5 +1,4 @@
 import numpy as np
-
 abc = np.array([int(a) for a in input().split()])
 abc = abc - np.array([np.min(abc)] * 3)
 abc = np.sort(abc)

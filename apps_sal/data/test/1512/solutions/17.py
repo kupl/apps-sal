@@ -18,7 +18,7 @@ else:
         f.append(f[i - 1])
         s.append(s[i - 1])
         if m[i] > f[i - 1]:
-            s[i], f[i] = f[i - 1], m[i]
+            (s[i], f[i]) = (f[i - 1], m[i])
         elif m[i] > s[i - 1]:
             s[i] = m[i]
     k = [1]

@@ -8,7 +8,6 @@ q = int(t())
 a = [0] * q
 for i in r(q):
     a[i] = int(t())
-
 x.sort()
 for i in a:
     index = bisect(x, i)

@@ -1,4 +1,4 @@
-n, k = input().split()
+(n, k) = input().split()
 n = int(n)
 k = int(k)
 l = input()
@@ -10,15 +10,15 @@ for val in l:
 opened = {}
 flag = 0
 for val in l:
-    if(val not in opened):
+    if val not in opened:
         opened[val] = 1
     d[val] -= 1
-    if(len(opened) > k):
+    if len(opened) > k:
         flag = 1
         break
-    if(d[val] == 0):
-        del(opened[val])
-if(flag == 0):
-    print("NO")
+    if d[val] == 0:
+        del opened[val]
+if flag == 0:
+    print('NO')
 else:
-    print("YES")
+    print('YES')

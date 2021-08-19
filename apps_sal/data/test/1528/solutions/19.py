@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 
 
 def n_pati(l):
@@ -23,7 +23,6 @@ while 1:
         elif X >= 2:
             SUM += min(3, X - 1)
             break
-
     L = n_layer(N)
     if X >= L // 2:
         SUM += n_pati(N - 1)
@@ -38,8 +37,6 @@ while 1:
     else:
         X -= 1
         N -= 1
-
     if X in [0, 1]:
         break
-
 print(SUM)

@@ -11,7 +11,7 @@ sum2 = 0
 sumbefore = 0
 a.sort()
 for i in range(n):
-    sum2 += a[i] * (i) - sumbefore
+    sum2 += a[i] * i - sumbefore
     sumbefore += a[i]
 sumtot = sum1 + 2 * sum2
 k = gcd(sumtot, n)

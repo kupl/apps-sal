@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-a, b = list(map(int, input().split())), list(map(int, input().split()))
+(n, m) = map(int, input().split())
+(a, b) = (list(map(int, input().split())), list(map(int, input().split())))
 a.sort()
 b.sort()
 i = j = 0

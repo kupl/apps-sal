@@ -7,9 +7,9 @@ for val in l:
     while val > 0:
         cur = val % 10
         val //= 10
-        answer += n * cur * (10 ** itr) % mod
+        answer += n * cur * 10 ** itr % mod
         itr += 1
-        answer += n * cur * (10 ** itr) % mod
+        answer += n * cur * 10 ** itr % mod
         itr += 1
         answer %= mod
 print(answer)

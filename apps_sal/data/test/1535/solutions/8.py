@@ -12,18 +12,18 @@ def PointOnLine(x, y, a, b, c):
         return False
 
 
-n, x0, y0 = map(int, input().split())
+(n, x0, y0) = map(int, input().split())
 s = set()
 x = []
 y = []
 ans = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     x.append(a)
     y.append(b)
 for i in range(n):
     if (x[i], y[i]) not in s:
-        a, b, c = coeff(x0, y0, x[i], y[i])
+        (a, b, c) = coeff(x0, y0, x[i], y[i])
         for i in range(n):
             if PointOnLine(x[i], y[i], a, b, c):
                 s.add((x[i], y[i]))

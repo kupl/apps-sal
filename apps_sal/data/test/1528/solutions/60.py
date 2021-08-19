@@ -1,5 +1,5 @@
-n, x = map(int, input().split())
-l, p = [1], [1]
+(n, x) = map(int, input().split())
+(l, p) = ([1], [1])
 for i in range(n):
     l += [l[-1] * 2 + 3]
     p += [p[-1] * 2 + 1]

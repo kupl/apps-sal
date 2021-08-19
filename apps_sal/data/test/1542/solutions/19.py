@@ -1,5 +1,4 @@
 import bisect
-
 n_shops = int(input())
 prices = [int(x) for x in input().split(' ')]
 prices.sort()

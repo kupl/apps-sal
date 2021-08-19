@@ -1,6 +1,6 @@
 def main():
     l = list(map(int, input().split()))
-    even, odd = [], []
+    (even, odd) = ([], [])
     for i in l:
         if i % 2 != 0:
             odd.append(i)

@@ -1,11 +1,9 @@
 n = int(input())
 s = list(map(int, input().split()))
-
 l = [bin(i)[2:] for i in s]
 length = [len(i) for i in l]
 maxLen = max(length)
 minLen = min(length)
-
 loc = 0
 flag = False
 for j in range(minLen):

@@ -4,7 +4,6 @@ from collections import Counter
 
 def b():
     n = int(input())
-
     mat = [input() for i in range(n)]
     return Counter(mat).most_common(1)[0][1]
 

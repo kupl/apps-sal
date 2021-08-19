@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 Seats = [[0, 0, 0, 0] for i in range(n)]
 Ans = []
 for i in range(m):
@@ -7,7 +7,6 @@ for i in range(m):
     else:
         j = i - 2 * n
         Seats[j // 2][j % 2 + 2] = i + 1
-
 for i in range(n):
     if Seats[i][2]:
         Ans.append(Seats[i][2])
@@ -17,5 +16,4 @@ for i in range(n):
         Ans.append(Seats[i][3])
     if Seats[i][1]:
         Ans.append(Seats[i][1])
-
-print(" ".join(map(str, Ans)))
+print(' '.join(map(str, Ans)))

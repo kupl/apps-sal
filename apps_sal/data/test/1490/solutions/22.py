@@ -3,8 +3,6 @@ n = int(string[0])
 m = int(string[1])
 types = list(map(int, input().split()))
 types = set(types)
-
-
 curr = 1
 res = []
 while m > 0:
@@ -14,6 +12,5 @@ while m > 0:
         m -= curr
         res.append(str(curr))
     curr += 1
-
 print(len(res))
 print(' '.join(res))

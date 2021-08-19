@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = [set() for i in range(m)]
 b = [0 for i in range(n)]
 d = [0 for i in range(m)]
@@ -8,7 +8,7 @@ for i in range(n):
         if s[j]:
             a[j].add(i)
 for i in range(k):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     d[y - 1] += 1
     b[x - 1] -= 1
 for i in range(m):

@@ -22,4 +22,4 @@ while k < x:
     k += 1
     i = left[i]
     j = left[j]
-print(" ".join([str(k) for k in q]))
+print(' '.join([str(k) for k in q]))

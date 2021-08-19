@@ -2,20 +2,17 @@ __author__ = 'Lipen'
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     data = []
     when = [0] * n
     blockedcells = set()
     blockedcores = set()
-
     for _ in range(n):
         data.append(list(map(int, input().split())))
-
     for j in range(m):
         operation = []
         for _ in range(k):
             operation.append([])
-
         for i in range(n):
             if i not in blockedcores:
                 x = data[i][j] - 1
@@ -31,7 +28,6 @@ def main():
                         blockedcores.add(i)
                         when[i] = j + 1
                     operation[x].append(i)
-
     for i in when:
         print(i)
 

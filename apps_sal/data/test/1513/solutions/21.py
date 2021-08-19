@@ -1,6 +1,5 @@
-
 def main():
-    n, m, k = [int(a) for a in input().split()]
+    (n, m, k) = [int(a) for a in input().split()]
     bis = [int(a) for a in input().split()]
     total_length = bis[-1] - bis[0]
     between = []

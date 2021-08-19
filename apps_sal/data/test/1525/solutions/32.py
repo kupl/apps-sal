@@ -1,8 +1,7 @@
 MOD = 10 ** 9 + 7
-h, w, k = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
 dp = [0] * w
 dp[0] = 1
-
 fdp = [[0, 0] for _ in range(w)]
 fdp[0][0] = 1
 for i in range(w - 1):
@@ -26,4 +25,4 @@ for _ in range(h):
         if i - 1 >= 0:
             ndp[i - 1] = (ndp[i - 1] + dp[i] * f(i - 2) * f(w - i - 2)) % MOD
     dp = ndp
-print((dp[k - 1]))
+print(dp[k - 1])

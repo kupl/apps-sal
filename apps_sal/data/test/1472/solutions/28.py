@@ -1,5 +1,5 @@
-N, X, Y = map(int, input().split())
-X, Y = X - 1, Y - 1
+(N, X, Y) = map(int, input().split())
+(X, Y) = (X - 1, Y - 1)
 d = [0] * N
 for i in range(N - 1):
     for j in range(i + 1, N):

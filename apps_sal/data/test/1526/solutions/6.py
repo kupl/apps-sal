@@ -1,7 +1,6 @@
 ABC = list(map(int, input().split()))
 odds = [x for x in ABC if x % 2]
 evens = [x for x in ABC if x % 2 == 0]
-
 ans = 0
 if len(odds) == 2:
     odds[0] += 1

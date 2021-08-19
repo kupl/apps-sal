@@ -9,10 +9,9 @@ if n > 4:
     for i in range(n - 1):
         print(a[i], end=' ')
     print(a[n - 1])
+elif n < 3:
+    print(1, 1, sep='\n')
+elif n == 3:
+    print(2, '1 3', sep='\n')
 else:
-    if n < 3:
-        print(1, 1, sep='\n')
-    elif n == 3:
-        print(2, '1 3', sep='\n')
-    else:
-        print(4, '3 1 4 2', sep='\n')
+    print(4, '3 1 4 2', sep='\n')

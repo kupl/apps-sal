@@ -100,7 +100,7 @@ class RedBlackTree(object):
                 x = x._left
             else:
                 x = x._right
-        return(g)
+        return g
 
     def search2(self, key):
         a = None
@@ -114,19 +114,18 @@ class RedBlackTree(object):
                 b = x
                 x = x._right
         if key == x._key:
-            return(None)
+            return None
         else:
-            return((a, b))
+            return (a, b)
 
 
 n = int(input())
 s = [int(i) for i in input().split()]
 t = RedBlackTree()
 t.insert_key([s[0], 0, 0])
-
 e = []
 for i in s[1:]:
-    o, u = t.search2([i, 0, 0])
+    (o, u) = t.search2([i, 0, 0])
     if u == None:
         e.append(o._key[0])
         if o._key[0] > i:
@@ -139,35 +138,33 @@ for i in s[1:]:
             u._key[1] = 1
         else:
             u._key[2] = 1
-    else:
-        if o._key[0] > i and u._key[0] > i:
-            if o._key[1] == 0:
-                o._key[1] = 1
-                e.append(o._key[0])
-            else:
-                u._key[1] = 1
-                e.append(u._key[0])
-
-        elif o._key[0] < i and u._key[0] > i:
-            if o._key[2] == 0:
-                o._key[2] = 1
-                e.append(o._key[0])
-            else:
-                u._key[1] = 1
-                e.append(u._key[0])
-        elif o._key[0] > i and u._key[0] < i:
-            if o._key[1] == 0:
-                o._key[1] = 1
-                e.append(o._key[0])
-            else:
-                u._key[2] = 1
-                e.append(u._key[0])
-        elif o._key[0] < i and u._key[0] < i:
-            if o._key[2] == 0:
-                o._key[2] = 1
-                e.append(o._key[0])
-            else:
-                u._key[2] = 1
-                e.append(u._key[0])
+    elif o._key[0] > i and u._key[0] > i:
+        if o._key[1] == 0:
+            o._key[1] = 1
+            e.append(o._key[0])
+        else:
+            u._key[1] = 1
+            e.append(u._key[0])
+    elif o._key[0] < i and u._key[0] > i:
+        if o._key[2] == 0:
+            o._key[2] = 1
+            e.append(o._key[0])
+        else:
+            u._key[1] = 1
+            e.append(u._key[0])
+    elif o._key[0] > i and u._key[0] < i:
+        if o._key[1] == 0:
+            o._key[1] = 1
+            e.append(o._key[0])
+        else:
+            u._key[2] = 1
+            e.append(u._key[0])
+    elif o._key[0] < i and u._key[0] < i:
+        if o._key[2] == 0:
+            o._key[2] = 1
+            e.append(o._key[0])
+        else:
+            u._key[2] = 1
+            e.append(u._key[0])
     t.insert_key([i, 0, 0])
 print(*e)

@@ -4,9 +4,9 @@ for i in range(1, n + 1):
     x = [0] * (n + 1)
     x[i] += 1
     z = i
-    while(1):
+    while 1:
         x[l[z]] += 1
-        if(x[l[z]] == 2):
+        if x[l[z]] == 2:
             print(l[z], end=' ')
             break
         z = l[z]

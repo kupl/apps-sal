@@ -11,14 +11,13 @@ for i in range(1, c + 1):
             l1.append(i)
         else:
             l4.append(i)
+    elif i % 2 == 1:
+        l2.append(i)
     else:
-        if i % 2 == 1:
-            l2.append(i)
-        else:
-            l3.append(i)
+        l3.append(i)
 l = []
 i = 0
-while i <= (int(c) + 1):
+while i <= int(c) + 1:
     try:
         l.append(l2[i])
     except:

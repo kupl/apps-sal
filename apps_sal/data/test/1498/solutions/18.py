@@ -1,7 +1,7 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 z = [0] * a
-for _ in " " * b:
-    t, k, d = map(int, input().split())
+for _ in ' ' * b:
+    (t, k, d) = map(int, input().split())
     gh = []
     for i in range(a):
         if z[i] < t:

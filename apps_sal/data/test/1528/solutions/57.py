@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 patty = [1]
 barger = [1]
 ans = 0

@@ -16,4 +16,4 @@ def db(x):
 md = 998244353
 ns = [int(db(x)) % md for x in ns]
 sm = sum(ns)
-print((sm * n) % md)
+print(sm * n % md)

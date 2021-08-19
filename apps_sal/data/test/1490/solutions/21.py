@@ -5,7 +5,6 @@ def re():
 [n, m] = re()
 us = re()
 us.sort()
-
 ar = []
 k = 0
 i = 0
@@ -47,4 +46,4 @@ if m > 0 and m > us[-1]:
         else:
             break
 print(len(ar))
-print(" ".join(ar))
+print(' '.join(ar))

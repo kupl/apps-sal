@@ -9,17 +9,16 @@ def delmax(lst):
     for i in range(l):
         v = lst[i]
         if v > m:
-            m, n = v, i
+            (m, n) = (v, i)
     del lst[n]
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 d = defaultdict(list)
 for i in range(n):
     d[a[i]].append(b[i])
-
 save = []
 for key in d:
     u = d[key]

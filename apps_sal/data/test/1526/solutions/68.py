@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 ans = 0
 while 1:
     if a == b and b == c:

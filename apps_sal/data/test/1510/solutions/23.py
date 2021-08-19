@@ -1,10 +1,10 @@
 from sys import stdin
-n, m = map(int, stdin.readline().split())
+(n, m) = map(int, stdin.readline().split())
 a = list(map(int, stdin.readline().split()))
 b = list(map(int, stdin.readline().split()))
 l = min(min(a), min(b))
 r = max(max(a), max(b))
-ans = 10**20
+ans = 10 ** 20
 while l <= r:
     lo = l + (r - l) // 3
     hi = r - (r - l) // 3

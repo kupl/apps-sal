@@ -7,7 +7,6 @@ prev = 'R'
 now = ''
 flag1 = 0
 flag2 = 0
-
 for i in range(1, N):
     now = S[i]
     if prev != now:
@@ -28,12 +27,10 @@ for i in range(1, N):
     else:
         odd += 1
     prev = now
-
 if flag1 % 2 == 0:
     cnt[flag1] = even
     cnt[flag2] = odd
 else:
     cnt[flag2] = even
     cnt[flag1] = odd
-
 print(' '.join([str(a) for a in cnt]))

@@ -1,7 +1,7 @@
-N, M, k = list(map(int, input().split()))
+(N, M, k) = list(map(int, input().split()))
 cash = [-1] * (k + 1)
 cash_lock = [False] * (k + 1)
-processers = [0] * (N)
+processers = [0] * N
 process = []
 for i in range(N):
     process.append(list(map(int, input().split())))
@@ -10,7 +10,7 @@ for j in range(M):
         if processers[i] == 0:
             if process[i][j] != 0:
                 cash_num = process[i][j]
-                if cash[cash_num] == -1 and not cash_lock[cash_num]:
+                if cash[cash_num] == -1 and (not cash_lock[cash_num]):
                     cash[cash_num] = i
                 elif cash_lock[cash_num]:
                     processers[i] = j + 1

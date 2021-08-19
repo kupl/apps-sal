@@ -1,14 +1,10 @@
 import bisect
-
 n = int(input())
 x = list(map(int, input().split()))
 q = int(input())
-
 x.sort()
-
 x0 = min(x)
 x1 = max(x)
-
 for i in range(q):
     m = int(input())
     if m < x0:

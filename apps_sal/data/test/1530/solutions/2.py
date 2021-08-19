@@ -1,8 +1,6 @@
 from bisect import bisect
-
 n = int(input())
 array = [int(x) for x in input().split()]
-
 tree = []
 ans = [''] * n
 for i in range(n):

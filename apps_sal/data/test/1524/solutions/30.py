@@ -24,7 +24,6 @@ for i in range(len(S) - 1, -1, -1):
             ans[i + 1] += count // 2 + 1
             ans[i] += count // 2
         count = 0
-
 for i in range(len(S)):
     ans[i] = str(ans[i])
 print(' '.join(ans))

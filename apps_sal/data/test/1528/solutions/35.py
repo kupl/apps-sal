@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 lsa = [1]
 lsp = [1]
 for i in range(50):

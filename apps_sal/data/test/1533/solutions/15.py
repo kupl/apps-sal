@@ -3,7 +3,7 @@ lst = []
 for i in range(n):
     s = input()
     if s in lst:
-        print("YES")
+        print('YES')
     else:
         lst.append(s)
-        print("NO")
+        print('NO')

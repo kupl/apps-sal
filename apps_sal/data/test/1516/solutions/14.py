@@ -10,4 +10,4 @@ def F(s):
 
 n = int(input())
 a = input().split()
-print((sum(list(map(F, a))) * n) % 998244353)
+print(sum(list(map(F, a))) * n % 998244353)

@@ -15,13 +15,11 @@ for i in range(len(s)):
             d[c] += 1
         else:
             d[c] = 1
-    else:
-        if f(c) in d:
-
-            if d[f(c)] > 0:
-                d[f(c)] -= 1
-            else:
-                sum1 += 1
+    elif f(c) in d:
+        if d[f(c)] > 0:
+            d[f(c)] -= 1
         else:
             sum1 += 1
+    else:
+        sum1 += 1
 print(sum1)

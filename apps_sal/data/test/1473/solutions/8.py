@@ -19,18 +19,18 @@ a = 0
 b = 0
 for x in appear.keys():
     if appear[x] == 1 and front[x]:
-        print(x, next[0], end=" ")
+        print(x, next[0], end=' ')
         a = x
         b = next[0]
 cnt = 2
 for i in range(0, n - 1):
     if cnt == n:
         break
-    print(next[a], end=" ")
+    print(next[a], end=' ')
     cnt += 1
     if cnt == n:
         break
-    print(next[b], end=" ")
+    print(next[b], end=' ')
     cnt += 1
     if cnt == n:
         break

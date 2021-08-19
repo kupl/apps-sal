@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     s = input()
-
     result = 0
     d = [0 for i in range(256)]
     for i in range(n - 1):
@@ -16,7 +15,6 @@ def main():
             result += 1
         else:
             d[door] -= 1
-
     print(result)
 
 

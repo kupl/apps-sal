@@ -8,6 +8,6 @@ for i in range(2, n + 1):
 l.sort()
 for i in range(2, n + 1):
     if l[i] == 0:
-        print(1, end=" ")
+        print(1, end=' ')
     else:
-        print(l[i], end=" ")
+        print(l[i], end=' ')

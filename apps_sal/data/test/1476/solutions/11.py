@@ -32,4 +32,4 @@ else:
     j = 0
     for z in range(2000, 9000):
         if students[z] != 0 and j == 0:
-            print(students[z], end=" ")
+            print(students[z], end=' ')

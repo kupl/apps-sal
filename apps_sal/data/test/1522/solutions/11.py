@@ -10,9 +10,8 @@ for i in range(len(s)):
         else:
             ers.add(ord(s[i]))
             er[ord(s[i])] = 1
+    elif ord(s[i]) + 32 in ers and er[ord(s[i]) + 32] >= 1:
+        er[ord(s[i]) + 32] -= 1
     else:
-        if ord(s[i]) + 32 in ers and er[ord(s[i]) + 32] >= 1:
-            er[ord(s[i]) + 32] -= 1
-        else:
-            cnt += 1
+        cnt += 1
 print(cnt)

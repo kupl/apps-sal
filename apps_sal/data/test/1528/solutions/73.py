@@ -1,7 +1,5 @@
-n, x = map(int, input().split())
-
-a, p = [1], [1]
-
+(n, x) = map(int, input().split())
+(a, p) = ([1], [1])
 for i in range(n):
     a.append(a[i] * 2 + 3)
     p.append(p[i] * 2 + 1)

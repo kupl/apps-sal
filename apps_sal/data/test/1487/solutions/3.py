@@ -2,7 +2,6 @@ s = input()
 t = input()
 l = len(s)
 p = ''
-
 c = 0
 for i in range(l):
     if s[i] != t[i]:
@@ -13,7 +12,6 @@ for i in range(l):
         c += 1
     else:
         p += s[i]
-
 if c % 2 == 1:
     print('impossible')
 else:

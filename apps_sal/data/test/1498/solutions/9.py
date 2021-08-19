@@ -7,7 +7,6 @@ while True:
         q = int(caption[1])
         using = {}
         for i in range(q):
-
             tasks = input().split()
             time = int(tasks[0])
             key = int(tasks[0]) + int(tasks[2])
@@ -16,7 +15,6 @@ while True:
                     servers += using[i]
                     servers.sort()
                     del using[i]
-
             need = int(tasks[1])
             touse = len(servers)
             if need > touse:
@@ -29,11 +27,8 @@ while True:
                     using[key] = amount
                 else:
                     using[key] += amount
-
                 answer.append(sums)
-
         for i in answer:
             print(i)
-
     except EOFError:
         break

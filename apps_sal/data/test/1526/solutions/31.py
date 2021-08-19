@@ -1,13 +1,12 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     input = sys.stdin.readline
-
     ans = 0
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     if a % 2 != c % 2 and b % 2 != c % 2:
         ans += 1
         a += 1
@@ -20,7 +19,7 @@ def main():
         ans += 1
         c += 1
         a += 1
-    a, b, c = sorted([a, b, c])
+    (a, b, c) = sorted([a, b, c])
     ans += (c - a) // 2
     ans += (c - b) // 2
     print(ans)

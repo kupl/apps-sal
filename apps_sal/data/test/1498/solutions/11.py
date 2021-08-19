@@ -1,8 +1,8 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 s = [0] * (n + 1)
 ans = []
 for i in range(q):
-    t, k, d = map(int, input().split())
+    (t, k, d) = map(int, input().split())
     sm = []
     for j in range(1, n + 1):
         if s[j] < t:

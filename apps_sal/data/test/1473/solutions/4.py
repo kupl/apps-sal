@@ -2,7 +2,7 @@ n = int(input())
 after = {}
 sets = [set(), set()]
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     sets[0].add(a)
     sets[1].add(b)
     after[a] = b

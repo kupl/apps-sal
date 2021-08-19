@@ -7,7 +7,7 @@ def main():
     s = sys.stdin.readline()
     more_keys = 0
     keys = collections.Counter()
-    for i, x in enumerate(s):
+    for (i, x) in enumerate(s):
         if i % 2 == 0:
             keys[x] += 1
         else:

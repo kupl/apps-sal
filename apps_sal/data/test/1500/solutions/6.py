@@ -1,5 +1,5 @@
 a = input().split()
-n, k = int(a[0]), int(a[1])
+(n, k) = (int(a[0]), int(a[1]))
 sharings = []
 s = 0
 coords = input().split()

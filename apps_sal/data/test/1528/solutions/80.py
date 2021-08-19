@@ -1,4 +1,4 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 L = [1 for _ in range(N + 1)]
 S = [1 for _ in range(N + 1)]
 for n in range(1, N + 1):
@@ -21,4 +21,4 @@ def rec(level, K):
         return S[level - 1] * 2 + 1
 
 
-print((rec(N, X)))
+print(rec(N, X))

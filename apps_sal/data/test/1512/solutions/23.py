@@ -19,7 +19,7 @@ else:
         elif i > t[1]:
             d[t[0]] += 1
             t = [t[0], i]
-    a, b = -2, n + 1
+    (a, b) = (-2, n + 1)
     for i in d:
         if d[i] > a:
             a = d[i]

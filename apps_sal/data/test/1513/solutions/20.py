@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 bi = list(map(int, input().split()))
 ai = [0] * (n - 1)
 for i in range(n - 1):

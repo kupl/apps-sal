@@ -4,16 +4,16 @@ kolzero = 0
 l = [int(i) for i in input().split()]
 kv = 0
 for i in range(n):
-    if int(l[i]**0.5)**2 == l[i]:
+    if int(l[i] ** 0.5) ** 2 == l[i]:
         kv += 1
 g = [0] * n
 for i in range(n):
     if l[i] == 0:
         kolzero += 1
-    a = int(l[i]**0.5)
+    a = int(l[i] ** 0.5)
     b = a + 1
-    a = a**2
-    b = b**2
+    a = a ** 2
+    b = b ** 2
     if l[i] - a < b - l[i]:
         g[i] = l[i] - a
     else:

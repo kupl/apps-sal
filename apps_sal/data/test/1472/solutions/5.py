@@ -1,6 +1,6 @@
 from collections import defaultdict
 ans = defaultdict(int)
-N, X, Y = map(int, input().split())
+(N, X, Y) = map(int, input().split())
 for i in range(1, N + 1):
     for j in range(1 + i, N + 1):
         l1 = j - i

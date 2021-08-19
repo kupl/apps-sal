@@ -3,7 +3,7 @@ d = {}
 for i in range(n):
     s = input()
     if s in d:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
         d[s] = 1

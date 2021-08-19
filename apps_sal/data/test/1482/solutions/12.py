@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 o = []
 for i in range(n * m):
@@ -8,7 +8,7 @@ for i in range(m):
 for i in range(m):
     for j in range(n - 1):
         for k in range(n * m):
-            if(o[k] == 0):
+            if o[k] == 0:
                 print(k + 1, end=' ')
                 o[k] = i + 1
                 break

@@ -16,7 +16,6 @@ else:
         elif pi[i] > maxs[2]:
             maxs[2] = pi[i]
             maxs[3] = i
-
         if maxs[1] == i:
             num[i] -= 1
         if maxs[3] == i:

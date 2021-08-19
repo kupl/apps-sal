@@ -6,4 +6,4 @@ if S[0] and S[1]:
     S[2] = 1 - S[2]
 if S[0] and S[1] and S[2]:
     S[3] = 1 - S[3]
-print(sum(2**(3 - i) * s for i, s in enumerate(S)))
+print(sum((2 ** (3 - i) * s for (i, s) in enumerate(S))))

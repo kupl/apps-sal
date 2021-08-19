@@ -16,7 +16,6 @@ def dfs(p, result, visited, start):
                 result[s] = r
             q.pop()
             continue
-
         if result[s] > 0:
             ret = result[s]
             q.pop()
@@ -25,7 +24,6 @@ def dfs(p, result, visited, start):
             ret = s + 1
             q.pop()
             continue
-
         next = p[s] - 1
         visited.add(s)
         q.append(next)
@@ -38,7 +36,6 @@ def solve(p):
     for i in range(n):
         if i not in visited:
             dfs(p, result, visited, i)
-
     return result
 
 

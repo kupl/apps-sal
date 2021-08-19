@@ -2,7 +2,7 @@ s = input()
 
 
 def RLE(s):
-    i, j = 0, 1
+    (i, j) = (0, 1)
     ret = []
     while i < len(s):
         while j < len(s) and s[i] == s[j]:
@@ -15,8 +15,8 @@ def RLE(s):
 rle = RLE(s)
 ans = []
 for t in range(0, len(rle) - 1, 2):
-    _, r = rle[t]
-    _, l = rle[t + 1]
+    (_, r) = rle[t]
+    (_, l) = rle[t + 1]
     for i in range(r - 1):
         ans.append(0)
     ans.append((r + 1) // 2 + l // 2)

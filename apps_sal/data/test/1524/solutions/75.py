@@ -3,9 +3,8 @@ A = [0] * len(S)
 n = 0
 m = 0
 num = 0
-
 for i in range(len(S)):
-    if S[i] == "R":
+    if S[i] == 'R':
         if num % 2 == 0:
             n += 1
         else:
@@ -22,14 +21,12 @@ for i in range(len(S)):
         n = 0
         m = 0
         num = 0
-
 sle = S[::-1]
 n = 0
 m = 0
 num = 0
-
 for i in range(len(S)):
-    if sle[i] == "L":
+    if sle[i] == 'L':
         if num % 2 == 0:
             n += 1
         else:
@@ -45,6 +42,5 @@ for i in range(len(S)):
         n = 0
         m = 0
         num = 0
-
 for i in A:
-    print(i, end=" ")
+    print(i, end=' ')

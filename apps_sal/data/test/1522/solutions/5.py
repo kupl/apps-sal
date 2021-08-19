@@ -8,9 +8,8 @@ b = input()
 for i in b:
     if i in l:
         key[i] += 1
+    elif not key[i.lower()]:
+        t += 1
     else:
-        if not key[i.lower()]:
-            t += 1
-        else:
-            key[i.lower()] -= 1
+        key[i.lower()] -= 1
 print(t)

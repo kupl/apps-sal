@@ -1,10 +1,9 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 tasks = []
 servers = [0] * n
 for _ in range(q):
     tasks.append(tuple(map(int, input().split())))
-
-for t, k, d in tasks:
+for (t, k, d) in tasks:
     a = []
     for i in range(n):
         if t >= servers[i]:

@@ -1,7 +1,7 @@
 def sieve(n):
     p = 2
-    while (p * p <= n):
-        if (prime[p] == True):
+    while p * p <= n:
+        if prime[p] == True:
             for i in range(p * p, n + 1, p):
                 prime[i] = False
         p += 1
@@ -33,7 +33,7 @@ for i in range(1, n + 1):
         ind[lis[j - step]] = j
         ind[lis[j]] = j - step
         ans.append([j - step, j])
-        lis[j - step], lis[j] = lis[j], lis[j - step]
+        (lis[j - step], lis[j]) = (lis[j], lis[j - step])
         j -= step
 print(ct)
 for i in ans:

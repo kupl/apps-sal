@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 delt = []
 for i in range(1, len(b)):

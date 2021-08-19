@@ -6,11 +6,10 @@ for i in range(n):
     b = b and t[-5:] == 'lala.'
     if a:
         if b:
-            print('OMG>.< I don\'t know!')
+            print("OMG>.< I don't know!")
         else:
-            print('Rainbow\'s')
+            print("Rainbow's")
+    elif b:
+        print("Freda's")
     else:
-        if b:
-            print('Freda\'s')
-        else:
-            print('OMG>.< I don\'t know!')
+        print("OMG>.< I don't know!")

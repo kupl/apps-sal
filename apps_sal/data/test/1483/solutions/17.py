@@ -12,7 +12,6 @@ def solve(N, A):
                 break
             visited[p] = 1
             p = A[p] - 1
-
     return ans
 
 

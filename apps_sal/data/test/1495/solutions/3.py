@@ -1,4 +1,5 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -12,7 +13,7 @@ for i in range(n):
     q = [(x, 0)]
     st = 0
     while st < len(q):
-        x, y = q[st]
+        (x, y) = q[st]
         st += 1
         if x >= m or was[x] == i:
             continue
@@ -21,5 +22,5 @@ for i in range(n):
         cnt[x] += 1
         q.append((x * 2, y + 1))
         q.append((x // 2, y + 1))
-ans = min(step[x] for x in range(m) if cnt[x] == n)
+ans = min((step[x] for x in range(m) if cnt[x] == n))
 print(ans)

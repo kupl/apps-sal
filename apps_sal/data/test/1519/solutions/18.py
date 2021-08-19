@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -17,24 +15,20 @@ def dprint(*value, sep=' ', end='\n'):
 
 def solve(N, L, A, B):
     ans = 0
-
     last = 0
-    for t, l in B:
+    for (t, l) in B:
         ans += (t - last) // A
         last = t + l
-
     ans += (L - last) // A
-
     return ans
 
 
 def main():
-    N, L, A = [int(e) for e in inp().split()]
+    (N, L, A) = [int(e) for e in inp().split()]
     B = []
     for _ in range(N):
-        t, l = [int(e) for e in inp().split()]
+        (t, l) = [int(e) for e in inp().split()]
         B.append((t, l))
-
     print(solve(N, L, A, B))
 
 

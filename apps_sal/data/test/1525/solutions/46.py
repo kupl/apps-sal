@@ -1,5 +1,5 @@
-h, w, k = map(int, input().split())
-mod = 10**9 + 7
+(h, w, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 dp = [0] * w
 dp[0] = 1
 fib = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]

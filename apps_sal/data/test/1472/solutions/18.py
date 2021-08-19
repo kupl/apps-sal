@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 dic = {}
 for i in range(1, n + 1):
     for j in range(i + 1, n + 1):
@@ -9,6 +9,6 @@ for i in range(1, n + 1):
             dic[l] = 1
 for l in range(1, n):
     if l in dic:
-        print((dic[l]))
+        print(dic[l])
     else:
-        print((0))
+        print(0)

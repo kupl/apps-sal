@@ -8,7 +8,7 @@ for i in range(1, n + 1):
     c = [0] * (n + 1)
     c[i] = 1
     x = i
-    while(1):
+    while 1:
         x = b[x]
         if c[x] == 1:
             q.append(x)

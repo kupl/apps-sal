@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[] for i in range(4)]
 for i in range(4 * n):
     cur = i + 1 if i < m else -1
@@ -7,11 +7,10 @@ for i in range(4 * n):
             a[0].append(cur)
         else:
             a[3].append(cur)
+    elif len(a[1]) == len(a[2]):
+        a[1].append(cur)
     else:
-        if len(a[1]) == len(a[2]):
-            a[1].append(cur)
-        else:
-            a[2].append(cur)
+        a[2].append(cur)
 for v in a:
     v.reverse()
 for i in range(n):

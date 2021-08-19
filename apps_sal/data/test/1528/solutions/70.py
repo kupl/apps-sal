@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 burger = [2 ** (i + 2) - 3 for i in range(n)]
 burger2 = [2 ** (i + 1) - 1 for i in range(n)]
 num = [0 for i in range(n)]

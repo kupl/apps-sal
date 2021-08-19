@@ -1,4 +1,4 @@
-N, X, Y = list(map(int, input().split()))
+(N, X, Y) = list(map(int, input().split()))
 
 
 def f(i, j):
@@ -13,6 +13,5 @@ for i in range(1, N):
     for j in range(i + 1, N + 1):
         d = f(i, j)
         D[d] += 1
-
 for d in D[1:]:
     print(d)

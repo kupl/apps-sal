@@ -5,8 +5,8 @@ from itertools import combinations
 import sys
 import math
 MAX = sys.maxsize
-MAXN = 10**5 + 10
-MOD = 10**9 + 7
+MAXN = 10 ** 5 + 10
+MOD = 10 ** 9 + 7
 
 
 def isprime(n):
@@ -17,7 +17,7 @@ def isprime(n):
         return True
     if not n & 1:
         return False
-    for x in range(3, int(n**0.5) + 1, 2):
+    for x in range(3, int(n ** 0.5) + 1, 2):
         if n % x == 0:
             return False
     return True
@@ -28,22 +28,22 @@ def mhd(a, b, x, y):
 
 
 def numIN():
-    return(list(map(int, sys.stdin.readline().strip().split())))
+    return list(map(int, sys.stdin.readline().strip().split()))
 
 
 def charIN():
-    return(sys.stdin.readline().strip().split())
+    return sys.stdin.readline().strip().split()
 
 
-n, k = numIN()
+(n, k) = numIN()
 a = list(numIN())
 b = list(numIN())
-x = [0] * (MAXN)
+x = [0] * MAXN
 d = {}
 for i in range(n):
     if not x[a[i]]:
         x[a[i]] = 1
-        d[a[i]] = [(b[i])]
+        d[a[i]] = [b[i]]
     else:
         d[a[i]].append(b[i])
 rem = x[1:k + 1].count(0)

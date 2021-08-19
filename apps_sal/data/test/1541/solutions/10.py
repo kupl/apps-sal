@@ -1,6 +1,6 @@
 m = input()
 n = len(m)
-k, o = 0, 0
+(k, o) = (0, 0)
 for i in range(n):
     if m[i] == '^':
         l = i

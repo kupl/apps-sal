@@ -2,7 +2,7 @@ def get():
     return list(map(int, input().split()))
 
 
-n, m, k = get()
+(n, m, k) = get()
 a = get()
 b = (n - 1) * [0]
 for i in range(1, n):

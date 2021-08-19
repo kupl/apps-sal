@@ -1,7 +1,7 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 data = [int(i) for i in input().split()]
 box = [0 for i in range(n * k)]
-a, b = 0, n * k
+(a, b) = (0, n * k)
 for i in range(k):
     box[data[i] - 1] = 1
     print(data[i], end=' ')

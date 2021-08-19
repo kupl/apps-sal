@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 checks = []
 zc = 0
 for i in arr:
-    x = i**0.5
+    x = i ** 0.5
     if int(x) * int(x) == i:
         checks.append(0)
         if not i:

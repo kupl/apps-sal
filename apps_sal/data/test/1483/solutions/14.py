@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -8,7 +7,7 @@ if not USE_STDIO:
 
 
 def main():
-    n, = list(map(int, input().split(' ')))
+    (n,) = list(map(int, input().split(' ')))
     p = [x - 1 for x in map(int, input().split(' '))]
     ans = [-1] * n
     for i in range(n):
@@ -21,7 +20,6 @@ def main():
                 break
             j = p[j]
     print(*ans)
-
     pass
 
 

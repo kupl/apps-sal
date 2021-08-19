@@ -1,7 +1,7 @@
 n = int(input())
-before, after = {}, {}
+(before, after) = ({}, {})
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     after[a] = b
     before[b] = a
 begin = None
@@ -10,7 +10,7 @@ for key in list(after.keys()):
         begin = key
         break
 sequence = n * [None]
-for pos, x in [(0, begin), (1, after[0])]:
+for (pos, x) in [(0, begin), (1, after[0])]:
     while True:
         sequence[pos] = x
         if x not in after or after[x] == 0:

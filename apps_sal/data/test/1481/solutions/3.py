@@ -19,7 +19,6 @@ board = ['x' * (n + 2)]
 for i in range(n):
     board.append('x' + sys.stdin.readline().strip() + 'x')
 board.append('x' * (n + 2))
-
 even = True
 for i in range(1, n + 1):
     for j in range(1, n + 1):
@@ -30,6 +29,6 @@ for i in range(1, n + 1):
     if not even:
         break
 if even:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

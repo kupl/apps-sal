@@ -11,16 +11,14 @@ def main():
     n = int(stdin.readline())
     leg = [int(_) for _ in stdin.readline().split()]
     d = [int(_) for _ in stdin.readline().split()]
-
     pairedLD = []
-    for x, y in zip(leg, d):
+    for (x, y) in zip(leg, d):
         pairedLD.append((x, y))
     pairedLD = sorted(pairedLD)
-
     legSet = set()
     suffixSum = dict()
     legFreq = dict()
-    for length, energy in zip(leg, d):
+    for (length, energy) in zip(leg, d):
         legSet.add(length)
         if length in suffixSum:
             suffixSum[length] += energy
@@ -28,15 +26,13 @@ def main():
         else:
             suffixSum[length] = energy
             legFreq[length] = 1
-
     legList = [x for x in legSet]
     legList = sorted(legList, reverse=True)
     total = 0
     for length in legList:
         suffixSum[length] += total
         total = suffixSum[length]
-
-    ans = int(2e7)
+    ans = int(20000000.0)
     toRemove = 0
     available = 0
     removable = [0] * 201
@@ -52,10 +48,10 @@ def main():
             toRemove = 0
         for j in range(1, 201):
             if removable[j] != 0 and removable[j] <= toRemove:
-                curr += (removable[j] * j)
+                curr += removable[j] * j
                 toRemove -= removable[j]
             elif removable[j] > toRemove:
-                curr += (toRemove * j)
+                curr += toRemove * j
                 toRemove = 0
             if toRemove == 0:
                 break
@@ -64,7 +60,6 @@ def main():
             removable[pairedLD[idx][1]] += 1
             idx += 1
         ans = min(ans, curr)
-
     print(ans)
 
 

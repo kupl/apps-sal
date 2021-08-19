@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 s = [list(input()) for j in range(H)]
 
 
@@ -8,10 +8,10 @@ def bfs(h, w):
     checked[h][w] = True
     g_n = 0
     while q:
-        h_, w_, n = q.pop(0)
+        (h_, w_, n) = q.pop(0)
         g_n = max(n, g_n)
-        for i, j in zip([0, 0, -1, 1], [-1, 1, 0, 0]):
-            if (0 <= h_ + i < H) and (0 <= w_ + j < W):
+        for (i, j) in zip([0, 0, -1, 1], [-1, 1, 0, 0]):
+            if 0 <= h_ + i < H and 0 <= w_ + j < W:
                 if checked[h_ + i][w_ + j]:
                     continue
                 checked[h_ + i][w_ + j] = True
@@ -24,5 +24,4 @@ n = 0
 for i in range(H):
     for j in range(W):
         n = max(n, bfs(i, j))
-
 print(n)

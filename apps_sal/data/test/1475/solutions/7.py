@@ -1,10 +1,10 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, b, k, x = R()
+(n, b, k, x) = R()
 v = list(R())
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 arr_0 = [0] * x
 for bd in v:
     arr_0[bd % x] += 1
@@ -24,7 +24,7 @@ def move(arr, s, x):
     m = pow(10, s, x)
     res = [0] * x
     for i in range(x):
-        res[(i * m) % x] += arr[i]
+        res[i * m % x] += arr[i]
     return res
 
 

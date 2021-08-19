@@ -1,6 +1,6 @@
 fib = [1, 1, 2, 3, 5, 8, 13, 21]
 mod = 1000000007
-h, w, k = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
 k -= 1
 p = [0] * w
 p[0] = 1
@@ -21,4 +21,4 @@ for i in range(h):
             q[j] += p[j]
         q[j] %= mod
     p = q
-print((p[k]))
+print(p[k])

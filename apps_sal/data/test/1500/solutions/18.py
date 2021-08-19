@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 R = [int(m) for m in input().split()]
 s = 0
 point = 0

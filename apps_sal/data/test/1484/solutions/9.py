@@ -20,7 +20,7 @@ for i in range((n + 1) // 2):
     if lis11[i] != -1:
         lis21.append(i)
         if len(lis21) > 1:
-            if (i - lis21[-2]) > long:
+            if i - lis21[-2] > long:
                 long = i - lis21[-2]
     if (i > 0) & (lis11[i] > 0):
         if lis11[i - 1] == lis11[i]:
@@ -29,14 +29,14 @@ for i in range(n // 2):
     if lis12[i] != -1:
         lis22.append(i)
         if len(lis22) > 1:
-            if (i - lis22[-2]) > long:
+            if i - lis22[-2] > long:
                 long = i - lis22[-2]
     if (i > 0) & (lis12[i] > 0):
         if lis12[i - 1] == lis12[i]:
             lisk.append(0)
 for i in range(3, long + 1):
-    tong.append((yi[i - 1]) * (k - 1) % 998244353)
-    yi.append(((yi[i - 1]) * (k - 2) + tong[i - 1]) % 998244353)
+    tong.append(yi[i - 1] * (k - 1) % 998244353)
+    yi.append((yi[i - 1] * (k - 2) + tong[i - 1]) % 998244353)
 if lis21:
     for i in range(lis21[0] - lis21[-1] + (n + 1) // 2 - 1):
         lisk.append(k - 1)

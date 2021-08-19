@@ -1,8 +1,8 @@
 import math
-n, x0, y0 = list(map(int, input().split()))
+(n, x0, y0) = list(map(int, input().split()))
 slope = []
 for i in range(n):
-    x1, y1 = list(map(int, input().split()))
+    (x1, y1) = list(map(int, input().split()))
     if x1 == x0:
         slp = 999
     else:

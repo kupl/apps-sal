@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-A.append(10**9 + 1)
+A.append(10 ** 9 + 1)
 B = []
 answer = 0
 cou = 0
@@ -11,7 +11,6 @@ for i in range(n + 1):
     if per2 == False:
         break
     while per != A[i]:
-
         answer += per
         if answer <= m:
             cou += 1
@@ -22,5 +21,4 @@ for i in range(n + 1):
             per2 = False
             break
         per += 1
-
     per += 1

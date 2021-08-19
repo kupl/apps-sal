@@ -11,7 +11,7 @@ for i in list(map(int, input().split())):
             max2 = i
     else:
         dct[i] -= 1
-        max1, max2 = i, max1
+        (max1, max2) = (i, max1)
 m = -100
 for i in dct:
     if dct[i] > m:

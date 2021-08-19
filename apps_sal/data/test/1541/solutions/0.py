@@ -9,11 +9,11 @@ for i in range(len(s)):
 for i in range(len(s)):
     c = s[i]
     if '1' <= c <= '9':
-        suc += ((kde - i) * int(c))
+        suc += (kde - i) * int(c)
         p += 1
 if suc < 0:
-    print("right")
+    print('right')
 elif suc > 0:
-    print("left")
+    print('left')
 else:
-    print("balance")
+    print('balance')

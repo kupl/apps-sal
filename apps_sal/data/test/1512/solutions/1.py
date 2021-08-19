@@ -12,9 +12,8 @@ for i in range(1, n):
         mymin = p[i]
         indmin = i
     elif p[i] > mymax:
-        mymin, mymax, indmax, indmin = mymax, p[i], i, indmax
+        (mymin, mymax, indmax, indmin) = (mymax, p[i], i, indmax)
         antiR[i] -= 1
-
 m = max(antiR)
 mini = 10 ** 9
 for i in range(n):

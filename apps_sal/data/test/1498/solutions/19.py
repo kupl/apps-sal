@@ -1,8 +1,8 @@
 for t in range(1):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     time = [0] * n
     for i in range(q):
-        t, k, d = map(int, input().split())
+        (t, k, d) = map(int, input().split())
         count = 0
         pos = 0
         for j in range(n):

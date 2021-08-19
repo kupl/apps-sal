@@ -8,16 +8,16 @@
 def main():
     import sys
     input = sys.stdin.readline
-    H, W, K = map(int, input().split())
+    (H, W, K) = map(int, input().split())
     dp = [[0] * W for _ in range(H + 1)]
     dp[0][0] = 1
     for h in range(1, H + 1):
         for w in range(W):
-            A, B, C = 0, 0, 0
+            (A, B, C) = (0, 0, 0)
             for i in range(2 ** (W - 1)):
                 lines = []
                 for j in range(W - 1):
-                    if ((i >> j) & 1):
+                    if i >> j & 1:
                         if lines and lines[-1]:
                             break
                         lines.append(True)
@@ -35,7 +35,7 @@ def main():
             dp[h][w] += dp[h - 1][w] * B
             if w + 1 <= W - 1:
                 dp[h][w] += dp[h - 1][w + 1] * C
-    print(dp[H][K - 1] % (10**9 + 7))
+    print(dp[H][K - 1] % (10 ** 9 + 7))
 
 
 def __starting_point():

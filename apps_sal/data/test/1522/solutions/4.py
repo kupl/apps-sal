@@ -8,9 +8,8 @@ for i in range(len(s)):
             k[s[i]] = 1
         else:
             k[s[i]] += 1
+    elif s[i].lower() not in k or (s[i].lower() in k and k[s[i].lower()] <= 0):
+        ans += 1
     else:
-        if s[i].lower() not in k or (s[i].lower() in k and k[s[i].lower()] <= 0):
-            ans += 1
-        else:
-            k[s[i].lower()] -= 1
+        k[s[i].lower()] -= 1
 print(ans)

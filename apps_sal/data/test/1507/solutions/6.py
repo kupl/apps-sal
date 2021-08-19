@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = input()
 d = [[n + 1, 0] for i in range(26)]
 for i in range(n):

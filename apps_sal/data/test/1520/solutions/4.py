@@ -17,7 +17,7 @@ def cnt(s):
 def nxt(c, t):
     nc = cnt(t)
     for ch in ALPH:
-        if c[ch] and not nc[ch]:
+        if c[ch] and (not nc[ch]):
             nc[ch] = 1
     f = 0
     while f < len(t) and t[f] == t[0]:
@@ -33,7 +33,7 @@ def nxt(c, t):
     else:
         nc[t[0]] = max(nc[t[0]], f + (c[t[0]] > 0))
         nc[t[-1]] = max(nc[t[-1]], r + (c[t[-1]] > 0))
-    return {x: min(MAX, y) for x, y in nc.items()}
+    return {x: min(MAX, y) for (x, y) in nc.items()}
 
 
 n = int(input())

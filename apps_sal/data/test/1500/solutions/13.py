@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 points = [int(i) for i in input().split()]
 count = 1
 distance = 0

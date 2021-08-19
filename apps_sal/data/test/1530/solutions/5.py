@@ -1,5 +1,4 @@
-__author__ = "House"
-
+__author__ = 'House'
 import bisect
 
 
@@ -16,14 +15,13 @@ def __starting_point():
             ans = f[0][0]
         elif idx == i:
             ans = f[idx - 1][0]
+        elif f[idx][1] < f[idx - 1][1]:
+            ans = f[idx - 1][0]
         else:
-            if f[idx][1] < f[idx - 1][1]:
-                ans = f[idx - 1][0]
-            else:
-                ans = f[idx][0]
+            ans = f[idx][0]
         f[idx:idx] = [now]
         outp.append(str(ans))
-    print(" ".join(outp))
+    print(' '.join(outp))
 
 
 __starting_point()

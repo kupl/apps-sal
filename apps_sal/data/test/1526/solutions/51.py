@@ -1,7 +1,5 @@
-
-
 import numpy as np
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 L = np.array([a, b, c])
 d = (L % 2).sum()
 
@@ -15,30 +13,30 @@ def calc(a, b, c):
 
 
 if d == 3 or d == 0:
-    print((calc(a, b, c)))
+    print(calc(a, b, c))
 elif d == 1:
     if a % 2 == 1:
         b += 1
         c += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)
     elif b % 2 == 1:
         a += 1
         c += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)
     elif c % 2 == 1:
         a += 1
         b += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)
 elif d == 2:
     if a % 2 == 0:
         b += 1
         c += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)
     elif b % 2 == 0:
         a += 1
         c += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)
     elif c % 2 == 0:
         a += 1
         b += 1
-        print((calc(a, b, c) + 1))
+        print(calc(a, b, c) + 1)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 initial = []
 first = input().split()
 for i in range(n):
@@ -39,6 +39,6 @@ while index < n:
         if done:
             break
         count += 1
-    ans += (count * (count + 1)) // 2
+    ans += count * (count + 1) // 2
     index += count
 print(ans)

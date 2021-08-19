@@ -1,8 +1,8 @@
 from math import *
-n, x0, y0 = list(map(int, input().split()))
+(n, x0, y0) = list(map(int, input().split()))
 a = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a.append([x, y])
 cnt = 0
 for i in range(n):

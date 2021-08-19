@@ -1,5 +1,4 @@
-N, X = map(int, input().split())
-
+(N, X) = map(int, input().split())
 burger = [1]
 patty = [1]
 for i in range(N):

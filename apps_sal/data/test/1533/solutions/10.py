@@ -2,7 +2,7 @@ a = set()
 for i in range(int(input())):
     s = input()
     if s in a:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
         a.add(s)

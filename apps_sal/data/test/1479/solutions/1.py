@@ -1,6 +1,6 @@
 def ans():
-    n, m, k = map(int, input().split())
-    a = list([] for i in range(n))
+    (n, m, k) = map(int, input().split())
+    a = list(([] for i in range(n)))
     s = [0] * m
     for i in range(n):
         a[i] = input()

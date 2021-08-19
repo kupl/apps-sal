@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 cores = [1 for i in range(n)]
 cells = [1 for i in range(k)]
 info = []

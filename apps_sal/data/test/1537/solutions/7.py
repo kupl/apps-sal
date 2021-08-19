@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     grid = [[] for _ in range(n)]
     for i in range(n):
         grid[i] = list(input().strip())
@@ -18,11 +18,9 @@ def main():
             if grid[i][j] == 'B':
                 row_min[i] = min(row_min[i], j)
                 row_max[i] = j
-
             if grid[j][i] == 'B':
                 col_min[i] = min(col_min[i], j)
                 col_max[i] = j
-
     res = 0
     for r in range(n):
         if row_min[r] == math.inf:
@@ -30,7 +28,6 @@ def main():
     for c in range(n):
         if col_min[c] == math.inf:
             res += 1
-
     rows_plus = [[0 for _ in range(n)] for _ in range(n)]
     for c in range(n - k + 1):
         added = 0
@@ -46,7 +43,6 @@ def main():
                 added += 1
             rows_plus[r][c] = added
             r += 1
-
     cols_plus = [[0 for _ in range(n)] for _ in range(n)]
     for r in range(n - k + 1):
         added = 0
@@ -66,7 +62,6 @@ def main():
     for r in range(n):
         for c in range(n):
             max_added = max(max_added, rows_plus[r][c] + cols_plus[r][c])
-
     print(res + max_added)
 
 

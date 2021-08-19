@@ -1,6 +1,5 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 arr = [int(x) for x in input().split()]
-
 i = 0
 kv = 1
 rest = k
@@ -17,5 +16,4 @@ while i <= n - 2:
         i += 1
         if i == n - 1:
             break
-
 print(kv)

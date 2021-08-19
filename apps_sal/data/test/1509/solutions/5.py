@@ -1,7 +1,6 @@
 from collections import defaultdict
 n = int(input())
 a = list(map(int, input().split()))
-
 b = []
 for x in a:
     if not b or b[-1] != x:
@@ -9,7 +8,6 @@ for x in a:
 p = defaultdict(list)
 for i in range(len(b)):
     p[b[i]].append(i)
-
 ans = cur = 0
 for r in range(1, n + 1):
     for i in p[r]:

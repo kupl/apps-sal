@@ -1,4 +1,4 @@
-a = input().split(",")
+a = input().split(',')
 n = len(a)
 comm = [[] for _ in range(1000001)]
 st = [1000001]
@@ -15,4 +15,4 @@ for i in range(1000000, 0, -1):
         break
 print(maxd)
 for i in range(1, maxd + 1):
-    print(" ".join(comm[i]))
+    print(' '.join(comm[i]))

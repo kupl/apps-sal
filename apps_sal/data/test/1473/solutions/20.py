@@ -5,7 +5,7 @@ s = [0] * (2 * n)
 xor2 = 0
 ind = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     xor2 ^= a ^ b
     s[ind] = a
     ind += 1
@@ -21,7 +21,7 @@ for i in s:
         r ^= i
 if l not in m:
     l = r
-a, b = 0, l
+(a, b) = (0, l)
 ans = str(b)
 for i in range(1, n, 2):
     a = m[a]

@@ -1,9 +1,8 @@
-
 def main():
-    n, x0, y0 = map(int, input().split())
+    (n, x0, y0) = map(int, input().split())
     c = set()
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         if x - x0 == 0:
             c.add('inf')
         else:

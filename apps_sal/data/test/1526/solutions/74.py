@@ -1,4 +1,4 @@
-a, b, c = sorted(list(map(int, input().split())))
+(a, b, c) = sorted(list(map(int, input().split())))
 cnt = 0
 while b < c:
     a += 1

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [[] for i in range(0, k + 1)]
 u = [0] * (n * k + 1)

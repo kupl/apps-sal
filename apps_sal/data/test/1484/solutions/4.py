@@ -1,4 +1,4 @@
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 l = list(map(int, input().strip().split()))
 test = True
 md = 998244353
@@ -55,10 +55,10 @@ for seg in segs:
         dp[0][0] = 1
         dp[0][1] = k - 2
     for i in range(1, l):
-        dp[i][0] = (dp[i - 1][1]) % md
+        dp[i][0] = dp[i - 1][1] % md
         dp[i][1] = (dp[i - 1][0] * (k - 1) + dp[i - 1][1] * (k - 2)) % md
     if a == -10:
-        ans *= (dp[l - 1][0] + dp[l - 1][1])
+        ans *= dp[l - 1][0] + dp[l - 1][1]
     else:
         ans *= dp[l - 1][1]
     ans %= md

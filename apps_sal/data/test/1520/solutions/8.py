@@ -1,7 +1,7 @@
 def mult(s, t):
-    f1, l1, cntf1, cntl1, beaut1, n1 = s
-    f2, l2, cntf2, cntl2, beaut2, n2, p = t
-    f3, l3, cntf3, cntl3, beaut3, n3 = 0, 0, 0, 0, beaut1, 0
+    (f1, l1, cntf1, cntl1, beaut1, n1) = s
+    (f2, l2, cntf2, cntl2, beaut2, n2, p) = t
+    (f3, l3, cntf3, cntl3, beaut3, n3) = (0, 0, 0, 0, beaut1, 0)
     f3 = f1
     l3 = l1
     n3 = n1 * (n2 + 1) + n2
@@ -30,11 +30,10 @@ def mult(s, t):
                 h = 0
         ans = max(ans, h)
         beaut3 = max(beaut3, n1 * (ans + 1) + ans)
+    elif f1 in p:
+        beaut3 = max(beaut3, 1 + cntf1 + cntl1)
     else:
-        if f1 in p:
-            beaut3 = max(beaut3, 1 + cntf1 + cntl1)
-        else:
-            beaut3 = max(beaut3, cntf1, cntl1)
+        beaut3 = max(beaut3, cntf1, cntl1)
     return [f3, l3, cntf3, cntl3, beaut3, n3]
 
 

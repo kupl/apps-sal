@@ -5,7 +5,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     edges = {e: [] for e in range(n)}
     for i1 in range(1, n - 1):
         edges[i1].append(i1 - 1)
@@ -14,7 +14,6 @@ def main():
     edges[n - 1].append(n - 2)
     edges[x - 1].append(y - 1)
     edges[y - 1].append(x - 1)
-
     dis = defaultdict(int)
     for j1 in range(n):
         seen = set()
@@ -34,7 +33,7 @@ def main():
         for d in dis_each:
             dis[d] += 1
     for k1 in range(1, n):
-        print((dis[k1] // 2))
+        print(dis[k1] // 2)
 
 
 def __starting_point():

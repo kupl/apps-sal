@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 a = sorted(a, key=lambda x: -x)
 ans = 0
 d = {}

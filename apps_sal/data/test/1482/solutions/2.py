@@ -1,4 +1,4 @@
-k, n = list(map(int, input().split()))
+(k, n) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = a + [n * k + 1]
 b.sort()
@@ -10,5 +10,5 @@ for i in b:
 x = 0
 k -= 1
 for i in range(n):
-    print(str(a[i]) + ' ' + ' '.join(str(j) for j in t[x: x + k]))
+    print(str(a[i]) + ' ' + ' '.join((str(j) for j in t[x:x + k])))
     x += k

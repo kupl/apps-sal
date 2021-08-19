@@ -15,22 +15,18 @@ def RunLengthEncoding(S):
 S = input()
 N = len(S)
 rle = RunLengthEncoding(S)
-
 goal = []
-for i, (l, r) in enumerate(zip(S[:-1], S[1:])):
-    if l == "R" and r == "L":
+for (i, (l, r)) in enumerate(zip(S[:-1], S[1:])):
+    if l == 'R' and r == 'L':
         goal.append(i)
-
 ans = [0] * N
-
 p = 0
 for i in range(0, len(rle), 2):
-    _, nl = rle[i]
-    _, nr = rle[i + 1]
+    (_, nl) = rle[i]
+    (_, nr) = rle[i + 1]
     g = goal[i // 2]
     ans[g] += (nl + 1) // 2
     ans[g + 1] += nl // 2
     ans[g + 1] += (nr + 1) // 2
     ans[g] += nr // 2
-
 print(*ans)

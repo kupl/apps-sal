@@ -1,7 +1,6 @@
-H, W, K = list(map(int, input().split()))
+(H, W, K) = list(map(int, input().split()))
 h_lines = (1, 1, 2, 3, 5, 8, 13, 21, 34)
 MOD = 10 ** 9 + 7
-
 dp = [[0] * 8 for _ in range(H + 1)]
 dp[0][0] = 1
 for h in range(H):
@@ -12,4 +11,4 @@ for h in range(H):
         if w < W - 1:
             dp[h + 1][w] += dp[h][w + 1] * h_lines[w] * h_lines[W - w - 2]
         dp[h + 1][w] %= MOD
-print((dp[H][K - 1]))
+print(dp[H][K - 1])

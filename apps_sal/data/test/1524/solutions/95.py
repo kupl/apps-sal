@@ -1,14 +1,10 @@
 li = list(input())
-
 n = len(li)
-
 ans = [0 for _ in range(n)]
-
 rcnt = 0
 lcnt = 0
 ridx = 0
 lidx = 0
-
 for i in range(1, n):
     if li[i - 1] == 'R':
         rcnt += 1
@@ -30,5 +26,4 @@ for i in range(1, n):
             ans[lidx] = (lcnt + 1) // 2 + rcnt // 2
             rcnt = 0
             lcnt = 0
-
 print(*ans)

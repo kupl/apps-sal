@@ -1,5 +1,4 @@
-N, X = list(map(int, input().split()))
-
+(N, X) = list(map(int, input().split()))
 burgerLengthList = [[] for i in range(51)]
 for i in range(51):
     burgerLengthList[i].append(2 ** (i + 2) - 3)

@@ -1,6 +1,5 @@
 import sys
 from functools import lru_cache
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,7 +9,7 @@ MOD = 1000000007
 
 
 def main():
-    N, X = list(map(int, readline().split()))
+    (N, X) = list(map(int, readline().split()))
 
     @lru_cache(maxsize=None)
     def rec1(i):
@@ -31,7 +30,6 @@ def main():
             return 0
         if i == 0:
             return 1
-
         x -= 1
         ans = 0
         if x > rec2(i - 1):
@@ -40,22 +38,18 @@ def main():
         else:
             ans += rec(i - 1, x)
             return ans
-
         if x > 0:
             x -= 1
             ans += 1
         else:
             return ans
-
         if x > rec2(i - 1):
             x -= rec2(i - 1)
             ans += rec1(i - 1)
         else:
             ans += rec(i - 1, x)
-
         return ans
-
-    print((rec(N, X)))
+    print(rec(N, X))
     return
 
 

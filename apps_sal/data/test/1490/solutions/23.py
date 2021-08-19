@@ -1,9 +1,9 @@
-n, m = map(int, input().split(' '))
+(n, m) = map(int, input().split(' '))
 a = [int(i) for i in input().split(' ')]
 a = set(a)
 b = []
 cc = 0
-lim = int(1e9)
+lim = int(1000000000.0)
 i = 1
 while i <= m:
     if i not in a:

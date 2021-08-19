@@ -1,7 +1,7 @@
-n, x, y = input().split(' ')
+(n, x, y) = input().split(' ')
 troops = []
 for i in range(int(n)):
-    a, b = input().split(' ')
+    (a, b) = input().split(' ')
     troops.append([int(a) - int(x), int(b) - int(y)])
 s = set()
 for troop in troops:

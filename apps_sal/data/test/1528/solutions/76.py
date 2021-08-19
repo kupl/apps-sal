@@ -1,5 +1,4 @@
-N, X = list(map(int, input().split()))
-
+(N, X) = list(map(int, input().split()))
 size = [1]
 patty = [1]
 for i in range(N):
@@ -18,4 +17,4 @@ def f(N, X):
         return patty[N - 1] + 1 + f(N - 1, X - size[N - 1] - 2)
 
 
-print((f(N, X)))
+print(f(N, X))

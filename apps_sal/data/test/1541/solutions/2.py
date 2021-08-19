@@ -9,15 +9,14 @@ def main():
     for i in range(fulcrum + 1, len(string)):
         if string[i] != '=':
             mass_right += int(string[i]) * (i - fulcrum)
-
     if mass_left == mass_right:
-        print("balance")
+        print('balance')
         return
     if mass_left < mass_right:
-        print("right")
+        print('right')
         return
     if mass_right < mass_left:
-        print("left")
+        print('left')
         return
 
 

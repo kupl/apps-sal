@@ -3,8 +3,7 @@ line = line.split(',')
 A = 'abcdefghijklmnopqrstuvwxyz'
 depth = 1
 comments = [[]]
-cur_cnt, cur_depth = [0], 1
-
+(cur_cnt, cur_depth) = ([0], 1)
 for token in line:
     if token[0] in A or token[0] in A.upper():
         comments[cur_depth - 1].append(token)
@@ -22,7 +21,6 @@ for token in line:
         else:
             while cur_depth > 1 and cur_cnt[cur_depth - 1] == 0:
                 cur_depth -= 1
-
 print(len(comments))
 for line in comments:
     print(' '.join(line))

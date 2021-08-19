@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 
 
 def A(x):

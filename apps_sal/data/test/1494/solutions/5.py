@@ -1,8 +1,8 @@
-s, p = input(), input()
-n, m = len(s) + 1, len(p)
+(s, p) = (input(), input())
+(n, m) = (len(s) + 1, len(p))
 d = [[0] * n for t in range(n)]
 for x in range(1, n):
-    i, j = x, m
+    (i, j) = (x, m)
     while i and j:
         j -= s[i - 1] == p[j - 1]
         i -= 1

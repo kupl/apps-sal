@@ -7,12 +7,10 @@ def gcd(n, m):
 n = int(eval(input()))
 a = list(map(int, input().split()))
 a.sort()
-
 s = a[0]
 sleft = 0
 for i in range(1, len(a)):
-    sleft += (i * a[i] - s)
+    sleft += i * a[i] - s
     s += a[i]
-
 tot = s + sleft * 2
 print(tot // gcd(tot, n), n // gcd(tot, n))

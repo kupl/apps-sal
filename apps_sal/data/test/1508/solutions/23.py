@@ -1,5 +1,5 @@
 n = int(input())
-arr = list(int(x) for x in input().split(' '))
+arr = list((int(x) for x in input().split(' ')))
 mi = min(arr)
 ma = max(arr)
 arr.remove(mi)

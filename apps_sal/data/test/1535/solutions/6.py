@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 A = [list(map(int, input().split())) for i in range(n)]
 S = set()
 B = []

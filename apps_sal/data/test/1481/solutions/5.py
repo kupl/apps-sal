@@ -1,7 +1,7 @@
 n = int(input())
 a = [input() for i in range(n)]
 if n == 1:
-    print("YES")
+    print('YES')
 else:
     ans = True
     c = 0
@@ -27,4 +27,4 @@ else:
                 c += int(a[i + 1][j] == 'o') + int(a[i][j + 1] == 'o') + int(a[i][j - 1] == 'o') + int(a[i - 1][j] == 'o')
             if c % 2 != 0:
                 ans = False
-    print(["NO", "YES"][ans])
+    print(['NO', 'YES'][ans])

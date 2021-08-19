@@ -1,16 +1,12 @@
 from collections import deque
-
-
 MAX_H = 20
 MAX_W = 20
-
-
-H, W = [int(x) for x in input().split()]
+(H, W) = [int(x) for x in input().split()]
 S = [input() for _ in range(H)]
 
 
 def valid(i, j, B):
-    return 0 <= i < H and 0 <= j < W and S[i][j] == '.' and not B[i][j]
+    return 0 <= i < H and 0 <= j < W and (S[i][j] == '.') and (not B[i][j])
 
 
 def bfs(i, j):

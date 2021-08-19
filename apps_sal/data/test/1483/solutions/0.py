@@ -6,4 +6,4 @@ for i in range(n):
     while tmp[j] != 1:
         tmp[j] = 1
         j = p[j] - 1
-    print(j + 1, end=" ")
+    print(j + 1, end=' ')

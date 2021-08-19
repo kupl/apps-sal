@@ -1,5 +1,4 @@
 l = [None, '1\n1', '1\n1', '2\n1 3', '4\n2 4 1 3']
-
 n = int(input())
 if n in range(len(l)):
     print(l[n])

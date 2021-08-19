@@ -1,4 +1,4 @@
-N, X, Y = map(int, input().split())
+(N, X, Y) = map(int, input().split())
 ansvec = [0] * N
 for a in range(N - 1):
     for b in range(a + 1, N):

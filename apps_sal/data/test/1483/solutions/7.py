@@ -1,6 +1,5 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 for i in range(n):
     p = [0] * n
     j = i
