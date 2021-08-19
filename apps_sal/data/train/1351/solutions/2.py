@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 test = input()
 for i in range(int(test)):
     N = int(input())

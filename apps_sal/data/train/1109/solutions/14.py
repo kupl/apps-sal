@@ -1,5 +1,4 @@
 import math
-# Good_one
 
 
 def is_square(integer):
@@ -11,10 +10,9 @@ def is_square(integer):
 
 
 for KK_KK in range(eval(input())):
-
     a = eval(input())
     k = is_square(a)
     if k == True:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

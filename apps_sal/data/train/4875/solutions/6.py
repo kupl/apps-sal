@@ -1,17 +1,13 @@
 def is_valid_coordinates(coordinates):
-    # all characters to be used
-    digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-    dec = "."
-    comma = ","
-    space = " "
-    neg = "-"
-
-    # counters
-    negOK, digitOK = True, True
-    decOK, spaceOK, commaOK = False, False, False
+    digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    dec = '.'
+    comma = ','
+    space = ' '
+    neg = '-'
+    (negOK, digitOK) = (True, True)
+    (decOK, spaceOK, commaOK) = (False, False, False)
     hitComma = False
     hitDec = False
-
     for c in coordinates:
         print(c)
         if hitComma:
@@ -27,33 +23,31 @@ def is_valid_coordinates(coordinates):
         elif c == neg:
             if not negOK:
                 return False
-            negOK, commaOK, decOK, spaceOK = False, False, False, False
+            (negOK, commaOK, decOK, spaceOK) = (False, False, False, False)
             continue
         elif c == dec:
             if not decOK:
                 return False
-            negOK, commaOK, decOK, spaceOK = False, False, False, False
+            (negOK, commaOK, decOK, spaceOK) = (False, False, False, False)
             digitOK = True
             hitDec = True
             continue
         elif c == comma:
             if not commaOK:
                 return False
-            negOK, commaOK, decOK, digitOK = False, False, False, False
+            (negOK, commaOK, decOK, digitOK) = (False, False, False, False)
             spaceOK = True
             continue
         elif c == space:
             if not spaceOK:
                 return False
-            negOK, digitOK = True, True
-            decOK, spaceOK, commaOK = False, False, False
+            (negOK, digitOK) = (True, True)
+            (decOK, spaceOK, commaOK) = (False, False, False)
             hitComma = True
             hitDec = False
             continue
         return False
-
-    # now check the size of the coordinates
-    cArr = coordinates.split(", ")
+    cArr = coordinates.split(', ')
     if abs(float(cArr[0])) > 90 or abs(float(cArr[1])) > 180:
         return False
     return True

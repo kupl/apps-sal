@@ -1,4 +1,3 @@
-#!/bin/python
 from heapq import heappush, heappop
 import sys
 
@@ -19,7 +18,7 @@ def getDistancesBot1(a, n, m, mat, k):
             right = min(m - 1, item[1] + c)
             for x in range(left, right + 1):
                 if a[y][x] == 0:
-                    if mat[y][x] > (item[0] + 1):
+                    if mat[y][x] > item[0] + 1:
                         mat[y][x] = item[0] + 1
                         heappush(heap, (mat[y][x], x, y))
 
@@ -40,7 +39,7 @@ def getDistancesBot2(a, n, m, mat, k):
             right = min(m - 1, item[1] + c)
             for x in range(left, right + 1):
                 if a[y][x] == 0:
-                    if mat[y][x] > (item[0] + 1):
+                    if mat[y][x] > item[0] + 1:
                         mat[y][x] = item[0] + 1
                         heappush(heap, (mat[y][x], x, y))
 

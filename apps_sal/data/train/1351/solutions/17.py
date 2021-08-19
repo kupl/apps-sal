@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -8,7 +7,6 @@ for i in range(t):
             lst[i] = i
         else:
             lst[i] = 0
-
     for i in range(0, n):
-        print(lst[i], end=" ")
+        print(lst[i], end=' ')
     print()

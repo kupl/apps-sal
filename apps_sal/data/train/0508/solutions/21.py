@@ -1,21 +1,20 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
 
+    def input():
+        return sys.stdin.readline().rstrip()
     from heapq import heappush, heappop
-
     running = []
     events = []
     delete = set()
-
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     for _ in range(n):
-        s, t, x = list(map(int, input().split()))
-        events.append((s - x, x, 1))  # 追加イベント
-        events.append((t - x, x, 0))  # 削除イベント
+        (s, t, x) = list(map(int, input().split()))
+        events.append((s - x, x, 1))
+        events.append((t - x, x, 0))
     for _ in range(q):
         d = int(input())
-        events.append((d, 10**10, 2))
+        events.append((d, 10 ** 10, 2))
     events.sort()
     for i in range(len(events)):
         temp = events[i]
@@ -34,7 +33,7 @@ def main():
                     print(p)
                     break
             if flag:
-                print((-1))
+                print(-1)
 
 
 def __starting_point():
