@@ -5,4 +5,4 @@ def sort(words):
     if len(words) <= 1:
         return iter(words)
     pivot = choice(words)
-    return chain(sort(w for w in words if w < pivot), [pivot], sort(w for w in words if w > pivot))
+    return chain(sort((w for w in words if w < pivot)), [pivot], sort((w for w in words if w > pivot)))

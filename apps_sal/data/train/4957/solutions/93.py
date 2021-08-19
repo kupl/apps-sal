@@ -1,4 +1,5 @@
 class Dog:
+
     def __init__(self, name):
         pass
 
@@ -6,5 +7,5 @@ class Dog:
         return 'Woof'
 
 
-snoopy = Dog("Beagle")
-scoobydoo = Dog("Great Dane")
+snoopy = Dog('Beagle')
+scoobydoo = Dog('Great Dane')

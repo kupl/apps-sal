@@ -1,1 +1,2 @@
-def multiply(x, y): return int.__mul__(x, y)
+def multiply(x, y):
+    return int.__mul__(x, y)

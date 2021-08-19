@@ -6,5 +6,4 @@ def camelize(str_):
             k += x
         else:
             k += ' '
-
-    return ''.join(x.capitalize() for x in k.split())
+    return ''.join((x.capitalize() for x in k.split()))

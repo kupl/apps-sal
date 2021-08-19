@@ -1,5 +1,5 @@
 def f(w):
-    l, r = 0, 0
+    (l, r) = (0, 0)
     word = ''
     length = len(w)
     n = 0
@@ -12,13 +12,13 @@ def f(w):
         elif w[n].isalpha():
             word += w[n]
         n += 1
-    return l, r, word
+    return (l, r, word)
 
 
 def remove(s):
     l = []
     for x in s.split():
-        a, b, word = f(x)
+        (a, b, word) = f(x)
         size = min(a, b)
-        l.append(f"{'!'*size}{word}{'!'*size}")
+        l.append(f"{'!' * size}{word}{'!' * size}")
     return ' '.join(l)

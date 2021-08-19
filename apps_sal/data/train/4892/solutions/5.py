@@ -13,9 +13,8 @@ def find_biggTriang(listPoints):
         if area == 0:
             num_invalid_points += 1
         elif area > max_area:
-            max_area, max_points = area, []
-            max_points.append(list(list(x) for x in j))
+            (max_area, max_points) = (area, [])
+            max_points.append(list((list(x) for x in j)))
         elif area == max_area:
-            max_points.append(list(list(x) for x in j))
-
+            max_points.append(list((list(x) for x in j)))
     return [len(listPoints), len(every_valid_point), len(every_valid_point) - num_invalid_points, max_points[0] if len(max_points) == 1 else max_points, max_area]

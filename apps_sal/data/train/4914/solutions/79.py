@@ -1,2 +1,2 @@
 def position(alphabet):
-    return "Position of alphabet: " + str(ord(alphabet) % ord('a') + 1)
+    return 'Position of alphabet: ' + str(ord(alphabet) % ord('a') + 1)

@@ -1,8 +1,8 @@
 def get_diagonale_code(grid: str) -> str:
     if not grid:
-        return ""
+        return ''
     lines = [l.split() for l in grid.split('\n')]
-    row, col, word = (0, 0, "")
+    (row, col, word) = (0, 0, '')
     while col < len(lines[row]):
         word += lines[row][col]
         if row == 0:

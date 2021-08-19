@@ -3,22 +3,22 @@ def reverse_str(str):
 
 
 def vert_mirror(strng):
-    string_list = strng.split("\n")
-    result = ""
-    for i, element in enumerate(string_list):
+    string_list = strng.split('\n')
+    result = ''
+    for (i, element) in enumerate(string_list):
         result = result + reverse_str(element)
         if i != len(string_list) - 1:
-            result += "\n"
+            result += '\n'
     return result
 
 
 def hor_mirror(strng):
-    string_list = strng.split("\n")
-    result = ""
-    for i, element in enumerate(string_list):
+    string_list = strng.split('\n')
+    result = ''
+    for (i, element) in enumerate(string_list):
         result = element + result
         if i != len(string_list) - 1:
-            result = "\n" + result
+            result = '\n' + result
     return result
 
 

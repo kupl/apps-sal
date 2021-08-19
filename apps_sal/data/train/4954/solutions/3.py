@@ -2,6 +2,7 @@ from re import match
 
 
 class WordDictionary:
+
     def __init__(self):
         self.db = []
 
@@ -9,4 +10,4 @@ class WordDictionary:
         self.db.append(word)
 
     def search(self, word):
-        return bool([w for w in self.db if match(rf'^{word}$', w)])
+        return bool([w for w in self.db if match(f'^{word}$', w)])

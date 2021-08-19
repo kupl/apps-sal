@@ -6,10 +6,10 @@ def get_diagonale_code(grid: str) -> str:
         s.append(line.split(' '))
     if len(s) == 1:
         return s[0][0]
-    x, y = 0, 0
+    (x, y) = (0, 0)
     m = -1
     r = ''
-    while(y < len(s[x])):
+    while y < len(s[x]):
         r += s[x][y]
         if x == 0 or x == len(s) - 1:
             m *= -1

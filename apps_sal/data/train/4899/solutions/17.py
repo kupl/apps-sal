@@ -1,2 +1,5 @@
 from math import exp
-def weight(n, w): return w * (1 - exp(-2 * n)) * 0.171741178625167174090959688267288041771996514689886836114
+
+
+def weight(n, w):
+    return w * (1 - exp(-2 * n)) * 0.17174117862516716

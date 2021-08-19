@@ -28,13 +28,10 @@ def connect_two_points(p1, p2, grid):
     xdiff = p2[1] - p1[1]
     ystep = norm(ydiff)
     xstep = norm(xdiff)
-
     step = (ystep, xstep)
-
     for i in range(0, max(abs(ydiff), abs(xdiff)) + 1):
         y_coord = p1[0] + ystep * i
         x_coord = p1[1] + xstep * i
-
         grid[y_coord][x_coord] = '*'
 
 

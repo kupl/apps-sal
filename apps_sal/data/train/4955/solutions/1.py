@@ -6,6 +6,6 @@ def ride(group, comet):
     for x in comet:
         n2 *= ord(x.lower()) - 96
     if n1 % 47 == n2 % 47:
-        return "GO"
+        return 'GO'
     else:
-        return "STAY"
+        return 'STAY'

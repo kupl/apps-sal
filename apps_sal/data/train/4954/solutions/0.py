@@ -2,6 +2,7 @@ import re
 
 
 class WordDictionary:
+
     def __init__(self):
         self.data = []
 
@@ -10,6 +11,6 @@ class WordDictionary:
 
     def search(self, x):
         for word in self.data:
-            if re.match(x + "\Z", word):
+            if re.match(x + '\\Z', word):
                 return True
         return False

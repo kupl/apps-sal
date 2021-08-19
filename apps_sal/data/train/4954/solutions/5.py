@@ -3,6 +3,7 @@ from re import compile, match
 
 
 class WordDictionary(defaultdict):
+
     def __init__(self):
         super(WordDictionary, self).__init__(list)
 
@@ -10,5 +11,5 @@ class WordDictionary(defaultdict):
         self[len(s)].append(s)
 
     def search(self, s):
-        p = compile(f"^{s}$")
-        return any(match(p, w) for w in self[len(s)])
+        p = compile(f'^{s}$')
+        return any((match(p, w) for w in self[len(s)]))

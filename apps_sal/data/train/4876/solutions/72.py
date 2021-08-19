@@ -1,5 +1,4 @@
 import unittest
-
 HELLO = 'Hello'
 WORLD = 'World'
 EXCLAMATION_MARK = '!'
@@ -10,11 +9,11 @@ def hello(name=None):
 
     def get_hello(word, hello_string=HELLO, exclamation_mark=EXCLAMATION_MARK):
         return DEFAULT_TEMPLATE.format(hello_string, word, exclamation_mark)
-
     return get_hello(word=name.title()) if name else get_hello(word=WORLD)
 
 
 class TestHello(unittest.TestCase):
+
     def test_hello_should_return_default_string_with_not_given_name(self):
         self.assertEqual(hello(None), 'Hello, World!')
 

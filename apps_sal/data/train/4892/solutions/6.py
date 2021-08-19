@@ -12,7 +12,7 @@ def find_biggTriang(listP):
     for c in lc:
         l = list(c)
         m = [[l[0][0], l[0][1], 1], [l[1][0], l[1][1], 1], [l[2][0], l[2][1], 1]]
-        A = round((1 / 2) * abs(det(m)), 1)
+        A = round(1 / 2 * abs(det(m)), 1)
         if A == 0:
             n += 1
         elif A == result[4]:

@@ -1,6 +1,5 @@
-def hello(name=""):
-
-    if name != "":
-        return f"Hello, { name.capitalize() }!"
+def hello(name=''):
+    if name != '':
+        return f'Hello, {name.capitalize()}!'
     else:
-        return "Hello, World!"
+        return 'Hello, World!'

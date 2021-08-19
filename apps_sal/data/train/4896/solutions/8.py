@@ -9,7 +9,7 @@ def f(d, word):
 
 
 def replace(d):
-    return {key: replace(value) for key, value in d.items()} if d else None
+    return {key: replace(value) for (key, value) in d.items()} if d else None
 
 
 def build_trie(*words):

@@ -5,7 +5,6 @@ primes = [2, 3, 5, 7, 11, 13, 17]
 def gen_primes():
     for p in primes:
         yield p
-
     next_prime = primes[-1]
     limit = int(next_prime ** 0.5) + 1
     while True:
@@ -44,12 +43,11 @@ def min_special_mult(arr):
             bad.append(a)
     if bad:
         if len(bad) == 1:
-            return "There is 1 invalid entry: {}".format(bad[0])
-        return "There are {} invalid entries: {}".format(len(bad), bad)
-
+            return 'There is 1 invalid entry: {}'.format(bad[0])
+        return 'There are {} invalid entries: {}'.format(len(bad), bad)
     maxes = {}
     for n in good:
-        for p, m in gen_prime_factor_multiplicities(abs(n)):
+        for (p, m) in gen_prime_factor_multiplicities(abs(n)):
             maxes[p] = max(maxes.get(p, m), m)
-    factors = [p ** m for p, m in maxes.items()]
+    factors = [p ** m for (p, m) in maxes.items()]
     return reduce(lambda a, b: a * b, factors)

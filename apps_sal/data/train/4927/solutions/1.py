@@ -1,5 +1,5 @@
 def transform(A, x):
-    c, i, f, r = 1, x, 0, None
+    (c, i, f, r) = (1, x, 0, None)
     for n in sorted(A):
         while i <= n:
             c *= i

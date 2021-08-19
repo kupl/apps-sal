@@ -1,4 +1,5 @@
 class PokeScan:
+
     def __init__(self, name, level, pkmntype):
         self.name = name
         self.level = level

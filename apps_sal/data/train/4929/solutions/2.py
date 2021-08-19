@@ -9,6 +9,6 @@ def get_diagonale_code(grid):
 
 def genRail(grid, rail):
     for i in count():
-        n, x = divmod(i, rail)
+        (n, x) = divmod(i, rail)
         row = rail - x if n & 1 else x
-        yield '' if i >= len(grid[row]) else grid[row][i]
+        yield ('' if i >= len(grid[row]) else grid[row][i])

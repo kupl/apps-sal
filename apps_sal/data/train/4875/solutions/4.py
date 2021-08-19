@@ -3,7 +3,7 @@ def is_valid_coordinates(coordinates):
     for char in coordinates:
         if not (char.isdigit() or char in ['-', '.', ',', ' ']):
             return False
-    l = coordinates.split(", ")
+    l = coordinates.split(', ')
     if len(l) != 2:
         return False
     print(l)

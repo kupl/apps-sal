@@ -21,7 +21,6 @@ def shut_the_gate(farm):
                         f[idx] = '.'
                     j += 1
                     idx = index_of(f, j, food)
-
     for i in rng:
         if f[i] in ANIMS:
             if '|' not in f[i:] or '|' not in f[:i]:

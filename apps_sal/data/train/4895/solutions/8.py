@@ -8,5 +8,4 @@ def actually_really_good(foods):
         return "You know what's actually really good? {0} and more {1}.".format(foods[0].capitalize(), foods[0].lower())
     elif len(foods) > 2:
         shuffle(foods)
-
     return "You know what's actually really good? {0} and {1}.".format(foods[0].capitalize(), foods[1].lower())

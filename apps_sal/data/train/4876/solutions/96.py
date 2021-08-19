@@ -1,5 +1,5 @@
 def hello(name=None):
     if name:
-        return f"Hello, {name.lower().title()}!"
+        return f'Hello, {name.lower().title()}!'
     else:
-        return f"Hello, World!"
+        return f'Hello, World!'

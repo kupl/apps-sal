@@ -5,7 +5,7 @@ def generate_solved_katas(n):
     for i in range(1, n):
         john_katas.append(i - ann_katas[john_katas[i - 1]])
         ann_katas.append(i - john_katas[ann_katas[i - 1]])
-    return john_katas, ann_katas
+    return (john_katas, ann_katas)
 
 
 def john(n):

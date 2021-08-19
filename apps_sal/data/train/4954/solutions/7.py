@@ -11,4 +11,4 @@ class WordDictionary:
 
     def search(self, pattern):
         pattern += '$'
-        return any(re.match(pattern, word) for word in self.words)
+        return any((re.match(pattern, word) for word in self.words))

@@ -1,5 +1,5 @@
 def adjust(coin, price):
-    if(price % coin == 0):
+    if price % coin == 0:
         return price
     else:
         return price + coin - price % coin

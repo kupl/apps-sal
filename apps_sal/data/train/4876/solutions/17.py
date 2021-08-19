@@ -6,5 +6,5 @@ def hello(*args) -> str:
     if args and len(args[0]):
         name = args[0]
     else:
-        name = "world"
-    return "Hello, {}!".format(name.title())
+        name = 'world'
+    return 'Hello, {}!'.format(name.title())

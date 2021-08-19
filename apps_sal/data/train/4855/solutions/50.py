@@ -7,5 +7,5 @@ def hor_mirror(strng):
 
 
 def oper(fct, s):
-    strng = s.split("\n")
-    return "\n".join(fct(strng))
+    strng = s.split('\n')
+    return '\n'.join(fct(strng))

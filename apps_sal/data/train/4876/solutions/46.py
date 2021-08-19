@@ -1,5 +1,5 @@
 def hello(name=0):
     if not name:
-        return "Hello, World!"
+        return 'Hello, World!'
     else:
-        return "Hello, " + name.capitalize() + "!"
+        return 'Hello, ' + name.capitalize() + '!'

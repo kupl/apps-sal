@@ -1,8 +1,12 @@
 from itertools import chain
 
 
-def pairwise(a): return list(zip(a, a[1:]))
-def transpose(a): return list(zip(*a))
+def pairwise(a):
+    return list(zip(a, a[1:]))
+
+
+def transpose(a):
+    return list(zip(*a))
 
 
 def different_squares(matrix):

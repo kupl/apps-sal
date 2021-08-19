@@ -1,6 +1,6 @@
-def hello(name=""):
+def hello(name=''):
     n = name.lower().capitalize()
     if len(name) == 0:
-        return "Hello, World!"
+        return 'Hello, World!'
     else:
-        return "Hello, {}!".format(n)
+        return 'Hello, {}!'.format(n)

@@ -1,10 +1,14 @@
-def done(w, seen): return w in seen
-def size(w): return len(w) == len(set(w))
+def done(w, seen):
+    return w in seen
+
+
+def size(w):
+    return len(w) == len(set(w))
 
 
 def check(w, word):
     found = False
-    for c1, c2 in zip(w, word):
+    for (c1, c2) in zip(w, word):
         if c1 != c2:
             if found:
                 return False
@@ -14,9 +18,13 @@ def check(w, word):
 
 
 def mutations(alice, bob, word, first):
-    def okay(w): return not done(w, seen) and size(w) and check(w, word)
-    def player(): return bob if first else alice
-    seen, state = {word}, 0
+
+    def okay(w):
+        return not done(w, seen) and size(w) and check(w, word)
+
+    def player():
+        return bob if first else alice
+    (seen, state) = ({word}, 0)
     while True:
         try:
             word = next(filter(okay, player()))

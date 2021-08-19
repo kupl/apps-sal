@@ -1,1 +1,2 @@
-def nthterm(first, n, c): return first + n * c
+def nthterm(first, n, c):
+    return first + n * c

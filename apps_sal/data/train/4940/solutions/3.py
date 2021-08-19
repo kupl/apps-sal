@@ -1,7 +1,7 @@
 def shut_the_gate(farm):
     r = ''
-    for i, c in enumerate(farm):
-        left, right = farm[:i][::-1], farm[i + 1:]
+    for (i, c) in enumerate(farm):
+        (left, right) = (farm[:i][::-1], farm[i + 1:])
         if c in 'HCR':
             if '|' not in left or '|' not in right:
                 c = '.'

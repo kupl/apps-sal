@@ -2,7 +2,7 @@ from typing import Callable
 
 
 def vert_mirror(strng: str) -> str:
-    return '\n'.join(s[::-1] for s in strng.splitlines())
+    return '\n'.join((s[::-1] for s in strng.splitlines()))
 
 
 def hor_mirror(strng: str) -> str:

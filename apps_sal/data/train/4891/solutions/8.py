@@ -7,7 +7,7 @@ class Datamining:
         print(xbar, ybar)
         xe = [s[0] - xbar for s in train_set]
         ye = [s[1] - ybar for s in train_set]
-        self.beta = sum(xe[i] * ye[i] for i in range(n)) / sum(xe[i] ** 2 for i in range(n))
+        self.beta = sum((xe[i] * ye[i] for i in range(n))) / sum((xe[i] ** 2 for i in range(n)))
         self.alpha = ybar - self.beta * xbar
         predict = [self.alpha + self.beta * s[0] for s in train_set]
 

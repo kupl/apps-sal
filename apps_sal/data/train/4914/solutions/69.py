@@ -4,4 +4,4 @@ def position(alphabet):
     for i in range(0, 26):
         if alp[i] == alphabet:
             a = int(alp.index(alp[i])) + 1
-    return "Position of alphabet: {}".format(a)
+    return 'Position of alphabet: {}'.format(a)

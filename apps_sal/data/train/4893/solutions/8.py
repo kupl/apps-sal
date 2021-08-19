@@ -8,6 +8,6 @@ def wave_sort(a):
         array.append(a[length - 1 - x])
         array.append(a[x])
     if len(a) % 2 != 0:
-        array.insert(length - 1, a[int((length / 2))])
+        array.insert(length - 1, a[int(length / 2)])
     for x in range(0, length):
         a[x] = array[x]

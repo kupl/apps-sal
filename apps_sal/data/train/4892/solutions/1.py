@@ -3,7 +3,7 @@ from collections import defaultdict
 
 
 def area(points):
-    (ax, ay), (bx, by), (cx, cy) = points
+    ((ax, ay), (bx, by), (cx, cy)) = points
     return abs(ax * (by - cy) + bx * (cy - ay) + cx * (ay - by)) / 2
 
 
@@ -20,5 +20,4 @@ def find_biggTriang(listPoints):
     po = aaa[maxarea]
     if len(po) == 1:
         po = po[0]
-
-    return([len(listPoints), len(allcom), count, po, maxarea])
+    return [len(listPoints), len(allcom), count, po, maxarea]

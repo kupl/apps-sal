@@ -5,7 +5,6 @@ def hello(name=None):
     except:
         name = ''
         print('Error Handled!!!')
-
     if name == '' or name == None:
         new_name = 'World'
     else:
@@ -20,7 +19,5 @@ def hello(name=None):
                 new_name += i.lower()
             else:
                 new_name += i
-
             letter += 1
-
     return 'Hello, ' + new_name + '!'

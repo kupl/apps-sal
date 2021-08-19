@@ -1,4 +1,5 @@
 class PokeScan:
+
     def __init__(self, name, level, pkmntype):
         self.name = name
         self.level = level
@@ -12,8 +13,4 @@ class PokeScan:
         return 'weak'
 
     def info(self):
-        return {
-            'water': '{}, a wet and {} Pokemon.',
-            'fire': '{}, a fiery and {} Pokemon.',
-            'grass': '{}, a grassy and {} Pokemon.'
-        }[self.pkmntype].format(self.name, self.level_description())
+        return {'water': '{}, a wet and {} Pokemon.', 'fire': '{}, a fiery and {} Pokemon.', 'grass': '{}, a grassy and {} Pokemon.'}[self.pkmntype].format(self.name, self.level_description())

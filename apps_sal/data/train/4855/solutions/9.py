@@ -1,9 +1,9 @@
 def vert_mirror(strng):
-    return [x[::-1] for x in strng.split("\n")]
+    return [x[::-1] for x in strng.split('\n')]
 
 
 def hor_mirror(strng):
-    return strng.split("\n")[::-1]
+    return strng.split('\n')[::-1]
 
 
 def oper(fct, s):

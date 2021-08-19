@@ -8,4 +8,4 @@ def infected(s):
             total += len(item)
         else:
             total += len(item)
-    return (float(100) * totalinf) / total if total != 0 else 0
+    return float(100) * totalinf / total if total != 0 else 0

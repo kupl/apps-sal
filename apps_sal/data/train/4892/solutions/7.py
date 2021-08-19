@@ -7,7 +7,7 @@ def find_biggTriang(listPoints):
     i = 0
     ret = []
     mx = 0
-    for a, b, c in s:
+    for (a, b, c) in s:
         s = abs((b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1])) / 2
         if s > mx:
             mx = s

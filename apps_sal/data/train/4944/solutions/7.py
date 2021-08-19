@@ -2,9 +2,10 @@ import numpy as np
 
 
 class Vector:
+
     def __init__(self, *args):
         self.vec = np.array(args if type(args[0]) == int else args[0])
-        self.x, self.y, self.z, self.magnitude = *self.vec, np.linalg.norm(self.vec)
+        (self.x, self.y, self.z, self.magnitude) = (*self.vec, np.linalg.norm(self.vec))
 
     def __str__(self):
         return f'<{self.x}, {self.y}, {self.z}>'

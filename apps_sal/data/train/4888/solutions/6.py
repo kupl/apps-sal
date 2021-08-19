@@ -1,5 +1,5 @@
 def recaman(n):
-    k, r, s = 0, 0, 0
+    (k, r, s) = (0, 0, 0)
     S = {0}
     while n != 0:
         r = k + 1

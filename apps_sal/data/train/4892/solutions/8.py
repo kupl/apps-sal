@@ -6,8 +6,8 @@ def area(x, y, z):
     b = math.hypot(x[0] - z[0], x[1] - z[1])
     c = math.hypot(z[0] - y[0], z[1] - y[1])
     p = (a + b + c) / 2
-    s = (p * (p - a) * (p - b) * (p - c))**.5
-    if abs(s) / (a + b + c) < 1e-6:
+    s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+    if abs(s) / (a + b + c) < 1e-06:
         return 0
     return round(s, 6)
 

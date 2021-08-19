@@ -3,7 +3,7 @@ def iter_unpack(x):
         for item in x:
             yield from iter_unpack(item)
     elif isinstance(x, dict):
-        for key, value in x.items():
+        for (key, value) in x.items():
             yield from iter_unpack(key)
             yield from iter_unpack(value)
     else:

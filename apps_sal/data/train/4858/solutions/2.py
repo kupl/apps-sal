@@ -6,10 +6,7 @@ def get_arrays(n, name):
         j.append(next_j)
         next_a = i - j[a[i - 1]]
         a.append(next_a)
-    ret = {
-        'john': j,
-        'ann': a
-    }
+    ret = {'john': j, 'ann': a}
     return ret[name]
 
 

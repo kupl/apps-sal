@@ -1,4 +1,3 @@
-
 def build_trie(*words):
     trie = {}
     k = ''
@@ -14,7 +13,5 @@ def build_trie(*words):
                 trie[k] = {} if len(wd) > 1 else None
                 recurse(trie[k], wd[1:], k)
             return trie
-
     [recurse(trie, word, '') for word in words]
-
     return trie

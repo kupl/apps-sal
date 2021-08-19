@@ -12,7 +12,7 @@ def build_branch(word, i=0):
 
 def insert(trie, branch):
     if branch and trie:
-        k, v = next(iter(list(branch.items())))
+        (k, v) = next(iter(list(branch.items())))
         if k in trie:
             trie[k] = insert(trie.get(k, {}), v)
         else:

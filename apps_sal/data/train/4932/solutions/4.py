@@ -1,7 +1,7 @@
 def find_solution(puzzle):
     moves = set()
     n = len(puzzle)
-    zeros = {(i, n + j) for i, row in enumerate(puzzle) for j, v in enumerate(row) if v == 0}
+    zeros = {(i, n + j) for (i, row) in enumerate(puzzle) for (j, v) in enumerate(row) if v == 0}
     if not zeros:
         return []
 
@@ -9,7 +9,7 @@ def find_solution(puzzle):
         v = None
         if len(moves) == 0:
             return zeros.pop()
-        for r, c in zeros:
+        for (r, c) in zeros:
             if r in moves or c in moves:
                 if r in moves and c in moves:
                     continue
@@ -19,7 +19,7 @@ def find_solution(puzzle):
         if v is None:
             return zeros.pop()
     while zeros:
-        r, c = get()
+        (r, c) = get()
         if r not in moves:
             moves.add(r)
             for k in range(n, 2 * n):
@@ -38,5 +38,4 @@ def find_solution(puzzle):
                     zeros.remove((k, c))
                 else:
                     zeros.add((k, c))
-
     return list(moves)

@@ -6,5 +6,4 @@ def infected(s):
             inf += len(c)
         else:
             saf += len(c)
-
     return 0 if inf + saf == 0 else inf / (inf + saf) * 100

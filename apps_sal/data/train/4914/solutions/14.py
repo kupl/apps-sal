@@ -3,4 +3,4 @@ def position(alphabet):
     for i in range(0, 26):
         if alphabet == alph_list[i]:
             j = i + 1
-            return "Position of alphabet: " + str(j)
+            return 'Position of alphabet: ' + str(j)

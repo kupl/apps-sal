@@ -1,6 +1,4 @@
-
 def hello(name=''):
-
     if name == None or name == '':
         return f'Hello, World!'
     else:

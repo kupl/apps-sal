@@ -19,6 +19,6 @@ def split(num, way):
     elif way == 1:
         return [1, num - 1]
     elif way == 2:
-        return next([d] * (num // d) for d in range(num - 1, 0, -2) if num % d == 0)
+        return next(([d] * (num // d) for d in range(num - 1, 0, -2) if num % d == 0))
     elif way == 3:
         return [1] * num

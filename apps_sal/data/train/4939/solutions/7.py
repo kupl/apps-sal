@@ -13,11 +13,10 @@ def coffee_limits(year, month, day):
         day = '0' + str(day)
     else:
         day = str(day)
-
     health_number = int(year + month + day)
     for i in range(1, 5001):
-        CAFE_total = health_number + (i * CAFE)
-        DECAF_total = health_number + (i * DECAF)
+        CAFE_total = health_number + i * CAFE
+        DECAF_total = health_number + i * DECAF
         CAFE_hex_total = hex(CAFE_total)
         DECAF_hex_total = hex(DECAF_total)
         if 'dead' in CAFE_hex_total:

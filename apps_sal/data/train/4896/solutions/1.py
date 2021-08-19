@@ -2,7 +2,7 @@ def build_trie(*words):
     d = {}
     for word in words:
         dd = d
-        w, l = "", len(word)
+        (w, l) = ('', len(word))
         for c in word:
             w += c
             l -= 1

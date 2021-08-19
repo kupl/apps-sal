@@ -8,7 +8,6 @@ def merge_sort(words):
     arr1 = merge_sort(words[:midpt])
     arr2 = merge_sort(words[midpt:])
     res = []
-
     while len(arr1) > 0 and len(arr2) > 0:
         if arr1[0] > arr2[0]:
             res.append(arr2.pop(0))
@@ -25,9 +24,8 @@ def sort(words):
     if not words:
         return []
     dict_by_alpha = dict()
-
     for a in alphabet:
         dict_by_alpha[a] = []
     for w in words:
         dict_by_alpha[w[0]] += [w]
-    return chain.from_iterable(merge_sort(dict_by_alpha[a]) for a in alphabet)
+    return chain.from_iterable((merge_sort(dict_by_alpha[a]) for a in alphabet))

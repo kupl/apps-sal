@@ -1,6 +1,6 @@
 def get_diagonale_code(grid: str) -> str:
     matrix = [i.split() for i in grid.split('\n')]
-    x, y = 0, 0
+    (x, y) = (0, 0)
     flag = True
     result = ''
     while x < len(matrix) and y < len(matrix[x]):

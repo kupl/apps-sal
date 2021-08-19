@@ -5,5 +5,4 @@ def string_counter(string, char):
             count = count + 1
         else:
             pass
-
     return count

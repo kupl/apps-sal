@@ -1,12 +1,12 @@
-class Dog ():
+class Dog:
+
     def __init__(self, breed):
         self.breed = breed
 
     @staticmethod
     def bark():
-        return "Woof"
+        return 'Woof'
 
 
-snoopy = Dog("Beagle")
-
-scoobydoo = Dog("Great Dane")
+snoopy = Dog('Beagle')
+scoobydoo = Dog('Great Dane')

@@ -1,4 +1,5 @@
-class Dog ():
+class Dog:
+
     def __init__(self, breed, sound):
         self.breed = breed
         self.sound = sound
@@ -7,6 +8,5 @@ class Dog ():
         return self.sound
 
 
-snoopy = Dog("Beagle", "Woof")
-
-scoobydoo = Dog("Great Dane", "Woof")
+snoopy = Dog('Beagle', 'Woof')
+scoobydoo = Dog('Great Dane', 'Woof')

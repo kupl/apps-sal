@@ -1,6 +1,12 @@
 from functools import reduce
-def gcd(a, b): return a if not b else gcd(b, a % b)
-def lcm(a, b): return a * b / gcd(a, b)
+
+
+def gcd(a, b):
+    return a if not b else gcd(b, a % b)
+
+
+def lcm(a, b):
+    return a * b / gcd(a, b)
 
 
 def min_special_mult(arr):
@@ -14,5 +20,5 @@ def min_special_mult(arr):
     if not errors:
         return reduce(lcm, xs)
     if not errors[1:]:
-        return "There is 1 invalid entry: %s" % errors[0]
-    return "There are %d invalid entries: %s" % (len(errors), errors)
+        return 'There is 1 invalid entry: %s' % errors[0]
+    return 'There are %d invalid entries: %s' % (len(errors), errors)

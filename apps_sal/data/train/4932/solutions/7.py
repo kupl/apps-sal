@@ -10,15 +10,12 @@ def flip_col(puzzle, i):
 def find_solution(puzzle):
     result = []
     n = len(puzzle)
-
     for i in range(1, n):
         if puzzle[i] != puzzle[i - 1]:
             flip_row(puzzle, i)
             result.append(i)
-
     for i in range(n):
         if puzzle[0][i] != 1:
             flip_col(puzzle, i)
             result.append(i + n)
-
     return result

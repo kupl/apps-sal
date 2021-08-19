@@ -14,7 +14,7 @@ jgreg = julian(3, 9, 1752)
 
 
 def days(day, month, year):
-    if year > 1752 or (year == 1752 and month > 9) or (year == 1752 and month == 9 and day > 13):
+    if year > 1752 or (year == 1752 and month > 9) or (year == 1752 and month == 9 and (day > 13)):
         return (ref - date(year, month, day)).days
     else:
         return jgreg - julian(day, month, year) + days2greg

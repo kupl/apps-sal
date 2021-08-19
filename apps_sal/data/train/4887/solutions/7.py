@@ -14,7 +14,7 @@ def days(date, month, year):
         for num in range(1, y):
             if leap_year(num):
                 n += 1
-        return ((y - 1) * 365 + n) if y <= 1752 else ((y - 2) * 365 + n + 354)
+        return (y - 1) * 365 + n if y <= 1752 else (y - 2) * 365 + n + 354
 
     def days_in_month(m, y):
         n = 0
@@ -34,9 +34,8 @@ def days(date, month, year):
         return n
 
     def days_in_days(d, m, y):
-        if y == 1752 and m == 9 and d > 2:
+        if y == 1752 and m == 9 and (d > 2):
             return d - 11
         return d
-
     current_days = days_in_days(24, 3, 2437) + days_in_month(3, 2437) + days_in_years(2437)
     return current_days - (days_in_days(date, month, year) + days_in_month(month, year) + days_in_years(year))

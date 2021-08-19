@@ -1,2 +1,2 @@
 def position(alphabet):
-    return "Position of alphabet: %s" % ("abcdefghijklmnopqrstuvwxyz".find(alphabet) + 1)
+    return 'Position of alphabet: %s' % ('abcdefghijklmnopqrstuvwxyz'.find(alphabet) + 1)

@@ -13,4 +13,4 @@ def collatz_seq(n):
 
 
 def collatz(n):
-    return '->'.join(str(x) for x in collatz_seq(n))
+    return '->'.join((str(x) for x in collatz_seq(n)))

@@ -11,7 +11,6 @@ def find77(j, son=False, sons=[]):
             sons = find77(c, False, sons)
         if sc == 7 and son:
             sons = [c['name']] + sons
-
     return sons
 
 
@@ -21,4 +20,4 @@ def find_seventh_sons_of_seventh_sons(jstring):
     if len(sonlist) == 0:
         return set()
     else:
-        return eval(str(sonlist).replace("[", "{").replace("]", "}"))
+        return eval(str(sonlist).replace('[', '{').replace(']', '}'))

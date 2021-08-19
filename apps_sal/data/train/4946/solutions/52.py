@@ -1,5 +1,4 @@
 def house_numbers_sum(inp):
-
     count = 0
     for item in inp:
         count += item

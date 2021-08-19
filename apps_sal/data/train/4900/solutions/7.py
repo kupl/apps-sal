@@ -6,6 +6,6 @@ def f(z, eps):
         return -1
     else:
         n = 1
-        while abs(z)**(n) > eps:
+        while abs(z) ** n > eps:
             n += 1
         return n

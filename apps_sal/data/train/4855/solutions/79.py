@@ -1,5 +1,5 @@
 def vert_mirror(strng):
-    return '\n'.join(elem[::-1] for elem in strng.split('\n'))
+    return '\n'.join((elem[::-1] for elem in strng.split('\n')))
 
 
 def hor_mirror(strng):

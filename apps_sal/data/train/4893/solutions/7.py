@@ -1,6 +1,5 @@
 def wave_sort(a):
-    a1, a2 = sorted(a), sorted(a)[::-1]
-
+    (a1, a2) = (sorted(a), sorted(a)[::-1])
     for i in range(len(a)):
         if i % 2 == 1:
             a[i] = a1.pop(0)

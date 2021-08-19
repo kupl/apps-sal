@@ -1,12 +1,15 @@
 class value:
+
     def __init__(s, a, b=0):
         s.v = a
         if b != 0:
-            s.v = {add: a.v + b.v, sub: a.v - b.v, mul: a.v * b.v, truediv: a.v / b.v, mod: a.v % b.v, pow: a.v**b.v}[type(s)]
+            s.v = {add: a.v + b.v, sub: a.v - b.v, mul: a.v * b.v, truediv: a.v / b.v, mod: a.v % b.v, pow: a.v ** b.v}[type(s)]
 
 
 class v(value):
-    def compute(s): return s.v
+
+    def compute(s):
+        return s.v
 
 
 class add(v):
