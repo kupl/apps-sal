@@ -1,5 +1,3 @@
-# ABC136 B
-
 import math
 N = int(input())
 digit = int(math.log10(N)) + 1

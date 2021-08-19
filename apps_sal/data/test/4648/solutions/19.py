@@ -1,12 +1,9 @@
-# Created by: WeirdBugsButOkay
-# 28-06-2020, 20:08:49
-
 import math
 
 
 def solve():
     n = int(input())
-    p2, p3 = 0, 0
+    (p2, p3) = (0, 0)
     while n % 2 == 0:
         p2 += 1
         n //= 2
@@ -15,11 +12,10 @@ def solve():
         n //= 3
     if p3 < p2:
         print(-1)
+    elif n != 1:
+        print(-1)
     else:
-        if n != 1:
-            print(-1)
-        else:
-            print((p3 - p2) + p3)
+        print(p3 - p2 + p3)
 
 
 t = 1

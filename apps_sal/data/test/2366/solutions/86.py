@@ -1,4 +1,3 @@
-# coding: utf-8
 from collections import Counter
 
 
@@ -10,9 +9,8 @@ def main():
     for value in list(c.values()):
         if value > 1:
             ans += value * (value - 1) // 2
-
     for i in range(N):
-        print((ans - c[A[i]] + 1))
+        print(ans - c[A[i]] + 1)
 
 
 def __starting_point():

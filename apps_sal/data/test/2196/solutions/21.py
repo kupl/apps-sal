@@ -1,8 +1,6 @@
 n = int(input())
 seq = [int(x) for x in input().split()]
 
-# print(seq)
-
 
 def inseri(s, n):
     if n in s:
@@ -15,6 +13,5 @@ def inseri(s, n):
 s = set()
 for i in seq:
     inseri(s, i)
-
 m = max(s)
 print(m - len(s) + 1)

@@ -1,6 +1,5 @@
-# coding: utf-8
 from collections import Counter
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = Counter([int(i) for i in input().split()])
 b = Counter([int(i) for i in input().split()])
 aa = list((a - b).elements())

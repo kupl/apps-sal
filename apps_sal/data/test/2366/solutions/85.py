@@ -1,18 +1,26 @@
 import math
-def ini(): return int(input())
 
 
-def inm(): return map(int, input().split())
-def inl(): return list(map(int, input().split()))
+def ini():
+    return int(input())
 
 
-def gcd(x, y): return gcd(y, x % y) if x % y else y
+def inm():
+    return map(int, input().split())
+
+
+def inl():
+    return list(map(int, input().split()))
+
+
+def gcd(x, y):
+    return gcd(y, x % y) if x % y else y
 
 
 def factorization(n):
     arr = []
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -28,7 +36,7 @@ def factorization(n):
 
 def make_divisors(n):
     divisors = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             divisors.append(i)
             if i != n // i:
@@ -37,7 +45,8 @@ def make_divisors(n):
     return divisors
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -52,13 +61,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -73,7 +79,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -82,13 +88,10 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-mod = 10**9 + 7
-
-# --maincode----------------
-
+mod = 10 ** 9 + 7
 n = ini()
 a = inl()
 b = [0] * (n + 1)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Jul  3 16:02:31 2018
 
@@ -7,7 +6,9 @@ Created on Tue Jul  3 16:02:31 2018
 
 
 def main():
-    def rd(): return list(map(int, input().split()))
+
+    def rd():
+        return list(map(int, input().split()))
     n = int(input())
     arr = rd()
     h = [0] * 1000

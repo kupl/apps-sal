@@ -34,7 +34,6 @@ while tot >= 2:
     idx = idx + 1
 idx = idx + 1
 res = idx
-#print (idx)
 st = []
 tot = 0
 idx = 0
@@ -42,16 +41,15 @@ for i in range(0, d):
     while idx < b[i]:
         if tot == 0:
             break
+        elif tot == 1:
+            st.append(idx)
+            tot = 0
+            idx = idx + 1
         else:
-            if tot == 1:
+            if tot % 2 == 1:
                 st.append(idx)
-                tot = 0
-                idx = idx + 1
-            else:
-                if tot % 2 == 1:
-                    st.append(idx)
-                tot = int(tot / 2)
-                idx = idx + 1
+            tot = int(tot / 2)
+            idx = idx + 1
     if idx < b[i]:
         idx = b[i]
         tot = c[i]
