@@ -1,6 +1,6 @@
 def stringify(node):
-    ret = ""
+    ret = ''
     while node:
-        ret += str(node.data) + " -> "
+        ret += str(node.data) + ' -> '
         node = node.next
-    return ret + "None"
+    return ret + 'None'

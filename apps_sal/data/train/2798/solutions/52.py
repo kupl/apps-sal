@@ -1,5 +1,5 @@
 def to_alternating_case(string):
-    res = ""
+    res = ''
     for l in string:
         if l.isupper():
             l = l.lower()

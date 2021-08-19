@@ -1,1 +1,2 @@
-def solution(x): return x[::-1]
+def solution(x):
+    return x[::-1]

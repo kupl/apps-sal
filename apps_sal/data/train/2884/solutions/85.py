@@ -1,7 +1,7 @@
 def stringify(node):
     if not node:
         return 'None'
-    return " -> ".join([x for x in rec_stringify(node)])
+    return ' -> '.join([x for x in rec_stringify(node)])
 
 
 def rec_stringify(node):

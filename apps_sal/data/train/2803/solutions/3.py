@@ -3,18 +3,17 @@ from functools import reduce
 
 
 def DPC_sequence(s):
+
     def lcm(a, b):
         return a * b // gcd(a, b)
-
-    d, p, c = [], [], []
+    (d, p, c) = ([], [], [])
     for i in range(len(s)):
-        if s[i] == "D":
+        if s[i] == 'D':
             d.append(i + 1)
-        elif s[i] == "P":
+        elif s[i] == 'P':
             p.append(i + 1)
         else:
             c.append(i + 1)
-
     if not d:
         return -1
     lcm_d = reduce(lambda i, j: lcm(i, j), d)

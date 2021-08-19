@@ -6,5 +6,4 @@ def duplicates(array):
             seen.append(char)
         elif char not in dups:
             dups.append(char)
-
     return dups

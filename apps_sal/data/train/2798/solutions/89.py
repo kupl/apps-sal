@@ -5,5 +5,4 @@ def to_alternating_case(string):
             result.append(letter.lower())
         elif letter.lower() == letter:
             result.append(letter.upper())
-
     return ''.join(result)

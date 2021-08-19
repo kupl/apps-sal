@@ -1,5 +1,5 @@
 def array_equalization(a, k):
-    min_ = float("inf")
+    min_ = float('inf')
     for x in set(a):
         count = 0
         i = 0

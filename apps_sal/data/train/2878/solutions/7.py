@@ -2,7 +2,6 @@ def shortest_to_char(s, c):
     i = s.find(c)
     if i == -1 or not c:
         return []
-
     lst = list(reversed(range(1, i + 1)))
     while i != -1:
         j = s.find(c, i + 1)

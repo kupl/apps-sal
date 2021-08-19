@@ -4,8 +4,6 @@ def seven(m):
     while len(str(int(result))) > 2:
         y = result % 10
         result = result // 10
-
         result = result - 2 * y
         count += 1
-
     return (result, count)

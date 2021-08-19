@@ -1,5 +1,5 @@
 def solve(arr):
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
     return_list = []
     for word in arr:
         print(word)
@@ -8,5 +8,4 @@ def solve(arr):
             if word.lower()[i] == alphabet[i]:
                 counter += 1
         return_list.append(counter)
-
     return return_list

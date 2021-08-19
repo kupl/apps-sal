@@ -1,5 +1,4 @@
 def distinct(seq):
-
     available = []
     ret = []
     for item in seq:
@@ -7,5 +6,4 @@ def distinct(seq):
             continue
         available.append(item)
         ret.append(item)
-
     return ret

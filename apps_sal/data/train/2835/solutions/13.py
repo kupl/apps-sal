@@ -6,7 +6,7 @@ def is_prime(n):
     elif n % 2 == 0:
         return False
     x = 3
-    while(x * x <= n):
+    while x * x <= n:
         if n % x == 0:
             return False
         x += 2
@@ -16,7 +16,7 @@ def is_prime(n):
 def make_prime_stream(n):
     s = '2'
     x = 3
-    while(len(s) < n):
+    while len(s) < n:
         if is_prime(x):
             s += str(x)
         x += 2

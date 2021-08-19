@@ -1,9 +1,9 @@
 def square_array(arr):
-    return [item**2 for item in arr]
+    return [item ** 2 for item in arr]
 
 
 def cube_array(arr):
-    return [item**3 for item in arr]
+    return [item ** 3 for item in arr]
 
 
 def sum_array(arr):

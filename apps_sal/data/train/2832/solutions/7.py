@@ -8,7 +8,7 @@ def array_equalization(a, k):
         templs = []
         times = 0
         for j in range(0, l_a):
-            if (j > 0 and j == len(templs)) or j == 0:
+            if j > 0 and j == len(templs) or j == 0:
                 if a[j] == i:
                     templs.append(i)
                 else:

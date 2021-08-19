@@ -3,5 +3,5 @@ def solution(string):
     pass
 
 
-a = "mortiitei"
+a = 'mortiitei'
 print(solution(a))

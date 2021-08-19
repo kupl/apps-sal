@@ -5,4 +5,4 @@ def to_alternating_case(string):
             ret.append(char.lower())
         else:
             ret.append(char.upper())
-    return "".join(ret)
+    return ''.join(ret)

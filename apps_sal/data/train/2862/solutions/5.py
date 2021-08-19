@@ -1,7 +1,7 @@
 def leaderboard_climb(scores, kara):
     answer = []
     kara = kara[::-1]
-    rank, iScore, lastScore = 1, 0, scores[0]
+    (rank, iScore, lastScore) = (1, 0, scores[0])
     l = len(scores)
     for karaScore in kara:
         while True:

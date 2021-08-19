@@ -1,5 +1,5 @@
 def char_attribute(score):
-    attributes = {"modifier": 0, "maximum_spell_level": -1, "extra_spells": []}
+    attributes = {'modifier': 0, 'maximum_spell_level': -1, 'extra_spells': []}
     if score == 0:
         return attributes
     modifier = score // 2 - 5

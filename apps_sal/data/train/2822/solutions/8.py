@@ -1,9 +1,7 @@
 def name_that_number(num):
     num_str = str(num)
-    word_num = ['zero', "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
-                "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-    word_units = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-
+    word_num = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+    word_units = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
     if num < 20:
         return word_num[num]
     else:

@@ -9,5 +9,4 @@ def solve(arr: List[int]) -> List[int]:
             d.move_to_end(a)
         except KeyError:
             d[a] = None
-
     return list(d.keys())

@@ -1,4 +1,4 @@
-A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 e = A.lower()
 
 
@@ -11,4 +11,4 @@ def to_alternating_case(s):
             t.append(i.upper())
         else:
             t.append(i)
-    return "".join(t)
+    return ''.join(t)

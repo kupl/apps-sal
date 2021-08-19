@@ -7,7 +7,6 @@ def array_madness(a, b):
     for number in b:
         newNumber = number ** 3
         totalOfB += newNumber
-
     if totalOfA > totalOfB:
         return True
     else:

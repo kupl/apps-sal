@@ -11,7 +11,7 @@ def send(s):
             elif (state == 0 or state == 1) and b != 0:
                 r = r + ' 0 0'
                 state = 2
-            elif (state == 2 and b != 0) or (state == 1 and b == 0):
+            elif state == 2 and b != 0 or (state == 1 and b == 0):
                 r = r + '0'
             i = i >> 1
     return r[1:]

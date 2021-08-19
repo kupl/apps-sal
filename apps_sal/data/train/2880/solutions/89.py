@@ -5,6 +5,7 @@ def seven(m):
         else:
             return (m, 0)
     else:
+
         def last_number(last_number):
             return int(last_number[-1]) * 2
 
@@ -21,11 +22,10 @@ def seven(m):
             if iterator == 0:
                 tmp = helper(m)
                 iterator += 1
+            elif (len(str(tmp)) == 2 or len(str(tmp)) == 1) and tmp % 7 == 0:
+                return (int(tmp), iterator)
+            elif (len(str(tmp)) == 2 or len(str(tmp)) == 1) and tmp % 7 != 0:
+                return (int(tmp), iterator)
             else:
-                if (len(str(tmp)) == 2 or len(str(tmp)) == 1) and tmp % 7 == 0:
-                    return (int(tmp), iterator)
-                elif (len(str(tmp)) == 2 or len(str(tmp)) == 1) and tmp % 7 != 0:
-                    return (int(tmp), iterator)
-                else:
-                    tmp = helper(tmp)
-                    iterator += 1
+                tmp = helper(tmp)
+                iterator += 1

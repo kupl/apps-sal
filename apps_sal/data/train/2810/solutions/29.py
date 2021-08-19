@@ -1,5 +1,5 @@
 def solve(arr):
-    s = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+    s = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
     res = []
     for el in arr:
         counter = 0

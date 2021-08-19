@@ -1,6 +1,6 @@
 def solve(arr):
     counts = []
-    alpha = "abcdefghijklmnopqrstuvwxyz"
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
     for i in range(len(arr)):
         count = 0
         for j in range(min(len(arr[i]), len(alpha))):

@@ -7,4 +7,4 @@ def to_alternating_case(string):
             res.append(token.upper())
         else:
             res.append(token)
-    return "".join(res)
+    return ''.join(res)

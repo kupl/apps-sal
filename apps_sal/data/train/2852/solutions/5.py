@@ -1,5 +1,5 @@
 def find_longest(st):
-    stack, max_so_far = [-1], 0
+    (stack, max_so_far) = ([-1], 0)
     for ind in range(len(st)):
         if st[ind] == '(':
             stack.append(ind)

@@ -1,14 +1,3 @@
 def switch_it_up(number):
     if str(number).isdecimal():
-        return ({
-            1: 'one',
-            2: 'two',
-            3: 'three',
-            4: 'four',
-            5: 'five',
-            6: 'six',
-            7: 'seven',
-            8: 'eight',
-            9: 'nine',
-            0: 'zero'
-        }.get(number)).title()
+        return {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 0: 'zero'}.get(number).title()

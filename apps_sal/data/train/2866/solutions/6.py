@@ -1,5 +1,5 @@
 def mobius(n):
-    d, k = 2, 0
+    (d, k) = (2, 0)
     while d * d <= n:
         if n % d == 0:
             n //= d

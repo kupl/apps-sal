@@ -1,5 +1,5 @@
 def solution(string):
-    newstring = ""
+    newstring = ''
     letter = len(string) - 1
     for x in string:
         x = string[letter]

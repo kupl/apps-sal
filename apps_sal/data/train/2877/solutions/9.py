@@ -1,1 +1,2 @@
-def count(a, t, x): return sum((e - t) % x == 0if x != 0else e - t == 0for e in a)
+def count(a, t, x):
+    return sum(((e - t) % x == 0 if x != 0 else e - t == 0 for e in a))

@@ -7,5 +7,4 @@ def per(n):
     while n > 9:
         n = reduce(mul, map(int, str(n)))
         results.append(n)
-
     return results

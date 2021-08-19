@@ -1,24 +1,23 @@
 def switch_it_up(number):
     result = ''
     if number == 0:
-        result = "Zero"
+        result = 'Zero'
     elif number == 1:
-        result = "One"
+        result = 'One'
     elif number == 2:
-        result = "Two"
+        result = 'Two'
     elif number == 3:
-        result = "Three"
+        result = 'Three'
     elif number == 4:
-        result = "Four"
+        result = 'Four'
     elif number == 5:
-        result = "Five"
+        result = 'Five'
     elif number == 6:
-        result = "Six"
+        result = 'Six'
     elif number == 7:
-        result = "Seven"
+        result = 'Seven'
     elif number == 8:
-        result = "Eight"
+        result = 'Eight'
     elif number == 9:
-        result = "Nine"
-
+        result = 'Nine'
     return result

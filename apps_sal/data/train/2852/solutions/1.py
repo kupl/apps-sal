@@ -1,6 +1,6 @@
 def find_longest(s):
-    stack, m = [-1], 0
-    for i, j in enumerate(s):
+    (stack, m) = ([-1], 0)
+    for (i, j) in enumerate(s):
         if j == '(':
             stack.append(i)
         else:

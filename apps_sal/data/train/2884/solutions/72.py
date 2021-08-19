@@ -1,9 +1,9 @@
 def stringify(node):
     if node == None:
         return 'None'
-    returnString = ""
+    returnString = ''
     while node != None:
         returnString += str(node.data) + ' -> '
         node = node.next
-    returnString += "None"
+    returnString += 'None'
     return returnString

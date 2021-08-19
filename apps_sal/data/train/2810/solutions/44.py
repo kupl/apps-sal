@@ -1,7 +1,7 @@
 def solve(arr):
     result = []
     counter_correct = 0
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
     for a in arr:
         a = a.lower()
         counter_correct = 0

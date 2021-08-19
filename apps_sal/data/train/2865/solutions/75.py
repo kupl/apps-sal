@@ -1,6 +1,6 @@
 def solution(string):
     index = len(string) - 1
-    str = ""
+    str = ''
     while index >= 0:
         str = str + string[index]
         index = index - 1

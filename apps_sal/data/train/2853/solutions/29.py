@@ -9,4 +9,4 @@ def solve(arr):
             del arr[num]
         else:
             num += 1
-    return(arr)
+    return arr

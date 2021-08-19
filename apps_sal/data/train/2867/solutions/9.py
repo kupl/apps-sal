@@ -8,10 +8,8 @@ def fix_progression(arr):
             if (arr[j] - arr[i]) % (j - i) == 0:
                 d = (arr[j] - arr[i]) // (j - i)
                 s = arr[i] - i * d
-                params[(s, d)] += 1
-
-    start, diff = params.most_common(1)[0][0]
-
+                params[s, d] += 1
+    (start, diff) = params.most_common(1)[0][0]
     count = 0
     for i in range(len(arr)):
         if arr[i] != start + i * diff:

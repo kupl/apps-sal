@@ -2,7 +2,7 @@ import re
 
 
 def could_be(original, another):
-    res = re.sub(r"[!,;:?.]", '', str(another))
+    res = re.sub('[!,;:?.]', '', str(another))
     if original == 'Carlos Ray Norris' and another == 'Carlos Norris':
         return True
     elif original == 'Carlos Ray Norris' and another == 'Norris Carlos':

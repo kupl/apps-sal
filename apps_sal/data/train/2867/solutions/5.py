@@ -5,7 +5,7 @@ def fix_progression(arr):
             if (arr[j] - arr[i]) % (j - i) != 0:
                 continue
             step = (arr[j] - arr[i]) // (j - i)
-            wrongs = sum(1 for k in range(len(arr)) if arr[k] != arr[i] + (k - i) * step)
+            wrongs = sum((1 for k in range(len(arr)) if arr[k] != arr[i] + (k - i) * step))
             best = min(wrongs, best)
             if best < i - 2:
                 break

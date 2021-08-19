@@ -6,5 +6,4 @@ def solve(arr):
             k = 0
         else:
             k += 1
-
     return arr

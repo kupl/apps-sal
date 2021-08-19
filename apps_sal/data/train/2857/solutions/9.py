@@ -1,3 +1,3 @@
 def splitSentence(s):
-    sentence = s.split(" ")
+    sentence = s.split(' ')
     return sentence

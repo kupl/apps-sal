@@ -1,6 +1,6 @@
 def solution(string):
     length = len(string)
-    reverse = ""
+    reverse = ''
     x = 0
     for y in string:
         length = length - 1

@@ -2,7 +2,7 @@ def find_longest(st):
     stack = [-1]
     longest = 0
     for index in range(0, len(st)):
-        if(st[index] == "("):
+        if st[index] == '(':
             stack.append(index)
         else:
             stack.pop()

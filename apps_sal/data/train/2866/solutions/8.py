@@ -3,12 +3,12 @@ from collections import defaultdict
 
 def prime_factor(n):
     r = defaultdict(int)
-    while(n % 2 == 0):
+    while n % 2 == 0:
         r[2] += 1
         n //= 2
     x = 3
-    while(n > 1 and x * x <= n):
-        while(n % x == 0):
+    while n > 1 and x * x <= n:
+        while n % x == 0:
             r[x] += 1
             n //= x
         x += 2

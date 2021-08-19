@@ -4,7 +4,7 @@ def combs(a, b):
 
 def mesh(a, b):
     for i in range(len(a)):
-        for j, k in zip(a[i:], b):
+        for (j, k) in zip(a[i:], b):
             if j + k == '**':
                 break
         else:

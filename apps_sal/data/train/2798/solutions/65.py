@@ -1,12 +1,12 @@
 def to_alternating_case(string):
-    output = ""
+    output = ''
     for str in string:
         if str.isupper():
             output += str.lower()
         elif str.islower():
             output += str.upper()
-        elif str == " ":
-            output += " "
+        elif str == ' ':
+            output += ' '
         else:
             output += str
     return output

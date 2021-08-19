@@ -1,7 +1,7 @@
 def custom_christmas_tree(chars, n):
     trunc = n // 3
     string = ''
-    l, i = len(chars), 0
+    (l, i) = (len(chars), 0)
     for r in range(n):
         string += ' ' * (n - r - 1)
         for c in range(r + 1):

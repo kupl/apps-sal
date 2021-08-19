@@ -7,6 +7,6 @@ def to_alternating_case(string):
         else:
             a = i.upper()
             e.append(a)
-    finale = ""
+    finale = ''
     nuova = finale.join(e)
     return nuova

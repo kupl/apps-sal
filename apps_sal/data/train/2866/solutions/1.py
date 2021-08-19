@@ -1,5 +1,5 @@
 def mobius(n):
-    s, p, m = 0, 2, n ** .5
+    (s, p, m) = (0, 2, n ** 0.5)
     while p <= m:
         if not n % p:
             s += 1

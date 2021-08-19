@@ -12,4 +12,4 @@ def solve(arr):
             if letter_to_int(word[i]) == i + 1:
                 counter = counter + 1
         result.append(counter)
-    return(result)
+    return result

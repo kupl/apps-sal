@@ -4,21 +4,21 @@ import unittest
 def seven(m):
 
     def _calc_last_rest(num):
-        return int(str(num)[-1]), int(str(num)[:-1])
+        return (int(str(num)[-1]), int(str(num)[:-1]))
     if m == 0:
         return (0, 0)
-
     cnt = 0
-    last, rest = _calc_last_rest(m)
+    (last, rest) = _calc_last_rest(m)
     while True:
         cnt += 1
-        result = rest - (2 * last)
+        result = rest - 2 * last
         if len(str(result)) <= 2:
             return (result, cnt)
-        last, rest = _calc_last_rest(result)
+        (last, rest) = _calc_last_rest(result)
 
 
 class TestSeven(unittest.TestCase):
+
     def test_seven(self):
         m = 1603
         actual = seven(m)

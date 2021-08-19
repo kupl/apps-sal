@@ -1,5 +1,5 @@
 def josephus_survivor(n, k):
-    if (n == 1):
+    if n == 1:
         return 1
     else:
         r = list(range(1, n + 1))

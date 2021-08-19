@@ -1,6 +1,6 @@
 def digitize(n):
     x = str(n)
-    y = ""
+    y = ''
     lst = []
     for char in x:
         y = char + y

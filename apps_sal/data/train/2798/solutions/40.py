@@ -10,7 +10,5 @@ def to_alternating_case(string):
             result += string[index].lower()
         else:
             result += string[index]
-
         index += 1
-
     return result
