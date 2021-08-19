@@ -5,15 +5,12 @@ for d in s[:3]:
 u = []
 for d in s[3:]:
     u.append(int(d))
-
 if sum(l) == sum(u):
     print(0)
 else:
     if sum(l) > sum(u):
-        l, u = u, l
-
+        (l, u) = (u, l)
     diffs = sorted(list([9 - x for x in l]) + u)[::-1]
-    # print(diffs)
     for i in range(1, 7):
         if sum(diffs[:i]) >= sum(u) - sum(l):
             print(i)

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def gcd(x, y):
     if y == 0 or x == 0:
         return max(x, y)
@@ -12,7 +10,9 @@ def gcd(x, y):
 
 
 def main():
-    def readData(): return list(map(int, input().split()))
+
+    def readData():
+        return list(map(int, input().split()))
     n = int(input())
     X = list(readData())
     d = 0

@@ -1,18 +1,16 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import List
 except ImportError:
     pass
-
-MOD = 1000000007  # type: int
+MOD = 1000000007
 
 
 def solve(L: str):
     a = 1
     b = 1
     for Li in L:
-        if Li == "1":
+        if Li == '1':
             a *= 3
             a %= MOD
             b *= 2
@@ -24,12 +22,13 @@ def solve(L: str):
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    L = next(tokens)  # type: str
+    L = next(tokens)
     solve(L)
 
 

@@ -1,17 +1,12 @@
 import sys
 input = sys.stdin.readline
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 Query = [list(map(int, input().split())) for _ in range(M)]
-
-L = 2**N
+L = 2 ** N
 seg = [0] * (2 * L - 1)
-
-# initialize
 for i in range(L):
     seg[i + L - 1] = A[i]
-
 k = L - 1
 c = 0
 while k > 0:
@@ -23,8 +18,6 @@ while k > 0:
             seg[i] = seg[2 * i + 1] ^ seg[2 * i + 2]
     c += 1
     k = (k - 1) // 2
-
-# update and return v
 
 
 def update(k, a):
@@ -41,6 +34,6 @@ def update(k, a):
     return seg[0]
 
 
-for p, b in Query:
+for (p, b) in Query:
     ans = update(p - 1, b)
     print(ans)
