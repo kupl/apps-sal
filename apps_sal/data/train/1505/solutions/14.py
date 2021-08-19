@@ -1,11 +1,9 @@
-# cook your dish here
 n = int(input())
 l = input().split()
-
 ml = []
-mnd, mndi = -1, -1
+(mnd, mndi) = (-1, -1)
 c = 1
-maxc, maxci = 0, 0
+(maxc, maxci) = (0, 0)
 for i in range(n):
     if l[i] == '1':
         ml.append('1')

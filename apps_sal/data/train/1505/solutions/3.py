@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 a = list(map(int, input().strip().split()))
 i = 0
@@ -8,19 +7,19 @@ nest = 1
 pos = 0
 seq = 1
 posq = 0
-while(i < n):
+while i < n:
     j = i + 1
     x = 1
     z = 1
     q = i
-    while(j < n and x > 0):
-        if(a[j] == 1):
+    while j < n and x > 0:
+        if a[j] == 1:
             x += 1
             z += 1
-            if(nest < x):
+            if nest < x:
                 nest = x
                 pos = j
-            if(seq < z):
+            if seq < z:
                 seq = z
                 posq = q
         else:

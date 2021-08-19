@@ -1,9 +1,11 @@
-''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces
-def gi(): return list(map(int, input().split()))
+""" بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ """
+
+
+def gi():
+    return list(map(int, input().split()))
 
 
 for j in range(gi()[0]):
-    a, b = gi()
+    (a, b) = gi()
     d = abs(a - b)
-    print(d // 5 + (d % 5) // 2 + ((d % 5) % 2))
+    print(d // 5 + d % 5 // 2 + d % 5 % 2)

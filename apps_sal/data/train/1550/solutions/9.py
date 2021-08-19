@@ -1,20 +1,19 @@
-# cook your dish here
 def xnor(a, b):
     if a == 0:
         return 1 ^ b
     p = a
-    a = a | (a >> 1)
-    a = a | (a >> 2)
-    a = a | (a >> 4)
-    a = a | (a >> 8)
-    a = a | (a >> 16)
-    a = a | (a >> 32)
-    a = a | (a >> 64)
-    return (a ^ p) ^ b
+    a = a | a >> 1
+    a = a | a >> 2
+    a = a | a >> 4
+    a = a | a >> 8
+    a = a | a >> 16
+    a = a | a >> 32
+    a = a | a >> 64
+    return a ^ p ^ b
 
 
 def solve():
-    a, b, n = map(int, input().split())
+    (a, b, n) = map(int, input().split())
     n -= 1
     index = n % 3
     if index == 0:
@@ -28,6 +27,6 @@ def solve():
 
 
 t = int(input())
-while(t > 0):
+while t > 0:
     solve()
     t = t - 1

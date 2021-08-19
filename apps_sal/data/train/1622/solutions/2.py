@@ -18,7 +18,7 @@ def bowling_score(frame_line: str) -> int:
     rolls = frame2rolls(frame_line)
     r = 0
     for i in range(10):
-        if i == 9:  # The last frame is special
+        if i == 9:
             score[i] = sum(rolls[r:])
             break
         if frames[i] == 'X':
@@ -43,28 +43,27 @@ def generate_frames() -> str:
         else:
             roll2 = random.randint(0, 10 - roll1)
             if roll2 + roll1 == 10:
-                frames.append("%d/" % roll1)
+                frames.append('%d/' % roll1)
             else:
-                frames.append("%d%d" % (roll1, roll2))
-
+                frames.append('%d%d' % (roll1, roll2))
     if frames[-1][-1] == 'X':
         f10_r2 = random.randint(0, 10)
         if f10_r2 == 10:
             f10_r3 = random.randint(0, 10)
             if f10_r3 == 10:
-                frames[-1] = "XXX"
+                frames[-1] = 'XXX'
             else:
-                frames[-1] = "XX%d" % f10_r3
+                frames[-1] = 'XX%d' % f10_r3
         else:
             f10_r3 = random.randint(0, 10 - f10_r2)
             if f10_r2 + f10_r3 == 10:
-                frames[-1] = "X%d/" % f10_r2
+                frames[-1] = 'X%d/' % f10_r2
             else:
-                frames[-1] = "X%d%d" % (f10_r2, f10_r3)
+                frames[-1] = 'X%d%d' % (f10_r2, f10_r3)
     elif frames[-1][-1] == '/':
         f10_r3 = random.randint(0, 10)
         if f10_r3 != 10:
-            frames[-1] = "%s%d" % (frames[-1], f10_r3)
+            frames[-1] = '%s%d' % (frames[-1], f10_r3)
         else:
-            frames[-1] = "%sX" % frames[-1]
+            frames[-1] = '%sX' % frames[-1]
     return ' '.join(frames)
