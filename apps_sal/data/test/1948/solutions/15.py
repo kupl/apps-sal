@@ -1,12 +1,9 @@
 from collections import deque
 from sys import stdin
 
-# parser
-
 
 def parser():
-    return [int(i) for i in stdin.readline().split(" ")]
-# Algoritmo BFS
+    return [int(i) for i in stdin.readline().split(' ')]
 
 
 def BFS(s):
@@ -14,7 +11,6 @@ def BFS(s):
         distance = distance_Alice
     else:
         distance = distance_Bob
-
     distance[s] = 0
     q = deque()
     q.append(s)
@@ -26,29 +22,18 @@ def BFS(s):
                 q.append(u)
 
 
-# Recibiendo los valores de n y x
-n, x = parser()
-
-# Creando los arrays necesarios para la ejecucion de DFS
-# visitados
+(n, x) = parser()
 distance_Alice = [-1 for i in range(n)]
 distance_Bob = [-1 for i in range(n)]
-
-# Armando el arbol
 adjacents_list = [[] for i in range(n)]
 for i in range(n - 1):
     edge = parser()
     adjacents_list[edge[0] - 1].append(edge[1] - 1)
     adjacents_list[edge[1] - 1].append(edge[0] - 1)
-
 BFS(0)
-
 BFS(x - 1)
-
-# Hallando el nodo mas alejado a Alice que puede alcanzar Bob antes que lo alcance Alice
 max = 0
 for i in range(n):
     if max < distance_Alice[i] and distance_Bob[i] < distance_Alice[i]:
         max = distance_Alice[i]
-
 print(max * 2)

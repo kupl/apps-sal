@@ -1,10 +1,10 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
-    # f.readline()
-    # input()
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
+
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
     [n] = get()
     a = get()
     a.sort()
@@ -22,8 +22,7 @@ def main():
         if found == False:
             p.append([i])
     print(len(p))
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

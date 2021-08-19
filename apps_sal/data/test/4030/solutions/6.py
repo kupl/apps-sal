@@ -1,6 +1,6 @@
 n = int(input())
 s = list(map(ord, input()))
-b = [0 for i in range(26)]  # what the heck is an alphabet without 33 letters
+b = [0 for i in range(26)]
 ans = []
 for i in s:
     for j in range(26):

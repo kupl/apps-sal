@@ -6,20 +6,32 @@ from itertools import permutations, combinations
 from collections import defaultdict, deque, OrderedDict
 from os import path
 import bisect as bi
-def yes(): print('YES')
-def no(): print('NO')
 
 
-if (path.exists('input.txt')):
-    #------------------Sublime--------------------------------------#
+def yes():
+    print('YES')
+
+
+def no():
+    print('NO')
+
+
+if path.exists('input.txt'):
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
-    def I(): return (int(input()))
-    def In(): return(list(map(int, input().split())))
+
+    def I():
+        return int(input())
+
+    def In():
+        return list(map(int, input().split()))
 else:
-    #------------------PYPY FAst I/o--------------------------------#
-    def I(): return (int(stdin.readline()))
-    def In(): return(list(map(int, stdin.readline().split())))
+
+    def I():
+        return int(stdin.readline())
+
+    def In():
+        return list(map(int, stdin.readline().split()))
 
 
 def dict(a):
@@ -35,7 +47,7 @@ def dict(a):
 
 
 def find_gt(a, x):
-    'Find leftmost value greater than x'
+    """Find leftmost value greater than x"""
     i = bi.bisect_right(a, x)
     if i != len(a):
         return i
@@ -52,7 +64,6 @@ def dfs(d, n, s):
     cnt = 0
     while q:
         temp = q.popleft()
-
         for x in d[temp]:
             if visit[x] == False:
                 q.appendleft(x)
@@ -64,22 +75,19 @@ def dfs(d, n, s):
 
 def main():
     try:
-        n, s = In()
+        (n, s) = In()
         d = defaultdict(list)
         for x in range(n - 1):
-            a, b = In()
+            (a, b) = In()
             d[a].append(b)
             d[b].append(a)
-
         alice = dfs(d, n, 1)
         bob = dfs(d, n, s)
-        # print(alice)
         ans = 0
         for i in range(1, n + 1):
             if bob[i] < alice[i]:
-                ans = max(ans, 2 * (alice[i]))
+                ans = max(ans, 2 * alice[i])
         print(ans)
-
     except:
         pass
 
@@ -89,7 +97,6 @@ P = 1000000007
 
 
 def __starting_point():
-    #for _ in range(I()):main()
     for _ in range(1):
         main()
 

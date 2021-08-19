@@ -1,16 +1,10 @@
 import fileinput
 import math
-
 for line in fileinput.input():
     inp = [int(i) for i in line.split()]
-
 N = len(inp)
-
-
-# case 1, all inputs are the same
-
 if len(set(inp)) == 1:
-    print(0, (N * (N - 1)) // 2)
+    print(0, N * (N - 1) // 2)
 else:
     minN = inp[0]
     maxN = inp[0]
@@ -26,5 +20,4 @@ else:
             nMin = nMin + 1
         if i == maxN:
             nMax = nMax + 1
-
     print(maxN - minN, nMin * nMax)

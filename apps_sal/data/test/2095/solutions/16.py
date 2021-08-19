@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 N = int(input())
-
 good_cars = []
 for i in range(N):
     collision = list(map(int, input().split()))

@@ -1,4 +1,3 @@
-
 from itertools import permutations
 
 
@@ -13,24 +12,19 @@ def factorials_with_inv(k, mod):
         t *= i
         t %= mod
         fac[i] = t
-
     t = pow(t, -1, mod)
     for i in reversed(range(1, k + 1)):
         inv[i] = t
         t *= i
         t %= mod
+    return (fac, inv)
 
-    return fac, inv
 
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def solve(N, M):
-    fac, inv = factorials_with_inv(max(N, M), MOD)
-
-    # (M-k)!/(k!(N-k)!) * N!M!/((M-N)!^2)
-
+    (fac, inv) = factorials_with_inv(max(N, M), MOD)
     res = 0
     sign = True
     for k in range(N + 1):
@@ -41,8 +35,7 @@ def solve(N, M):
             res -= t
         res %= MOD
         sign = not sign
-
-    res *= fac[N] * fac[M] * inv[M - N]**2
+    res *= fac[N] * fac[M] * inv[M - N] ** 2
     res %= MOD
     return res
 
@@ -51,14 +44,12 @@ def naive(N, M):
     res = 0
     for A in permutations(range(M), N):
         for B in permutations(range(M), N):
-            res += all(a != b for a, b in zip(A, B))
+            res += all((a != b for (a, b) in zip(A, B)))
     return res % MOD
 
 
 def __starting_point():
-    N, M = map(int, input().split())
-
-    # print(naive(N,M))
+    (N, M) = map(int, input().split())
     print(solve(N, M))
 
 

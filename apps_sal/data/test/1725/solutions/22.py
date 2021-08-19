@@ -7,24 +7,18 @@ def solve(array, d):
         if (array[i] - minval) % d:
             return -1
         array[i] //= d
-
-    # minimize sum |array_i - x|
-    # x = median
     median = round(statistics.median(array))
     moves = 0
     for el in array:
         moves += abs(el - median)
-
     return moves
 
 
 line = input()
-n, m, d = list(map(int, line.strip().split()))
+(n, m, d) = list(map(int, line.strip().split()))
 array = []
-
 for i in range(n):
     line = input()
     row = list(map(int, line.strip().split()))
     array += row
-
 print(solve(array, d))

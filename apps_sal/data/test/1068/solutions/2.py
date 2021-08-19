@@ -1,31 +1,5 @@
-def modgroup(M=10**9 + 7, invn=0):
-    exec(f'''class mod{M} :
-	inv = [None] * {invn+1}
-	if {invn+1} >= 2 : inv[1] = 1
-	for i in range(2, {invn+1}) :
-		inv[i] = (({M} - {M}//i) * inv[{M}%i]) %{M}
-	def __init__(self, n = 0) : self.n = n % {M}
-	__repr__ = lambda self : str(self.n) + '%{M}'
-	__int__ = lambda self : self.n
-	__eq__ = lambda a,b : int(a)%{M} == int(b)%{M}
-	__add__ = lambda a,b : __class__(a.n + int(b))
-	__sub__ = lambda a,b : __class__(a.n - int(b))
-	__mul__ = lambda a,b : __class__(a.n * int(b))
-	__radd__ = lambda a,b : __class__(b + a.n)
-	__rsub__ = lambda a,b : __class__(b - a.n)
-	__rmul__ = lambda a,b : __class__(b * a.n)
-	def __pow__(a,b) :
-		a, ret = int(a), 1
-		while b :
-			if b & 1 : ret = (ret * a) % {M}
-			a = (a * a) % {M}
-			b >>= 1
-		return __class__(ret)
-	def __truediv__(a,b) :
-		return __class__(a.n * __class__.__pow__(b, {M-2}))
-	def __floordiv__(a,b) :
-		return __class__(a.n * __class__.inv[b])
-	''')
+def modgroup(M=10 ** 9 + 7, invn=0):
+    exec(f"class mod{M} :\n\tinv = [None] * {invn + 1}\n\tif {invn + 1} >= 2 : inv[1] = 1\n\tfor i in range(2, {invn + 1}) :\n\t\tinv[i] = (({M} - {M}//i) * inv[{M}%i]) %{M}\n\tdef __init__(self, n = 0) : self.n = n % {M}\n\t__repr__ = lambda self : str(self.n) + '%{M}'\n\t__int__ = lambda self : self.n\n\t__eq__ = lambda a,b : int(a)%{M} == int(b)%{M}\n\t__add__ = lambda a,b : __class__(a.n + int(b))\n\t__sub__ = lambda a,b : __class__(a.n - int(b))\n\t__mul__ = lambda a,b : __class__(a.n * int(b))\n\t__radd__ = lambda a,b : __class__(b + a.n)\n\t__rsub__ = lambda a,b : __class__(b - a.n)\n\t__rmul__ = lambda a,b : __class__(b * a.n)\n\tdef __pow__(a,b) :\n\t\ta, ret = int(a), 1\n\t\twhile b :\n\t\t\tif b & 1 : ret = (ret * a) % {M}\n\t\t\ta = (a * a) % {M}\n\t\t\tb >>= 1\n\t\treturn __class__(ret)\n\tdef __truediv__(a,b) :\n\t\treturn __class__(a.n * __class__.__pow__(b, {M - 2}))\n\tdef __floordiv__(a,b) :\n\t\treturn __class__(a.n * __class__.inv[b])\n\t")
     return eval(f'mod{M}')
 
 
@@ -33,14 +7,14 @@ def solution():
     s = input()
     l = len(s)
     mod = modgroup()
-    num = [mod(0)] * (l + 1)  # num[i] = int(s[:i]) <mod>
-    shift = [mod(1)] * (l + 1)  # shift[i] = 10**i <mod>
-    for i, x in enumerate(s, 1):
+    num = [mod(0)] * (l + 1)
+    shift = [mod(1)] * (l + 1)
+    for (i, x) in enumerate(s, 1):
         num[i] = num[i - 1] * 10 + int(x)
         shift[i] = shift[i - 1] * 10
 
     def mod_check(la, lb, lc):
-        a, b, c = num[la], num[la + lb], num[la + lb + lc]
+        (a, b, c) = (num[la], num[la + lb], num[la + lb + lc])
         c -= b * shift[lc]
         b -= a * shift[lb]
         return a + b == c
@@ -53,7 +27,7 @@ def solution():
                 continue
             if not mod_check(la, lb, lc):
                 continue
-            print(f'{s[:la]}+{s[la:la+lb]}={s[la+lb:la+lb+lc]}')
+            print(f'{s[:la]}+{s[la:la + lb]}={s[la + lb:la + lb + lc]}')
             return
 
 

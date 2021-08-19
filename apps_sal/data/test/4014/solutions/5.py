@@ -1,5 +1,5 @@
-# Hello World program in Python
 class exam:
+
     def __init__(self, tickets, ex_day, prep_days, index):
         self.tick = tickets - 1
         self.ex_day = ex_day - 1
@@ -8,10 +8,10 @@ class exam:
 
 
 def task():
-    n, m = [int(x) for x in input().split(' ')]
+    (n, m) = [int(x) for x in input().split(' ')]
     exs = list()
     for i in range(m):
-        a, b, c = [int(x) for x in input().split(' ')]
+        (a, b, c) = [int(x) for x in input().split(' ')]
         exs.append(exam(a, b, c, i + 1))
     s = sum((x.prep_days for x in exs))
     if s > n - m:
@@ -25,7 +25,7 @@ def task():
         offs = 1
         for i in range(ex.prep_days):
             cont = True
-            while (cont):
+            while cont:
                 if d - offs < ex.tick:
                     print(-1)
                     return
@@ -34,7 +34,6 @@ def task():
                     cont = False
                 else:
                     offs += 1
-
     print(' '.join((str(x) for x in days)))
 
 

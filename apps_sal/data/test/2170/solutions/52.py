@@ -19,35 +19,32 @@ from itertools import accumulate
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
-alf = list("abcdefghijklmnopqrstuvwxyz")
-ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
-INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
-N, M = list(map(int, input().split()))
+alf = list('abcdefghijklmnopqrstuvwxyz')
+ALF = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+INF = float('inf')
+(N, M) = list(map(int, input().split()))
 fac = [1, 1]
 inv = [0, 1]
 finv = [1, 1]
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 for i in range(2, M + 2):
     fac.append(fac[-1] * i % MOD)
     inv.append(MOD - inv[MOD % i] * (MOD // i) % MOD)
     finv.append(finv[-1] * inv[-1] % MOD)
 
 
-def comb_mod(n, r, m):  # nCr mod m
-    if (n < 0 or r < 0 or n < r):
+def comb_mod(n, r, m):
+    if n < 0 or r < 0 or n < r:
         return 0
     r = min(r, n - r)
     return fac[n] * finv[n - r] * finv[r] % m
 
 
-def chofuku(n, r):  # nHr mod MOD の計算
+def chofuku(n, r):
     return comb_mod(n + r - 1, r)
 
 
-def nPr(n, r, m):  # nPr mod MOD の計算
+def nPr(n, r, m):
     return fac[n] * finv[n - r] % m
 
 
@@ -63,8 +60,8 @@ for i in range(1, N + 1):
         ans %= MOD
 ans1 = 1
 for i in range(N):
-    ans1 *= (M - i)
+    ans1 *= M - i
     ans1 %= MOD
-ans2 = (ans1 * ans1) % MOD
-ans3 = (ans * nPr(M, N, MOD)) % MOD
-print(((ans2 - ans3) % MOD))
+ans2 = ans1 * ans1 % MOD
+ans3 = ans * nPr(M, N, MOD) % MOD
+print((ans2 - ans3) % MOD)
