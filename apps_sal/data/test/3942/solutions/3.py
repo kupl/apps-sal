@@ -6,10 +6,9 @@ for i in range(len(s)):
         lis[i] = 1
     if s[i] == ')':
         lis[i] = -1
-    if s[i] == "#":
+    if s[i] == '#':
         lis[i] = 0
         lis1.append(i)
-
 if sum(lis) <= 0:
     print(-1)
 else:

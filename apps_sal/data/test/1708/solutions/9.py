@@ -1,16 +1,15 @@
 import sys
-# sys.setrecursionlimit(200000)
 input = sys.stdin.readline
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 c = list(map(int, input().split()))
 z = list(range(n))
 d = []
-for i, j, k in zip(a, c, z):
+for (i, j, k) in zip(a, c, z):
     d.append([j, i, k])
 d.sort(key=lambda x: -x[0])
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     ans = 0
     if a[x]:
@@ -23,7 +22,7 @@ for i in range(m):
             y -= a[x]
             a[x] = 0
     while d and y > 0:
-        q, w, e = d.pop()
+        (q, w, e) = d.pop()
         w = a[e]
         if w >= y:
             ans += q * y

@@ -1,12 +1,8 @@
 from functools import lru_cache
-
-n, k = list(map(int, input().split()))
-
-# 2000までの階乗（MOD:10^9+7）とその逆元を計算しておく
-MOD = 10**9 + 7
+(n, k) = list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 fact = [1, 1]
 fact_inv = [1, 1]
-
 for i in range(2, n + 1):
     fact.append(fact[i - 1] * i % MOD)
     fact_inv.append(pow(fact[i], MOD - 2, MOD))

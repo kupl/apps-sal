@@ -1,26 +1,19 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/31 21:44
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : D. Lunar New Year and a Wander.py
-
 import heapq
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     graph_dict = {}
     for _ in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         temp_list = graph_dict.get(u, [])
         temp_list.append(v)
         graph_dict[u] = temp_list
         temp_list = graph_dict.get(v, [])
         temp_list.append(u)
         graph_dict[v] = temp_list
-
     visit = [False] * (n + 1)
-    h, ret = [], []
+    (h, ret) = ([], [])
     heapq.heappush(h, 1)
     while h:
         u = heapq.heappop(h)

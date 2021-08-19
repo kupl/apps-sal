@@ -1,11 +1,5 @@
-# 494A
-# θ(|s|) time
-# θ(|s|) space
-
 __author__ = 'artyom'
 
-
-# SOLUTION
 
 def main():
     s = read(0)
@@ -33,14 +27,7 @@ def main():
     return res
 
 
-# HELPERS
-
 def read(mode=1, size=None):
-    # 0: String
-    # 1: Integer
-    # 2: List of strings
-    # 3: List of integers
-    # 4: Matrix of integers
     if mode == 0:
         return input().strip()
     if mode == 1:
@@ -55,13 +42,13 @@ def read(mode=1, size=None):
     return a
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
         s = ''
     if isinstance(s, tuple) or isinstance(s, list):
         s = '\n'.join(map(str, s))
     s = str(s)
-    print(s, end="\n")
+    print(s, end='\n')
 
 
 write(main())

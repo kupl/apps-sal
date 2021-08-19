@@ -1,8 +1,7 @@
-'''
+"""
 
 @author: linhz
-'''
-
+"""
 import sys
 
 
@@ -27,7 +26,7 @@ def __starting_point():
                 ansList.append(1)
                 sharpCount += 1
         else:
-            sys.stderr.write("Unexpected character:%c" % (c))
+            sys.stderr.write('Unexpected character:%c' % c)
     if ansFlag:
         ansList[-1] += leftCount
         leftCount = 0
@@ -45,7 +44,7 @@ def __starting_point():
                 if leftCount < 0:
                     ansFlag = False
             else:
-                sys.stderr.write("Unexpected character:%c" % (c))
+                sys.stderr.write('Unexpected character:%c' % c)
         if ansFlag:
             for i in ansList:
                 print(i)

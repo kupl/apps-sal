@@ -1,4 +1,4 @@
-'''input
+"""input
 3
 5 2
 BGGGG
@@ -6,11 +6,10 @@ BGGGG
 RBRGR
 5 5
 BBBRR
-'''
+"""
 import sys
 from collections import defaultdict as dd
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -21,57 +20,49 @@ def ri(flag=0):
 
 
 for _ in range(int(input())):
-    n, k = ri()
+    (n, k) = ri()
     a = input()
     rgb = [0 for i in range(n)]
     gbr = [0 for i in range(n)]
     brg = [0 for i in range(n)]
-
     for i in range(n):
         if i % 3 == 0:
-            if a[i] != "R":
+            if a[i] != 'R':
                 rgb[i] += 1
         if i % 3 == 1:
-            if a[i] != "G":
+            if a[i] != 'G':
                 rgb[i] += 1
         if i % 3 == 2:
-            if a[i] != "B":
+            if a[i] != 'B':
                 rgb[i] += 1
-
     for i in range(n):
         if i % 3 == 0:
-            if a[i] != "G":
+            if a[i] != 'G':
                 gbr[i] += 1
         if i % 3 == 1:
-            if a[i] != "B":
+            if a[i] != 'B':
                 gbr[i] += 1
         if i % 3 == 2:
-            if a[i] != "R":
+            if a[i] != 'R':
                 gbr[i] += 1
-
     for i in range(n):
         if i % 3 == 0:
-            if a[i] != "B":
+            if a[i] != 'B':
                 brg[i] += 1
         if i % 3 == 1:
-            if a[i] != "R":
+            if a[i] != 'R':
                 brg[i] += 1
         if i % 3 == 2:
-            if a[i] != "G":
+            if a[i] != 'G':
                 brg[i] += 1
-
     for i in range(1, n):
         rgb[i] += rgb[i - 1]
         brg[i] += brg[i - 1]
         gbr[i] += gbr[i - 1]
-
     ans = 999999999
-    # print(rgb,gbr,brg)
     for i in range(k - 1, n):
-        # print(i,i-k)
         if i - k == -1:
             ans = min(ans, rgb[i], gbr[i], brg[i])
         else:
             ans = min(ans, rgb[i] - rgb[i - k], gbr[i] - gbr[i - k], brg[i] - brg[i - k])
-
     print(ans)

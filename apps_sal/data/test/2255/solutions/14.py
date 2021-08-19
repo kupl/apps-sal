@@ -3,6 +3,7 @@ from heapq import heappush, heappop, heapify
 
 
 class MinHeap:
+
     def __init__(self):
         self.heap = []
 
@@ -17,22 +18,19 @@ class MinHeap:
 
 
 heapObj = MinHeap()
-
-
 graph = defaultdict(list)
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     graph[u - 1].append(v - 1)
     graph[v - 1].append(u - 1)
-visited = [False] * (n)
-# queue = []
+visited = [False] * n
 heapObj.insertKey(0)
 visited[0] = True
 count = 0
 while count != n:
     s = heapObj.extractMin()
-    print(s + 1, end=" ")
+    print(s + 1, end=' ')
     for i in graph[s]:
         if visited[i] == False:
             heapObj.insertKey(i)

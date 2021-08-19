@@ -1,4 +1,3 @@
-# coding:UTF-8
 import sys
 
 
@@ -7,13 +6,8 @@ def resultSur97(x):
 
 
 def __starting_point():
-    # ------ 入力 ------#
-    # 1行入力
-    aList = list(map(int, input().split()))     # スペース区切り連続数字
-
+    aList = list(map(int, input().split()))
     x = 5
-
-    # ------ 処理 ------#
     c5 = 0
     c7 = 0
     for a in aList:
@@ -21,12 +15,10 @@ def __starting_point():
             c5 += 1
         elif a == 7:
             c7 += 1
-
-    # ------ 出力 ------#
     if c5 == 2 and c7 == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

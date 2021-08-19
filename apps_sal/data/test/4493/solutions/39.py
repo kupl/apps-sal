@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep 22 04:07:05 2020
 
 @author: liang
 """
-
 C = [[int(x) for x in input().split()] for _ in range(3)]
 A = [0] * 3
 B = [0] * 3
-
 ans = False
 for a1 in range(C[0][0] + 1):
     tmp = True
@@ -28,6 +25,6 @@ for a1 in range(C[0][0] + 1):
     if tmp == True:
         ans = True
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')
