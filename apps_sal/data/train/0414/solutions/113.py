@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         n = len(arr)
         maxv = max(arr)
@@ -8,8 +9,7 @@ class Solution:
         c = 0
         w = queue[0]
         while queue[0] != maxv:
-            a, b = queue.popleft(), queue.popleft()
-            # print(a, b)
+            (a, b) = (queue.popleft(), queue.popleft())
             if a < b:
                 queue.append(a)
                 queue.appendleft(b)

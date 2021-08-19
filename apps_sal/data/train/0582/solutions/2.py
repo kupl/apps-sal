@@ -1,9 +1,7 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
     s = input()
     _ = input()
-
     stack = []
     nextOpen = [-1 for _ in range(len(s))]
     closing = [-1 for _ in range(len(s))]
@@ -12,14 +10,13 @@ for _ in range(T):
         if s[i] == '(':
             nextO = i
             if stack and stack[-1][0] == 1:
-                _, pos = stack.pop()
+                (_, pos) = stack.pop()
                 closing[i] = pos
             else:
                 stack.append((0, i))
         else:
             stack.append((1, i))
         nextOpen[i] = nextO
-
     for t in map(int, input().split()):
         t -= 1
         t = nextOpen[t]
