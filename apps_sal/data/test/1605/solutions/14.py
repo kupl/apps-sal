@@ -1,7 +1,10 @@
 import sys
 import collections as cc
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 s = input().strip()

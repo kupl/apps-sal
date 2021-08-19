@@ -1,4 +1,4 @@
-n, m, k = input().split(' ')
+(n, m, k) = input().split(' ')
 n = int(n)
 m = int(m)
 k = int(k)
@@ -8,7 +8,7 @@ count = 0
 ind = 0
 dead = False
 for i in range(k):
-    a, b = input().split(' ')
+    (a, b) = input().split(' ')
     moves.append([int(a), int(b)])
 for i in range(n):
     grid.append([])

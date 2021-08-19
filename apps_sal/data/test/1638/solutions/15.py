@@ -1,6 +1,6 @@
 n = int(input())
 m = list(map(int, input().split()))
-ans, idx = 0, -1
+(ans, idx) = (0, -1)
 for i in range(n):
     a = [0] * n
     a[i] = m[i]

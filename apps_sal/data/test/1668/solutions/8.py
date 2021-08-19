@@ -27,7 +27,7 @@ for _ in range(t):
     res = []
     cnt = 0
     for p in pins:
-        c, d = change(p, l)
+        (c, d) = change(p, l)
         cnt += d
         l[p] -= 1
         if l[p] == 0:

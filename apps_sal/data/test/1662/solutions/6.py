@@ -22,7 +22,6 @@ while a < len(cards):
         cards.pop(a)
     else:
         a += 1
-
 stair += stair_rev
 print(len(stair))
 s = ''

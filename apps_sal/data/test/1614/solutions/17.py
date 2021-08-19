@@ -1,6 +1,5 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
 sm = 0
 for x in l:
     sm += 1

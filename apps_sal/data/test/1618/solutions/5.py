@@ -11,6 +11,5 @@ for i in range(m):
     t = max(b, a + 1)
     h += [t]
     a = t + s[i][1] - 1
-
 for i in h:
     print(i)

@@ -1,5 +1,5 @@
 def main():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     g = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     count = 0

@@ -1,9 +1,7 @@
 S = input()
-
 word_lst = ['dream', 'dreamer', 'erase', 'eraser']
 for i in range(len(word_lst)):
     word_lst[i] = word_lst[i][::-1]
-
 S = S[::-1]
 ans = ''
 while len(ans) < len(S) - 4:
@@ -17,7 +15,6 @@ while len(ans) < len(S) - 4:
         ans = ans + word_lst[3]
     else:
         break
-
 if ans == S:
     print('YES')
 else:

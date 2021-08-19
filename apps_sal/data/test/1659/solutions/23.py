@@ -1,14 +1,13 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 pres = x
 dis = 0
 for i in range(n):
-    a, b = input().split()
+    (a, b) = input().split()
     b = int(b)
-    if(a == '+'):
+    if a == '+':
         pres += b
+    elif pres < b:
+        dis += 1
     else:
-        if(pres < b):
-            dis += 1
-        else:
-            pres -= b
+        pres -= b
 print(pres, dis)

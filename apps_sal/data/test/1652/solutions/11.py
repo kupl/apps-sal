@@ -9,4 +9,4 @@ for i in range(len(S) + 1):
         flag = True
     else:
         flag = False
-print("YES" if flag else "NO")
+print('YES' if flag else 'NO')

@@ -1,5 +1,5 @@
 s = input()
-M = 10**9 + 7
+M = 10 ** 9 + 7
 o = u = v = 0
 n = len(s)
 for i in range(n):

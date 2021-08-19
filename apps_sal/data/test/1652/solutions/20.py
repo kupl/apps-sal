@@ -1,6 +1,5 @@
 s = input()
 i = len(s)
-
 while True:
     if i == 0:
         print('YES')

@@ -17,12 +17,12 @@ def odind(l):
 def dvad(l):
     cx = {}
     ans1 = []
-    for x, y, n in l:
+    for (x, y, n) in l:
         if x in cx:
             cx[x].append([y, n])
         else:
             cx[x] = [[y, n]]
-    for x, j in cx.items():
+    for (x, j) in cx.items():
         v = odind(j)
         if len(v) != 0:
             ans1.append(tuple([x] + v))
@@ -37,12 +37,12 @@ def dvad(l):
 def trid(l):
     cx = {}
     ans1 = []
-    for x, y, z, n in l:
+    for (x, y, z, n) in l:
         if x in cx:
             cx[x].append((y, z, n))
         else:
             cx[x] = [(y, z, n)]
-    for x, j in cx.items():
+    for (x, j) in cx.items():
         v = list(dvad(j))
         if len(v) != 0:
             ans1.append(tuple([x] + v))

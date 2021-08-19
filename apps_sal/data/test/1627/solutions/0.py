@@ -6,8 +6,8 @@ def s(arr):
 
 x = int(input())
 y = list(map(int, input().split(' ')))
-while (not s(y)):
+while not s(y):
     for i in range(x - 1):
         if y[i] > y[i + 1]:
             print(i + 1, i + 2)
-            y[i], y[i + 1] = y[i + 1], y[i]
+            (y[i], y[i + 1]) = (y[i + 1], y[i])

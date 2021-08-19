@@ -1,4 +1,4 @@
-n, h = (int(i) for i in input().split())
+(n, h) = (int(i) for i in input().split())
 ans = 0
 l = list(map(int, input().split()))
 for i in range(n):

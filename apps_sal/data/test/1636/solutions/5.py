@@ -1,11 +1,9 @@
 n = int(input())
-
 opens = {}
 sums = [n - i for i in range(n)] + [0] * (n + 1)
 for i in range(n):
     t = tuple(map(int, input().split()))
     opens[t] = 1
-
 nums = list(map(int, input().split()))
 res = 1
 res_nums = []
@@ -17,7 +15,6 @@ for elem in nums:
     except:
         f = 0
     y = x + elem
-
     try:
         u = opens[x, y]
     except KeyError:
@@ -38,8 +35,6 @@ for elem in nums:
     sums[elem + n] += 1
     opens[x, y] = 0
     res_nums.append((x, y))
-
-
 print('YES' if res else 'NO')
 if res:
     for elem in res_nums:

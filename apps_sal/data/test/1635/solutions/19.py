@@ -4,7 +4,7 @@ def ma():
     k = {b[-1]}
     last = b[-1]
     for i in range(n - 1, -1, -1):
-        if not (b[i] in k):
+        if not b[i] in k:
             last = b[i]
             k.add(b[i])
     print(last)

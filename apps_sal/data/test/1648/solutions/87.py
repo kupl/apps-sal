@@ -1,6 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 list = [0] * (N + 1)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 list[1] = 1
 list[0] = 1
 for i in range(1, N):

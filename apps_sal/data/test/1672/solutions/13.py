@@ -1,7 +1,6 @@
 t = 0
 inputa = int(input())
-
-string = ""
+string = ''
 for x in range(inputa):
     add = input()
     string += add

@@ -1,7 +1,8 @@
 from itertools import accumulate
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -16,7 +17,7 @@ for i in range(1, 5001):
         if ones[i] and ones[j]:
             twos[i + j] += ones[i] * ones[j]
 stwos = list(accumulate(twos))
-sat, sm = 0, 0
+(sat, sm) = (0, 0)
 for i in range(1, 5001):
     if ones[i]:
         sat += ones[i] * stwos[i - 1]

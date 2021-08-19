@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 result = 1
 cur = 1
 prev = a[0]

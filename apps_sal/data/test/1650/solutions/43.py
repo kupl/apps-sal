@@ -12,10 +12,10 @@ else:
         else:
             L[N - i - 1] = '0'
 res = 0
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 buff = 1
-for d, char in enumerate(L):
+for (d, char) in enumerate(L):
     if char == '1':
         res = (res + buff * pow(3, N - 1 - d, MOD)) % MOD
-        buff = (2 * buff) % MOD
+        buff = 2 * buff % MOD
 print(res)

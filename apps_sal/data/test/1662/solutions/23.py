@@ -3,7 +3,7 @@ from itertools import chain
 
 def main():
     input()
-    lb, la = [], []
+    (lb, la) = ([], [])
     a = b = -1
     it = iter(sorted(map(int, input().split())))
     try:

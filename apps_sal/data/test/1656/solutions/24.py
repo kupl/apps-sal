@@ -13,5 +13,5 @@ for i in range(n - 2, -1, -1):
     if s[i] == 'v' and s[i + 1] == 'v':
         curr += 1
     elif s[i] == 'o':
-        ans += (curr) * (pre[i])
+        ans += curr * pre[i]
 print(ans)

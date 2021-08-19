@@ -1,5 +1,5 @@
 s = str(input())
-words = ["dream", "erase", "eraser", "dreamer"]
+words = ['dream', 'erase', 'eraser', 'dreamer']
 i = len(s)
 while i > 0:
     if s[-5:] in words:
@@ -14,6 +14,6 @@ while i > 0:
     else:
         break
 if i == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

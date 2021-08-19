@@ -10,7 +10,7 @@ for t in range(T):
             coll.append((s, n))
         Ans[n] = s
         V.add(s)
-    for c, pos in coll:
+    for (c, pos) in coll:
         for i in range(4):
             tVal = int(c[i])
             for j in range(1, 10):

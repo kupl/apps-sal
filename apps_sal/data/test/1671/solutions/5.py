@@ -9,7 +9,7 @@ for i in range(len(l) + 1):
         lo_n = i
         break
 if lo_n < 0 or lo_n > len(l):
-    assert(False)
+    assert False
 hi_n = n - lo_n
 l = sorted(l)
 l2 = []

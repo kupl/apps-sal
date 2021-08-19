@@ -2,7 +2,7 @@ S = input()
 N = len(S)
 words = ['dream', 'dreamer', 'erase', 'eraser']
 stack = [0]
-ans = "NO"
+ans = 'NO'
 while stack:
     ind = stack.pop()
     if ind == N:

@@ -1,4 +1,4 @@
-n, x = map(int, input().strip().split())
+(n, x) = map(int, input().strip().split())
 l = list(map(int, input().strip().split()))
 m = min(l)
 x -= 1
@@ -11,7 +11,6 @@ for i in range(n):
 for i in range(n):
     l[i] -= m
     l[p] += m
-
 if x != p:
     i = (p + 1) % n
     while i != x:

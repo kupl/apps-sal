@@ -1,4 +1,5 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -9,7 +10,7 @@ for i in a:
     if i:
         b[j] = i
         j += 1
-cnt = sum(i != 0 for i in b)
+cnt = sum((i != 0 for i in b))
 for i in range(n):
     if b[i] == 0:
         break

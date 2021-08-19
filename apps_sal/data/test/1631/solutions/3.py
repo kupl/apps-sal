@@ -16,7 +16,6 @@ def make_order(G, str1, str2):
         if str1[i] != str2[i]:
             make_link(G, str1[i], str2[i])
             return True
-
     if len(str2) > len(str1):
         return True
     else:
@@ -38,21 +37,16 @@ def topological_sort(G, ans, k='', visited={}):
 
 def main():
     N = int(input())
-
     strs = [input() for i in range(N)]
-
     G = {}
-
     for i in range(N - 1):
         if not make_order(G, strs[i], strs[i + 1]):
-            print("Impossible")
+            print('Impossible')
             return
-
     G[''] = reversed(string.ascii_lowercase)
-
     ans = []
     if topological_sort(G, ans):
-        print("Impossible")
+        print('Impossible')
     else:
         print(''.join(ans))
 

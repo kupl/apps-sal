@@ -1,5 +1,5 @@
 mod = pow(10, 9) + 7
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 inv = [0, 1]
 fact = [1, 1]
 ifact = [1, 1]

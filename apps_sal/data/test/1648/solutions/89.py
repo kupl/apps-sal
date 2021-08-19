@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 dp = [[0] * (n + 1) for _ in range(n + 1)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp[0][0] = 1
 dp[1][0] = 1
 dp[1][1] = 1

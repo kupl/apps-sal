@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 c = dict()
 for i in range(n):
     a = A[i]

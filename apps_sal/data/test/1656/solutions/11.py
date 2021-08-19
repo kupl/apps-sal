@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -19,7 +17,6 @@ def solve(S):
     vv = 0
     o = 0
     cnt = 0
-
     N = len(S)
     for i in range(N):
         if S[i:i + 2] == 'vv':
@@ -27,7 +24,6 @@ def solve(S):
             vv += 1
         elif S[i] == 'o':
             o += vv
-
     return cnt
 
 

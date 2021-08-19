@@ -19,8 +19,8 @@ for i in range(n):
         prev = min(a[j], prev)
         s += prev
         res.append(prev)
-    if(s > ans):
+    if s > ans:
         ans = s
-        fres = res[::]
+        fres = res[:]
 for i in fres:
-    print(i, end=" ")
+    print(i, end=' ')

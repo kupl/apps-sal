@@ -1,4 +1,4 @@
-n, h = [int(x) for x in input().split()]
+(n, h) = [int(x) for x in input().split()]
 L = [int(x) for x in input().split()]
 w = len(L)
 for i in L:

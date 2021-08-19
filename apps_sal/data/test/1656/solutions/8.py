@@ -1,5 +1,5 @@
 s = input()
-w, wo, wow = 0, 0, 0
+(w, wo, wow) = (0, 0, 0)
 last = None
 for c in s:
     if c == 'v' and last == 'v':
@@ -8,5 +8,4 @@ for c in s:
     elif c == 'o':
         wo += w
     last = c
-
 print(wow)

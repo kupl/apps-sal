@@ -20,5 +20,4 @@ a = sorted(a)
 ans = 0
 for i in range(n // 2):
     ans += pow(a[i] + a[n - i - 1], 2)
-
 print(ans)

@@ -1,5 +1,5 @@
 def main():
-    x, y, a, b = map(int, input().split())
+    (x, y, a, b) = map(int, input().split())
     res = [None]
     for i in range(a, x + 1):
         si = str(i)

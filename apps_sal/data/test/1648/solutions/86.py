@@ -10,14 +10,25 @@ from time import time
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
 
-n, k = MAP()
+def input():
+    return sys.stdin.readline().strip()
 
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+(n, k) = MAP()
 for i in range(1, k + 1):
-    ans = comb(n - k + 1, i) * comb(k - 1, i - 1) % (10**9 + 7)
+    ans = comb(n - k + 1, i) * comb(k - 1, i - 1) % (10 ** 9 + 7)
     print(ans)

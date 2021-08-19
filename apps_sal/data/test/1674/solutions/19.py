@@ -1,5 +1,5 @@
 from sys import stdin
-n, m = list(map(int, stdin.readline().strip().split()))
+(n, m) = list(map(int, stdin.readline().strip().split()))
 s = list(map(int, stdin.readline().strip().split()))
 s1 = stdin.readline().strip()
 x = [s[0]]

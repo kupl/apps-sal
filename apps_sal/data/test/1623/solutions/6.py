@@ -1,4 +1,4 @@
-n, l, r = map(int, input().split())
+(n, l, r) = map(int, input().split())
 sm = 0
 for i in range(l):
     sm += 2 ** i

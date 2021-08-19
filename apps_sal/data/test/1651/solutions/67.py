@@ -5,14 +5,14 @@ input = sys.stdin.readline
 
 
 def main():
-    s, p = list(map(int, input().split()))
+    (s, p) = list(map(int, input().split()))
     i = 1
-    while(i**2 <= p):
-        if(s == i + p / i):
-            print("Yes")
+    while i ** 2 <= p:
+        if s == i + p / i:
+            print('Yes')
             return 0
         i += 1
-    print("No")
+    print('No')
 
 
 main()

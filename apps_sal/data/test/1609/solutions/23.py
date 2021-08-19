@@ -1,6 +1,6 @@
 n = int(input())
 inp = list(map(int, input().split(' ')))
-used = set(x for x in inp if x > 0 and x <= n)
+used = set((x for x in inp if x > 0 and x <= n))
 toadd = {i + 1 for i in range(n)}.difference(used)
 res = []
 for num in inp:

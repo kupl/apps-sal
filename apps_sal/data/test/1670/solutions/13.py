@@ -1,9 +1,7 @@
 h = input()
 a = input()
 n = int(input())
-
 dic = {}
-
 while n > 0:
     n -= 1
     line = input().split()
@@ -24,7 +22,6 @@ while n > 0:
         dic[m] = f
         if f > 1:
             give_red = True
-
     if give_red:
         line = ' ' + t
         if m > 100:

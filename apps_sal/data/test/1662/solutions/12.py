@@ -1,5 +1,5 @@
-n, t = int(input()), sorted(map(int, input().split()))
-a, b, k = [t[0]], [], False
+(n, t) = (int(input()), sorted(map(int, input().split())))
+(a, b, k) = ([t[0]], [], False)
 for i in range(1, n):
     if t[i] == t[i - 1]:
         k = True

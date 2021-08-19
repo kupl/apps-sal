@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = 0
 for k in c:
     if not a:

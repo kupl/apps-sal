@@ -7,7 +7,7 @@ def main():
                 l.append((c, d))
     print(len(l))
     for ll in l:
-        print("{} {}".format(*ll))
+        print('{} {}'.format(*ll))
 
 
 main()

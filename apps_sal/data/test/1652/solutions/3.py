@@ -1,6 +1,6 @@
 s = input()
-s = s.replace("eraser", "").replace("erase", "").replace("dreamer", "").replace("dream", "")
+s = s.replace('eraser', '').replace('erase', '').replace('dreamer', '').replace('dream', '')
 if s:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

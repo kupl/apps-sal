@@ -3,12 +3,10 @@ import re
 import math
 import getpass
 import sys
-
 debug = False
 files = False
 if getpass.getuser() == 'frohe':
     debug = True
-
 if debug and files:
     sys.stdin = open('test.in')
 
@@ -22,7 +20,7 @@ ar = ria()
 mp = {}
 for i in ar:
     mp[i] = 0
-for n, i in enumerate(ar):
+for (n, i) in enumerate(ar):
     mp[i] = n
 mini = ar[0]
 for i in mp:

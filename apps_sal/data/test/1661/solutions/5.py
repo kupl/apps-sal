@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 c = list(map(int, input().split()))
 d = list(map(int, input().split()))
-
 ci = 0
 di = 0
 ans = 0

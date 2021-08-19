@@ -1,5 +1,5 @@
 import sys
-M = int(1e9) + 7
+M = int(1000000000.0) + 7
 
 
 def I():
@@ -7,7 +7,6 @@ def I():
 
 
 s = I()
-
 if 'w' in s or 'm' in s:
     print(0)
 else:

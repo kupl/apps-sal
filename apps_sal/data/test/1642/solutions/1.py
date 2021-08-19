@@ -1,6 +1,4 @@
 from math import hypot
-
-
 n = int(input())
 
 
@@ -17,14 +15,12 @@ def height(a, b, c):
 points = []
 for i in range(n):
     points.append(list(map(float, input().split())))
-_max = 3e9
-
+_max = 3000000000.0
 for i in range(n):
     a = points[i]
     b = points[(i + 1) % n]
     c = points[(i + 2) % n]
-    _max = min(_max, (height(a, b, c) / 2))
+    _max = min(_max, height(a, b, c) / 2)
     _max = min(_max, height(c, a, b) / 2)
-    _max = min(_max, (height(b, c, a) / 2))
-
+    _max = min(_max, height(b, c, a) / 2)
 print(_max)

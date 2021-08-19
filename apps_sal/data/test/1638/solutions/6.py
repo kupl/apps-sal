@@ -4,7 +4,6 @@ ans = [0] * n
 sA = 0
 for top in range(n):
     r = []
-
     if top != 0:
         left = []
         now = L[top]

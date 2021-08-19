@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 sum = 1
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]

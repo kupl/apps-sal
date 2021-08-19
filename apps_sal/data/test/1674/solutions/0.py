@@ -10,10 +10,9 @@ def li():
     return list(mi())
 
 
-n, k = mi()
+(n, k) = mi()
 a = li()
 s = input().strip()
-
 ans = 0
 i = 0
 while i < n:

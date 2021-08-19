@@ -5,19 +5,17 @@ def main():
     max_ht = 0
     m = int(input())
     for i in range(m):
-        w, h = list(map(int, input().split()))
+        (w, h) = list(map(int, input().split()))
         curr_ht = hts[w - 1]
         if max_ht == 0:
             ans.append(curr_ht)
             max_ht = curr_ht + h
+        elif curr_ht >= max_ht:
+            max_ht = curr_ht + h
+            ans.append(curr_ht)
         else:
-            if curr_ht >= max_ht:
-                max_ht = curr_ht + h
-                ans.append(curr_ht)
-            else:
-                ans.append(max_ht)
-                max_ht += h
-
+            ans.append(max_ht)
+            max_ht += h
     for i in range(m):
         print(ans[i])
 

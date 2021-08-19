@@ -1,4 +1,4 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 ip = list(map(int, input().split()))
 width = 0
 for i in range(n):

@@ -1,4 +1,5 @@
 def main():
+
     def solve2():
         a = m[:]
         cnt = 0
@@ -15,7 +16,7 @@ def main():
     Sum = sum(m)
     mid = Sum // n
     if Sum % n == 0:
-        ans = sum(abs(i - mid) for i in m) // 2
+        ans = sum((abs(i - mid) for i in m)) // 2
     else:
         cntscd = Sum % n
         cnt = ans = 0

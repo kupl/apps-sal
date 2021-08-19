@@ -14,9 +14,7 @@ def average(args):
 
 n = int(input())
 args = [int(x) for x in input().split()]
-
 avg = average(args)
-
 up = 0
 down = 0
 for arg in args:
@@ -24,5 +22,4 @@ for arg in args:
         down += arg - math.ceil(avg)
     elif arg < avg:
         up += math.floor(avg) - arg
-
 print(max(up, down))

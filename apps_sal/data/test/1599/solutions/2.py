@@ -7,5 +7,5 @@ for i in input():
         d.append(d[-1])
     c = i
 for i in range(int(input())):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     print(d[r] - d[l])

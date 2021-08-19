@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 prices = list(map(int, input().split(' ')))
 money = list(map(int, input().split(' ')))
-
 res = 0
 cur = 0
 for price in prices:

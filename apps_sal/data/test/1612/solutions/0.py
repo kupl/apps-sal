@@ -6,7 +6,7 @@ for i in range(n):
     for j in range(n):
         if i != j:
             if p[i].issuperset(p[j]):
-                print("NO")
+                print('NO')
                 break
     else:
-        print("YES")
+        print('YES')

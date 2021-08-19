@@ -1,5 +1,5 @@
 import math
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 
 
 def ok(n):
@@ -9,8 +9,8 @@ def ok(n):
             ret.append(i)
             ret.append(n // i)
             if i + n // i == a:
-                return "Yes"
-    return "No"
+                return 'Yes'
+    return 'No'
 
 
-print((ok(b)))
+print(ok(b))

@@ -1,9 +1,7 @@
 from itertools import accumulate
-
 v = ord('v')
 o = ord('o')
 S = [o] + [ord(s) for s in input().strip()]
-
 stack = []
 pre = None
 cnt = 0
@@ -16,7 +14,6 @@ for s in S:
         cnt = 1
 stack.append(cnt)
 stack = stack[1:]
-
 LS = len(stack)
 w = 0
 sp = [stack[i] - 1 if i % 2 else 0 for i in range(LS)]

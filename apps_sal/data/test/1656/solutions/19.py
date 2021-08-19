@@ -9,6 +9,6 @@ ws = 0
 for i in range(len(arr) - 1):
     if len(arr[i]) > 1:
         ws += len(arr[i]) - 1
-        wsall -= (len(arr[i]) - 1)
+        wsall -= len(arr[i]) - 1
     ans += ws * wsall
 print(ans)

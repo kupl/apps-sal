@@ -1,4 +1,3 @@
-
 t = int(input())
 for nt in range(t):
     n = int(input())

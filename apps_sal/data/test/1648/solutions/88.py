@@ -16,9 +16,8 @@ def comb_pre(N, p):
 fac = [1, 1]
 facinv = [1, 1]
 inv = [0, 1]
-
-N, K = list(map(int, input().split()))
-MOD = 1_000_000_007
+(N, K) = list(map(int, input().split()))
+MOD = 1000000007
 comb_pre(N + 1, MOD)
 for i in range(1, K + 1):
     tmp = comb(N - K + 1, i, MOD)

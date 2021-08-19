@@ -4,7 +4,7 @@ def solve():
     ss = [input() for i in range(n)]
     for s in ss:
         d[s] = d.get(s, 0) + 1
-    ans = sum(i - 1 for i in d.values())
+    ans = sum((i - 1 for i in d.values()))
     print(ans)
     used = set(d.keys())
     l = []
@@ -15,7 +15,7 @@ def solve():
             for i in range(4):
                 for j in range(10):
                     t[i] = str(j)
-                    u = "".join(t)
+                    u = ''.join(t)
                     if u not in used:
                         l.append(u)
                         used.add(u)
@@ -27,7 +27,7 @@ def solve():
         else:
             l.append(s)
             used.add(s)
-    print(*l, sep="\n")
+    print(*l, sep='\n')
 
 
 t = int(input())

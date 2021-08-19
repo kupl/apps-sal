@@ -14,7 +14,7 @@ for i in range(t):
         if a.get(v, 0) == 0:
             print(v)
         else:
-            v, vo = v[1:], v
+            (v, vo) = (v[1:], v)
             for i in range(10):
                 if not str(i) + v in a:
                     a[str(i) + v] = 0

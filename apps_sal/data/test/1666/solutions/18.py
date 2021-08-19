@@ -4,8 +4,6 @@ x = l[0]
 y = l[1]
 a = l[2]
 b = l[3]
-
-
 r = []
 for i in range(a, x + 1):
     for j in range(b, y + 1):
@@ -13,7 +11,6 @@ for i in range(a, x + 1):
             r.append((i, j))
         else:
             break
-
 print(len(r))
 for x in r:
     print(x[0], x[1])

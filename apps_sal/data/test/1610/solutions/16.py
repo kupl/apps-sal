@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 i = 1
-while i < (n - k):
+while i < n - k:
     print(i, end='')
     print(' ', end='')
     i += 1

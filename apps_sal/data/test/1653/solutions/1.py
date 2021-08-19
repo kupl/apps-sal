@@ -8,16 +8,16 @@ def read():
     return r
 
 
-s, t = read(), read()
+(s, t) = (read(), read())
 q = int(input())
 r = ''
 for i in range(q):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     sb = s[1][b] - s[1][a] + (s[0][a] == 0)
     sa = s[0][b] - (s[0][a] - 1) * (sb == 0)
     tb = t[1][d] - t[1][c] + (t[0][c] == 0)
     ta = t[0][d] - (t[0][c] - 1) * (tb == 0)
-    if any([sb > tb, sa < ta, tb - sb & 1, sb == tb and (sa - ta) % 3, sa == ta and not sb and tb]):
+    if any([sb > tb, sa < ta, tb - sb & 1, sb == tb and (sa - ta) % 3, sa == ta and (not sb) and tb]):
         r += '0'
     else:
         r += '1'

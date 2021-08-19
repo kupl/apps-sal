@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 
 
@@ -9,7 +8,6 @@ def s(n, k):
 
 
 result = []
-
 for d in range(1, int(math.sqrt(n)) + 1):
     if n % d != 0:
         continue
@@ -17,7 +15,5 @@ for d in range(1, int(math.sqrt(n)) + 1):
     result.append(s(n, d))
     if d2 != d:
         result.append(s(n, d2))
-
 result.sort()
-
 print(*result)

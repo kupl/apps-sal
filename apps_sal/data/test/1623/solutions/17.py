@@ -1,5 +1,5 @@
-n, l, r = list(map(int, input().split()))
-ans1, ans2 = 0, 0
+(n, l, r) = list(map(int, input().split()))
+(ans1, ans2) = (0, 0)
 t = 1
 for i in range(l):
     ans1 += t

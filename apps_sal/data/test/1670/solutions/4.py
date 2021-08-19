@@ -1,9 +1,9 @@
-team1, team2 = input(), input()
+(team1, team2) = (input(), input())
 n = int(input())
 yellow = set()
 red = set()
 for i in range(n):
-    a, b, c, d = input().split()
+    (a, b, c, d) = input().split()
     a = int(a)
     c = int(c)
     c2 = c

@@ -19,4 +19,4 @@ for i in range(n):
         a[i] = nls_pos[-1]
         nls_pos.pop()
 for i in a:
-    print(i, end=" ")
+    print(i, end=' ')

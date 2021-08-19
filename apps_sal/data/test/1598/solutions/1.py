@@ -1,7 +1,6 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     s = [int(i) for i in input()[:-1]][::-1]
     n = len(s)
     dp = [[0] * n for _ in range(n)]
@@ -14,8 +13,7 @@ def main():
             else:
                 tmp[1] += 1
                 dp[j][i] = tmp[1]
-
-    t = ""
+    t = ''
     dp2 = [[0] * n for _ in range(n)]
     tmp = [[0, 0] for _ in range(n)]
     for j in range(n):
@@ -27,7 +25,6 @@ def main():
             dp2[i][j] = tmp[i][0]
             if dp2[i][j] != dp[i][j]:
                 okay = 0
-
         if not okay:
             for i in range(j + 1):
                 tmp[i][0] = prev[i]
@@ -36,9 +33,7 @@ def main():
             t += '1'
         else:
             t += '0'
-
     print(t[::-1])
-
     return 0
 
 

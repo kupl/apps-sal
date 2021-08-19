@@ -11,10 +11,8 @@ def main():
             numbers[el] = numbers[el] + 1
         except KeyError:
             numbers[el] = 1
-
     nr = numbers.keys()
     nr = sorted(list(set(nr)))
-
     count = 0
     final = []
     for n in nr:
@@ -31,7 +29,7 @@ def main():
                 count += 1
     print(count)
     for el in final[:-1]:
-        print(el, end=" ")
+        print(el, end=' ')
     print(final[-1])
 
 

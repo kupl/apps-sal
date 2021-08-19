@@ -2,7 +2,7 @@ def get():
     return list(map(int, input().split()))
 
 
-n, k = get()
+(n, k) = get()
 a = list(get())
 s = input()
 i = 0

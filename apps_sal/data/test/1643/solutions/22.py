@@ -6,7 +6,6 @@ for i in range(len(s)):
         stack.append(i)
     elif len(stack):
         stack.pop()
-
 for i in range(len(stack)):
     t[stack[i]] = '0'
 print(''.join(t))

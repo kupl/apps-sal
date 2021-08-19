@@ -11,4 +11,4 @@ for i in range(n):
         if t <= s and i != j:
             joke = 0
             break
-    print("YES" * joke + "NO" * (1 - joke))
+    print('YES' * joke + 'NO' * (1 - joke))

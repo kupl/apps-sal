@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ev = [tuple(map(int, input().split())) for _ in range(m)]
-
 g = [[] for _ in range(n + 1)]
 qry = [[] for _ in range(m + 1)]
 roots = set(range(1, n + 1))
@@ -12,12 +11,11 @@ for e in ev:
     elif e[0] == 3:
         qry[e[2]].append((qcnt, e[1]))
         qcnt += 1
-
-tin, tout = [0] * (n + 1), [0] * (n + 1)
+(tin, tout) = ([0] * (n + 1), [0] * (n + 1))
 st = [(u, 0) for u in roots]
 time = 0
 while st:
-    u, w = st.pop()
+    (u, w) = st.pop()
     if w:
         tout[u] = time
         continue
@@ -26,7 +24,6 @@ while st:
     st.append((u, 1))
     for v in g[u]:
         st.append((v, 0))
-
 p = list(range(n + 1))
 
 
@@ -43,7 +40,6 @@ for e in ev:
         p[find(e[1])] = find(e[2])
     elif e[0] == 2:
         pcnt += 1
-        for qid, x in qry[pcnt]:
+        for (qid, x) in qry[pcnt]:
             ans[qid] = 'YES' if find(e[1]) == find(x) and tin[x] <= tin[e[1]] <= tout[x] else 'NO'
-
 print(*ans, sep='\n')

@@ -1,12 +1,10 @@
-
 def mi():
     return map(int, input().split())
 
 
-n1, n2 = mi()
+(n1, n2) = mi()
 c = list(mi())
 a = list(mi())
-
 i = 0
 j = 0
 cnt = 0

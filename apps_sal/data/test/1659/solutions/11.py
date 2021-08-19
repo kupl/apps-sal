@@ -1,7 +1,7 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 sad = 0
 for i in range(n):
-    a, b = input().split()
+    (a, b) = input().split()
     b = int(b)
     if a == '-':
         if x >= b:

@@ -1,5 +1,4 @@
 from math import sqrt
-
 n = int(input())
 ans = []
 for p in range(1, n + 1):

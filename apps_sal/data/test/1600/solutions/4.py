@@ -2,7 +2,6 @@ def main():
     n = int(input())
     a = [int(i) for i in input().split()]
     b = sorted(a)
-
     diff = 0
     d = {}
     result = 0
@@ -24,7 +23,6 @@ def main():
             diff -= 1
         if diff == 0:
             result += 1
-
     print(result)
 
 

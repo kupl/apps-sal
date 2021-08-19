@@ -1,6 +1,6 @@
 def main():
-    n, k = list(map(int, input().split()))
-    mod = 10**9 + 7
+    (n, k) = list(map(int, input().split()))
+    mod = 10 ** 9 + 7
     a = 1
     b = n - k + 1
     for i in range(k):

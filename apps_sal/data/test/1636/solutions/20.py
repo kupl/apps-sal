@@ -1,9 +1,8 @@
 n = int(input())
 p = sorted([tuple(map(int, input().split())) for _ in range(n)])
 arr = list(map(int, input().split()))
-w, r, pr = {}, {}, {}
-
-for i, wi in enumerate(arr, 1):
+(w, r, pr) = ({}, {}, {})
+for (i, wi) in enumerate(arr, 1):
     if wi not in w:
         w[wi] = []
     w[wi].append(i)
@@ -37,8 +36,8 @@ def solve():
 
 
 if solve() == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
-    for k, v in sorted(r.items()):
+    print('YES')
+    for (k, v) in sorted(r.items()):
         print(v[0], v[1])

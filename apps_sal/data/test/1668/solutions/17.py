@@ -1,4 +1,3 @@
-
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -14,7 +13,7 @@ for i in range(t):
                 for m in range(10):
                     temp = list(cards[j])
                     temp[k] = str(m)
-                    temp = "".join(temp)
+                    temp = ''.join(temp)
                     if temp not in cards:
                         cards[j] = temp
                         cou += 1
@@ -23,4 +22,4 @@ for i in range(t):
                 if br:
                     break
     print(cou)
-    print(*cards, sep="\n")
+    print(*cards, sep='\n')

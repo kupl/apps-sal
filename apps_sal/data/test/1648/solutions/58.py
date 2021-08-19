@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(1 << 30)
-M = 10**9 + 7
-N, Blue = map(int, input().split())
+M = 10 ** 9 + 7
+(N, Blue) = map(int, input().split())
 Red = N - Blue
 Comb = [[0] * (N + 1) for i in range(0, N + 1)]
 for i in range(1, N + 1):

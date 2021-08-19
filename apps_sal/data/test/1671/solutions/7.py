@@ -4,13 +4,11 @@ a.sort()
 Yu = sum(a) % n
 pin = sum(a) // n
 re = 0
-
 for i in a:
     if i < pin:
         re += pin - i
     else:
         break
-
 if Yu == 0:
     print(re)
 else:

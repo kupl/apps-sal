@@ -2,8 +2,8 @@ def ma():
     return list(map(int, input().split()))
 
 
-n, m = ma()
-i, j = 0, 0
+(n, m) = ma()
+(i, j) = (0, 0)
 A = list(ma())
 B = list(ma())
 ans = 0

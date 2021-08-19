@@ -11,25 +11,23 @@ while i <= k - 5:
                 i += 5
             else:
                 i = k + 1
+        elif t[i:i + 6] == 'resare':
+            i += 6
+        elif t[i:i + 7] == 'remaerd':
+            i += 7
         else:
-            if t[i:i + 6] == 'resare':
-                i += 6
-            elif t[i:i + 7] == 'remaerd':
-                i += 7
-            else:
-                i = k + 1
+            i = k + 1
     elif k - i == 6:
         if t[i:i + 6] == 'resare':
             i = k
         else:
             i = k + 1
+    elif t[i:i + 5] == 'esare':
+        i = k
+    elif t[i:i + 5] == 'maerd':
+        i = k
     else:
-        if t[i:i + 5] == 'esare':
-            i = k
-        elif t[i:i + 5] == 'maerd':
-            i = k
-        else:
-            i = k + 1
+        i = k + 1
 if i == k:
     print('YES')
 else:

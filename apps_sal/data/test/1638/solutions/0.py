@@ -1,10 +1,8 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     N = int(input())
     A = list(map(int, input().split()))
-
     S = -1
     for mid in range(N):
         ans = [0] * N

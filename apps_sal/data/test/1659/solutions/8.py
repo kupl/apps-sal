@@ -1,17 +1,13 @@
-n, x = list(map(int, input().split()))
-
+(n, x) = list(map(int, input().split()))
 bad = 0
-
 for i in range(n):
     l = input().split()
-    cmd, d = l
+    (cmd, d) = l
     d = int(d)
     if cmd == '+':
         x += d
+    elif x >= d:
+        x -= d
     else:
-        if x >= d:
-            x -= d
-        else:
-            bad += 1
-
+        bad += 1
 print(x, bad)

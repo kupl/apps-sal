@@ -1,6 +1,6 @@
-s, p = list(map(int, input().split()))
-n1 = (s + ((-s)**2 - 4 * p)**.5) / 2
-n2 = (s - ((-s)**2 - 4 * p)**.5) / 2
+(s, p) = list(map(int, input().split()))
+n1 = (s + ((-s) ** 2 - 4 * p) ** 0.5) / 2
+n2 = (s - ((-s) ** 2 - 4 * p) ** 0.5) / 2
 n1 = int(n1)
 n2 = int(n2)
 m1 = s - n1

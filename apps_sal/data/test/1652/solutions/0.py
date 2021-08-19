@@ -1,9 +1,9 @@
 S = input()
-S = "".join(list(reversed(S)))
-str_list = ["dream", "dreamer", "erase", "eraser"]
+S = ''.join(list(reversed(S)))
+str_list = ['dream', 'dreamer', 'erase', 'eraser']
 rev_str = []
 for i in str_list:
-    rev_str.append("".join(list(reversed(i))))
+    rev_str.append(''.join(list(reversed(i))))
 is_OK = True
 while len(S) > 0:
     if S[0:5] in rev_str:
@@ -16,6 +16,6 @@ while len(S) > 0:
         is_OK = False
         break
 if is_OK:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

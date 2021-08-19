@@ -4,7 +4,6 @@ for _ in range(t):
     a = []
     for i in range(n):
         a.append(input())
-
     added = set()
     everything = set(a)
     out = []

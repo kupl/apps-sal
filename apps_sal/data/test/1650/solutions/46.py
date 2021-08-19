@@ -1,6 +1,6 @@
 l = input()
 dp = [1, 0]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in l:
     newdp = dp[:]
     if i == '0':

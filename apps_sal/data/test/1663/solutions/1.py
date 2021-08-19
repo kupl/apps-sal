@@ -1,4 +1,4 @@
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 s = input()
 n = len(s)
 pref = [0] * (n + 1)
@@ -6,7 +6,6 @@ for i in range(n):
     pref[i + 1] = (int(s[i]) + pref[i] * 10) % mod
 for i in range(n):
     pref[i + 1] = (pref[i + 1] + pref[i]) % mod
-
 res = 0
 acc = 0
 for i in range(n, 0, -1):

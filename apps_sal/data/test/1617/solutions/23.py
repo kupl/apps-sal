@@ -1,6 +1,6 @@
 n = int(input())
 dels = set()
-for k in range(1, int((n + 1)**0.5) + 1):
+for k in range(1, int((n + 1) ** 0.5) + 1):
     if n % k == 0:
         dels.add(k)
         dels.add(n // k)

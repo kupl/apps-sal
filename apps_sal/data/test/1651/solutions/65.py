@@ -1,4 +1,4 @@
-s, p = map(int, input().split())
+(s, p) = map(int, input().split())
 ans = 'No'
 for i in range(1000050):
     if i * (s - i) == p:

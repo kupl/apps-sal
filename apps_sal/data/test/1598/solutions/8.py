@@ -1,4 +1,4 @@
-v, t = 0, ''
+(v, t) = (0, '')
 for c in input()[::-1]:
     if c < '1' or v:
         t += c

@@ -1,2 +1,2 @@
 import re
-print('YES' if re.compile(r'^(dream|dreamer|erase|eraser)+$').match(input()) else 'NO')
+print('YES' if re.compile('^(dream|dreamer|erase|eraser)+$').match(input()) else 'NO')

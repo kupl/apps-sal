@@ -3,12 +3,12 @@ import math
 
 def main():
     n = int(input())
-    ans = ""
+    ans = ''
     for i in range(n):
         if i % 4 == 0 or i % 4 == 1:
-            ans += "a"
+            ans += 'a'
         else:
-            ans += "b"
+            ans += 'b'
     print(ans)
 
 

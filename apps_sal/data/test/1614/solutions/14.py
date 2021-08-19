@@ -1,4 +1,4 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 pr = 0
 for s in input().split():
     if int(s) > h:

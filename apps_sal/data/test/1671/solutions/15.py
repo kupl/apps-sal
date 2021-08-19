@@ -14,6 +14,6 @@ for a in m:
             ans += a - (dd + 1)
             maxdd -= 1
         else:
-            ans + + a - dd
+            ans + +a - dd
             mindd -= 1
 print(ans)

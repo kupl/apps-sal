@@ -1,19 +1,19 @@
-S, P = list(map(int, input().split()))
-v = S**2 - 4 * P
+(S, P) = list(map(int, input().split()))
+v = S ** 2 - 4 * P
 if v < 0:
-    print("No")
+    print('No')
 elif v == 0:
-    print("Yes")
+    print('Yes')
 else:
     left = 1
     right = v
     while right - left > 1:
         mid = (left + right) // 2
-        if mid**2 > v:
+        if mid ** 2 > v:
             right = mid
         else:
             left = mid
-    if left**2 == v:
-        print("Yes")
+    if left ** 2 == v:
+        print('Yes')
     else:
-        print("No")
+        print('No')

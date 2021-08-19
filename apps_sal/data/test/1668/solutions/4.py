@@ -10,4 +10,4 @@ for _ in range(int(input())):
                 l[i] %= 10000
     print(ans)
     for i in l:
-        print("%04d" % i)
+        print('%04d' % i)

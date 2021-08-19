@@ -2,7 +2,6 @@ from collections import Counter as Cnt
 n = int(input())
 data = tuple(map(int, input().split()))
 datasorted = sorted(data)
-
 i = 0
 a = Cnt()
 b = Cnt()
@@ -12,5 +11,5 @@ for i in range(n):
     b[datasorted[i]] += 1
     if a == b:
         ans += 1
-        a, b = Cnt(), Cnt()
+        (a, b) = (Cnt(), Cnt())
 print(ans)

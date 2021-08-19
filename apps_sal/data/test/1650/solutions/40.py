@@ -10,9 +10,9 @@ def main():
             dp[i + 1][0] += dp[i][1]
         else:
             dp[i + 1][1] += dp[i][1]
-        dp[i + 1][0] %= 10**9 + 7
-        dp[i + 1][1] %= 10**9 + 7
-    print(sum(dp[n]) % (10**9 + 7))
+        dp[i + 1][0] %= 10 ** 9 + 7
+        dp[i + 1][1] %= 10 ** 9 + 7
+    print(sum(dp[n]) % (10 ** 9 + 7))
 
 
 def __starting_point():

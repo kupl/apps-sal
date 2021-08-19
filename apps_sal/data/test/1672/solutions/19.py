@@ -6,5 +6,4 @@ for i in range(n):
     if s[1] != polo:
         gruppi += 1
     polo = s[1]
-
 print(gruppi)

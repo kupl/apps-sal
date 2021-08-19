@@ -18,14 +18,13 @@ for i in input().split():
     if k == -1:
         k += 1
         a[k] = x
+    elif x >= a[k]:
+        k += 1
+        a[k] = x
     else:
-        if x >= a[k]:
+        k1 = k
+        k = binsearch(a, x, k + 1)
+        if a[k] <= x:
             k += 1
-            a[k] = x
-        else:
-            k1 = k
-            k = binsearch(a, x, k + 1)
-            if a[k] <= x:
-                k += 1
-            a[k] = a[k1]
+        a[k] = a[k1]
 print(k + 1)

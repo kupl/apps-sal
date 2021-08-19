@@ -1,5 +1,4 @@
 from collections import Counter
-
 n = int(input())
 A = list(map(int, input().split()))
 
@@ -19,6 +18,5 @@ for i in range(n):
         A[i] = next(ch)
     elif A[i] > n:
         A[i] = next(ch)
-
 for i in A:
     print(i, end=' ')

@@ -1,11 +1,11 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 cnt = 0
 for i in range(n):
-    sgn, v = input().split()
+    (sgn, v) = input().split()
     v = int(v)
-    if sgn == "+":
+    if sgn == '+':
         x += v
-    if sgn == "-":
+    if sgn == '-':
         if x >= v:
             x -= v
         else:

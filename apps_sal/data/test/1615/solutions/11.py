@@ -8,6 +8,5 @@ for i in range(0, int(a[0])):
 for j in range(0, len(lista)):
     contador += int(lista[j][0])
     contador2 += int(lista[j][1])
-
-formula = ((contador - int(a[0])) - contador2) % int(a[-1])
+formula = (contador - int(a[0]) - contador2) % int(a[-1])
 print(formula)

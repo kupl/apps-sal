@@ -36,7 +36,7 @@ def f():
     for i in range(s + 1, n):
         cur = min(cur, M[i])
         rt[i] = cur
-    print(' '.join(str(num) for num in rt))
+    print(' '.join((str(num) for num in rt)))
 
 
 f()

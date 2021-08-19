@@ -1,7 +1,8 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, m, k = R()
+(n, m, k) = R()
 N = 1024
 g = [[0] * N for _ in range(N)]
 
@@ -11,7 +12,7 @@ def T(r, c):
 
 
 for i in range(k):
-    r, c = R()
+    (r, c) = R()
     g[r][c] = 1
     if T(r - 1, c - 1) or T(r - 1, c) or T(r, c - 1) or T(r, c):
         print(i + 1)

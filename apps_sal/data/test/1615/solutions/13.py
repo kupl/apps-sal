@@ -1,9 +1,10 @@
-def q(): return map(int, input().split())
+def q():
+    return map(int, input().split())
 
 
-n, k = q()
+(n, k) = q()
 a = []
-while(n):
+while n:
     a += [q()]
     n -= 1
-print((k - sum(r - l + 1 for l, r in a) % k) % k)
+print((k - sum((r - l + 1 for (l, r) in a)) % k) % k)

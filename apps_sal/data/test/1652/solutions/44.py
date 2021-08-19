@@ -4,6 +4,6 @@ s = s.replace('erase', '')
 s = s.replace('dreamer', '')
 s = s.replace('dream', '')
 if s == '':
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

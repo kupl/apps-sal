@@ -1,6 +1,5 @@
 n = int(input())
 arr = [int(x) for x in input().split()]
-
 ans = 1
 now = 1
 for i in range(1, n):
@@ -9,6 +8,5 @@ for i in range(1, n):
     else:
         ans = max(ans, now)
         now = 1
-
 ans = max(ans, now)
 print(ans)

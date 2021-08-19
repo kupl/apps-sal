@@ -3,22 +3,31 @@ import math
 import decimal
 import bisect
 import collections
-def read(): return input().strip()
-def iread(): return int(input().strip())
-def viread(): return [int(_) for _ in input().strip().split()]
 
 
-n, k = viread()
+def read():
+    return input().strip()
+
+
+def iread():
+    return int(input().strip())
+
+
+def viread():
+    return [int(_) for _ in input().strip().split()]
+
+
+(n, k) = viread()
 d = viread()
 s = list(read())
 processed = 0
 damage = 0
-while (processed < n):
+while processed < n:
     damages = []
     c = s[processed]
     damages.append(d[processed])
     processed += 1
-    while (processed < n and s[processed] == c):
+    while processed < n and s[processed] == c:
         damages.append(d[processed])
         processed += 1
     if len(damages) > k:

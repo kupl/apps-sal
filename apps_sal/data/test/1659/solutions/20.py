@@ -1,13 +1,12 @@
 bad = 0
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 for i in range(n):
-    c, d = input().split()
+    (c, d) = input().split()
     d = int(d)
-    if c == "+":
+    if c == '+':
         x += d
+    elif d > x:
+        bad += 1
     else:
-        if d > x:
-            bad += 1
-        else:
-            x -= d
+        x -= d
 print(x, bad)

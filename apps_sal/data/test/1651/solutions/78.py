@@ -9,12 +9,12 @@ def prime_decomposition(n):
 
 
 def main():
-    S, P = map(int, input().split())
+    (S, P) = map(int, input().split())
     kouho = prime_decomposition(P)
-    a = "No"
+    a = 'No'
     for i in kouho:
         if sum(i) == S:
-            a = "Yes"
+            a = 'Yes'
     print(a)
 
 

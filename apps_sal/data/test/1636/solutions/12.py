@@ -1,21 +1,20 @@
 from collections import deque
 n = int(input())
-def R(): return list(map(int, input().split()))
+
+
+def R():
+    return list(map(int, input().split()))
 
 
 p = []
 w = {}
 r = {}
 pr = {}
-
-
 for _ in range(n):
-    x, y = R()
+    (x, y) = R()
     p.append((x, y))
-
 p = sorted(p)
-
-for i, wi in enumerate(list(R()), 1):
+for (i, wi) in enumerate(list(R()), 1):
     if wi not in w:
         w[wi] = deque()
     w[wi].append(i)
@@ -36,7 +35,6 @@ def solve(p, w, r):
                 return 0
         else:
             return 0
-
     return 1
 
 
@@ -44,7 +42,7 @@ def check_neighbours(p, ind, pr):
     n1 = (p[0] - 1, p[1])
     n2 = (p[0], p[1] - 1)
     n3 = (p[0] - 1, p[1] - 1)
-    return (check_neighbour(n1, ind, pr) and check_neighbour(n2, ind, pr) and check_neighbour(n3, ind, pr))
+    return check_neighbour(n1, ind, pr) and check_neighbour(n2, ind, pr) and check_neighbour(n3, ind, pr)
 
 
 def check_neighbour(nb, ind, pr):
@@ -55,8 +53,8 @@ def check_neighbour(nb, ind, pr):
 
 
 if solve(p, w, r) == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
-    for k, v in sorted(r.items()):
+    print('YES')
+    for (k, v) in sorted(r.items()):
         print(v[0], v[1])

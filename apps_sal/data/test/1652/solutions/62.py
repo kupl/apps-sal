@@ -5,8 +5,8 @@ while True:
         break
     else:
         a = S[-5:] in ('dream', 'erase')
-        b = S[-6:] in ('eraser')
-        c = S[-7:] in ('dreamer')
+        b = S[-6:] in 'eraser'
+        c = S[-7:] in 'dreamer'
         if not (a or b or c):
             print('NO')
             break

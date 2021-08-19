@@ -7,7 +7,7 @@ for j in range(i - 1):
     if g[j] <= g[j + 1]:
         k += 1
     else:
-        if(k > maxx):
+        if k > maxx:
             maxx = k
         k = 1
 print(max(k, maxx))

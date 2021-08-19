@@ -1,6 +1,6 @@
 s = input()
 ans = 0
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = len(s)
 ps = [0]
 cp = 1

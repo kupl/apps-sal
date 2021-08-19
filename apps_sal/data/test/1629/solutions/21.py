@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 idx = x % n
 for j in range(x, x + n):

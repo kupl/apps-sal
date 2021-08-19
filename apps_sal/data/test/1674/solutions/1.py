@@ -1,9 +1,6 @@
-n, k = [int(x) for x in input().split()]
-
+(n, k) = [int(x) for x in input().split()]
 L = [int(x) for x in input().split()]
-
 s = input()
-
 temp = [1, 0, 0]
 R = []
 for i in range(n - 1):
@@ -13,7 +10,6 @@ for i in range(n - 1):
         temp[-1] = i
         R.append(temp)
         temp = [1, i + 1, i + 1]
-
 temp[-1] = n - 1
 R.append(temp)
 Dam = 0
@@ -27,5 +23,4 @@ for i in R:
         Dam += t
     else:
         Dam += sum(L[i[1]:i[2] + 1])
-
 print(Dam)

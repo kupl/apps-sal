@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 same = [0] * (k + 1)
 diff = [0] * (k + 1)
 same[1] = 2
