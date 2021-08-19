@@ -1,14 +1,6 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def maxAncestorDiff(self, root: TreeNode) -> int:
-        # Use DFS, and a max diff tracker.
-        # Each node has a min-max ancestor.
-        # Time: O(N), Space: O(log(N))
         self.max_p_diff = 0
 
         def max_diff(node, p_min, p_max):
