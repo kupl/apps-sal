@@ -2,7 +2,7 @@ class Solution:
     parents = [i for i in range(1005)]
 
     def findParent(i):
-        if(Solution.parents[i] != i):
+        if Solution.parents[i] != i:
             Solution.parents[i] = Solution.findParent(Solution.parents[i])
         return Solution.parents[i]
 
@@ -15,7 +15,7 @@ class Solution:
         distances.sort()
         ans = 0
         for distance in distances:
-            if(Solution.findParent(distance[1]) != Solution.findParent(distance[2])):
+            if Solution.findParent(distance[1]) != Solution.findParent(distance[2]):
                 Solution.parents[Solution.parents[distance[1]]] = Solution.parents[Solution.parents[distance[2]]]
                 ans += distance[0]
         Solution.parents = [i for i in range(1005)]

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         L = len(points)
         res = 0
@@ -16,16 +17,16 @@ class Solution:
                     father[q] = p
                 else:
                     father[p] = q
-        for i, p in enumerate(points):
-            for j, p2 in enumerate(points):
+        for (i, p) in enumerate(points):
+            for (j, p2) in enumerate(points):
                 if i != j and (j, i) not in list(con.keys()):
                     d = self.dis(p, p2)
-                    con[(i, j)] = d
+                    con[i, j] = d
         k = sorted(con, key=lambda x: con[x])
         count = 0
         for e in k:
-            x, y = e[0], e[1]
-            fx, fy = find(x), find(y)
+            (x, y) = (e[0], e[1])
+            (fx, fy) = (find(x), find(y))
             if fx != fy:
                 union(fx, fy)
                 count += 1

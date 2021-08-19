@@ -3,11 +3,12 @@ input = sys.stdin.readline
 
 
 class Solution:
-    def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
         import math as mt
 
-        def re(x, y): return abs(x[0] - y[0]) + abs(x[1] - y[1])
+        def re(x, y):
+            return abs(x[0] - y[0]) + abs(x[1] - y[1])
         ar = []
         n = len(points)
         par = [i for i in range(len(points) + 1)]
@@ -29,7 +30,7 @@ class Solution:
         ans = 0
         cnt = 0
         ar.sort()
-        for a, b, c in ar:
+        for (a, b, c) in ar:
             if find(b) != find(c):
                 join(b, c)
                 ans += a

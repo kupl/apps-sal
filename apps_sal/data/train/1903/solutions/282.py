@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = [[] for i in range(n)]
@@ -17,7 +18,7 @@ class Solution:
         heapq.heapify(li)
         result = 0
         while li:
-            d, j = heapq.heappop(li)
+            (d, j) = heapq.heappop(li)
             if j not in visited:
                 visited.add(j)
                 result += d

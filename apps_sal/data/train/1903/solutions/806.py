@@ -1,4 +1,5 @@
 class union_find:
+
     def __init__(self, n):
         self.father = {i: i for i in range(n)}
         self.rank = [1 for i in range(n)]
@@ -12,13 +13,13 @@ class union_find:
 
     def union(self, x, y):
         if self.rank[x] < self.rank[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.rank[x] += self.rank[y]
         self.father[y] = x
         self.count -= 1
 
     def union_andfind(self, x, y):
-        father_x, father_y = self.find(x), self.find(y)
+        (father_x, father_y) = (self.find(x), self.find(y))
         if father_x != father_y:
             self.union(father_x, father_y)
             return False
@@ -26,6 +27,7 @@ class union_find:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         graph = []
         for i in range(len(points)):

@@ -1,9 +1,9 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         row = len(matrix)
         col = len(matrix[0])
         ret = 0
-
         for r in range(row):
             for c in range(col):
                 if matrix[r][c] == 1:

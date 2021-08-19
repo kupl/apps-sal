@@ -1,5 +1,7 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
+
         def helper(x, y):
             temp = 0
             pre = [[x, y]]
@@ -8,8 +10,8 @@ class Solution:
                 flag = 1
                 nxt = []
                 for i in range(len(pre)):
-                    a, b = pre[i]
-                    if a + 1 >= len(matrix) or b + 1 >= len(matrix[0]) or matrix[a + 1][b + 1] != 1 or matrix[a + 1][b] != 1 or matrix[a][b + 1] != 1:
+                    (a, b) = pre[i]
+                    if a + 1 >= len(matrix) or b + 1 >= len(matrix[0]) or matrix[a + 1][b + 1] != 1 or (matrix[a + 1][b] != 1) or (matrix[a][b + 1] != 1):
                         flag = 0
                         break
                     if i - side == -1:
@@ -26,7 +28,6 @@ class Solution:
                 side += 1
                 pre = nxt
             return temp
-
         res = 0
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):

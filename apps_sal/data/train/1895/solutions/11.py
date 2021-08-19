@@ -1,4 +1,5 @@
 class Solution:
+
     def validTicTacToe(self, board):
         """
         :type board: List[str]
@@ -23,7 +24,6 @@ class Solution:
                     win_x += 1
                 elif board[0][i] == 'O':
                     win_o += 1
-
         if board[0][0] == board[1][1] == board[2][2]:
             if board[0][0] == 'O':
                 win_o += 1
@@ -34,14 +34,10 @@ class Solution:
                 win_o += 1
             elif board[2][0] == 'X':
                 win_x += 1
-
-        if x > (o + 1) or x < o or (win_o > 0 and win_x > 0):
+        if x > o + 1 or x < o or (win_o > 0 and win_x > 0):
             return False
-
         if win_x > 0 and x == o:
             return False
-
         if win_o > 0 and x > o:
             return False
-
         return True

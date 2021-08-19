@@ -1,13 +1,14 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         points.sort()
         n = len(points)
         result = math.inf
         seen = set()
         for i in range(n):
-            x1, y1 = points[i]
+            (x1, y1) = points[i]
             for j in range(i + 1, n):
-                x2, y2 = points[j]
+                (x2, y2) = points[j]
                 if x2 == x1:
                     continue
                 a = (x1, y2, x2, y1)

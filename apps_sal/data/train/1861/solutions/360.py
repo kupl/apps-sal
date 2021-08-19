@@ -1,4 +1,4 @@
-'''
+"""
 
     When we see new x point, we establish base point x as baseX.
     For every baseX, there will be multiple y points (y_for_baseX array)
@@ -8,16 +8,17 @@
     After processing, we append y to bases array.
     Return res
 
-'''
+"""
 
 
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         base_x_to_y = collections.defaultdict(dict)
         y_for_base_x = []
         base_x = -1
         min_area = float('inf')
-        for x, y in sorted(points):
+        for (x, y) in sorted(points):
             if x != base_x:
                 base_x = x
                 y_for_base_x = []

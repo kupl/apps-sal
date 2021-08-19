@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.par = [i for i in range(N)]
         self.cnt = N
@@ -17,6 +18,7 @@ class DSU:
 
 
 class Solution:
+
     def largestIsland(self, grid: List[List[int]]) -> int:
         R = len(grid)
         C = len(grid[0])
@@ -25,9 +27,9 @@ class Solution:
         for y in range(R):
             for x in range(C):
                 if grid[y][x] == 1:
-                    for dx, dy in dirs:
-                        nx, ny = dx + x, dy + y
-                        if 0 <= nx < C and 0 <= ny < R and grid[ny][nx] == 1:
+                    for (dx, dy) in dirs:
+                        (nx, ny) = (dx + x, dy + y)
+                        if 0 <= nx < C and 0 <= ny < R and (grid[ny][nx] == 1):
                             dsu.union(y * R + x, ny * R + nx)
         smap = {}
         for y in range(R):
@@ -43,9 +45,9 @@ class Solution:
             for x in range(C):
                 if grid[y][x] == 0:
                     rset = set()
-                    for dx, dy in dirs:
-                        nx, ny = dx + x, dy + y
-                        if 0 <= nx < C and 0 <= ny < R and grid[ny][nx] == 1:
+                    for (dx, dy) in dirs:
+                        (nx, ny) = (dx + x, dy + y)
+                        if 0 <= nx < C and 0 <= ny < R and (grid[ny][nx] == 1):
                             r = dsu.find(ny * R + nx)
                             rset.add(r)
                     t = 1

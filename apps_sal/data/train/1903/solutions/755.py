@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         uf = list(range(n))
@@ -16,16 +17,14 @@ class Solution:
 
         def l1dist(x, y):
             return abs(x[0] - y[0]) + abs(x[1] - y[1])
-
         dist = []
         for i in range(n):
             for j in range(i + 1, n):
                 dist.append((l1dist(points[i], points[j]), i, j))
-
         dist.sort()
         ans = 0
         cnt = 0
-        for d, x, y in dist:
+        for (d, x, y) in dist:
             if cnt == n:
                 break
             if find(x) != find(y):

@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.height = [0 for i in range(n)]
@@ -23,6 +24,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
@@ -32,7 +34,7 @@ class Solution:
         uf = UnionFind(n)
         ans = 0
         while edges:
-            cost, va, vb = heappop(edges)
+            (cost, va, vb) = heappop(edges)
             if uf.find(va) == uf.find(vb):
                 pass
             else:

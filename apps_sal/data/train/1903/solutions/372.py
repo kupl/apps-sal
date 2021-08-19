@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if not points or len(points) == 1:
             return 0
@@ -9,16 +10,15 @@ class Solution:
         cost = 0
         while dist:
             min_k = 0
-            min_v = 1e10
-            for k, v in list(dist.items()):
+            min_v = 10000000000.0
+            for (k, v) in list(dist.items()):
                 if v < min_v:
                     min_v = v
                     min_k = k
             print((min_k, min_v))
             cost += min_v
-            for k, v in list(dist.items()):
+            for (k, v) in list(dist.items()):
                 dist[k] = min(dist[k], abs(points[min_k][0] - points[k][0]) + abs(points[min_k][1] - points[k][1]))
             assert dist[min_k] == 0
             del dist[min_k]
-
         return cost

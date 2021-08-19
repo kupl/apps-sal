@@ -1,4 +1,5 @@
 class Solution:
+
     def sequentialDigits(self, low: int, high: int) -> List[int]:
         nums = []
         max_digits = 9

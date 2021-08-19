@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n == 1:
@@ -22,7 +23,7 @@ class Solution:
         step = 0
         res = 0
         while dis:
-            d, i, j = heapq.heappop(dis)
+            (d, i, j) = heapq.heappop(dis)
             if union(i, j):
                 res += d
                 step += 1

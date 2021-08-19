@@ -1,14 +1,13 @@
 class Solution:
-    def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
 
+    def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         prefix = []
         curr = 0
         for n in arr:
             curr ^= n
             prefix.append(curr)
-
         res = []
-        for l, r in queries:
+        for (l, r) in queries:
             if l == 0:
                 res.append(prefix[r])
             else:

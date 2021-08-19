@@ -1,4 +1,5 @@
 class Solution:
+
     def beautifulArray(self, N: int) -> List[int]:
         result = list(range(1, N + 1))
 
@@ -9,6 +10,5 @@ class Solution:
             m = i + (j - i + 1) // 2
             partition(i, m)
             partition(m, j)
-
         partition(0, N)
         return result

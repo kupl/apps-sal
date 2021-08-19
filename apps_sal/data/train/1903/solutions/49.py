@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         dis = [[0] * N for _ in range(N)]
@@ -11,7 +12,7 @@ class Solution:
         heap = [(0, 0)]
         res = 0
         while heap:
-            weight, node = heapq.heappop(heap)
+            (weight, node) = heapq.heappop(heap)
             if vis[node]:
                 continue
             vis[node] = True

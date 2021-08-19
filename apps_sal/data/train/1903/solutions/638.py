@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.parent = {i: i for i in range(n)}
 
@@ -17,6 +18,7 @@ class UF:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         n = len(points)
@@ -27,7 +29,7 @@ class Solution:
         edges.sort()
         cost = 0
         uf = UF(n)
-        for dis, i, j in edges:
+        for (dis, i, j) in edges:
             if uf.union(i, j):
                 cost += dis
         return cost

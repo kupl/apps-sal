@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
@@ -25,7 +26,7 @@ class Solution:
                 return False
         arr = set()
         for i in range(len(points)):
-            _min = 10e9
+            _min = 10000000000.0
             ix = -1
             for j in range(len(points)):
                 if i != j:

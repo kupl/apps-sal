@@ -2,6 +2,7 @@ from heapq import *
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         points = [tuple(point) for point in points]
         currPoint = points[0]
@@ -12,7 +13,7 @@ class Solution:
             return abs(a[0] - b[0]) + abs(a[1] - b[1])
         ans = 0
         while que:
-            dist, cpoint = heappop(que)
+            (dist, cpoint) = heappop(que)
             if cpoint in vis:
                 continue
             ans += dist

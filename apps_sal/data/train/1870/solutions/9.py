@@ -1,4 +1,5 @@
 class Solution:
+
     def sampleStats(self, count: List[int]) -> List[float]:
         Min = len(count)
         Max = 0
@@ -29,7 +30,6 @@ class Solution:
             for i in range(Min, Max + 1):
                 total = total - count[i]
                 if total <= 0:
-                    Med = (i)
+                    Med = i
                     break
-
         return [float(Min), float(Max), Mean, Med, Mod]

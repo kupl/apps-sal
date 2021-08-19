@@ -1,4 +1,5 @@
 class Solution:
+
     def sampleStats(self, count: List[int]) -> List[float]:
         n = sum(count)
         sm = 0
@@ -7,10 +8,10 @@ class Solution:
         mode = -1
         minim = -1
         maxim = -1
-        mid1, mid2 = -1, -1
+        (mid1, mid2) = (-1, -1)
         for i in range(256):
             curr += count[i]
-            sm += (i * count[i])
+            sm += i * count[i]
             if mid1 == -1 and curr >= n // 2:
                 mid1 = i
             if mid2 == -1 and curr >= n // 2 + 1:

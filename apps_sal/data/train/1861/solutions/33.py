@@ -1,9 +1,9 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         xtoy = collections.defaultdict(set)
-        for x, y in points:
+        for (x, y) in points:
             xtoy[x].add(y)
-
         minarea = sys.maxsize
         for x1 in xtoy:
             for x2 in xtoy:

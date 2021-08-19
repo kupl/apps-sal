@@ -2,6 +2,7 @@ from heapq import heappop, heappush, heapify
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n <= 1:
@@ -15,13 +16,14 @@ class Solution:
         heapq.heapify(hp)
         ans = 0
         while ds.count > 1:
-            mhd, i, j = heapq.heappop(hp)
+            (mhd, i, j) = heapq.heappop(hp)
             if ds.union(i, j):
                 ans += mhd
         return ans
 
 
 class UFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [1] * n
@@ -33,7 +35,7 @@ class UFind:
         return self.parent[x]
 
     def union(self, x, y):
-        x_par, y_par = self.find(x), self.find(y)
+        (x_par, y_par) = (self.find(x), self.find(y))
         if x_par == y_par:
             return False
         else:

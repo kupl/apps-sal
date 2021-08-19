@@ -1,6 +1,7 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
-        m, n = len(A), len(A[0])
+        (m, n) = (len(A), len(A[0]))
         dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         queue = deque()
         boundary = set()
@@ -11,9 +12,9 @@ class Solution:
                     A[i][j] = 2
                     queue.append((i, j))
                     while queue:
-                        ci, cj = queue.popleft()
-                        for di, dj in dirs:
-                            ni, nj = ci + di, cj + dj
+                        (ci, cj) = queue.popleft()
+                        for (di, dj) in dirs:
+                            (ni, nj) = (ci + di, cj + dj)
                             if 0 <= ni < m and 0 <= nj < n:
                                 if A[ni][nj] == 1:
                                     A[ni][nj] = 2
@@ -24,14 +25,13 @@ class Solution:
                     break
             if found:
                 break
-
         queue = deque(boundary)
         steps = 0
         while queue:
             for _ in range(len(queue)):
-                i, j = queue.popleft()
-                for di, dj in dirs:
-                    ni, nj = i + di, j + dj
+                (i, j) = queue.popleft()
+                for (di, dj) in dirs:
+                    (ni, nj) = (i + di, j + dj)
                     if 0 <= ni < m and 0 <= nj < n:
                         if A[ni][nj] == 0:
                             A[ni][nj] = 2

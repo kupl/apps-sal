@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.parent = {i: i for i in range(n)}
 
@@ -12,12 +13,12 @@ class UF:
         r_b = self.find(b)
         if r_a == r_b:
             return False
-
         self.parent[r_a] = r_b
         return True
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
@@ -28,8 +29,7 @@ class Solution:
         edges.sort()
         count = 0
         uf = UF(n)
-
-        for dis, u, v in edges:
+        for (dis, u, v) in edges:
             if uf.union(u, v):
                 count += dis
         return count

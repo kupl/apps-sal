@@ -1,9 +1,9 @@
 class Solution:
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def dist(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-
         n = len(points)
         fa = [i for i in range(n)]
 

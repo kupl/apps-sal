@@ -15,31 +15,32 @@ def findAnIsland(m, e):
         else:
             continue
         break
-    result, edges = set(), set()
+    (result, edges) = (set(), set())
     while stack:
-        ci, cj = stack.pop()
+        (ci, cj) = stack.pop()
         result.add((ci, cj))
-        for di, dj in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-            cdi, cdj = ci + di, cj + dj
-            if valid(m, cdi, cdj) and (cdi, cdj) not in e and (cdi, cdj) not in result:
+        for (di, dj) in ((0, 1), (1, 0), (0, -1), (-1, 0)):
+            (cdi, cdj) = (ci + di, cj + dj)
+            if valid(m, cdi, cdj) and (cdi, cdj) not in e and ((cdi, cdj) not in result):
                 if m[cdi][cdj] == 1:
                     stack.append((cdi, cdj))
                 else:
                     edges.add((ci, cj))
-    return result, edges
+    return (result, edges)
 
 
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
-        a, aedges = findAnIsland(A, set())
-        b, bedges = findAnIsland(A, a)
+        (a, aedges) = findAnIsland(A, set())
+        (b, bedges) = findAnIsland(A, a)
         q = Queue()
-        for i, j in aedges:
+        for (i, j) in aedges:
             q.put((i, j, 0))
         while not q.empty():
-            ci, cj, dist = q.get()
-            for di, dj in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-                cdi, cdj = ci + di, cj + dj
+            (ci, cj, dist) = q.get()
+            for (di, dj) in ((0, 1), (1, 0), (0, -1), (-1, 0)):
+                (cdi, cdj) = (ci + di, cj + dj)
                 if valid(A, cdi, cdj):
                     if (cdi, cdj) in bedges:
                         return dist

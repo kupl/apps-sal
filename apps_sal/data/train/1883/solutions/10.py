@@ -1,8 +1,9 @@
 class Solution:
+
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
         start = end = None
         cnt = ans = 0
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == 1:
@@ -19,8 +20,8 @@ class Solution:
                 return
             val = grid[i][j]
             grid[i][j] = -1
-            for x, y in map(lambda t: (t[0] + i, t[1] + j), [(-1, 0), (1, 0), (0, -1), (0, 1)]):
-                if 0 <= x < m and 0 <= y < n and grid[x][y] != -1:
+            for (x, y) in map(lambda t: (t[0] + i, t[1] + j), [(-1, 0), (1, 0), (0, -1), (0, 1)]):
+                if 0 <= x < m and 0 <= y < n and (grid[x][y] != -1):
                     dfs(x, y, cnt - 1)
             grid[i][j] = val
         dfs(*start, cnt)

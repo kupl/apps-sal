@@ -8,7 +8,6 @@ class Solution:
         row_dict = {}
         col_dict = {}
         ssq_dict = {}
-
         for row in range(len(board)):
             for col in range(len(board[0])):
                 if board[row][col] != '.':
@@ -16,7 +15,6 @@ class Solution:
                         row_dict['r' + str(row)] = [board[row][col]]
                     else:
                         row_dict['r' + str(row)].append(board[row][col])
-
                     if 'c' + str(col) not in col_dict:
                         col_dict['c' + str(col)] = [board[row][col]]
                     else:
@@ -26,11 +24,9 @@ class Solution:
                         ssq_dict['s' + str(row - row % 3) + str(col - col % 3)] = [board[row][col]]
                     else:
                         ssq_dict['s' + str(row - row % 3) + str(col - col % 3)].append(board[row][col])
-
         for val in row_dict.values():
             if len(val) > len(set(val)):
                 return False
-
         for val in col_dict.values():
             if len(val) > len(set(val)):
                 return False

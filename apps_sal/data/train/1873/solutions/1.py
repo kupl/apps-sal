@@ -1,4 +1,5 @@
 class Solution:
+
     def canTransform(self, start, end):
         """
         :type start: str
@@ -7,7 +8,7 @@ class Solution:
         """
         if len(start) != len(end) or start.replace('X', '') != end.replace('X', ''):
             return False
-        l, ll, r, rr = 0, 0, 0, 0
+        (l, ll, r, rr) = (0, 0, 0, 0)
         for i in range(len(start)):
             if start[i] == 'L':
                 l += 1

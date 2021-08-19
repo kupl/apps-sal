@@ -3,6 +3,7 @@ Directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
 
 
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         queue = deque()
         found = False
@@ -10,22 +11,18 @@ class Solution:
             if found:
                 break
             for j in range(len(A[0])):
-
                 if A[i][j] == 1:
-
                     visited = set()
-
                     self.dfs(i, j, queue, A, visited)
                     found = True
                     break
         print(queue)
-
         step = 0
         while queue:
             for _ in range(len(queue)):
-                cur_x, cur_y = queue.popleft()
-                for dx, dy in Directions:
-                    nx, ny = cur_x + dx, cur_y + dy
+                (cur_x, cur_y) = queue.popleft()
+                for (dx, dy) in Directions:
+                    (nx, ny) = (cur_x + dx, cur_y + dy)
                     if not self.isValid(nx, ny, A) or (nx, ny) in visited:
                         continue
                     if A[nx][ny] == 1:
@@ -40,11 +37,11 @@ class Solution:
             return
         queue.append((i, j))
         visited.add((i, j))
-        for dx, dy in Directions:
-            nx, ny = i + dx, j + dy
+        for (dx, dy) in Directions:
+            (nx, ny) = (i + dx, j + dy)
             if not self.isValid(nx, ny, A) or (nx, ny) in visited:
                 continue
             self.dfs(nx, ny, queue, A, visited)
 
     def isValid(self, x, y, A):
-        return x >= 0 and x < len(A) and y >= 0 and y < len(A[0])
+        return x >= 0 and x < len(A) and (y >= 0) and (y < len(A[0]))

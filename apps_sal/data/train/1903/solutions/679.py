@@ -1,8 +1,11 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         graph = collections.defaultdict(list)
-        def mh(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+        def mh(p1, p2):
+            return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         for i in range(n):
             for j in range(i + 1, n):
                 d = mh(points[i], points[j])
@@ -15,7 +18,7 @@ class Solution:
         visited[0] = True
         heapq.heapify(heap)
         while heap:
-            d, j = heapq.heappop(heap)
+            (d, j) = heapq.heappop(heap)
             if not visited[j]:
                 visited[j] = True
                 ans += d

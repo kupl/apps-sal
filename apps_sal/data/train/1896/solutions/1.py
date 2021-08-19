@@ -1,4 +1,5 @@
 class Solution:
+
     def kSmallestPairs(self, nums1, nums2, k):
         """
         :type nums1: List[int]
@@ -14,7 +15,7 @@ class Solution:
         push(0, 0)
         pairs = []
         while queue and len(pairs) < k:
-            _, i, j = heapq.heappop(queue)
+            (_, i, j) = heapq.heappop(queue)
             pairs.append([nums1[i], nums2[j]])
             push(i, j + 1)
             if j == 0:

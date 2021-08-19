@@ -19,6 +19,7 @@ def union(x, y, uf):
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []

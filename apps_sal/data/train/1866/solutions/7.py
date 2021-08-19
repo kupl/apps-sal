@@ -1,4 +1,5 @@
 class Solution:
+
     def fullJustify(self, words, maxWidth):
         """
         :type words: List[str]

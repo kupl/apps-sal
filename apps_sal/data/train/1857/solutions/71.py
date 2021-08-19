@@ -1,9 +1,10 @@
 class Solution:
+
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         lookup = collections.defaultdict(list)
         dic = {}
-        for row, seat in reservedSeats:
-            if (row - 1) not in lookup:
+        for (row, seat) in reservedSeats:
+            if row - 1 not in lookup:
                 data = [0] * 10
                 data[seat - 1] = 1
                 lookup[row - 1] = data
@@ -27,10 +28,9 @@ class Solution:
                     if sum(lookup[k][5:9]) == 0:
                         res += 1
                         third = True
-                    if not first and not third and sum(lookup[k][3:7]) == 0:
+                    if not first and (not third) and (sum(lookup[k][3:7]) == 0):
                         res += 1
                 dic[data_tup] = res - prev
             else:
                 res += dic[data_tup]
-
         return res + 2 * (n - len(lookup))

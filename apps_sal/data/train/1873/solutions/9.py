@@ -1,4 +1,5 @@
 class Solution:
+
     def canTransform(self, start, end):
         """
         :type start: str

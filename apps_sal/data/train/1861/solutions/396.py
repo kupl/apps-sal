@@ -1,7 +1,8 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         y2x = collections.defaultdict(list)
-        for x, y in points:
+        for (x, y) in points:
             y2x[y].append(x)
         res = float('inf')
         ys = list(y2x.keys())

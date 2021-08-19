@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dis = {}
         length = len(points)
@@ -11,7 +12,6 @@ class Solution:
                     continue
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(dis[i], (d, j))
-
         visited = set([0])
         res = 0
         while len(visited) < length:

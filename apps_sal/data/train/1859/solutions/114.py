@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         if not matrix or not matrix[0]:
             return 0

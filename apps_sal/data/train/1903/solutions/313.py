@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         vertices = len(points)
         self.V = vertices
@@ -24,14 +25,12 @@ class Solution:
         parent = [None] * self.V
         key[0] = 0
         mstSet = [False] * self.V
-
         parent[0] = -1
-
         for cout in range(self.V):
             u = self.minKey(key, mstSet)
             mstSet[u] = True
             for v in range(self.V):
-                if self.graph[u][v] > 0 and mstSet[v] == False and key[v] > self.graph[u][v]:
+                if self.graph[u][v] > 0 and mstSet[v] == False and (key[v] > self.graph[u][v]):
                     key[v] = self.graph[u][v]
                     parent[v] = u
         res = 0

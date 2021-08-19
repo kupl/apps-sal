@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         dist = {}
@@ -6,7 +7,7 @@ class Solution:
         for i in range(N):
             for j in range(i):
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-                dist[(i, j)] = d
+                dist[i, j] = d
                 edges.append((d, i, j))
         edges.sort(reverse=True)
         uf = []

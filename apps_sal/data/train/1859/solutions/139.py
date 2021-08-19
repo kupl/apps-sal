@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         presum = [[0] * (len(matrix[0]) + 1) for _ in range(len(matrix) + 1)]
         dp = [[0] * (len(matrix[0]) + 1) for _ in range(len(matrix) + 1)]
@@ -13,5 +14,4 @@ class Solution:
                 else:
                     dp[r][c] = min(dp[r - 1][c - 1], dp[r - 1][c], dp[r][c - 1]) + 1
                     tot += dp[r][c]
-
         return tot

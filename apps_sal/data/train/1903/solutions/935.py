@@ -1,4 +1,5 @@
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -8,8 +9,9 @@ class Point:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        points = [Point(x, y) for x, y in points]
+        points = [Point(x, y) for (x, y) in points]
         edges = []
 
         def getDistance(a, b):
@@ -17,17 +19,15 @@ class Solution:
         visited = set()
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
-                u, v = points[i], points[j]
+                (u, v) = (points[i], points[j])
                 edges.append((getDistance(u, v), u, v))
-
         edges.sort(reverse=True)
         self.parent = {p: p for p in points}
         self.size = {p: 1 for p in points}
         components = len(points)
-
         total_cost = 0
         while components > 1 and edges:
-            d, u, v = edges.pop()
+            (d, u, v) = edges.pop()
             if self.union(u, v):
                 total_cost += d
                 components -= 1
@@ -50,7 +50,7 @@ class Solution:
         curr = a
         while self.parent[curr] != curr:
             curr = self.parent[curr]
-        root, curr = curr, a
+        (root, curr) = (curr, a)
         while self.parent[curr] != curr:
-            self.parent[curr], curr = root, self.parent[curr]
+            (self.parent[curr], curr) = (root, self.parent[curr])
         return root

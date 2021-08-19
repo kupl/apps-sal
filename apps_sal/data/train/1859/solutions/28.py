@@ -1,6 +1,6 @@
 class Solution:
-    def countSquares(self, matrix: List[List[int]]) -> int:
 
+    def countSquares(self, matrix: List[List[int]]) -> int:
         sq = 0
         m_row = range(len(matrix))
         m_col = range(len(matrix[0]))
@@ -18,10 +18,8 @@ class Solution:
                             return square
                 square += 1
                 count += 1
-
         for row in m_row:
             for n in m_col:
                 if matrix[row][n] == 1:
                     sq += expand_square(row, n, len(matrix), len(matrix[0]))
-
         return sq

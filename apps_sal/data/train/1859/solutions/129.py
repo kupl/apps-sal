@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         if not matrix:
             return 0
@@ -9,7 +10,6 @@ class Solution:
             for j in range(0, m):
                 if matrix[i][j] == 1:
                     squares += self.get_squares(matrix, i, j, n, m)
-
         return squares
 
     def get_squares(self, matrix, i, j, n, m):
@@ -23,5 +23,4 @@ class Solution:
                         return count
             count += 1
             s += 1
-
         return count

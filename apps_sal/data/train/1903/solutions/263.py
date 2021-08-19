@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         l = [[0 for i in range(n)] for j in range(n)]
@@ -23,6 +24,6 @@ class Solution:
             u = minKey()
             vis[u] = 1
             for v in range(n):
-                if l[u][v] and vis[v] == 0 and l[u][v] < key[v]:
+                if l[u][v] and vis[v] == 0 and (l[u][v] < key[v]):
                     key[v] = l[u][v]
         return sum(key)

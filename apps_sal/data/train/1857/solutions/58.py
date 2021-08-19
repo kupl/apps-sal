@@ -1,15 +1,15 @@
 class Solution:
+
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         lookup = collections.defaultdict(list)
         dic = {}
-        for row, seat in reservedSeats:
+        for (row, seat) in reservedSeats:
             if row - 1 not in lookup:
                 data = [0] * 10
                 data[seat - 1] = 1
                 lookup[row - 1] = data
             else:
                 lookup[row - 1][seat - 1] = 1
-
         res = 0
         four_person = [0, 0, 0, 0]
         for data in lookup.values():
@@ -25,5 +25,4 @@ class Solution:
                 dic[data_tup] = res - prev
             else:
                 res += dic[data_tup]
-
         return res + 2 * (n - len(lookup))

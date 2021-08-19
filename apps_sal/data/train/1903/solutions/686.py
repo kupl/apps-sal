@@ -3,7 +3,9 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def manhattan(p1, p2):
             return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         n = len(points)
@@ -13,7 +15,6 @@ class Solution:
                 dist = manhattan(points[i], points[j])
                 c[i].append((dist, j))
                 c[j].append((dist, i))
-
         pq = c[0]
         heapq.heapify(pq)
         visited = [False] * n
@@ -21,7 +22,7 @@ class Solution:
         cnt = 1
         res = 0
         while pq:
-            d, j = heapq.heappop(pq)
+            (d, j) = heapq.heappop(pq)
             if not visited[j]:
                 cnt += 1
                 res += d
@@ -30,5 +31,4 @@ class Solution:
                     heapq.heappush(pq, record)
                 if cnt >= n:
                     break
-
         return res

@@ -1,4 +1,5 @@
 class Ufs:
+
     def __init__(self, n):
         self.p = [i for i in range(n)]
         self.rank = [0 for i in range(n)]
@@ -29,8 +30,11 @@ class Ufs:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        def calc(x, y): return abs(x[0] - y[0]) + abs(x[1] - y[1])
+
+        def calc(x, y):
+            return abs(x[0] - y[0]) + abs(x[1] - y[1])
         edges = []
         n = len(points)
         vis = {}
@@ -41,8 +45,8 @@ class Solution:
         ans = 0
         ufs = Ufs(n)
         cnt = i = 0
-        while(cnt < n - 1):
-            w, u, v = edges[i]
+        while cnt < n - 1:
+            (w, u, v) = edges[i]
             i += 1
             if ufs.connect(u, v):
                 continue

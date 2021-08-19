@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         ans = 0
@@ -32,7 +33,6 @@ class Solution:
         def union(parent, rank, x, y):
             xroot = find(parent, x)
             yroot = find(parent, y)
-
             if rank[xroot] < rank[yroot]:
                 parent[xroot] = yroot
             elif rank[yroot] < rank[xroot]:
@@ -40,14 +40,13 @@ class Solution:
             else:
                 parent[yroot] = xroot
                 rank[xroot] += 1
-
         for node in range(n):
             parent.append(node)
             rank.append(0)
         i = 0
         ans = 0
         while e < n - 1:
-            u, v, w = graph[i]
+            (u, v, w) = graph[i]
             i += 1
             x = find(parent, u)
             y = find(parent, v)

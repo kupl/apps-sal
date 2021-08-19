@@ -1,5 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def find_parent(parent, x):
             if parent[x] == -1:
                 return x
@@ -16,7 +18,7 @@ class Solution:
             i = 0
             j = 0
             while j < len(points) - 1:
-                start, end, weight = edges[i]
+                (start, end, weight) = edges[i]
                 x = find_parent(parent, start)
                 y = find_parent(parent, end)
                 i += 1
@@ -25,7 +27,6 @@ class Solution:
                     union(parent, x, y)
                     min_weight += weight
             return min_weight
-
         edges = []
         for i in range(len(points)):
             for j in range(i + 1, len(points)):

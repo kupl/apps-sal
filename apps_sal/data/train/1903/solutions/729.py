@@ -1,11 +1,12 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         g = [[] for _ in range(n)]
         for i in range(n - 1):
-            x0, y0 = points[i]
+            (x0, y0) = points[i]
             for j in range(i + 1, n):
-                x1, y1 = points[j]
+                (x1, y1) = points[j]
                 d = abs(x0 - x1) + abs(y0 - y1)
                 g[i].append((d, j))
                 g[j].append((d, i))

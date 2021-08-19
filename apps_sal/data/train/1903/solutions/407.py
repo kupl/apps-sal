@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         weight_graph = []
@@ -26,7 +27,7 @@ class Solution:
                 rank[y] += 1
         for edge in weight_graph:
             if len(res) < len(points) - 1:
-                u, v, w = edge
+                (u, v, w) = edge
                 x = find(u)
                 y = find(v)
                 if x != y:

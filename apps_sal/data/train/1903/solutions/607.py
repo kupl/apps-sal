@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.p = list(range(n))
 
@@ -17,12 +18,13 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dsu = DSU(len(points))
 
         def getDistance(point1, point2):
-            x1, y1 = point1
-            x2, y2 = point2
+            (x1, y1) = point1
+            (x2, y2) = point2
             return abs(x1 - x2) + abs(y1 - y2)
         paths = []
         for i in range(len(points)):
@@ -31,7 +33,7 @@ class Solution:
                 paths.append((dis, i, j))
         paths.sort()
         cost = 0
-        for dis, i, j in paths:
+        for (dis, i, j) in paths:
             if dsu.union(i, j):
                 cost += dis
         return cost

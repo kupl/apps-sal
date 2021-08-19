@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         ll = len(points)
         if ll == 1:
@@ -7,7 +8,6 @@ class Solution:
 
         def get_distance(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-
         for i in range(ll):
             for j in range(i + 1, ll):
                 distances.append((get_distance(i, j), i, j))
@@ -29,9 +29,8 @@ class Solution:
             else:
                 parents[uy] = ux
                 size[ux] += uy
-
         res = 0
-        for d, x, y in distances:
+        for (d, x, y) in distances:
             ux = ufind(x)
             uy = ufind(y)
             if ux != uy:

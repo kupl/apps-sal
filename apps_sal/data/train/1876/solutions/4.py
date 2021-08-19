@@ -1,21 +1,19 @@
 class Solution:
+
     def reachNumber(self, target):
         target = abs(target)
 
         def binary_search(lo, hi):
             if lo >= hi:
                 return lo
-
             mi = lo + (hi - lo) // 2
             t = mi * (mi + 1) // 2
-
             if t == target:
                 return mi
             elif t < target:
                 return binary_search(mi + 1, hi)
             else:
                 return binary_search(lo, mi)
-
         res = binary_search(0, target)
         if target % 2 == 0 and 1 <= res % 4 <= 2:
             return res + 3 - res % 4

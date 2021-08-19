@@ -3,9 +3,10 @@ import sys
 
 
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         coordMap = defaultdict(set)
-        for x, y in points:
+        for (x, y) in points:
             coordMap[x].add(y)
         xlist = sorted(list(coordMap.keys()))
         ans = sys.maxsize

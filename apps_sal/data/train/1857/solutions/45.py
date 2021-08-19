@@ -1,13 +1,11 @@
 class Solution:
+
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         total = 2 * n
-
         dicts = {}
-
         for k in range(len(reservedSeats)):
             index = reservedSeats[k][0]
             val = reservedSeats[k][1]
-
             if index not in dicts:
                 dicts[index] = [1, 1, 1]
             curr_list = dicts[index]

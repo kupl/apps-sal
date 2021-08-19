@@ -9,7 +9,7 @@ class Solution:
         dp2 = [0] * ncols
         ans = 0
         for row in range(nrows):
-            dp1, dp2 = dp2, [0] * ncols
+            (dp1, dp2) = (dp2, [0] * ncols)
             for col in range(ncols):
                 if matrix[row][col] == 0:
                     continue

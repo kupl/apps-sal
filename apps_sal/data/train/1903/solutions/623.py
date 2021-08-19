@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         for i in range(len(points)):
@@ -21,7 +22,7 @@ class Solution:
                 return True
             return False
         res = 0
-        for d, u, v in edges:
+        for (d, u, v) in edges:
             if union(u, v):
                 res += d
         return res

@@ -42,6 +42,7 @@ def expand(A, level):
 
 
 class Solution:
+
     def shortestBridge(self, A):
         length = len(A)
         found = 0
@@ -54,7 +55,6 @@ class Solution:
                     break
             if found == 1:
                 break
-
         level = 2
         found = 0
         while found == 0:

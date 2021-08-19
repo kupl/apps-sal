@@ -1,5 +1,5 @@
-
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         ln = len(points)
         if ln <= 1:

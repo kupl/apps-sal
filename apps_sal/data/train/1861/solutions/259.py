@@ -1,13 +1,14 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         points.sort()
         xs = collections.defaultdict(list)
         ys = collections.defaultdict(list)
-        for x, y in points:
+        for (x, y) in points:
             xs[x].append(y)
             ys[y].append(x)
         result = math.inf
-        for x0, ylist in xs.items():
+        for (x0, ylist) in xs.items():
             for i in range(len(ylist)):
                 y1 = ylist[i]
                 xlist1 = ys[y1]

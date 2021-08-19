@@ -3,6 +3,7 @@ import sys
 
 
 class Solution:
+
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
         n = len(p)
         graph = [[] for i in range(n + 1)]
@@ -21,7 +22,6 @@ class Solution:
             (du, u) = pq.get()
             if du != dist[u]:
                 continue
-
             dist[u] = 0
             res += du
             for (v, uv) in graph[u]:

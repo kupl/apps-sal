@@ -1,4 +1,5 @@
 class Solution:
+
     def distance(self, p1, p2):
         return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
@@ -20,19 +21,14 @@ class Solution:
                 node = parent
                 parent = parents[node]
             return node
-
         cost = 0
-
         for edge in connections:
             node1 = edge[0]
             node2 = edge[1]
             curr_cost = edge[2]
-
             par1 = find(node1)
             par2 = find(node2)
-
             if par1 != par2:
                 parents[par2] = par1
                 cost += curr_cost
-
         return cost

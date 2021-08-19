@@ -1,7 +1,8 @@
 class Solution:
+
     def getWeight(self, x, y):
-        xi, xj = x[0], x[1]
-        yi, yj = y[0], y[1]
+        (xi, xj) = (x[0], x[1])
+        (yi, yj) = (y[0], y[1])
         return abs(xi - yi) + abs(xj - yj)
 
     def find(self, parent, i):
@@ -37,7 +38,7 @@ class Solution:
         i = 0
         result = 0
         while e < len(points) - 1:
-            u, v, w = E[i]
+            (u, v, w) = E[i]
             i += 1
             x = self.find(parent, u)
             y = self.find(parent, v)

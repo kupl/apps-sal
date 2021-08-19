@@ -1,4 +1,5 @@
 class Solution:
+
     def SequentialDigits(self, low: int, high: int) -> List[int]:
         res = []
         for i in range(1, 10):
@@ -20,5 +21,4 @@ class Solution:
             last = elem % 10
             if last < 9:
                 queue.append(elem * 10 + last + 1)
-
         return out

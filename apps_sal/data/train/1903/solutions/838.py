@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class DSU:
+
     def __init__(self, arr):
         self.p = {}
         self.n = 0
@@ -21,6 +22,7 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         d = DSU([])
         edge = []
@@ -39,33 +41,4 @@ class Solution:
             if d.n == 0:
                 break
         return ans
-
-        '''
-        comb = list(combinations(points, 2))
-        edges = []
-        ans = 0
-        for c in comb:
-            d = abs(c[0][0]-c[1][0])+abs(c[0][1]-c[1][1])
-            edges.append((c, d))
-        edges.sort(key=lambda x: x[1])
-        s = []
-        for p in points:
-            p = tuple(p)
-            t = set()
-            t.add(p)
-            s.append(t)
-        print(s)
-        for e in edges:
-            u1 = -1
-            u2 = -1
-            for i in range(len(s)):
-                if tuple(e[0][0]) in s[i]:
-                    u1 = i
-                if tuple(e[0][1]) in s[i]:
-                    u2 = i
-            if u1 != u2:
-                s[u1] = s[u1] | s[u2]
-                s.pop(u2)
-                ans += e[1]
-        return ans
-        '''
+        '\n        comb = list(combinations(points, 2))\n        edges = []\n        ans = 0\n        for c in comb:\n            d = abs(c[0][0]-c[1][0])+abs(c[0][1]-c[1][1])\n            edges.append((c, d))\n        edges.sort(key=lambda x: x[1])\n        s = []\n        for p in points:\n            p = tuple(p)\n            t = set()\n            t.add(p)\n            s.append(t)\n        print(s)\n        for e in edges:\n            u1 = -1\n            u2 = -1\n            for i in range(len(s)):\n                if tuple(e[0][0]) in s[i]:\n                    u1 = i\n                if tuple(e[0][1]) in s[i]:\n                    u2 = i\n            if u1 != u2:\n                s[u1] = s[u1] | s[u2]\n                s.pop(u2)\n                ans += e[1]\n        return ans\n        '

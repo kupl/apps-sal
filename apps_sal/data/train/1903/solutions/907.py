@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.parent = dict()
         self.rank = dict()
@@ -31,7 +32,7 @@ class Solution:
             self.rank[l - 1] = 0
             heapq.heapify(heap)
             while heap:
-                dis, x, y = heapq.heappop(heap)
+                (dis, x, y) = heapq.heappop(heap)
                 if self.find(x) != self.find(y):
                     ans += dis
                     self.union(self.find(x), self.find(y))

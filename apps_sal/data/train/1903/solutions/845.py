@@ -2,14 +2,14 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         q = [(0, 0)]
         heapq.heapify(q)
         added = [False for i in range(len(points))]
-
         ans = 0
         while q:
-            d, u = heapq.heappop(q)
+            (d, u) = heapq.heappop(q)
             if added[u]:
                 continue
             ans += d

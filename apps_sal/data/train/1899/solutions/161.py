@@ -1,7 +1,8 @@
 class Solution:
+
     def __init__(self):
         self.map = None
-        self.w, self.h = 0, 0
+        (self.w, self.h) = (0, 0)
 
     def get_neighbors(self, r, c):
         nei = []
@@ -31,11 +32,11 @@ class Solution:
 
     def shortestBridge(self, A: List[List[int]]) -> int:
         self.map = A
-        self.w, self.h = len(A), len(A[0])
-        source, target = self.find_island()
+        (self.w, self.h) = (len(A), len(A[0]))
+        (source, target) = self.find_island()
         queue = [(node, 0) for node in source]
         while queue:
-            node, d = queue.pop(0)
+            (node, d) = queue.pop(0)
             if node in target:
                 return d - 1
             neighbors = self.get_neighbors(node[0], node[1])

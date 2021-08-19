@@ -1,4 +1,5 @@
 class Solution:
+
     def memoization(self, grid, i, j, memo):
         if i == len(grid) - 1 or j == len(grid[0]) - 1:
             return int(grid[i][j] == 1)

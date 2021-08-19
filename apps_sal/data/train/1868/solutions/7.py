@@ -1,4 +1,5 @@
 class Solution:
+
     def beautifulArray(self, N: int) -> List[int]:
         nums = []
         for i in range(1, N + 1):

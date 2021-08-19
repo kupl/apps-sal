@@ -1,6 +1,7 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
-        S = set((p[0], p[1]) for p in points)
+        S = set(((p[0], p[1]) for p in points))
         ans = float('inf')
         for i in range(len(points)):
             for j in range(i):

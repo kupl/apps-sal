@@ -1,16 +1,17 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         points.sort()
         xs = collections.defaultdict(list)
         ys = collections.defaultdict(list)
-        for x, y in points:
+        for (x, y) in points:
             xs[x].append(y)
             ys[y].append(x)
         result = math.inf
-        for x0, ylist in xs.items():
-            for y1, y2 in itertools.combinations(ylist, 2):
-                xlist1, xlist2 = ys[y1], ys[y2]
-                m, n = len(xlist1), len(xlist2)
+        for (x0, ylist) in xs.items():
+            for (y1, y2) in itertools.combinations(ylist, 2):
+                (xlist1, xlist2) = (ys[y1], ys[y2])
+                (m, n) = (len(xlist1), len(xlist2))
                 i = bisect.bisect(xlist1, x0)
                 if i == m:
                     continue

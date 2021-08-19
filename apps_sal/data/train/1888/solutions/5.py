@@ -1,4 +1,5 @@
 class Solution:
+
     def addOneRow(self, root, v, d):
         """
         :type root: TreeNode
@@ -13,14 +14,14 @@ class Solution:
         level = 1
         que = [root]
         d -= 1
-        beg, end = 0, 1
+        (beg, end) = (0, 1)
         while beg < end:
             lev_cnt = 0
             i = beg
             if level == d:
                 while i < end:
                     p = que[i]
-                    lt, rt = TreeNode(v), TreeNode(v)
+                    (lt, rt) = (TreeNode(v), TreeNode(v))
                     lt.left = p.left
                     p.left = lt
                     rt.right = p.right

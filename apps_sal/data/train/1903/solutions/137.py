@@ -6,6 +6,7 @@ def dist(i, j, points):
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.root = [i for i in range(n)]
         self.cnt = n
@@ -18,19 +19,19 @@ class UnionFind:
         return self.root[x]
 
     def union(self, i, j):
-        ri, rj = self.find(i), self.find(j)
+        (ri, rj) = (self.find(i), self.find(j))
         self.root[ri] = rj
         self.cnt -= 1
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         n = len(points)
         for i in range(n):
             for j in range(i + 1, n):
                 edges.append((dist(i, j, points), i, j))
-
         heapq.heapify(edges)
         res = 0
         uf = UnionFind(n)

@@ -1,8 +1,9 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         horizontal = collections.defaultdict(set)
         vertical = collections.defaultdict(set)
-        for x, y in points:
+        for (x, y) in points:
             horizontal[y].add(x)
             vertical[x].add(y)
         xlist = [x for x in vertical if len(vertical[x]) > 1]

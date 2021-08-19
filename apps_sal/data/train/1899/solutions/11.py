@@ -13,7 +13,7 @@ class Solution:
         while len(self.island) > 0:
             [i, j] = self.island.pop(0)
             for d in D:
-                if (i + d[0] in range(self.m)) and (j + d[1] in range(self.n)):
+                if i + d[0] in range(self.m) and j + d[1] in range(self.n):
                     if self.grid[i + d[0]][j + d[1]] == 1:
                         return self.grid[i][j] + 1
                     if self.grid[i + d[0]][j + d[1]] == 0:
@@ -24,7 +24,7 @@ class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         from itertools import product
         self.grid = A
-        self.m, self.n = len(A), len(A[0])
+        (self.m, self.n) = (len(A), len(A[0]))
         self.island = []
         for i in range(self.n):
             for j in range(self.m):

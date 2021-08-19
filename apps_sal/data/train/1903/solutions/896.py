@@ -1,5 +1,5 @@
-
 class UnionFind:
+
     def __init__(self, n):
         self.groups = list(range(n))
         self.size = [1] * n
@@ -23,9 +23,9 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         cost_array = []
-
         for i in range(len(points) - 1):
             for j in range(i + 1, len(points)):
                 weight = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
@@ -33,7 +33,7 @@ class Solution:
         cost_array.sort()
         res = 0
         uf = UnionFind(len(points))
-        for weight, i, j in cost_array:
+        for (weight, i, j) in cost_array:
             if uf.find(i) == uf.find(j):
                 continue
             uf.union(i, j)

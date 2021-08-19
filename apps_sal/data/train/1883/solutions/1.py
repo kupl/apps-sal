@@ -1,6 +1,6 @@
 class Solution:
-    def uniquePathsIII(self, grid):
 
+    def uniquePathsIII(self, grid):
         maxPath = 2
         neighbors = [None] * (len(grid) * len(grid[0]))
         visited = [False] * (len(grid) * len(grid[0]))
@@ -17,7 +17,6 @@ class Solution:
                 elif grid[x][y] == 2:
                     end = node
                     visited[node] = False
-
         return count(neighbors, visited, start, maxPath, 1, end)
 
 
@@ -35,18 +34,14 @@ def getNeighbors(grid, x, y):
 
 
 def count(neighbors, visited, node, maxPath, pathLength, destination):
-
     if pathLength == maxPath and node == destination:
         return 1
     elif pathLength == maxPath or node == destination:
         return 0
-
     visited[node] = True
-
     sum = 0
     for k in neighbors[node]:
         if not visited[k]:
             sum += count(neighbors, visited, k, maxPath, pathLength + 1, destination)
-
     visited[node] = False
     return sum

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         import heapq
         if len(points) == 1:
@@ -11,11 +12,11 @@ class Solution:
         edgeset = []
         heapq.heapify(heap)
         while len(set(group.values())) > 1:
-            weight, s, e = heapq.heappop(heap)
+            (weight, s, e) = heapq.heappop(heap)
             if group[s] != group[e]:
                 v1 = group[s]
                 v2 = group[e]
-                for key, v in list(group.items()):
+                for (key, v) in list(group.items()):
                     if v == v2:
                         group[key] = v1
                 edgeset.append(weight)

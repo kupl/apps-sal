@@ -1,5 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def find(parent, i):
             if parent[i] == i:
                 return i
@@ -15,7 +17,6 @@ class Solution:
             else:
                 parent[yroot] = xroot
                 rank[xroot] += 1
-
         ans = 0
         V = len(points)
         graph = []
@@ -23,8 +24,7 @@ class Solution:
             for j in range(i):
                 v = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 graph.append([i, j, v])
-
-        i, e = 0, 0
+        (i, e) = (0, 0)
         graph = sorted(graph, key=lambda item: item[2])
         parent = []
         rank = []
@@ -32,7 +32,7 @@ class Solution:
             parent.append(node)
             rank.append(0)
         while e < V - 1:
-            u, v, w = graph[i]
+            (u, v, w) = graph[i]
             i = i + 1
             x = find(parent, u)
             y = find(parent, v)

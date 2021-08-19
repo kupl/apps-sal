@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
         def dist(e1, e2):
@@ -10,12 +11,11 @@ class Solution:
             return p[x]
 
         def union(x, y):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return False
             p[px] = py
             return True
-
         n = len(points)
         res = 0
         p = list(range(len(points)))
@@ -25,11 +25,10 @@ class Solution:
                 heappush(edges, (dist(points[i], points[j]), i, j))
         count = 0
         while edges:
-            cost, x, y = heappop(edges)
+            (cost, x, y) = heappop(edges)
             if union(x, y):
                 res += cost
                 count += 1
             if count == n - 1:
                 break
-
         return res

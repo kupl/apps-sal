@@ -1,4 +1,5 @@
 class Solution:
+
     def find(self, roots, x):
         if x == roots[x]:
             return x
@@ -9,8 +10,8 @@ class Solution:
         n = len(points)
         for i in range(n):
             for j in range(i + 1, n):
-                x1, y1 = points[i]
-                x2, y2 = points[j]
+                (x1, y1) = points[i]
+                (x2, y2) = points[j]
                 d = abs(x1 - x2) + abs(y1 - y2)
                 edges.append((d, i, j))
         edges.sort()
@@ -18,7 +19,7 @@ class Solution:
         ranks = [0] * n
         count = 0
         res = 0
-        for d, x, y in edges:
+        for (d, x, y) in edges:
             rx = self.find(roots, x)
             ry = self.find(roots, y)
             if rx != ry:
@@ -33,5 +34,4 @@ class Solution:
                 res += d
                 if count == n - 1:
                     return res
-
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
@@ -7,7 +8,6 @@ class Solution:
                 d = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((d, i, j))
         edges.sort()
-
         root = [i for i in range(n)]
 
         def find(v):
@@ -22,9 +22,8 @@ class Solution:
                 root[p2] = root[p1]
                 return True
             return False
-
         res = 0
-        for d, u, v in edges:
+        for (d, u, v) in edges:
             if union(u, v):
                 res += d
         return res

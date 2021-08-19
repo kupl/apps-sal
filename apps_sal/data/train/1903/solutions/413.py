@@ -1,4 +1,5 @@
 class Graph:
+
     def __init__(self, vertices):
         self.V = vertices
         self.graph = []
@@ -33,7 +34,7 @@ class Graph:
             parent.append(node)
             rank.append(0)
         while e < self.V - 1:
-            u, v, w = self.graph[i]
+            (u, v, w) = self.graph[i]
             i = i + 1
             x = self.find(parent, u)
             y = self.find(parent, v)
@@ -45,6 +46,7 @@ class Graph:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         g = Graph(n)

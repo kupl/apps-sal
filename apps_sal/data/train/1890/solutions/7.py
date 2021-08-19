@@ -1,4 +1,5 @@
 class Solution:
+
     def findBottomLeftValue(self, root):
         """
         :type root: TreeNode

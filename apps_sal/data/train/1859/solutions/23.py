@@ -11,13 +11,13 @@ def prefix_sums(m):
 
 
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         if not matrix:
             return 0
-
         bsums = transpose(prefix_sums(transpose(prefix_sums(matrix))))
         squares = 0
-        m, n = len(matrix), len(matrix[0])
+        (m, n) = (len(matrix), len(matrix[0]))
         for i in range(m):
             for j in range(n):
                 k = 0

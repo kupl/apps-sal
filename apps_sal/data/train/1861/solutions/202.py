@@ -1,4 +1,4 @@
-'''
+"""
 939. Minimum Area Rectangle.  Medium
 
 Given a set of points in the xy-plane, 
@@ -29,16 +29,17 @@ Submissions
 
 NOTE: Clarify: rectangle formed by ALL these points (convex hull)
             v. rectangle formed by ANY four distinct points
-'''
+"""
 
 
 class Solution:
+
     def minAreaRectangularHull(self, points: List[List[int]]) -> int:
         area = 0
         if points:
-            minx, miny = points[0]
-            maxx, maxy = points[0]
-            for x, y in points:
+            (minx, miny) = points[0]
+            (maxx, maxy) = points[0]
+            for (x, y) in points:
                 minx = min(minx, x)
                 miny = min(miny, y)
                 maxx = max(maxx, x)
@@ -49,9 +50,9 @@ class Solution:
     def minAreaRect(self, points):
         S = set(map(tuple, points))
         ans = float('inf')
-        for k, (xB, yB) in enumerate(points):
+        for (k, (xB, yB)) in enumerate(points):
             for j in range(k):
-                xA, yA = points[j]
-                if (xA != xB and yA != yB and (xA, yB) in S and (xB, yA) in S):
+                (xA, yA) = points[j]
+                if xA != xB and yA != yB and ((xA, yB) in S) and ((xB, yA) in S):
                     ans = min(ans, abs(xB - xA) * abs(yB - yA))
         return ans if ans < float('inf') else 0

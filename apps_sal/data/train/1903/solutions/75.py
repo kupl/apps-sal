@@ -1,10 +1,11 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         graph = defaultdict(list)
         visited = set()
         res = 0
-        for idx1, point1 in enumerate(points):
-            for idx2, point2 in enumerate(points):
+        for (idx1, point1) in enumerate(points):
+            for (idx2, point2) in enumerate(points):
                 if idx1 != idx2:
                     man = abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
                     graph[idx1].append((man, idx2))

@@ -1,4 +1,5 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
 
         def smallestinterval(l):
@@ -7,7 +8,6 @@ class Solution:
                 if l[i] - l[i - 1] < rst:
                     rst = l[i] - l[i - 1]
             return rst
-
         xloc = defaultdict(set)
         for p in points:
             xloc[p[1]].add(p[0])

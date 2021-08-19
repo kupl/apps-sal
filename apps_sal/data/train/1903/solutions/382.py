@@ -4,7 +4,7 @@ from heapq import heappop, heappush, heapify
 
 def prim(N, E):
     edges = defaultdict(list)
-    for x, y, c in E:
+    for (x, y, c) in E:
         edges[x].append((c, y))
         edges[y].append((c, x))
     heap = []
@@ -13,7 +13,7 @@ def prim(N, E):
     visited = {}
     ans = 0
     while heap:
-        c, n = heappop(heap)
+        (c, n) = heappop(heap)
         if n in visited:
             continue
         visited[n] = 1
@@ -27,6 +27,7 @@ def prim(N, E):
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         E = []
         n = len(points)

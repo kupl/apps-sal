@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         reservedSeats.sort()
         count = 2 * (reservedSeats[0][0] - 1)
@@ -16,14 +17,10 @@ class Solution:
             elif len(indices) == 2:
                 if indices[0] == 1 and indices[1] == 10:
                     count += 2
-                elif (all(i not in indices for i in [2, 3, 4, 5])
-                      or all(i not in indices for i in [4, 5, 6, 7])
-                      or all(i not in indices for i in [6, 7, 8, 9])):
+                elif all((i not in indices for i in [2, 3, 4, 5])) or all((i not in indices for i in [4, 5, 6, 7])) or all((i not in indices for i in [6, 7, 8, 9])):
                     count += 1
             elif len(indices) <= 6:
-                if (all(i not in indices for i in [2, 3, 4, 5])
-                    or all(i not in indices for i in [4, 5, 6, 7])
-                        or all(i not in indices for i in [6, 7, 8, 9])):
+                if all((i not in indices for i in [2, 3, 4, 5])) or all((i not in indices for i in [4, 5, 6, 7])) or all((i not in indices for i in [6, 7, 8, 9])):
                     count += 1
             row_start = row_end
             next_row = reservedSeats[row_start][0] if row_start < len(reservedSeats) else n + 1

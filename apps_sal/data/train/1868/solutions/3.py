@@ -1,6 +1,7 @@
-
 class Solution:
+
     def beautifulArray(self, N: int) -> List[int]:
+
         def find_array(N: int, dic=defaultdict(list)) -> List[int]:
             if dic[N]:
                 pass
