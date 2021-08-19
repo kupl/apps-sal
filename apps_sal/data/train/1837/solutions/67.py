@@ -1,11 +1,11 @@
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         d = {}
         dn = []
         for o in orders:
             if o[2] not in dn:
                 dn.append(o[2])
-
             if o[1] in d:
                 if o[2] in d[o[1]]:
                     d[o[1]][o[2]] += 1
@@ -14,7 +14,6 @@ class Solution:
             else:
                 d[o[1]] = {}
                 d[o[1]][o[2]] = 1
-
         dn.sort()
         fr = ['Table']
         for n in dn:
@@ -30,5 +29,4 @@ class Solution:
                 else:
                     r.append('0')
             ans.append(r)
-
         return ans

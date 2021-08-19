@@ -1,9 +1,11 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
+
         def calcmin(t: str) -> int:
             return int(t[:2]) * 60 + int(t[3:])
-        key, res = {}, []
-        for i, v in enumerate(keyName):
+        (key, res) = ({}, [])
+        for (i, v) in enumerate(keyName):
             if not v in key:
                 key[v] = []
             key[v] += [keyTime[i]]

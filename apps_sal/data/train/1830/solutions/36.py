@@ -1,8 +1,8 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         rains_over_city = {}
         lake_drying_days = []
-
         ind = 0
         for rain in rains:
             if rain > 0:

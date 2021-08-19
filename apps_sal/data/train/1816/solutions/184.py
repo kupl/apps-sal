@@ -1,13 +1,11 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         pairs = []
-
         for i in range(len(keyName)):
             pairs.append((keyName[i], self.getMinutes(keyTime[i])))
         pairs.sort()
-
         print(pairs)
-
         i = 0
         res = []
         while i + 2 < len(pairs):
@@ -25,5 +23,5 @@ class Solution:
         return res
 
     def getMinutes(self, time):
-        hh, mm = time.split(':')
+        (hh, mm) = time.split(':')
         return int(hh) * 60 + int(mm)

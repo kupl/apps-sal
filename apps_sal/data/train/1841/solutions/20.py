@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         n = len(arr)
         d = {}
@@ -7,13 +8,11 @@ class Solution:
             m = sort[n // 2]
         else:
             m = sort[(n - 1) // 2]
-
         for num in arr:
             val = abs(num - m)
             if val not in d:
                 d[val] = []
             d[val].append(num)
-
         items = sorted(list(d.items()), reverse=True)
         i = 0
         ret = []
@@ -24,7 +23,6 @@ class Solution:
             else:
                 break
             i += 1
-
         if k > 0:
             items[i][1].sort()
             for j in range(k):

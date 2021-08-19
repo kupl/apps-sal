@@ -1,9 +1,10 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         op = []
         lakes = dict()
         days = []
-        for i, r in enumerate(rains):
+        for (i, r) in enumerate(rains):
             if r > 0:
                 op.append(-1)
                 if r in lakes.keys():
@@ -22,5 +23,4 @@ class Solution:
             else:
                 op.append(99999)
                 days.append(i)
-
         return op

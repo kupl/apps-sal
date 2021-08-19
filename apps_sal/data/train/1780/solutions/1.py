@@ -22,7 +22,7 @@ def part_aux(s, k):
     res = []
     for n in range(k0, 0, -1):
         r = s - n
-        if (r > 0):
+        if r > 0:
             for t in part_aux(r, n):
                 if type(t) is list:
                     res.append([n] + t)
@@ -40,4 +40,4 @@ def part(n):
     avg = reduce(lambda x, y: x + y, r, 0) / float(lg)
     rge = r[lg - 1] - r[0]
     md = (r[(lg - 1) // 2] + r[lg // 2]) / 2.0
-    return "Range: %d Average: %.2f Median: %.2f" % (rge, avg, md)
+    return 'Range: %d Average: %.2f Median: %.2f' % (rge, avg, md)

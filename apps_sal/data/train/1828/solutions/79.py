@@ -1,4 +1,5 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         counter = Counter(barcodes)
         keys = sorted(list(counter.keys()), key=lambda k: counter[k], reverse=True)

@@ -2,6 +2,7 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         n = len(friends)
         adj = [[] for i in range(n)]
@@ -13,7 +14,7 @@ class Solution:
         q.append((id, 0))
         visited[id] = True
         while q:
-            u, lev = q.popleft()
+            (u, lev) = q.popleft()
             if lev == level:
                 req.append(u)
                 continue

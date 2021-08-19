@@ -1,7 +1,8 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         n = len(watchedVideos)
-        a, d, w = [id], [1] * n, {}
+        (a, d, w) = ([id], [1] * n, {})
         d[id] = 0
         for _ in range(level):
             b = []

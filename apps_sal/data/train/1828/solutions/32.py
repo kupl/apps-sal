@@ -1,4 +1,5 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes):
         cnt = dict()
         for v in barcodes:
@@ -6,5 +7,5 @@ class Solution:
         N = len(barcodes)
         barcodes.sort(key=lambda v: (-cnt[v], v))
         A = [0] * N
-        A[::2], A[1::2] = barcodes[:(N + 1) // 2], barcodes[(N + 1) // 2:]
+        (A[::2], A[1::2]) = (barcodes[:(N + 1) // 2], barcodes[(N + 1) // 2:])
         return A

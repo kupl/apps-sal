@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         n = len(mat)
         m = len(mat[0])
@@ -17,13 +18,10 @@ class Solution:
                             sum1 += sumo(mat[r][:j + K + 1])
                         else:
                             sum1 += sumo(mat[r])
+                    elif j + K < m:
+                        sum1 += sumo(mat[r][j - K:j + K + 1])
                     else:
-                        if j + K < m:
-                            sum1 += sumo(mat[r][j - K:j + K + 1])
-                        else:
-                            sum1 += sumo(mat[r][j - K:])
-
+                        sum1 += sumo(mat[r][j - K:])
                     r += 1
                 answer[i][j] = sum1
-
         return answer

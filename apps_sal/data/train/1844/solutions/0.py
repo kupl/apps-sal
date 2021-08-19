@@ -1,4 +1,5 @@
 class Solution:
+
     def findMinDifference(self, timePoints):
         """
         :type timePoints: List[str]
@@ -9,7 +10,6 @@ class Solution:
         timeNum = [0] * len(timePoints)
         for i in range(len(timePoints)):
             timeNum[i] = 60 * int(timePoints[i][:2]) + int(timePoints[i][3:])
-
         timeNum.sort()
         minMin = 24 * 60
         for i in range(len(timeNum) - 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
 
         def devidelist(L: List[int]):
@@ -33,5 +34,4 @@ class Solution:
                     ans.append(right[ridx])
                     ridx += 1
             return ans
-
         return devidelist(nums)

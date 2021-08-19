@@ -1,16 +1,17 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         drying = []
         out = []
         lakes = {}
         v = 1
-        for c, i in enumerate(rains):
+        for (c, i) in enumerate(rains):
             out.append(-1)
             if i <= 0:
                 drying.append(c)
             elif i in lakes and drying:
                 found = -1
-                for index, val in enumerate(drying):
+                for (index, val) in enumerate(drying):
                     if val > lakes[i]:
                         found = index
                         break

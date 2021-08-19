@@ -7,11 +7,10 @@ class Datamining:
     def predict(self, x):
         y = 0
         for j in range(len(self.X)):
-            Lj, xj = 1, self.X[j]
+            (Lj, xj) = (1, self.X[j])
             for k in range(len(self.X)):
                 xk = self.X[k]
                 if xk != xj:
                     Lj *= (x - xk) / (xj - xk)
             y += Lj * self.Y[j]
-
         return y

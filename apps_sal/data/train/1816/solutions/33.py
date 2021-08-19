@@ -2,9 +2,10 @@ import math
 
 
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         dic = {}
-        for i, name in enumerate(keyName):
+        for (i, name) in enumerate(keyName):
             t = keyTime[i]
             if name in dic:
                 dic[name].append(int(t[0:2] + t[3:]))

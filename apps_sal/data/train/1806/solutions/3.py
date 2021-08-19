@@ -1,4 +1,5 @@
 class Solution:
+
     def basicCalculatorIV(self, expression, evalvars, evalints):
         """
         :type expression: str
@@ -6,7 +7,9 @@ class Solution:
         :type evalints: List[int]
         :rtype: List[str]
         """
+
         class C(collections.Counter):
+
             def __add__(self, other):
                 self.update(other)
                 return self
@@ -27,7 +30,5 @@ class Solution:
         def f(s):
             s = str(vals.get(s, s))
             return C({(s,): 1}) if s.isalpha() else C({(): int(s)})
-        c = eval(re.sub('(\w+)', r'f("\1")', expression))
-        return ['*'.join((str(c[x]),) + x)
-                for x in sorted(c, key=lambda x: (-len(x), x))
-                if c[x]]
+        c = eval(re.sub('(\\w+)', 'f("\\1")', expression))
+        return ['*'.join((str(c[x]),) + x) for x in sorted(c, key=lambda x: (-len(x), x)) if c[x]]

@@ -1,9 +1,10 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         ans = []
         zero = []
         full = {}
-        for day, city in enumerate(rains):
+        for (day, city) in enumerate(rains):
             if city:
                 ans.append(-1)
                 if city in full:

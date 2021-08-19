@@ -1,7 +1,8 @@
 class Solution:
+
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         neighbors = defaultdict(list)
-        for u, v in edges:
+        for (u, v) in edges:
             neighbors[u].append(v)
             neighbors[v].append(u)
 
@@ -24,6 +25,5 @@ class Solution:
                 return m / (len(neighbors[u]) - 1)
             else:
                 return 0
-
         visited = set()
         return dfs(1, 0, True)

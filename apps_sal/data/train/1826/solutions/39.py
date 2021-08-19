@@ -2,6 +2,7 @@ from copy import deepcopy
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         matrix = deepcopy(mat)
         for i in range(len(matrix)):

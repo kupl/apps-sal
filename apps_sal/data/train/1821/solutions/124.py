@@ -1,4 +1,5 @@
 class node:
+
     def __init__(self, val):
         self.val = val
         self.right = None
@@ -11,11 +12,10 @@ class node:
                     self.left = node(val)
                 else:
                     self.left.insert(val)
+            elif self.right is None:
+                self.right = node(val)
             else:
-                if self.right is None:
-                    self.right = node(val)
-                else:
-                    self.right.insert(val)
+                self.right.insert(val)
         else:
             self.val = val
 

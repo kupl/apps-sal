@@ -3,6 +3,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         mapping = defaultdict(lambda: -1)
         ans = []

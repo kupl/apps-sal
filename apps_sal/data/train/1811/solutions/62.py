@@ -1,4 +1,5 @@
 class StockSpanner(object):
+
     def __init__(self):
         self.stack = []
 

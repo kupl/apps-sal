@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1:
             return nums
@@ -7,7 +8,6 @@ class Solution:
                 return [nums[1], nums[0]]
             else:
                 return nums
-
         mid = len(nums) // 2
         left = self.sortArray(nums[:mid + 1])
         right = self.sortArray(nums[mid + 1:])

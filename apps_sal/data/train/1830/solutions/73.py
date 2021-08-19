@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         lake = defaultdict(list)
         ans = [1] * len(rains)

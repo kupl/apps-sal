@@ -1,7 +1,4 @@
-SPECIAL = {"J": 1,
-           "Q": 2,
-           "K": 3,
-           "A": 4}
+SPECIAL = {'J': 1, 'Q': 2, 'K': 3, 'A': 4}
 
 
 def who_wins_beggar_thy_neighbour(hand_1, hand_2):
@@ -10,7 +7,6 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2):
     pot = []
     penalty = 0
     time = 0
-
     while time < 10000:
         time += 1
         try:
@@ -28,6 +24,5 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2):
                 pot.append(card)
         except IndexError:
             return (turn + 1) % 2
-
         penalty = card
         turn = (turn + 1) % 2

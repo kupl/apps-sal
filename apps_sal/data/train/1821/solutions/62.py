@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         mi = abs(min(nums))
         nums = [i + mi for i in nums]
@@ -11,10 +12,8 @@ class Solution:
             d = l - len(str(i))
             a = '0' * d + str(i)
             res.append(a)
-
         for i in range(l - 1, -1, -1):
             res = self.f(res, i)
-
         return [int(i) - mi for i in res]
 
     def f(self, res, i):

@@ -1,5 +1,7 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def merge(l1, l2):
             p1 = p2 = 0
             new_list = []

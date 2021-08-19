@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, words, k):
         times_dict = {}
         for i in words:
@@ -9,7 +10,7 @@ class Solution:
         return_list = []
         for i in range(k):
             max = 0
-            max_key = ""
+            max_key = ''
             for j in times_dict.keys():
                 if times_dict[j] > max:
                     max = times_dict[j]

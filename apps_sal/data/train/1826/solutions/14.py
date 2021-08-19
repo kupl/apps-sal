@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:
         m = len(mat)
         n = len(mat[0])
@@ -10,7 +11,6 @@ class Solution:
                 s += mat[i][j]
                 row.append(s)
             p.append(row)
-
         ans = []
         for i in range(m):
             row = []

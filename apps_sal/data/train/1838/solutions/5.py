@@ -1,4 +1,5 @@
 class Solution:
+
     def maxChunksToSorted(self, arr):
         """
         :type arr: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if not arr:
             return 0
-
         res = 0
         l = len(arr)
         curr = -1
@@ -19,11 +19,9 @@ class Solution:
                     curr = -1
                     res += 1
                     flag = False
+            elif c == i:
+                res += 1
             else:
-                if c == i:
-                    res += 1
-                else:
-                    curr = max(curr, c)
-                    flag = True
-
+                curr = max(curr, c)
+                flag = True
         return res

@@ -15,7 +15,6 @@ def to_postfix(infix):
             while stack and prec[stack[-1]] >= prec[ch]:
                 postfix.append(stack.pop())
             stack.append(ch)
-
     while stack:
         postfix.append(stack.pop())
     return ''.join(postfix)

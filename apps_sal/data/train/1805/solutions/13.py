@@ -2,13 +2,14 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         visited = set()
         queue = deque([(id, 0)])
         visited.add(id)
         chosenFriends = list()
         while queue:
-            person, lv = queue.popleft()
+            (person, lv) = queue.popleft()
             if lv == level:
                 chosenFriends.append(person)
             if lv > level:

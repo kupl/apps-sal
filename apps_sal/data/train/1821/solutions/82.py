@@ -1,6 +1,7 @@
 class Solution:
+
     def partition(self, arr, pi):
-        less, equal, high = [], [], []
+        (less, equal, high) = ([], [], [])
         for i in arr:
             if i < pi:
                 less.append(i)
@@ -14,5 +15,5 @@ class Solution:
         if len(nums) < 1:
             return nums
         pivot = nums[0]
-        less, equal, high = self.partition(nums, pivot)
+        (less, equal, high) = self.partition(nums, pivot)
         return self.sortArray(less) + equal + self.sortArray(high)

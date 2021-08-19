@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, A: List[int], k: int) -> List[int]:
         A.sort()
         z = []

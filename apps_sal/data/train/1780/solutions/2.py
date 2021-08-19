@@ -12,4 +12,4 @@ def prod(n, x):
 
 def part(n):
     xs = prod(n, n)
-    return f"Range: {max(xs) - min(xs)} Average: {mean(xs):.2f} Median: {median(xs):.2f}"
+    return f'Range: {max(xs) - min(xs)} Average: {mean(xs):.2f} Median: {median(xs):.2f}'

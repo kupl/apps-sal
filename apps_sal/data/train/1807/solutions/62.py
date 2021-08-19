@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         fractions = set()
         for i in range(2, n + 1):

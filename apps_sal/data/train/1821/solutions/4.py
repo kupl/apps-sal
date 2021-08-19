@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1:
             return nums
@@ -16,10 +17,10 @@ class Solution:
                 else:
                     combine.append(left.pop(0))
                     n_left -= 1
-            elif n_left and not n_right:
+            elif n_left and (not n_right):
                 combine += left
                 n_left = 0
-            elif n_right and not n_left:
+            elif n_right and (not n_left):
                 combine += right
                 n_right = 0
         return combine

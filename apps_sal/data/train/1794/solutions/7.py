@@ -1,9 +1,9 @@
 def statement1(s):
-    return not prime(s - 2) and not s % 2 == 0
+    return not prime(s - 2) and (not s % 2 == 0)
 
 
 def statement2(p):
-    l = [i for i in factor_pairs(p) if (i[0] >= 2 and i[1] >= 2)]
+    l = [i for i in factor_pairs(p) if i[0] >= 2 and i[1] >= 2]
     l_ = [i for i in l if statement1(sum(i))]
     return l != l_ and len(l_) == 1
 
@@ -27,5 +27,5 @@ def factor_pairs(x):
     res = set([])
     for i in range(1, x):
         if x % i == 0:
-            res.add(tuple(sorted(([i, x / i]))))
-    return sorted([[int(j) for j in i]for i in list(res)], key=lambda x: x[0])
+            res.add(tuple(sorted([i, x / i])))
+    return sorted([[int(j) for j in i] for i in list(res)], key=lambda x: x[0])

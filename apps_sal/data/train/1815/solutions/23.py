@@ -1,4 +1,5 @@
 class Solution:
+
     def shiftingLetters(self, S: str, shifts: List[int]) -> str:
         back_sum = [0] * len(shifts)
         N = 26

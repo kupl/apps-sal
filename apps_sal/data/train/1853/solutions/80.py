@@ -3,10 +3,11 @@ import heapq
 
 
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         results = []
         graph = defaultdict(dict)
-        for x, y, dist in edges:
+        for (x, y, dist) in edges:
             graph[x][y] = dist
             graph[y][x] = dist
         for i in range(n):
@@ -23,7 +24,7 @@ class Solution:
         distances = [float('inf')] * n
         distances[start] = 0
         while q:
-            city, dist = heapq.heappop(q)
+            (city, dist) = heapq.heappop(q)
             for key in list(graph[city].keys()):
                 new_dist = dist + graph[city][key]
                 if distances[key] > new_dist:

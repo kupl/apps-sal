@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToChessboard(self, board):
         """
         :type board: List[List[int]]
@@ -21,13 +22,12 @@ class Solution:
             if x != y:
                 return -1
             result += min(x, n // 2 - x)
+        elif x == y:
+            result += x
+        elif (n + 1) // 2 - x == (n - 1) // 2 - y:
+            result += (n + 1) // 2 - x
         else:
-            if x == y:
-                result += x
-            elif (n + 1) // 2 - x == (n - 1) // 2 - y:
-                result += (n + 1) // 2 - x
-            else:
-                return -1
+            return -1
         x = 0
         y = 0
         for i in range(0, n):
@@ -39,11 +39,10 @@ class Solution:
             if x != y:
                 return -1
             result += min(x, n // 2 - x)
+        elif x == y:
+            result += x
+        elif (n + 1) // 2 - x == (n - 1) // 2 - y:
+            result += (n + 1) // 2 - x
         else:
-            if x == y:
-                result += x
-            elif (n + 1) // 2 - x == (n - 1) // 2 - y:
-                result += (n + 1) // 2 - x
-            else:
-                return -1
+            return -1
         return result

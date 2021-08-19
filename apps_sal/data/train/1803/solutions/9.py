@@ -8,19 +8,17 @@ def numeric_palindrome(*args):
         for multiplier in seen.union(products):
             products.add(multiplier * number)
         seen.add(number)
-
     palindromes = set()
     for number in products:
         occurrences = Counter(str(number))
         repeated = []
         max_single = ''
-        for char, count in occurrences.items():
+        for (char, count) in occurrences.items():
             if count // 2 > 0 and char != '0':
                 repeated.extend([char] * (count // 2))
             if count % 2 == 1:
                 if max_single < char:
                     max_single = char
-
         half_palindrome = ''
         while repeated:
             maximum = max(repeated)

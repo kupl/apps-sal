@@ -4,10 +4,10 @@ from functools import lru_cache
 @lru_cache(maxsize=None)
 def balanced_parens(n):
     if not n:
-        return [""]
+        return ['']
     r = set()
     for x in balanced_parens(n - 1):
-        r.add("(" + x + ")")
+        r.add('(' + x + ')')
     for i in range(1, n // 2 + 1):
         lo = balanced_parens(i)
         hi = balanced_parens(n - i)

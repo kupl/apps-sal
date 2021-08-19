@@ -3,14 +3,14 @@ import heapq
 
 
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         d = defaultdict(int)
         heap = []
         res = []
         for bc in barcodes:
             d[bc] += 1
-
-        for key, val in d.items():
+        for (key, val) in d.items():
             heapq.heappush(heap, (-val, key))
         while heap:
             cur = heapq.heappop(heap)
@@ -20,8 +20,7 @@ class Solution:
                 val = 1 + tmp[0]
                 if val != 0:
                     heapq.heappush(heap, (val, tmp[1]))
-                heapq.heappush(heap, (cur))
-
+                heapq.heappush(heap, cur)
             else:
                 res.append(cur[1])
                 v = cur[0] + 1

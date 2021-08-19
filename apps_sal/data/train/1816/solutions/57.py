@@ -3,7 +3,7 @@ class Solution:
 
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         data = defaultdict(list)
-        for name, t in zip(keyName, keyTime):
+        for (name, t) in zip(keyName, keyTime):
             data[name].append(t)
 
         def compare(t1, t2):
@@ -14,20 +14,18 @@ class Solution:
             if int(t2[0]) - int(t1[0]) == 1 and t1[1] >= t2[1]:
                 return True
             return False
-
         r = []
-        for name, times in list(data.items()):
+        for (name, times) in list(data.items()):
             times.sort()
             q = deque()
             for t in times:
                 if not q:
                     q.append(t)
                 else:
-                    while q and not compare(q[0], t):
+                    while q and (not compare(q[0], t)):
                         q.popleft()
                     q.append(t)
                     if len(q) >= 3:
                         r.append(name)
                         break
-
         return sorted(r)

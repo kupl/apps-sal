@@ -23,6 +23,7 @@ def merge(L, R):
 
 
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) < 2:
             return nums

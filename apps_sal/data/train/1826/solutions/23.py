@@ -5,7 +5,7 @@ class Solution:
 
     def matrixBlockSum(self, mat, k):
         p = 2 * k + 1
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         array = np.zeros((m + p, n + p), dtype=np.uint32)
         array[k + 1:-k, k + 1:-k] = mat
         np.cumsum(array, axis=0, out=array)

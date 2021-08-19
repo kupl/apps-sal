@@ -3,6 +3,7 @@ def cross(p1, p2, p):
 
 
 def dist_to(p1):
+
     def f(p):
         return (p1[0] - p[0]) * (p1[0] - p[0]) + (p1[1] - p[1]) * (p1[1] - p[1])
     return f

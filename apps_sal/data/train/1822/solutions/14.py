@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, words, k):
         """
         :type words: List[str]
@@ -8,9 +9,9 @@ class Solution:
         wDict = collections.Counter(words)
         res = []
         maxHeap = []
-        for key, cnt in list(wDict.items()):
+        for (key, cnt) in list(wDict.items()):
             heapq.heappush(maxHeap, (-cnt, key))
         for i in range(k):
-            freq, word = heapq.heappop(maxHeap)
+            (freq, word) = heapq.heappop(maxHeap)
             res.append(word)
         return res

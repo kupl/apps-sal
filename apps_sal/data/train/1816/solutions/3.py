@@ -2,14 +2,13 @@ from sortedcontainers import SortedList
 
 
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         hm = defaultdict(SortedList)
         res = set()
-
-        for name, time in zip(keyName, keyTime):
+        for (name, time) in zip(keyName, keyTime):
             int_time = self.get_time_as_int(time)
             hm[name].add(int_time)
-
         for name in hm:
             if self.check(hm[name]):
                 res.add(name)

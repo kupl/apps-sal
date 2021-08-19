@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         n = len(mat)
         m = len(mat[0])

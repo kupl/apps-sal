@@ -8,7 +8,7 @@ class SubrectangleQueries:
         self.changes.append((row1, col1, row2, col2, newValue))
 
     def getValue(self, row: int, col: int) -> int:
-        for row1, col1, row2, col2, newValue in reversed(self.changes):
+        for (row1, col1, row2, col2, newValue) in reversed(self.changes):
             if row1 <= row <= row2 and col1 <= col <= col2:
                 return newValue
         return self.rectangle[row][col]

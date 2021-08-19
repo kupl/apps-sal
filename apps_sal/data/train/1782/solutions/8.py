@@ -1,29 +1,8 @@
-TOKENS_TYPE = {
-    "+": "operator",
-    "-": "operator",
-    "*": "operator",
-    "/": "operator",
-    "%": "operator",
-    "(": "operator",
-    ")": "operator",
-    "=": "operator",
-
-    "true": "boolean",
-    "false": "boolean",
-
-    "if": "keyword",
-    "for": "keyword",
-    "while": "keyword",
-    "else": "keyword",
-    "return": "keyword",
-    "func": "keyword",
-    "break": "keyword",
-
-    " ": "whitespace"
-}
+TOKENS_TYPE = {'+': 'operator', '-': 'operator', '*': 'operator', '/': 'operator', '%': 'operator', '(': 'operator', ')': 'operator', '=': 'operator', 'true': 'boolean', 'false': 'boolean', 'if': 'keyword', 'for': 'keyword', 'while': 'keyword', 'else': 'keyword', 'return': 'keyword', 'func': 'keyword', 'break': 'keyword', ' ': 'whitespace'}
 
 
 class Token:
+
     def __init__(self, text: str, type: str):
         self.text = text
         self.type = type
@@ -36,6 +15,7 @@ class Token:
 
 
 class Simplexer:
+
     def __init__(self, expression):
         self.exp = expression
         self.num = 0
@@ -63,27 +43,27 @@ class Simplexer:
             result = []
             split_chars = self._get_split_chars(char_types)
             for pack in split_chars:
-                seq = ""
-                if pack[0][-1] != "operator":
+                seq = ''
+                if pack[0][-1] != 'operator':
                     for char_data in pack:
                         seq += char_data[0]
                     seq_type = self.get_seq_type(seq)
                     result.append(Token(seq, seq_type))
                 else:
-                    result.extend([Token(i[0], "operator") for i in pack])
+                    result.extend([Token(i[0], 'operator') for i in pack])
             return result
 
     @staticmethod
     def get_seq_type(s: str) -> str:
         if s.isdigit():
-            return "integer"
+            return 'integer'
         elif s in TOKENS_TYPE:
             return TOKENS_TYPE[s]
         elif not s.split():
-            return "whitespace"
-        elif len(s) > 1 and s[0] in ("'", '"') and s[-1] in ("'", '"'):
-            return "string"
-        return "identifier"
+            return 'whitespace'
+        elif len(s) > 1 and s[0] in ("'", '"') and (s[-1] in ("'", '"')):
+            return 'string'
+        return 'identifier'
 
     def __iter__(self):
         return self

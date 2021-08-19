@@ -1,10 +1,10 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr = sorted(arr)
         K = len(arr)
         median = arr[(K - 1) // 2]
-
-        left, right = 0, len(arr) - 1
+        (left, right) = (0, len(arr) - 1)
         ans = []
         print((arr, median))
         while left <= right and k > 0:

@@ -1,6 +1,6 @@
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
 
+    def sortArray(self, nums: List[int]) -> List[int]:
         nums = self.merge(nums)
         return nums
 
@@ -11,9 +11,7 @@ class Solution:
             right = values[m:]
             left = self.merge(left)
             right = self.merge(right)
-
             values = []
-
             while len(left) > 0 and len(right) > 0:
                 if left[0] < right[0]:
                     values.append(left[0])
@@ -21,10 +19,8 @@ class Solution:
                 else:
                     values.append(right[0])
                     right.pop(0)
-
             for i in left:
                 values.append(i)
             for i in right:
                 values.append(i)
-
         return values

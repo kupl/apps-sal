@@ -1,11 +1,12 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1:
             return nums
         else:
             numA = self.sortArray(nums[:len(nums) // 2])
             numB = self.sortArray(nums[len(nums) // 2:])
-            i, j = 0, 0
+            (i, j) = (0, 0)
             nums = []
             while i < len(numA) and j < len(numB):
                 if numA[i] <= numB[j]:

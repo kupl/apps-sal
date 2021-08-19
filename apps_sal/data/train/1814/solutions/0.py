@@ -1,4 +1,5 @@
 class Solution:
+
     def exclusiveTime(self, n, logs):
         """
         :type n: int
@@ -10,11 +11,11 @@ class Solution:
         prev = 0
         if n < 1 or not logs:
             return fn_stk
-        fn, action, ts = logs[0].split(':')
+        (fn, action, ts) = logs[0].split(':')
         fn_stk.append(int(fn))
         for log in logs[1:]:
-            fn, action, ts = log.split(':')
-            fn, ts = int(fn), int(ts)
+            (fn, action, ts) = log.split(':')
+            (fn, ts) = (int(fn), int(ts))
             if action == 'start':
                 if fn_stk:
                     excl_time[fn_stk[len(fn_stk) - 1]] += ts - prev
@@ -22,6 +23,6 @@ class Solution:
                 fn_stk.append(fn)
             else:
                 fid = fn_stk.pop()
-                excl_time[fid] += (ts - prev + 1)
+                excl_time[fid] += ts - prev + 1
                 prev = ts + 1
         return excl_time

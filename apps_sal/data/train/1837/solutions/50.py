@@ -2,10 +2,11 @@ from collections import defaultdict
 
 
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         d = defaultdict(lambda: defaultdict(int))
         foods = set()
-        for _, table, order in orders:
+        for (_, table, order) in orders:
             d[int(table)][order] += 1
             foods.add(order)
         foods = sorted(foods)

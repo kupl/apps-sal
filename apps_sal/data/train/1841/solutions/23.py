@@ -1,11 +1,11 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        '''
+        """
         1. find the median of the arr
         2. sort the list based on |arr[i]-m | > |arr[j] - m|
         3. select the top k strongest elements
-        '''
-
+        """
         arr.sort()
         lastPointer = -1
         startPointer = 0

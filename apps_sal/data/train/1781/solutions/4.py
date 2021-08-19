@@ -26,6 +26,6 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2):
             penalty -= 1
             if penalty == 0:
                 player = 1 - player
-                while(len(common) > 0):
+                while len(common) > 0:
                     hands[player].append(common.popleft())
     return None

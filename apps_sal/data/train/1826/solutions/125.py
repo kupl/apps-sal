@@ -1,14 +1,14 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         k = K
-        n, m = len(mat), len(mat[0])
+        (n, m) = (len(mat), len(mat[0]))
         matrix = []
         for i in range(n):
             temp = []
             for j in range(m):
                 temp.append(0)
             matrix.append(temp)
-
         for i in range(n):
             for j in range(m):
                 if i == 0 and j == 0:

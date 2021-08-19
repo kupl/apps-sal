@@ -1,4 +1,5 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         count = {}
         for code in barcodes:
@@ -6,7 +7,7 @@ class Solution:
                 count[code] += 1
             else:
                 count[code] = 1
-        count = {k: v for k, v in sorted(count.items(), key=lambda item: item[1], reverse=True)}
+        count = {k: v for (k, v) in sorted(count.items(), key=lambda item: item[1], reverse=True)}
 
         def nextCode(last: int) -> int:
             for k in count.keys():

@@ -1,4 +1,5 @@
 class Solution(object):
+
     def avoidFlood(self, rains):
         aux = dict()
         for i in range(len(rains)):
@@ -10,7 +11,7 @@ class Solution(object):
         for i in range(len(rains)):
             if rains[i] == 0:
                 if q:
-                    index, val = heapq.heappop(q)
+                    (index, val) = heapq.heappop(q)
                     if index < i:
                         return []
                     else:

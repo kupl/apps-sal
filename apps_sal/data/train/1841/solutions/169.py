@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         n = len(arr)
         m = sorted(arr)[(n - 1) // 2]

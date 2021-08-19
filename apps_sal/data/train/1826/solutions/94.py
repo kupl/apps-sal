@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         m = len(mat)
         n = len(mat[0])
@@ -17,4 +18,4 @@ class Solution:
                 x2 = min(i + K + 1, m)
                 y2 = min(j + K + 1, n)
                 result[i][j] = matrix[x2][y2] - matrix[x1][y2] - matrix[x2][y1] + matrix[x1][y1]
-        return (result.astype(int))
+        return result.astype(int)

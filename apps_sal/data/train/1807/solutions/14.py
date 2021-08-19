@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         res = []
         s = set()

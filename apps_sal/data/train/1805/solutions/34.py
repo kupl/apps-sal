@@ -1,4 +1,5 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         friends = getFriends(friends, id, 1, level, set([id]))
         videoCounts = collections.Counter([val for i in friends for val in watchedVideos[i]])
@@ -8,7 +9,7 @@ class Solution:
 
 def getFriends(friends: List[List[int]], index: int, level: int, targetLevel: int, knownFriends):
     currentFriends = set(friends[index]) - knownFriends
-    if (level == targetLevel):
+    if level == targetLevel:
         return currentFriends
     else:
         newKnownFriends = knownFriends | currentFriends

@@ -5,7 +5,7 @@ class Solution:
 
     def constructGraph(self, edges, n):
         graph = [[sys.maxsize for i in range(n)] for j in range(n)]
-        for i, j, k in edges:
+        for (i, j, k) in edges:
             graph[i][j] = k
             graph[j][i] = k
         return graph
@@ -31,7 +31,7 @@ class Solution:
 
     def cityWithLeastNumber(self, arr):
         minNum = sys.maxsize
-        for i, j in enumerate(arr):
+        for (i, j) in enumerate(arr):
             if len(j) <= minNum:
                 minNum = len(j)
                 curr = i

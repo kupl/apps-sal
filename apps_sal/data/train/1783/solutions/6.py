@@ -3,15 +3,16 @@ from enum import IntEnum, auto
 
 
 class PokerHand:
+
     def __init__(self, hand):
         self.hand = hand
         cards = hand.split()
-        values = tuple(sorted(cardval.get(c[0]) or int(c[0]) for c in cards))
-        groups = tuple(sorted((len(tuple(g)) for _, g in groupby(values)), reverse=True))
+        values = tuple(sorted((cardval.get(c[0]) or int(c[0]) for c in cards)))
+        groups = tuple(sorted((len(tuple(g)) for (_, g) in groupby(values)), reverse=True))
         hand_value = hv_table.get(groups)
         if hand_value is None:
-            flush = len(set(c[1] for c in cards)) == 1
-            straight = set(a - b for (a, b) in zip(values[1:], values[:-1])) == {1} or values == (2, 3, 4, 5, 14)
+            flush = len(set((c[1] for c in cards))) == 1
+            straight = set((a - b for (a, b) in zip(values[1:], values[:-1]))) == {1} or values == (2, 3, 4, 5, 14)
             if straight and flush:
                 hand_value = HV.royal_flush if values[0] == 10 else HV.straight_flush
             elif flush:
@@ -48,10 +49,4 @@ class HV(IntEnum):
     royal_flush = auto()
 
 
-hv_table = {
-    (2, 1, 1, 1): HV.pair,
-    (2, 2, 1): HV.two_pairs,
-    (3, 1, 1): HV.three_ok_a_kind,
-    (3, 2): HV.full_house,
-    (4, 1): HV.four_of_a_kind,
-}
+hv_table = {(2, 1, 1, 1): HV.pair, (2, 2, 1): HV.two_pairs, (3, 1, 1): HV.three_ok_a_kind, (3, 2): HV.full_house, (4, 1): HV.four_of_a_kind}

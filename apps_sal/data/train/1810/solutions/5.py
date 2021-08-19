@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         strs = set()
         new_strs = []
@@ -15,5 +16,4 @@ class Solution:
                         new_strs.append(new_str)
                         break
                     i += 1
-
         return new_strs

@@ -1,4 +1,5 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         ans = [-1] * len(rains)
         spares = []

@@ -1,4 +1,5 @@
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         unique_tables = []
         unique_dishes = []
@@ -20,4 +21,4 @@ class Solution:
         for i in range(len(ans)):
             for j in range(len(ans[0])):
                 ans[i][j] = str(ans[i][j])
-        return(ans)
+        return ans

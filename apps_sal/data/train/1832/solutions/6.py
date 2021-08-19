@@ -1,17 +1,18 @@
 class Solution:
+
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         g = collections.defaultdict(dict)
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             g[u][v] = w
             g[v][u] = w
         q = [(0, 0, 0)]
         visited = [[10 ** 9 + 1, -1] for i in range(N)]
         visited[0] = [0, -1]
         while q:
-            m, u, p = heapq.heappop(q)
+            (m, u, p) = heapq.heappop(q)
             if m > visited[u][0]:
                 continue
-            for v, w in list(g[u].items()):
+            for (v, w) in list(g[u].items()):
                 if v == p:
                     continue
                 mm = m + w + 1
@@ -21,11 +22,11 @@ class Solution:
                     heapq.heappush(q, (mm, v, u))
         edges2 = set()
         edges3 = {}
-        for u, (m, v) in enumerate(visited):
+        for (u, (m, v)) in enumerate(visited):
             if m > M:
                 continue
             edges2.add((min(u, v), max(u, v)))
-            for k, w in list(g[u].items()):
+            for (k, w) in list(g[u].items()):
                 if k == v:
                     continue
                 t = (min(u, k), max(u, k))
@@ -40,12 +41,12 @@ class Solution:
                         edges3[t][1] = max(edges3[t][1], M - m)
         result = 0
         nodes = set()
-        for u, v in edges2:
+        for (u, v) in edges2:
             result += g[v].get(u, 0)
             nodes.add(u)
             nodes.add(v)
         result += len(nodes) - 1
-        for k, v in list(edges3.items()):
+        for (k, v) in list(edges3.items()):
             if k in edges2:
                 continue
             result += min(sum(v), g[k[0]][k[1]])

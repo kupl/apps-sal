@@ -1,8 +1,8 @@
 def find_prime_kPerm(n, k):
     sieve = n // 2 * [True]
-    for i in range(3, int(n ** .5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if sieve[i // 2]:
-            sieve[i * i // 2:: i] = ((n - i * i - 1) // (2 * i) + 1) * [False]
+            sieve[i * i // 2::i] = ((n - i * i - 1) // (2 * i) + 1) * [False]
     cycles = {}
     for i in range(1, n // 2):
         if sieve[i]:

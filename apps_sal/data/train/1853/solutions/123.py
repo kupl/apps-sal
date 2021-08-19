@@ -2,9 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         graph = [[math.inf for _ in range(n)] for _ in range(n)]
-        for source, sink, cost in edges:
+        for (source, sink, cost) in edges:
             graph[source][sink] = cost
             graph[sink][source] = cost
         for k in range(n):

@@ -1,10 +1,11 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         records = defaultdict(list)
         alerts = set()
         for i in range(len(keyName)):
             records[keyName[i]].append(keyTime[i])
-        for k, v in list(records.items()):
+        for (k, v) in list(records.items()):
             if len(v) < 3:
                 continue
             else:
@@ -16,7 +17,6 @@ class Solution:
                     time2 = end.split(':')
                     md = int(time2[1]) - int(time1[1])
                     hd = int(time2[0]) - int(time1[0])
-
                     f = 0
                     if md < 0:
                         md += 60

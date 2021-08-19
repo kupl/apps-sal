@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
-        used, hashmap = set(), defaultdict(int)
+        (used, hashmap) = (set(), defaultdict(int))
         result = []
         for name in names:
             k = hashmap[name]

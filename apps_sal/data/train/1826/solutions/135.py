@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         import numpy as np
         mat = np.array(mat)
@@ -12,4 +13,4 @@ class Solution:
                 down = j + K + 1
                 temp.append(np.sum(mat[left:right, up:down]))
             ans.append(temp)
-        return(ans)
+        return ans

@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         m = len(mat)
         n = len(mat[0])
@@ -26,7 +27,7 @@ class Solution:
             for j in range(1, n):
                 ans[i, j] = ans[i, j - 1]
                 if j + K < n:
-                    ans[i, j] += mat[max(0, i - K): min(i + K + 1, m), j + K].sum()
+                    ans[i, j] += mat[max(0, i - K):min(i + K + 1, m), j + K].sum()
                 if j - K > 0:
-                    ans[i, j] -= mat[max(0, i - K): min(i + K + 1, m), j - K - 1].sum()
+                    ans[i, j] -= mat[max(0, i - K):min(i + K + 1, m), j - K - 1].sum()
         return ans

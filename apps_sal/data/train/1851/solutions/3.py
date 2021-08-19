@@ -1,6 +1,6 @@
 class Solution:
-    def videoStitching(self, clips: List[List[int]], T: int) -> int:
 
+    def videoStitching(self, clips: List[List[int]], T: int) -> int:
         dp = [T + 1] * (T + 1)
         dp[0] = 0
         i = 1

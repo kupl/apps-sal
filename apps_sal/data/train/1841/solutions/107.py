@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         back = arr[:]
@@ -7,7 +8,7 @@ class Solution:
         ans = []
         for i in range(n):
             arr[i] = abs(arr[i] - med)
-        l, r = 0, n - 1
+        (l, r) = (0, n - 1)
         while l <= r and len(ans) < k:
             if arr[l] < arr[r]:
                 ans += [back[r]]

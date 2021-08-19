@@ -2,7 +2,9 @@ import math
 
 
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def sort(start, stop):
             if start >= stop:
                 return nums[start:stop + 1]

@@ -1,9 +1,10 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         lakes = {}
         dries = []
         res = []
-        for i, rain in enumerate(rains):
+        for (i, rain) in enumerate(rains):
             if rain == 0:
                 dries.append(i)
                 res.append(1)

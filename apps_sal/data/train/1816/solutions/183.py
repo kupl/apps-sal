@@ -1,9 +1,10 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         n = len(keyName)
         lst = [0] * n
         for i in range(n):
-            a, b = keyTime[i].split(':')
+            (a, b) = keyTime[i].split(':')
             st = float(a + '.' + b)
             lst[i] = [keyName[i], st]
         lst.sort()
@@ -20,7 +21,7 @@ class Solution:
             if len(lst2) >= 3:
                 foo = 0
                 for k in range(len(lst2) - 2):
-                    if float(format(lst2[k + 2] - lst2[k], '.2f')) <= 1.00:
+                    if float(format(lst2[k + 2] - lst2[k], '.2f')) <= 1.0:
                         foo = 1
                 if foo == 1:
                     ans.append(name)

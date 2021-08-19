@@ -1,7 +1,7 @@
 class Solution:
+
     def alertNames(self, name: List[str], time: List[str]) -> List[str]:
         d = collections.defaultdict(list)
-
         for i in range(len(name)):
             c = int(time[i][:2]) * 60 + int(time[i][3:])
             d[name[i]].append(c)

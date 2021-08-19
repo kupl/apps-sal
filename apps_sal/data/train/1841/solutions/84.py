@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         median = arr[(len(arr) - 1) // 2]
@@ -11,5 +12,4 @@ class Solution:
             else:
                 arry.append(arr[0])
                 del arr[0]
-
         return arry

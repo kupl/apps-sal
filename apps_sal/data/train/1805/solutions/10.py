@@ -1,5 +1,7 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
+
         def bfs(start):
             queue = [start]
             current_level = 0
@@ -12,7 +14,7 @@ class Solution:
                 for i in subqueue:
                     visited.add(i)
                     for j in friends[i]:
-                        if j not in visited and j not in queue and j not in subqueue:
+                        if j not in visited and j not in queue and (j not in subqueue):
                             queue.append(j)
                 current_level += 1
             return queue

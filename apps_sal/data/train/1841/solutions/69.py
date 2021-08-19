@@ -1,13 +1,12 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         p = (len(arr) - 1) // 2
         med = arr[p]
-
         print(med)
         a1 = arr[:p]
         a2 = arr[p:]
-
         ans = []
         while k > 0:
             if len(a2) > 0 and len(a1) > 0:

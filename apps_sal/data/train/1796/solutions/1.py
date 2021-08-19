@@ -1,17 +1,19 @@
-def LEFT(a, b): return a >= b
-def RIGHT(a, b): return a > b
+def LEFT(a, b):
+    return a >= b
+
+
+def RIGHT(a, b):
+    return a > b
 
 
 PREC = {'+': 2, '-': 2, '*': 3, '/': 3, '^': 4, '(': 1, ')': 1}
-
 OP_ASSOCIATION = {'+': LEFT, '-': LEFT, '*': LEFT, '/': LEFT, '^': RIGHT}
 
 
 def to_postfix(infix):
-    stack, output = [], []
+    (stack, output) = ([], [])
     for c in infix:
         prec = PREC.get(c)
-
         if prec is None:
             output.append(c)
         elif c == '(':
@@ -24,5 +26,4 @@ def to_postfix(infix):
             while stack and OP_ASSOCIATION[c](PREC[stack[-1]], prec):
                 output.append(stack.pop())
             stack.append(c)
-
     return ''.join(output + stack[::-1])

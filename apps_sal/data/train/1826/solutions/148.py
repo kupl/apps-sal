@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
 
         def getSum(i, j):
@@ -24,7 +25,6 @@ class Solution:
                     s += mat[ii][j + K]
                     ii += 1
             return s
-
         rett = []
         for i in range(len(mat)):
             s = getSum(i, 0)

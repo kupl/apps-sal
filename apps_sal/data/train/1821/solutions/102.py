@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         print(nums)
         if nums == []:

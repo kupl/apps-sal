@@ -1,4 +1,5 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         stack = deque([id])
         seen = set()
@@ -10,7 +11,6 @@ class Solution:
                     if j not in seen:
                         stack.append(j)
                         seen.add(j)
-
         count = Counter()
         for lf in stack:
             count += Counter(watchedVideos[lf])

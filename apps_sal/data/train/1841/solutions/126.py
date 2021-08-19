@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, A: List[int], k: int) -> List[int]:
         A.sort()
         z = []
@@ -10,5 +11,5 @@ class Solution:
             z.append([abs(i - n), i])
         z.sort(key=lambda x: x[0])
         z = z[::-1]
-        x = [j for i, j in z]
+        x = [j for (i, j) in z]
         return x[:k]

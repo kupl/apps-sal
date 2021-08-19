@@ -1,12 +1,13 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         res = set()
         d = collections.defaultdict(list)
-        for key, time in zip(keyName, keyTime):
+        for (key, time) in zip(keyName, keyTime):
             hour = int(time[:2])
             minute = int(time[3:])
             d[key].append(60 * hour + minute)
-        for key, times in d.items():
+        for (key, times) in d.items():
             if key not in res:
                 times.sort()
                 q = deque()

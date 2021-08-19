@@ -3,12 +3,12 @@ from typing import List
 
 
 class Solution:
-    def avoidFlood(self, rains: List[int]) -> List[int]:
 
+    def avoidFlood(self, rains: List[int]) -> List[int]:
         result = []
         filled = {}
         free_day = []
-        for index, city in enumerate(rains):
+        for (index, city) in enumerate(rains):
             if city:
                 result.append(-1)
                 if city not in filled:
@@ -22,12 +22,10 @@ class Solution:
                     else:
                         return []
                     pass
-
                 pass
             else:
                 result.append(1)
                 free_day.append(index)
                 pass
             pass
-
         return result

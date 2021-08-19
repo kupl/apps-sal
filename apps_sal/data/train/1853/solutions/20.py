@@ -3,14 +3,9 @@ def buildGraph(n, edges):
     for e in edges:
         graph[e[0]][e[1]] = e[2]
         graph[e[1]][e[0]] = e[2]
-
-    '''
-    Floyed-Warshall algorithm won't work if diagonal values are not set to 
-    0 when self loop distance is not given
-    '''
+    "\n    Floyed-Warshall algorithm won't work if diagonal values are not set to \n    0 when self loop distance is not given\n    "
     for i in range(n):
         graph[i][i] = 0
-
     return graph
 
 
@@ -22,16 +17,13 @@ def floyedWarshalAllPairDist(graph):
                 graph[j][k] = min(graph[j][k], graph[j][i] + graph[i][k])
 
 
-'''
-Algorithm: 
-1) Measure all pair distance using Floyed Warshal algorithm
-2) Find the city with minimum connected cities with atmost threshold distance
-'''
+'\nAlgorithm: \n1) Measure all pair distance using Floyed Warshal algorithm\n2) Find the city with minimum connected cities with atmost threshold distance\n'
 
 
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        '''
+        """
         graph = buildGraph(n, edges)
         floyedWarshalAllPairDist(graph)
 
@@ -44,12 +36,11 @@ class Solution:
                 min_city = i
 
         return min_city
-        '''
+        """
         g = [[float('inf')] * n for _ in range(n)]
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             g[u][v] = w
             g[v][u] = w
-
         for i in range(n):
             for u in range(n):
                 for v in range(n):
@@ -57,12 +48,10 @@ class Solution:
                         g[u][v] = 0
                     else:
                         g[u][v] = min(g[u][v], g[u][i] + g[i][v])
-
-        city, count = -1, float('inf')
+        (city, count) = (-1, float('inf'))
         for i in range(n):
-            tmp = sum(1 for x in g[i] if x <= distanceThreshold)
+            tmp = sum((1 for x in g[i] if x <= distanceThreshold))
             if tmp <= count:
                 city = i
                 count = tmp
-
         return city

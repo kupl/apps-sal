@@ -1,10 +1,11 @@
 class Solution:
+
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         if M == 0:
             return 1
         graph = [[-1] * N for i in range(N)]
         nodes = set()
-        for i, j, n in edges:
+        for (i, j, n) in edges:
             graph[i][j] = n
             graph[j][i] = n
             nodes.add(i)

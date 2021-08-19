@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         self.qsort(nums, 0, len(nums))
         return nums

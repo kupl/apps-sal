@@ -1,7 +1,8 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         g = collections.defaultdict(dict)
-        for i, j, w in edges:
+        for (i, j, w) in edges:
             g[i][j] = w
             g[j][i] = w
         t = distanceThreshold
@@ -10,7 +11,7 @@ class Solution:
             q = [(0, u)]
             ret = {}
             while q:
-                d, v = heapq.heappop(q)
+                (d, v) = heapq.heappop(q)
                 if v in ret:
                     continue
                 ret[v] = d

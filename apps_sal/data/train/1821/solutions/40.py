@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) < 2:
             return nums
@@ -8,7 +9,7 @@ class Solution:
             right = nums[mid:]
             self.sortArray(left)
             self.sortArray(right)
-            i, j, k = 0, 0, 0
+            (i, j, k) = (0, 0, 0)
             while i < len(left) and j < len(right):
                 if left[i] <= right[j]:
                     nums[k] = left[i]

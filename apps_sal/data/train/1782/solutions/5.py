@@ -1,7 +1,7 @@
 class Simplexer(object):
+
     def __init__(self, expression):
         self.tokens = []
-
         l = list(expression)[::-1]
         while l:
             t = l.pop()
@@ -21,15 +21,14 @@ class Simplexer(object):
                     t += l.pop()
                 t += l.pop()
             else:
-                while l and not l[-1].isspace() and not l[-1] in '+-*/%()=':
+                while l and (not l[-1].isspace()) and (not l[-1] in '+-*/%()='):
                     t += l.pop()
-
                 ttype = 'boolean' if t in 'true false' else 'keyword' if t in 'if else for while return func and break'.split() else 'identifier'
-
             self.tokens.append(Token(t, ttype))
         self.tokens = self.tokens[::-1]
 
-    def __iter__(self): return iter(self.tokens[::-1])
+    def __iter__(self):
+        return iter(self.tokens[::-1])
 
     def __next__(self):
         if self.tokens:

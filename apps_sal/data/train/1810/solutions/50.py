@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, lis: List[str]) -> List[str]:
         s = set()
         ans = []

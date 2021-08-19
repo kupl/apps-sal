@@ -1,7 +1,8 @@
 class Solution:
+
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         g = collections.defaultdict(dict)
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             g[u][v] = w
             g[v][u] = w
         q = [(0, 0)]
@@ -10,11 +11,11 @@ class Solution:
         result = 0
         edges2 = {}
         while q:
-            m, u = heapq.heappop(q)
+            (m, u) = heapq.heappop(q)
             if m > visited[u]:
                 continue
             result += 1
-            for v, w in list(g[u].items()):
+            for (v, w) in list(g[u].items()):
                 edge = (min(u, v), max(u, v))
                 l = None
                 if edge not in edges2:
@@ -27,7 +28,6 @@ class Solution:
                 if mm <= M and mm < visited[v]:
                     visited[v] = mm
                     heapq.heappush(q, (mm, v))
-
-        for (u, v), (l1, l2) in list(edges2.items()):
+        for ((u, v), (l1, l2)) in list(edges2.items()):
             result += min(l1 + l2, g[u][v])
         return result

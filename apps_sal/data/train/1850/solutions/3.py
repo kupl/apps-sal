@@ -1,8 +1,9 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         import collections
         self.graph = collections.defaultdict(set)
-        for u, v in edges:
+        for (u, v) in edges:
             self.graph[u].add(v)
             self.graph[v].add(u)
         self.count = [1 for _ in range(N)]

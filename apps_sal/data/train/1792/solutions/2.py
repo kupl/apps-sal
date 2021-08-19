@@ -11,7 +11,6 @@ for _ in range(10000):
     dd = b[-1]
     ee = c[-1]
     ff = a[-1]
-
     a.append(aa % 12345787)
     b.append(bb % 12345787)
     c.append(cc % 12345787)
@@ -27,4 +26,4 @@ def three_by_n(n):
     for i in range(n):
         tot += d[i] * a[n - i - 1] + a[i] * d[n - i - 1] + b[i] * b[n - i - 1] + a[i] * a[n - i - 1]
         tot %= 12345787
-    return (2 * tot) % 12345787
+    return 2 * tot % 12345787

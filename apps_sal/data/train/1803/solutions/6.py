@@ -6,10 +6,10 @@ import re
 
 def max_palindrome(x):
     s = str(x)
-    left, odds = [], []
+    (left, odds) = ([], [])
     for c in set(s):
         cnt = s.count(c)
-        d, d1 = cnt // 2, cnt % 2
+        (d, d1) = (cnt // 2, cnt % 2)
         if d:
             left.append(c * d)
         if d1:
@@ -18,7 +18,7 @@ def max_palindrome(x):
     s1 = ''.join(left)
     m = max(odds) if odds else ''
     temp = s1 + m + s1[::-1]
-    temp = re.sub(r'0*$', '', temp)
+    temp = re.sub('0*$', '', temp)
     return int(temp)
 
 
@@ -29,8 +29,7 @@ def numeric_palindrome(*args):
     if len(arr) > 1:
         res = 0
         for i in range(2, len(arr) + 1):
-            temp = [max_palindrome(reduce(mul, x))
-                    for x in itertools.combinations(arr, i)]
+            temp = [max_palindrome(reduce(mul, x)) for x in itertools.combinations(arr, i)]
             res = max(max(temp), res)
         return res
     elif len(arr) == 1:

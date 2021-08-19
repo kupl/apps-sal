@@ -2,13 +2,14 @@ from heapq import heappush, heappop
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         d = collections.defaultdict(list)
         last = []
-        for idx, lake in enumerate(rains):
+        for (idx, lake) in enumerate(rains):
             d[lake].append(idx)
         ans = []
-        for idx, lake in enumerate(rains):
+        for (idx, lake) in enumerate(rains):
             if lake:
                 if last and last[0] == idx:
                     return []
@@ -17,9 +18,8 @@ class Solution:
                 if arr:
                     heappush(last, arr[0])
                 ans.append(-1)
+            elif last:
+                ans.append(rains[heappop(last)])
             else:
-                if last:
-                    ans.append(rains[heappop(last)])
-                else:
-                    ans.append(1)
+                ans.append(1)
         return ans

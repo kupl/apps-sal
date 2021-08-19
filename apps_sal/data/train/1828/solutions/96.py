@@ -2,19 +2,17 @@ from collections import Counter
 
 
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         if barcodes is None or len(barcodes) == 0:
             return []
         if len(barcodes) == 1:
             return barcodes
-
         counter = Counter(barcodes)
         num_occurrences = sorted(counter, key=lambda x: counter.get(x), reverse=True)
         elements = dict()
-
         for elem in num_occurrences:
             elements[elem] = counter[elem]
-
         output = [None] * len(barcodes)
         item_index = 0
         index = 0
@@ -35,5 +33,4 @@ class Solution:
                 value = num_occurrences[value_index]
             else:
                 elements[value] -= 1
-
         return output

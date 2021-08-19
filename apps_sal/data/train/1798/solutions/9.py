@@ -3,7 +3,7 @@ import numpy as np
 
 def next_gen(grid):
     neighbours = np.array([np.roll(grid, (i, j), axis=(0, 1)) for i in [-1, 0, 1] for j in [-1, 0, 1]]).sum(axis=0) - grid
-    return (neighbours == 3) | (grid & (neighbours == 2))
+    return (neighbours == 3) | grid & (neighbours == 2)
 
 
 def unpad(grid):

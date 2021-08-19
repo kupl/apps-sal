@@ -2,8 +2,9 @@ import math
 
 
 class Solution:
+
     def merge_fn(self, x: List[int], y: List[int]) -> List[int]:
-        i, j = 0, 0
+        (i, j) = (0, 0)
         res = []
         while i < len(x) and j < len(y):
             if x[i] < y[j]:
@@ -26,6 +27,5 @@ class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) == 1:
             return nums
-
         res = self.helper_iter(nums)
         return res

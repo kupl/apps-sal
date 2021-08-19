@@ -1,11 +1,12 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         ans = [-1] * len(rains)
         nearest = []
         locs = defaultdict(deque)
-        for i, lake in enumerate(rains):
+        for (i, lake) in enumerate(rains):
             locs[lake].append(i)
-        for i, lake in enumerate(rains):
+        for (i, lake) in enumerate(rains):
             if nearest and nearest[0] == i:
                 return []
             if lake == 0:

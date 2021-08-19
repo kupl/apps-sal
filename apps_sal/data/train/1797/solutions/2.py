@@ -1,6 +1,6 @@
 def hamming(n):
     num = [1]
-    i, j, k = 0, 0, 0
+    (i, j, k) = (0, 0, 0)
     if n == 1:
         return 1
     else:

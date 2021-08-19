@@ -3,6 +3,7 @@ import collections
 
 
 class Solution(object):
+
     def topKFrequent(self, words, k):
         """
             :type words: List[str]

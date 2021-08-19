@@ -1,11 +1,9 @@
 def get(cells, i, j):
-    return cells[i][j] if i > -1 and j > -1 and i < len(cells) and j < len(cells[0]) else 0
+    return cells[i][j] if i > -1 and j > -1 and (i < len(cells)) and (j < len(cells[0])) else 0
 
 
 def num_neighbors(cells, i, j):
-    return (get(cells, i, j + 1) + get(cells, i, j - 1) + get(cells, i + 1, j) +
-            get(cells, i - 1, j) + get(cells, i - 1, j - 1) + get(cells, i - 1, j + 1) +
-            get(cells, i + 1, j - 1) + get(cells, i + 1, j + 1))
+    return get(cells, i, j + 1) + get(cells, i, j - 1) + get(cells, i + 1, j) + get(cells, i - 1, j) + get(cells, i - 1, j - 1) + get(cells, i - 1, j + 1) + get(cells, i + 1, j - 1) + get(cells, i + 1, j + 1)
 
 
 def next_cell(cell, i, j):

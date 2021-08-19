@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         i = 0
@@ -9,5 +10,4 @@ class Solution:
                 i += 1
             else:
                 j -= 1
-
         return arr[:i] + arr[j + 1:]

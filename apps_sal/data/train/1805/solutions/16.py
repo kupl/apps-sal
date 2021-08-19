@@ -1,7 +1,8 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         graph = collections.defaultdict(list)
-        for u, v in enumerate(friends):
+        for (u, v) in enumerate(friends):
             for i in v:
                 graph[u].append(i)
         queue = collections.deque()
@@ -10,7 +11,7 @@ class Solution:
         visited.add(id)
         res = collections.defaultdict(int)
         while queue:
-            id, l = queue.popleft()
+            (id, l) = queue.popleft()
             if l == level:
                 for j in watchedVideos[id]:
                     res[j] += 1
@@ -25,11 +26,10 @@ class Solution:
                 return -1
             elif res[y] > res[x]:
                 return 1
+            elif x > y:
+                return -1
+            elif y > x:
+                return 1
             else:
-                if x > y:
-                    return -1
-                elif y > x:
-                    return 1
-                else:
-                    return 0
-        return (sorted(res.keys(), key=cmp_to_key(func)))[::-1]
+                return 0
+        return sorted(res.keys(), key=cmp_to_key(func))[::-1]

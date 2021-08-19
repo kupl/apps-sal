@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
 
         def hasFactor(divisor, dividend):
@@ -12,9 +13,8 @@ class Solution:
                 if k > 1 and hasFactor(k, i):
                     continue
                 result.append(str(k) + '/' + str(i))
-
         result = []
-        for i in range(2, (n + 1)):
+        for i in range(2, n + 1):
             fractions(result, i)
         return result
         print(result)

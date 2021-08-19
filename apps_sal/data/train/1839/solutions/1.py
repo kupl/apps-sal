@@ -1,4 +1,5 @@
 class Solution:
+
     def swimInWater(self, grid):
         """
         :type grid: List[List[int]]
@@ -15,7 +16,7 @@ class Solution:
                 pos[grid[i][j]] = (i, j)
 
         def search(x, y, n, grid, flag, k):
-            if x < 0 or x >= n or y < 0 or y >= n or flag[x][y] == 2:
+            if x < 0 or x >= n or y < 0 or (y >= n) or (flag[x][y] == 2):
                 return
             if grid[x][y] > k:
                 flag[x][y] = 1
@@ -26,7 +27,7 @@ class Solution:
                 search(x, y - 1, n, grid, flag, k)
                 search(x, y + 1, n, grid, flag, k)
         for k in range(n * n):
-            x, y = pos[k]
+            (x, y) = pos[k]
             if flag[x][y] == 1:
                 search(x, y, n, grid, flag, k)
             if flag[n - 1][n - 1] == 2:

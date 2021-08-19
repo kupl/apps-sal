@@ -1,11 +1,11 @@
 class Solution:
+
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         ans = None
         graph = defaultdict(set)
-        for x, y in edges:
+        for (x, y) in edges:
             graph[x].add(y)
             graph[y].add(x)
-
         vis = set([1])
 
         def dfs(root, prev_prob, t):
@@ -13,7 +13,6 @@ class Solution:
             if t < 0:
                 return
             can = graph[root] - vis
-
             if root == target:
                 ans = prev_prob if not can or t == 0 else 0
                 return

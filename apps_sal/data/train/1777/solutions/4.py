@@ -1,9 +1,9 @@
 def edge_detection(image):
     image = [int(v) for v in image.split(' ')]
     width = image[0]
-    map, line, flat = [], [], []
-    rest, f = width, 1
-    current, result = ['', width], ['']
+    (map, line, flat) = ([], [], [])
+    (rest, f) = (width, 1)
+    (current, result) = (['', width], [''])
 
     def apply(value):
         if current[0] == value:
@@ -49,14 +49,13 @@ def edge_detection(image):
             line.append(v[f][0])
             t += 1
             if v[f][1] <= t:
-                t, f = 0, 1 + f
-    for r, row in enumerate(map):
+                (t, f) = (0, 1 + f)
+    for (r, row) in enumerate(map):
         if 2 < len(row[0]):
             apply(0)
             current[1] += width * row[0][2] - 1
         else:
             for f in range(width):
-                apply(max(diff(r, f, -1, 0), diff(r, f, -1, 1), diff(r, f, 0, 1), diff(r, f, 1, 1),
-                          diff(r, f, 1, 0), diff(r, f, 1, -1), diff(r, f, 0, -1), diff(r, f, -1, -1)))
+                apply(max(diff(r, f, -1, 0), diff(r, f, -1, 1), diff(r, f, 0, 1), diff(r, f, 1, 1), diff(r, f, 1, 0), diff(r, f, 1, -1), diff(r, f, 0, -1), diff(r, f, -1, -1)))
     apply(None)
     return result[0][2:]

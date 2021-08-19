@@ -5,9 +5,9 @@ class Solution:
         IMPOSSIBLE = float('inf')
         sorted_clips = sorted(clips, key=lambda x: x[0], reverse=False)
         opt = {}
-        for index, clip in enumerate(sorted_clips):
+        for (index, clip) in enumerate(sorted_clips):
             for t in range(0, T + 1):
-                start, end = tuple(clip)
+                (start, end) = tuple(clip)
                 if t == 0:
                     opt[index, t] = 0
                 elif index == 0:

@@ -1,5 +1,5 @@
 def recoverSecret(triplets):
-    'triplets is a list of triplets from the secrent string. Return the string.'
+    """triplets is a list of triplets from the secrent string. Return the string."""
     res = ''
     while triplets != []:
         non_firsts = [num for t in triplets for num in t[1:]]

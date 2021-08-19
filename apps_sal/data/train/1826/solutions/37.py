@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         valid_row_indexes = range(len(mat))
         valid_col_indexes = range(len(mat[0]))

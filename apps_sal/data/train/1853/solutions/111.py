@@ -1,7 +1,8 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         adj = collections.defaultdict(dict)
-        for a, b, c in edges:
+        for (a, b, c) in edges:
             adj[a][b] = adj[b][a] = c
 
         def bfs(s, distanceThreshold):
@@ -11,7 +12,7 @@ class Solution:
             visited[s] = True
             dist[s] = 0
             while frontier:
-                d, s = heapq.heappop(frontier)
+                (d, s) = heapq.heappop(frontier)
                 if d > distanceThreshold:
                     break
                 dist[s] = d

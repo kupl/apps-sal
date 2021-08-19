@@ -1,5 +1,7 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
+
         def checktime(s1, s2):
             h1 = int(s1.split(':')[0])
             m1 = int(s1.split(':')[1])
