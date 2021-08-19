@@ -3,8 +3,8 @@ N = int(input())
 C = []
 M = {}
 for i in range(N):
-    *c, = list(map(int, input().split()))
-    c = tuple(min(c[j:] + c[:j] for j in range(1, 5)))
+    (*c,) = list(map(int, input().split()))
+    c = tuple(min((c[j:] + c[:j] for j in range(1, 5))))
     C.append(c)
     if c not in M:
         M[c] = deque([i])
@@ -23,10 +23,8 @@ def count(p, q, r, s):
 def solve(ci, cj, k):
     R = {}
     for l in range(4):
-        #  [l]   [l-1]
-        # [l+k] [l+k+1]
-        c = ci[l], ci[l - 1], cj[k - l], cj[k - l - 1]
-        c = tuple(min(c[j:] + c[:j] for j in range(1, 5)))
+        c = (ci[l], ci[l - 1], cj[k - l], cj[k - l - 1])
+        c = tuple(min((c[j:] + c[:j] for j in range(1, 5))))
         if c not in M:
             return 0
         R[c] = R.get(c, 0) + 1

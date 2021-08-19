@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     n = int(input())
     x = list(map(int, input().split()))
@@ -14,7 +12,6 @@ def main():
             ans[i] = a_med
         else:
             ans[i] = b_med
-
     print(*ans, sep='\n')
 
 

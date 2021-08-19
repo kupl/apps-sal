@@ -1,5 +1,4 @@
 """http://codeforces.com/problemset/problem/864/D"""
-# 17:54
 
 
 def make_a_permutation():
@@ -15,7 +14,6 @@ def make_a_permutation():
     for i in range(n):
         if occ[i] == 1:
             fixedNum[i] = True
-
     for dup in dupIndexes:
         dupNum = a[dup]
         if occ[dupNum] > 1 and (fixedNum[dupNum] or dupNum > missing[mi]):
@@ -26,10 +24,10 @@ def make_a_permutation():
             occ[dupNum] -= 1
         else:
             fixedNum[dupNum] = True
-    return mi, a
+    return (mi, a)
 
 
-c, l = make_a_permutation()
+(c, l) = make_a_permutation()
 print(c)
 for i in range(len(l)):
-    print(l[i], end=" ")
+    print(l[i], end=' ')

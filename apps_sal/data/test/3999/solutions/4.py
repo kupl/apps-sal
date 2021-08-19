@@ -1,5 +1,5 @@
 from collections import defaultdict
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 
 
 def normal(xs):
@@ -13,15 +13,13 @@ def normal(xs):
     if xs[(xi + 1) % 4] > xs[(xi + 3) % 4]:
         xi = (xi + 2) % 4
     return (xs[xi % 4], xs[(xi + 1) % 4], xs[(xi + 2) % 4], xs[(xi + 3) % 4])
-#x = (0,2,2,0)
-# print(normal(x))
 
 
 dd = defaultdict(int)
 cc = defaultdict(int)
 ss = []
 for _ in range(N):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     x = normal([a, b, c, d])
     n = 1
     if x[0] == x[2] and x[1] == x[3]:
@@ -42,9 +40,8 @@ def dcr(x):
 
 
 def f(ff, gg):
-    # print(dd)
-    a, b, c, d = ff
-    e, h, g, f = gg
+    (a, b, c, d) = ff
+    (e, h, g, f) = gg
     tl = list(map(normal, [(a, e, f, b), (b, f, g, c), (c, g, h, d), (d, h, e, a)]))
     r = 1
     for cp in tl:
@@ -67,10 +64,10 @@ for i in range(N):
     for j in range(i + 1, N):
         sl = ss[j]
         dcr(sl)
-        x, y, z, w = sl
+        (x, y, z, w) = sl
         sls = [(x, y, z, w), (y, z, w, x), (z, w, x, y), (w, x, y, z)]
         for s in sls:
             r += f(ff, s)
         icr(sl)
     icr(ff)
-print((r // 3))
+print(r // 3)

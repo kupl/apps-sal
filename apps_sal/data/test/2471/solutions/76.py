@@ -2,12 +2,10 @@ def main():
     from collections import defaultdict
     import sys
     input = sys.stdin.readline
-
-    H, W, N = map(int, input().split())
-
+    (H, W, N) = map(int, input().split())
     g = defaultdict(int)
     for _ in range(N):
-        a, b = (int(x) - 1 for x in input().split())
+        (a, b) = (int(x) - 1 for x in input().split())
         for i in range(3):
             if a - i < 0:
                 continue
@@ -19,15 +17,12 @@ def main():
                 if b - j + 3 > W:
                     continue
                 g[(a - i) * W + (b - j)] += 1
-                # (a,b)を塗ったとき影響される3x3マス目の左上の座標に加算する
-
     ctr = [0] * 10
     tot = (H - 2) * (W - 2)
     for cnt in g.values():
         ctr[cnt] += 1
         tot -= 1
     ctr[0] = tot
-
     print(*ctr, sep='\n')
 
 

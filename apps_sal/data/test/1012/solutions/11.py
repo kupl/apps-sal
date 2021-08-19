@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -7,22 +5,16 @@ import heapq
 import time
 import itertools
 import sys
-
-"""
-created by shhuan at 2018/12/15 22:40
-
-"""
+'\ncreated by shhuan at 2018/12/15 22:40\n\n'
 
 
 def check(val):
-    l, r = 0, len(val) - 1
-
+    (l, r) = (0, len(val) - 1)
     while l < r:
         if val[l] != val[r]:
             return True
         l += 1
         r -= 1
-
     return False
 
 
