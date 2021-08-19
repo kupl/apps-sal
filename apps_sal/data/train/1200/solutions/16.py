@@ -1,4 +1,3 @@
-# cook your dish here
 def piano(s):
     acount = s.count('A')
     bcount = s.count('B')
@@ -13,6 +12,6 @@ def piano(s):
 for _ in range(int(input())):
     s = list(input())
     if piano(s):
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

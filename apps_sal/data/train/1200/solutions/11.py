@@ -1,10 +1,9 @@
-# cook your dish here
 n = int(input())
 while n != 0:
     i = 0
     flag = True
     string = input()
-    while i <= (len(string) - 2):
+    while i <= len(string) - 2:
         if string[i] == string[i + 1]:
             print('no')
             flag = False

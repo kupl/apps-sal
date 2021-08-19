@@ -1,12 +1,11 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     m = []
     t = []
     ms = ts = 0
     for i in range(n):
-        if (i % 2) == 0:
+        if i % 2 == 0:
             m.append(l[i])
         else:
             t.append(l[i])

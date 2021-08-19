@@ -1,7 +1,7 @@
 def execute(code):
     path = translatePath(createPath(transformCode(removeBrackets(code))))
-    if path == "":
-        return "*"
+    if path == '':
+        return '*'
     xmax = 0
     ymax = 0
     for coordinate in path:
@@ -14,16 +14,15 @@ def execute(code):
         grid.append((xmax + 1) * [' '])
     for visited in path:
         grid[visited[1]][visited[0]] = '*'
-    finalstring = ""
+    finalstring = ''
     for row in grid:
         for elem in row:
             finalstring += elem
-        finalstring += "\r\n"
+        finalstring += '\r\n'
     return finalstring[:-2]
 
 
 def removeBrackets(rscommand):
-    # check for brackets
     if rscommand.find('(') == -1:
         return rscommand
     found = False
@@ -40,9 +39,7 @@ def removeBrackets(rscommand):
     leftpart = rscommand[:openbracketindex]
     rightpart = rscommand[closingbracketindex + 1:]
     middlepart = rscommand[openbracketindex + 1:closingbracketindex]
-
-    # find number in rightpart
-    factor = ""
+    factor = ''
     indeks = 0
     if len(rightpart) > 0:
         while rightpart[indeks].isdigit():
@@ -50,7 +47,6 @@ def removeBrackets(rscommand):
             indeks += 1
             if indeks == len(rightpart):
                 break
-
     if indeks > 0:
         newcommand = leftpart + int(factor) * middlepart + rightpart[indeks:]
     else:
@@ -59,7 +55,7 @@ def removeBrackets(rscommand):
 
 
 def createPath(command):
-    state = [0, 0, "E"]
+    state = [0, 0, 'E']
     path = [[0, 0]]
     for x in command:
         if x == 'L' or x == 'R':
@@ -67,7 +63,6 @@ def createPath(command):
         else:
             state = moveForward(state)
             path.append([state[0], state[1]])
-
     return path
 
 
@@ -79,7 +74,6 @@ def translatePath(path):
             minx = c[0]
         if c[1] < miny:
             miny = c[1]
-    # translate path
     for c in path:
         c[0] = c[0] - minx
         c[1] = c[1] - miny
@@ -87,42 +81,38 @@ def translatePath(path):
 
 
 def moveForward(state):
-    # state[0] = x coordinate
-    # state[1] = y coordinate
-    # state[2] = direction N, S, E or W
-    if state[2] == "N":
+    if state[2] == 'N':
         return [state[0], state[1] - 1, state[2]]
-    if state[2] == "S":
+    if state[2] == 'S':
         return [state[0], state[1] + 1, state[2]]
-    if state[2] == "W":
+    if state[2] == 'W':
         return [state[0] - 1, state[1], state[2]]
-    # remaing direction is east_asian_width
     return [state[0] + 1, state[1], state[2]]
 
 
 def makeTurn(state, leftorright):
-    if leftorright == "L":
-        if state[2] == "N":
-            return [state[0], state[1], "W"]
-        if state[2] == "W":
-            return [state[0], state[1], "S"]
-        if state[2] == "S":
-            return [state[0], state[1], "E"]
-        if state[2] == "E":
-            return [state[0], state[1], "N"]
-    if leftorright == "R":
-        if state[2] == "N":
-            return [state[0], state[1], "E"]
-        if state[2] == "W":
-            return [state[0], state[1], "N"]
-        if state[2] == "S":
-            return [state[0], state[1], "W"]
-        if state[2] == "E":
-            return [state[0], state[1], "S"]
+    if leftorright == 'L':
+        if state[2] == 'N':
+            return [state[0], state[1], 'W']
+        if state[2] == 'W':
+            return [state[0], state[1], 'S']
+        if state[2] == 'S':
+            return [state[0], state[1], 'E']
+        if state[2] == 'E':
+            return [state[0], state[1], 'N']
+    if leftorright == 'R':
+        if state[2] == 'N':
+            return [state[0], state[1], 'E']
+        if state[2] == 'W':
+            return [state[0], state[1], 'N']
+        if state[2] == 'S':
+            return [state[0], state[1], 'W']
+        if state[2] == 'E':
+            return [state[0], state[1], 'S']
 
 
 def transformCode(code):
-    newcode = ""
+    newcode = ''
     indeks = 0
     while indeks < len(code):
         while not code[indeks].isdigit():
@@ -132,8 +122,7 @@ def transformCode(code):
                 break
         if indeks == len(code):
             break
-        # found a digit
-        factor = ""
+        factor = ''
         while code[indeks].isdigit():
             factor += code[indeks]
             indeks += 1

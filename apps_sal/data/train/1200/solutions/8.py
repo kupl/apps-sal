@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 for i in range(T):
     s = input()
@@ -7,13 +6,13 @@ for i in range(T):
     count = 0
     for i in range(len(s) // 2):
         a = s[x:y]
-        if "A" in a and "B" in a:
+        if 'A' in a and 'B' in a:
             count = count + 1
         else:
             count = count
         x = x + 2
         y = y + 2
     if count == len(s) // 2:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

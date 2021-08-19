@@ -1,5 +1,4 @@
 def min_sum(arr):
-    # Your code here
     s = 0
     arr = sorted(arr)
     while arr:
