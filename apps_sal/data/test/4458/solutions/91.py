@@ -1,6 +1,5 @@
 N = int(input())
 P = list(map(int, input().split()))
-
 tmp = N
 cnt = 0
 for i in range(N):

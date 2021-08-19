@@ -1,2 +1,2 @@
-s, t = input().split()
-print("".join([t, s]))
+(s, t) = input().split()
+print(''.join([t, s]))

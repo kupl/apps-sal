@@ -10,5 +10,4 @@ for i in counterA.keys():
         ans += counterA[i] - i
     elif i > counterA[i]:
         ans += counterA[i]
-
 print(ans)

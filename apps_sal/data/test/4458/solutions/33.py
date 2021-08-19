@@ -1,7 +1,6 @@
 n = int(input())
 p = list(map(int, input().split()))
-
-min_num = 10**6
+min_num = 10 ** 6
 cnt = 0
 for i in range(n):
     if p[i] < min_num:

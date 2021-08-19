@@ -10,11 +10,11 @@ ab.sort(key=lambda x: x[1], reverse=True)
 flag_ab = [False for i in range(n)]
 count = 0
 for i in range(n):
-    c, d = cd[i][0], cd[i][1]
+    (c, d) = (cd[i][0], cd[i][1])
     for j in range(n):
         if flag_ab[j] == True:
             continue
-        a, b = ab[j][0], ab[j][1]
+        (a, b) = (ab[j][0], ab[j][1])
         if c > a and d > b:
             flag_ab[j] = True
             count += 1

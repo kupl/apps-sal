@@ -1,6 +1,5 @@
 n = int(input())
 p = [int(s) for s in input().split()]
-
 ans = 1
 min_val = p[0]
 for i in range(1, n):

@@ -18,6 +18,6 @@ for i in range(q):
             break
         i += 2
     if ans:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

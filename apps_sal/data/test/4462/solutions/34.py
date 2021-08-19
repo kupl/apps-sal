@@ -10,13 +10,12 @@ for i in range(N):
 zero = a.count(0)
 one = a.count(1)
 two = a.count(2)
-
 if zero > two + 1:
-    print("No")
+    print('No')
 elif zero == two + 1:
     if zero + two == N:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("Yes")
+    print('Yes')

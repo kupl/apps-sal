@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 ans = [str(A) * B, str(B) * A]
 ans.sort()
-print((ans[0]))
+print(ans[0])

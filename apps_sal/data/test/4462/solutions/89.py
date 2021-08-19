@@ -8,4 +8,4 @@ for a in a_list:
         y += 1
     else:
         z += 1
-print("Yes" if (y == 0 and x >= z - 1) or (y > 0 and x >= z) else "No")
+print('Yes' if y == 0 and x >= z - 1 or (y > 0 and x >= z) else 'No')

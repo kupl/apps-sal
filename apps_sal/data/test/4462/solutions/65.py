@@ -11,8 +11,8 @@ for i in range(n):
     else:
         a1.append(a[i])
 if len(a4) >= n // 2:
-    print("Yes")
+    print('Yes')
 elif len(a4) + len(a2) // 2 >= n // 2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

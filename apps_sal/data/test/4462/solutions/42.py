@@ -4,7 +4,6 @@ f = []
 t = []
 o = []
 ans = 'No'
-
 for i in a:
     if i % 4 == 0:
         f.append(i)
@@ -12,11 +11,9 @@ for i in a:
         t.append(i)
     else:
         o.append(i)
-
 if len(t) == 0:
     if len(o) <= len(f) + 1:
         ans = 'Yes'
-else:
-    if len(o) <= len(f):
-        ans = 'Yes'
+elif len(o) <= len(f):
+    ans = 'Yes'
 print(ans)

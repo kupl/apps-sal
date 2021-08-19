@@ -11,8 +11,7 @@ def main():
             evens += 1
         else:
             odds += 1
-
-    if fours + (evens) // 2 >= n // 2:
+    if fours + evens // 2 >= n // 2:
         ans = 'Yes'
     else:
         ans = 'No'

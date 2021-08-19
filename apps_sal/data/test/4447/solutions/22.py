@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
-k, c, free = n // m, [[] for _ in range(m)], []
-for i, ai in enumerate(a):
+(k, c, free) = (n // m, [[] for _ in range(m)], [])
+for (i, ai) in enumerate(a):
     c[ai % m].append(i)
 ans = 0
 for _ in range(2 * m):

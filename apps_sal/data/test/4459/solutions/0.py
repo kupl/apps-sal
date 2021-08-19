@@ -1,5 +1,4 @@
 import collections
-
 N = int(input())
 L = list(map(int, input().split()))
 L = sorted(L)
@@ -14,5 +13,5 @@ for i in range(K):
     if D[i] > E[i]:
         ans += E[i]
     if D[i] < E[i]:
-        ans += (E[i] - D[i])
+        ans += E[i] - D[i]
 print(ans)

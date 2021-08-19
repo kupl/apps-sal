@@ -10,16 +10,13 @@ for ai in a:
         bai2.append(ai)
     else:
         bai_.append(ai)
-
 len_bai_ = len(bai_)
 len_bai2 = len(bai2)
 len_bai4 = len(bai4)
-
-
 if len_bai_ > len_bai4:
     if len_bai_ == len_bai4 + 1 and n == len_bai_ + len_bai4:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("Yes")
+    print('Yes')

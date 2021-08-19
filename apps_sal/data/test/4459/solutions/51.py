@@ -1,8 +1,6 @@
 from collections import Counter
-
 N = int(input())
 D = list(map(int, input().split()))
-
 CD = Counter(D)
 CD = list(CD.items())
 count = 0

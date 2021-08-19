@@ -1,4 +1,4 @@
-l = list("abcdefghijklmnopqrstuvwxyz")
+l = list('abcdefghijklmnopqrstuvwxyz')
 ans = input()
 for i in range(len(l)):
     if l[i] == ans:

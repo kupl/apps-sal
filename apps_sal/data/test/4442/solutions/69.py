@@ -1,7 +1,5 @@
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 my_list = []
-
 if a > b:
     for i in range(a):
         my_list.append(b)
@@ -11,5 +9,4 @@ elif b > a:
 else:
     for i in range(a):
         my_list.append(b)
-
 print(''.join([str(n) for n in my_list]))

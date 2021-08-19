@@ -1,32 +1,26 @@
 import copy
 from collections import defaultdict
-
-BIG = 10**9
-N, M = [int(i) for i in input().split()]
-
+BIG = 10 ** 9
+(N, M) = [int(i) for i in input().split()]
 K = [0] + [int(i) for i in input().split()]
-
 sumK = sum(K)
 max_days = 2 * sum(K)
-
 day_at_sale_per_item = defaultdict(list)
 for i in range(M):
-    day, item = [int(i) for i in input().split()]
+    (day, item) = [int(i) for i in input().split()]
     day_at_sale_per_item[item].append(day)
-
 sales_per_day = defaultdict(list)
-for item, days in list(day_at_sale_per_item.items()):
+for (item, days) in list(day_at_sale_per_item.items()):
     for day in days:
         sales_per_day[day].append(item)
-
-L, R = 0, max_days
+(L, R) = (0, max_days)
 answer = 0
 while L <= R:
     m = (L + R) // 2
 
     def get_best_sales(m):
         best_sales = defaultdict(list)
-        for item, days in list(day_at_sale_per_item.items()):
+        for (item, days) in list(day_at_sale_per_item.items()):
             best_day = 0
             for day in days:
                 if day <= m:
@@ -39,9 +33,7 @@ while L <= R:
         available_money = 0
         nb_sales = 0
         cK = copy.deepcopy(K)
-
         best_sales = get_best_sales(m)
-
         for day in range(1, m + 1):
             available_money += 1
             for item in best_sales[day]:
@@ -56,7 +48,6 @@ while L <= R:
         total_money = m
         needed_money = 2 * sumK - available_sales(m)
         return total_money >= needed_money
-
     if possible(m):
         answer = m
         R = m - 1

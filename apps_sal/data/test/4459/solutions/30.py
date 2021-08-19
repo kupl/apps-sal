@@ -1,5 +1,4 @@
 import collections as c
-
 n = int(input())
 s = list(map(int, input().split()))
 s = c.Counter(s)

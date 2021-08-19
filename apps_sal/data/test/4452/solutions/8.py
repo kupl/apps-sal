@@ -4,9 +4,9 @@ for _ in range(int(input())):
     k = 0
     a = []
     for x in s:
-        if x != "0":
+        if x != '0':
             k += 1
-            a.append(x + "0" * n)
+            a.append(x + '0' * n)
         n -= 1
     print(k)
     print(*a)

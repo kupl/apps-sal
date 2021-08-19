@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 n = int(input())

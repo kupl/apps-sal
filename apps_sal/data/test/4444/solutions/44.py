@@ -1,4 +1,3 @@
-s, t = input().split()
-
+(s, t) = input().split()
 answer = t + s
 print(answer)

@@ -1,4 +1,4 @@
-n, a, b, k = map(int, input().split())
+(n, a, b, k) = map(int, input().split())
 l1 = list(map(int, input().split()))
 new = []
 for x in l1:

@@ -7,7 +7,7 @@ cd.sort(key=lambda x: x[0])
 ans = 0
 i = 0
 red_x = []
-for c, d in cd:
+for (c, d) in cd:
     while i < n and ab[i][0] < c:
         bisect.insort_right(red_x, ab[i][1])
         i += 1

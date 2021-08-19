@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-res = "No"
+res = 'No'
 
 
 def check(p):
@@ -23,10 +23,8 @@ for i in range(n):
         c2 += 1
     else:
         c0 += 1
-
 if c0 == c4 + 1 and c2 == 0:
-    res = "Yes"
+    res = 'Yes'
 elif c0 <= c4:
-    res = "Yes"
-
+    res = 'Yes'
 print(res)

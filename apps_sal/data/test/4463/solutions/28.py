@@ -1,13 +1,11 @@
 s = input()
 t = input()
-
 s = sorted(s)
 t = sorted(t)[::-1]
-
-answer = "Yes"
+answer = 'Yes'
 for i in range(len(s)):
     if i == len(t):
-        answer = "No"
+        answer = 'No'
         break
     s_c = s[i]
     t_c = t[i]
@@ -16,10 +14,8 @@ for i in range(len(s)):
     elif s_c == t_c:
         continue
     else:
-        answer = "No"
+        answer = 'No'
         break
-
 if s == t:
-    answer = "No"
-
+    answer = 'No'
 print(answer)

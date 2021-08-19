@@ -1,8 +1,7 @@
 n = int(input())
 p = list(map(int, input().split()))
 ans = 0
-m = 10**18
-
+m = 10 ** 18
 for i in p:
     if m > i:
         m = i

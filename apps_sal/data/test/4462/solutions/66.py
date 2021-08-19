@@ -8,13 +8,12 @@ def main():
         if an % 2 == 0:
             if an % 4 == 0:
                 count4 += 1
-            else:
-                if not exist2:
-                    exist2 = True
-                    not4 += 1
+            elif not exist2:
+                exist2 = True
+                not4 += 1
         else:
             not4 += 1
-    print(('Yes' if count4 >= not4 - 1 else 'No'))
+    print('Yes' if count4 >= not4 - 1 else 'No')
 
 
 def __starting_point():

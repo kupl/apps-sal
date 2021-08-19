@@ -1,11 +1,9 @@
 N = int(input())
 AB = sorted([list(map(int, input().split())) for _ in range(N)])
 CD = sorted([list(map(int, input().split())) for _ in range(N)])
-
 paira = -1
 pairb = -1
 ans = 0
-
 for i in range(N):
     tempcd = CD[i]
     for h in range(len(AB)):
@@ -20,5 +18,4 @@ for i in range(N):
         AB.pop(pairnum)
         paira = -1
         pairb = -1
-
 print(ans)

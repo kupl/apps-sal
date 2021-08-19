@@ -1,6 +1,6 @@
 input()
 a = list(map(int, input().split()))
-b1, b2, b4 = [], [], []
+(b1, b2, b4) = ([], [], [])
 ans = ''
 for i in a:
     if i % 2 != 0:
@@ -14,9 +14,8 @@ if b2:
         ans = 'Yes'
     else:
         ans = 'No'
+elif len(b1) <= len(b4) + 1:
+    ans = 'Yes'
 else:
-    if len(b1) <= len(b4) + 1:
-        ans = 'Yes'
-    else:
-        ans = 'No'
+    ans = 'No'
 print(ans)

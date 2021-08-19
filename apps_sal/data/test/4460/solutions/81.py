@@ -1,2 +1,2 @@
 X = input().split()
-print((X.index("0") + 1))
+print(X.index('0') + 1)

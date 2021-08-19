@@ -1,5 +1,5 @@
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     f = str(a) * b
     s = str(b) * a
     ans = [f, s]
@@ -8,7 +8,7 @@ def main():
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

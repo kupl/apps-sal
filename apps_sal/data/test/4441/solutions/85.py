@@ -1,6 +1,6 @@
 x = int(input())
 if x == 1:
-    print("Hello World")
+    print('Hello World')
 else:
     x = int(input())
     y = int(input())

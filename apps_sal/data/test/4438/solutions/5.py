@@ -1,5 +1,5 @@
 def distance(a, b):
-    return(abs(a[0] - b[0]) + abs(a[1] - b[1]))
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 
 n = int(input())
@@ -29,5 +29,5 @@ for level in levels:
     newleft = min(left + distance(leftpoint, dict[level][1]) + r, right + distance(rightpoint, dict[level][1]) + r)
     leftpoint = dict[level][0]
     rightpoint = dict[level][1]
-    left, right = (newleft, newright)
+    (left, right) = (newleft, newright)
 print(min(left, right))

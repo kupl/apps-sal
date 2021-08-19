@@ -1,4 +1,4 @@
-n, m = input().split()
+(n, m) = input().split()
 n = int(n)
 m = int(m)
 nList = input().split()
@@ -11,24 +11,22 @@ oHis = []
 mHis = []
 maxD = 0
 for i in range(m):
-    d, t = input().split()
+    (d, t) = input().split()
     if nList[int(t) - 1] != 0:
         maxD = max(maxD, int(d))
         if d not in shopD.keys():
             shopD.update({d: [int(t)]})
-        else:
-            if int(t) not in shopD[d]:
-                shopD[d].append(int(t))
+        elif int(t) not in shopD[d]:
+            shopD[d].append(int(t))
         if t not in shopT.keys():
             shopT.update({t: [int(d)]})
-        else:
-            if int(d) not in shopT[t]:
-                shopT[t].append(int(d))
-for i, j in shopT.items():
+        elif int(d) not in shopT[t]:
+            shopT[t].append(int(d))
+for (i, j) in shopT.items():
     j = list(dict.fromkeys(j))
     j.sort()
     shopT[i] = j
-for i, j in shopD.items():
+for (i, j) in shopD.items():
     j = list(dict.fromkeys(j))
     shopD[i] = j
 total = sum(nList)
@@ -54,7 +52,7 @@ while total > 0 and day < maxD:
     if str(day) in shopD.keys():
         for t in shopD[str(day)]:
             if nList[t - 1] > 0:
-                if bList[t - 1] > 0 and shopT[str(t)][0] != day and coin > nList[t - 1] - bList[t - 1] and len(mHis) > 0 and coin > 0:
+                if bList[t - 1] > 0 and shopT[str(t)][0] != day and (coin > nList[t - 1] - bList[t - 1]) and (len(mHis) > 0) and (coin > 0):
                     i = 0
                     j = 0
                     while shopT[str(t)][i] < day:

@@ -2,7 +2,7 @@ from math import ceil, floor
 
 
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     d = h * w
     d = min((ceil(h / 3) - floor(h / 3)) * w, d)
     d = min((ceil(w / 3) - floor(w / 3)) * h, d)

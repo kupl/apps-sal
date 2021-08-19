@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 str = ''
 if int(a) <= int(b):
     for _ in range(int(b)):
@@ -6,5 +6,4 @@ if int(a) <= int(b):
 else:
     for _ in range(int(a)):
         str += b
-
 print(str)

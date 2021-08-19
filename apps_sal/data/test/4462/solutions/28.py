@@ -24,6 +24,6 @@ for i in range(n):
 if two > 0:
     one += 1
 if one <= four + 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,10 +1,8 @@
-
-
 def solve():
     Point = []
     n = int(input())
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         Point.append((x, y))
     data = {}
     for each in Point:
@@ -37,18 +35,18 @@ def solve():
     pre1 = (0, 0, 0)
     pre2 = (0, 0, 0)
     for each in sorted(data.keys()):
-        x1, y1, w1 = pre1
-        x2, y2, w2 = pre2
+        (x1, y1, w1) = pre1
+        (x2, y2, w2) = pre2
         if len(data[each]) == 2:
             if 'xa' in data[each]:
-                x3, y3 = data[each]['xa'], each
-                x4, y4 = data[each]['xi'], each
+                (x3, y3) = (data[each]['xa'], each)
+                (x4, y4) = (data[each]['xi'], each)
             if 'ya' in data[each]:
-                x3, y3 = each, data[each]['ya']
-                x4, y4 = each, data[each]['yi']
+                (x3, y3) = (each, data[each]['ya'])
+                (x4, y4) = (each, data[each]['yi'])
         else:
-            x3, y3 = data[each]['xi'], each
-            x4, y4 = each, data[each]['yi']
+            (x3, y3) = (data[each]['xi'], each)
+            (x4, y4) = (each, data[each]['yi'])
         d = abs(x3 - x4) + abs(y3 - y4)
         pre1 = (x3, y3, min(abs(x1 - x4) + abs(y1 - y4) + w1 + d, abs(x2 - x4) + abs(y2 - y4) + w2 + d))
         pre2 = (x4, y4, min(abs(x1 - x3) + abs(y1 - y3) + w1 + d, abs(x2 - x3) + abs(y2 - y3) + w2 + d))

@@ -1,9 +1,9 @@
 def resolve():
-    H, W = list(map(int, input().split()))
+    (H, W) = list(map(int, input().split()))
 
     def _solve(H, W):
         mean_w = W // 2
-        ans = float("inf")
+        ans = float('inf')
         for h in range(1, H):
             s1 = h * W
             mean_h = (H - h) // 2
@@ -16,7 +16,6 @@ def resolve():
                     s3 = (H - h - mean_h) * W
                 ans = min(ans, max(s1, s2, s3) - min(s1, s2, s3))
         return ans
-
     print(min(_solve(H, W), _solve(W, H)))
 
 

@@ -1,12 +1,11 @@
 n = int(input())
-red, blue = [], []
+(red, blue) = ([], [])
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     red.append([a, b, min(a, b)])
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     blue.append([a, b, min(a, b)])
-
 red.sort(key=lambda x: x[1])
 blue.sort(key=lambda x: x[0])
 status = [False for _ in range(n)]

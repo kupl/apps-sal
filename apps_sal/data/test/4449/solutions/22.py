@@ -7,18 +7,18 @@ for _ in range(int(input())):
     flag = 0
     for i in hsh:
         flag += i % 2
-        if(flag):
+        if flag:
             break
-    if(flag):
-        print("NO")
+    if flag:
+        print('NO')
     else:
         a.sort()
         s = a[0] * a[-1]
         for i in range(2 * n):
-            if(a[i] * a[4 * n - 1 - i] != s):
+            if a[i] * a[4 * n - 1 - i] != s:
                 flag = 1
                 break
-        if(flag):
-            print("NO")
+        if flag:
+            print('NO')
         else:
-            print("YES")
+            print('YES')

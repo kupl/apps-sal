@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 min = p[0]
 cnt = 0
 for i in range(n):

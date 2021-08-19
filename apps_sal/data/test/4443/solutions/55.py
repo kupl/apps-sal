@@ -1,3 +1,2 @@
 alp = 'abcdefghijklmnopqrstuvwxyz'
-
-print((alp[alp.index(input()) + 1]))
+print(alp[alp.index(input()) + 1])

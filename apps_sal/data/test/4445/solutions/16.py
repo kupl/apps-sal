@@ -1,8 +1,13 @@
-def GI(): return int(input())
+def GI():
+    return int(input())
 
 
-def GIS(): return list(map(int, input().split()))
-def LGIS(): return list(GIS())
+def GIS():
+    return list(map(int, input().split()))
+
+
+def LGIS():
+    return list(GIS())
 
 
 def main():

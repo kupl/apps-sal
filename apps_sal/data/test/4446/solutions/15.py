@@ -1,9 +1,8 @@
 import math
 import sys
 input = sys.stdin.readline
-N, a, b, k = list(map(int, input().split()))
+(N, a, b, k) = list(map(int, input().split()))
 h = list(map(int, input().split()))
-
 ans = 0
 tmp = []
 for i in range(N):
@@ -16,7 +15,6 @@ for i in range(N):
         else:
             j -= a
         tmp.append(j)
-
 tmp.sort()
 for x in tmp:
     if k >= math.ceil(x / a):

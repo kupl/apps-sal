@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
 sp = set()
@@ -20,7 +20,7 @@ for i in range(n):
     if chuj == 26:
         break
 if chuj < k:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
-    print("".join(odp))
+    print('YES')
+    print(''.join(odp))

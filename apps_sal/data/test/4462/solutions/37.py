@@ -1,7 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
-
-ans = "No"
+ans = 'No'
 c1 = c2 = c4 = 0
 for a in A:
     if a % 4 == 0:
@@ -10,12 +9,10 @@ for a in A:
         c2 += 1
     else:
         c1 += 1
-
 if c4 == 0 and c1 > 0:
-    ans = "No"
+    ans = 'No'
 elif c1 <= c4 + (c2 == 0):
-    ans = "Yes"
+    ans = 'Yes'
 else:
-    ans = "No"
-
+    ans = 'No'
 print(ans)

@@ -10,9 +10,8 @@ for Q in range(q):
         else:
             arr2.append(i)
             unused.remove(i)
-
     if len(unused) != 0:
-        print("NO")
+        print('NO')
     else:
         flag = True
         arr2.sort()
@@ -21,10 +20,10 @@ for Q in range(q):
         while len(arr2) != 0:
             s2 = arr2[0] * arr2[-1]
             if s2 != s:
-                print("NO")
+                print('NO')
                 flag = False
                 break
             else:
                 arr2 = arr2[1:-1]
         if flag:
-            print("YES")
+            print('YES')

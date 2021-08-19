@@ -4,12 +4,10 @@ A = []
 for i in range(N):
     A.append(tuple(map(int, input().split())))
 A.sort()
-
 B = []
 for i in range(N):
     B.append(tuple(map(int, input().split())))
 B.sort()
-
 heap = []
 heapify(heap)
 aindex = count = 0

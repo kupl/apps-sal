@@ -9,12 +9,12 @@ while q:
     value = a[0] * a[4 * n - 1]
     j = 0
     while j <= 2 * n - 2:
-        if(a[j] == a[j + 1] and a[4 * n - j - 1] == a[4 * n - j - 2]):
-            if(a[j] * a[4 * n - j - 1] == value):
+        if a[j] == a[j + 1] and a[4 * n - j - 1] == a[4 * n - j - 2]:
+            if a[j] * a[4 * n - j - 1] == value:
                 count += 1
         j += 2
-    if(count == n):
-        print("YES")
+    if count == n:
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     q -= 1

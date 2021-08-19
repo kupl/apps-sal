@@ -12,7 +12,7 @@ ans = []
 counter = 0
 for i in range(len(a)):
     for j in d[a[i]]:
-        sum1 += (a[i] * counter) + 1
+        sum1 += a[i] * counter + 1
         counter += 1
         ans.append(j)
 print(sum1)

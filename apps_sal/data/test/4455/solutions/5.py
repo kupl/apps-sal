@@ -1,9 +1,9 @@
 import bisect
-n, k = list(map(int, input().split()))
-r, o = list(map(int, input().split())), ''
+(n, k) = list(map(int, input().split()))
+(r, o) = (list(map(int, input().split())), '')
 d = {}
 for i in range(k):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if [b] != d.setdefault(a, [b]):
         d[a] += [b]
     if [a] != d.setdefault(b, [a]):

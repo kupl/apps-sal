@@ -8,7 +8,7 @@ for i in lst:
     else:
         freq[i] = 1
 ans = 0
-for key, value in freq.items():
+for (key, value) in freq.items():
     if key > value:
         ans += value
     elif key < value:

@@ -6,5 +6,4 @@ for x in range(len(p)):
     if p[x] <= a:
         count += 1
         a = p[x]
-
 print(count)

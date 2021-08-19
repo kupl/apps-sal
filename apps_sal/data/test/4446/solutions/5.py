@@ -1,4 +1,4 @@
-n, a, b, k = list(map(int, input().split()))
+(n, a, b, k) = list(map(int, input().split()))
 ar = list(map(int, input().split()))
 kek = []
 ans = 0

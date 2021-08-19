@@ -3,7 +3,6 @@ c = list(map(int, input().split()))
 a = 0
 a2 = 0
 a4 = 0
-
 for i in c:
     if i % 2 != 0:
         a += 1

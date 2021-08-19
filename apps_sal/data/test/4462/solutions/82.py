@@ -13,11 +13,10 @@ for i in range(n):
         z += 1
 if y == 0:
     if x + 1 >= z:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
+elif x >= z:
+    print('Yes')
 else:
-    if x >= z:
-        print("Yes")
-    else:
-        print("No")
+    print('No')

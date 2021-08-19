@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if a > b:
-    print((str(b) * a))
+    print(str(b) * a)
 else:
-    print((str(a) * b))
+    print(str(a) * b)

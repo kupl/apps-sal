@@ -9,7 +9,7 @@ def solve(h, w):
     return min(res)
 
 
-h, w = map(int, sys.stdin.readline().split())
+(h, w) = map(int, sys.stdin.readline().split())
 
 
 def main():

@@ -1,13 +1,10 @@
 import sys
 input = sys.stdin.readline
-
 N = int(input())
 a = list(map(int, input().split()))
-
 n_c4 = 0
 n_c2 = 0
 n_c0 = 0
-
 for ai in a:
     if ai % 4 == 0:
         n_c4 += 1

@@ -6,8 +6,8 @@ for y in range(t):
     for i in range(n):
         j = i
         ct = 0
-        while(i != a[j] - 1):
+        while i != a[j] - 1:
             j = a[j] - 1
             ct += 1
-        print(ct + 1, end=" ")
+        print(ct + 1, end=' ')
     print()

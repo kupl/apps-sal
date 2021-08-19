@@ -9,5 +9,5 @@ for _ in range(int(input())):
         while x != i:
             ans += 1
             x = a[x]
-        print(ans + 1, end=" ")
+        print(ans + 1, end=' ')
     print()

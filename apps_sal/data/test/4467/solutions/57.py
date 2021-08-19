@@ -2,11 +2,11 @@ n = int(input())
 red = [[] for i in range(n)]
 blue = [[] for i in range(n)]
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     red[i].append(a)
     red[i].append(b)
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     blue[i].append(a)
     blue[i].append(b)
 red = sorted(red)

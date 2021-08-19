@@ -25,4 +25,4 @@ for _ in range(q):
             head += 1
             tail -= 1
         return True
-    print("YES" if solve(a) else "NO")
+    print('YES' if solve(a) else 'NO')

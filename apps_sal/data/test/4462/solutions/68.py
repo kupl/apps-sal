@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().strip().split()))
-
 even = 0
 odd = 0
 four = 0
@@ -11,17 +10,14 @@ for n in range(N):
         even += 1
     else:
         odd += 1
-
 if odd == 0:
-    print("Yes")
-else:
-    if even == 0:
-        if four >= odd - 1:
-            print("Yes")
-        else:
-            print("No")
+    print('Yes')
+elif even == 0:
+    if four >= odd - 1:
+        print('Yes')
     else:
-        if four >= odd:
-            print("Yes")
-        else:
-            print("No")
+        print('No')
+elif four >= odd:
+    print('Yes')
+else:
+    print('No')

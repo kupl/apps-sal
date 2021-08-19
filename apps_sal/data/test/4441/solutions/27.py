@@ -4,4 +4,4 @@ if n == 2:
     b = int(input())
     print(a + b)
 else:
-    print("Hello World")
+    print('Hello World')

@@ -3,19 +3,18 @@ def abc091_c():
     red = []
     blue = []
     for _ in range(n):
-        a, b = (int(x) for x in input().split())
+        (a, b) = (int(x) for x in input().split())
         red.append((a, b))
     for _ in range(n):
-        c, d = (int(x) for x in input().split())
+        (c, d) = (int(x) for x in input().split())
         blue.append((c, d))
     blue = sorted(blue, key=lambda x: x[0])
-
     ans = 0
     r_used = [False] * n
-    for c, d in blue:
+    for (c, d) in blue:
         match = -1
         y_high = -1
-        for i, (a, b) in enumerate(red):
+        for (i, (a, b)) in enumerate(red):
             if r_used[i]:
                 continue
             if not (a < c and b < d):

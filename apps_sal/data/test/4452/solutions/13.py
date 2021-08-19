@@ -8,8 +8,8 @@ for nt in range(int(input())):
     count = 0
     ans = []
     for i in range(len(s)):
-        if s[i] != "0":
+        if s[i] != '0':
             count += 1
-            ans.append(s[i] + "0" * (len(s) - i - 1))
+            ans.append(s[i] + '0' * (len(s) - i - 1))
     print(count)
     print(*ans)

@@ -6,5 +6,4 @@ for i in a:
     if mina >= i:
         count += 1
         mina = i
-
 print(count)

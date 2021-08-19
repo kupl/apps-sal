@@ -9,10 +9,20 @@ from string import ascii_lowercase, ascii_uppercase, digits
 from fractions import gcd
 
 
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
@@ -32,7 +42,6 @@ def main():
             cnt += A[i] - i
         elif i > A[i]:
             cnt += A[i]
-
     print(cnt)
 
 

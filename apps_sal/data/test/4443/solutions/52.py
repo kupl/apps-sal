@@ -1,5 +1,9 @@
-def ri(S): return [int(v) for v in S.split()]
-def rii(): return ri(input())
+def ri(S):
+    return [int(v) for v in S.split()]
+
+
+def rii():
+    return ri(input())
 
 
 C = input()

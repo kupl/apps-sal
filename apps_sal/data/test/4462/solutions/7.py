@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 num2 = 0
 num4 = 0
 odd = 0

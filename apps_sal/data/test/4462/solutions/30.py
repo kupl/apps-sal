@@ -7,10 +7,9 @@ for i in range(n):
         four += 1
     elif a[i] % 2 == 0:
         two += 1
-
 if 2 * four + 1 >= n:
-    print("Yes")
+    print('Yes')
 elif 2 * four + two >= n:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

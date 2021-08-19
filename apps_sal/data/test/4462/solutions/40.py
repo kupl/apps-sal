@@ -1,6 +1,6 @@
 input()
 a = list(map(int, input().split()))
-b1, b2, b4 = 0, 0, 0
+(b1, b2, b4) = (0, 0, 0)
 for i in a:
     if i % 2 != 0:
         b1 += 1

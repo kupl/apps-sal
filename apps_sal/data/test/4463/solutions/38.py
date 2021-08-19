@@ -1,6 +1,5 @@
 s = input()
 t = input()
-
 ss = sorted(s)
 tt = sorted(t, reverse=True)
 
@@ -19,4 +18,4 @@ def checker(s, t):
     return 'No'
 
 
-print((checker(ss, tt)))
+print(checker(ss, tt))

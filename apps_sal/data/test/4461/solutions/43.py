@@ -13,7 +13,7 @@ def min_value(w, h):
 
 
 def resolve():
-    h, w = map(int, input().split())
+    (h, w) = map(int, input().split())
     a = min_value(w, h)
     b = min_value(h, w)
     print(min(a, b))

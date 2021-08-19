@@ -1,7 +1,6 @@
 _ = int(input())
 a = list(map(int, input().split()))
-
-x, y, z = 0, 0, 0
+(x, y, z) = (0, 0, 0)
 for i in a:
     if i % 4 == 0:
         z += 1
@@ -14,8 +13,7 @@ if y:
         print('Yes')
     else:
         print('No')
+elif x <= z + 1:
+    print('Yes')
 else:
-    if x <= z + 1:
-        print('Yes')
-    else:
-        print('No')
+    print('No')

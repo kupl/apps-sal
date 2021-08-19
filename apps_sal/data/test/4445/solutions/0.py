@@ -11,8 +11,7 @@ odd.sort()
 even.sort()
 if abs(len(odd) - len(even)) <= 1:
     print(0)
+elif len(odd) > len(even):
+    print(sum(odd[:len(odd) - len(even) - 1]))
 else:
-    if len(odd) > len(even):
-        print(sum(odd[:len(odd) - len(even) - 1]))
-    else:
-        print(sum(even[:len(even) - len(odd) - 1]))
+    print(sum(even[:len(even) - len(odd) - 1]))
