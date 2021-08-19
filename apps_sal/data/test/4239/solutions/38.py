@@ -1,9 +1,5 @@
-# 解説見ながら
-
 n = int(input())
-
 ans = n
-
 for i in range(n + 1):
     c = 0
     a = n - i
@@ -16,5 +12,4 @@ for i in range(n + 1):
         a = a // 9
     if c < ans:
         ans = c
-
 print(ans)

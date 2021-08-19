@@ -1,5 +1,4 @@
-# WsSc0L
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 if y > x and x >= -y:
     print(y * 4 - 2)
 elif y < x and x <= -y + 1:

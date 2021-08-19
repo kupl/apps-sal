@@ -1,7 +1,7 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 P = []
 for _ in range(N):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     P.append([x, y, z])
 ans = 0
 for X in (1, -1):
@@ -14,4 +14,3 @@ for X in (1, -1):
             A.sort(reverse=True)
             ans = max(ans, sum(A[:M]))
 print(ans)
-# O(NlogN)で全列挙

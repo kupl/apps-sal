@@ -1,10 +1,9 @@
 import itertools
 import numpy as np
+bit_base = 2
 
-bit_base = 2  # bit_base^nの全探査になる.
 
-
-def Base_10_to_n(X, n):  # 10進数をbit_base進数に変換
+def Base_10_to_n(X, n):
     X_dumy = X
     out = ''
     while X_dumy > 0:
@@ -14,18 +13,18 @@ def Base_10_to_n(X, n):  # 10進数をbit_base進数に変換
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     cake = []
     for i in range(N):
         cake.append(list(map(int, input().split())))
     cake = np.array(cake)
     ans = 0
     n = 3
-    for i in range(bit_base**n):
+    for i in range(bit_base ** n):
         s = Base_10_to_n(i, bit_base)
         s = s.zfill(n)
         cake_temp = cake.copy()
-        for num, j in enumerate(s):
+        for (num, j) in enumerate(s):
             if j == '0':
                 cake_temp[:, num] *= -1
         cake_temp = np.sum(cake_temp, axis=1)

@@ -1,5 +1,4 @@
-#input = open('a0.in').readline
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 stages = sorted(input().strip())
 i = 0
 total = 0
@@ -10,9 +9,7 @@ while k > 0 and i < n:
         total += wi
         k -= 1
         last = wi
-
     i += 1
-
 if k > 0:
     print(-1)
 else:

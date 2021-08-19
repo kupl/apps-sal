@@ -1,15 +1,10 @@
-# -*- coding: UTF-8 -*-
-
 import math
-
-n, k1, k2 = map(int, input().split())
+(n, k1, k2) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 x = []
 for i in range(n):
     x.append(int(math.fabs(a[i] - b[i])))
-
 k = k1 + k2
 while k > 0:
     max_num = 0
@@ -22,7 +17,6 @@ while k > 0:
         break
     x[idx] -= 1
     k -= 1
-
 ret = 0
 for i in range(n):
     ret += x[i] * x[i]

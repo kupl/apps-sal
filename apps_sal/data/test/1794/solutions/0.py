@@ -9,6 +9,7 @@ def maxi(a, b):
 
 
 class Segment_Tree:
+
     def init(self, left, right, data, leftbound, rightbound):
         self.data = data
         self.left = left
@@ -18,7 +19,6 @@ class Segment_Tree:
         return self
 
     def build(self, a, leftbound, rightbound):
-        #print(leftbound, rightbound, a)
         if len(a) == 0:
             return self.init(-1, -1, [0, -1], MAX_N + 1, -1)
         elif len(a) == 1:
