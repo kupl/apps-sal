@@ -1,5 +1,3 @@
-# cook your dish here
-
 t = int(input())
 for rep in range(t):
     n = int(input())

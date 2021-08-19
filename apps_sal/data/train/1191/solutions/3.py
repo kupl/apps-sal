@@ -1,4 +1,3 @@
-# cook your dish here
 from difflib import get_close_matches
 import sys
 
@@ -13,7 +12,7 @@ def get_string():
 
 test = int(input())
 for i in range(test):
-    n, q = input().split(" ")
+    (n, q) = input().split(' ')
     n = int(n)
     q = int(q)
     patterns = []

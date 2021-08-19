@@ -60,7 +60,6 @@ def __starting_point():
                 moves.append((table[2][j], 3, j + 2))
                 table[2][j + 1] = table[2][j]
                 table[2][j] = 0
-
         for j in range(n):
             if table[1][j] == table[0][j] and table[1][j] != 0:
                 moves.append((table[1][j], 1, j + 1))
@@ -74,8 +73,6 @@ def __starting_point():
         print(-1)
         return
     print(len(moves))
-    # for j in range(len(moves)):
-    #  print(moves[j])
     for j in moves:
         print(*j)
 

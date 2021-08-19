@@ -1,4 +1,3 @@
-# cook your dish here
 from difflib import get_close_matches
 import sys
 import os
@@ -18,7 +17,7 @@ def get_ints():
 
 test = int(input())
 for i in range(test):
-    n, q = get_ints()
+    (n, q) = get_ints()
     ans = []
     n = int(n)
     q = int(q)
@@ -30,4 +29,4 @@ for i in range(test):
         word = get_string()
         ans.append(closeMatches(patterns, word))
     for j in ans:
-        sys.stdout.write(j + "\n")
+        sys.stdout.write(j + '\n')

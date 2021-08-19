@@ -2,20 +2,14 @@ class Solution:
 
     def dfs(self, grid, i, j, m, n):
         tmp = 0
-
-        # print(self.visited)
-        # base case
         if grid[i][j] == 0 or self.visited[i][j] == 1:
             return 0
-
         self.visited[i][j] = 1
-
-        for x, y in self.direction:
+        for (x, y) in self.direction:
             x = i + x
             y = j + y
-            if x >= 0 and y >= 0 and x < m and y < n and grid[x][y] != 0 and self.visited[x][y] != 1:
+            if x >= 0 and y >= 0 and (x < m) and (y < n) and (grid[x][y] != 0) and (self.visited[x][y] != 1):
                 tmp = max(tmp, self.dfs(grid, x, y, m, n))
-
         self.visited[i][j] = 0
         return tmp + grid[i][j]
 
