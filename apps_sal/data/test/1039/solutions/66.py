@@ -14,30 +14,41 @@ import copy
 import bisect
 from operator import itemgetter
 from heapq import heappush, heappop
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
 
 
-def dijkstra(s, n):  # (始点, ノード数)
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+def dijkstra(s, n):
     dist = [inf] * n
-    hq = [(0, s)]  # (distance, node)
+    hq = [(0, s)]
     dist[s] = 0
-    seen = [False] * n  # ノードが確定済みかどうか
+    seen = [False] * n
     while hq:
-        v = heappop(hq)[1]  # ノードを pop する
+        v = heappop(hq)[1]
         seen[v] = True
-        for to, cost in adj[v]:  # ノード v に隣接しているノードに対して
+        for (to, cost) in adj[v]:
             if seen[to] == False and dist[v] + cost < dist[to]:
                 dist[to] = dist[v] + cost
                 heappush(hq, (dist[to], to))
@@ -47,19 +58,16 @@ def dijkstra(s, n):  # (始点, ノード数)
 N = ni()
 adj = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b, c = na()
+    (a, b, c) = na()
     adj[a - 1].append((b - 1, c))
     adj[b - 1].append((a - 1, c))
-
-Q, K = na()
+(Q, K) = na()
 ans = []
 d = dijkstra(K - 1, N)
-
 for i in range(Q):
-    x, y = na()
+    (x, y) = na()
     x -= 1
     y -= 1
     ans.append(d[x] + d[y])
-
 for i in range(Q):
-    print((ans[i]))
+    print(ans[i])

@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     cur = 1
     while True:
         if a < cur:
-            print("Vladik")
+            print('Vladik')
             break
         a -= cur
         if b < cur + 1:
-            print("Valera")
+            print('Valera')
             break
         b -= cur + 1
         cur += 2

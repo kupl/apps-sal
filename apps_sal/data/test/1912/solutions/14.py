@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
@@ -21,13 +20,13 @@ def is_ok(r, g, b, w):
 
 t = int(input())
 for _ in range(t):
-    r, g, b, w = map(int, input().split())
+    (r, g, b, w) = map(int, input().split())
     if is_ok(r, g, b, w):
-        print("Yes")
+        print('Yes')
         continue
     ok = False
     for _ in range(4):
-        if r > 0 and g > 0 and b > 0:
+        if r > 0 and g > 0 and (b > 0):
             r -= 1
             g -= 1
             b -= 1
@@ -36,6 +35,6 @@ for _ in range(t):
         if ok:
             break
     if ok:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -2,17 +2,14 @@ from collections import defaultdict
 
 
 def solve():
-
     a = input().strip()
     n = len(a)
-    # print(n)
     g = defaultdict(list)
     for i in range(n):
         g[a[i]].append(i)
     vis = {}
     vis[0] = 0
     q = [0]
-    # print(g)
     while len(q) != 0:
         tmp = q.pop(0)
         if tmp == n - 1:

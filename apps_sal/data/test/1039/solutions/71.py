@@ -1,30 +1,25 @@
 import sys
 import itertools
-# import numpy as np
 import time
 import math
 import heapq
 from collections import defaultdict
 from collections import Counter
 sys.setrecursionlimit(10 ** 7)
-
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-
-# map(int, input().split())
 N = int(input())
 adj = [[] for _ in range(N)]
 for i in range(N - 1):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     a -= 1
     b -= 1
     adj[a].append((c, b))
     adj[b].append((c, a))
-
-Q, K = list(map(int, input().split()))
+(Q, K) = list(map(int, input().split()))
 K -= 1
 
 
@@ -49,9 +44,8 @@ def dijkstra(start):
 
 
 dist = dijkstra(K)
-
 for i in range(Q):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
-    print((dist[x] + dist[y]))
+    print(dist[x] + dist[y])

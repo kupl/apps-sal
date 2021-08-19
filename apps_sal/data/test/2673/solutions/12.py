@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict, deque
 text = input().strip()
 v = len(text)
@@ -11,7 +10,7 @@ que = [0]
 dist = [0] * v
 vis = [False] * v
 vis[0] = True
-while(len(que)):
+while len(que):
     index = que.pop(0)
     if index == v - 1:
         break
@@ -24,11 +23,11 @@ while(len(que)):
     del store[temp]
     left = index - 1
     right = index + 1
-    if left >= 0 and not vis[left]:
+    if left >= 0 and (not vis[left]):
         vis[left] = True
         que.append(left)
         dist[left] = dist[index] + 1
-    if right < v and not vis[right]:
+    if right < v and (not vis[right]):
         vis[right] = True
         que.append(right)
         dist[right] = dist[index] + 1
