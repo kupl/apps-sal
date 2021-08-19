@@ -2,8 +2,6 @@ import sys
 from itertools import chain
 readline = sys.stdin.readline
 
-# 非再帰
-
 
 def scc(Edge):
     N = len(Edge)
@@ -11,7 +9,6 @@ def scc(Edge):
     for vn in range(N):
         for vf in Edge[vn]:
             Edgeinv[vf].append(vn)
-
     used = [False] * N
     dim = [len(Edge[i]) for i in range(N)]
     order = []
@@ -19,7 +16,7 @@ def scc(Edge):
         if not used[st]:
             stack = [st, 0]
             while stack:
-                vn, i = stack[-2], stack[-1]
+                (vn, i) = (stack[-2], stack[-1])
                 if not i and used[vn]:
                     stack.pop()
                     stack.pop()
@@ -61,18 +58,15 @@ def scc(Edge):
             if tn != tf and tn * M + tf not in teset:
                 teset.add(tn * M + tf)
                 tEdge[tn].append(tf)
-    return res, components, tEdge
+    return (res, components, tEdge)
 
 
 N = int(readline())
 P = list([int(x) - 1 for x in readline().split()])
-
 Edge = [[] for _ in range(N)]
 for i in range(N):
     Edge[P[i]].append(i)
-
-R, Com, _ = scc(Edge)
-
+(R, Com, _) = scc(Edge)
 Lord = list(chain(*Com[::-1]))
 val = [None] * N
 for vn in Lord:
@@ -83,12 +77,10 @@ for vn in Lord:
     for vf in Edge[vn]:
         if val[vf] < lvn:
             res[val[vf]] += 1
-
     for k in range(lvn):
         if not res[k]:
             val[vn] = k
             break
-
 st = Lord[-1]
 lst = len(Edge[st]) + 2
 res = [0] * lst
@@ -101,7 +93,6 @@ mc = []
 for k in range(lst):
     if not res[k]:
         mc.append(k)
-
 vn = st
 Ls = []
 while vn is not None:
@@ -113,9 +104,7 @@ while vn is not None:
         else:
             Ls.append(vf)
             vn = vf
-
 Ls.reverse()
-
 ans = False
 for idx in range(2):
     vc = val[:]
@@ -126,12 +115,10 @@ for idx in range(2):
         for vf in Edge[vn]:
             if vc[vf] < lvn:
                 res[vc[vf]] += 1
-
         for k in range(lvn):
             if not res[k]:
                 vc[vn] = k
                 break
-
     for vn in range(N):
         res = [False] * vc[vn]
         for vf in Edge[vn]:
@@ -148,4 +135,4 @@ for idx in range(2):
         ans = True
     if ans:
         break
-print(('POSSIBLE' if ans else 'IMPOSSIBLE'))
+print('POSSIBLE' if ans else 'IMPOSSIBLE')

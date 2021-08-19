@@ -1,6 +1,6 @@
 def men_from_boys(arr):
     l1 = sorted(set(arr))
-    arr, odds = [], []
+    (arr, odds) = ([], [])
     for i in l1:
         if i & 1:
             odds.append(i)
@@ -9,4 +9,4 @@ def men_from_boys(arr):
     l1 = None
     odds.reverse()
     arr.extend(odds)
-    return arr  # lamda suck, bitwise rock
+    return arr

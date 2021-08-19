@@ -1,8 +1,7 @@
 te = int(input())
-# print(te)
 while te > 0:
     te -= 1
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     dishes = list(input())
     heads = [0] * n
     tails = [0] * n

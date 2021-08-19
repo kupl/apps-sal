@@ -1,5 +1,3 @@
-# Sometimes a few lines of math go a long way!
-
 def sumin(n):
     return n * (n + 1) * (2 * n + 1) / 6
 

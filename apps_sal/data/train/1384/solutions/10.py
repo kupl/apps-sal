@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     m = k
     head = [0] * n
@@ -14,8 +13,7 @@ for _ in range(int(input())):
         if s[i + 1] == '1':
             tail[i] = 1 + tail[i + 1]
     i = 0
-
-    while(i + k <= n):
+    while i + k <= n:
         c = head[i] + k + tail[i + k - 1]
         m = max(m, c)
         i += 1
