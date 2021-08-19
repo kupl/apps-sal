@@ -1,7 +1,8 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
-        dp = [float('-inf')] * n  # max score after i
+        dp = [float('-inf')] * n
         dp[-1] = stoneValue[-1]
         dp.append(0)
         for i in range(n - 2, -1, -1):
