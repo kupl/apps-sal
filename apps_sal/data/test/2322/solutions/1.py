@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = ['#' * (m + 2)]
 for i in range(1, n + 1):
     B = ['#'] + list(input()) + ['#']

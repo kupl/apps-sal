@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 s = input()
 x = set()
 f = False
@@ -20,5 +18,4 @@ for t in range(len(x)):
         r *= 9
     else:
         r *= 10 - t
-
 print(r)

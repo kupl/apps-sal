@@ -1,18 +1,12 @@
 import itertools
-
-N, M, Q = map(int, input().split())
-
+(N, M, Q) = map(int, input().split())
 seisu_list = []
-
 for i in range(Q):
     seisu = list(map(int, input().split()))
     seisu_list.append(seisu)
-
 M_list = [i for i in range(1, M + 1)]
 A_list = list(itertools.combinations_with_replacement(M_list, N))
-# print(A_list)
 ans = 0
-
 for i in range(len(A_list)):
     ans_temp = 0
     for j in range(Q):

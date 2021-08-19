@@ -1,5 +1,5 @@
 from collections import Counter
-n, x, k = list(map(int, input().split()))
+(n, x, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 0
 if k != 0:
@@ -8,7 +8,7 @@ if k != 0:
     for i in a:
         dn[i // x] += 1
         un[(i - 0.1) // x] += 1
-    for item, kol in list(un.items()):
+    for (item, kol) in list(un.items()):
         ans += kol * dn[item + k]
     print(ans)
 else:
@@ -19,7 +19,6 @@ else:
         if i % x != 0:
             un[i] += 1
             dn[i // x] += 1
-    # print(dn,un,sep='\n')
     for kol in list(dn.values()):
         ans += kol * (kol + 1) // 2
     for kol in list(un.values()):

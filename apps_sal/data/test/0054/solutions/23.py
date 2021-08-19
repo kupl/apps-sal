@@ -1,5 +1,9 @@
-def VI(): return list(map(int, input().split()))
-def Y(): print("YES")
+def VI():
+    return list(map(int, input().split()))
+
+
+def Y():
+    print('YES')
 
 
 def run(w, m):
@@ -19,13 +23,11 @@ def run(w, m):
         if m == 0:
             Y()
             return
-        # if w**(i) > mm: break
-
-    print("NO")
+    print('NO')
 
 
 def main(info=0):
-    w, m = VI()
+    (w, m) = VI()
     run(w, m)
 
 

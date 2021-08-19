@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     try:
         while True:
@@ -8,7 +6,6 @@ def main():
             c = int(input())
             x = min(a, b >> 1, c >> 2)
             print(x * 7)
-
     except EOFError:
         pass
 

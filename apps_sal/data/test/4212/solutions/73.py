@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
-# import numpy as np
-# from itertools import combinations as comb
-# from bisect import bisect_left, bisect_right, insort_left, insort_right
-# from collections import Counter
 
+def solve(N: int, M: int, Q: int, ABCD: 'List[(int,int,int,int)]'):
 
-def solve(
-    N: int, M: int, Q: int, ABCD: "List[(int,int,int,int)]",
-):
     def dfs(A, l, r, n):
         if n > 0:
             max_score = 0
@@ -23,19 +16,18 @@ def solve(
             return max_score
         else:
             score = 0
-            for a, b, c, d in ABCD:
+            for (a, b, c, d) in ABCD:
                 if A[b - 1] - A[a - 1] == c:
                     score += d
             return score
-
     return dfs([], 1, M, N)
 
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    Q = int(next(tokens))  # type: int
+    N = int(next(tokens))
+    M = int(next(tokens))
+    Q = int(next(tokens))
     ABCD = []
     for i in range(Q):
         a = int(next(tokens))

@@ -1,14 +1,11 @@
 import itertools
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 l = []
 for i in range(q):
     tl = list(map(int, input().split()))
     l.append(tl)
-# print(l)
-
 lis = [i + 1 for i in range(m)]
 lis = list(itertools.combinations_with_replacement(lis, n))
-# print(lis)
 ans = 0
 for i in lis:
     tmp = 0

@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 board = [input() for _ in range(n)]
 u = [[1 for _ in range(m)] for _ in range(n)]
 l = [[1 for _ in range(m)] for _ in range(n)]
@@ -19,5 +18,5 @@ for i1 in range(n):
         if i2 >= 0 and u[i2][j] == k:
             i3 = i2 - k
             if i3 >= 0 and u[i3][j] >= k:
-                answer += min(l[i][j] for i in range(i3 - k + 1, i1 + 1))
+                answer += min((l[i][j] for i in range(i3 - k + 1, i1 + 1)))
 print(answer)
