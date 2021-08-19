@@ -1,5 +1,3 @@
-# cook your dish here
-
 def foo(temp, p):
     flag = True
     for d in range(p):
@@ -22,5 +20,4 @@ for t in range(T):
         y = (n, x)
         temp.append(y)
         lst.append(num)
-
     print(int(N * (N + 1) / 2))

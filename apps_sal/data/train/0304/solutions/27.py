@@ -1,4 +1,5 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         ages = sorted(ages)
         print(ages)
@@ -9,7 +10,7 @@ class Solution:
             return (min(low, a), hi)
 
         def getlow(v):
-            lo, hi = 0, len(ages)
+            (lo, hi) = (0, len(ages))
             while lo < hi:
                 mid = (lo + hi) // 2
                 if ages[mid] >= v:
@@ -19,7 +20,7 @@ class Solution:
             return hi
 
         def getupper(v):
-            lo, hi = 0, len(ages)
+            (lo, hi) = (0, len(ages))
             while lo < hi:
                 mid = (lo + hi) // 2
                 if ages[mid] <= v:
@@ -27,16 +28,12 @@ class Solution:
                 else:
                     hi = mid
             return hi - 1
-
         count = 0
         for i in range(len(ages)):
             if ages[i] <= 14:
                 continue
-            minv, maxv = bound(ages[i])
+            (minv, maxv) = bound(ages[i])
             c = getupper(maxv) - getlow(minv)
-            # print(i,\"  :\",c, getlow(minv), getupper(maxv) )
             count += c
-
         p = 115
-        # print( getlow(p), getupper(p))
         return count

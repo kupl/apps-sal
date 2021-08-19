@@ -1,4 +1,5 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         ages.sort()
         res = 0
@@ -12,7 +13,7 @@ class Solution:
             return 0
         leftmost = i
         for i in range(leftmost, len(ages)):
-            left, right = leftmost, i - 1
+            (left, right) = (leftmost, i - 1)
             edge = ages[i] * 0.5 + 7
             while left <= right:
                 m = (left + right) // 2
@@ -21,8 +22,7 @@ class Solution:
                 else:
                     right = m - 1
             res += i - left
-            # find same age:
-            left, right = i + 1, len(ages) - 1
+            (left, right) = (i + 1, len(ages) - 1)
             while left <= right:
                 m = (left + right) // 2
                 if ages[m] <= ages[i]:

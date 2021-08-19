@@ -1,11 +1,12 @@
 class Solution:
+
     def predictPartyVictory(self, senate):
         """
         :type senate: str
         :rtype: str
         """
-        num = 0  # num of Reeding R
-        while ('R' in senate and 'D' in senate):
+        num = 0
+        while 'R' in senate and 'D' in senate:
             res = []
             for i in senate:
                 if i == 'R':
