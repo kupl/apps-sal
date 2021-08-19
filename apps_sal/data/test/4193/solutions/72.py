@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc157/tasks/abc157_b
 import numpy as np
 
 
@@ -30,13 +28,7 @@ N = int(input())
 for _ in range(N):
     b = int(input())
     A = check(A, b)
-
-# for i in range(3):
-#     for j in range(3):
-#         print(f"{A[i][j]} ", end="")
-#     print("")
-
 if bingo(A):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

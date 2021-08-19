@@ -1,7 +1,5 @@
-# A - ABC/ARC
 def main():
     x = int(input())
-
     if x < 1200:
         print('ABC')
     else:

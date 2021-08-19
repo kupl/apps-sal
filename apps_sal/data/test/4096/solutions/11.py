@@ -1,4 +1,4 @@
-n, m = (int(i) for i in input().split())
+(n, m) = (int(i) for i in input().split())
 L = [int(i) for i in input().split()]
 p = 0
 t = 1
@@ -22,7 +22,6 @@ for u in range(len(L)):
     L = L[1:]
     n = n - 1
     p = 0
-    # print(L)
     for i in L:
         p += i
     if p >= m:

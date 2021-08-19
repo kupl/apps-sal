@@ -3,7 +3,6 @@ s = input()
 best = 0
 for i in range(len(s) // 2 + 1):
     t = s[:i] * 2
-    # print(t)
     try:
         if s.index(t) == 0:
             best = i

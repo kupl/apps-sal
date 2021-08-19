@@ -9,7 +9,6 @@ def solve(c, n):
     right_bound = root
     while len(c) > 0:
         val = c.pop()
-        # print('Current: ' + str(val))
         node = Node()
         node.value = val
         if left_bound.value > val:
@@ -19,7 +18,6 @@ def solve(c, n):
             else:
                 left_bound.next = node
             left_bound = node
-            # print('appended to left')
         elif right_bound.value > val:
             node.prev = right_bound
             if right_bound == root:
@@ -27,12 +25,8 @@ def solve(c, n):
             else:
                 right_bound.next = node
             right_bound = node
-        # 	print('appended to right')
-        # else:
-        # 	print('skipped')
     res_len = 0
     res_str = ''
-
     p = left_bound
     while p is not root:
         res_str += str(p.value) + ' '

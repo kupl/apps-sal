@@ -14,8 +14,7 @@ def mints():
 
 
 def solve():
-    n, m, d = mints()
-
+    (n, m, d) = mints()
     a = list(mints())
     b = [0] * m
     s = sum(a)
@@ -24,7 +23,7 @@ def solve():
         b[i] = p + d
         p = p + d + a[i] - 1
     if b[-1] + a[-1] - 1 + d < n + 1:
-        print("NO")
+        print('NO')
         return
     p = n + 1
     c = [0] * n
@@ -32,10 +31,9 @@ def solve():
         if b[i] + a[i] - 1 >= p:
             b[i] = p - a[i]
         p = b[i]
-        #print(i, b[i], a[i], b[i]+a[i])
         for j in range(b[i], b[i] + a[i]):
             c[j - 1] = i + 1
-    print("YES")
+    print('YES')
     print(*c)
 
 

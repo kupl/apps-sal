@@ -2,9 +2,6 @@ import sys
 import math
 sys.setrecursionlimit(100000)
 
-#sys.stdin = open("INP.txt", 'r')
-# sys.stdout = open("OUT.txt", 'w')
-
 
 def main():
     s = input()
@@ -31,12 +28,11 @@ def main():
             else:
                 l = k + 1
         sticker = ''
-        for char, occ in zip(list(M.keys()), list(M.values())):
-            sticker += (char * math.ceil(occ / l))
-
+        for (char, occ) in zip(list(M.keys()), list(M.values())):
+            sticker += char * math.ceil(occ / l)
         if len(sticker) < n:
             sticker += (n - len(sticker)) * list(M.keys())[0]
-        print("{}\n{}".format(l, sticker))
+        print('{}\n{}'.format(l, sticker))
 
 
 main()

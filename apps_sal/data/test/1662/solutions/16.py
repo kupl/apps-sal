@@ -1,14 +1,9 @@
-# -*- coding: utf-8 -*-
 import sys
-
 m = int(sys.stdin.readline())
 b = [int(x) for x in sys.stdin.readline().split(' ')]
-
 b.sort()
-
 l1 = []
 l2 = []
-
 last = b[0]
 rep = 1
 l1.append(last)
@@ -22,12 +17,9 @@ for i in range(1, len(b)):
         l1.append(last)
     elif rep == 2:
         l2.append(last)
-    # 否则丢弃
-
 if l2 and l2[-1] == l1[-1]:
     l2.pop()
 l2.reverse()
-
 print(len(l1) + len(l2))
 print(' '.join([str(x) for x in l1]), end='')
 if l2:

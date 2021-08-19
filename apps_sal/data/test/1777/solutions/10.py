@@ -1,5 +1,4 @@
 n = int(input())
-# by count of opens
 a = dict()
 for pos in range(n):
     cur = input()
@@ -21,10 +20,9 @@ for pos in range(n):
         a[ops] += 1
     else:
         a[ops] = 1
-
 ans = 0
 for i in list(a.keys()):
-    if (0 - i) in a:
+    if 0 - i in a:
         if i != 0:
             cur = min(a[i], a[0 - i])
             ans += cur
