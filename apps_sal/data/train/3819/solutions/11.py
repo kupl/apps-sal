@@ -1,5 +1,5 @@
 def smash(words):
-    out = ""
+    out = ''
     for word in words:
-        out += word + " "
+        out += word + ' '
     return out.strip()

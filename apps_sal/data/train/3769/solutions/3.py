@@ -2,8 +2,6 @@ import re
 from enum import Enum
 from operator import itemgetter
 from typing import List, Tuple, Set, Generator
-
-
 Cell = Tuple[int, int]
 
 
@@ -23,8 +21,7 @@ def execute(code: str) -> str:
 def visit_cells(code: str) -> Set[Cell]:
     visited_cells = [(0, 0)]
     direction = Direction.RIGHT
-
-    for action, n_times in code_interpreter(code):
+    for (action, n_times) in code_interpreter(code):
         if action == 'F':
             new_cells = move_forward(visited_cells[-1], direction, n_times)
             visited_cells.extend(new_cells)
@@ -34,15 +31,15 @@ def visit_cells(code: str) -> Set[Cell]:
 
 
 def code_interpreter(code: str) -> Generator[Tuple[str, int], None, None]:
-    for move in re.finditer(r'([LRF])(\d*)', code):
+    for move in re.finditer('([LRF])(\\d*)', code):
         action = move.group(1)
         times = int(move.group(2)) if move.group(2) else 1
-        yield action, times
+        yield (action, times)
 
 
 def move_forward(position: Cell, direction: Direction, n_moves: int) -> List[Cell]:
-    px, py = position
-    dx, dy = direction.value
+    (px, py) = position
+    (dx, dy) = direction.value
     return [(px + i * dx, py + i * dy) for i in range(1, n_moves + 1)]
 
 
@@ -53,20 +50,17 @@ def make_turn(start: Direction, side: str, n_turns: int) -> Direction:
 
 
 def draw_path(visited_cells: Set[Cell]) -> str:
-    max_x, min_x, max_y, min_y = find_cells_boundaries(visited_cells)
-
+    (max_x, min_x, max_y, min_y) = find_cells_boundaries(visited_cells)
     rectangle = list()
     for y in range(max_y, min_y - 1, -1):
         row = ['*' if (x, y) in visited_cells else ' ' for x in range(min_x, max_x + 1)]
         rectangle.append(''.join(row))
-
     return '\r\n'.join(rectangle)
 
 
 def find_cells_boundaries(visited_cells: Set[Cell]) -> Tuple[int, int, int, int]:
-    max_x, _ = max(visited_cells, key=itemgetter(0))
-    min_x, _ = min(visited_cells, key=itemgetter(0))
-
-    _, max_y = max(visited_cells, key=itemgetter(1))
-    _, min_y = min(visited_cells, key=itemgetter(1))
-    return max_x, min_x, max_y, min_y
+    (max_x, _) = max(visited_cells, key=itemgetter(0))
+    (min_x, _) = min(visited_cells, key=itemgetter(0))
+    (_, max_y) = max(visited_cells, key=itemgetter(1))
+    (_, min_y) = min(visited_cells, key=itemgetter(1))
+    return (max_x, min_x, max_y, min_y)

@@ -1,2 +1,2 @@
 def past(h, m, s):
-    return h * 36e5 + m * 6e4 + s * 1e3
+    return h * 3600000.0 + m * 60000.0 + s * 1000.0

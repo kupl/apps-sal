@@ -1,7 +1,5 @@
 import re
-
-BAD_WORD = re.compile(r'bad|mean|ugly|horrible|hideous', re.I)
-
+BAD_WORD = re.compile('bad|mean|ugly|horrible|hideous', re.I)
 GOOD_WORD = 'awesome'
 
 

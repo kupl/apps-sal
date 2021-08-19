@@ -3,7 +3,7 @@ def calculator(x, y, op):
         xx = int(x)
         yy = int(y)
     except ValueError:
-        return "unknown value"
+        return 'unknown value'
     if op == '+':
         return xx + yy
     elif op == '-':
@@ -13,4 +13,4 @@ def calculator(x, y, op):
     elif op == '/':
         return xx / yy
     else:
-        return "unknown value"
+        return 'unknown value'

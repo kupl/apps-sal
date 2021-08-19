@@ -7,10 +7,10 @@ def siegfried(week, txt):
     w.append(t)
     t = t.replace('ph', 'f').replace('Ph', 'F')
     w.append(t)
-    t = re.sub(r'([A-Za-z])\1', r'\1', re.sub(r'([a-zA-Z]{3,})e\b', r'\1', t), flags=re.I)
+    t = re.sub('([A-Za-z])\\1', '\\1', re.sub('([a-zA-Z]{3,})e\\b', '\\1', t), flags=re.I)
     w.append(t)
     t = t.replace('th', 'z').replace('Th', 'Z').replace('wr', 'r').replace('Wr', 'R').replace('wh', 'v').replace('Wh', 'V').replace('w', 'v').replace('W', 'V')
     w.append(t)
-    t = re.sub(r'\b(s|S)(m)', r'\1ch\2', re.sub(r'ing\b', r'ink', t.replace('ou', 'u').replace('an', 'un').replace('An', 'Un')))
+    t = re.sub('\\b(s|S)(m)', '\\1ch\\2', re.sub('ing\\b', 'ink', t.replace('ou', 'u').replace('an', 'un').replace('An', 'Un')))
     w.append(t)
     return w[week - 1]

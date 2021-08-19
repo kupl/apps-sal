@@ -1,1 +1,2 @@
-def angle(n): return (n - 2) * 180
+def angle(n):
+    return (n - 2) * 180

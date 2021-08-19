@@ -1,2 +1,2 @@
 def nerdify(txt):
-    return txt.translate(str.maketrans("aAeEl", "44331"))
+    return txt.translate(str.maketrans('aAeEl', '44331'))

@@ -1,1 +1,1 @@
-smash = lambda words, separator = " ": separator.join(words)
+smash = lambda words, separator=' ': separator.join(words)

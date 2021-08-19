@@ -1,5 +1,5 @@
 from functools import reduce
-REPLACEMENTS = ('.', ' [dot] '), ('@', ' [at] ')
+REPLACEMENTS = (('.', ' [dot] '), ('@', ' [at] '))
 
 
 def obfuscate(email):

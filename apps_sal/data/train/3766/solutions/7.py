@@ -33,5 +33,5 @@ def getUniquePrimeFactorsWithProducts(n):
     products = []
     if not counted == [[], []]:
         for i in range(len(counted[0])):
-            products.append(counted[0][i]**counted[1][i])
+            products.append(counted[0][i] ** counted[1][i])
     return products

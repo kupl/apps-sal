@@ -6,4 +6,4 @@ def calculator(x, y, op):
     if op in ops and str(x).isdigit() and str(y).isdigit():
         return ops[op](x, y)
     else:
-        return "unknown value"
+        return 'unknown value'

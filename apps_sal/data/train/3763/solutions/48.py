@@ -12,4 +12,4 @@ def calculator(x, y, op):
         if op == '/':
             res = x / y
             return res
-    return "unknown value"
+    return 'unknown value'

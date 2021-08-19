@@ -1,11 +1,5 @@
 import operator as op
-
-ops = {
-    '+': op.add,
-    '-': op.sub,
-    '*': op.mul,
-    '/': op.truediv,
-}
+ops = {'+': op.add, '-': op.sub, '*': op.mul, '/': op.truediv}
 
 
 def calculator(x, y, op):

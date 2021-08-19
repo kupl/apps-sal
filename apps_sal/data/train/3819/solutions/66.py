@@ -1,7 +1,7 @@
 def smash(words):
-    newWords = ""
+    newWords = ''
     for letters in words:
         newWords += letters
         if letters != words[-1]:
-            newWords += " "
+            newWords += ' '
     return newWords

@@ -1,8 +1,6 @@
 def calculator(x, y, op):
-    ops = ("+", "-", "*", "/")
-
+    ops = ('+', '-', '*', '/')
     if op in ops and (type(x) == int and type(y) == int):
-        return eval(f"{x} {op} {y}")
-
+        return eval(f'{x} {op} {y}')
     else:
-        return "unknown value"
+        return 'unknown value'

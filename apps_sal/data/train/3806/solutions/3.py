@@ -1,7 +1,7 @@
 def black_and_white(height, width, compressed):
     r = []
     row = []
-    for i, x in enumerate(compressed):
+    for (i, x) in enumerate(compressed):
         color = i % 2
         if not row and color:
             row.append(0)
@@ -15,7 +15,7 @@ def black_and_white(height, width, compressed):
                     row.append(0)
             r.append(row)
             x = x - remain
-            while(x >= width):
+            while x >= width:
                 if color:
                     r.append([0, width])
                 else:

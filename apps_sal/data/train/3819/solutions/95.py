@@ -1,5 +1,5 @@
 def smash(words):
-    sentens = ""
+    sentens = ''
     for i in words:
-        sentens += i + " "
+        sentens += i + ' '
     return sentens[:-1]

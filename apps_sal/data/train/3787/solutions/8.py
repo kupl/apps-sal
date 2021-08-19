@@ -1,7 +1,6 @@
 import re
-
-pattern = re.compile(r"[@\.]")
-obfusc = {'@': " [at] ", '.': " [dot] "}.get
+pattern = re.compile('[@\\.]')
+obfusc = {'@': ' [at] ', '.': ' [dot] '}.get
 
 
 def obfuscate(email):

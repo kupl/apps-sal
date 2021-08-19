@@ -1,12 +1,7 @@
 def spacify(string):
-
-    b = ""
-
+    b = ''
     for i in string:
-
-        b += i + ""
-        b += " "
-
+        b += i + ''
+        b += ' '
     b = b[:-1]
-
     return b

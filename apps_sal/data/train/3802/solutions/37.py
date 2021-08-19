@@ -1,7 +1,6 @@
 import unittest
-
-TEN_MORE_HOOPS_MESSAGE = "Great, now move on to tricks"
-NOT_TEN_MORE_HOOPS_MESSAGE = "Keep at it until you get it"
+TEN_MORE_HOOPS_MESSAGE = 'Great, now move on to tricks'
+NOT_TEN_MORE_HOOPS_MESSAGE = 'Keep at it until you get it'
 
 
 def hoop_count(n):
@@ -9,6 +8,7 @@ def hoop_count(n):
 
 
 class TestHoopCount(unittest.TestCase):
+
     def test_should_return_encouraging_message_when_getting_ten_more_hoops(self):
         n = 11
         actual = hoop_count(n)

@@ -2,4 +2,4 @@ import re
 
 
 def unscramble_eggs(word):
-    return re.sub(r'([^aeiouAEIOU])egg', r'\1', word)
+    return re.sub('([^aeiouAEIOU])egg', '\\1', word)

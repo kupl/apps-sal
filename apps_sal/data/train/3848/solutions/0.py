@@ -11,4 +11,4 @@ def unique_date(*args):
             dates.add(date)
         except ValueError:
             pass
-    return dates.pop() if len(dates) == 1 else "ambiguous" if dates else "invalid"
+    return dates.pop() if len(dates) == 1 else 'ambiguous' if dates else 'invalid'

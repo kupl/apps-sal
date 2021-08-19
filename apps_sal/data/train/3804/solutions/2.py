@@ -5,7 +5,7 @@ def sequence(n):
         tot = 0
         while j > 0:
             for k in s:
-                tot += k**j
+                tot += k ** j
                 j -= 1
             break
         yield tot

@@ -6,6 +6,7 @@ def angle(n):
 
 
 class TestAngle(unittest.TestCase):
+
     def test_should_return_180_when_given_n_is_3(self):
         self.assertEqual(angle(3), 180)
 

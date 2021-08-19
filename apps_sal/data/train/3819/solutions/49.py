@@ -1,3 +1,3 @@
 def smash(words):
-    w = " "
+    w = ' '
     return w.join(words)

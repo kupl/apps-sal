@@ -4,12 +4,12 @@ def chain_arith_deriv(start, k):
         s = 0
         r = factorize(start)
         if i == 0 and r == {start: 1}:
-            return str(start) + " is a prime number"
+            return str(start) + ' is a prime number'
         try:
             for n in r:
                 p = 1
                 for n2 in r:
-                    p *= r[n2] * n2**(r[n2] - 1) if n2 == n else n2**r[n2]
+                    p *= r[n2] * n2 ** (r[n2] - 1) if n2 == n else n2 ** r[n2]
                 s += p
             start = s
             res.append(s)
@@ -23,7 +23,7 @@ def factorize(num):
         return [num]
     r = {}
     d = 2
-    while d < num**.5 + 1:
+    while d < num ** 0.5 + 1:
         while not num % d:
             r[d] = r[d] + 1 if d in r else 1
             num /= d

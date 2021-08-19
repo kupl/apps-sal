@@ -1,1 +1,1 @@
-spacify = " ".join
+spacify = ' '.join

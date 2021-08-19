@@ -1,17 +1,16 @@
 from datetime import datetime
 from itertools import product
-
-FORMATS = ["%Y-%m-%d", "%Y-%d-%m"]
+FORMATS = ['%Y-%m-%d', '%Y-%d-%m']
 
 
 def check_dates(records):
     correct = 0
     recoverable = 0
     uncertain = 0
-    for start, end in records:
+    for (start, end) in records:
         good = set()
         right = False
-        for i, (start_format, end_format) in enumerate(product(FORMATS, FORMATS)):
+        for (i, (start_format, end_format)) in enumerate(product(FORMATS, FORMATS)):
             try:
                 start_date = datetime.strptime(start, start_format)
                 end_date = datetime.strptime(end, end_format)

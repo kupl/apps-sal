@@ -7,4 +7,4 @@ def radius(year):
 
 
 def does_fred_need_houseboat(x, y):
-    return next(year for year in count(1) if hypot(x, y) < radius(year))
+    return next((year for year in count(1) if hypot(x, y) < radius(year)))

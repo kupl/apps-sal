@@ -1,5 +1,5 @@
 def isValid(f):
-    if len(f) == 1 and f[0] != 7 and f[0] != 8:
+    if len(f) == 1 and f[0] != 7 and (f[0] != 8):
         return False
     elif 1 in f and 2 in f:
         return False

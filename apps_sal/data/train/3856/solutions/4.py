@@ -11,4 +11,4 @@ def list_simple_num(a):
 def solve(a, b):
     lst = tuple(filter(bool, list_simple_num(b)))
     ind = list_simple_num(len(lst))[1:]
-    return sum(lst for ind, lst in zip(ind, lst) if ind != 0 and lst > a)
+    return sum((lst for (ind, lst) in zip(ind, lst) if ind != 0 and lst > a))

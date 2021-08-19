@@ -1,7 +1,7 @@
 def black_and_white(height, width, compressed):
     answer = []
-    row, wFilled = [], 0
-    for i, pixels in enumerate(compressed):
+    (row, wFilled) = ([], 0)
+    for (i, pixels) in enumerate(compressed):
         wSum = wFilled + pixels
         if wSum < width:
             row.append(pixels)

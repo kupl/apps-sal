@@ -1,7 +1,7 @@
 def calculator(x, y, op):
     print((x, y, op))
     if type(x) == str or type(y) == str:
-        return "unknown value"
+        return 'unknown value'
     elif op == '+':
         return x + y
     elif op == '-':
@@ -11,4 +11,4 @@ def calculator(x, y, op):
     elif op == '/':
         return x / y
     else:
-        return "unknown value"
+        return 'unknown value'

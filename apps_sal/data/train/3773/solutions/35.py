@@ -1,7 +1,7 @@
 def isValid(formula):
-    if not 7 in formula and not 8 in formula:
+    if not 7 in formula and (not 8 in formula):
         return False
-    if 5 in formula and 6 not in formula or 6 in formula and 5 not in formula:
+    if 5 in formula and 6 not in formula or (6 in formula and 5 not in formula):
         return False
     if 1 in formula and 2 in formula:
         return False

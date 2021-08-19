@@ -6,4 +6,4 @@ def greatest_product(n):
         t.append(a)
     print(t)
     ans = max(t)
-    return(ans)
+    return ans

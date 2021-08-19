@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 def generate_diagonal(nn, l):
+
     @lru_cache(None)
     def calc(n, ll):
         if n == 0 or ll == 1:

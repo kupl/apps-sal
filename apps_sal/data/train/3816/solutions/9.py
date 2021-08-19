@@ -1,6 +1,6 @@
 def move_ten(st):
-    alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
-    output = ""
+    alphabet = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
+    output = ''
     for letter in st:
         index = alphabet.index(letter)
         letter = alphabet[index + 10]

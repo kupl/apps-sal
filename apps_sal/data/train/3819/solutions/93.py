@@ -1,1 +1,2 @@
-def smash(n): return " ".join(n)
+def smash(n):
+    return ' '.join(n)

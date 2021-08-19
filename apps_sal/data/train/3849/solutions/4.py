@@ -1,6 +1,5 @@
 def spacify(string):
-    retVal = ""
+    retVal = ''
     for ch in string:
-        retVal += ch + " "
-
+        retVal += ch + ' '
     return retVal[:-1]

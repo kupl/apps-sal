@@ -14,18 +14,19 @@ def check_dates(records):
 
 
 class Date:
+
     def __init__(self, date):
         self.date = [int(n) for n in date.split('-')]
         if 12 < self.date[1]:
-            self.date[2], self.date[1] = self.date[1:]
+            (self.date[2], self.date[1]) = self.date[1:]
             self.corrected = True
         else:
             self.corrected = False
-        self.ambiguous = self.date[1] < 13 and self.date[2] < 13 and self.date[1] != self.date[2]
+        self.ambiguous = self.date[1] < 13 and self.date[2] < 13 and (self.date[1] != self.date[2])
 
     def swap(self):
         date = self.date[:]
-        date[2], date[1] = date[1:]
+        (date[2], date[1]) = date[1:]
         return Date('-'.join([str(d) for d in date]))
 
     def __le__(self, other):
@@ -37,6 +38,7 @@ class Date:
 
 
 class DateRange:
+
     def __init__(self, start, end):
         self.start = Date(start)
         self.end = Date(end)

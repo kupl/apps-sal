@@ -4,7 +4,7 @@ def isValid(formula):
             return False
         if 3 in formula and 4 in formula:
             return False
-        if (5 in formula and not 6 in formula) or (6 in formula and not 5 in formula):
+        if 5 in formula and (not 6 in formula) or (6 in formula and (not 5 in formula)):
             return False
         return True
     else:

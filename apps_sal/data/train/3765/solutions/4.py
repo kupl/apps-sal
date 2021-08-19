@@ -8,7 +8,7 @@ def highest_age(group1, group2):
         else:
             d[name] = i['age']
     n = max(d.values())
-    for k, v in d.items():
+    for (k, v) in d.items():
         if n == v:
             lst.append(k)
     return min(lst)

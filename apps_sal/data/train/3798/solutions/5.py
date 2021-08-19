@@ -4,5 +4,5 @@ def cards_and_pero(s):
         return [-1] * 4
     result = [13] * 4
     for (suit, num) in cards:
-        result["PKHT".index(suit)] -= 1
+        result['PKHT'.index(suit)] -= 1
     return result

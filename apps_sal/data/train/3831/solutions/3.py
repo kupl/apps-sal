@@ -1,3 +1,3 @@
 def angle(n):
-    "Sum angles in N-sided shape"
+    """Sum angles in N-sided shape"""
     return (n - 2) * 180

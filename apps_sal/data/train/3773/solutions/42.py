@@ -3,9 +3,9 @@ def isValid(f):
         return False
     if 3 in f and 4 in f:
         return False
-    if not 7 in f and not 8 in f:
+    if not 7 in f and (not 8 in f):
         return False
-    if 5 in f and not 6 in f:
+    if 5 in f and (not 6 in f):
         return False
     if not 5 in f and 6 in f:
         return False

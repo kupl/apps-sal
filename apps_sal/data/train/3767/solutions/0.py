@@ -1,9 +1,7 @@
 from math import factorial
 from string import digits, ascii_uppercase
-
 DIGITS = digits + ascii_uppercase
 FACTORIALS = [1, 1]
-
 f = 1
 for i in range(2, 36):
     f *= i
@@ -20,4 +18,4 @@ def dec2FactString(nb):
 
 
 def factString2Dec(string):
-    return sum(DIGITS.index(d) * f for (d, f) in zip(reversed(string), FACTORIALS))
+    return sum((DIGITS.index(d) * f for (d, f) in zip(reversed(string), FACTORIALS)))

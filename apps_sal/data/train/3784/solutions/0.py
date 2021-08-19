@@ -1,4 +1,5 @@
-def extract(arr): return ''.join(arr[:2] + arr[-2:])
+def extract(arr):
+    return ''.join(arr[:2] + arr[-2:])
 
 
 def sort_transform(arr):

@@ -6,5 +6,4 @@ def words_to_marks(s):
     s1 = 0
     for letter in s:
         s1 += alphabet.index(letter)
-
     return s1

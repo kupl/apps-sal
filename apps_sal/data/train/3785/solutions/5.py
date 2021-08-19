@@ -9,7 +9,7 @@ def ncr(n, r):
 
 def generate_diagonal(n, l):
     mx = []
-    i, j = n, 0
+    (i, j) = (n, 0)
     while i < n + l:
         mx.append(ncr(i, j))
         i += 1

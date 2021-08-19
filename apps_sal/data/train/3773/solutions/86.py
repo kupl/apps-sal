@@ -25,8 +25,8 @@ def isValid(formula):
         elif 7 in formula or 8 in formula:
             if 5 in formula and 6 in formula:
                 return True
-            elif (3 in formula and 4 not in formula) or (4 in formula and 3 not in formula):
-                if (1 in formula and 2 not in formula) or (2 in formula and 1 not in formula):
+            elif 3 in formula and 4 not in formula or (4 in formula and 3 not in formula):
+                if 1 in formula and 2 not in formula or (2 in formula and 1 not in formula):
                     return True
                 else:
                     return False
@@ -38,8 +38,8 @@ def isValid(formula):
         if 7 in formula and 8 in formula:
             if 5 in formula and 6 in formula:
                 return True
-            elif (3 in formula and 4 not in formula) or (4 in formula and 3 not in formula):
-                if (1 in formula and 2 not in formula) or (2 in formula and 1 not in formula):
+            elif 3 in formula and 4 not in formula or (4 in formula and 3 not in formula):
+                if 1 in formula and 2 not in formula or (2 in formula and 1 not in formula):
                     return True
                 else:
                     return False
@@ -60,8 +60,8 @@ def isValid(formula):
                 return False
         elif 7 in formula or 8 in formula:
             if 5 in formula and 6 in formula:
-                if (3 in formula and 4 not in formula) or (4 in formula and 3 not in formula):
-                    if (1 in formula and 2 not in formula) or (2 in formula and 1 not in formula):
+                if 3 in formula and 4 not in formula or (4 in formula and 3 not in formula):
+                    if 1 in formula and 2 not in formula or (2 in formula and 1 not in formula):
                         return True
                     else:
                         return False
@@ -74,8 +74,8 @@ def isValid(formula):
     elif len(formula) == 6:
         if 7 in formula and 8 in formula:
             if 5 in formula and 6 in formula:
-                if (3 in formula and 4 not in formula) or (4 in formula and 3 not in formula):
-                    if (1 in formula and 2 not in formula) or (2 in formula and 1 not in formula):
+                if 3 in formula and 4 not in formula or (4 in formula and 3 not in formula):
+                    if 1 in formula and 2 not in formula or (2 in formula and 1 not in formula):
                         return True
                     else:
                         return False

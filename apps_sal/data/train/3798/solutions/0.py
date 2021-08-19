@@ -8,4 +8,4 @@ def cards_and_pero(s):
         if card[1:] in deck[card[0]]:
             return [-1, -1, -1, -1]
         deck[card[0]] |= {card[1:]}
-    return [13 - len(deck[suit]) for suit in "PKHT"]
+    return [13 - len(deck[suit]) for suit in 'PKHT']

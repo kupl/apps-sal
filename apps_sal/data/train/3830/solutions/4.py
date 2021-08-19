@@ -15,7 +15,6 @@ def _prime_factors(n):
             factors[n] += 1
         else:
             factors[n] = 1
-
     return factors
 
 
@@ -26,13 +25,12 @@ def chain_arith_deriv(start, m, chain=None):
     if chain is None:
         chain = []
     chain.append(start)
-
     if m == 1:
         return chain
     elif start == 1:
         next_num = 1
     else:
         next_num = 0
-        for p, k in factors.items():
+        for (p, k) in factors.items():
             next_num += k / p * start
     return chain_arith_deriv(round(next_num), m - 1, chain=chain)

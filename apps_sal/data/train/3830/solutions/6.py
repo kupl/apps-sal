@@ -14,7 +14,7 @@ def derivate(x):
         divisors[x] += 1
     if len(divisors) < 2:
         return 1
-    return sum(k * n / p for p, k in divisors.items())
+    return sum((k * n / p for (p, k) in divisors.items()))
 
 
 def chain_arith_deriv(start, k):

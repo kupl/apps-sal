@@ -1,16 +1,16 @@
 def chain_arith_deriv(n, k):
     if len(prime_factors(n)) < 2:
-        return "{} is a prime number".format(n)
+        return '{} is a prime number'.format(n)
     chain = [n]
     while k > 1:
-        k, n = k - 1, arith_deriv(n)
+        (k, n) = (k - 1, arith_deriv(n))
         chain.append(n)
     return chain
 
 
 def arith_deriv(n):
     factors = prime_factors(n)
-    return sum(n * factors.count(factor) // factor for factor in set(factors)) or 1
+    return sum((n * factors.count(factor) // factor for factor in set(factors))) or 1
 
 
 def prime_factors(n):

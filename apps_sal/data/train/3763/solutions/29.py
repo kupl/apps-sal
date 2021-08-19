@@ -2,13 +2,13 @@ def calculator(x, y, op):
     x = str(x)
     y = str(y)
     if x.isdigit() == True and y.isdigit() == True:
-        if op == "+" or op == "-" or op == "*" or op == "/":
+        if op == '+' or op == '-' or op == '*' or (op == '/'):
             equation = x + op + y
             result = eval(equation)
         else:
-            result = "unknown value"
+            result = 'unknown value'
     else:
-        result = "unknown value"
+        result = 'unknown value'
     return result
 
 

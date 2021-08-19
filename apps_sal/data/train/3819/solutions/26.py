@@ -1,5 +1,5 @@
 def smash(words):
-    res = ""
+    res = ''
     for i in range(len(words)):
         res += words[i]
         if i < len(words) - 1:

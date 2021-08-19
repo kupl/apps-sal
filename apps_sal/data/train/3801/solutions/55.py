@@ -1,6 +1,6 @@
 import string
 values = dict()
-for index, letter in enumerate(string.ascii_lowercase):
+for (index, letter) in enumerate(string.ascii_lowercase):
     values[letter] = index + 1
 
 

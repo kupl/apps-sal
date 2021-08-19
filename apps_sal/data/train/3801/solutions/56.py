@@ -1,4 +1,4 @@
-alpha = "-abcdefghijklmnopqrstuvwxyz"
+alpha = '-abcdefghijklmnopqrstuvwxyz'
 
 
 def words_to_marks(s):
