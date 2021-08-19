@@ -1,4 +1,5 @@
 class Solution(object):
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         memo = {}
 
@@ -7,8 +8,7 @@ class Solution(object):
                 return memo[t, s]
             if s == len(stamp):
                 if t < len(target):
-                    # check if cur_stmp precedes its following substring
-                    for i, ch in enumerate(stamp):
+                    for (i, ch) in enumerate(stamp):
                         if ch == target[t]:
                             suffix_stmp_seq = dfs(t, i, t - i)
                             if suffix_stmp_seq:
@@ -20,12 +20,9 @@ class Solution(object):
                 else:
                     memo[t, s] = [cur_stmp]
                     return [cur_stmp]
-
             if t == len(target):
-                # target[t] is empty while s < len(stamp), cur_stmp cannot succeeds empty.
                 memo[t, s] = []
                 return []
-
             if stamp[s] == target[t]:
                 seq1 = dfs(t + 1, s + 1, cur_stmp)
                 if seq1:
@@ -35,9 +32,7 @@ class Solution(object):
                     cand = dfs(t + 1, 0, t + 1)
                     memo[t, s] = [cur_stmp] + cand if cand else []
                     return [cur_stmp] + cand if cand else []
-
             elif stamp[s] != target[t]:
-                # check if cur_stmp succeeds the substring target[t:]
                 if stamp[0] == target[t]:
                     suffix_stmp_seq = dfs(t, 0, t)
                     memo[t, s] = [cur_stmp] + dfs(t, 0, t) if suffix_stmp_seq else []
@@ -45,5 +40,4 @@ class Solution(object):
                 else:
                     memo[t, s] = []
                     return []
-
         return dfs(0, 0, 0)

@@ -1,8 +1,8 @@
-# cook your dish here
 from sys import stdin, stdout
 
 
 class Graph:
+
     def __init__(self, V):
         self.V = V
         self.adj = [[] for i in range(V)]
@@ -33,10 +33,10 @@ class Graph:
 
 for ii in range(int(input())):
     x = 1293781029873019827309128730918273
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     g = Graph(n)
     for i in range(m):
-        nn, mm = map(int, input().split())
+        (nn, mm) = map(int, input().split())
         g.addEdge(nn, mm)
     c = g.connectedComponents()
     print(len(c))

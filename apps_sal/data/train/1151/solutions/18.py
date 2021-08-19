@@ -1,4 +1,3 @@
-# cook your dish here
 def dfs(s):
     if v[s] == 1:
         return
@@ -9,15 +8,15 @@ def dfs(s):
 
 test = int(input())
 for t in range(test):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     v = [0 for i in range(n)]
     adj = [[] for i in range(n)]
     for i in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         adj[a].append(b)
         adj[b].append(a)
     count = 0
-    while(0 in v):
+    while 0 in v:
         node = v.index(0)
         dfs(node)
         count += 1

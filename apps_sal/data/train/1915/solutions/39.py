@@ -1,8 +1,6 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        # abc??
-        # ?abc?
-        # ??abc
 
         def num_match(stamp, target):
             ret = 0
@@ -12,7 +10,6 @@ class Solution:
                 elif c2 != '?':
                     return -1
             return ret
-
         remain = len(target)
         ret = []
         cur = list(target)
@@ -28,8 +25,6 @@ class Solution:
                     cur[l:l + len(stamp)] = ['?'] * len(stamp)
                     ret.append(l)
                     remain -= match
-
             if tmp == remain:
                 return []
-
         return ret[::-1]

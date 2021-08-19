@@ -1,7 +1,6 @@
-# cook your dish here
 import copy
 MOD = 20011
-R, C, D = map(int, input().split())
+(R, C, D) = map(int, input().split())
 list1 = []
 for i in range(R):
     temp = list(map(int, input().split()))
@@ -21,7 +20,5 @@ for j in range(1, R):
     for i in range(1, C):
         if list2[j][i] != 0:
             list2[j][i] = list2[j - 1][i] + list2[j][i - 1]
-answer = (list2[R - 1][C - 1]) % MOD
-# for i in range(len(list1)):
-# print(list1[i],list2[i])
+answer = list2[R - 1][C - 1] % MOD
 print(answer)

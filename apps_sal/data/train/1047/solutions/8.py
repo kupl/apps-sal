@@ -1,13 +1,12 @@
-# cook your dish here
 import numpy as np
 t = int(input())
-while(t):
+while t:
     n = int(input())
     X = []
     Y = []
     for i in range(n):
-        x, y = map(int, input().split())
-        x, y = x - y, x + y
+        (x, y) = map(int, input().split())
+        (x, y) = (x - y, x + y)
         X.append(x)
         Y.append(y)
     X = set(X)
