@@ -1,6 +1,9 @@
-def kk(): return map(int, input().split())
-# k2=lambda:map(lambda x:int(x)-1, input().split())
-def ll(): return list(kk())
+def kk():
+    return map(int, input().split())
+
+
+def ll():
+    return list(kk())
 
 
 n = int(input())
@@ -21,12 +24,12 @@ while i < len(k):
         total += d[k[i]]
         if d[k[i]] == 1:
             if total > m:
-                m, mi = total, (start, k[i])
+                (m, mi) = (total, (start, k[i]))
             break
     else:
         i += 1
         if total > m:
-            m, mi = total, (start, k[i - 1])
+            (m, mi) = (total, (start, k[i - 1]))
 print(m)
 tbp = []
 for i in range(mi[0], mi[1] + 1):

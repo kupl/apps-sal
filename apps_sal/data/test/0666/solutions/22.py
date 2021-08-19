@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def isqrt(n):
     if n == 0:
         return 0

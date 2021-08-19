@@ -1,6 +1,13 @@
-def rint(): return int(input())
-def rmint(): return map(int, input().split())
-def rlist(): return list(rmint())
+def rint():
+    return int(input())
+
+
+def rmint():
+    return map(int, input().split())
+
+
+def rlist():
+    return list(rmint())
 
 
 n = rint()
@@ -28,7 +35,6 @@ while a[l - 1] > 1:
 while a[r] > 1:
     r += 1
 print(ans)
-# print(l,r)
 
 
 def out(x, y=1):

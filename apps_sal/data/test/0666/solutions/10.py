@@ -1,7 +1,5 @@
 import collections
 import math
-
-#n ,m = map(int, input().split())
 n = int(input())
 x = int((math.sqrt(1 + 8 * n) - 1) / 2)
 t = (x + 1) * x // 2

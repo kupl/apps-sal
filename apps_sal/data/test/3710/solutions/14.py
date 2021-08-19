@@ -15,7 +15,6 @@ def lcm(a, b):
 def solve(n, k):
     ans = 1
     a = list(map(int, input().split()))
-    # print(a);
     for i in range(n):
         ans = math.gcd(k, lcm(ans, a[i]))
     return ans == k
@@ -23,11 +22,11 @@ def solve(n, k):
 
 while True:
     try:
-        n, k = list(map(int, input().split()))
+        (n, k) = list(map(int, input().split()))
         p = solve(n, k)
         if p:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     except EOFError:
         break

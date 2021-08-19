@@ -3,9 +3,9 @@ import sys
 
 
 def main():
-    r, c = map(int, sys.stdin.readline().strip().split())
+    (r, c) = map(int, sys.stdin.readline().strip().split())
     grid = [list(sys.stdin.readline().strip()) for _ in range(r)]
-    n = sum(u.count('#') for u in grid)
+    n = sum((u.count('#') for u in grid))
     if n == 0:
         if r == 1:
             print(1)
@@ -29,7 +29,6 @@ def main():
                 f = f or grid[i][j - 1] == '0'
             if f:
                 grid[i][j] = '0'
-
     grid[-1][-1] = '1'
     for i in range(r - 1, -1, -1):
         for j in range(c - 1, -1, -1):
@@ -39,7 +38,6 @@ def main():
                 grid[i][j] = '1'
             elif j != c - 1 and grid[i][j + 1] == '1':
                 grid[i][j] = '1'
-
     if grid[0][0] != '1':
         print(0)
         return

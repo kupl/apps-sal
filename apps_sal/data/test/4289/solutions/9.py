@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import decimal
 import sys
 input = sys.stdin.readline
@@ -7,7 +6,7 @@ input = sys.stdin.readline
 def main():
     numbers = []
     n = int(input())
-    t, a = map(int, input().split())
+    (t, a) = map(int, input().split())
     numbers = list(map(int, input().split()))
     dp = []
     hensu = decimal.Decimal('0.006')

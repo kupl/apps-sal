@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-cnt = [0] * (200005)
+cnt = [0] * 200005
 for i in range(0, n):
     cnt[a[i]] += 1
 ans = 0
@@ -8,13 +8,13 @@ ansl = 0
 ansr = 0
 l = 1
 N = 200001
-while (l <= N):
+while l <= N:
     if cnt[l] == 0:
         l += 1
     else:
         r = l
         now = 0
-        while (r <= N):
+        while r <= N:
             if cnt[r] == 0:
                 r -= 1
                 break
@@ -28,7 +28,6 @@ while (l <= N):
             ansl = l
             ansr = r
             ans = now
-        # print(l,r,now)
         if l == r:
             l = r + 1
         else:
@@ -43,4 +42,4 @@ for i in range(ansr, ansl - 1, -1):
         cnt[i] -= 1
 print(len(seq))
 for i in seq:
-    print(i, end=" ")
+    print(i, end=' ')

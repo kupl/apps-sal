@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def main():
     N = int(input())
     s = [input() for _ in range(N)]
