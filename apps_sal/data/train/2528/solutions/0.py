@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonPrefix(self, strs):
         """
         :type strs: List[str]
@@ -7,8 +8,3 @@ class Solution:
         strs = strs
         import os
         return os.path.commonprefix(strs)
-
-
-#         for x in strs:
-#            if prefix in x:
-#                 print x

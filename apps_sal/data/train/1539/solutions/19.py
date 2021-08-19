@@ -1,18 +1,9 @@
-#!/usr/bin/env python
-# -------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      dvdreddy
-#
-# Created:     05/03/2012
-# Copyright:   (c) dvdreddy 2012
-# Licence:     <your licence>
-# -------------------------------------------------------------------------------
+def toint(s):
+    return int(s)
 
 
-def toint(s): return int(s)
-def tofloat(s): return float(s)
+def tofloat(s):
+    return float(s)
 
 
 def get_int():
@@ -25,7 +16,6 @@ def main():
     while t:
         j = input()
         s = input()
-
         a = [0] * 256
         for i in j:
             a[ord(i)] = 1

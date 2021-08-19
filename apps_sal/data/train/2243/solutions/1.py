@@ -3,6 +3,7 @@ from collections import defaultdict
 
 
 class Bit:
+
     def __init__(self, n, MOD):
         self.size = n
         self.tree = [0] * (n + 1)
@@ -34,15 +35,14 @@ class Bit:
             if k <= self.size and sum_ + self.tree[k] < x:
                 sum_ += self.tree[k]
                 pos += 1 << i
-        return pos + 1, sum_
+        return (pos + 1, sum_)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 xxx = list(map(int, input().split()))
 yyy = list(map(int, input().split()))
 ab = defaultdict(set)
 coordinates = set()
-
 for x in xxx:
     if x < yyy[0] or yyy[-1] < x:
         continue
@@ -51,17 +51,13 @@ for x in xxx:
     b = yyy[i] - x
     ab[a].add(b)
     coordinates.add(b)
-
-# Bitのindexは1から始まるように作っているが、"0"を取れるようにするため、全体を1ずらす
-cor_dict = {b: i for i, b in enumerate(sorted(coordinates), start=2)}
+cor_dict = {b: i for (i, b) in enumerate(sorted(coordinates), start=2)}
 cdg = cor_dict.get
 MOD = 10 ** 9 + 7
 bit = Bit(len(coordinates) + 1, MOD)
 bit.add(1, 1)
-
 for a in sorted(ab):
     bbb = sorted(map(cdg, ab[a]), reverse=True)
     for b in bbb:
         bit.add(b, bit.sum(b - 1))
-
-print((bit.sum(bit.size)))
+print(bit.sum(bit.size))
