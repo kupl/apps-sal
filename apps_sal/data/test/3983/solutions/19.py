@@ -1,8 +1,8 @@
 from collections import Counter
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
-    *p, = list(range(n))
+    (n, m) = list(map(int, input().split()))
+    (*p,) = list(range(n))
     r = [0] * n
 
     def par(x):
@@ -25,20 +25,18 @@ for _ in range(t):
         else:
             p[px] = py
             r[py] += 1
-
     for _ in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         u -= 1
         v -= 1
         union(u, v)
     if n % 2:
-        print(('First' if (n * (n - 1) // 2 - m) % 2 else 'Second'))
+        print('First' if (n * (n - 1) // 2 - m) % 2 else 'Second')
         continue
-
     for i in range(n):
         par(i)
     cp = Counter(p)
-    if (cp[par(0)] - cp[par(n - 1)]) % 2:  # par
+    if (cp[par(0)] - cp[par(n - 1)]) % 2:
         print('First')
         continue
     if (n * (n - 1) // 2 - cp[par(0)] * cp[par(n - 1)] - m) % 2:

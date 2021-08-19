@@ -1,6 +1,4 @@
-#! /usr/bin/env python
-
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 dancers = {}
 for i in range(m):
     dance = [int(x) for x in input().split()]
@@ -11,5 +9,4 @@ for i in range(m):
             dancers[dance[(j + 1) % 3]] = (dancers[dance[j]] + 1) % 3
             dancers[dance[(j + 2) % 3]] = (dancers[dance[j]] + 2) % 3
             break
-
 print(*[x + 1 for x in list(dancers.values())])

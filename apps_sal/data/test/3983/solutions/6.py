@@ -1,9 +1,8 @@
-
-# Union-Find
 from collections import Counter
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = list(range(self.n))
@@ -23,7 +22,7 @@ class UnionFind():
         if p == q:
             return None
         if p > q:
-            p, q = q, p
+            (p, q) = (q, p)
         self.rank[p] += self.rank[q]
         self.par[q] = p
         self.count -= 1
@@ -40,16 +39,16 @@ class UnionFind():
 
 t = int(input())
 for i in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     UF = UnionFind(n)
     for i in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         UF.unite(a - 1, b - 1)
     if n % 2:
-        print("First" if (n * (n - 1) // 2 - m) % 2 else "Second")
+        print('First' if (n * (n - 1) // 2 - m) % 2 else 'Second')
     else:
         for i in range(n):
             UF.find(i)
         c = Counter(UF.par)
-        x, y = c[UF.find(0)], c[UF.find(n - 1)]
-        print("First" if x % 2 != y % 2 else "First" if (n * (n - 1) // 2 - x * y - m) % 2 else "Second")
+        (x, y) = (c[UF.find(0)], c[UF.find(n - 1)])
+        print('First' if x % 2 != y % 2 else 'First' if (n * (n - 1) // 2 - x * y - m) % 2 else 'Second')

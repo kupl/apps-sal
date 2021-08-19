@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -16,7 +15,8 @@ import queue
 import decimal
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -42,8 +42,8 @@ class Scanner():
         return [Scanner.int() for i in range(n)]
 
 
-MOD = int(1e09) + 7
-INF = int(1e15)
+MOD = int(1000000000.0) + 7
+INF = int(1000000000000000.0)
 
 
 def solve():
@@ -51,26 +51,20 @@ def solve():
     A = [0 for _ in range(N)]
     B = [0 for _ in range(N)]
     for i in range(N):
-        A[i], B[i] = Scanner.map_int()
+        (A[i], B[i]) = Scanner.map_int()
     A.sort()
     B.sort()
     if N % 2 == 0:
         mA = A[N // 2] + A[N // 2 - 1]
         mB = B[N // 2] + B[N // 2 - 1]
-        print((mB - mA + 1))
+        print(mB - mA + 1)
     else:
         mA = A[N // 2]
         mB = B[N // 2]
-        print((mB - mA + 1))
+        print(mB - mA + 1)
 
 
 def main():
-    # sys.setrecursionlimit(1000000)
-    # sys.stdin = open("sample.txt")
-    # T = Scanner.int()
-    # for _ in range(T):
-    #     solve()
-    # print('YNeos'[not solve()::2])
     solve()
 
 

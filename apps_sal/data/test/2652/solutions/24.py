@@ -17,8 +17,6 @@ class UnionFind:
     def unite(self, x: int, y: int) -> None:
         px = self.find(x)
         py = self.find(y)
-
-        # 一致していないときはリンクをつける
         if px != py:
             self._link(px, py)
 
@@ -39,7 +37,6 @@ class UnionFind:
     def find(self, x: int) -> int:
         if self._parents[x] == x:
             return x
-
         self._parents[x] = self.find(self._parents[x])
         return self._parents[x]
 
@@ -50,21 +47,16 @@ ps.sort(key=lambda t: t[0])
 xs = []
 for i in range(N - 1):
     xs.append((ps[i + 1][0] - ps[i][0], ps[i][2], ps[i + 1][2]))
-
 ps.sort(key=lambda t: t[1])
 ys = []
 for i in range(N - 1):
     ys.append((ps[i + 1][1] - ps[i][1], ps[i][2], ps[i + 1][2]))
-
 xs += [(1 << 40, -1, -1)]
 ys += [(1 << 40, -1, -1)]
-
 xs.sort()
 ys.sort()
-
-xc, yc = 0, 0
+(xc, yc) = (0, 0)
 uf = UnionFind(N)
-
 ans = 0
 while xc < N - 1 and yc < N - 1:
     if xs[xc][0] < ys[yc][0]:
@@ -77,5 +69,4 @@ while xc < N - 1 and yc < N - 1:
             uf.unite(ys[yc][1], ys[yc][2])
             ans += ys[yc][0]
         yc += 1
-
 print(ans)

@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = [int(item) for item in input().split()]
     all_same = True
     has_same = False

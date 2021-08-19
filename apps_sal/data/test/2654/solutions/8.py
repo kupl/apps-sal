@@ -1,14 +1,9 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 import numpy as np
 
-# from itertools import combinations as comb
-# form bisect import bisect_left, bisect_right, insort_left, insort_right
-# from collections import Counter
 
-
-def solve(N: int, A: "List[int]", B: "List[int]"):
+def solve(N: int, A: 'List[int]', B: 'List[int]'):
     A = sorted(A)
     B = sorted(B)
     if N % 2 == 1:
@@ -23,8 +18,7 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    # N, A, B = map(int, line.split())
-    N = int(next(tokens))  # type: int
+    N = int(next(tokens))
     AB = np.array(list(map(int, tokens)), dtype=np.int32)
     A = AB[0::2]
     B = AB[1::2]

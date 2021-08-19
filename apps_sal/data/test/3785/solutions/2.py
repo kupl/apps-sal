@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split(' '))
+(a, b, c) = map(int, input().split(' '))
 array = [[i for i in input()] for j in range(a)]
 p = []
 x = 0
@@ -7,7 +7,6 @@ for i in range(a):
         if array[i][j] == '.':
             p = [(i, j)]
             x += 1
-
 visited = [[False for _ in range(b)] for i in range(a)]
 
 
@@ -20,9 +19,8 @@ def ok(i, j):
 
 sa = 0
 while sa < x - c:
-    i, j = p[-1]
+    (i, j) = p[-1]
     p.pop()
-    # print(i,j,sa)
     if not visited[i][j]:
         if ok(i, j - 1):
             if not visited[i][j - 1]:
@@ -38,11 +36,9 @@ while sa < x - c:
                 p.append((i - 1, j))
         visited[i][j] = True
         sa += 1
-
 for i in range(a):
     for j in range(b):
-        if array[i][j] == '.' and not visited[i][j]:
+        if array[i][j] == '.' and (not visited[i][j]):
             array[i][j] = 'X'
-
 for each in [''.join(i) for i in array]:
     print(each)

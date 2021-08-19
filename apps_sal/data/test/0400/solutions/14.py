@@ -1,10 +1,10 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
-    # f.readline()
-    # input()
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
+
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
     [n, k] = get()
     a = get()
     b = []
@@ -27,7 +27,7 @@ def main():
                 k = 0
                 break
     if k > 0 and len(b) > 0:
-        k -= (k % 10)
+        k -= k % 10
         for i in b:
             if i[1] == 100:
                 continue
@@ -39,7 +39,7 @@ def main():
     for i in b:
         s += i[1] // 10
     print(s)
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

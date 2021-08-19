@@ -1,11 +1,11 @@
 import sys
 import math
-
 input = sys.stdin.readline
 T = int(input())
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -20,13 +20,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -41,7 +38,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -50,14 +47,14 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 for _ in range(T):
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for _ in range(M)]
     uf = UnionFind(N)
-    for a, b in ab:
+    for (a, b) in ab:
         a -= 1
         b -= 1
         uf.union(a, b)
@@ -72,16 +69,14 @@ for _ in range(T):
         else:
             print('Second')
     else:
-        if sum(roots_size) == (s_size + t_size):
-            flg = flg ^ (s_size & t_size)
+        if sum(roots_size) == s_size + t_size:
+            flg = flg ^ s_size & t_size
+        elif s_size & t_size:
+            flg = flg ^ 1
+        elif not s_size | t_size:
+            flg = flg ^ 0
         else:
-            # 先手が勝てるようにs_size, t_sizeを(1,1)か(0,0)にする。その後は勝利条件を持ってる方が常に維持できる
-            if (s_size & t_size):
-                flg = flg ^ 1
-            elif not (s_size | t_size):
-                flg = flg ^ 0
-            else:
-                flg = 1
+            flg = 1
         if flg:
             print('First')
         else:
