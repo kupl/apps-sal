@@ -1,5 +1,4 @@
 def pre_fizz(n):
-    # your code here
     array = []
     x = 1
     while x <= n:

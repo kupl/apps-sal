@@ -45,7 +45,6 @@ for i in l:
         abc(i)
     except:
         pass
-    # print(i,k)
     if len(k) == n:
         print(*k)
         break

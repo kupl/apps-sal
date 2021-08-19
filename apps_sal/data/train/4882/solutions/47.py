@@ -1,5 +1,4 @@
 def round_to_next5(n):
-    # Your code here
     i = 5
     while True:
         x = i - n
@@ -9,5 +8,4 @@ def round_to_next5(n):
             i = i + 5
         elif x >= 5:
             i = i - 5
-
     return n
