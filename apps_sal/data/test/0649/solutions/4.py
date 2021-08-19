@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
@@ -20,10 +19,7 @@ def fill(x, y, dir, depth):
 def dfs(x, y, dir, depth):
     if depth == n:
         return
-    #print(T, dir, depth)
     if (dir, depth) in T[x][y]:
-        # print("found")
-        #print(T, dir, depth)
         return
     fill(x, y, dir, depth)
     ndepth = depth + 1
@@ -38,18 +34,12 @@ def dfs(x, y, dir, depth):
 
 n = int(input())
 t = list(ri())
-
 v = [[0 for i in range(n * w)] for j in range(n * w)]
-
 T = [[set() for i in range(n * w)] for j in range(n * w)]
-
-# x, y, dir, depth
 dfs(n * w // 2, n * w // 2, 0, 0)
-
 ans = 0
 for i in range(n * w):
     for j in range(n * w):
         if v[i][j]:
             ans += 1
-
 print(ans)

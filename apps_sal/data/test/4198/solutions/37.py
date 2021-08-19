@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
 def main():
-    # 二分探索でも解ける
-    A, B, X = list(map(int, input().split()))
+    (A, B, X) = list(map(int, input().split()))
     num_max = 10 ** 9
-
     right = num_max + 1
     ok_max = 0
     cnt = 0

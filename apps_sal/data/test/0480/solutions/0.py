@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 def main():
     try:
         while True:
-            s, x1, x2 = list(map(int, input().split()))
-            t1, t2 = list(map(int, input().split()))
-            p, d = list(map(int, input().split()))
+            (s, x1, x2) = list(map(int, input().split()))
+            (t1, t2) = list(map(int, input().split()))
+            (p, d) = list(map(int, input().split()))
 
             def travel(src, trg):
                 nonlocal d
@@ -17,17 +15,14 @@ def main():
                     else:
                         d = 1
                         return trg + src
+                elif d < 0:
+                    return src - trg
                 else:
-                    if d < 0:
-                        return src - trg
-                    else:
-                        d = -1
-                        return s - src + s - trg
-
+                    d = -1
+                    return s - src + s - trg
             a = travel(p, x1)
             b = travel(x1, x2)
-            print("%d" % min(abs(x1 - x2) * t2, (a + b) * t1))
-
+            print('%d' % min(abs(x1 - x2) * t2, (a + b) * t1))
     except EOFError:
         pass
 

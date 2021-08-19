@@ -1,9 +1,8 @@
 def main():
-    N, K, C = list(map(int, input().split(' ')))
+    (N, K, C) = list(map(int, input().split(' ')))
     S = input()
-    R, L = [0 for _ in range(K)], [0 for _ in range(K)]
-    # calc first dates
-    index, cnt = 0, 0
+    (R, L) = ([0 for _ in range(K)], [0 for _ in range(K)])
+    (index, cnt) = (0, 0)
     while cnt < K and index <= N - 1:
         if S[index] == 'o':
             R[cnt] = index
@@ -11,9 +10,8 @@ def main():
             cnt += 1
         else:
             index += 1
-    # calc last dates
     S = S[::-1]
-    index, cnt = 0, 0
+    (index, cnt) = (0, 0)
     while cnt < K and index <= N - 1:
         if S[index] == 'o':
             L[K - 1 - cnt] = N - 1 - index

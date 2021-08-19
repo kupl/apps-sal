@@ -1,5 +1,3 @@
-# 問題：https://atcoder.jp/contests/abc146/tasks/abc146_c
-
 def buy_an_integer(a, b, x, l, r):
     c = (l + r) // 2
     price = a * c + b * len(str(c))
@@ -14,13 +12,13 @@ def buy_an_integer(a, b, x, l, r):
 
 
 def main():
-    a, b, x = list(map(int, input().strip().split()))
+    (a, b, x) = list(map(int, input().strip().split()))
     if a + b > x:
         return 0
-    if a * (10 ** 9) + b * 10 < x:
+    if a * 10 ** 9 + b * 10 < x:
         return 10 ** 9
     return buy_an_integer(a, b, x, 0, 10 ** 9)
 
 
 if __name__ == '__main__':
-    print((main()))
+    print(main())

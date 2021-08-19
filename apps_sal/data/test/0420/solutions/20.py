@@ -1,19 +1,8 @@
-# -------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      Administrator
-#
-# Created:     03/05/2014
-# Copyright:   (c) Administrator 2014
-# Licence:     <your licence>
-# -------------------------------------------------------------------------------
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n & 1:
     print(n)
 else:
-    k, t = n // 2, [int(input()[::2], 2) for i in range(n)]
+    (k, t) = (n // 2, [int(input()[::2], 2) for i in range(n)])
     while True:
         if t[:k] != t[k:2 * k][::-1]:
             print(2 * k)

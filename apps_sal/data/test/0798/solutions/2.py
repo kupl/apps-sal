@@ -3,18 +3,16 @@ import sys
 
 
 def solve(a, b, c):
-    ix, iy, iz = 3, 2, 1
-    # sort
+    (ix, iy, iz) = (3, 2, 1)
     if b < a:
-        a, b = b, a
-        ix, iy = iy, ix
+        (a, b) = (b, a)
+        (ix, iy) = (iy, ix)
     if c < a:
-        a, c = c, a
-        iz, iy = iy, iz
+        (a, c) = (c, a)
+        (iz, iy) = (iy, iz)
     if c < b:
-        b, c = c, b
-        iz, ix = ix, iz
-    # solve
+        (b, c) = (c, b)
+        (iz, ix) = (ix, iz)
     x2 = a + (c - b)
     if x2 % 2 != 0:
         print('Impossible')
@@ -34,5 +32,5 @@ def solve(a, b, c):
     print(sol[0][1], sol[1][1], sol[2][1])
 
 
-a, b, c = [int(x) for x in sys.stdin.readline().strip().split()]
+(a, b, c) = [int(x) for x in sys.stdin.readline().strip().split()]
 solve(a, b, c)

@@ -7,9 +7,6 @@ Language: Python 3.3.4
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -19,14 +16,13 @@ def read(mode=2):
         return [int(x) for x in inputs.split()]
 
 
-def write(s="\n"):
+def write(s='\n'):
     if isinstance(s, list):
-        s = " ".join(s)
+        s = ' '.join(s)
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
-# SOLUTION
-n, = read()
+(n,) = read()
 a = read()
 write(n * (n + 1) // 2 - sum(a))

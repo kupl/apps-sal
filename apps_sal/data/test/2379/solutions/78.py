@@ -1,5 +1,5 @@
-n, k, c = map(int, input().split())
-s = [i == "o" for i in list(input())]
+(n, k, c) = map(int, input().split())
+s = [i == 'o' for i in list(input())]
 i = 0
 cnt = 0
 l = [0] * n
@@ -26,7 +26,6 @@ while i >= 0:
     else:
         r[i] = cnt
         i -= 1
-# print(l,r)
 r.append(0)
 if r[1] < k:
     print(1)
