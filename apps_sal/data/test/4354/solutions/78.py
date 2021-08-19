@@ -1,9 +1,7 @@
-# B - Checkpoints
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a_b = [input().split() for i in range(n)]
     c_d = [input().split() for i in range(m)]
-
     for i in range(n):
         temp = []
         for j in range(m):

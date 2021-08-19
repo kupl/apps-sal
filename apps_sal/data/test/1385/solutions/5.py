@@ -2,18 +2,13 @@ def main(s):
     type = 0
     temp = ''
     answer = []
-
-    # type:
-    # 0 - обычный поиск
-    # 1 - внутри кавычек
-
     for c in s:
         if type == 0:
             if c == ' ':
                 if temp != '':
                     answer.append(temp)
                     temp = ''
-            elif c == '\"':
+            elif c == '"':
                 if temp != '':
                     answer.append(temp)
                     temp = ''
@@ -21,26 +16,22 @@ def main(s):
             else:
                 temp += c
         elif type == 1:
-            if c == '\"':
+            if c == '"':
                 type = 0
                 answer.append(temp)
                 temp = ''
             else:
                 temp += c
-
     if type == 0 and temp != '':
         answer.append(temp)
-
     q = ''
     for item in answer:
         q += '<' + item + '>\n'
-
     return q[:-1]
 
 
 def init():
     s = input()
-
     print(main(s))
 
 

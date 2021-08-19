@@ -1,6 +1,5 @@
-# C問題
 import numpy as np
-X, K, D = map(int, input().split())
+(X, K, D) = map(int, input().split())
 ans = 0
 if X >= 0:
     if int(X / D) <= K:

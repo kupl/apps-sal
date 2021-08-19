@@ -1,12 +1,26 @@
 import sys
 from collections import *
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
 
 
 n = int(input())
@@ -41,14 +55,12 @@ def dfs(u=0):
 
 
 def main():
-    for u, p in enumerate(pp, 1):
+    for (u, p) in enumerate(pp, 1):
         to[p - 1].append(u)
-    # print(to)
     if dfs():
-        print("POSSIBLE")
+        print('POSSIBLE')
     else:
-        print("IMPOSSIBLE")
-    # print(ww)
+        print('IMPOSSIBLE')
 
 
 main()

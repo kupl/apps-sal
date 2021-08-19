@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, m = mints()
+    (n, m) = mints()
     a = [None] * n
     for i in range(n):
         a[i] = list(mints())
@@ -22,19 +22,14 @@ def solve():
     for j in range(m):
         c = [0] * n
         for i in range(n):
-            x = (a[i][j] - 1)
-            #print(x, end='')
+            x = a[i][j] - 1
             if x % m == j and x < n * m:
                 t = (x - j) // m
-                # print('',t,i,end='')
                 if i - t >= 0:
                     c[i - t] += 1
                 else:
                     c[i - t + n] += 1
-            # print(end='|')
-        # print()
-        mi = int(1e9)
-        # print(c)
+        mi = int(1000000000.0)
         for i in range(n):
             mi = min(mi, i + n - c[i])
         r += mi

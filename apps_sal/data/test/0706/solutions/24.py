@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def g(a, b, n, x, mod=10 ** 9 + 7):
     if a == 1:
         return (x + b * n) % mod

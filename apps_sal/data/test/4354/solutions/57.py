@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def manhattan_distance(p1, p2):
@@ -6,20 +6,17 @@ def manhattan_distance(p1, p2):
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     students = []
     check_points = []
-
     for _ in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         students.append((a, b))
-
     for _ in range(m):
-        c, d = list(map(int, input().split()))
+        (c, d) = list(map(int, input().split()))
         check_points.append((c, d))
-
     for s in students:
-        cur_closest_dist = int(4e8)
+        cur_closest_dist = int(400000000.0)
         cur_closest_point = -1
         for i in range(m):
             c = check_points[i]
