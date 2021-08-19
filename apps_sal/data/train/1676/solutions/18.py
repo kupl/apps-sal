@@ -67,7 +67,6 @@ def fil(y, x):
     for i1 in range(len(x)):
         if an[0] + x[i1] < 10 and an[1] + y[i1] < 10:
             mp[an[0] + x[i1]][an[1] + y[i1]] = 1
-    # chk()
 
 
 def ind(y, x):
@@ -75,7 +74,7 @@ def ind(y, x):
         for j in range(10):
             flag = 1
             for i1 in range(len(x)):
-                if i + x[i1] < 10 and j + y[i1] < 10 and mp[i + x[i1]][j + y[i1]] != 0:
+                if i + x[i1] < 10 and j + y[i1] < 10 and (mp[i + x[i1]][j + y[i1]] != 0):
                     flag = -1
                     break
                 if i + x[i1] >= 10 or j + y[i1] >= 10:
@@ -152,25 +151,25 @@ def find(index):
     return False
 
 
-a, b, c = list(map(int, input().split()))
-while(a != -1):
-    ans = ""
+(a, b, c) = list(map(int, input().split()))
+while a != -1:
+    ans = ''
     flag = 0
     if find(a):
-        ans += "1 " + str(an[0] + 1 + smx(a)) + " " + str(an[1] + 1) + " "
+        ans += '1 ' + str(an[0] + 1 + smx(a)) + ' ' + str(an[1] + 1) + ' '
     else:
         flag += 1
     if find(b):
-        ans += "2 " + str(an[0] + 1 + smx(b)) + " " + str(an[1] + 1) + " "
+        ans += '2 ' + str(an[0] + 1 + smx(b)) + ' ' + str(an[1] + 1) + ' '
     else:
         flag += 1
     if find(c):
-        ans += "3 " + str(an[0] + 1 + smx(c)) + " " + str(an[1] + 1) + " "
+        ans += '3 ' + str(an[0] + 1 + smx(c)) + ' ' + str(an[1] + 1) + ' '
     else:
         flag += 1
-    while(flag > 0):
-        ans += "-1 -1 -1 "
+    while flag > 0:
+        ans += '-1 -1 -1 '
         flag -= 1
     print(ans)
     sys.stdout.flush()
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))

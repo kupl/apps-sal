@@ -1,17 +1,17 @@
-MODULO = 10**9 + 7
+MODULO = 10 ** 9 + 7
 
 
 class DP:
+
     def __init__(self, arrLen: int):
         self._len = arrLen
         self._cache = {}
 
     def get(self, index, steps):
         if (index, steps) in self._cache:
-            return self._cache[(index, steps)]
+            return self._cache[index, steps]
         result = self._get_uncached(index, steps)
-        # print(f\"index={index} steps={steps}  =>  ways={result}\")
-        self._cache[(index, steps)] = result
+        self._cache[index, steps] = result
         return result
 
     def _get_uncached(self, index, steps):
@@ -25,6 +25,7 @@ class DP:
 
 
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         dp = DP(arrLen)
         return dp.get(0, steps)

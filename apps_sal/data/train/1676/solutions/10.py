@@ -5,14 +5,13 @@ from random import random
 
 def printBS(li):
     s = [str(i) for i in li]
-    print(" ".join(s))
+    print(' '.join(s))
 
 
-# grid defined as array 10x10 of 0's and 1's 1 means occupied
 grid = [[0] * 10 for i in range(10)]
-blocks = ({1: [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 2: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 3: [[1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 4: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 5: [[1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 6: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 7: [[1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 8: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0]], 9: [[1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 10: [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 11: [[1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 12: [[1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 13: [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 14: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 15: [[1, 1, 1, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 16: [[1, 1, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 17: [[1, 1, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 18: [[0, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 19: [[1, 0, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]})
+blocks = {1: [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 2: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 3: [[1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 4: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 5: [[1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 6: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 7: [[1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 8: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0]], 9: [[1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 10: [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 11: [[1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 12: [[1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 13: [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 14: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 15: [[1, 1, 1, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 16: [[1, 1, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 17: [[1, 1, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 18: [[0, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 19: [[1, 0, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]}
 leftBelow = {1: (0, 0), 2: (1, 0), 3: (0, 0), 4: (2, 0), 5: (0, 0), 6: (3, 0), 7: (0, 0), 8: (4, 0), 9: (0, 0), 10: (1, 0), 11: (2, 0), 12: (2, 0), 13: (2, 0), 14: (2, 0), 15: (2, 0), 16: (1, 0), 17: (1, 0), 18: (1, 0), 19: (1, 0)}
-pattern = {1: "dot", 2: "vert 2 line", 3: "hor 2 line", 4: "vert 3", 5: "hor 3", 6: "vert 4", 7: "hor 4", 8: "vert 5", 9: "hor 5", 10: "2*2", 11: "3*3", 12: " 3T3R", 13: "3R3B", 14: "3L3B", 15: "3L3T", 16: "2L2T", 17: "2R2T", 18: "2R2B", 19: "2L2B"}
+pattern = {1: 'dot', 2: 'vert 2 line', 3: 'hor 2 line', 4: 'vert 3', 5: 'hor 3', 6: 'vert 4', 7: 'hor 4', 8: 'vert 5', 9: 'hor 5', 10: '2*2', 11: '3*3', 12: ' 3T3R', 13: '3R3B', 14: '3L3B', 15: '3L3T', 16: '2L2T', 17: '2R2T', 18: '2R2B', 19: '2L2B'}
 
 
 def bounded(x, y):
@@ -24,13 +23,13 @@ def adjzero(tempGrid, block, x, y):
     for i in range(5):
         for j in range(5):
             if bounded(x + i, y + j) and blocks[block][i][j]:
-                if bounded(x + i - 1, y + j) and (i == 0 or blocks[block][i - 1][j] == 0) and tempGrid[x + i - 1][y + j] == 0:
+                if bounded(x + i - 1, y + j) and (i == 0 or blocks[block][i - 1][j] == 0) and (tempGrid[x + i - 1][y + j] == 0):
                     ones += 1
-                if bounded(x + i, y + j - 1) and (j == 0 or blocks[block][i][j - 1] == 0) and tempGrid[x + i][y + j - 1] == 0:
+                if bounded(x + i, y + j - 1) and (j == 0 or blocks[block][i][j - 1] == 0) and (tempGrid[x + i][y + j - 1] == 0):
                     ones += 1
-                if bounded(x + i, y + j + 1) and (j == 4 or blocks[block][i][j + 1] == 0) and tempGrid[x + i][y + j + 1] == 0:
+                if bounded(x + i, y + j + 1) and (j == 4 or blocks[block][i][j + 1] == 0) and (tempGrid[x + i][y + j + 1] == 0):
                     ones += 1
-                if bounded(x + i + 1, y + j) and (i == 4 or blocks[block][i + 1][j] == 0) and tempGrid[x + i + 1][y + j] == 0:
+                if bounded(x + i + 1, y + j) and (i == 4 or blocks[block][i + 1][j] == 0) and (tempGrid[x + i + 1][y + j] == 0):
                     ones += 1
     return ones
 
@@ -63,14 +62,11 @@ def boundary(tempGrid, block, x, y):
 
 
 def points(block, x, y):
-    # creatw a local copy
-    # place it on grid
     tempGrid = [i[:] for i in grid]
     for i in range(min(5, 10 - x)):
         for j in range(min(5, 10 - y)):
             if blocks[block][i][j] == 1:
                 tempGrid[i + x][j + y] = block
-    # calculate lines heuristics
     lines = 0
     for i in range(10):
         for j in range(10):
@@ -84,10 +80,8 @@ def points(block, x, y):
                 break
         else:
             lines += 1
-    # caculatw nearby non zeroes
     nearby = adjnon(tempGrid, block, x, y)
     nearholes = adjnon(tempGrid, block, x, y)
-    # calculate boundary close points
     bndcls = boundary(tempGrid, block, x, y)
     return 20.0 * lines + 0.25 * nearby + 0.5 * bndcls
 
@@ -109,7 +103,6 @@ def placeBlock(block, x, y):
 
 
 def clearFilledLines():
-    # check horizontal
     horz = []
     for i in range(10):
         for j in range(10):
@@ -118,7 +111,6 @@ def clearFilledLines():
         else:
             horz.append(i)
     vertz = []
-    # check vertical
     for j in range(10):
         for i in range(10):
             if grid[i][j] == 0:
@@ -134,7 +126,7 @@ def clearFilledLines():
 def printGrid():
     for i in range(10):
         for j in range(10):
-            print("%02d" % grid[i][j], end=' ')
+            print('%02d' % grid[i][j], end=' ')
         print()
 
 
@@ -155,14 +147,13 @@ def findPos(block):
         for j in range(10):
             if checkPos(i, j, block):
                 pos.append((points(block, i, j), i, j))
-    # print pos
     if pos:
         return max(pos)
     return (-1, -1, -1)
 
 
 while True:
-    a, b, c = list(map(int, stdin.readline().split()))
+    (a, b, c) = list(map(int, stdin.readline().split()))
     if (a, b, c) == (-1, -1, -1):
         break
     li = [(a, 1), (b, 2), (c, 3)]
@@ -184,8 +175,8 @@ while True:
         if t3 != (-1, -1, -1):
             placeBlock(p[2][0], t3[1], t3[2])
             clearFilledLines()
-        if (t1[0] + t2[0] + t3[0]) > maxv:
-            maxv = (t1[0] + t2[0] + t3[0])
+        if t1[0] + t2[0] + t3[0] > maxv:
+            maxv = t1[0] + t2[0] + t3[0]
             pos = [t1[1:], t2[1:], t3[1:]]
             maxp = p
         grid = tempGrid
@@ -196,10 +187,8 @@ while True:
             i = maxp[pi]
             x = pos[pi][0]
             y = pos[pi][1]
-            # print x,y
             placeBlock(i[0], x, y)
             clearFilledLines()
-            # printGrid()
             outstr.extend([i[1], x + 1 + leftBelow[i[0]][0], y + 1])
             count += 1
     for i in range(3 - count):
