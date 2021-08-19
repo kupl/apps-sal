@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def recoverFromPreorder(self, S: str) -> TreeNode:
         if not S:
             return None
@@ -30,11 +25,9 @@ class Solution:
                     node = s.pop()
                     while s and node[1] != d - 1:
                         node = s.pop()
-
                     if not node[0].left:
                         node[0].left = nnode
                         s.append(node)
-                        # s.append((nnode, d))
                     else:
                         node[0].right = nnode
                     s.append((nnode, d))

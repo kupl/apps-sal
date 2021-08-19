@@ -1,17 +1,15 @@
 class Solution:
-    def maxTurbulenceSize(self, A: List[int]) -> int:
-        maxAB, currA, currB = 1, 1, 1  # 初始化
 
+    def maxTurbulenceSize(self, A: List[int]) -> int:
+        (maxAB, currA, currB) = (1, 1, 1)
         for i in range(1, len(A)):
-            if A[i] > A[i - 1]:  # 以第 i 个元素结尾，呈现升序的情况
+            if A[i] > A[i - 1]:
                 currA = currB + 1
                 currB = 1
-            elif A[i] < A[i - 1]:  # 以第 i 个元素结尾，呈现降序的情况
+            elif A[i] < A[i - 1]:
                 currB = currA + 1
                 currA = 1
             else:
-                currA, currB = 1, 1  # 出现相等的情况，重新计数
-
-            maxAB = max(maxAB, currA, currB)  # 更新最优值
-
+                (currA, currB) = (1, 1)
+            maxAB = max(maxAB, currA, currB)
         return maxAB

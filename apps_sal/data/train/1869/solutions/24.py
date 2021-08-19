@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
 
     def recoverFromPreorder(self, S: str) -> TreeNode:
@@ -11,20 +5,18 @@ class Solution:
             return None
         if '-' not in S:
             return TreeNode(int(S))
-        dashes, ind, n = 0, 1, len(S)
-        while ind < n and S[ind] >= '0' and S[ind] <= '9':
+        (dashes, ind, n) = (0, 1, len(S))
+        while ind < n and S[ind] >= '0' and (S[ind] <= '9'):
             ind += 1
         root = TreeNode(S[:ind])
         while ind < n and S[ind] == '-':
             ind += 1
             dashes += 1
         left_ind = ind
-
-        # start to find the right part
         dashes_right = 0
         while ind < n:
             dashes_right = 0
-            while ind < n and S[ind] >= '0' and S[ind] <= '9':
+            while ind < n and S[ind] >= '0' and (S[ind] <= '9'):
                 ind += 1
             while ind < n and S[ind] == '-':
                 dashes_right += 1

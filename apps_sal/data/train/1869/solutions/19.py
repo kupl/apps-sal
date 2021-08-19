@@ -1,11 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
+
     def recoverFromPreorder(self, S: str) -> TreeNode:
         return self.helper(S, 0)
 
@@ -14,7 +8,7 @@ class Solution:
             return None
         val = self.get(S)
         node = TreeNode(val)
-        idx1, idx2 = self.find(S, level)
+        (idx1, idx2) = self.find(S, level)
         if idx1:
             node.left = self.helper(S[idx1:idx2], level + 1)
         if idx2:
@@ -24,18 +18,18 @@ class Solution:
     def find(self, S, level):
         idx1 = idx2 = None
         count = 0
-        for i, ch in enumerate(S):
+        for (i, ch) in enumerate(S):
             if ch != '-':
                 if count == level + 1:
                     if not idx1:
                         idx1 = i
                     else:
                         idx2 = i
-                        return idx1, idx2
+                        return (idx1, idx2)
                 count = 0
             else:
                 count += 1
-        return idx1, idx2
+        return (idx1, idx2)
 
     def get(self, S):
         val = ''
