@@ -1,6 +1,5 @@
-# cook your dish here
 import heapq
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 numList = []
 for i in range(a + b):
     numIn = int(input())

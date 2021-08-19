@@ -1,12 +1,25 @@
-########################################################
-################# Template #############################
 import sys
 import math
-def Int(): return int(input())
-def Str(): return input()
-def Ints(): return map(int, input().split(" "))
-def int_arr(): return list(map(int, input().strip().split(" ")))
-def str_arr(): return list(map(str, input().split(" ")))
+
+
+def Int():
+    return int(input())
+
+
+def Str():
+    return input()
+
+
+def Ints():
+    return map(int, input().split(' '))
+
+
+def int_arr():
+    return list(map(int, input().strip().split(' ')))
+
+
+def str_arr():
+    return list(map(str, input().split(' ')))
 
 
 def vsInput():
@@ -14,9 +27,7 @@ def vsInput():
     sys.stdout = open('output.txt', 'w')
 
 
-#########################################################
-# vsInput()
-no_of_citizen, visits = Ints()
+(no_of_citizen, visits) = Ints()
 citizen_lst = []
 maxi = 0
 for i in range(no_of_citizen + visits):

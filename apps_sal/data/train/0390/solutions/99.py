@@ -2,8 +2,7 @@ import math
 
 
 class Solution:
-    # A
-    # B 15 1 4 9
+
     def helper(self, n: int, dp: dict) -> bool:
         if n in dp:
             return dp[n]
@@ -11,7 +10,7 @@ class Solution:
             return False
         i = 1
         while i * i <= n:
-            if (self.helper(n - i * i, dp) == False):
+            if self.helper(n - i * i, dp) == False:
                 dp[n] = True
                 return True
             i += 1

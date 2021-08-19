@@ -1,10 +1,10 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
-        if n == 1 or n == 3 or n == 4 or n == 6:
+        if n == 1 or n == 3 or n == 4 or (n == 6):
             return True
         if n == 0 or n == 2 or n == 5:
             return False
-
         dp = [0, 1, 0, 1, 1, 0, 1, 0]
         i = 8
         while i <= n:
@@ -19,6 +19,4 @@ class Solution:
             if not add:
                 dp.append(0)
             i += 1
-        # print(dp)
-        #print([i for i in range(n+1)])
         return dp[n]

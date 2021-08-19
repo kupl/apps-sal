@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t = n + m
 l = []
 while t > 0:
