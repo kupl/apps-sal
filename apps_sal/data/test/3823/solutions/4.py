@@ -1,4 +1,4 @@
-n, k, s = int(input()), 0, 0
+(n, k, s) = (int(input()), 0, 0)
 for i in input().split():
     j = int(i[-3:])
     if j == 0:
@@ -6,7 +6,7 @@ for i in input().split():
     else:
         s += j
 c = s // 1000 + int(s % 1000 > 500)
-a, b = max(0, n - k), min(2 * n - k, n)
+(a, b) = (max(0, n - k), min(2 * n - k, n))
 if a <= c <= b:
     s = abs(c * 1000 - s)
 else:

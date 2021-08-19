@@ -1,5 +1,5 @@
 M = 998244353
-a = range(N := int(input()))
+a = range((N := int(input())))
 C = M + 1 >> 1
 p = [N * C] * N * 3
 for i in a:

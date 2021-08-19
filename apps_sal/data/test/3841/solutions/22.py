@@ -1,4 +1,4 @@
-p, k = list(map(int, input().split()))
+(p, k) = list(map(int, input().split()))
 a = ''
 cnt = 0
 while p != 0:

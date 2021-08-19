@@ -1,12 +1,15 @@
 from collections import deque
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 N = int(input())
 X = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     X[a - 1].append(b - 1)
     X[b - 1].append(a - 1)
 
@@ -25,12 +28,11 @@ def farthest(i):
                 if L[k] < 0:
                     L[k] = d
                     post.append(k)
-
     return (pre[0], d - 1)
 
 
-s, _ = farthest(0)
-t, d = farthest(s)
+(s, _) = farthest(0)
+(t, d) = farthest(s)
 
 
 def BFS_dist(n, E, i0=0):
@@ -48,17 +50,15 @@ def BFS_dist(n, E, i0=0):
 
 D1 = BFS_dist(N, X, s)
 D2 = BFS_dist(N, X, t)
-
 Y = [0] * (d + 1)
 ma = 0
 for i in range(N):
     if i == s or i == t:
         continue
-    a, b = sorted((D1[i], D2[i]))
+    (a, b) = sorted((D1[i], D2[i]))
     ma = max(ma, a)
     Y[b] += 1
 Y[d] += 1
-
 P = 10 ** 9 + 7
 i2 = P + 1 >> 1
 s = 1

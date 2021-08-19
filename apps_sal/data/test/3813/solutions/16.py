@@ -2,13 +2,10 @@ def main():
     n = int(input())
     p = list(map(int, input().split()))
     x = list(map(int, input().split()))
-
     child = [[] for _ in [0] * n]
-    for i, j in enumerate(p):
+    for (i, j) in enumerate(p):
         child[j - 1].append(i + 1)
-
     other = [0] * n
-
     for i in range(n - 1, -1, -1):
         if child[i] == []:
             continue
@@ -19,7 +16,7 @@ def main():
             dp2 = [-1] * (xx + 1)
             m = x[j]
             o = other[j]
-            for k, l in enumerate(dp):
+            for (k, l) in enumerate(dp):
                 if l == -1:
                     continue
                 if k + m <= xx:
@@ -37,10 +34,10 @@ def main():
         if k != []:
             other[i] = min(k)
         else:
-            print("IMPOSSIBLE")
+            print('IMPOSSIBLE')
             break
     else:
-        print("POSSIBLE")
+        print('POSSIBLE')
 
 
 def __starting_point():

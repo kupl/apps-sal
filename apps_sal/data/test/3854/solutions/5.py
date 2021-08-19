@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 dp = []
 k += 1
 for i in range(2):
@@ -8,7 +7,6 @@ for i in range(2):
         a.append([0] * k)
     dp.append(a)
 dp[1][0][0] = 1
-
 c = list(map(int, input().split()))
 c = sorted(c)
 for i in range(n):

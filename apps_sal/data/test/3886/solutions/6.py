@@ -25,17 +25,14 @@ d = 'What are you doing at the end of the world? Are you busy? Will you save us?
 a = 'What are you doing while sending "'
 b = '"? Are you busy? Will you send "'
 c = '"?'
-
 len_a = len(a)
 len_b = len(b)
 len_c = len(c)
 len_d = len(d)
 ln = len_a + len_b + len_c
-
 q = int(input())
 ls = [len_d]
 ans = ''
-
 for i in range(1, 60):
     ls += [ls[i - 1] * 2 + ln]
 
@@ -73,5 +70,4 @@ for i in range(0, q):
         ans += get_ans(1000, k)
     else:
         ans += get_ans(n, k)
-
 print(ans)

@@ -1,9 +1,10 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
 a = sorted(read())
-N = (10**5) + 10
+N = 10 ** 5 + 10
 c = [0] * N
 for i in a:
     c[i] += 1

@@ -23,4 +23,4 @@ for i in range(N):
     B[i] *= Qinv
     B[i] %= mod
 for i in range(N):
-    print((B[i]))
+    print(B[i])

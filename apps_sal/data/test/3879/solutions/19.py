@@ -12,9 +12,9 @@ def main():
         while not x % 3:
             x //= 3
         if x != a:
-            print("No")
+            print('No')
             return
-    print("Yes")
+    print('Yes')
 
 
 def __starting_point():

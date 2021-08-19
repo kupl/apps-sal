@@ -2,7 +2,7 @@ def get(nn, x):
     res = 0
     i = -1
     while x:
-        res += ((x + 1) // 2) * nn[i]
+        res += (x + 1) // 2 * nn[i]
         x //= 2
         i -= 1
     return res
@@ -27,6 +27,6 @@ def raw(n):
         return temp + [n % 2] + temp
 
 
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 nn = toBin(n)
 print(get(nn, r) - get(nn, l - 1))

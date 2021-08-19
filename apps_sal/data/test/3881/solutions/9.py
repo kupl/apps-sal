@@ -9,10 +9,10 @@ def deep(ch, curn):
     return s
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = {}
 for i in range(m):
-    dec, en = input().split()
+    (dec, en) = input().split()
     if en in d:
         d[en].append(dec)
     else:

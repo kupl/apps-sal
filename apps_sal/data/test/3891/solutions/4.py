@@ -1,9 +1,10 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, m = read()
+(n, m) = read()
 a = [input() for i in range(n)]
-y1 = x1 = 1e9
+y1 = x1 = 1000000000.0
 y2 = x2 = -1
 for i in range(n):
     if 'B' in a[i]:

@@ -6,7 +6,7 @@ s = int(input())
 def solve(n, s):
     if n == s:
         return n + 1
-    for b in range(2, math.floor(n**0.5) + 1):
+    for b in range(2, math.floor(n ** 0.5) + 1):
         tmp = n
         res = 0
         while tmp >= b:
@@ -15,7 +15,7 @@ def solve(n, s):
         res += tmp
         if res == s:
             return b
-    for p in range(int(n**0.5), 0, -1):
+    for p in range(int(n ** 0.5), 0, -1):
         r = s - p
         if r < 0:
             continue

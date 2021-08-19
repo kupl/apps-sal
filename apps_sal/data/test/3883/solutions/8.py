@@ -4,9 +4,9 @@ def run1(x, y):
     cst = (x - y) * 0.5
     l = 1
     r = 1000000001
-    ans = - 1.0
-    while(l <= r):
-        m = (l + r) >> 1
+    ans = -1.0
+    while l <= r:
+        m = l + r >> 1
         now = cst / m
         if now >= y:
             ans = now
@@ -20,11 +20,11 @@ def run2(x, y):
     cst = (x + y) * 0.5
     l = 1
     r = 1000000001
-    ans = - 1.0
-    while(l <= r):
-        m = (l + r) >> 1
+    ans = -1.0
+    while l <= r:
+        m = l + r >> 1
         now = cst / m
-        if(now >= y):
+        if now >= y:
             ans = now
             l = m + 1
         else:
@@ -32,14 +32,12 @@ def run2(x, y):
     return ans
 
 
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 p = run1(x, y)
 q = run2(x, y)
-
-ans = - 1.0
-
-if(ans < 0 or (p > 0 and p < ans)):
+ans = -1.0
+if ans < 0 or (p > 0 and p < ans):
     ans = p
-if(ans < 0 or (q > 0 and q < ans)):
+if ans < 0 or (q > 0 and q < ans):
     ans = q
 print(ans)

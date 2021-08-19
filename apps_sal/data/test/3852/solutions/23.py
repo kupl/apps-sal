@@ -1,10 +1,8 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 ans = []
 mx = max(A)
 mi = min(A)
-
 if mx * mi < 0:
     if abs(mi) > abs(mx):
         x = A.index(mi)
@@ -20,10 +18,8 @@ if mx * mi < 0:
                 continue
             A[y] += mx
             ans.append((x, y))
-
-for i in range(N - 1)[::(-1)**(min(A) < 0)]:
-    l, r = A[i], A[i + 1]
-
+for i in range(N - 1)[::(-1) ** (min(A) < 0)]:
+    (l, r) = (A[i], A[i + 1])
     if l > r:
         if r >= 0:
             A[i + 1] += l
@@ -31,11 +27,9 @@ for i in range(N - 1)[::(-1)**(min(A) < 0)]:
         elif l <= 0:
             A[i] += r
             ans.append((i + 1, i))
-
-print((len(ans)))
-for x, y in ans:
+print(len(ans))
+for (x, y) in ans:
     print((x + 1, y + 1))
-
 if list(sorted(A)) != A:
     print(A)
     1 / 0

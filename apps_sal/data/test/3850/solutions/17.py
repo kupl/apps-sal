@@ -11,13 +11,13 @@ def check(x):
     return True
 
 
-n, k, p = list(map(int, input().split()))
+(n, k, p) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a.sort()
 b.sort()
 l = 0
-r = 10**18
+r = 10 ** 18
 ans = -1
 while l <= r:
     mid = l + (r - l) // 2

@@ -3,7 +3,7 @@ import sys
 
 def __starting_point():
     n = input().split()
-    n, m = int(n[0]), int(n[1])
+    (n, m) = (int(n[0]), int(n[1]))
     _l = list()
     for _ in range(n):
         _l.append(input())

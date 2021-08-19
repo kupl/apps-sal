@@ -6,11 +6,9 @@ def main():
     try:
         n = int(input())
         par = list(map(int, input().split()))
-
         gr = [[] for i in range(n)]
         for i in range(n - 1):
             gr[par[i] - 1].append(i + 1)
-
         cnt = [0] * n
 
         def dfs(v, depth=0):
@@ -19,7 +17,6 @@ def main():
                 pass
             for u in gr[v]:
                 dfs(u, depth + 1)
-
         dfs(0)
         print(sum([x % 2 for x in cnt]))
     except:

@@ -18,16 +18,12 @@ def solution(n, m, a, b):
         extra_fuel = tmp / (a[i - 1] - 1)
         tmp += extra_fuel
         mass[i - 1] = tmp
-
     return mass[0] - m
 
 
 n = int(sys.stdin.readline().rstrip())
 m = int(sys.stdin.readline().rstrip())
-
 a = [int(x) for x in sys.stdin.readline().rstrip().split()]
 b = [int(x) for x in sys.stdin.readline().rstrip().split()]
-
 res = solution(n, m, a, b)
-
 sys.stdout.write(str(res))

@@ -1,4 +1,3 @@
-
 import sys
 import math
 
@@ -10,24 +9,24 @@ def gcd(a, b):
 
 
 N = int(input())
-x, y = list(map(int, input().split(' ')))
+(x, y) = list(map(int, input().split(' ')))
 divisor = 2
 result = []
 while divisor <= math.sqrt(max(x, y)):
-    if (x % divisor == 0) or (y % divisor == 0):
+    if x % divisor == 0 or y % divisor == 0:
         result.append(divisor)
         while x % divisor == 0:
             x /= divisor
         while y % divisor == 0:
             y /= divisor
     divisor += 1
-if (x > 1):
+if x > 1:
     result.append(x)
-if (y > 1):
+if y > 1:
     result.append(y)
 for i in range(1, N):
-    x, y = list(map(int, input().split(' ')))
-    new_result = [i for i in result if ((x % i == 0) or (y % i == 0))]
+    (x, y) = list(map(int, input().split(' ')))
+    new_result = [i for i in result if x % i == 0 or y % i == 0]
     result = new_result
 if len(result) < 1:
     print(-1)

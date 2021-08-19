@@ -15,5 +15,5 @@ for i in range(n - 1):
     elif mx < 0:
         ans.append((n - i, n - i - 1))
 print(len(ans))
-for x, y in ans:
+for (x, y) in ans:
     print(x, y)

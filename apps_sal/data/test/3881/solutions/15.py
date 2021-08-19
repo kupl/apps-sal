@@ -1,9 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = [[] for i in range(6)]
 for i in range(m):
-    a, b = input().split()
+    (a, b) = input().split()
     t[ord(b) - ord('a')] += [a]
-
 l = ['a']
 A = 0
 while len(l) > 0:
@@ -17,5 +16,4 @@ while len(l) > 0:
             for new in t[ord(ch) - ord('a')]:
                 L += [s[:i] + new + s[i + 1:]]
     l = set(L)
-
 print(A)

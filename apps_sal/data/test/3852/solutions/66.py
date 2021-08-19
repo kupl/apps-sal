@@ -2,8 +2,8 @@ n = int(input())
 a = list(map(int, input().split()))
 mxn = 0
 mnn = 0
-mx = -10**10
-mn = 10**10
+mx = -10 ** 10
+mn = 10 ** 10
 for i in range(n):
     if mx < a[i]:
         mx = a[i]

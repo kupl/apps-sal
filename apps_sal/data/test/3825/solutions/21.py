@@ -1,8 +1,7 @@
-
 def f(n):
     if n < 0:
         return 0
-    val = ((n + 3) * (n + 2) * (n + 1)) // 6
+    val = (n + 3) * (n + 2) * (n + 1) // 6
     return val
 
 

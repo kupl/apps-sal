@@ -1,10 +1,9 @@
 import collections
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 d = collections.defaultdict(list)
-cnt, t = [0] * 6, [0] * 6
+(cnt, t) = ([0] * 6, [0] * 6)
 for i in range(q):
-    s1, s2 = input().split()
+    (s1, s2) = input().split()
     d[s2].append(s1)
     cnt[ord(s2) - ord('a')] += 1
 for s in d['a']:

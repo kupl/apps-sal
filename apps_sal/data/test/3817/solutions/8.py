@@ -1,4 +1,4 @@
-MOD = int(1e9 + 9)
+MOD = int(1000000000.0 + 9)
 
 
 def fast_power(b, e):
@@ -11,7 +11,7 @@ def fast_power(b, e):
     return res
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = fast_power(2, m) - 1
 a = (a + MOD) % MOD
 b = a - 1

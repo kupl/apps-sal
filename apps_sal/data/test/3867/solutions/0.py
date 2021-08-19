@@ -2,7 +2,7 @@ n = int(input())
 graph = [set() for tr in range(n + 2)]
 i = 1
 while i < n:
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     graph[x].add(y)
     graph[y].add(x)
     i += 1
@@ -19,6 +19,6 @@ try:
             gv.remove(u)
             graph[u].remove(v)
             q.append(u)
-    print("Yes")
+    print('Yes')
 except AssertionError:
-    print("No")
+    print('No')

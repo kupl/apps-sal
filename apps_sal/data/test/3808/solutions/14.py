@@ -13,11 +13,10 @@ def solve():
             stack.pop()
         else:
             stack.append(i)
-
-    if(len(stack) <= 2 and op == cl):
-        print("Yes")
+    if len(stack) <= 2 and op == cl:
+        print('Yes')
         return
-    print("No")
+    print('No')
 
 
 solve()

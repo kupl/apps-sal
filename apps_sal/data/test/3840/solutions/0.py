@@ -1,5 +1,4 @@
 3
-
 n = int(input())
 a = [0] + list(map(int, input().split()))
 if len(a) < 3 or n % 2 == 0:

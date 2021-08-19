@@ -1,7 +1,6 @@
 def solve(s, n):
     if len(s) == 1:
         return chr(ord(s[0]) + 1) if ord(s[0]) + 1 < ord('a') + n else 'NO'
-
     for i in reversed(range(2, len(s))):
         c = s[i]
         for j in range(ord(c) + 1, ord('a') + n):
@@ -16,7 +15,6 @@ def solve(s, n):
             new_s = s[0] + next
             new_s = fill(new_s, n, s, 1)
             return new_s
-
     for i in range(ord(s[0]) + 1, ord('a') + n):
         next = chr(i)
         new_s = next
@@ -35,6 +33,6 @@ def fill(new_s, n, s, i):
     return new_s if len(new_s) == len(s) else 'NO'
 
 
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 s = input()
 print(solve(s, n))

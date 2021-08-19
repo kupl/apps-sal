@@ -29,7 +29,7 @@ def gen(pos=0, minute=False, smaller=False):
         return ans
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 n -= 1
 m -= 1
 used = [False] * BASE

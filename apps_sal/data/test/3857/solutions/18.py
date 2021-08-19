@@ -5,7 +5,7 @@ dp = [0]
 for i in a:
     add = False
     for j in range(len(dp)):
-        if(dp[j] <= i):
+        if dp[j] <= i:
             dp[j] += 1
             add = True
             break

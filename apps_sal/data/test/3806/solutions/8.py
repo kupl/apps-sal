@@ -3,6 +3,7 @@ def dot_product(v1, v2):
 
 
 class vector:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -15,6 +16,7 @@ class vector:
 
 
 class line:
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -24,6 +26,7 @@ class line:
 
 
 class ray:
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -35,6 +38,7 @@ class ray:
 
 
 class segment:
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -48,24 +52,18 @@ class segment:
         return max(vector(self.a.x - p.x, self.a.y - p.y).length(), vector(self.b.x - p.x, self.b.y - p.y).length())
 
 
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 p = vector(x, y)
-
 min_r = 2000000
 max_r = 0
-
 a = [[] for i in range(n + 1)]
-
 for i in range(n):
     a[i] = list(map(int, input().split()))
     a[i] = vector(a[i][0], a[i][1])
-
 a[n] = a[0]
-
 for i in range(n):
     s = segment(a[i], a[i + 1])
     min_r = min(min_r, s.min_distance(p))
     max_r = max(max_r, s.max_distance(p))
-
 pi = 3.141592653589
 print(pi * max_r ** 2 - pi * min_r ** 2)

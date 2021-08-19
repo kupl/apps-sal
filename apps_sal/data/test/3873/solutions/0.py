@@ -1,11 +1,14 @@
 n = int(input())
-def p(a, b): return print(a + 1, b + 1)
+
+
+def p(a, b):
+    return print(a + 1, b + 1)
 
 
 if n % 4 > 1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     for i in range(n % 4, n, 4):
         for x in range(2):
             for j in range(i):

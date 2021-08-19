@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 MOD = 10 ** 9 + 9
 out = 1
 curr = pow(2, m, MOD) - 1

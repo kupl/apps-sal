@@ -1,12 +1,11 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 ans = []
 
 
 def f1():
     for i in range(1, N):
-        mx = -(10**7)
+        mx = -10 ** 7
         mxi = 0
         for j in range(N):
             if A[j] > mx:
@@ -18,7 +17,7 @@ def f1():
 
 def f2():
     for i in range(N - 2, -1, -1):
-        mn = 10**7
+        mn = 10 ** 7
         mni = 0
         for j in range(N):
             if A[j] < mn:
@@ -28,9 +27,9 @@ def f2():
         ans.append((mni, i))
 
 
-mx = -(10**7)
+mx = -10 ** 7
 mxi = 0
-mn = 10**7
+mn = 10 ** 7
 mni = 0
 for i in range(N):
     if A[i] > mx:
@@ -55,7 +54,6 @@ else:
             A[i] += mn
             ans.append((mni, i))
     f2()
-
-print((len(ans)))
-for a1, a2 in ans:
+print(len(ans))
+for (a1, a2) in ans:
     print((a1 + 1, a2 + 1))

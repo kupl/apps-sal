@@ -3,7 +3,7 @@ from collections import deque
 n = int(stdin.readline())
 g = dict()
 for i in range(n - 1):
-    a, b = list(map(int, stdin.readline().split()))
+    (a, b) = list(map(int, stdin.readline().split()))
     g.setdefault(a, set()).add(b)
     g.setdefault(b, set()).add(a)
 a = [int(x) for x in stdin.readline().split()]
@@ -31,6 +31,6 @@ if n > 1 and a[0] == 1:
 else:
     ans = a[0] == 1
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

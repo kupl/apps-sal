@@ -1,4 +1,5 @@
 class FK:
+
     def __init__(self, n):
         self.table = [[0] * n for i in range(n)]
         self.n = n
@@ -11,7 +12,7 @@ class FK:
         if s == t:
             return f
         for i in range(self.n):
-            if (not self.visit[i]) and self.table[s][i] > 0:
+            if not self.visit[i] and self.table[s][i] > 0:
                 df = self.ford(i, t, min(f, self.table[s][i]))
                 if df > 0:
                     self.table[s][i] -= df
@@ -21,9 +22,9 @@ class FK:
 
     def flow(self, s, t):
         ans = 0
-        inf = 10**20
+        inf = 10 ** 20
         while True:
-            self.visit = [False] * (self.n)
+            self.visit = [False] * self.n
             df = self.ford(s, t, inf)
             if df == 0:
                 break
@@ -33,7 +34,7 @@ class FK:
 
 N = int(input())
 P = [int(i) for i in input().split()]
-inf = 10**20
+inf = 10 ** 20
 maxflow = FK(N + 2)
 for i in range(1, N + 1):
     if P[i - 1] > 0:

@@ -1,14 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 u = [[], []]
-
 for q in range(n):
-    p, s = input().split()
+    (p, s) = input().split()
     u[p == 'ATK'].append(int(s))
-
-d, a = [sorted(q) for q in u]
-v = sorted(int(input()) for q in range(m))
-k, s = 0, sum(v)
-
+(d, a) = [sorted(q) for q in u]
+v = sorted((int(input()) for q in range(m)))
+(k, s) = (0, sum(v))
 i = j = 0
 for q in v:
     if i < len(d) and q > d[i]:
@@ -22,7 +19,6 @@ if i + j - len(a) - len(d):
 for q in v:
     if k < len(a) and q >= a[k]:
         k += 1
-
 x = y = 0
 v.reverse()
 for i in range(k):

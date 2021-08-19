@@ -20,29 +20,26 @@ def dist(x, y, x1, y1, x2, y2):
     else:
         xx = x1 + param * c
         yy = y1 + param * d
-
     dx = x - xx
     dy = y - yy
-    return (dx * dx + dy * dy)**0.5
+    return (dx * dx + dy * dy) ** 0.5
 
 
 def dist2(x, y):
-    return ((x[0] - y[0])**2 + (x[1] - y[1])**2)**0.5
+    return ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5
 
 
 maxx = -1
 minn = 100000000000000000
 pts = []
-a, b, c = list(map(int, input().split(' ')))
+(a, b, c) = list(map(int, input().split(' ')))
 for i in range(a):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     pts.append([x, y])
-
 k = []
 for i in pts:
     k.append(dist2(i, [b, c]))
 pts.append(pts[0])
 for i in range(a):
     k.append(dist(b, c, pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]))
-
-print((max(k)**2 - min(k)**2) * math.pi)
+print((max(k) ** 2 - min(k) ** 2) * math.pi)

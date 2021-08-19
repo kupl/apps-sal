@@ -13,15 +13,12 @@ def length_base_7(ele, arr):
     return length
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 n -= 1
 m -= 1
-
-n_base7, m_base7 = [], []
-n_length, m_length = length_base_7(n, n_base7), length_base_7(m, m_base7)
-
-n_base7, m_base7 = n_base7[::-1], m_base7[::-1]
-
+(n_base7, m_base7) = ([], [])
+(n_length, m_length) = (length_base_7(n, n_base7), length_base_7(m, m_base7))
+(n_base7, m_base7) = (n_base7[::-1], m_base7[::-1])
 combination_number = {0, 1, 2, 3, 4, 5, 6}
 res = 0
 for i in p(combination_number, n_length):
@@ -29,5 +26,4 @@ for i in p(combination_number, n_length):
         for j in p(combination_number - set(i), m_length):
             if list(j) <= m_base7:
                 res += 1
-
 print(res)

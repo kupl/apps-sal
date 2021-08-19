@@ -4,6 +4,7 @@ a = list(map(int, input().split()))
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -28,7 +29,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -39,7 +40,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -50,10 +51,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.G))
+            (*self.it,) = list(map(iter, self.G))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -69,5 +70,5 @@ for i in range(n):
     graph.add_edge(n + 1, i, -a[i])
 for i in range(1, n + 1):
     for j in range(2 * i, n + 1, i):
-        graph.add_edge(i - 1, j - 1, 10**11)
-print((sum([max(0, i) for i in a]) - graph.flow(n + 1, n)))
+        graph.add_edge(i - 1, j - 1, 10 ** 11)
+print(sum([max(0, i) for i in a]) - graph.flow(n + 1, n))

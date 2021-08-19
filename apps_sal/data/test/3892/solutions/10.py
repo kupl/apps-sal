@@ -2,12 +2,12 @@ def distance(b, a, n):
     return b - a if b >= a else b + n - a
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 dic_last_candy = dict()
 dict_node = dict()
 s = ''
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     c = dict_node.get(a, 0)
     c += 1
     dict_node[a] = c
@@ -20,7 +20,6 @@ for i in range(m):
     else:
         last_candy = b
     dic_last_candy[a] = last_candy
-
 for i in range(1, n + 1):
     c = dict_node.get(i, 0)
     if c:

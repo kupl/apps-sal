@@ -1,8 +1,8 @@
-M = 10**9 + 7
+M = 10 ** 9 + 7
 D = []
 i = 1
 r = 0
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 while i * i <= N:
     if N % i == 0:
         D.append(i)
@@ -15,5 +15,5 @@ for i in range(len(D)):
     for j in range(i):
         if D[i] % D[j] == 0:
             N[i] = (N[i] - N[j]) % M
-    r = (r + (N[i] * D[i] * pow(2, M - 2 + D[i] % 2, M))) % M
+    r = (r + N[i] * D[i] * pow(2, M - 2 + D[i] % 2, M)) % M
 print(r)

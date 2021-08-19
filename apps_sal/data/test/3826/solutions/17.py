@@ -9,11 +9,9 @@ def KKK():
     for i in range(len(a)):
         d[a[i]] += 1
         se.add(a[i])
-
     s = 0
     while se:
         s += d[se.pop()] - 1
-
     minLen = 3000
     for i in range(len(a)):
         r = s

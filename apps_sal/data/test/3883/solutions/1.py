@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if b > a:
     print(-1)
 else:
@@ -10,6 +10,6 @@ else:
         k = int((a - b) / 2 / b)
         if k != 0:
             x = min(x, (a - b) / 2 / k)
-        print("%.9f" % x)
+        print('%.9f' % x)
     except:
         print(-1)

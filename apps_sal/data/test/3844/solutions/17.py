@@ -20,7 +20,7 @@ f = 0
 for i in range(n):
     if b[i][1] % 2 == 1:
         f = 1
-        print("Conan")
+        print('Conan')
         break
 if f == 0:
-    print("Agasa")
+    print('Agasa')

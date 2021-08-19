@@ -6,9 +6,11 @@ class MaxFlow:
        complexity: O(EV^2)
        used in GRL6A(AOJ)
     """
+
     class Edge:
+
         def __init__(self, to, cap, rev):
-            self.to, self.cap, self.rev = to, cap, rev
+            (self.to, self.cap, self.rev) = (to, cap, rev)
 
     def __init__(self, V):
         """ V: the number of vertexes
@@ -23,7 +25,7 @@ class MaxFlow:
         self.E[fr].append(self.Edge(to, cap, len(self.E[to])))
         self.E[to].append(self.Edge(fr, 0, len(self.E[fr]) - 1))
 
-    def dinic(self, source, sink, INF=10**9):
+    def dinic(self, source, sink, INF=10 ** 9):
         """find max-flow"""
         maxflow = 0
         while True:
@@ -59,7 +61,6 @@ class MaxFlow:
         self.level = [-1] * self.V
         que.append(start)
         self.level[start] = 0
-
         while que:
             fr = que.popleft()
             for e in self.E[fr]:
@@ -73,8 +74,8 @@ def main():
     N = int(input())
     A = [int(x) for x in input().split()]
     flow = MaxFlow(N + 2)
-    source, sink = N, N + 1
-    for i, a in enumerate(A):
+    (source, sink) = (N, N + 1)
+    for (i, a) in enumerate(A):
         if a >= 0:
             flow.add_edge(source, i, a)
         else:
@@ -84,7 +85,7 @@ def main():
             if j % i == 0:
                 flow.add_edge(j - 1, i - 1, INF)
     cost = flow.dinic(source, sink, INF)
-    print((sum(a for a in A if a > 0) - cost))
+    print(sum((a for a in A if a > 0)) - cost)
 
 
 def __starting_point():

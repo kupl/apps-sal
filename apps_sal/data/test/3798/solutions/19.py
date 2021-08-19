@@ -1,5 +1,4 @@
 import sys
-
 MAX = 1000000
 
 
@@ -13,27 +12,21 @@ def digit_sum(n, b):
 def __starting_point():
     n = int(input())
     s = int(input())
-
     if n < s:
-        print((-1))
+        print(-1)
         return
-
     ans = -1
-
     for b in range(2, min(n + 1, MAX) + 1):
         sm = digit_sum(n, b)
         if sm == s:
             ans = b
             break
-
     if ans != -1:
         print(ans)
         return
-
     if n + 1 <= MAX:
-        print((-1))
+        print(-1)
         return
-
     for p in reversed(list(range(1, MAX))):
         if (n - s) % p != 0:
             continue
@@ -44,16 +37,13 @@ def __starting_point():
         if sm == s:
             ans = b
             break
-
     if ans != -1:
         print(ans)
         return
-
     if n == s:
-        print((n + 1))
+        print(n + 1)
         return
-
-    print((-1))
+    print(-1)
 
 
 __starting_point()

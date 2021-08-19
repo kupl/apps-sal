@@ -1,8 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-print((2 * n - 2))
-
+print(2 * n - 2)
 M = a.index(max(a))
 m = a.index(min(a))
 if abs(a[m]) <= abs(a[M]):

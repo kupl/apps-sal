@@ -1,10 +1,16 @@
 from functools import reduce
-def g(a, b): return g(b, a % b)if b else a
-def gcd(x): return reduce(g, x)
+
+
+def g(a, b):
+    return g(b, a % b) if b else a
+
+
+def gcd(x):
+    return reduce(g, x)
 
 
 input()
-*a, = list(map(int, input().split()))
+(*a,) = list(map(int, input().split()))
 b = gcd(a)
 a = [i // b for i in a]
 c = True

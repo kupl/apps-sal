@@ -5,7 +5,8 @@ readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
 
-class EDOMONDS_KARP():
+class EDOMONDS_KARP:
+
     def __init__(self, N, s, t):
         self.N = N
         self.s = s
@@ -25,7 +26,7 @@ class EDOMONDS_KARP():
         f = 0
         flow = [[0] * N for _ in range(N)]
         while True:
-            m, prev = self.bfs(flow)
+            (m, prev) = self.bfs(flow)
             if m == 0:
                 break
             f += m
@@ -63,11 +64,9 @@ class EDOMONDS_KARP():
 
 def main():
     INF = float('inf')
-
     N = int(readline())
     A = list(map(int, readline().split()))
-
-    S, T = 0, N + 1
+    (S, T) = (0, N + 1)
     EK = EDOMONDS_KARP(N + 2, S, T)
     add = EK.add_edge
     for i in range(1, N + 1):
@@ -78,8 +77,8 @@ def main():
             add(i, T, a)
         for j in range(2, N // i + 1):
             add(i, i * j, INF)
-    f, _ = EK.max_flow()
-    print((sum([x for x in A if x > 0]) - f))
+    (f, _) = EK.max_flow()
+    print(sum([x for x in A if x > 0]) - f)
 
 
 def __starting_point():

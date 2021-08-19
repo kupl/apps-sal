@@ -6,5 +6,5 @@ def solve(a, b, c):
     return ans
 
 
-a, b, c, l = list(map(int, input().split()))
+(a, b, c, l) = list(map(int, input().split()))
 print((l + 1) * (l + 2) * (l + 3) // 6 - solve(a, b, c) - solve(b, a, c) - solve(c, a, b))

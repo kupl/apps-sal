@@ -1,8 +1,8 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 
 
 def f(t, k):
-    a, b = min(t[k - 1], 2), min(t[k], 2)
+    (a, b) = (min(t[k - 1], 2), min(t[k], 2))
     if a == b:
         a = 1
     return [3 - a - b, a, b]
@@ -23,8 +23,8 @@ def h(t):
         s = g(t, k)
         if s:
             d = n - k - 1
-            t = t[: k + 1] + s * (d // 3) + s[: d % 3]
-            return ''.join(chr(i + 97) for i in t)
+            t = t[:k + 1] + s * (d // 3) + s[:d % 3]
+            return ''.join((chr(i + 97) for i in t))
     return 'NO'
 
 

@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 maxi = max(list(range(n)), key=lambda x: a[x])
 maxa = a[maxi]
 mini = min(list(range(n)), key=lambda x: a[x])
@@ -22,7 +21,6 @@ else:
         if a[i] < mina:
             mina = a[i]
             mini = i
-
-print((len(out)))
+print(len(out))
 for o in out:
     print((o[0], o[1]))

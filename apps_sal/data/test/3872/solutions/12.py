@@ -12,6 +12,6 @@ def reorder(a):
 
 
 if reorder(input()) == reorder(input()):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

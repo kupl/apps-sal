@@ -1,7 +1,8 @@
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-n, m = f()
+(n, m) = f()
 t = list(f())
 s = [0] * 301
 d = s[:]

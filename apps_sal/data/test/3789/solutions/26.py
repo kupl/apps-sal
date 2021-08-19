@@ -2,6 +2,7 @@ import collections
 
 
 class Dinic:
+
     def __init__(self, n):
         self.n = n
         self.g = [[] for i in range(n)]
@@ -52,7 +53,7 @@ class Dinic:
                 break
             self.it = [0] * self.n
             while True:
-                f = self.dfs(s, t, 10**9 + 7)
+                f = self.dfs(s, t, 10 ** 9 + 7)
                 if f > 0:
                     flow += f
                 else:
@@ -61,11 +62,9 @@ class Dinic:
 
 
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 dinic = Dinic(N + 2)
-
-INF = 10**18
-
+INF = 10 ** 18
 su = 0
 for x in range(1, N + 1):
     a = A[x - 1]
@@ -74,9 +73,7 @@ for x in range(1, N + 1):
         dinic.add_edge(0, x + 1, a)
     elif a < 0:
         dinic.add_edge(x + 1, 1, -a)
-
 for x in range(1, N + 1):
     for y in range(x + x, N + 1, x):
         dinic.add_edge(y + 1, x + 1, INF)
-
 print(su - dinic.max_flow(0, 1))

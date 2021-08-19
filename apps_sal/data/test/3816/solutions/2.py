@@ -1,8 +1,8 @@
-'''
+"""
 import sys
 sys.stdin = open("input.txt", "r")
 sys.stdout = open("output.txt", "w")
-'''
+"""
 
 
 def Solve(a, b, c, l):
@@ -13,10 +13,8 @@ def Solve(a, b, c, l):
     return k * (k + 1) // 2
 
 
-a, b, c, l = list(map(int, input().split()))
-
+(a, b, c, l) = list(map(int, input().split()))
 ans = (l + 3) * (l + 2) * (l + 1) // 6
-
 for d in range(l + 1):
     ans -= Solve(a + d, b, c, l - d) + Solve(b + d, a, c, l - d) + Solve(c + d, a, b, l - d)
 print(ans)

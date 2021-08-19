@@ -1,8 +1,7 @@
 def c(n):
-
     ans = 0
     if n > 15:
-        ans += (49 * (n - 15))
+        ans += 49 * (n - 15)
         n = 15
     l = set()
     for i in range(max(n + 1, 441)):

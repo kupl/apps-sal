@@ -1,13 +1,13 @@
 from math import sin, cos, tan, pi
 [w, h, a] = [int(i) for i in input().split()]
 if h > w:
-    h, w = w, h
+    (h, w) = (w, h)
 if a > 90:
     a = 180 - a
 if a == 0:
     print(w * h)
 else:
-    b = (a * pi) / 180
+    b = a * pi / 180
     w = w / 2.0
     h = h / 2.0
     if tan(b / 2) >= h / w:

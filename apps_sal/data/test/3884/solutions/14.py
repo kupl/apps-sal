@@ -2,7 +2,6 @@ N = int(input())
 M = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 imp = fuel = 0
 for i in range(N, 0, -1):
     if i == N:

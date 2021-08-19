@@ -1,5 +1,5 @@
-n, m = int(input()), int(input())
-a, b = [int(i) for i in input().split()], [int(i) for i in input().split()]
+(n, m) = (int(input()), int(input()))
+(a, b) = ([int(i) for i in input().split()], [int(i) for i in input().split()])
 
 
 def check(t):
@@ -13,7 +13,7 @@ def check(t):
     return 1
 
 
-l, r = 0, 10 ** 10
+(l, r) = (0, 10 ** 10)
 if not check(r):
     print(-1)
 else:

@@ -1,12 +1,9 @@
 n = int(input())
 ps = list(map(int, input().split()))
-
 pos = [0] * n
-for i, p in enumerate(ps):
+for (i, p) in enumerate(ps):
     pos[p - 1] = i
-
 used = [False] * n
-
 longest = 0
 for v in range(n):
     if used[v]:

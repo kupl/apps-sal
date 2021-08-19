@@ -12,4 +12,4 @@ for i in range(2, (N + 1) // 2):
     t = t * 4 % P
 for i in range(N // 2):
     ANS.append(ANS[N // 2 - i - 1])
-print("\n".join(map(str, ANS)))
+print('\n'.join(map(str, ANS)))

@@ -13,6 +13,6 @@ for i in ar:
     elif res != i:
         fl = 0
 if fl == 1:
-    print("Yes\n")
+    print('Yes\n')
 else:
-    print("No\n")
+    print('No\n')

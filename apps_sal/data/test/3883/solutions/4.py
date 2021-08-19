@@ -1,9 +1,7 @@
 from decimal import *
 import math
 getcontext().prec = 50
-
-
-a, b = list(map(Decimal, input().split()))
+(a, b) = list(map(Decimal, input().split()))
 if b > a:
     print(-1)
 else:

@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     m = b = 0
-    for k, a in sorted(tuple(map(int, input().split())) for _ in range(n)):
+    for (k, a) in sorted((tuple(map(int, input().split())) for _ in range(n))):
         if k - m > 15:
             b = 1 if b else 0
         else:

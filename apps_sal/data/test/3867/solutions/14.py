@@ -1,12 +1,19 @@
 from collections import Counter, defaultdict, deque
 
 
-def read(): return list(map(int, input().split()))
-def getinfo(grid): return print(list(map(print, grid)))
-def p(x): return print(x, end=" ")
+def read():
+    return list(map(int, input().split()))
 
 
-mod = 10**9 + 7
+def getinfo(grid):
+    return print(list(map(print, grid)))
+
+
+def p(x):
+    return print(x, end=' ')
+
+
+mod = 10 ** 9 + 7
 inf = float('inf')
 
 
@@ -28,7 +35,7 @@ def solve(a):
 n = int(input())
 d = defaultdict(set)
 for i in range(n - 1):
-    a, b = read()
+    (a, b) = read()
     d[a].add(b)
     d[b].add(a)
 a = read()

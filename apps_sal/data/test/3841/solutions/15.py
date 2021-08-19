@@ -1,4 +1,4 @@
-p, k = input().strip().split(' ')
+(p, k) = input().strip().split(' ')
 flag = 1
 p = int(p)
 k = int(k)
@@ -17,4 +17,4 @@ for i in A:
         B.append(i)
 print(len(B))
 for i in B:
-    print(i, end=" ")
+    print(i, end=' ')

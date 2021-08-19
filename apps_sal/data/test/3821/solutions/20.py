@@ -7,6 +7,6 @@ d = 1
 vze = 0
 for x in l:
     vze = vze + x * (d - vze)
-    d *= (1 - x)
+    d *= 1 - x
     ans = max(ans, vze)
 print(ans)

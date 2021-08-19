@@ -17,4 +17,4 @@ def ans(p):
     return ans
 
 
-print('%.100f' % max(ans(p[i:]) for i in range(n)))
+print('%.100f' % max((ans(p[i:]) for i in range(n))))

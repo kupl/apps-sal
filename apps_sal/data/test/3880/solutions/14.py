@@ -9,7 +9,6 @@ if n % 2 == 0 and s % 2 != 0:
     for i in p:
         if abs(i) <= q:
             q = abs(i)
-    print(sum(abs(i) for i in p) - 2 * q)
-
+    print(sum((abs(i) for i in p)) - 2 * q)
 else:
-    print(sum(abs(i) for i in p))
+    print(sum((abs(i) for i in p)))

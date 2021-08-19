@@ -10,7 +10,7 @@ while True:
             break
     if count == 0:
         if b % 2 == 1:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')
         break

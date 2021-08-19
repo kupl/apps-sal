@@ -1,7 +1,7 @@
 def primes(n):
     d = 2
     while d * d <= n:
-        while (n % d) == 0:
+        while n % d == 0:
             primfac.add(d)
             n //= d
         d += 1
@@ -24,7 +24,6 @@ for i in range(n - 1):
             to_delete.append(j)
     for j in to_delete:
         primfac.remove(j)
-
 li = list(primfac)
 if len(li) == 0:
     print(-1)

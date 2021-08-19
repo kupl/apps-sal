@@ -1,4 +1,4 @@
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 a = input()
 b = input()
 if '*' not in a:
@@ -7,7 +7,7 @@ if '*' not in a:
     else:
         print('NO')
     quit()
-l, r = a.split('*')
+(l, r) = a.split('*')
 if len(b) >= len(a) - 1:
     if l == b[:len(l)] and r == b[len(b) - len(r):]:
         print('YES')

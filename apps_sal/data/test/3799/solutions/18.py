@@ -1,15 +1,13 @@
 def main():
     s = input()
-
     if s[0] == s[-1]:
         ss = 1
     else:
         ss = 0
-
     if len(s) % 2 == ss:
-        print("Second")
+        print('Second')
     else:
-        print("First")
+        print('First')
 
 
 def __starting_point():

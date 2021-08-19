@@ -1,5 +1,5 @@
-sgn, a, b = 1, 0, 0
-sol = ""
+(sgn, a, b) = (1, 0, 0)
+sol = ''
 ok = 0
 for ch in input().split():
     if ch == '?':
@@ -18,9 +18,9 @@ for ch in input().split():
         ok = 1
     if not ok:
         sol += ch
-pl, mn = [n] * a, [1] * b
+(pl, mn) = ([n] * a, [1] * b)
 s = n * a - b
-i, j = 0, 0
+(i, j) = (0, 0)
 while s > n and (i < a or j < b):
     if i < a:
         amt = min(s - n, n - 1)
@@ -33,9 +33,9 @@ while s > n and (i < a or j < b):
         s -= amt
         j += 1
 if s != n:
-    print("Impossible")
+    print('Impossible')
 else:
-    print("Possible")
+    print('Possible')
     for ch in sol:
         if ch != 'P' and ch != 'M':
             print(ch, end=' ')

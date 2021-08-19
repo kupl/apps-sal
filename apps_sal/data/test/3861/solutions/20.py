@@ -6,6 +6,6 @@ for i in a:
         mn = max(mn, i)
         continue
     v = int(i ** 0.5)
-    if v * v != i and (v + 1) * (v + 1) != i and (v - 1) * (v - 1) != i:
+    if v * v != i and (v + 1) * (v + 1) != i and ((v - 1) * (v - 1) != i):
         mn = max(mn, i)
 print(mn)

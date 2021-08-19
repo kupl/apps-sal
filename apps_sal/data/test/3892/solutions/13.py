@@ -1,16 +1,16 @@
 def prog():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     d = {i: [] for i in range(1, n + 1)}
     from sys import stdin
     for i in range(m):
-        a, b = map(int, stdin.readline().split())
+        (a, b) = map(int, stdin.readline().split())
         d[a].append(b)
     res = []
     for i in range(1, n + 1):
         lst = []
-        for j, x in enumerate(d):
-            mn, k = 100000, -1
-            for k, y in enumerate(d[x]):
+        for (j, x) in enumerate(d):
+            (mn, k) = (100000, -1)
+            for (k, y) in enumerate(d[x]):
                 if x < y:
                     a = y - x
                 else:

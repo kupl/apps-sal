@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 t = input()
-res, tp = 0, 1
+(res, tp) = (0, 1)
 for i in range(n):
     tp *= 2
     if s[i] == 'b':
@@ -9,5 +9,5 @@ for i in range(n):
     if t[i] == 'a':
         tp -= 1
     res += min(tp, k)
-    tp = min(tp, 1e9)
+    tp = min(tp, 1000000000.0)
 print(res)

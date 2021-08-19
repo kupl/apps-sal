@@ -1,7 +1,6 @@
 from math import gcd
-
-n, k = map(int, input().split())
-a, b = map(int, input().split())
+(n, k) = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def stop(x, y):
@@ -10,12 +9,11 @@ def stop(x, y):
     return n * k // g
 
 
-mn, mx = 10**20, 0
+(mn, mx) = (10 ** 20, 0)
 for x in [-a, a]:
     for i in range(n):
         for y in [i * k - b, i * k + b]:
             cur = stop(x, y)
             mn = min(mn, cur)
             mx = max(mx, cur)
-
 print(mn, mx)

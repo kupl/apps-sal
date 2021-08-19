@@ -1,15 +1,11 @@
 n = int(input())
 x = list(map(int, input().split()))
 x.sort()
-
 nu = 0
 ans = 0
-
 mark = []
 for i in range(0, n):
     mark.append(0)
-
-
 for i in range(0, n):
     fail = 1
     nu = 0

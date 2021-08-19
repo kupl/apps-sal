@@ -1,5 +1,5 @@
 s = input().split()
-t = s[::]
+t = s[:]
 req = int(s[-1])
 lim = req
 S = 0
@@ -7,7 +7,6 @@ for i in range(len(s)):
     if s[i] == '?':
         s[i] = '1'
         S += 1 if i == 0 or s[i - 1] == '+' else -1
-
 if S < req:
     for i in range(len(s)):
         if t[i] == '?':
@@ -25,7 +24,7 @@ else:
                 s[i] = str(d + 1)
                 S -= d
 if S == req:
-    print("Possible")
+    print('Possible')
     print(' '.join(s))
 else:
-    print("Impossible")
+    print('Impossible')

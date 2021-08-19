@@ -17,10 +17,9 @@ if M * m < 0:
             if i + 1 != M_ind:
                 ans.append([M_ind, i + 1])
                 A[i] += M
-        else:
-            if i + 1 != m_ind:
-                ans.append([m_ind, i + 1])
-                A[i] += m
+        elif i + 1 != m_ind:
+            ans.append([m_ind, i + 1])
+            A[i] += m
 if max(A) > 0:
     for i in range(1, N):
         ans.append([i, i + 1])

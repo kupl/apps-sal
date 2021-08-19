@@ -1,11 +1,10 @@
 import copy
-
-n, m = list(map(int, input().strip().split()))
+(n, m) = list(map(int, input().strip().split()))
 items = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = list(map(int, input().strip().split()))
+    (u, v) = list(map(int, input().strip().split()))
     items[u - 1].append(v - 1)
-for i, line in enumerate(items):
+for (i, line) in enumerate(items):
     pairs = []
     for v in line:
         pairs.append((v - i, v) if v > i else (n - i + v, v))

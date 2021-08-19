@@ -1,14 +1,14 @@
 from math import sin, cos, tan
-PI = 3.141592653589793238463
+PI = 3.141592653589793
 [w, h, a] = [int(i) for i in input().split()]
 if h > w:
-    h, w = w, h
+    (h, w) = (w, h)
 if a > 90:
     a = 180 - a
 if a == 0:
     print(w * h)
 else:
-    b = (a * PI) / 180
+    b = a * PI / 180
     w = w / 2.0
     h = h / 2.0
     if tan(b / 2) >= h / w:

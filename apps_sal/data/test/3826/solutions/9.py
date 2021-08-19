@@ -1,15 +1,11 @@
 from collections import defaultdict as dd
 n = int(input())
 A = [int(x) for x in input().split()]
-
-
 hsh = dd(int)
 for i in range(n):
     hsh[A[i]] += 1
-
 cnt = 0
 ans = 10000000
-
 for i in hsh:
     if hsh[i] >= 2:
         cnt += 1
@@ -25,5 +21,4 @@ else:
                 ct += 1
             if ct == cnt:
                 ans = min(ans, abs(j - i + 1))
-
     print(ans)

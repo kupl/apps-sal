@@ -12,7 +12,7 @@ while i < len(s) and s[i] == 'b':
 while i < len(s) and s[i] == 'c':
     c += 1
     i += 1
-if i == len(s) and (a == c or b == c) and a * b != 0:
-    print("YES")
+if i == len(s) and (a == c or b == c) and (a * b != 0):
+    print('YES')
 else:
-    print("NO")
+    print('NO')

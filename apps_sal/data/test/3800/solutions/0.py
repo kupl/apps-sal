@@ -1,6 +1,6 @@
 def f(t, k):
-    i, j = 0, 1
-    s, d = 0, t[0]
+    (i, j) = (0, 1)
+    (s, d) = (0, t[0])
     n = len(t)
     while j <= n:
         if d > k:
@@ -10,7 +10,7 @@ def f(t, k):
             if t[i] and (j == n or t[j]):
                 s += 1
             else:
-                a, b = i - 1, j - 1
+                (a, b) = (i - 1, j - 1)
                 while j < n and t[j] == 0:
                     j += 1
                 while t[i] == 0:
@@ -28,7 +28,7 @@ def f(t, k):
     return s
 
 
-s, n = 0, int(input())
+(s, n) = (0, int(input()))
 t = list(map(int, input()))
 if n:
     k = sum(t)
@@ -36,7 +36,7 @@ if n:
         print(0)
     else:
         p = [(i, n // i) for i in range(max(1, n // k), int(n ** 0.5) + 1) if n % i == 0]
-        for a, b in p:
+        for (a, b) in p:
             if a != b:
                 s += 2 * f(t, a) * f(t, b)
             else:
@@ -53,7 +53,7 @@ else:
             j += 1
             while j < n and t[j] == 0:
                 j += 1
-            k = ((j - i) * (j - i + 1)) // 2
+            k = (j - i) * (j - i + 1) // 2
             s += k
         j += 1
     print((m - s) * s)

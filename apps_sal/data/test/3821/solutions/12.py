@@ -1,5 +1,5 @@
 input()
-p, s, ans = 1.0, 0.0, 0.0
+(p, s, ans) = (1.0, 0.0, 0.0)
 for x in sorted(map(float, input().split()), reverse=True):
     if x == 1:
         ans = 1

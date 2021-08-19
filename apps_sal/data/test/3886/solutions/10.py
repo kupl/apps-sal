@@ -8,7 +8,7 @@ l2 = len(s2)
 
 def get(h):
     if h > 55:
-        return 10**20
+        return 10 ** 20
     return (l0 + l1 + l2 + 2 << h) - l1 - l2 - 2
 
 
@@ -36,5 +36,5 @@ def solve(n, k):
 
 q = int(input())
 for i in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     print(solve(n, k - 1), end='')

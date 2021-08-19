@@ -13,7 +13,6 @@ for i in range(N):
     if x <= y:
         B[x] = A[i]
         B[y] = A[i]
-
 P = N * pow(2, N - 2 + mod - 1, mod)
 for i in range(N):
     B[i] += P
@@ -24,4 +23,4 @@ for i in range(N):
     B[i] *= Qinv
     B[i] %= mod
 for i in range(N):
-    print((B[i]))
+    print(B[i])

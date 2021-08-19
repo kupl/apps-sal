@@ -5,12 +5,9 @@ def solve(N, S):
     cnt = [0] * 26
     for c in S:
         cnt[ord(c) - ord('a')] += 1
-
     colors = len([c for c in cnt if c > 0])
-
     if colors == 1:
         return True
-
     return max(cnt) >= 2
 
 

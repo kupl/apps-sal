@@ -1,11 +1,10 @@
 P = 998244353
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 B = [int(a) for a in input().split()]
 li = sum([A[i] * B[i] for i in range(N)])
 di = sum([(A[i] ^ 1) * B[i] for i in range(N)])
 X = [[] for _ in range(M + 1)]
-
 X[0] = [1]
 
 

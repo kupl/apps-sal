@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, m = mi()
+(n, m) = mi()
 s = input().strip()
 t = input().strip()
 ok = 0

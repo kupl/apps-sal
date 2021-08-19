@@ -1,5 +1,4 @@
 sequence = input().strip()
-
 if len(sequence) % 2 != 0:
     print('No')
 else:
@@ -9,7 +8,6 @@ else:
             stack.pop()
         else:
             stack.append(s)
-
     if stack:
         print('No')
     else:

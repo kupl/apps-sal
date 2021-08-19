@@ -1,10 +1,9 @@
 import sys
 import math
 from itertools import permutations
-
 DEBUG = 0
 if DEBUG:
-    f = open("input.txt", "r")
+    f = open('input.txt', 'r')
     input = f.readline
 else:
     input = sys.stdin.readline

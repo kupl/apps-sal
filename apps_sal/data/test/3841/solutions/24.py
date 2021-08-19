@@ -1,7 +1,7 @@
-p, k = list(map(int, input().split()))
+(p, k) = list(map(int, input().split()))
 arr = []
 while p:
-    a, b = divmod(p, -k)
+    (a, b) = divmod(p, -k)
     if b < 0:
         a += 1
         b += k

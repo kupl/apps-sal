@@ -9,8 +9,8 @@ def dfs(x):
     return r
 
 
-n, m = list(map(int, input().split()))
-res, ln, lm = 0, dfs(n - 1), dfs(m - 1)
+(n, m) = list(map(int, input().split()))
+(res, ln, lm) = (0, dfs(n - 1), dfs(m - 1))
 for i in permutations('0123456', ln + lm):
     i = ''.join(i)
     res += int(i[:ln], 7) < n and int(i[ln:], 7) < m

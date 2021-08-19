@@ -1,8 +1,6 @@
 import sys
 from math import sqrt
-
-x, y = [int(x) for x in sys.stdin.readline().split()]
-
+(x, y) = [int(x) for x in sys.stdin.readline().split()]
 if y > x:
     print(-1)
 else:

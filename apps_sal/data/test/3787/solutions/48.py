@@ -1,5 +1,4 @@
-N, A, B = map(int, input().split())
-
+(N, A, B) = map(int, input().split())
 if A * B < N:
     print(-1)
 elif A + B - 1 > N:
@@ -27,6 +26,5 @@ else:
             P[pos] = i
             i += 1
             pos += 1
-
     for p in P:
         print(p, end=' ')

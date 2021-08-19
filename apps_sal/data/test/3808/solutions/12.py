@@ -11,8 +11,8 @@ if n % 2 == 0:
             if d < -1:
                 d -= 400001
     if d == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("No")
+    print('No')

@@ -18,8 +18,7 @@ def square(n):
 
 n = int(input())
 line = input().split()
-
-best = -10**7
+best = -10 ** 7
 for i in range(n):
     a = int(line[i])
     if not square(a):

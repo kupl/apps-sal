@@ -5,7 +5,7 @@ def main():
             del stack[-1]
         else:
             stack.append(c)
-    print(("Yes", "No")[bool(stack)])
+    print(('Yes', 'No')[bool(stack)])
 
 
 def __starting_point():

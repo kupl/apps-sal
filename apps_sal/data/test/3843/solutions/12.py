@@ -12,7 +12,7 @@ def digits(x, k):
 
 
 def solve(n, m):
-    if n * m > 7**7:
+    if n * m > 7 ** 7:
         return 0
     k1 = math.ceil(math.log(n, 7)) if n > 1 else 1
     k2 = math.ceil(math.log(m, 7)) if m > 1 else 1
@@ -23,5 +23,5 @@ def solve(n, m):
     return s
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 print(solve(n, m))

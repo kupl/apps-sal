@@ -24,11 +24,10 @@ for i in range(1, lim):
                 dp[i][j] = dp[i - 1][0] + x
             else:
                 dp[i][j] = dp[i][j - 1]
+        elif dp[i - 1][j - 2] + x <= dp[i][j - 1]:
+            vis[i][j] = True
+            dp[i][j] = dp[i - 1][j - 2] + x
         else:
-            if dp[i - 1][j - 2] + x <= dp[i][j - 1]:
-                vis[i][j] = True
-                dp[i][j] = dp[i - 1][j - 2] + x
-            else:
-                dp[i][j] = dp[i][j - 1]
+            dp[i][j] = dp[i][j - 1]
     ans[i - 1] = dp[i][-1]
 print(*ans)

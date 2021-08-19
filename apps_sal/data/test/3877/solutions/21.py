@@ -1,5 +1,5 @@
 import sys
-n, l, r = map(int, input().split())
+(n, l, r) = map(int, input().split())
 l -= 1
 r -= 1
 

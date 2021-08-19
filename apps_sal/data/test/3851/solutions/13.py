@@ -15,9 +15,8 @@ def gcd(p, q):
     return gcdi(max(p, q), min(p, q))
 
 
-n, k = map(int, input().strip().split())
-a, b = map(int, input().strip().split())
-
+(n, k) = map(int, input().strip().split())
+(a, b) = map(int, input().strip().split())
 tests = [(a, b), (a, k - b), (k - a, b), (k - a, k - b)]
 ansx = math.inf
 ansy = -math.inf

@@ -1,13 +1,13 @@
-s = "What are you doing at the end of the world? Are you busy? Will you save us?"
+s = 'What are you doing at the end of the world? Are you busy? Will you save us?'
 s1 = 'What are you doing while sending "'
 s2 = '"? Are you busy? Will you send "'
 s3 = '"?'
-l1, l2, l3 = len(s1), len(s2), len(s3)
+(l1, l2, l3) = (len(s1), len(s2), len(s3))
 
 
 def count(n):
     if n >= 60:
-        return 10**20
+        return 10 ** 20
     return (1 << n) * 75 + ((1 << n) - 1) * 68
 
 
@@ -36,7 +36,7 @@ def find(n, k):
 q = int(input())
 ans = ''
 while q:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     while n > 70 and k > 34:
         k -= 34
         n -= 1

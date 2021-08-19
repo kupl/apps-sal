@@ -1,6 +1,6 @@
 raw = input().split()
 vals = [x for x in input()]
-n, a, b, k = [int(x) for x in raw]
+(n, a, b, k) = [int(x) for x in raw]
 summ = 0
 mod = 1000000009
 
@@ -30,6 +30,5 @@ else:
 x = fast_power(a, n)
 for i in range(k):
     summ = (summ + [-1, 1][vals[i] == '+'] * x * p) % mod
-    x = (x * c) % mod
-
+    x = x * c % mod
 print(summ)

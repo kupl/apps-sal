@@ -1,13 +1,12 @@
 import numpy as np
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
-INF = 2**30
+sys.setrecursionlimit(10 ** 7)
+INF = 2 ** 30
 n = int(input())
 P = list(map(int, input().split()))
 T = [[] for _ in range(n)]
-for i, p in enumerate(P, 1):
+for (i, p) in enumerate(P, 1):
     T[p - 1].append(i)
 X = list(map(int, input().split()))
 D = [-1] * n
@@ -20,7 +19,7 @@ def dfs(v):
     x = X[v]
     dp = np.full(x + 1, INF, dtype=np.int64)
     dp[0] = 0
-    for i, nv in enumerate(T[v]):
+    for (i, nv) in enumerate(T[v]):
         k = np.full(x + 1, INF, dtype=np.int64)
         if x + 1 >= X[nv]:
             np.minimum(k[X[nv]:], dp[:x + 1 - X[nv]] + dfs(nv), out=k[X[nv]:])
@@ -34,6 +33,6 @@ def dfs(v):
 
 ans = dfs(0)
 if ans == INF:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')
 else:
-    print("POSSIBLE")
+    print('POSSIBLE')

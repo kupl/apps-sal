@@ -4,14 +4,12 @@ def ARC064D():
         key = 1
     else:
         key = -1
-
     if len(s) % 2 != 0:
         key *= -1
-
     if key == 1:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')
 
 
 ARC064D()

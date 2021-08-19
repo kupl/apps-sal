@@ -1,5 +1,4 @@
-N, A, B = list(map(int, input().split()))
-
+(N, A, B) = list(map(int, input().split()))
 if A + B - 1 > N or A * B < N:
     print('-1')
 else:
@@ -14,5 +13,4 @@ else:
         for i in range(A - 1 - y):
             ans += list(range(st, st + x)[::-1])
             st += x
-
-    print((' '.join(map(str, ans))))
+    print(' '.join(map(str, ans)))

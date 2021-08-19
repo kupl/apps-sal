@@ -1,5 +1,5 @@
 import bisect
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 L1 = list(map(int, input().split()))
 L2 = list(map(int, input().split()))
 x = int(input())
@@ -12,14 +12,12 @@ for i in L2:
 min1 = []
 min2 = []
 mx = 99999999999999
-
 for i in range(1, n + 1):
     m1 = mx
     for j in range(n - i + 1):
         if newL1[j + i] - newL1[j] < m1:
             m1 = newL1[j + i] - newL1[j]
     min1.append(m1)
-
 for i in range(1, m + 1):
     m2 = mx
     for j in range(m - i + 1):
@@ -27,7 +25,6 @@ for i in range(1, m + 1):
             m2 = newL2[j + i] - newL2[j]
     min2.append(m2)
 ot = 0
-
 for i in range(n):
     k = x // min1[i]
     for j in range(m):

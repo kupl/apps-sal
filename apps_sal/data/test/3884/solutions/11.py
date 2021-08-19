@@ -9,7 +9,7 @@ for i in range(n - 1):
 fuel_used += (1 - fuel_used) / a[n - 1]
 fuel_used += (1 - fuel_used) / b[0]
 try:
-    fuel_required = m * (fuel_used) / (1 - fuel_used)
+    fuel_required = m * fuel_used / (1 - fuel_used)
     print(fuel_required)
 except ZeroDivisionError:
     print(-1)

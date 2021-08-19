@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(x) for x in input().split()]
 a.sort()
-pile, tc = 0, n
+(pile, tc) = (0, n)
 visited = [0] * n
 while tc != 0:
     tt = 0
@@ -10,6 +10,6 @@ while tc != 0:
             visited[i] = 1
             tt += 1
             tc -= 1
-    if(tt > 0):
+    if tt > 0:
         pile += 1
 print(pile)

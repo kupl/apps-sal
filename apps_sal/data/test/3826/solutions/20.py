@@ -2,14 +2,12 @@ n = int(input())
 a = [int(x) for x in input().split()]
 mp = {}
 rep = 0
-
 for i in range(n):
     if a[i] in mp:
         mp[a[i]] += 1
         rep += 1
     else:
         mp[a[i]] = 1
-
 ans = 1000000
 if rep == 0:
     print(0)

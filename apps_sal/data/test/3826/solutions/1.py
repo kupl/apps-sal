@@ -1,10 +1,10 @@
 n = int(input())
 a = list(map(int, input().split()))
-s, d = {}, {}
+(s, d) = ({}, {})
 for q in range(n):
     s[a[q]] = q
     d[a[q]] = d.get(a[q], 0) + 1
-q2, ans = 0, n - 1
+(q2, ans) = (0, n - 1)
 for q1 in d:
     while d[q1] > 1:
         d[a[q2]] -= 1

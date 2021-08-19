@@ -5,8 +5,7 @@ if N % 2 == 0:
         print('First')
     else:
         print('Second')
+elif S[0] == S[-1]:
+    print('Second')
 else:
-    if S[0] == S[-1]:
-        print('Second')
-    else:
-        print('First')
+    print('First')

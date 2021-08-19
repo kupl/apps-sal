@@ -1,9 +1,7 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
     s = input()
-
     if '<' not in s or '>' not in s:
         print(N)
     else:

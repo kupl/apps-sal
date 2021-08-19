@@ -7,8 +7,6 @@ for i in range(l):
     for j in range(i, l):
         ss += int(s[j])
         sm[ss] += 1
-
-
 if n == 0:
     ans = 0
     for i in range(1, 40000):
@@ -17,7 +15,7 @@ if n == 0:
     print(ans)
 else:
     ans = 0
-    u = int(n**.5)
+    u = int(n ** 0.5)
     for i in range(1, u + 1):
         if n % i == 0:
             if n // i < 40000:

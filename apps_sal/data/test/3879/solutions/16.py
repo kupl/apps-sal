@@ -7,7 +7,7 @@ for j in range(n):
         c[j] = c[j] // 2
     while c[j] % 3 == 0:
         c[j] = c[j] // 3
-if(max(c) == min(c)):
+if max(c) == min(c):
     print('Yes')
 else:
     print('No')

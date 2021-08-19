@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-m = int(1e9 + 7)
+(n, k) = map(int, input().split())
+m = int(1000000000.0 + 7)
 r = 0
 p = pow(2, n, m)
 a = [1] + [0] * k

@@ -3,7 +3,7 @@
 """
 N = int(input())
 A = list(map(int, input().split()))
-print((2 * N - 1))
+print(2 * N - 1)
 if abs(max(A)) >= abs(min(A)):
     idx = A.index(max(A)) + 1
     for i in range(1, N + 1):

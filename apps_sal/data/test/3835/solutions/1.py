@@ -5,8 +5,8 @@ for i in range(n):
     grid.append(l1)
 first = grid[0][1] * grid[0][2]
 first = first // grid[1][2]
-first = int(first**0.5)
+first = int(first ** 0.5)
 result = [first]
 for i in range(1, n):
     result.append(grid[0][i] // first)
-print(*result, sep=" ")
+print(*result, sep=' ')

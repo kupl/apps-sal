@@ -2,7 +2,7 @@ from collections import deque
 n = int(input())
 graph = [[] for i in range(n + 1)]
 for _ in range(n - 1):
-    i, j = map(int, input().split())
+    (i, j) = map(int, input().split())
     graph[i].append(j)
     graph[j].append(i)
 mod = 10 ** 9 + 7
@@ -12,7 +12,7 @@ def bfs(x):
     q = deque([(0, x, 0)])
     dist = {x: 0}
     while q:
-        step, i, par = q.popleft()
+        (step, i, par) = q.popleft()
         dist[i] = step
         for j in graph[i]:
             if j == par:
@@ -21,10 +21,9 @@ def bfs(x):
     return [step, i, dist]
 
 
-_, black, _ = bfs(1)
-maxdist, white, b_dist = bfs(black)
-_, _, w_dist = bfs(white)
-
+(_, black, _) = bfs(1)
+(maxdist, white, b_dist) = bfs(black)
+(_, _, w_dist) = bfs(white)
 mindls = [0] * n
 maxdls = [0] * n
 for i in range(1, n + 1):

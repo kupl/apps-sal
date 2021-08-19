@@ -1,9 +1,9 @@
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 As = list(map(int, input().split()))
-a, b = max(As), min(As)
+(a, b) = (max(As), min(As))
 ai = As.index(a)
 bi = As.index(b)
-print((N - 1 + N - 1))
+print(N - 1 + N - 1)
 if a > -b:
     for i in range(N):
         if i != ai:

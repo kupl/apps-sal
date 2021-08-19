@@ -1,15 +1,18 @@
 import sys
-def input(): return sys.stdin.readline().strip()
-def mapint(): return map(int, input().split())
 
 
-sys.setrecursionlimit(10**9)
+def input():
+    return sys.stdin.readline().strip()
 
+
+def mapint():
+    return map(int, input().split())
+
+
+sys.setrecursionlimit(10 ** 9)
 N = int(input())
 As = list(mapint())
-
 command = []
-
 plus_max = max(As)
 minus_min = min(As)
 if abs(plus_max) >= abs(minus_min):
@@ -39,5 +42,5 @@ else:
             command.append((i - 1, i))
             As[i - 1] += As[i]
 print(len(command))
-for x, y in command:
+for (x, y) in command:
     print(y + 1, x + 1)

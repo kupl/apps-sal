@@ -8,7 +8,7 @@ def dist(a, b, p):
     yv = p[1] - a[1]
     c1 = xu * xv + yu * yv
     c2 = xu * xu + yu * yu
-    x, y = 0, 0
+    (x, y) = (0, 0)
     if c1 <= 0:
         x = a[0] - p[0]
         y = a[1] - p[1]
@@ -21,11 +21,11 @@ def dist(a, b, p):
     return x * x + y * y
 
 
-n, cx, cy = map(int, input().split())
+(n, cx, cy) = map(int, input().split())
 pts = [list(map(int, input().split())) for _ in range(n)]
-mini, maxi = float('inf'), 0
+(mini, maxi) = (float('inf'), 0)
 for i in range(n):
-    px, py = pts[i]
-    maxi = max((px - cx)**2 + (py - cy)**2, maxi)
+    (px, py) = pts[i]
+    maxi = max((px - cx) ** 2 + (py - cy) ** 2, maxi)
     mini = min(dist(pts[i - 1], pts[i], [cx, cy]), mini)
 print((maxi - mini) * pi)

@@ -1,4 +1,4 @@
-p, k = map(int, input().split())
+(p, k) = map(int, input().split())
 r = []
 while p:
     r.append(p % k)

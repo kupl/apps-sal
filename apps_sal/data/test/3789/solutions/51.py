@@ -2,8 +2,9 @@ from collections import deque
 
 
 class Dinic:
+
     def __init__(self, number):
-        self.table = [[0] * (number) for i in range(number)]
+        self.table = [[0] * number for i in range(number)]
         self.n = number
 
     def add(self, x, y, f):
@@ -35,9 +36,9 @@ class Dinic:
 
     def flow(self, s, t):
         ans = 0
-        inf = 10**20
+        inf = 10 ** 20
         while True:
-            self.visit = [-1] * (self.n)
+            self.visit = [-1] * self.n
             self.bfs(s)
             if self.visit[t] == -1:
                 break
@@ -51,7 +52,7 @@ class Dinic:
 
 N = int(input())
 P = [int(i) for i in input().split()]
-inf = 10**20
+inf = 10 ** 20
 maxflow = Dinic(N + 2)
 for i in range(1, N + 1):
     if P[i - 1] > 0:

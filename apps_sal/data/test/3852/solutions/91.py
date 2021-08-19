@@ -1,13 +1,11 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 tmp = 0
 disc = 0
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if abs(tmp) < abs(a):
         tmp = a
         disc = i
-
 print(2 * N - 2)
 for i in range(N):
     if i == disc:

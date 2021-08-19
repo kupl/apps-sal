@@ -8,10 +8,9 @@ for j in range(n):
     while c[j] % 3 == 0:
         c[j] = c[j] // 3
     if j >= 1:
-        if(c[j] != c[j - 1]):
+        if c[j] != c[j - 1]:
             f = False
             break
-
 if f:
     print('Yes')
 else:

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = []
 for i in range(n):
     x = input()
@@ -9,11 +9,11 @@ se = set(ind)
 le = len(l[ind[0] - 1])
 flag = 1
 for i in range(m):
-    if(len(l[ind[i] - 1]) != le):
+    if len(l[ind[i] - 1]) != le:
         flag = 0
         break
 if flag == 1:
-    s = ""
+    s = ''
     for j in range(le):
         flagc = 1
         c = l[ind[0] - 1][j]
@@ -22,7 +22,7 @@ if flag == 1:
                 flagc = 0
                 break
         if flagc == 0:
-            s = s + "?"
+            s = s + '?'
         else:
             s = s + c
     d = []
@@ -30,7 +30,6 @@ if flag == 1:
         if i + 1 not in se:
             if len(l[i]) == le:
                 d.append(l[i])
-
     for word in d:
         flagw = 1
         for i in range(le):
@@ -41,7 +40,7 @@ if flag == 1:
             flag = 0
             break
 if flag == 1:
-    print("Yes")
+    print('Yes')
     print(s)
 else:
-    print("No")
+    print('No')

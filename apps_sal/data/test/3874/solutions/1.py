@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 w = [input() for _ in range(n)]
 todel = [w[i - 1] for i in map(int, input().split())]
 if len(set(map(len, todel))) != 1:

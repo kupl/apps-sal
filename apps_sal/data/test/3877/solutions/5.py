@@ -1,11 +1,11 @@
-n, l, r = [int(x) for x in input().strip().split(' ')]
+(n, l, r) = [int(x) for x in input().strip().split(' ')]
 
 
 def handlerequest(n, l, r):
     if n == 0 or n == 1:
         return n if l == r else 0
     else:
-        size = 2**(n.bit_length() - 1) - 1
+        size = 2 ** (n.bit_length() - 1) - 1
         if r <= size:
             return handlerequest(n // 2, l, r)
         elif l > size + 1:

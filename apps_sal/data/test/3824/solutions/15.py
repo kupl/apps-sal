@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-c, d = map(int, input().split())
+(a, b) = map(int, input().split())
+(c, d) = map(int, input().split())
 k = 0
 if c == a or b == d:
     k = 2

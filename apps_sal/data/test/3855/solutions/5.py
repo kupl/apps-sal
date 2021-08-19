@@ -5,5 +5,4 @@ while n > 0:
     x += 1
     n -= p
     p <<= 1
-
 print(x)

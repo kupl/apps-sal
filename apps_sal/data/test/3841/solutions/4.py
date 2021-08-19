@@ -1,4 +1,4 @@
-p, k = list(map(int, input().split()))
+(p, k) = list(map(int, input().split()))
 
 
 def convert(num, base):
@@ -8,9 +8,9 @@ def convert(num, base):
     else:
         res = []
         while num != 0:
-            num, rem = divmod(num, -base)
+            (num, rem) = divmod(num, -base)
             if rem < 0:
-                num, rem = num + 1, rem + base
+                (num, rem) = (num + 1, rem + base)
             res.append(rem)
     return res
 

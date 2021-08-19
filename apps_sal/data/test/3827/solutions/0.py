@@ -1,6 +1,6 @@
-'''input
+"""input
 aabc
-'''
+"""
 
 
 def list_input():
@@ -19,12 +19,12 @@ s = input()
 a = s.count('a')
 b = s.count('b')
 c = s.count('c')
-ans = "YES"
-if(a == 0 or b == 0):
-    ans = "NO"
-if(c != a and c != b):
-    ans = "NO"
+ans = 'YES'
+if a == 0 or b == 0:
+    ans = 'NO'
+if c != a and c != b:
+    ans = 'NO'
 for i in range(len(s) - 1):
-    if(s[i] > s[i + 1]):
-        ans = "NO"
+    if s[i] > s[i + 1]:
+        ans = 'NO'
 print(ans)

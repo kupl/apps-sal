@@ -16,8 +16,7 @@ while True:
     if tmp == 0:
         break
     count += tmp
-
 if count % 2 == 0:
-    print("Second")
+    print('Second')
 else:
-    print("First")
+    print('First')

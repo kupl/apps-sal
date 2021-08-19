@@ -1,7 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = []
 T = []
-for x in range(1, int(N**.5) + 1):
+for x in range(1, int(N ** 0.5) + 1):
     if N % x == 0:
         S.append(x)
         if x * x < N:
@@ -10,8 +10,7 @@ T.reverse()
 S += T
 M = len(S)
 U = []
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 ans = 0
 v = 0
 for i in range(M):
