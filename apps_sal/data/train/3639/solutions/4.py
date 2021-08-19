@@ -17,7 +17,7 @@ def alan(arr):
                     b += 1
                 else:
                     sd += 1
-    if s >= 4 and r > 0 and d > 0 and b > 0 and sd > 0:
+    if s >= 4 and r > 0 and (d > 0) and (b > 0) and (sd > 0):
         return 'Smell my cheese you mother!'
     else:
         return 'No, seriously, run. You will miss it.'

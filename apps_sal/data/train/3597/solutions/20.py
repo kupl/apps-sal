@@ -1,6 +1,6 @@
 def say_hello(name, city, state):
-    element = ""
+    element = ''
     for x in name:
-        element = element + x + " "
+        element = element + x + ' '
     element = element[:-1]
-    return("Hello, " + element + "!" + " Welcome to " + city + ", " + state + "!")
+    return 'Hello, ' + element + '!' + ' Welcome to ' + city + ', ' + state + '!'

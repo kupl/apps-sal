@@ -1,5 +1,5 @@
 def capitalize(s, ind):
-    c = ""
+    c = ''
     for i in range(len(s)):
         k = 0
         for j in range(len(ind)):

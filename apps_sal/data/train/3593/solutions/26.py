@@ -5,4 +5,4 @@ def capitalize(s, arr):
             s[i] = s[i].upper()
         except IndexError:
             continue
-    return "".join(s)
+    return ''.join(s)

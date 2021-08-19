@@ -3,5 +3,5 @@ def xor(a, b):
         return False
     if a and b == True:
         return False
-    if a or b == False and a or b == True:
+    if a or (b == False and a) or b == True:
         return True

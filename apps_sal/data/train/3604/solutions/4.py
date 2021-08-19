@@ -4,12 +4,13 @@ a2 = [None]
 
 
 def f(n):
+
     def is_happy(n):
         s = {n}
         while n != 1:
             nn = 0
             while n > 0:
-                nn += (n % 10)**2
+                nn += (n % 10) ** 2
                 n //= 10
             n = nn
             if n < len(b):

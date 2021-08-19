@@ -8,7 +8,7 @@ def decompose(n):
     result = [str(ff)] if ff else []
     f -= ff
     while f > 0:
-        x = F(1, int(ceil(f**-1)))
+        x = F(1, int(ceil(f ** (-1))))
         f -= x
         result.append(str(x))
     return result

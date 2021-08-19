@@ -1,1 +1,2 @@
-def lovefunc(a, b): return (b - a) & 1
+def lovefunc(a, b):
+    return b - a & 1

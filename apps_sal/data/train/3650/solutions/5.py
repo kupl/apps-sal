@@ -7,7 +7,6 @@ def solve(arr):
                 links[a] = next_val
         if a * 2 in arr:
             links[a] = a * 2
-
     start = (set(links.keys()) - set(links.values())).pop()
     result = [start]
     while True:

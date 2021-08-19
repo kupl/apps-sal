@@ -1,5 +1,4 @@
 def paperwork(n, m):
-
     paperwork1 = n * m
     nothing = 0
     if n >= 0 and m >= 0:

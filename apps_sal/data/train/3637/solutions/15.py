@@ -9,7 +9,6 @@ def num_primorial(n):
             lst.append(i)
         if len(lst) == n:
             break
-
     prod = 1
     for e in range(n):
         prod = prod * lst[e]

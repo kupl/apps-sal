@@ -17,7 +17,7 @@ def prime_factors(n):
         n = n // 3
     k = 5
     step = 2
-    while k <= n**0.5:
+    while k <= n ** 0.5:
         if not n % k:
             factors.append(k)
             n = n // k

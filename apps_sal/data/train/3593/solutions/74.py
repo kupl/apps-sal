@@ -4,5 +4,4 @@ def capitalize(s, ind):
         if i >= len(letters):
             break
         letters[i] = letters[i].upper()
-
     return ''.join(letters)

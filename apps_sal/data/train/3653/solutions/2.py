@@ -1,5 +1,5 @@
 def tops(msg):
-    i, l, step, st = 2, 2, 2, []
+    (i, l, step, st) = (2, 2, 2, [])
     while l < len(msg):
         st.insert(0, msg[l:l + i])
         step += 3

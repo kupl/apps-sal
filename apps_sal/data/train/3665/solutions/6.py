@@ -8,14 +8,14 @@ def gen_res(n):
         if q not in D:
             D[q * q] = [q]
         else:
-            if all(c in allowed for c in str(q)):
+            if all((c in allowed for c in str(q))):
                 yield q
             for p in D[q]:
                 D[p + q].append(p)
             del D[q]
 
 
-allowed = set("2357")
+allowed = set('2357')
 res = list(gen_res(20000))
 
 

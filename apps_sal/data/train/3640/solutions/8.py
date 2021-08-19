@@ -1,5 +1,5 @@
 def funnel_out(funnel):
-    ans = ""
+    ans = ''
     while funnel:
         ans += funnel[-1].pop()
         funnel[-1].append('µ')
@@ -12,8 +12,8 @@ def funnel_out(funnel):
                     else:
                         funnel[row][col] = funnel[row - 1][col + 1]
                         funnel[row - 1][col + 1] = 'µ'
-            if all(en == 'µ' for en in funnel[row]):
-                del(funnel[row])
+            if all((en == 'µ' for en in funnel[row])):
+                del funnel[row]
         if len(funnel) == 1:
             break
     return ans

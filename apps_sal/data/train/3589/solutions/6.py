@@ -7,4 +7,4 @@ def next_numb(val):
         if len(s) == len(set(s)):
             return val
         val += 6
-    return "There is no possible number that fulfills those requirements"
+    return 'There is no possible number that fulfills those requirements'

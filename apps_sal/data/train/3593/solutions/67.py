@@ -1,5 +1,5 @@
 def capitalize(s, ind):
-    new_string = ""
+    new_string = ''
     i = 0
     while i < len(s):
         if i in ind:

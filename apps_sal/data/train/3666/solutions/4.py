@@ -1,1 +1,2 @@
-def whitespace(x): return not x.strip()
+def whitespace(x):
+    return not x.strip()

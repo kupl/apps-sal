@@ -1,7 +1,7 @@
 def f(s1, s2):
     d = {}
-    for a, b in zip(s1, s2):
-        if (a in d and d[a] != b):
+    for (a, b) in zip(s1, s2):
+        if a in d and d[a] != b:
             return False
         d[a] = b
     return True

@@ -1,1 +1,2 @@
-def paperwork(n, m): return max(max(n, 0) * m, 0)
+def paperwork(n, m):
+    return max(max(n, 0) * m, 0)

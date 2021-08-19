@@ -13,5 +13,4 @@ def work_on_strings(a, b):
             if i.upper() == j or i.lower() == j:
                 x = x.swapcase()
         k.append(x)
-
     return ''.join(z) + ''.join(k)

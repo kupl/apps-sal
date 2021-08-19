@@ -8,5 +8,4 @@ def say_hello(name, city, state):
         nam = name[0] + ' ' + name[1] + ' ' + name[2] + ' ' + name[3]
     elif len(name) == 5:
         nam = name[0] + ' ' + name[1] + ' ' + name[2] + ' ' + name[3] + ' ' + name[4]
-
-    return f"Hello, {nam}! Welcome to {city}, {state}!"
+    return f'Hello, {nam}! Welcome to {city}, {state}!'

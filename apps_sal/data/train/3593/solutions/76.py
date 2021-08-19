@@ -1,6 +1,6 @@
 def capitalize(s, ind):
     ret = ''
-    for i, letter in enumerate(s):
+    for (i, letter) in enumerate(s):
         if i in ind:
             ret += letter.upper()
         else:

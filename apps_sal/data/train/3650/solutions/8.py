@@ -8,4 +8,4 @@ def factors_count(n):
         while n % k == 0:
             n //= k
             result.append(k)
-    return -result.count(3), result.count(2)
+    return (-result.count(3), result.count(2))

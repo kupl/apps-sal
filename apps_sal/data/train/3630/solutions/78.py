@@ -1,13 +1,13 @@
 def arithmetic(a, b, operator):
     total = 0
-    if operator == "add":
+    if operator == 'add':
         total = a + b
-    elif operator == "subtract":
+    elif operator == 'subtract':
         total = a - b
-    elif operator == "multiply":
+    elif operator == 'multiply':
         total = a * b
-    elif operator == "divide":
+    elif operator == 'divide':
         total = a / b
     else:
-        return "Something Went Wrong"
+        return 'Something Went Wrong'
     return total

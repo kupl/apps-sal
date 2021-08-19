@@ -17,7 +17,7 @@ def happy_numbers(n):
                 unhappy |= seen
                 break
             seen.add(i)
-            i = sum(int(d)**2 for d in str(i))
+            i = sum((int(d) ** 2 for d in str(i)))
     return happy_list
 
 

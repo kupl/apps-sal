@@ -1,7 +1,7 @@
 def f1(n, k):
     n_i = n
     while True:
-        if all(int(c) < k for c in str(n_i)):
+        if all((int(c) < k for c in str(n_i))):
             return n_i
         n_i += n
 
@@ -9,7 +9,7 @@ def f1(n, k):
 def f2(n, k):
     n_i = n
     while True:
-        if set(str(n_i)) == set(str(d) for d in range(k)):
+        if set(str(n_i)) == set((str(d) for d in range(k))):
             return n_i
         n_i += n
 

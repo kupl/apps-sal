@@ -1,1 +1,2 @@
-def lovefunc(f, s): return (f + s) % 2
+def lovefunc(f, s):
+    return (f + s) % 2

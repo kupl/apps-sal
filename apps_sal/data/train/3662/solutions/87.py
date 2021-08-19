@@ -1,1 +1,2 @@
-def xor(a, b): return int(a) ^ int(b)
+def xor(a, b):
+    return int(a) ^ int(b)

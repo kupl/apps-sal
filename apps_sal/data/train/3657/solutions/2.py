@@ -4,7 +4,6 @@ def series_slices(digits, n):
         raise Exception
     else:
         d = list(map(int, digits))
-
         res = []
         for i in range(0, l - n + 1):
             res.append(d[i:i + n])

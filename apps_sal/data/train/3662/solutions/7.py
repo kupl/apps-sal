@@ -1,1 +1,1 @@
-xor = __import__("operator").__xor__
+xor = __import__('operator').__xor__

@@ -1,5 +1,5 @@
 def capitalize(s, ind):
-    n = ""
+    n = ''
     for i in range(len(s)):
         if i in ind:
             n += s[i].upper()

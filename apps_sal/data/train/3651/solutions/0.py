@@ -1,2 +1,2 @@
 def square(number):
-    return 2**(number - 1)
+    return 2 ** (number - 1)

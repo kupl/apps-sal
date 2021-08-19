@@ -17,7 +17,7 @@ def sflpf(n):
         return 0
 
 
-sflpf_of = [sflpf(i) for i in range(1, 2 * 10**4)]
+sflpf_of = [sflpf(i) for i in range(1, 2 * 10 ** 4)]
 
 
 def sflpf_data(val, n):

@@ -15,4 +15,4 @@ def sum_part(n, k=2):
         yield [n]
     for i in range(k, n // 2 + 1):
         for part in sum_part(n - i, i):
-            yield part + [i]
+            yield (part + [i])

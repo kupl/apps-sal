@@ -9,7 +9,7 @@ def primes_sieve(n):
             i = k * 2
             l = (n - k) // k
             sieve[i::k] = [False] * l
-    return [p for p, is_prime in enumerate(sieve) if is_prime]
+    return [p for (p, is_prime) in enumerate(sieve) if is_prime]
 
 
 primes = primes_sieve(8000)

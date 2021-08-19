@@ -1,6 +1,5 @@
 from re import compile, match
-
-REGEX = compile(r'\d$')
+REGEX = compile('\\d$')
 
 
 def is_digit(n):

@@ -3,4 +3,4 @@ def capitalize(s, ind):
     for i in ind:
         if i < len(s) + 1:
             j[i] = j[i].upper()
-    return "".join(j)
+    return ''.join(j)

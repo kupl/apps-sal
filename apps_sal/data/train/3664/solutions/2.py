@@ -1,5 +1,5 @@
 def cat_mouse(x):
     if len(x) > 5:
-        return "Escaped!"
+        return 'Escaped!'
     else:
-        return "Caught!"
+        return 'Caught!'

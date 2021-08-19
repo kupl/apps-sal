@@ -1,7 +1,8 @@
-DEFAULT = "There is no possible number that fulfills those requirements"
+DEFAULT = 'There is no possible number that fulfills those requirements'
 
 
-def valid(s): return len(set(s)) == len(s)
+def valid(s):
+    return len(set(s)) == len(s)
 
 
 def next_numb(n):

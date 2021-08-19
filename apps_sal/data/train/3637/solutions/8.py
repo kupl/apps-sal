@@ -15,7 +15,7 @@ def gen():
             del D[q]
 
 
-create, save = accumulate(gen(), mul), [1]
+(create, save) = (accumulate(gen(), mul), [1])
 
 
 def num_primorial(n):

@@ -4,7 +4,7 @@ def encode(str, key):
     for x in range(int(len(key) / 2)):
         switched.append(key[x * 2 + 1])
         switched.append(key[x * 2])
-    switched = "".join(switched)
+    switched = ''.join(switched)
     return str.translate(str.maketrans(key + key.upper(), switched + switched.upper()))
 
 

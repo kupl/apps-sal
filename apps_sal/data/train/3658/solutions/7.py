@@ -4,7 +4,7 @@ def swap(s, n):
     binary_mult = str(n) * len(s)
     bn_words = list(binary_mult)
     result = []
-    for i, x in enumerate(words):
+    for (i, x) in enumerate(words):
         if not x.isalpha():
             bn_words.insert(i, x)
         if bn_words[i] == '1':

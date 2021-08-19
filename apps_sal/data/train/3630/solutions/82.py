@@ -1,16 +1,15 @@
 def arithmetic(a, b, operator):
     ans = 0
-    while operator == "add":
+    while operator == 'add':
         ans = a + b
         break
-    while operator == "subtract":
+    while operator == 'subtract':
         ans = a - b
         break
-    while operator == "multiply":
+    while operator == 'multiply':
         ans = a * b
         break
-
-    while operator == "divide":
+    while operator == 'divide':
         ans = a / b
         break
     return ans

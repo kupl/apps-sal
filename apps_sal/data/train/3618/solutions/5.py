@@ -3,7 +3,7 @@ def socialist_distribution(population, minimum):
         return []
     while 1:
         poor = rich = 0
-        for idx, need in enumerate(population):
+        for (idx, need) in enumerate(population):
             if need < population[poor]:
                 poor = idx
             if need > population[rich]:

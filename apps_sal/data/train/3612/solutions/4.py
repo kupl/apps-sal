@@ -1,5 +1,5 @@
 def loose_change(c, a):
-    l, n = 0, 0
+    (l, n) = (0, 0)
     s = sorted([a // i for i in c if i > 1 and a % i == 0])
     for i in range(len(c) - 1, -1, -1):
         k = (a - l) // c[i]

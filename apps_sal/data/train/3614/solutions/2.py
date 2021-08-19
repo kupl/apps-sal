@@ -1,5 +1,5 @@
 def interpreter(tape):
-    dct, selector, out = {0: 0}, 0, ''
+    (dct, selector, out) = ({0: 0}, 0, '')
     for l in tape:
         if l == '>':
             selector += 1

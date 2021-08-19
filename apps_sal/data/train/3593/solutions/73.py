@@ -1,7 +1,7 @@
 def capitalize(s, ind):
-    out = ""
+    out = ''
     s = list(s)
     for i in ind:
         if i < len(s):
             s[i] = s[i].upper()
-    return "".join(s)
+    return ''.join(s)

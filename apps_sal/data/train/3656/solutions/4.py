@@ -5,7 +5,7 @@ def decompose(n):
         b = int(strs[1])
     elif '.' in n:
         strs = n.split('.')
-        b = 10**len(strs[1])
+        b = 10 ** len(strs[1])
         a = int(strs[1]) + b * int(strs[0])
     else:
         a = int(n)

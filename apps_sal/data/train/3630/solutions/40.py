@@ -1,11 +1,11 @@
 def arithmetic(a, b, operator):
-    while operator[0] == "a":
+    while operator[0] == 'a':
         return a + b
         break
-    while operator[0] == "s":
+    while operator[0] == 's':
         return a - b
         break
-    while operator[0] == "m":
+    while operator[0] == 'm':
         return a * b
         break
     else:

@@ -1,1 +1,2 @@
-def square(a): return 1 << (a - 1)
+def square(a):
+    return 1 << a - 1

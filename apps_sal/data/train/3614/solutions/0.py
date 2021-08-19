@@ -1,21 +1,19 @@
 def interpreter(tape):
-    memory, ptr, output = {0: 0}, 0, ""
-
+    (memory, ptr, output) = ({0: 0}, 0, '')
     for command in tape:
-        if command == ">":
+        if command == '>':
             ptr += 1
-        elif command == "<":
+        elif command == '<':
             ptr -= 1
-        elif command == "!":
+        elif command == '!':
             memory[len(memory)] = 0
-        elif command == "*":
+        elif command == '*':
             output += chr(memory.get(ptr, 0) % 256)
         elif ptr in memory:
-            if command == "+":
+            if command == '+':
                 memory[ptr] += 1
-            elif command == "-":
+            elif command == '-':
                 memory[ptr] -= 1
-            elif command == "/":
+            elif command == '/':
                 memory[ptr] = 0
-
     return output
