@@ -5,10 +5,7 @@ def is_palindrome(s):
         else:
             return False
     elif type(s) is int:
-        if str(s) == (str(s))[::-1]:
+        if str(s) == str(s)[::-1]:
             return True
         else:
             return False
-
-
-#  Implement a function that checks if something is a palindrome.

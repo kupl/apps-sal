@@ -1,12 +1,13 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
-        '''
+        """
         # Note:
             the arr's length is even
         # Notes:
             each pair has two numbers
             get the remainder of each number divided by k
-        '''
+        """
         n = len(arr)
         for i in range(n):
             arr[i] = arr[i] % k
@@ -20,7 +21,6 @@ class Solution:
                     lookup.pop(k - arr[i])
             else:
                 lookup[arr[i]] += 1
-
         if not lookup:
             return True
         return False

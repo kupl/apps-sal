@@ -14,7 +14,7 @@ def mints():
 
 
 def main():
-    n, k = mints()
+    (n, k) = mints()
     a = [list(minp()) for i in range(3)]
     w = [[False] * (n + 1) for i in range(3)]
     for j in range(3):
@@ -29,11 +29,10 @@ def main():
                         if (i * 3 + 1 >= n or a[z][i * 3 + 1] == '.') and (i * 3 + 2 >= n or a[z][i * 3 + 2] == '.') and (i * 3 + 3 >= n or a[z][i * 3 + 3] == '.'):
                             w[z][i + 1] = True
     can = w[0][n] or w[1][n] or w[2][n]
-    # print(w)
     if can:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 t = mint()

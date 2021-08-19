@@ -1,14 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 S = list(input().rstrip())
 L = len(S)
-
-# binary indexed tree
 bit = [0 for _ in range(L + 1)]
-
-# 0からiまでの区間和
-# 立っているビットを下から処理
 
 
 def query_sum(i):
@@ -17,9 +11,6 @@ def query_sum(i):
         s += bit[i]
         i -= i & -i
     return s
-
-# i番目の要素にxを足す
-# 覆ってる区間すべてに足す
 
 
 def add(i, x):
@@ -30,14 +21,14 @@ def add(i, x):
 
 def main():
     A = {}
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         if not s in A.keys():
             A[s] = [i]
         else:
             A[s].append(i)
     odd = 0
     dic = {}
-    for al, c in A.items():
+    for (al, c) in A.items():
         dic[al] = 0
         if len(c) % 2 != 0:
             odd += 1
@@ -45,16 +36,16 @@ def main():
         print(-1)
     else:
         make_ind = []
-        for s, B in A.items():
+        for (s, B) in A.items():
             l = len(B)
             if l % 2 == 1:
                 mid = B[l // 2]
-            for j, b in enumerate(B):
+            for (j, b) in enumerate(B):
                 if j < l // 2:
                     make_ind.append(b)
         make_ind.sort()
         IND = [None] * L
-        for i, m in enumerate(make_ind):
+        for (i, m) in enumerate(make_ind):
             s = S[m]
             IND[m] = i + 1
             inv = A[s][len(A[s]) - 1 - dic[s]]
@@ -62,12 +53,10 @@ def main():
             dic[s] += 1
         if L % 2 == 1:
             IND[mid] = L // 2 + 1
-
         ans = 0
-        for j, a in enumerate(IND):
+        for (j, a) in enumerate(IND):
             ans += j - query_sum(a)
             add(a, 1)
-
         print(ans)
 
 

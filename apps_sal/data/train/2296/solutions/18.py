@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class fenwick_tree(object):
+
     def __init__(self, n):
         self.n = n
         self.data = [0] * n
@@ -23,14 +24,14 @@ class fenwick_tree(object):
 
     def sum(self, l, r):
         """a[l] + a[l+1] + .. + a[r-1]を返す"""
-        assert 0 <= l and l <= r and r <= self.n
+        assert 0 <= l and l <= r and (r <= self.n)
         return self.__sum(r) - self.__sum(l)
 
 
 def calc_inversion(arr):
     N = len(arr)
     bit = fenwick_tree(N)
-    atoi = {a: i for i, a in enumerate(arr)}
+    atoi = {a: i for (i, a) in enumerate(arr)}
     res = 0
     for a in reversed(range(N)):
         i = atoi[a]
@@ -41,10 +42,10 @@ def calc_inversion(arr):
 
 def calc_inv(arr):
     N = len(set(arr))
-    atoi = {a: i for i, a in enumerate(sorted(set(arr)))}
+    atoi = {a: i for (i, a) in enumerate(sorted(set(arr)))}
     bit = fenwick_tree(N)
     res = 0
-    for i, a in enumerate(arr):
+    for (i, a) in enumerate(arr):
         res += i - bit.sum(0, atoi[a] + 1)
         bit.add(atoi[a], 1)
     return res
@@ -54,23 +55,21 @@ def main():
     S = input()
     N = len(S)
     C = Counter(S)
-
     odd = 0
-    mid = ""
-    for k, v in C.items():
+    mid = ''
+    for (k, v) in C.items():
         if v & 1:
             odd += 1
             mid = k
-
-    if N % 2 == 0:  # 偶数
+    if N % 2 == 0:
         if odd:
             return -1
-        half = {k: v // 2 for k, v in C.items()}
+        half = {k: v // 2 for (k, v) in C.items()}
         cnt = {k: 0 for k in C.keys()}
         label = []
         left = []
         right = []
-        for i, s in enumerate(S):
+        for (i, s) in enumerate(S):
             if cnt[s] < half[s]:
                 label.append(0)
                 left.append(s)
@@ -79,29 +78,26 @@ def main():
                 right.append(s)
             cnt[s] += 1
         ans = calc_inv(label)
-
         pos = {k: [] for k in C.keys()}
-        for i, s in enumerate(left):
+        for (i, s) in enumerate(left):
             pos[s].append(i)
         label = []
         for s in right:
             label.append(pos[s].pop())
         ans += calc_inv(label[::-1])
         return ans
-
-    else:  # 奇数
+    else:
         if odd != 1:
             return -1
-        half = {k: v // 2 for k, v in C.items()}
+        half = {k: v // 2 for (k, v) in C.items()}
         cnt = {k: 0 for k in C.keys()}
         label = []
         right = []
         left = []
         seen = 0
-        LL = 0  # midの右にあるL
-        RR = 0  # midの左にあるR
-
-        for i, s in enumerate(S):
+        LL = 0
+        RR = 0
+        for (i, s) in enumerate(S):
             if s == mid and cnt[s] == half[s]:
                 seen = 1
                 cnt[s] += 1
@@ -119,9 +115,8 @@ def main():
             cnt[s] += 1
         ans = calc_inv(label)
         ans += RR + LL
-
         pos = {k: [] for k in C.keys()}
-        for i, s in enumerate(left):
+        for (i, s) in enumerate(left):
             pos[s].append(i)
         label = []
         for s in right:

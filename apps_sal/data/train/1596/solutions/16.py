@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     c = list(bin(a + 1)[2:])
     d = list(bin(b + 1)[2:])
     e = c.count('1')
