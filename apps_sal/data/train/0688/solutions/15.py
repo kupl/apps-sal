@@ -11,6 +11,6 @@ for i in range(t):
     s.append(c)
 for i in s:
     if i <= 2:
-        print("uniform")
+        print('uniform')
     else:
-        print("non-uniform")
+        print('non-uniform')

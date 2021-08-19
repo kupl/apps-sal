@@ -1,12 +1,18 @@
 from sys import stdin, stdout
 input = stdin.readline
 print2 = stdout.write
-def get_ints(): return map(int, stdin.readline().split())
-def get_list(): return list(map(int, stdin.readline().split()))
+
+
+def get_ints():
+    return map(int, stdin.readline().split())
+
+
+def get_list():
+    return list(map(int, stdin.readline().split()))
 
 
 for _ in range(int(input())):
-    n, k = get_ints()
+    (n, k) = get_ints()
     powers = get_list()
     s = sum(powers[0:k])
     ma = s

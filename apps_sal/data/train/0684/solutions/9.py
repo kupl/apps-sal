@@ -32,7 +32,7 @@ def abc(n, k):
 t = int(input())
 for _ in range(t):
     n = int(input())
-    if n & (n - 1) == 0:
+    if n & n - 1 == 0:
         if n == 2:
             print('Me')
         else:

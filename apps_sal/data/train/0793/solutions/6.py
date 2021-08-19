@@ -7,7 +7,6 @@ def find_gcd(list):
     return x
 
 
-N, D = [int(i) for i in input().split()]
+(N, D) = [int(i) for i in input().split()]
 H = [abs(int(i) - D) for i in input().split()]
-
 print(find_gcd(H))

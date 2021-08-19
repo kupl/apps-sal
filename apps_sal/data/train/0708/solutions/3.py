@@ -1,10 +1,7 @@
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 for _ in range(int(input())):
-    n, a = list(map(int, input().split()))
-
+    (n, a) = list(map(int, input().split()))
     res = 0
-
     base = a
     for i in range(n):
         curr = pow(base, 2 * i + 1, MOD)
@@ -12,5 +9,4 @@ for _ in range(int(input())):
         res %= MOD
         base = base * curr
         base %= MOD
-
     print(res % MOD)

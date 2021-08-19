@@ -1,11 +1,10 @@
 import sys
-
 for __ in range(eval(input())):
     n = eval(input())
-    ans, const = "", False
+    (ans, const) = ('', False)
     for i in range(n):
-        p, a = list(map(int, sys.stdin.readline().split()))
-        coeff, power = 0, 0
+        (p, a) = list(map(int, sys.stdin.readline().split()))
+        (coeff, power) = (0, 0)
         if a > 0:
             coeff = a * p
             power = a - 1
@@ -14,8 +13,8 @@ for __ in range(eval(input())):
                     ans += str(coeff) + 'x^' + str(power)
                     const = True
                 else:
-                    ans += str(coeff) + 'x^' + str(power) + " + "
+                    ans += str(coeff) + 'x^' + str(power) + ' + '
             else:
                 ans += str(coeff)
                 const = True
-    print(0 if ans == "" else ans.strip() if const else ans[:len(ans) - 3].strip())
+    print(0 if ans == '' else ans.strip() if const else ans[:len(ans) - 3].strip())

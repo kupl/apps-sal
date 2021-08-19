@@ -1,9 +1,8 @@
-'''
+"""
 Created on 22-Nov-2015
 
 @author: root1
-'''
-
+"""
 from fractions import gcd
 
 

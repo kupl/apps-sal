@@ -9,6 +9,6 @@ for _ in range(int(input())):
             c = 1
             break
     if c == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

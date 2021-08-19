@@ -11,12 +11,11 @@ def solve(array):
 
 
 for _ in range(int(input())):
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     rooms = [[] for i in range(K)]
     for i in range(N):
-        s, e, p = list(map(int, input().split()))
+        (s, e, p) = list(map(int, input().split()))
         rooms[p - 1].append([e, -s])
-
     ans = 0
     for i in rooms:
         ans += solve(i)

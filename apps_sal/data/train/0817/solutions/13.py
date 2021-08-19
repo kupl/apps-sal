@@ -4,5 +4,4 @@ for i in range(int(input())):
     x = 0
     for j in range(n):
         x ^= lst[j]
-
     print(x)

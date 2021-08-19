@@ -12,4 +12,4 @@ for T in range(int(input())):
     for i in range(1, n + 1):
         height = min(L[i], R[i])
         maxHeight = max(maxHeight, height)
-    print(sum(arr) - maxHeight**2)
+    print(sum(arr) - maxHeight ** 2)

@@ -4,6 +4,6 @@ for i in range(int(input())):
     if userstring[-1] != userstring[0]:
         count = count + 1
     if count <= 2:
-        print("uniform")
+        print('uniform')
     else:
-        print("non-uniform")
+        print('non-uniform')

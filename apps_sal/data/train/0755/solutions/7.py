@@ -12,7 +12,7 @@ for i in range(n):
         else:
             ll.append(l[i] - l[j])
 ll.sort()
-for i in range(2, int(ll[0]**0.5) + 1):
+for i in range(2, int(ll[0] ** 0.5) + 1):
     if i * i > ll[0]:
         break
     if ll[0] % i == 0:

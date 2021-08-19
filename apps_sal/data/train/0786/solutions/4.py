@@ -8,7 +8,7 @@ while t:
     z = 1
     s = 0
     for i in range(len(x)):
-        if x[i] == "1":
+        if x[i] == '1':
             s += z
         z *= 6
     print(s)

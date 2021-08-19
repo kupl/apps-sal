@@ -4,7 +4,7 @@ for _ in range(int(input())):
     b = a[::-1]
     maxx = 0
     h = [0] * N
-    for index, items in enumerate(b):
+    for (index, items) in enumerate(b):
         k = 0
         if h[N - index - 1] == 0:
             for i in range(N - index):

@@ -1,7 +1,7 @@
-a = int(input(""))
+a = int(input(''))
 A = []
 for m in range(a):
-    x, y, z = [int(q) for q in input("").split()]
+    (x, y, z) = [int(q) for q in input('').split()]
     B = [x, y, z]
     A.append(B)
 for m in range(a):

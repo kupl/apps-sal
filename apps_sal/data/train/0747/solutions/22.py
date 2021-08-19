@@ -5,7 +5,7 @@ for _ in range(int(input())):
     b = []
     flag = 0
     if a[n - 1] == a[n - 2]:
-        print("NO")
+        print('NO')
         continue
     i = 0
     while i < n - 2:
@@ -18,7 +18,7 @@ for _ in range(int(input())):
         i += 1
     if flag == 0:
         b.sort(reverse=True)
-        print("YES")
-        print(*(a + b))
+        print('YES')
+        print(*a + b)
     else:
-        print("NO")
+        print('NO')

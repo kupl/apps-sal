@@ -1,7 +1,4 @@
-
-
-d = 10**9 + 7
-
+d = 10 ** 9 + 7
 t = int(input())
 while t:
     t -= 1
@@ -12,8 +9,7 @@ while t:
     ans = 1
     for i in range(n):
         c = a[i] - b[i] + 1
-        tmp = ((pow(p[i], b[i], d) * ((pow(p[i], c, d) - 1 + d) % d) * pow(p[i] - 1, d - 2, d) % d))
+        tmp = pow(p[i], b[i], d) * ((pow(p[i], c, d) - 1 + d) % d) * pow(p[i] - 1, d - 2, d) % d
         ans *= tmp
         ans = ans % d
-
     print(ans)

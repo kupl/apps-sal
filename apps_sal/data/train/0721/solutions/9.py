@@ -11,5 +11,4 @@ for _ in range(int(input())):
             ans = 26 * (1 + 26 * (pow(26, k - 1, mod) - 1) * pow(26 - 1, mod - 2, mod)) + 26 * (1 + 26 * (pow(26, k - 1, mod) - 1) * pow(26 - 1, mod - 2, mod))
         else:
             ans = 26 * (1 + 26 * (pow(26, k - 1, mod) - 1) * pow(26 - 1, mod - 2, mod)) + 26 * (1 + 26 * (pow(26, k - 2, mod) - 1) * pow(26 - 1, mod - 2, mod))
-
         print(ans % mod)

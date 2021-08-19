@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     rating = list(map(int, input().split()))
     track = [[] for i in range(n)]
     cng = []
@@ -42,7 +42,6 @@ for _ in range(int(input())):
                 track[x[k][0]].append(x[k][1])
                 track[x[k][0]].append(r)
                 track[x[k][0]].append(False)
-
     out = 0
     for i in track:
         if i[2]:

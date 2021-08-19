@@ -15,9 +15,9 @@ for _ in range(0, int(input())):
         pos = -1
         ctrpos = 0
         for q in z:
-            if(q > p):
+            if q > p:
                 break
-            if (p - q) < minq:
+            if p - q < minq:
                 minq = p - q
                 pos = ctrpos
             ctrpos += 1

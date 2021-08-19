@@ -4,7 +4,7 @@ for _ in range(t):
     s1 = input()
     s2 = input()
     rem = 0
-    if (s1.count('1') == s2.count('1') and s1.count('0') == s2.count('0')):
+    if s1.count('1') == s2.count('1') and s1.count('0') == s2.count('0'):
         u1 = 0
         n1 = 0
         s1 = list(s1)
@@ -19,8 +19,8 @@ for _ in range(t):
                     rem = 1
                     break
         if rem == 0:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("No")
+        print('No')

@@ -1,10 +1,9 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     c = []
     d = []
-
     for i in range(n):
         if b[i] == 1:
             c.append(a[i])
@@ -12,8 +11,8 @@ for _ in range(int(input())):
             d.append(a[i])
     r = 100 - m
     if len(c) == 0 or len(d) == 0:
-        print("no")
+        print('no')
     elif min(c) + min(d) <= r:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

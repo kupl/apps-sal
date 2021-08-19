@@ -9,7 +9,7 @@ def lcm(denominators):
 try:
     for testcase in range(int(input())):
         d = int(input())
-        f, s, t = list(map(int, input().split()))
+        (f, s, t) = list(map(int, input().split()))
         a = lcm([f, s, t])
         c = 24 * d // a
         print(c)

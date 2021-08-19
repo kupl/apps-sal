@@ -13,6 +13,6 @@ for i in range(len(a)):
             f = 1
             break
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

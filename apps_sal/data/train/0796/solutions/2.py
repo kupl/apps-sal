@@ -17,7 +17,7 @@ def g(n):
             i += 1
     if len(l) != n:
         l.append(1)
-    return " ".join(str(i) for i in l)
+    return ' '.join((str(i) for i in l))
 
 
 t = int(input())

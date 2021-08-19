@@ -9,11 +9,11 @@ for _ in range(t):
         print('**')
         print('*')
     else:
-        s1 = ""
+        s1 = ''
         n1 = n // 2
         n1 += 1
         for i in range(1, n1 + 1):
-            s1 = ""
+            s1 = ''
             if i == 1:
                 s1 += '*'
             elif i == 2:

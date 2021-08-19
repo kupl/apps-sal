@@ -4,6 +4,6 @@ while int(input()) != 0:
     for i in range(len(l)):
         invArray[l[i] - 1] = i + 1
     if invArray == l:
-        print("ambiguous")
+        print('ambiguous')
     else:
-        print("not ambiguous")
+        print('not ambiguous')

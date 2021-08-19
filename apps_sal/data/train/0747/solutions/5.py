@@ -12,7 +12,7 @@ for _ in range(int(input())):
             l[i] = 0
             continue
         b.append(l[i])
-    x, f = 0, 0
+    (x, f) = (0, 0)
     for i in b:
         if x == i:
             f = 1
@@ -25,4 +25,4 @@ for _ in range(int(input())):
         print('NO')
     else:
         print('YES')
-        print(*(a + b))
+        print(*a + b)

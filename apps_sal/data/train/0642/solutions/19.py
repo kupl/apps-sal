@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 testcase = int(input())
-e = 0.0000005
+e = 5e-07
 
 
 def check(m):
@@ -9,7 +9,7 @@ def check(m):
     for i in range(n):
         if curr <= a[i]:
             curr = a[i] + m
-        elif curr <= (a[i] + d):
+        elif curr <= a[i] + d:
             curr = curr + m
         else:
             return False
@@ -19,7 +19,7 @@ def check(m):
 def bs(l, h):
     m = (l + h) / 2
     if check(m):
-        if (m + e) <= h and check(m + e):
+        if m + e <= h and check(m + e):
             return bs(m + e, h)
         else:
             return m
@@ -28,7 +28,7 @@ def bs(l, h):
 
 
 for _ in range(testcase):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
     print(bs(0, max(a) + d))

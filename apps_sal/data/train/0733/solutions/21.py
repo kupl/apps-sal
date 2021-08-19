@@ -4,6 +4,6 @@ for i in range(0, T):
     word = input()
     min = word[0]
     for j in range(0, N):
-        if (word[j] <= min):
+        if word[j] <= min:
             min = word[j]
     print(min)

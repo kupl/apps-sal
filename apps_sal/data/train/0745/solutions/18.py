@@ -10,4 +10,4 @@ for _ in range(int(input())):
     Max = 0
     for i in range(1, n + 1):
         Max = max(Max, min(l[i], r[i]))
-    print(sum(ls) - (Max ** 2))
+    print(sum(ls) - Max ** 2)

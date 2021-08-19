@@ -1,7 +1,6 @@
 import math as m
 import cmath as c
-
-t, x = map(int, input().split())
+(t, x) = map(int, input().split())
 for _ in range(t):
     n = int(input())
     if n >= 0:
@@ -10,7 +9,7 @@ for _ in range(t):
         p = n + 0j
         s = c.sqrt(p)
         s = m.ceil(s.real)
-    if n - (s * s) <= 0.01 * x * n:
-        print("yes")
+    if n - s * s <= 0.01 * x * n:
+        print('yes')
     else:
-        print("no")
+        print('no')

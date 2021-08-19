@@ -1,8 +1,8 @@
 testcase = eval(input())
-while(testcase):
+while testcase:
     dosas = eval(input())
     if dosas % 2 == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     testcase -= 1

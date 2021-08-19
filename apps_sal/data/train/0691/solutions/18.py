@@ -4,7 +4,7 @@ for _ in range(int(input())):
     b = a[::-1]
     maxx = 0
     dic = {}
-    for index, items in enumerate(b):
+    for (index, items) in enumerate(b):
         k = 0
         try:
             if dic[items] == 0:

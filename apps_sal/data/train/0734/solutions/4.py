@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    l1 = [(x, i) for i, x in enumerate(l)]
+    l1 = [(x, i) for (i, x) in enumerate(l)]
     l.sort()
     l1.sort()
     i = 0

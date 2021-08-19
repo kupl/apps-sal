@@ -1,5 +1,4 @@
 from fractions import gcd
-
 for t in range(eval(input())):
     n = eval(input())
     ans = 0

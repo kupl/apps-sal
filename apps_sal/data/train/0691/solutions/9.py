@@ -14,8 +14,6 @@ for _ in range(int(input())):
             if L[i] % L[n] == 0:
                 L2[i] = 1
                 req = req + 1
-
         res = max(req, res)
         n = n - 1
-
     print(res)

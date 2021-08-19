@@ -1,5 +1,5 @@
 for a in range(int(input())):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     q = map(int, input().split())
     problem = sum(q)
     days = problem // k

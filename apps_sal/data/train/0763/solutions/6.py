@@ -14,7 +14,7 @@ for _ in range(int(input())):
             if one < zero:
                 ans = False
                 break
-    if ans == True and (one == zero):
+    if ans == True and one == zero:
         print('Yes')
     else:
         print('No')

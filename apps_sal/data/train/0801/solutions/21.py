@@ -4,7 +4,7 @@ for _ in range(int(input())):
     listt2 = [int(e) for e in input().split()]
     m = min(min(listt1), min(listt2))
     dic = {}
-    flag, flag2 = True, True
+    (flag, flag2) = (True, True)
     for e in listt1:
         if e not in dic:
             dic[e] = 1
@@ -31,7 +31,6 @@ for _ in range(int(input())):
         print(-1)
         continue
     ref = dic2.copy()
-
     listt11 = []
     listt22 = []
     for i in range(0, n):

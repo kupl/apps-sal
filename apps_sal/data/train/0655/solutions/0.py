@@ -1,7 +1,7 @@
 def __starting_point():
     t = int(input())
     for _ in range(t):
-        n, k, v = map(int, input().split())
+        (n, k, v) = map(int, input().split())
         li = list(map(int, input().split()))
         sumn = 0
         for i in range(n):

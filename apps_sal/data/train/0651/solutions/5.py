@@ -1,5 +1,5 @@
 def chk(n):
-    return (n & 1)
+    return n & 1
 
 
 def ans(n, dic):

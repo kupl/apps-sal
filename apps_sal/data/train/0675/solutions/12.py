@@ -9,7 +9,7 @@ for i in range(int(input())):
         print(1)
         continue
     elif num == 3:
-        print("1 3 2")
+        print('1 3 2')
         continue
     else:
         for i in range(4, num + 1):
@@ -17,7 +17,6 @@ for i in range(int(input())):
                 if i not in l:
                     l.append(i + 1)
                     l.append(i)
-            else:
-                if i not in l:
-                    l.append(i)
+            elif i not in l:
+                l.append(i)
     print(' '.join(map(str, l)))

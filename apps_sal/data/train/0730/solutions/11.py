@@ -12,13 +12,13 @@ for _ in range(int(input())):
         if d[1] - d[0] > 0:
             ans += (d[1] - d[0]) * 2
         if d[2] - d[1] - d[0] > 0:
-            ans += (d[2] - d[1] - d[0])
+            ans += d[2] - d[1] - d[0]
         ans += b[0]
         p.append(ans)
     s = sorted(p)
     if s[n - 1] == s[n - 2]:
-        print("tie")
+        print('tie')
     elif p[0] == max(p):
-        print("chef")
+        print('chef')
     else:
         print(p.index(max(p)) + 1)

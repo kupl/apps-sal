@@ -1,6 +1,6 @@
 def main():
     for _ in range(int(input())):
-        n, k = list(map(int, input().split()))
+        (n, k) = list(map(int, input().split()))
         a = list(map(int, input().split()))
         s = sum(a[:k])
         m = s

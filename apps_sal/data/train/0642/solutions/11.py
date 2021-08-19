@@ -1,11 +1,10 @@
 t = int(input())
 for _ in range(t):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     arr = list(map(int, input().split()))
     arr.sort()
-
-    low, high = 0, arr[-1] + d
-    while (high - low) > 0.0000005:
+    (low, high) = (0, arr[-1] + d)
+    while high - low > 5e-07:
         mid = (high + low) / 2
         time = arr[0] + mid
         ans = True
@@ -22,5 +21,4 @@ for _ in range(t):
             low = mid
         else:
             high = mid
-
     print(low)

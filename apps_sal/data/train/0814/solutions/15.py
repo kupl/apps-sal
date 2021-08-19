@@ -13,7 +13,7 @@ for _ in range(int(input())):
                 count = 0
         else:
             count += 1
-    if (fmax % 2 != 0 and smax < (fmax + 1) // 2):
-        print("Yes")
+    if fmax % 2 != 0 and smax < (fmax + 1) // 2:
+        print('Yes')
     else:
-        print("No")
+        print('No')

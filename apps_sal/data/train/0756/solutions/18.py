@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     c = x + y
     n = 1
-    while(True):
+    while True:
         t = c + n
         for i in range(2, t):
             if t % i == 0:

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     arr_price = list(map(int, input().split()))
     arr_players = list(map(int, input().split()))
     a = b = 101

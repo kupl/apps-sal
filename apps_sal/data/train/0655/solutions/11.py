@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, K, v = list(map(int, input().split()))
+    (N, K, v) = list(map(int, input().split()))
     a = list(map(int, input().split()))[:N]
     s = (N + K) * v
     b = s - sum(a)

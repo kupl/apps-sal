@@ -9,4 +9,4 @@ for i in range(inputs):
     s_r = math.pi * r2 * r2 * h2
     f_r = 4.0 / 6.0 * math.pi * r1 * r1 * r1
     f_r += math.pi * r1 * r1 * (h1 / 3.0)
-    print("%f %f" % (f_r, s_r))
+    print('%f %f' % (f_r, s_r))

@@ -21,10 +21,10 @@ def solve(C, F, cost):
 
 
 def __starting_point():
-    C, F = list(map(int, input().strip().split()))
+    (C, F) = list(map(int, input().strip().split()))
     cost = {i: {} for i in range(1, C + 1)}
     for flight in range(1, F + 1):
-        x, y, p = list(map(int, input().strip().split()))
+        (x, y, p) = list(map(int, input().strip().split()))
         cost[x][y] = p
         cost[y][x] = p
     print(solve(C, F, cost))

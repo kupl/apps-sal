@@ -2,7 +2,6 @@ cnt1_max = 315
 arr_size = [None] * cnt1_max
 for i in range(1, cnt1_max + 1):
     arr_size[i - 1] = (i * (i + 1), i)
-
 t = int(input())
 for _t in range(t):
     s = input().strip()
@@ -13,9 +12,8 @@ for _t in range(t):
             tot1[i] = tot1[i - 1] + 1
         else:
             tot1[i] = tot1[i - 1]
-
     beauty = 0
-    for size, cnt in arr_size:
+    for (size, cnt) in arr_size:
         i = 0
         limit = n - size
         while i < limit + 1:

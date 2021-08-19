@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    arr = list(map(int, input(). strip(). split()))
+    arr = list(map(int, input().strip().split()))
     a = [0] * n
     b = [0] * n
     if arr[0] >= 1:
@@ -26,5 +26,5 @@ for _ in range(t):
         if tmp > max:
             max = tmp
     total = sum(arr)
-    s = max + (max * (max - 1))
+    s = max + max * (max - 1)
     print(total - s)

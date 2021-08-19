@@ -2,6 +2,6 @@ T = int(input())
 for t in range(T):
     n = int(input())
     if n % 2 == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

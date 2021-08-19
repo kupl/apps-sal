@@ -14,6 +14,6 @@ for j in range(len(lst)):
             stat = True
             break
 if stat:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

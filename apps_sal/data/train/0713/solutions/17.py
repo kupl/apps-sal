@@ -17,8 +17,8 @@ for i in range(t):
                 f = 1
                 break
         if f == 1:
-            print("No")
+            print('No')
         else:
-            print("Yes")
+            print('Yes')
     else:
-        print("No")
+        print('No')

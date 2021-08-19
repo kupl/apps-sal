@@ -9,7 +9,6 @@ for t in L:
 while q > 0:
     q -= 1
     l1 = list(map(int, input().split()))
-
     if l1[0] == 1:
         F[l1[1]] = l1[2]
     else:
@@ -18,12 +17,10 @@ while q > 0:
         k = 1
         while 1:
             if 1 + k * r > n:
-
                 break
             enjoy = enjoy * F[1 + k * r]
             k += 1
         temp = enjoy
-
         while 1:
             if temp // 10 == 0:
                 print(temp, end=' ')

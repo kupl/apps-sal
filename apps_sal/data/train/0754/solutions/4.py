@@ -1,7 +1,7 @@
 def solve(n):
-    while(n > 0):
+    while n > 0:
         e = n % 10
-        if(e % 2 == 0):
+        if e % 2 == 0:
             return 1
         n = n // 10
     return 0

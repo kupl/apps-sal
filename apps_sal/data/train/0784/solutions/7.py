@@ -1,12 +1,9 @@
 from collections import defaultdict
-
-n, m, p = list(map(int, input().split()))
+(n, m, p) = list(map(int, input().split()))
 c = [defaultdict(int) for _ in range(n + 1)]
-
 for _ in range(p):
-    i, j = list(map(int, input().split()))
+    (i, j) = list(map(int, input().split()))
     c[i][j] += 1
-
 for i in range(1, n + 1):
     if not c[i]:
         print(m - 1)
@@ -17,7 +14,7 @@ for i in range(1, n + 1):
         cost = 0
         last_col = m
         ok = True
-        for j, h in v:
+        for (j, h) in v:
             cost += max(0, last_col - j - 1)
             if j < m:
                 x = j + 1 + c[i].get(j + 1, 0)

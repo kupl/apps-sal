@@ -1,5 +1,4 @@
-n, m, val = list(map(int, input().split()))
-
+(n, m, val) = list(map(int, input().split()))
 fenwick = [0] * (n + 1)
 
 

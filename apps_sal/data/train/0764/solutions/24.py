@@ -4,9 +4,9 @@ for i in range(t):
     b = input().split()
     c = 0
     for i in a:
-        if(i in b):
+        if i in b:
             c = c + 1
-    if(c >= 2):
-        print("similar")
+    if c >= 2:
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')

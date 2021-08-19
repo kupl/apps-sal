@@ -9,9 +9,9 @@ def factors(n):
 t = int(input())
 for _ in range(t):
     z = 1
-    x, y = map(int, input().split(" "))
+    (x, y) = map(int, input().split(' '))
     k = x + y
-    while(True):
+    while True:
         t = k + z
         if factors(t) == 2:
             break

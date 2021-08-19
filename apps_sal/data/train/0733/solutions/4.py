@@ -4,5 +4,4 @@ for _ in range(int(input())):
     minn = ord(s[0])
     for i in range(1, n):
         minn = min(ord(s[i]), minn)
-
     print(chr(minn))

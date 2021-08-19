@@ -8,7 +8,6 @@ for _ in range(eval(input())):
             mc += 1
         elif i > 0 and i % f == 0:
             fc += 1
-
     total = mc + fc
     if total < 0.7 * n:
         print('No')

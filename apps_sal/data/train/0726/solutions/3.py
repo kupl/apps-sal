@@ -6,7 +6,7 @@ for i in range(t):
         s = input()
         l.append(s)
     s = ''.join(l)
-    f = "odhf"
+    f = 'odhf'
     m = []
     for j in f:
         m.append(s.count(j))

@@ -1,8 +1,6 @@
 try:
-
-    n, k, s = list(map(int, input().split(' ')))
+    (n, k, s) = list(map(int, input().split(' ')))
     arr = list(map(int, input().split(' ')))
-
     start = 0
     end = 0
     temp = 0
@@ -17,6 +15,5 @@ try:
         print(-1)
     else:
         print(end - start + 1)
-
 except:
     pass

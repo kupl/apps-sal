@@ -1,6 +1,6 @@
 tc = int(input())
 for case in range(tc):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     sm = sum(a)
     f = True

@@ -11,7 +11,7 @@ for _ in range(int(input())):
             continue
         p.append(cnt)
     for _ in range(int(input())):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         if p[r - 1] - p[l - 1] > 0:
             print('EVEN')
         else:

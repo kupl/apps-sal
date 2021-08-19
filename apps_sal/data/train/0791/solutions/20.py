@@ -1,11 +1,8 @@
 import sys
-
 t = int(sys.stdin.readline().strip())
-
 while t:
-
-    n, d = list(map(int, sys.stdin.readline().strip().split(" ")))
-    nums = list(map(int, sys.stdin.readline().strip().split(" ")))
+    (n, d) = list(map(int, sys.stdin.readline().strip().split(' ')))
+    nums = list(map(int, sys.stdin.readline().strip().split(' ')))
     a = False
     s = 0
     for i in nums:
@@ -17,7 +14,6 @@ while t:
         ans = -1
     else:
         arr = [avg] * n
-
         for i in range(len(arr) - d):
             k = arr[i] - nums[i]
             if k != 0:
@@ -29,7 +25,6 @@ while t:
                 ans = -1
                 a = True
                 break
-
         if a != True:
             ans = count
     print(ans)

@@ -6,13 +6,13 @@ def sin():
 
 
 for _ in range(int(sin())):
-    n, m, k = list(map(int, sin().split()))
+    (n, m, k) = list(map(int, sin().split()))
     grid = []
     ans = 4 * k
     for i in range(n):
         grid.append([0] * m)
     for i in range(k):
-        r, c = list(map(int, sin().split()))
+        (r, c) = list(map(int, sin().split()))
         r -= 1
         c -= 1
         if r > 0 and grid[r - 1][c] == 1:

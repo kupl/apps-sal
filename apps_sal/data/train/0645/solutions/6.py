@@ -5,8 +5,7 @@ for test in range(t):
     one = k % n
     zero = n - one
     if zero < one:
-        one, zero = zero, one
-
+        (one, zero) = (zero, one)
     if zero >= one + 1:
         print(one * 2)
     elif zero == one:

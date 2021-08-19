@@ -1,5 +1,5 @@
 import operator
-n, m, p = list(map(int, input().split()))
+(n, m, p) = list(map(int, input().split()))
 a = []
 for i in range(p):
     a.append(list(map(int, input().split())))

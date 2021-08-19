@@ -10,9 +10,8 @@ def createTree(n, par):
 
 
 def recurse(graph, root):
-    if (len(graph[root]) == 0):
+    if len(graph[root]) == 0:
         return [1, 1]
-
     noNodes = 1
     root_sum = 0
     for i in range(len(graph[root])):

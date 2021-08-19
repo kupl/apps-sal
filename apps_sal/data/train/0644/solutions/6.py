@@ -3,6 +3,6 @@ for i in range(int(input())):
     array = list(map(int, input().split()))
     sums = sum(array)
     if sums // n == sums / n:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -24,5 +24,4 @@ for _ in range(eval(input())):
             c = 1
     for j in range(c):
         b.append(c - j)
-
     print(' '.join(map(str, b)))

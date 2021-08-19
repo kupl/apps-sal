@@ -5,7 +5,7 @@ for O in range(int(input())):
     s2 = set(l2)
     s = set()
     s = s1.intersection(s2)
-    if(len(s) >= 2):
-        print("similar")
+    if len(s) >= 2:
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')

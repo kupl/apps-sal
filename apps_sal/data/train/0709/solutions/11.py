@@ -1,5 +1,5 @@
 def gcd(a, b):
-    if (b == 0):
+    if b == 0:
         return a
     else:
         return gcd(b, a % b)
@@ -12,7 +12,7 @@ for u in range(t):
     ans = a[0]
     for i in a:
         h = gcd(ans, i)
-        if(h > ans):
+        if h > ans:
             ans = h
         else:
             break
@@ -20,7 +20,7 @@ for u in range(t):
     ans2 = a[0]
     for i in a:
         h = gcd(ans2, i)
-        if(h > ans):
+        if h > ans:
             ans2 = h
         else:
             break

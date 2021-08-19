@@ -9,8 +9,7 @@ for i in range(t):
         new_total = total
     cand = new_total // n
     op = new_total - total
-
     for j in a:
         if j > cand:
-            op += (j - cand)
+            op += j - cand
     print(op)

@@ -2,14 +2,14 @@ import math
 
 
 def hello(x, n):
-    xPn = (x / 100) * n
+    xPn = x / 100 * n
     sqr = math.sqrt(n)
     sqr = math.floor(sqr)
-    sqr = sqr**2
-    if(abs(n - sqr) <= xPn):
-        return "yes"
+    sqr = sqr ** 2
+    if abs(n - sqr) <= xPn:
+        return 'yes'
     else:
-        return "no"
+        return 'no'
 
 
 def __starting_point():

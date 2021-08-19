@@ -8,21 +8,19 @@ def ispoweroftwo(y):
 t = int(input())
 for i in range(t):
     n = int(input())
-
     a = []
-    if(ispoweroftwo(n) and n != 1):
-        print(-1, end=" ")
-    if(n == 1):
+    if ispoweroftwo(n) and n != 1:
+        print(-1, end=' ')
+    if n == 1:
         print(1)
-
-    if(n >= 3 and not(ispoweroftwo(n))):
+    if n >= 3 and (not ispoweroftwo(n)):
         a.append(2)
         a.append(3)
         a.append(1)
-    if(n > 3 and not ispoweroftwo(n)):
+    if n > 3 and (not ispoweroftwo(n)):
         i = 4
-        while(i <= n):
-            if(ispoweroftwo(i)):
+        while i <= n:
+            if ispoweroftwo(i):
                 a.append(i + 1)
                 a.append(i)
                 i += 2

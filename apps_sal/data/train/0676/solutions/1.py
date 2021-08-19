@@ -9,20 +9,18 @@ for _ in range(testCase):
         finalList.append([boysList[0], coun])
         for _ in range(coun):
             boysList.remove(boysList[0])
-
     finalList.sort(key=lambda x: x[1])
     finalList.reverse()
     test = []
     name = []
-    for a, b in finalList:
+    for (a, b) in finalList:
         if len(test) == 0:
             test.append(b)
             name.append(a)
+        elif b in test:
+            name.append(a)
+            name.sort()
+            name = [name[0]]
         else:
-            if b in test:
-                name.append(a)
-                name.sort()
-                name = [name[0]]
-            else:
-                break
+            break
     print(name[0])

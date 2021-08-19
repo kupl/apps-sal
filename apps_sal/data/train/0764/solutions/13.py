@@ -10,7 +10,7 @@ for i in range(int(input())):
         for m in k:
             if j == m:
                 c += 1
-    if(c >= 2):
+    if c >= 2:
         print('similar')
     else:
         print('dissimilar')

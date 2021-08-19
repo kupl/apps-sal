@@ -1,10 +1,9 @@
 t = int(input())
-
 for i in range(t):
     l = int(input())
     st = input()
-    if st == "":
-        print("")
+    if st == '':
+        print('')
     else:
         minC = st[0]
         for s in st:

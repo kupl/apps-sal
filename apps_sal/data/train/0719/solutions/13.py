@@ -1,9 +1,8 @@
 N = int(input())
 station = [0] * (N + 1)
 for i in range(N):
-    amount, distance = list(map(int, input().split()))
+    (amount, distance) = list(map(int, input().split()))
     station[i] = (amount, distance)
-
 for c in range(N):
     i = c
     p = station[i][0]

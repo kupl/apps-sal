@@ -16,8 +16,8 @@ for _ in range(int(input())):
     for i in range(len(b) - 1, n - 1):
         if arr[i] == arr[i + 1]:
             flag = 1
-            print("NO")
+            print('NO')
             break
     if flag == 0:
-        print("YES")
+        print('YES')
         print(*arr)

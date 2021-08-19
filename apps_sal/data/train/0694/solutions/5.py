@@ -1,12 +1,12 @@
 def find_lcm(num1, num2):
-    if(num1 > num2):
+    if num1 > num2:
         num = num1
         den = num2
     else:
         num = num2
         den = num1
     rem = num % den
-    while(rem != 0):
+    while rem != 0:
         num = den
         den = rem
         rem = num % den
@@ -29,7 +29,7 @@ b = []
 c = []
 for i in range(t):
     nodays.append(int(input()))
-    d, e, f = map(int, input().split())
+    (d, e, f) = map(int, input().split())
     a.append(d)
     b.append(e)
     c.append(f)

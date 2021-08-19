@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     lis = []
     if a >= b:
         for i in range(1, a + 1):

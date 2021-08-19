@@ -1,6 +1,6 @@
 for a in range(int(input())):
-    N, k = map(int, input().split())
-    c = list(map(lambda b: k**b, list(map(int, input().split()))))
+    (N, k) = map(int, input().split())
+    c = list(map(lambda b: k ** b, list(map(int, input().split()))))
     total_sum = sum(c)
     i = 0
     for e in range(N):

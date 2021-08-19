@@ -33,6 +33,5 @@ try:
                 if t == q:
                     break
         print(day)
-
 except:
     None

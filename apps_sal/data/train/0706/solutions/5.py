@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     w = list(map(int, input().split()))
-
     p = 0
     ans = 0
     flag = False
@@ -21,7 +19,6 @@ for _ in range(t):
                     break
             ans += 1
             pick = 0
-
     if flag:
         print(-1)
     else:

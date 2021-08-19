@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     k = 100 - k
     a = list(map(int, input().strip().split()))
     b = list(map(int, input().strip().split()))
@@ -11,6 +11,6 @@ for _ in range(int(input())):
         elif b[i] == 1 and a[i] < a_min:
             a_min = a[i]
     if a_min + d_min <= k:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

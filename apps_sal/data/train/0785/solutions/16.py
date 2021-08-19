@@ -1,5 +1,5 @@
 def two(d):
-    return (2**d) - 1
+    return 2 ** d - 1
 
 
 for _ in range(int(input())):
@@ -12,7 +12,5 @@ for _ in range(int(input())):
         chef_acc = a * d - two(d)
         lst.append(chef_acc)
         day.append(d)
-
         d += 1
-
     print(day[-2], lst.index(max(lst)) + 1)

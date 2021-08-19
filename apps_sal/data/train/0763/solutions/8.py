@@ -1,27 +1,20 @@
 tc = int(input())
-
 for _ in range(tc):
-
     n = int(input())
     s = input()
     p = input()
-
     zeros = ones = 0
-
     for i in range(n):
         if s[i] != p[i]:
             if s[i] == '0':
                 zeros += 1
             else:
                 ones += 1
-
     if zeros != ones:
-        print("No")
+        print('No')
         continue
-
     c1 = 0
     ans = True
-
     for i in range(n):
         if s[i] != p[i]:
             if s[i] == '0':
@@ -32,5 +25,4 @@ for _ in range(tc):
                     break
             else:
                 c1 += 1
-
-    print("Yes" if ans else "No")
+    print('Yes' if ans else 'No')

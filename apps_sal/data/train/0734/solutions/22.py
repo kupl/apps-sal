@@ -11,13 +11,12 @@ def arrange(n, l):
                         break
             if i == n:
                 break
-            else:
-                if l[j] != l[i]:
-                    list2[i] = l[j]
-                    list2[j] = l[i]
-                    list1[i] = 1
-                    list1[j] = 1
-                    i += 1
+            elif l[j] != l[i]:
+                list2[i] = l[j]
+                list2[j] = l[i]
+                list1[i] = 1
+                list1[j] = 1
+                i += 1
     if i != n:
         for j in range(0, i):
             if i < n and list1[i] == 1:
@@ -27,12 +26,11 @@ def arrange(n, l):
                         break
             if i == n:
                 break
-            else:
-                if l[j] != l[i] and list2[j] != l[i]:
-                    list2[i] = list2[j]
-                    list2[j] = l[i]
-                    list1[i] = 1
-                    i += 1
+            elif l[j] != l[i] and list2[j] != l[i]:
+                list2[i] = list2[j]
+                list2[j] = l[i]
+                list1[i] = 1
+                i += 1
     if i != n:
         print('No')
     else:

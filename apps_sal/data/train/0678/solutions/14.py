@@ -9,6 +9,6 @@ for i in range(0, t):
     while True:
         days += 1
         j += arr[j]
-        if(j >= n - 1):
+        if j >= n - 1:
             break
     print(days)

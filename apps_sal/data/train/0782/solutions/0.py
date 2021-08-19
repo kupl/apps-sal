@@ -14,10 +14,10 @@ for i in range(test):
     if gaf[0] < gaf[1]:
         t = False
     j = 0
-    while(j < gaf[1] and t):
+    while j < gaf[1] and t:
         sum = sum + rate[j]
         j = j + 1
     if t:
         print(sum)
     else:
-        print("Not Possible")
+        print('Not Possible')

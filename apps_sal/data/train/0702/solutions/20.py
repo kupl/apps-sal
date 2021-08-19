@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    m, c, h = (list(map(int, input().split())))
+    (m, c, h) = list(map(int, input().split()))
     if c + 2 * m < h - m:
         print('Yes')
     elif h == c:

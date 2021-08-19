@@ -12,6 +12,5 @@ for t in range(int(input())):
     for i in range(1, n + 1):
         l = min(L[i], R[i])
         ma = max(ma, l)
-
-    ans = sum(arr) - ma**2
+    ans = sum(arr) - ma ** 2
     print(ans)

@@ -1,10 +1,8 @@
 n = int(input())
-health = sorted((map(int, input().split())))
+health = sorted(map(int, input().split()))
 laser = int(input())
-
-left, right = 0, len(health) - 1
+(left, right) = (0, len(health) - 1)
 ans = 0
-
 while left <= right:
     if health[left] <= laser:
         laser -= health[left]
@@ -16,5 +14,4 @@ while left <= right:
         laser += health[right]
         ans -= 1
         right -= 1
-
 print(ans)

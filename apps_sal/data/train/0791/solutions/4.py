@@ -1,14 +1,11 @@
 t = int(input())
-
 while t > 0:
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     count = 0
     sum1 = sum(arr)
-
     if sum1 % n != 0:
-        print("-1")
-
+        print('-1')
     else:
         ans = 0
         average = sum1 / n
@@ -21,7 +18,5 @@ while t > 0:
                 ans += abs(y)
                 if i + d < n:
                     arr[i + d] += y
-
         print(ans)
-
     t = t - 1

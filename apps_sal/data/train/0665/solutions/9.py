@@ -1,10 +1,9 @@
 import math
-
 try:
     for _ in range(int(input())):
-        n, m = list(map(int, input().split()))
+        (n, m) = list(map(int, input().split()))
         p = list(map(int, input().split()))
-        points = [[0 for i in range(m + 1)]for i in range(n)]
+        points = [[0 for i in range(m + 1)] for i in range(n)]
         for i in range(n):
             points[i][0] = p[i]
         mx = [[0, 0] for i in range(n)]
@@ -22,16 +21,16 @@ try:
             rank = sorted(rank, reverse=True)
             for j in range(n):
                 pos = rank.index(points[j][i])
-                if(pos < arr[j][0]):
+                if pos < arr[j][0]:
                     mx[j][1] = i
                     arr[j][0] = pos
             for j in range(n):
-                if(points[j][i] > arr[j][1]):
+                if points[j][i] > arr[j][1]:
                     mx[j][0] = i
                     arr[j][1] = points[j][i]
         ans = 0
         for x in mx:
-            if(x[0] != x[1]):
+            if x[0] != x[1]:
                 ans += 1
         print(ans)
 except EOFError as e:

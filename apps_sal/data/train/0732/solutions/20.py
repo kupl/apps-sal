@@ -11,13 +11,12 @@ for _ in range(int(input())):
             sumb += int(b[i])
             if suma == sumb:
                 Sum += int(a[i])
-        else:
+        elif suma == sumb:
+            suma += int(a[i])
+            sumb += int(b[i])
             if suma == sumb:
-                suma += int(a[i])
-                sumb += int(b[i])
-                if suma == sumb:
-                    Sum += int(a[i])
-            else:
-                suma += int(a[i])
-                sumb += int(b[i])
+                Sum += int(a[i])
+        else:
+            suma += int(a[i])
+            sumb += int(b[i])
     print(Sum)

@@ -1,14 +1,14 @@
 try:
     from math import sqrt
-    t, x = list(map(int, input().split()))
+    (t, x) = list(map(int, input().split()))
     for _ in range(t):
         n = abs(int(input()))
-        diff = (x / 100) * n
+        diff = x / 100 * n
         ans = int(sqrt(n))
-        ans1 = ans**2
-        if(n - ans1 <= diff):
-            print("yes")
+        ans1 = ans ** 2
+        if n - ans1 <= diff:
+            print('yes')
         else:
-            print("no")
+            print('no')
 except:
     pass

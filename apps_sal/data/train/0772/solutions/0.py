@@ -1,14 +1,12 @@
-
-
 def powerset(s):
     n = len(s)
     masks = [1 << j for j in range(n)]
-    for i in range(2**n):
-        yield [j + 1 for j in range(n) if (masks[j] & i)]
+    for i in range(2 ** n):
+        yield [j + 1 for j in range(n) if masks[j] & i]
 
 
 def is_power2(num):
-    return num != 0 and ((num & (num - 1)) == 0)
+    return num != 0 and num & num - 1 == 0
 
 
 def special(l):
@@ -47,7 +45,6 @@ def main():
     for _ in range(eval(input())):
         S = input()
         count = 0
-
         for i in special(range(1, len(S) + 1)):
             s = [S[j - 1] for j in i]
             if s == s[::-1]:

@@ -3,7 +3,7 @@ for _ in range(t):
     n = int(input())
     k = int(input())
     x1 = k // n
-    y1 = (x1 + 1)
+    y1 = x1 + 1
     y2 = k % n
     x2 = n - y2
     ans = 0

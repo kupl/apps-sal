@@ -24,9 +24,8 @@ def update(l, r, v):
         arr[idx] += v
 
 
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-
 for _ in range(q):
     a = list(map(int, input().split()))
     if a[0] - 1:

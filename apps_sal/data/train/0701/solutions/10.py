@@ -1,8 +1,8 @@
 q = int(input())
 for i in range(q):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     l = list(map(int, input().split()))
-    po = [(m)**i for i in l]
+    po = [m ** i for i in l]
     r = sum(po)
     l = 0
     count = 0

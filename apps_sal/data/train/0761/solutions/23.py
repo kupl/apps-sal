@@ -23,7 +23,7 @@ for i in range(t):
     ii = 0
     fl = 0
     for j in range(N):
-        while(1):
+        while 1:
             if ii >= K + M:
                 fl = 1
                 break

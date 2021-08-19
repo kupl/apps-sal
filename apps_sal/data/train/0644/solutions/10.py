@@ -3,10 +3,10 @@ for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     if n == 0:
-        print("No")
+        print('No')
     else:
         x = sum(a) // n
         if x * n == sum(a):
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

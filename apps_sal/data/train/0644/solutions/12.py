@@ -3,9 +3,9 @@ try:
         n = int(input())
         a = list(map(int, input().split()))
         s = sum(a)
-        if(s % n == 0):
-            print("Yes")
+        if s % n == 0:
+            print('Yes')
         else:
-            print("No")
+            print('No')
 except:
     pass

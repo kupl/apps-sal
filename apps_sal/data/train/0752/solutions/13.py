@@ -1,7 +1,7 @@
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 dic = {}
 for i in range(N):
-    a, b = input().split()
+    (a, b) = input().split()
     dic[a] = b
 for kk in range(Q):
     a = input().strip()

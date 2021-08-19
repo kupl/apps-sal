@@ -14,5 +14,4 @@ for _ in range(t):
                 c = b
                 b = a + b
                 a = c
-
         print()

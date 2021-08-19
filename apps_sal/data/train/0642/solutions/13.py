@@ -1,10 +1,10 @@
 t = int(input())
 for _ in range(t):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     c = list(map(int, input().split()))
     c.sort()
     start = 0
-    end = 10**12
+    end = 10 ** 12
     possible = True
     ans = None
     while start <= end:
@@ -26,7 +26,6 @@ for _ in range(t):
             start = mid + 1
         else:
             end = mid - 1
-
     start = ans
     end = ans + 1
     possible = True
@@ -46,8 +45,7 @@ for _ in range(t):
                 break
         if possible:
             ans = mid
-            start = mid + 0.000001
+            start = mid + 1e-06
         else:
-            end = mid - 0.000001
-
-    print(ans - 0.0000001)
+            end = mid - 1e-06
+    print(ans - 1e-07)

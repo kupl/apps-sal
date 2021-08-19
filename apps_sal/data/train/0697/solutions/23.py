@@ -1,7 +1,6 @@
 def maxSum(arr, n, k):
-    if (n < k):
-
-        print("Invalid")
+    if n < k:
+        print('Invalid')
         return -1
     res = 0
     for i in range(k):
@@ -14,6 +13,6 @@ def maxSum(arr, n, k):
 
 
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     arr = list(map(int, input().split()))
     print(maxSum(arr, n, k))

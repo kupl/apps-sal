@@ -7,10 +7,8 @@ def maxval(arr):
         fn[i] = max(fn[i + 1], arr[i])
     for i in reversed(list(range(len(arr) - 1))):
         sn[i] = max(sn[i + 1], fn[i + 1] - arr[i])
-
     for i in reversed(list(range(len(arr) - 2))):
         tn[i] = max(tn[i + 1], sn[i + 1] + arr[i])
-
     for i in reversed(list(range(len(arr) - 3))):
         fon[i] = max(fon[i + 1], tn[i + 1] - arr[i])
     return fon[0]

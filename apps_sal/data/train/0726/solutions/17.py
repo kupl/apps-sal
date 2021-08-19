@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     a = []
-    d = [0] * (26)
+    d = [0] * 26
     for i in range(n):
         for k in input():
             d[ord(k) - ord('a')] += 1

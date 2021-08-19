@@ -9,10 +9,11 @@ mod1 = 998244353
 
 
 def printlist(n):
-    sys.stdout.write(" ".join(map(str, n)) + "\n")
+    sys.stdout.write(' '.join(map(str, n)) + '\n')
 
 
-def printf(n): return sys.stdout.write(str(n) + "\n")
+def printf(n):
+    return sys.stdout.write(str(n) + '\n')
 
 
 def printns(n):
@@ -40,7 +41,7 @@ def flush():
 
 
 def power_two(x):
-    return (1 << x)
+    return 1 << x
 
 
 def lcm(a, b):
@@ -50,7 +51,7 @@ def lcm(a, b):
 def solve():
     n = str(intinp())
     for i in n:
-        if(int(i) % 2 == 0):
+        if int(i) % 2 == 0:
             print(1)
             return 0
     print(0)
@@ -58,7 +59,7 @@ def solve():
 
 def main():
     tc = intinp()
-    while(tc):
+    while tc:
         solve()
         tc -= 1
 

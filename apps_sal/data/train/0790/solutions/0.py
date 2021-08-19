@@ -1,4 +1,4 @@
-N, M, C = list(map(int, input().split()))
+(N, M, C) = list(map(int, input().split()))
 tree = [0] * (N + 1)
 
 
@@ -13,7 +13,6 @@ def query(k):
     while k:
         ans += tree[k]
         k -= k & -k
-
     return ans
 
 
@@ -23,7 +22,7 @@ def solve():
         if op[0] == 'Q':
             print(query(int(op[1])) + C)
         else:
-            u, v, k = int(op[1]), int(op[2]), int(op[3])
+            (u, v, k) = (int(op[1]), int(op[2]), int(op[3]))
             add(u, k)
             add(v + 1, -k)
 

@@ -1,7 +1,7 @@
-N, M, P = list(map(int, input().split()))
+(N, M, P) = list(map(int, input().split()))
 A = [dict() for _ in range(N)]
 for _ in range(P):
-    i, j = list(map(int, input().split()))
+    (i, j) = list(map(int, input().split()))
     i -= 1
     j -= 1
     if j not in A[i]:

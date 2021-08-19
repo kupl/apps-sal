@@ -1,13 +1,11 @@
-
-
 t = int(input())
 while t:
     n = int(input())
-    ans = ""
+    ans = ''
     c = []
     zero = 0
     while n:
-        a, b = input().split()
+        (a, b) = input().split()
         a = int(a)
         b = int(b)
         if b == 0:
@@ -15,10 +13,9 @@ while t:
         if b == 1:
             c.append(repr(a))
         elif b != 0:
-            c.append(repr(a * b) + 'x^' + repr((b - 1)))
+            c.append(repr(a * b) + 'x^' + repr(b - 1))
         n -= 1
     l = len(c)
-
     if l == 0:
         print(0)
     else:

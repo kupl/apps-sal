@@ -13,7 +13,7 @@ def main():
         if n == 1:
             print(input())
         else:
-            a = list(map(int, input().split(" ")))
+            a = list(map(int, input().split(' ')))
             p = a[0]
             for i in range(1, n):
                 p = gcd(p, a[i])

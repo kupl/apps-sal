@@ -11,7 +11,7 @@ def lcm(x, y, z):
 
 for _ in range(int(input())):
     n = int(input())
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     z = lcm(x, y, z)
     x = n * 24 // z
     print(x)

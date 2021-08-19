@@ -16,9 +16,9 @@ for _ in range(int(input())):
     for i in d.values():
         if i > 1 or c[0] == b[-1]:
             flag = 1
-            print("NO")
+            print('NO')
             break
     if flag == 0:
-        print("YES")
+        print('YES')
         b.extend(c)
         print(*b)

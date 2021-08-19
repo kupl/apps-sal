@@ -1,5 +1,5 @@
 for _ in range(eval(input())):
-    n, d = list(map(int, input().strip().split()))
+    (n, d) = list(map(int, input().strip().split()))
     l = list(map(int, input().strip().split()))
     main_flag = 0
     final_count = 0

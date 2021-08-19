@@ -6,7 +6,7 @@ for _ in range(t):
     j = 0
     ss = {}
     for i in range(n):
-        if s[i] == "1":
+        if s[i] == '1':
             pre.append(i)
             ss[i] = j
             j += 1
@@ -15,10 +15,9 @@ for _ in range(t):
     tot = 0
     duff = [0 for i in range(n + 1)]
     for i in range(n - 1, -1, -1):
-        if s[i] == "0":
+        if s[i] == '0':
             pass
         else:
-
             suff[i] = suff[pre[ss[i] + 1]] + max(tot, 0)
             duff[i] = max(tot, 0)
             tot -= 1
@@ -27,7 +26,7 @@ for _ in range(t):
     st = False
     dp = [0] * (n + 1)
     for i in range(n - 1, -1, -1):
-        if s[i] == "0":
+        if s[i] == '0':
             st = True
             continue
         else:
@@ -35,5 +34,4 @@ for _ in range(t):
                 tot += 1
                 st = False
             dp[i] = tot + dp[pre[ss[i] + 1]]
-
     print(suff[pre[0]] + dp[pre[0]])

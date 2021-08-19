@@ -5,7 +5,7 @@ while t > 0:
         print('0')
         t -= 1
         continue
-    num = (n * (n + 1)) // 2
+    num = n * (n + 1) // 2
     fib = [0 for i in range(num)]
     fib[0] = 0
     fib[1] = 1

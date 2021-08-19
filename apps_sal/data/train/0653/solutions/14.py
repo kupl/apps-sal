@@ -7,21 +7,20 @@ try:
     k = len(li) - 1
     li.sort()
     i = 0
-    while(i <= k):
+    while i <= k:
         if l >= li[i]:
             l -= li[i]
             p += 1
             i += 1
             if m < p:
                 m = p
+        elif p > 0:
+            l += li[k]
+            p -= 1
+            li.pop(k)
+            k -= 1
         else:
-            if p > 0:
-                l += li[k]
-                p -= 1
-                li.pop(k)
-                k -= 1
-            else:
-                break
+            break
     print(m)
 except:
     pass

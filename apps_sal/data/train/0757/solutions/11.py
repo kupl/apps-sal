@@ -4,16 +4,16 @@ for i in range(int(input())):
     s = input()
     b = 0
     for m in a:
-        if(m in s):
+        if m in s:
             b = 1
             break
     p = []
     p.append(s[0])
     p.append(s[n - 1])
     p = ''.join(p)
-    if(n == 2 or n == 1):
+    if n == 2 or n == 1:
         print('No')
-    elif(b == 0 and p not in a):
+    elif b == 0 and p not in a:
         print('No')
     else:
         print('Yes')

@@ -1,4 +1,3 @@
-
 from collections import Counter
 
 
@@ -19,7 +18,6 @@ def fn(a):
             return 0
     except:
         pass
-
     return single + double
 
 
@@ -28,7 +26,7 @@ for _ in range(int(input())):
     a = list(map(int, input().split()))
     g = fn(a)
     if g:
-        print("YES")
+        print('YES')
         print(*g)
     else:
-        print("NO")
+        print('NO')

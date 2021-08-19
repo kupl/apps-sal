@@ -1,6 +1,6 @@
 def left(h, m, n):
     k = 0
-    L = [False] * (n)
+    L = [False] * n
     for i in range(n):
         if h[i] >= k + 1:
             k += 1
@@ -14,7 +14,7 @@ def left(h, m, n):
 
 def right(h, m, n):
     k = 0
-    R = [False] * (n)
+    R = [False] * n
     for i in range(n - 1, -1, -1):
         if h[i] >= k + 1:
             k += 1

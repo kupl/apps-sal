@@ -6,10 +6,10 @@ for _ in range(t):
     s = s.lower()
     flag = 0
     for i in range(len(s)):
-        if(s[i] in vowels and s[(i + 1) % n] in vowels):
+        if s[i] in vowels and s[(i + 1) % n] in vowels:
             flag = 1
             break
-    if(flag == 1 and n > 1):
-        print("Yes")
+    if flag == 1 and n > 1:
+        print('Yes')
     else:
-        print("No")
+        print('No')

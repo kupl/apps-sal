@@ -16,6 +16,6 @@ for t in range(int(input())):
     if curr > count:
         count = curr
     if count % 2 == 0:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

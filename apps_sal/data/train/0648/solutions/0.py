@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 final = []
 height = list(map(int, input().split()))
 for k in range(0, q):
@@ -8,7 +8,7 @@ for k in range(0, q):
         for k in range(0, int(b[2])):
             temp = 0
             j = 1
-            while j in range(1, 101) and temp == 0 and step + j < n:
+            while j in range(1, 101) and temp == 0 and (step + j < n):
                 if height[step + j] > height[step]:
                     step = step + j
                     temp = 1

@@ -4,7 +4,7 @@ for _ in range(T):
     c = 0
     i = 1
     curr = a[0]
-    while(i < 8):
+    while i < 8:
         if a[i] != curr:
             curr = a[i]
             c = c + 1
@@ -12,6 +12,6 @@ for _ in range(T):
     if a[0] != a[7]:
         c = c + 1
     if c <= 2:
-        print("uniform")
+        print('uniform')
     else:
-        print("non-uniform")
+        print('non-uniform')

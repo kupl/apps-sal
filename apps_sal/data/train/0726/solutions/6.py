@@ -10,17 +10,17 @@ for i in range(int(input())):
     for i in range(n):
         s = input()
         for i in range(len(s)):
-            if(s[i] == "c"):
+            if s[i] == 'c':
                 c = c + 1
-            elif(s[i] == "o"):
+            elif s[i] == 'o':
                 o = o + 1
-            elif(s[i] == "d"):
+            elif s[i] == 'd':
                 d = d + 1
-            elif(s[i] == "e"):
+            elif s[i] == 'e':
                 e = e + 1
-            elif(s[i] == "h"):
+            elif s[i] == 'h':
                 h = h + 1
-            elif(s[i] == "f"):
+            elif s[i] == 'f':
                 f = f + 1
     c = c // 2
     e = e // 2

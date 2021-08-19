@@ -9,12 +9,12 @@ def karatsuba(x, y):
     if m % 2 != 0:
         m -= 1
     m_2 = int(m / 2)
-    a, b = divmod(x, tmp**m_2)
-    c, d = divmod(y, tmp**m_2)
+    (a, b) = divmod(x, tmp ** m_2)
+    (c, d) = divmod(y, tmp ** m_2)
     ac = karatsuba(a, c)
     bd = karatsuba(b, d)
-    ad_bc = karatsuba((a + b), (c + d)) - ac - bd
-    return ((ac * (10**m)) + bd + ((ad_bc) * (10**m_2)))
+    ad_bc = karatsuba(a + b, c + d) - ac - bd
+    return ac * 10 ** m + bd + ad_bc * 10 ** m_2
 
 
 def solve(array, r):
@@ -23,7 +23,7 @@ def solve(array, r):
     while i * r < len(array):
         res = karatsuba(res, array[i * r])
         i += 1
-    return ' '.join((str(res)[0], str(res % (10**9 + 7))))
+    return ' '.join((str(res)[0], str(res % (10 ** 9 + 7))))
 
 
 def frjump():
@@ -35,7 +35,7 @@ def frjump():
         if query[0] == 1:
             friendliness[query[1] - 1] = query[2]
         else:
-            types, R = query
+            (types, R) = query
             print(solve(friendliness, R))
 
 

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     l = [int(i) for i in input().split()]
     qry = [int(input()) for i in range(q)]
 

@@ -2,8 +2,8 @@ T = int(input())
 for t in range(T):
     n = int(input())
     if n == 2:
-        print("NO")
+        print('NO')
     elif n & 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

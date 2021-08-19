@@ -1,5 +1,5 @@
 import math
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 a = []
 for i in range(len(l)):

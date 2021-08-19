@@ -1,6 +1,6 @@
 from collections import defaultdict
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -10,7 +10,7 @@ for _ in range(t):
         l = list(map(int, input().split()))
         mex = 0
         d = defaultdict(lambda: [])
-        for i, num in enumerate(l):
+        for (i, num) in enumerate(l):
             d[num - 1].append(i + 1)
 
         def dfs(i):

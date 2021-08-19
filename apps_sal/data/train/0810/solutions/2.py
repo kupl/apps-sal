@@ -1,11 +1,10 @@
 import random
 for case in range(int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-
-    if n <= 10**2:
+    if n <= 10 ** 2:
         for que in range(q):
-            typ, *args = list(map(int, input().split()))
+            (typ, *args) = list(map(int, input().split()))
             if typ == 1:
                 A = args[0]
                 seen = {}
@@ -20,7 +19,7 @@ for case in range(int(input())):
                 if not done:
                     print(-1)
             else:
-                A, B = args
+                (A, B) = args
                 arr[A] = B
     else:
         for que in range(q):

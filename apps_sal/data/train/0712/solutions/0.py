@@ -12,6 +12,6 @@ for _ in range(int(input())):
         for i in arr[1:]:
             value = value * i // gcd(value, i)
     if value % 2 == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -5,5 +5,5 @@ def gcd(x, y):
 
 
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(gcd(a, b))

@@ -21,5 +21,5 @@ for _ in range(int(input())):
             else:
                 j += abs(i - (a[j + r] - a[j]))
         i += 1
-        r = i + i**2
+        r = i + i ** 2
     print(ans)

@@ -4,6 +4,6 @@ for i in range(0, t):
     p = 1
     for j in range(0, n):
         for k in range(0, n):
-            print(p, end="")
+            print(p, end='')
             p = p + 1
-        print(" ")
+        print(' ')

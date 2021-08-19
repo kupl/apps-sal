@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    x = ""
+    x = ''
     lst = []
     c = ['c', 'o', 'd', 'e', 'c', 'h', 'e', 'f']
     for __ in range(n):

@@ -12,6 +12,6 @@ for _ in range(int(input())):
         if x[i] < x[i + 1]:
             c += 1
     if c == m - 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

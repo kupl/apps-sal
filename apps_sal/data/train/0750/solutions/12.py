@@ -3,11 +3,10 @@ def checker(lst):
     nlst = [0] * le
     for i in range(le):
         nlst[lst[i] - 1] = i + 1
-
     if nlst == lst:
-        print("ambiguous")
+        print('ambiguous')
     else:
-        print("not ambiguous")
+        print('not ambiguous')
 
 
 def __starting_point():

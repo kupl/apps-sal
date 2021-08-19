@@ -18,6 +18,6 @@ while test_case > 0:
             temp = 0
             flag = True
     if c % 2 == 0:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
