@@ -2,7 +2,9 @@ from collections import deque
 
 
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
+
         def find_neighbors(arr, i):
             e = A[i]
             nei = []
@@ -10,7 +12,6 @@ class Solution:
                 if arr[x] == e:
                     nei.append(x)
             return nei
-
         q = deque()
         for i in range(len(A)):
             if A[i] == B[i]:
@@ -18,24 +19,23 @@ class Solution:
             else:
                 q.append([list(B), i])
                 break
-
         l = 0
         while q:
             for x in range(len(q)):
                 e = q.popleft()
                 y = e[1]
-                while y < len(e[0]):  # Move forward when elements of A and B are equal
+                while y < len(e[0]):
                     if e[0][y] == A[y]:
                         y += 1
                     else:
                         break
-                if y == len(e[0]):  # If everything is equal return level
+                if y == len(e[0]):
                     return l
                 else:
-                    nei = find_neighbors(e[0], y)  # Find all A[i]'s to the right of B which are prospective candidates
+                    nei = find_neighbors(e[0], y)
                     for n in nei:
                         new_e = e[0][:]
-                        new_e[n] = e[0][y]  # Swap A[i] with all matched neighbors(Generating a new 'state')
+                        new_e[n] = e[0][y]
                         q.append([new_e, y + 1])
             l += 1
         return l

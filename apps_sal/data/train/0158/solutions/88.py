@@ -2,9 +2,8 @@ from collections import deque
 
 
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
-        # check official solution and
-        # https://leetcode.com/problems/k-similar-strings/discuss/269517/Python-Graph-BFS
         q = deque()
         q.append(A)
         visited = set([A])
@@ -22,7 +21,6 @@ class Solution:
                         visited.add(new_str)
                         res.append(new_str)
             return res
-
         while len(q) > 0:
             q_sz = len(q)
             for _ in range(q_sz):

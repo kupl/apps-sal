@@ -1,26 +1,24 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
-        lsta, lstb = [], []
+        (lsta, lstb) = ([], [])
         for i in range(len(A)):
             if A[i] != B[i]:
                 lsta.append(A[i])
                 lstb.append(B[i])
-        A, B = ''.join(lsta), ''.join(lstb)
+        (A, B) = (''.join(lsta), ''.join(lstb))
         q = deque([(0, A, B)])
         while q:
-            cost, curr, goal = q.popleft()
+            (cost, curr, goal) = q.popleft()
             if not curr:
                 return cost
             need = goal[0]
             work = None
             for i in range(len(curr)):
-                # need to find one where curr[i] == goal[0] and goal[i] == curr[0]
                 if curr[i] == goal[0] and goal[i] == curr[0]:
                     work = i
                     break
             if work:
-                # only swap this one
-                # remove 0 and work from the unmatched list
                 q.append((cost + 1, curr[1:work] + curr[work + 1:], goal[1:work] + goal[work + 1:]))
             else:
                 for i in range(1, len(curr)):

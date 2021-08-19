@@ -1,13 +1,13 @@
 class Solution:
+
     def bfs(self, A: str, B: str):
         if A == B:
             return 0
         n = len(A)
         q = []
-        # visited = [False for i in range(n)]
         q.append((B, 0, 0))
         while q:
-            processed, idx, swaps = q.pop(0)
+            (processed, idx, swaps) = q.pop(0)
             while processed[idx] == A[idx]:
                 idx += 1
             for i in range(idx + 1, n):
@@ -16,7 +16,6 @@ class Solution:
                     if A == new_processed:
                         return swaps + 1
                     q.append((new_processed, idx + 1, swaps + 1))
-
         return 0
 
     def kSimilarity(self, A: str, B: str) -> int:

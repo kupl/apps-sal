@@ -1,4 +1,5 @@
 class Dsu:
+
     def __init__(self, v, s):
         self.par = s
         self.v = v
@@ -10,9 +11,6 @@ class Dsu:
             self.speed[i].append(i)
 
     def find(self, i):
-        #     if parent[i] == -1:
-        #         return i
-        #     else: return self.find_parent(parent, parent[i])
         if i != self.par[i][0]:
             org = self.par[i][0]
             self.par[i][0] = self.find(self.par[i][0])
@@ -23,18 +21,14 @@ class Dsu:
         return self.par[i][0]
 
     def union(self, x, y):
-        # def union(self, parent, x, y):
-        #     x_set = self.find_parent(parent, x)
-        #     y_set = self.find_parent(parent, y)
-        #     parent[x_set] = y_set
         self.rx = self.find(x)
         self.ry = self.find(y)
         self.sign = -self.dr[x] * self.dr[y]
         if self.rx != self.ry:
-            if (self.par[self.rx][1] < self.par[self.ry][1]):
+            if self.par[self.rx][1] < self.par[self.ry][1]:
                 mx = self.ry
                 mn = self.rx
-            if (self.par[self.rx][1] > self.par[self.ry][1]):
+            if self.par[self.rx][1] > self.par[self.ry][1]:
                 mx = self.rx
                 mn = self.ry
             if self.par[self.rx][1] != self.par[self.ry][1]:
@@ -49,7 +43,6 @@ class Dsu:
                             self.par[self.speed[mn][i]][0] = mx
                             self.speed[mx].append(self.speed[mn][i])
                 self.speed[mx].append(mn)
-
             else:
                 self.par[self.ry][0] = self.rx
                 self.par[self.rx][1] += 1
@@ -68,7 +61,7 @@ class Dsu:
 
 
 def optwo(x, y, D):
-    if (D.find(x) == D.find(y) and D.dr[x] == D.dr[y]):
+    if D.find(x) == D.find(y) and D.dr[x] == D.dr[y]:
         D.zero[x] = D.zero[y] = True
     D.union(x, y)
 
@@ -81,15 +74,15 @@ def gcd(a, b):
 
 
 def opthree(x, y, v, D):
-    if (D.find(x) != D.find(y)) or (D.zero[D.par[y][0]]):
+    if D.find(x) != D.find(y) or D.zero[D.par[y][0]]:
         print(0)
     else:
         g = gcd(v * speed[x], speed[y])
-        flag = (D.dr[x] * D.dr[y]) // abs(D.dr[x] * D.dr[y])
-        print(str(flag * v * speed[x] // g) + "/" + str(speed[y] // g))
+        flag = D.dr[x] * D.dr[y] // abs(D.dr[x] * D.dr[y])
+        print(str(flag * v * speed[x] // g) + '/' + str(speed[y] // g))
 
 
-n, M = map(int, input().split())
+(n, M) = map(int, input().split())
 speed = list(map(int, input().split()))
 s = []
 for i in range(n):
@@ -97,9 +90,9 @@ for i in range(n):
 D = Dsu(n, s)
 for i in range(M):
     T = list(map(int, input().split()))
-    if (T[0] == 1):
+    if T[0] == 1:
         speed[T[1] - 1] = T[2]
-    elif (T[0] == 2):
+    elif T[0] == 2:
         optwo(T[1] - 1, T[2] - 1, D)
-    elif (T[0] == 3):
+    elif T[0] == 3:
         opthree(T[1] - 1, T[2] - 1, T[3], D)
