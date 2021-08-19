@@ -1,6 +1,7 @@
 class Solution:
+
     def countOrders(self, n: int) -> int:
-        '''
+        """
         # Notes:
             example n = 3
                                 P1         P2     P3 
@@ -22,9 +23,8 @@ class Solution:
 
             OPT[i][j] = i*opt[i-1][j] + j*opt[i+1][j-1]
 
-        '''
+        """
         opt = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
-
         for j in range(n + 1):
             for i in range(n + 1):
                 if j == n:
@@ -46,5 +46,3 @@ class Solution:
                     if i + j > n:
                         break
                     opt[i][j] = i * opt[i - 1][j] + j * opt[i + 1][j - 1]
-
-        # return opt[0][n] % (pow(10, 9)+7)

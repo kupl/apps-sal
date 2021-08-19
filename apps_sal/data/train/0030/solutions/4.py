@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -10,20 +9,18 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 def main():
     for _ in range(int(input())):
         n = int(input())
-        # a=list(map(int, input().split()))
         s = input()
         c = 0
         for i in range(1, len(s)):
             if s[i] == s[i - 1]:
                 c += 1
         print(c // 2 + c % 2)
-
     return
 
 

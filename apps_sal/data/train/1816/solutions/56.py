@@ -1,4 +1,5 @@
 class Solution:
+
     def alertNames(self, l1: List[str], l2: List[str]) -> List[str]:
         d = {}
         for i in l1:
@@ -12,9 +13,7 @@ class Solution:
         for i in range(len(l1)):
             curr = l2[i]
             curr = curr.split(':')
-            # print(curr)
             curr = int(''.join(curr))
-
             d[l1[i]].append(curr)
         ans = []
         for i in d:

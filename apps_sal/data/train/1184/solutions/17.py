@@ -1,4 +1,3 @@
-# cook your dish here
 def generateIndex(indexes):
     ans = indexes[:]
     for i in range(1, 4):
@@ -18,7 +17,7 @@ def countScore(x, index):
     ans = 0
     m = [25, 50, 75, 100]
     for i in range(4):
-        temp = (m[i] * profit[i])
+        temp = m[i] * profit[i]
         if temp == 0:
             ans -= 100
         else:
@@ -49,7 +48,7 @@ while t > 0:
     c = a[:]
     d = a[:]
     for _ in range(n):
-        m, t1 = input().split()
+        (m, t1) = input().split()
         t1 = int(t1)
         if m == 'A':
             a[ind(t1)] += 1

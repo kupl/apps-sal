@@ -1,6 +1,8 @@
-# cook your dish here
 from sys import stdin, stdout
-def I1(): return int(stdin.readline())
+
+
+def I1():
+    return int(stdin.readline())
 
 
 T = 0
@@ -9,10 +11,9 @@ for _ in range(I1()):
     li2 = [12, 3, 6, 9]
     d = {'A': [0, 0, 0, 0], 'B': [0, 0, 0, 0], 'C': [0, 0, 0, 0], 'D': [0, 0, 0, 0]}
     for i in range(m):
-        x, t = list(map(str, stdin.readline().split()))
+        (x, t) = list(map(str, stdin.readline().split()))
         t = int(t)
         d[x][li2.index(t)] += 1
-    # print(d)
     n = 4
     ans = []
     cost = [100, 75, 50, 25]
@@ -26,7 +27,7 @@ for _ in range(I1()):
                     if k != i and k != j:
                         li1.append(d['C'][k])
                         for l in range(n):
-                            if l != i and l != j and l != k:
+                            if l != i and l != j and (l != k):
                                 li1.append(d['D'][l])
                                 c = 0
                                 z = 0
@@ -42,7 +43,6 @@ for _ in range(I1()):
                         li1.pop()
                 li1.pop()
         li1.pop()
-    # print(ans)
     a = max(ans)
     print(a)
     T += a

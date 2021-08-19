@@ -1,8 +1,6 @@
 def correct_polish_letters(st):
     new_str = ''
     for i in range(0, len(st)):
-
-        # print(st)
         if st[i] == 'ą':
             new_str += 'a'
         elif st[i] == 'ę':
@@ -21,7 +19,6 @@ def correct_polish_letters(st):
             new_str += 'z'
         elif st[i] == 'ż':
             new_str += 'z'
-
         else:
             new_str += st[i]
     return new_str

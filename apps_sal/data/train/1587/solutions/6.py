@@ -1,16 +1,15 @@
-# Pre-Computed using bruteforce
 r = int(input())
-if(r == 2):
+if r == 2:
     print(5)
     print(5, 12, 13)
     print(6, 8, 10)
     print(6, 25, 29)
     print(7, 15, 20)
     print(9, 10, 17)
-if(r == 1):
+if r == 1:
     print(1)
     print(3, 4, 5)
-if(r == 3):
+if r == 3:
     print(13)
     print(7, 24, 25)
     print(7, 65, 68)
