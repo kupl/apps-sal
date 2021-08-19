@@ -1,4 +1,3 @@
-# 832
 class TweetCounts:
 
     def __init__(self):
@@ -13,18 +12,13 @@ class TweetCounts:
         ei = 0
         time = startTime
         delta = {'minute': 60, 'hour': 3600, 'day': 24 * 3600}[freq]
-
-        # print(events)
-
         cur = 0
         while time <= endTime:
-
             if ei == len(events):
                 ret.append(cur)
                 cur = 0
                 time += delta
                 continue
-
             if events[ei] < time:
                 ei += 1
             elif time + delta <= events[ei]:
@@ -35,11 +29,4 @@ class TweetCounts:
                 assert time <= events[ei] < time + delta
                 cur += 1
                 ei += 1
-
         return ret
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

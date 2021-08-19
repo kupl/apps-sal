@@ -12,11 +12,8 @@ class TweetCounts:
             self.tw[tweetName] = self.tw[tweetName][:ind] + [time] + self.tw[tweetName][ind:]
 
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
-
         res = []
-
         q = self.tw[tweetName]
-
         s = startTime
         while s <= endTime:
             e = min(endTime, s + self.duration[freq] - 1)
@@ -24,11 +21,4 @@ class TweetCounts:
             ind2 = bisect.bisect_right(q, e, lo=ind1)
             res.append(ind2 - ind1)
             s = e + 1
-
         return res
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

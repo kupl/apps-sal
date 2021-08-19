@@ -21,14 +21,9 @@ class TweetCounts:
         tweetcounts = self.tweets[tweetName]
         intervals = []
         while startTime < endTime + 1:
-            # Binary Search to find the tweets
             startindex = self.binary_search(0, len(tweetcounts) - 1, startTime, tweetcounts, 'S')
             findval = min(startTime + self.mapping[freq], endTime + 1)
             endindex = self.binary_search(0, len(tweetcounts) - 1, findval, tweetcounts, 'E')
             intervals.append(endindex - startindex + 1)
             startTime += self.mapping[freq]
         return intervals
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

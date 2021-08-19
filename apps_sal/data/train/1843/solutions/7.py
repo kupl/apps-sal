@@ -19,7 +19,6 @@ class TweetCounts:
             f = 3600
         else:
             f = 3600 * 24
-
         bucket_size = (endTime - startTime) // f + 1
         ans = [0] * bucket_size
         cur = 0
@@ -31,11 +30,4 @@ class TweetCounts:
                 break
             i = (t - startTime) // f
             ans[i] += 1
-
         return ans
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

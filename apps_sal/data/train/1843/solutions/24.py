@@ -17,7 +17,7 @@ class TweetCounts:
             delta = 3600
         else:
             delta = 86400
-        A, cur = self.history[tweet], s
+        (A, cur) = (self.history[tweet], s)
         res = []
         while cur <= e:
             nxt = min(cur + delta, e + 1)
@@ -25,9 +25,3 @@ class TweetCounts:
             res.append(occurence)
             cur += delta
         return res
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

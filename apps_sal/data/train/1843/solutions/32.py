@@ -15,9 +15,3 @@ class TweetCounts:
             res.append(bisect_left(self.a[tn], j) - bisect_left(self.a[tn], i))
             i += delta
         return res
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

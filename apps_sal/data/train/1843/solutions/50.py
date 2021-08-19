@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 import bisect
 
 
@@ -23,10 +22,5 @@ class TweetCounts:
             e = min(s + delta, endTime + 1)
             j = bisect.bisect_left(self.T[tweetName][1], e)
             ans.append(j - i)
-            s, i = e, j
+            (s, i) = (e, j)
         return ans
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
