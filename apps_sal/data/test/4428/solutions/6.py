@@ -7,12 +7,12 @@ t1 = 0
 t3 = 0
 t1 += L[i]
 t3 += L[j]
-while(i < j):
-    if(t1 == t3):
+while i < j:
+    if t1 == t3:
         smax = max(smax, t1)
         i += 1
         t1 += L[i]
-    elif(t1 > t3):
+    elif t1 > t3:
         j -= 1
         t3 += L[j]
     else:

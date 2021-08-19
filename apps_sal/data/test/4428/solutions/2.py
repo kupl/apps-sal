@@ -1,12 +1,10 @@
 length = int(input())
-numbers = list(map(int, input().split(" ")))
-
+numbers = list(map(int, input().split(' ')))
 maxTotal = 0
 totalLeft = 0
 indexLeft = 0
 totalRight = 0
 indexRight = length - 1
-
 while indexLeft <= indexRight:
     if totalLeft > totalRight:
         totalRight += numbers[indexRight]

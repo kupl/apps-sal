@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 list_a = list(map(int, input().split()))
 list_a.reverse()
 count_b = 0

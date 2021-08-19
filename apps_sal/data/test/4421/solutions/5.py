@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 di = list(map(int, input().split()))
 ai = [0] * k
 for i in di:

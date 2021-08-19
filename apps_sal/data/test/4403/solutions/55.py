@@ -5,5 +5,4 @@ for i in li:
         n += 1
     elif i == '-':
         n -= 1
-
 print(n)

@@ -2,7 +2,7 @@ def LI():
     return list(map(int, input().split()))
 
 
-N, K = LI()
+(N, K) = LI()
 ans = 0
 for i in range(1, N + 1):
     x = 1

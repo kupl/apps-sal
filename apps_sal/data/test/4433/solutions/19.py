@@ -1,8 +1,8 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 graph = {}
 for i in range(m):
-    a, b = [int(x) for x in input().split()]
-    for a, b in (a, b), (b, a):
+    (a, b) = [int(x) for x in input().split()]
+    for (a, b) in ((a, b), (b, a)):
         if a not in graph:
             graph[a] = [b]
         else:
@@ -26,6 +26,6 @@ for v in graph:
         max_rou = len(graph[v])
         index = v
 invite = set([index])
-answer = (tree([index]))
+answer = tree([index])
 for i in range(n - 1):
     print(*answer[i])

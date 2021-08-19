@@ -1,5 +1,4 @@
 S = str(input())
-
 if S == 'SUN':
     print(int(7 - 0))
 elif S == 'MON':

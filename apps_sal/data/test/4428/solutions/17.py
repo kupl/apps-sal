@@ -1,6 +1,5 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 mx = 0
 left = 0
 right = n - 1

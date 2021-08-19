@@ -14,11 +14,11 @@ def mints():
 
 
 def solve():
-    a, b, n, S = mints()
+    (a, b, n, S) = mints()
     d = S // n
     r = S % n
     d = min(a, d)
-    print(["NO", "YES"][S - d * n <= b])
+    print(['NO', 'YES'][S - d * n <= b])
 
 
 for i in range(mint()):

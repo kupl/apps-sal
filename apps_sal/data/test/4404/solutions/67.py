@@ -1,8 +1,7 @@
-s = [int(x) for x in input().split("/")]
-
+s = [int(x) for x in input().split('/')]
 if s[1] < 4:
-    print("Heisei")
+    print('Heisei')
 elif s[1] == 4 and s[2] <= 30:
-    print("Heisei")
+    print('Heisei')
 else:
-    print("TBD")
+    print('TBD')

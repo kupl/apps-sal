@@ -1,7 +1,5 @@
 n = int(input())
-
-numbers = [int(i) for i in input().split(" ")]
-
+numbers = [int(i) for i in input().split(' ')]
 s = 0
 a = 0
 sum1 = 0
@@ -14,8 +12,6 @@ while a <= b:
     else:
         sum2 += numbers[b]
         b -= 1
-
     if sum1 == sum2:
         s = sum1
-
 print(s)

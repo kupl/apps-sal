@@ -1,20 +1,16 @@
 from collections import Counter
-
 n = int(input())
 arr = list(map(int, input().split()))
 arr.sort()
-
 C = Counter(arr)
 flag = 0
-
 for keys in C:
     if C[keys] >= 3:
         flag = 1
-        print("NO")
+        print('NO')
         break
-
 if flag == 0:
-    print("YES")
+    print('YES')
     es = []
     ds = []
     for keys in C:
@@ -23,11 +19,9 @@ if flag == 0:
             ds.append(keys)
         else:
             es.append(keys)
-
     es.sort()
     ds.sort()
     ds = ds[::-1]
-
     print(len(es))
     print(*es)
     print(len(ds))

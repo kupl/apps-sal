@@ -1,5 +1,4 @@
-
-url = "https://atcoder.jp//contests/abc128/tasks/abc128_b"
+url = 'https://atcoder.jp//contests/abc128/tasks/abc128_b'
 
 
 def main():
@@ -13,7 +12,7 @@ def main():
     for k in town:
         sort_town = sorted(list(k[1].items()), key=lambda x: x[1], reverse=True)
         for v in sort_town:
-            print((v[0]))
+            print(v[0])
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = input()
 ans = []
 for i in range(N):
@@ -9,5 +9,4 @@ for i in range(N):
         ans.append(y)
     else:
         ans.append(S[i])
-
 print(''.join(ans))

@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a > 12:
     print(b)
 elif 6 <= a <= 12:

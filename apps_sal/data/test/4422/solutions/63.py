@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = input()
 lsS = list(S)
 lsS[K - 1] = lsS[K - 1].lower()

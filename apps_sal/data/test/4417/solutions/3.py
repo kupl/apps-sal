@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     t = [int(i) for i in input().split()]
     r = min(t)
     s = max(t)

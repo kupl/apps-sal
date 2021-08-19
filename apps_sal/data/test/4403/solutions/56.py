@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 s = input()
 ans = 0
 for i in range(4):

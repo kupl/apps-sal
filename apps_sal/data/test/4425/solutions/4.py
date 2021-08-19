@@ -8,12 +8,9 @@ def p(n, k):
     return 1 / 2 ** num
 
 
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 ans = 0
 for n in range(1, N + 1):
     ans += p(n, K)
-
 ans /= N
-
 print(ans)

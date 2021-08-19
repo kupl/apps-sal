@@ -18,13 +18,13 @@ def SI():
     return sys.stdin.readline().strip()
 
 
-n, k = MI()
+(n, k) = MI()
 x = []
 y = []
 z = []
 o = []
 for q in range(n):
-    t, a, b = MI()
+    (t, a, b) = MI()
     if a == 1 and b == 1:
         z.append(t)
     elif a == 1:
@@ -45,7 +45,7 @@ else:
     ans = 0
     l = r = 0
     for i in range(k):
-        if l < x0 and l < y0 and r < z0:
+        if l < x0 and l < y0 and (r < z0):
             if x[l] + y[l] < z[r]:
                 ans += x[l] + y[l]
                 l += 1

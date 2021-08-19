@@ -1,4 +1,4 @@
-X, Y, Z = map(int, input().split())
+(X, Y, Z) = map(int, input().split())
 b = Y
 c = Z
 Y = X

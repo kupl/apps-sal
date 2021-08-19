@@ -1,5 +1,3 @@
-
-
 def solve():
     n = int(input())
     iters = n // 2

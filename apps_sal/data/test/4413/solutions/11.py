@@ -1,7 +1,7 @@
 q = int(input())
 for query in range(q):
     n = int(input())
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     a = sorted(a)
     res = 1
     for i in range(n - 1):

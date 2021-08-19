@@ -1,5 +1,5 @@
 import heapq
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(o) for o in input().split()]
 h = []
 s = set()

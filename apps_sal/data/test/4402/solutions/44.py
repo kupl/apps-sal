@@ -1,5 +1,5 @@
 def solver():
-    A, B = [int(n) for n in input().split()]
+    (A, B) = [int(n) for n in input().split()]
     if A <= 5:
         return 0
     if 6 <= A <= 12:
@@ -9,7 +9,7 @@ def solver():
 
 
 def __starting_point():
-    print((solver()))
+    print(solver())
 
 
 __starting_point()

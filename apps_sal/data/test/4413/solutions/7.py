@@ -9,7 +9,7 @@ for y in range(t):
         if a[i] - a[i - 1] == 1:
             flag = 1
             break
-    if(flag == 1):
+    if flag == 1:
         print(2)
     else:
         print(1)

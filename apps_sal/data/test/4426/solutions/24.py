@@ -1,5 +1,4 @@
 s = input()
-
 if s == 'SAT':
     print(1)
 if s == 'FRI':

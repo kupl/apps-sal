@@ -19,7 +19,7 @@ for z in range(T):
                     break
         i += 1
     if found == 3:
-        print("YES")
+        print('YES')
         print(*nums)
     else:
-        print("NO")
+        print('NO')

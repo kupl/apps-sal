@@ -1,8 +1,8 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 l = [[] for i in range(n + 1)]
 count = [0 for i in range(n + 1)]
 for i in range(m):
-    a, b = map(int, input().strip().split())
+    (a, b) = map(int, input().strip().split())
     l[a].append(b)
     l[b].append(a)
     count[a] += 1

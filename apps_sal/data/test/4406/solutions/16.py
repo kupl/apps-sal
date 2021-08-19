@@ -1,7 +1,5 @@
-n, k = [int(i) for i in input().split()]
-
+(n, k) = [int(i) for i in input().split()]
 msg = [int(i) for i in input().split()]
-
 fila = []
 for i in msg:
     if i in fila:

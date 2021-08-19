@@ -1,9 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 p = []
 q = []
 x = input().split()
-k = ""
+k = ''
 t = 0
 for i in s:
     if i in x:
@@ -12,11 +12,11 @@ for i in s:
     else:
         p.append(k)
         q.append(t)
-        k = ""
+        k = ''
         t = 0
 p.append(k)
 q.append(t)
 res = 0
 for i in q:
-    res += (i * (i + 1)) // 2
+    res += i * (i + 1) // 2
 print(res)

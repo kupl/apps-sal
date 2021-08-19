@@ -1,8 +1,6 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
-
     answer = 0
     i = 0
     moves = 0

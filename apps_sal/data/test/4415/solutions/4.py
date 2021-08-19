@@ -1,10 +1,8 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 B = set()
 C = set()
 yes = True
-
 for i in A:
     if i not in B:
         B.add(i)
@@ -14,12 +12,9 @@ for i in A:
         print('NO')
         yes = False
         break
-
 if yes:
     print('YES')
-
     print(len(B))
     print(*sorted(list(B)))
-
     print(len(C))
     print(*sorted(list(C), reverse=True))

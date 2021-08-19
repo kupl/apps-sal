@@ -1,5 +1,5 @@
-k, x = [int(x) for x in input().split()]
+(k, x) = [int(x) for x in input().split()]
 if k * 500 >= x:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

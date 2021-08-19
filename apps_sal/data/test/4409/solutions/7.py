@@ -1,8 +1,6 @@
-n, l = int(input()), list(map(int, input().split()))
-
+(n, l) = (int(input()), list(map(int, input().split())))
 d = {}
-mx, index = 0, 0
-
+(mx, index) = (0, 0)
 for i in l:
     if i in d:
         d[i] += 1
@@ -11,7 +9,6 @@ for i in l:
     if d[i] > mx:
         mx = d[i]
         index = i
-
 print(n - mx)
 i = l.index(index)
 j = i

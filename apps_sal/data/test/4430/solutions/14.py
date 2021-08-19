@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     a = list(map(int, input().split()))
     if min(a) > k:
         return 0
@@ -19,17 +19,16 @@ def main():
             m -= 1
             if m == 0:
                 break
+            elif current + a[i] < k:
+                current += a[i]
+                answer += 1
+            elif current + a[i] == k:
+                answer += 1
+                m -= 1
+                if m == 0:
+                    break
             else:
-                if current + a[i] < k:
-                    current += a[i]
-                    answer += 1
-                elif current + a[i] == k:
-                    answer += 1
-                    m -= 1
-                    if m == 0:
-                        break
-                else:
-                    continue
+                continue
     return answer
 
 

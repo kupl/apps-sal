@@ -1,6 +1,5 @@
 from collections import deque
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ar = list(map(int, input().split()))
 lol = deque([])
 for elem in ar:

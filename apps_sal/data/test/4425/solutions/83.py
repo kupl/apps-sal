@@ -1,5 +1,5 @@
 import math
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 0
 for i in range(1, n + 1):
     tmp = 1 / n

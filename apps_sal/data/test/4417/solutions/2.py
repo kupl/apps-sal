@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     mi = min(a)
     ma = max(a)

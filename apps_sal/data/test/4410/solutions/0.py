@@ -3,13 +3,16 @@ from collections import defaultdict as dd, Counter
 from math import ceil
 from math import gcd
 import sys
-INF = 10**20
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+INF = 10 ** 20
+MOD = 10 ** 9 + 7
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 def solve():
-    n, k = I()
+    (n, k) = I()
     s = input()
     ans = 0
     last = -INF
@@ -23,11 +26,10 @@ def solve():
         if i - last > k:
             ans += 1
             last = i
-
     print(ans)
 
 
-t, = I()
+(t,) = I()
 while t:
     t -= 1
     solve()

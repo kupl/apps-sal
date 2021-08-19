@@ -1,10 +1,10 @@
 import math
 for nt in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     ind = []
     for i in range(n):
-        if s[i] == "1":
+        if s[i] == '1':
             ind.append(i)
     if len(ind) == 0:
         print(math.ceil(n / (k + 1)))

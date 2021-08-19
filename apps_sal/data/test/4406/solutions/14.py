@@ -2,10 +2,10 @@ import sys
 
 
 def main():
+
     def input():
         return sys.stdin.readline()[:-1]
-
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     l = []
     for e in a:
@@ -14,13 +14,12 @@ def main():
                 l = [e] + l[:-1]
             else:
                 pass
+        elif e not in l:
+            l = [e] + l
         else:
-            if e not in l:
-                l = [e] + l
-            else:
-                pass
+            pass
     print(len(l))
-    print(*l, sep=" ")
+    print(*l, sep=' ')
 
 
 def __starting_point():

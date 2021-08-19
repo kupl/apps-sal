@@ -1,10 +1,10 @@
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a1 = []
     b1 = []
     ab1 = []
     for i in range(n):
-        t, a, b = map(int, input().split())
+        (t, a, b) = map(int, input().split())
         if a == 1 and b == 1:
             ab1.append(t)
         elif a == 1:

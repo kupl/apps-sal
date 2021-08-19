@@ -1,7 +1,7 @@
 l = int(input())
 L = []
 for i in range(l):
-    n, k = map(str, input().split())
+    (n, k) = map(str, input().split())
     c = []
     c.append(n)
     c.append(100 - int(k))

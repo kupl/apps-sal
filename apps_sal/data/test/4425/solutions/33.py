@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 result = 0
 for i in range(1, N + 1):
     prob = 1

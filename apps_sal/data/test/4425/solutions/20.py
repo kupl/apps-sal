@@ -1,5 +1,5 @@
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     ans = 0
     dict = {}
     cnt = 0
@@ -7,15 +7,15 @@ def main():
     for i in range(N, 0, -1):
         i = float(i)
         if K <= i:
-            ans += tmp * (0.5**cnt)
+            ans += tmp * 0.5 ** cnt
         else:
             while True:
                 K = K / 2
                 cnt += 1
                 if K <= i:
                     break
-            ans += tmp * (0.5**cnt)
+            ans += tmp * 0.5 ** cnt
     return ans
 
 
-print((main()))
+print(main())

@@ -1,8 +1,5 @@
 n = int(input())
-
 a = [int(i) for i in input().split()]
-
-
 counts = {}
 max_cnt = 0
 max_value = -1
@@ -16,7 +13,6 @@ for ij in range(n):
         max_cnt = counts[i]
         max_value = i
         indd = ij
-
 print(n - max_cnt)
 for i in range(indd + 1, n):
     if a[i] != max_value:
@@ -24,7 +20,6 @@ for i in range(indd + 1, n):
             print(1, i + 1, i)
         else:
             print(2, i + 1, i)
-
 for i in range(indd - 1, -1, -1):
     if a[i] != max_value:
         if a[i] < max_value:

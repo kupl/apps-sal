@@ -6,4 +6,4 @@ for i in range(n):
     sp[i].append(i + 1)
 sp.sort()
 for i in sp:
-    print((i[2]))
+    print(i[2])

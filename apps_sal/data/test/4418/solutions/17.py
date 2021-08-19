@@ -48,7 +48,7 @@ def main():
             if leonov[4] > 0:
                 leonov[4] -= 1
                 leonov[5] += 1
-    print(n - (leonov[-1] * 6))
+    print(n - leonov[-1] * 6)
 
 
 main()

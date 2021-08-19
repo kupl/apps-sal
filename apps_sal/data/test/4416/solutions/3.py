@@ -1,10 +1,9 @@
-
-n, k = list(map(int, input().split(" ")))
+(n, k) = list(map(int, input().split(' ')))
 db = []
 a = []
 b = []
 for i in range(n):
-    t, A, B = list(map(int, input().split(" ")))
+    (t, A, B) = list(map(int, input().split(' ')))
     if A == B == 1:
         db.append(t)
     elif A == 1:
@@ -14,7 +13,7 @@ for i in range(n):
 a.sort()
 b.sort()
 for i in range(min(len(a), len(b))):
-    db.append((a[i] + b[i]))
+    db.append(a[i] + b[i])
 if len(db) < k:
     print(-1)
 else:

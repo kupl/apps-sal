@@ -10,6 +10,5 @@ for i in range(0, n, 2):
     else:
         a.append(s[i])
         a.append(s[i + 1])
-
 print(d)
-print("".join(a))
+print(''.join(a))

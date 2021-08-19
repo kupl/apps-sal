@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = [*map(int, input().split())]
 cnt = [0] * k
 for i in d:

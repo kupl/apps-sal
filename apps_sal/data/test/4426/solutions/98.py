@@ -1,17 +1,17 @@
 s = input()
 res = 0
-if s == "SUN":
+if s == 'SUN':
     res = 7
-elif s == "MON":
+elif s == 'MON':
     res = 6
-elif s == "TUE":
+elif s == 'TUE':
     res = 5
-elif s == "WED":
+elif s == 'WED':
     res = 4
-elif s == "THU":
+elif s == 'THU':
     res = 3
-elif s == "FRI":
+elif s == 'FRI':
     res = 2
-elif s == "SAT":
+elif s == 'SAT':
     res = 1
 print(res)

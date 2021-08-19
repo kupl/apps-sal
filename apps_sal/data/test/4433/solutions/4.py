@@ -1,15 +1,13 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u - 1].append(v - 1)
     g[v - 1].append(u - 1)
-
 root = 0
 for i in range(n):
     if len(g[i]) > len(g[root]):
         root = i
-
 uf = [-1 for _ in range(n)]
 
 
@@ -28,7 +26,7 @@ def merge(u, v):
     if pu == pv:
         return
     if uf[pu] > uf[pv]:
-        pu, pv = pv, pu
+        (pu, pv) = (pv, pu)
     uf[pu] += uf[pv]
     uf[pv] = pu
 

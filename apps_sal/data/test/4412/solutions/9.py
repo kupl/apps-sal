@@ -13,8 +13,8 @@ for query in range(q):
         if len(a) > 4:
             break
         u += 1
-    if (len(a) > 3 and a[1] == a[0] / 2 and a[2] == a[0] / 3 and a[3] == a[0] / 5) or (len(a) > 4 and a[1] == a[0] / 2 and a[2] == a[0] / 3 and a[3] == a[0] / 4 and a[4] == a[0] / 5):
-        wy = (a[1] + a[2] + a[3])
+    if len(a) > 3 and a[1] == a[0] / 2 and (a[2] == a[0] / 3) and (a[3] == a[0] / 5) or (len(a) > 4 and a[1] == a[0] / 2 and (a[2] == a[0] / 3) and (a[3] == a[0] / 4) and (a[4] == a[0] / 5)):
+        wy = a[1] + a[2] + a[3]
     nowa = [l[i] for i in range(n) if l[0] % l[i] != 0]
     nowa.sort()
     nowa.reverse()

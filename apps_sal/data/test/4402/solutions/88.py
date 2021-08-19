@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 if 13 <= a:
     print(b)
 elif 6 <= a:

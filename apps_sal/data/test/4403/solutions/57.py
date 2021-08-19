@@ -1,7 +1,7 @@
 S = list(input())
 num = 0
 for s in S:
-    if s == "+":
+    if s == '+':
         num += 1
     else:
         num -= 1

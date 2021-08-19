@@ -1,6 +1,5 @@
 from collections import deque as queue
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 used = [0] * n
 edges = [[] for _ in range(n)]
 a = []
@@ -20,14 +19,12 @@ def bfs(z):
 
 
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     edges[a - 1].append(b - 1)
     edges[b - 1].append(a - 1)
-
 k = 0
 for i in range(n):
     k = max(k, len(edges[i]))
-
 for i in range(n):
     if len(edges[i]) == k:
         bfs(i)

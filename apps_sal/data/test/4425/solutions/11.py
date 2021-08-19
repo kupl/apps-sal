@@ -1,6 +1,5 @@
 import math
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 log2 = math.log10(2)
 ans = 0
 for i in range(1, n + 1):
@@ -10,5 +9,4 @@ for i in range(1, n + 1):
         num /= 2
         temp *= 2
     ans += num
-
 print(ans)

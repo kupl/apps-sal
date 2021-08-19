@@ -39,5 +39,5 @@ for i in range(len(b)):
     else:
         p = min(p // 2, b[i][0])
     if p != 0:
-        r = max(r, p * ((2**(i + 1)) - 1))
+        r = max(r, p * (2 ** (i + 1) - 1))
 print(r)

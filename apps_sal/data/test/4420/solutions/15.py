@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, y, n = list(map(int, input().split()))
+    (x, y, n) = list(map(int, input().split()))
     z = n // x
     p = n % x
     if p >= y:

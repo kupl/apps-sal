@@ -1,15 +1,15 @@
 a = input()
 if a == 'SUN':
-    print((7))
+    print(7)
 elif a == 'MON':
-    print((6))
+    print(6)
 elif a == 'TUE':
-    print((5))
+    print(5)
 elif a == 'WED':
-    print((4))
+    print(4)
 elif a == 'THU':
-    print((3))
+    print(3)
 elif a == 'FRI':
-    print((2))
+    print(2)
 else:
-    print((1))
+    print(1)

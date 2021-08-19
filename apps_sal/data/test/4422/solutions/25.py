@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 print(s[:k - 1], end='')
 print(str.swapcase(s[k - 1]), end='')

@@ -15,9 +15,8 @@ for i in a:
         db[i] = 1
     else:
         work = False
-
 if work:
-    print("YES")
+    print('YES')
     print(len(l1))
     print(*sorted(l1))
     print(len(l2))
@@ -25,4 +24,4 @@ if work:
     l2 = l2[::-1]
     print(*l2)
 else:
-    print("NO")
+    print('NO')

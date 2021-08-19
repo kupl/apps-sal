@@ -3,7 +3,7 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def func(i, k):
@@ -15,7 +15,7 @@ def func(i, k):
 
 
 def main():
-    n, k = Input()
+    (n, k) = Input()
     ans = 0
     for i in range(1, n + 1):
         ans += 1 / n * (1 / 2 ** func(i, k))

@@ -5,15 +5,15 @@ def main():
         if n % a == 0:
             b = a + 1
             while b * b < n // a:
-                if (n // a) % b == 0:
+                if n // a % b == 0:
                     c = n // a // b
                     if a != c and b != c:
-                        print("YES")
+                        print('YES')
                         print(a, b, n // a // b)
                         return 0
                 b += 1
         a += 1
-    print("NO")
+    print('NO')
 
 
 p = int(input())

@@ -5,8 +5,7 @@ X = [0] * 6
 for a in A:
     if a == 0:
         X[a] += 1
-    else:
-        if X[a - 1]:
-            X[a - 1] -= 1
-            X[a] += 1
+    elif X[a - 1]:
+        X[a - 1] -= 1
+        X[a] += 1
 print(N - X[5] * 6)

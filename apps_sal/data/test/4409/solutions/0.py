@@ -12,9 +12,7 @@ def main():
         if dct[arr[i]] > m:
             m = dct[arr[i]]
             k = arr[i]
-
     print(n - m)
-
     for i in range(n):
         if arr[i] == k:
             for j in range(i - 1, -1, -1):
@@ -23,7 +21,6 @@ def main():
                 else:
                     print(1, j + 1, j + 2)
             break
-
     while i != n:
         if arr[i] > k:
             print(2, i + 1, i)

@@ -1,5 +1,5 @@
 def go():
-    n, m, k = [int(i) for i in input().split(' ')]
+    (n, m, k) = [int(i) for i in input().split(' ')]
     a = [int(i) for i in input().split(' ')]
     current_box = k
     m -= 1

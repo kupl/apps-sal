@@ -1,6 +1,5 @@
 import sys
-
-N, K = map(int, sys.stdin.readline().split())
+(N, K) = map(int, sys.stdin.readline().split())
 ans = 0
 for i in range(1, N + 1):
     if K <= i:
@@ -10,6 +9,5 @@ for i in range(1, N + 1):
         while i < K:
             count += 1
             i *= 2
-        ans += (1 / N) * 0.5 ** count
-
+        ans += 1 / N * 0.5 ** count
 print(ans)

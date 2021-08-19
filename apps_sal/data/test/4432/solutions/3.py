@@ -4,7 +4,7 @@ for i in range(int(input())):
     s = 0
     mx = a[0]
     for j in range(n):
-        if(a[j] * mx < 0):
+        if a[j] * mx < 0:
             s += mx
             mx = a[j]
         else:

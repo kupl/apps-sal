@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = list(map(int, list(input())))
     ans = 0
     last1 = n * 2

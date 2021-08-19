@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    a, b, n, S = map(int, input().split())
+    (a, b, n, S) = map(int, input().split())
     if a * n >= S:
         x = S // n
     else:

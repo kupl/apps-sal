@@ -1,9 +1,8 @@
-r, D, x = map(int, input().split())
+(r, D, x) = map(int, input().split())
 
 
 def function(y):
     y = r * y - D
-
     return y
 
 

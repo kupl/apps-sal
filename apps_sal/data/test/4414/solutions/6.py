@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, n, s = map(int, input().split())
+    (a, b, n, s) = map(int, input().split())
     maxi = n * a
     rem = s % n
     z = s // n * n

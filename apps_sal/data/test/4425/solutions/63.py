@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 ans = 0
 for i in range(1, N + 1):
     x = i
@@ -7,4 +7,4 @@ for i in range(1, N + 1):
         p /= 2
         x <<= 1
     ans += p
-print((ans / N))
+print(ans / N)

@@ -1,4 +1,3 @@
-
 s = input()
 if s == 'SUN':
     print('7')

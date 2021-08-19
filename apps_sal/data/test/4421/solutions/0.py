@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 D = list(map(int, input().split()))
 z = {i: 0 for i in range(k)}
 for i in range(n):

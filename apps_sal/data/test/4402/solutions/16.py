@@ -1,5 +1,4 @@
-a, p = map(int, input().split())
-
+(a, p) = map(int, input().split())
 if a <= 5:
     print(0)
 elif 6 <= a <= 12:

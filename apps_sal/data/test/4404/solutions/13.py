@@ -1,7 +1,7 @@
 s = input()
 if int(s[5]) == 1:
-    print("TBD")
+    print('TBD')
 elif int(s[6]) <= 4:
-    print("Heisei")
+    print('Heisei')
 else:
-    print("TBD")
+    print('TBD')

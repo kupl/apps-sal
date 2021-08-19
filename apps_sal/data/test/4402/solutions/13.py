@@ -1,6 +1,5 @@
 import sys
-
-A, B = map(int, sys.stdin.readline().split())
+(A, B) = map(int, sys.stdin.readline().split())
 if A <= 5:
     print(0)
 elif A <= 12:

@@ -1,7 +1,6 @@
 from math import floor
 from collections import defaultdict
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = defaultdict(int)
 for i in input().split():
     i = int(i) % k

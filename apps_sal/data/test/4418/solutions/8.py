@@ -28,7 +28,7 @@ def main():
             if arr[4] > 0:
                 arr[4] -= 1
                 arr[5] += 1
-    print(n - (arr[-1] * 6))
+    print(n - arr[-1] * 6)
 
 
 main()

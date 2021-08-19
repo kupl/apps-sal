@@ -6,9 +6,8 @@ def main():
     N = int(input())
     restaurants = []
     for _ in range(N):
-        s, p = input().split()
+        (s, p) = input().split()
         restaurants.append((s.strip(), int(p)))
-
     rank = sorted(restaurants, key=lambda x: (x[0], -x[1]))
     for a in rank:
         print(int(restaurants.index(a)) + 1)

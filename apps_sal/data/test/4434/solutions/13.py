@@ -5,7 +5,7 @@ for f in range(int(input())):
     cur = 3
     mov = 0
     for i in range(m):
-        mov += (i + 1) * (cur**2 - prev**2)
+        mov += (i + 1) * (cur ** 2 - prev ** 2)
         prev += 2
         cur += 2
     print(mov)

@@ -8,5 +8,5 @@ for v in map(int, input().split()):
         r[i] += 1
     else:
         z += 1
-z += sum(v - r[-1] for v in r)
+z += sum((v - r[-1] for v in r))
 print(z)

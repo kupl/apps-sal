@@ -1,6 +1,6 @@
 req = int(input())
 for i in range(req):
-    amount, edit = map(int, input().split())
+    (amount, edit) = map(int, input().split())
     price = list(map(int, input().split()))
     price.sort()
     if amount == 1:

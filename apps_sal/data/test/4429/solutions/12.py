@@ -17,10 +17,10 @@ def solve():
     a = list(mints())
     a.sort()
     if a[-1] != a[-2]:
-        print("NO")
+        print('NO')
         return
     else:
-        print("YES")
+        print('YES')
         print(a[0], a[0], a[1])
 
 

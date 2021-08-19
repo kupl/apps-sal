@@ -1,4 +1,4 @@
-a, p = map(int, input().split())
+(a, p) = map(int, input().split())
 if a >= 13:
     print(p)
 elif a <= 5:

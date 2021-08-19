@@ -17,13 +17,12 @@ for i in range(t):
                 ans = ans + currentmax
                 currentmax = nums[j]
                 pos = 1
-        else:
-            if pos == -1:
-                if nums[j] > currentmax:
-                    currentmax = nums[j]
-            else:
-                ans = ans + currentmax
+        elif pos == -1:
+            if nums[j] > currentmax:
                 currentmax = nums[j]
-                pos = -1
+        else:
+            ans = ans + currentmax
+            currentmax = nums[j]
+            pos = -1
     ans = ans + currentmax
     print(ans)

@@ -1,7 +1,7 @@
 a = input()
-if a[5] == "1":
-    print("TBD")
+if a[5] == '1':
+    print('TBD')
 elif int(a[6]) > 4:
-    print("TBD")
+    print('TBD')
 else:
-    print("Heisei")
+    print('Heisei')

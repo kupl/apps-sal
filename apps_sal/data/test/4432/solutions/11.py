@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = [int(x) for x in input().strip().split()]
@@ -11,10 +10,9 @@ for _ in range(t):
             while i < n and a[i] > 0:
                 pi = max(pi, a[i])
                 i += 1
-
             res += pi
         else:
-            ni = -10**10
+            ni = -10 ** 10
             while i < n and a[i] < 0:
                 ni = max(ni, a[i])
                 i += 1
