@@ -1,4 +1,5 @@
 class Solution:
+
     def numRabbits(self, answers):
         """
         :type answers: List[int]
@@ -13,11 +14,9 @@ class Solution:
             else:
                 d[n] = 1
         total = 0
-        # 想清楚各种可能的边界情况
         for n in d:
             if d[n] % (n + 1) == 0:
                 total += d[n]
             else:
-                total += ((d[n] // (n + 1)) + 1) * (n + 1)
-
+                total += (d[n] // (n + 1) + 1) * (n + 1)
         return total

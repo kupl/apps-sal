@@ -1,6 +1,3 @@
-# 10 + 20 + 2:28
-
-
 def solve(b, n):
     x = 0
     y = 0
@@ -11,7 +8,6 @@ def solve(b, n):
             y += 1
     if x == n or y == n:
         return -1
-
     return abs(x - y) // 2
 
 

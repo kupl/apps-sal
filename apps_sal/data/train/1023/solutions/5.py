@@ -10,15 +10,14 @@ for _ in range(int(input())):
     else:
         print('1')
         for _ in range(2, n):
-            print(xx, end="")
+            print(xx, end='')
             xx += 1
             if a > 0:
-                print(' ' * a, end="")
+                print(' ' * a, end='')
             a += 1
             print(xx)
             xx += 1
-        # xx+=1
         for _ in range(1, n + 1):
-            print(xx, end="")
+            print(xx, end='')
             xx += 1
         print()

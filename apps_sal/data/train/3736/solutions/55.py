@@ -1,5 +1,4 @@
 def minimum(arr):
-    # your code here...
     val = arr[0]
     for i in arr:
         if i < val:
@@ -8,7 +7,6 @@ def minimum(arr):
 
 
 def maximum(arr):
-    #...and here
     val = arr[0]
     for i in arr:
         if i > val:

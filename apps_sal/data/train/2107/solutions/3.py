@@ -37,7 +37,5 @@ for i in range(n - 1, -1, -1):
                     right = j
                     ans += 1
                     continue
-# print(dp,'dp')
-'''for i in range(n):
-    print(dp[i])'''
+'for i in range(n):\n    print(dp[i])'
 print(ans)

@@ -1,5 +1,4 @@
-'''Author- Akshit Monga'''
-# Complexity- (26*|S|)
+"""Author- Akshit Monga"""
 from sys import stdin, stdout
 input = stdin.readline
 
@@ -18,14 +17,14 @@ for _ in range(t):
     for i in s:
         if i == '?':
             continue
-        mask ^= (1 << val(i))
+        mask ^= 1 << val(i)
     hash = {0: 1}
     pre = 0
     for i in s:
-        pre ^= (1 << val(i))
+        pre ^= 1 << val(i)
         ans += hash.get(pre ^ mask, 0)
-        x = mask ^ (1 << 26)
+        x = mask ^ 1 << 26
         for j in range(26):
-            ans += hash.get(pre ^ (1 << j) ^ x, 0)
+            ans += hash.get(pre ^ 1 << j ^ x, 0)
         hash[pre] = hash.get(pre, 0) + 1
     stdout.write(str(ans) + '\n')

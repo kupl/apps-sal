@@ -1,10 +1,9 @@
-# cook your dish here
 try:
     t = int(input())
     for k in range(t):
         s = input()
         ans = 0
-        if((len(s) % 2 != 0) or (not '0' in s) or (not '1' in s)):
+        if len(s) % 2 != 0 or not '0' in s or (not '1' in s):
             ans = -1
         else:
             zeros = 0

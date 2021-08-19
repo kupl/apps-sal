@@ -1,12 +1,10 @@
-# cook your dish here
 from math import gcd
-
 t = int(input())
 for _t in range(t):
     n = int(input())
     arr = [int(x) for x in input().split()]
     dp = [[0] * 10001 for i in range(n)]
-    dp[0][arr[0]], sett = 1, set([arr[0]])
+    (dp[0][arr[0]], sett) = (1, set([arr[0]]))
     for i in range(1, n):
         dp[i][arr[i]] += 1
         tmp = []
