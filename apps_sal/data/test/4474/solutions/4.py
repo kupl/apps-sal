@@ -1,8 +1,6 @@
-# coding: utf-8
-# Your code here!
 def tobase3(n):
     a = []
-    while(n > 0):
+    while n > 0:
         a.append(n % 3)
         n //= 3
     a.reverse()
@@ -24,15 +22,15 @@ for _ in range(t):
     j = 0
     flag = False
     for i in range(len(a)):
-        if(a[i] == 2):
+        if a[i] == 2:
             flag = True
             j = i
-            while(j >= 0 and a[j] != 0):
+            while j >= 0 and a[j] != 0:
                 j -= 1
             break
-    if(j < 0 and flag):
-        print(3**len(a))
-    elif(flag):
+    if j < 0 and flag:
+        print(3 ** len(a))
+    elif flag:
         print(todec(a[:j] + [1] + [0] * (len(a) - j - 1)))
     else:
         print(n)

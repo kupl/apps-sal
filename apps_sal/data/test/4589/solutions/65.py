@@ -11,20 +11,18 @@ def get_num_bomb(arr, i, j):
     return slice.sum()
 
 
-h, w = tuple([int(x) for x in input().split(" ")])
+(h, w) = tuple([int(x) for x in input().split(' ')])
 arr = []
 ret_arr = [[0] * w for i in range(h)]
 for i in range(h):
-    x = list([(False if x == "." else True) for x in input()])
-    # x = list(map(lambda x: x, input()))
+    x = list([False if x == '.' else True for x in input()])
     arr.append(x)
 arr = np.array(arr)
-# print(arr)
 for i in range(h):
     for j in range(w):
         if arr[i, j] == True:
-            ret_arr[i][j] = "#"
+            ret_arr[i][j] = '#'
         else:
             ret_arr[i][j] = get_num_bomb(arr, i, j)
 for lis in ret_arr:
-    print(("".join(list([str(x) for x in lis]))))
+    print(''.join(list([str(x) for x in lis])))

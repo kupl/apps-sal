@@ -1,7 +1,4 @@
 import sys
-
-# sys.stdin = open('in.txt')
-
 s = sys.stdin.read().split()
 p = 0
 
@@ -12,9 +9,7 @@ def getSm(k, a, b, c, d):
 
 t = int(s[p])
 p += 1
-
 res = []
-
 for _ in range(t):
     a = int(s[p])
     p += 1
@@ -30,14 +25,13 @@ for _ in range(t):
         res.append(a)
     else:
         dn = 0
-        up = int(1e6) + 1
+        up = int(1000000.0) + 1
         while up - dn > 1:
-            md = (up + dn) >> 1
+            md = up + dn >> 1
             if getSm(md, a, b, c, d) < getSm(md + 1, a, b, c, d):
                 dn = md
             else:
                 up = md
         ans = max(a, getSm(dn, a, b, c, d), getSm(up, a, b, c, d))
         res.append(ans)
-
 print('\n'.join(map(str, res)))

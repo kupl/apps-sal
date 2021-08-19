@@ -10,15 +10,15 @@ class InputHandlerObject(object):
     inputs = []
 
     def getInput(self, n=0):
-        res = ""
+        res = ''
         inputs = self.inputs
         if not inputs:
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n == 0:
             res = inputs[:]
             inputs[:] = []
         while n > len(inputs):
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n > 0:
             res = inputs[:n]
             inputs[:n] = []
@@ -27,9 +27,7 @@ class InputHandlerObject(object):
 
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
-
-############################## SOLUTION ##############################
-n, m = [int(x) for x in g()]
+(n, m) = [int(x) for x in g()]
 
 
 def sqr(n):
@@ -46,4 +44,4 @@ a = sqr(n)
 b = sqr(m)
 for i in range(n):
     res = [str(a[i] * x) for x in b]
-    print(" ".join(res))
+    print(' '.join(res))

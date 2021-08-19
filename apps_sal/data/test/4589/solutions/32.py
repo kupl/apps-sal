@@ -1,14 +1,13 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 sl = []
-bl = [["" for _ in range(w)] for _ in range(h)]
-
+bl = [['' for _ in range(w)] for _ in range(h)]
 for i in range(h):
     s = input()
     sl.append(s)
 
 
 def scheck(s):
-    if s == "#":
+    if s == '#':
         return 1
     else:
         return 0
@@ -25,11 +24,10 @@ def check(i, j, sl):
 
 for i in range(h):
     for j in range(w):
-        if sl[i][j] == ".":
+        if sl[i][j] == '.':
             bl[i][j] = check(i, j, sl)
         else:
-            bl[i][j] = "#"
-
+            bl[i][j] = '#'
 for b in bl:
     t = ''.join(b)
     print(t)

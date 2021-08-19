@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
 import random
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -36,24 +44,17 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
-
     return
-
-# B
 
 
 def B():
-
     return
-
-# C
 
 
 def C():
+
     def bfs(s, g, n):
         bfs_map = [-1 for i in range(n)]
         bfs_map[s] = 0
@@ -71,11 +72,10 @@ def C():
                     q.append(y)
             if fin:
                 break
-
         if bfs_map[g] == -1:
             return [None, 0]
         path = [None for i in range(bfs_map[g] + 1)]
-        m = float("inf")
+        m = float('inf')
         path[bfs_map[g]] = g
         y = g
         for i in range(bfs_map[g])[::-1]:
@@ -90,18 +90,17 @@ def C():
 
     def ford_fulkerson(s, g, c, n):
         while 1:
-            p, m = bfs(s, g, n)
+            (p, m) = bfs(s, g, n)
             if not m:
                 break
             for i in range(len(p) - 1):
                 c[p[i]][p[i + 1]] -= m
                 c[p[i + 1]][p[i]] += m
         return sum(c[g])
-
     n = I()
     a = LI()
     e = n + 2
-    ma = 10**9
+    ma = 10 ** 9
     c = [[0] * e for i in range(e)]
     for i in range(n):
         d = i + 1
@@ -109,33 +108,22 @@ def C():
         c[0][d] = ma
         c[d][n + 1] = ma - a[i]
         while j <= n:
-            c[j][d] = float("inf")
+            c[j][d] = float('inf')
             j += d
-    print((ma * n - ford_fulkerson(0, n + 1, c, e)))
+    print(ma * n - ford_fulkerson(0, n + 1, c, e))
     return
-
-# D
 
 
 def D():
-
     return
-
-# E
 
 
 def E():
-
     return
-
-# F
 
 
 def F():
-
     return
-
-# Solve
 
 
 def __starting_point():

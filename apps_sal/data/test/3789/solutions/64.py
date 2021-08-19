@@ -10,25 +10,19 @@ import itertools
 from collections import deque, Counter, defaultdict
 from operator import mul
 import copy
-# ! /usr/bin/env python
-# -*- coding: utf-8 -*-
 import heapq
-sys.setrecursionlimit(10**6)
-# INF =  float("inf")
-INF = 10**18
-mod = 10**9 + 7
-# mod = 998244353
-
-# Dinic's algorithm
+sys.setrecursionlimit(10 ** 6)
+INF = 10 ** 18
+mod = 10 ** 9 + 7
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
-        # 始点ノードidx，終点ノードidx，容量をinput
         forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
@@ -48,7 +42,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -59,7 +53,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -69,12 +63,11 @@ class Dinic:
         return 0
 
     def flow(self, s, t):
-        # source/targetノードのidxを入力すると最大フロー（＝最小カット）が出力
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = map(iter, self.G)
+            (*self.it,) = map(iter, self.G)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -84,9 +77,7 @@ class Dinic:
 
 N = int(input())
 a = [0] + list(map(int, input().split()))
-
 dinic = Dinic(N + 2)
-
 for i in range(1, N + 1):
     x = a[i]
     if x >= 0:
@@ -95,9 +86,7 @@ for i in range(1, N + 1):
     else:
         dinic.add_edge(0, i, abs(x))
         dinic.add_edge(i, N + 1, 0)
-
 for i in range(1, N + 1):
     for j in range(2, N // i + 1):
         dinic.add_edge(i, j * i, INF)
-
 print(sum([max(aa, 0) for aa in a]) - dinic.flow(0, N + 1))

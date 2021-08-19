@@ -3,7 +3,7 @@ from sys import stdin, setrecursionlimit
 
 class Dinic:
 
-    def __init__(self, v, inf=float("inf")):
+    def __init__(self, v, inf=float('inf')):
         self.V = v
         self.inf = inf
         self.G = [[] for _ in range(v)]
@@ -11,15 +11,13 @@ class Dinic:
         self.iter = [0 for _ in range(v)]
 
     def addEdge(self, fm, to, cap):
-        '''
+        """
         to:行き先
         cap:容量
         rev:反対側の辺
-        '''
+        """
         self.G[fm].append({'to': to, 'cap': cap, 'rev': len(self.G[to])})
         self.G[to].append({'to': fm, 'cap': 0, 'rev': len(self.G[fm]) - 1})
-
-    # sからの最短距離をbfsで計算
 
     def bfs(self, s):
         import queue
@@ -27,7 +25,6 @@ class Dinic:
         self.level[s] = 0
         que = queue.Queue()
         que.put(s)
-
         while not que.empty():
             v = que.get()
             for i in range(len(self.G[v])):
@@ -63,7 +60,8 @@ class Dinic:
                 f = self.dfs(s, t, self.inf)
 
 
-def IL(): return list(map(int, stdin.readline().split()))
+def IL():
+    return list(map(int, stdin.readline().split()))
 
 
 setrecursionlimit(1000000)
@@ -85,7 +83,8 @@ def main():
     print(res - d.max_flow(N, N + 1))
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

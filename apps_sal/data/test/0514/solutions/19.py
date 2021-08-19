@@ -11,7 +11,7 @@ def inp(dtype=str, strip=True):
 def problem1():
     t = inp(int)
     for _ in range(t):
-        n, d = inp(int)
+        (n, d) = inp(int)
         res = False
         sq = math.floor(math.sqrt(d))
         for x in range(max(sq - 1000, 0), min(sq + 1000, n)):
@@ -45,11 +45,6 @@ def problem6():
 
 
 def __starting_point():
-    # problem6()
-    # problem5()
-    # problem4()
-    # problem3()
-    # problem2()
     problem1()
 
 
