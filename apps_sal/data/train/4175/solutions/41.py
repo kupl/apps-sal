@@ -1,8 +1,7 @@
 def repeater(string, n):
-    # Your code goes here.
-    return(string * n)
+    return string * n
 
 
-string = "bla"
+string = 'bla'
 n = 5
 repeater(string, n)

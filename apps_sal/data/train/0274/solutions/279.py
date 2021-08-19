@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         sd = collections.deque()
         ld = collections.deque()
@@ -16,7 +17,6 @@ class Solution:
         def popleft(d, j):
             while d and d[0][1] < j:
                 d.popleft()
-
         n = len(nums)
         ans = -math.inf
         start = 0
@@ -27,15 +27,12 @@ class Solution:
             if abs(ld[0][0] - sd[0][0]) <= limit:
                 ans = max(ans, i - start + 1)
             else:
-                # print(ld, sd, \"  ------\")
                 while abs(ld[0][0] - sd[0][0]) > limit:
                     if ld[0][1] == start:
                         ld.popleft()
                     if sd[0][1] == start:
                         sd.popleft()
                     start += 1
-                # print(ld, sd)
-                # start = min(ld[0][1], sd[0][1])
                 ans = max(ans, i - start + 1)
             i += 1
         return ans

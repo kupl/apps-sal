@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums or len(nums) == 0:
             return 0
@@ -11,7 +12,6 @@ class Solution:
         right = 0
         result = 0
         while right < len(nums):
-            # Maintain minDeque
             while minDeque and nums[right] < nums[minDeque[-1]]:
                 minDeque.pop()
             while maxDeque and nums[right] > nums[maxDeque[-1]]:

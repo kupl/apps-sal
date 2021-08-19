@@ -1,10 +1,11 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if len(nums) == 0:
             return 0
         max_q = MonoQueue(False)
         min_q = MonoQueue(True)
-        l, r = 0, 0
+        (l, r) = (0, 0)
         max_q.push(nums[0])
         min_q.push(nums[0])
 
@@ -14,7 +15,6 @@ class Solution:
             return abs(max_q.top() - min_q.top()) <= limit
         res = 0
         while r < len(nums):
-            # print(max_q.queue, min_q.queue)
             if in_limit() is True:
                 res = max(res, r - l + 1)
                 r += 1
@@ -28,7 +28,8 @@ class Solution:
         return res
 
 
-class MonoQueue():
+class MonoQueue:
+
     def __init__(self, inc=True):
         self.queue = []
         self.inc = inc

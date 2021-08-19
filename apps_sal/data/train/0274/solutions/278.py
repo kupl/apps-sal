@@ -1,13 +1,10 @@
-# 注意需要标记滑动窗口内min和max的取值， 否则有可能超时
-# 这题需要使用单调栈或者最小最大堆
-
-
 import heapq as hq
 
 
 class Solution:
+
     def longestSubarray(self, nums, limit):
-        mini, maxi, res, i = deque([]), deque([]), 0, 0
+        (mini, maxi, res, i) = (deque([]), deque([]), 0, 0)
         for j in range(len(nums)):
             while mini and mini[-1][0] > nums[j]:
                 mini.pop()
