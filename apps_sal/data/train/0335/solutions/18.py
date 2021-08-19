@@ -1,11 +1,10 @@
 class Solution:
-    def tallestBillboard(self, rods: List[int]) -> int:
 
-        # diff: lower length
+    def tallestBillboard(self, rods: List[int]) -> int:
         dp = {0: 0}
         for r in rods:
             new_dp = dp.copy()
-            for d, l in dp.items():
+            for (d, l) in dp.items():
                 h = d + l
                 if r + d not in new_dp:
                     new_dp[r + d] = l
@@ -13,6 +12,5 @@ class Solution:
                 if abs(d - r) not in new_dp:
                     new_dp[abs(d - r)] = 0
                 new_dp[abs(d - r)] = max(new_dp[abs(d - r)], min(l + r, h))
-
             dp = new_dp
         return dp[0]

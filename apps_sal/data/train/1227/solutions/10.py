@@ -23,15 +23,13 @@ def _strarr():
 
 
 def adj(a, b, c):
-    if b != opp[a] and b != opp[c] and a != opp[c]:
+    if b != opp[a] and b != opp[c] and (a != opp[c]):
         return True
     return False
 
 
 t = _int()
-
 opp = [1, 0, 3, 2, 5, 4]
-
 for _ in range(t):
     c = _strarr()
     cd = dict()
@@ -39,9 +37,6 @@ for _ in range(t):
         ind = cd.get(c[i], [])
         ind.append(i)
         cd[c[i]] = ind
-
-    # print(cd)
-
     found = False
     for k in list(cd.keys()):
         ind = cd.get(k, [])
@@ -61,4 +56,4 @@ for _ in range(t):
             found = True
         if found:
             break
-    print("YES" if found else "NO")
+    print('YES' if found else 'NO')

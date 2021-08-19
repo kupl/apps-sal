@@ -1,32 +1,28 @@
 n = int(input().strip())
-w = (n - 1) * 2 + ((n * 2) - 1)
-# upper half
+w = (n - 1) * 2 + (n * 2 - 1)
 for i in range(1, n, 1):
-    number_of_letter = (i * 2) - 1
+    number_of_letter = i * 2 - 1
     s = ''
     letter_value = 97 + n - 1
     for i in range(0, number_of_letter):
-        if(i != 0):
+        if i != 0:
             s += '-'
         s += chr(letter_value)
-        if(i < (number_of_letter - 1) / 2):
+        if i < (number_of_letter - 1) / 2:
             letter_value = letter_value - 1
         else:
             letter_value = letter_value + 1
-    print((s.center(w, '-')))
-
-
-# bottom half
+    print(s.center(w, '-'))
 for i in range(n, 0, -1):
-    number_of_letter = (i * 2) - 1
+    number_of_letter = i * 2 - 1
     s = ''
     letter_value = 97 + n - 1
     for i in range(0, number_of_letter):
-        if(i != 0):
+        if i != 0:
             s += '-'
         s += chr(letter_value)
-        if(i < (number_of_letter - 1) / 2):
+        if i < (number_of_letter - 1) / 2:
             letter_value = letter_value - 1
         else:
             letter_value = letter_value + 1
-    print((s.center(w, '-')))
+    print(s.center(w, '-'))

@@ -1,11 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
+
     def sameTree(self, s, t):
         if not s or not t:
             return s == t
