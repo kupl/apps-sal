@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort()
         if amount == 0:
@@ -11,7 +12,7 @@ class Solution:
                     break
                 else:
                     changes[i] = min(changes[i], changes[i - coin] + 1)
-        if changes[-1] != (amount + 1):
+        if changes[-1] != amount + 1:
             return changes[-1]
         else:
             return -1

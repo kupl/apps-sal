@@ -2,14 +2,15 @@ import collections
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        '''
+        """
         coins = [1, 2, 5], amount = 0
                        ^
                  2  3  6
                  4 
                  10
-        '''
+        """
         if not amount:
             return 0
         queue = collections.deque(coins)

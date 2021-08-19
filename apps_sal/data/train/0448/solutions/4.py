@@ -1,4 +1,5 @@
 class Solution:
+
     def checkSubarraySum(self, nums, k):
         """
         :type nums: List[int]
@@ -15,7 +16,7 @@ class Solution:
         d = dict()
         d[0] = -1
         s = 0
-        for i, x in enumerate(nums):
+        for (i, x) in enumerate(nums):
             s += x
             s = s % k
             if s in d:

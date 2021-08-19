@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if not coins or len(coins) == 0:
             return 0

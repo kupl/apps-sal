@@ -1,9 +1,8 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        n, inf = len(jobDifficulty), float('inf')
-
+        (n, inf) = (len(jobDifficulty), float('inf'))
         dp = [[inf] * n + [0] for _ in range(d + 1)]
-
         for d in range(1, d + 1):
             for i in range(n - (d - 1)):
                 maxd = 0

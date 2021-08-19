@@ -1,9 +1,11 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+
         @lru_cache(None)
         def helper(i, d):
-            if(d == 1):
-                if(len(jobDifficulty) == 0):
+            if d == 1:
+                if len(jobDifficulty) == 0:
                     return float('inf')
                 return max(jobDifficulty[i:])
             else:
@@ -12,7 +14,7 @@ class Solution:
                     m = min(max(jobDifficulty[i:j]) + helper(j, d - 1), m)
                 return m
         x = helper(0, d)
-        if(x == float('inf')):
+        if x == float('inf'):
             return -1
         else:
             return x

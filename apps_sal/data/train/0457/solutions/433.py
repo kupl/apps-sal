@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins, amount):
         if amount < 1:
             return 0
@@ -11,7 +12,6 @@ class Solution:
             if amount in dic:
                 return dic[amount]
             minimum = float('inf')
-
             for i in range(len(coins)):
                 current = count_change(coins, amount - coins[i], dic)
                 if current >= 0 and current < minimum:
@@ -21,5 +21,4 @@ class Solution:
             else:
                 dic[amount] = minimum
             return dic[amount]
-
         return count_change(coins, amount, {})

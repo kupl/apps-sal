@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def isRationalEqual(self, S: str, T: str) -> bool:
         if len(S) == 0 or len(T) == 0:
             return False
@@ -9,8 +10,8 @@ class Solution:
         def process(s):
             if s[-1] == '.':
                 s = s[:-1]
-            stack, repeat_9 = [], False
-            for i, x in enumerate(s):
+            (stack, repeat_9) = ([], False)
+            for (i, x) in enumerate(s):
                 if x != ')':
                     stack.append(x)
                 else:
@@ -20,10 +21,9 @@ class Solution:
                     if len(tmp) == tmp.count('9'):
                         repeat_9 = True
                     stack.pop()
-                    return ''.join(stack) + tmp[::-1] * (24 // len(tmp)), repeat_9
-            return ''.join(stack), repeat_9
-
-        x, y = process(S), process(T)
+                    return (''.join(stack) + tmp[::-1] * (24 // len(tmp)), repeat_9)
+            return (''.join(stack), repeat_9)
+        (x, y) = (process(S), process(T))
         if x[0].count('.') == 0 or y[0].count('.') == 0:
             return float(x[0]) == float(y[0])
         l = max(len(x[0]), len(y[0]))
@@ -33,5 +33,4 @@ class Solution:
             m = min(len(x[0].split('.')[1]), len(y[0].split('.')[1]))
             if round(float(x[0]), m) == round(float(y[0]), m):
                 return True
-
         return False

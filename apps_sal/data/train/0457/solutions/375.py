@@ -1,8 +1,7 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-
         t = [[-1] * (amount + 1)] * (len(coins) + 1)
-
         for i in range(len(t)):
             for j in range(len(t[0])):
                 if j == 0:

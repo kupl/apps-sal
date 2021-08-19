@@ -1,6 +1,7 @@
 class Solution:
+
     def checkSubarraySum(self, nums, k):
-        dict, cur = {}, 0
+        (dict, cur) = ({}, 0)
         if k == 0:
             zero = 0
             for i in nums:
@@ -19,14 +20,10 @@ class Solution:
             elif cur % k in dict and cur >= k:
                 print('2')
                 return True
-            elif i != 0 and nums[i] == 0 and nums[i - 1] == 0:
+            elif i != 0 and nums[i] == 0 and (nums[i - 1] == 0):
                 print('3')
                 return True
             else:
                 dict[cur % k] = True
         return False
-        """
-         :type nums: List[int]
-         :type k: int
-         :rtype: bool
-         """
+        '\n         :type nums: List[int]\n         :type k: int\n         :rtype: bool\n         '

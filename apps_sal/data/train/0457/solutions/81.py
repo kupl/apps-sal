@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if not amount:
             return 0
@@ -13,9 +14,8 @@ class Solution:
                 if dp[i] >= 1:
                     if dp[i + coin] == 0:
                         dp[i + coin] = dp[i] + 1
-                    else:
-                        if dp[i] + 1 < dp[i + coin]:
-                            dp[i + coin] = dp[i] + 1
+                    elif dp[i] + 1 < dp[i + coin]:
+                        dp[i + coin] = dp[i] + 1
         if not dp[amount]:
             return -1
         return dp[amount]

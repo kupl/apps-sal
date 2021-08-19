@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         ans = 0
         for num in nums:
@@ -15,7 +16,6 @@ class Solution:
                 memo.add(num // i)
                 if len(memo) > 4:
                     return 0
-
         if len(memo) == 4:
             return sum(memo)
         return 0

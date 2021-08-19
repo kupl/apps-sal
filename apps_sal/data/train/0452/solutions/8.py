@@ -1,7 +1,7 @@
 class Solution:
-    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
 
-        n, inf = len(jobDifficulty), float('inf')
+    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+        (n, inf) = (len(jobDifficulty), float('inf'))
         dp = [[inf] * n + [0] for i in range(d + 1)]
         for d in range(1, d + 1):
             for i in range(n - d + 1):
@@ -12,7 +12,4 @@ class Solution:
         return dp[d][0] if dp[d][0] < inf else -1
 
 
-'''
-Solution3: Bottom-up 1D DP
-Time complexity O(nnd)
-Space complexity O(n)'''
+'\nSolution3: Bottom-up 1D DP\nTime complexity O(nnd)\nSpace complexity O(n)'

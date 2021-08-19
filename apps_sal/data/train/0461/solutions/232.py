@@ -1,8 +1,8 @@
 class Solution:
-    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
+    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         sub = collections.defaultdict(list)
-        for i, v in enumerate(manager):
+        for (i, v) in enumerate(manager):
             sub[v].append(i)
         res = -float('inf')
 

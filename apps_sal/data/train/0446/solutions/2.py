@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         char_freq_map = {}
         for num in arr:
@@ -6,7 +7,6 @@ class Solution:
                 char_freq_map[num] += 1
             else:
                 char_freq_map[num] = 1
-
         freq_to_char_map = {}
         freqs = []
         for key in char_freq_map:
@@ -15,11 +15,10 @@ class Solution:
             else:
                 freqs.append(char_freq_map[key])
                 freq_to_char_map[char_freq_map[key]] = [key]
-
         i = 0
         freqs.sort()
         ans = 0
-        while(1):
+        while 1:
             if k == 0:
                 break
             freq = freqs[i]
@@ -30,9 +29,8 @@ class Solution:
                 ans += len(freq_to_char_map[freq]) - k // freq
                 k = 0
                 i += 1
-
         print(freq_to_char_map)
-        while(i < len(freqs)):
+        while i < len(freqs):
             ans += len(freq_to_char_map[freqs[i]])
             i += 1
         return ans

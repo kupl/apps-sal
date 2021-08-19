@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange2(self, coins: List[int], amount: int) -> int:
         impossible = amount + 1
         cnts = [impossible] * impossible
@@ -17,11 +18,11 @@ class Solution:
         def createCoins(total: int):
             if total == 0:
                 return 0
-            if (self.cnts[total] != 0):
+            if self.cnts[total] != 0:
                 return self.cnts[total]
             minCnt = impossible
             for coin in coins:
-                if (total - coin < 0):
+                if total - coin < 0:
                     continue
                 cnt = createCoins(total - coin) + 1
                 minCnt = min(cnt, minCnt)

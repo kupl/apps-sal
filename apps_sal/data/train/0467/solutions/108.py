@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         return sum([self.sumofDivisors(num) for num in nums])
 

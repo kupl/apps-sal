@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         managerMapping = {}
         maxTime = 0
@@ -11,7 +12,6 @@ class Solution:
                 directs = managerMapping[currentEmployee]
                 for direct in directs:
                     dfs(currentTime + informTime[currentEmployee], direct, managerMapping)
-
         for i in range(len(manager)):
             if manager[i] in managerMapping:
                 managerMapping[manager[i]].append(i)

@@ -1,15 +1,15 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
+
         def dfs(start, amount, n_coins):
             coin = coins[start]
             div = amount // coin
             n_coins += div
             amount %= coin
-
             if amount == 0:
                 self.minimum = min(n_coins, self.minimum)
                 return
-
             if start < length:
                 dfs(start + 1, amount, n_coins)
                 next_coin = coins[start + 1]

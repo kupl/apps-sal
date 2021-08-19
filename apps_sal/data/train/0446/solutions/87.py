@@ -1,8 +1,9 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         bucket = [[] for _ in range(len(arr) + 1)]
         counter = collections.Counter(arr)
-        for key, value in counter.items():
+        for (key, value) in counter.items():
             bucket[value].append(key)
         for c in range(len(bucket)):
             if k == 0:

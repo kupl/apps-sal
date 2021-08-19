@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         m = [-1 for x in range(amount + 1)]
         m[0] = 0

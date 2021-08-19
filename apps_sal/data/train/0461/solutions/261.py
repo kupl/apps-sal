@@ -1,8 +1,8 @@
 class Solution:
-    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
 
+    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         children = collections.defaultdict(list)
-        for i, m in enumerate(manager):
+        for (i, m) in enumerate(manager):
             if m >= 0:
                 children[m].append(i)
 

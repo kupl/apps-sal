@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSwap(self, num):
         arr = [int(c) for c in str(num)]
         n = len(arr)
@@ -14,6 +15,6 @@ class Solution:
                 continue
             j = posmax[i]
             if arr[j] > arr[i]:
-                arr[i], arr[j] = arr[j], arr[i]
+                (arr[i], arr[j]) = (arr[j], arr[i])
                 return int(''.join(map(str, arr)))
         return num

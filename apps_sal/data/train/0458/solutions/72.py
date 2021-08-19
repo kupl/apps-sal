@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         lastest = {0: -1}
         total = 0

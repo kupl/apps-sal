@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, id, informTime=0):
         self.id = id
         self.employees = []
@@ -6,14 +7,14 @@ class Node:
 
 
 class Solution:
+
     def construct_tree(self, headID, managers, informTime):
         manager_to_employees = {}
-        for employee, manager in enumerate(managers):
+        for (employee, manager) in enumerate(managers):
             if manager in manager_to_employees:
                 manager_to_employees[manager].append(employee)
             else:
                 manager_to_employees[manager] = [employee]
-
         root = Node(headID, informTime[headID])
         stack = [root]
         while stack:

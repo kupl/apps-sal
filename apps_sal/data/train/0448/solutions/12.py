@@ -1,4 +1,5 @@
 class Solution:
+
     def checkSubarraySum(self, nums, k):
         """
         :type nums: List[int]
@@ -11,7 +12,6 @@ class Solution:
             if k:
                 v %= abs(k)
             P.append(v)
-
         seen = set()
         for i in range(len(P) - 3, -1, -1):
             seen.add(P[i + 2])

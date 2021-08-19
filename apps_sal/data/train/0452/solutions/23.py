@@ -1,9 +1,8 @@
 class Solution:
-    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
 
+    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         cumsum = [0] * len(jobDifficulty)
         cummax = [[0] * len(jobDifficulty) for _ in range(len(jobDifficulty))]
-
         for i in range(len(jobDifficulty)):
             cumsum[i] = cumsum[i - 1] + jobDifficulty[i]
             for j in range(i, len(jobDifficulty)):
@@ -18,7 +17,6 @@ class Solution:
             elif d == 1:
                 return cummax[0][s - 1]
             else:
-                return min(cummax[i][s - 1] + DFS(i, d - 1) for i in range(1, s))
-
+                return min((cummax[i][s - 1] + DFS(i, d - 1) for i in range(1, s)))
         res = DFS(len(jobDifficulty), d)
         return res if res < float('inf') else -1

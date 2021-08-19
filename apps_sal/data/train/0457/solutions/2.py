@@ -1,6 +1,7 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        INVALID = 2**32
+        INVALID = 2 ** 32
         dp = [INVALID] * (amount + 1)
         dp[0] = 0
         for coin in coins:

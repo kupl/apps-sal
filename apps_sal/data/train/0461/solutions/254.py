@@ -5,7 +5,6 @@ class Solution:
         if len(edgeList[headID]) == 0:
             Solution.over_all_max_time = max(Solution.over_all_max_time, max_time)
             return
-
         for emp in edgeList[headID]:
             max_time += informTime[headID]
             self.DFS(edgeList, max_time, emp, informTime)

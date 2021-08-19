@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         memo = {}
 
@@ -17,5 +18,4 @@ class Solution:
                             fewest = f + 1
                     memo[amt] = fewest
             return memo[amt]
-
         return _fewest(coins, amount)

@@ -1,9 +1,9 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
 
+    def coinChange(self, coins: List[int], amount: int) -> int:
         memo = {}
 
-        def backtrack(memo, curr=amount,):
+        def backtrack(memo, curr=amount):
             if curr == 0:
                 return 0
             if memo.get(curr):

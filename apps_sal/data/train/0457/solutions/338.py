@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
 
         def helper(coins, amount, dp):
@@ -15,7 +16,6 @@ class Solution:
                 else:
                     dp[amount] = min(dp[amount], use_ci)
             return dp[amount]
-
         if amount == 0:
             return 0
         if amount < 0:

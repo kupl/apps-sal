@@ -1,25 +1,21 @@
 class Solution:
+
     def __init__(self):
         self.divisors = {}
 
     def generate_result(self, n):
         counter = 1
         quo = n // counter
-
         while counter <= quo:
-
             if n % counter == 0:
                 yield counter
                 if quo != counter:
                     yield quo
-
             counter += 1
             quo = n // counter
 
     def count_divisors(self, n):
-
         result = list(self.generate_result(n))
-
         return result
 
     def sumFourDivisors(self, nums: List[int]) -> int:

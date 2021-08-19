@@ -8,7 +8,6 @@ def div(n):
         if n % i == 0:
             c += 1
             k += i + n // i
-
         i += 1
     if c == 2:
         return k
@@ -17,6 +16,7 @@ def div(n):
 
 
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         ans = 0
         for i in nums:

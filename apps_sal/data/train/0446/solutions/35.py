@@ -1,6 +1,6 @@
 class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
 
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         c = collections.Counter(arr)
         for n in sorted(c, key=lambda num: c[num]):
             if c[n] <= k:
@@ -8,5 +8,4 @@ class Solution:
                 del c[n]
             else:
                 break
-
         return len(c)

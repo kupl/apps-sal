@@ -1,6 +1,7 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        '''
+        """
         if amount == 0:
             return 0
         elif amount < 0:
@@ -15,7 +16,7 @@ class Solution:
                 return -1
             else:
                 return min(arr) + 1
-        '''
+        """
         dp = [amount + 1 for i in range(amount + 1)]
         dp[0] = 0
         for i in range(amount + 1):

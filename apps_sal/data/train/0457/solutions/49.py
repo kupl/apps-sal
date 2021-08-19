@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: [int], amount: int) -> int:
         summary = 0
         result = [float('inf')] * (amount + 1)

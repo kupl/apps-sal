@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -18,5 +19,5 @@ class Solution:
                                 return nc
                             visited[newval] = True
                             value2.append(newval)
-            value1, value2 = value2, []
+            (value1, value2) = (value2, [])
         return -1

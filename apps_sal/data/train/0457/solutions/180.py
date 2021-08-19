@@ -1,7 +1,6 @@
 class Solution:
 
     def coinChange(self, coins: List[int], amount: int) -> int:
-
         mem = {}
         mem[0] = 0
 
@@ -19,7 +18,6 @@ class Solution:
                 m = -1
             mem[amount] = m
             return m
-
         if amount == 0:
             return 0
         return rec(amount)

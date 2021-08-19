@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [[0 for i in range(amount + 1)] for j in range(len(coins) + 1)]
         for j in range(1, amount + 1):

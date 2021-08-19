@@ -1,4 +1,5 @@
 class Solution:
+
     def arrayNesting(self, nums):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution:
         maxlen = 0
         for i in range(0, len(nums)):
             cur = nums[i]
-            if(cur >= 0):
+            if cur >= 0:
                 curlen = 0
                 nums[i] = -1
                 while cur >= 0:

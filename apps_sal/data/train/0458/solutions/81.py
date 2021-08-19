@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         need = sum(nums) % p
         dp = {0: -1}

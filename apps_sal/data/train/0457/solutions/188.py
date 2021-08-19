@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [0] + [float('inf')] * amount
         coinValues = collections.defaultdict(list)

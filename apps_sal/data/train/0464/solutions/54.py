@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, n: int) -> int:
         A = [_ * 2 + 1 for _ in range(n)]
         ret = 0

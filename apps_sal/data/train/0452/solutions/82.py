@@ -1,5 +1,7 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
+
         @lru_cache(None)
         def helper(start, d):
             if len(jobDifficulty) - start < d:

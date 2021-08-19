@@ -1,5 +1,7 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
+
         @lru_cache(None)
         def divisors(v):
             divs = set()

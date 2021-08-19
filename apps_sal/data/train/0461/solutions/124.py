@@ -1,4 +1,5 @@
 class Solution:
+
     def dfsFromId(self, g, visited, informTime, vertex, times, currTime):
         visited[vertex] = True
         times[0] = max(times[0], currTime)
@@ -10,10 +11,7 @@ class Solution:
         g = [set() for i in range(n)]
         visited = [False] * n
         maxMinutes = [0]
-
-        for i, v in enumerate(manager):
+        for (i, v) in enumerate(manager):
             g[v].add(i)
-
         self.dfsFromId(g, visited, informTime, headID, maxMinutes, 0)
-
         return maxMinutes[0]

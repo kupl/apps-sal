@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Node:
+
     def __init__(self, id: int, inform_t: int):
         self.id = id
         self.children = []
@@ -13,7 +14,7 @@ class Node:
     def total_inform_time(self):
         t = self.inform_t
         if self.children:
-            t += max(ch.total_inform_time() for ch in self.children)
+            t += max((ch.total_inform_time() for ch in self.children))
         return t
 
 
@@ -22,14 +23,12 @@ class Solution:
     def build_tree(self, manager: List[int], inform_time: List[int]) -> Node:
         nodes = [None] * len(manager)
         root = None
-        for id, man_id in enumerate(manager):
+        for (id, man_id) in enumerate(manager):
             if nodes[id] is None:
                 nodes[id] = Node(id, inform_time[id])
-
             if man_id >= 0:
                 if nodes[man_id] is None:
                     nodes[man_id] = Node(man_id, inform_time[man_id])
-
                 nodes[man_id].children.append(nodes[id])
             else:
                 root = nodes[id]

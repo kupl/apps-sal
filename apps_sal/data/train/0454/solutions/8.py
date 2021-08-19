@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSwap(self, num):
         """
         :type num: int
@@ -8,7 +9,7 @@ class Solution:
         stack = []
         l = float('inf')
         r = None
-        for i, d in enumerate(array):
+        for (i, d) in enumerate(array):
             while stack and array[stack[-1]] < d:
                 l = min(l, stack.pop())
             stack.append(i)

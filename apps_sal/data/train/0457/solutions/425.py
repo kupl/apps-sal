@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         dic = {0: 0}
 
@@ -13,5 +14,4 @@ class Solution:
             else:
                 dic[amount] = min(res) + 1
             return dic[amount]
-
         return change(amount)

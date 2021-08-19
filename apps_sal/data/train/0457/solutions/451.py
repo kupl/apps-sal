@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         self.c = set([x for x in coins if x <= amount])
         self.coins = list(self.c)

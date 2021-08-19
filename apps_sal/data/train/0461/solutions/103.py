@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        managerToReports, ms = defaultdict(set), set([headID])
-        for i, m in enumerate(manager):
+        (managerToReports, ms) = (defaultdict(set), set([headID]))
+        for (i, m) in enumerate(manager):
             managerToReports[m].add(i)
         self.result = 0
 

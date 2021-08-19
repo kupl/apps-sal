@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSwap(self, num):
         """
         :type num: int
@@ -8,9 +9,8 @@ class Solution:
         ans = A[:]
         for i in range(len(A)):
             for j in range(i + 1, len(A)):
-                A[i], A[j] = A[j], A[i]
+                (A[i], A[j]) = (A[j], A[i])
                 if A > ans:
                     ans = A[:]
-                A[i], A[j] = A[j], A[i]
-
-        return int("".join(ans))
+                (A[i], A[j]) = (A[j], A[i])
+        return int(''.join(ans))

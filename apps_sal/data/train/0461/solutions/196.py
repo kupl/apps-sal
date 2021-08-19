@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         graph = defaultdict(list)
-        for index, managerId in enumerate(manager):
+        for (index, managerId) in enumerate(manager):
             graph[managerId].append(index)
         result = 0
 

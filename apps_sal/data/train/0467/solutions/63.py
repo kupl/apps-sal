@@ -1,4 +1,5 @@
 class Solution:
+
     def find_factors(self, n):
         factors = []
         i = 1

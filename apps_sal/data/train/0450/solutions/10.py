@@ -1,4 +1,5 @@
 class Solution:
+
     def validUtf8(self, data):
         """
         :type data: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         current = 0
         for byte in data:
-            b = "{0:08b}".format(byte)
+            b = '{0:08b}'.format(byte)
             if current == 0:
                 cnt = 0
                 for i in b:

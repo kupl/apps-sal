@@ -1,4 +1,5 @@
 class Solution:
+
     def maskPII(self, S: str) -> str:
         if '@' in S:
             s = S.split('@')

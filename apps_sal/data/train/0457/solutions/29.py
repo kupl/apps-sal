@@ -2,21 +2,19 @@ from collections import deque
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        '''
+        """
         This a DP problem
         but we can solve this using BFS
         https://leetcode.com/problems/coin-change/discuss/77361/Fast-Python-BFS-Solution
-        '''
-
+        """
         if not amount:
             return 0
-
         queue = deque([(amount, 0)])
         visited = set([amount])
         while queue:
-            remaining, steps = queue.popleft()
-
+            (remaining, steps) = queue.popleft()
             for coin in coins:
                 if coin == remaining:
                     return steps + 1

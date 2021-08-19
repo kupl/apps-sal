@@ -1,5 +1,5 @@
-
 class Solution:
+
     def findLongestPath(self, tree, root, informTime):
         return max([self.findLongestPath(tree, child, informTime) for child in tree[root]] + [0]) + informTime[root]
 
@@ -10,5 +10,4 @@ class Solution:
                 continue
             else:
                 mapM2E[manager[i]].append(i)
-
         return self.findLongestPath(mapM2E, headID, informTime)

@@ -1,6 +1,6 @@
 class Solution:
-    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
 
+    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         from functools import lru_cache
 
         @lru_cache(None)

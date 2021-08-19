@@ -1,9 +1,9 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         company_dict = {}
         total_time = 0
-
-        for i, m in enumerate(manager):
+        for (i, m) in enumerate(manager):
             if m not in company_dict:
                 company_dict[m] = set([i])
             else:
@@ -17,7 +17,6 @@ class Solution:
             for e in company_dict[manager]:
                 time_to_inform = time + informTime[manager]
                 get_emp_inf_time(e, time_to_inform)
-
         head = list(company_dict[-1])[0]
         get_emp_inf_time(head, 0)
         return total_time

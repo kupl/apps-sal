@@ -1,10 +1,9 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         n = len(coins)
         w = amount
-
         t = [[0 for i in range(w + 1)] for j in range(n + 1)]
-
         for i in range(n + 1):
             for j in range(w + 1):
                 if i == 0:
@@ -16,7 +15,6 @@ class Solution:
                         t[i][j] = j // coins[0]
                     else:
                         t[i][j] = float('inf')
-
         for i in range(2, n + 1):
             for j in range(1, w + 1):
                 if coins[i - 1] <= j:

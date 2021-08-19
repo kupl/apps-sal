@@ -1,12 +1,12 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
-
         memo = {}
 
         def helper(target, options):
-            if(target in memo):
+            if target in memo:
                 return memo[target]
             else:
                 best = None
@@ -20,6 +20,5 @@ class Solution:
                             best = cont + 1
                 memo[target] = best
                 return best
-
         output = helper(amount, coins)
         return output if output is not None else -1

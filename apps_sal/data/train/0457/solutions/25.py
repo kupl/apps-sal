@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -10,7 +11,7 @@ class Solution:
         level = 0
         seen = set()
         while q:
-            amt, level = q.popleft()
+            (amt, level) = q.popleft()
             for n in coins:
                 if amt - n == 0:
                     return level + 1
@@ -18,5 +19,4 @@ class Solution:
                     continue
                 seen.add(amt - n)
                 q.append([amt - n, level + 1])
-
         return -1

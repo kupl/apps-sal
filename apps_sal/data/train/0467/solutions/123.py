@@ -1,5 +1,7 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
+
         def check(x):
             v = set()
             i = 1

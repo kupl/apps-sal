@@ -2,15 +2,15 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         res = 0
         nextdict = defaultdict(set)
         timedict = []
-        for i1, m in enumerate(manager):
+        for (i1, m) in enumerate(manager):
             nextdict[m].add(i1)
         for t in informTime:
             timedict.append(t)
-
         visit = set()
         q = [(headID, 0)]
         while q:

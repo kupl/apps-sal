@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, lst: List[int]) -> int:
         import math
         final = 0

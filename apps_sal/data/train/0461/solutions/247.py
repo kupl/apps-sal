@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n, headID, manager, informTime):
         children = [[] for i in range(n)]
-        for i, m in enumerate(manager):
+        for (i, m) in enumerate(manager):
             if m >= 0:
                 children[m].append(i)
 

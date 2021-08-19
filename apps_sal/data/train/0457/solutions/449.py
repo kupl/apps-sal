@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         table = [float('inf') for _ in range(amount + 1)]
         i = 0

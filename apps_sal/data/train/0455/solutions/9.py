@@ -1,5 +1,5 @@
-
 class Solution:
+
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         coverage = dict()
         for y in range(len(targetGrid)):
@@ -24,7 +24,6 @@ class Solution:
                     s.remove(color)
             before[color] = s
         print(before)
-
         while len(before) > 0:
             gotOne = False
             for color in list(before.keys()):

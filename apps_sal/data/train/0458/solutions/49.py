@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         n = len(nums)
         pref = [0]
@@ -7,7 +8,7 @@ class Solution:
             nums[i] %= p
             s = (s + nums[i]) % p
             pref.append(s)
-        if (s == 0):
+        if s == 0:
             return 0
         target = pref[-1]
         c = dict()
@@ -18,7 +19,6 @@ class Solution:
             if x in c:
                 ans = min(ans, i - c[x])
             c[pref[i]] = i
-
-        if (ans == n):
+        if ans == n:
             return -1
         return ans

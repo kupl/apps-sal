@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         graph = collections.defaultdict(list)
         for i in range(len(manager)):

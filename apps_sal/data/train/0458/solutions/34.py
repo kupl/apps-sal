@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         tar = sum(nums) % p
         if tar == 0:
@@ -6,8 +7,8 @@ class Solution:
         n = len(nums)
         pos = collections.defaultdict(lambda: -n)
         pos[0] = -1
-        cur, res = 0, n
-        for i, x in enumerate(nums):
+        (cur, res) = (0, n)
+        for (i, x) in enumerate(nums):
             cur = (cur + x) % p
             res = min(res, i - pos[(cur - tar) % p])
             pos[cur] = i

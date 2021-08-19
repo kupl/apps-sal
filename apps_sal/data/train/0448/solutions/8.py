@@ -1,4 +1,5 @@
 class Solution:
+
     def checkSubarraySum(self, nums, k):
         """
         :type nums: List[int]
@@ -16,7 +17,6 @@ class Solution:
                     return True
                 if not modv in indexs:
                     indexs[modv] = i
-            else:
-                if nums[i] == 0 and i < len(nums) - 1 and nums[i + 1] == 0:
-                    return True
+            elif nums[i] == 0 and i < len(nums) - 1 and (nums[i + 1] == 0):
+                return True
         return False

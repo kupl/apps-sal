@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.count = []
 
@@ -6,13 +7,12 @@ class Solution:
         if len(self.count) < amount:
             self.count = [-1] * (amount + 1)
             self.skip = [False] * (amount + 1)
-
         if amount is 0:
             return 0
         elif amount < 0:
             return -1
         else:
-            if self.count[amount] < 0 and not self.skip[amount]:
+            if self.count[amount] < 0 and (not self.skip[amount]):
                 tmp = float('inf')
                 for co in coins:
                     previous = self.coinChange(coins, amount - co)
@@ -22,5 +22,4 @@ class Solution:
                     else:
                         continue
                 self.skip[amount] = True
-
             return self.count[amount]

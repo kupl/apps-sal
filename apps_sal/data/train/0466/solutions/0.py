@@ -1,7 +1,8 @@
 class Solution:
+
     def maskPII(self, S: str) -> str:
         if '@' in S:
-            name, domain = S.split('@')
+            (name, domain) = S.split('@')
             return name[0].lower() + '*****' + name[-1].lower() + '@' + domain.lower()
         else:
             number = ''

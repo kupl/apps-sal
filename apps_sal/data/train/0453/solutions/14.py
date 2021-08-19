@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         memo = [[[-1 for i in range(m + 1)] for j in range(n + 1)] for _ in range(m + 1)]
 
@@ -10,7 +11,6 @@ class Solution:
                     return 0
                 else:
                     return float('inf')
-
             if memo[i][prevColor][nbrs] != -1:
                 return memo[i][prevColor][nbrs]
             ans = float('inf')
@@ -21,11 +21,10 @@ class Solution:
                     else:
                         temp = dp(i + 1, j + 1, nbrs + 1)
                     ans = min(ans, cost[i][j] + temp)
+            elif prevColor == houses[i]:
+                ans = min(ans, dp(i + 1, houses[i], nbrs))
             else:
-                if prevColor == houses[i]:
-                    ans = min(ans, dp(i + 1, houses[i], nbrs))
-                else:
-                    ans = min(ans, dp(i + 1, houses[i], nbrs + 1))
+                ans = min(ans, dp(i + 1, houses[i], nbrs + 1))
             memo[i][prevColor][nbrs] = ans
             return ans
         ans = dp(0, 0, 0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         range_6 = list(range(6))
         result = 0
@@ -10,7 +11,7 @@ class Solution:
                 temp = [1, num]
                 len_t = 2
                 for i in range(2, pivot + 1):
-                    divisor, rem = divmod(num, i)
+                    (divisor, rem) = divmod(num, i)
                     if not rem:
                         if i == divisor:
                             len_t = 0

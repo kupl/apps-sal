@@ -4,6 +4,7 @@ import bisect
 
 
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         d = collections.defaultdict(list)
         summ = 0
@@ -11,7 +12,7 @@ class Solution:
         delta = sum(nums) % p
         if delta == 0:
             return 0
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             summ = (summ + num) % p
             d[summ].append(i)
         ans = len(nums)

@@ -1,10 +1,11 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         minLength = len(nums)
         target = sum(nums) % p
         currSum = 0
         prev = {0: -1}
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             currSum = (currSum + n) % p
             prev[currSum] = i
             if (currSum - target) % p in prev:

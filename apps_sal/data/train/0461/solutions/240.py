@@ -1,4 +1,5 @@
 class Solution:
+
     def dfs(self, node, visited, graph, minute, informTime):
         visited[node] = minute
         for neighbour in graph[node]:

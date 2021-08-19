@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         MAX = 300 * 1000 * 10
         N = len(jobDifficulty)
@@ -24,7 +25,7 @@ class Solution:
                     else:
                         cost = MAX
                 elif n_left_jobs == left_days:
-                    cost = get_max_jobDifficulty(current_jobs_i, left_jobs_i + 1) + sum(jobDifficulty[(left_jobs_i + 1):])
+                    cost = get_max_jobDifficulty(current_jobs_i, left_jobs_i + 1) + sum(jobDifficulty[left_jobs_i + 1:])
                 elif n_left_jobs < left_days:
                     cost = MAX
                 else:

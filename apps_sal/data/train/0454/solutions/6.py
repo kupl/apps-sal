@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSwap(self, num):
         arr = str(num)
         n = len(arr)

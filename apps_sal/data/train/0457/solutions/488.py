@@ -1,7 +1,8 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort(reverse=True)
-        INVALID = 10**10
+        INVALID = 10 ** 10
         self.ans = INVALID
 
         def dfs(s, amount, count):

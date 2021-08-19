@@ -1,6 +1,7 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        count = [(v, k) for k, v in collections.Counter(arr).items()]
+        count = [(v, k) for (k, v) in collections.Counter(arr).items()]
         heapq.heapify(count)
         while k > 0:
             k -= heapq.heappop(count)[0]

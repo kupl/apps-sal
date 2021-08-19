@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.divisors = {}
 
@@ -6,20 +7,15 @@ class Solution:
         if n in self.divisors:
             return self.divisors[n]
         result = []
-
         counter = 1
         quo = n // counter
-
         while counter <= quo:
-
             if n % counter == 0:
                 result.append(counter)
                 if quo != counter:
                     result.append(quo)
-
             counter += 1
             quo = n // counter
-
         self.divisors[n] = result
         return result
 

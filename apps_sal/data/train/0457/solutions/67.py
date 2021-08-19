@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         return self.coinChangeBFS(coins, amount)
 
@@ -18,7 +19,7 @@ class Solution:
                         return depth
                     elif remaining - c < 0:
                         continue
-                    elif (remaining - c) not in visited:
+                    elif remaining - c not in visited:
                         queue.append(remaining - c)
                         visited.add(remaining - c)
         return -1

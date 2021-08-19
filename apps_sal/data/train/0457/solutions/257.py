@@ -11,8 +11,7 @@ class Solution:
             for coin in self.coins:
                 if coin > n:
                     continue
-                if ((needed_extra := self.computeMinCoins(n - coin))
-                        != Solution.IMPOSSIBLE):
+                if (needed_extra := self.computeMinCoins(n - coin)) != Solution.IMPOSSIBLE:
                     possible_result = 1 + needed_extra
                     if result == Solution.IMPOSSIBLE or result > possible_result:
                         result = possible_result

@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort()
         changes = [amount + 1] * (amount + 1)
@@ -9,4 +10,4 @@ class Solution:
                     break
                 else:
                     changes[i] = min(changes[i], changes[i - coin] + 1)
-        return changes[-1] if changes[-1] != (amount + 1) else -1
+        return changes[-1] if changes[-1] != amount + 1 else -1

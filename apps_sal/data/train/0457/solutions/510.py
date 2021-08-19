@@ -1,10 +1,11 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
         myQueue = [[0, 0]]
         reachedMap = {0}
-        for value, num_coins in myQueue:
+        for (value, num_coins) in myQueue:
             for coin in coins:
                 if coin + value in reachedMap:
                     continue

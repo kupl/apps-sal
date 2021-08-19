@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, id, time):
         self.id = id
         self.informTime = time
@@ -6,9 +7,10 @@ class Node:
 
 
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         nodes = [Node(x, informTime[x]) for x in range(n)]
-        for i, v in enumerate(manager):
+        for (i, v) in enumerate(manager):
             if v == -1:
                 continue
             nodes[v].children.add(nodes[i])
@@ -20,5 +22,4 @@ class Solution:
             for n in node.children:
                 temp = max(temp, recursive(n))
             return temp + node.informTime
-
         return recursive(nodes[headID])

@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         state = [float('inf')] * amount
         if amount < 1:
@@ -12,5 +13,4 @@ class Solution:
             for c in coins:
                 if i - c >= 0:
                     state[i] = min(state[i - c] + 1, state[i])
-
         return state[-1] if state[-1] != float('inf') else -1

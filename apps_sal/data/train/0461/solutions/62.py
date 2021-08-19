@@ -1,9 +1,9 @@
 import heapq
-
 from collections import defaultdict, deque
 
 
 class Solution(object):
+
     def numOfMinutes(self, n, headID, manager, informTime):
         if not manager or not informTime:
             return 0
@@ -14,7 +14,7 @@ class Solution(object):
         for i in range(len(manager)):
             sub[manager[i]].append(i)
         while q:
-            spent, emp = heapq.heappop(q)
+            (spent, emp) = heapq.heappop(q)
             if used.get(emp, -1) != -1:
                 continue
             used[emp] = spent

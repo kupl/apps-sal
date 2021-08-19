@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         sub_h = {}
         for idx in range(n):
@@ -16,6 +17,5 @@ class Solution:
                 return
             for sub in sub_h[cur][1:]:
                 helper(sub, t + sub_h[cur][0])
-
         helper(headID, 0)
         return self.res

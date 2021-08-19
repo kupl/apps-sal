@@ -1,4 +1,5 @@
 class Solution:
+
     def divisors(self, n, c={}):
         if n in c:
             return c[n]

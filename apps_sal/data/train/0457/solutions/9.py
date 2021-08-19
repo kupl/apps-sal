@@ -1,10 +1,11 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         res = 0
         queue = collections.deque([(amount, 0)])
         seen = {amount}
         while queue:
-            head, res = queue.popleft()
+            (head, res) = queue.popleft()
             if head == 0:
                 return res
             for c in coins:

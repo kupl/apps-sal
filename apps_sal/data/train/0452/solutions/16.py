@@ -1,7 +1,8 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
-        M = 1e6
+        M = 1000000.0
         dp = [[M] * (d + 1) for i in range(n + 1)]
         dp[n][0] = 0
         dp[n - 1][1] = jobDifficulty[n - 1]

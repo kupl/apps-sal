@@ -1,7 +1,7 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coin_count = len(coins)
-
         dp = [[math.inf for i in range(coin_count + 1)] for j in range(amount + 1)]
         for i in range(coin_count + 1):
             dp[0][i] = 0

@@ -1,13 +1,11 @@
 class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
 
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         from collections import Counter
         from heapq import heappush, heappop
         d = Counter(arr)
         q = []
-
         for ele in d:
-
             heappush(q, [d[ele], ele])
         print(q)
         for i in range(k):

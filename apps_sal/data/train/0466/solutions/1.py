@@ -1,12 +1,13 @@
 class Solution:
+
     def maskPII(self, S: str) -> str:
         N = len(S)
         if '@' in S:
             S = S.lower()
-            first, rest = S.split('@')
+            (first, rest) = S.split('@')
             return first[0] + '*' * 5 + first[-1] + '@' + rest
         else:
-            digits = ''.join(c for c in S if c.isdigit())
+            digits = ''.join((c for c in S if c.isdigit()))
             a = []
             if len(digits) > 10:
                 a.append('+' + '*' * (len(digits) - 10))

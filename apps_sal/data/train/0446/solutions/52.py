@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         a = collections.Counter(arr)
         b = sorted(a, key=lambda x: a[x])

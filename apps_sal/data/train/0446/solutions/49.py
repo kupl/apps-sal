@@ -2,8 +2,8 @@ import queue
 
 
 class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
 
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         counter = {}
         for i in arr:
             if counter.__contains__(i):
@@ -13,7 +13,6 @@ class Solution:
         q = queue.PriorityQueue()
         for i in counter:
             q.put((counter[i], i))
-
         lastCutted = True
         while k > 0:
             element = q.get()
@@ -23,7 +22,6 @@ class Solution:
             else:
                 lastCutted = False
             k -= count
-
         if lastCutted:
             return q.qsize()
         else:
