@@ -1,9 +1,8 @@
-# cook your dish here
-
 from collections import defaultdict
 
 
-class sol():
+class sol:
+
     def __init__(self, n, edges):
         self.n = n
         self.edges = edges
@@ -43,7 +42,7 @@ class sol():
         return freq
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 edges = []
 while m:
     uvw = list(map(int, input().split()))

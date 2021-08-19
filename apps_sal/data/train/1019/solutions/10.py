@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for z in range(t):
     n = int(input())
@@ -12,8 +11,8 @@ for z in range(t):
                 c = 1
                 break
         if c == 1:
-            print("no")
+            print('no')
         else:
-            print("yes")
+            print('yes')
     else:
-        print("no")
+        print('no')

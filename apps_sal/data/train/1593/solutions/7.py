@@ -1,7 +1,6 @@
-# cook your dish here
 def notes(a):
     Q = [100, 50, 10, 5, 2, 1]
-    x, b = 0, 0
+    (x, b) = (0, 0)
     for i in Q:
         b = a // i
         x += b

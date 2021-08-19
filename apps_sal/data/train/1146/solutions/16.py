@@ -1,5 +1,4 @@
-# cook your dish here
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 l = []
 for i in range(n):
     l.append(int(input()))

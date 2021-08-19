@@ -19,11 +19,10 @@ def solve():
     b = list(enumerate(a))
     b.sort(key=lambda a: a[1])
     c1 = [0] * n
-    #c2 = [0]*n
     c = 0
     h = 0
     p = -1
-    for i, v in b:
+    for (i, v) in b:
         if i > p:
             c += 1
         else:
@@ -36,13 +35,12 @@ def solve():
     p = -1
     ans = n + n
     for z in range(len(b) - 1, -1, -1):
-        i, v = b[z]
+        (i, v) = b[z]
         if i < p:
             c += 1
         else:
             c = 1
         h += 1
-        #c2[i] = h-c
         ans = min(ans, h - c + c1[i])
         p = i
     print(ans)

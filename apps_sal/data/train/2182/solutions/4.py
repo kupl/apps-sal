@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
@@ -6,10 +5,8 @@ def rint():
     return map(int, stdin.readline().split())
 
 
-#lines = stdin.readlines()
 a = list(input())
 b = list(input())
-
 a.sort()
 b.sort(reverse=True)
 n = len(a)
@@ -46,4 +43,4 @@ while i + j < n:
             j += 1
             bj += 1
             flag = 1
-print("".join(ans))
+print(''.join(ans))

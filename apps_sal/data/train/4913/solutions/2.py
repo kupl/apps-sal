@@ -7,17 +7,16 @@ def mutations(alice, bob, matchWord, first):
     numOfIncorrectLetters = 0
     firstRound = -1
     i = 0
-
-    if matchWord in aliceWords:  # removes the word from both Alice's and Bob's memory, as they are not allowed to be used again
+    if matchWord in aliceWords:
         del aliceWords[aliceWords.index(matchWord)]
     if matchWord in bobWords:
         del bobWords[bobWords.index(matchWord)]
-    while (aliceFoundAWord and bobFoundAWord and matchingWordFound) or (firstRound < 1):
+    while aliceFoundAWord and bobFoundAWord and matchingWordFound or firstRound < 1:
         firstRound += 1
         i = 0
         numOfIncorrectLetters = 0
         matchingWordFound = False
-        if not (first):
+        if not first:
             aliceFoundAWord = False
             for word in aliceWords:
                 for letter in word:
@@ -26,7 +25,7 @@ def mutations(alice, bob, matchWord, first):
                     if letter != matchWord[i]:
                         numOfIncorrectLetters += 1
                     i += 1
-                    if (i == 4) and (numOfIncorrectLetters == 1):
+                    if i == 4 and numOfIncorrectLetters == 1:
                         aliceFoundAWord = True
                         matchingWordFound = True
                         del aliceWords[aliceWords.index(word)]
@@ -36,7 +35,7 @@ def mutations(alice, bob, matchWord, first):
                         break
                 i = 0
                 numOfIncorrectLetters = 0
-                if (aliceFoundAWord):
+                if aliceFoundAWord:
                     break
         else:
             bobFoundAWord = False
@@ -47,7 +46,7 @@ def mutations(alice, bob, matchWord, first):
                     if letter != matchWord[i]:
                         numOfIncorrectLetters += 1
                     i += 1
-                    if (i == 4) and (numOfIncorrectLetters == 1):
+                    if i == 4 and numOfIncorrectLetters == 1:
                         bobFoundAWord = True
                         matchingWordFound = True
                         del bobWords[bobWords.index(word)]
@@ -57,12 +56,12 @@ def mutations(alice, bob, matchWord, first):
                         break
                 i = 0
                 numOfIncorrectLetters = 0
-                if (bobFoundAWord):
+                if bobFoundAWord:
                     break
-        first = not (first)
-    if (aliceFoundAWord):
+        first = not first
+    if aliceFoundAWord:
         winner = 0
-    elif (bobFoundAWord):
+    elif bobFoundAWord:
         winner = 1
     else:
         winner = -1

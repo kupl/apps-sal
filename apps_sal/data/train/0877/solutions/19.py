@@ -1,12 +1,11 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    x, y, k, n = list(map(int, input().split()))
+    (x, y, k, n) = list(map(int, input().split()))
     val = abs(x - y)
-    if(val % k == 0):
-        if((val / k) % 2 == 0):
-            print("Yes")
+    if val % k == 0:
+        if val / k % 2 == 0:
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("No")
+        print('No')

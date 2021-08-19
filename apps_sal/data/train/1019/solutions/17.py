@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -11,6 +10,6 @@ for _ in range(int(input())):
     if n % 2 == 0:
         f = False
     if f == True:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')
