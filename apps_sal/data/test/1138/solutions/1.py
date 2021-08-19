@@ -1,4 +1,3 @@
-# You lost the game.
 s = str(input())
 n = len(s)
 r = 0
@@ -7,11 +6,11 @@ if n % 2:
 else:
     U = D = L = R = 0
     for i in range(n):
-        if s[i] == "L":
+        if s[i] == 'L':
             L += 1
-        elif s[i] == "R":
+        elif s[i] == 'R':
             R += 1
-        elif s[i] == "U":
+        elif s[i] == 'U':
             U += 1
         else:
             D += 1

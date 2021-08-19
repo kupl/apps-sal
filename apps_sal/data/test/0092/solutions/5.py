@@ -1,12 +1,8 @@
-# 236B
-
 import math
-
-arr = list(map(int, input().split(" ")))
+arr = list(map(int, input().split(' ')))
 a = arr[0]
 b = arr[1]
 c = arr[2]
-
 d = dict()
 
 
@@ -29,5 +25,4 @@ for i in range(1, a + 1):
     for j in range(1, b + 1):
         for k in range(1, c + 1):
             answer += numdiv(i * j * k)
-
 print(answer)

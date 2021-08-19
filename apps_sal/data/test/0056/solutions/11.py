@@ -1,9 +1,6 @@
-n, t = list(map(int, input().split()))
-
+(n, t) = list(map(int, input().split()))
 m = [[0] * 11 for i in range(11)]
-
-eps = 1e-6
-
+eps = 1e-06
 for l in range(t):
     m[0][0] += 1.0
     for i in range(n):
@@ -14,14 +11,9 @@ for l in range(t):
                 m[i][j] = 1.0
                 m[i + 1][j] += delta / 2.0
                 m[i + 1][j + 1] += delta / 2.0
-    # print(l)
-    # for k in m:
-    #     print(k)
-
 answ = 0
 for i in range(n):
     for j in range(n):
         if abs(m[i][j] - 1.0) <= eps:
             answ += 1
-
 print(answ)

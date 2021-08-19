@@ -1,12 +1,5 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def __starting_point():
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     if x > y:
         up = x - y
         if z < up:
@@ -19,11 +12,10 @@ def __starting_point():
             print('-')
         else:
             print('?')
+    elif z == 0:
+        print('0')
     else:
-        if z == 0:
-            print('0')
-        else:
-            print('?')
+        print('?')
 
 
 __starting_point()

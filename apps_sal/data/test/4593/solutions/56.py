@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     x = int(input())
     ans = 0

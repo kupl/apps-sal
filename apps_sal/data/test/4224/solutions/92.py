@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-# 標準入力を取得
 N = int(input())
 a = list(map(int, input().split()))
-
-# 求解処理
 
 
 def get_divisible_count(x: int) -> int:
@@ -17,6 +13,4 @@ def get_divisible_count(x: int) -> int:
 ans = 0
 for n in range(N):
     ans += get_divisible_count(a[n])
-
-# 結果出力
 print(ans)
