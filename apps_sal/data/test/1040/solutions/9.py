@@ -1,11 +1,8 @@
 n = int(input())
 s = input()
-
-t = ""
+t = ''
 for i in range(n):
     t += s[i]
-    #print("t1 = " + t)
-    while len(t) >= 3 and t[-3:] == "fox":
+    while len(t) >= 3 and t[-3:] == 'fox':
         t = t[:-3]
-        #print("t2 = " + t)
-print((len(t)))
+print(len(t))

@@ -1,8 +1,5 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
 t = 1
 for test in range(t):
-    # n,s = (map(int, input().split()))
-    # a = list(map(int, input().split()))
     n = int(input())
     s = input()
     ind = 0
@@ -12,4 +9,4 @@ for test in range(t):
         ans.append(s[ind])
         ind += cur
         cur = cur + 1
-    print(*ans, sep="")
+    print(*ans, sep='')

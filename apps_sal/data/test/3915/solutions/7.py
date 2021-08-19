@@ -1,8 +1,8 @@
-'''
+"""
 Created on 19 Aؤںu 2015
 
 @author: enesoncu
-'''
+"""
 pr = [0] * 1300000
 
 
@@ -21,21 +21,15 @@ def palindrom(s):
 
 
 (p, q) = list(map(int, input().split()))
-
-res = "Palindromic tree is better than splay tree"
+res = 'Palindromic tree is better than splay tree'
 rub = 0
 pi = 0
 prime()
 for i in range(1, 1200000):
-    # print(palindrom(i))
     if pr[i] == 0:
         pi += 1
     if palindrom(i):
         rub += 1
-    # print(i,pi,rub)
     if pi * q <= rub * p:
         res = i
 print(res)
-
-
-# Made By Mostafa_Khaled

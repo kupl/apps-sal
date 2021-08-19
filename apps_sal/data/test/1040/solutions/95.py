@@ -5,14 +5,12 @@ l_s = len(s)
 cnt = 0
 d = deque()
 for i in s:
-    # print(i,d,cnt)
-    if i == "x":
+    if i == 'x':
         if len(d) > 1:
             o = d.pop()
             f = d.pop()
-            if o == "o" and f == "f":
+            if o == 'o' and f == 'f':
                 cnt += 1
-
             else:
                 d.append(f)
                 d.append(o)
@@ -21,5 +19,4 @@ for i in s:
             d.append(i)
     else:
         d.append(i)
-
 print(l_s - 3 * cnt)

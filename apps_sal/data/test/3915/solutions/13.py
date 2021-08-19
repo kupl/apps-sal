@@ -4,22 +4,13 @@ input = sys.stdin.readline
 
 def rr(n):
     a = set([])
-    # Create a boolean array "prime[0..n]" and initialize
-    #  all entries it as true. A value in prime[i] will
-    # finally be false if i is Not a prime, else true.
     prime = [True for i in range(n + 1)]
     p = 2
-    while (p * p <= n):
-
-        # If prime[p] is not changed, then it is a prime
-        if (prime[p] == True):
-
-            # Update all multiples of p
+    while p * p <= n:
+        if prime[p] == True:
             for i in range(p * p, n + 1, p):
                 prime[i] = False
         p += 1
-
-    # Print all prime numbers
     for p in range(2, n + 1):
         if prime[p]:
             a.add(p)
@@ -32,7 +23,7 @@ def pal(a):
     return 0
 
 
-p, q = list(map(int, input().split()))
+(p, q) = list(map(int, input().split()))
 n = 1500000
 a = rr(n)
 b = []
@@ -49,6 +40,6 @@ for i in range(len(b) - 1, -1, -1):
         e = b[i][1]
         break
 if e == -1:
-    print("Palindromic tree is better than splay tree")
+    print('Palindromic tree is better than splay tree')
 else:
     print(e)

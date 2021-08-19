@@ -1,4 +1,3 @@
-# Код программы написал на языке Python 3
 import sys
 import bisect
 

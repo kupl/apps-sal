@@ -1,5 +1,4 @@
-# n=int(input())
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
@@ -12,7 +11,6 @@ def next(k, a):
 
 
 ans = [0] * (m + 1)
-
 k = -1
 k = next(k, b)
 ans[1] = k
@@ -24,9 +22,6 @@ for i in range(2, m + 1):
         else:
             ans[i] += 1
     k = kk
-
-
-ans[m] += (n + m - 1 - k)
-
+ans[m] += n + m - 1 - k
 for i in range(1, m + 1):
     print(ans[i], end=' ')

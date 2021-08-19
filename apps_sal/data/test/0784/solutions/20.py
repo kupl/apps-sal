@@ -7,9 +7,9 @@ def actionB(i):
 
 
 def getAction(i):
-    if not (i % 2):
+    if not i % 2:
         return actionA
-    elif (i % 10) == 1:
+    elif i % 10 == 1:
         return actionB
     else:
         return None
@@ -20,7 +20,7 @@ def fail():
 
 
 def m():
-    i, j = (int(a) for a in input().split(' '))
+    (i, j) = (int(a) for a in input().split(' '))
     l = [j]
     while True:
         act = getAction(j)
@@ -33,7 +33,7 @@ def m():
         if j == i:
             break
     l.reverse()
-    print('YES', len(l), ' '.join(str(i) for i in l), sep='\n')  # success!
+    print('YES', len(l), ' '.join((str(i) for i in l)), sep='\n')
 
 
 def __starting_point():

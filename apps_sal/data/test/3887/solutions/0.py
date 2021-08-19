@@ -1,8 +1,6 @@
-#!/bin/python3
-
 a = input()
 while a:
-    expr, n = a.split('=')
+    (expr, n) = a.split('=')
     n = int(n.strip())
     pos = 1
     neg = 0
@@ -24,22 +22,21 @@ while a:
                 rez.append(1 + v)
             else:
                 rez.append(-1)
+        elif i > 0:
+            rez.append(1)
         else:
-            if i > 0:
-                rez.append(1)
-            else:
-                v = min(csum - n, n - 1)
-                csum -= v
-                rez.append(-1 - v)
+            v = min(csum - n, n - 1)
+            csum -= v
+            rez.append(-1 - v)
     if csum == n:
-        print("Possible")
+        print('Possible')
         ans = str(rez[0])
         for j in rez[1:]:
-            ans += " " + ("+" if j > 0 else "-") + " "
+            ans += ' ' + ('+' if j > 0 else '-') + ' '
             ans += str(abs(j))
-        ans += " = " + str(n)
+        ans += ' = ' + str(n)
         print(ans)
     else:
-        print("Impossible")
+        print('Impossible')
     break
     a = input()

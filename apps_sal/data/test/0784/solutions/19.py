@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def convert(a, b):
     path = [b]
     while b != a:
@@ -18,9 +15,9 @@ def convert(a, b):
 def main():
     ans = convert(*list(map(int, input().split())))
     if ans is None:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         path = list(ans)
         print(len(path))
         print(*path)
