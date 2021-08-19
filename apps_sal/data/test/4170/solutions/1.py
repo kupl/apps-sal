@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -9,7 +8,6 @@ def main():
     step = int(input())
     steps = list(map(int, input().split()))
     count = 0
-
     for idx in range(1, len(steps)):
         if steps[idx - 1] >= steps[idx]:
             count += 1

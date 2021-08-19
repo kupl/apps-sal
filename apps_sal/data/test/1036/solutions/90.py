@@ -9,10 +9,8 @@ def winner(a, b):
     return a
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 S = input()
-
-# dp[2^k人のトーナメント][左端がSのi番目から始まるパターン] = 勝者の得意な手
 dp = [[''] * n for _ in range(k + 1)]
 for i in range(n):
     dp[0][i] = S[i]
@@ -20,7 +18,7 @@ for i in range(n):
 
 def solve(k, i):
     if dp[k][i] == '':
-        dp[k][i] = winner(solve(k - 1, i), solve(k - 1, (i + 2**(k - 1)) % n))
+        dp[k][i] = winner(solve(k - 1, i), solve(k - 1, (i + 2 ** (k - 1)) % n))
     return dp[k][i]
 
 

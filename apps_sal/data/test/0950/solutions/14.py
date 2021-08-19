@@ -15,18 +15,14 @@ def get_min_distance(str, alphabet):
     return mi
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 strs = []
 for i in range(n):
     strs.append(input())
 mins = []
 for i in range(n):
-    mins.append([get_min_distance(strs[i], string.digits),
-                 get_min_distance(strs[i], string.ascii_lowercase),
-                 get_min_distance(strs[i], "#*&")])
-# print(mins)
-
-mincost = 10**6
+    mins.append([get_min_distance(strs[i], string.digits), get_min_distance(strs[i], string.ascii_lowercase), get_min_distance(strs[i], '#*&')])
+mincost = 10 ** 6
 for i in range(n):
     for j in range(n):
         if i == j:

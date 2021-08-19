@@ -1,7 +1,6 @@
 import math
 import sys
 import itertools
-
 alpha = list('abcdefghijklmnopqrstuvwxyz')
 digit = list('1234567890')
 spec = ['*', '&', '#']
@@ -22,24 +21,22 @@ def find(s):
         if s[i] in spec:
             if spos > min(m - i, i):
                 spos = min(m - i, i)
-    return apos, dpos, spos
+    return (apos, dpos, spos)
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     st = []
     for i in range(n):
         st.append(input())
-
     al = []
     dig = []
     spec = []
     for i in range(n):
-        a, d, s = (find(st[i]))
+        (a, d, s) = find(st[i])
         al.append(a)
         dig.append(d)
         spec.append(s)
-
     sumn = 10000
     for a in range(n):
         for d in range(n):

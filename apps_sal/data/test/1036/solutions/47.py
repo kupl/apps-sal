@@ -6,17 +6,11 @@ from math import gcd, factorial, log2
 from pprint import pprint
 from sys import setrecursionlimit
 from time import time
-
-setrecursionlimit(10**9)
-MOD = 10**9 + 7
-INF = 10**18
-
-# 同じパターンがくるところを考え
-# メモで枝切をする
-
-n, k = list(map(int, input().split()))
+setrecursionlimit(10 ** 9)
+MOD = 10 ** 9 + 7
+INF = 10 ** 18
+(n, k) = list(map(int, input().split()))
 s = input()
-
 memo = [[None] * n for _ in range(k + 1)]
 
 
@@ -46,4 +40,4 @@ def recur(a, b):
         return winner
 
 
-print((s[recur(0, 2**k) % n]))
+print(s[recur(0, 2 ** k) % n])

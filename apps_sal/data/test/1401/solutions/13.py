@@ -5,7 +5,7 @@ a = a.split()
 a[0:0] = [0]
 for i in range(1, n + 1):
     a[i] = int(a[i])
-e = [[]for i in range(0, n + 1)]
+e = [[] for i in range(0, n + 1)]
 for i in range(2, n + 1):
     x = input()
     x = x.split()
@@ -17,7 +17,6 @@ f = [0 for i in range(0, n + 1)]
 dp = [0 for i in range(0, n + 1)]
 ans = 1
 while cnt < len(q):
-    # print(cnt,len(q))
     now = q[cnt]
     cnt += 1
     for x in e[now]:

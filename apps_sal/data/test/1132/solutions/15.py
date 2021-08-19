@@ -14,7 +14,7 @@ def mints():
     return list(map(int, minp().split()))
 
 
-n, m = mints()
+(n, m) = mints()
 e = [[] for i in range(n + 1)]
 
 
@@ -27,8 +27,6 @@ def isstar():
             c = i
     if c == None:
         return False
-    # for i in range(1,n+1)
-    #	if i != c and e[i][0] != i:
     return len(e[c]) == n - 1
 
 
@@ -68,14 +66,14 @@ def isring():
 
 
 for i in range(m):
-    a, b = mints()
+    (a, b) = mints()
     e[a].append(b)
     e[b].append(a)
 if isstar():
-    print("star topology")
+    print('star topology')
 elif isbus():
-    print("bus topology")
+    print('bus topology')
 elif isring():
-    print("ring topology")
+    print('ring topology')
 else:
-    print("unknown topology")
+    print('unknown topology')

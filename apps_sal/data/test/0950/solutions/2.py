@@ -1,9 +1,6 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 w = [input() for _ in range(n)]
-
 inf = 1000000
-
 let = [inf] * n
 num = [inf] * n
 spec = [inf] * n
@@ -24,9 +21,7 @@ for i in range(n):
         num[i] = min(num[i], get(i, j))
     for j in '*#&':
         spec[i] = min(spec[i], get(i, j))
-
 ans = inf
-
 for i in range(n):
     for j in range(n):
         if i == j:
@@ -35,5 +30,4 @@ for i in range(n):
             if i == k or j == k:
                 continue
             ans = min(ans, let[i] + num[j] + spec[k])
-
 print(ans)

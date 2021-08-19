@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, m = read()
+(n, m) = read()
 a = [input() for i in range(n)]
 c1 = '1234567890'
 c2 = 'qwertyuiopasdfghjklzxcvbnm'

@@ -2,9 +2,8 @@ from collections import defaultdict
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     s = input()
-    s1 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
+    s1 = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_'
     d = defaultdict(int)
     for i in range(64):
         for j in range(64):
@@ -12,7 +11,6 @@ def __starting_point():
     ans = 1
     for ch in s:
         ans = ans * d[ch] % (10 ** 9 + 7)
-
     print(ans)
 
 

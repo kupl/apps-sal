@@ -1,9 +1,7 @@
 import sys
 from functools import reduce
-
 zz = 1
-
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 if zz:
     input = sys.stdin.readline
 else:
@@ -33,7 +31,7 @@ def fli():
 
 
 def comp(a, b):
-    if(a > b):
+    if a > b:
         return 2
     return 2 if a == b else 0
 
@@ -43,7 +41,7 @@ def gi():
 
 
 def gtc(tc, ans):
-    print(("Case #" + str(tc) + ":", ans))
+    print(('Case #' + str(tc) + ':', ans))
 
 
 def cil(n, m):
@@ -59,7 +57,7 @@ def pro(a):
 
 
 def swap(a, i, j):
-    a[i], a[j] = a[j], a[i]
+    (a[i], a[j]) = (a[j], a[i])
 
 
 def si():
@@ -84,20 +82,20 @@ def bo(i):
 
 def graph(n, m):
     for i in range(m):
-        x, y = mi()
+        (x, y) = mi()
         a[x].append(y)
         a[y].append(x)
 
 
 t = 1
 uu = t
-w = {"PS": "S", "PR": "P", "RS": "R"}
+w = {'PS': 'S', 'PR': 'P', 'RS': 'R'}
 
 
 def winner(s, p):
     if s == p:
         return s
-    return w["".join(sorted(s + p))]
+    return w[''.join(sorted(s + p))]
 
 
 dp = {}
@@ -115,6 +113,6 @@ def rec(i, j):
 
 while t > 0:
     t -= 1
-    n, k = mi()
+    (n, k) = mi()
     s = ii()
-    print((rec(0, k)))
+    print(rec(0, k))

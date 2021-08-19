@@ -1,9 +1,6 @@
-# from math import ceil
-#from sys import stdout
-
-t = 1  # int(input())
+t = 1
 for test in range(1, t + 1):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     arr = [[0 for i in range(m)] for j in range(n)]
@@ -13,9 +10,9 @@ for test in range(1, t + 1):
     for i in b:
         tmp = tmp ^ i
     if tmp != 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         row = 0
         while row < n - 1:
             arr[row][-1] = a[row]
@@ -23,6 +20,5 @@ for test in range(1, t + 1):
             row += 1
         for i in range(m):
             arr[n - 1][i] = b[i]
-
         for i in range(n):
             print(*arr[i])
