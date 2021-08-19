@@ -5,10 +5,6 @@ import itertools
 import math
 import timeit
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 
 def sieve(n):
     if n < 2:
@@ -63,21 +59,41 @@ def flin(d, x, default=-1):
         return (left, right)
 
 
-def ceil(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep=' '): print(sep.join(map(str, a)))
-def dd(): return collections.defaultdict(int)
-def ddl(): return collections.defaultdict(list)
+def ceil(n, k):
+    return n // k + (n % k != 0)
 
-# input = sys.stdin.readline
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def prr(a, sep=' '):
+    print(sep.join(map(str, a)))
+
+
+def dd():
+    return collections.defaultdict(int)
+
+
+def ddl():
+    return collections.defaultdict(list)
 
 
 t = 1
 for _ in range(t):
-    n, k = mi()
+    (n, k) = mi()
     d = li()
     used = set(d)
     left = d[:]
@@ -107,6 +123,5 @@ for _ in range(t):
         left = nl
         right = nr
         c += 1
-
     print(s)
     prr(res)

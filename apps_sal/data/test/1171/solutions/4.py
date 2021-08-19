@@ -1,10 +1,9 @@
 def abc128_d():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     v = list(map(int, input().split()))
     ans = 0
-
-    for a in range(max(1, k + 1)):  # 左から取る個数
-        for b in range(max(1, k - a + 1)):  # 右から取る個数
+    for a in range(max(1, k + 1)):
+        for b in range(max(1, k - a + 1)):
             if a + b > n:
                 break
             arr = []
@@ -13,12 +12,11 @@ def abc128_d():
             if b > 0 and a < n:
                 arr += v[max(a, 0, n - b):]
             arr.sort()
-            for j in range(max(1, a + b)):  # 戻す個数
+            for j in range(max(1, a + b)):
                 if a + b + j > k:
                     break
                 score = sum(arr[j:])
                 ans = max(ans, score)
-                #print(a, b, j, score, arr)
     print(ans)
 
 

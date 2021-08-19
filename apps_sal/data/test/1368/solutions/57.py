@@ -1,19 +1,17 @@
-# mAx average set
 import math
 from collections import Counter
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 lists = list(map(int, input().split()))
 lists = sorted(lists)
 P = sum(lists[-a:])
 print(P / a)
-# Bことって総和がminiになっている
 J = dict(Counter(lists))
 K = dict(Counter(lists[-a:]))
 ans = 1
 sums = 0
 if J[max(lists)] < a:
     for some in K.keys():
-        ans *= (math.factorial(J[some]) // ((math.factorial(K[some])) * math.factorial(J[some] - K[some])))
+        ans *= math.factorial(J[some]) // (math.factorial(K[some]) * math.factorial(J[some] - K[some]))
     print(ans)
 elif J[max(lists)] > a:
     for i in range(a, min(b, J[max(lists)]) + 1):

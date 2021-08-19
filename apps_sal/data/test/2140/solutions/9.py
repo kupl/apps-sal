@@ -1,7 +1,3 @@
-#!/c/Python34/python
-# coding: utf-8
-
-
 def main():
     S = list(input())
     n = int(input())
@@ -11,7 +7,7 @@ def main():
         R[m - 1] += 1
     for i in range(len(S) // 2):
         if R[i] % 2 == 1:
-            S[i], S[len(S) - i - 1] = S[len(S) - i - 1], S[i]
+            (S[i], S[len(S) - i - 1]) = (S[len(S) - i - 1], S[i])
         R[(i + 1) % len(S)] += R[i]
     print(''.join(S))
 

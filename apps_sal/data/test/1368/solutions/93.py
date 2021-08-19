@@ -1,6 +1,6 @@
 from collections import Counter
 import math
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = sorted(list(map(int, input().split())))[::-1]
 l = Counter(v)
 su = 0
@@ -19,6 +19,5 @@ for i in range(a, b + 1):
         ko = C(l[v[a]], v1.count(v1[-1]))
     elif su == s:
         ko += C(l[v[a]], v1.count(v1[-1]))
-     # print(s,ko)
 print(su)
 print(ko)

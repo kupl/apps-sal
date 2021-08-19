@@ -1,9 +1,7 @@
-# map(int, input().split())
 def main():
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     a.sort()
     b.sort()
     b.reverse()

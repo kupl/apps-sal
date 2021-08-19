@@ -1,12 +1,9 @@
-#!python3
+def LI():
+    return list(map(int, input().split()))
 
-def LI(): return list(map(int, input().split()))
 
-
-# input
-N, A, B = LI()
+(N, A, B) = LI()
 V = LI()
-
 MAX = 51
 finv = [None] * MAX
 
@@ -28,9 +25,8 @@ def main():
     mx = s // A if s % A == 0 else s / A
     print(mx)
     if A == N or V[A - 1] > V[A]:
-        print((1))
+        print(1)
         return
-
     x = V.count(V[A])
     ans = 0
     if mx == V[A]:

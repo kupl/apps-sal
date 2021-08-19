@@ -11,19 +11,14 @@ def comb(n, k):
         return comb(n - 1, k) + comb(n - 1, k - 1)
 
 
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 vs = sorted(map(int, input().split()), reverse=True)
-
 print(sum(vs[:A]) / A)
 v_replaceable = vs[A]
-
 n = vs.count(v_replaceable)
 a = A - vs.index(v_replaceable)
 b = min(n, B - vs.index(v_replaceable))
-
 if vs[0] == v_replaceable:
-    # n個からa~b個を選ぶ選び方が答え。
-    print(sum(comb(n, t) for t in range(a, b + 1)))
+    print(sum((comb(n, t) for t in range(a, b + 1))))
 else:
-    # n個からa個を選ぶ選び方が答え。
     print(comb(n, a))
