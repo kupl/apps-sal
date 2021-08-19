@@ -30,7 +30,6 @@ class DinnerPlates:
                 self.stacks.pop()
                 self.right -= 1
         item = self.stacks[self.right].pop()
-
         if not self.stacks[self.right]:
             self.stacks.pop()
             self.right -= 1
@@ -46,10 +45,3 @@ class DinnerPlates:
                 self.left = index
             item = self.stacks[index].pop()
             return item
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

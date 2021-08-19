@@ -1,11 +1,9 @@
 def whoseMove(lastPlayer, win):
-    other = ""
-    if lastPlayer == "black":
-        other = "white"
+    other = ''
+    if lastPlayer == 'black':
+        other = 'white'
     else:
-        other = "black"
+        other = 'black'
     if win:
         return lastPlayer
     return other
-
-    # Your Move...

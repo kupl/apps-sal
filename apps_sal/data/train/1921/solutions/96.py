@@ -9,18 +9,14 @@ class DinnerPlates:
         self.q = PriorityQueue()
 
     def push(self, val: int) -> None:
-        while self.stacks and not self.q.empty():
+        while self.stacks and (not self.q.empty()):
             idx = self.q.get()
             if idx > len(self.stacks) - 1:
                 self.stacks.append([])
-            # if len(self.stacks[idx]) == self.cap:
-            #     continue
-            # else:
             self.stacks[idx].append(val)
             if len(self.stacks[idx]) < self.cap:
                 self.q.put(idx)
             return
-
         if not self.stacks:
             self.stacks = [[val]]
             if len(self.stacks[-1]) < self.cap:
@@ -54,10 +50,3 @@ class DinnerPlates:
                 return -1
         else:
             return -1
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)
