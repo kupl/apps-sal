@@ -1,7 +1,5 @@
-# cook your dish here
 t = int(input())
-
-while(t):
+while t:
     n = int(input())
     lt = input().split()
     for i in range(n):

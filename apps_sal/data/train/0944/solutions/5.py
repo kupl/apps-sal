@@ -1,19 +1,16 @@
-# cook your dish here
-# JUST FIND IT
 def splitting(arr):
     if len(arr) == len(set(arr)):
         return 0
     ev_od = {}
     occur = {}
     ans = 0
-    for i, n in enumerate(arr):
+    for (i, n) in enumerate(arr):
         if i == 0:
             ev_od[i] = [0, 0, 0]
+        elif arr[i - 1] & 1 == 1:
+            ev_od[i] = [ev_od[i - 1][0], ev_od[i - 1][1] + 1, ev_od[i - 1][2] + arr[i - 1]]
         else:
-            if arr[i - 1] & 1 == 1:
-                ev_od[i] = [ev_od[i - 1][0], ev_od[i - 1][1] + 1, ev_od[i - 1][2] + arr[i - 1]]
-            else:
-                ev_od[i] = [ev_od[i - 1][0] + 1, ev_od[i - 1][1], ev_od[i - 1][2] + arr[i - 1]]
+            ev_od[i] = [ev_od[i - 1][0] + 1, ev_od[i - 1][1], ev_od[i - 1][2] + arr[i - 1]]
         if n in occur:
             if n & 1 == 1:
                 num_of_odd = ev_od[i][1] - ev_od[occur[n]][1] - 1
@@ -27,7 +24,6 @@ def splitting(arr):
                     tmp_sum = ev_od[i][2] - ev_od[occur[n]][2] - n
                 else:
                     tmp_sum = 0
-            # print(tmp_sum)
             ans = max(ans, tmp_sum)
         occur[n] = i
     return ans

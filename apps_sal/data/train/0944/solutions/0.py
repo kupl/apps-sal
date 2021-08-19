@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 from collections import defaultdict
 for _ in range(int(stdin.readline())):
@@ -15,13 +14,11 @@ for _ in range(int(stdin.readline())):
             odd_val += 1
         prefix_even[i] = even_val
         prefix_odd[i] = odd_val
-    # print(prefix_odd,prefix_even)
     prefix_sum = [0] * n
     s = 0
     for i in range(n):
         s += lst[i]
         prefix_sum[i] = s
-    # print(prefix_sum)
     dict = {}
     count = {}
     for i in range(n):
@@ -31,7 +28,6 @@ for _ in range(int(stdin.readline())):
         else:
             dict[lst[i]] = i
             count[lst[i]] += 1
-    # print(dict)
     graph = defaultdict(list)
     for i in range(n):
         graph[lst[i]].append(i)
@@ -43,45 +39,17 @@ for _ in range(int(stdin.readline())):
                 index2 = graph[i][j]
                 index1 = prev
                 prev = index2
-                # print(index1,index2)
                 if i % 2 == 0:
                     val = prefix_even[index2] - prefix_even[index1] - 1
-                    # print(val)
                     if val % 2 == 0:
                         temp_sum = prefix_sum[index2] - prefix_sum[index1] - i
-                        # print(temp_sum)
                         if temp_sum > max_sum:
                             max_sum = temp_sum
                 else:
                     val = prefix_odd[index2] - prefix_odd[index1] - 1
-                    # print(val)
                     if val % 2 != 0:
                         temp_sum = prefix_sum[index2] - prefix_sum[index1] - i
-                        # print(temp_sum)
                         if temp_sum > max_sum:
                             max_sum = temp_sum
-
-    '''max_sum=-1
-                for i in range(n):
-                    if count[lst[i]]>1:
-                        index2=dict[lst[i]]
-                        index1=i
-                        print(index1,index2)
-                        if lst[i]%2==0:
-                            val=prefix_even[index2]-prefix_even[index1]-1
-                            print(val)
-                            if val%2==0:
-                                temp_sum=prefix_sum[index2]-prefix_sum[index1]-lst[i]
-                                print(temp_sum)
-                                if temp_sum>max_sum:
-                                    max_sum=temp_sum
-                        else:
-                            val=prefix_odd[index2]-prefix_odd[index1]-1
-                            print(val)
-                            if val%2!=0:
-                                temp_sum=prefix_sum[index2]-prefix_sum[index1]-lst[i]
-                                print(temp_sum)
-                                if temp_sum>max_sum:
-                                    max_sum=temp_sum'''
-
+    'max_sum=-1\n                for i in range(n):\n                    if count[lst[i]]>1:\n                        index2=dict[lst[i]]\n                        index1=i\n                        print(index1,index2)\n                        if lst[i]%2==0:\n                            val=prefix_even[index2]-prefix_even[index1]-1\n                            print(val)\n                            if val%2==0:\n                                temp_sum=prefix_sum[index2]-prefix_sum[index1]-lst[i]\n                                print(temp_sum)\n                                if temp_sum>max_sum:\n                                    max_sum=temp_sum\n                        else:\n                            val=prefix_odd[index2]-prefix_odd[index1]-1\n                            print(val)\n                            if val%2!=0:\n                                temp_sum=prefix_sum[index2]-prefix_sum[index1]-lst[i]\n                                print(temp_sum)\n                                if temp_sum>max_sum:\n                                    max_sum=temp_sum'
     stdout.write(str(max_sum) + '\n')

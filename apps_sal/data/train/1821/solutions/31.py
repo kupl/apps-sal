@@ -1,5 +1,4 @@
 class Solution:
-    # def __init__(self):
 
     def sortArray(self, nums: List[int]) -> List[int]:
         return self.mergeSort(nums)
@@ -10,7 +9,6 @@ class Solution:
             l2 = nums[len(nums) // 2:]
             L = self.mergeSort(l1)
             R = self.mergeSort(l2)
-
             sorted_list = []
             i = j = 0
             while i < len(L) and j < len(R):
@@ -20,7 +18,6 @@ class Solution:
                 else:
                     sorted_list.append(R[j])
                     j += 1
-
             while i < len(L):
                 sorted_list.append(L[i])
                 i += 1
@@ -28,5 +25,4 @@ class Solution:
                 sorted_list.append(R[j])
                 j += 1
             return sorted_list
-
         return nums

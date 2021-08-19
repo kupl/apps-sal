@@ -7,7 +7,6 @@ def merge(arr, l, m, r):
         L[i] = arr[l + i]
     for j in range(0, n2):
         R[j] = arr[m + 1 + j]
-
     i = 0
     j = 0
     k = l
@@ -41,7 +40,7 @@ def mergeSort(arr, l, r):
 class Solution:
 
     def sortArray(self, arr: List[int]) -> List[int]:
-        '''
+        """
         #Insertion Sort
         for i in range(1, len(arr)):
             key = arr[i]
@@ -54,5 +53,5 @@ class Solution:
                 j -= 1
             arr[j+1] = key 
         return arr
-        '''
+        """
         return mergeSort(arr, 0, len(arr) - 1)

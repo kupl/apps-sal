@@ -2,23 +2,28 @@ import math
 from collections import deque, defaultdict
 from sys import stdin, stdout
 input = stdin.readline
-# print = stdout.write
-def listin(): return list(map(int, input().split()))
-def mapin(): return list(map(int, input().split()))
+
+
+def listin():
+    return list(map(int, input().split()))
+
+
+def mapin():
+    return list(map(int, input().split()))
 
 
 for _ in range(int(input())):
     n = int(input())
-    n1 = (n * (n - 1)) // 2
+    n1 = n * (n - 1) // 2
     if n1 % n:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         x = [0]
         for i in range(n1 // n):
             x.append(1)
         for i in range(n1 // n):
             x.append(0)
         for i in range(n):
-            print("".join(map(str, x)))
+            print(''.join(map(str, x)))
             x = [x[-1]] + x[:-1]

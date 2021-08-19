@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a = input()
     count = 0
@@ -10,7 +9,6 @@ for _ in range(int(input())):
             if i == '0':
                 count += 1
                 s += 1
-            else:
-                if s > 0:
-                    break
+            elif s > 0:
+                break
         print(count)

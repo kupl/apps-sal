@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -15,8 +14,7 @@ for _ in range(t):
                 lis[i] = i + 2
             else:
                 lis[i] = i
-        lis[n - 3], lis[n - 2], lis[n - 1] = n - 1, n, n - 2
+        (lis[n - 3], lis[n - 2], lis[n - 1]) = (n - 1, n, n - 2)
     for ele in lis:
         print(ele, end=' ')
-
     print('\n')
