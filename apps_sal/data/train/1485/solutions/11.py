@@ -1,5 +1,3 @@
-# cook your dish here
-
 for _ in range(int(input())):
     n = int(input())
     l = []
@@ -15,10 +13,10 @@ for _ in range(int(input())):
         p = 0
         q = 0
         for j in range(n):
-            if j < (n / 2) and l[i][j] == "1":
+            if j < n / 2 and l[i][j] == '1':
                 x += 1
                 p += 1
-            elif j >= (n / 2) and l[i][j] == "1":
+            elif j >= n / 2 and l[i][j] == '1':
                 y += 1
                 q += 1
         a = []

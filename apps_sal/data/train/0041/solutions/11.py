@@ -1,19 +1,18 @@
 t = int(input())
 while t:
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = list(input())
     hyp = []
     k1 = k
-    while (k - 1):
+    while k - 1:
         hyp.append('(')
         hyp.append(')')
         k -= 1
-    ll = (n // 2) - (k1 - 1)
+    ll = n // 2 - (k1 - 1)
     for i in range(ll):
         hyp.append('(')
     for i in range(ll):
         hyp.append(')')
-    # print(hyp,s)
     ans = []
     for i in range(n):
         if hyp[i] != s[i]:

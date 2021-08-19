@@ -1,5 +1,4 @@
 def anagrams(word, words):
-    # your code here
     list = []
     word = sorted(word)
     for i in range(len(words)):
@@ -7,4 +6,4 @@ def anagrams(word, words):
             list.append(words[i])
         else:
             pass
-    return(list)
+    return list

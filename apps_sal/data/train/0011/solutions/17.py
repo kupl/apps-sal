@@ -1,43 +1,33 @@
-# coding=utf-8
-INF = 1e11
-
-# move = {'W': (0, 0), 'A': (0, 0), 'S': (0, 0), 'D': (0, 0)}
+INF = 100000000000.0
 move = {'W': (0, 1), 'A': (-1, 0), 'S': (0, -1), 'D': (1, 0)}
 
 
 def getExtremes(positions):
-    minX, minY, maxX, maxY = [positions[0][0]], [positions[0][1]], [positions[0][0]], [positions[0][1]]
+    (minX, minY, maxX, maxY) = ([positions[0][0]], [positions[0][1]], [positions[0][0]], [positions[0][1]])
     for p in positions[1:]:
         minX.append(min(minX[-1], p[0]))
         minY.append(min(minY[-1], p[1]))
         maxX.append(max(maxX[-1], p[0]))
         maxY.append(max(maxY[-1], p[1]))
-    return minX, minY, maxX, maxY
+    return (minX, minY, maxX, maxY)
 
 
 t = int(input())
-
 while t > 0:
     t -= 1
     s = input()
-    x, y = 0, 0
+    (x, y) = (0, 0)
     positions = [(0, 0)]
     for c in s:
-        x, y = x + move[c][0], y + move[c][1]
+        (x, y) = (x + move[c][0], y + move[c][1])
         positions.append((x, y))
-    # print(positions)
-    # print()
-    minXBeg, minYBeg, maxXBeg, maxYBeg = getExtremes(positions)
-    # print(minXBeg, minYBeg, maxXBeg, maxYBeg, sep="\n")
-    # print()
+    (minXBeg, minYBeg, maxXBeg, maxYBeg) = getExtremes(positions)
     positions.reverse()
-    minXEnd, minYEnd, maxXEnd, maxYEnd = getExtremes(positions)
+    (minXEnd, minYEnd, maxXEnd, maxYEnd) = getExtremes(positions)
     minXEnd.reverse()
     minYEnd.reverse()
     maxXEnd.reverse()
     maxYEnd.reverse()
-    # print(minXEnd, minYEnd, maxXEnd, maxYEnd, sep="\n")
-    # print()
     positions.reverse()
     ans = INF
     for i in range(len(s)):
@@ -47,6 +37,5 @@ while t > 0:
             minY = min(minYBeg[i], positions[i][1] + move[c][1], minYEnd[i + 1] + move[c][1])
             maxY = max(maxYBeg[i], positions[i][1] + move[c][1], maxYEnd[i + 1] + move[c][1])
             area = (maxX - minX + 1) * (maxY - minY + 1)
-            # print(i, c, minX, maxX, minY, maxY, area)
             ans = min(ans, area)
     print(ans)

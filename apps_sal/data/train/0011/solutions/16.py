@@ -1,9 +1,9 @@
 q = int(input())
 for _ in range(q):
     d = [x for x in list(input())]
-    x, y = 0, 0
-    minX, maxX, minY, maxY = 0, 0, 0, 0
-    allowW, allowS, allowA, allowD = True, True, True, True
+    (x, y) = (0, 0)
+    (minX, maxX, minY, maxY) = (0, 0, 0, 0)
+    (allowW, allowS, allowA, allowD) = (True, True, True, True)
     for v in d:
         if v == 'W':
             y += 1
@@ -29,7 +29,7 @@ for _ in range(q):
                 allowD = True
             elif x == minX:
                 allowA = False
-        else:  # if v == 'D':
+        else:
             x += 1
             if x > maxX:
                 maxX = x
@@ -38,8 +38,8 @@ for _ in range(q):
             elif x == maxX:
                 allowD = False
     val = (maxX - minX + 1) * (maxY - minY + 1)
-    if (maxX - minX) > 1 and (allowD or allowA):
+    if maxX - minX > 1 and (allowD or allowA):
         val = min(val, (maxX - minX) * (maxY - minY + 1))
-    if (maxY - minY) > 1 and (allowW or allowS):
+    if maxY - minY > 1 and (allowW or allowS):
         val = min(val, (maxX - minX + 1) * (maxY - minY))
     print(val)

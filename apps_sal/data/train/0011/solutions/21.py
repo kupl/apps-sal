@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 for _ in range(int(input())):
     s = input()
-    l, r, u, d, fl, fr, fu, fd, x, y = [0] * 10
+    (l, r, u, d, fl, fr, fu, fd, x, y) = [0] * 10
     for i in range(len(s)):
         if s[i] == 'W':
             y += 1
@@ -37,11 +36,10 @@ for _ in range(int(input())):
                 fl = 0
             if x == r:
                 fr = 1
-    # bless Ctrl+C Ctrl+V
-    x, y = r - l + 1, u - d + 1
-    s, k = x * y, x * y
-    if x > 2 and not fl * fr:
+    (x, y) = (r - l + 1, u - d + 1)
+    (s, k) = (x * y, x * y)
+    if x > 2 and (not fl * fr):
         s = k - y
-    if y > 2 and not fu * fd and k - x < s:
+    if y > 2 and (not fu * fd) and (k - x < s):
         s = k - x
     print(s)

@@ -27,8 +27,6 @@ def main():
         def canDecrease(a):
             _min = min(a)
             _max = max(a)
-
-            # decrease max
             _min_rindex = a.index(_min)
             for i in range(_min_rindex, len(a)):
                 if a[i] == _min:
@@ -36,8 +34,6 @@ def main():
             _max_index = a.index(_max)
             if _max_index > _min_rindex:
                 return True
-
-            # increase min
             _max_rindex = a.index(_max)
             for i in range(_max_rindex, len(a)):
                 if a[i] == _max:
@@ -45,9 +41,7 @@ def main():
             _min_index = a.index(_min)
             if _max_rindex < _min_index:
                 return True
-
             return False
-
         x = max(pref_a1) - min(pref_a1)
         y = max(pref_a2) - min(pref_a2)
         res = (x + 1) * (y + 1)
@@ -55,7 +49,6 @@ def main():
             res = min(res, x * (y + 1))
         if y > 1 and canDecrease(pref_a2):
             res = min(res, (x + 1) * y)
-
         print(res)
 
 

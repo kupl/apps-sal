@@ -1,10 +1,9 @@
-# cook your dish here
 try:
     for i in range(int(input())):
         l = list(map(int, input().strip().split()))
         s = input()
         s = list(s)
-        alpha = "abcdefghijklmnopqrstuvwxyz"
+        alpha = 'abcdefghijklmnopqrstuvwxyz'
         alpha = list(alpha)
         count = 0
         for i in alpha:
