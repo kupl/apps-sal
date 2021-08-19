@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 a = list()
 for _ in range(t):
@@ -13,4 +12,4 @@ for i in range(t):
     if count != 0:
         break
 if count == 0:
-    print("NO")
+    print('NO')

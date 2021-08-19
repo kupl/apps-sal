@@ -15,19 +15,17 @@ def mints():
 
 def solve():
     n = mint()
-
     s = list(minp())
     t = list(minp())
     if sorted(t) != sorted(s):
-        print("NO")
+        print('NO')
         return
     if len(s) > 26:
-        print("YES")
+        print('YES')
         return
-
     for i in range(26):
         if s.count(chr(ord('a') + i)) > 1:
-            print("YES")
+            print('YES')
             return
     r = 0
     for i in range(len(s)):
@@ -38,10 +36,9 @@ def solve():
                     jj = j
                     break
             for j in range(jj - 1, i - 1, -1):
-                s[j], s[j + 1] = s[j + 1], s[j]
+                (s[j], s[j + 1]) = (s[j + 1], s[j])
                 r += 1
-    # print(r)
-    print(["NO", "YES"][r % 2 == 0])
+    print(['NO', 'YES'][r % 2 == 0])
 
 
 for i in range(mint()):

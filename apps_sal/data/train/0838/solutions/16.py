@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -9,5 +8,4 @@ for _ in range(t):
         if l[i] + i > m:
             index = i
             m = l[i] + i
-
     print(m)

@@ -1,14 +1,14 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         ans = 0
-        # d stores elements seen till now against every cumsum
         d = {0: 0}
         start = {}
         cumsum = 0
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             cumsum += num % 2
             d[cumsum] = i + 1
-            if (cumsum not in start):
+            if cumsum not in start:
                 start[cumsum] = i
             if cumsum == k:
                 elems = d[0]
