@@ -1,11 +1,8 @@
-#!/bin/python3
-
 import math
 import os
 import random
 import re
 import sys
-
 n = int(input())
 l = list(map(int, input().split()))
 d = {}
@@ -16,8 +13,8 @@ for i in range(2 * n):
         d[l[i]] = t
     else:
         d[l[i]].append(i)
-a, b = 0, 0
-c, e = 0, 0
+(a, b) = (0, 0)
+(c, e) = (0, 0)
 k = 0
 for i in sorted(d.keys()):
     z = sorted(d[i])

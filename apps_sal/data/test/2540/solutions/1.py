@@ -2,16 +2,14 @@ def main():
     import sys
     from collections import deque
     input = sys.stdin.readline
-
     N = int(input())
     color = list(map(int, input().split()))
     color.insert(0, 0)
     adj = [[] for _ in range(N + 1)]
     for _ in range(N - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         adj[a].append(b)
         adj[b].append(a)
-
     que = deque()
     que.append(1)
     seen = [-1] * (N + 1)
@@ -29,7 +27,6 @@ def main():
                 child[v].append(u)
                 que.append(u)
     seq.reverse()
-
     cnt = [{color[i]: 1} for i in range(N + 1)]
     cnt_size = [1] * (N + 1)
     dom_num = [1] * (N + 1)
@@ -41,7 +38,7 @@ def main():
             small = cnt[u]
             size_small = cnt_size[u]
             if size_big < size_small:
-                small, big = big, small
+                (small, big) = (big, small)
                 dom_num[v] = dom_num[u]
                 ans[v] = ans[u]
             size_big += size_small
@@ -59,9 +56,6 @@ def main():
         cnt_size[v] = size_big
         cnt[v] = big
     print(*ans[1:])
-    # print(child)
-    # print(cnt)
-    # print(cnt_size)
 
 
 def __starting_point():

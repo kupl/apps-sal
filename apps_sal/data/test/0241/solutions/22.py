@@ -1,5 +1,5 @@
-n, m, mn, mx = input().split()
-n, m, mn, mx = int(n), int(m), int(mn), int(mx)
+(n, m, mn, mx) = input().split()
+(n, m, mn, mx) = (int(n), int(m), int(mn), int(mx))
 diff = n - m
 tem = [int(x) for x in input().split()]
 flag = 0
@@ -9,14 +9,12 @@ for x in tem:
         flag = 1
     if x < mn or x > mx:
         check = 1
-
-# print(flag,diff)
 if not check:
     if diff >= 2:
-        print("Correct")
+        print('Correct')
     elif diff == 1 and flag:
-        print("Correct")
+        print('Correct')
     else:
-        print("Incorrect")
+        print('Incorrect')
 else:
-    print("Incorrect")
+    print('Incorrect')

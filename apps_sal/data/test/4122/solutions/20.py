@@ -1,6 +1,6 @@
 s1 = list(map(int, input().split()))
 s = list(map(int, input().split()))
-h, n = s1[0], s1[1]
+(h, n) = (s1[0], s1[1])
 hp = h
 time = 0
 mins = 0
@@ -17,19 +17,14 @@ if hp <= 0:
     print(time)
 else:
     t = sum(s)
-    # print(t)
     if t >= 0:
         print(-1)
     else:
         hp1 = h + mins
-        # print(hp1)
         cycle = hp1 // abs(t)
-        # print(cycle)
         time = n * (hp1 // abs(t))
-        # print(time)
         timemod = 0
         hp = h - abs(t) * cycle
-        # print(hp)
         while hp > 0:
             hp += s[timemod]
             timemod = (timemod + 1) % n

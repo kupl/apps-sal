@@ -1,6 +1,5 @@
 n_input = int(input())
 l_input = list(map(int, str(input()).split()))
-
 l_binary = []
 for _ in range(n_input):
     pop = l_input.pop() % 2
@@ -16,7 +15,7 @@ def solve(n, l_binary):
     if n <= 1:
         return 1
     elif n == 2:
-        sum_l = sum(l_binary) % 2  # if sum_l = 0 return YES else return NO
+        sum_l = sum(l_binary) % 2
         return sum_l - 1
     else:
         for k in range(n - 2):
@@ -27,6 +26,6 @@ def solve(n, l_binary):
 
 
 if solve(len(l_binary), l_binary):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

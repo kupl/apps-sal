@@ -3,7 +3,7 @@ from random import random
 
 
 def getInt():
-    return(int(input()))
+    return int(input())
 
 
 def getInts():
@@ -12,7 +12,7 @@ def getInts():
 
 
 def getFloat():
-    return(float(input()))
+    return float(input())
 
 
 def getFloats():
@@ -22,24 +22,19 @@ def getFloats():
 
 def getStrings():
     line = input().split()
-    return(line)
+    return line
 
 
 N = getInt()
 values = getInts()
-
 nConsidered = 0
-#                nC, nO
 bestForChooserSoFar = [0, 0]
-
 for i in range(len(values)):
     v = values[len(values) - i - 1]
     qsIfTaken = [v + bestForChooserSoFar[1], bestForChooserSoFar[0]]
     qsIfGiven = [bestForChooserSoFar[0], v + bestForChooserSoFar[1]]
-
-    if(qsIfTaken[0] >= qsIfGiven[0]):
+    if qsIfTaken[0] >= qsIfGiven[0]:
         bestForChooserSoFar = qsIfTaken
     else:
         bestForChooserSoFar = qsIfGiven
-
 print(str(bestForChooserSoFar[1]) + ' ' + str(bestForChooserSoFar[0]))

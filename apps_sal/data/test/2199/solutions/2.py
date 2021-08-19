@@ -1,11 +1,10 @@
 import sys
 import math
 from collections import defaultdict
-# n=int(sys.stdin.readline().split())
 arr = []
 q = int(sys.stdin.readline())
-a, b = list(map(int, sys.stdin.readline().split()))
-l, r = 0, 0
+(a, b) = list(map(int, sys.stdin.readline().split()))
+(l, r) = (0, 0)
 mean = b
 num = 1
 arr.append(b)
@@ -28,5 +27,4 @@ for _ in range(1, q):
             l += 1
             num += 1
     else:
-        # print(arr,'arr',mean,'mean')
         print(arr[r] - mean)

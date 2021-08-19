@@ -2,11 +2,20 @@ import sys
 input = sys.stdin.readline
 
 
-def getInt(): return int(input())
-def getVars(): return list(map(int, input().split()))
-def getList(): return list(map(int, input().split()))
-def getStr(): return input().strip()
-# -------------------------------
+def getInt():
+    return int(input())
+
+
+def getVars():
+    return list(map(int, input().split()))
+
+
+def getList():
+    return list(map(int, input().split()))
+
+
+def getStr():
+    return input().strip()
 
 
 def addDictList(d, key, val):
@@ -32,16 +41,14 @@ def addDictSum(d, key, val):
         d[key] = 0
     d[key] += val
 
-# -------------------------------
-
 
 t = getInt()
 for _ in range(t):
-    n, x = getVars()
+    (n, x) = getVars()
     razn = 0
     maxD = 0
     for i in range(n):
-        d, h = getVars()
+        (d, h) = getVars()
         razn = max(razn, d - h)
         maxD = max(d, maxD)
     if razn == 0:

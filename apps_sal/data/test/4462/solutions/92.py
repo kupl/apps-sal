@@ -9,26 +9,24 @@ for i in range(n):
         li[1] += 1
     else:
         li[0] += 1
-# print(li)
-
 if li[0] == 0:
-    print("Yes")
+    print('Yes')
 elif li[0] == 1:
     if li[2] >= 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
     k = li[0]
     if n >= 2 * k:
         if li[2] >= k:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     elif n == 2 * k - 1:
         if li[2] >= k - 1:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("No")
+        print('No')
