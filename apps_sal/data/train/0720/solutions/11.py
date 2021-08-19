@@ -1,4 +1,3 @@
-
 t = int(input())
 for k in range(t):
     s = input().strip()
@@ -14,7 +13,7 @@ for k in range(t):
     l = 2
     while l <= n:
         i = 0
-        while i <= n - l:  # for i in range(0, n - l + 1):
+        while i <= n - l:
             if dp[i + l] - dp[i] == d:
                 ans += 1
                 i += 1

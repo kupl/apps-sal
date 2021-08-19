@@ -1,7 +1,5 @@
-# cook your dish here
-# 872//2
 import math
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 l = []
 m = []
 for i in range(1, a + 1):

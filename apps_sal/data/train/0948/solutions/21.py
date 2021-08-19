@@ -1,6 +1,5 @@
-# cook your dish here
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 x = 1
 y = 1
 res = 0
