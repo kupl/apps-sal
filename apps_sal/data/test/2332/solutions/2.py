@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -15,18 +13,17 @@ def write():
 
 
 def main():
-    n, k, m = [int(x) for x in input().split()]
+    (n, k, m) = [int(x) for x in input().split()]
     s = input().split()
     mm = {}
     a = [int(x) for x in input().split()]
     group = []
     for i in range(k):
         ii = [int(x) - 1 for x in input().split()][1:]
-        mc = min(a[x] for x in ii)
+        mc = min((a[x] for x in ii))
         for iii in ii:
             mm[s[iii]] = mc
-
-    print(sum(mm[x] for x in input().split()))
+    print(sum((mm[x] for x in input().split())))
 
 
 def __starting_point():

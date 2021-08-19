@@ -6,7 +6,6 @@ Problem 602 A.
 @author yamaton
 @date 2015-11-24
 """
-
 import itertools as it
 import functools
 import operator
@@ -26,10 +25,6 @@ def solve(xs, ys, bx, by):
         return '='
 
 
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
-
-
 def main():
     [n, bx] = list(map(int, input().strip().split()))
     xs = [int(c) for c in input().strip().split()]
@@ -37,7 +32,6 @@ def main():
     [m, by] = list(map(int, input().strip().split()))
     ys = [int(c) for c in input().strip().split()]
     assert len(ys) == m
-
     result = solve(xs, ys, bx, by)
     print(result)
 

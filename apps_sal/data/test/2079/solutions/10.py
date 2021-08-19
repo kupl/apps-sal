@@ -1,15 +1,9 @@
-# your code goes here
 N = int(input())
-
 w = list(map(int, input().split(' ')))
 key = [i + 1 for i in range(N)]
-
 w_dict = dict(zip(key, w))
-
 w_dict = sorted(w_dict.items(), key=lambda x: x[1])
-
 number = [row[0] for row in w_dict]
-
 passenger = input()
 ans = []
 gaikouteki = []

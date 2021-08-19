@@ -3,7 +3,7 @@ s = 0
 n = int(input())
 ls = [[] for i in range(n + 1)]
 for i in range(1, n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ls[a].append(b)
     ls[b].append(a)
 arr = [0 for i in range(n + 1)]
@@ -17,9 +17,7 @@ while q:
     for i in ls[node]:
         if arr[i] == 0:
             to_explore.append(i)
-
     if len(to_explore) == 0:
-        # leaf
         s = s + x[1] * x[2]
         continue
     n = len(to_explore)

@@ -22,7 +22,7 @@ the bus. Determine which row each passenger will take.
 
 Input:
 
-The first line contains a single integer `n` (`1 <= n <= 200\,000`) — the
+The first line contains a single integer `n` (`1 <= n <= 200\\,000`) — the
 number of rows in the bus.
 
 The second line contains the sequence of integers `w_1, w_2, ..., w_n` (`1 <=
@@ -45,15 +45,11 @@ passengers should be the same as in input.
 """
 import logging
 import collections
-
-
 fmt = '%(levelname)s - %(name)s (line:%(lineno)s) - %(message)s'
 formatter = logging.Formatter(fmt)
-
 ch = logging.StreamHandler()
 ch.setLevel(logging.NOTSET)
 ch.setFormatter(formatter)
-
 logger = logging.getLogger('bus_of_characters')
 logger.setLevel(logging.NOTSET)
 logger.addHandler(ch)
@@ -62,33 +58,26 @@ logger.addHandler(ch)
 def solve(w, s):
     free = collections.deque()
     used = collections.deque()
-
     for w in sorted(enumerate(w), key=lambda x: x[1]):
         free.append([w[0] + 1, w[1]])
-
     ids = [-1] * len(s)
-
     order = []
-    for pid, p in enumerate(s):
+    for (pid, p) in enumerate(s):
         logger.debug('pid: %s', pid)
         if p == '0':
-            taken = free.popleft(),
+            taken = (free.popleft(),)
             used.appendleft(taken)
-            # order.append(pid, taken[0])
         else:
             logger.debug('used %s', used)
             taken = used.popleft()
-        #order.append([pid, taken[0]])
         ids[pid] = taken[0]
-
-    return [x for x, y in ids]
+    return [x for (x, y) in ids]
 
 
 def main():
     n = int(input().strip())
     w = [int(x) for x in input().strip().split()]
     s = input().strip()
-
     result = solve(w, s)
     print(' '.join(map(str, result)))
 

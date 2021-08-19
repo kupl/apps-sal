@@ -5,12 +5,11 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     n = int(input())
-    l, r = -200000000, 200000000  # >=, <
+    (l, r) = (-200000000, 200000000)
     temp = 0
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if b == 1:
             l = max(1900 - temp, l)
         else:

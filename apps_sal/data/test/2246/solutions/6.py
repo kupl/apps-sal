@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sys
 
 
@@ -20,7 +18,7 @@ def main():
     adj_mat = [[] for __ in range(n)]
     node_exp = [0 for __ in range(n)]
     for __ in range(n - 1):
-        u, v = list(map(int, sys.stdin.readline().split()))
+        (u, v) = list(map(int, sys.stdin.readline().split()))
         adj_mat[u - 1].append(v - 1)
         adj_mat[v - 1].append(u - 1)
     stk = [0]
@@ -39,9 +37,7 @@ def main():
                 length[dst] = length[nxt] + 1
         else:
             node_exp[nxt] += prob[nxt] * length[nxt]
-
-    #explore(0, 1, 0, adj_mat,node_exp, set([0]))
-    print("{:.13f}".format(sum(node_exp)))
+    print('{:.13f}'.format(sum(node_exp)))
 
 
 main()

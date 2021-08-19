@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-
 def main():
-    x, y, m = map(int, input().split())
+    (x, y, m) = map(int, input().split())
     b1 = min(x, y)
     b2 = max(x, y)
     count = 0

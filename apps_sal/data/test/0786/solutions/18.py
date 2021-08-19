@@ -1,6 +1,4 @@
-# Author: Maharshi Gor
 import sys
-
 sys.setrecursionlimit(5000000)
 
 
@@ -17,33 +15,27 @@ def abs(num):
 
 
 inf = 10 ** 9
-
 c = 1899
-
-u, l = inf, -inf
+(u, l) = (inf, -inf)
 diff = 0
 n = read()
 A = []
 for i in range(n):
-    r, d = read_arr()
+    (r, d) = read_arr()
     A.append((r, d))
-
 e = False
-for r, d in A:
+for (r, d) in A:
     if d == 1:
         l = max(l, 1900 - diff)
     else:
         u = min(u, 1899 - diff)
-    # print(diff, d, l, u)
     diff += r
     if u < l:
         e = True
         break
-
-
 if e or l > u:
-    print("Impossible")
+    print('Impossible')
 elif u == inf:
-    print("Infinity")
+    print('Infinity')
 else:
     print(u + diff)

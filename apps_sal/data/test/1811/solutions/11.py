@@ -1,13 +1,8 @@
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 s = input()
-
 c = 0
-
 if s[-1] == '#':
     print('NO')
-
 else:
     a = 0
     q = 0
@@ -19,7 +14,6 @@ else:
                 break
         else:
             q = 0
-
     if c == 0:
         print('YES')
     else:

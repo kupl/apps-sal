@@ -9,14 +9,14 @@ def mp():
 
 debug = 0
 if debug:
-    file = open("input.txt", "r")
+    file = open('input.txt', 'r')
     input = file.readline
 else:
     input = sys.stdin.readline
 
 
 def main():
-    n, m, k = mp()
+    (n, m, k) = mp()
     x = n * m
     g = math.gcd(x, k)
     x //= g
@@ -26,9 +26,9 @@ def main():
     elif k // g == 2:
         a = x
     else:
-        print("NO")
+        print('NO')
         return
-    print("YES")
+    print('YES')
     kn = math.gcd(k, n)
     k //= kn
     km = math.gcd(k, m)
@@ -46,7 +46,6 @@ def main():
         print(n, 0)
         print(0, m * t)
     else:
-        # assert(t == 4)
         print(0, 0)
         print(2 * n, 0)
         print(0, 2 * m)
